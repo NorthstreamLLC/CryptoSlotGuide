@@ -1,28 +1,178 @@
 [
   {
+    "slug": "dice",
+    "name": "Dice",
+    "mono": "DI",
+    "tint": "#2FA8B0",
+    "edge": "1.0%",
+    "rtp": "99.0%",
+    "fair": "Provably fair",
+    "speed": "Instant",
+    "note": "Pick a number, pick over or under, set your own win chance.",
+    "steps": [
+      "Set a target number between 0 and 100 — this sets both your win chance and your multiplier.",
+      "Choose whether the roll must land over or under it.",
+      "Stake and roll. The result is derived from a server seed, your client seed and a nonce.",
+      "Verify any roll afterwards by re-hashing the seed triplet in the fairness tab."
+    ],
+    "tips": [
+      "At 1% house edge this is the cheapest game in the originals lobby — nothing you do changes that edge.",
+      "Martingale-style auto-bet setups lose to the table limit, not to the edge. The limit always arrives first.",
+      "Auto-bet with a stop-loss is the only setting on this game worth configuring."
+    ]
+  },
+  {
     "slug": "crash",
     "name": "Crash",
     "mono": "CR",
-    "tint": "#00C2CC",
-    "edge": "1%",
-    "rtp": "99%",
+    "tint": "#C4795A",
+    "edge": "1.0%",
+    "rtp": "99.0%",
     "fair": "Provably fair",
-    "speed": "~5s rounds",
-    "note": "Multiplier climbs until it crashes; cash out before it does.",
-    "steps": ["Place a bet before the round starts.", "Watch the multiplier climb.", "Cash out any time before it crashes to lock in that multiplier."],
-    "tips": ["Set an auto-cashout target to remove reaction-time risk.", "The house edge is fixed regardless of when you cash out."]
+    "speed": "5–20s rounds",
+    "note": "A multiplier climbs from 1× and busts at a random point. Cash out first.",
+    "steps": [
+      "Place your stake before the round starts — bets lock when the curve begins.",
+      "Watch the multiplier climb from 1.00×.",
+      "Cash out before it busts; your return is stake × the multiplier at that moment.",
+      "Set an auto-cashout target if you would rather not decide under pressure."
+    ],
+    "tips": [
+      "A 2× auto-cashout wins roughly half the time. That is the whole game — there is no read on the curve.",
+      "Previous rounds are independent. A long red streak tells you nothing about the next round.",
+      "Partial cashouts, where offered, are the only genuine risk-management tool here."
+    ]
   },
   {
     "slug": "plinko",
     "name": "Plinko",
     "mono": "PL",
-    "tint": "#7BE0B8",
-    "edge": "1–3% (risk-dependent)",
-    "rtp": "97–99%",
+    "tint": "#9B8FC4",
+    "edge": "1.0%",
+    "rtp": "99.0%",
     "fair": "Provably fair",
     "speed": "Instant",
-    "note": "Ball drops through pegs into multiplier slots; risk setting changes the payout table.",
-    "steps": ["Choose a risk level (low/medium/high) and row count.", "Drop the ball.", "Payout is read off the slot it lands in."],
-    "tips": ["Higher risk widens the payout spread but doesn't change the long-run edge much.", "More rows increase variance, not RTP."]
+    "note": "A ball falls through pins into a multiplier bucket. Pick your risk row.",
+    "steps": [
+      "Choose a risk level — low, medium or high — and the number of rows.",
+      "Drop the ball. Its path is determined by the seed triplet, not by physics.",
+      "The bucket it lands in sets your multiplier.",
+      "Higher risk widens the buckets at both ends without changing the edge."
+    ],
+    "tips": [
+      "Risk level changes variance only. Expected return is identical across all three.",
+      "High risk with 16 rows has the longest dry spells in the whole originals lobby.",
+      "The centre buckets pay under 1×, which is where most of your rounds land."
+    ]
+  },
+  {
+    "slug": "mines",
+    "name": "Mines",
+    "mono": "MI",
+    "tint": "#C7A45C",
+    "edge": "1.0%",
+    "rtp": "99.0%",
+    "fair": "Provably fair",
+    "speed": "Self-paced",
+    "note": "Reveal safe tiles on a grid, avoid the mines, cash out when you like.",
+    "steps": [
+      "Choose how many mines to hide on the 5×5 grid — more mines, higher multiplier per tile.",
+      "Reveal tiles one at a time. Each safe tile increases your multiplier.",
+      "Cash out at any point, or keep going and risk the lot.",
+      "The mine layout is fixed at round start and provable afterwards."
+    ],
+    "tips": [
+      "Three mines and four picks is the most common setup and pays a little over 2×.",
+      "The multiplier curve accelerates late, which is exactly when the risk per tile is highest.",
+      "Because you choose when to stop, this is the best originals game for a fixed session target."
+    ]
+  },
+  {
+    "slug": "limbo",
+    "name": "Limbo",
+    "mono": "LI",
+    "tint": "#57B98C",
+    "edge": "1.0%",
+    "rtp": "99.0%",
+    "fair": "Provably fair",
+    "speed": "Instant",
+    "note": "Set a target multiplier; win if the round rolls above it.",
+    "steps": [
+      "Enter a target multiplier — the higher it is, the lower your win chance.",
+      "Stake and roll.",
+      "If the round result exceeds your target, you win stake × target.",
+      "The win chance is shown before you commit, so the maths is never hidden."
+    ],
+    "tips": [
+      "A 100× target wins roughly once in a hundred rolls. It will feel much rarer than that.",
+      "This is Dice with the interface stripped back; the edge is identical.",
+      "Useful for a single high-multiplier shot, poor for grinding."
+    ]
+  },
+  {
+    "slug": "keno",
+    "name": "Keno",
+    "mono": "KE",
+    "tint": "#7E93B8",
+    "edge": "1.5%",
+    "rtp": "98.5%",
+    "fair": "Provably fair",
+    "speed": "Instant",
+    "note": "Pick numbers on a grid and see how many the draw matches.",
+    "steps": [
+      "Select between one and ten numbers on the 40-number grid.",
+      "Choose a risk level, which reshapes the payout table.",
+      "Draw. Ten numbers are pulled and your matches set the multiplier.",
+      "The paytable is shown live as you pick, so you can see what each hit is worth."
+    ],
+    "tips": [
+      "Picking more numbers does not improve your edge — it just flattens the payout curve.",
+      "At high risk, low match counts pay nothing at all. Read the table before staking.",
+      "The slowest-feeling of the instant originals, despite resolving immediately."
+    ]
+  },
+  {
+    "slug": "hi-lo",
+    "name": "Hi-Lo",
+    "mono": "HL",
+    "tint": "#C47A97",
+    "edge": "1.0%",
+    "rtp": "99.0%",
+    "fair": "Provably fair",
+    "speed": "Self-paced",
+    "note": "Guess whether the next card is higher or lower. Build a streak.",
+    "steps": [
+      "A card is dealt face up.",
+      "Call the next card higher or lower — the odds shown reflect the remaining deck.",
+      "Each correct call compounds your multiplier.",
+      "Cash out whenever, or lose the streak on a wrong call."
+    ],
+    "tips": [
+      "Calling the obvious side of a 2 or a King is close to a free step, and the multiplier reflects that.",
+      "The compounding is what makes this dangerous — five correct calls feel like a system.",
+      "Same-rank ties are handled differently between operators. Check before you play."
+    ]
+  },
+  {
+    "slug": "wheel",
+    "name": "Wheel",
+    "mono": "WH",
+    "tint": "#9AAE5E",
+    "edge": "1.0%",
+    "rtp": "99.0%",
+    "fair": "Provably fair",
+    "speed": "10s rounds",
+    "note": "A segmented wheel spins into a multiplier. Pick risk and segment count.",
+    "steps": [
+      "Choose risk level and how many segments the wheel carries.",
+      "Stake before the spin.",
+      "The wheel lands on a segment and pays its multiplier.",
+      "Segment layout and result are both verifiable after the round."
+    ],
+    "tips": [
+      "Low risk pays under 2× on almost every segment; high risk pays nothing on most of them.",
+      "Segment count changes granularity, not edge.",
+      "The most passive game in the lobby — nothing to decide once the stake is set."
+    ]
   }
 ]

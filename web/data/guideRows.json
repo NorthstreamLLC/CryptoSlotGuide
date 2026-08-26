@@ -1,6 +1,82 @@
 [
-  { "slug": "how-to-buy-crypto-for-gambling", "title": "How to buy crypto for gambling", "standfirst": "The fastest, lowest-fee path from fiat to a funded casino wallet.", "category": "Getting started", "readMins": 6 },
-  { "slug": "no-kyc-casinos-explained", "title": "No-KYC casinos, explained", "standfirst": "What 'no KYC' actually means, and where the limits kick in.", "category": "Getting started", "readMins": 5 },
-  { "slug": "understanding-rtp-and-volatility", "title": "Understanding RTP and volatility", "standfirst": "Why the same slot can pay differently at two different casinos.", "category": "Slots", "readMins": 8 },
-  { "slug": "provably-fair-explained", "title": "Provably fair, explained", "standfirst": "How to verify a house game's outcome wasn't manipulated.", "category": "House games", "readMins": 7 }
+  {
+    "slug": "how-casino-rtp-versions-work",
+    "title": "How casino RTP versions work",
+    "mono": "RT",
+    "tint": "#2FA8B0",
+    "standfirst": "Why the same slot pays differently at two casinos",
+    "category": "Slots",
+    "readMins": 7,
+    "updated": "21 Aug"
+  },
+  {
+    "slug": "reading-wagering-requirements",
+    "title": "Reading wagering requirements",
+    "mono": "WG",
+    "tint": "#C7A45C",
+    "standfirst": "Turning a 40× headline into the number that matters",
+    "category": "Bonuses",
+    "readMins": 6,
+    "updated": "19 Aug"
+  },
+  {
+    "slug": "kyc-thresholds-explained",
+    "title": "KYC thresholds, explained",
+    "mono": "KY",
+    "tint": "#7E93B8",
+    "standfirst": "What triggers a document request, and when",
+    "category": "Accounts",
+    "readMins": 5,
+    "updated": "18 Aug"
+  },
+  {
+    "slug": "depositing-over-lightning",
+    "title": "Depositing over Lightning",
+    "mono": "LN",
+    "tint": "#C4795A",
+    "standfirst": "When channel capacity becomes the limit",
+    "category": "Crypto",
+    "readMins": 4,
+    "updated": "16 Aug"
+  },
+  {
+    "slug": "who-pays-the-network-fee",
+    "title": "Who pays the network fee",
+    "mono": "FE",
+    "tint": "#9AAE5E",
+    "standfirst": "{fee} of {casinos} operators absorb it. The rest deduct",
+    "category": "Crypto",
+    "readMins": 4,
+    "updated": "14 Aug"
+  },
+  {
+    "slug": "sportsbook-margin-measured",
+    "title": "Sportsbook margin, measured",
+    "mono": "MG",
+    "tint": "#57B98C",
+    "standfirst": "How we compute overround across 40 markets",
+    "category": "Betting",
+    "readMins": 8,
+    "updated": "12 Aug"
+  },
+  {
+    "slug": "bankroll-separation",
+    "title": "Bankroll separation",
+    "mono": "BR",
+    "tint": "#9B8FC4",
+    "standfirst": "Hot wallet, cold wallet, and what stays on-site",
+    "category": "Wallets",
+    "readMins": 6,
+    "updated": "10 Aug"
+  },
+  {
+    "slug": "our-scoring-sheet",
+    "title": "Our scoring sheet",
+    "mono": "SC",
+    "tint": "#C47A97",
+    "standfirst": "The six criteria and their weights, line by line",
+    "category": "Method",
+    "readMins": 9,
+    "updated": "08 Aug"
+  }
 ]

@@ -1,8 +1,26 @@
 [
-  { "slug": "roobet", "name": "Roobet" },
-  { "slug": "stake", "name": "Stake" },
-  { "slug": "bc-game", "name": "BC.Game" },
-  { "slug": "duelbits", "name": "Duelbits" },
-  { "slug": "gamdom", "name": "Gamdom" },
-  { "slug": "shuffle", "name": "Shuffle" }
+  {
+    "slug": "roobet",
+    "name": "Roobet"
+  },
+  {
+    "slug": "stake",
+    "name": "Stake"
+  },
+  {
+    "slug": "bc-game",
+    "name": "BC.Game"
+  },
+  {
+    "slug": "shuffle",
+    "name": "Shuffle"
+  },
+  {
+    "slug": "rollbit",
+    "name": "Rollbit"
+  },
+  {
+    "slug": "gamdom",
+    "name": "Gamdom"
+  }
 ]

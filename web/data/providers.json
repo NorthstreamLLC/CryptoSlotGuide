@@ -1,5 +1,68 @@
 [
-  { "slug": "pragmatic-play", "name": "Pragmatic Play", "mono": "PP", "tint": "#00C2CC", "score": 9.0, "note": "Broadest catalogue and the most frequently checked in RTP Watch. Licenses multiple configurations — several on our index ship them.", "titles": 4, "rtp": "96.3–96.7%", "casinos": 8 },
-  { "slug": "hacksaw-gaming", "name": "Hacksaw Gaming", "mono": "HG", "tint": "#DA9877", "score": 8.8, "note": "Single-configuration studio — one annual RTP check needed per title.", "titles": 2, "rtp": "96.1%", "casinos": 6 },
-  { "slug": "nolimit-city", "name": "Nolimit City", "mono": "NC", "tint": "#7BE0B8", "score": 9.1, "note": "Single-configuration studio, highest volatility in the index.", "titles": 2, "rtp": "96.0%", "casinos": 5 }
+  {
+    "slug": "hacksaw-gaming",
+    "name": "Hacksaw Gaming",
+    "mono": "HG",
+    "tint": "#E0A67B",
+    "score": 9,
+    "note": "Single RTP version per title. Short, sharp, very high variance.",
+    "titles": 180,
+    "rtp": "96.3%",
+    "casinos": 16
+  },
+  {
+    "slug": "push-gaming",
+    "name": "Push Gaming",
+    "mono": "PG",
+    "tint": "#8FA5C9",
+    "score": 8.9,
+    "note": "Mechanic-led, consistently high RTP. Fewer releases, better tuned.",
+    "titles": 85,
+    "rtp": "96.5–96.7%",
+    "casinos": 14
+  },
+  {
+    "slug": "nolimit-city",
+    "name": "Nolimit City",
+    "mono": "NC",
+    "tint": "#D68A6E",
+    "score": 8.8,
+    "note": "Extreme volatility by design. Highest max-win ceilings we log.",
+    "titles": 95,
+    "rtp": "96.0–96.1%",
+    "casinos": 15
+  },
+  {
+    "slug": "relax-gaming",
+    "name": "Relax Gaming",
+    "mono": "RG",
+    "tint": "#7BE0B8",
+    "score": 8.5,
+    "note": "Money Train line plus a large third-party aggregation arm.",
+    "titles": 240,
+    "rtp": "96.1–96.6%",
+    "casinos": 17
+  },
+  {
+    "slug": "print-studios",
+    "name": "Print Studios",
+    "mono": "PS",
+    "tint": "#C9D67B",
+    "score": 8.2,
+    "note": "Newer studio, strong bonus-buy maths, thin catalogue so far.",
+    "titles": 40,
+    "rtp": "96.2%",
+    "casinos": 11
+  },
+  {
+    "slug": "pragmatic-play",
+    "name": "Pragmatic Play",
+    "mono": "PP",
+    "tint": "#9FB6E0",
+    "score": 7.6,
+    "note": "Volume studio. Same title often ships at three different RTPs.",
+    "titles": 620,
+    "rtp": "94.5–96.5%",
+    "casinos": 18
+  }
 ]

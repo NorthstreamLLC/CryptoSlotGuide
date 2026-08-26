@@ -1,5 +1,57 @@
 [
-  { "slug": "metamask", "name": "MetaMask", "mono": "MM", "hed": "The default self-custody wallet", "note": "Browser extension + mobile, EVM chains only natively.", "m1": "Self-custody", "m2": "EVM + snaps for others", "m3": "Manual gas, no simulation", "score": 8.9 },
-  { "slug": "phantom", "name": "Phantom", "mono": "PH", "hed": "Solana-first, now multi-chain", "note": "Cleanest mobile UX of the self-custody wallets.", "m1": "Self-custody", "m2": "SOL, ETH, BTC", "m3": "Auto priority fee on Solana", "score": 8.7 },
-  { "slug": "ledger", "name": "Ledger", "mono": "LG", "hed": "Hardware wallet reference", "note": "Cold storage; pairs with Ledger Live or third-party apps.", "m1": "Self-custody (hardware)", "m2": "Multi-chain", "m3": "Set by companion app", "score": 9.0 }
+  {
+    "slug": "ledger",
+    "name": "Ledger",
+    "mono": "LG",
+    "hed": "hardware keys, 5,500+ assets, a fee you set by hand",
+    "note": "Reference cold storage; bridge software is the weak point",
+    "m1": "Self-custody",
+    "m2": "5,500+ assets",
+    "m3": "Manual, per chain",
+    "score": 9.1
+  },
+  {
+    "slug": "metamask",
+    "name": "MetaMask",
+    "mono": "MM",
+    "hed": "the EVM default, and the widest casino support",
+    "note": "EVM default. Widest dApp and casino deposit support",
+    "m1": "Self-custody",
+    "m2": "All EVM",
+    "m3": "Editable, no sponsor",
+    "score": 8.7
+  },
+  {
+    "slug": "phantom",
+    "name": "Phantom",
+    "mono": "PH",
+    "hed": "nine-second Solana deposits, four chains covered",
+    "note": "Fastest Solana deposits we timed; multi-chain still catching up",
+    "m1": "Self-custody",
+    "m2": "4 chains",
+    "m3": "Auto, priority fee",
+    "score": 8.6
+  },
+  {
+    "slug": "rabby",
+    "name": "Rabby",
+    "mono": "RB",
+    "hed": "it simulates the transaction before you sign it",
+    "note": "Pre-sign simulation catches malformed casino contracts",
+    "m1": "Self-custody",
+    "m2": "All EVM",
+    "m3": "Simulated first",
+    "score": 8.5
+  },
+  {
+    "slug": "trust-wallet",
+    "name": "Trust Wallet",
+    "mono": "TW",
+    "hed": "100+ chains from a phone, at the cost of isolation",
+    "note": "Mobile-first, broadest chain list, thinner desktop story",
+    "m1": "Self-custody",
+    "m2": "100+ chains",
+    "m3": "Auto",
+    "score": 8.2
+  }
 ]

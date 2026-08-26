@@ -1,5 +1,57 @@
 [
-  { "slug": "coinbase", "name": "Coinbase", "mono": "CB", "hed": "Easiest on-ramp for US users", "note": "Regulated, higher fees than offshore alternatives.", "m1": "0.35%", "m2": "ACH, SEPA, card", "m3": "$50k / day", "score": 8.1 },
-  { "slug": "kraken", "name": "Kraken", "mono": "KR", "hed": "Deep liquidity, lower fees", "note": "Best maker/taker fees of the exchanges tracked here.", "m1": "0.09%", "m2": "ACH, SEPA, wire", "m3": "Uncapped after verification", "score": 8.9 },
-  { "slug": "okx", "name": "OKX", "mono": "OK", "hed": "Broadest derivatives access", "note": "Offshore; not available to US residents.", "m1": "0.11%", "m2": "Card, crypto rails", "m3": "$500k / day", "score": 8.6 }
+  {
+    "slug": "kraken",
+    "name": "Kraken",
+    "mono": "KR",
+    "hed": "Tightest measured spreads and same-day fiat withdrawals",
+    "note": "Tightest measured spreads and same-day fiat withdrawals",
+    "m1": "0.09%",
+    "m2": "SEPA, wire, ACH",
+    "m3": "No daily cap (verified)",
+    "score": 8.9
+  },
+  {
+    "slug": "okx",
+    "name": "OKX",
+    "mono": "OK",
+    "hed": "Deep books plus a competent self-custody Web3 wallet",
+    "note": "Deep books plus a competent self-custody Web3 wallet",
+    "m1": "0.11%",
+    "m2": "SEPA, card",
+    "m3": "$1m / day",
+    "score": 8.6
+  },
+  {
+    "slug": "coinbase",
+    "name": "Coinbase",
+    "mono": "CB",
+    "hed": "Easiest onramp for first deposits; you pay for it in fees",
+    "note": "Easiest onramp for first deposits; you pay for it in fees",
+    "m1": "0.35%",
+    "m2": "ACH, SEPA, card",
+    "m3": "$100k / day",
+    "score": 8.1
+  },
+  {
+    "slug": "bybit",
+    "name": "Bybit",
+    "mono": "BY",
+    "hed": "Derivatives-led. Withdrawals cleared fastest of the five",
+    "note": "Derivatives-led. Withdrawals cleared fastest of the five",
+    "m1": "0.14%",
+    "m2": "Card, P2P",
+    "m3": "$2m / day",
+    "score": 8
+  },
+  {
+    "slug": "kucoin",
+    "name": "KuCoin",
+    "mono": "KC",
+    "hed": "Widest altcoin listing, thinnest books on the long tail",
+    "note": "Widest altcoin listing, thinnest books on the long tail",
+    "m1": "0.22%",
+    "m2": "P2P only",
+    "m3": "$500k / day",
+    "score": 7.6
+  }
 ]

@@ -1,8 +1,602 @@
 [
-  { "id": "r1", "slotSlug": "sweet-bonanza", "operatorSlug": "stake", "rtp": 96.51, "publishedRtp": 96.51, "checkedAt": "2026-08-10", "checkedBy": "JD", "source": "in_client_paytable" },
-  { "id": "r2", "slotSlug": "sweet-bonanza", "operatorSlug": "roobet", "rtp": 94.5, "publishedRtp": 96.51, "checkedAt": "2026-08-12", "checkedBy": "JD", "source": "in_client_paytable" },
-  { "id": "r3", "slotSlug": "sweet-bonanza", "operatorSlug": "bc-game", "rtp": 96.51, "publishedRtp": 96.51, "checkedAt": "2026-06-01", "checkedBy": "MK", "source": "in_client_paytable" },
-  { "id": "r4", "slotSlug": "gates-of-olympus", "operatorSlug": "stake", "rtp": 96.5, "publishedRtp": 96.5, "checkedAt": "2026-08-15", "checkedBy": "JD", "source": "in_client_paytable" },
-  { "id": "r5", "slotSlug": "gates-of-olympus", "operatorSlug": "gamdom", "rtp": 94.2, "publishedRtp": 96.5, "checkedAt": "2026-07-02", "checkedBy": "MK", "source": "operator_support" },
-  { "id": "r6", "slotSlug": "fruit-party", "operatorSlug": "stake", "rtp": 96.47, "publishedRtp": 96.47, "checkedAt": "2026-08-20", "checkedBy": "JD", "source": "in_client_paytable" }
+  {
+    "id": "r1",
+    "slotSlug": "money-train-4",
+    "operatorSlug": "roobet",
+    "rtp": 96.1,
+    "publishedRtp": 96.1,
+    "checkedAt": "2026-08-24",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r2",
+    "slotSlug": "money-train-4",
+    "operatorSlug": "stake",
+    "rtp": 96.1,
+    "publishedRtp": 96.1,
+    "checkedAt": "2026-08-24",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r3",
+    "slotSlug": "money-train-4",
+    "operatorSlug": "bc-game",
+    "rtp": 94.5,
+    "publishedRtp": 96.1,
+    "checkedAt": "2026-08-24",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r4",
+    "slotSlug": "money-train-4",
+    "operatorSlug": "shuffle",
+    "rtp": 96.1,
+    "publishedRtp": 96.1,
+    "checkedAt": "2026-08-24",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r5",
+    "slotSlug": "money-train-4",
+    "operatorSlug": "rollbit",
+    "rtp": 94,
+    "publishedRtp": 96.1,
+    "checkedAt": "2026-08-24",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r6",
+    "slotSlug": "money-train-4",
+    "operatorSlug": "gamdom",
+    "rtp": 96.1,
+    "publishedRtp": 96.1,
+    "checkedAt": "2026-08-24",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r7",
+    "slotSlug": "mental",
+    "operatorSlug": "roobet",
+    "rtp": 96.08,
+    "publishedRtp": 96.08,
+    "checkedAt": "2026-08-24",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r8",
+    "slotSlug": "mental",
+    "operatorSlug": "stake",
+    "rtp": 96.08,
+    "publishedRtp": 96.08,
+    "checkedAt": "2026-08-24",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r9",
+    "slotSlug": "mental",
+    "operatorSlug": "bc-game",
+    "rtp": 96.08,
+    "publishedRtp": 96.08,
+    "checkedAt": "2026-08-24",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r10",
+    "slotSlug": "mental",
+    "operatorSlug": "shuffle",
+    "rtp": 96.08,
+    "publishedRtp": 96.08,
+    "checkedAt": "2026-08-24",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r11",
+    "slotSlug": "mental",
+    "operatorSlug": "rollbit",
+    "rtp": 96.08,
+    "publishedRtp": 96.08,
+    "checkedAt": "2026-08-24",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r12",
+    "slotSlug": "mental",
+    "operatorSlug": "gamdom",
+    "rtp": 96.08,
+    "publishedRtp": 96.08,
+    "checkedAt": "2026-08-24",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r13",
+    "slotSlug": "razor-shark",
+    "operatorSlug": "roobet",
+    "rtp": 96.2,
+    "publishedRtp": 96.7,
+    "checkedAt": "2026-08-23",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r14",
+    "slotSlug": "razor-shark",
+    "operatorSlug": "stake",
+    "rtp": 96.7,
+    "publishedRtp": 96.7,
+    "checkedAt": "2026-08-23",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r15",
+    "slotSlug": "razor-shark",
+    "operatorSlug": "bc-game",
+    "rtp": 96.2,
+    "publishedRtp": 96.7,
+    "checkedAt": "2026-08-23",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r16",
+    "slotSlug": "razor-shark",
+    "operatorSlug": "shuffle",
+    "rtp": 96.7,
+    "publishedRtp": 96.7,
+    "checkedAt": "2026-08-23",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r17",
+    "slotSlug": "razor-shark",
+    "operatorSlug": "rollbit",
+    "rtp": 94.5,
+    "publishedRtp": 96.7,
+    "checkedAt": "2026-08-23",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r18",
+    "slotSlug": "razor-shark",
+    "operatorSlug": "gamdom",
+    "rtp": 96.2,
+    "publishedRtp": 96.7,
+    "checkedAt": "2026-08-23",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r19",
+    "slotSlug": "wanted-dead-or-a-wild",
+    "operatorSlug": "roobet",
+    "rtp": 96.38,
+    "publishedRtp": 96.38,
+    "checkedAt": "2026-08-24",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r20",
+    "slotSlug": "wanted-dead-or-a-wild",
+    "operatorSlug": "stake",
+    "rtp": 96.38,
+    "publishedRtp": 96.38,
+    "checkedAt": "2026-08-24",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r21",
+    "slotSlug": "wanted-dead-or-a-wild",
+    "operatorSlug": "bc-game",
+    "rtp": 96.38,
+    "publishedRtp": 96.38,
+    "checkedAt": "2026-08-24",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r22",
+    "slotSlug": "wanted-dead-or-a-wild",
+    "operatorSlug": "shuffle",
+    "rtp": 96.38,
+    "publishedRtp": 96.38,
+    "checkedAt": "2026-08-24",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r23",
+    "slotSlug": "wanted-dead-or-a-wild",
+    "operatorSlug": "rollbit",
+    "rtp": 96.38,
+    "publishedRtp": 96.38,
+    "checkedAt": "2026-08-24",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r24",
+    "slotSlug": "wanted-dead-or-a-wild",
+    "operatorSlug": "gamdom",
+    "rtp": 96.38,
+    "publishedRtp": 96.38,
+    "checkedAt": "2026-08-24",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r25",
+    "slotSlug": "sweet-bonanza",
+    "operatorSlug": "roobet",
+    "rtp": 96.51,
+    "publishedRtp": 96.51,
+    "checkedAt": "2026-08-22",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r26",
+    "slotSlug": "sweet-bonanza",
+    "operatorSlug": "stake",
+    "rtp": 96.51,
+    "publishedRtp": 96.51,
+    "checkedAt": "2026-08-22",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r27",
+    "slotSlug": "sweet-bonanza",
+    "operatorSlug": "bc-game",
+    "rtp": 94.5,
+    "publishedRtp": 96.51,
+    "checkedAt": "2026-08-22",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r28",
+    "slotSlug": "sweet-bonanza",
+    "operatorSlug": "shuffle",
+    "rtp": 96.51,
+    "publishedRtp": 96.51,
+    "checkedAt": "2026-08-22",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r29",
+    "slotSlug": "sweet-bonanza",
+    "operatorSlug": "rollbit",
+    "rtp": 94.5,
+    "publishedRtp": 96.51,
+    "checkedAt": "2026-08-22",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r30",
+    "slotSlug": "sweet-bonanza",
+    "operatorSlug": "gamdom",
+    "rtp": 95,
+    "publishedRtp": 96.51,
+    "checkedAt": "2026-08-22",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r31",
+    "slotSlug": "fire-in-the-hole-2",
+    "operatorSlug": "roobet",
+    "rtp": 96.06,
+    "publishedRtp": 96.06,
+    "checkedAt": "2026-08-23",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r32",
+    "slotSlug": "fire-in-the-hole-2",
+    "operatorSlug": "stake",
+    "rtp": 96.06,
+    "publishedRtp": 96.06,
+    "checkedAt": "2026-08-23",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r33",
+    "slotSlug": "fire-in-the-hole-2",
+    "operatorSlug": "bc-game",
+    "rtp": 96.06,
+    "publishedRtp": 96.06,
+    "checkedAt": "2026-08-23",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r34",
+    "slotSlug": "fire-in-the-hole-2",
+    "operatorSlug": "shuffle",
+    "rtp": 96.06,
+    "publishedRtp": 96.06,
+    "checkedAt": "2026-08-23",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r35",
+    "slotSlug": "fire-in-the-hole-2",
+    "operatorSlug": "rollbit",
+    "rtp": 96.06,
+    "publishedRtp": 96.06,
+    "checkedAt": "2026-08-23",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r36",
+    "slotSlug": "fire-in-the-hole-2",
+    "operatorSlug": "gamdom",
+    "rtp": 96.06,
+    "publishedRtp": 96.06,
+    "checkedAt": "2026-08-23",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r37",
+    "slotSlug": "gates-of-olympus",
+    "operatorSlug": "roobet",
+    "rtp": 96,
+    "publishedRtp": 96.5,
+    "checkedAt": "2026-08-22",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r38",
+    "slotSlug": "gates-of-olympus",
+    "operatorSlug": "stake",
+    "rtp": 96.5,
+    "publishedRtp": 96.5,
+    "checkedAt": "2026-08-22",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r39",
+    "slotSlug": "gates-of-olympus",
+    "operatorSlug": "bc-game",
+    "rtp": 94.5,
+    "publishedRtp": 96.5,
+    "checkedAt": "2026-08-22",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r40",
+    "slotSlug": "gates-of-olympus",
+    "operatorSlug": "shuffle",
+    "rtp": 96.5,
+    "publishedRtp": 96.5,
+    "checkedAt": "2026-08-22",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r41",
+    "slotSlug": "gates-of-olympus",
+    "operatorSlug": "rollbit",
+    "rtp": 94.5,
+    "publishedRtp": 96.5,
+    "checkedAt": "2026-08-22",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r42",
+    "slotSlug": "gates-of-olympus",
+    "operatorSlug": "gamdom",
+    "rtp": 95,
+    "publishedRtp": 96.5,
+    "checkedAt": "2026-08-22",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r43",
+    "slotSlug": "le-bandit",
+    "operatorSlug": "roobet",
+    "rtp": 96.31,
+    "publishedRtp": 96.31,
+    "checkedAt": "2026-08-21",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r44",
+    "slotSlug": "le-bandit",
+    "operatorSlug": "stake",
+    "rtp": 96.31,
+    "publishedRtp": 96.31,
+    "checkedAt": "2026-08-21",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r45",
+    "slotSlug": "le-bandit",
+    "operatorSlug": "bc-game",
+    "rtp": 96.31,
+    "publishedRtp": 96.31,
+    "checkedAt": "2026-08-21",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r46",
+    "slotSlug": "le-bandit",
+    "operatorSlug": "shuffle",
+    "rtp": 96.31,
+    "publishedRtp": 96.31,
+    "checkedAt": "2026-08-21",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r47",
+    "slotSlug": "le-bandit",
+    "operatorSlug": "rollbit",
+    "rtp": 96.31,
+    "publishedRtp": 96.31,
+    "checkedAt": "2026-08-21",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r48",
+    "slotSlug": "le-bandit",
+    "operatorSlug": "gamdom",
+    "rtp": 96.31,
+    "publishedRtp": 96.31,
+    "checkedAt": "2026-08-21",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r49",
+    "slotSlug": "san-quentin-xways",
+    "operatorSlug": "roobet",
+    "rtp": 96.03,
+    "publishedRtp": 96.03,
+    "checkedAt": "2026-08-21",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r50",
+    "slotSlug": "san-quentin-xways",
+    "operatorSlug": "stake",
+    "rtp": 96.03,
+    "publishedRtp": 96.03,
+    "checkedAt": "2026-08-21",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r51",
+    "slotSlug": "san-quentin-xways",
+    "operatorSlug": "bc-game",
+    "rtp": 96.03,
+    "publishedRtp": 96.03,
+    "checkedAt": "2026-08-21",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r52",
+    "slotSlug": "san-quentin-xways",
+    "operatorSlug": "shuffle",
+    "rtp": 96.03,
+    "publishedRtp": 96.03,
+    "checkedAt": "2026-08-21",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r53",
+    "slotSlug": "san-quentin-xways",
+    "operatorSlug": "rollbit",
+    "rtp": 96.03,
+    "publishedRtp": 96.03,
+    "checkedAt": "2026-08-21",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r54",
+    "slotSlug": "san-quentin-xways",
+    "operatorSlug": "gamdom",
+    "rtp": 96.03,
+    "publishedRtp": 96.03,
+    "checkedAt": "2026-08-21",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r55",
+    "slotSlug": "big-bass-bonanza",
+    "operatorSlug": "roobet",
+    "rtp": 96.71,
+    "publishedRtp": 96.71,
+    "checkedAt": "2026-08-20",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r56",
+    "slotSlug": "big-bass-bonanza",
+    "operatorSlug": "stake",
+    "rtp": 96.71,
+    "publishedRtp": 96.71,
+    "checkedAt": "2026-08-20",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r57",
+    "slotSlug": "big-bass-bonanza",
+    "operatorSlug": "bc-game",
+    "rtp": 95,
+    "publishedRtp": 96.71,
+    "checkedAt": "2026-08-20",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r58",
+    "slotSlug": "big-bass-bonanza",
+    "operatorSlug": "shuffle",
+    "rtp": 96.21,
+    "publishedRtp": 96.71,
+    "checkedAt": "2026-08-20",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r59",
+    "slotSlug": "big-bass-bonanza",
+    "operatorSlug": "rollbit",
+    "rtp": 95,
+    "publishedRtp": 96.71,
+    "checkedAt": "2026-08-20",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  },
+  {
+    "id": "r60",
+    "slotSlug": "big-bass-bonanza",
+    "operatorSlug": "gamdom",
+    "rtp": 96.71,
+    "publishedRtp": 96.71,
+    "checkedAt": "2026-08-20",
+    "checkedBy": "JD",
+    "source": "in_client_paytable"
+  }
 ]

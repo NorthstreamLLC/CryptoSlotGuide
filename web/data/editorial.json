@@ -1,4 +1,8 @@
 {
-  "casino:roobet": "Roobet's median withdrawal is the fastest we've measured across the index, and its rakeback structure rewards volume without a hard wagering requirement — the trade-off is a narrower coin list than Stake or Shuffle.",
-  "casino:stake": "Stake carries the deepest live-dealer catalogue we track and pairs it with a genuinely competitive sportsbook, but two confirmations on deposit is a real wait compared to the fastest operators here."
+  "casino:roobet": "Roobet is the operator we point readers at most often, and the reason is boring: it does the operational things well and does not dress them up. Four-minute payouts and 1× wagering are worth more over a year than any welcome offer on this index.",
+  "casino:stake": "Stake is the better product and the worse deal. The catalogue, the sportsbook and the interface are all a step above, but the rakeback needs volume most readers will never reach before it beats a straightforward cashback.",
+  "exchange:kraken": "If you are funding a casino bankroll monthly, this is where we would do it. The spread is the tightest we measured and the fiat rails have never given us a surprise in three years of testing.",
+  "wallet:rabby": "The pre-sign simulation is the single best safety feature in any wallet we test. If you interact with cashier contracts at all, this is the one we would put a beginner in front of.",
+  "provider:hacksaw-gaming": "One RTP per title is a small policy with a large effect: it means the studio, not the casino, decides the maths. We wish more studios were this boring about it.",
+  "provider:pragmatic-play": "The catalogue is unavoidable and the RTP policy is the reason we cannot rank it higher. A 94.5% build of a title published at 96.5% is the same game with two points of your money removed."
 }

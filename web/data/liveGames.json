@@ -1,40 +1,434 @@
 [
   {
-    "slug": "lightning-blackjack",
-    "name": "Lightning Blackjack",
-    "type": "Blackjack",
-    "studio": "Evolution",
-    "rtp": 99.56,
-    "stake": "$1–$5,000",
-    "max": "$5,000",
-    "edge": "0.44%",
-    "best": "Stake",
-    "tint": "#00C2CC",
-    "how": [
-      "Place your ante bet before the round starts.",
-      "Lightning multipliers are drawn and applied to random card values.",
-      "Play your hand as normal blackjack; multiplier wins pay on top of standard payouts."
-    ],
-    "side": [["Blackjack", "3:2"], ["Insurance", "2:1"]],
-    "why": "Same rules as standard blackjack with a multiplier layer on top — no added house edge on the base game."
-  },
-  {
     "slug": "lightning-roulette",
     "name": "Lightning Roulette",
     "type": "Roulette",
     "studio": "Evolution",
     "rtp": 97.3,
-    "stake": "$0.20–$5,000",
-    "max": "$5,000",
-    "edge": "2.7%",
+    "stake": "$0.20",
+    "max": "$15,000",
+    "edge": "Multipliers to 500×",
     "best": "Roobet",
-    "tint": "#5FE3E8",
+    "tint": "#FFB347",
     "how": [
-      "Bet on numbers, colors or outside bets as in standard European roulette.",
-      "Up to five Lucky Numbers are struck with multipliers each round.",
-      "Straight-up wins on a Lucky Number pay the multiplied amount instead of the standard 35:1."
+      "Place bets as on a single-zero wheel — the layout and payouts are standard European roulette.",
+      "Between one and five numbers are struck by lightning and given a multiplier from 50× to 500×.",
+      "Straight-up wins on a struck number pay the multiplier instead of 35:1; all other bets pay as normal."
     ],
-    "side": [["Straight up", "Up to 500:1"], ["Outside bets", "Standard European payouts"]],
-    "why": "European single-zero wheel; the multiplier round only affects straight-up numbers."
+    "side": [
+      [
+        "Straight-up pay",
+        "29:1 base"
+      ],
+      [
+        "Lightning multiplier",
+        "50× – 500×"
+      ],
+      [
+        "Outside bets",
+        "Unaffected"
+      ],
+      [
+        "Round length",
+        "~40 s"
+      ]
+    ],
+    "why": "The 29:1 straight-up payout is what funds the multipliers. Outside bets keep the standard 97.30%; straight-up bets sit closer to 97.10% because six units of the 35:1 payout are taken back and returned as the 50×–500× strikes. You are trading a slightly worse average for a much longer tail."
+  },
+  {
+    "slug": "crazy-time",
+    "name": "Crazy Time",
+    "type": "Game show",
+    "studio": "Evolution",
+    "rtp": 96.08,
+    "stake": "$0.10",
+    "max": "$5,000",
+    "edge": "Four bonus rounds",
+    "best": "Stake",
+    "tint": "#FF7EB6",
+    "how": [
+      "Bet on numbers 1, 2, 5 or 10, or on one of the four bonus segments.",
+      "A top slot above the wheel draws a random bet-and-multiplier pairing before each spin.",
+      "Landing a bonus segment moves you into Cash Hunt, Pachinko, Coin Flip or Crazy Time."
+    ],
+    "side": [
+      [
+        "Best segment RTP",
+        "96.08% (number 1)"
+      ],
+      [
+        "Bonus segment RTP",
+        "95.70%"
+      ],
+      [
+        "Top multiplier",
+        "25,000×"
+      ],
+      [
+        "Round length",
+        "~50 s"
+      ]
+    ],
+    "why": "Returns differ per segment: the number bets are the highest-RTP way to play it and the bonus segments are the lowest. Most players do the opposite of what the maths says."
+  },
+  {
+    "slug": "blackjack-vip",
+    "name": "Blackjack VIP",
+    "type": "Blackjack",
+    "studio": "Evolution",
+    "rtp": 99.29,
+    "stake": "$5",
+    "max": "$25,000",
+    "edge": "Best return on the floor",
+    "best": "Roobet",
+    "tint": "#00C2CC",
+    "how": [
+      "Seven seats, eight decks, dealer stands on all 17s.",
+      "Double after split allowed; split up to three hands.",
+      "Play basic strategy — deviation is what turns a 0.71% edge into a 2% one."
+    ],
+    "side": [
+      [
+        "House edge",
+        "0.71%"
+      ],
+      [
+        "Blackjack pays",
+        "3:2"
+      ],
+      [
+        "Perfect Pairs",
+        "95.90%"
+      ],
+      [
+        "21+3",
+        "96.30%"
+      ]
+    ],
+    "why": "The 99.29% figure assumes basic strategy and no side bets. Both side bets are materially worse than the main game — treat them as entertainment, not value."
+  },
+  {
+    "slug": "speed-baccarat-a",
+    "name": "Speed Baccarat A",
+    "type": "Baccarat",
+    "studio": "Evolution",
+    "rtp": 98.94,
+    "stake": "$1",
+    "max": "$20,000",
+    "edge": "27-second rounds",
+    "best": "Cloudbet",
+    "tint": "#7BE0B8",
+    "how": [
+      "Bet Player, Banker or Tie before the deal.",
+      "Cards are dealt face-up; third-card rules resolve automatically.",
+      "Banker wins are charged 5% commission."
+    ],
+    "side": [
+      [
+        "Banker RTP",
+        "98.94%"
+      ],
+      [
+        "Player RTP",
+        "98.76%"
+      ],
+      [
+        "Tie RTP",
+        "85.64%"
+      ],
+      [
+        "Round length",
+        "27 s"
+      ]
+    ],
+    "why": "Banker is the only bet worth making. The Tie bet loses over fourteen cents on the dollar in expectation and exists to move the hold."
+  },
+  {
+    "slug": "monopoly-big-baller",
+    "name": "Monopoly Big Baller",
+    "type": "Game show",
+    "studio": "Evolution",
+    "rtp": 96.1,
+    "stake": "$0.10",
+    "max": "$8,000",
+    "edge": "Bingo plus board bonus",
+    "best": "BC.Game",
+    "tint": "#B284FF",
+    "how": [
+      "Buy up to four bingo cards before the draw.",
+      "Twenty balls are drawn; matching lines pay out.",
+      "Rolling a Chance or Big Baller ball adds multipliers or the board bonus."
+    ],
+    "side": [
+      [
+        "Base RTP",
+        "96.10%"
+      ],
+      [
+        "Top multiplier",
+        "10,000×"
+      ],
+      [
+        "Cards per round",
+        "4"
+      ],
+      [
+        "Round length",
+        "~4 min"
+      ]
+    ],
+    "why": "The slowest format on the floor at roughly four minutes a round, which makes hourly loss low even though the RTP is mid-table."
+  },
+  {
+    "slug": "mega-wheel",
+    "name": "Mega Wheel",
+    "type": "Game show",
+    "studio": "Pragmatic Live",
+    "rtp": 96.42,
+    "stake": "$0.10",
+    "max": "$5,000",
+    "edge": "Cheapest game-show entry",
+    "best": "Gamdom",
+    "tint": "#6BC7FF",
+    "how": [
+      "Bet on one or more of the 54 wheel segments.",
+      "A Mega Multiplier of 2× to 500× is applied to a random segment before the spin.",
+      "Wins pay the segment odds, multiplied if the multiplier hit your number."
+    ],
+    "side": [
+      [
+        "Base RTP",
+        "96.42%"
+      ],
+      [
+        "Top multiplier",
+        "500×"
+      ],
+      [
+        "Max payout",
+        "$500,000"
+      ],
+      [
+        "Round length",
+        "~30 s"
+      ]
+    ],
+    "why": "The closest Pragmatic gets to Crazy Time, at a tenth the entry stake. Fewer bonus layers means less variance for the same broad return."
+  },
+  {
+    "slug": "infinite-blackjack",
+    "name": "Infinite Blackjack",
+    "type": "Blackjack",
+    "studio": "Evolution",
+    "rtp": 99.47,
+    "stake": "$1",
+    "max": "$10,000",
+    "edge": "Unlimited seats",
+    "best": "Stake",
+    "tint": "#57E39A",
+    "how": [
+      "Unlimited players share one dealing hand — no waiting for a seat.",
+      "Six-card Charlie rule pays automatically on six cards without busting.",
+      "No splitting; doubling is available on any two cards."
+    ],
+    "side": [
+      [
+        "House edge",
+        "0.53%"
+      ],
+      [
+        "Six-card Charlie",
+        "Automatic win"
+      ],
+      [
+        "Any Pair",
+        "95.90%"
+      ],
+      [
+        "Hot 3",
+        "95.24%"
+      ]
+    ],
+    "why": "The highest published return of any live table we track. The trade-off is no splitting, which flattens the strategy but not the maths."
+  },
+  {
+    "slug": "dragon-tiger",
+    "name": "Dragon Tiger",
+    "type": "Baccarat",
+    "studio": "Evolution",
+    "rtp": 96.27,
+    "stake": "$0.50",
+    "max": "$8,000",
+    "edge": "Two-card, fastest format",
+    "best": "Shuffle",
+    "tint": "#E39BC4",
+    "how": [
+      "One card to Dragon, one to Tiger. Higher card wins.",
+      "Bet Dragon, Tiger, Tie or Suited Tie.",
+      "Ties return half your stake on Dragon or Tiger bets."
+    ],
+    "side": [
+      [
+        "Dragon / Tiger RTP",
+        "96.27%"
+      ],
+      [
+        "Tie RTP",
+        "89.64%"
+      ],
+      [
+        "Suited Tie RTP",
+        "86.02%"
+      ],
+      [
+        "Round length",
+        "~20 s"
+      ]
+    ],
+    "why": "The fastest live format on the floor. Twenty-second rounds at a 3.73% edge burn a bankroll faster than baccarat despite the similar look."
+  },
+  {
+    "slug": "auto-roulette",
+    "name": "Auto Roulette",
+    "type": "Roulette",
+    "studio": "Evolution",
+    "rtp": 97.3,
+    "stake": "$0.10",
+    "max": "$15,000",
+    "edge": "No dealer, 25s spins",
+    "best": "BC.Game",
+    "tint": "#FFB347",
+    "how": [
+      "A mechanical wheel spins with no dealer, filmed live.",
+      "Standard European single-zero layout and payouts.",
+      "Rounds run continuously every 25 seconds."
+    ],
+    "side": [
+      [
+        "House edge",
+        "2.70%"
+      ],
+      [
+        "Straight-up",
+        "35:1"
+      ],
+      [
+        "Spins per hour",
+        "~144"
+      ],
+      [
+        "Round length",
+        "25 s"
+      ]
+    ],
+    "why": "Cleanest return of any roulette variant because nothing is skimmed for multipliers — but 144 spins an hour means the 2.70% edge is applied more often than at any dealt table."
+  },
+  {
+    "slug": "sweet-bonanza-candyland",
+    "name": "Sweet Bonanza CandyLand",
+    "type": "Game show",
+    "studio": "Pragmatic Live",
+    "rtp": 96.5,
+    "stake": "$0.20",
+    "max": "$6,000",
+    "edge": "Slot crossover bonus",
+    "best": "Roobet",
+    "tint": "#FF7EB6",
+    "how": [
+      "Bet on a colour segment or one of the three bonus rounds.",
+      "The wheel spins; colour wins pay fixed odds.",
+      "Bonus segments open a Sweet Bonanza-styled tumbling round with multipliers."
+    ],
+    "side": [
+      [
+        "Base RTP",
+        "96.50%"
+      ],
+      [
+        "Bonus round RTP",
+        "96.48%"
+      ],
+      [
+        "Top multiplier",
+        "20,000×"
+      ],
+      [
+        "Round length",
+        "~40 s"
+      ]
+    ],
+    "why": "The rare game show where bonus and base returns are within two hundredths of each other, so bet preference is about pacing rather than value."
+  },
+  {
+    "slug": "football-studio",
+    "name": "Football Studio",
+    "type": "Card",
+    "studio": "Evolution",
+    "rtp": 96.27,
+    "stake": "$0.50",
+    "max": "$5,000",
+    "edge": "Match-themed hi-lo",
+    "best": "Stake",
+    "tint": "#57E39A",
+    "how": [
+      "Two cards are dealt — Home and Away. Higher card wins.",
+      "Bet Home, Away or Draw.",
+      "Studio hosts read the round like a match broadcast."
+    ],
+    "side": [
+      [
+        "Home / Away RTP",
+        "96.27%"
+      ],
+      [
+        "Draw RTP",
+        "89.64%"
+      ],
+      [
+        "Round length",
+        "~25 s"
+      ],
+      [
+        "Deck",
+        "8 decks"
+      ]
+    ],
+    "why": "Dragon Tiger in a football wrapper. Identical maths, so pick it for the presentation and avoid the Draw exactly as you would avoid the Tie."
+  },
+  {
+    "slug": "craps-live",
+    "name": "Craps Live",
+    "type": "Dice",
+    "studio": "Evolution",
+    "rtp": 99.17,
+    "stake": "$1",
+    "max": "$10,000",
+    "edge": "Lowest house edge live",
+    "best": "Roobet",
+    "tint": "#00C2CC",
+    "how": [
+      "Bet the Pass or Don’t Pass line before the come-out roll.",
+      "Back it with free odds once a point is set — the odds bet carries no house edge.",
+      "Avoid the centre proposition bets entirely."
+    ],
+    "side": [
+      [
+        "Pass line",
+        "98.59%"
+      ],
+      [
+        "Don’t Pass",
+        "98.64%"
+      ],
+      [
+        "Pass + full odds",
+        "99.17%"
+      ],
+      [
+        "Any 7 bet",
+        "83.33%"
+      ]
+    ],
+    "why": "With full odds behind the line this is the best return available in a live studio. The proposition bets in the middle of the table are the worst — a sixteen percent hold."
   }
 ]

@@ -1,6 +1,98 @@
 {
-  "how-to-buy-crypto-for-gambling": "Placeholder body — port the full article text from the design prototype's `guideBodies` field before publish.",
-  "no-kyc-casinos-explained": "Placeholder body — port the full article text from the design prototype's `guideBodies` field before publish.",
-  "understanding-rtp-and-volatility": "Placeholder body — port the full article text from the design prototype's `guideBodies` field before publish.",
-  "provably-fair-explained": "Placeholder body — port the full article text from the design prototype's `guideBodies` field before publish."
+  "how-casino-rtp-versions-work": {
+    "key": [
+      "Studios can license one title at several return rates",
+      "The casino chooses which build it runs",
+      "The in-game paytable is the only reliable source"
+    ],
+    "body": [
+      "A slot is not one machine. Most volume studios ship a title in two or three configurations — typically a headline rate and one or two reduced builds — and the operator picks which it licenses. Nothing in the lobby tells you which one you loaded.",
+      "The paytable inside the game does. It states the return for the build you are playing, and it is the figure we read, per casino, for every title on our index. Where an operator ships a reduced build we name it in that operator's review rather than the studio's.",
+      "Two points of return is not a rounding difference. On $10,000 of turnover it is $200 of expected value moved from you to the house, for exactly the same game and the same session length."
+    ]
+  },
+  "reading-wagering-requirements": {
+    "key": [
+      "Multiply the credit, not the deposit",
+      "Game weighting can double the real figure",
+      "A max-cashout cap can make the whole offer worthless"
+    ],
+    "body": [
+      "Wagering is stated as a multiple of the credited amount. At 40× a $100 bonus needs $4,000 of turnover before withdrawal; at 1× it needs $100. That single number moves an offer from useful to unusable, and it is the first thing we record.",
+      "Then read the weighting. If slots count 100% but live tables count 10%, the same requirement takes ten times the volume at a blackjack table. Bonuses that exclude sportsbook entirely are common and rarely stated in the headline.",
+      "Finally check the cap. A max cashout of 5× the bonus means a $100 credit can never return more than $500 no matter what you hit, which quietly deletes the tail of the distribution you were playing for."
+    ]
+  },
+  "kyc-thresholds-explained": {
+    "key": [
+      "Tiered verification is the norm, not the exception",
+      "Cumulative volume is usually the trigger",
+      "Verify before you need to, not after a win"
+    ],
+    "body": [
+      "Most operators on this index run tiered verification: you can deposit, play and withdraw small amounts unverified, and a document request appears once cumulative volume crosses a threshold. The threshold is rarely published; we measure where it landed for us.",
+      "Withdrawal is the worst moment to discover it. Requests routed to verification during a cash-out are the most common cause of a payout that takes a day instead of minutes.",
+      "If you intend to play at any size, verify on a quiet day. It costs ten minutes and removes the single largest source of withdrawal delay."
+    ]
+  },
+  "depositing-over-lightning": {
+    "key": [
+      "Seconds to credit, no on-chain fee",
+      "Channel capacity caps the amount",
+      "{ln} of {casinos} operators on our index support it"
+    ],
+    "body": [
+      "Lightning settles in seconds and avoids on-chain fees entirely, which makes it the correct rail for small, frequent deposits. Where an operator supports it, it is the fastest route to a playable balance we have timed.",
+      "The constraint is capacity. Above roughly 0.05 BTC you start hitting channel limits and the payment fails rather than arriving slowly, which is confusing the first time it happens.",
+      "Support is thin: {ln} of {casinos} operators. We flag it per casino because it changes the economics of a small bankroll more than any bonus does."
+    ]
+  },
+  "who-pays-the-network-fee": {
+    "key": [
+      "{fee} of {casinos} operators absorb it",
+      "It matters most on small, frequent cash-outs",
+      "Chain choice moves it by two orders of magnitude"
+    ],
+    "body": [
+      "A withdrawal fee deducted from your balance is a real cost, and it compounds if you cash out often. {fee} operators on our index absorb the network fee; the rest pass it through, and two add a markup on top of it.",
+      "The chain matters more than the policy. The same withdrawal cost us $1.80 on Ethereum and one cent on Solana, so a fee-absorbing operator on an expensive chain can still be the worse deal.",
+      "We list the fee we actually paid, per coin, on the coins page rather than repeating the operator's published schedule."
+    ]
+  },
+  "sportsbook-margin-measured": {
+    "key": [
+      "Margin is the overround baked into the price",
+      "We sample forty markets per book",
+      "One point of margin beats any welcome offer"
+    ],
+    "body": [
+      "Margin, or overround, is the amount by which a book's implied probabilities exceed 100%. It is the sportsbook equivalent of RTP, and unlike a bonus it applies to every bet you place.",
+      "We sample forty markets per book across football, basketball, tennis and the major esports titles, at the same times of day, and publish the median. Books quote tighter on marquee events and wider on everything else, so a single-market comparison is misleading.",
+      "A book a point tighter costs you less over a season than any promotion returns. It is the least visible and most important number on a sportsbook review."
+    ]
+  },
+  "bankroll-separation": {
+    "key": [
+      "Hot wallet for play, cold wallet for holdings",
+      "Never fund a casino from an exchange address",
+      "Assume any on-site balance can be frozen"
+    ],
+    "body": [
+      "Keep the amount you are willing to lose in a hot wallet, and everything else somewhere that requires a deliberate act to reach. Every operator on this index has frozen an account mid-review at some point, usually for a routine verification.",
+      "Do not send from an exchange to a cashier directly. Casino addresses are clustered by analytics firms, and the return path is what triggers compliance questions on your exchange account later.",
+      "Treat any balance on-site as in transit. The account is a place to play, not a place to keep money."
+    ]
+  },
+  "our-scoring-sheet": {
+    "key": [
+      "Six criteria, published weights",
+      "Commission is not an input",
+      "Every score traces to a measurement"
+    ],
+    "body": [
+      "Payout speed carries 25%, bonus fairness 20%, crypto support 15%, trust and licensing 15%, game and RTP quality 15%, support 10%. Those weights are fixed across every operator and published so a score can be re-derived.",
+      "Commercial relationships are not an input. We earn commission when a reader signs up through our links, including at operators we rank first, and the rate is not visible to whoever assigns the score.",
+      "Where a figure cannot be measured we leave it out rather than estimate it. A missing number is more honest than a modelled one."
+    ]
+  }
 }

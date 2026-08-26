@@ -226,18 +226,31 @@ export interface SportsMarket {
 
 export interface EsportsTitle {
   name: string;
+  mono: string;
+  tint: string;
   note: string;
+  best: string;
+  m2: string;
+  m3: string;
 }
 
 export interface GuideRow {
   slug: string;
   title: string;
+  mono: string;
+  tint: string;
   standfirst: string;
   category: string;
   readMins: number;
+  updated: string;
 }
 
-export type GuideBodies = Record<string, string>;
+export interface GuideBody {
+  key: string[];
+  body: string[];
+}
+/** Keyed by guide slug. */
+export type GuideBodies = Record<string, GuideBody>;
 
 /**
  * One row per operator/slot cell — never a single field on Slot.
