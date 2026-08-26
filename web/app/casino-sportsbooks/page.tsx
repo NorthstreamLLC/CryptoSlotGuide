@@ -1,5 +1,5 @@
-import { VerticalIndexPage } from "@/components/vertical/VerticalIndexPage";
+import { CasinoIndexPage } from "@/components/casino-index/CasinoIndexPage";
 
 export default function Page() {
-  return <VerticalIndexPage kind="sportsbooks" tabIdx={1} />;
+  return <CasinoIndexPage filter="sports" />;
 }

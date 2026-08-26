@@ -1,11 +1,5 @@
-import { PagePlaceholder } from "@/components/ui/PagePlaceholder";
+import { CasinoIndexPage } from "@/components/casino-index/CasinoIndexPage";
 
 export default function Page() {
-  return (
-    <PagePlaceholder
-      kicker="Crypto casinos · Lowest wagering"
-      title="Lowest wagering crypto casinos"
-      standfirst="Bonus wagering requirements, lowest first."
-    />
-  );
+  return <CasinoIndexPage filter="lowwager" />;
 }

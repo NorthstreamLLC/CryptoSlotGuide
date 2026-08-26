@@ -132,7 +132,11 @@ export function VerticalIndexPage({ kind, tabIdx = 0 }: { kind: VerticalKind; ta
 
 function vertHref(kind: VerticalKind, tab: number): string {
   if (kind !== "sportsbooks") return `/${kind}`;
-  return tab === 0 ? "/sportsbooks" : tab === 1 ? "/casino-sportsbooks" : "/esports-casinos";
+  // Note: /casino-sportsbooks and /esports-casinos are reserved for the
+  // casino-index filtered views (see lib/casino-index.ts) — a different
+  // page from this vertical's Sports/Esports market-list tabs, so those
+  // tabs live under a query param on /sportsbooks instead of their own URL.
+  return tab === 0 ? "/sportsbooks" : `/sportsbooks?tab=${tab}`;
 }
 
 function HeadCell({ children, muted }: { children: React.ReactNode; muted?: boolean }) {
