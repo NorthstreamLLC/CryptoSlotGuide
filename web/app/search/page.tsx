@@ -1,11 +1,6 @@
-import { PagePlaceholder } from "@/components/ui/PagePlaceholder";
+import { SearchPage } from "@/components/search/SearchPage";
 
-export default function Page() {
-  return (
-    <PagePlaceholder
-      kicker="Search"
-      title="Search"
-      standfirst="Live search across casinos, slots, providers, wallets, exchanges, guides and coins."
-    />
-  );
+export default async function Page({ searchParams }: { searchParams: Promise<{ q?: string }> }) {
+  const { q } = await searchParams;
+  return <SearchPage initialQuery={q ?? ""} />;
 }
