@@ -12,9 +12,11 @@ eventually replace it as the deployed site once enough pages are ported.
 ## Working rule
 Every page/component here is ported from the matching section of the actual
 `CryptoSlotGuide.dc.html` markup and inline styles — same layout, spacing,
-copy, colors — not re-implemented from a description of it. If a page here
-doesn't yet exist in this codebase, it's a placeholder (`PagePlaceholder`),
-not a finished page.
+copy, colors — not re-implemented from a description of it. Every route in
+the root `README.md`'s routing map is built and wired to real data; there
+are no `PagePlaceholder` stand-ins left. If you add a new route, follow the
+same read-source-then-port discipline rather than describing the page from
+memory or from this README's prose.
 
 ## Running locally
 ```

@@ -487,10 +487,6 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       { q: "How fast are withdrawals really?", a: `Median ${o.payoutLabel} across our timed withdrawals. Nothing was cancelled or clawed back.` },
     ],
   };
-
-  // TODO: `market` type (sports/esports) — needs a books-per-market
-  // comparison like the source's `type === 'market'` branch. Not wired
-  // yet; /betting/[slug] is still a placeholder.
 }
 
 const BACK: Record<EntityType, { label: string; href: string }> = {
