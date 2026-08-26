@@ -13,8 +13,10 @@ import providers from "@/data/providers.json";
 import walletRows from "@/data/walletRows.json";
 import exchangeRows from "@/data/exchangeRows.json";
 import sportsMarkets from "@/data/sportsMarkets.json";
+import sbData from "@/data/sbData.json";
 import esportsTitles from "@/data/esportsTitles.json";
 import guideRows from "@/data/guideRows.json";
+import guideBodies from "@/data/guideBodies.json";
 import houseGames from "@/data/houseGames.json";
 import fiatCasinos from "@/data/fiatCasinos.json";
 import predMarkets from "@/data/predMarkets.json";
@@ -35,6 +37,7 @@ import type {
   Editorial,
   EsportsTitle,
   FiatCasino,
+  GuideBodies,
   GuideRow,
   HouseGame,
   LiveCasino,
@@ -48,6 +51,7 @@ import type {
   Slot,
   SlotCategoryDef,
   SlotTags,
+  SportsbookData,
   SportsMarket,
   TickerFact,
   WalletOrExchangeRow,
@@ -66,8 +70,10 @@ export const siteData = {
   walletRows: walletRows as WalletOrExchangeRow[],
   exchangeRows: exchangeRows as WalletOrExchangeRow[],
   sportsMarkets: sportsMarkets as SportsMarket[],
+  sbData: sbData as SportsbookData,
   esportsTitles: esportsTitles as EsportsTitle[],
   guideRows: guideRows as GuideRow[],
+  guideBodies: guideBodies as GuideBodies,
   houseGames: houseGames as HouseGame[],
   fiatCasinos: fiatCasinos as FiatCasino[],
   predMarkets: predMarkets as PredictionMarkets,
