@@ -1,6 +1,8 @@
 [
-  { "title": "Fund a real account", "body": "Every operator we score is tested on a funded account under a real identity, not a demo or affiliate sandbox." },
-  { "title": "Time the withdrawal", "body": "We record wall-clock time from withdrawal request to funds landing on-chain, across at least three separate withdrawals." },
-  { "title": "Check RTP in-client", "body": "Where a studio licenses multiple configurations, we read the paytable inside the operator's own game client rather than trusting the studio's headline figure." },
-  { "title": "Score against fixed criteria", "body": "Every operator is scored against the same six weighted criteria — see Criteria below — so scores are comparable across the index." }
+  { "n": "01", "t": "Fund a real account", "d": "Own money, own name, no press access or comped balance. Every figure on the site comes from an account that could be frozen like anyone else's." },
+  { "n": "02", "t": "Time the withdrawals", "d": "At least three sizes per operator, from the minimum to four figures, timed from confirmed request to first on-chain broadcast so network congestion is excluded." },
+  { "n": "03", "t": "Read the paytables", "d": "Open each tracked title inside the operator's own client and read the stated return. This is how we catch reduced builds that the lobby does not disclose." },
+  { "n": "04", "t": "Transcribe the terms", "d": "Wagering, weighting, caps, expiry and max bet, copied from the operator's own page on the date of test, then flagged where they materially limit withdrawal." },
+  { "n": "05", "t": "File three support tickets", "d": "One simple, one about a withdrawal, one deliberately ambiguous, across time zones. We record first reply and resolution." },
+  { "n": "06", "t": "Re-test on a schedule", "d": "Every operator is re-tested at least quarterly, and immediately if a reader reports a change we can reproduce. Each page carries the date of its last pass." }
 ]

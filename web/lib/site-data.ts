@@ -22,10 +22,14 @@ import coinsBy from "@/data/coinsBy.json";
 import rtpWatch from "@/data/rtpWatch.json";
 import watchOps from "@/data/watchOps.json";
 import editorial from "@/data/editorial.json";
+import methodSteps from "@/data/methodSteps.json";
+import criteria from "@/data/criteria.json";
+import reviewBasis from "@/data/reviewBasis.json";
 
 import type {
   CoinDef,
   CoinsByOperator,
+  Criterion,
   Editorial,
   EsportsTitle,
   FiatCasino,
@@ -33,9 +37,11 @@ import type {
   HouseGame,
   LiveCasino,
   LiveGame,
+  MethodStep,
   Operator,
   PredictionMarkets,
   Provider,
+  ReviewBasis,
   RtpReading,
   Slot,
   SportsMarket,
@@ -65,6 +71,9 @@ export const siteData = {
   rtpWatch: rtpWatch as RtpReading[],
   watchOps: watchOps as WatchOperator[],
   editorial: editorial as Editorial,
+  methodSteps: methodSteps as MethodStep[],
+  criteria: criteria as Criterion[],
+  reviewBasis: reviewBasis as ReviewBasis[],
 };
 
 export const siteCounts = counts(siteData);

@@ -265,14 +265,24 @@ export interface WatchOperator {
 export type Editorial = Record<string, string>;
 
 export interface MethodStep {
-  title: string;
-  body: string;
+  n: string;
+  t: string;
+  d: string;
 }
 
 export interface Criterion {
-  key: string;
-  label: string;
-  weight: number;
+  name: string;
+  /** e.g. "25%" — kept as the source's display string, not a fraction. */
+  weight: string;
+  desc: string;
+}
+
+export interface ReviewBasis {
+  name: string;
+  icon: string;
+  tint: string;
+  checks: string;
+  measured: string;
 }
 
 /** Entity types the generic review page and search can resolve. */

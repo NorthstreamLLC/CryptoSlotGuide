@@ -1,8 +1,8 @@
 [
-  { "key": "payout", "label": "Payout speed", "weight": 0.25 },
-  { "key": "trust", "label": "Trust & licensing", "weight": 0.2 },
-  { "key": "value", "label": "Bonus value", "weight": 0.15 },
-  { "key": "catalogue", "label": "Game catalogue", "weight": 0.15 },
-  { "key": "support", "label": "Support quality", "weight": 0.15 },
-  { "key": "coins", "label": "Coin support", "weight": 0.1 }
+  { "name": "Payout speed", "weight": "25%", "desc": "Median of at least three timed withdrawals at different sizes." },
+  { "name": "Bonus fairness", "weight": "20%", "desc": "Wagering, game weighting, max-cashout caps read line by line." },
+  { "name": "Crypto support", "weight": "15%", "desc": "Coins, chains, confirmation counts, who pays network fees." },
+  { "name": "Trust & licensing", "weight": "15%", "desc": "Licence, ownership, terms enforcement, complaint history." },
+  { "name": "Game & RTP quality", "weight": "15%", "desc": "Live catalogue counts and the RTP version each casino ships." },
+  { "name": "Support", "weight": "10%", "desc": "Three tickets per operator, timed, across time zones." }
 ]

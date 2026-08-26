@@ -1,0 +1,10 @@
+[
+  { "name": "Live casino", "icon": "🃏", "tint": "#FF7EB6", "checks": "Studio breadth, seat limits at the table, stream latency, and which provider is behind the glass.", "measured": "Latency timed from a funded seat" },
+  { "name": "Slots", "icon": "🎰", "tint": "#FFB347", "checks": "The RTP build each operator actually ships, volatility, max-win ceiling and how the mechanic pays.", "measured": "Paytables read in every operator build" },
+  { "name": "Game providers", "icon": "🎮", "tint": "#B284FF", "checks": "Whether the studio permits reduced RTP configurations, its volatility range, and catalogue reach.", "measured": "Configurations counted across our index" },
+  { "name": "Sportsbooks", "icon": "🏆", "tint": "#57E39A", "checks": "Margin priced across 40 matched selections, market depth outside majors, settlement speed.", "measured": "Priced on tournament weeks" },
+  { "name": "Prediction markets", "icon": "🔮", "tint": "#6BC7FF", "checks": "Cost to trade, book depth, resolution source, and what the payout rail actually requires.", "measured": "Fees read, not quoted" },
+  { "name": "Wallets", "icon": "👛", "tint": "#9B8FC4", "checks": "Custody model, chain coverage, what it shows you before you sign, and fee handling.", "measured": "Signing flows reviewed by hand" },
+  { "name": "Exchanges", "icon": "💱", "tint": "#5FE3E8", "checks": "Spread sampled hourly, fiat rails, withdrawal limits and the combined cost of getting on chain.", "measured": "Two weeks of order-book samples" },
+  { "name": "Fiat casinos", "icon": "🏛️", "tint": "#C7A45C", "checks": "Licence, deposit rails, payout in days, wagering. Kept on a separate list, never mixed into the crypto ranking.", "measured": "Scored against each other only" }
+]
