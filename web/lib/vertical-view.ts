@@ -5,10 +5,9 @@
  * shared vertical-index page — "one component, six data sources" per
  * design/README.md's build order.
  *
- * Not yet ported: the exchanges award cards (`vHasAwards` block in the
- * source) — the source's five awards reference two exchanges (Bybit,
- * KuCoin) not in our seed exchangeRows.json, so linking them would 404.
- * Skipped for now rather than shipping dead links; see TODO below.
+ * The exchanges award cards (`vHasAwards` block, source lines 2033-2058
+ * and 3982-3992) are ported below — the five awards (source lines
+ * 2894-2900) are all exchanges now present in exchangeRows.json.
  */
 import { siteData } from "./site-data";
 import {
@@ -42,6 +41,19 @@ export interface VerticalRow {
   href: string;
 }
 
+export interface VerticalAward {
+  slug: string;
+  name: string;
+  award: string;
+  why: string;
+  metrics: [string, string][];
+  accent: string;
+  awardBg: string;
+  awardBorder: string;
+  logo: string;
+  href: string;
+}
+
 export interface VerticalPage {
   kicker: string;
   title: string;
@@ -52,6 +64,9 @@ export interface VerticalPage {
   note: string;
   tabs?: string[];
   rows: VerticalRow[];
+  awardTitle?: string;
+  awardSub?: string;
+  awards?: VerticalAward[];
 }
 
 function logoFor(slug: string): string {
@@ -238,7 +253,13 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
   }
 
   if (kind === "exchanges") {
-    // TODO: award cards (vHasAwards in the source) — see file header.
+    const rawAwards: { award: string; name: string; why: string; m: [string, string][] }[] = [
+      { award: "Best overall", name: "Kraken", why: "Tightest measured spread of the five and the only venue with no daily withdrawal cap after verification.", m: [["Spread", "0.09%"], ["Fiat payout", "4h 10m"], ["Score", "8.9"]] },
+      { award: "Best for beginners", name: "Coinbase", why: "The shortest path from card to on-chain balance. You pay 0.35% in spread for that, every time.", m: [["Spread", "0.35%"], ["Rails", "ACH, SEPA, card"], ["Score", "8.1"]] },
+      { award: "Best for low fees", name: "OKX", why: "Entry-tier taker fee of 0.10% with book depth close to Kraken on majors.", m: [["Spread", "0.11%"], ["Depth 0.5%", "$3.1m"], ["Score", "8.6"]] },
+      { award: "Best for fast withdrawals", name: "Bybit", why: "Crypto out in under two minutes on every request we timed, at a $2m daily ceiling.", m: [["Withdrawal", "< 2 min"], ["Limit", "$2m / day"], ["Score", "8.0"]] },
+      { award: "Best for altcoin range", name: "KuCoin", why: "Widest listing by a distance. Books thin out fast past the top fifty pairs.", m: [["Pairs", "740+"], ["Spread", "0.22%"], ["Score", "7.6"]] },
+    ];
     return {
       kicker: "Exchanges",
       title: "Getting on and off chain",
@@ -251,6 +272,23 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
       cols: ["Spread", "Fiat rails", "Withdrawal limit"],
       scoreLabel: "Score",
       note: "Spread plus withdrawal fee is the true cost of an onramp. The cheapest headline maker fee on this list is not the cheapest way to fund an account.",
+      awardTitle: "Best crypto exchanges for August 2026",
+      awardSub: "One superlative per venue, awarded on the measurement that earned it. No venue holds two.",
+      awards: rawAwards.map((a, i) => {
+        const slug = exchangeRows.find((x) => x.name === a.name)?.slug ?? a.name.toLowerCase();
+        return {
+          slug,
+          name: a.name,
+          award: a.award,
+          why: a.why,
+          metrics: a.m,
+          accent: i === 0 ? "#FFCC00" : "#00C2CC",
+          awardBg: i === 0 ? "rgba(255,204,0,.10)" : "rgba(0,194,204,.10)",
+          awardBorder: i === 0 ? "rgba(255,204,0,.32)" : "rgba(0,194,204,.28)",
+          logo: logoFor(slug),
+          href: `/exchanges/${slug}`,
+        };
+      }),
       rows: exchangeRows.map((x) => ({
         slug: x.slug,
         name: x.name,

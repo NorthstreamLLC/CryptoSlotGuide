@@ -49,6 +49,59 @@ export function VerticalIndexPage({ kind, tabIdx = 0 }: { kind: VerticalKind; ta
         </div>
       </section>
 
+      {vp.awards && vp.awards.length > 0 && (
+        <section style={{ maxWidth: 1400, margin: "0 auto", padding: "40px 40px 0" }}>
+          <div style={{ marginBottom: 20 }}>
+            <h2 style={{ margin: "0 0 8px", fontSize: 27, letterSpacing: "-.028em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>
+              {vp.awardTitle}
+            </h2>
+            <p style={{ margin: 0, fontSize: 14.5, color: "#8DA0AA", maxWidth: "76ch", textWrap: "pretty" }}>{vp.awardSub}</p>
+          </div>
+          <div style={{ display: "grid", minWidth: 0, gridTemplateColumns: "repeat(auto-fit,minmax(198px,1fr))", gap: 12 }}>
+            {vp.awards.map((a) => (
+              <Link
+                key={a.slug}
+                href={a.href}
+                className="hover:!bg-[#0F1417] hover:!border-accent"
+                style={{ display: "flex", flexDirection: "column", padding: 20, borderRadius: 14, background: "#0C1013", border: `1px solid ${a.awardBorder}` }}
+              >
+                <span
+                  style={{
+                    alignSelf: "flex-start",
+                    padding: "5px 9px",
+                    borderRadius: 5,
+                    background: a.awardBg,
+                    fontFamily: "var(--font-jetbrains-mono), monospace",
+                    fontSize: 9.5,
+                    fontWeight: 700,
+                    letterSpacing: ".06em",
+                    textTransform: "uppercase",
+                    color: a.accent,
+                    marginBottom: 18,
+                  }}
+                >
+                  {a.award}
+                </span>
+                <div style={{ width: 76, height: 32, display: "flex", alignItems: "center", marginBottom: 14 }}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={a.logo} alt="" style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }} />
+                </div>
+                <div style={{ fontSize: 17, fontWeight: 700, letterSpacing: "-.02em", color: "#fff", marginBottom: 9 }}>{a.name}</div>
+                <p style={{ margin: "0 0 18px", fontSize: 12.5, lineHeight: 1.55, color: "#7B8A93", textWrap: "pretty" }}>{a.why}</p>
+                <div style={{ marginTop: "auto", display: "flex", flexDirection: "column", gap: 1, borderRadius: 9, overflow: "hidden" }}>
+                  {a.metrics.map(([label, value]) => (
+                    <div key={label} style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 10, padding: "9px 11px", background: "#0F1417" }}>
+                      <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 9.5, letterSpacing: ".06em", textTransform: "uppercase", color: "#5C6A72" }}>{label}</span>
+                      <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12.5, color: "#E8EDF0" }}>{value}</span>
+                    </div>
+                  ))}
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+
       <section style={{ maxWidth: 1400, margin: "0 auto", padding: "34px 40px 20px" }}>
         {vp.tabs && (
           <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 20 }}>
