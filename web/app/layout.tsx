@@ -37,7 +37,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-page text-text-primary">
         <Header counts={siteCounts} />
         <main className="flex-1">{children}</main>
-        <Footer counts={siteCounts} />
+        <Footer />
       </body>
     </html>
   );

@@ -1,59 +1,173 @@
 import Link from "next/link";
-import { buildNavTabs } from "@/lib/nav";
-import type { SiteCounts } from "@/lib/derived";
 
 /**
- * NOT yet ported from the real design — CryptoSlotGuide.dc.html's actual
- * footer markup hasn't been read/copied over yet. This is a placeholder
- * sitemap-style footer using the same real nav content as the header, so
- * every route stays reachable in the meantime.
+ * Ported from `<footer>` in CryptoSlotGuide.dc.html (search for
+ * `<footer style="background:#07090B`) and the `footerCols` data a few
+ * hundred lines later in renderVals(). Structure, copy, and the four
+ * column groups are the real ones.
  */
-export function Footer({ counts }: { counts: SiteCounts }) {
-  const navTabs = buildNavTabs(counts);
+const footerCols = [
+  {
+    title: "Casinos",
+    links: [
+      { l: "Top crypto casinos", href: "/crypto-casinos" },
+      { l: "No-KYC casinos", href: "/crypto-casinos/no-kyc" },
+      { l: "Fastest payouts", href: "/fastest-payouts" },
+      { l: "Live casinos", href: "/live-casino" },
+      { l: "Bonuses tracked", href: "/bonuses" },
+      { l: "Fiat casinos", href: "/fiat-casinos" },
+    ],
+  },
+  {
+    title: "Slots & games",
+    links: [
+      { l: "Highest RTP slots", href: "/slots" },
+      { l: "Bonus buy slots", href: "/slots/bonus-buy" },
+      { l: "Megaways slots", href: "/slots/megaways" },
+      { l: "Jackpot slots", href: "/slots/jackpot" },
+      { l: "Provably fair originals", href: "/house-games" },
+      { l: "Slot RTP tracker", href: "/rtp-watch" },
+    ],
+  },
+  {
+    title: "Betting",
+    links: [
+      { l: "Crypto sportsbooks", href: "/sportsbooks" },
+      { l: "Sports markets", href: "/casino-sportsbooks" },
+      { l: "Esports betting", href: "/esports-casinos" },
+      { l: "Prediction markets", href: "/prediction-markets" },
+      { l: "Game providers", href: "/providers" },
+      { l: "Guides", href: "/guides" },
+    ],
+  },
+  {
+    title: "About",
+    links: [
+      { l: "How we rate", href: "/how-we-rate" },
+      { l: "Wallets", href: "/wallets" },
+      { l: "Exchanges", href: "/exchanges" },
+      { l: "Coins we track", href: "/coins" },
+    ],
+  },
+];
 
+export function Footer() {
   return (
-    <footer className="border-t border-border bg-section">
-      <div className="mx-auto max-w-[1400px] px-10 py-12">
-        <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
-          {navTabs.map((tab) => (
-            <div key={tab.key}>
-              <h3 className="mb-3 font-mono text-[10.5px] uppercase tracking-[0.07em] text-text-dim">
-                {tab.label}
-              </h3>
-              <ul className="flex flex-col gap-2">
-                {tab.sections.slice(0, 5).map((section) => (
-                  <li key={section.label}>
-                    <Link
-                      href={section.href}
-                      className="text-[13px] text-text-secondary transition-colors hover:text-accent"
-                    >
-                      {section.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+    <footer style={{ background: "#07090B", borderTop: "1px solid rgba(255,255,255,.07)" }}>
+      <div
+        style={{
+          maxWidth: 1400,
+          margin: "0 auto",
+          padding: "52px 40px 28px",
+          display: "grid",
+          gridTemplateColumns: "1.4fr 1fr 1fr 1fr 1fr",
+          gap: 40,
+        }}
+      >
+        <div>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "baseline",
+              gap: 1,
+              color: "#fff",
+              fontWeight: 800,
+              fontSize: 16,
+              letterSpacing: "-.02em",
+              fontStretch: "112%",
+              marginBottom: 14,
+            }}
+          >
+            <span>CryptoSlot</span>
+            <span style={{ color: "#00C2CC" }}>Guide</span>
+          </div>
+          <p style={{ margin: "0 0 18px", fontSize: 13, lineHeight: 1.6, color: "#6E7F88", maxWidth: "34ch" }}>
+            Independent crypto gambling and Web3 product reviews. We test with our own money, publish the log, and
+            disclose every commercial relationship.
+          </p>
+          <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+            {["18+ ONLY", "BEGAMBLEAWARE", "GAMSTOP"].map((badge) => (
+              <span
+                key={badge}
+                style={{
+                  padding: "5px 9px",
+                  border: "1px solid rgba(255,255,255,.12)",
+                  borderRadius: 5,
+                  fontFamily: "var(--font-jetbrains-mono), monospace",
+                  fontSize: 10,
+                  color: "#8DA0AA",
+                }}
+              >
+                {badge}
+              </span>
+            ))}
+          </div>
         </div>
 
-        <div className="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-border pt-6">
-          <p className="font-mono text-[11px] text-text-dim">
-            © {new Date().getFullYear()} CryptoSlotGuide. Not affiliated with any operator listed.
-          </p>
-          <ul className="flex flex-wrap gap-5">
-            {[
-              { label: "Compare", href: "/compare" },
-              { label: "How we rate", href: "/how-we-rate" },
-              { label: "RTP Watch", href: "/rtp-watch" },
-              { label: "Guides", href: "/guides" },
-            ].map((link) => (
-              <li key={link.href}>
-                <Link href={link.href} className="text-[12.5px] text-text-dim-2 hover:text-accent">
-                  {link.label}
+        {footerCols.map((col) => (
+          <div key={col.title}>
+            <div
+              style={{
+                fontFamily: "var(--font-jetbrains-mono), monospace",
+                fontSize: 10.5,
+                letterSpacing: ".08em",
+                textTransform: "uppercase",
+                color: "#4E5A62",
+                marginBottom: 14,
+              }}
+            >
+              {col.title}
+            </div>
+            <div style={{ display: "flex", flexDirection: "column", gap: 9 }}>
+              {col.links.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="hover:!text-white"
+                  style={{ fontSize: 13, color: "#8DA0AA" }}
+                >
+                  {link.l}
                 </Link>
-              </li>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div
+        style={{
+          maxWidth: 1400,
+          margin: "0 auto",
+          padding: "22px 40px 44px",
+          borderTop: "1px solid rgba(255,255,255,.06)",
+        }}
+      >
+        <p style={{ margin: "0 0 14px", fontSize: 12, lineHeight: 1.7, color: "#5C6A72", maxWidth: "96ch", textWrap: "pretty" }}>
+          Gambling involves risk and is not a way to make money. Never stake funds you cannot afford to lose. If
+          gambling stops feeling like entertainment, use the deposit limits, cool-off and self-exclusion tools every
+          operator on this site is required to offer, or contact BeGambleAware on 0808 8020 133. Availability of the
+          operators listed here depends on your jurisdiction — check local law before registering.
+        </p>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            gap: 24,
+            flexWrap: "wrap",
+            fontFamily: "var(--font-jetbrains-mono), monospace",
+            fontSize: 11,
+            color: "#4E5A62",
+          }}
+        >
+          <span>© 2026 CryptoSlotGuide.com · Some links are affiliate links.</span>
+          <div style={{ display: "flex", gap: 18 }}>
+            {["Privacy", "Terms", "Editorial standards", "Contact"].map((label) => (
+              <span key={label} style={{ color: "#4E5A62" }}>
+                {label}
+              </span>
             ))}
-          </ul>
+          </div>
         </div>
       </div>
     </footer>

@@ -18,9 +18,15 @@ import fiatCasinos from "@/data/fiatCasinos.json";
 import predMarkets from "@/data/predMarkets.json";
 import tickerFacts from "@/data/tickerFacts.json";
 import coinDefs from "@/data/coinDefs.json";
+import coinsBy from "@/data/coinsBy.json";
+import rtpWatch from "@/data/rtpWatch.json";
+import watchOps from "@/data/watchOps.json";
+import editorial from "@/data/editorial.json";
 
 import type {
   CoinDef,
+  CoinsByOperator,
+  Editorial,
   EsportsTitle,
   FiatCasino,
   GuideRow,
@@ -30,9 +36,11 @@ import type {
   Operator,
   PredictionMarkets,
   Provider,
+  RtpReading,
   Slot,
   SportsMarket,
   WalletOrExchangeRow,
+  WatchOperator,
 } from "./types";
 import { counts } from "./derived";
 
@@ -52,6 +60,10 @@ export const siteData = {
   predMarkets: predMarkets as PredictionMarkets,
   tickerFacts: tickerFacts as { text: string }[],
   coinDefs: coinDefs as CoinDef[],
+  coinsBy: coinsBy as CoinsByOperator,
+  rtpWatch: rtpWatch as RtpReading[],
+  watchOps: watchOps as WatchOperator[],
+  editorial: editorial as Editorial,
 };
 
 export const siteCounts = counts(siteData);

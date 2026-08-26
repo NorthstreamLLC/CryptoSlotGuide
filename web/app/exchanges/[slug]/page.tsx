@@ -1,15 +1,10 @@
-import { PagePlaceholder } from "@/components/ui/PagePlaceholder";
+import { notFound } from "next/navigation";
+import { getEntityView } from "@/lib/entity-view";
+import { EntityReviewPage } from "@/components/entity/EntityReviewPage";
 
-export default async function Page({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
+export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  return (
-    <PagePlaceholder
-      kicker="Exchanges"
-      title={`Exchange review: ${slug}`}
-    />
-  );
+  const view = getEntityView("exchange", slug);
+  if (!view) notFound();
+  return <EntityReviewPage e={view} />;
 }
