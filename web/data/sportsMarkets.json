@@ -1,8 +1,8 @@
 [
-  { "name": "Match winner (moneyline)", "note": "Straight win bet, no handicap." },
-  { "name": "Point spread / handicap", "note": "Levels the odds by a margin." },
-  { "name": "Totals (over/under)", "note": "Bets on combined score vs. a line." },
-  { "name": "Player props", "note": "Individual performance markets." },
-  { "name": "Futures", "note": "Season-long outcome bets." },
-  { "name": "Live/in-play", "note": "Odds update as the event unfolds." }
+  { "name": "Football", "mono": "FB", "tint": "#57B98C", "note": "Top-five leagues, UCL, internationals", "best": "Cloudbet", "m2": "2.1%", "m3": "740" },
+  { "name": "UFC & boxing", "mono": "UF", "tint": "#C4795A", "note": "Main-card props settled in-round", "best": "Roobet", "m2": "3.2%", "m3": "110" },
+  { "name": "NFL & college", "mono": "NF", "tint": "#7E93B8", "note": "Alt lines and same-game parlays", "best": "Cloudbet", "m2": "2.6%", "m3": "420" },
+  { "name": "Tennis", "mono": "TN", "tint": "#9AAE5E", "note": "ATP/WTA, live point-by-point", "best": "Stake", "m2": "3.4%", "m3": "260" },
+  { "name": "Basketball", "mono": "BK", "tint": "#C7A45C", "note": "NBA, EuroLeague, player props", "best": "Stake", "m2": "2.9%", "m3": "380" },
+  { "name": "Horse racing", "mono": "HR", "tint": "#9B8FC4", "note": "Tote and fixed-odds racebooks", "best": "Cloudbet", "m2": "5.2%", "m3": "95" }
 ]

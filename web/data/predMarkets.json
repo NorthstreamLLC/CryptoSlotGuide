@@ -1,10 +1,16 @@
 {
   "crypto": [
-    { "name": "Polymarket", "score": 9.0, "settle": "crypto", "fee": "0% (spread only)", "kyc": "None", "payout": "On-chain, instant", "vol": "High", "note": "Largest crypto-settled prediction market by volume.", "tint": "#00C2CC" },
-    { "name": "Limitless", "score": 8.1, "settle": "crypto", "fee": "0% (spread only)", "kyc": "None", "payout": "On-chain, instant", "vol": "Medium", "note": "Base-chain markets, narrower catalogue.", "tint": "#7BE0B8" }
+    { "name": "Polymarket", "score": 9.0, "settle": "USDC · Polygon", "fee": "No trading fee", "kyc": "Email only", "payout": "On-chain, instant", "vol": "$1.2b / mo", "note": "Deepest books in the category by a distance, and the only venue where election and macro markets clear size without moving.", "tint": "#00C2CC" },
+    { "name": "Limitless", "score": 8.4, "settle": "USDC · Base", "fee": "0.5% taker", "kyc": "Wallet only", "payout": "On-chain, instant", "vol": "$61m / mo", "note": "Hourly crypto-price markets with an AMM behind them — thin on anything that is not BTC or ETH.", "tint": "#B284FF" },
+    { "name": "Drift BET", "score": 8.2, "settle": "USDC · Solana", "fee": "0.3% taker", "kyc": "Wallet only", "payout": "On-chain, instant", "vol": "$38m / mo", "note": "Fast and cheap because it is Solana, and tied to the same account as the perps exchange.", "tint": "#FF7EB6" },
+    { "name": "Overtime", "score": 7.9, "settle": "USDC · Optimism", "fee": "2% spread", "kyc": "Wallet only", "payout": "On-chain, instant", "vol": "$22m / mo", "note": "Sports-first parimutuel markets. Effective spread is wide, but no counterparty and no account.", "tint": "#57E39A" },
+    { "name": "Myriad", "score": 7.4, "settle": "USDC · Abstract", "fee": "1% taker", "kyc": "Email only", "payout": "On-chain, instant", "vol": "$9m / mo", "note": "Culture and crypto-media markets, small size. Interesting questions, shallow books.", "tint": "#FFB347" }
   ],
   "fiat": [
-    { "name": "Kalshi", "score": 8.6, "settle": "fiat", "fee": "Trading fee per contract", "kyc": "Required", "payout": "ACH, 1–3 days", "vol": "High", "note": "CFTC-regulated, US-facing.", "tint": "#8FA5C9" },
-    { "name": "PredictIt", "score": 7.4, "settle": "fiat", "fee": "5% withdrawal + 10% profit", "kyc": "Required", "payout": "ACH, 1–5 days", "vol": "Medium", "note": "Position caps limit size.", "tint": "#B4B8BB" }
+    { "name": "Kalshi", "score": 8.8, "settle": "USD · CFTC-regulated", "fee": "~1% on profit", "kyc": "Full KYC", "payout": "ACH, 1–3 days", "vol": "$420m / mo", "note": "The regulated benchmark: a real exchange with a real regulator, and the only place a US resident can trade event contracts without ambiguity.", "tint": "#6BC7FF" },
+    { "name": "Polymarket US", "score": 8.5, "settle": "USD · CFTC-regulated", "fee": "No trading fee", "kyc": "Full KYC", "payout": "ACH, 1–2 days", "vol": "Ramping", "note": "The licensed US venue running on the acquired QCX seat. Same interface, different rails, fewer markets so far.", "tint": "#00C2CC" },
+    { "name": "Robinhood Prediction", "score": 8.0, "settle": "USD · via Kalshi", "fee": "$0.01 / contract", "kyc": "Full KYC", "payout": "To brokerage cash", "vol": "Not disclosed", "note": "Cheapest per-contract cost in the category, wrapped in a broker app most people already have. Market list is curated, not complete.", "tint": "#57E39A" },
+    { "name": "IBKR ForecastEx", "score": 7.6, "settle": "USD · CFTC-regulated", "fee": "$0.01 / contract", "kyc": "Full KYC", "payout": "To brokerage cash", "vol": "Not disclosed", "note": "Economics and climate contracts inside a professional platform. Pays interest on held positions, which nothing else does.", "tint": "#B284FF" },
+    { "name": "PredictIt", "score": 6.9, "settle": "USD · no-action relief", "fee": "5% on profit, 5% withdrawal", "kyc": "Full KYC", "payout": "ACH, 3–5 days", "vol": "$14m / mo", "note": "The academic original. Position caps and double fees make it the most expensive way to be right.", "tint": "#C7A45C" }
   ]
 }

@@ -57,7 +57,7 @@ export interface Slot {
   provider: string;
   /** Published (full-build) RTP, e.g. 96.51. Per-operator cuts live in RtpReading. */
   rtp: number;
-  vol: "low" | "medium" | "high";
+  vol: "low" | "medium" | "high" | "very-high" | "extreme";
   maxWin: string;
   bestAt: string;
   tint: string;
@@ -118,10 +118,12 @@ export interface LiveGame {
 export interface PredictionMarket {
   name: string;
   score: number;
-  settle: "crypto" | "fiat";
+  /** Settlement asset/chain description, e.g. "USDC · Polygon" — not an enum. */
+  settle: string;
   fee: string;
   kyc: string;
   payout: string;
+  /** Monthly volume, e.g. "$1.2b / mo". */
   vol: string;
   note: string;
   tint: string;
@@ -147,6 +149,7 @@ export interface FiatCasino {
 
 export interface TickerFact {
   text: string;
+  tint: string;
 }
 
 export interface Provider {
@@ -192,7 +195,8 @@ export interface CoinDef {
   tint: string;
   name: string;
   creditTime: string;
-  confirms: number;
+  /** Range string, e.g. "1–3" — confirmation requirements vary by operator. */
+  confirms: string;
   fee: string;
   note: string;
   /** Drives the bar spark on the coin page. */
@@ -202,14 +206,22 @@ export interface CoinDef {
 export interface SportsbookRow {
   margin: string;
   markets: number;
-  settle: "crypto" | "fiat" | "both";
+  /** Bet-settlement time, e.g. "< 2 min" — not a crypto/fiat distinction. */
+  settle: string;
 }
 
+/** Keyed by operator slug. */
 export type SportsbookData = Record<string, SportsbookRow>;
 
 export interface SportsMarket {
   name: string;
+  mono: string;
+  tint: string;
   note: string;
+  /** Operator with the best price/coverage for this market. */
+  best: string;
+  m2: string;
+  m3: string;
 }
 
 export interface EsportsTitle {

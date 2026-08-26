@@ -243,7 +243,7 @@ export default function HomePage() {
             <div style={{ display: "flex", gap: 30, width: "max-content", animation: "csg-slide 46s linear infinite" }}>
               {tickerRun.map((t, i) => (
                 <span key={i} style={{ display: "flex", alignItems: "center", gap: 8, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11.5, color: "#7B8A93", whiteSpace: "nowrap" }}>
-                  <span style={{ width: 5, height: 5, borderRadius: "50%", flex: "none", background: "#00C2CC" }} />
+                  <span style={{ width: 5, height: 5, borderRadius: "50%", flex: "none", background: t.tint }} />
                   {t.text}
                 </span>
               ))}

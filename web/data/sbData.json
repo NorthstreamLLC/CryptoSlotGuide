@@ -1,6 +1,15 @@
 {
-  "roobet": { "margin": "4.8%", "markets": 12, "settle": "crypto" },
-  "stake": { "margin": "4.5%", "markets": 18, "settle": "crypto" },
-  "bc-game": { "margin": "5.2%", "markets": 10, "settle": "crypto" },
-  "duelbits": { "margin": "5.0%", "markets": 9, "settle": "crypto" }
+  "roobet": { "margin": "2.4%", "markets": 84, "settle": "< 2 min" },
+  "stake": { "margin": "2.6%", "markets": 61, "settle": "< 2 min" },
+  "cloudbet": { "margin": "2.1%", "markets": 47, "settle": "3 min" },
+  "shuffle": { "margin": "2.9%", "markets": 52, "settle": "4 min" },
+  "bc-game": { "margin": "3.4%", "markets": 38, "settle": "6 min" },
+  "rollbit": { "margin": "3.1%", "markets": 22, "settle": "5 min" },
+  "gamdom": { "margin": "3.6%", "markets": 29, "settle": "7 min" },
+  "duelbits": { "margin": "3.3%", "markets": 31, "settle": "5 min" },
+  "rainbet": { "margin": "3.8%", "markets": 26, "settle": "8 min" },
+  "sportsbet-io": { "margin": "2.8%", "markets": 44, "settle": "4 min" },
+  "500-casino": { "margin": "4.1%", "markets": 18, "settle": "9 min" },
+  "vave": { "margin": "4.4%", "markets": 15, "settle": "11 min" },
+  "betplay": { "margin": "4.0%", "markets": 12, "settle": "6 min" }
 }

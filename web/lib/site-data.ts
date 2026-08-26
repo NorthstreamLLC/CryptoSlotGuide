@@ -39,6 +39,7 @@ import type {
   RtpReading,
   Slot,
   SportsMarket,
+  TickerFact,
   WalletOrExchangeRow,
   WatchOperator,
 } from "./types";
@@ -58,7 +59,7 @@ export const siteData = {
   houseGames: houseGames as HouseGame[],
   fiatCasinos: fiatCasinos as FiatCasino[],
   predMarkets: predMarkets as PredictionMarkets,
-  tickerFacts: tickerFacts as { text: string }[],
+  tickerFacts: tickerFacts as TickerFact[],
   coinDefs: coinDefs as CoinDef[],
   coinsBy: coinsBy as CoinsByOperator,
   rtpWatch: rtpWatch as RtpReading[],

@@ -1,5 +1,8 @@
 [
-  { "slug": "stake", "name": "Stake", "score": 9.1, "tables": 210, "studios": ["Evolution", "Pragmatic Play Live"], "stakes": "$0.10–$50,000", "latency": "~180ms", "note": "Largest live catalogue in the index.", "tint": "#00C2CC" },
-  { "slug": "roobet", "name": "Roobet", "score": 8.8, "tables": 140, "studios": ["Evolution"], "stakes": "$0.20–$25,000", "latency": "~190ms", "note": "Fastest live-table payouts of the three.", "tint": "#5FE3E8" },
-  { "slug": "bc-game", "name": "BC.Game", "score": 8.2, "tables": 95, "studios": ["Evolution", "Ezugi"], "stakes": "$0.10–$10,000", "latency": "~210ms", "note": "Broadest studio mix, smaller max stakes.", "tint": "#7BE0B8" }
+  { "slug": "roobet", "name": "Roobet", "score": 9.2, "tables": 210, "studios": ["Evolution", "Pragmatic Live"], "stakes": "$0.50 – $15k", "latency": "47 ms", "note": "Widest Evolution shelf on the index and the only operator streaming every table at 1080p by default.", "tint": "#00C2CC" },
+  { "slug": "stake", "name": "Stake", "score": 9.0, "tables": 246, "studios": ["Evolution", "Stake Originals"], "stakes": "$0.20 – $50k", "latency": "52 ms", "note": "Highest table ceilings we found, plus branded studios you cannot play anywhere else.", "tint": "#7BE0B8" },
+  { "slug": "bc-game", "name": "BC.Game", "score": 8.6, "tables": 184, "studios": ["Evolution", "Ezugi"], "stakes": "$0.10 – $8k", "latency": "61 ms", "note": "Lowest entry stakes of the top five — the cheapest place to learn a table.", "tint": "#FFB347" },
+  { "slug": "shuffle", "name": "Shuffle", "score": 8.5, "tables": 150, "studios": ["Evolution", "Playtech"], "stakes": "$0.50 – $20k", "latency": "58 ms", "note": "Clean lobby and quick seat-finding, but the game-show shelf is thin.", "tint": "#B284FF" },
+  { "slug": "cloudbet", "name": "Cloudbet", "score": 8.3, "tables": 128, "studios": ["Evolution", "Ezugi"], "stakes": "$1 – $25k", "latency": "66 ms", "note": "High-limit baccarat is the draw; everything else is table stakes.", "tint": "#FF7EB6" },
+  { "slug": "gamdom", "name": "Gamdom", "score": 8.1, "tables": 112, "studios": ["Pragmatic Live", "Ezugi"], "stakes": "$0.20 – $5k", "latency": "72 ms", "note": "Cheapest rakeback on live play, at the cost of studio breadth.", "tint": "#6BC7FF" }
 ]

@@ -1,10 +1,18 @@
 {
-  "sweet-bonanza": ["bonus-buy", "cluster-pays"],
-  "gates-of-olympus": ["bonus-buy"],
-  "big-bass-bonanza": ["bonus-buy"],
-  "fruit-party": ["cluster-pays"],
+  "money-train-4": ["bonus-buy", "high-volatility"],
+  "mental": ["bonus-buy", "high-volatility"],
+  "razor-shark": ["high-volatility"],
   "wanted-dead-or-a-wild": ["bonus-buy", "high-volatility"],
-  "le-bandit": ["bonus-buy", "high-volatility"],
-  "san-quentin": ["bonus-buy", "high-volatility", "jackpot"],
-  "mental": ["bonus-buy", "high-volatility"]
+  "sweet-bonanza": ["bonus-buy", "cluster-pays"],
+  "fire-in-the-hole-2": ["bonus-buy", "high-volatility"],
+  "gates-of-olympus": ["bonus-buy", "cluster-pays", "high-volatility"],
+  "le-bandit": ["bonus-buy"],
+  "san-quentin-xways": ["bonus-buy", "high-volatility"],
+  "big-bass-bonanza": ["bonus-buy"],
+  "bonanza-megaways": ["megaways", "high-volatility"],
+  "gonzo-s-quest-megaways": ["megaways"],
+  "jammin-jars": ["cluster-pays", "high-volatility"],
+  "reactoonz": ["cluster-pays"],
+  "divine-fortune": ["jackpot"],
+  "mega-moolah": ["jackpot", "megaways"]
 }

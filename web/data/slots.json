@@ -1,10 +1,178 @@
 [
-  { "slug": "sweet-bonanza", "name": "Sweet Bonanza", "mono": "SB", "provider": "Pragmatic Play", "rtp": 96.51, "vol": "high", "maxWin": "21,100x", "bestAt": "Stake", "tint": "#D6669C" },
-  { "slug": "gates-of-olympus", "name": "Gates of Olympus", "mono": "GO", "provider": "Pragmatic Play", "rtp": 96.5, "vol": "high", "maxWin": "5,000x", "bestAt": "Roobet", "tint": "#8FA5C9" },
-  { "slug": "big-bass-bonanza", "name": "Big Bass Bonanza", "mono": "BB", "provider": "Pragmatic Play", "rtp": 96.71, "vol": "medium", "maxWin": "2,100x", "bestAt": "Shuffle", "tint": "#5FBFA0" },
-  { "slug": "fruit-party", "name": "Fruit Party", "mono": "FP", "provider": "Pragmatic Play", "rtp": 96.47, "vol": "medium", "maxWin": "5,000x", "bestAt": "Stake", "tint": "#D6B65C" },
-  { "slug": "wanted-dead-or-a-wild", "name": "Wanted Dead or a Wild", "mono": "WD", "provider": "Hacksaw Gaming", "rtp": 96.38, "vol": "high", "maxWin": "12,500x", "bestAt": "Roobet", "tint": "#DA9877" },
-  { "slug": "le-bandit", "name": "Le Bandit", "mono": "LB", "provider": "Hacksaw Gaming", "rtp": 96.24, "vol": "high", "maxWin": "10,000x", "bestAt": "Duelbits", "tint": "#00C2CC" },
-  { "slug": "san-quentin", "name": "San Quentin xWays", "mono": "SQ", "provider": "Nolimit City", "rtp": 96.03, "vol": "high", "maxWin": "150,000x", "bestAt": "Stake", "tint": "#7BE0B8" },
-  { "slug": "mental", "name": "Mental", "mono": "MT", "provider": "Nolimit City", "rtp": 96.08, "vol": "high", "maxWin": "66,666x", "bestAt": "Gamdom", "tint": "#9FB6E0" }
+  {
+    "slug": "money-train-4",
+    "name": "Money Train 4",
+    "mono": "MT4",
+    "provider": "Relax Gaming",
+    "rtp": 96.1,
+    "vol": "very-high",
+    "maxWin": "150,000x",
+    "bestAt": "Roobet",
+    "tint": "#7BE0B8"
+  },
+  {
+    "slug": "mental",
+    "name": "Mental",
+    "mono": "MNT",
+    "provider": "Nolimit City",
+    "rtp": 96.08,
+    "vol": "extreme",
+    "maxWin": "66,666x",
+    "bestAt": "Roobet",
+    "tint": "#D6B65C"
+  },
+  {
+    "slug": "razor-shark",
+    "name": "Razor Shark",
+    "mono": "RZR",
+    "provider": "Push Gaming",
+    "rtp": 96.7,
+    "vol": "high",
+    "maxWin": "50,000x",
+    "bestAt": "Stake",
+    "tint": "#8FA5C9"
+  },
+  {
+    "slug": "wanted-dead-or-a-wild",
+    "name": "Wanted Dead or a Wild",
+    "mono": "WDW",
+    "provider": "Hacksaw Gaming",
+    "rtp": 96.38,
+    "vol": "very-high",
+    "maxWin": "12,500x",
+    "bestAt": "Roobet",
+    "tint": "#E0A67B"
+  },
+  {
+    "slug": "sweet-bonanza",
+    "name": "Sweet Bonanza",
+    "mono": "SWB",
+    "provider": "Pragmatic Play",
+    "rtp": 96.51,
+    "vol": "high",
+    "maxWin": "21,100x",
+    "bestAt": "Shuffle",
+    "tint": "#E39BC4"
+  },
+  {
+    "slug": "fire-in-the-hole-2",
+    "name": "Fire in the Hole 2",
+    "mono": "FH2",
+    "provider": "Nolimit City",
+    "rtp": 96.06,
+    "vol": "extreme",
+    "maxWin": "60,000x",
+    "bestAt": "Roobet",
+    "tint": "#D68A6E"
+  },
+  {
+    "slug": "gates-of-olympus",
+    "name": "Gates of Olympus",
+    "mono": "GOO",
+    "provider": "Pragmatic Play",
+    "rtp": 96.5,
+    "vol": "very-high",
+    "maxWin": "5,000x",
+    "bestAt": "BC.Game",
+    "tint": "#9FB6E0"
+  },
+  {
+    "slug": "le-bandit",
+    "name": "Le Bandit",
+    "mono": "LEB",
+    "provider": "Hacksaw Gaming",
+    "rtp": 96.31,
+    "vol": "high",
+    "maxWin": "20,000x",
+    "bestAt": "Roobet",
+    "tint": "#C9D67B"
+  },
+  {
+    "slug": "san-quentin-xways",
+    "name": "San Quentin xWays",
+    "mono": "SQX",
+    "provider": "Nolimit City",
+    "rtp": 96.03,
+    "vol": "extreme",
+    "maxWin": "150,000x",
+    "bestAt": "Gamdom",
+    "tint": "#B4B8BB"
+  },
+  {
+    "slug": "big-bass-bonanza",
+    "name": "Big Bass Bonanza",
+    "mono": "BBB",
+    "provider": "Reel Kingdom",
+    "rtp": 96.71,
+    "vol": "medium",
+    "maxWin": "2,100x",
+    "bestAt": "Cloudbet",
+    "tint": "#7BC9E0"
+  },
+  {
+    "slug": "bonanza-megaways",
+    "name": "Bonanza Megaways",
+    "mono": "BNZ",
+    "provider": "Big Time Gaming",
+    "rtp": 96,
+    "vol": "high",
+    "maxWin": "12,000x",
+    "bestAt": "Stake",
+    "tint": "#D6B65C"
+  },
+  {
+    "slug": "gonzo-s-quest-megaways",
+    "name": "Gonzo’s Quest Megaways",
+    "mono": "GQM",
+    "provider": "Red Tiger",
+    "rtp": 95.97,
+    "vol": "high",
+    "maxWin": "21,000x",
+    "bestAt": "BC.Game",
+    "tint": "#9AAE5E"
+  },
+  {
+    "slug": "jammin-jars",
+    "name": "Jammin’ Jars",
+    "mono": "JMJ",
+    "provider": "Push Gaming",
+    "rtp": 96.83,
+    "vol": "high",
+    "maxWin": "20,000x",
+    "bestAt": "Roobet",
+    "tint": "#E39BC4"
+  },
+  {
+    "slug": "reactoonz",
+    "name": "Reactoonz",
+    "mono": "RTZ",
+    "provider": "Play’n GO",
+    "rtp": 96.51,
+    "vol": "high",
+    "maxWin": "4,570x",
+    "bestAt": "Shuffle",
+    "tint": "#B284FF"
+  },
+  {
+    "slug": "divine-fortune",
+    "name": "Divine Fortune",
+    "mono": "DVF",
+    "provider": "NetEnt",
+    "rtp": 96.59,
+    "vol": "medium",
+    "maxWin": "6,000x",
+    "bestAt": "Cloudbet",
+    "tint": "#C7A45C"
+  },
+  {
+    "slug": "mega-moolah",
+    "name": "Mega Moolah",
+    "mono": "MML",
+    "provider": "Microgaming",
+    "rtp": 88.12,
+    "vol": "high",
+    "maxWin": "225,000x",
+    "bestAt": "Bitstarz",
+    "tint": "#C4795A"
+  }
 ]
