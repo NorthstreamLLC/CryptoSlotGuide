@@ -1,11 +1,5 @@
-import { PagePlaceholder } from "@/components/ui/PagePlaceholder";
+import { SlotCategoryPage } from "@/components/slots/SlotCategoryPage";
 
 export default function Page() {
-  return (
-    <PagePlaceholder
-      kicker="Slots · Cluster pays"
-      title="Cluster pays slots"
-      standfirst="Wins form from clusters of matching symbols rather than fixed paylines."
-    />
-  );
+  return <SlotCategoryPage tag="cluster-pays" />;
 }

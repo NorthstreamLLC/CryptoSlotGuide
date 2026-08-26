@@ -1,11 +1,5 @@
-import { PagePlaceholder } from "@/components/ui/PagePlaceholder";
+import { SlotCategoryPage } from "@/components/slots/SlotCategoryPage";
 
 export default function Page() {
-  return (
-    <PagePlaceholder
-      kicker="Slots · Megaways"
-      title="Megaways slots"
-      standfirst="Reel heights change every spin for up to hundreds of thousands of ways to win."
-    />
-  );
+  return <SlotCategoryPage tag="megaways" />;
 }

@@ -1,11 +1,5 @@
-import { PagePlaceholder } from "@/components/ui/PagePlaceholder";
+import { PredictionMarketsPage } from "@/components/prediction-markets/PredictionMarketsPage";
 
 export default function Page() {
-  return (
-    <PagePlaceholder
-      kicker="Prediction markets"
-      title="Prediction markets"
-      standfirst="Two lists split by settlement asset — crypto-settled and regulated fiat."
-    />
-  );
+  return <PredictionMarketsPage />;
 }

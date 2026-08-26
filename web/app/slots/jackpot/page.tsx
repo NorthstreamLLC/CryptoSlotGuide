@@ -1,11 +1,5 @@
-import { PagePlaceholder } from "@/components/ui/PagePlaceholder";
+import { SlotCategoryPage } from "@/components/slots/SlotCategoryPage";
 
 export default function Page() {
-  return (
-    <PagePlaceholder
-      kicker="Slots · Jackpot"
-      title="Jackpot slots"
-      standfirst="Progressive and fixed top prizes on top of the base paytable."
-    />
-  );
+  return <SlotCategoryPage tag="jackpot" />;
 }

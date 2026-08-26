@@ -1,11 +1,5 @@
-import { PagePlaceholder } from "@/components/ui/PagePlaceholder";
+import { SlotCategoryPage } from "@/components/slots/SlotCategoryPage";
 
 export default function Page() {
-  return (
-    <PagePlaceholder
-      kicker="Slots · Bonus buy"
-      title="Bonus buy slots"
-      standfirst="Skip the base game and pay for the feature round outright."
-    />
-  );
+  return <SlotCategoryPage tag="bonus-buy" />;
 }

@@ -5,6 +5,8 @@
  */
 import ops from "@/data/ops.json";
 import slots from "@/data/slots.json";
+import slotTags from "@/data/slotTags.json";
+import slotCatDefs from "@/data/slotCatDefs.json";
 import liveCasinos from "@/data/liveCasinos.json";
 import liveGames from "@/data/liveGames.json";
 import providers from "@/data/providers.json";
@@ -44,6 +46,8 @@ import type {
   ReviewBasis,
   RtpReading,
   Slot,
+  SlotCategoryDef,
+  SlotTags,
   SportsMarket,
   TickerFact,
   WalletOrExchangeRow,
@@ -54,6 +58,8 @@ import { counts } from "./derived";
 export const siteData = {
   ops: ops as Operator[],
   slots: slots as Slot[],
+  slotTags: slotTags as SlotTags,
+  slotCatDefs: slotCatDefs as SlotCategoryDef[],
   liveCasinos: liveCasinos as LiveCasino[],
   liveGames: liveGames as LiveGame[],
   providers: providers as Provider[],
