@@ -24,7 +24,7 @@ const quickChips = [
   { label: "No-KYC", href: "/crypto-casinos/no-kyc" },
   { label: "Live blackjack", href: "/live-casino" },
   { label: "High RTP slots", href: "/slots" },
-  { label: "Esports betting", href: "/esports-casinos" },
+  { label: "Esports betting", href: "/sportsbooks?tab=2" },
   { label: "Hardware wallets", href: "/wallets" },
 ];
 
