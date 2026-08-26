@@ -1,25 +1,80 @@
-import type { CoinsByOperator, GuideRow, LiveCasino, Operator, Provider, RtpReading, Slot } from "./types";
+import type {
+  CoinsByOperator,
+  EsportsTitle,
+  FiatCasino,
+  GuideRow,
+  HouseGame,
+  LiveCasino,
+  LiveGame,
+  Operator,
+  Provider,
+  RtpReading,
+  Slot,
+  SportsMarket,
+  WalletOrExchangeRow,
+} from "./types";
 
 /**
  * "Every published figure is derived — keep it that way." Per README:
  * no count, median, superlative or comparison is ever a literal — every
  * one of these is computed from the current data arrays. Port these
  * helpers, not the sentences they produce.
+ *
+ * Shape matches `C` in CryptoSlotGuide.dc.html's renderVals() exactly —
+ * note `live` counts live *table types* (liveGames), not live-casino
+ * operators (that's `liveOps`). Keep that distinction; it's load-bearing
+ * for copy like "12 live tables" vs "3 live casinos".
  */
-
 export interface SiteCounts {
   casinos: number;
-  slots: number;
   live: number;
+  liveOps: number;
+  slots: number;
+  providers: number;
+  wallets: number;
+  exchanges: number;
+  books: number;
+  markets: number;
+  guides: number;
+  house: number;
+  fiat: number;
+  predict: number;
   total: number;
 }
 
-export function counts(ops: Operator[], slots: Slot[], live: LiveCasino[]): SiteCounts {
+export function counts(data: {
+  ops: Operator[];
+  liveGames: LiveGame[];
+  liveCasinos: LiveCasino[];
+  slots: Slot[];
+  providers: Provider[];
+  walletRows: WalletOrExchangeRow[];
+  exchangeRows: WalletOrExchangeRow[];
+  sportsMarkets: SportsMarket[];
+  esportsTitles: EsportsTitle[];
+  guideRows: GuideRow[];
+  houseGames: HouseGame[];
+  fiatCasinos: FiatCasino[];
+  predMarkets: { crypto: unknown[]; fiat: unknown[] };
+}): SiteCounts {
+  const c: Omit<SiteCounts, "total"> = {
+    casinos: data.ops.length,
+    live: data.liveGames.length,
+    liveOps: data.liveCasinos.length,
+    slots: data.slots.length,
+    providers: data.providers.length,
+    wallets: data.walletRows.length,
+    exchanges: data.exchangeRows.length,
+    books: data.ops.filter((o) => o.sports).length,
+    markets: data.sportsMarkets.length + data.esportsTitles.length,
+    guides: data.guideRows.length,
+    house: data.houseGames.length,
+    fiat: data.fiatCasinos.length,
+    predict: data.predMarkets.crypto.length + data.predMarkets.fiat.length,
+  };
   return {
-    casinos: ops.length,
-    slots: slots.length,
-    live: live.length,
-    total: ops.length + slots.length + live.length,
+    ...c,
+    total: c.casinos + c.live + c.slots + c.providers + c.wallets + c.exchanges + c.markets + c.guides,
   };
 }
 

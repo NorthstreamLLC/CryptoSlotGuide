@@ -1,13 +1,22 @@
 import Link from "next/link";
-import { footerLinks, navTabs } from "@/lib/nav";
+import { buildNavTabs } from "@/lib/nav";
+import type { SiteCounts } from "@/lib/derived";
 
-export function Footer() {
+/**
+ * NOT yet ported from the real design — CryptoSlotGuide.dc.html's actual
+ * footer markup hasn't been read/copied over yet. This is a placeholder
+ * sitemap-style footer using the same real nav content as the header, so
+ * every route stays reachable in the meantime.
+ */
+export function Footer({ counts }: { counts: SiteCounts }) {
+  const navTabs = buildNavTabs(counts);
+
   return (
     <footer className="border-t border-border bg-section">
       <div className="mx-auto max-w-[1400px] px-10 py-12">
         <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
           {navTabs.map((tab) => (
-            <div key={tab.label}>
+            <div key={tab.key}>
               <h3 className="mb-3 font-mono text-[10.5px] uppercase tracking-[0.07em] text-text-dim">
                 {tab.label}
               </h3>
@@ -32,7 +41,12 @@ export function Footer() {
             © {new Date().getFullYear()} CryptoSlotGuide. Not affiliated with any operator listed.
           </p>
           <ul className="flex flex-wrap gap-5">
-            {footerLinks.map((link) => (
+            {[
+              { label: "Compare", href: "/compare" },
+              { label: "How we rate", href: "/how-we-rate" },
+              { label: "RTP Watch", href: "/rtp-watch" },
+              { label: "Guides", href: "/guides" },
+            ].map((link) => (
               <li key={link.href}>
                 <Link href={link.href} className="text-[12.5px] text-text-dim-2 hover:text-accent">
                   {link.label}

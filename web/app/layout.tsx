@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Archivo, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
-import { DisclosureStrip } from "@/components/layout/DisclosureStrip";
 import { Footer } from "@/components/layout/Footer";
+import { siteCounts } from "@/lib/site-data";
 
 const archivo = Archivo({
   variable: "--font-archivo",
@@ -35,10 +35,9 @@ export default function RootLayout({
       className={`${archivo.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-page text-text-primary">
-        <Header />
-        <DisclosureStrip />
+        <Header counts={siteCounts} />
         <main className="flex-1">{children}</main>
-        <Footer />
+        <Footer counts={siteCounts} />
       </body>
     </html>
   );

@@ -141,79 +141,18 @@ p {
   text-wrap: pretty;
 }
 
-/* Motion — see README "Motion". Kept to this restrained set on purpose. */
-@keyframes csg-drift {
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-  50% {
-    transform: translate(3%, -4%) scale(1.08);
-  }
-}
-
-@keyframes csg-drift2 {
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-  50% {
-    transform: translate(-4%, 3%) scale(1.1);
-  }
-}
-
-@keyframes csg-sweep {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 200% 50%;
-  }
-}
-
-@keyframes csg-slide {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-@keyframes csg-up {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-50%);
-  }
-}
-
-@keyframes csg-down {
-  0% {
-    transform: translateY(-50%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes csg-live {
-  0% {
-    box-shadow: 0 0 0 0 rgba(0, 194, 204, 0.45);
-  }
-  100% {
-    box-shadow: 0 0 0 10px rgba(0, 194, 204, 0);
-  }
-}
-
+/*
+ * Motion — ported verbatim from CryptoSlotGuide.dc.html's <style> block.
+ * Exact keyframe values matter here (translate3d offsets, timing) — don't
+ * re-derive these from the README's prose description.
+ */
 @keyframes csg-pulse {
   0%,
   100% {
-    opacity: 1;
+    opacity: 0.55;
   }
   50% {
-    opacity: 0.55;
+    opacity: 1;
   }
 }
 
@@ -224,6 +163,66 @@ p {
   }
   to {
     opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes csg-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  33% {
+    transform: translate3d(46px, -28px, 0) scale(1.12);
+  }
+  66% {
+    transform: translate3d(-30px, 22px, 0) scale(0.94);
+  }
+}
+
+@keyframes csg-drift2 {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1.04);
+  }
+  50% {
+    transform: translate3d(-52px, 34px, 0) scale(0.9);
+  }
+}
+
+@keyframes csg-sweep {
+  to {
+    background-position: 280% 0;
+  }
+}
+
+@keyframes csg-slide {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes csg-up {
+  to {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes csg-down {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
     transform: translateY(0);
+  }
+}
+
+@keyframes csg-live {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 90, 120, 0.55);
+  }
+  50% {
+    box-shadow: 0 0 0 7px rgba(255, 90, 120, 0);
   }
 }

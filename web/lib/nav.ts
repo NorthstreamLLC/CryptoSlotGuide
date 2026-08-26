@@ -1,191 +1,342 @@
 /**
- * Mega-menu structure — see design/README.md "Navigation": four top-level
- * tabs, each with a left rail of sections; each rail item shows two columns
- * of links plus a "See all" footer. Route paths follow the "Routing map"
- * table in the same doc.
+ * Mega-menu structure — ported directly from `megaDefs` / `navTabs` in
+ * CryptoSlotGuide.dc.html (search that file for `const megaDefs =` to
+ * cross-check). Labels that embed a count (e.g. "All 47 crypto casinos")
+ * are built from live SiteCounts, exactly like the prototype's `C.casinos`
+ * etc. — never hardcoded, so a data change updates the copy automatically.
  */
+import type { SiteCounts } from "./derived";
 
 export interface NavLink {
   label: string;
   href: string;
+  dot?: string;
 }
 
 export interface NavSection {
-  emoji: string;
+  mono: string;
   label: string;
+  tint: string;
   href: string;
-  seeAllLabel: string;
-  columns: [NavLink[], NavLink[]];
+  columns: NavColumn[];
+}
+
+export interface NavColumn {
+  title: string;
+  links: NavLink[];
 }
 
 export interface NavTab {
+  key: "gambling" | "sports" | "predict" | "crypto";
   label: string;
   sections: NavSection[];
 }
 
-export const navTabs: NavTab[] = [
-  {
-    label: "Gambling",
-    sections: [
-      {
-        emoji: "🎰",
-        label: "Crypto casinos",
-        href: "/crypto-casinos",
-        seeAllLabel: "See all 47 reviews",
-        columns: [
-          [
-            { label: "All crypto casinos", href: "/crypto-casinos" },
-            { label: "No-KYC", href: "/crypto-casinos/no-kyc" },
-            { label: "Fastest payouts", href: "/fastest-payouts" },
+export function buildNavTabs(c: SiteCounts): NavTab[] {
+  return [
+    {
+      key: "gambling",
+      label: "Gambling",
+      sections: [
+        {
+          mono: "♠️",
+          label: "Crypto casinos",
+          tint: "#5FE3E8",
+          href: "/crypto-casinos",
+          columns: [
+            {
+              title: "Browse casinos by",
+              links: [
+                { label: `All ${c.casinos} crypto casinos`, href: "/crypto-casinos" },
+                { label: "No-KYC casinos", href: "/crypto-casinos/no-kyc" },
+                { label: "Fastest payouts", href: "/fastest-payouts" },
+                { label: "Lowest wagering", href: "/lowest-wagering" },
+                { label: "Compare side by side", href: "/compare" },
+                { label: "Fiat casinos (separate list)", href: "/fiat-casinos" },
+              ],
+            },
+            {
+              title: "Top casino reviews",
+              links: ["Roobet", "Stake", "BC.Game", "Shuffle", "Rollbit"].map((name) => ({
+                label: name,
+                href: `/casinos/${slug(name)}`,
+              })),
+            },
           ],
-          [
-            { label: "Lowest wagering", href: "/lowest-wagering" },
-            { label: "Casino + sportsbook", href: "/casino-sportsbooks" },
-            { label: "Esports casinos", href: "/esports-casinos" },
+        },
+        {
+          mono: "🃏",
+          label: "Live casino",
+          tint: "#FF7EB6",
+          href: "/live-casino",
+          columns: [
+            {
+              title: "Live tables",
+              links: [
+                { label: "All live casinos", href: "/live-casino", dot: "#FF5A78" },
+                { label: "Blackjack tables", href: "/live-casino?type=Blackjack" },
+                { label: "Roulette tables", href: "/live-casino?type=Roulette" },
+                { label: "Baccarat tables", href: "/live-casino?type=Baccarat" },
+                { label: "Game shows", href: "/live-casino?type=Game+show" },
+              ],
+            },
+            {
+              title: "Popular tables",
+              links: [
+                "Crazy Time",
+                "Lightning Roulette",
+                "Infinite Blackjack",
+                "Speed Baccarat A",
+                "Monopoly Big Baller",
+              ].map((name) => ({ label: name, href: `/live-casino/${slug(name)}` })),
+            },
           ],
-        ],
-      },
-      {
-        emoji: "🎥",
-        label: "Live casino",
-        href: "/live-casino",
-        seeAllLabel: "See all live tables",
-        columns: [
-          [{ label: "Live casino index", href: "/live-casino" }],
-          [{ label: "Blackjack tables", href: "/live-casino" }],
-        ],
-      },
-      {
-        emoji: "🎯",
-        label: "Slots & RTP",
-        href: "/slots",
-        seeAllLabel: "See all 16 slots",
-        columns: [
-          [
-            { label: "All slots", href: "/slots" },
-            { label: "RTP Watch", href: "/rtp-watch" },
-            { label: "Bonus buy", href: "/slots/bonus-buy" },
+        },
+        {
+          mono: "🎰",
+          label: "Slots & RTP",
+          tint: "#DA9877",
+          href: "/slots",
+          columns: [
+            {
+              title: "RTP tools",
+              links: [
+                { label: "RTP Watch · live board", href: "/rtp-watch", dot: "#DA9877" },
+                { label: `All ${c.slots} slot reviews`, href: "/slots" },
+                { label: "How casino RTP versions work", href: "/guides/how-casino-rtp-versions-work" },
+                { label: "How we rate", href: "/how-we-rate" },
+              ],
+            },
+            {
+              title: "By mechanic",
+              links: ["bonus-buy", "megaways", "jackpot", "cluster-pays", "high-volatility"].map((tag) => ({
+                label: `${tag} slots`,
+                href: `/slots/${tag}`,
+              })),
+            },
+            {
+              title: "Top slot reviews",
+              links: ["Money Train 4", "Sweet Bonanza", "Razor Shark", "Gates of Olympus"].map((name) => ({
+                label: name,
+                href: `/slots/${slug(name)}`,
+              })),
+            },
           ],
-          [
-            { label: "Megaways", href: "/slots/megaways" },
-            { label: "Jackpot", href: "/slots/jackpot" },
-            { label: "High volatility", href: "/slots/high-volatility" },
+        },
+        {
+          mono: "🎮",
+          label: "Game providers",
+          tint: "#8FA5C9",
+          href: "/providers",
+          columns: [
+            {
+              title: "Studios",
+              links: [
+                { label: `All ${c.providers} provider reviews`, href: "/providers" },
+                { label: "Slots by provider", href: "/slots" },
+                { label: "How casino RTP versions work", href: "/guides/how-casino-rtp-versions-work" },
+              ],
+            },
+            {
+              title: "Top studios",
+              links: ["Hacksaw Gaming", "Push Gaming", "Nolimit City", "Pragmatic Play", "Relax Gaming"].map(
+                (name) => ({ label: name, href: `/providers/${slug(name)}` })
+              ),
+            },
           ],
-        ],
-      },
-      {
-        emoji: "🛠️",
-        label: "Game providers",
-        href: "/providers",
-        seeAllLabel: "See all providers",
-        columns: [[{ label: "All providers", href: "/providers" }], []],
-      },
-      {
-        emoji: "🎲",
-        label: "House games",
-        href: "/house-games",
-        seeAllLabel: "See all house games",
-        columns: [[{ label: "All house games", href: "/house-games" }], []],
-      },
-      {
-        emoji: "🎁",
-        label: "Bonuses",
-        href: "/bonuses",
-        seeAllLabel: "See the bonus tracker",
-        columns: [[{ label: "Bonus tracker", href: "/bonuses" }], []],
-      },
-      {
-        emoji: "📘",
-        label: "Guides",
-        href: "/guides",
-        seeAllLabel: "See all guides",
-        columns: [[{ label: "All guides", href: "/guides" }], []],
-      },
-    ],
-  },
-  {
-    label: "Sports betting",
-    sections: [
-      {
-        emoji: "🏟️",
-        label: "Sportsbooks",
-        href: "/sportsbooks",
-        seeAllLabel: "See all sportsbooks",
-        columns: [[{ label: "All sportsbooks", href: "/sportsbooks" }], []],
-      },
-      {
-        emoji: "🏈",
-        label: "Sports betting",
-        href: "/casino-sportsbooks",
-        seeAllLabel: "See casino + sportsbook combos",
-        columns: [[{ label: "Casino + sportsbook", href: "/casino-sportsbooks" }], []],
-      },
-      {
-        emoji: "🎮",
-        label: "Esports",
-        href: "/esports-casinos",
-        seeAllLabel: "See esports casinos",
-        columns: [[{ label: "Esports casinos", href: "/esports-casinos" }], []],
-      },
-    ],
-  },
-  {
-    label: "Prediction markets",
-    sections: [
-      {
-        emoji: "🔮",
-        label: "Crypto-settled",
-        href: "/prediction-markets",
-        seeAllLabel: "See crypto-settled markets",
-        columns: [[{ label: "Crypto-settled markets", href: "/prediction-markets" }], []],
-      },
-      {
-        emoji: "🏛️",
-        label: "Regulated fiat",
-        href: "/prediction-markets",
-        seeAllLabel: "See regulated fiat markets",
-        columns: [[{ label: "Regulated fiat markets", href: "/prediction-markets" }], []],
-      },
-      {
-        emoji: "⚖️",
-        label: "Markets vs books",
-        href: "/prediction-markets",
-        seeAllLabel: "Read the comparison",
-        columns: [[{ label: "Markets vs. sportsbooks", href: "/prediction-markets" }], []],
-      },
-    ],
-  },
-  {
-    label: "Cryptocurrency",
-    sections: [
-      {
-        emoji: "👛",
-        label: "Wallets",
-        href: "/wallets",
-        seeAllLabel: "See all wallets",
-        columns: [[{ label: "All wallets", href: "/wallets" }], []],
-      },
-      {
-        emoji: "🔁",
-        label: "Exchanges",
-        href: "/exchanges",
-        seeAllLabel: "See all exchanges",
-        columns: [[{ label: "All exchanges", href: "/exchanges" }], []],
-      },
-      {
-        emoji: "🪙",
-        label: "Coins",
-        href: "/coins",
-        seeAllLabel: "See all coins",
-        columns: [[{ label: "All coins", href: "/coins" }], []],
-      },
-    ],
-  },
-];
+        },
+        {
+          mono: "🎲",
+          label: "House games",
+          tint: "#7BE0B8",
+          href: "/house-games",
+          columns: [
+            {
+              title: "How to play",
+              links: ["Dice", "Crash", "Plinko", "Mines"].map((name) => ({
+                label: name,
+                href: `/house-games/${slug(name)}`,
+              })),
+            },
+            {
+              title: "More originals",
+              links: ["Limbo", "Keno", "Hi-Lo", "Wheel"].map((name) => ({
+                label: name,
+                href: `/house-games/${slug(name)}`,
+              })),
+            },
+          ],
+        },
+        {
+          mono: "🎁",
+          label: "Bonuses",
+          tint: "#C7A45C",
+          href: "/bonuses",
+          columns: [
+            {
+              title: "Offers",
+              links: [
+                { label: "All tracked bonuses", href: "/bonuses" },
+                { label: "Casinos by lowest wagering", href: "/lowest-wagering" },
+                { label: "No-KYC casinos", href: "/crypto-casinos/no-kyc" },
+              ],
+            },
+            {
+              title: "Understand the terms",
+              links: [
+                { label: "Reading wagering requirements", href: "/guides/reading-wagering-requirements" },
+                { label: "KYC thresholds, explained", href: "/guides/kyc-thresholds-explained" },
+                { label: "Our scoring sheet", href: "/how-we-rate" },
+              ],
+            },
+          ],
+        },
+        {
+          mono: "📘",
+          label: "Guides",
+          tint: "#9AAE5E",
+          href: "/guides",
+          columns: [
+            { title: "Most read", links: [{ label: "How to buy crypto for gambling", href: "/guides/how-to-buy-crypto-for-gambling" }] },
+            { title: "More guides", links: [{ label: "All guides", href: "/guides" }] },
+          ],
+        },
+      ],
+    },
+    {
+      key: "sports",
+      label: "Sports betting",
+      sections: [
+        {
+          mono: "🏆",
+          label: "Sportsbooks",
+          tint: "#57B98C",
+          href: "/sportsbooks",
+          columns: [
+            {
+              title: "Rankings",
+              links: [
+                { label: `All ${c.books} sportsbooks`, href: "/sportsbooks" },
+                { label: "Compare side by side", href: "/compare" },
+                { label: "Sportsbook margin, measured", href: "/guides/sportsbook-margin-measured" },
+              ],
+            },
+            {
+              title: "Top book reviews",
+              links: ["Cloudbet", "Stake", "Roobet", "BC.Game"].map((name) => ({
+                label: name,
+                href: `/casinos/${slug(name)}`,
+              })),
+            },
+          ],
+        },
+        {
+          mono: "⚽",
+          label: "Sports betting",
+          tint: "#9FB6E0",
+          href: "/casino-sportsbooks",
+          columns: [{ title: "By sport", links: [{ label: "All sports markets", href: "/casino-sportsbooks" }] }],
+        },
+        {
+          mono: "🕹️",
+          label: "Esports",
+          tint: "#C4795A",
+          href: "/esports-casinos",
+          columns: [{ title: "By title", links: [{ label: "All esports markets", href: "/esports-casinos" }] }],
+        },
+      ],
+    },
+    {
+      key: "predict",
+      label: "Prediction markets",
+      sections: [
+        {
+          mono: "🔗",
+          label: "Crypto-settled",
+          tint: "#00C2CC",
+          href: "/prediction-markets",
+          columns: [
+            {
+              title: "Venues",
+              links: ["Polymarket", "Limitless", "Drift BET", "Overtime", "Myriad"].map((name) => ({
+                label: name,
+                href: "/prediction-markets",
+              })),
+            },
+          ],
+        },
+        {
+          mono: "🏛️",
+          label: "Regulated fiat",
+          tint: "#6BC7FF",
+          href: "/prediction-markets",
+          columns: [
+            {
+              title: "Venues",
+              links: ["Kalshi", "Polymarket US", "Robinhood Prediction", "IBKR ForecastEx", "PredictIt"].map(
+                (name) => ({ label: name, href: "/prediction-markets" })
+              ),
+            },
+          ],
+        },
+        {
+          mono: "⚖️",
+          label: "Markets vs books",
+          tint: "#57E39A",
+          href: "/prediction-markets",
+          columns: [{ title: "Compare against", links: [{ label: "Crypto sportsbooks", href: "/sportsbooks" }] }],
+        },
+      ],
+    },
+    {
+      key: "crypto",
+      label: "Cryptocurrency",
+      sections: [
+        {
+          mono: "👛",
+          label: "Wallets",
+          tint: "#9B8FC4",
+          href: "/wallets",
+          columns: [{ title: "Wallet reviews", links: [{ label: `All ${c.wallets} wallets`, href: "/wallets" }] }],
+        },
+        {
+          mono: "💱",
+          label: "Exchanges",
+          tint: "#5FE3E8",
+          href: "/exchanges",
+          columns: [{ title: "Exchange reviews", links: [{ label: `All ${c.exchanges} exchanges`, href: "/exchanges" }] }],
+        },
+        {
+          mono: "🪙",
+          label: "Coins",
+          tint: "#C7A45C",
+          href: "/coins",
+          columns: [
+            {
+              title: "Coin support",
+              links: [
+                { label: "Every coin we track", href: "/coins" },
+                { label: "Depositing over Lightning", href: "/guides/depositing-over-lightning" },
+              ],
+            },
+            {
+              title: "Tools",
+              links: [
+                { label: "RTP Watch · live board", href: "/rtp-watch", dot: "#DA9877" },
+                { label: "Prediction markets", href: "/prediction-markets" },
+                { label: "Compare operators", href: "/compare" },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  ];
+}
 
-export const footerLinks: NavLink[] = [
-  { label: "Compare", href: "/compare" },
-  { label: "How we rate", href: "/how-we-rate" },
-  { label: "RTP Watch", href: "/rtp-watch" },
-  { label: "Guides", href: "/guides" },
-];
+function slug(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
+}
