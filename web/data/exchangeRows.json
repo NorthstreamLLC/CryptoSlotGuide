@@ -1,5 +1,5 @@
 [
-  { "slug": "coinbase", "name": "Coinbase", "mono": "CB", "hed": "Easiest on-ramp for US users", "note": "Regulated, higher fees than offshore alternatives.", "m1": "Custodial", "m2": "USD, EUR, GBP rails", "m3": "0.6–3.99%", "score": 8.2 },
-  { "slug": "kraken", "name": "Kraken", "mono": "KR", "hed": "Deep liquidity, lower fees", "note": "Best maker/taker fees of the exchanges tracked here.", "m1": "Custodial", "m2": "USD, EUR rails", "m3": "0–0.26%", "score": 8.8 },
-  { "slug": "okx", "name": "OKX", "mono": "OK", "hed": "Broadest derivatives access", "note": "Offshore; not available to US residents.", "m1": "Custodial", "m2": "Card + crypto rails", "m3": "0.08–0.1%", "score": 8.5 }
+  { "slug": "coinbase", "name": "Coinbase", "mono": "CB", "hed": "Easiest on-ramp for US users", "note": "Regulated, higher fees than offshore alternatives.", "m1": "0.35%", "m2": "ACH, SEPA, card", "m3": "$50k / day", "score": 8.1 },
+  { "slug": "kraken", "name": "Kraken", "mono": "KR", "hed": "Deep liquidity, lower fees", "note": "Best maker/taker fees of the exchanges tracked here.", "m1": "0.09%", "m2": "ACH, SEPA, wire", "m3": "Uncapped after verification", "score": 8.9 },
+  { "slug": "okx", "name": "OKX", "mono": "OK", "hed": "Broadest derivatives access", "note": "Offshore; not available to US residents.", "m1": "0.11%", "m2": "Card, crypto rails", "m3": "$500k / day", "score": 8.6 }
 ]

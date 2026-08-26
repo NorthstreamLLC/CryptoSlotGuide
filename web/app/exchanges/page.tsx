@@ -1,11 +1,5 @@
-import { PagePlaceholder } from "@/components/ui/PagePlaceholder";
+import { VerticalIndexPage } from "@/components/vertical/VerticalIndexPage";
 
 export default function Page() {
-  return (
-    <PagePlaceholder
-      kicker="Cryptocurrency · Exchanges"
-      title="Exchanges"
-      standfirst="On/off-ramps compared by fees and settlement rails."
-    />
-  );
+  return <VerticalIndexPage kind="exchanges" />;
 }

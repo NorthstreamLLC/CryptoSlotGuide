@@ -12,7 +12,7 @@
  */
 import { siteData } from "./site-data";
 import { crit, flag } from "./scoring";
-import { casinoCons, indexMedianPayout } from "./derived";
+import { casinoCons, fmtMins, indexMedianPayout } from "./derived";
 import type { ScoreBar, Flag } from "./types";
 
 export type EntityType = "casino" | "slot" | "wallet" | "exchange" | "provider";
@@ -74,12 +74,6 @@ const COIN_TINTS: Record<string, string> = {
 };
 function coinTint(t: string): string {
   return COIN_TINTS[t] ?? "#8DA0AA";
-}
-
-function fmtMins(mins: number): string {
-  const m = Math.floor(mins);
-  const sec = Math.round((mins - m) * 60);
-  return `${m}m ${String(sec).padStart(2, "0")}s`;
 }
 
 function logoFor(slug: string): string {
@@ -413,7 +407,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       o.ln ? "Lightning supported, so small deposits avoid on-chain fees" : `Deposits credited at ${o.conf} confirmation${o.conf > 1 ? "s" : ""}`,
       o.esports ? "Live esports markets alongside the casino" : "Catalogue covers all major studios we track",
     ],
-    cons: casinoCons(o, { medianPayout, coinsBy, allCoinsCount: 8 }),
+    cons: casinoCons(o, { ops, liveCasinos: siteData.liveCasinos, coinsBy, coinDefs: siteData.coinDefs }),
     faqs: [
       { q: `Is ${o.name} available in my country?`, a: `${o.name} blocks a long list of jurisdictions under its ${o.licence} licence, enforced at registration and again at withdrawal. Check the restricted list in the terms before depositing rather than after.` },
       { q: "Do I have to complete KYC?", a: o.kyc === "none" ? "No documents were requested at any volume we tested, but the operator reserves the right to ask." : o.kyc === "tiered" ? "Not for small volumes. Withdrawals below a cumulative threshold cleared with no document request; above it, expect a standard ID and address check." : "Yes. Verification is required before the first withdrawal is processed." },

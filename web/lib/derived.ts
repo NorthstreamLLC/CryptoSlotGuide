@@ -1,4 +1,5 @@
 import type {
+  CoinDef,
   CoinsByOperator,
   EsportsTitle,
   FiatCasino,
@@ -113,21 +114,25 @@ export function medianRtp(slots: Slot[]): number {
   return median(slots.map((s) => s.rtp));
 }
 
-/** Share (0–1) of RTP Watch readings that come in below the studio's full-build figure. */
+/**
+ * Count of distinct slot titles with at least one cut reading (rtp below
+ * the studio's published figure) somewhere in RTP Watch. NOTE: the
+ * prototype's `splitBuilds()` counts against a per-title `cuts[]` array,
+ * a shape design/README.md explicitly says not to carry into production
+ * ("one row per cell, not per title" — see the RTP Watch section). This
+ * is the per-cell equivalent against our real `rtp_reading` schema.
+ */
 export function splitBuilds(readings: RtpReading[]): number {
-  if (readings.length === 0) return 0;
-  const cut = readings.filter((r) => r.rtp < r.publishedRtp).length;
-  return cut / readings.length;
+  return new Set(readings.filter((r) => r.rtp < r.publishedRtp).map((r) => r.slotSlug)).size;
 }
 
 export function medianReadMins(guides: GuideRow[]): number {
   return median(guides.map((g) => g.readMins));
 }
 
-/** Widest gap between an operator's cut RTP and the studio's published figure. */
-export function bestSpread(readings: RtpReading[]): number {
-  if (readings.length === 0) return 0;
-  return Math.max(...readings.map((r) => Math.round((r.publishedRtp - r.rtp) * 100) / 100));
+/** Tightest exchange spread — same sort-and-take-first the source uses (m1 is a "%" string). */
+export function bestSpread(exchangeRows: WalletOrExchangeRow[]): string {
+  return [...exchangeRows].map((x) => x.m1).sort()[0] ?? "—";
 }
 
 export function topScore<T extends { score: number }>(list: T[]): T | undefined {
@@ -142,61 +147,93 @@ export function lightningOps(ops: Operator[]): number {
   return ops.filter((o) => o.ln).length;
 }
 
-/** Studios with no per-operator RTP Watch readings — i.e. only one configuration is in the wild. */
-export function singleRtpStudios(slots: Slot[], readings: RtpReading[]): string[] {
-  const checkedProviders = new Set(
-    readings
-      .map((r) => slots.find((s) => s.slug === r.slotSlug)?.provider)
-      .filter((p): p is string => Boolean(p))
-  );
-  const allProviders = new Set(slots.map((s) => s.provider));
-  return [...allProviders].filter((p) => !checkedProviders.has(p));
+/** A studio "ships one RTP" when it publishes a single figure, not a range. */
+export function singleRtpStudios(providers: Provider[]): number {
+  return providers.filter((p) => !p.rtp.includes("–")).length;
 }
 
-export function selfCustodyWallets(rows: { slug: string; custody?: "self" | "custodial" }[]): number {
-  return rows.filter((r) => r.custody === "self").length;
+export function rangeRtpStudios(providers: Provider[]): number {
+  return providers.length - singleRtpStudios(providers);
 }
 
-export function largestCatalogue(providers: Provider[]): Provider | undefined {
-  return [...providers].sort((a, b) => b.titles - a.titles)[0];
+export function selfCustodyWallets(rows: WalletOrExchangeRow[]): number {
+  return rows.filter((r) => /self/i.test(r.m1)).length;
 }
 
-/** Resolves {casinos}/{fee}/{ln}/{coins} tokens in prose so copy can't drift from data. */
-export function fill(template: string, tokens: Record<string, string | number>): string {
-  return template.replace(/\{(\w+)\}/g, (match, key) =>
-    key in tokens ? String(tokens[key]) : match
-  );
+export function largestCatalogue(providers: Provider[]): number {
+  return Math.max(0, ...providers.map((p) => p.titles || 0));
+}
+
+/** Resolves {casinos}/{fee}/{ln}/{coins}/{slots}/{studios} tokens in prose so copy can't drift from data. */
+export function fill(
+  template: string,
+  data: { ops: Operator[]; slots: Slot[]; providers: Provider[]; coinDefs: CoinDef[] }
+): string {
+  const tokens: Record<string, string | number> = {
+    casinos: data.ops.length,
+    fee: feeAbsorbers(data.ops),
+    ln: lightningOps(data.ops),
+    coins: data.coinDefs.length,
+    slots: data.slots.length,
+    studios: data.providers.length,
+  };
+  return template.replace(/\{(\w+)\}/g, (match, key) => (key in tokens ? String(tokens[key]) : match));
+}
+
+export function fmtMins(v: number): string {
+  const m = Math.floor(v);
+  const s = Math.round((v - m) * 60);
+  return `${m}m ${String(s).padStart(2, "0")}s`;
+}
+
+/** Coin tickers the operator does NOT credit, per coinsBy. */
+export function missingCoins(coinsBy: CoinsByOperator, coinDefs: CoinDef[], slug: string): string[] {
+  const has = coinsBy[slug] ?? [];
+  return coinDefs.map((c) => c.ticker).filter((t) => !has.includes(t));
 }
 
 /**
- * Walks an operator's own record in priority order and returns the first
- * four cons that genuinely apply: wagering above 1x, confirmations above 1,
- * payout above the index median, fee absorption, missing coins, Lightning,
- * KYC posture, then sportsbook gaps.
+ * Walks an operator's own record in priority order, same as the source's
+ * `casinoCons(o)`: wagering, confirmations, payout vs. median, the live
+ * criticism (if it runs a live casino), fee absorption, missing coins,
+ * Lightning, KYC/manual-review risk, sportsbook/esports gaps, then a
+ * catch-all — so there are always at least four candidates and the first
+ * four that genuinely apply are used.
  */
 export function casinoCons(
   o: Operator,
-  ctx: { medianPayout: number; coinsBy: CoinsByOperator; allCoinsCount: number }
+  ctx: { ops: Operator[]; liveCasinos: LiveCasino[]; coinsBy: CoinsByOperator; coinDefs: CoinDef[] }
 ): string[] {
-  const cons: string[] = [];
-  if (o.wager > 1) cons.push(`${o.wager}x wagering requirement`);
-  if (o.conf > 1) cons.push(`${o.conf} confirmations required`);
-  if (o.payout > ctx.medianPayout) cons.push("Payout time above the index median");
-  if (!o.absorbsFee) cons.push("Does not absorb network fees");
-  const coinCount = (ctx.coinsBy[o.slug] ?? []).length;
-  if (coinCount < ctx.allCoinsCount) cons.push(`Missing ${ctx.allCoinsCount - coinCount} supported coins`);
-  if (!o.ln) cons.push("No Lightning Network support");
-  if (o.kyc === "required") cons.push("Mandatory KYC");
-  if (!o.sports) cons.push("No sportsbook");
-  return cons.slice(0, 4);
+  const missing = missingCoins(ctx.coinsBy, ctx.coinDefs, o.slug);
+  const med = indexMedianPayout(ctx.ops);
+  const out: (string | null)[] = [];
+  if (o.wager > 1) out.push(`${o.wager}× wagering makes the headline offer far less valuable than it reads`);
+  if (o.conf > 1) out.push(`${o.conf} confirmations before the balance is playable, so a busy block costs you real time`);
+  if (o.payout > med) out.push(`Median withdrawal of ${o.payoutLabel} sits above the index median of ${fmtMins(med)}`);
+  if (ctx.liveCasinos.some((l) => l.slug === o.slug)) out.push(liveCon(ctx.liveCasinos, o.slug));
+  if (!o.absorbsFee) out.push("Network fee is deducted from the withdrawal rather than absorbed");
+  if (missing.length) out.push(`No ${missing.slice(0, 2).join(" or ")} support on the cashier`);
+  if (!o.ln) out.push("No Lightning, so small deposits still pay an on-chain fee");
+  if (o.kyc === "required") out.push("Documents required before the first withdrawal clears");
+  else out.push("A large withdrawal can still trigger a manual review");
+  if (!o.sports) out.push("No sportsbook, so a single balance cannot cover both");
+  else if (!o.esports) out.push("Sportsbook carries no esports markets");
+  out.push("Restricted-country list is long and enforced at withdrawal as well as signup");
+  return out.filter((x): x is string => Boolean(x)).slice(0, 4);
 }
 
-/** Returns null rather than inventing a fault for the category leader. */
+/**
+ * The category leader has nothing to answer for on breadth — the only
+ * honest live criticism there is latency, and only if someone beats it.
+ */
 export function liveCon(liveCasinos: LiveCasino[], slug: string): string | null {
-  const leader = topScore(liveCasinos);
-  if (leader?.slug === slug) return null;
-  const casino = liveCasinos.find((c) => c.slug === slug);
-  if (!casino || !leader) return null;
-  if (casino.tables < leader.tables) return "Smaller table count than the category leader";
-  return null;
+  const ranked = [...liveCasinos].sort((a, b) => b.tables - a.tables);
+  const me = ranked.find((c) => c.slug === slug);
+  const best = ranked[0];
+  if (!me || !best) return null;
+  if (me.slug === best.slug) {
+    const quick = [...ranked].sort((a, b) => parseInt(a.latency, 10) - parseInt(b.latency, 10))[0];
+    return quick && quick.slug !== me.slug ? `Live stream runs ${me.latency} against ${quick.name}'s ${quick.latency}` : null;
+  }
+  return `Live catalogue trails ${best.name} — ${me.tables} tables against ${best.tables}`;
 }

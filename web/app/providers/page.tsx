@@ -1,11 +1,5 @@
-import { PagePlaceholder } from "@/components/ui/PagePlaceholder";
+import { VerticalIndexPage } from "@/components/vertical/VerticalIndexPage";
 
 export default function Page() {
-  return (
-    <PagePlaceholder
-      kicker="Game providers"
-      title="Game providers"
-      standfirst="Studios ranked by catalogue depth and measured RTP behaviour."
-    />
-  );
+  return <VerticalIndexPage kind="providers" />;
 }

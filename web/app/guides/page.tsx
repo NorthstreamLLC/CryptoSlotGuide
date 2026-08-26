@@ -1,11 +1,5 @@
-import { PagePlaceholder } from "@/components/ui/PagePlaceholder";
+import { VerticalIndexPage } from "@/components/vertical/VerticalIndexPage";
 
 export default function Page() {
-  return (
-    <PagePlaceholder
-      kicker="Guides"
-      title="Guides"
-      standfirst="Explainers on buying crypto, KYC, RTP, provably fair and more."
-    />
-  );
+  return <VerticalIndexPage kind="guides" />;
 }

@@ -1,11 +1,5 @@
-import { PagePlaceholder } from "@/components/ui/PagePlaceholder";
+import { VerticalIndexPage } from "@/components/vertical/VerticalIndexPage";
 
 export default function Page() {
-  return (
-    <PagePlaceholder
-      kicker="Sports betting"
-      title="Sportsbooks"
-      standfirst="Crypto sportsbooks ranked, with Sportsbooks / Sports / Esports tabs."
-    />
-  );
+  return <VerticalIndexPage kind="sportsbooks" tabIdx={0} />;
 }
