@@ -243,7 +243,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
           mono: "⚽",
           label: "Sports betting",
           tint: "#9FB6E0",
-          href: "/casino-sportsbooks",
+          href: "/sportsbooks?tab=1",
           columns: [
             {
               title: "By sport",
@@ -259,7 +259,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
           mono: "🕹️",
           label: "Esports",
           tint: "#C4795A",
-          href: "/esports-casinos",
+          href: "/sportsbooks?tab=2",
           columns: [
             {
               title: "By title",
@@ -268,7 +268,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
             {
               title: "Where to bet it",
               links: [
-                { label: "All esports markets", href: "/esports-casinos" },
+                { label: "All esports markets", href: "/sportsbooks?tab=2" },
                 { label: "Sportsbook margin, measured", href: "/guides/sportsbook-margin-measured" },
                 { label: "Compare books", href: "/compare" },
               ],
@@ -308,18 +308,18 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
           mono: "🏛️",
           label: "Regulated fiat",
           tint: "#6BC7FF",
-          href: "/prediction-markets",
+          href: "/prediction-markets?tab=fiat",
           columns: [
             {
               title: "Venues",
               links: ["Kalshi", "Polymarket US", "Robinhood Prediction", "IBKR ForecastEx", "PredictIt"].map(
-                (name) => ({ label: name, href: "/prediction-markets" })
+                (name) => ({ label: name, href: "/prediction-markets?tab=fiat" })
               ),
             },
             {
               title: "What to know",
               links: [
-                { label: "All regulated venues", href: "/prediction-markets" },
+                { label: "All regulated venues", href: "/prediction-markets?tab=fiat" },
                 { label: "Exchanges to fund with", href: "/exchanges" },
                 { label: "How we rate", href: "/how-we-rate" },
               ],

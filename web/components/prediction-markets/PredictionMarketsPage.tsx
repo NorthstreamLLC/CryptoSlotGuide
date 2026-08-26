@@ -7,10 +7,17 @@ import { siteData } from "@/lib/site-data";
  * Ported from the `isPredict` block in CryptoSlotGuide.dc.html (search
  * for `PREDICTION MARKETS`). Two lists split by settlement asset —
  * crypto-settled and regulated fiat — never merged.
+ *
+ * `initialTab` deep-links to the Regulated fiat list — the source's
+ * `predTab` state that the mega-menu's Regulated fiat rail item and its
+ * venue links (Kalshi, Polymarket US, ...) jump straight to. Read
+ * server-side in app/prediction-markets/page.tsx (same pattern as
+ * /search's `q` param) rather than via useSearchParams, so the page
+ * stays statically prerenderable.
  */
-export function PredictionMarketsPage() {
+export function PredictionMarketsPage({ initialTab = "crypto" }: { initialTab?: "crypto" | "fiat" }) {
   const { predMarkets } = siteData;
-  const [tab, setTab] = useState<"crypto" | "fiat">("crypto");
+  const [tab, setTab] = useState<"crypto" | "fiat">(initialTab);
   const rows = predMarkets[tab];
 
   return (

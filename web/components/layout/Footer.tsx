@@ -33,8 +33,8 @@ const footerCols = [
     title: "Betting",
     links: [
       { l: "Crypto sportsbooks", href: "/sportsbooks" },
-      { l: "Sports markets", href: "/casino-sportsbooks" },
-      { l: "Esports betting", href: "/esports-casinos" },
+      { l: "Sports markets", href: "/sportsbooks?tab=1" },
+      { l: "Esports betting", href: "/sportsbooks?tab=2" },
       { l: "Prediction markets", href: "/prediction-markets" },
       { l: "Game providers", href: "/providers" },
       { l: "Guides", href: "/guides" },
@@ -47,6 +47,8 @@ const footerCols = [
       { l: "Wallets", href: "/wallets" },
       { l: "Exchanges", href: "/exchanges" },
       { l: "Coins we track", href: "/coins" },
+      { l: "Search the index", href: "/search" },
+      { l: "Responsible gambling", href: "/guides/kyc-thresholds-explained" },
     ],
   },
 ];
