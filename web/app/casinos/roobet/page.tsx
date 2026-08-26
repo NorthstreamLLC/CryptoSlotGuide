@@ -1,11 +1,5 @@
-import { PagePlaceholder } from "@/components/ui/PagePlaceholder";
+import { RoobetReviewPage } from "@/components/casinos/RoobetReviewPage";
 
 export default function Page() {
-  return (
-    <PagePlaceholder
-      kicker="Casino review"
-      title="Roobet review"
-      standfirst="Hand-written flagship review — the canonical URL for Roobet across the site."
-    />
-  );
+  return <RoobetReviewPage />;
 }
