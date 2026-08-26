@@ -77,12 +77,18 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
               <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#5C6A72", marginBottom: 12 }}>
                 {scoreLabel}
               </div>
-              <div style={{ display: "flex", alignItems: "flex-end", gap: 12, marginBottom: 22 }}>
-                <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 60, fontWeight: 700, lineHeight: 0.85, color: "#fff", letterSpacing: "-.045em" }}>
-                  {e.score}
-                </span>
-                <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 13, color: "#5C6A72", paddingBottom: 8 }}>{scoreUnit}</span>
-              </div>
+              {e.type === "market" ? (
+                <div style={{ marginBottom: 22, fontSize: 14.5, lineHeight: 1.6, color: "#8DA0AA", textWrap: "pretty" }}>
+                  Markets are not scored as a whole. The ratings below are for this market at the best book we found.
+                </div>
+              ) : (
+                <div style={{ display: "flex", alignItems: "flex-end", gap: 12, marginBottom: 22 }}>
+                  <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 60, fontWeight: 700, lineHeight: 0.85, color: "#fff", letterSpacing: "-.045em" }}>
+                    {e.score}
+                  </span>
+                  <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 13, color: "#5C6A72", paddingBottom: 8 }}>{scoreUnit}</span>
+                </div>
+              )}
               <div style={{ display: "flex", flexDirection: "column", gap: 13, marginBottom: 24 }}>
                 {e.criteria.map((c) => (
                   <div key={c.name}>

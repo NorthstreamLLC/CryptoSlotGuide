@@ -34,7 +34,7 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
 
   const view = btcViews[filter];
   const btcFn = filterFns[filter];
-  const coinOk = (o: Operator) => coinSel === "all" || (coinsBy[o.slug] ?? []).includes(coinSel);
+  const coinOk = (o: Operator) => coinSel === "all" || (coinsBy[o.slug] ?? []).map(String).includes(coinSel);
 
   const roobet = ops.find((o) => o.hasCustomReview);
   const spotlight = !!roobet && btcFn(roobet);
@@ -55,7 +55,7 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
 
   const coinFilters = [{ t: "all", label: "All coins" }, ...coinDefs.map((c) => ({ t: c.ticker, label: c.ticker }))].map((c) => ({
     ...c,
-    count: c.t === "all" ? ops.length : ops.filter((o) => (coinsBy[o.slug] ?? []).includes(c.t)).length,
+    count: c.t === "all" ? ops.length : ops.filter((o) => (coinsBy[o.slug] ?? []).map(String).includes(c.t)).length,
   }));
 
   function toggleSort(key: SortKey) {

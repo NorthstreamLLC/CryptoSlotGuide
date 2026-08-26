@@ -1,8 +1,8 @@
 [
-  { "name": "CS2", "note": "Highest liquidity esports market on most crypto sportsbooks." },
-  { "name": "League of Legends", "note": "Deep in-play markets during major tournaments." },
-  { "name": "Dota 2", "note": "Strong futures markets around The International." },
-  { "name": "Valorant", "note": "Growing market depth, fewer live markets than CS2." },
-  { "name": "Rocket League", "note": "Niche but consistently offered by crypto-native books." },
-  { "name": "Overwatch", "note": "Limited to major league windows." }
+  { "name": "CS2", "mono": "CS", "tint": "#2FA8B0", "note": "Map, round and pistol markets", "best": "Roobet", "m2": "84", "m3": "< 2 min" },
+  { "name": "League of Legends", "mono": "LO", "tint": "#5FA8D6", "note": "First blood, towers, dragons", "best": "Roobet", "m2": "61", "m3": "< 2 min" },
+  { "name": "Dota 2", "mono": "DO", "tint": "#C4795A", "note": "Series handicaps and map totals", "best": "Roobet", "m2": "48", "m3": "3 min" },
+  { "name": "Valorant", "mono": "VA", "tint": "#C47A97", "note": "Map winner, correct score", "best": "Shuffle", "m2": "39", "m3": "4 min" },
+  { "name": "Rainbow Six", "mono": "R6", "tint": "#7E93B8", "note": "Thin books outside majors", "best": "Stake", "m2": "17", "m3": "6 min" },
+  { "name": "Rocket League", "mono": "RK", "tint": "#9AAE5E", "note": "RLCS only, limited in-play", "best": "Gamdom", "m2": "12", "m3": "7 min" }
 ]

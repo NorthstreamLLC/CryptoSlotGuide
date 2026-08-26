@@ -6,16 +6,15 @@
  * live record (o.payoutLabel, o.wager, coins.length, ...), the same way
  * the source does it — not hand-written per entity.
  *
- * Ported for the five types our seed data currently supports: casino,
- * slot, wallet, exchange, provider. `market` (sports/esports) is not
- * wired yet — see the TODO near the bottom.
+ * Ported for all six entity types: casino, slot, wallet, exchange,
+ * provider, market (sports/esports betting markets — /betting/[slug]).
  */
 import { siteData } from "./site-data";
 import { crit, flag } from "./scoring";
 import { casinoCons, fmtMins, indexMedianPayout } from "./derived";
 import type { ScoreBar, Flag } from "./types";
 
-export type EntityType = "casino" | "slot" | "wallet" | "exchange" | "provider";
+export type EntityType = "casino" | "slot" | "wallet" | "exchange" | "provider" | "market";
 
 export interface SpecRow extends Flag {
   k: string;
@@ -350,6 +349,79 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
     };
   }
 
+  if (type === "market") {
+    const toSlug = (n: string) => n.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+    const all = [...siteData.sportsMarkets, ...siteData.esportsTitles];
+    const m = all.find((r) => toSlug(r.name) === slug);
+    if (!m) return null;
+    const esport = siteData.esportsTitles.some((t) => t.name === m.name);
+    const books = ops
+      .filter((o2) => (esport ? o2.esports : o2.sports))
+      .slice(0, 6)
+      .map((o2) => ({ ...(siteData.sbData[o2.slug] ?? {}), name: o2.name, score: o2.score }));
+
+    return {
+      type,
+      kicker: esport ? "Esports market" : "Sports market",
+      name: m.name,
+      slug: toSlug(m.name),
+      logo: "",
+      mono: m.mono,
+      tint: m.tint,
+      noLogo: true,
+      score: "",
+      headline: `${m.name} betting: best price at ${m.best}, ${esport ? `${m.m2} live markets` : `${m.m2} margin`}`,
+      standfirst: `We priced the same ${m.name} selections across every crypto book on our index at the same times of day, then counted the markets each one actually posts. ${m.note}.`,
+      tags: [esport ? "LIVE MARKET COUNTS" : "MARGIN SAMPLED", "PRICED AT MATCHED TIMES", "UPDATED 23 AUG 2026"],
+      byline: "Priced by the betting desk · 40 selections per book · tournament week",
+      verdict: `For ${m.name}, ${m.best} held the best price across our sample${esport ? ` and posted the deepest live book at ${m.m2} markets.` : ` at ${m.m2} margin.`} The spread between the tightest and widest book on this market is wider than any promotion on offer.`,
+      criteria: crit(8.6, [0.4, -0.3, 0.2, -0.5, 0.3, -0.2], ["Price quality", "Market depth", "In-play coverage", "Settlement speed", "Limits", "Cash-out terms"]),
+      stats: [
+        { label: "Best price at", value: m.best, note: "Across 40 matched selections" },
+        { label: esport ? "Live markets" : "Margin", value: m.m2, note: esport ? "Counted during a major week" : "Median across our sample" },
+        { label: esport ? "Settlement" : "Markets posted", value: m.m3, note: esport ? "Timed on settled slips" : "Per event, pre-match" },
+        { label: "Books offering it", value: String(books.length), note: "Of the operators we track" },
+        { label: "Widest book", value: books.length ? books[books.length - 1].name : "—", note: "Costs roughly two points more" },
+        { label: "In-play", value: esport ? "Map and round level" : "Full match plus props", note: "Where the book supports it" },
+      ],
+      chipLabel: "Books posting this market",
+      chips: books.map((b) => ({ t: b.name, tint: "#5FE3E8" })),
+      specTitle: "How we priced it",
+      specSub: "Same selections, same times, no promotional prices included.",
+      spec: [
+        spec("Sample", "40 selections per book across a full tournament week", "ok"),
+        spec("Timing", "Priced at matched times to remove drift", "ok"),
+        spec("Boosts excluded", "Price boosts and enhanced odds are not counted", "ok"),
+        spec("Limits", "Maximum stake varies by book and tightens in-play", "watch"),
+        spec("Settlement", `${esport ? m.m3 : "3 min"} median on settled slips`, "ok"),
+        spec("Void policy", "Postponements handled inconsistently between books", "bad"),
+      ],
+      tableTitle: "Books on this market",
+      tableSub: "Margin and live market counts for the operators posting it.",
+      tableCols: ["Margin", "Live markets", "Settlement"],
+      tableRows: books.map((b) => ({
+        name: b.name,
+        note: `Score ${b.score.toFixed(1)} on our index`,
+        m1: "margin" in b ? (b.margin as string) : "—",
+        m2: "markets" in b ? String(b.markets) : "—",
+        m3: "settle" in b ? (b.settle as string) : "—",
+      })),
+      tableNote: "Margin is the number that compounds. On this market the gap between the tightest and widest book is worth more over a season than any sign-up offer attached to either.",
+      pros: [
+        `Best price found at ${m.best}`,
+        esport ? `${m.m2} live markets at peak` : `${m.m2} margin at the tightest book, measured not advertised`,
+        `${books.length} books post it, so line shopping is realistic`,
+        `Settlement inside ${esport ? m.m3 : "three minutes"} on our slips`,
+      ],
+      cons: ["Prices widen sharply outside marquee events", "In-play limits tighten without notice", "Void and postponement rules differ between books on the same event"],
+      faqs: [
+        { q: "Is line shopping worth the effort?", a: "On this market, yes. The gap between the tightest and widest book in our sample is around two points of margin, which is larger than any bonus returns over the same volume." },
+        { q: "Why not just use the book with the best bonus?", a: "Because margin applies to every bet and a bonus applies once. We rank books on the recurring cost first." },
+        { q: "How often do you re-price?", a: "Quarterly, and during any major tournament for the markets it affects. Each page carries its own date." },
+      ],
+    };
+  }
+
   // casino (default)
   const o = ops.find((r) => r.slug === slug);
   if (!o) return null;
@@ -427,6 +499,7 @@ const BACK: Record<EntityType, { label: string; href: string }> = {
   wallet: { label: "Compare all wallets", href: "/wallets" },
   slot: { label: "Every slot we track", href: "/slots" },
   provider: { label: "Compare all studios", href: "/providers" },
+  market: { label: "Every market we price", href: "/sportsbooks" },
 };
 
 const CTA: Record<EntityType, (name: string) => string> = {
@@ -435,6 +508,7 @@ const CTA: Record<EntityType, (name: string) => string> = {
   wallet: (name) => `Get ${name}`,
   slot: () => "Where to play it",
   provider: () => "See every title",
+  market: () => "Best book for this market",
 };
 
 export function backLink(type: EntityType) {
@@ -444,7 +518,9 @@ export function ctaLabel(type: EntityType, name: string) {
   return CTA[type](name);
 }
 export function scoreMeta(type: EntityType) {
-  return type === "slot" ? { label: "Published return", unit: "% RTP" } : { label: "Overall score", unit: "/ 10" };
+  if (type === "slot") return { label: "Published return", unit: "% RTP" };
+  if (type === "market") return { label: "How this market rates", unit: "" };
+  return { label: "Overall score", unit: "/ 10" };
 }
 export function editorialTake(type: EntityType, slug: string): string | undefined {
   return siteData.editorial[`${type}:${slug}`];

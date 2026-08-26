@@ -13,7 +13,7 @@ export default function Page() {
   const { coinDefs, ops, coinsBy } = siteData;
   const [sel, setSel] = useState<string>("all");
 
-  const coinOps = (t: string) => ops.filter((o) => (coinsBy[o.slug] ?? []).includes(t));
+  const coinOps = (t: string) => ops.filter((o) => (coinsBy[o.slug] ?? []).map(String).includes(t));
   const rows = coinDefs.filter((c) => sel === "all" || c.ticker === sel);
 
   const detail = sel === "all" ? [] : [...coinOps(sel)].sort((a, b) => b.score - a.score);
