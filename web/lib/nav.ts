@@ -6,6 +6,9 @@
  * etc. — never hardcoded, so a data change updates the copy automatically.
  */
 import type { SiteCounts } from "./derived";
+import { siteData } from "./site-data";
+
+const slotCatLabels = siteData.slotCatDefs.map((d) => ({ tag: d.tag, label: d.label }));
 
 export interface NavLink {
   label: string;
@@ -109,8 +112,8 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
             },
             {
               title: "By mechanic",
-              links: ["bonus-buy", "megaways", "jackpot", "cluster-pays", "high-volatility"].map((tag) => ({
-                label: `${tag} slots`,
+              links: slotCatLabels.map(({ tag, label }) => ({
+                label: `${label} slots`,
                 href: `/slots/${tag}`,
               })),
             },
@@ -197,8 +200,14 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
           tint: "#9AAE5E",
           href: "/guides",
           columns: [
-            { title: "Most read", links: [{ label: "How to buy crypto for gambling", href: "/guides/how-to-buy-crypto-for-gambling" }] },
-            { title: "More guides", links: [{ label: "All guides", href: "/guides" }] },
+            {
+              title: "Most read",
+              links: siteData.guideRows.slice(0, 4).map((g) => ({ label: g.title, href: `/guides/${g.slug}` })),
+            },
+            {
+              title: "More guides",
+              links: siteData.guideRows.slice(4, 8).map((g) => ({ label: g.title, href: `/guides/${g.slug}` })),
+            },
           ],
         },
       ],
@@ -235,14 +244,36 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
           label: "Sports betting",
           tint: "#9FB6E0",
           href: "/casino-sportsbooks",
-          columns: [{ title: "By sport", links: [{ label: "All sports markets", href: "/casino-sportsbooks" }] }],
+          columns: [
+            {
+              title: "By sport",
+              links: siteData.sportsMarkets.slice(0, 3).map((m) => ({ label: m.name, href: `/betting/${slug(m.name)}` })),
+            },
+            {
+              title: "More markets",
+              links: siteData.sportsMarkets.slice(3, 6).map((m) => ({ label: m.name, href: `/betting/${slug(m.name)}` })),
+            },
+          ],
         },
         {
           mono: "🕹️",
           label: "Esports",
           tint: "#C4795A",
           href: "/esports-casinos",
-          columns: [{ title: "By title", links: [{ label: "All esports markets", href: "/esports-casinos" }] }],
+          columns: [
+            {
+              title: "By title",
+              links: siteData.esportsTitles.slice(0, 3).map((t) => ({ label: t.name, href: `/betting/${slug(t.name)}` })),
+            },
+            {
+              title: "Where to bet it",
+              links: [
+                { label: "All esports markets", href: "/esports-casinos" },
+                { label: "Sportsbook margin, measured", href: "/guides/sportsbook-margin-measured" },
+                { label: "Compare books", href: "/compare" },
+              ],
+            },
+          ],
         },
       ],
     },
@@ -263,6 +294,14 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
                 href: "/prediction-markets",
               })),
             },
+            {
+              title: "What to know",
+              links: [
+                { label: "All crypto-settled venues", href: "/prediction-markets" },
+                { label: "Wallets to trade from", href: "/wallets" },
+                { label: "Coins and networks", href: "/coins" },
+              ],
+            },
           ],
         },
         {
@@ -277,6 +316,14 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
                 (name) => ({ label: name, href: "/prediction-markets" })
               ),
             },
+            {
+              title: "What to know",
+              links: [
+                { label: "All regulated venues", href: "/prediction-markets" },
+                { label: "Exchanges to fund with", href: "/exchanges" },
+                { label: "How we rate", href: "/how-we-rate" },
+              ],
+            },
           ],
         },
         {
@@ -284,7 +331,24 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
           label: "Markets vs books",
           tint: "#57E39A",
           href: "/prediction-markets",
-          columns: [{ title: "Compare against", links: [{ label: "Crypto sportsbooks", href: "/sportsbooks" }] }],
+          columns: [
+            {
+              title: "Compare against",
+              links: [
+                { label: "Crypto sportsbooks", href: "/sportsbooks" },
+                { label: "Sports markets", href: "/sportsbooks?tab=1" },
+                { label: "Esports markets", href: "/sportsbooks?tab=2" },
+              ],
+            },
+            {
+              title: "Method",
+              links: [
+                { label: "How we rate", href: "/how-we-rate" },
+                { label: "Sportsbook margin, measured", href: "/guides/sportsbook-margin-measured" },
+                { label: "Compare operators", href: "/compare" },
+              ],
+            },
+          ],
         },
       ],
     },
@@ -297,14 +361,40 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
           label: "Wallets",
           tint: "#9B8FC4",
           href: "/wallets",
-          columns: [{ title: "Wallet reviews", links: [{ label: `All ${c.wallets} wallets`, href: "/wallets" }] }],
+          columns: [
+            {
+              title: "Wallet reviews",
+              links: siteData.walletRows.slice(0, 5).map((w) => ({ label: w.name, href: `/wallets/${w.slug}` })),
+            },
+            {
+              title: "Read first",
+              links: [
+                { label: "Bankroll separation", href: "/guides/bankroll-separation" },
+                { label: "Who pays the network fee", href: "/guides/who-pays-the-network-fee" },
+                { label: "Depositing over Lightning", href: "/guides/depositing-over-lightning" },
+              ],
+            },
+          ],
         },
         {
           mono: "💱",
           label: "Exchanges",
           tint: "#5FE3E8",
           href: "/exchanges",
-          columns: [{ title: "Exchange reviews", links: [{ label: `All ${c.exchanges} exchanges`, href: "/exchanges" }] }],
+          columns: [
+            {
+              title: "Exchange reviews",
+              links: siteData.exchangeRows.slice(0, 5).map((x) => ({ label: x.name, href: `/exchanges/${x.slug}` })),
+            },
+            {
+              title: "Getting on chain",
+              links: [
+                { label: "All exchange reviews", href: "/exchanges" },
+                { label: "Depositing over Lightning", href: "/guides/depositing-over-lightning" },
+                { label: "Our scoring sheet", href: "/how-we-rate" },
+              ],
+            },
+          ],
         },
         {
           mono: "🪙",
@@ -317,6 +407,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
               links: [
                 { label: "Every coin we track", href: "/coins" },
                 { label: "Depositing over Lightning", href: "/guides/depositing-over-lightning" },
+                { label: "Who pays the network fee", href: "/guides/who-pays-the-network-fee" },
               ],
             },
             {
@@ -325,6 +416,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
                 { label: "RTP Watch · live board", href: "/rtp-watch", dot: "#DA9877" },
                 { label: "Prediction markets", href: "/prediction-markets" },
                 { label: "Compare operators", href: "/compare" },
+                { label: "How we rate", href: "/how-we-rate" },
               ],
             },
           ],
