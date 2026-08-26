@@ -1,0 +1,10 @@
+{
+  "roobet": ["BTC", "ETH", "USDT", "LTC", "DOGE", "TRX"],
+  "stake": ["BTC", "ETH", "USDT", "SOL", "LTC", "DOGE", "XRP", "TRX"],
+  "bc-game": ["BTC", "ETH", "USDT", "SOL", "LTC", "DOGE"],
+  "duelbits": ["BTC", "ETH", "USDT", "LTC"],
+  "gamdom": ["BTC", "ETH", "USDT", "LTC", "DOGE"],
+  "shuffle": ["BTC", "ETH", "USDT", "SOL", "LTC", "DOGE", "XRP", "TRX"],
+  "bitcasino-io": ["BTC", "ETH", "USDT"],
+  "vave": ["BTC", "ETH", "USDT", "LTC", "DOGE"]
+}

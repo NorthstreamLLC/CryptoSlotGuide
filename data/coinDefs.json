@@ -1,0 +1,10 @@
+[
+  { "ticker": "BTC", "tint": "#F7931A", "name": "Bitcoin", "creditTime": "1–30 min", "confirms": 2, "fee": "Network-dependent", "note": "Slowest credit time; Lightning-enabled operators are near-instant.", "distribution": [8, 8, 7, 6, 5, 4, 3, 3] },
+  { "ticker": "ETH", "tint": "#8FA5C9", "name": "Ethereum", "creditTime": "1–5 min", "confirms": 12, "fee": "Gas-dependent", "note": "Confirmation count varies by operator's risk tolerance.", "distribution": [8, 7, 6, 6, 5, 4, 4, 2] },
+  { "ticker": "USDT", "tint": "#5FBFA0", "name": "Tether", "creditTime": "1–5 min", "confirms": 12, "fee": "Low (chain-dependent)", "note": "Most widely supported stablecoin across the index.", "distribution": [8, 8, 8, 7, 6, 5, 4, 3] },
+  { "ticker": "SOL", "tint": "#7BE0B8", "name": "Solana", "creditTime": "<1 min", "confirms": 1, "fee": "Near-zero", "note": "Fastest credit time of any tracked coin.", "distribution": [5, 5, 4, 4, 3, 3, 2, 2] },
+  { "ticker": "LTC", "tint": "#B4B8BB", "name": "Litecoin", "creditTime": "2–10 min", "confirms": 3, "fee": "Low", "note": "Common secondary coin for fee-sensitive players.", "distribution": [6, 6, 5, 5, 4, 3, 3, 2] },
+  { "ticker": "DOGE", "tint": "#D6B65C", "name": "Dogecoin", "creditTime": "5–20 min", "confirms": 6, "fee": "Low", "note": "Popular on casino platforms with strong community ties.", "distribution": [6, 5, 5, 4, 4, 3, 2, 2] },
+  { "ticker": "XRP", "tint": "#9FB6E0", "name": "XRP", "creditTime": "<1 min", "confirms": 1, "fee": "Near-zero", "note": "Fast settlement; narrower operator support.", "distribution": [3, 3, 3, 2, 2, 2, 1, 1] },
+  { "ticker": "TRX", "tint": "#C4795A", "name": "Tron", "creditTime": "1–3 min", "confirms": 20, "fee": "Near-zero", "note": "High confirmation count offset by short block times.", "distribution": [3, 3, 2, 2, 2, 1, 1, 1] }
+]

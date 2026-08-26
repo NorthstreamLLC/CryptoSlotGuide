@@ -1,0 +1,6 @@
+{
+  "roobet": { "margin": "4.8%", "markets": 12, "settle": "crypto" },
+  "stake": { "margin": "4.5%", "markets": 18, "settle": "crypto" },
+  "bc-game": { "margin": "5.2%", "markets": 10, "settle": "crypto" },
+  "duelbits": { "margin": "5.0%", "markets": 9, "settle": "crypto" }
+}

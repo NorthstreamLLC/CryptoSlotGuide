@@ -1,0 +1,229 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens — ported from design/README.md "Design tokens" section.
+ * Keep this file as the single source of truth; components should reference
+ * the Tailwind utilities these generate (bg-page, text-secondary, etc.)
+ * rather than hardcoding hex values.
+ */
+:root {
+  /* Color — surfaces */
+  --color-page: #07090b;
+  --color-section: #090c0f;
+  --color-surface: #0c1013;
+  --color-surface-raised: #0f1417;
+  --color-surface-header: #101519;
+  --color-surface-hero: #12181c;
+  --color-menu: #0d1215;
+
+  /* Color — accent */
+  --color-accent: #00c2cc;
+  --color-accent-bright: #5fe3e8;
+  --color-accent-gold: #ffcc00;
+  --color-warning: #da9877;
+  --color-caution: #d6b65c;
+
+  /* Color — text */
+  --color-text-primary: #e8edf0;
+  --color-text-secondary: #b7c4cb;
+  --color-text-muted: #93a3ac;
+  --color-text-muted-2: #8da0aa;
+  --color-text-dim: #7b8a93;
+  --color-text-dim-2: #5c6a72;
+  --color-text-dim-3: #4e5a62;
+
+  /* Color — borders & rows */
+  --color-border: rgba(255, 255, 255, 0.07);
+  --color-border-strong: rgba(255, 255, 255, 0.14);
+  --color-border-strong-2: rgba(255, 255, 255, 0.16);
+  --color-row-divider: rgba(255, 255, 255, 0.05);
+  --color-row-hover: rgba(255, 255, 255, 0.028);
+  --color-accent-wash: rgba(0, 194, 204, 0.1);
+  --color-accent-wash-strong: rgba(0, 194, 204, 0.12);
+
+  /* Color — coin tints (see README "Per-brand and per-coin tints") */
+  --color-btc: #f7931a;
+  --color-eth: #8fa5c9;
+  --color-usdt: #5fbfa0;
+  --color-sol: #7be0b8;
+  --color-ltc: #b4b8bb;
+  --color-doge: #d6b65c;
+  --color-xrp: #9fb6e0;
+  --color-trx: #c4795a;
+
+  /* Radius */
+  --radius-chip: 5px;
+  --radius-btn: 8px;
+  --radius-card: 14px;
+  --radius-hero: 16px;
+  --radius-pill: 100px;
+
+  /* Shadow */
+  --shadow-card: 0 12px 40px rgba(0, 0, 0, 0.35);
+  --shadow-hero: 0 20px 60px rgba(0, 0, 0, 0.5);
+  --shadow-dropdown: 0 22px 60px rgba(0, 0, 0, 0.65);
+  --shadow-cta: 0 8px 26px rgba(0, 194, 204, 0.24);
+}
+
+@theme inline {
+  --color-page: var(--color-page);
+  --color-section: var(--color-section);
+  --color-surface: var(--color-surface);
+  --color-surface-raised: var(--color-surface-raised);
+  --color-surface-header: var(--color-surface-header);
+  --color-surface-hero: var(--color-surface-hero);
+  --color-menu: var(--color-menu);
+
+  --color-accent: var(--color-accent);
+  --color-accent-bright: var(--color-accent-bright);
+  --color-accent-gold: var(--color-accent-gold);
+  --color-warning: var(--color-warning);
+  --color-caution: var(--color-caution);
+
+  --color-text-primary: var(--color-text-primary);
+  --color-text-secondary: var(--color-text-secondary);
+  --color-text-muted: var(--color-text-muted);
+  --color-text-muted-2: var(--color-text-muted-2);
+  --color-text-dim: var(--color-text-dim);
+  --color-text-dim-2: var(--color-text-dim-2);
+  --color-text-dim-3: var(--color-text-dim-3);
+
+  --color-border: var(--color-border);
+  --color-border-strong: var(--color-border-strong);
+  --color-row-divider: var(--color-row-divider);
+  --color-row-hover: var(--color-row-hover);
+  --color-accent-wash: var(--color-accent-wash);
+  --color-accent-wash-strong: var(--color-accent-wash-strong);
+
+  --color-btc: var(--color-btc);
+  --color-eth: var(--color-eth);
+  --color-usdt: var(--color-usdt);
+  --color-sol: var(--color-sol);
+  --color-ltc: var(--color-ltc);
+  --color-doge: var(--color-doge);
+  --color-xrp: var(--color-xrp);
+  --color-trx: var(--color-trx);
+
+  --radius-chip: var(--radius-chip);
+  --radius-btn: var(--radius-btn);
+  --radius-card: var(--radius-card);
+  --radius-hero: var(--radius-hero);
+  --radius-pill: var(--radius-pill);
+
+  --shadow-card: var(--shadow-card);
+  --shadow-hero: var(--shadow-hero);
+  --shadow-dropdown: var(--shadow-dropdown);
+  --shadow-cta: var(--shadow-cta);
+
+  --font-sans: var(--font-archivo), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, "SFMono-Regular", monospace;
+}
+
+body {
+  background: var(--color-page);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+h1,
+h2,
+h3 {
+  font-stretch: 112%;
+  letter-spacing: -0.028em;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* Motion — see README "Motion". Kept to this restrained set on purpose. */
+@keyframes csg-drift {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(3%, -4%) scale(1.08);
+  }
+}
+
+@keyframes csg-drift2 {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-4%, 3%) scale(1.1);
+  }
+}
+
+@keyframes csg-sweep {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@keyframes csg-slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes csg-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes csg-down {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes csg-live {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 194, 204, 0.45);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgba(0, 194, 204, 0);
+  }
+}
+
+@keyframes csg-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}
+
+@keyframes csg-rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,28 @@
+[
+  {
+    "slug": "crash",
+    "name": "Crash",
+    "mono": "CR",
+    "tint": "#00C2CC",
+    "edge": "1%",
+    "rtp": "99%",
+    "fair": "Provably fair",
+    "speed": "~5s rounds",
+    "note": "Multiplier climbs until it crashes; cash out before it does.",
+    "steps": ["Place a bet before the round starts.", "Watch the multiplier climb.", "Cash out any time before it crashes to lock in that multiplier."],
+    "tips": ["Set an auto-cashout target to remove reaction-time risk.", "The house edge is fixed regardless of when you cash out."]
+  },
+  {
+    "slug": "plinko",
+    "name": "Plinko",
+    "mono": "PL",
+    "tint": "#7BE0B8",
+    "edge": "1–3% (risk-dependent)",
+    "rtp": "97–99%",
+    "fair": "Provably fair",
+    "speed": "Instant",
+    "note": "Ball drops through pegs into multiplier slots; risk setting changes the payout table.",
+    "steps": ["Choose a risk level (low/medium/high) and row count.", "Drop the ball.", "Payout is read off the slot it lands in."],
+    "tips": ["Higher risk widens the payout spread but doesn't change the long-run edge much.", "More rows increase variance, not RTP."]
+  }
+]

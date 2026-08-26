@@ -1,0 +1,8 @@
+[
+  { "name": "Match winner (moneyline)", "note": "Straight win bet, no handicap." },
+  { "name": "Point spread / handicap", "note": "Levels the odds by a margin." },
+  { "name": "Totals (over/under)", "note": "Bets on combined score vs. a line." },
+  { "name": "Player props", "note": "Individual performance markets." },
+  { "name": "Futures", "note": "Season-long outcome bets." },
+  { "name": "Live/in-play", "note": "Odds update as the event unfolds." }
+]

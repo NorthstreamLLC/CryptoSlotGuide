@@ -1,0 +1,8 @@
+[
+  { "key": "payout", "label": "Payout speed", "weight": 0.25 },
+  { "key": "trust", "label": "Trust & licensing", "weight": 0.2 },
+  { "key": "value", "label": "Bonus value", "weight": 0.15 },
+  { "key": "catalogue", "label": "Game catalogue", "weight": 0.15 },
+  { "key": "support", "label": "Support quality", "weight": 0.15 },
+  { "key": "coins", "label": "Coin support", "weight": 0.1 }
+]

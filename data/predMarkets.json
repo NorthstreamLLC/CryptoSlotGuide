@@ -1,0 +1,10 @@
+{
+  "crypto": [
+    { "name": "Polymarket", "score": 9.0, "settle": "crypto", "fee": "0% (spread only)", "kyc": "None", "payout": "On-chain, instant", "vol": "High", "note": "Largest crypto-settled prediction market by volume.", "tint": "#00C2CC" },
+    { "name": "Limitless", "score": 8.1, "settle": "crypto", "fee": "0% (spread only)", "kyc": "None", "payout": "On-chain, instant", "vol": "Medium", "note": "Base-chain markets, narrower catalogue.", "tint": "#7BE0B8" }
+  ],
+  "fiat": [
+    { "name": "Kalshi", "score": 8.6, "settle": "fiat", "fee": "Trading fee per contract", "kyc": "Required", "payout": "ACH, 1–3 days", "vol": "High", "note": "CFTC-regulated, US-facing.", "tint": "#8FA5C9" },
+    { "name": "PredictIt", "score": 7.4, "settle": "fiat", "fee": "5% withdrawal + 10% profit", "kyc": "Required", "payout": "ACH, 1–5 days", "vol": "Medium", "note": "Position caps limit size.", "tint": "#B4B8BB" }
+  ]
+}

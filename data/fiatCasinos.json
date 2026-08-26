@@ -1,0 +1,4 @@
+[
+  { "slug": "ignition", "name": "Ignition", "score": 8.3, "licence": "Curaçao", "rails": "Visa, Mastercard, wire", "payout": "1–5 business days", "wager": "25x", "games": "300+ slots, live dealer", "note": "Card processing is the main friction point.", "tint": "#00C2CC" },
+  { "slug": "bovada", "name": "Bovada", "score": 8.0, "licence": "Curaçao", "rails": "Visa, Mastercard, Rapid Transfer", "payout": "2–7 business days", "wager": "30x", "games": "250+ slots, sportsbook", "note": "Deliberately kept separate from the crypto ranking.", "tint": "#8FA5C9" }
+]

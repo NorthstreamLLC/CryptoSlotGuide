@@ -1,0 +1,40 @@
+[
+  {
+    "slug": "lightning-blackjack",
+    "name": "Lightning Blackjack",
+    "type": "Blackjack",
+    "studio": "Evolution",
+    "rtp": 99.56,
+    "stake": "$1–$5,000",
+    "max": "$5,000",
+    "edge": "0.44%",
+    "best": "Stake",
+    "tint": "#00C2CC",
+    "how": [
+      "Place your ante bet before the round starts.",
+      "Lightning multipliers are drawn and applied to random card values.",
+      "Play your hand as normal blackjack; multiplier wins pay on top of standard payouts."
+    ],
+    "side": [["Blackjack", "3:2"], ["Insurance", "2:1"]],
+    "why": "Same rules as standard blackjack with a multiplier layer on top — no added house edge on the base game."
+  },
+  {
+    "slug": "lightning-roulette",
+    "name": "Lightning Roulette",
+    "type": "Roulette",
+    "studio": "Evolution",
+    "rtp": 97.3,
+    "stake": "$0.20–$5,000",
+    "max": "$5,000",
+    "edge": "2.7%",
+    "best": "Roobet",
+    "tint": "#5FE3E8",
+    "how": [
+      "Bet on numbers, colors or outside bets as in standard European roulette.",
+      "Up to five Lucky Numbers are struck with multipliers each round.",
+      "Straight-up wins on a Lucky Number pay the multiplied amount instead of the standard 35:1."
+    ],
+    "side": [["Straight up", "Up to 500:1"], ["Outside bets", "Standard European payouts"]],
+    "why": "European single-zero wheel; the multiplier round only affects straight-up numbers."
+  }
+]

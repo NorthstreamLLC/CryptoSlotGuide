@@ -1,0 +1,5 @@
+[
+  { "slug": "metamask", "name": "MetaMask", "mono": "MM", "hed": "The default self-custody wallet", "note": "Browser extension + mobile, EVM chains only natively.", "m1": "Self-custody", "m2": "EVM + snaps for others", "m3": "Free", "score": 8.9 },
+  { "slug": "phantom", "name": "Phantom", "mono": "PH", "hed": "Solana-first, now multi-chain", "note": "Cleanest mobile UX of the self-custody wallets.", "m1": "Self-custody", "m2": "SOL, ETH, BTC", "m3": "Free", "score": 8.7 },
+  { "slug": "ledger", "name": "Ledger", "mono": "LG", "hed": "Hardware wallet reference", "note": "Cold storage; pairs with Ledger Live or third-party apps.", "m1": "Self-custody (hardware)", "m2": "Multi-chain", "m3": "$79–$249 device", "score": 9.0 }
+]

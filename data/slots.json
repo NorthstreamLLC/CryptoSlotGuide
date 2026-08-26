@@ -1,0 +1,10 @@
+[
+  { "slug": "sweet-bonanza", "name": "Sweet Bonanza", "mono": "SB", "provider": "Pragmatic Play", "rtp": 96.51, "vol": "high", "maxWin": "21,100x", "bestAt": "Stake", "tint": "#D6669C" },
+  { "slug": "gates-of-olympus", "name": "Gates of Olympus", "mono": "GO", "provider": "Pragmatic Play", "rtp": 96.5, "vol": "high", "maxWin": "5,000x", "bestAt": "Roobet", "tint": "#8FA5C9" },
+  { "slug": "big-bass-bonanza", "name": "Big Bass Bonanza", "mono": "BB", "provider": "Pragmatic Play", "rtp": 96.71, "vol": "medium", "maxWin": "2,100x", "bestAt": "Shuffle", "tint": "#5FBFA0" },
+  { "slug": "fruit-party", "name": "Fruit Party", "mono": "FP", "provider": "Pragmatic Play", "rtp": 96.47, "vol": "medium", "maxWin": "5,000x", "bestAt": "Stake", "tint": "#D6B65C" },
+  { "slug": "wanted-dead-or-a-wild", "name": "Wanted Dead or a Wild", "mono": "WD", "provider": "Hacksaw Gaming", "rtp": 96.38, "vol": "high", "maxWin": "12,500x", "bestAt": "Roobet", "tint": "#DA9877" },
+  { "slug": "le-bandit", "name": "Le Bandit", "mono": "LB", "provider": "Hacksaw Gaming", "rtp": 96.24, "vol": "high", "maxWin": "10,000x", "bestAt": "Duelbits", "tint": "#00C2CC" },
+  { "slug": "san-quentin", "name": "San Quentin xWays", "mono": "SQ", "provider": "Nolimit City", "rtp": 96.03, "vol": "high", "maxWin": "150,000x", "bestAt": "Stake", "tint": "#7BE0B8" },
+  { "slug": "mental", "name": "Mental", "mono": "MT", "provider": "Nolimit City", "rtp": 96.08, "vol": "high", "maxWin": "66,666x", "bestAt": "Gamdom", "tint": "#9FB6E0" }
+]

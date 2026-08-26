@@ -1,0 +1,10 @@
+{
+  "sweet-bonanza": ["bonus-buy", "cluster-pays"],
+  "gates-of-olympus": ["bonus-buy"],
+  "big-bass-bonanza": ["bonus-buy"],
+  "fruit-party": ["cluster-pays"],
+  "wanted-dead-or-a-wild": ["bonus-buy", "high-volatility"],
+  "le-bandit": ["bonus-buy", "high-volatility"],
+  "san-quentin": ["bonus-buy", "high-volatility", "jackpot"],
+  "mental": ["bonus-buy", "high-volatility"]
+}

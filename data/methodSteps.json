@@ -1,0 +1,6 @@
+[
+  { "title": "Fund a real account", "body": "Every operator we score is tested on a funded account under a real identity, not a demo or affiliate sandbox." },
+  { "title": "Time the withdrawal", "body": "We record wall-clock time from withdrawal request to funds landing on-chain, across at least three separate withdrawals." },
+  { "title": "Check RTP in-client", "body": "Where a studio licenses multiple configurations, we read the paytable inside the operator's own game client rather than trusting the studio's headline figure." },
+  { "title": "Score against fixed criteria", "body": "Every operator is scored against the same six weighted criteria — see Criteria below — so scores are comparable across the index." }
+]

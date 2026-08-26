@@ -1,0 +1,8 @@
+[
+  { "id": "r1", "slotSlug": "sweet-bonanza", "operatorSlug": "stake", "rtp": 96.51, "publishedRtp": 96.51, "checkedAt": "2026-08-10", "checkedBy": "JD", "source": "in_client_paytable" },
+  { "id": "r2", "slotSlug": "sweet-bonanza", "operatorSlug": "roobet", "rtp": 94.5, "publishedRtp": 96.51, "checkedAt": "2026-08-12", "checkedBy": "JD", "source": "in_client_paytable" },
+  { "id": "r3", "slotSlug": "sweet-bonanza", "operatorSlug": "bc-game", "rtp": 96.51, "publishedRtp": 96.51, "checkedAt": "2026-06-01", "checkedBy": "MK", "source": "in_client_paytable" },
+  { "id": "r4", "slotSlug": "gates-of-olympus", "operatorSlug": "stake", "rtp": 96.5, "publishedRtp": 96.5, "checkedAt": "2026-08-15", "checkedBy": "JD", "source": "in_client_paytable" },
+  { "id": "r5", "slotSlug": "gates-of-olympus", "operatorSlug": "gamdom", "rtp": 94.2, "publishedRtp": 96.5, "checkedAt": "2026-07-02", "checkedBy": "MK", "source": "operator_support" },
+  { "id": "r6", "slotSlug": "fruit-party", "operatorSlug": "stake", "rtp": 96.47, "publishedRtp": 96.47, "checkedAt": "2026-08-20", "checkedBy": "JD", "source": "in_client_paytable" }
+]

@@ -1,0 +1,5 @@
+[
+  { "slug": "pragmatic-play", "name": "Pragmatic Play", "mono": "PP", "tint": "#00C2CC", "score": 9.0, "note": "Broadest catalogue and the most frequently checked in RTP Watch.", "titles": 4, "rtp": "96.3–96.7%", "casinos": 8 },
+  { "slug": "hacksaw-gaming", "name": "Hacksaw Gaming", "mono": "HG", "tint": "#DA9877", "score": 8.8, "note": "Single-configuration studio — one annual RTP check needed per title.", "titles": 2, "rtp": "96.1–96.4%", "casinos": 6 },
+  { "slug": "nolimit-city", "name": "Nolimit City", "mono": "NC", "tint": "#7BE0B8", "score": 9.1, "note": "Single-configuration studio, highest volatility in the index.", "titles": 2, "rtp": "96.0–96.1%", "casinos": 5 }
+]

@@ -1,0 +1,7 @@
+[
+  { "tag": "bonus-buy", "label": "Bonus Buy", "standfirst": "Skip the base game and pay for the feature round outright — higher variance, faster sessions." },
+  { "tag": "megaways", "label": "Megaways", "standfirst": "Reel heights change every spin, producing up to hundreds of thousands of ways to win." },
+  { "tag": "jackpot", "label": "Jackpot", "standfirst": "A progressive or fixed top prize sits on top of the base paytable." },
+  { "tag": "cluster-pays", "label": "Cluster Pays", "standfirst": "Wins form from clusters of matching symbols rather than fixed paylines." },
+  { "tag": "high-volatility", "label": "High Volatility", "standfirst": "Bigger, rarer wins — built for players who can withstand longer dry spells." }
+]
