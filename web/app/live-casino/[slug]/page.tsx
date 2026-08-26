@@ -1,15 +1,10 @@
-import { PagePlaceholder } from "@/components/ui/PagePlaceholder";
+import { notFound } from "next/navigation";
+import { siteData } from "@/lib/site-data";
+import { LiveGamePage } from "@/components/live-casino/LiveGamePage";
 
-export default async function Page({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
+export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  return (
-    <PagePlaceholder
-      kicker="Live casino"
-      title={`Live table: ${slug}`}
-    />
-  );
+  const g = siteData.liveGames.find((x) => x.slug === slug);
+  if (!g) notFound();
+  return <LiveGamePage g={g} />;
 }

@@ -1,11 +1,7 @@
-import { PagePlaceholder } from "@/components/ui/PagePlaceholder";
+import { LiveCasinoPage } from "@/components/live-casino/LiveCasinoPage";
+import type { LiveGame } from "@/lib/types";
 
-export default function Page() {
-  return (
-    <PagePlaceholder
-      kicker="Live casino"
-      title="Live casino"
-      standfirst="Operator cards, then a table grid filterable by Blackjack, Roulette, Baccarat, Game show, Card and Dice."
-    />
-  );
+export default async function Page({ searchParams }: { searchParams: Promise<{ type?: string }> }) {
+  const { type } = await searchParams;
+  return <LiveCasinoPage initialType={type as LiveGame["type"] | undefined} />;
 }
