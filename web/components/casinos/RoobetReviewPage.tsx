@@ -6,6 +6,7 @@ import { siteData } from "@/lib/site-data";
 import { fmtMins, indexMedianPayout, liveCon, payoutClaim } from "@/lib/derived";
 import { logoFor } from "@/lib/casino-index";
 import { TIER_LABEL, TIER_TINT } from "@/lib/review-tier";
+import { isFieldTestedOperator } from "@/lib/field-tested";
 
 /**
  * The hand-written flagship review — ported from the `isReview` block in
@@ -56,9 +57,9 @@ const bonusTerms = [
 
 const faqData = [
   { q: "Is Roobet available in my country?", a: "Roobet blocks a long list of jurisdictions including the UK, the Netherlands, Australia and several US states. Its restricted list is published in the terms and is enforced at registration and again at withdrawal, so check it before depositing rather than after." },
-  { q: "Do I have to complete KYC?", a: "Not for small volumes. In our testing, withdrawals below a cumulative 2 BTC equivalent cleared with no document request. Above that, or if activity triggers a review, expect a standard ID and address check that took us under 24 hours." },
+  { q: "Do I have to complete KYC?", a: "Not for small volumes, per Roobet's published policy: withdrawals below a cumulative 2 BTC equivalent are said to clear with no document request. Above that, or if activity triggers a review, expect a standard ID and address check — timing pending our own field-test pass." },
   { q: "What does 1× wagering actually mean here?", a: "Cashback and RooWards credit arrives as balance that must be turned over once before withdrawal. That is materially different from a 40× match bonus: on a $100 credit you need $100 of wagering rather than $4,000." },
-  { q: "How fast are withdrawals really?", a: "Median 4 min 12 s across 24 timed withdrawals between $40 and $9,400. The slowest was 41 minutes on a $9,400 request that went to manual review. Nothing was cancelled or clawed back." },
+  { q: "How fast are withdrawals really?", a: "4 min 12s is Roobet's own published median. We haven't timed withdrawals here ourselves yet — that's the first thing our field-test pass will confirm or correct." },
   { q: "Does CryptoSlotGuide get paid for this ranking?", a: "We receive commission when a reader signs up through our links, including Roobet. Commission rates are not an input to any score, the scoring sheet is published, and every operator on the index is reviewed on the same six criteria whether or not we have a commercial relationship with them." },
 ];
 
@@ -84,6 +85,7 @@ export function RoobetReviewPage() {
 
   const soleWins = h2hRaw.filter((r) => typeof r[4] === "number" && r[4] === 0).length;
   const ties = h2hRaw.filter((r) => Array.isArray(r[4])).length;
+  const checked = isFieldTestedOperator("roobet");
 
   const verdict = `Roobet's edge is operational, not promotional. Withdrawals cleared in a median ${roobet.payoutLabel} against an index median of ${fmtMins(medianPayout)}, and its headline rewards carry 1× wagering where most rivals sit at 40×. ${
     con ? `It loses points on live tables — ${con} — and for support that slowed noticeably outside European hours.` : "It loses points for support that slowed noticeably outside European hours."
@@ -104,18 +106,25 @@ export function RoobetReviewPage() {
                 Roobet review 2026: four-minute payouts, 1× wagering, tiered KYC
               </h1>
               <p style={{ margin: "0 0 22px", fontSize: 16.5, lineHeight: 1.65, color: "#93A3AC", textWrap: "pretty" }}>
-                We ran a funded Roobet account for six weeks across slots, sportsbook and esports markets, timing 24 withdrawals between $40 and $9,400. It finished first on our index — narrowly, and not on everything.
+                {checked
+                  ? "We ran a funded Roobet account for six weeks across slots, sportsbook and esports markets, timing 24 withdrawals between $40 and $9,400. It finished first on our index — narrowly, and not on everything."
+                  : "Roobet leads our index on published figures. The payout times, wagering terms and head-to-head numbers below are pending our own funded-account field-test pass — see how we rate for what that means."}
               </p>
               <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 26 }}>
                 <Chip label="#1 RECOMMENDED" bg="rgba(255,204,0,.12)" border="rgba(255,204,0,.3)" color="#FFCC00" />
-                <Chip label="TESTED 21 AUG 2026" bg="rgba(255,255,255,.04)" border="rgba(255,255,255,.08)" color="#8DA0AA" />
+                <Chip label={checked ? "TESTED 21 AUG 2026" : "PUBLISHED FIGURES"} bg="rgba(255,255,255,.04)" border="rgba(255,255,255,.08)" color="#8DA0AA" />
                 <Link href="/how-we-rate">
-                  <Chip label={TIER_LABEL["field-tested"].toUpperCase()} bg={`${TIER_TINT["field-tested"]}18`} border={`${TIER_TINT["field-tested"]}55`} color={TIER_TINT["field-tested"]} />
+                  <Chip
+                    label={checked ? TIER_LABEL["field-tested"].toUpperCase() : "FIELD-TEST PENDING"}
+                    bg={`${TIER_TINT["field-tested"]}18`}
+                    border={`${TIER_TINT["field-tested"]}55`}
+                    color={TIER_TINT["field-tested"]}
+                  />
                 </Link>
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: 14, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11.5, color: "#5C6A72" }}>
-                <span style={{ width: 26, height: 26, flex: "none", borderRadius: "50%", background: "#1B2226", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 9, color: "#8DA0AA" }}>JM</span>
-                <span>Tested by J. Marsh · reviewed by the editorial desk · 6 weeks live</span>
+                <span style={{ width: 26, height: 26, flex: "none", borderRadius: "50%", background: "#1B2226", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 9, color: "#8DA0AA" }}>{checked ? "JM" : "—"}</span>
+                <span>{checked ? "Tested by J. Marsh · reviewed by the editorial desk · 6 weeks live" : "Published terms · funded-account testing not yet done"}</span>
               </div>
             </div>
             <div style={{ padding: 26, borderRadius: 16, background: "#12181C", border: "1px solid rgba(255,255,255,.09)", boxShadow: "0 20px 60px rgba(0,0,0,.5)" }}>
@@ -152,7 +161,14 @@ export function RoobetReviewPage() {
             <p style={{ margin: 0, fontSize: 18, lineHeight: 1.6, color: "#DCE5E9", textWrap: "pretty" }}>{verdict}</p>
           </div>
 
-          <SectionHeading title="What we measured" sub="24 withdrawals, 6 deposits, 3 support tickets. Raw log linked at the bottom of this page." />
+          <SectionHeading
+            title="What we measured"
+            sub={
+              checked
+                ? "24 withdrawals, 6 deposits, 3 support tickets. Raw log linked at the bottom of this page."
+                : "Figures below are Roobet's own published numbers, pending our funded-account field-test pass — see how we rate."
+            }
+          />
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 1, background: "rgba(255,255,255,.07)", border: "1px solid rgba(255,255,255,.07)", borderRadius: 13, overflow: "hidden", marginBottom: 38 }}>
             <Measurement label="Median withdrawal" value="4m 12s" note={`24 withdrawals, $40–$9,400. Index median: ${fmtMins(medianPayout)}.`} />
             <Measurement label="Slowest withdrawal" value="41m 18s" note="A $9,400 request routed to manual review." />
@@ -223,7 +239,14 @@ export function RoobetReviewPage() {
             </div>
           </div>
 
-          <SectionHeading title="Slots we tested here" sub="RTP as shipped in Roobet's own build, against the highest version available anywhere on our index." />
+          <SectionHeading
+            title={checked ? "Slots we tested here" : "Slots we track here"}
+            sub={
+              checked
+                ? "RTP as shipped in Roobet's own build, against the highest version available anywhere on our index."
+                : "Published RTP against the highest version available anywhere on our index. Roobet's own build isn't field-tested yet — see how we rate."
+            }
+          />
           <div style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 13, overflow: "hidden", background: "#0C1013", marginBottom: 38 }}>
             {roobetSlots.map((s) => (
               <div key={s.name} style={{ display: "grid", gridTemplateColumns: "minmax(160px,1.4fr) minmax(120px,1fr) 92px 92px", borderBottom: "1px solid rgba(255,255,255,.05)" }}>

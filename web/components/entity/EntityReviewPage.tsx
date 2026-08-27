@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import type { EntityView } from "@/lib/entity-view";
 import { backLink, ctaLabel, scoreMeta, editorialTake } from "@/lib/entity-view";
-import { reviewTier, TIER_LABEL, TIER_TINT } from "@/lib/review-tier";
+import { reviewTierFor, TIER_LABEL, TIER_TINT } from "@/lib/review-tier";
 
 /**
  * Ported from the `isEntity` block in CryptoSlotGuide.dc.html — the
@@ -18,7 +18,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
   const { label: scoreLabel, unit: scoreUnit } = scoreMeta(e.type);
   const take = editorialTake(e.type, e.slug);
   const isCasino = e.type === "casino";
-  const tier = reviewTier(e.type);
+  const tier = reviewTierFor(e.type, e.slug);
 
   return (
     <main style={{ background: "#07090B", color: "#E8EDF0" }}>
@@ -173,6 +173,8 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
           sub={
             tier === "field-tested"
               ? "Every figure below came from our own funded account. Raw log linked at the foot of the page."
+              : tier === "pending"
+              ? "Every figure below is the operator's own published number, pending our funded-account field-test pass. See how we rate for what that means here."
               : "Every figure below is assessed from public sources — published paytables, RTP certificates and posted odds, not a funded account. See how we rate for what that means here."
           }
         />

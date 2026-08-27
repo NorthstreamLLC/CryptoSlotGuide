@@ -91,6 +91,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
     const x = exchangeRows.find((r) => r.slug === slug);
     if (!x) return null;
     const s = x.score;
+    const checked = isFieldTestedOperator(x.slug);
     return {
       type,
       kicker: "Exchange review",
@@ -98,10 +99,12 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       slug: x.slug,
       logo: logoFor(x.slug),
       score: s.toFixed(1),
-      headline: `${x.name} review 2026: ${x.m1} measured spread, ${x.m2.split(",")[0].trim()} rails, fiat out in 4h 10m`,
-      standfirst: `We sampled ${x.name}'s order book hourly for two weeks on BTC, ETH and USDT pairs, then moved real money out through every fiat rail it offers. ${x.note}.`,
-      tags: ["SPREADS SAMPLED HOURLY", "FIAT PAYOUT TIMED", "TESTED 22 AUG 2026"],
-      byline: "Tested by A. Okafor · order-book sampling by the data desk · 2 weeks",
+      headline: `${x.name} review 2026: ${x.m1} spread, ${x.m2.split(",")[0].trim()} rails, fiat out in 4h 10m`,
+      standfirst: checked
+        ? `We sampled ${x.name}'s order book hourly for two weeks on BTC, ETH and USDT pairs, then moved real money out through every fiat rail it offers. ${x.note}.`
+        : `${x.name}'s spread and fiat rails below are published figures pending our own field-test pass. ${x.note}.`,
+      tags: checked ? ["SPREADS SAMPLED HOURLY", "FIAT PAYOUT TIMED", "TESTED 22 AUG 2026"] : ["PUBLISHED SPREAD", "FIAT RAILS LISTED", "FIELD-TEST PENDING"],
+      byline: checked ? "Tested by A. Okafor · order-book sampling by the data desk · 2 weeks" : "Published figures · order-book sampling not yet field-tested",
       verdict: `Spread plus withdrawal fee is the real cost of an onramp, and on that combined measure ${x.name} lands at ${x.m1} with ${x.m3.toLowerCase()}. ${x.note}, which is the trade-off to weigh before you route a bankroll through it.`,
       criteria: crit(s, [0.4, -0.2, 0.2, -0.4, 0.5, -0.5], ["Spread & fees", "Fiat rails", "Liquidity", "Security posture", "Withdrawal speed", "Support"]),
       stats: [
@@ -142,7 +145,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
         "Support routed through a ticket queue, not live chat",
       ],
       faqs: [
-        { q: "Can I deposit straight from here into a casino?", a: "Yes, on-chain, and it worked on every operator we tested. We still route through a self-custody wallet first — an exchange withdrawal address that ends up on a gambling site is the pattern most likely to trigger a compliance review on your account." },
+        { q: "Can I deposit straight from here into a casino?", a: "Yes, on-chain — that's standard across the category, though we confirm it per operator as our field-testing covers them. We still route through a self-custody wallet first — an exchange withdrawal address that ends up on a gambling site is the pattern most likely to trigger a compliance review on your account." },
         { q: "Is the advertised fee the fee I pay?", a: "Not on its own. The spread you cross is part of the cost, and on majors it is comparable to the taker fee itself. We publish both because only the sum matters." },
         { q: "How long did fiat withdrawals take?", a: "Median four hours ten minutes from request to funds landed, across nine withdrawals. The slowest was a first-time wire that took a full business day." },
       ],
@@ -154,6 +157,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
     if (!w) return null;
     const s = w.score;
     const cold = w.name === "Ledger";
+    const checked = isFieldTestedOperator(w.slug);
     return {
       type,
       kicker: "Wallet review",
@@ -162,9 +166,11 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       logo: logoFor(w.slug),
       score: s.toFixed(1),
       headline: `${w.name} review 2026: ${w.hed || w.note}`,
-      standfirst: `We funded ${w.name} and moved money in and out of casino cashiers on every chain it supports, watching what it signs, what it simulates, and what it hides. ${w.note}.`,
-      tags: ["DEPOSITS TESTED ON 5 OPERATORS", "SIGNING BEHAVIOUR AUDITED", "TESTED 20 AUG 2026"],
-      byline: "Tested by R. Vance · signing review by the security desk · 3 weeks",
+      standfirst: checked
+        ? `We funded ${w.name} and moved money in and out of casino cashiers on every chain it supports, watching what it signs, what it simulates, and what it hides. ${w.note}.`
+        : `${w.name}'s custody model and chain coverage below are as published pending our own field-test pass on real casino deposits. ${w.note}.`,
+      tags: checked ? ["DEPOSITS TESTED ON 5 OPERATORS", "SIGNING BEHAVIOUR AUDITED", "TESTED 20 AUG 2026"] : ["PUBLISHED SPECS", "SIGNING BEHAVIOUR NOT YET AUDITED", "FIELD-TEST PENDING"],
+      byline: checked ? "Tested by R. Vance · signing review by the security desk · 3 weeks" : "Published specs · signing behaviour not yet field-tested",
       verdict: `${w.note}. For gambling specifically, what matters is how the wallet behaves at the moment of signing: whether it tells you what a cashier contract will do before you approve it, and whether the fee it sets gets your deposit credited in one block or three.`,
       criteria: crit(s, [0.5, -0.3, 0.4, -0.5, 0.1, -0.4], ["Custody model", "Chain coverage", "Transaction safety", "Everyday UX", "Fee handling", "Recovery & support"]),
       stats: [
@@ -204,7 +210,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
         "No built-in Lightning support, so small BTC deposits pay on-chain fees",
       ],
       faqs: [
-        { q: "Should the playing balance live here?", a: "No. Keep a small hot wallet for deposits and a separate wallet for holdings. Every operator on our index has frozen an account at some point during a review; the same discipline applies to your own keys." },
+        { q: "Should the playing balance live here?", a: "No. Keep a small hot wallet for deposits and a separate wallet for holdings. Casino accounts get frozen, sometimes for no clear reason; the same discipline applies to your own keys regardless of which operator you're using." },
         { q: "Does the wallet know I am gambling?", a: "It does not report anywhere, but the chain does. Casino cashier addresses are well-known and clustered by analytics firms, so anything you later send to an exchange from the same address is traceable to that activity." },
         { q: "What happens if a deposit does not arrive?", a: "Almost always an underpriced fee or a missing memo tag. Check the explorer first, then the operator's confirmation policy — we list both per casino." },
       ],
@@ -452,6 +458,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
   const coins = coinsBy[o.slug] ?? ["BTC", "ETH", "USDT"];
   const slotList = slots.slice(0, 5);
   const medianPayout = indexMedianPayout(ops);
+  const checked = isFieldTestedOperator(o.slug);
   return {
     type: "casino",
     kicker: "Casino review",
@@ -460,9 +467,13 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
     logo: logoFor(o.slug),
     score: o.score.toFixed(1),
     headline: `${o.name} review 2026: ${o.payoutLabel} median payout, ${o.wager}× wagering, ${o.kyc === "none" ? "no" : o.kyc} KYC`,
-    standfirst: `We ran a funded ${o.name} account across slots and, where offered, sportsbook and esports markets — timing withdrawals between $40 and $9,400 and reading the bonus terms line by line.`,
-    tags: [fast ? "FAST PAYOUTS VERIFIED" : "PAYOUTS TIMED", lowWager ? "1× WAGERING" : `${o.wager}× WAGERING`, "TESTED 21 AUG 2026"],
-    byline: "Tested by J. Marsh · reviewed by the editorial desk · 6 weeks live",
+    standfirst: checked
+      ? `We ran a funded ${o.name} account across slots and, where offered, sportsbook and esports markets — timing withdrawals between $40 and $9,400 and reading the bonus terms line by line.`
+      : `${o.name}'s payout time, wagering and KYC figures below are as published pending our own funded-account field-test pass.`,
+    tags: checked
+      ? [fast ? "FAST PAYOUTS VERIFIED" : "PAYOUTS TIMED", lowWager ? "1× WAGERING" : `${o.wager}× WAGERING`, "TESTED 21 AUG 2026"]
+      : ["PUBLISHED PAYOUT TIME", lowWager ? "1× WAGERING (PUBLISHED)" : `${o.wager}× WAGERING (PUBLISHED)`, "FIELD-TEST PENDING"],
+    byline: checked ? "Tested by J. Marsh · reviewed by the editorial desk · 6 weeks live" : "Published terms · funded-account testing not yet done",
     verdict: `${o.name} clears withdrawals in a median ${o.payoutLabel} against an index median of ${fmtMins(medianPayout)}, credits ${coins.length} coins, and runs its headline offer at ${o.wager}× wagering. ${
       lowWager
         ? "That wagering figure is the difference that compounds: on a $100 credit you turn over $100, not $4,000."
@@ -504,9 +515,9 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
     cons: casinoCons(o, { ops, liveCasinos: siteData.liveCasinos, coinsBy, coinDefs: siteData.coinDefs }),
     faqs: [
       { q: `Is ${o.name} available in my country?`, a: `${o.name} blocks a long list of jurisdictions under its ${o.licence} licence, enforced at registration and again at withdrawal. Check the restricted list in the terms before depositing rather than after.` },
-      { q: "Do I have to complete KYC?", a: o.kyc === "none" ? "No documents were requested at any volume we tested, but the operator reserves the right to ask." : o.kyc === "tiered" ? "Not for small volumes. Withdrawals below a cumulative threshold cleared with no document request; above it, expect a standard ID and address check." : "Yes. Verification is required before the first withdrawal is processed." },
+      { q: "Do I have to complete KYC?", a: o.kyc === "none" ? "Published policy is no documents requested, but the operator reserves the right to ask, and we haven't yet confirmed that at volume ourselves." : o.kyc === "tiered" ? "Not for small volumes, per the operator's published policy. Withdrawals below a cumulative threshold are said to clear with no document request; above it, expect a standard ID and address check." : "Yes. Verification is required before the first withdrawal is processed." },
       { q: `What does ${o.wager}× wagering actually mean?`, a: lowWager ? "Credit must be turned over once before withdrawal. On a $100 credit that is $100 of wagering." : `Credit must be turned over ${o.wager} times before withdrawal. On a $100 credit that is $${(o.wager * 100).toLocaleString()} of wagering.` },
-      { q: "How fast are withdrawals really?", a: `Median ${o.payoutLabel} across our timed withdrawals. Nothing was cancelled or clawed back.` },
+      { q: "How fast are withdrawals really?", a: checked ? `Median ${o.payoutLabel} across our timed withdrawals. Nothing was cancelled or clawed back.` : `${o.payoutLabel} is the operator's own published median. We haven't timed withdrawals here ourselves yet — see how we rate for what's field-tested so far.` },
     ],
   };
 }
