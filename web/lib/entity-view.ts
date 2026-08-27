@@ -11,7 +11,7 @@
  */
 import { siteData } from "./site-data";
 import { crit, flag } from "./scoring";
-import { casinoCons, fmtMins, indexMedianPayout } from "./derived";
+import { casinoCons, fmtMins, indexMedianPayout, isStaleReading } from "./derived";
 import { isFieldTestedOperator } from "./field-tested";
 import type { ScoreBar, Flag } from "./types";
 
@@ -60,6 +60,14 @@ export interface EntityView {
   pros: string[];
   cons: string[];
   faqs: { q: string; a: string }[];
+  /**
+   * Overrides EntityReviewPage's default tier-based "What we measured"
+   * subhead. Needed for slots specifically: the page mixes editorially-
+   * assessed data (published RTP, volatility, max win) with genuinely
+   * field-tested per-operator RTP Watch readings once any exist for
+   * this title — a single tier-wide sentence can't describe both.
+   */
+  measuredSub?: string;
 }
 
 const COIN_TINTS: Record<string, string> = {
@@ -220,14 +228,17 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
   if (type === "slot") {
     const s = slots.find((r) => r.slug === slug);
     if (!s) return null;
-    const readings = rtpWatch.filter((r) => r.slotSlug === s.slug);
-    // Only operators in FIELD_TESTED_OPERATOR_SLUGS count as actually
-    // checked — see lib/field-tested.ts. That list is empty until real
-    // testing happens, so today every slot page falls into the "not yet
-    // verified per operator" branch below, honestly. As operators get
-    // added there, their readings start counting here automatically —
-    // no other change needed.
-    const checkedOps = watchOps.filter((op) => isFieldTestedOperator(op.slug));
+    const readings = rtpWatch.filter((r) => r.slotSlug === s.slug && !isStaleReading(r.checkedAt));
+    // "Checked" means a real, non-stale reading exists for this exact
+    // slot × operator pair — not just that the operator is field-tested
+    // in general. data/rtpWatch.json only ever holds real readings
+    // (scripts/import-rtp-readings.mjs), empty until the first real
+    // import, so today every slot page falls into the "not yet verified
+    // per operator" branch below, honestly. Gating on the operator alone
+    // was a real bug: it would make every title look verified at an
+    // operator the moment *any* title there was checked. See
+    // lib/rtp-watch-view.ts's header for the same fix.
+    const checkedOps = watchOps.filter((op) => readings.some((r) => r.operatorSlug === op.slug));
     const cuts = checkedOps.map((op) => {
       const r = readings.find((x) => x.operatorSlug === op.slug);
       return r ? Math.round((r.publishedRtp - r.rtp) * 100) / 100 : 0;
@@ -310,6 +321,9 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
         { q: "How do I check the build myself?", a: "Open the game, then the paytable or info screen. The return is stated there for the configuration you have loaded. If it differs from the published figure above, tell us and we will add it to our RTP Watch queue." },
         { q: "Is the max win realistic?", a: "It is real but rare. Treat it as the tail of the distribution, not a target — the median session ends nowhere near it." },
       ],
+      measuredSub: anyChecked
+        ? `Volatility, max win and mechanic design are assessed from public sources. The RTP-by-build figures are real — read inside ${checkedOps.length === 1 ? "an operator's" : `${checkedOps.length} operators'`} own client${checkedOps.length === 1 ? "" : "s"}, not published data. See how we rate for what that means here.`
+        : undefined,
     };
   }
 

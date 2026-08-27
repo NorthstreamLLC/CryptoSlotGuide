@@ -171,11 +171,12 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
         <SectionHeading
           title="What we measured"
           sub={
-            tier === "field-tested"
+            e.measuredSub ??
+            (tier === "field-tested"
               ? "Every figure below came from our own funded account. Raw log linked at the foot of the page."
               : tier === "pending"
               ? "Every figure below is the operator's own published number, pending our funded-account field-test pass. See how we rate for what that means here."
-              : "Every figure below is assessed from public sources — published paytables, RTP certificates and posted odds, not a funded account. See how we rate for what that means here."
+              : "Every figure below is assessed from public sources — published paytables, RTP certificates and posted odds, not a funded account. See how we rate for what that means here.")
           }
         />
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 1, background: "rgba(255,255,255,.07)", border: "1px solid rgba(255,255,255,.07)", borderRadius: 13, overflow: "hidden", marginBottom: 38 }}>

@@ -22,7 +22,6 @@ import {
   splitBuilds,
   topScore,
 } from "./derived";
-import { isFieldTestedOperator } from "./field-tested";
 
 export type VerticalKind = "slots" | "providers" | "sportsbooks" | "wallets" | "exchanges" | "guides";
 
@@ -78,11 +77,10 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
   const { slots, providers, walletRows, exchangeRows, guideRows, ops, sportsMarkets, esportsTitles, rtpWatch, sbData } = siteData;
 
   if (kind === "slots") {
-    // Only readings from field-tested operators count toward the "split
-    // builds" claim below — see lib/field-tested.ts. Filtering here (not
-    // just on the slot review page) keeps this vertical's headline stat
-    // honest too, since it's built straight from the raw rtpWatch data.
-    const checkedReadings = rtpWatch.filter((r) => isFieldTestedOperator(r.operatorSlug));
+    // rtpWatch only ever holds real readings (empty until the first real
+    // import via scripts/import-rtp-readings.mjs — see data/README.md),
+    // and splitBuilds() itself excludes stale ones, so this stat is
+    // honest without any extra filtering here.
     return {
       kicker: "Slots",
       title: "Slot RTP index",
@@ -90,7 +88,7 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
       stats: [
         [String(slots.length), "Slots tracked"],
         [`${medianRtp(slots).toFixed(2)}%`, "Median RTP"],
-        [String(splitBuilds(checkedReadings)), "Titles with split builds"],
+        [String(splitBuilds(rtpWatch)), "Titles with split builds"],
       ],
       cols: ["Provider", "RTP", "Max win"],
       scoreLabel: "RTP",

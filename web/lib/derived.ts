@@ -123,7 +123,23 @@ export function medianRtp(slots: Slot[]): number {
  * is the per-cell equivalent against our real `rtp_reading` schema.
  */
 export function splitBuilds(readings: RtpReading[]): number {
-  return new Set(readings.filter((r) => r.rtp < r.publishedRtp).map((r) => r.slotSlug)).size;
+  return new Set(readings.filter((r) => r.rtp < r.publishedRtp && !isStaleReading(r.checkedAt)).map((r) => r.slotSlug)).size;
+}
+
+/**
+ * Root README's RTP Watch section: "surface stale cells explicitly, and
+ * prefer hiding a stale cell to showing an unverified one." A reading
+ * older than 30 days is treated as unchecked everywhere it's used —
+ * lib/rtp-watch-view.ts's matrix, lib/entity-view.ts's slot branch, and
+ * splitBuilds above.
+ */
+export const STALE_READING_DAYS = 30;
+
+export function isStaleReading(checkedAt: string): boolean {
+  const checked = new Date(checkedAt).getTime();
+  if (Number.isNaN(checked)) return true;
+  const ageDays = (Date.now() - checked) / (1000 * 60 * 60 * 24);
+  return ageDays > STALE_READING_DAYS;
 }
 
 export function medianReadMins(guides: GuideRow[]): number {

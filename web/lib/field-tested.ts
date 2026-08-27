@@ -2,24 +2,30 @@
  * Which operators currently have REAL field-testing behind them — a
  * funded account actually opened, withdrawals actually timed, paytables
  * actually read inside that account (the process app/how-we-rate/page.tsx
- * describes as "the test protocol"). Confirmed 26 Aug 2026: this list is
- * empty today. Every "Tested by ..." byline and every per-operator RTP
- * Watch reading currently on the site is inherited from the original
- * design mockup's placeholder flavor text, not real work — none of it
- * has actually been done yet. The site is not public yet, so that's fine
- * for now, but nothing here should start reading as a completed claim
- * before this list says otherwise.
+ * describes as "the test protocol"). Backed by data/fieldTestedOperators.json,
+ * which starts empty and is meant to be maintained two ways:
  *
- * Add an operator's slug here only once its casino review, and any
- * RTP Watch readings attributed to it, are backed by real testing.
- * This directly gates:
+ *  1. Automatically, by scripts/import-rtp-readings.mjs — importing real
+ *     RTP Watch readings for an operator adds its slug here too, since
+ *     reading a paytable inside an operator's client requires the same
+ *     funded account as everything else "field-tested" claims.
+ *  2. By hand, once a casino/wallet/exchange review itself gets a real
+ *     funded-account pass (not just RTP checks) — add the slug directly
+ *     to the JSON file.
+ *
+ * Confirmed 26 Aug 2026: this list was empty at that point — every
+ * "Tested by ..." byline and RTP Watch reading on the site up to then was
+ * the original design mockup's placeholder flavor text, not real work.
+ * The site isn't public yet, so that's fine as of writing, but nothing
+ * here should start reading as a completed claim before this list says
+ * otherwise. This directly gates:
  *  - which operators' RTP Watch readings render as real vs. "not yet
  *    checked" (lib/entity-view.ts's slot branch, lib/rtp-watch-view.ts)
  *  - the slot review page's per-operator "RTP by casino build" table
- *  - (future) casino review bylines, once those get the same treatment
+ *  - casino/wallet/exchange review bylines and standfirst claims
  */
-export const FIELD_TESTED_OPERATOR_SLUGS: string[] = [];
+import { siteData } from "./site-data";
 
 export function isFieldTestedOperator(slug: string): boolean {
-  return FIELD_TESTED_OPERATOR_SLUGS.includes(slug);
+  return siteData.fieldTestedOperators.includes(slug);
 }

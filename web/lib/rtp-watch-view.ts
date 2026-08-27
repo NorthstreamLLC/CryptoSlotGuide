@@ -4,19 +4,30 @@
  * (search for "RTP Watch" comment block). The source models `rtpWatch` as one
  * row per title with a `cuts[]` array aligned to `watchOps`; our real
  * schema is per-cell (`rtp_reading`, one row per slot×operator — see
- * design/README.md's RTP Watch section, which explicitly says not to
- * carry the per-title shape into production). This module is the
- * adapter: reshape our real schema into the same per-title view the
- * page renders, without adopting the wrong-shape data model.
+ * root README.md's RTP Watch section, which explicitly says not to carry
+ * the per-title shape into production). This module is the adapter:
+ * reshape our real schema into the same per-title view the page renders,
+ * without adopting the wrong-shape data model.
  *
- * Cells only render a real figure for operators in
- * FIELD_TESTED_OPERATOR_SLUGS (lib/field-tested.ts) — empty today, so
- * every cell currently renders as "not yet checked" rather than the raw
- * rtpWatch.json numbers, which are the design mockup's placeholder data,
- * not real readings. See that file's header for why.
+ * data/rtpWatch.json holds ONLY real readings — populated by
+ * scripts/import-rtp-readings.mjs, empty until the first real import.
+ * The earlier design had this module additionally gate cells by whether
+ * the operator was in lib/field-tested.ts's list; that was a real bug:
+ * marking an operator "field-tested" (because we'd checked *some*
+ * titles there) would make *every* title's cell for that operator
+ * render as verified, including ones nobody had actually re-read. Gate
+ * per cell, off the data that's actually there, not off a broader
+ * per-operator flag — lib/field-tested.ts stays scoped to the separate
+ * "did we open a funded account here at all" claim casino/wallet/
+ * exchange reviews make.
+ *
+ * Staleness (root README's RTP Watch section, "Derive everything
+ * else"): a reading older than 30 days is treated as unchecked rather
+ * than shown as a stale confirmation — "prefer hiding a stale cell to
+ * showing an unverified one."
  */
 import { siteData } from "./site-data";
-import { isFieldTestedOperator } from "./field-tested";
+import { isStaleReading } from "./derived";
 
 export interface WatchCell {
   label: string;
@@ -42,7 +53,10 @@ export function getWatchRows(): WatchRow[] {
   const { slots, watchOps, rtpWatch } = siteData;
 
   return slots.map((s) => {
-    const readings = watchOps.map((op) => (isFieldTestedOperator(op.slug) ? rtpWatch.find((r) => r.slotSlug === s.slug && r.operatorSlug === op.slug) : undefined));
+    const readings = watchOps.map((op) => {
+      const r = rtpWatch.find((x) => x.slotSlug === s.slug && x.operatorSlug === op.slug);
+      return r && !isStaleReading(r.checkedAt) ? r : undefined;
+    });
     const cuts = readings.map((r) => (r ? Math.max(0, Math.round((r.publishedRtp - r.rtp) * 100) / 100) : 0));
     const checkedCount = readings.filter(Boolean).length;
     const worst = Math.max(0, ...cuts);
