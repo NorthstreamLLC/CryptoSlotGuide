@@ -1,10 +1,17 @@
 import { siteData } from "@/lib/site-data";
+import { pageMetadata } from "@/lib/seo";
 
 /**
  * Ported from the `isFiat` block in CryptoSlotGuide.dc.html (search for
  * `FIAT CASINOS`). Deliberately a separate list, never merged into the
  * crypto ranking — same rule the README states.
  */
+export const metadata = pageMetadata(
+  "Fiat casinos, scored on their own terms",
+  "Licensed operators taking cards and bank transfers, not crypto — kept on a separate list because the comparison would be dishonest otherwise.",
+  "/fiat-casinos"
+);
+
 export default function Page() {
   const { fiatCasinos } = siteData;
 

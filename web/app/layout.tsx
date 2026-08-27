@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { siteCounts } from "@/lib/site-data";
+import { SITE_URL, SITE_NAME } from "@/lib/seo";
 
 const archivo = Archivo({
   variable: "--font-archivo",
@@ -18,9 +19,10 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "CryptoSlotGuide — crypto casino & slot reviews",
-    template: "%s | CryptoSlotGuide",
+    template: `%s | ${SITE_NAME}`,
   },
   description:
     "Crypto casino, slot, sportsbook and wallet reviews built on measured data — field-tested where we can fund it, assessed from public sources everywhere else, and every review says which is which.",

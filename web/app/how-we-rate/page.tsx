@@ -1,5 +1,12 @@
 import { siteData } from "@/lib/site-data";
 import { TIER_LABEL, TIER_DESC, TIER_TINT } from "@/lib/review-tier";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata(
+  "How we rate, in full",
+  "One weighted model for crypto casinos, built from six criteria with published weights. Everything else is reviewed against its own checklist, field-tested or editorially assessed — every review says which.",
+  "/how-we-rate"
+);
 
 const REVIEW_BASIS_TIER: Record<string, "field-tested" | "editorial"> = {
   "Live casino": "field-tested",

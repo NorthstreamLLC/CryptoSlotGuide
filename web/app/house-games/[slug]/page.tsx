@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { siteData } from "@/lib/site-data";
 import { logoFor } from "@/lib/casino-index";
+import { pageMetadata } from "@/lib/seo";
 
 /**
  * Ported from the `isHouseGame` block in CryptoSlotGuide.dc.html (search
@@ -10,6 +11,17 @@ import { logoFor } from "@/lib/casino-index";
  * is to pick on payout/wagering) rather than a per-game operator list our
  * data model doesn't carry.
  */
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const h = siteData.houseGames.find((g) => g.slug === slug);
+  if (!h) return {};
+  return pageMetadata(
+    `${h.name}: the rules, the edge, and what you actually decide`,
+    `${h.note} House edge ${h.edge}, return ${h.rtp}, provably fair: ${h.fair}.`,
+    `/house-games/${slug}`
+  );
+}
+
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const { houseGames, ops } = siteData;

@@ -1,10 +1,17 @@
 import Link from "next/link";
 import { siteData } from "@/lib/site-data";
+import { pageMetadata } from "@/lib/seo";
 
 /**
  * Ported from the `isHouse` block in CryptoSlotGuide.dc.html (search
  * for `House games · crypto originals`).
  */
+export const metadata = pageMetadata(
+  "Originals, and how to play them",
+  "The in-house games are the only titles on a crypto casino where the maths is published, provable and identical everywhere. Here is the edge on each one, what the game actually asks you to decide, and where the play is honest.",
+  "/house-games"
+);
+
 export default function Page() {
   const { houseGames } = siteData;
 

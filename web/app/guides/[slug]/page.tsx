@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { siteData } from "@/lib/site-data";
 import { fill } from "@/lib/derived";
+import { pageMetadata } from "@/lib/seo";
 
 /**
  * Ported from the `isGuide` block in CryptoSlotGuide.dc.html (search for
@@ -9,6 +10,14 @@ import { fill } from "@/lib/derived";
  * fill() so a claim like "{fee} of {casinos} operators" can't drift out
  * of step with the live data.
  */
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const { guideRows } = siteData;
+  const g = guideRows.find((r) => r.slug === slug);
+  if (!g) return {};
+  return pageMetadata(g.title, fill(g.standfirst, siteData), `/guides/${slug}`);
+}
+
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const { guideRows, guideBodies } = siteData;
