@@ -5,6 +5,7 @@ import { useState } from "react";
 import { siteData } from "@/lib/site-data";
 import { fmtMins, indexMedianPayout, liveCon, payoutClaim } from "@/lib/derived";
 import { logoFor } from "@/lib/casino-index";
+import { TIER_LABEL, TIER_TINT } from "@/lib/review-tier";
 
 /**
  * The hand-written flagship review — ported from the `isReview` block in
@@ -108,6 +109,9 @@ export function RoobetReviewPage() {
               <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 26 }}>
                 <Chip label="#1 RECOMMENDED" bg="rgba(255,204,0,.12)" border="rgba(255,204,0,.3)" color="#FFCC00" />
                 <Chip label="TESTED 21 AUG 2026" bg="rgba(255,255,255,.04)" border="rgba(255,255,255,.08)" color="#8DA0AA" />
+                <Link href="/how-we-rate">
+                  <Chip label={TIER_LABEL["field-tested"].toUpperCase()} bg={`${TIER_TINT["field-tested"]}18`} border={`${TIER_TINT["field-tested"]}55`} color={TIER_TINT["field-tested"]} />
+                </Link>
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: 14, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11.5, color: "#5C6A72" }}>
                 <span style={{ width: 26, height: 26, flex: "none", borderRadius: "50%", background: "#1B2226", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 9, color: "#8DA0AA" }}>JM</span>

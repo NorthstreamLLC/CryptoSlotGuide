@@ -84,8 +84,9 @@ export function Footer() {
             <span style={{ color: "#00C2CC" }}>Guide</span>
           </div>
           <p style={{ margin: "0 0 18px", fontSize: 13, lineHeight: 1.6, color: "#6E7F88", maxWidth: "34ch" }}>
-            Independent crypto gambling and Web3 product reviews. We test with our own money, publish the log, and
-            disclose every commercial relationship.
+            Independent crypto gambling and Web3 product reviews. We field-test what we can fund by hand and disclose
+            exactly which reviews that covers — see{" "}
+            <Link href="/how-we-rate" style={{ color: "#8DA0AA" }}>how we rate</Link>.
           </p>
           <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
             {["18+ ONLY", "BEGAMBLEAWARE", "GAMSTOP"].map((badge) => (

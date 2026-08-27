@@ -12,6 +12,7 @@
 import { siteData } from "./site-data";
 import { crit, flag } from "./scoring";
 import { casinoCons, fmtMins, indexMedianPayout } from "./derived";
+import { isFieldTestedOperator } from "./field-tested";
 import type { ScoreBar, Flag } from "./types";
 
 export type EntityType = "casino" | "slot" | "wallet" | "exchange" | "provider" | "market";
@@ -214,11 +215,19 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
     const s = slots.find((r) => r.slug === slug);
     if (!s) return null;
     const readings = rtpWatch.filter((r) => r.slotSlug === s.slug);
-    const cuts = watchOps.map((op) => {
+    // Only operators in FIELD_TESTED_OPERATOR_SLUGS count as actually
+    // checked — see lib/field-tested.ts. That list is empty until real
+    // testing happens, so today every slot page falls into the "not yet
+    // verified per operator" branch below, honestly. As operators get
+    // added there, their readings start counting here automatically —
+    // no other change needed.
+    const checkedOps = watchOps.filter((op) => isFieldTestedOperator(op.slug));
+    const cuts = checkedOps.map((op) => {
       const r = readings.find((x) => x.operatorSlug === op.slug);
       return r ? Math.round((r.publishedRtp - r.rtp) * 100) / 100 : 0;
     });
     const clean = cuts.filter((c) => c === 0).length;
+    const anyChecked = checkedOps.length > 0;
     return {
       type,
       kicker: "Slot review",
@@ -230,56 +239,69 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       noLogo: true,
       score: s.rtp.toFixed(2),
       headline: `${s.name} review: ${s.rtp.toFixed(2)}% at best, ${s.vol} volatility, ${s.maxWin} ceiling`,
-      standfirst: `We opened ${s.name} in every casino on our index that carries it and read the paytable inside each build. ${clean} of ${cuts.length} major operators ship the full ${s.rtp.toFixed(2)}% version.`,
-      tags: ["PAYTABLE READ PER CASINO", `${s.vol.toUpperCase()} VOLATILITY`, "CHECKED 24 AUG 2026"],
-      byline: `Read by the games desk · ${s.provider} · verified in ${cuts.length} operator builds`,
-      verdict: `${s.name} is a ${s.vol}-volatility ${s.provider} title with a ${s.maxWin} ceiling and a published return of ${s.rtp.toFixed(2)}%. ${
-        clean === cuts.length
-          ? "Every operator we checked ships that build, so the only variable left is where you want your money held."
-          : `Only ${clean} of the ${cuts.length} operators we checked ship it. The rest run a reduced configuration, and the lobby does not tell you which.`
-      }`,
+      standfirst: anyChecked
+        ? `We opened ${s.name} in ${checkedOps.length} operator ${checkedOps.length === 1 ? "account" : "accounts"} on our index and read the paytable inside each build. ${clean} of ${cuts.length} ship the full ${s.rtp.toFixed(2)}% version.`
+        : `${s.name} publishes a return of ${s.rtp.toFixed(2)}%. Studios license more than one configuration of the same title, and which one an operator ships isn't disclosed in the lobby — we check that per operator as our RTP Watch program covers them, and none of the operators carrying this title are checked yet.`,
+      tags: anyChecked ? ["PAYTABLE READ PER CASINO", `${s.vol.toUpperCase()} VOLATILITY`, "CHECKED 24 AUG 2026"] : ["PUBLISHED RTP", `${s.vol.toUpperCase()} VOLATILITY`, "PER-OPERATOR CHECK PENDING"],
+      byline: anyChecked
+        ? `Read by the games desk · ${s.provider} · verified in ${cuts.length} operator ${cuts.length === 1 ? "build" : "builds"}`
+        : `Published return · ${s.provider} · per-operator build not yet field-tested`,
+      verdict: anyChecked
+        ? `${s.name} is a ${s.vol}-volatility ${s.provider} title with a ${s.maxWin} ceiling and a published return of ${s.rtp.toFixed(2)}%. ${
+            clean === cuts.length
+              ? "Every operator we checked ships that build, so the only variable left is where you want your money held."
+              : `Only ${clean} of the ${cuts.length} operators we checked ship it. The rest run a reduced configuration, and the lobby does not tell you which.`
+          }`
+        : `${s.name} is a ${s.vol}-volatility ${s.provider} title with a ${s.maxWin} ceiling and a published return of ${s.rtp.toFixed(2)}%. Operators can legally ship a reduced-RTP configuration of the same title without disclosing it in the lobby; we haven't yet field-tested any operator carrying this title to confirm which build they run.`,
       criteria: crit(Math.min(9.6, s.rtp - 86.5), [0.3, -0.4, 0.2, 0.4, -0.2, 0.1], ["Return (best build)", "Build consistency", "Max win ceiling", "Mechanic design", "Base-game pacing", "Bonus-buy value"]),
       stats: [
-        { label: "Best RTP on index", value: `${s.rtp.toFixed(2)}%`, note: `Read in ${s.bestAt}'s build` },
+        { label: "Published RTP", value: `${s.rtp.toFixed(2)}%`, note: `As certified by ${s.provider}` },
         { label: "Volatility", value: s.vol, note: "Studio rating, matched to our session logs" },
         { label: "Max win", value: s.maxWin, note: "Published cap, honoured where verified" },
         { label: "Provider", value: s.provider, note: "See the studio profile for RTP policy" },
-        { label: "Operators checked", value: String(cuts.length), note: `${clean} at the full published rate` },
+        { label: "Operators checked", value: String(checkedOps.length), note: anyChecked ? `${clean} at the full published rate` : "Not yet field-tested" },
       ],
       chipLabel: "Where the full build runs",
-      chips: watchOps.filter((_, i) => cuts[i] === 0).map((o) => ({ t: o.name, tint: "#5FE3E8" })),
+      chips: anyChecked ? checkedOps.filter((_, i) => cuts[i] === 0).map((o) => ({ t: o.name, tint: "#5FE3E8" })) : [],
       specTitle: "What the paytable says",
       specSub: "Read inside the game client, not from a marketing page.",
       spec: [
         spec("Published return", `${s.rtp.toFixed(2)}% in the full build`, "ok"),
-        spec("Configurations", cuts.some((c) => c) ? "Multiple, operator-selectable" : "Single configuration", cuts.some((c) => c) ? "bad" : "ok"),
+        spec("Configurations", anyChecked ? (cuts.some((c) => c) ? "Multiple, operator-selectable" : "Single configuration") : "Not yet confirmed per operator", anyChecked ? (cuts.some((c) => c) ? "bad" : "ok") : "watch"),
         spec("Volatility", `${s.vol} — long dry spells between features`, "watch"),
         spec("Max win", `${s.maxWin} stake, stated in the paytable`, "ok"),
       ],
       tableTitle: "RTP by casino build",
-      tableSub: "The figure in each operator's own client on the date shown.",
+      tableSub: anyChecked ? "The figure in each operator's own client on the date shown." : "Field-tested per operator as our RTP Watch program covers them — none checked yet for this title.",
       tableCols: ["RTP here", "Difference", "Status"],
-      tableRows: watchOps.map((o, i) => ({
-        name: o.name,
-        note: cuts[i] ? "Reduced build in this client" : "Full published build",
-        m1: `${(s.rtp - cuts[i]).toFixed(2)}%`,
-        m2: cuts[i] ? `−${cuts[i].toFixed(2)}` : "match",
-        m3: cuts[i] ? "Cut" : "Clean",
-      })),
+      tableRows: anyChecked
+        ? checkedOps.map((o, i) => ({
+            name: o.name,
+            note: cuts[i] ? "Reduced build in this client" : "Full published build",
+            m1: `${(s.rtp - cuts[i]).toFixed(2)}%`,
+            m2: cuts[i] ? `−${cuts[i].toFixed(2)}` : "match",
+            m3: cuts[i] ? "Cut" : "Clean",
+          }))
+        : [],
       tableNote: "The operator chooses the build, not the studio. Where a casino ships a reduced configuration of a title we track, it costs that casino points on game and RTP quality.",
       pros: [
         `Published return of ${s.rtp.toFixed(2)}% in the full build`,
         `${s.maxWin} max win, verified where paid`,
-        `${clean} of ${cuts.length} major operators ship the full version`,
+        anyChecked ? `${clean} of ${cuts.length} major operators ship the full version` : `${s.provider} publishes one certified return for the full build`,
       ],
       cons: [
-        cuts.some((c) => c) ? "Reduced builds exist and the lobby does not flag them" : "Volatility makes short sessions unrepresentative",
+        anyChecked ? (cuts.some((c) => c) ? "Reduced builds exist and the lobby does not flag them" : "Volatility makes short sessions unrepresentative") : "Per-operator build not yet field-tested — a reduced configuration could be running anywhere it's offered",
         `${s.vol} volatility: the base game will test a bankroll`,
         "Bonus buys move variance, not expected value",
       ],
       faqs: [
-        { q: "Which casino should I play it at?", a: "Any of the operators marked clean above run the full build. Between those, pick on payout speed and wagering rather than on the game, because the maths is identical." },
-        { q: "How do I check the build myself?", a: "Open the game, then the paytable or info screen. The return is stated there for the configuration you have loaded. If it differs from the figure above, tell us and we will re-check." },
+        {
+          q: "Which casino should I play it at?",
+          a: anyChecked
+            ? "Any of the operators marked clean above run the full build. Between those, pick on payout speed and wagering rather than on the game, because the maths is identical."
+            : "We haven't field-tested a per-operator build for this title yet. Until we have, treat the published return as the ceiling, not a guarantee at any specific casino.",
+        },
+        { q: "How do I check the build myself?", a: "Open the game, then the paytable or info screen. The return is stated there for the configuration you have loaded. If it differs from the published figure above, tell us and we will add it to our RTP Watch queue." },
         { q: "Is the max win realistic?", a: "It is real but rare. Treat it as the tail of the distribution, not a target — the median session ends nowhere near it." },
       ],
     };

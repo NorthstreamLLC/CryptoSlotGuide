@@ -22,6 +22,7 @@ import {
   splitBuilds,
   topScore,
 } from "./derived";
+import { isFieldTestedOperator } from "./field-tested";
 
 export type VerticalKind = "slots" | "providers" | "sportsbooks" | "wallets" | "exchanges" | "guides";
 
@@ -77,14 +78,19 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
   const { slots, providers, walletRows, exchangeRows, guideRows, ops, sportsMarkets, esportsTitles, rtpWatch, sbData } = siteData;
 
   if (kind === "slots") {
+    // Only readings from field-tested operators count toward the "split
+    // builds" claim below — see lib/field-tested.ts. Filtering here (not
+    // just on the slot review page) keeps this vertical's headline stat
+    // honest too, since it's built straight from the raw rtpWatch data.
+    const checkedReadings = rtpWatch.filter((r) => isFieldTestedOperator(r.operatorSlug));
     return {
       kicker: "Slots",
       title: "Slot RTP index",
-      sub: "Every RTP below was read from the live paytable inside a funded account, casino by casino. Where a title ships in more than one configuration we name the operator that cut it.",
+      sub: "Every RTP below is the studio's published return. Where we've field-tested a title's build in a specific operator's account, the slot's own review names the operator that cut it — see how we rate for what's checked so far.",
       stats: [
         [String(slots.length), "Slots tracked"],
         [`${medianRtp(slots).toFixed(2)}%`, "Median RTP"],
-        [String(splitBuilds(rtpWatch)), "Titles with split builds"],
+        [String(splitBuilds(checkedReadings)), "Titles with split builds"],
       ],
       cols: ["Provider", "RTP", "Max win"],
       scoreLabel: "RTP",

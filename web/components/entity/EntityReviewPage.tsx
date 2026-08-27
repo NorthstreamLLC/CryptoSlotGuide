@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import type { EntityView } from "@/lib/entity-view";
 import { backLink, ctaLabel, scoreMeta, editorialTake } from "@/lib/entity-view";
+import { reviewTier, TIER_LABEL, TIER_TINT } from "@/lib/review-tier";
 
 /**
  * Ported from the `isEntity` block in CryptoSlotGuide.dc.html — the
@@ -17,6 +18,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
   const { label: scoreLabel, unit: scoreUnit } = scoreMeta(e.type);
   const take = editorialTake(e.type, e.slug);
   const isCasino = e.type === "casino";
+  const tier = reviewTier(e.type);
 
   return (
     <main style={{ background: "#07090B", color: "#E8EDF0" }}>
@@ -70,7 +72,26 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
                   </span>
                 ))}
               </div>
-              <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11.5, color: "#5C6A72" }}>{e.byline}</div>
+              <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
+                <Link
+                  href="/how-we-rate"
+                  style={{
+                    padding: "3px 8px",
+                    borderRadius: 4,
+                    border: `1px solid ${TIER_TINT[tier]}55`,
+                    background: `${TIER_TINT[tier]}18`,
+                    fontFamily: "var(--font-jetbrains-mono), monospace",
+                    fontSize: 9.5,
+                    fontWeight: 700,
+                    letterSpacing: ".06em",
+                    textTransform: "uppercase",
+                    color: TIER_TINT[tier],
+                  }}
+                >
+                  {TIER_LABEL[tier]}
+                </Link>
+                <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11.5, color: "#5C6A72" }}>{e.byline}</div>
+              </div>
             </div>
 
             <div style={{ padding: 26, borderRadius: 16, background: "#12181C", border: "1px solid rgba(255,255,255,.09)", boxShadow: "0 20px 60px rgba(0,0,0,.5)" }}>
@@ -147,7 +168,14 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
           </div>
         )}
 
-        <SectionHeading title="What we measured" sub="Every figure below came from our own funded account. Raw log linked at the foot of the page." />
+        <SectionHeading
+          title="What we measured"
+          sub={
+            tier === "field-tested"
+              ? "Every figure below came from our own funded account. Raw log linked at the foot of the page."
+              : "Every figure below is assessed from public sources — published paytables, RTP certificates and posted odds, not a funded account. See how we rate for what that means here."
+          }
+        />
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 1, background: "rgba(255,255,255,.07)", border: "1px solid rgba(255,255,255,.07)", borderRadius: 13, overflow: "hidden", marginBottom: 38 }}>
           {e.stats.map((m) => (
             <div key={m.label} style={{ padding: "20px 22px", background: "#0C1013" }}>
@@ -166,14 +194,18 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
           <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 13 }}>
             {e.chipLabel}
           </div>
-          <div style={{ display: "flex", gap: 7, flexWrap: "wrap" }}>
-            {e.chips.map((c) => (
-              <span key={c.t} style={{ display: "flex", alignItems: "center", gap: 7, padding: "6px 11px", borderRadius: 100, background: "rgba(255,255,255,.04)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".04em", color: "#B7C4CB" }}>
-                <span style={{ width: 8, height: 8, borderRadius: "50%", background: c.tint }} />
-                {c.t}
-              </span>
-            ))}
-          </div>
+          {e.chips.length > 0 ? (
+            <div style={{ display: "flex", gap: 7, flexWrap: "wrap" }}>
+              {e.chips.map((c) => (
+                <span key={c.t} style={{ display: "flex", alignItems: "center", gap: 7, padding: "6px 11px", borderRadius: 100, background: "rgba(255,255,255,.04)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".04em", color: "#B7C4CB" }}>
+                  <span style={{ width: 8, height: 8, borderRadius: "50%", background: c.tint }} />
+                  {c.t}
+                </span>
+              ))}
+            </div>
+          ) : (
+            <div style={{ fontSize: 13, color: "#5C6A72" }}>None field-tested yet.</div>
+          )}
         </div>
 
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginBottom: 38 }}>
@@ -221,6 +253,12 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
         </div>
 
         <SectionHeading title={e.tableTitle} sub={e.tableSub} maxWidth="80ch" />
+        {e.tableRows.length === 0 && (
+          <div style={{ padding: "20px 24px", borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)", marginBottom: 14, fontSize: 13.5, color: "#7B8A93" }}>
+            No operator builds field-tested for this title yet — this table fills in as our RTP Watch program covers them.
+          </div>
+        )}
+        {e.tableRows.length > 0 && (
         <div style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 13, overflow: "hidden", background: "#0C1013", marginBottom: 14 }}>
           <div style={{ display: "grid", gridTemplateColumns: "minmax(240px,1.5fr) 130px 150px 130px", background: "#101519", borderBottom: "1px solid rgba(255,255,255,.07)" }}>
             {["Item", ...e.tableCols].map((h) => (
@@ -241,6 +279,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
             </div>
           ))}
         </div>
+        )}
         <p style={{ margin: "0 0 38px", fontSize: 13.5, lineHeight: 1.6, color: "#7B8A93", maxWidth: "84ch", textWrap: "pretty" }}>{e.tableNote}</p>
 
         <div style={{ display: "grid", gridTemplateColumns: "1fr 300px", gap: 14 }}>

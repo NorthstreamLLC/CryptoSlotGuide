@@ -102,8 +102,9 @@ export default function HomePage() {
               </span>
             </h1>
             <p style={{ margin: "0 0 30px", maxWidth: 530, fontSize: 17.5, lineHeight: 1.6, color: "#9AAAB3", textWrap: "pretty" }}>
-              Crypto casinos, live tables, slots, sportsbooks, wallets and exchanges — opened with real money, timed,
-              and scored on published criteria. Start with a number, not a banner.
+              Crypto casinos, wallets and exchanges opened with real money and timed by hand. Slots, providers and
+              sportsbooks assessed from public paytables and posted odds. Every review says which is which — start
+              with a number, not a banner.
             </p>
 
             <Link
