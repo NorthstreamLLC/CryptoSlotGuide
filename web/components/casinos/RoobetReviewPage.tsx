@@ -6,7 +6,7 @@ import { siteData } from "@/lib/site-data";
 import { fmtMins, indexMedianPayout, liveCon, payoutClaim } from "@/lib/derived";
 import { logoFor } from "@/lib/casino-index";
 import { TIER_LABEL, TIER_TINT } from "@/lib/review-tier";
-import { isFieldTestedOperator } from "@/lib/field-tested";
+import { isFieldTestedOperator, isEditoriallyAudited } from "@/lib/field-tested";
 
 /**
  * The hand-written flagship review — ported from the `isReview` block in
@@ -86,6 +86,7 @@ export function RoobetReviewPage() {
   const soleWins = h2hRaw.filter((r) => typeof r[4] === "number" && r[4] === 0).length;
   const ties = h2hRaw.filter((r) => Array.isArray(r[4])).length;
   const checked = isFieldTestedOperator("roobet");
+  const audited = isEditoriallyAudited("roobet");
 
   const verdict = `Roobet's edge is operational, not promotional. Withdrawals cleared in a median ${roobet.payoutLabel} against an index median of ${fmtMins(medianPayout)}, and its headline rewards carry 1× wagering where most rivals sit at 40×. ${
     con ? `It loses points on live tables — ${con} — and for support that slowed noticeably outside European hours.` : "It loses points for support that slowed noticeably outside European hours."
@@ -108,23 +109,31 @@ export function RoobetReviewPage() {
               <p style={{ margin: "0 0 22px", fontSize: 16.5, lineHeight: 1.65, color: "#93A3AC", textWrap: "pretty" }}>
                 {checked
                   ? "We ran a funded Roobet account for six weeks across slots, sportsbook and esports markets, timing 24 withdrawals between $40 and $9,400. It finished first on our index — narrowly, and not on everything."
-                  : "Roobet leads our index on published figures. The payout times, wagering terms and head-to-head numbers below are pending our own funded-account field-test pass — see how we rate for what that means."}
+                  : audited
+                  ? "Roobet's bonus terms, coin support and licence below are checked against its own pages and public registries. Payout speed is community-reported, not yet timed on our own funded account — see how we rate."
+                  : "Roobet leads our index on published figures. The payout times, wagering terms and head-to-head numbers below are pending our own desk-research and funded-account passes — see how we rate for what that means."}
               </p>
               <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 26 }}>
                 <Chip label="#1 RECOMMENDED" bg="rgba(255,204,0,.12)" border="rgba(255,204,0,.3)" color="#FFCC00" />
-                <Chip label={checked ? "TESTED 21 AUG 2026" : "PUBLISHED FIGURES"} bg="rgba(255,255,255,.04)" border="rgba(255,255,255,.08)" color="#8DA0AA" />
+                <Chip label={checked ? "TESTED 21 AUG 2026" : audited ? "DESK-AUDITED" : "PUBLISHED FIGURES"} bg="rgba(255,255,255,.04)" border="rgba(255,255,255,.08)" color="#8DA0AA" />
                 <Link href="/how-we-rate">
                   <Chip
-                    label={checked ? TIER_LABEL["field-tested"].toUpperCase() : "FIELD-TEST PENDING"}
-                    bg={`${TIER_TINT["field-tested"]}18`}
-                    border={`${TIER_TINT["field-tested"]}55`}
-                    color={TIER_TINT["field-tested"]}
+                    label={checked ? TIER_LABEL["field-tested"].toUpperCase() : audited ? TIER_LABEL["community-reported"].toUpperCase() : "FIELD-TEST PENDING"}
+                    bg={`${TIER_TINT[checked ? "field-tested" : audited ? "community-reported" : "pending"]}18`}
+                    border={`${TIER_TINT[checked ? "field-tested" : audited ? "community-reported" : "pending"]}55`}
+                    color={TIER_TINT[checked ? "field-tested" : audited ? "community-reported" : "pending"]}
                   />
                 </Link>
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: 14, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11.5, color: "#5C6A72" }}>
                 <span style={{ width: 26, height: 26, flex: "none", borderRadius: "50%", background: "#1B2226", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 9, color: "#8DA0AA" }}>{checked ? "JM" : "—"}</span>
-                <span>{checked ? "Tested by J. Marsh · reviewed by the editorial desk · 6 weeks live" : "Published terms · funded-account testing not yet done"}</span>
+                <span>
+                  {checked
+                    ? "Tested by J. Marsh · reviewed by the editorial desk · 6 weeks live"
+                    : audited
+                    ? "Desk-audited against public terms and registries · payout timing not yet field-tested"
+                    : "Published terms · desk audit and funded-account testing not yet done"}
+                </span>
               </div>
             </div>
             <div style={{ padding: 26, borderRadius: 16, background: "#12181C", border: "1px solid rgba(255,255,255,.09)", boxShadow: "0 20px 60px rgba(0,0,0,.5)" }}>
@@ -166,7 +175,9 @@ export function RoobetReviewPage() {
             sub={
               checked
                 ? "24 withdrawals, 6 deposits, 3 support tickets. Raw log linked at the bottom of this page."
-                : "Figures below are Roobet's own published numbers, pending our funded-account field-test pass — see how we rate."
+                : audited
+                ? "Bonus terms, coin support and licence are checked against public terms and registries. Withdrawal and support figures below are community-reported, not yet timed on our own funded account — see how we rate."
+                : "Figures below are Roobet's own published numbers, pending our desk-research and funded-account passes — see how we rate."
             }
           />
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 1, background: "rgba(255,255,255,.07)", border: "1px solid rgba(255,255,255,.07)", borderRadius: 13, overflow: "hidden", marginBottom: 38 }}>

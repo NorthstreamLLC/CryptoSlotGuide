@@ -29,3 +29,20 @@ import { siteData } from "./site-data";
 export function isFieldTestedOperator(slug: string): boolean {
   return siteData.fieldTestedOperators.includes(slug);
 }
+
+/**
+ * Separate from the above — whether an operator's *desk-research*
+ * criteria (bonus terms, coin/chain support, licence + complaint
+ * history — data/criteria.json's "editorial"-sourced rows) have
+ * actually been checked against real public sources: the operator's
+ * own T&Cs/help pages, the licensing regulator's own register, and
+ * AskGamblers/Casino.Guru's complaint history. No funded account
+ * needed for any of that, which is the whole point — but it still has
+ * to actually happen before ops.json's wager/kyc/licence/bonus fields
+ * can be shown as verified rather than "published, not yet audited."
+ * Backed by data/editoriallyAuditedOperators.json, empty until real
+ * desk research is done and the slug is added by hand.
+ */
+export function isEditoriallyAudited(slug: string): boolean {
+  return siteData.editoriallyAuditedOperators.includes(slug);
+}

@@ -47,12 +47,12 @@ export default function Page() {
       </section>
 
       <section style={{ maxWidth: 1180, margin: "0 auto", padding: "44px 40px 0" }}>
-        <h2 style={{ margin: "0 0 8px", fontSize: 28, letterSpacing: "-.028em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Two ways we back a figure</h2>
+        <h2 style={{ margin: "0 0 8px", fontSize: 28, letterSpacing: "-.028em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Three ways we back a figure</h2>
         <p style={{ margin: "0 0 20px", maxWidth: "80ch", fontSize: 15, lineHeight: 1.65, color: "#8DA0AA", textWrap: "pretty" }}>
-          Not every category gets the same kind of check, and we&apos;d rather say so than blur it. Every review on this site carries one of two labels, and every number traces back to whichever one applies.
+          Not every figure gets the same kind of check, and we&apos;d rather say so than blur it. This isn&apos;t a split by category — a single casino review draws on all three, criterion by criterion (see the weights below). Every number traces back to whichever one applies.
         </p>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 1, background: "rgba(255,255,255,.07)", border: "1px solid rgba(255,255,255,.07)", borderRadius: 14, overflow: "hidden" }}>
-          {(["field-tested", "editorial"] as const).map((tier) => (
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))", gap: 1, background: "rgba(255,255,255,.07)", border: "1px solid rgba(255,255,255,.07)", borderRadius: 14, overflow: "hidden" }}>
+          {(["field-tested", "community-reported", "editorial"] as const).map((tier) => (
             <div key={tier} style={{ padding: 24, background: "#0C1013" }}>
               <span
                 style={{
@@ -73,11 +73,6 @@ export default function Page() {
                 {TIER_LABEL[tier]}
               </span>
               <p style={{ margin: "0 0 10px", fontSize: 14, lineHeight: 1.65, color: "#93A3AC", textWrap: "pretty" }}>{TIER_DESC[tier]}</p>
-              <p style={{ margin: 0, fontSize: 13, lineHeight: 1.6, color: "#7B8A93" }}>
-                {tier === "field-tested"
-                  ? "Applies to: crypto casinos, live casino tables, wallets, exchanges."
-                  : "Applies to: slots, game providers, sportsbooks, prediction markets, fiat casinos."}
-              </p>
             </div>
           ))}
         </div>
@@ -89,9 +84,9 @@ export default function Page() {
             Crypto casinos only
           </span>
         </div>
-        <h2 style={{ margin: "0 0 8px", fontSize: 28, letterSpacing: "-.028em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>The six criteria and their weights</h2>
+        <h2 style={{ margin: "0 0 8px", fontSize: 28, letterSpacing: "-.028em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>The six criteria, their weights, and how each is sourced</h2>
         <p style={{ margin: "0 0 20px", maxWidth: "74ch", fontSize: 15, lineHeight: 1.65, color: "#8DA0AA", textWrap: "pretty" }}>
-          These weights produce the score on every crypto casino review and the order of the casino index. They are not applied to any other category.
+          These weights produce the score on every crypto casino review and the order of the casino index. They are not applied to any other category. Four of the six don&apos;t require a funded account at all — only payout speed and support responsiveness depend on either field-testing or a cited community source.
         </p>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 1, background: "rgba(255,255,255,.07)", border: "1px solid rgba(255,255,255,.07)", borderRadius: 14, overflow: "hidden" }}>
           {criteria.map((c) => (
@@ -100,7 +95,24 @@ export default function Page() {
                 <span style={{ fontSize: 16, fontWeight: 700, color: "#fff", letterSpacing: "-.015em" }}>{c.name}</span>
                 <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 16, color: "#00C2CC" }}>{c.weight}</span>
               </div>
-              <p style={{ margin: 0, fontSize: 13.5, lineHeight: 1.6, color: "#8DA0AA", textWrap: "pretty" }}>{c.desc}</p>
+              <p style={{ margin: "0 0 12px", fontSize: 13.5, lineHeight: 1.6, color: "#8DA0AA", textWrap: "pretty" }}>{c.desc}</p>
+              <span
+                style={{
+                  display: "inline-block",
+                  padding: "3px 8px",
+                  borderRadius: 4,
+                  border: `1px solid ${TIER_TINT[c.sourcing]}55`,
+                  background: `${TIER_TINT[c.sourcing]}18`,
+                  fontFamily: "var(--font-jetbrains-mono), monospace",
+                  fontSize: 9,
+                  fontWeight: 700,
+                  letterSpacing: ".05em",
+                  textTransform: "uppercase",
+                  color: TIER_TINT[c.sourcing],
+                }}
+              >
+                {TIER_LABEL[c.sourcing]}
+              </span>
             </div>
           ))}
         </div>

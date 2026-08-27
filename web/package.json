@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "import:rtp": "node scripts/import-rtp-readings.mjs"
+    "import:rtp": "node scripts/import-rtp-readings.mjs",
+    "import:audit": "node scripts/import-operator-audit.mjs"
   },
   "dependencies": {
     "next": "16.3.3",

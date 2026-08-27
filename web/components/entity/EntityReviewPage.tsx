@@ -5,6 +5,13 @@ import { useState } from "react";
 import type { EntityView } from "@/lib/entity-view";
 import { backLink, ctaLabel, scoreMeta, editorialTake } from "@/lib/entity-view";
 import { reviewTierFor, TIER_LABEL, TIER_TINT } from "@/lib/review-tier";
+import { isEditoriallyAudited } from "@/lib/field-tested";
+import { siteData } from "@/lib/site-data";
+
+/** Casino criteria bars use the same 6 names as data/criteria.json — see
+ * that file's `sourcing` field. Other entity types have their own
+ * criteria names not covered by it, so this only matches for casinos. */
+const CRITERION_SOURCING = new Map(siteData.criteria.map((c) => [c.name, c.sourcing]));
 
 /**
  * Ported from the `isEntity` block in CryptoSlotGuide.dc.html — the
@@ -19,6 +26,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
   const take = editorialTake(e.type, e.slug);
   const isCasino = e.type === "casino";
   const tier = reviewTierFor(e.type, e.slug);
+  const audited = tier === "pending" && isEditoriallyAudited(e.slug);
 
   return (
     <main style={{ background: "#07090B", color: "#E8EDF0" }}>
@@ -111,17 +119,28 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
                 </div>
               )}
               <div style={{ display: "flex", flexDirection: "column", gap: 13, marginBottom: 24 }}>
-                {e.criteria.map((c) => (
-                  <div key={c.name}>
-                    <div style={{ display: "flex", justifyContent: "space-between", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, marginBottom: 6 }}>
-                      <span style={{ color: "#A8B6BE" }}>{c.name}</span>
-                      <span style={{ color: "#fff" }}>{c.val.toFixed(1)}</span>
+                {e.criteria.map((c) => {
+                  const sourcing = CRITERION_SOURCING.get(c.name);
+                  return (
+                    <div key={c.name}>
+                      <div style={{ display: "flex", justifyContent: "space-between", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, marginBottom: 6 }}>
+                        <span style={{ display: "flex", alignItems: "center", gap: 6, color: "#A8B6BE" }}>
+                          {sourcing && (
+                            <span
+                              title={TIER_LABEL[sourcing]}
+                              style={{ width: 5, height: 5, borderRadius: "50%", flex: "none", background: TIER_TINT[sourcing] }}
+                            />
+                          )}
+                          {c.name}
+                        </span>
+                        <span style={{ color: "#fff" }}>{c.val.toFixed(1)}</span>
+                      </div>
+                      <div style={{ height: 4, borderRadius: 3, background: "rgba(255,255,255,.08)", overflow: "hidden" }}>
+                        <div style={{ height: "100%", borderRadius: 3, background: c.color, width: `${c.pct}%` }} />
+                      </div>
                     </div>
-                    <div style={{ height: 4, borderRadius: 3, background: "rgba(255,255,255,.08)", overflow: "hidden" }}>
-                      <div style={{ height: "100%", borderRadius: 3, background: c.color, width: `${c.pct}%` }} />
-                    </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
               <span style={{ display: "block", textAlign: "center", padding: 14, borderRadius: 9, background: "#00C2CC", color: "#04191B", fontSize: 14, fontWeight: 700, marginBottom: 9 }}>
                 {ctaLabel(e.type, e.name)}
@@ -175,7 +194,9 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
             (tier === "field-tested"
               ? "Every figure below came from our own funded account. Raw log linked at the foot of the page."
               : tier === "pending"
-              ? "Every figure below is the operator's own published number, pending our funded-account field-test pass. See how we rate for what that means here."
+              ? audited
+                ? "Bonus terms, coin support and licence below are checked against public terms and registries. Payout speed and support responsiveness are community-reported, not yet timed on our own funded account. See how we rate for what that means here."
+                : "Every figure below is the operator's own published number, pending our desk-research and funded-account passes. See how we rate for what that means here."
               : "Every figure below is assessed from public sources — published paytables, RTP certificates and posted odds, not a funded account. See how we rate for what that means here.")
           }
         />

@@ -30,6 +30,7 @@ import methodSteps from "@/data/methodSteps.json";
 import criteria from "@/data/criteria.json";
 import reviewBasis from "@/data/reviewBasis.json";
 import fieldTestedOperators from "@/data/fieldTestedOperators.json";
+import editoriallyAuditedOperators from "@/data/editoriallyAuditedOperators.json";
 
 import type {
   CoinDef,
@@ -89,6 +90,8 @@ export const siteData = {
   reviewBasis: reviewBasis as ReviewBasis[],
   /** See lib/field-tested.ts and scripts/import-rtp-readings.mjs. */
   fieldTestedOperators: fieldTestedOperators as string[],
+  /** See lib/field-tested.ts's isEditoriallyAudited(). */
+  editoriallyAuditedOperators: editoriallyAuditedOperators as string[],
 };
 
 export const siteCounts = counts(siteData);

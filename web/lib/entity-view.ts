@@ -12,7 +12,7 @@
 import { siteData } from "./site-data";
 import { crit, flag } from "./scoring";
 import { casinoCons, fmtMins, indexMedianPayout, isStaleReading } from "./derived";
-import { isFieldTestedOperator } from "./field-tested";
+import { isFieldTestedOperator, isEditoriallyAudited } from "./field-tested";
 import type { ScoreBar, Flag } from "./types";
 
 export type EntityType = "casino" | "slot" | "wallet" | "exchange" | "provider" | "market";
@@ -473,6 +473,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
   const slotList = slots.slice(0, 5);
   const medianPayout = indexMedianPayout(ops);
   const checked = isFieldTestedOperator(o.slug);
+  const audited = isEditoriallyAudited(o.slug);
   return {
     type: "casino",
     kicker: "Casino review",
@@ -483,11 +484,19 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
     headline: `${o.name} review 2026: ${o.payoutLabel} median payout, ${o.wager}× wagering, ${o.kyc === "none" ? "no" : o.kyc} KYC`,
     standfirst: checked
       ? `We ran a funded ${o.name} account across slots and, where offered, sportsbook and esports markets — timing withdrawals between $40 and $9,400 and reading the bonus terms line by line.`
-      : `${o.name}'s payout time, wagering and KYC figures below are as published pending our own funded-account field-test pass.`,
+      : audited
+      ? `${o.name}'s bonus terms, coin support and licence below are checked against its own pages and public registries. Payout speed is community-reported, not yet timed on our own funded account — see how we rate.`
+      : `${o.name}'s payout time, wagering, KYC and licence figures below are all as published — pending our own desk-research and funded-account passes. See how we rate for what's checked so far.`,
     tags: checked
       ? [fast ? "FAST PAYOUTS VERIFIED" : "PAYOUTS TIMED", lowWager ? "1× WAGERING" : `${o.wager}× WAGERING`, "TESTED 21 AUG 2026"]
+      : audited
+      ? [lowWager ? "1× WAGERING (VERIFIED)" : `${o.wager}× WAGERING (VERIFIED)`, "LICENCE CHECKED", "PAYOUT TIME: COMMUNITY-REPORTED"]
       : ["PUBLISHED PAYOUT TIME", lowWager ? "1× WAGERING (PUBLISHED)" : `${o.wager}× WAGERING (PUBLISHED)`, "FIELD-TEST PENDING"],
-    byline: checked ? "Tested by J. Marsh · reviewed by the editorial desk · 6 weeks live" : "Published terms · funded-account testing not yet done",
+    byline: checked
+      ? "Tested by J. Marsh · reviewed by the editorial desk · 6 weeks live"
+      : audited
+      ? "Desk-audited against public terms and registries · payout timing not yet field-tested"
+      : "Published terms · desk audit and funded-account testing not yet done",
     verdict: `${o.name} clears withdrawals in a median ${o.payoutLabel} against an index median of ${fmtMins(medianPayout)}, credits ${coins.length} coins, and runs its headline offer at ${o.wager}× wagering. ${
       lowWager
         ? "That wagering figure is the difference that compounds: on a $100 credit you turn over $100, not $4,000."

@@ -288,6 +288,17 @@ export interface Criterion {
   /** e.g. "25%" — kept as the source's display string, not a fraction. */
   weight: string;
   desc: string;
+  /**
+   * How this criterion's figures are actually sourced — see
+   * lib/review-tier.ts. Not part of the original prototype, which made
+   * one blanket "funded account" claim for every criterion regardless
+   * of whether that was true. "editorial": read from the operator's own
+   * public pages/registries, no account needed. "community-reported":
+   * aggregated from public review sites (AskGamblers, Casino.Guru,
+   * Trustpilot), cited, not personally measured. "field-tested": from
+   * our own funded account once one exists for that operator.
+   */
+  sourcing: "field-tested" | "community-reported" | "editorial";
 }
 
 export interface ReviewBasis {
