@@ -2,6 +2,7 @@ import Link from "next/link";
 import { siteData, siteCounts } from "@/lib/site-data";
 import { topScore } from "@/lib/derived";
 import { CasinoIndexTable } from "@/components/home/CasinoIndexTable";
+import { CryptoTicker } from "@/components/home/CryptoTicker";
 
 /**
  * Ported from the HOME section of CryptoSlotGuide.dc.html (hero through
@@ -250,6 +251,7 @@ export default function HomePage() {
               ))}
             </div>
           </div>
+          <CryptoTicker coins={siteData.coinDefs} />
         </div>
       </section>
 
