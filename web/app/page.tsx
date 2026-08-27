@@ -3,6 +3,8 @@ import { siteData, siteCounts } from "@/lib/site-data";
 import { topScore } from "@/lib/derived";
 import { CasinoIndexTable } from "@/components/home/CasinoIndexTable";
 import { CryptoTicker } from "@/components/home/CryptoTicker";
+import { SlotsPreviewTable } from "@/components/home/SlotsPreviewTable";
+import { logoFor, filterFns } from "@/lib/casino-index";
 
 /**
  * Ported from the HOME section of CryptoSlotGuide.dc.html (hero through
@@ -41,7 +43,7 @@ const featured = [
 ];
 
 export default function HomePage() {
-  const { ops, slots, liveCasinos, providers, walletRows } = siteData;
+  const { ops, slots, liveCasinos, providers, walletRows, exchangeRows, coinDefs, coinsBy, sportsMarkets, esportsTitles, criteria } = siteData;
   const c = siteCounts;
 
   const topCasino = topScore(ops);
@@ -51,6 +53,62 @@ export default function HomePage() {
   const topBook = topScore(ops.filter((o) => o.sports));
   const topWallet = topScore(walletRows);
 
+  // "Best operator" lookups for the sportsbook/esports hub items below —
+  // sportsMarkets/esportsTitles name a `best` operator by name but not
+  // its score, so pull it from ops the same way every other "top" figure
+  // on this page is derived rather than hardcoded.
+  const scoreFor = (opName: string) => ops.find((o) => o.name === opName)?.score.toFixed(1);
+
+  const categoryHub = {
+    kicker: "By category",
+    title: "How you want to play",
+    blurb: "Filtered by the operational detail that actually differs — verification, payout speed, and bonus terms.",
+    items: [
+      { label: "No-KYC casinos", href: "/crypto-casinos/no-kyc", filter: "nokyc" as const },
+      { label: "Fastest payouts", href: "/fastest-payouts", filter: "fast" as const },
+      { label: "Lowest wagering", href: "/lowest-wagering", filter: "lowwager" as const },
+      { label: "Casino + sportsbook", href: "/casino-sportsbooks", filter: "sports" as const },
+    ].map((it, i) => {
+      const top = topScore(ops.filter(filterFns[it.filter]));
+      return { n: String(i + 1).padStart(2, "0"), label: it.label, href: it.href, top: top ? `${top.name} ${top.score.toFixed(1)}` : "—", topColor: top?.name === "Roobet" ? "#FFCC00" : "#5C6A72" };
+    }),
+  };
+  const sportsHub = {
+    kicker: "Sportsbooks",
+    title: "Betting with crypto",
+    blurb: "Margin, market depth and settlement speed on the events readers bet most.",
+    items: sportsMarkets.slice(0, 4).map((m, i) => ({
+      n: String(i + 1).padStart(2, "0"),
+      label: m.name,
+      href: `/betting/${slug(m.name)}`,
+      top: `${m.best} ${scoreFor(m.best) ?? ""}`.trim(),
+      topColor: m.best === "Roobet" ? "#FFCC00" : "#5C6A72",
+    })),
+  };
+  const esportsHub = {
+    kicker: "Esports",
+    title: "Where the markets are",
+    blurb: "Live market counts taken during a major tournament week, not from the marketing page.",
+    items: esportsTitles.slice(0, 4).map((t, i) => ({
+      n: String(i + 1).padStart(2, "0"),
+      label: t.name,
+      href: `/betting/${slug(t.name)}`,
+      top: `${t.best} ${scoreFor(t.best) ?? ""}`.trim(),
+      topColor: t.best === "Roobet" ? "#FFCC00" : "#5C6A72",
+    })),
+  };
+  const hubs = [categoryHub, sportsHub, esportsHub];
+
+  const toolLists = [
+    { kicker: "Wallets", title: "Where the bankroll lives", blurb: "Custody model, chain coverage, and how each handles gas.", href: "/wallets", items: walletRows },
+    { kicker: "Exchanges", title: "Getting on and off chain", blurb: "Real measured spreads, fiat rails and withdrawal limits.", href: "/exchanges", items: exchangeRows },
+  ];
+
+  const coinTiles = coinDefs.map((coin) => ({
+    ...coin,
+    count: ops.filter((o) => (coinsBy[o.slug] ?? []).map(String).includes(coin.ticker)).length,
+  }));
+
   const verticals = [
     { icon: "♠️", title: "Crypto casinos", tint: "#00C2CC", count: c.casinos, top: topCasino?.name ?? "—", topScore: topCasino?.score.toFixed(1) ?? "—", href: "/crypto-casinos" },
     { icon: "🃏", title: "Live casino", tint: "#FF7EB6", count: c.live, top: topLive?.name ?? "—", topScore: topLive?.score.toFixed(1) ?? "—", href: "/live-casino" },
@@ -59,8 +117,6 @@ export default function HomePage() {
     { icon: "⚽", title: "Sportsbooks", tint: "#57E39A", count: c.books, top: topBook?.name ?? "—", topScore: topBook?.score.toFixed(1) ?? "—", href: "/sportsbooks" },
     { icon: "👛", title: "Wallets", tint: "#6BC7FF", count: c.wallets, top: topWallet?.name ?? "—", topScore: topWallet?.score.toFixed(1) ?? "—", href: "/wallets" },
   ];
-
-  const tickerRun = [...siteData.tickerFacts, ...siteData.tickerFacts];
 
   return (
     <main
@@ -239,18 +295,11 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Ticker */}
+        {/* Live crypto price ticker — replaced the tickerFacts strip (static
+            hand-authored copy claiming specific measured events like "Roobet
+            withdrawal cleared in 3m 58s") that read as fabricated activity
+            logging once nothing behind it was real. */}
         <div style={{ position: "relative", maxWidth: 1400, margin: "0 auto", padding: "0 40px 26px" }}>
-          <div style={{ overflow: "hidden", padding: "12px 0", borderTop: "1px solid rgba(255,255,255,.07)" }}>
-            <div style={{ display: "flex", gap: 30, width: "max-content", animation: "csg-slide 46s linear infinite" }}>
-              {tickerRun.map((t, i) => (
-                <span key={i} style={{ display: "flex", alignItems: "center", gap: 8, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11.5, color: "#7B8A93", whiteSpace: "nowrap" }}>
-                  <span style={{ width: 5, height: 5, borderRadius: "50%", flex: "none", background: t.tint }} />
-                  {t.text}
-                </span>
-              ))}
-            </div>
-          </div>
           <CryptoTicker coins={siteData.coinDefs} />
         </div>
       </section>
@@ -300,7 +349,7 @@ export default function HomePage() {
       </section>
 
       {/* Casino index — this app's own addition, not in the prototype */}
-      <section style={{ maxWidth: 1400, margin: "0 auto", padding: "68px 40px 96px" }}>
+      <section style={{ maxWidth: 1400, margin: "0 auto", padding: "68px 40px 62px" }}>
         <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 32, flexWrap: "wrap", marginBottom: 22 }}>
           <div>
             <h2 style={{ margin: "0 0 8px", fontSize: 32, letterSpacing: "-.03em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>
@@ -314,6 +363,161 @@ export default function HomePage() {
         </div>
         <CasinoIndexTable operators={ops} />
       </section>
+
+      {/* Slots */}
+      <section style={{ maxWidth: 1400, margin: "0 auto", padding: "58px 40px 0" }}>
+        <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 32, flexWrap: "wrap", marginBottom: 22 }}>
+          <div>
+            <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 12 }}>Slots</div>
+            <h2 style={{ margin: "0 0 9px", fontSize: 32, letterSpacing: "-.03em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Slots worth the volatility</h2>
+            <p style={{ margin: 0, fontSize: 15, color: "#8DA0AA", maxWidth: "70ch", textWrap: "pretty" }}>
+              RTP is configurable — operators can ship the same game at 96.5% or 94%. Published return shown below; where we&apos;ve field-tested a build in a specific operator&apos;s account, the slot&apos;s own review names the operator that cut it.
+            </p>
+          </div>
+          <Link href="/slots" style={{ fontSize: 14, fontWeight: 600, color: "#00C2CC", whiteSpace: "nowrap" }}>
+            All {c.slots} slots →
+          </Link>
+        </div>
+        <SlotsPreviewTable slots={slots} />
+      </section>
+
+      {/* Providers */}
+      <section style={{ maxWidth: 1400, margin: "0 auto", padding: "58px 40px 0" }}>
+        <div style={{ marginBottom: 20 }}>
+          <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 12 }}>Providers</div>
+          <h2 style={{ margin: "0 0 9px", fontSize: 32, letterSpacing: "-.03em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Who actually makes the games</h2>
+          <p style={{ margin: 0, fontSize: 15, color: "#8DA0AA", maxWidth: "70ch" }}>Studio profiles with the RTP range each one ships, their volatility signature, and how many crypto casinos carry them.</p>
+        </div>
+        <div style={{ display: "grid", minWidth: 0, gridTemplateColumns: "repeat(auto-fit,minmax(178px,1fr))", gap: 12 }}>
+          {providers.map((p) => (
+            <Link key={p.slug} href={`/providers/${p.slug}`} className="hover:!border-accent hover:!bg-[#111619]" style={{ display: "block", padding: 20, borderRadius: 13, background: "rgba(14,18,21,.72)", border: "1px solid rgba(255,255,255,.06)" }}>
+              <div style={{ width: 58, height: 40, marginBottom: 16, display: "flex", alignItems: "center" }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={logoFor(p.slug)} alt="" style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }} />
+              </div>
+              <div style={{ fontSize: 14.5, fontWeight: 600, color: "#E8EDF0", marginBottom: 5 }}>{p.name}</div>
+              <div style={{ fontSize: 12, lineHeight: 1.5, color: "#7B8A93", marginBottom: 14 }}>{p.note}</div>
+              <div style={{ display: "flex", flexDirection: "column", gap: 6, paddingTop: 12, borderTop: "1px solid rgba(255,255,255,.07)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#5C6A72" }}>
+                <div style={{ display: "flex", justifyContent: "space-between", gap: 8 }}><span>titles</span><span style={{ color: "#C3CFD5" }}>{p.titles}</span></div>
+                <div style={{ display: "flex", justifyContent: "space-between", gap: 8 }}><span>rtp</span><span style={{ color: "#C3CFD5" }}>{p.rtp}</span></div>
+                <div style={{ display: "flex", justifyContent: "space-between", gap: 8 }}><span>casinos</span><span style={{ color: "#C3CFD5" }}>{p.casinos}</span></div>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* By coin */}
+      <section style={{ maxWidth: 1400, margin: "0 auto", padding: "58px 40px 0" }}>
+        <h2 style={{ margin: "0 0 8px", fontSize: 26, letterSpacing: "-.025em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Casinos by coin</h2>
+        <p style={{ margin: "0 0 20px", fontSize: 15, color: "#8DA0AA" }}>Deposit rails differ per chain. These pages compare confirmation counts, minimums, and who pays the network fee.</p>
+        <div style={{ display: "grid", minWidth: 0, gridTemplateColumns: "repeat(auto-fit,minmax(178px,1fr))", gap: 12 }}>
+          {coinTiles.map((coin) => (
+            <Link key={coin.ticker} href="/coins" className="hover:!border-accent hover:!bg-[#111619]" style={{ display: "block", padding: 20, borderRadius: 13, background: "rgba(14,18,21,.72)", border: "1px solid rgba(255,255,255,.06)" }}>
+              <span style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 34, height: 34, borderRadius: "50%", background: coin.tint, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, fontWeight: 700, color: "#0A0D0F", marginBottom: 14 }}>
+                {coin.ticker}
+              </span>
+              <div style={{ fontSize: 14, fontWeight: 600, color: "#E8EDF0", marginBottom: 4 }}>{coin.name} casinos</div>
+              <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#5C6A72" }}>{coin.count} operators</div>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* Category / sports / esports hubs */}
+      <section style={{ maxWidth: 1400, margin: "0 auto", padding: "56px 40px 0" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))", gap: 14 }}>
+          {hubs.map((h) => (
+            <div key={h.kicker} style={{ padding: 26, borderRadius: 14, background: "rgba(12,16,19,.66)", border: "1px solid rgba(255,255,255,.06)" }}>
+              <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 16 }}>{h.kicker}</div>
+              <h3 style={{ margin: "0 0 6px", fontSize: 20, letterSpacing: "-.02em", fontWeight: 700, color: "#fff" }}>{h.title}</h3>
+              <p style={{ margin: "0 0 20px", fontSize: 13.5, lineHeight: 1.55, color: "#8DA0AA" }}>{h.blurb}</p>
+              <div style={{ display: "flex", flexDirection: "column", gap: 1, background: "rgba(255,255,255,.06)", borderRadius: 9, overflow: "hidden" }}>
+                {h.items.map((it) => (
+                  <Link key={it.label} href={it.href} className="hover:!bg-[#141A1E] hover:!text-white" style={{ display: "flex", alignItems: "center", gap: 10, padding: "11px 14px", background: "#0F1417", fontSize: 13, color: "#C3CFD5" }}>
+                    <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#4E5A62", width: 14 }}>{it.n}</span>
+                    <span style={{ flex: 1 }}>{it.label}</span>
+                    <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: it.topColor, whiteSpace: "nowrap" }}>{it.top}</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Wallets & exchanges */}
+      <section style={{ maxWidth: 1400, margin: "0 auto", padding: "56px 40px 0" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(340px,1fr))", gap: 14 }}>
+          {toolLists.map((t) => (
+            <div key={t.kicker} style={{ padding: 26, borderRadius: 14, background: "rgba(12,16,19,.66)", border: "1px solid rgba(255,255,255,.06)" }}>
+              <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 16, marginBottom: 18 }}>
+                <div>
+                  <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 10 }}>{t.kicker}</div>
+                  <h3 style={{ margin: "0 0 5px", fontSize: 21, letterSpacing: "-.02em", fontWeight: 700, color: "#fff" }}>{t.title}</h3>
+                  <p style={{ margin: 0, fontSize: 13.5, color: "#8DA0AA" }}>{t.blurb}</p>
+                </div>
+                <Link href={t.href} style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#00C2CC", whiteSpace: "nowrap" }}>
+                  view all →
+                </Link>
+              </div>
+              <div style={{ display: "flex", flexDirection: "column", gap: 1, background: "rgba(255,255,255,.06)", borderRadius: 10, overflow: "hidden" }}>
+                {t.items.map((it) => (
+                  <Link
+                    key={it.slug}
+                    href={`${t.href}/${it.slug}`}
+                    className="hover:!bg-[#141A1E]"
+                    style={{ display: "grid", gridTemplateColumns: "56px minmax(90px,1fr) minmax(110px,1.4fr) 52px", alignItems: "center", gap: 12, padding: "12px 14px", background: "#0F1417" }}
+                  >
+                    <div style={{ width: 56, height: 30, display: "flex", alignItems: "center" }}>
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={logoFor(it.slug)} alt="" style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }} />
+                    </div>
+                    <span style={{ fontSize: 13.5, fontWeight: 600, color: "#E8EDF0", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{it.name}</span>
+                    <span style={{ fontSize: 12, color: "#7B8A93", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{it.note}</span>
+                    <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 13, color: "#fff", textAlign: "right" }}>{it.score.toFixed(1)}</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Methodology teaser */}
+      <section style={{ maxWidth: 1400, margin: "0 auto", padding: "60px 40px 80px" }}>
+        <div style={{ padding: 44, borderRadius: 16, background: "linear-gradient(150deg,#0E1417,#0A0E10)", border: "1px solid rgba(255,255,255,.07)" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "minmax(260px,.85fr) minmax(300px,1.15fr)", gap: 56, alignItems: "start" }}>
+            <div>
+              <h2 style={{ margin: "0 0 14px", fontSize: 30, letterSpacing: "-.03em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Six criteria. No paid placement inside a score.</h2>
+              <p style={{ margin: "0 0 22px", fontSize: 15, lineHeight: 1.65, color: "#8DA0AA", textWrap: "pretty" }}>
+                Crypto casinos, wallets and exchanges are opened with a funded account and audited against their own published terms, once field-tested. Slots and providers are assessed from published paytables and RTP certificates. Commercial relationships are disclosed on every page and excluded from scoring inputs.
+              </p>
+              <Link href="/how-we-rate" style={{ display: "inline-flex", alignItems: "center", gap: 8, fontSize: 14, fontWeight: 600, color: "#00C2CC" }}>
+                Read the full methodology <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace" }}>→</span>
+              </Link>
+            </div>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))", gap: 1, background: "rgba(255,255,255,.07)", borderRadius: 12, overflow: "hidden" }}>
+              {criteria.map((cr) => (
+                <div key={cr.name} style={{ padding: "18px 20px", background: "rgba(12,16,19,.66)" }}>
+                  <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 10, marginBottom: 8 }}>
+                    <span style={{ fontSize: 13.5, fontWeight: 600, color: "#E8EDF0" }}>{cr.name}</span>
+                    <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#5C6A72" }}>{cr.weight}</span>
+                  </div>
+                  <div style={{ fontSize: 12, lineHeight: 1.5, color: "#75858E" }}>{cr.desc}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
+}
+
+function slug(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
 }
