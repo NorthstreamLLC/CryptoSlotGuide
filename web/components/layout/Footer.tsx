@@ -165,10 +165,15 @@ export function Footer() {
         >
           <span>© 2026 CryptoSlotGuide.com · Some links are affiliate links.</span>
           <div style={{ display: "flex", gap: 18 }}>
-            {["Privacy", "Terms", "Editorial standards", "Contact"].map((label) => (
-              <span key={label} style={{ color: "#4E5A62" }}>
-                {label}
-              </span>
+            {[
+              { label: "Privacy", href: "/privacy" },
+              { label: "Terms", href: "/terms" },
+              { label: "Editorial standards", href: "/editorial-standards" },
+              { label: "Contact", href: "/contact" },
+            ].map((l) => (
+              <Link key={l.href} href={l.href} className="hover:!text-white" style={{ color: "#4E5A62" }}>
+                {l.label}
+              </Link>
             ))}
           </div>
         </div>

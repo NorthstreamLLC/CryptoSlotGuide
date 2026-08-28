@@ -37,6 +37,10 @@ const STATIC_ROUTES = [
   "/house-games",
   "/how-we-rate",
   "/search",
+  "/privacy",
+  "/terms",
+  "/editorial-standards",
+  "/contact",
 ];
 
 function slugPath(base: string, slug: string): string {
