@@ -5,6 +5,8 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { siteCounts } from "@/lib/site-data";
 import { SITE_URL, SITE_NAME } from "@/lib/seo";
+import { organizationSchema, websiteSchema } from "@/lib/schema";
+import { JsonLd } from "@/components/seo/JsonLd";
 
 const archivo = Archivo({
   variable: "--font-archivo",
@@ -37,6 +39,7 @@ export default function RootLayout({
       className={`${archivo.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-page text-text-primary">
+        <JsonLd data={[organizationSchema(), websiteSchema()]} />
         <Header counts={siteCounts} />
         <main className="flex-1">{children}</main>
         <Footer />

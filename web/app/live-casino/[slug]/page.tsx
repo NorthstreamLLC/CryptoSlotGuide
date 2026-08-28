@@ -2,6 +2,8 @@ import { notFound } from "next/navigation";
 import { siteData } from "@/lib/site-data";
 import { LiveGamePage } from "@/components/live-casino/LiveGamePage";
 import { pageMetadata } from "@/lib/seo";
+import { breadcrumbSchema } from "@/lib/schema";
+import { JsonLd } from "@/components/seo/JsonLd";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -18,5 +20,10 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const { slug } = await params;
   const g = siteData.liveGames.find((x) => x.slug === slug);
   if (!g) notFound();
-  return <LiveGamePage g={g} />;
+  return (
+    <>
+      <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Live casino", path: "/live-casino" }, { name: g.name, path: `/live-casino/${slug}` }])} />
+      <LiveGamePage g={g} />
+    </>
+  );
 }

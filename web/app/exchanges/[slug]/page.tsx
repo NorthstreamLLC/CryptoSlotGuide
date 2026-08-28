@@ -1,7 +1,9 @@
 import { notFound } from "next/navigation";
-import { getEntityView } from "@/lib/entity-view";
+import { getEntityView, backLink } from "@/lib/entity-view";
 import { EntityReviewPage } from "@/components/entity/EntityReviewPage";
 import { pageMetadata } from "@/lib/seo";
+import { entityBreadcrumbSchema, faqSchema } from "@/lib/schema";
+import { JsonLd } from "@/components/seo/JsonLd";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -14,5 +16,10 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const { slug } = await params;
   const view = getEntityView("exchange", slug);
   if (!view) notFound();
-  return <EntityReviewPage e={view} />;
+  return (
+    <>
+      <JsonLd data={[entityBreadcrumbSchema(view.kicker, backLink("exchange").href, view.name, `/exchanges/${slug}`), faqSchema(view.faqs)]} />
+      <EntityReviewPage e={view} />
+    </>
+  );
 }

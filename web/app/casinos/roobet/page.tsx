@@ -1,5 +1,8 @@
 import { RoobetReviewPage } from "@/components/casinos/RoobetReviewPage";
+import { faqData } from "@/lib/roobet-faq";
 import { pageMetadata } from "@/lib/seo";
+import { entityBreadcrumbSchema, faqSchema } from "@/lib/schema";
+import { JsonLd } from "@/components/seo/JsonLd";
 
 export const metadata = pageMetadata(
   "Roobet review 2026: four-minute payouts, 1× wagering, tiered KYC",
@@ -8,5 +11,10 @@ export const metadata = pageMetadata(
 );
 
 export default function Page() {
-  return <RoobetReviewPage />;
+  return (
+    <>
+      <JsonLd data={[entityBreadcrumbSchema("Casino review", "/crypto-casinos", "Roobet", "/casinos/roobet"), faqSchema(faqData)]} />
+      <RoobetReviewPage />
+    </>
+  );
 }

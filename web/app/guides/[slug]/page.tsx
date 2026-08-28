@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import { siteData } from "@/lib/site-data";
 import { fill } from "@/lib/derived";
 import { pageMetadata } from "@/lib/seo";
+import { breadcrumbSchema } from "@/lib/schema";
+import { JsonLd } from "@/components/seo/JsonLd";
 
 /**
  * Ported from the `isGuide` block in CryptoSlotGuide.dc.html (search for
@@ -29,6 +31,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 
   return (
     <main>
+      <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Guides", path: "/guides" }, { name: g.title, path: `/guides/${slug}` }])} />
       <article style={{ maxWidth: 820, margin: "0 auto", padding: "52px 40px 40px" }}>
         <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#5C6A72", marginBottom: 26 }}>
           <Link href="/" style={{ color: "#5C6A72" }}>Index</Link> / <Link href="/guides" style={{ color: "#5C6A72" }}>Guides</Link> / <span style={{ color: "#A8B6BE" }}>{g.category}</span>

@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import { siteData } from "@/lib/site-data";
 import { logoFor } from "@/lib/casino-index";
 import { pageMetadata } from "@/lib/seo";
+import { breadcrumbSchema } from "@/lib/schema";
+import { JsonLd } from "@/components/seo/JsonLd";
 
 /**
  * Ported from the `isHouseGame` block in CryptoSlotGuide.dc.html (search
@@ -33,6 +35,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 
   return (
     <main>
+      <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "House games", path: "/house-games" }, { name: h.name, path: `/house-games/${slug}` }])} />
       <section style={{ borderBottom: "1px solid rgba(255,255,255,.07)", background: "#0B0F12" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "26px 40px 44px" }}>
           <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#5C6A72", marginBottom: 26 }}>
