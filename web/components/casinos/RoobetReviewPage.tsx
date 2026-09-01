@@ -8,6 +8,10 @@ import { logoFor } from "@/lib/casino-index";
 import { TIER_LABEL, TIER_TINT } from "@/lib/review-tier";
 import { isFieldTestedOperator, isEditoriallyAudited } from "@/lib/field-tested";
 import { faqData } from "@/lib/roobet-faq";
+import { SCORE_BRAND, scoreTier, SCORE_TIER_LABEL, SCORE_TIER_COLOR } from "@/lib/score-tier";
+
+/** Same 6 casino criteria names as data/criteria.json's `sourcing` field — see components/entity/EntityReviewPage.tsx's identical map. */
+const CRITERION_SOURCING = new Map(siteData.criteria.map((c) => [c.name, c.sourcing]));
 
 /**
  * The hand-written flagship review — ported from the `isReview` block in
@@ -130,23 +134,58 @@ export function RoobetReviewPage() {
               </div>
             </div>
             <div style={{ padding: 26, borderRadius: 16, background: "#12181C", border: "1px solid rgba(255,255,255,.09)", boxShadow: "0 20px 60px rgba(0,0,0,.5)" }}>
-              <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#5C6A72", marginBottom: 12 }}>Overall score</div>
-              <div style={{ display: "flex", alignItems: "flex-end", gap: 12, marginBottom: 22 }}>
-                <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 60, fontWeight: 700, lineHeight: 0.85, color: "#fff", letterSpacing: "-.045em" }}>{roobet.score.toFixed(1)}</span>
-                <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 13, color: "#5C6A72", paddingBottom: 8 }}>/ 10</span>
+              <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#5C6A72", marginBottom: 12 }}>{SCORE_BRAND}</div>
+              <div style={{ display: "flex", alignItems: "baseline", gap: 10, marginBottom: 22, flexWrap: "wrap" }}>
+                <span style={{ fontSize: 26, fontWeight: 800, letterSpacing: "-.02em", color: SCORE_TIER_COLOR[scoreTier(roobet.score)] }}>
+                  {SCORE_TIER_LABEL[scoreTier(roobet.score)]}
+                </span>
+                <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 13, color: "#5C6A72" }}>{roobet.score.toFixed(1)} / 10</span>
               </div>
-              <div style={{ display: "flex", flexDirection: "column", gap: 13, marginBottom: 24 }}>
-                {roobetScores.map((s) => (
-                  <div key={s.name}>
-                    <div style={{ display: "flex", justifyContent: "space-between", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, marginBottom: 6 }}>
-                      <span style={{ color: "#A8B6BE" }}>{s.name}</span>
-                      <span style={{ color: "#fff" }}>{s.val.toFixed(1)}</span>
+              <div style={{ display: "flex", flexDirection: "column", gap: 1, marginBottom: 24, borderRadius: 9, overflow: "hidden" }}>
+                {roobetScores.map((s) => {
+                  const sourcing = CRITERION_SOURCING.get(s.name);
+                  const ct = scoreTier(s.val);
+                  return (
+                    <div key={s.name} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10, padding: "8px 0" }}>
+                      <span style={{ fontSize: 12.5, color: "#A8B6BE" }}>{s.name}</span>
+                      <div style={{ display: "flex", alignItems: "center", gap: 6, flex: "none" }}>
+                        {sourcing && (
+                          <span
+                            style={{
+                              fontFamily: "var(--font-jetbrains-mono), monospace",
+                              fontSize: 9,
+                              fontWeight: 700,
+                              letterSpacing: ".04em",
+                              textTransform: "uppercase",
+                              padding: "2px 7px",
+                              borderRadius: 4,
+                              color: TIER_TINT[sourcing],
+                              background: `${TIER_TINT[sourcing]}18`,
+                              whiteSpace: "nowrap",
+                            }}
+                          >
+                            {TIER_LABEL[sourcing]}
+                          </span>
+                        )}
+                        <span
+                          style={{
+                            fontFamily: "var(--font-jetbrains-mono), monospace",
+                            fontSize: 10.5,
+                            fontWeight: 700,
+                            letterSpacing: ".04em",
+                            padding: "2px 8px",
+                            borderRadius: 4,
+                            color: SCORE_TIER_COLOR[ct],
+                            background: `${SCORE_TIER_COLOR[ct]}18`,
+                            whiteSpace: "nowrap",
+                          }}
+                        >
+                          {SCORE_TIER_LABEL[ct]}
+                        </span>
+                      </div>
                     </div>
-                    <div style={{ height: 4, borderRadius: 3, background: "rgba(255,255,255,.08)", overflow: "hidden" }}>
-                      <div style={{ height: "100%", borderRadius: 3, background: s.color, width: `${s.pct}%` }} />
-                    </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
               <a href="https://roobet.com" target="_blank" rel="nofollow sponsored noopener" style={{ display: "block", textAlign: "center", padding: 14, borderRadius: 9, background: "#FFCC00", color: "#1A1400", fontSize: 14, fontWeight: 700, marginBottom: 9 }}>Visit Roobet</a>
               <Link href="/crypto-casinos" style={{ display: "block", textAlign: "center", padding: 13, borderRadius: 9, border: "1px solid rgba(255,255,255,.14)", color: "#DCE5E9", fontSize: 13.5, fontWeight: 600 }}>Compare against {ops.length - 1} others</Link>

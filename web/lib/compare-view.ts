@@ -7,6 +7,7 @@
  */
 import type { Operator } from "./types";
 import type { CoinsByOperator } from "./types";
+import { SCORE_BRAND } from "./score-tier";
 
 export interface CompareCell {
   v: string;
@@ -24,7 +25,7 @@ type ScoreKind = "high" | "lowPayout" | "highCoins" | "lowWager" | "kyc" | "lowC
 
 export function getCompareRows(cmpOps: Operator[], coinsBy: CoinsByOperator): CompareRow[] {
   const defs: [string, (o: Operator) => string, ScoreKind][] = [
-    ["Overall score", (o) => o.score.toFixed(1), "high"],
+    [SCORE_BRAND, (o) => o.score.toFixed(1), "high"],
     ["Median withdrawal", (o) => o.payoutLabel, "lowPayout"],
     ["Coins credited", (o) => String((coinsBy[o.slug] ?? []).length), "highCoins"],
     ["Wagering", (o) => `${o.wager}×`, "lowWager"],

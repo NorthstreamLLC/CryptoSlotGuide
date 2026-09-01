@@ -13,6 +13,7 @@ import { siteData } from "./site-data";
 import { crit, flag } from "./scoring";
 import { casinoCons, fmtMins, indexMedianPayout, isStaleReading } from "./derived";
 import { isFieldTestedOperator, isEditoriallyAudited } from "./field-tested";
+import { SCORE_BRAND } from "./score-tier";
 import type { ScoreBar, Flag } from "./types";
 
 export type EntityType = "casino" | "slot" | "wallet" | "exchange" | "provider" | "market";
@@ -572,7 +573,7 @@ export function ctaLabel(type: EntityType, name: string) {
 export function scoreMeta(type: EntityType) {
   if (type === "slot") return { label: "Published return", unit: "% RTP" };
   if (type === "market") return { label: "How this market rates", unit: "" };
-  return { label: "Overall score", unit: "/ 10" };
+  return { label: SCORE_BRAND, unit: "/ 10" };
 }
 export function editorialTake(type: EntityType, slug: string): string | undefined {
   return siteData.editorial[`${type}:${slug}`];

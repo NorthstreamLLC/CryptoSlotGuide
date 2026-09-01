@@ -7,6 +7,7 @@ import { backLink, ctaLabel, scoreMeta, editorialTake } from "@/lib/entity-view"
 import { reviewTierFor, TIER_LABEL, TIER_TINT } from "@/lib/review-tier";
 import { isEditoriallyAudited } from "@/lib/field-tested";
 import { siteData } from "@/lib/site-data";
+import { scoreTier, SCORE_TIER_LABEL, SCORE_TIER_COLOR } from "@/lib/score-tier";
 
 /** Casino criteria bars use the same 6 names as data/criteria.json — see
  * that file's `sourcing` field. Other entity types have their own
@@ -27,6 +28,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
   const isCasino = e.type === "casino";
   const tier = reviewTierFor(e.type, e.slug);
   const audited = tier === "pending" && isEditoriallyAudited(e.slug);
+  const isLedgerScored = scoreUnit === "/ 10";
 
   return (
     <main style={{ background: "#07090B", color: "#E8EDF0" }}>
@@ -110,6 +112,20 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
                 <div style={{ marginBottom: 22, fontSize: 14.5, lineHeight: 1.6, color: "#8DA0AA", textWrap: "pretty" }}>
                   Markets are not scored as a whole. The ratings below are for this market at the best book we found.
                 </div>
+              ) : isLedgerScored ? (
+                <div style={{ display: "flex", alignItems: "baseline", gap: 10, marginBottom: 22, flexWrap: "wrap" }}>
+                  <span
+                    style={{
+                      fontSize: 26,
+                      fontWeight: 800,
+                      letterSpacing: "-.02em",
+                      color: SCORE_TIER_COLOR[scoreTier(Number(e.score))],
+                    }}
+                  >
+                    {SCORE_TIER_LABEL[scoreTier(Number(e.score))]}
+                  </span>
+                  <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 13, color: "#5C6A72" }}>{e.score} {scoreUnit}</span>
+                </div>
               ) : (
                 <div style={{ display: "flex", alignItems: "flex-end", gap: 12, marginBottom: 22 }}>
                   <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 60, fontWeight: 700, lineHeight: 0.85, color: "#fff", letterSpacing: "-.045em" }}>
@@ -118,25 +134,47 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
                   <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 13, color: "#5C6A72", paddingBottom: 8 }}>{scoreUnit}</span>
                 </div>
               )}
-              <div style={{ display: "flex", flexDirection: "column", gap: 13, marginBottom: 24 }}>
+              <div style={{ display: "flex", flexDirection: "column", gap: 1, marginBottom: 24, borderRadius: 9, overflow: "hidden" }}>
                 {e.criteria.map((c) => {
                   const sourcing = CRITERION_SOURCING.get(c.name);
+                  const ct = scoreTier(c.val);
                   return (
-                    <div key={c.name}>
-                      <div style={{ display: "flex", justifyContent: "space-between", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, marginBottom: 6 }}>
-                        <span style={{ display: "flex", alignItems: "center", gap: 6, color: "#A8B6BE" }}>
-                          {sourcing && (
-                            <span
-                              title={TIER_LABEL[sourcing]}
-                              style={{ width: 5, height: 5, borderRadius: "50%", flex: "none", background: TIER_TINT[sourcing] }}
-                            />
-                          )}
-                          {c.name}
+                    <div key={c.name} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10, padding: "8px 0" }}>
+                      <span style={{ fontSize: 12.5, color: "#A8B6BE" }}>{c.name}</span>
+                      <div style={{ display: "flex", alignItems: "center", gap: 6, flex: "none" }}>
+                        {sourcing && (
+                          <span
+                            style={{
+                              fontFamily: "var(--font-jetbrains-mono), monospace",
+                              fontSize: 9,
+                              fontWeight: 700,
+                              letterSpacing: ".04em",
+                              textTransform: "uppercase",
+                              padding: "2px 7px",
+                              borderRadius: 4,
+                              color: TIER_TINT[sourcing],
+                              background: `${TIER_TINT[sourcing]}18`,
+                              whiteSpace: "nowrap",
+                            }}
+                          >
+                            {TIER_LABEL[sourcing]}
+                          </span>
+                        )}
+                        <span
+                          style={{
+                            fontFamily: "var(--font-jetbrains-mono), monospace",
+                            fontSize: 10.5,
+                            fontWeight: 700,
+                            letterSpacing: ".04em",
+                            padding: "2px 8px",
+                            borderRadius: 4,
+                            color: SCORE_TIER_COLOR[ct],
+                            background: `${SCORE_TIER_COLOR[ct]}18`,
+                            whiteSpace: "nowrap",
+                          }}
+                        >
+                          {SCORE_TIER_LABEL[ct]}
                         </span>
-                        <span style={{ color: "#fff" }}>{c.val.toFixed(1)}</span>
-                      </div>
-                      <div style={{ height: 4, borderRadius: 3, background: "rgba(255,255,255,.08)", overflow: "hidden" }}>
-                        <div style={{ height: "100%", borderRadius: 3, background: c.color, width: `${c.pct}%` }} />
                       </div>
                     </div>
                   );

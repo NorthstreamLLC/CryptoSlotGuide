@@ -1,9 +1,10 @@
 import { siteData } from "@/lib/site-data";
 import { TIER_LABEL, TIER_DESC, TIER_TINT } from "@/lib/review-tier";
+import { SCORE_BRAND } from "@/lib/score-tier";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata(
-  "How we rate, in full",
+  `How the ${SCORE_BRAND} works`,
   "One weighted model for crypto casinos, built from six criteria with published weights. Everything else is reviewed against its own checklist, field-tested or editorially assessed — every review says which.",
   "/how-we-rate"
 );
@@ -35,10 +36,10 @@ export default function Page() {
             Methodology
           </div>
           <h1 style={{ margin: "0 0 16px", fontSize: 50, lineHeight: 1.03, letterSpacing: "-.038em", fontWeight: 800, fontStretch: "116%", color: "#fff", textWrap: "balance" }}>
-            How we rate, in full
+            How the {SCORE_BRAND} works
           </h1>
           <p style={{ margin: "0 auto 14px", maxWidth: "66ch", fontSize: 16.5, lineHeight: 1.65, color: "#93A3AC", textWrap: "pretty" }}>
-            One weighted model, applied to one category. Crypto casinos carry a headline score built from six criteria with fixed weights, published so any number on this site can be re-derived. Commission is not one of the inputs, and the people assigning scores cannot see the commercial terms.
+            One weighted model, applied to one category. Crypto casinos carry a {SCORE_BRAND.toLowerCase()} built from six criteria with fixed weights, published so any number on this site can be re-derived. Commission is not one of the inputs, and the people assigning scores cannot see the commercial terms.
           </p>
           <p style={{ margin: "0 auto", maxWidth: "66ch", fontSize: 15, lineHeight: 1.65, color: "#7B8A93", textWrap: "pretty" }}>
             Everything else — live tables, slots, providers, sportsbooks, prediction markets, wallets, exchanges — is reviewed against its own checklist rather than forced into the casino model. Those checklists are below.
