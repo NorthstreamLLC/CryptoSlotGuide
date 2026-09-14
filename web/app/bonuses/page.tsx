@@ -1,5 +1,7 @@
 import { BonusesPage } from "@/components/bonuses/BonusesPage";
 import { pageMetadata } from "@/lib/seo";
+import { breadcrumbSchema } from "@/lib/schema";
+import { JsonLd } from "@/components/seo/JsonLd";
 
 export const metadata = pageMetadata(
   "What each offer actually costs you",
@@ -8,5 +10,10 @@ export const metadata = pageMetadata(
 );
 
 export default function Page() {
-  return <BonusesPage />;
+  return (
+    <>
+      <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Bonuses", path: "/bonuses" }])} />
+      <BonusesPage />
+    </>
+  );
 }

@@ -30,8 +30,6 @@ export interface VerticalRow {
   name: string;
   mono: string;
   tint: string;
-  hasLogo: boolean;
-  logo?: string;
   note: string;
   m1: string;
   m2: string;
@@ -50,7 +48,7 @@ export interface VerticalAward {
   accent: string;
   awardBg: string;
   awardBorder: string;
-  logo: string;
+  mono: string;
   href: string;
 }
 
@@ -67,10 +65,6 @@ export interface VerticalPage {
   awardTitle?: string;
   awardSub?: string;
   awards?: VerticalAward[];
-}
-
-function logoFor(slug: string): string {
-  return slug === "roobet" ? "/assets/roobet-logo.png" : `/assets/logos/${slug}.png`;
 }
 
 export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
@@ -98,7 +92,6 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
         name: s.name,
         mono: s.mono,
         tint: s.tint,
-        hasLogo: false,
         note: `${s.vol} volatility · ${s.provider}`,
         m1: s.provider,
         m2: `${s.rtp.toFixed(2)}%`,
@@ -128,8 +121,6 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
         name: p.name,
         mono: p.mono,
         tint: p.tint,
-        hasLogo: true,
-        logo: logoFor(p.slug),
         note: p.note,
         m1: String(p.titles),
         m2: p.rtp,
@@ -170,7 +161,6 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
           name: m.name,
           mono: m.mono,
           tint: m.tint,
-          hasLogo: false,
           note: m.note,
           m1: m.best,
           m2: m.m2,
@@ -189,7 +179,6 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
           name: m.name,
           mono: m.name.slice(0, 2).toUpperCase(),
           tint: "#C4795A",
-          hasLogo: false,
           note: m.note,
           m1: "—",
           m2: "—",
@@ -211,8 +200,6 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
             name: o.name,
             mono: o.mono,
             tint: "#57B98C",
-            hasLogo: true,
-            logo: logoFor(o.slug),
             note: o.bonus,
             m1: sb?.margin ?? "—",
             m2: sb ? String(sb.markets) : "—",
@@ -243,8 +230,6 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
         name: w.name,
         mono: w.mono,
         tint: "#9B8FC4",
-        hasLogo: true,
-        logo: logoFor(w.slug),
         note: w.note,
         m1: w.m1,
         m2: w.m2,
@@ -279,7 +264,8 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
       awardTitle: "Best crypto exchanges for August 2026",
       awardSub: "One superlative per venue, awarded on the measurement that earned it. No venue holds two.",
       awards: rawAwards.map((a, i) => {
-        const slug = exchangeRows.find((x) => x.name === a.name)?.slug ?? a.name.toLowerCase();
+        const match = exchangeRows.find((x) => x.name === a.name);
+        const slug = match?.slug ?? a.name.toLowerCase();
         return {
           slug,
           name: a.name,
@@ -289,7 +275,7 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
           accent: i === 0 ? "#FFCC00" : "#00C2CC",
           awardBg: i === 0 ? "rgba(255,204,0,.10)" : "rgba(0,194,204,.10)",
           awardBorder: i === 0 ? "rgba(255,204,0,.32)" : "rgba(0,194,204,.28)",
-          logo: logoFor(slug),
+          mono: match?.mono ?? a.name.slice(0, 2).toUpperCase(),
           href: `/exchanges/${slug}`,
         };
       }),
@@ -298,8 +284,6 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
         name: x.name,
         mono: x.mono,
         tint: "#5FE3E8",
-        hasLogo: true,
-        logo: logoFor(x.slug),
         note: x.note,
         m1: x.m1,
         m2: x.m2,
@@ -329,7 +313,6 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
       name: g.title,
       mono: g.mono,
       tint: g.tint,
-      hasLogo: false,
       note: fill(g.standfirst, siteData),
       m1: g.category,
       m2: `${g.readMins} min`,

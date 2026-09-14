@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { siteData } from "@/lib/site-data";
-import { logoFor } from "@/lib/casino-index";
+import { BrandMark } from "@/components/ui/BrandMark";
 import type { LiveGame } from "@/lib/types";
 
 /**
@@ -64,9 +64,8 @@ export function LiveGamePage({ g }: { g: LiveGame }) {
               return (
                 <div key={c.slug} style={{ display: "grid", gridTemplateColumns: "minmax(160px,1.2fr) 96px 110px 96px 92px", alignItems: "center", borderBottom: "1px solid rgba(255,255,255,.05)" }}>
                   <div style={{ display: "flex", alignItems: "center", gap: 11, padding: "13px 16px" }}>
-                    <div style={{ width: 44, height: 30, flex: "none", display: "flex", alignItems: "center" }}>
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={logoFor(c.slug)} alt="" style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }} />
+                    <div style={{ width: 30, height: 30, flex: "none" }}>
+                      <BrandMark slug={c.slug} mono={siteData.ops.find((x) => x.slug === c.slug)?.mono ?? c.name.slice(0, 2).toUpperCase()} tint={c.tint} fontSize={10} />
                     </div>
                     <span style={{ fontSize: 14, fontWeight: 600, color: "#E8EDF0" }}>{c.name}</span>
                   </div>

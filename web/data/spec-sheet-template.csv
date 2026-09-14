@@ -1,0 +1,10 @@
+operator_slug,group_title,label,value,chips,flag_label,flag_tone,sourcing,source_url,as_of
+"roobet","Coins & deposit limits","Coins accepted","","BTC;ETH;USDT;LTC;SOL;DOGE;TRX;XRP","","","site-data","",""
+"roobet","Crypto & custody","Withdrawal fees","No withdrawal fee — network fee only, varies by coin","","","","editorial","https://help.roobet.com/en/articles/4797515-does-roobet-charge-withdrawal-fees","2026-09-10"
+"roobet","Compliance","Licence","Curaçao, licence OGL/2024/687/0427","","","","editorial","https://roobet.com/kyc-aml-policy","2026-09-10"
+"roobet","Compliance","Company","Raw Entertainment B.V., Reg No 157205","","","","editorial","https://roobet.com/kyc-aml-policy","2026-09-10"
+"roobet","Compliance","Geo-blocking","Confirmed active — blocked a restricted-region test request","","Enforced","verified","editorial","https://roobet.com/fair","2026-09-10"
+"stake","Coins & deposit limits","Coins accepted","","BTC;ETH;USDT;LTC;SOL;DOGE;XRP;TRX","","","site-data","",""
+"bc-game","Coins & deposit limits","Coins accepted","","BTC;ETH;USDT;LTC;SOL;DOGE;XRP;TRX","","","site-data","",""
+"bc-game","Compliance","Licence","Anjouan, Union of Comoros, licence ALSI-202410011-FI1","","","","editorial","https://bc.game/licenses","2026-09-14"
+"bc-game","Compliance","Company","Twocent Technology Limited, Belize, Reg No 000041939","","","","editorial","https://bc.game/licenses","2026-09-14"

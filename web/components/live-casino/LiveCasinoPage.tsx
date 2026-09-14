@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { siteData, siteCounts } from "@/lib/site-data";
-import { logoFor } from "@/lib/casino-index";
+import { BrandMark } from "@/components/ui/BrandMark";
 import type { LiveGame } from "@/lib/types";
 
 const TYPES: LiveGame["type"][] = ["Blackjack", "Roulette", "Baccarat", "Game show", "Card", "Dice"];
@@ -74,9 +74,8 @@ export function LiveCasinoPage({ initialType }: { initialType?: LiveGame["type"]
             >
               <span style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: `linear-gradient(90deg,${o.tint},transparent)` }} />
               <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
-                <div style={{ width: 60, height: 42, flex: "none", display: "flex", alignItems: "center" }}>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={logoFor(o.slug)} alt="" style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }} />
+                <div style={{ width: 42, height: 42, flex: "none" }}>
+                  <BrandMark slug={o.slug} mono={siteData.ops.find((x) => x.slug === o.slug)?.mono ?? o.name.slice(0, 2).toUpperCase()} tint={o.tint} fontSize={13} />
                 </div>
                 <div style={{ minWidth: 0 }}>
                   <div style={{ fontSize: 16, fontWeight: 700, letterSpacing: "-.02em", color: "#fff" }}>{o.name}</div>

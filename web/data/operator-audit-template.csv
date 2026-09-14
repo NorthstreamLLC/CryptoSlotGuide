@@ -1,3 +1,3 @@
-operator_slug,licence,kyc,bonus,wager,conf,absorbs_fee,ln,coins,audited_by,audited_at,notes
-roobet,Curaçao,tiered,Weekly cashback + RooWards VIP,1,1,true,true,BTC;ETH;USDT;LTC;SOL;DOGE;TRX;XRP,JD,2026-08-27,Licence checked against CGCB register; complaint history checked on AskGamblers and Casino.Guru
-stake,Curaçao,tiered,1x rakeback + weekly reload,1,1,true,true,BTC;ETH;USDT;LTC;SOL;DOGE;XRP;TRX,JD,2026-08-27,
+operator_slug,licence,kyc,bonus,wager,conf,absorbs_fee,ln,coins,bonus_expiry,cashout_cap,audited_by,audited_at,notes
+roobet,Curaçao,tiered,Weekly cashback + RooWards VIP,1,1,true,true,BTC;ETH;USDT;LTC;SOL;DOGE;TRX;XRP,Weekly cashback expires 7 days after credit,No cap on cashback winnings,JD,2026-08-27,Licence checked against CGCB register; complaint history checked on AskGamblers and Casino.Guru
+stake,Curaçao,tiered,1x rakeback + weekly reload,1,1,true,true,BTC;ETH;USDT;LTC;SOL;DOGE;XRP;TRX,,,JD,2026-08-27,Bonus text corrected off a promo-code variant; expiry/cashout cap not yet checked — stake.com is behind a bot-check we haven't gotten past

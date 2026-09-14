@@ -4,7 +4,8 @@ import Link from "next/link";
 import { useState } from "react";
 import { siteData } from "@/lib/site-data";
 import { getCompareRows } from "@/lib/compare-view";
-import { logoFor } from "@/lib/casino-index";
+import { tintFor } from "@/lib/logo";
+import { BrandMark } from "@/components/ui/BrandMark";
 
 /**
  * Ported from the `isCompare` block in CryptoSlotGuide.dc.html (search
@@ -83,9 +84,8 @@ export function ComparePage() {
                 </div>
                 {cmpOps.map((o) => (
                   <div key={o.slug} style={{ flex: 1, minWidth: 150, padding: "14px 18px", borderLeft: "1px solid rgba(255,255,255,.06)" }}>
-                    <div style={{ width: 64, height: 26, marginBottom: 8, display: "flex", alignItems: "center" }}>
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={logoFor(o.slug)} alt="" style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }} />
+                    <div style={{ width: 26, height: 26, marginBottom: 8 }}>
+                      <BrandMark slug={o.slug} mono={o.mono} tint={tintFor(o.slug)} fontSize={9} />
                     </div>
                     <Link href={o.hasCustomReview ? "/casinos/roobet" : `/casinos/${o.slug}`} className="hover:!text-accent" style={{ display: "block", fontSize: 14, fontWeight: 700, color: "#fff" }}>
                       {o.name}

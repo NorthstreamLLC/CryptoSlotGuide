@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { useState } from "react";
 import { siteData, siteCounts } from "@/lib/site-data";
-import { logoFor } from "@/lib/casino-index";
+import { tintFor } from "@/lib/logo";
+import { BrandMark } from "@/components/ui/BrandMark";
 
 /**
  * Ported from the `isCoins` block in CryptoSlotGuide.dc.html (search for
@@ -117,9 +118,8 @@ export function CoinsPage() {
             {detail.map((o, i) => (
               <Link key={o.slug} href={o.hasCustomReview ? "/casinos/roobet" : `/casinos/${o.slug}`} style={{ display: "flex", flexDirection: "column", gap: 16, padding: 20, borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.06)" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                  <div style={{ width: 56, height: 28, flex: "none", display: "flex", alignItems: "center" }}>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={logoFor(o.slug)} alt="" style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }} />
+                  <div style={{ width: 28, height: 28, flex: "none" }}>
+                    <BrandMark slug={o.slug} mono={o.mono} tint={tintFor(o.slug)} fontSize={10} />
                   </div>
                   <div style={{ minWidth: 0 }}>
                     <div style={{ fontSize: 14.5, fontWeight: 600, color: "#E8EDF0", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{o.name}</div>

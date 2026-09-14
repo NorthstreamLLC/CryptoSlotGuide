@@ -83,9 +83,8 @@ export function kycStyle(kyc: Operator["kyc"]): { kycBg: string; kycColor: strin
   return { kycBg: "rgba(196,101,58,.14)", kycColor: "#DA9877" };
 }
 
-export function logoFor(slug: string): string {
-  return slug === "roobet" ? "/assets/roobet-logo.png" : `/assets/logos/${slug}.png`;
-}
+/** @deprecated import from lib/logo.ts directly — kept here so existing `import { logoFor } from "@/lib/casino-index"` call sites don't all need touching. */
+export { logoFor } from "./logo";
 
 /** Median payout stat block above the table, computed against the currently filtered list. */
 export function btcStats(list: Operator[]): { v: string; l: string }[] {

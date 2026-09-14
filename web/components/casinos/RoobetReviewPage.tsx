@@ -3,12 +3,18 @@
 import Link from "next/link";
 import { useState } from "react";
 import { siteData } from "@/lib/site-data";
+import { editorialTake } from "@/lib/entity-view";
 import { fmtMins, indexMedianPayout, liveCon, payoutClaim } from "@/lib/derived";
-import { logoFor } from "@/lib/casino-index";
+import { tintFor } from "@/lib/logo";
+import { BrandMark } from "@/components/ui/BrandMark";
 import { TIER_LABEL, TIER_TINT } from "@/lib/review-tier";
 import { isFieldTestedOperator, isEditoriallyAudited } from "@/lib/field-tested";
 import { faqData } from "@/lib/roobet-faq";
 import { SCORE_BRAND, scoreTier, SCORE_TIER_LABEL, SCORE_TIER_COLOR } from "@/lib/score-tier";
+import { OnChainActivity } from "@/components/entity/OnChainActivity";
+import { CasinoSpecSheet } from "@/components/entity/CasinoSpecSheet";
+import { CasinoBonuses } from "@/components/entity/CasinoBonuses";
+import { getSpecFact } from "@/lib/spec-sheet";
 
 /** Same 6 casino criteria names as data/criteria.json's `sourcing` field — see components/entity/EntityReviewPage.tsx's identical map. */
 const CRITERION_SOURCING = new Map(siteData.criteria.map((c) => [c.name, c.sourcing]));
@@ -85,9 +91,22 @@ export function RoobetReviewPage() {
   const checked = isFieldTestedOperator("roobet");
   const audited = isEditoriallyAudited("roobet");
 
+  // Pulled from the same sourced spec-sheet data as the "The full spec
+  // sheet" section below, not re-typed — a second hardcoded "$10" here
+  // previously drifted from (and contradicted) the real, cited figure.
+  const minDeposit = getSpecFact("roobet", "Coins & deposit limits", "Minimum deposit");
+  const minWithdrawal = getSpecFact("roobet", "Coins & deposit limits", "Minimum withdrawal");
+
   const verdict = `Roobet's edge is operational, not promotional. Withdrawals cleared in a median ${roobet.payoutLabel} against an index median of ${fmtMins(medianPayout)}, and its headline rewards carry 1× wagering where most rivals sit at 40×. ${
     con ? `It loses points on live tables — ${con} — and for support that slowed noticeably outside European hours.` : "It loses points for support that slowed noticeably outside European hours."
   }`;
+  // Real hand-written opinion (data/editorial.json's "casino:roobet"
+  // entry) — same lib/entity-view.ts helper EntityReviewPage.tsx uses.
+  // Previously unused on Roobet's own page despite existing; now it's
+  // the hero lead instead of the funded-account caveat paragraph that
+  // used to open the page, same change as the generic template got.
+  const take = editorialTake("casino", "roobet");
+  const heroLead = take ?? verdict;
 
   return (
     <main style={{ background: "#07090B", color: "#E8EDF0" }}>
@@ -103,13 +122,10 @@ export function RoobetReviewPage() {
               <h1 style={{ margin: "0 0 16px", fontSize: 46, lineHeight: 1.05, letterSpacing: "-.035em", fontWeight: 800, fontStretch: "114%", color: "#fff" }}>
                 Roobet review 2026: four-minute payouts, 1× wagering, tiered KYC
               </h1>
-              <p style={{ margin: "0 0 22px", fontSize: 16.5, lineHeight: 1.65, color: "#93A3AC", textWrap: "pretty" }}>
-                {checked
-                  ? "We ran a funded Roobet account for six weeks across slots, sportsbook and esports markets, timing 24 withdrawals between $40 and $9,400. It finished first on our index — narrowly, and not on everything."
-                  : audited
-                  ? "Roobet's bonus terms, coin support and licence below are checked against its own pages and public registries. Payout speed is community-reported, not yet timed on our own funded account — see how we rate."
-                  : "Roobet leads our index on published figures. The payout times, wagering terms and head-to-head numbers below are pending our own desk-research and funded-account passes — see how we rate for what that means."}
-              </p>
+              <div style={{ display: "flex", gap: 16, marginBottom: 22 }}>
+                <div style={{ width: 3, flex: "none", borderRadius: 2, background: "#00C2CC" }} />
+                <p style={{ margin: 0, maxWidth: "60ch", fontSize: 19, lineHeight: 1.55, fontWeight: 600, color: "#E8EDF0", textWrap: "pretty" }}>{heroLead}</p>
+              </div>
               <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 26 }}>
                 <Chip label="#1 RECOMMENDED" bg="rgba(255,204,0,.12)" border="rgba(255,204,0,.3)" color="#FFCC00" />
                 <Chip label={checked ? "TESTED 21 AUG 2026" : audited ? "DESK-AUDITED" : "PUBLISHED FIGURES"} bg="rgba(255,255,255,.04)" border="rgba(255,255,255,.08)" color="#8DA0AA" />
@@ -148,32 +164,31 @@ export function RoobetReviewPage() {
                   return (
                     <div key={s.name} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10, padding: "8px 0" }}>
                       <span style={{ fontSize: 12.5, color: "#A8B6BE" }}>{s.name}</span>
-                      <div style={{ display: "flex", alignItems: "center", gap: 6, flex: "none" }}>
+                      <div style={{ display: "flex", alignItems: "center", gap: 8, flex: "none" }}>
                         {sourcing && (
-                          <span
-                            style={{
-                              fontFamily: "var(--font-jetbrains-mono), monospace",
-                              fontSize: 9,
-                              fontWeight: 700,
-                              letterSpacing: ".04em",
-                              textTransform: "uppercase",
-                              padding: "2px 7px",
-                              borderRadius: 4,
-                              color: TIER_TINT[sourcing],
-                              background: `${TIER_TINT[sourcing]}18`,
-                              whiteSpace: "nowrap",
-                            }}
-                          >
-                            {TIER_LABEL[sourcing]}
+                          <span style={{ display: "flex", alignItems: "center", gap: 5 }}>
+                            <span style={{ width: 5, height: 5, borderRadius: "50%", background: TIER_TINT[sourcing], flex: "none" }} />
+                            <span
+                              style={{
+                                fontFamily: "var(--font-jetbrains-mono), monospace",
+                                fontSize: 8.5,
+                                letterSpacing: ".04em",
+                                textTransform: "uppercase",
+                                color: TIER_TINT[sourcing],
+                                whiteSpace: "nowrap",
+                              }}
+                            >
+                              {TIER_LABEL[sourcing]}
+                            </span>
                           </span>
                         )}
                         <span
                           style={{
                             fontFamily: "var(--font-jetbrains-mono), monospace",
-                            fontSize: 10.5,
+                            fontSize: 10,
                             fontWeight: 700,
                             letterSpacing: ".04em",
-                            padding: "2px 8px",
+                            padding: "2px 7px",
                             borderRadius: 4,
                             color: SCORE_TIER_COLOR[ct],
                             background: `${SCORE_TIER_COLOR[ct]}18`,
@@ -197,10 +212,18 @@ export function RoobetReviewPage() {
 
       <div style={{ maxWidth: 1180, margin: "0 auto", padding: "56px 40px 80px", display: "grid", gridTemplateColumns: "1fr 300px", gap: 56, alignItems: "start" }}>
         <div>
-          <div style={{ padding: 28, borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)", marginBottom: 34 }}>
-            <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 12 }}>Verdict</div>
-            <p style={{ margin: 0, fontSize: 18, lineHeight: 1.6, color: "#DCE5E9", textWrap: "pretty" }}>{verdict}</p>
-          </div>
+          {/* Same rule as EntityReviewPage.tsx: when a hand-written take
+              exists it's already the hero lead above, so this box shows
+              the separate computed verdict rather than repeating it. If
+              editorial.json ever lost the roobet entry, heroLead would
+              fall back to verdict and this box would correctly disappear
+              instead of showing the same sentence twice. */}
+          {take && (
+            <div style={{ padding: 28, borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)", marginBottom: 34 }}>
+              <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 12 }}>Verdict</div>
+              <p style={{ margin: 0, fontSize: 18, lineHeight: 1.6, color: "#DCE5E9", textWrap: "pretty" }}>{verdict}</p>
+            </div>
+          )}
 
           <SectionHeading
             title="What we measured"
@@ -224,6 +247,10 @@ export function RoobetReviewPage() {
               note={tableLeader && tableLeader.slug !== "roobet" ? `Counted in the lobby. ${tableLeader.name} carries ${tableLeader.tables}.` : "Counted in the lobby. The highest count we track."}
             />
           </div>
+
+          <CasinoBonuses slug="roobet" />
+          <OnChainActivity slug="roobet" />
+          <CasinoSpecSheet slug="roobet" />
 
           <SectionHeading title="Head to head" sub="Against the two operators readers compare it with most. Winner marked per row." />
           <div style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 13, overflow: "hidden", background: "#0C1013", marginBottom: 38 }}>
@@ -344,7 +371,11 @@ export function RoobetReviewPage() {
                 { k: "Games", v: "4,200+" },
                 { k: "Sportsbook", v: roobet.sports ? "Yes" : "No" },
                 { k: "Esports", v: roobet.esports ? "Yes" : "No" },
-                { k: "Min deposit", v: "$10" },
+                // Min deposit/withdrawal need a funded account to confirm
+                // (they're per-coin, shown only in the logged-in cashier) —
+                // left out rather than shown as "—" until that's real.
+                ...(minDeposit ? [{ k: "Min deposit", v: minDeposit.value! }] : []),
+                ...(minWithdrawal ? [{ k: "Min withdrawal", v: minWithdrawal.value! }] : []),
                 { k: "Live chat", v: "24/7" },
               ].map((g) => (
                 <div key={g.k} style={{ display: "flex", justifyContent: "space-between", gap: 12, fontSize: 12.5 }}>
@@ -366,9 +397,8 @@ export function RoobetReviewPage() {
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
               {alsoConsidered.map((o) => (
                 <Link key={o.slug} href={`/casinos/${o.slug}`} className="hover:!text-accent" style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 13, color: "#B7C4CB" }}>
-                  <div style={{ width: 22, height: 22, flex: "none", display: "flex", alignItems: "center" }}>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={logoFor(o.slug)} alt="" style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }} />
+                  <div style={{ width: 22, height: 22, flex: "none" }}>
+                    <BrandMark slug={o.slug} mono={o.mono} tint={tintFor(o.slug)} fontSize={8} />
                   </div>
                   <span style={{ flex: 1 }}>{o.name}</span>
                   <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#5C6A72" }}>{o.score.toFixed(1)}</span>

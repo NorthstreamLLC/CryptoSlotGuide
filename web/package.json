@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "eslint",
     "import:rtp": "node scripts/import-rtp-readings.mjs",
-    "import:audit": "node scripts/import-operator-audit.mjs"
+    "import:audit": "node scripts/import-operator-audit.mjs",
+    "import:onchain": "node scripts/import-onchain-volume.mjs",
+    "import:spec": "node scripts/import-spec-sheet.mjs"
   },
   "dependencies": {
     "next": "16.3.3",

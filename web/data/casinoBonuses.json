@@ -1,0 +1,83 @@
+[
+  {
+    "operatorSlug": "bc-game",
+    "bonuses": [
+      {
+        "title": "Monthly Deposit Bonus",
+        "category": "Deposit bonus · new users",
+        "headline": "500%",
+        "subCopy": "Cumulative across 4 deposits, unlocked as you wager. Currently at its 220% first tier.",
+        "stats": [
+          { "label": "First tier", "value": "220%" },
+          { "label": "Cycle resets", "value": "16d 07h" }
+        ],
+        "asOf": "2026-09-14",
+        "sourceUrl": "https://bc.game/promotions",
+        "sourceNote": "Operator's own in-account Promotions view, screenshot-verified — bc.game/promotions didn't return real content to an automated fetch"
+      },
+      {
+        "title": "Weekly Raffle",
+        "category": "Recurring · all players",
+        "headline": "$20,000",
+        "subCopy": "Prize pool, drawn weekly. Tickets are earned by wagering, not purchased.",
+        "stats": [
+          { "label": "Ticket = wager", "value": "$100 / day" },
+          { "label": "Or per", "value": "$1,000 wagered" }
+        ],
+        "asOf": "2026-09-14",
+        "sourceUrl": "https://bc.game/promotions/weekly-raffle",
+        "sourceNote": "Operator's own in-account Promotions view, screenshot-verified — bc.game/promotions/weekly-raffle didn't return real content to an automated fetch"
+      },
+      {
+        "title": "Harpelnas Golden Raffle",
+        "category": "Raffle · site-wide",
+        "headline": "10G Gold",
+        "subCopy": "Prize pool paid in gold, per the operator's own promotions grid.",
+        "asOf": "2026-09-14",
+        "endsLabel": "Ends 30 Sep 2026",
+        "sourceUrl": "https://bc.game/promotions",
+        "sourceNote": "Operator's own Promotions grid, screenshot-verified"
+      },
+      {
+        "title": "100x Multiplier Challenge",
+        "category": "Challenge · slots",
+        "headline": "$13,300",
+        "subCopy": "Shared prize pool for the highest multiplier hits on slots, per the operator's own promotions grid.",
+        "asOf": "2026-09-14",
+        "endsLabel": "Ends 15 Sep 2026",
+        "sourceUrl": "https://bc.game/promotions",
+        "sourceNote": "Operator's own Promotions grid, screenshot-verified"
+      },
+      {
+        "title": "Free Spins Giveaway",
+        "category": "Giveaway · slots",
+        "headline": "20 Spins",
+        "subCopy": "Free spins giveaway, per the operator's own promotions grid.",
+        "asOf": "2026-09-14",
+        "endsLabel": "Ends 16 Sep 2026",
+        "sourceUrl": "https://bc.game/promotions",
+        "sourceNote": "Operator's own Promotions grid, screenshot-verified"
+      },
+      {
+        "title": "Daily Contest",
+        "category": "Recurring · all players",
+        "headline": "$50,000",
+        "subCopy": "Daily wagering-contest pool, per the operator's own promotions grid.",
+        "asOf": "2026-09-14",
+        "endsLabel": "Runs through 1 Jan",
+        "sourceUrl": "https://bc.game/promotions",
+        "sourceNote": "Operator's own Promotions grid, screenshot-verified"
+      },
+      {
+        "title": "BC Engine",
+        "category": "Platform token · all players",
+        "headline": "Ongoing",
+        "subCopy": "Wager to earn BC Engine platform-token rewards, per the operator's own promotions grid.",
+        "asOf": "2026-09-14",
+        "endsLabel": "Runs through 1 Jan",
+        "sourceUrl": "https://bc.game/promotions",
+        "sourceNote": "Operator's own Promotions grid, screenshot-verified"
+      }
+    ]
+  }
+]

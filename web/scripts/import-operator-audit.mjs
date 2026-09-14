@@ -15,18 +15,28 @@
  *
  * CSV columns (header row required, any order, extra columns ignored):
  *   operator_slug, licence, kyc, bonus, wager, conf, absorbs_fee, ln,
- *   coins, audited_by, audited_at, notes (optional)
+ *   coins, bonus_expiry (optional), cashout_cap (optional), audited_by,
+ *   audited_at, notes (optional)
  *
  *   licence       — e.g. "Curaçao", "MGA", "Kahnawake" (as shown on the
  *                   regulator's own public register, not just the
  *                   operator's footer claim)
  *   kyc           — none | tiered | required
- *   bonus         — the real headline offer text, transcribed
+ *   bonus         — the operator's standard, published welcome bonus or
+ *                   leaderboard/rakeback program, transcribed from its
+ *                   own terms page — never a streamer deal or promo
+ *                   code, which aren't standing public terms and can't
+ *                   be verified the same way
  *   wager         — number, e.g. 1 or 40 (40x wagering)
  *   conf          — integer, confirmations required before credit
  *   absorbs_fee   — true/false — does the operator eat the network fee
  *   ln            — true/false — Lightning Network support
  *   coins         — semicolon-separated tickers, e.g. "BTC;ETH;USDT;SOL"
+ *   bonus_expiry  — how long the bonus credit itself has to be used
+ *                   before it expires, e.g. "7 days after credit" — real
+ *                   text from the terms page, not a guessed/uniform figure
+ *   cashout_cap   — how winnings from the bonus are capped, e.g. "No cap
+ *                   on cashback winnings" or "5x the bonus amount"
  *   audited_by    — initials or name
  *   audited_at    — YYYY-MM-DD
  *
@@ -167,11 +177,16 @@ function main() {
     const auditedBy = get("audited_by");
     const auditedAt = get("audited_at");
     const coinsStr = get("coins");
+    const bonusExpiry = get("bonus_expiry") || undefined;
+    const cashoutCap = get("cashout_cap") || undefined;
     const notes = get("notes") || undefined;
 
     if (!licence) errors.push(`Line ${lineNo}: licence is required`);
     if (!KYC_ENUM.includes(kyc)) errors.push(`Line ${lineNo}: kyc "${kyc}" must be one of ${KYC_ENUM.join(", ")}`);
     if (!bonus) errors.push(`Line ${lineNo}: bonus is required`);
+    if (/\b(code|streamer|codes)\b/i.test(bonus)) {
+      errors.push(`Line ${lineNo}: bonus "${bonus}" reads like a promo code or streamer deal, not the operator's standard published bonus — those aren't standing public terms and can't be verified the same way. Use the operator's own default welcome bonus/leaderboard instead.`);
+    }
 
     const wager = Number(wagerStr);
     if (!Number.isFinite(wager) || wager <= 0) errors.push(`Line ${lineNo}: wager "${wagerStr}" is not a valid multiplier`);
@@ -193,7 +208,7 @@ function main() {
     if (Number.isNaN(new Date(auditedAt).getTime())) errors.push(`Line ${lineNo}: audited_at "${auditedAt}" is not a valid date (use YYYY-MM-DD)`);
     if (!auditedBy) errors.push(`Line ${lineNo}: audited_by is required`);
 
-    parsed.push({ operatorSlug, licence, kyc, bonus, wager, conf, absorbsFee, ln, coins, auditedBy, auditedAt, notes });
+    parsed.push({ operatorSlug, licence, kyc, bonus, wager, conf, absorbsFee, ln, coins, bonusExpiry, cashoutCap, auditedBy, auditedAt, notes });
   });
 
   if (errors.length > 0) {
@@ -215,6 +230,8 @@ function main() {
     op.conf = row.conf;
     if (row.absorbsFee !== undefined) op.absorbsFee = row.absorbsFee;
     if (row.ln !== undefined) op.ln = row.ln;
+    if (row.bonusExpiry !== undefined) op.bonusExpiry = row.bonusExpiry;
+    if (row.cashoutCap !== undefined) op.cashoutCap = row.cashoutCap;
     updated++;
 
     if (row.coins) {

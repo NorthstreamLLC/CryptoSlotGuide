@@ -1,10 +1,31 @@
 import Link from "next/link";
 import { siteData, siteCounts } from "@/lib/site-data";
 import { topScore } from "@/lib/derived";
+import { tintFor } from "@/lib/logo";
 import { CasinoIndexTable } from "@/components/home/CasinoIndexTable";
 import { CryptoTicker } from "@/components/home/CryptoTicker";
 import { SlotsPreviewTable } from "@/components/home/SlotsPreviewTable";
-import { logoFor, filterFns } from "@/lib/casino-index";
+import { BrandMark } from "@/components/ui/BrandMark";
+import { filterFns } from "@/lib/casino-index";
+
+/**
+ * A slug in the hero logo wall (wallCols, below) can be a casino, wallet,
+ * exchange or provider — the only four data sources that carry a `mono`
+ * field. Casinos/wallets/exchanges don't carry their own brand tint (see
+ * lib/logo.ts's tintFor for why), so this falls back to that for them;
+ * providers already have a real one.
+ */
+function brandFor(slug: string): { mono: string; tint: string } {
+  const { ops, providers, walletRows, exchangeRows } = siteData;
+  const p = providers.find((x) => x.slug === slug);
+  if (p) return { mono: p.mono, tint: p.tint };
+  const w = walletRows.find((x) => x.slug === slug);
+  if (w) return { mono: w.mono, tint: "#9B8FC4" };
+  const x = exchangeRows.find((x) => x.slug === slug);
+  if (x) return { mono: x.mono, tint: "#5FE3E8" };
+  const o = ops.find((x) => x.slug === slug);
+  return { mono: o?.mono ?? slug.slice(0, 2).toUpperCase(), tint: tintFor(slug) };
+}
 
 /**
  * Ported from the HOME section of CryptoSlotGuide.dc.html (hero through
@@ -223,30 +244,38 @@ export default function HomePage() {
                 const doubled = [...col, ...col];
                 return (
                   <div key={ci} style={{ display: "flex", flexDirection: "column", gap: 12, animation: wallAnims[ci] }}>
-                    {doubled.map((slug, i) => (
-                      <div
-                        key={`${slug}-${i}`}
-                        style={{
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          width: "100%",
-                          aspectRatio: "1.55",
-                          flex: "none",
-                          borderRadius: 14,
-                          background: i % 3 === 0 ? "rgba(255,255,255,.07)" : "rgba(255,255,255,.03)",
-                          border: "1px solid rgba(255,255,255,.07)",
-                        }}
-                      >
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                          src={`/assets/logos/${slug}.png`}
-                          alt=""
-                          loading="lazy"
-                          style={{ width: "88%", height: "66%", objectFit: "contain", opacity: 0.92 }}
-                        />
-                      </div>
-                    ))}
+                    {doubled.map((slug, i) => {
+                      const b = brandFor(slug);
+                      return (
+                        <div
+                          key={`${slug}-${i}`}
+                          style={{
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            width: "100%",
+                            aspectRatio: "1.55",
+                            flex: "none",
+                            borderRadius: 14,
+                            background: i % 3 === 0 ? "rgba(255,255,255,.07)" : "rgba(255,255,255,.03)",
+                            border: "1px solid rgba(255,255,255,.07)",
+                          }}
+                        >
+                          <span
+                            style={{
+                              fontFamily: "var(--font-jetbrains-mono), monospace",
+                              fontSize: 22,
+                              fontWeight: 700,
+                              letterSpacing: ".02em",
+                              color: b.tint,
+                              opacity: 0.92,
+                            }}
+                          >
+                            {b.mono}
+                          </span>
+                        </div>
+                      );
+                    })}
                   </div>
                 );
               })}
@@ -328,9 +357,8 @@ export default function HomePage() {
               style={{ display: "flex", flexDirection: "column", padding: 20, borderRadius: 13, background: "rgba(12,16,19,.66)", border: "1px solid rgba(255,255,255,.06)" }}
             >
               <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
-                <div style={{ width: 54, height: 40, flex: "none", borderRadius: 7, background: "rgba(255,255,255,.04)", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={`/assets/logos/${f.slug}.png`} alt="" loading="lazy" style={{ width: "80%", height: "80%", objectFit: "contain" }} />
+                <div style={{ width: 54, height: 40, flex: "none", borderRadius: 7, overflow: "hidden" }}>
+                  <BrandMark slug={f.slug} mono={f.mono} tint={tintFor(f.slug)} radius={7} fontSize={12} />
                 </div>
                 <div style={{ minWidth: 0 }}>
                   <div style={{ fontSize: 14.5, fontWeight: 600, color: "#E8EDF0", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{f.name}</div>
@@ -391,9 +419,8 @@ export default function HomePage() {
         <div style={{ display: "grid", minWidth: 0, gridTemplateColumns: "repeat(auto-fit,minmax(178px,1fr))", gap: 12 }}>
           {providers.map((p) => (
             <Link key={p.slug} href={`/providers/${p.slug}`} className="hover:!border-accent hover:!bg-[#111619]" style={{ display: "block", padding: 20, borderRadius: 13, background: "rgba(14,18,21,.72)", border: "1px solid rgba(255,255,255,.06)" }}>
-              <div style={{ width: 58, height: 40, marginBottom: 16, display: "flex", alignItems: "center" }}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={logoFor(p.slug)} alt="" style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }} />
+              <div style={{ width: 40, height: 40, marginBottom: 16 }}>
+                <BrandMark slug={p.slug} mono={p.mono} tint={p.tint} fontSize={12} />
               </div>
               <div style={{ fontSize: 14.5, fontWeight: 600, color: "#E8EDF0", marginBottom: 5 }}>{p.name}</div>
               <div style={{ fontSize: 12, lineHeight: 1.5, color: "#7B8A93", marginBottom: 14 }}>{p.note}</div>
@@ -469,9 +496,8 @@ export default function HomePage() {
                     className="hover:!bg-[#141A1E]"
                     style={{ display: "grid", gridTemplateColumns: "56px minmax(90px,1fr) minmax(110px,1.4fr) 52px", alignItems: "center", gap: 12, padding: "12px 14px", background: "#0F1417" }}
                   >
-                    <div style={{ width: 56, height: 30, display: "flex", alignItems: "center" }}>
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={logoFor(it.slug)} alt="" style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }} />
+                    <div style={{ width: 30, height: 30 }}>
+                      <BrandMark slug={it.slug} mono={it.mono} tint={t.kicker === "Wallets" ? "#9B8FC4" : "#5FE3E8"} fontSize={10} />
                     </div>
                     <span style={{ fontSize: 13.5, fontWeight: 600, color: "#E8EDF0", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{it.name}</span>
                     <span style={{ fontSize: 12, color: "#7B8A93", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{it.note}</span>

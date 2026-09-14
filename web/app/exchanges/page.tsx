@@ -1,10 +1,17 @@
 import { VerticalIndexPage } from "@/components/vertical/VerticalIndexPage";
 import { getVerticalPage } from "@/lib/vertical-view";
 import { pageMetadata } from "@/lib/seo";
+import { breadcrumbSchema } from "@/lib/schema";
+import { JsonLd } from "@/components/seo/JsonLd";
 
 const vp = getVerticalPage("exchanges");
 export const metadata = pageMetadata(vp.title, vp.sub, "/exchanges");
 
 export default function Page() {
-  return <VerticalIndexPage kind="exchanges" />;
+  return (
+    <>
+      <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: vp.title, path: "/exchanges" }])} />
+      <VerticalIndexPage kind="exchanges" />
+    </>
+  );
 }

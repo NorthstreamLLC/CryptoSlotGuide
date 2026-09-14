@@ -4,12 +4,13 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import { siteData } from "@/lib/site-data";
 import { fill } from "@/lib/derived";
+import { tintFor } from "@/lib/logo";
+import { BrandMark } from "@/components/ui/BrandMark";
 import {
   btcStats,
   btcViews,
   filterFns,
   kycStyle,
-  logoFor,
   sortOps,
   type BtcFilterKey,
   type SortDir,
@@ -152,9 +153,8 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
                     <span style={{ padding: "4px 9px", borderRadius: 5, background: "rgba(0,194,204,.12)", border: "1px solid rgba(0,194,204,.3)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".05em", color: "#5FE3E8" }}>#1</span>
                   </div>
                   <div style={{ display: "flex", alignItems: "center", gap: 13, marginBottom: 20 }}>
-                    <div style={{ width: 56, height: 38, flex: "none", display: "flex", alignItems: "center" }}>
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={logoFor(btcTop.slug)} alt="" style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }} />
+                    <div style={{ width: 38, height: 38, flex: "none" }}>
+                      <BrandMark slug={btcTop.slug} mono={btcTop.mono} tint={tintFor(btcTop.slug)} fontSize={13} />
                     </div>
                     <span style={{ fontSize: 20, fontWeight: 700, letterSpacing: "-.025em", color: "#fff" }}>{btcTop.name}</span>
                     <span style={{ marginLeft: "auto", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 26, color: "#fff" }}>{btcTop.score.toFixed(1)}</span>
@@ -347,9 +347,8 @@ function OpRow({ o, pos, coins }: { o: Operator; pos: number; coins: string[] })
     >
       <div style={{ padding: 16, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 13, color: "#5C6A72" }}>{String(pos).padStart(2, "0")}</div>
       <div style={{ padding: "14px 12px 14px 0", display: "flex", alignItems: "center", gap: 10, minWidth: 0 }}>
-        <div style={{ width: 58, height: 26, flex: "none", display: "flex", alignItems: "center" }}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={logoFor(o.slug)} alt="" style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }} />
+        <div style={{ width: 26, height: 26, flex: "none" }}>
+          <BrandMark slug={o.slug} mono={o.mono} tint={tintFor(o.slug)} fontSize={9} />
         </div>
         <Link href={o.hasCustomReview ? "/casinos/roobet" : `/casinos/${o.slug}`} className="hover:!text-accent" style={{ fontSize: 14.5, fontWeight: 600, color: "#E8EDF0", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
           {o.name}

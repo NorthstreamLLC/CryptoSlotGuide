@@ -1,10 +1,11 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { siteData } from "@/lib/site-data";
-import { logoFor } from "@/lib/casino-index";
+import { tintFor } from "@/lib/logo";
 import { pageMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { BrandMark } from "@/components/ui/BrandMark";
 
 /**
  * Ported from the `isHouseGame` block in CryptoSlotGuide.dc.html (search
@@ -104,9 +105,8 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         <div style={{ display: "grid", minWidth: 0, gridTemplateColumns: "repeat(auto-fit,minmax(258px,1fr))", gap: 12, marginBottom: 38 }}>
           {where.map((o) => (
             <Link key={o.slug} href={o.hasCustomReview ? "/casinos/roobet" : `/casinos/${o.slug}`} style={{ display: "flex", alignItems: "center", gap: 12, padding: 18, borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
-              <div style={{ width: 54, height: 26, flex: "none", display: "flex", alignItems: "center" }}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={logoFor(o.slug)} alt="" style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }} />
+              <div style={{ width: 30, height: 26, flex: "none" }}>
+                <BrandMark slug={o.slug} mono={o.mono} tint={tintFor(o.slug)} fontSize={10} />
               </div>
               <div style={{ minWidth: 0, flex: 1 }}>
                 <div style={{ fontSize: 14, fontWeight: 600, color: "#E8EDF0", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{o.name}</div>

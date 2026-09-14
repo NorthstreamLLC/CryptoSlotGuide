@@ -31,6 +31,9 @@ import criteria from "@/data/criteria.json";
 import reviewBasis from "@/data/reviewBasis.json";
 import fieldTestedOperators from "@/data/fieldTestedOperators.json";
 import editoriallyAuditedOperators from "@/data/editoriallyAuditedOperators.json";
+import onChainVolume from "@/data/onChainVolume.json";
+import casinoSpecSheets from "@/data/casinoSpecSheets.json";
+import casinoBonuses from "@/data/casinoBonuses.json";
 
 import type {
   CoinDef,
@@ -44,7 +47,10 @@ import type {
   HouseGame,
   LiveCasino,
   LiveGame,
+  CasinoSpecSheet,
+  CasinoBonusSheet,
   MethodStep,
+  OnChainVolumeEntry,
   Operator,
   PredictionMarkets,
   Provider,
@@ -92,6 +98,12 @@ export const siteData = {
   fieldTestedOperators: fieldTestedOperators as string[],
   /** See lib/field-tested.ts's isEditoriallyAudited(). */
   editoriallyAuditedOperators: editoriallyAuditedOperators as string[],
+  /** See lib/onchain-volume.ts and scripts/import-onchain-volume.mjs. */
+  onChainVolume: onChainVolume as OnChainVolumeEntry[],
+  /** See lib/spec-sheet.ts. */
+  casinoSpecSheets: casinoSpecSheets as CasinoSpecSheet[],
+  /** See lib/casino-bonuses.ts. */
+  casinoBonuses: casinoBonuses as CasinoBonusSheet[],
 };
 
 export const siteCounts = counts(siteData);

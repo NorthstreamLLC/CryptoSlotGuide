@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import type { VerticalKind, VerticalRow } from "@/lib/vertical-view";
 import { getVerticalPage } from "@/lib/vertical-view";
+import { BrandMark } from "@/components/ui/BrandMark";
 
 /**
  * Ported from the `isVertical` block in CryptoSlotGuide.dc.html (search
@@ -82,9 +83,8 @@ export function VerticalIndexPage({ kind, tabIdx = 0 }: { kind: VerticalKind; ta
                 >
                   {a.award}
                 </span>
-                <div style={{ width: 76, height: 32, display: "flex", alignItems: "center", marginBottom: 14 }}>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={a.logo} alt="" style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }} />
+                <div style={{ width: 40, height: 32, display: "flex", alignItems: "center", marginBottom: 14 }}>
+                  <BrandMark slug={a.slug} mono={a.mono} tint={a.accent} radius={7} fontSize={12} />
                 </div>
                 <div style={{ fontSize: 17, fontWeight: 700, letterSpacing: "-.02em", color: "#fff", marginBottom: 9 }}>{a.name}</div>
                 <p style={{ margin: "0 0 18px", fontSize: 12.5, lineHeight: 1.55, color: "#7B8A93", textWrap: "pretty" }}>{a.why}</p>
@@ -229,31 +229,9 @@ function VerticalRowView({ r, pos, hasScore, onNavigate }: { r: VerticalRow; pos
         {String(pos).padStart(2, "0")}
       </div>
       <div role="cell" style={{ padding: "13px 16px", display: "flex", alignItems: "center", gap: 12, minWidth: 0 }}>
-        {r.hasLogo && r.logo ? (
-          <div style={{ width: 56, height: 30, flex: "none", display: "flex", alignItems: "center" }}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={r.logo} alt="" style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }} />
-          </div>
-        ) : (
-          <span
-            style={{
-              width: 30,
-              height: 30,
-              flex: "none",
-              borderRadius: 7,
-              background: r.tint,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontFamily: "var(--font-jetbrains-mono), monospace",
-              fontSize: 9,
-              fontWeight: 700,
-              color: "#0A0D0F",
-            }}
-          >
-            {r.mono}
-          </span>
-        )}
+        <div style={{ width: 30, height: 30, flex: "none" }}>
+          <BrandMark slug={r.slug} mono={r.mono} tint={r.tint} />
+        </div>
         <div style={{ minWidth: 0 }}>
           <Link
             href={r.href}

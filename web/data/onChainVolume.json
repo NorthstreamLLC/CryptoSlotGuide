@@ -1,0 +1,513 @@
+[
+  {
+    "operatorSlug": "1win",
+    "sources": [
+      {
+        "source": "Tanzanite",
+        "metric": "30-day deposit volume",
+        "value": "$119.5M",
+        "note": "+22.9% vs prior 30d",
+        "asOf": "2026-09-10",
+        "sourceUrl": "https://www.tanzanite.xyz/centralized/volume"
+      }
+    ]
+  },
+  {
+    "operatorSlug": "500-casino",
+    "sources": [
+      {
+        "source": "Tanzanite",
+        "metric": "30-day deposit volume",
+        "value": "$25.0M",
+        "note": "+27.3% vs prior 30d",
+        "asOf": "2026-09-10",
+        "sourceUrl": "https://www.tanzanite.xyz/centralized/volume"
+      }
+    ]
+  },
+  {
+    "operatorSlug": "acebet",
+    "sources": [
+      {
+        "source": "Tanzanite",
+        "metric": "30-day deposit volume",
+        "value": "$5.4M",
+        "note": "-1.2% vs prior 30d",
+        "asOf": "2026-09-10",
+        "sourceUrl": "https://www.tanzanite.xyz/centralized/volume"
+      }
+    ]
+  },
+  {
+    "operatorSlug": "bc-game",
+    "sources": [
+      {
+        "source": "Tanzanite",
+        "metric": "30-day deposit volume",
+        "value": "$217.9M",
+        "note": "+60.7% vs prior 30d",
+        "asOf": "2026-09-10",
+        "sourceUrl": "https://www.tanzanite.xyz/centralized/volume"
+      }
+    ]
+  },
+  {
+    "operatorSlug": "betfury",
+    "sources": [
+      {
+        "source": "Tanzanite",
+        "metric": "30-day deposit volume",
+        "value": "$21.1M",
+        "note": "+26.4% vs prior 30d",
+        "asOf": "2026-09-10",
+        "sourceUrl": "https://www.tanzanite.xyz/centralized/volume"
+      }
+    ]
+  },
+  {
+    "operatorSlug": "bluff",
+    "sources": [
+      {
+        "source": "Tanzanite",
+        "metric": "30-day deposit volume",
+        "value": "$23.5K",
+        "note": "-95.0% vs prior 30d",
+        "asOf": "2026-09-10",
+        "sourceUrl": "https://www.tanzanite.xyz/centralized/volume"
+      }
+    ]
+  },
+  {
+    "operatorSlug": "cloudbet",
+    "sources": [
+      {
+        "source": "Tanzanite",
+        "metric": "30-day deposit volume",
+        "value": "$31.7M",
+        "note": "-36.9% vs prior 30d",
+        "asOf": "2026-09-10",
+        "sourceUrl": "https://www.tanzanite.xyz/centralized/volume"
+      }
+    ]
+  },
+  {
+    "operatorSlug": "coincasino",
+    "sources": [
+      {
+        "source": "Tanzanite",
+        "metric": "30-day deposit volume",
+        "value": "$7.2M",
+        "note": "+20.5% vs prior 30d",
+        "asOf": "2026-09-10",
+        "sourceUrl": "https://www.tanzanite.xyz/centralized/volume"
+      }
+    ]
+  },
+  {
+    "operatorSlug": "cybet",
+    "sources": [
+      {
+        "source": "Tanzanite",
+        "metric": "30-day deposit volume",
+        "value": "$439.0K",
+        "note": "-43.9% vs prior 30d",
+        "asOf": "2026-09-10",
+        "sourceUrl": "https://www.tanzanite.xyz/centralized/volume"
+      }
+    ]
+  },
+  {
+    "operatorSlug": "degencity",
+    "sources": [
+      {
+        "source": "Tanzanite",
+        "metric": "30-day deposit volume",
+        "value": "$3.3M",
+        "note": "+18.4% vs prior 30d",
+        "asOf": "2026-09-10",
+        "sourceUrl": "https://www.tanzanite.xyz/centralized/volume"
+      }
+    ]
+  },
+  {
+    "operatorSlug": "dicey",
+    "sources": [
+      {
+        "source": "Tanzanite",
+        "metric": "30-day deposit volume",
+        "value": "$20.4M",
+        "note": "+32.3% vs prior 30d",
+        "asOf": "2026-09-10",
+        "sourceUrl": "https://www.tanzanite.xyz/centralized/volume"
+      }
+    ]
+  },
+  {
+    "operatorSlug": "duel",
+    "sources": [
+      {
+        "source": "Tanzanite",
+        "metric": "30-day deposit volume",
+        "value": "$309.3M",
+        "note": "+24.9% vs prior 30d",
+        "asOf": "2026-09-10",
+        "sourceUrl": "https://www.tanzanite.xyz/centralized/volume"
+      }
+    ]
+  },
+  {
+    "operatorSlug": "duelbits",
+    "sources": [
+      {
+        "source": "Tanzanite",
+        "metric": "30-day deposit volume",
+        "value": "$26.1M",
+        "note": "+21.8% vs prior 30d",
+        "asOf": "2026-09-10",
+        "sourceUrl": "https://www.tanzanite.xyz/centralized/volume"
+      }
+    ]
+  },
+  {
+    "operatorSlug": "flush",
+    "sources": [
+      {
+        "source": "Tanzanite",
+        "metric": "30-day deposit volume",
+        "value": "$71.0K",
+        "note": "-50.8% vs prior 30d",
+        "asOf": "2026-09-10",
+        "sourceUrl": "https://www.tanzanite.xyz/centralized/volume"
+      }
+    ]
+  },
+  {
+    "operatorSlug": "gamba",
+    "sources": [
+      {
+        "source": "Tanzanite",
+        "metric": "30-day deposit volume",
+        "value": "$9.7M",
+        "note": "+1.9% vs prior 30d",
+        "asOf": "2026-09-10",
+        "sourceUrl": "https://www.tanzanite.xyz/centralized/volume"
+      }
+    ]
+  },
+  {
+    "operatorSlug": "gamdom",
+    "sources": [
+      {
+        "source": "Tanzanite",
+        "metric": "30-day deposit volume",
+        "value": "$213.6M",
+        "note": "+14.7% vs prior 30d",
+        "asOf": "2026-09-10",
+        "sourceUrl": "https://www.tanzanite.xyz/centralized/volume"
+      }
+    ]
+  },
+  {
+    "operatorSlug": "goated",
+    "sources": [
+      {
+        "source": "Tanzanite",
+        "metric": "30-day deposit volume",
+        "value": "$3.2M",
+        "note": "+25.6% vs prior 30d",
+        "asOf": "2026-09-10",
+        "sourceUrl": "https://www.tanzanite.xyz/centralized/volume"
+      }
+    ]
+  },
+  {
+    "operatorSlug": "housebets",
+    "sources": [
+      {
+        "source": "Tanzanite",
+        "metric": "30-day deposit volume",
+        "value": "$5.0M",
+        "note": "-17.8% vs prior 30d",
+        "asOf": "2026-09-10",
+        "sourceUrl": "https://www.tanzanite.xyz/centralized/volume"
+      }
+    ]
+  },
+  {
+    "operatorSlug": "jackpotbet",
+    "sources": [
+      {
+        "source": "Tanzanite",
+        "metric": "30-day deposit volume",
+        "value": "$291.7K",
+        "note": "-0.3% vs prior 30d",
+        "asOf": "2026-09-10",
+        "sourceUrl": "https://www.tanzanite.xyz/centralized/volume"
+      }
+    ]
+  },
+  {
+    "operatorSlug": "metawin",
+    "sources": [
+      {
+        "source": "Tanzanite",
+        "metric": "30-day deposit volume",
+        "value": "$21.8M",
+        "note": "-23.6% vs prior 30d",
+        "asOf": "2026-09-10",
+        "sourceUrl": "https://www.tanzanite.xyz/centralized/volume"
+      }
+    ]
+  },
+  {
+    "operatorSlug": "qzino",
+    "sources": [
+      {
+        "source": "Tanzanite",
+        "metric": "30-day deposit volume",
+        "value": "$3.8M",
+        "note": "+25.2% vs prior 30d",
+        "asOf": "2026-09-10",
+        "sourceUrl": "https://www.tanzanite.xyz/centralized/volume"
+      }
+    ]
+  },
+  {
+    "operatorSlug": "rainbet",
+    "sources": [
+      {
+        "source": "Tanzanite",
+        "metric": "30-day deposit volume",
+        "value": "$316.0M",
+        "note": "-10.8% vs prior 30d",
+        "asOf": "2026-09-10",
+        "sourceUrl": "https://www.tanzanite.xyz/centralized/volume"
+      }
+    ]
+  },
+  {
+    "operatorSlug": "razed",
+    "sources": [
+      {
+        "source": "Tanzanite",
+        "metric": "30-day deposit volume",
+        "value": "$23.9M",
+        "note": "-8.8% vs prior 30d",
+        "asOf": "2026-09-10",
+        "sourceUrl": "https://www.tanzanite.xyz/centralized/volume"
+      }
+    ]
+  },
+  {
+    "operatorSlug": "rollbit",
+    "sources": [
+      {
+        "source": "Tanzanite",
+        "metric": "30-day deposit volume",
+        "value": "$1.6M",
+        "note": "-95.9% vs prior 30d",
+        "asOf": "2026-09-10",
+        "sourceUrl": "https://www.tanzanite.xyz/centralized/volume"
+      }
+    ]
+  },
+  {
+    "operatorSlug": "roobet",
+    "sources": [
+      {
+        "source": "FairGambling",
+        "metric": "Deposit volume (reported period)",
+        "value": "$381.2M",
+        "note": "8.5% market share",
+        "asOf": "2026-09-03",
+        "sourceUrl": "https://www.fairgambling.com/roobet"
+      },
+      {
+        "source": "FairGambling",
+        "metric": "Hot wallet balance (all chains)",
+        "value": "$31.4M",
+        "asOf": "2026-09-03",
+        "sourceUrl": "https://www.fairgambling.com/roobet"
+      },
+      {
+        "source": "Tanzanite",
+        "metric": "30-day deposit volume",
+        "value": "$403.9M",
+        "note": "+2.7% vs prior 30d",
+        "asOf": "2026-09-10",
+        "sourceUrl": "https://www.tanzanite.xyz/centralized/volume"
+      }
+    ]
+  },
+  {
+    "operatorSlug": "shock",
+    "sources": [
+      {
+        "source": "Tanzanite",
+        "metric": "30-day deposit volume",
+        "value": "$1.5M",
+        "note": "+4.0% vs prior 30d",
+        "asOf": "2026-09-10",
+        "sourceUrl": "https://www.tanzanite.xyz/centralized/volume"
+      }
+    ]
+  },
+  {
+    "operatorSlug": "shuffle",
+    "sources": [
+      {
+        "source": "Tanzanite",
+        "metric": "30-day deposit volume",
+        "value": "$209.3M",
+        "note": "+8.7% vs prior 30d",
+        "asOf": "2026-09-10",
+        "sourceUrl": "https://www.tanzanite.xyz/centralized/volume"
+      }
+    ]
+  },
+  {
+    "operatorSlug": "solcasino",
+    "sources": [
+      {
+        "source": "Tanzanite",
+        "metric": "30-day deposit volume",
+        "value": "$14.9M",
+        "note": "+1.5% vs prior 30d",
+        "asOf": "2026-09-10",
+        "sourceUrl": "https://www.tanzanite.xyz/centralized/volume"
+      }
+    ]
+  },
+  {
+    "operatorSlug": "spartans",
+    "sources": [
+      {
+        "source": "Tanzanite",
+        "metric": "30-day deposit volume",
+        "value": "$2.7M",
+        "note": "-23.1% vs prior 30d",
+        "asOf": "2026-09-10",
+        "sourceUrl": "https://www.tanzanite.xyz/centralized/volume"
+      }
+    ]
+  },
+  {
+    "operatorSlug": "sportsbet-io",
+    "sources": [
+      {
+        "source": "Tanzanite",
+        "metric": "30-day deposit volume",
+        "value": "$82.9M",
+        "note": "+59.3% vs prior 30d",
+        "asOf": "2026-09-10",
+        "sourceUrl": "https://www.tanzanite.xyz/centralized/volume"
+      }
+    ]
+  },
+  {
+    "operatorSlug": "stake",
+    "sources": [
+      {
+        "source": "FairGambling",
+        "metric": "Deposit volume (reported period)",
+        "value": "$2.2B",
+        "note": "48.4% market share",
+        "asOf": "2026-09-07",
+        "sourceUrl": "https://www.fairgambling.com/stake"
+      },
+      {
+        "source": "FairGambling",
+        "metric": "Hot wallet balance (all chains)",
+        "value": "$137.4M",
+        "asOf": "2026-09-07",
+        "sourceUrl": "https://www.fairgambling.com/stake"
+      },
+      {
+        "source": "Tanzanite",
+        "metric": "30-day deposit volume",
+        "value": "$2.25B",
+        "note": "+13.8% vs prior 30d",
+        "asOf": "2026-09-10",
+        "sourceUrl": "https://www.tanzanite.xyz/centralized/volume"
+      }
+    ]
+  },
+  {
+    "operatorSlug": "thrill",
+    "sources": [
+      {
+        "source": "Tanzanite",
+        "metric": "30-day deposit volume",
+        "value": "$48.2M",
+        "note": "-5.5% vs prior 30d",
+        "asOf": "2026-09-10",
+        "sourceUrl": "https://www.tanzanite.xyz/centralized/volume"
+      }
+    ]
+  },
+  {
+    "operatorSlug": "toshibet",
+    "sources": [
+      {
+        "source": "Tanzanite",
+        "metric": "30-day deposit volume",
+        "value": "$6.7M",
+        "note": "+11.2% vs prior 30d",
+        "asOf": "2026-09-10",
+        "sourceUrl": "https://www.tanzanite.xyz/centralized/volume"
+      }
+    ]
+  },
+  {
+    "operatorSlug": "wager-com",
+    "sources": [
+      {
+        "source": "Tanzanite",
+        "metric": "30-day deposit volume",
+        "value": "$505.1K",
+        "note": "-64.9% vs prior 30d",
+        "asOf": "2026-09-10",
+        "sourceUrl": "https://www.tanzanite.xyz/centralized/volume"
+      }
+    ]
+  },
+  {
+    "operatorSlug": "whale-io",
+    "sources": [
+      {
+        "source": "Tanzanite",
+        "metric": "30-day deposit volume",
+        "value": "$4.6M",
+        "note": "+0.4% vs prior 30d",
+        "asOf": "2026-09-10",
+        "sourceUrl": "https://www.tanzanite.xyz/centralized/volume"
+      }
+    ]
+  },
+  {
+    "operatorSlug": "winna",
+    "sources": [
+      {
+        "source": "Tanzanite",
+        "metric": "30-day deposit volume",
+        "value": "$44.5M",
+        "note": "+20.3% vs prior 30d",
+        "asOf": "2026-09-10",
+        "sourceUrl": "https://www.tanzanite.xyz/centralized/volume"
+      }
+    ]
+  },
+  {
+    "operatorSlug": "yeet",
+    "sources": [
+      {
+        "source": "Tanzanite",
+        "metric": "30-day deposit volume",
+        "value": "$22.3M",
+        "note": "-29.8% vs prior 30d",
+        "asOf": "2026-09-10",
+        "sourceUrl": "https://www.tanzanite.xyz/centralized/volume"
+      }
+    ]
+  }
+]

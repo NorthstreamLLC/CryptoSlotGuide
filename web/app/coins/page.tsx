@@ -1,5 +1,7 @@
 import { CoinsPage } from "@/components/coins/CoinsPage";
 import { pageMetadata } from "@/lib/seo";
+import { breadcrumbSchema } from "@/lib/schema";
+import { JsonLd } from "@/components/seo/JsonLd";
 
 export const metadata = pageMetadata(
   "Deposit and withdraw, coin by coin",
@@ -8,5 +10,10 @@ export const metadata = pageMetadata(
 );
 
 export default function Page() {
-  return <CoinsPage />;
+  return (
+    <>
+      <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Coins", path: "/coins" }])} />
+      <CoinsPage />
+    </>
+  );
 }

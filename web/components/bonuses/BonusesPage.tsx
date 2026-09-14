@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { useState } from "react";
 import { siteData } from "@/lib/site-data";
-import { logoFor } from "@/lib/casino-index";
+import { tintFor } from "@/lib/logo";
+import { BrandMark } from "@/components/ui/BrandMark";
 
 /**
  * Ported from the `isBonuses` block in CryptoSlotGuide.dc.html (search
@@ -43,6 +44,7 @@ export function BonusesPage() {
   const countFor = (f: Filter) => (f === "all" ? ops.length : ops.filter((o) => classify(o.bonus).filter === f).length);
 
   const lowCount = ops.filter((o) => o.wager <= 1).length;
+  const confirmedCount = ops.filter((o) => o.bonusExpiry && o.cashoutCap).length;
 
   return (
     <main>
@@ -57,13 +59,13 @@ export function BonusesPage() {
                 What each offer actually costs you
               </h1>
               <p style={{ margin: 0, maxWidth: "66ch", fontSize: 16.5, lineHeight: 1.65, color: "#93A3AC", textWrap: "pretty" }}>
-                Every live offer on our index, with the turnover it demands per $100 of credit, the cashout cap, and the expiry — transcribed from the operator&apos;s own terms rather than the banner.
+                Every live offer on our index, with the turnover it demands per $100 of credit. Cashout cap and expiry are shown where we&apos;ve confirmed them against the operator&apos;s own terms — not guessed or applied uniformly for the rest.
               </p>
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: 1, borderRadius: 12, overflow: "hidden", border: "1px solid rgba(255,255,255,.08)" }}>
               <StatRow label="Offers tracked" value={String(ops.length)} />
               <StatRow label="At 1× wagering" value={String(lowCount)} color="#5FE3E8" />
-              <StatRow label="Terms read" value="21 Aug" />
+              <StatRow label="Cap & expiry confirmed" value={String(confirmedCount)} color={confirmedCount > 0 ? "#5FE3E8" : undefined} />
             </div>
           </div>
         </div>
@@ -101,20 +103,21 @@ export function BonusesPage() {
             return (
               <div key={o.slug} role="row" style={{ display: "grid", minWidth: 1120, gridTemplateColumns: "minmax(210px,1fr) minmax(220px,1.3fr) 140px 96px 150px 110px 108px", alignItems: "center", borderBottom: "1px solid rgba(255,255,255,.05)" }}>
                 <div role="cell" style={{ padding: "12px 18px", display: "flex", alignItems: "center", gap: 11, minWidth: 0 }}>
-                  <div style={{ width: 54, height: 26, flex: "none", display: "flex", alignItems: "center" }}>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={logoFor(o.slug)} alt="" style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }} />
+                  <div style={{ width: 26, height: 26, flex: "none" }}>
+                    <BrandMark slug={o.slug} mono={o.mono} tint={tintFor(o.slug)} fontSize={9} />
                   </div>
                   <Link href={o.hasCustomReview ? "/casinos/roobet" : `/casinos/${o.slug}`} className="hover:!text-accent" style={{ fontSize: 14, fontWeight: 600, color: "#E8EDF0", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{o.name}</Link>
                 </div>
                 <div role="cell" style={{ padding: 14, fontSize: 13, color: "#B7C4CB", minWidth: 0 }}>
                   <span style={{ display: "block", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{o.bonus}</span>
-                  <span style={{ display: "block", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#5C6A72", marginTop: 3 }}>expires 30 days</span>
+                  <span style={{ display: "block", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: o.bonusExpiry ? "#5C6A72" : "#4E5A62", marginTop: 3, fontStyle: o.bonusExpiry ? "normal" : "italic" }}>
+                    {o.bonusExpiry ?? "expiry not yet confirmed"}
+                  </span>
                 </div>
                 <div role="cell" style={{ padding: 14, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11.5, color: "#8DA0AA" }}>{type}</div>
                 <div role="cell" style={{ padding: 14, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 13, color: "#E8EDF0" }}>{o.wager}×</div>
                 <div role="cell" style={{ padding: 14, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 14, fontWeight: 500, color: costColor }}>{cost}</div>
-                <div role="cell" style={{ padding: 14, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11.5, color: "#B7C4CB" }}>{low ? "Uncapped" : "5× bonus"}</div>
+                <div role="cell" style={{ padding: 14, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11.5, color: o.cashoutCap ? "#B7C4CB" : "#4E5A62" }}>{o.cashoutCap ?? "—"}</div>
                 <div role="cell" style={{ padding: 14 }}>
                   <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".05em", padding: "3px 7px", borderRadius: 4, background: flag.bg, color: flag.color, whiteSpace: "nowrap" }}>{flag.label}</span>
                 </div>

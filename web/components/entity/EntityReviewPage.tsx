@@ -8,6 +8,10 @@ import { reviewTierFor, TIER_LABEL, TIER_TINT } from "@/lib/review-tier";
 import { isEditoriallyAudited } from "@/lib/field-tested";
 import { siteData } from "@/lib/site-data";
 import { scoreTier, SCORE_TIER_LABEL, SCORE_TIER_COLOR } from "@/lib/score-tier";
+import { OnChainActivity } from "./OnChainActivity";
+import { CasinoSpecSheet } from "./CasinoSpecSheet";
+import { CasinoBonuses } from "./CasinoBonuses";
+import { BrandMark } from "@/components/ui/BrandMark";
 
 /** Casino criteria bars use the same 6 names as data/criteria.json — see
  * that file's `sourcing` field. Other entity types have their own
@@ -25,10 +29,19 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
   const back = backLink(e.type);
   const { label: scoreLabel, unit: scoreUnit } = scoreMeta(e.type);
   const take = editorialTake(e.type, e.slug);
+  // What leads the hero now — real hand-written opinion where one exists
+  // (6 entities total, see data/editorial.json), else the same computed
+  // verdict that used to sit in a box below the fold. Either way it's
+  // real content, never a guessed take. Promoting it here — instead of
+  // the old standfirst, which opened every review with the funded-
+  // account caveat — is deliberate: that caveat isn't going away (it's
+  // still in the byline below), it just stops being the first thing a
+  // reader sees before the site's actual opinion.
+  const heroLead = take ?? e.verdict;
   const isCasino = e.type === "casino";
   const tier = reviewTierFor(e.type, e.slug);
   const audited = tier === "pending" && isEditoriallyAudited(e.slug);
-  const isLedgerScored = scoreUnit === "/ 10";
+  const isProofScored = scoreUnit === "/ 10";
 
   return (
     <main style={{ background: "#07090B", color: "#E8EDF0" }}>
@@ -42,31 +55,9 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
           <div style={{ display: "grid", gridTemplateColumns: "1.25fr .75fr", gap: 56, alignItems: "start" }}>
             <div>
               <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 22 }}>
-                {!e.noLogo ? (
-                  <div style={{ width: 96, height: 34, display: "flex", alignItems: "center" }}>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={e.logo} alt="" style={{ maxWidth: "100%", maxHeight: "100%", objectFit: "contain" }} />
-                  </div>
-                ) : (
-                  <span
-                    style={{
-                      width: 38,
-                      height: 38,
-                      flex: "none",
-                      borderRadius: 9,
-                      background: e.tint,
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      fontFamily: "var(--font-jetbrains-mono), monospace",
-                      fontSize: 11,
-                      fontWeight: 700,
-                      color: "#0A0D0F",
-                    }}
-                  >
-                    {e.mono}
-                  </span>
-                )}
+                <div style={{ width: 38, height: 38, flex: "none" }}>
+                  <BrandMark slug={e.slug} mono={e.mono} tint={e.tint} radius={9} />
+                </div>
                 <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".09em", textTransform: "uppercase", color: "#00C2CC" }}>
                   {e.kicker}
                 </span>
@@ -74,7 +65,10 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
               <h1 style={{ margin: "0 0 16px", fontSize: 44, lineHeight: 1.06, letterSpacing: "-.035em", fontWeight: 800, fontStretch: "114%", color: "#fff", textWrap: "balance" }}>
                 {e.headline}
               </h1>
-              <p style={{ margin: "0 0 24px", maxWidth: "60ch", fontSize: 16.5, lineHeight: 1.65, color: "#93A3AC", textWrap: "pretty" }}>{e.standfirst}</p>
+              <div style={{ display: "flex", gap: 16, marginBottom: 24 }}>
+                <div style={{ width: 3, flex: "none", borderRadius: 2, background: "#00C2CC" }} />
+                <p style={{ margin: 0, maxWidth: "60ch", fontSize: 19, lineHeight: 1.55, fontWeight: 600, color: "#E8EDF0", textWrap: "pretty" }}>{heroLead}</p>
+              </div>
               <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 24 }}>
                 {e.tags.map((t) => (
                   <span key={t} style={{ padding: "5px 10px", borderRadius: 5, background: "rgba(255,255,255,.04)", border: "1px solid rgba(255,255,255,.09)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".05em", color: "#A8B6BE" }}>
@@ -112,7 +106,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
                 <div style={{ marginBottom: 22, fontSize: 14.5, lineHeight: 1.6, color: "#8DA0AA", textWrap: "pretty" }}>
                   Markets are not scored as a whole. The ratings below are for this market at the best book we found.
                 </div>
-              ) : isLedgerScored ? (
+              ) : isProofScored ? (
                 <div style={{ display: "flex", alignItems: "baseline", gap: 10, marginBottom: 22, flexWrap: "wrap" }}>
                   <span
                     style={{
@@ -141,32 +135,31 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
                   return (
                     <div key={c.name} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10, padding: "8px 0" }}>
                       <span style={{ fontSize: 12.5, color: "#A8B6BE" }}>{c.name}</span>
-                      <div style={{ display: "flex", alignItems: "center", gap: 6, flex: "none" }}>
+                      <div style={{ display: "flex", alignItems: "center", gap: 8, flex: "none" }}>
                         {sourcing && (
-                          <span
-                            style={{
-                              fontFamily: "var(--font-jetbrains-mono), monospace",
-                              fontSize: 9,
-                              fontWeight: 700,
-                              letterSpacing: ".04em",
-                              textTransform: "uppercase",
-                              padding: "2px 7px",
-                              borderRadius: 4,
-                              color: TIER_TINT[sourcing],
-                              background: `${TIER_TINT[sourcing]}18`,
-                              whiteSpace: "nowrap",
-                            }}
-                          >
-                            {TIER_LABEL[sourcing]}
+                          <span style={{ display: "flex", alignItems: "center", gap: 5 }}>
+                            <span style={{ width: 5, height: 5, borderRadius: "50%", background: TIER_TINT[sourcing], flex: "none" }} />
+                            <span
+                              style={{
+                                fontFamily: "var(--font-jetbrains-mono), monospace",
+                                fontSize: 8.5,
+                                letterSpacing: ".04em",
+                                textTransform: "uppercase",
+                                color: TIER_TINT[sourcing],
+                                whiteSpace: "nowrap",
+                              }}
+                            >
+                              {TIER_LABEL[sourcing]}
+                            </span>
                           </span>
                         )}
                         <span
                           style={{
                             fontFamily: "var(--font-jetbrains-mono), monospace",
-                            fontSize: 10.5,
+                            fontSize: 10,
                             fontWeight: 700,
                             letterSpacing: ".04em",
-                            padding: "2px 8px",
+                            padding: "2px 7px",
                             borderRadius: 4,
                             color: SCORE_TIER_COLOR[ct],
                             background: `${SCORE_TIER_COLOR[ct]}18`,
@@ -180,14 +173,29 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
                   );
                 })}
               </div>
-              <span style={{ display: "block", textAlign: "center", padding: 14, borderRadius: 9, background: "#00C2CC", color: "#04191B", fontSize: 14, fontWeight: 700, marginBottom: 9 }}>
-                {ctaLabel(e.type, e.name)}
-              </span>
+              {e.signupUrl ? (
+                <a
+                  href={e.signupUrl}
+                  target="_blank"
+                  rel="nofollow sponsored noopener"
+                  style={{ display: "block", textAlign: "center", padding: 14, borderRadius: 9, background: "#00C2CC", color: "#04191B", fontSize: 14, fontWeight: 700, marginBottom: 9 }}
+                >
+                  {ctaLabel(e.type, e.name)}
+                </a>
+              ) : (
+                <span style={{ display: "block", textAlign: "center", padding: 14, borderRadius: 9, background: "#00C2CC", color: "#04191B", fontSize: 14, fontWeight: 700, marginBottom: 9 }}>
+                  {ctaLabel(e.type, e.name)}
+                </span>
+              )}
               <Link href={back.href} style={{ display: "block", textAlign: "center", padding: 13, borderRadius: 9, border: "1px solid rgba(255,255,255,.14)", color: "#DCE5E9", fontSize: 13.5, fontWeight: 600 }}>
                 {back.label}
               </Link>
               <div style={{ marginTop: 14, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, lineHeight: 1.5, color: "#4E5A62" }}>
-                {isCasino ? "Affiliate link. 18+. T&Cs apply. Play within your limits." : "Not financial advice. We hold no position in any asset named here."}
+                {isCasino
+                  ? e.signupUrl
+                    ? "Affiliate link. 18+. T&Cs apply. Play within your limits."
+                    : "18+. T&Cs apply. Play within your limits. Sign-up link not yet added for this operator."
+                  : "Not financial advice. We hold no position in any asset named here."}
               </div>
             </div>
           </div>
@@ -195,33 +203,16 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
       </section>
 
       <div style={{ maxWidth: 1180, margin: "0 auto", padding: "56px 40px 80px" }}>
-        <div style={{ padding: 28, borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)", marginBottom: 38 }}>
-          <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 12 }}>
-            Verdict
-          </div>
-          <p style={{ margin: 0, maxWidth: "88ch", fontSize: 18, lineHeight: 1.6, color: "#DCE5E9", textWrap: "pretty" }}>{e.verdict}</p>
-        </div>
-
+        {/* When a hand-written take exists, it's now the hero lead above —
+            this box shows the separate computed verdict so nothing repeats.
+            When there's no take, the verdict IS the hero lead already, so
+            this box is skipped rather than showing the same sentence twice. */}
         {take && (
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "170px 1fr",
-              gap: 28,
-              padding: "26px 28px",
-              borderRadius: 14,
-              background: "linear-gradient(150deg,#0E1417,#0A0E10)",
-              border: "1px solid rgba(0,194,204,.20)",
-              marginBottom: 38,
-            }}
-          >
-            <div>
-              <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 8 }}>
-                Our take
-              </div>
-              <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, lineHeight: 1.5, color: "#4E5A62" }}>Written, not measured</div>
+          <div style={{ padding: 28, borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)", marginBottom: 38 }}>
+            <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 12 }}>
+              Verdict
             </div>
-            <p style={{ margin: 0, maxWidth: "80ch", fontSize: 16.5, lineHeight: 1.7, color: "#C4D0D6", textWrap: "pretty" }}>{take}</p>
+            <p style={{ margin: 0, maxWidth: "88ch", fontSize: 18, lineHeight: 1.6, color: "#DCE5E9", textWrap: "pretty" }}>{e.verdict}</p>
           </div>
         )}
 
@@ -251,6 +242,10 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
             </div>
           ))}
         </div>
+
+        {isCasino && <CasinoBonuses slug={e.slug} />}
+        {isCasino && <OnChainActivity slug={e.slug} />}
+        {isCasino && <CasinoSpecSheet slug={e.slug} />}
 
         <div style={{ padding: "20px 24px", borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)", marginBottom: 38 }}>
           <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 13 }}>

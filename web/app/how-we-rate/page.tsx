@@ -3,6 +3,18 @@ import { TIER_LABEL, TIER_DESC, TIER_TINT } from "@/lib/review-tier";
 import { SCORE_BRAND } from "@/lib/score-tier";
 import { pageMetadata } from "@/lib/seo";
 
+/**
+ * A fourth kind of backing, alongside the three ReviewTier values in
+ * lib/review-tier.ts — deliberately not added to that type, because it
+ * never applies to a criteria.json row the way the other three do. It
+ * backs supplementary figures (on-chain deposit volume, hot-wallet
+ * balance — see lib/onchain-volume.ts) that this site has no
+ * infrastructure to measure itself yet, so it cites a named platform
+ * directly instead of presenting a number it can't back. Kept local to
+ * this page rather than exported, since nothing else needs to switch on it.
+ */
+const ON_CHAIN_TINT = "#6BC7FF";
+
 export const metadata = pageMetadata(
   `How the ${SCORE_BRAND} works`,
   "One weighted model for crypto casinos, built from six criteria with published weights. Everything else is reviewed against its own checklist, field-tested or editorially assessed — every review says which.",
@@ -26,7 +38,13 @@ const REVIEW_BASIS_TIER: Record<string, "field-tested" | "editorial"> = {
  * a server component.
  */
 export default function Page() {
-  const { methodSteps, criteria, reviewBasis } = siteData;
+  const { methodSteps, criteria, reviewBasis, ops, fieldTestedOperators, editoriallyAuditedOperators, casinoSpecSheets, onChainVolume } = siteData;
+  const coverage = [
+    { label: "Field-tested casinos", value: fieldTestedOperators.length, total: ops.length },
+    { label: "Editorially audited", value: editoriallyAuditedOperators.length, total: ops.length },
+    { label: "Full spec sheet on file", value: casinoSpecSheets.length, total: ops.length },
+    { label: "On-chain tracked", value: onChainVolume.length, total: ops.length },
+  ];
 
   return (
     <main>
@@ -47,10 +65,26 @@ export default function Page() {
         </div>
       </section>
 
+      <section style={{ maxWidth: 1180, margin: "0 auto", padding: "36px 40px 0" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 1, background: "rgba(255,255,255,.07)", border: "1px solid rgba(255,255,255,.07)", borderRadius: 14, overflow: "hidden" }}>
+          {coverage.map((c) => (
+            <div key={c.label} style={{ padding: "18px 20px", background: "#0C1013" }}>
+              <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 22, fontWeight: 700, color: c.value > 0 ? "#5FE3E8" : "#5C6A72", letterSpacing: "-.02em" }}>
+                {c.value} <span style={{ fontSize: 14, color: "#5C6A72", fontWeight: 500 }}>/ {c.total}</span>
+              </div>
+              <div style={{ fontSize: 11.5, color: "#7B8A93", marginTop: 4 }}>{c.label}</div>
+            </div>
+          ))}
+        </div>
+        <p style={{ margin: "10px 0 0", fontSize: 12, color: "#5C6A72" }}>
+          Real coverage across the index, not a completion rate we&apos;re hiding — most of this site is still &quot;published, pending our own check.&quot;
+        </p>
+      </section>
+
       <section style={{ maxWidth: 1180, margin: "0 auto", padding: "44px 40px 0" }}>
-        <h2 style={{ margin: "0 0 8px", fontSize: 28, letterSpacing: "-.028em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Three ways we back a figure</h2>
+        <h2 style={{ margin: "0 0 8px", fontSize: 28, letterSpacing: "-.028em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>How we back a figure</h2>
         <p style={{ margin: "0 0 20px", maxWidth: "80ch", fontSize: 15, lineHeight: 1.65, color: "#8DA0AA", textWrap: "pretty" }}>
-          Not every figure gets the same kind of check, and we&apos;d rather say so than blur it. This isn&apos;t a split by category — a single casino review draws on all three, criterion by criterion (see the weights below). Every number traces back to whichever one applies.
+          Not every figure gets the same kind of check, and we&apos;d rather say so than blur it. The first three apply criterion by criterion within a single casino review (see the weights below); the fourth backs a small set of figures — on-chain deposit flow, hot-wallet balances — that need infrastructure this site doesn&apos;t have yet. Every number traces back to whichever one applies.
         </p>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))", gap: 1, background: "rgba(255,255,255,.07)", border: "1px solid rgba(255,255,255,.07)", borderRadius: 14, overflow: "hidden" }}>
           {(["field-tested", "community-reported", "editorial"] as const).map((tier) => (
@@ -76,6 +110,29 @@ export default function Page() {
               <p style={{ margin: "0 0 10px", fontSize: 14, lineHeight: 1.65, color: "#93A3AC", textWrap: "pretty" }}>{TIER_DESC[tier]}</p>
             </div>
           ))}
+          <div style={{ padding: 24, background: "#0C1013" }}>
+            <span
+              style={{
+                display: "inline-block",
+                marginBottom: 12,
+                padding: "4px 9px",
+                borderRadius: 4,
+                border: `1px solid ${ON_CHAIN_TINT}55`,
+                background: `${ON_CHAIN_TINT}18`,
+                fontFamily: "var(--font-jetbrains-mono), monospace",
+                fontSize: 10,
+                fontWeight: 700,
+                letterSpacing: ".06em",
+                textTransform: "uppercase",
+                color: ON_CHAIN_TINT,
+              }}
+            >
+              On-chain cited
+            </span>
+            <p style={{ margin: "0 0 10px", fontSize: 14, lineHeight: 1.65, color: "#93A3AC", textWrap: "pretty" }}>
+              Deposit flow and hot-wallet balances are public on a blockchain, but tracing them to a specific operator needs wallet-clustering infrastructure we don&apos;t have yet. Where we cite one of these figures, the source and date are named right on the row — not folded into our own claim.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -116,6 +173,23 @@ export default function Page() {
               </span>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section style={{ maxWidth: 1180, margin: "0 auto", padding: "44px 40px 0" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 8 }}>
+          <span style={{ padding: "5px 11px", borderRadius: 100, border: "1px solid rgba(0,194,204,.32)", background: "rgba(0,194,204,.09)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".07em", textTransform: "uppercase", color: "#00C2CC" }}>
+            Crypto casinos only
+          </span>
+        </div>
+        <h2 style={{ margin: "0 0 8px", fontSize: 28, letterSpacing: "-.028em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>The full spec sheet</h2>
+        <p style={{ margin: "0 0 20px", maxWidth: "74ch", fontSize: 15, lineHeight: 1.65, color: "#8DA0AA", textWrap: "pretty" }}>
+          Below the six weighted criteria, most casino reviews also carry a grouped fact table — coins accepted, withdrawal fees, licence and company registration, geo-blocking — that doesn&apos;t feed the score at all. Every fact on it is either drawn from data already established elsewhere on this site, or checked by us directly against the operator&apos;s own page, with the exact source and date shown per row. It only ever grows by real, individual research — an operator with no facts checked yet simply has no spec sheet, not a filled-in placeholder.
+        </p>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
+          <div style={{ padding: "10px 16px", borderRadius: 10, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)", fontSize: 13, color: "#8DA0AA" }}>
+            <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", color: "#5FE3E8", fontWeight: 700 }}>{casinoSpecSheets.length}</span> of {ops.length} casinos have one so far
+          </div>
         </div>
       </section>
 

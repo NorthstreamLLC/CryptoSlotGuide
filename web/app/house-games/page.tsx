@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { siteData } from "@/lib/site-data";
 import { pageMetadata } from "@/lib/seo";
+import { breadcrumbSchema } from "@/lib/schema";
+import { JsonLd } from "@/components/seo/JsonLd";
 
 /**
  * Ported from the `isHouse` block in CryptoSlotGuide.dc.html (search
@@ -17,6 +19,7 @@ export default function Page() {
 
   return (
     <main>
+      <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "House games", path: "/house-games" }])} />
       <section style={{ borderBottom: "1px solid rgba(255,255,255,.07)", background: "radial-gradient(110% 100% at 22% 0%, rgba(0,194,204,.09), transparent 58%), #090C0F" }}>
         <div style={{ maxWidth: 1400, margin: "0 auto", padding: "48px 40px 38px" }}>
           <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 16 }}>

@@ -1,6 +1,8 @@
 import { LiveCasinoPage } from "@/components/live-casino/LiveCasinoPage";
 import type { LiveGame } from "@/lib/types";
 import { pageMetadata } from "@/lib/seo";
+import { breadcrumbSchema } from "@/lib/schema";
+import { JsonLd } from "@/components/seo/JsonLd";
 
 export const metadata = pageMetadata(
   "Live casino: table limits, dealer latency, studio quality",
@@ -10,5 +12,10 @@ export const metadata = pageMetadata(
 
 export default async function Page({ searchParams }: { searchParams: Promise<{ type?: string }> }) {
   const { type } = await searchParams;
-  return <LiveCasinoPage initialType={type as LiveGame["type"] | undefined} />;
+  return (
+    <>
+      <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Live casino", path: "/live-casino" }])} />
+      <LiveCasinoPage initialType={type as LiveGame["type"] | undefined} />
+    </>
+  );
 }

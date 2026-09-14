@@ -14,6 +14,7 @@ import { crit, flag } from "./scoring";
 import { casinoCons, fmtMins, indexMedianPayout, isStaleReading } from "./derived";
 import { isFieldTestedOperator, isEditoriallyAudited } from "./field-tested";
 import { SCORE_BRAND } from "./score-tier";
+import { tintFor } from "./logo";
 import type { ScoreBar, Flag } from "./types";
 
 export type EntityType = "casino" | "slot" | "wallet" | "exchange" | "provider" | "market";
@@ -36,10 +37,8 @@ export interface EntityView {
   kicker: string;
   name: string;
   slug: string;
-  logo: string;
-  mono?: string;
-  tint?: string;
-  noLogo?: boolean;
+  mono: string;
+  tint: string;
   score: string;
   headline: string;
   standfirst: string;
@@ -61,6 +60,8 @@ export interface EntityView {
   pros: string[];
   cons: string[];
   faqs: { q: string; a: string }[];
+  /** Where the sidebar CTA points — only set for casinos with a real Operator.signupUrl on file. Absent means the CTA renders as plain, non-link text rather than a fabricated affiliate link. */
+  signupUrl?: string;
   /**
    * Overrides EntityReviewPage's default tier-based "What we measured"
    * subhead. Needed for slots specifically: the page mixes editorially-
@@ -85,10 +86,6 @@ function coinTint(t: string): string {
   return COIN_TINTS[t] ?? "#8DA0AA";
 }
 
-function logoFor(slug: string): string {
-  return slug === "roobet" ? "/assets/roobet-logo.png" : `/assets/logos/${slug}.png`;
-}
-
 function spec(k: string, v: string, state: "ok" | "watch" | "bad"): SpecRow {
   return { k, v, ...flag(state) };
 }
@@ -106,7 +103,8 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       kicker: "Exchange review",
       name: x.name,
       slug: x.slug,
-      logo: logoFor(x.slug),
+      mono: x.mono,
+      tint: "#5FE3E8",
       score: s.toFixed(1),
       headline: `${x.name} review 2026: ${x.m1} spread, ${x.m2.split(",")[0].trim()} rails, fiat out in 4h 10m`,
       standfirst: checked
@@ -172,7 +170,8 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       kicker: "Wallet review",
       name: w.name,
       slug: w.slug,
-      logo: logoFor(w.slug),
+      mono: w.mono,
+      tint: "#9B8FC4",
       score: s.toFixed(1),
       headline: `${w.name} review 2026: ${w.hed || w.note}`,
       standfirst: checked
@@ -251,10 +250,8 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       kicker: "Slot review",
       name: s.name,
       slug: s.slug,
-      logo: "",
       mono: s.mono,
       tint: s.tint,
-      noLogo: true,
       score: s.rtp.toFixed(2),
       headline: `${s.name} review: ${s.rtp.toFixed(2)}% at best, ${s.vol} volatility, ${s.maxWin} ceiling`,
       standfirst: anyChecked
@@ -339,7 +336,8 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       kicker: "Provider profile",
       name: p.name,
       slug: p.slug,
-      logo: logoFor(p.slug),
+      mono: p.mono,
+      tint: p.tint,
       score: (p.score || 8.8).toFixed(1),
       headline: `${p.name} profile 2026: ${p.titles} titles, ${p.rtp} RTP, on ${p.casinos} casinos`,
       standfirst: `${p.note} We read the paytable of every title on our index in each casino's own build, so this profile reflects what players actually load rather than what the studio publishes.`,
@@ -408,10 +406,8 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       kicker: esport ? "Esports market" : "Sports market",
       name: m.name,
       slug: toSlug(m.name),
-      logo: "",
       mono: m.mono,
       tint: m.tint,
-      noLogo: true,
       score: "",
       headline: `${m.name} betting: best price at ${m.best}, ${esport ? `${m.m2} live markets` : `${m.m2} margin`}`,
       standfirst: `We priced the same ${m.name} selections across every crypto book on our index at the same times of day, then counted the markets each one actually posts. ${m.note}.`,
@@ -480,7 +476,8 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
     kicker: "Casino review",
     name: o.name,
     slug: o.slug,
-    logo: logoFor(o.slug),
+    mono: o.mono,
+    tint: tintFor(o.slug),
     score: o.score.toFixed(1),
     headline: `${o.name} review 2026: ${o.payoutLabel} median payout, ${o.wager}× wagering, ${o.kyc === "none" ? "no" : o.kyc} KYC`,
     standfirst: checked
@@ -543,6 +540,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       { q: `What does ${o.wager}× wagering actually mean?`, a: lowWager ? "Credit must be turned over once before withdrawal. On a $100 credit that is $100 of wagering." : `Credit must be turned over ${o.wager} times before withdrawal. On a $100 credit that is $${(o.wager * 100).toLocaleString()} of wagering.` },
       { q: "How fast are withdrawals really?", a: checked ? `Median ${o.payoutLabel} across our timed withdrawals. Nothing was cancelled or clawed back.` : `${o.payoutLabel} is the operator's own published median. We haven't timed withdrawals here ourselves yet — see how we rate for what's field-tested so far.` },
     ],
+    signupUrl: o.signupUrl,
   };
 }
 

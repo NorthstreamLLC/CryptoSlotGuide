@@ -1,5 +1,5 @@
 /**
- * "Ledger score" — the site's branded name for the weighted 1-10
+ * "Proof score" — the site's branded name for the weighted 1-10
  * scoring model (casino/wallet/exchange/provider entity types; see
  * lib/scoring.ts's crit()). Not part of the original prototype, which
  * just called it "score" — added so the model reads as this site's
@@ -10,11 +10,14 @@
  * detail (and is still what index/vertical tables sort on) — this is
  * a display layer over the same data, not a new scoring model.
  *
- * Double meaning is deliberate for a crypto site: a ledger is both
- * "the record we keep" (this whole site's premise) and the literal
- * data structure behind every coin it covers.
+ * Was "Ledger score" — renamed after noticing the wallet vertical
+ * covers a real operator called Ledger (/wallets/ledger), which read
+ * as a brand collision on that page. "Proof score" keeps the same
+ * idea (this is the record we keep) but ties directly to the
+ * three-tier sourcing model instead: field-tested / community-reported
+ * / editorial evidence is literally the "proof" behind each number.
  */
-export const SCORE_BRAND = "Ledger score";
+export const SCORE_BRAND = "Proof score";
 
 export type ScoreTier = "excellent" | "strong" | "good" | "fair" | "weak";
 

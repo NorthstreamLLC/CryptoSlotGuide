@@ -1,0 +1,105 @@
+[
+  {
+    "operatorSlug": "roobet",
+    "groups": [
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": ["BTC", "ETH", "USDT", "LTC", "SOL", "DOGE", "TRX", "XRP"],
+            "sourcing": "site-data"
+          }
+        ]
+      },
+      {
+        "title": "Crypto & custody",
+        "facts": [
+          {
+            "label": "Withdrawal fees",
+            "value": "No withdrawal fee — network fee only, varies by coin",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.roobet.com/en/articles/4797515-does-roobet-charge-withdrawal-fees",
+            "asOf": "2026-09-10"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Licence",
+            "value": "Curaçao, licence OGL/2024/687/0427",
+            "sourcing": "editorial",
+            "sourceUrl": "https://roobet.com/kyc-aml-policy",
+            "asOf": "2026-09-10"
+          },
+          {
+            "label": "Company",
+            "value": "Raw Entertainment B.V., Reg No 157205",
+            "sourcing": "editorial",
+            "sourceUrl": "https://roobet.com/kyc-aml-policy",
+            "asOf": "2026-09-10"
+          },
+          {
+            "label": "Geo-blocking",
+            "value": "Confirmed active — blocked a restricted-region test request",
+            "flag": { "label": "Enforced", "color": "#7BE0B8", "background": "rgba(123,224,184,.12)" },
+            "sourcing": "editorial",
+            "sourceUrl": "https://roobet.com/fair",
+            "asOf": "2026-09-10"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "operatorSlug": "stake",
+    "groups": [
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": ["BTC", "ETH", "USDT", "LTC", "SOL", "DOGE", "XRP", "TRX"],
+            "sourcing": "site-data"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "operatorSlug": "bc-game",
+    "groups": [
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": ["BTC", "ETH", "USDT", "LTC", "SOL", "DOGE", "XRP", "TRX"],
+            "sourcing": "site-data"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Licence",
+            "value": "Anjouan, Union of Comoros, licence ALSI-202410011-FI1",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bc.game/licenses",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "Company",
+            "value": "Twocent Technology Limited, Belize, Reg No 000041939",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bc.game/licenses",
+            "asOf": "2026-09-14"
+          }
+        ]
+      }
+    ]
+  }
+]

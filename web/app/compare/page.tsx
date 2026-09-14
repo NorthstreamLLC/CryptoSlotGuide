@@ -1,5 +1,7 @@
 import { ComparePage } from "@/components/compare/ComparePage";
 import { pageMetadata } from "@/lib/seo";
+import { breadcrumbSchema } from "@/lib/schema";
+import { JsonLd } from "@/components/seo/JsonLd";
 
 export const metadata = pageMetadata(
   "Compare operators side by side",
@@ -8,5 +10,10 @@ export const metadata = pageMetadata(
 );
 
 export default function Page() {
-  return <ComparePage />;
+  return (
+    <>
+      <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Compare", path: "/compare" }])} />
+      <ComparePage />
+    </>
+  );
 }
