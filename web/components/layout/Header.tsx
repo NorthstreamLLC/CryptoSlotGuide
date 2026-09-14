@@ -14,6 +14,8 @@ export function Header({ counts }: { counts: SiteCounts }) {
   const navTabs = buildNavTabs(counts);
   const [menu, setMenu] = useState<string | null>(null);
   const [rail, setRail] = useState(0);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileTab, setMobileTab] = useState<string | null>(null);
 
   const activeTab: NavTab | undefined = navTabs.find((t) => t.key === menu);
   const activeSection = activeTab?.sections[Math.min(rail, activeTab.sections.length - 1)];
@@ -65,6 +67,7 @@ export function Header({ counts }: { counts: SiteCounts }) {
         </Link>
 
         <nav
+          className="csg-desktop-only"
           style={{
             display: "flex",
             alignItems: "center",
@@ -114,6 +117,7 @@ export function Header({ counts }: { counts: SiteCounts }) {
         <div style={{ display: "flex", alignItems: "center", gap: 12, flex: "none", marginLeft: "auto" }}>
           <Link
             href="/search"
+            aria-label="Search"
             style={{
               display: "flex",
               alignItems: "center",
@@ -144,11 +148,85 @@ export function Header({ counts }: { counts: SiteCounts }) {
           >
             18+
           </span>
+          <button
+            type="button"
+            className="csg-mobile-only"
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+            aria-expanded={mobileOpen}
+            onClick={() => setMobileOpen((o) => !o)}
+            style={{
+              alignItems: "center",
+              justifyContent: "center",
+              width: 38,
+              height: 38,
+              border: "1px solid rgba(255,255,255,.12)",
+              borderRadius: 8,
+              background: mobileOpen ? "rgba(255,255,255,.06)" : "transparent",
+              color: "#E8EDF0",
+              fontSize: 17,
+              cursor: "pointer",
+            }}
+          >
+            {mobileOpen ? "✕" : "☰"}
+          </button>
         </div>
       </div>
 
+      {mobileOpen && (
+        <nav
+          className="csg-mobile-only"
+          aria-label="Site"
+          style={{
+            flexDirection: "column",
+            maxHeight: "calc(100vh - 110px)",
+            overflowY: "auto",
+            padding: "6px 16px 18px",
+            background: "#0B0F12",
+            borderTop: "1px solid rgba(255,255,255,.07)",
+          }}
+        >
+          {navTabs.map((tab) => {
+            const open = mobileTab === tab.key;
+            return (
+              <div key={tab.key} style={{ borderBottom: "1px solid rgba(255,255,255,.06)" }}>
+                <button
+                  type="button"
+                  aria-expanded={open}
+                  onClick={() => setMobileTab(open ? null : tab.key)}
+                  style={{ display: "flex", alignItems: "center", width: "100%", padding: "14px 2px", border: 0, background: "transparent", color: "#E8EDF0", fontSize: 15, fontWeight: 600, textAlign: "left", cursor: "pointer" }}
+                >
+                  {tab.label}
+                  <span style={{ marginLeft: "auto", fontSize: 10, color: "#5C6A72", transform: open ? "rotate(180deg)" : undefined }}>▾</span>
+                </button>
+                {open && (
+                  <div style={{ display: "flex", flexDirection: "column", paddingBottom: 10 }}>
+                    {tab.sections.map((section, i) => (
+                      <Link
+                        key={section.label + i}
+                        href={section.href}
+                        onClick={() => setMobileOpen(false)}
+                        style={{ display: "flex", alignItems: "center", gap: 11, padding: "9px 2px", color: "#C3CFD5", fontSize: 14, fontWeight: 500 }}
+                      >
+                        <span style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 26, height: 26, flex: "none", borderRadius: 7, background: "rgba(255,255,255,.04)", border: "1px solid rgba(255,255,255,.07)", fontSize: 13 }}>
+                          {section.mono}
+                        </span>
+                        {section.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+          <Link href="/search" onClick={() => setMobileOpen(false)} style={{ padding: "14px 2px 0", fontSize: 13.5, fontWeight: 600, color: "#00C2CC" }}>
+            Search all {counts.total} listings →
+          </Link>
+        </nav>
+      )}
+
       {activeTab && activeSection && (
         <div
+          className="csg-desktop-only"
           style={{
             position: "absolute",
             left: 0,
@@ -242,7 +320,7 @@ export function Header({ counts }: { counts: SiteCounts }) {
                   className="hover:!text-[#5FE3E8]"
                   style={{ padding: "0 11px", fontSize: 12.5, fontWeight: 600, color: "#00C2CC" }}
                 >
-                  See all {counts.total} reviews →
+                  See all {counts.total} listings →
                 </Link>
               </div>
             </div>
@@ -311,7 +389,9 @@ export function Header({ counts }: { counts: SiteCounts }) {
           alignItems: "center",
           gap: 8,
           justifyContent: "center",
-          padding: "7px 40px",
+          flexWrap: "wrap",
+          textAlign: "center",
+          padding: "7px 16px",
           background: "rgba(0,194,204,.06)",
           borderTop: "1px solid rgba(0,194,204,.12)",
           fontFamily: "var(--font-jetbrains-mono), monospace",

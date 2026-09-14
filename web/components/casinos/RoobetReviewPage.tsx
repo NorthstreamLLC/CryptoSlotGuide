@@ -303,7 +303,7 @@ export function RoobetReviewPage() {
 
           <SectionHeading title="Head to head" sub="Against Stake and BC.Game. Listed figures, not yet timed by us. Winner marked per row." />
           <div style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 13, overflow: "hidden", background: "#0C1013", marginBottom: 38 }}>
-            <div style={{ display: "grid", gridTemplateColumns: "1.25fr 1fr 1fr 1fr", background: "#101519", borderBottom: "1px solid rgba(255,255,255,.07)" }}>
+            <div data-keep-grid style={{ display: "grid", gridTemplateColumns: "1.25fr 1fr 1fr 1fr", background: "#101519", borderBottom: "1px solid rgba(255,255,255,.07)" }}>
               <div style={{ padding: "15px 18px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".07em", textTransform: "uppercase", color: "#5C6A72" }}>Criterion</div>
               <div style={{ padding: "15px 18px", fontSize: 13.5, fontWeight: 700, color: "#E8EDF0", borderLeft: "1px solid rgba(255,255,255,.06)", background: "rgba(255,204,0,.07)" }}>Roobet</div>
               <div style={{ padding: "15px 18px", fontSize: 13.5, fontWeight: 700, color: "#E8EDF0", borderLeft: "1px solid rgba(255,255,255,.06)" }}>Stake</div>
@@ -312,7 +312,7 @@ export function RoobetReviewPage() {
             {h2hRaw.map(([k, a, b, c, w]) => {
               const A = win(0, w), B = win(1, w), C = win(2, w);
               return (
-                <div key={k} style={{ display: "grid", gridTemplateColumns: "1.25fr 1fr 1fr 1fr", borderBottom: "1px solid rgba(255,255,255,.05)" }}>
+                <div key={k} data-keep-grid style={{ display: "grid", gridTemplateColumns: "1.25fr 1fr 1fr 1fr", borderBottom: "1px solid rgba(255,255,255,.05)" }}>
                   <div style={{ padding: "15px 18px", fontSize: 13.5, fontWeight: 600, color: "#B7C4CB" }}>{k}</div>
                   <div style={{ padding: "15px 18px", borderLeft: "1px solid rgba(255,255,255,.05)", background: w === 0 ? "rgba(255,204,0,.08)" : A.bg, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12.5, color: A.color, fontWeight: A.weight }}>{a} {A.mark}</div>
                   <div style={{ padding: "15px 18px", borderLeft: "1px solid rgba(255,255,255,.05)", background: B.bg, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12.5, color: B.color, fontWeight: B.weight }}>{b} {B.mark}</div>

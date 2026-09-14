@@ -56,7 +56,7 @@ function BonusCard({ bonus, name, signupUrl }: { bonus: CasinoBonus; name: strin
       <div style={{ fontSize: 12.5, lineHeight: 1.5, color: "#7B8A93", marginBottom: bonus.stats ? 20 : 16 }}>{bonus.subCopy}</div>
 
       {bonus.stats && (
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, marginBottom: 20 }}>
+        <div data-keep-grid style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, marginBottom: 20 }}>
           {bonus.stats.map((s) => (
             <div key={s.label} style={{ padding: "12px 14px", background: "#101519", borderRadius: 9 }}>
               <div style={{ fontSize: 10, letterSpacing: ".06em", textTransform: "uppercase", color: "#5C6A72", marginBottom: 5 }}>{s.label}</div>

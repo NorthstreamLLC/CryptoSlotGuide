@@ -142,6 +142,78 @@ p {
 }
 
 /*
+ * Phone and small-tablet layout. Pages are ported with inline styles
+ * (which can't carry breakpoints), so this collapses them from outside:
+ * multi-column grids stack to one column, page gutters shrink to 16px,
+ * and oversized headings scale down.
+ *
+ * Opt-outs:
+ *  - Wide data tables set a min-width of 700px+ on each row and sit in an
+ *    overflow-x:auto wrapper; those rows (and anything inside them) keep
+ *    their grid and scroll sideways instead of stacking.
+ *  - Small grids that read fine at phone width (stat tiles, compact
+ *    comparison rows) carry data-keep-grid.
+ *
+ * React serializes SSR styles without a space after the colon but
+ * client-rendered updates with one, so selectors match both forms.
+ */
+.csg-mobile-only {
+  display: none;
+}
+
+@media (max-width: 820px) {
+  .csg-desktop-only {
+    display: none !important;
+  }
+  .csg-mobile-only {
+    display: flex;
+  }
+  /* Search keeps its icon on phones; the word "search" is desktop chrome. */
+  header a[aria-label="Search"] span:last-child {
+    display: none;
+  }
+
+  [style*="max-width:1400px"], [style*="max-width: 1400px"],
+  [style*="max-width:1180px"], [style*="max-width: 1180px"],
+  [style*="max-width:900px"], [style*="max-width: 900px"],
+  [style*="max-width:820px"], [style*="max-width: 820px"] {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  [style*="grid-template-columns"]:not([data-keep-grid]):not([style*="min-width:1"]):not([style*="min-width: 1"]):not([style*="min-width:9"]):not([style*="min-width: 9"]):not([style*="min-width:7"]):not([style*="min-width: 7"]):not([style*="min-width:1"] *):not([style*="min-width: 1"] *):not([style*="min-width:9"] *):not([style*="min-width: 9"] *):not([style*="min-width:7"] *):not([style*="min-width: 7"] *) {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+  [style*="grid-column"]:not([data-keep-grid] > *) {
+    grid-column: auto !important;
+  }
+
+  [style*="gap:56px"], [style*="gap: 56px"],
+  [style*="gap:64px"], [style*="gap: 64px"],
+  [style*="gap:48px"], [style*="gap: 48px"] {
+    gap: 28px !important;
+  }
+
+  p[style*="font-size:19px"], p[style*="font-size: 19px"],
+  p[style*="font-size:20px"], p[style*="font-size: 20px"] {
+    font-size: 16.5px !important;
+  }
+
+  h1[style*="font-size"] {
+    font-size: clamp(28px, 8.2vw, 40px) !important;
+    line-height: 1.1 !important;
+  }
+  h2[style*="font-size:28px"], h2[style*="font-size: 28px"],
+  h2[style*="font-size:30px"], h2[style*="font-size: 30px"],
+  h2[style*="font-size:32px"], h2[style*="font-size: 32px"],
+  h2[style*="font-size:34px"], h2[style*="font-size: 34px"],
+  h2[style*="font-size:36px"], h2[style*="font-size: 36px"],
+  h2[style*="font-size:40px"], h2[style*="font-size: 40px"] {
+    font-size: 23px !important;
+  }
+}
+
+/*
  * Motion — ported verbatim from CryptoSlotGuide.dc.html's <style> block.
  * Exact keyframe values matter here (translate3d offsets, timing) — don't
  * re-derive these from the README's prose description.

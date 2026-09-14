@@ -128,7 +128,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       standfirst: checked
         ? `We sampled ${x.name}'s order book and moved real money out through the fiat rails it offers. ${x.note}.`
         : `${x.name}'s spread, fiat rails and limits below are listed figures, not yet sampled or confirmed on our own account. ${x.note}.`,
-      tags: checked ? ["SPREADS SAMPLED", "FIAT PAYOUT TIMED", "FIELD-TESTED"] : ["LISTED SPREAD", "FIAT RAILS LISTED", "FIELD-TEST PENDING"],
+      tags: checked ? ["SPREADS SAMPLED", "FIAT PAYOUT TIMED", "FIELD-TESTED"] : ["LISTED SPREAD", "FIAT RAILS LISTED"],
       byline: checked ? "Field-tested on our own verified account" : "Listed figures · order book and fiat payouts not yet field-tested",
       verdict: `Spread plus withdrawal fee is the real cost of an onramp. ${x.name} ${checked ? "came in at" : "lists"} a ${x.m1} spread on majors (withdrawal limit: ${x.m3}). ${x.note}, which is the trade-off to weigh before you route a bankroll through it.`,
       criteria: crit(s, [0.4, -0.2, 0.2, -0.4, 0.5, -0.5], ["Spread & fees", "Fiat rails", "Liquidity", "Security posture", "Withdrawal speed", "Support"]),
@@ -198,7 +198,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       standfirst: checked
         ? `We funded ${w.name} and moved money in and out of casino cashiers on the chains it supports, watching what it signs, what it simulates, and what it hides. ${w.note}.`
         : `${w.name}'s custody model and chain coverage below are as published, pending our own field test on real casino deposits. ${w.note}.`,
-      tags: checked ? ["DEPOSITS TESTED", "SIGNING BEHAVIOUR AUDITED", "FIELD-TESTED"] : ["PUBLISHED SPECS", "SIGNING BEHAVIOUR NOT YET AUDITED", "FIELD-TEST PENDING"],
+      tags: checked ? ["DEPOSITS TESTED", "SIGNING BEHAVIOUR AUDITED", "FIELD-TESTED"] : ["PUBLISHED SPECS", "SIGNING BEHAVIOUR NOT YET AUDITED"],
       byline: checked ? "Field-tested on real casino deposits" : "Published specs · signing behaviour not yet field-tested",
       verdict: `${w.note}. For gambling specifically, what matters is how the wallet behaves at the moment of signing: whether it tells you what a cashier contract will do before you approve it, and whether the fee it sets gets your deposit credited in one block or three.`,
       criteria: crit(s, [0.5, -0.3, 0.4, -0.5, 0.1, -0.4], ["Custody model", "Chain coverage", "Transaction safety", "Everyday UX", "Fee handling", "Recovery & support"]),
@@ -515,7 +515,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       ? [fast ? "FAST PAYOUTS VERIFIED" : "PAYOUTS TIMED", lowWager ? "1× WAGERING" : `${o.wager}× WAGERING`, "FIELD-TESTED"]
       : audited
       ? [lowWager ? "1× WAGERING (VERIFIED)" : `${o.wager}× WAGERING (VERIFIED)`, "LICENCE CHECKED", "PAYOUT TIME NOT YET TIMED"]
-      : ["PAYOUT TIME NOT YET TIMED", lowWager ? "1× WAGERING (UNCHECKED)" : `${o.wager}× WAGERING (UNCHECKED)`, "FIELD-TEST PENDING"],
+      : ["PAYOUT TIME NOT YET TIMED", lowWager ? "1× WAGERING (UNCHECKED)" : `${o.wager}× WAGERING (UNCHECKED)`],
     byline: checked
       ? "Field-tested on our own funded account · reviewed by the editorial desk"
       : audited
