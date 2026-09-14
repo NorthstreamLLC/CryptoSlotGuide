@@ -70,7 +70,7 @@ const columns: Column<Slot>[] = [
   },
   {
     key: "bestAt",
-    label: "Best RTP at",
+    label: "Listed at",
     render: (s) => <span style={{ color: s.bestAt === "Roobet" ? "#FFCC00" : "#B7C4CB" }}>{s.bestAt}</span>,
   },
 ];

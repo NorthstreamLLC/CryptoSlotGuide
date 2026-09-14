@@ -42,6 +42,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
   const tier = reviewTierFor(e.type, e.slug);
   const audited = tier === "pending" && isEditoriallyAudited(e.slug);
   const isProofScored = scoreUnit === "/ 10";
+  const statCols = e.stats.length === 4 ? 2 : Math.min(3, e.stats.length);
 
   return (
     <main style={{ background: "#07090B", color: "#E8EDF0" }}>
@@ -217,7 +218,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
         )}
 
         <SectionHeading
-          title="What we measured"
+          title={tier === "field-tested" ? "What we measured" : "Key figures"}
           sub={
             e.measuredSub ??
             (tier === "field-tested"
@@ -229,9 +230,14 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
               : "Every figure below is assessed from public sources — published paytables, RTP certificates and posted odds, not a funded account. See how we rate for what that means here.")
           }
         />
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 1, background: "rgba(255,255,255,.07)", border: "1px solid rgba(255,255,255,.07)", borderRadius: 13, overflow: "hidden", marginBottom: 38 }}>
-          {e.stats.map((m) => (
-            <div key={m.label} style={{ padding: "20px 22px", background: "#0C1013" }}>
+        <div style={{ display: "grid", gridTemplateColumns: `repeat(${statCols}, 1fr)`, gap: 1, background: "rgba(255,255,255,.07)", border: "1px solid rgba(255,255,255,.07)", borderRadius: 13, overflow: "hidden", marginBottom: 38 }}>
+          {e.stats.map((m, i) => (
+            <div
+              key={m.label}
+              // Last tile spans whatever's left of its row, so an uneven
+              // count never leaves a bare gap-colored cell.
+              style={{ padding: "20px 22px", background: "#0C1013", gridColumn: i === e.stats.length - 1 ? `span ${statCols - (i % statCols)}` : undefined }}
+            >
               <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".07em", textTransform: "uppercase", color: "#5C6A72", marginBottom: 8 }}>
                 {m.label}
               </div>
@@ -261,7 +267,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
               ))}
             </div>
           ) : (
-            <div style={{ fontSize: 13, color: "#5C6A72" }}>None field-tested yet.</div>
+            <div style={{ fontSize: 13, color: "#5C6A72" }}>{e.chipsEmpty ?? "None field-tested yet."}</div>
           )}
         </div>
 
@@ -312,7 +318,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
         <SectionHeading title={e.tableTitle} sub={e.tableSub} maxWidth="80ch" />
         {e.tableRows.length === 0 && (
           <div style={{ padding: "20px 24px", borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)", marginBottom: 14, fontSize: 13.5, color: "#7B8A93" }}>
-            No operator builds field-tested for this title yet — this table fills in as our RTP Watch program covers them.
+            {e.tableEmpty ?? "No operator builds field-tested for this title yet — this table fills in as our RTP Watch program covers them."}
           </div>
         )}
         {e.tableRows.length > 0 && (

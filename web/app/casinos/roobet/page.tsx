@@ -5,8 +5,8 @@ import { entityBreadcrumbSchema, faqSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 
 export const metadata = pageMetadata(
-  "Roobet review 2026: four-minute payouts, 1× wagering, tiered KYC",
-  "Roobet leads our index on published figures — payout speed, wagering and KYC compared against every other operator we track.",
+  "Roobet review 2026: payout speed, 1× wagering, tiered KYC",
+  "Roobet leads our index on listed figures — payout speed, wagering and KYC compared against every other operator we track. Payouts not yet timed by us.",
   "/casinos/roobet"
 );
 

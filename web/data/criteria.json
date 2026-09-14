@@ -1,8 +1,8 @@
 [
-  { "name": "Payout speed", "weight": "25%", "desc": "Median of at least three timed withdrawals at different sizes.", "sourcing": "community-reported" },
+  { "name": "Payout speed", "weight": "25%", "desc": "Withdrawal times aggregated from public player reports and cited. A field test replaces this with the median of at least three withdrawals we time ourselves, at different sizes.", "sourcing": "community-reported" },
   { "name": "Bonus fairness", "weight": "20%", "desc": "Wagering, game weighting, max-cashout caps read line by line from the operator's own terms.", "sourcing": "editorial" },
   { "name": "Crypto support", "weight": "15%", "desc": "Coins, chains, confirmation counts, who pays network fees — read from the operator's own help pages.", "sourcing": "editorial" },
   { "name": "Trust & licensing", "weight": "15%", "desc": "Licence checked against the regulator's own register; complaint history checked against AskGamblers/Casino.Guru.", "sourcing": "editorial" },
   { "name": "Game & RTP quality", "weight": "15%", "desc": "Live catalogue counts from the public lobby; the specific RTP version shipped is field-tested via RTP Watch as we cover each operator.", "sourcing": "editorial" },
-  { "name": "Support", "weight": "10%", "desc": "Three tickets per operator, timed, across time zones.", "sourcing": "community-reported" }
+  { "name": "Support", "weight": "10%", "desc": "Response and resolution times aggregated from public player reports and cited. A field test replaces this with three tickets per operator, timed across time zones.", "sourcing": "community-reported" }
 ]

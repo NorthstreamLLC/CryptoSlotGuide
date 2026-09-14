@@ -51,10 +51,10 @@
   },
   {
     "slug": "sportsbook-margin-measured",
-    "title": "Sportsbook margin, measured",
+    "title": "Sportsbook margin, explained",
     "mono": "MG",
     "tint": "#57B98C",
-    "standfirst": "How we compute overround across 40 markets",
+    "standfirst": "How overround is computed, and why one market is not enough",
     "category": "Betting",
     "readMins": 8,
     "updated": "12 Aug"

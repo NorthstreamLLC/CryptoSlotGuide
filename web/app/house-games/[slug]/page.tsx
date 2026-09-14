@@ -54,7 +54,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
               <p style={{ margin: "0 0 24px", maxWidth: "62ch", fontSize: 16.5, lineHeight: 1.65, color: "#93A3AC", textWrap: "pretty" }}>
                 {h.note} The maths is published and the result is verifiable, so the only variable left is how you size and stop.
               </p>
-              <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11.5, color: "#5C6A72" }}>Written by the games desk · edge confirmed in-client · 24 Aug 2026</div>
+              <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11.5, color: "#5C6A72" }}>Written by the games desk · edge as published by the game</div>
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 1, borderRadius: 14, overflow: "hidden", border: "1px solid rgba(255,255,255,.09)", background: "rgba(255,255,255,.07)" }}>
               <StatTile label="House edge" value={h.edge} color="#5FE3E8" />

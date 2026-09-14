@@ -75,7 +75,7 @@ export function SlotCategoryPage({ tag }: { tag: SlotMechanicTag }) {
                 </div>
                 <div style={{ marginTop: "auto", display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 10, paddingTop: 13, borderTop: "1px solid rgba(255,255,255,.07)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#5C6A72" }}>
                   <span>{s.vol} · {s.maxWin}</span>
-                  <span style={{ color: "#9AAAB3" }}>best at {s.bestAt}</span>
+                  <span style={{ color: "#9AAAB3" }}>listed at {s.bestAt}</span>
                 </div>
               </Link>
             );

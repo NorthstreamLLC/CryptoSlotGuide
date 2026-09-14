@@ -13,7 +13,13 @@ export const metadata = pageMetadata(
 );
 
 export default function Page() {
-  const { fiatCasinos } = siteData;
+  const { fiatCasinos, ops } = siteData;
+  // Listed figures from data/ops.json and data/fiatCasinos.json, not timed
+  // withdrawals — the copy below says "listed" for that reason.
+  const byPayout = [...ops].sort((a, b) => a.payout - b.payout);
+  const fastestCrypto = byPayout[0]?.payoutLabel ?? "—";
+  const slowestCrypto = byPayout[byPayout.length - 1]?.payoutLabel ?? "—";
+  const fastestFiat = [...fiatCasinos].sort((a, b) => parseFloat(a.payout) - parseFloat(b.payout))[0]?.payout ?? "—";
 
   return (
     <main>
@@ -52,7 +58,7 @@ export default function Page() {
           ))}
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: 14, flexWrap: "wrap", marginTop: 22, padding: "18px 22px", borderRadius: 13, background: "rgba(0,194,204,.06)", border: "1px solid rgba(0,194,204,.18)" }}>
-          <span style={{ fontSize: 14, color: "#9FD9DD" }}>Crypto payouts on our index run four minutes to eight; the fastest fiat operator here takes a day.</span>
+          <span style={{ fontSize: 14, color: "#9FD9DD" }}>Listed crypto payouts on our index run from {fastestCrypto} to {slowestCrypto}; the fastest listed fiat payout here is {fastestFiat}.</span>
           <a href="/crypto-casinos" style={{ marginLeft: "auto", fontSize: 14, fontWeight: 600, color: "#00C2CC", whiteSpace: "nowrap" }}>See the crypto list →</a>
         </div>
       </section>

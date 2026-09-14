@@ -38,7 +38,7 @@ export function ComparePage() {
             Build your own head to head
           </h1>
           <p style={{ margin: "0 0 26px", maxWidth: "70ch", fontSize: 16.5, lineHeight: 1.65, color: "#93A3AC", textWrap: "pretty" }}>
-            Pick up to four operators and we&apos;ll generate the comparison from the same measurements every review uses. Winners are marked per row; ties are marked as ties rather than resolved.
+            Pick up to four operators and we&apos;ll generate the comparison from the same figures every review uses. Winners are marked per row; ties are marked as ties rather than resolved.
           </p>
           <div style={{ display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap", marginBottom: 14 }}>
             <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".06em", textTransform: "uppercase", color: "#5C6A72" }}>{picked.length} of 4 selected</span>

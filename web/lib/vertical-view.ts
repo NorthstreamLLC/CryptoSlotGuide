@@ -78,7 +78,7 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
     return {
       kicker: "Slots",
       title: "Slot RTP index",
-      sub: "Every RTP below is the studio's published return. Where we've field-tested a title's build in a specific operator's account, the slot's own review names the operator that cut it — see how we rate for what's checked so far.",
+      sub: "Every RTP below is the studio's published return. Once we field-test a title's build in a specific operator's account, the slot's own review names the operator that cut it — see how we rate for what's checked so far.",
       stats: [
         [String(slots.length), "Slots tracked"],
         [`${medianRtp(slots).toFixed(2)}%`, "Median RTP"],
@@ -97,7 +97,7 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
         m2: `${s.rtp.toFixed(2)}%`,
         m3: s.maxWin,
         score: s.rtp.toFixed(2),
-        cta: "Best build",
+        cta: "Slot review",
         href: `/slots/${s.slug}`,
       })),
     };
@@ -139,14 +139,19 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
       ["Best price at", "Margin", "Markets"],
       ["Best price at", "Live markets", "Settlement"],
     ];
+    // Margin, market and settlement figures are listed values carried over
+    // from the prototype dataset (data/sbData.json, data/esportsTitles.json),
+    // not first-hand measurements — label them that way.
+    const margins = Object.values(sbData).map((b) => parseFloat(b.margin)).filter((n) => !Number.isNaN(n));
+    const esportsMarkets = esportsTitles.map((t) => parseInt(t.m2, 10)).filter((n) => !Number.isNaN(n));
     const base = {
       kicker: "Sportsbooks",
       title: "Betting with crypto",
-      sub: "Margin measured across forty markets per book, live market counts taken during a major tournament week, settlement timed on real slips.",
+      sub: "Margin, live market depth and settlement time as listed for each book, side by side. A book's review says which figures have been checked and how.",
       stats: [
-        [String(ops.filter((o) => o.sports).length), "Books tested"],
-        ["2.1%", "Lowest margin measured"],
-        ["84", "Peak live esports markets"],
+        [String(ops.filter((o) => o.sports).length), "Books listed"],
+        [margins.length ? `${Math.min(...margins).toFixed(1)}%` : "—", "Lowest listed margin"],
+        [esportsMarkets.length ? String(Math.max(...esportsMarkets)) : "—", "Most listed esports markets"],
       ] as [string, string][],
       cols: cols[tab],
       scoreLabel: "Score",
@@ -216,15 +221,15 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
     return {
       kicker: "Wallets",
       title: "Where the bankroll lives",
-      sub: "Custody model, chain coverage and gas handling, tested by moving real funds in and out of casino cashiers.",
+      sub: "Custody model, chain coverage and gas handling — the three things that decide how a wallet works with a casino cashier.",
       stats: [
-        [String(walletRows.length), "Wallets tested"],
+        [String(walletRows.length), "Wallets listed"],
         [String(selfCustodyWallets(walletRows)), "Self-custody"],
         [(topScore(walletRows)?.score ?? 0).toFixed(1), "Top score"],
       ],
       cols: ["Custody", "Chains", "Gas handling"],
       scoreLabel: "Score",
-      note: "Keep the playing balance and the holding balance in different wallets. Every operator on our index has, at some point, frozen an account mid-review.",
+      note: "Keep the playing balance and the holding balance in different wallets. Any operator can freeze an account pending a manual review, and whatever is held there waits with it.",
       rows: walletRows.map((w) => ({
         slug: w.slug,
         name: w.name,
@@ -242,27 +247,31 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
   }
 
   if (kind === "exchanges") {
-    const rawAwards: { award: string; name: string; why: string; m: [string, string][] }[] = [
-      { award: "Best overall", name: "Kraken", why: "Tightest measured spread of the five and the only venue with no daily withdrawal cap after verification.", m: [["Spread", "0.09%"], ["Fiat payout", "4h 10m"], ["Score", "8.9"]] },
-      { award: "Best for beginners", name: "Coinbase", why: "The shortest path from card to on-chain balance. You pay 0.35% in spread for that, every time.", m: [["Spread", "0.35%"], ["Rails", "ACH, SEPA, card"], ["Score", "8.1"]] },
-      { award: "Best for low fees", name: "OKX", why: "Entry-tier taker fee of 0.10% with book depth close to Kraken on majors.", m: [["Spread", "0.11%"], ["Depth 0.5%", "$3.1m"], ["Score", "8.6"]] },
-      { award: "Best for fast withdrawals", name: "Bybit", why: "Crypto out in under two minutes on every request we timed, at a $2m daily ceiling.", m: [["Withdrawal", "< 2 min"], ["Limit", "$2m / day"], ["Score", "8.0"]] },
-      { award: "Best for altcoin range", name: "KuCoin", why: "Widest listing by a distance. Books thin out fast past the top fifty pairs.", m: [["Pairs", "740+"], ["Spread", "0.22%"], ["Score", "7.6"]] },
+    // Editorial picks, not measurement results. Every metric shown on a
+    // card is read from that venue's exchangeRows record (m1 = listed
+    // spread, m2 = fiat rails, m3 = withdrawal limit) — nothing hardcoded.
+    type ExField = "m1" | "m2" | "m3" | "score";
+    const rawAwards: { award: string; name: string; why: string; m: [string, ExField][] }[] = [
+      { award: "Top pick overall", name: "Kraken", why: "Tightest listed spread of the five and no daily withdrawal cap once the account is verified.", m: [["Spread", "m1"], ["Fiat rails", "m2"], ["Score", "score"]] },
+      { award: "Pick for beginners", name: "Coinbase", why: "Card, ACH and SEPA on one account. The trade-off is the widest listed spread of the five.", m: [["Spread", "m1"], ["Rails", "m2"], ["Score", "score"]] },
+      { award: "Pick for low spreads", name: "OKX", why: "Second-tightest listed spread behind Kraken, with card and SEPA deposits.", m: [["Spread", "m1"], ["Limit", "m3"], ["Score", "score"]] },
+      { award: "Pick for high limits", name: "Bybit", why: "The highest capped daily withdrawal limit listed of the five.", m: [["Limit", "m3"], ["Spread", "m1"], ["Score", "score"]] },
+      { award: "Pick for altcoin range", name: "KuCoin", why: "Picked for breadth of listings rather than price. Fiat access is P2P only.", m: [["Spread", "m1"], ["Rails", "m2"], ["Score", "score"]] },
     ];
     return {
       kicker: "Exchanges",
       title: "Getting on and off chain",
-      sub: "Spreads sampled hourly for two weeks on BTC, ETH and USDT pairs, with fiat rails and real withdrawal limits confirmed on verified accounts.",
+      sub: "Listed spreads on BTC, ETH and USDT pairs, fiat rails and withdrawal limits for each venue, side by side.",
       stats: [
-        [String(exchangeRows.length), "Exchanges tested"],
-        [bestSpread(exchangeRows), "Tightest spread"],
+        [String(exchangeRows.length), "Exchanges listed"],
+        [bestSpread(exchangeRows), "Tightest listed spread"],
         [(topScore(exchangeRows)?.score ?? 0).toFixed(1), "Top score"],
       ],
       cols: ["Spread", "Fiat rails", "Withdrawal limit"],
       scoreLabel: "Score",
       note: "Spread plus withdrawal fee is the true cost of an onramp. The cheapest headline maker fee on this list is not the cheapest way to fund an account.",
-      awardTitle: "Best crypto exchanges for August 2026",
-      awardSub: "One superlative per venue, awarded on the measurement that earned it. No venue holds two.",
+      awardTitle: "Editor's picks: crypto exchanges",
+      awardSub: "One pick per venue, based on the listed figures in the table below. No venue holds two.",
       awards: rawAwards.map((a, i) => {
         const match = exchangeRows.find((x) => x.name === a.name);
         const slug = match?.slug ?? a.name.toLowerCase();
@@ -271,7 +280,7 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
           name: a.name,
           award: a.award,
           why: a.why,
-          metrics: a.m,
+          metrics: a.m.map(([label, field]): [string, string] => [label, match ? (field === "score" ? match.score.toFixed(1) : match[field]) : "—"]),
           accent: i === 0 ? "#FFCC00" : "#00C2CC",
           awardBg: i === 0 ? "rgba(255,204,0,.10)" : "rgba(0,194,204,.10)",
           awardBorder: i === 0 ? "rgba(255,204,0,.32)" : "rgba(0,194,204,.28)",
@@ -303,7 +312,7 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
     stats: [
       [String(guideRows.length), "Guides published"],
       [`${medianReadMins(guideRows)} min`, "Median read"],
-      ["Aug 2026", "Last review pass"],
+      [String(new Set(guideRows.map((g) => g.category)).size), "Categories"],
     ],
     cols: ["Category", "Read time", "Updated"],
     scoreLabel: "",

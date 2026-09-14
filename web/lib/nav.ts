@@ -227,7 +227,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
               links: [
                 { label: `All ${c.books} sportsbooks`, href: "/sportsbooks" },
                 { label: "Compare side by side", href: "/compare" },
-                { label: "Sportsbook margin, measured", href: "/guides/sportsbook-margin-measured" },
+                { label: "Sportsbook margin, explained", href: "/guides/sportsbook-margin-measured" },
               ],
             },
             {
@@ -269,7 +269,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
               title: "Where to bet it",
               links: [
                 { label: "All esports markets", href: "/sportsbooks?tab=2" },
-                { label: "Sportsbook margin, measured", href: "/guides/sportsbook-margin-measured" },
+                { label: "Sportsbook margin, explained", href: "/guides/sportsbook-margin-measured" },
                 { label: "Compare books", href: "/compare" },
               ],
             },
@@ -344,7 +344,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
               title: "Method",
               links: [
                 { label: "How we rate", href: "/how-we-rate" },
-                { label: "Sportsbook margin, measured", href: "/guides/sportsbook-margin-measured" },
+                { label: "Sportsbook margin, explained", href: "/guides/sportsbook-margin-measured" },
                 { label: "Compare operators", href: "/compare" },
               ],
             },

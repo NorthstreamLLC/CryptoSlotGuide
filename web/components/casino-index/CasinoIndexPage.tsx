@@ -6,6 +6,7 @@ import { siteData } from "@/lib/site-data";
 import { fill } from "@/lib/derived";
 import { tintFor } from "@/lib/logo";
 import { BrandMark } from "@/components/ui/BrandMark";
+import { isFieldTestedOperator } from "@/lib/field-tested";
 import {
   btcStats,
   btcViews,
@@ -112,10 +113,10 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
                 </div>
                 <div style={{ display: "flex", alignItems: "flex-end", gap: 14, marginBottom: 22 }}>
                   <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 52, fontWeight: 700, lineHeight: 0.9, color: "#fff", letterSpacing: "-.04em" }}>{roobet.score.toFixed(1)}</span>
-                  <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, color: "#5C6A72", paddingBottom: 7 }}>/ 10 · tested 21 Aug 2026</span>
+                  <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, color: "#5C6A72", paddingBottom: 7 }}>/ 10 · {isFieldTestedOperator(roobet.slug) ? "field-tested" : "payouts not yet timed"}</span>
                 </div>
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 1, background: "rgba(255,255,255,.07)", borderRadius: 10, overflow: "hidden", marginBottom: 22 }}>
-                  <StatTile label="Median payout" value={roobet.payoutLabel} />
+                  <StatTile label="Listed payout" value={roobet.payoutLabel} />
                   <StatTile label="Confirmations" value={String(roobet.conf)} />
                   <StatTile label="Lightning" value={roobet.ln ? "Yes" : "No"} color={roobet.ln ? "#5FE3E8" : undefined} />
                   <StatTile label="Bonus wagering" value={`${roobet.wager}×`} />
@@ -160,7 +161,7 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
                     <span style={{ marginLeft: "auto", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 26, color: "#fff" }}>{btcTop.score.toFixed(1)}</span>
                   </div>
                   <div style={{ display: "flex", flexDirection: "column", gap: 9, paddingTop: 16, borderTop: "1px solid rgba(255,255,255,.08)" }}>
-                    <TopRow label="Median payout" value={btcTop.payoutLabel} />
+                    <TopRow label="Listed median payout" value={btcTop.payoutLabel} />
                     <TopRow label="Licence · KYC" value={`${btcTop.licence} · ${btcTop.kyc}`} />
                     <TopRow label="Offer" value={btcTop.bonus} />
                   </div>
@@ -279,7 +280,7 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
               Almost none of the variance is the chain. It&apos;s the operator&apos;s internal batching interval and whether a withdrawal trips a manual review. Sites that batch every few minutes and auto-approve under a threshold clear in single-digit minutes; sites that batch hourly and review everything over $500 take an hour or more.
             </p>
             <p style={{ margin: 0, fontSize: 14.5, lineHeight: 1.65, color: "#93A3AC", textWrap: "pretty" }}>
-              We time from confirmed request to first on-chain broadcast, so network congestion is excluded and the number reflects what the operator controls.
+              When we field-test an operator we time from confirmed request to first on-chain broadcast, so network congestion is excluded and the number reflects what the operator controls. The payout times on this page are listed figures, not yet timed by us.
             </p>
           </div>
           <div style={{ padding: 26, borderRadius: 13, background: "rgba(12,16,19,.66)", border: "1px solid rgba(255,255,255,.07)" }}>
@@ -359,7 +360,7 @@ function OpRow({ o, pos, coins }: { o: Operator; pos: number; coins: string[] })
       </div>
       <div style={{ padding: "14px 8px" }}>
         <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12.5, color: "#B7C4CB" }}>{o.payoutLabel}</div>
-        <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#5C6A72", marginTop: 2 }}>median</div>
+        <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#5C6A72", marginTop: 2 }}>listed median</div>
       </div>
       <div style={{ padding: "14px 8px", minWidth: 0 }}>
         <div style={{ display: "flex", gap: 4, flexWrap: "nowrap", overflow: "hidden" }}>

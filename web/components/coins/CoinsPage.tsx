@@ -68,7 +68,6 @@ export function CoinsPage() {
           {rows.map((c) => {
             const opsForCoin = coinOps(c.ticker);
             const pct = ops.length ? Math.round((opsForCoin.length / ops.length) * 100) : 0;
-            const peak = Math.max(1, ...c.distribution);
             return (
               <div key={c.ticker} role="row" style={{ display: "grid", minWidth: 1120, gridTemplateColumns: "minmax(240px,1.3fr) 120px 130px 116px 116px 150px 168px", alignItems: "center", borderBottom: "1px solid rgba(255,255,255,.05)" }}>
                 <div role="cell" style={{ padding: "14px 18px", display: "flex", alignItems: "center", gap: 13, minWidth: 0 }}>
@@ -85,12 +84,10 @@ export function CoinsPage() {
                 <div role="cell" style={{ padding: "14px 12px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12.5, color: "#B7C4CB" }}>{c.creditTime}</div>
                 <div role="cell" style={{ padding: "14px 12px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12.5, color: "#B7C4CB" }}>{c.confirms}</div>
                 <div role="cell" style={{ padding: "14px 12px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12.5, color: "#B7C4CB" }}>{c.fee}</div>
-                <div role="cell" style={{ padding: "14px 12px" }}>
-                  <div style={{ display: "flex", alignItems: "flex-end", gap: 2, height: 34 }}>
-                    {c.distribution.map((v, i) => (
-                      <span key={i} style={{ width: 6, borderRadius: "2px 2px 0 0", background: c.tint, opacity: 0.55, height: Math.max(3, Math.round((v / peak) * 34)) }} />
-                    ))}
-                  </div>
+                {/* Credit spread needs real deposit timings from field-testing; the prototype's
+                    `distribution` arrays in data/coinDefs.json are unsourced, so they are not drawn. */}
+                <div role="cell" style={{ padding: "14px 12px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#4E5A62" }}>
+                  Not yet timed
                 </div>
                 <div role="cell" style={{ padding: "12px 18px", display: "flex", gap: 8 }}>
                   <Link href={`/crypto-casinos?coin=${c.ticker}`} className="hover:!border-accent hover:!text-[#5FE3E8]" style={{ flex: 1, textAlign: "center", padding: 9, borderRadius: 7, border: "1px solid rgba(255,255,255,.16)", color: "#DCE5E9", fontSize: 12.5, fontWeight: 700, whiteSpace: "nowrap" }}>
@@ -112,7 +109,7 @@ export function CoinsPage() {
             <h2 style={{ margin: "0 0 7px", fontSize: 26, letterSpacing: "-.028em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>
               Casinos that credit {coinDefs.find((c) => c.ticker === sel)?.name ?? sel}
             </h2>
-            <p style={{ margin: 0, fontSize: 14.5, color: "#8DA0AA" }}>{detail.length} operators, ranked by overall score. Payout time is the median across all coins at that operator.</p>
+            <p style={{ margin: 0, fontSize: 14.5, color: "#8DA0AA" }}>{detail.length} operators, ranked by overall score. Payout time is the operator&apos;s listed figure, not one we have timed.</p>
           </div>
           <div style={{ display: "grid", minWidth: 0, gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))", gap: 12 }}>
             {detail.map((o, i) => (
@@ -143,7 +140,7 @@ export function CoinsPage() {
             <div style={{ padding: "28px 32px", borderRadius: 14, background: "linear-gradient(150deg,#0E1417,#0A0E10)", border: "1px solid rgba(255,255,255,.07)" }}>
               <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 12 }}>How to read credit spread</div>
               <p style={{ margin: 0, maxWidth: "78ch", fontSize: 15, lineHeight: 1.7, color: "#93A3AC", textWrap: "pretty" }}>
-                The bars show how deposit timing for each coin is expected to distribute, fastest on the left, based on published network confirmation times. A tall left edge means the coin behaves predictably; a long tail can mean an operator batches deposits on a schedule rather than crediting on confirmation — something we confirm per operator as our field-testing covers them. Pick a ticker above to see which operators sit where.
+                Credit spread will show how deposit times for each coin actually distribute across operators, fastest on the left. It stays empty until field-testing produces real deposit timings — we would rather show nothing than an estimate. When it fills in, a tall left edge means the coin credits predictably; a long tail usually means an operator batches deposits on a schedule rather than crediting on confirmation. Pick a ticker above to see which operators accept it.
               </p>
             </div>
             <Link href="/crypto-casinos" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", gap: 20, padding: "28px 32px", borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>

@@ -16,6 +16,7 @@ export function RtpWatchPage() {
   const { watchOps } = siteData;
   const allRows = getWatchRows();
   const stats = watchStats(allRows);
+  const readCells = allRows.reduce((n, r) => n + r.cells.filter((c) => c.checked).length, 0);
   const rows = onlyCut ? allRows.filter((r) => r.cut) : allRows;
 
   return (
@@ -31,7 +32,10 @@ export function RtpWatchPage() {
                 Which casinos ship a cut build
               </h1>
               <p style={{ margin: 0, maxWidth: "66ch", fontSize: 16.5, lineHeight: 1.65, color: "#93A3AC", textWrap: "pretty" }}>
-                The same slot can pay 96.5% at one casino and 94.5% at the next, and nothing in the lobby tells you which you loaded. We read the paytable inside each operator&apos;s own client as our field-testing covers them, and publish the number, per build, with the date we last checked it — cells we haven&apos;t reached yet are marked, not guessed at.
+                The same slot can pay 96.5% at one casino and 94.5% at the next, and nothing in the lobby tells you which you loaded. RTP Watch records the return stated in the paytable inside each operator&apos;s own client, per build, with the date it was read.{" "}
+                {readCells === 0
+                  ? "The board is just starting: no readings are in yet, so every cell is marked as not checked rather than filled with a guess."
+                  : `${readCells} cells have a reading so far; the rest are marked as not checked rather than filled with a guess.`}
               </p>
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 1, borderRadius: 12, overflow: "hidden", border: "1px solid rgba(255,255,255,.08)" }}>
@@ -62,7 +66,7 @@ export function RtpWatchPage() {
           >
             Cut somewhere
           </button>
-          <span style={{ marginLeft: "auto", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#4E5A62" }}>Figures read in-client · orange = reduced build · — = not yet checked</span>
+          <span style={{ marginLeft: "auto", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#4E5A62" }}>Filled cells read in-client · orange = reduced build · — = not yet checked</span>
         </div>
 
         <div role="table" style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 14, overflowX: "auto", background: "#0C1013", boxShadow: "0 12px 40px rgba(0,0,0,.35)" }}>
@@ -112,7 +116,7 @@ export function RtpWatchPage() {
               Every filled cell is a figure someone read inside that operator&apos;s client, with the date attached — an em dash means we haven&apos;t reached that operator yet, not that the build is clean. There is no feed to subscribe to — studios do not publish per-operator configurations, and operators do not advertise a reduced one. Which is exactly why the board is worth keeping.
             </p>
             <p style={{ margin: 0, maxWidth: "80ch", fontSize: 15, lineHeight: 1.7, color: "#93A3AC", textWrap: "pretty" }}>
-              Re-checks run on a rolling schedule and immediately on any reader report we can reproduce. A cell older than 30 days gets re-read before it stays on the board.
+              Cells fill in as our field-testing reaches each operator. A reading older than 30 days drops back to not checked until it is re-read, so a stale figure never sits on the board, and reader reports of a changed build go to the front of the queue.
             </p>
           </div>
           <Link href="/slots" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", gap: 20, padding: "28px 32px", borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>

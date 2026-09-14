@@ -35,10 +35,10 @@ export function LiveCasinoPage({ initialType }: { initialType?: LiveGame["type"]
           <div style={{ display: "grid", gridTemplateColumns: "1.25fr .75fr", gap: 56, alignItems: "end" }}>
             <div>
               <h1 style={{ margin: "0 0 14px", fontSize: 52, lineHeight: 1.02, letterSpacing: "-.038em", fontWeight: 800, fontStretch: "116%", color: "#fff", textWrap: "balance" }}>
-                Real dealers, measured limits
+                Real dealers, listed limits
               </h1>
               <p style={{ margin: 0, maxWidth: "68ch", fontSize: 16.5, lineHeight: 1.65, color: "#96A6AF", textWrap: "pretty" }}>
-                We sat at {siteCounts.live} tables across {siteCounts.liveOps} operators with real balances: clocking stream latency, logging the actual minimum and maximum stake at the seat, and checking which studio is behind the glass. Operators first, then the tables worth your seat.
+                {siteCounts.live} tables across {siteCounts.liveOps} operators, with the listed stream latency, minimum and maximum stake at the seat, and which studio is behind the glass. None of it is from a funded seat yet — those checks come with field-testing. Operators first, then the tables worth your seat.
               </p>
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 1, background: "rgba(255,255,255,.08)", border: "1px solid rgba(255,255,255,.08)", borderRadius: 13, overflow: "hidden" }}>
@@ -48,7 +48,7 @@ export function LiveCasinoPage({ initialType }: { initialType?: LiveGame["type"]
                 <div style={{ fontSize: 11.5, color: "#7B8A93", marginTop: 3 }}>{bestReturn.name}</div>
               </div>
               <div style={{ padding: "18px 20px", background: "rgba(12,16,19,.9)" }}>
-                <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 9.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#5C6A72", marginBottom: 8 }}>Fastest stream</div>
+                <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 9.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#5C6A72", marginBottom: 8 }}>Fastest listed stream</div>
                 <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 23, color: "#fff" }}>{fastest.latency}</div>
                 <div style={{ fontSize: 11.5, color: "#7B8A93", marginTop: 3 }}>{fastest.name}</div>
               </div>
@@ -98,7 +98,7 @@ export function LiveCasinoPage({ initialType }: { initialType?: LiveGame["type"]
         <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 32, flexWrap: "wrap", marginBottom: 20 }}>
           <div>
             <h2 style={{ margin: "0 0 8px", fontSize: 30, letterSpacing: "-.03em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Live tables we track</h2>
-            <p style={{ margin: 0, fontSize: 15, color: "#8DA0AA" }}>{rows.length} tables · published return, real seat minimum, and the operator we found it cheapest at.</p>
+            <p style={{ margin: 0, fontSize: 15, color: "#8DA0AA" }}>{rows.length} tables · published return, listed seat minimum, and the operator listed cheapest for it.</p>
           </div>
           <div style={{ display: "flex", gap: 7, flexWrap: "wrap" }}>
             <button

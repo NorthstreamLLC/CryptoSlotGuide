@@ -1,8 +1,8 @@
 [
-  { "n": "01", "t": "Fund a real account", "d": "Own money, own name, no press access or comped balance. Every figure on the site comes from an account that could be frozen like anyone else's." },
+  { "n": "01", "t": "Fund a real account", "d": "Own money, own name, no press access or comped balance. A figure is only labelled field-tested if it came from an account that could be frozen like anyone else's." },
   { "n": "02", "t": "Time the withdrawals", "d": "At least three sizes per operator, from the minimum to four figures, timed from confirmed request to first on-chain broadcast so network congestion is excluded." },
-  { "n": "03", "t": "Read the paytables", "d": "Open each tracked title inside the operator's own client and read the stated return. This is how we catch reduced builds that the lobby does not disclose." },
+  { "n": "03", "t": "Read the paytables", "d": "Open each tracked title inside the operator's own client and read the stated return. It is the only way to catch a reduced build the lobby does not disclose." },
   { "n": "04", "t": "Transcribe the terms", "d": "Wagering, weighting, caps, expiry and max bet, copied from the operator's own page on the date of test, then flagged where they materially limit withdrawal." },
-  { "n": "05", "t": "File three support tickets", "d": "One simple, one about a withdrawal, one deliberately ambiguous, across time zones. We record first reply and resolution." },
-  { "n": "06", "t": "Re-test on a schedule", "d": "Every operator is re-tested at least quarterly, and immediately if a reader reports a change we can reproduce. Each page carries the date of its last pass." }
+  { "n": "05", "t": "File three support tickets", "d": "One simple, one about a withdrawal, one deliberately ambiguous, across time zones. Record first reply and resolution." },
+  { "n": "06", "t": "Re-test on a schedule", "d": "A field-tested operator is due a re-test at least quarterly, and sooner if a reader reports a change we can reproduce. Its page carries the date of its last pass." }
 ]

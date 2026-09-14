@@ -157,7 +157,7 @@ export function VerticalIndexPage({ kind, tabIdx = 0 }: { kind: VerticalKind; ta
           <div style={{ display: "flex", alignItems: "center", gap: 12, padding: "14px 16px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#4E5A62", whiteSpace: "nowrap" }}>
             <span>{vp.rows.length} entries</span>
             <span>·</span>
-            <span>test log updated 24 Aug 2026</span>
+            <span>sources noted in each review</span>
           </div>
         </div>
       </section>

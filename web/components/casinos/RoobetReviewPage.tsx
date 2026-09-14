@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { siteData } from "@/lib/site-data";
 import { editorialTake } from "@/lib/entity-view";
-import { fmtMins, indexMedianPayout, liveCon, payoutClaim } from "@/lib/derived";
+import { fmtMins, indexMedianPayout, isStaleReading, liveCon, payoutClaim } from "@/lib/derived";
 import { tintFor } from "@/lib/logo";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { TIER_LABEL, TIER_TINT } from "@/lib/review-tier";
@@ -24,11 +24,14 @@ const CRITERION_SOURCING = new Map(siteData.criteria.map((c) => [c.name, c.sourc
  * CryptoSlotGuide.dc.html (search for `ROOBET REVIEW (light)`). Per
  * design/README.md's "Canonical routing caveat", this is the one casino
  * with a bespoke review; every other casino uses the generic
- * EntityReviewPage template. Most content here is genuinely hand-authored
- * in the source (the head-to-head table, the slot spot-checks, the FAQ
- * copy) rather than generated, so it's ported as real literal content,
- * not derived — same as the source treats it.
+ * EntityReviewPage template. The prototype's hand-typed measurements
+ * (withdrawal counts, support reply times, esports market counts,
+ * per-build RTP deltas) were invented — nothing on this page may read as
+ * timed/tested/counted unless isFieldTestedOperator("roobet") or real
+ * RTP Watch readings back it. Listed figures come from ops.json /
+ * liveCasinos.json and are labelled as listed, not measured.
  */
+// Criterion scores are editorial ratings, not measurements.
 const roobetScores = [
   { name: "Payout speed", val: 9.8, pct: 98, color: "#00C2CC" },
   { name: "Bonus fairness", val: 9.6, pct: 96, color: "#00C2CC" },
@@ -38,24 +41,15 @@ const roobetScores = [
   { name: "Support", val: 8.6, pct: 86, color: "#4E6469" },
 ];
 
-const h2hRaw: [string, string, string, string, number | number[]][] = [
-  ["Median withdrawal", "4m 12s", "6m 24s", "5m 06s", 0],
-  ["Wagering on headline offer", "1×", "1×", "40×", [0, 1]],
-  ["Coins accepted", "8", "8", "8", [0, 1, 2]],
-  ["Esports markets (live)", "84", "61", "38", 0],
-  ["KYC threshold", "2 BTC", "1 BTC", "0.5 BTC", 0],
-  ["Live dealer tables", "210", "246", "184", 1],
-  ["Support first reply", "3m 40s", "5m 10s", "9m 02s", 0],
-];
+/** Head-to-head columns, in order. Values are pulled from ops.json / coinsBy / liveCasinos — listed figures, not timed by us. */
+const H2H_SLUGS = ["roobet", "stake", "bc-game"] as const;
 
-const roobetSlots = [
-  { name: "Money Train 4", provider: "Relax Gaming", here: "96.10%", delta: "best", deltaColor: "#5FE3E8" },
-  { name: "Mental", provider: "Nolimit City", here: "96.08%", delta: "best", deltaColor: "#5FE3E8" },
-  { name: "Wanted Dead or a Wild", provider: "Hacksaw Gaming", here: "96.38%", delta: "best", deltaColor: "#5FE3E8" },
-  { name: "Sweet Bonanza", provider: "Pragmatic Play", here: "96.51%", delta: "best", deltaColor: "#5FE3E8" },
-  { name: "Gates of Olympus", provider: "Pragmatic Play", here: "96.00%", delta: "−0.50", deltaColor: "#DA9877" },
-  { name: "Razor Shark", provider: "Push Gaming", here: "96.20%", delta: "−0.50", deltaColor: "#DA9877" },
-];
+/** Index (or tied indexes) of the best value in a row. */
+function bestIdx(vals: number[], dir: "min" | "max"): number | number[] {
+  const target = dir === "min" ? Math.min(...vals) : Math.max(...vals);
+  const idx = vals.flatMap((v, i) => (v === target ? [i] : []));
+  return idx.length === 1 ? idx[0] : idx;
+}
 
 const bonusTerms = [
   { k: "Wagering", v: "1× on cashback and RooWards balance", flag: "CLEAR", bg: "rgba(0,194,204,.12)", color: "#5FE3E8" },
@@ -75,7 +69,7 @@ function win(idx: number, w: number | number[]) {
 
 export function RoobetReviewPage() {
   const [faq, setFaq] = useState<number | null>(null);
-  const { ops, coinsBy, liveCasinos } = siteData;
+  const { ops, coinsBy, liveCasinos, rtpWatch, slots } = siteData;
 
   const roobet = ops.find((o) => o.slug === "roobet")!;
   const coins = coinsBy["roobet"] ?? [];
@@ -86,10 +80,49 @@ export function RoobetReviewPage() {
   const roobetLive = liveCasinos.find((c) => c.slug === "roobet");
   const tableLeader = [...liveCasinos].sort((a, b) => b.tables - a.tables)[0];
 
+  // Listed figures only — the prototype's esports-market and support-reply
+  // rows were first-hand counts/timings we never did, so they're gone.
+  const h2hOps = H2H_SLUGS.map((s) => ops.find((o) => o.slug === s));
+  const h2hLive = H2H_SLUGS.map((s) => liveCasinos.find((c) => c.slug === s));
+  const h2hRaw: [string, string, string, string, number | number[]][] = [];
+  if (h2hOps.every(Boolean)) {
+    const [r, s, b] = h2hOps as NonNullable<(typeof h2hOps)[number]>[];
+    const coinCounts = H2H_SLUGS.map((slug) => (coinsBy[slug] ?? []).length);
+    h2hRaw.push(
+      ["Median withdrawal (listed)", r.payoutLabel, s.payoutLabel, b.payoutLabel, bestIdx([r.payout, s.payout, b.payout], "min")],
+      ["Wagering on headline offer", `${r.wager}×`, `${s.wager}×`, `${b.wager}×`, bestIdx([r.wager, s.wager, b.wager], "min")],
+      ["Coins accepted", String(coinCounts[0]), String(coinCounts[1]), String(coinCounts[2]), bestIdx(coinCounts, "max")],
+      ["KYC threshold (listed)", "2 BTC", "1 BTC", "0.5 BTC", 0]
+    );
+    if (h2hLive.every(Boolean)) {
+      const tables = h2hLive.map((c) => c!.tables);
+      h2hRaw.push(["Live dealer tables (listed)", String(tables[0]), String(tables[1]), String(tables[2]), bestIdx(tables, "max")]);
+    }
+  }
   const soleWins = h2hRaw.filter((r) => typeof r[4] === "number" && r[4] === 0).length;
   const ties = h2hRaw.filter((r) => Array.isArray(r[4])).length;
   const checked = isFieldTestedOperator("roobet");
   const audited = isEditoriallyAudited("roobet");
+
+  // Only real, non-stale RTP Watch readings taken in Roobet's own client —
+  // the prototype's per-build RTP table was invented. Empty today.
+  const slotReadings = checked ? rtpWatch.filter((r) => r.operatorSlug === "roobet" && !isStaleReading(r.checkedAt)) : [];
+  const readingRows = slotReadings.map((r) => {
+    const slot = slots.find((s) => s.slug === r.slotSlug);
+    const diff = r.rtp - r.publishedRtp;
+    return {
+      key: r.id,
+      name: slot?.name ?? r.slotSlug,
+      provider: slot?.provider ?? "—",
+      here: `${r.rtp.toFixed(2)}%`,
+      delta: diff >= 0 ? "full" : `−${Math.abs(diff).toFixed(2)}`,
+      deltaColor: diff >= 0 ? "#5FE3E8" : "#DA9877",
+      cut: diff < 0,
+    };
+  });
+  const cutSlots = readingRows.filter((s) => s.cut).map((s) => s.name);
+
+  const licenceFact = getSpecFact("roobet", "Compliance", "Licence");
 
   // Pulled from the same sourced spec-sheet data as the "The full spec
   // sheet" section below, not re-typed — a second hardcoded "$10" here
@@ -97,9 +130,11 @@ export function RoobetReviewPage() {
   const minDeposit = getSpecFact("roobet", "Coins & deposit limits", "Minimum deposit");
   const minWithdrawal = getSpecFact("roobet", "Coins & deposit limits", "Minimum withdrawal");
 
-  const verdict = `Roobet's edge is operational, not promotional. Withdrawals cleared in a median ${roobet.payoutLabel} against an index median of ${fmtMins(medianPayout)}, and its headline rewards carry 1× wagering where most rivals sit at 40×. ${
-    con ? `It loses points on live tables — ${con} — and for support that slowed noticeably outside European hours.` : "It loses points for support that slowed noticeably outside European hours."
-  }`;
+  const verdict = `Roobet's edge is operational, not promotional. ${
+    checked
+      ? `Withdrawals cleared in a median ${roobet.payoutLabel} on our own funded account`
+      : `It lists a median withdrawal of ${roobet.payoutLabel}, not yet timed by us,`
+  } against an index median of ${fmtMins(medianPayout)}, and its headline rewards carry 1× wagering where most rivals sit at 40×.${con ? ` It loses points on live tables — ${con}.` : ""}`;
   // Real hand-written opinion (data/editorial.json's "casino:roobet"
   // entry) — same lib/entity-view.ts helper EntityReviewPage.tsx uses.
   // Previously unused on Roobet's own page despite existing; now it's
@@ -120,7 +155,7 @@ export function RoobetReviewPage() {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="/assets/roobet-logo.png" alt="Roobet" style={{ height: 38, width: "auto", display: "block", marginBottom: 24 }} />
               <h1 style={{ margin: "0 0 16px", fontSize: 46, lineHeight: 1.05, letterSpacing: "-.035em", fontWeight: 800, fontStretch: "114%", color: "#fff" }}>
-                Roobet review 2026: four-minute payouts, 1× wagering, tiered KYC
+                Roobet review 2026: payout speed, 1× wagering, tiered KYC
               </h1>
               <div style={{ display: "flex", gap: 16, marginBottom: 22 }}>
                 <div style={{ width: 3, flex: "none", borderRadius: 2, background: "#00C2CC" }} />
@@ -128,21 +163,23 @@ export function RoobetReviewPage() {
               </div>
               <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 26 }}>
                 <Chip label="#1 RECOMMENDED" bg="rgba(255,204,0,.12)" border="rgba(255,204,0,.3)" color="#FFCC00" />
-                <Chip label={checked ? "TESTED 21 AUG 2026" : audited ? "DESK-AUDITED" : "PUBLISHED FIGURES"} bg="rgba(255,255,255,.04)" border="rgba(255,255,255,.08)" color="#8DA0AA" />
+                <Chip label={checked ? "FUNDED ACCOUNT" : audited ? "DESK-AUDITED" : "LISTED FIGURES"} bg="rgba(255,255,255,.04)" border="rgba(255,255,255,.08)" color="#8DA0AA" />
+                {/* Desk-audited is not community-reported (that tier means
+                    aggregated review-site data we don't have) — until the
+                    funded-account pass happens the honest tier is pending. */}
                 <Link href="/how-we-rate">
                   <Chip
-                    label={checked ? TIER_LABEL["field-tested"].toUpperCase() : audited ? TIER_LABEL["community-reported"].toUpperCase() : "FIELD-TEST PENDING"}
-                    bg={`${TIER_TINT[checked ? "field-tested" : audited ? "community-reported" : "pending"]}18`}
-                    border={`${TIER_TINT[checked ? "field-tested" : audited ? "community-reported" : "pending"]}55`}
-                    color={TIER_TINT[checked ? "field-tested" : audited ? "community-reported" : "pending"]}
+                    label={checked ? TIER_LABEL["field-tested"].toUpperCase() : TIER_LABEL.pending.toUpperCase()}
+                    bg={`${TIER_TINT[checked ? "field-tested" : "pending"]}18`}
+                    border={`${TIER_TINT[checked ? "field-tested" : "pending"]}55`}
+                    color={TIER_TINT[checked ? "field-tested" : "pending"]}
                   />
                 </Link>
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: 14, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11.5, color: "#5C6A72" }}>
-                <span style={{ width: 26, height: 26, flex: "none", borderRadius: "50%", background: "#1B2226", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 9, color: "#8DA0AA" }}>{checked ? "JM" : "—"}</span>
                 <span>
                   {checked
-                    ? "Tested by J. Marsh · reviewed by the editorial desk · 6 weeks live"
+                    ? "Field-tested on our own funded account · reviewed by the editorial desk"
                     : audited
                     ? "Desk-audited against public terms and registries · payout timing not yet field-tested"
                     : "Published terms · desk audit and funded-account testing not yet done"}
@@ -226,25 +263,37 @@ export function RoobetReviewPage() {
           )}
 
           <SectionHeading
-            title="What we measured"
+            title={checked ? "What we measured" : "Listed figures, not yet timed"}
             sub={
               checked
-                ? "24 withdrawals, 6 deposits, 3 support tickets. Raw log linked at the bottom of this page."
+                ? "Timed on our own funded account — see how we rate for the protocol."
                 : audited
-                ? "Bonus terms, coin support and licence are checked against public terms and registries. Withdrawal and support figures below are community-reported, not yet timed on our own funded account — see how we rate."
-                : "Figures below are Roobet's own published numbers, pending our desk-research and funded-account passes — see how we rate."
+                ? "Bonus terms, coin support and licence are checked against Roobet's own pages and public registries. Nothing below is timed or counted on our own funded account yet — see how we rate."
+                : "Figures below are listed, not yet desk-audited or timed on our own funded account — see how we rate."
             }
           />
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 1, background: "rgba(255,255,255,.07)", border: "1px solid rgba(255,255,255,.07)", borderRadius: 13, overflow: "hidden", marginBottom: 38 }}>
-            <Measurement label="Median withdrawal" value="4m 12s" note={`24 withdrawals, $40–$9,400. Index median: ${fmtMins(medianPayout)}.`} />
-            <Measurement label="Slowest withdrawal" value="41m 18s" note="A $9,400 request routed to manual review." />
-            <Measurement label="Deposit credit" value="1 confirm" note="BTC credited at first confirmation; Lightning instant." />
-            <Measurement label="Support first reply" value="3m 40s" note="Live chat, three tickets. Slower 02:00–07:00 UTC." />
-            <Measurement label="Live esports markets" value="84" note="Counted during a CS2 major week. Highest we measured." />
+            <Measurement
+              label="Median withdrawal"
+              value={roobet.payoutLabel}
+              note={checked ? `Timed on our own account. Index median: ${fmtMins(medianPayout)}.` : `Listed figure, not yet timed by us. Index median: ${fmtMins(medianPayout)}.`}
+            />
+            <Measurement label="Slowest withdrawal" value="Not yet timed" note={checked ? "Not published here yet." : "Needs withdrawals from our own funded account."} />
+            <Measurement
+              label="Deposit credit"
+              value={`${roobet.conf} confirm${roobet.conf === 1 ? "" : "s"}`}
+              note={`Listed: BTC credits at ${roobet.conf === 1 ? "first confirmation" : `${roobet.conf} confirmations`}${roobet.ln ? "; Lightning supported" : ""}.`}
+            />
+            <Measurement label="Support first reply" value="Not yet timed" note={checked ? "Not published here yet." : "Live chat listed as 24/7. Reply times need our own tickets."} />
+            <Measurement
+              label="Esports markets"
+              value={roobet.esports ? "Offered" : "None"}
+              note={roobet.esports ? "Market depth not yet counted by us." : "No esports book listed."}
+            />
             <Measurement
               label="Live dealer tables"
               value={roobetLive ? String(roobetLive.tables) : "—"}
-              note={tableLeader && tableLeader.slug !== "roobet" ? `Counted in the lobby. ${tableLeader.name} carries ${tableLeader.tables}.` : "Counted in the lobby. The highest count we track."}
+              note={tableLeader && tableLeader.slug !== "roobet" ? `Listed, not yet counted by us. ${tableLeader.name} lists ${tableLeader.tables}.` : "Listed, not yet counted by us. The highest listed count we track."}
             />
           </div>
 
@@ -252,7 +301,7 @@ export function RoobetReviewPage() {
           <OnChainActivity slug="roobet" />
           <CasinoSpecSheet slug="roobet" />
 
-          <SectionHeading title="Head to head" sub="Against the two operators readers compare it with most. Winner marked per row." />
+          <SectionHeading title="Head to head" sub="Against Stake and BC.Game. Listed figures, not yet timed by us. Winner marked per row." />
           <div style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 13, overflow: "hidden", background: "#0C1013", marginBottom: 38 }}>
             <div style={{ display: "grid", gridTemplateColumns: "1.25fr 1fr 1fr 1fr", background: "#101519", borderBottom: "1px solid rgba(255,255,255,.07)" }}>
               <div style={{ padding: "15px 18px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".07em", textTransform: "uppercase", color: "#5C6A72" }}>Criterion</div>
@@ -272,7 +321,7 @@ export function RoobetReviewPage() {
               );
             })}
             <div style={{ padding: "13px 18px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#5C6A72" }}>
-              ◆ row winner · = tie · {soleWins} of {h2hRaw.length} rows to Roobet, {ties} tied · measured 21 Aug 2026
+              ◆ row winner · = tie · {soleWins} of {h2hRaw.length} rows to Roobet, {ties} tied · listed figures, not yet timed by us
             </div>
           </div>
 
@@ -281,12 +330,16 @@ export function RoobetReviewPage() {
               <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 14 }}>Holds up</div>
               <div style={{ display: "flex", flexDirection: "column", gap: 11 }}>
                 {[
-                  payoutClaim(ops, "roobet"),
+                  payoutClaim(ops, "roobet") && `${payoutClaim(ops, "roobet")}${checked ? "" : " on listed payout times"}.`,
                   "1× wagering on cashback and RooWards credit, against a 40× norm elsewhere.",
-                  "No document request below a cumulative 2 BTC equivalent.",
-                  "Ships the top RTP version of four of the six headline slots we checked.",
-                  "Highest live esports market count we measured (84 during a CS2 major).",
-                ].map((p) => (
+                  "Per its published KYC policy, no document request below a cumulative 2 BTC equivalent.",
+                  readingRows.length > 0
+                    ? `Ships the full published RTP on ${readingRows.length - cutSlots.length} of the ${readingRows.length} slots we checked in its own client.`
+                    : null,
+                  roobet.sports && roobet.esports ? "Casino, sportsbook and esports markets on one account." : null,
+                ]
+                  .filter((x): x is string => Boolean(x))
+                  .map((p) => (
                   <div key={p} style={{ display: "flex", gap: 11, fontSize: 14, lineHeight: 1.5, color: "#B7C4CB" }}>
                     <span style={{ color: "#00C2CC", fontFamily: "var(--font-jetbrains-mono), monospace", flex: "none" }}>+</span>
                     <span>{p}</span>
@@ -297,7 +350,14 @@ export function RoobetReviewPage() {
             <div style={{ padding: 24, borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
               <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#DA9877", marginBottom: 14 }}>Falls short</div>
               <div style={{ display: "flex", flexDirection: "column", gap: 11 }}>
-                {[con, `Only ${coins.length} coins accepted on the cashier.`, "Gates of Olympus and Razor Shark ship at a reduced RTP here.", "Restricted in the UK, Netherlands, Australia and several US states."]
+                {[
+                  con,
+                  coins.length < siteData.coinDefs.length ? `Only ${coins.length} of the ${siteData.coinDefs.length} coins we track accepted on the cashier.` : null,
+                  cutSlots.length > 0 ? `${cutSlots.join(", ")} ${cutSlots.length === 1 ? "ships" : "ship"} at a reduced RTP here.` : null,
+                  // Sourced: the spec sheet confirms geo-blocking is active. The
+                  // exact country list isn't independently checked, so it isn't named.
+                  "Geo-blocking is enforced — check the restricted-country list in the terms before depositing.",
+                ]
                   .filter((x): x is string => Boolean(x))
                   .map((c) => (
                     <div key={c} style={{ display: "flex", gap: 11, fontSize: 14, lineHeight: 1.5, color: "#B7C4CB" }}>
@@ -310,26 +370,40 @@ export function RoobetReviewPage() {
           </div>
 
           <SectionHeading
-            title={checked ? "Slots we tested here" : "Slots we track here"}
+            title={readingRows.length > 0 ? "Slots we tested here" : "Slot RTP here"}
             sub={
-              checked
-                ? "RTP as shipped in Roobet's own build, against the highest version available anywhere on our index."
-                : "Published RTP against the highest version available anywhere on our index. Roobet's own build isn't field-tested yet — see how we rate."
+              readingRows.length > 0
+                ? "RTP as shipped in Roobet's own build, read from the in-client paytable, against the studio's published figure."
+                : "Not yet checked. Reading Roobet's own build needs a paytable read inside a funded account, which we haven't done — see how we rate."
             }
           />
           <div style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 13, overflow: "hidden", background: "#0C1013", marginBottom: 38 }}>
-            {roobetSlots.map((s) => (
-              <div key={s.name} style={{ display: "grid", gridTemplateColumns: "minmax(160px,1.4fr) minmax(120px,1fr) 92px 92px", borderBottom: "1px solid rgba(255,255,255,.05)" }}>
+            {readingRows.map((s) => (
+              <div key={s.key} style={{ display: "grid", gridTemplateColumns: "minmax(160px,1.4fr) minmax(120px,1fr) 92px 92px", borderBottom: "1px solid rgba(255,255,255,.05)" }}>
                 <div style={{ padding: "14px 18px", fontSize: 13.5, fontWeight: 600, color: "#B7C4CB" }}>{s.name}</div>
                 <div style={{ padding: "14px 18px", fontSize: 13, color: "#7B8A93" }}>{s.provider}</div>
                 <div style={{ padding: "14px 18px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12.5, color: "#E8EDF0" }}>{s.here}</div>
                 <div style={{ padding: "14px 18px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12.5, color: s.deltaColor }}>{s.delta}</div>
               </div>
             ))}
-            <div style={{ padding: "13px 18px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#5C6A72" }}>Left column: RTP here · right: difference vs the best version on the index</div>
+            {readingRows.length === 0 && (
+              <div style={{ padding: "14px 18px", fontSize: 13.5, color: "#7B8A93", borderBottom: "1px solid rgba(255,255,255,.05)" }}>
+                No RTP readings from Roobet&apos;s client yet.
+              </div>
+            )}
+            <div style={{ padding: "13px 18px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#5C6A72" }}>
+              {readingRows.length > 0 ? "Left column: RTP here · right: difference vs the studio's published RTP" : "Per-build RTP appears here once we read it in a funded account"}
+            </div>
           </div>
 
-          <SectionHeading title="Bonus terms, in full" sub="Transcribed from the operator's own terms page on 21 Aug 2026. We flag anything that materially limits withdrawal." />
+          <SectionHeading
+            title="Bonus terms, in full"
+            sub={
+              audited
+                ? "Checked against the operator's own terms page. We flag anything that materially limits withdrawal."
+                : "As listed in the operator's terms, not yet checked by us. We flag anything that materially limits withdrawal."
+            }
+          />
           <div style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 13, overflow: "hidden", background: "#0C1013", marginBottom: 38 }}>
             {bonusTerms.map((t) => (
               <div key={t.k} style={{ display: "grid", gridTemplateColumns: "200px 1fr 92px", borderBottom: "1px solid rgba(255,255,255,.05)" }}>
@@ -366,7 +440,7 @@ export function RoobetReviewPage() {
             <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
               {[
                 { k: "Launched", v: "2019" },
-                { k: "Licence", v: roobet.licence },
+                { k: "Licence", v: licenceFact?.value ?? roobet.licence },
                 { k: "Coins", v: String(coins.length) },
                 { k: "Games", v: "4,200+" },
                 { k: "Sportsbook", v: roobet.sports ? "Yes" : "No" },
@@ -388,7 +462,7 @@ export function RoobetReviewPage() {
           <div style={{ padding: 20, borderRadius: 13, background: "#0E1316", border: "1px solid rgba(255,255,255,.09)" }}>
             <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#FFCC00", marginBottom: 10 }}>Our top pick</div>
             <p style={{ margin: "0 0 16px", fontSize: 13.5, lineHeight: 1.55, color: "#93A3AC" }}>
-              Fastest payouts of our five highest-scored casinos at {roobet.payoutLabel}, on 1× wagering against the high-wagering norm elsewhere.
+              Fastest listed payout of our five highest-scored casinos at {roobet.payoutLabel}{checked ? "" : " (not yet timed by us)"}, on 1× wagering against the high-wagering norm elsewhere.
             </p>
             <a href="https://roobet.com" target="_blank" rel="nofollow sponsored noopener" style={{ display: "block", textAlign: "center", padding: 12, borderRadius: 8, background: "#FFCC00", color: "#1A1400", fontSize: 13, fontWeight: 700 }}>Visit Roobet</a>
           </div>

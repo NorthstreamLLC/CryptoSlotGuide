@@ -13,44 +13,44 @@ export type BtcFilterKey = "all" | "nokyc" | "fast" | "lowwager" | "sports" | "e
 export const btcViews: Record<BtcFilterKey, { crumb: string; kicker: string; h1: string; p: string; note: string }> = {
   all: {
     crumb: "Crypto casinos",
-    kicker: "operators · 8 coins tracked · updated 24 Aug 2026",
-    h1: "Best crypto casinos, ranked by verified payout speed",
-    p: "Every operator here was tested with real on-chain withdrawals, coin by coin. We list which cryptos each one actually credits, the confirmations it waits for, and whether Lightning works — the three things that decide how long you wait.",
+    kicker: "operators · 8 coins tracked",
+    h1: "Best crypto casinos, compared on payout speed",
+    p: "Which cryptos each operator credits, the confirmations it waits for, and whether Lightning works — the three things that decide how long you wait. Payout times are listed figures; we haven't timed withdrawals on our own funded accounts yet.",
     note: "Showing operators that credit ",
   },
   nokyc: {
     crumb: "No-KYC casinos",
-    kicker: "no-KYC operators · verified at withdrawal · updated 24 Aug 2026",
-    h1: "No-KYC crypto casinos, verified by withdrawing",
-    p: 'These operators took a deposit and paid a withdrawal without asking for a document. Nothing here is on the list because a marketing page claims "no KYC" — we cashed out to confirm it. Operators that verify at a threshold are excluded, however high that threshold is.',
+    kicker: "no-KYC operators · listed policy",
+    h1: "No-KYC crypto casinos",
+    p: "Operators listed as paying withdrawals without asking for a document. That's their listed policy — we haven't yet cashed out on our own account to confirm it. Operators that verify at a threshold are excluded, however high that threshold is.",
     note: "No-KYC operators that credit ",
   },
   fast: {
     crumb: "Fastest payouts",
-    kicker: "operators under 6 minutes · timed · updated 24 Aug 2026",
-    h1: "Fastest-paying crypto casinos, timed to the second",
-    p: "Median time from a confirmed withdrawal request to the first on-chain broadcast, measured across three withdrawal sizes. Network congestion is excluded, so the number reflects the operator's own batching and review policy.",
+    kicker: "operators under 6 minutes · listed",
+    h1: "Fastest-paying crypto casinos",
+    p: "Ranked on listed median time from a confirmed withdrawal request to the first on-chain broadcast, not yet timed by us. When we field-test an operator we time that interval across three withdrawal sizes and exclude network congestion, so the number reflects the operator's own batching and review policy.",
     note: "Sub-6-minute operators that credit ",
   },
   lowwager: {
     crumb: "Lowest wagering",
-    kicker: "operators at 1× wagering · updated 24 Aug 2026",
+    kicker: "operators at 1× wagering",
     h1: "Crypto casinos with 1× bonus wagering",
     p: "Wagering is the only bonus term that decides whether an offer is worth taking. These operators clear at 1× turnover — the bonus is effectively cash — instead of the 35× to 45× that makes a headline number meaningless.",
     note: "1× wagering operators that credit ",
   },
   sports: {
     crumb: "Casino + sportsbook",
-    kicker: "operators with a sportsbook · updated 24 Aug 2026",
-    h1: "Crypto casinos with a real sportsbook attached",
-    p: 'One balance across casino and sports, with margins we priced ourselves across football, basketball and tennis. Operators whose "sportsbook" is a white-label iframe with three markets are not on this list.',
+    kicker: "operators with a sportsbook",
+    h1: "Crypto casinos with a sportsbook attached",
+    p: "Operators listed with a sportsbook alongside the casino. We haven't yet priced margins ourselves across football, basketball and tennis, or checked market depth beyond what each operator lists.",
     note: "Sportsbook operators that credit ",
   },
   esports: {
     crumb: "Esports betting",
-    kicker: "operators with esports markets · updated 24 Aug 2026",
+    kicker: "operators with esports markets",
     h1: "Crypto casinos that take esports bets",
-    p: "CS2, League of Legends, Dota 2 and Valorant markets on the same balance as the casino, judged on market depth outside the majors and how quickly a settled map pays.",
+    p: "Operators listed with CS2, League of Legends, Dota 2 or Valorant markets alongside the casino. Market depth outside the majors and how quickly a settled map pays are not yet checked by us.",
     note: "Esports operators that credit ",
   },
 };
@@ -93,7 +93,7 @@ export function btcStats(list: Operator[]): { v: string; l: string }[] {
   const m = Math.floor(mid);
   const sec = Math.round((mid - m) * 60);
   return [
-    { v: `${m}m ${String(sec).padStart(2, "0")}s`, l: "median payout here" },
+    { v: `${m}m ${String(sec).padStart(2, "0")}s`, l: "listed median payout" },
     { v: String(list.filter((o) => o.conf === 1).length), l: "clear at 1 confirmation" },
     { v: String(list.filter((o) => o.ln).length), l: "support Lightning" },
     { v: String(list.filter((o) => o.wager === 1).length), l: "at 1× wagering" },

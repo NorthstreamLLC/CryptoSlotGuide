@@ -1,5 +1,6 @@
 import { siteData } from "@/lib/site-data";
-import { TIER_LABEL, TIER_DESC, TIER_TINT } from "@/lib/review-tier";
+import { TIER_LABEL, TIER_DESC, TIER_TINT, type ReviewTier } from "@/lib/review-tier";
+import { isFieldTestedOperator } from "@/lib/field-tested";
 import { SCORE_BRAND } from "@/lib/score-tier";
 import { pageMetadata } from "@/lib/seo";
 
@@ -21,16 +22,24 @@ export const metadata = pageMetadata(
   "/how-we-rate"
 );
 
-const REVIEW_BASIS_TIER: Record<string, "field-tested" | "editorial"> = {
-  "Live casino": "field-tested",
-  Slots: "editorial",
-  "Game providers": "editorial",
-  Sportsbooks: "editorial",
-  "Prediction markets": "editorial",
-  Wallets: "field-tested",
-  Exchanges: "field-tested",
-  "Fiat casinos": "editorial",
+/**
+ * Live casino, wallets and exchanges are categories a field test covers,
+ * but the badge has to reflect what has actually happened: it only reads
+ * "Field-tested" once every entity in that category is in
+ * data/fieldTestedOperators.json, and "Field-test pending" until then.
+ * Every other category is editorial by design.
+ */
+const FIELD_TEST_CATEGORY_SLUGS: Record<string, string[]> = {
+  "Live casino": siteData.liveCasinos.map((o) => o.slug),
+  Wallets: siteData.walletRows.map((o) => o.slug),
+  Exchanges: siteData.exchangeRows.map((o) => o.slug),
 };
+
+function reviewBasisTier(name: string): ReviewTier {
+  const slugs = FIELD_TEST_CATEGORY_SLUGS[name];
+  if (!slugs) return "editorial";
+  return slugs.length > 0 && slugs.every(isFieldTestedOperator) ? "field-tested" : "pending";
+}
 
 /**
  * Ported from the `isMethod` block in CryptoSlotGuide.dc.html (search
@@ -194,7 +203,13 @@ export default function Page() {
       </section>
 
       <section style={{ maxWidth: 1180, margin: "0 auto", padding: "44px 40px 0" }}>
-        <h2 style={{ margin: "0 0 20px", fontSize: 28, letterSpacing: "-.028em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>The test protocol</h2>
+        <h2 style={{ margin: "0 0 8px", fontSize: 28, letterSpacing: "-.028em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>The field-test protocol</h2>
+        <p style={{ margin: "0 0 20px", maxWidth: "80ch", fontSize: 15, lineHeight: 1.65, color: "#8DA0AA", textWrap: "pretty" }}>
+          The steps a field test follows. A figure is only labelled field-tested once its operator has been through them —{" "}
+          {fieldTestedOperators.length === 0
+            ? "none has yet."
+            : `${fieldTestedOperators.length} so far.`}
+        </p>
         <div style={{ display: "flex", flexDirection: "column", gap: 1, border: "1px solid rgba(255,255,255,.07)", borderRadius: 14, overflow: "hidden", background: "rgba(255,255,255,.07)" }}>
           {methodSteps.map((s) => (
             <div key={s.n} style={{ display: "grid", gridTemplateColumns: "72px minmax(200px,1fr) 2fr", gap: 20, alignItems: "baseline", padding: "20px 24px", background: "#0C1013" }}>
@@ -209,11 +224,11 @@ export default function Page() {
       <section style={{ maxWidth: 1180, margin: "0 auto", padding: "44px 40px 0" }}>
         <h2 style={{ margin: "0 0 8px", fontSize: 28, letterSpacing: "-.028em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Everything else: reviewed, not weighted</h2>
         <p style={{ margin: "0 0 22px", maxWidth: "80ch", fontSize: 15, lineHeight: 1.65, color: "#8DA0AA", textWrap: "pretty" }}>
-          A slot and a hardware wallet have nothing in common, so scoring them on one scale would be theatre. Each category is reviewed against the things that actually decide whether it is any good, and each review shows you those checks with the reading behind them.
+          A slot and a hardware wallet have nothing in common, so scoring them on one scale would be theatre. Each category is reviewed against the things that actually decide whether it is any good, and each review shows you those checks and where each figure came from.
         </p>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 1, background: "rgba(255,255,255,.07)", border: "1px solid rgba(255,255,255,.07)", borderRadius: 14, overflow: "hidden" }}>
           {reviewBasis.map((r) => {
-            const tier = REVIEW_BASIS_TIER[r.name] ?? "editorial";
+            const tier = reviewBasisTier(r.name);
             return (
               <div key={r.name} style={{ display: "flex", flexDirection: "column", gap: 10, padding: "22px 24px", background: "#0C1013" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
@@ -261,7 +276,7 @@ export default function Page() {
           <div style={{ padding: "28px 32px", borderRadius: 14, background: "linear-gradient(150deg,#0E1417,#0A0E10)", border: "1px solid rgba(255,255,255,.07)" }}>
             <h3 style={{ margin: "0 0 14px", fontSize: 19, letterSpacing: "-.02em", fontWeight: 700, color: "#fff" }}>Corrections</h3>
             <p style={{ margin: "0 0 12px", fontSize: 14.5, lineHeight: 1.7, color: "#93A3AC", textWrap: "pretty" }}>
-              If a figure here is wrong, we want to know. Reader reports that we can reproduce trigger an immediate re-test, and the page carries the new date rather than a silent edit.
+              If a figure here is wrong, we want to know. Reader reports go to the front of the queue. When we correct a figure, the page says what changed and where the new figure came from rather than making a silent edit.
             </p>
             <a href="mailto:corrections@cryptoslotguide.com" style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11.5, letterSpacing: ".05em", color: "#00C2CC" }}>Report an inaccuracy →</a>
           </div>

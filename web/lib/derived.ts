@@ -234,7 +234,7 @@ export function casinoCons(
   else out.push("A large withdrawal can still trigger a manual review");
   if (!o.sports) out.push("No sportsbook, so a single balance cannot cover both");
   else if (!o.esports) out.push("Sportsbook carries no esports markets");
-  out.push("Restricted-country list is long and enforced at withdrawal as well as signup");
+  out.push("Restricted-country list in the terms is worth checking before you deposit");
   return out.filter((x): x is string => Boolean(x)).slice(0, 4);
 }
 

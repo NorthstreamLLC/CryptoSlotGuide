@@ -5,7 +5,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 
 export const metadata = pageMetadata(
   "Compare operators side by side",
-  "Pick any two or three operators — casinos, wallets, exchanges, sportsbooks — and compare their measured figures column by column.",
+  "Pick any two or three operators — casinos, wallets, exchanges, sportsbooks — and compare their listed figures column by column.",
   "/compare"
 );
 

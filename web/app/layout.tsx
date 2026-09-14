@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    "Crypto casino, slot, sportsbook and wallet reviews built on measured data — field-tested where we can fund it, assessed from public sources everywhere else, and every review says which is which.",
+    "Crypto casino, slot, sportsbook and wallet reviews that say where every figure comes from — field-tested once we fund an account, assessed from public sources until then, and labelled either way.",
 };
 
 export default function RootLayout({

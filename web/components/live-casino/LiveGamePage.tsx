@@ -52,7 +52,7 @@ export function LiveGamePage({ g }: { g: LiveGame }) {
           </div>
 
           <h2 style={{ margin: "0 0 8px", fontSize: 26, letterSpacing: "-.03em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Where to play it</h2>
-          <p style={{ margin: "0 0 18px", fontSize: 14.5, color: "#8DA0AA" }}>Seat limits and stream latency as we found them, logged from a funded account.</p>
+          <p style={{ margin: "0 0 18px", fontSize: 14.5, color: "#8DA0AA" }}>Seat limits and stream latency as listed per operator — not yet checked from a funded account.</p>
           <div style={{ border: "1px solid rgba(255,255,255,.08)", borderRadius: 13, overflow: "hidden" }}>
             <div style={{ display: "grid", gridTemplateColumns: "minmax(160px,1.2fr) 96px 110px 96px 92px", background: "rgba(255,255,255,.03)", borderBottom: "1px solid rgba(255,255,255,.08)" }}>
               {["Casino", "Min", "Max", "Latency", ""].map((h) => (
