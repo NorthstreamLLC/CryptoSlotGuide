@@ -1,7 +1,6 @@
 import { siteData } from "@/lib/site-data";
 import { TIER_LABEL, TIER_DESC, TIER_TINT, type ReviewTier } from "@/lib/review-tier";
 import { isFieldTestedOperator } from "@/lib/field-tested";
-import { SCORE_BRAND } from "@/lib/score-tier";
 import { pageMetadata } from "@/lib/seo";
 
 /**
@@ -17,8 +16,8 @@ import { pageMetadata } from "@/lib/seo";
 const ON_CHAIN_TINT = "#6BC7FF";
 
 export const metadata = pageMetadata(
-  `How the ${SCORE_BRAND} works`,
-  "One weighted model for crypto casinos, built from six criteria with published weights. Everything else is reviewed against its own checklist, field-tested or editorially assessed — every review says which.",
+  "How we source information",
+  "No scores and no ratings: every review is built from facts, each one cited to where it came from and marked when it hasn't been checked yet.",
   "/how-we-rate"
 );
 
@@ -63,10 +62,10 @@ export default function Page() {
             Methodology
           </div>
           <h1 style={{ margin: "0 0 16px", fontSize: 50, lineHeight: 1.03, letterSpacing: "-.038em", fontWeight: 800, fontStretch: "116%", color: "#fff", textWrap: "balance" }}>
-            How the {SCORE_BRAND} works
+            How we source information
           </h1>
           <p style={{ margin: "0 auto 14px", maxWidth: "66ch", fontSize: 16.5, lineHeight: 1.65, color: "#93A3AC", textWrap: "pretty" }}>
-            One weighted model, applied to one category. Crypto casinos carry a {SCORE_BRAND.toLowerCase()} built from six criteria with fixed weights, published so any number on this site can be re-derived. Commission is not one of the inputs, and the people assigning scores cannot see the commercial terms.
+            We don&apos;t score or rate anything. Every review is built from facts — each one cited to the operator&apos;s own page, a third-party tracker, or our own testing — and anything we haven&apos;t checked is marked as not yet checked. Commission never decides what a review says or which facts it shows.
           </p>
           <p style={{ margin: "0 auto", maxWidth: "66ch", fontSize: 15, lineHeight: 1.65, color: "#7B8A93", textWrap: "pretty" }}>
             Everything else — live tables, slots, providers, sportsbooks, prediction markets, wallets, exchanges — is reviewed against its own checklist rather than forced into the casino model. Those checklists are below.
@@ -93,7 +92,7 @@ export default function Page() {
       <section style={{ maxWidth: 1180, margin: "0 auto", padding: "44px 40px 0" }}>
         <h2 style={{ margin: "0 0 8px", fontSize: 28, letterSpacing: "-.028em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>How we back a figure</h2>
         <p style={{ margin: "0 0 20px", maxWidth: "80ch", fontSize: 15, lineHeight: 1.65, color: "#8DA0AA", textWrap: "pretty" }}>
-          Not every figure gets the same kind of check, and we&apos;d rather say so than blur it. The first three apply criterion by criterion within a single casino review (see the weights below); the fourth backs a small set of figures — on-chain deposit flow, hot-wallet balances — that need infrastructure this site doesn&apos;t have yet. Every number traces back to whichever one applies.
+          Not every figure gets the same kind of check, and we&apos;d rather say so than blur it. The first three apply fact by fact within a single casino review (see the six checks below); the fourth backs a small set of figures — on-chain deposit flow, hot-wallet balances — that need infrastructure this site doesn&apos;t have yet. Every number traces back to whichever one applies.
         </p>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))", gap: 1, background: "rgba(255,255,255,.07)", border: "1px solid rgba(255,255,255,.07)", borderRadius: 14, overflow: "hidden" }}>
           {(["field-tested", "community-reported", "editorial"] as const).map((tier) => (
@@ -151,16 +150,15 @@ export default function Page() {
             Crypto casinos only
           </span>
         </div>
-        <h2 style={{ margin: "0 0 8px", fontSize: 28, letterSpacing: "-.028em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>The six criteria, their weights, and how each is sourced</h2>
+        <h2 style={{ margin: "0 0 8px", fontSize: 28, letterSpacing: "-.028em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>The six things we check on every casino, and how each is sourced</h2>
         <p style={{ margin: "0 0 20px", maxWidth: "74ch", fontSize: 15, lineHeight: 1.65, color: "#8DA0AA", textWrap: "pretty" }}>
-          These weights produce the score on every crypto casino review and the order of the casino index. They are not applied to any other category. Four of the six start from the operator&apos;s own public pages. Support responsiveness and the RTP build an operator ships can only be checked from a funded account, and payout speed moves from the operator&apos;s stated time to our own timings once field-tested. Each review marks any criterion that hasn&apos;t been checked for that operator yet.
+          There are no weights and no score. Each casino review shows these six as facts, with where each came from, and lists are sorted by facts like withdrawal time or name. Four of the six start from the operator&apos;s own public pages. Support responsiveness and the RTP build an operator ships can only be checked from a funded account, and payout speed moves from the operator&apos;s stated time to our own timings once field-tested. Each review marks any criterion that hasn&apos;t been checked for that operator yet.
         </p>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 1, background: "rgba(255,255,255,.07)", border: "1px solid rgba(255,255,255,.07)", borderRadius: 14, overflow: "hidden" }}>
           {criteria.map((c) => (
             <div key={c.name} style={{ padding: 24, background: "#0C1013" }}>
               <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 12, marginBottom: 10 }}>
                 <span style={{ fontSize: 16, fontWeight: 700, color: "#fff", letterSpacing: "-.015em" }}>{c.name}</span>
-                <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 16, color: "#00C2CC" }}>{c.weight}</span>
               </div>
               <p style={{ margin: "0 0 12px", fontSize: 13.5, lineHeight: 1.6, color: "#8DA0AA", textWrap: "pretty" }}>{c.desc}</p>
               <span
@@ -193,7 +191,7 @@ export default function Page() {
         </div>
         <h2 style={{ margin: "0 0 8px", fontSize: 28, letterSpacing: "-.028em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>The full spec sheet</h2>
         <p style={{ margin: "0 0 20px", maxWidth: "74ch", fontSize: 15, lineHeight: 1.65, color: "#8DA0AA", textWrap: "pretty" }}>
-          Below the six weighted criteria, most casino reviews also carry a grouped fact table — coins accepted, withdrawal fees, licence and company registration, geo-blocking — that doesn&apos;t feed the score at all. Every fact on it is either drawn from data already established elsewhere on this site, or checked by us directly against the operator&apos;s own page, with the exact source and date shown per row. It only ever grows by real, individual research — an operator with no facts checked yet simply has no spec sheet, not a filled-in placeholder.
+          Alongside those six checks, most casino reviews carry a grouped fact table — withdrawal time, fees, coins, bonus terms, licence and company registration, KYC. Every fact on it is either drawn from data already established elsewhere on this site, or checked by us directly against the operator&apos;s own page, with the exact source and date shown per row. It only ever grows by real, individual research — an operator with no facts checked yet simply has no spec sheet, not a filled-in placeholder.
         </p>
         <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
           <div style={{ padding: "10px 16px", borderRadius: 10, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)", fontSize: 13, color: "#8DA0AA" }}>
@@ -222,9 +220,9 @@ export default function Page() {
       </section>
 
       <section style={{ maxWidth: 1180, margin: "0 auto", padding: "44px 40px 0" }}>
-        <h2 style={{ margin: "0 0 8px", fontSize: 28, letterSpacing: "-.028em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Everything else: reviewed, not weighted</h2>
+        <h2 style={{ margin: "0 0 8px", fontSize: 28, letterSpacing: "-.028em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Everything else: reviewed against its own checklist</h2>
         <p style={{ margin: "0 0 22px", maxWidth: "80ch", fontSize: 15, lineHeight: 1.65, color: "#8DA0AA", textWrap: "pretty" }}>
-          A slot and a hardware wallet have nothing in common, so scoring them on one scale would be theatre. Each category is reviewed against the things that actually decide whether it is any good, and each review shows you those checks and where each figure came from.
+          A slot and a hardware wallet have nothing in common, so putting them on one scale would be theatre. Each category is reviewed against the things that actually decide whether it is any good, and each review shows you those checks and where each figure came from.
         </p>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 1, background: "rgba(255,255,255,.07)", border: "1px solid rgba(255,255,255,.07)", borderRadius: 14, overflow: "hidden" }}>
           {reviewBasis.map((r) => {
@@ -267,10 +265,10 @@ export default function Page() {
           <div style={{ padding: "28px 32px", borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
             <h3 style={{ margin: "0 0 14px", fontSize: 19, letterSpacing: "-.02em", fontWeight: 700, color: "#fff" }}>How we&apos;re funded</h3>
             <p style={{ margin: "0 0 12px", fontSize: 14.5, lineHeight: 1.7, color: "#93A3AC", textWrap: "pretty" }}>
-              We earn commission when a reader signs up through our links, including at operators we rank first. Rates differ between operators, which is exactly why they are kept away from scoring.
+              We earn commission when a reader signs up through our links. Rates differ between operators, which is exactly why commission never decides what a review says or which facts it shows.
             </p>
             <p style={{ margin: 0, fontSize: 14.5, lineHeight: 1.7, color: "#93A3AC", textWrap: "pretty" }}>
-              No operator has ever been given sight of a score before publication, and no operator can pay for placement on any table on this site.
+              No operator sees a review before publication, and no operator can pay for placement on any table on this site.
             </p>
           </div>
           <div style={{ padding: "28px 32px", borderRadius: 14, background: "linear-gradient(150deg,#0E1417,#0A0E10)", border: "1px solid rgba(255,255,255,.07)" }}>

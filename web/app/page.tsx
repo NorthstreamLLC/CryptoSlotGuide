@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { rtpSortValue } from "@/lib/slot-facts";
 import { siteData, siteCounts } from "@/lib/site-data";
-import { topScore } from "@/lib/derived";
+import { allVersionsListedStudios, selfCustodyWallets } from "@/lib/derived";
 import { tintFor } from "@/lib/logo";
 import { CasinoIndexTable } from "@/components/home/CasinoIndexTable";
 import { CryptoTicker } from "@/components/home/CryptoTicker";
@@ -53,7 +53,7 @@ const quickChips = [
 ];
 
 /**
- * Featured cards. Every score and metric is read from siteData; the one-line
+ * Featured cards. Every metric is read from siteData; the one-line
  * copy only states what those records (or published terms) show. No
  * per-card dates — nothing here has a real re-test date behind it.
  */
@@ -64,11 +64,9 @@ function buildFeatured() {
   const prov = (s: string) => providers.find((x) => x.slug === s);
   const wal = (s: string) => walletRows.find((x) => x.slug === s);
   const exch = (s: string) => exchangeRows.find((x) => x.slug === s);
-  const score = (n: number | undefined) => (n === undefined ? "—" : n.toFixed(1));
 
   const sb = slot("sweet-bonanza");
   const kr = exch("kraken");
-  const st = op("stake");
   const ph = wal("phantom");
   const hg = prov("hacksaw-gaming");
   const cb = op("cloudbet");
@@ -78,14 +76,14 @@ function buildFeatured() {
   const nc = prov("nolimit-city");
 
   return [
-    { name: "Sweet Bonanza", mono: "SWB", slug: "sweet-bonanza", cat: "Slot", score: sb ? `${sb.rtp.toFixed(2)}%` : "—", line: `Published at ${sb ? `${sb.rtp.toFixed(2)}%` : "its studio RTP"}, but operators can licence a lower build. Check the RTP in the game's info screen before you spin.`, metric: sb ? `${sb.provider} game page` : "—", cta: "Slot review →", href: "/slots/sweet-bonanza" },
-    { name: "Kraken", mono: "KR", slug: "kraken", cat: "Exchange", score: score(kr?.score), line: "MiCA-licensed, FCA-registered and publishes proof of reserves — its entry-tier Pro fees are the highest of the five.", metric: `${kr?.m1 ?? "—"} entry taker fee`, cta: "Review →", href: "/exchanges/kraken" },
-    { name: "Stake", mono: "ST", slug: "stake", cat: "Casino", score: score(st?.score), line: `${(coinsBy["stake"] ?? []).length} of the ${coinDefs.length} coins we track on the cashier and VIP rakeback with no wagering on its weekly bonus, but no withdrawal time stated in its help centre.`, metric: `${(coinsBy["stake"] ?? []).length} coins accepted`, cta: "Review →", href: "/casinos/stake" },
-    { name: "Phantom", mono: "PH", slug: "phantom", cat: "Wallet", score: score(ph?.score), line: "Solana-first self-custody wallet with transaction previews before you approve, audited by Kudelski and Least Authority.", metric: ph?.m2 ?? "—", cta: "Review →", href: "/wallets/phantom" },
-    { name: "Hacksaw Gaming", mono: "HG", slug: "hacksaw-gaming", cat: "Provider", score: score(hg?.score), line: "Lists every RTP version it licenses on each game page, so you can see how low a casino's build could go. Volatility is not for everyone.", metric: hg?.rtp ?? "—", cta: "Studio profile →", href: "/providers/hacksaw-gaming" },
-    { name: "Cloudbet", mono: "CB", slug: "cloudbet", cat: "Sportsbook", score: score(cb?.score), line: `${cbBook && parseFloat(cbBook.margin) === lowestMargin ? "Lowest listed margin of the sportsbooks on our index" : "Sportsbook and casino on one balance"}. The casino welcome offer carries ${cb?.wager ?? "—"}× wagering.`, metric: `${cbBook?.margin ?? "—"} listed margin`, cta: "Sportsbooks →", href: "/sportsbooks" },
-    { name: "Ledger", mono: "LG", slug: "ledger", cat: "Wallet", score: score(lg?.score), line: "Hardware wallet with keys in a Secure Element and a Transaction Check before you sign.", metric: `${lg?.m2 ?? "—"}`, cta: "Review →", href: "/wallets/ledger" },
-    { name: "Nolimit City", mono: "NC", slug: "nolimit-city", cat: "Provider", score: score(nc?.score), line: "Extreme volatility by design. The max-win ceilings are high and the base game will test your bankroll.", metric: nc?.rtp ?? "—", cta: "Studio profile →", href: "/providers/nolimit-city" },
+    { name: "Sweet Bonanza", mono: "SWB", slug: "sweet-bonanza", cat: "Slot", line: `Published at ${sb ? `${sb.rtp.toFixed(2)}%` : "its studio RTP"}, but operators can licence a lower build. Check the RTP in the game's info screen before you spin.`, metric: sb ? `${sb.provider} game page` : "—", cta: "Slot review →", href: "/slots/sweet-bonanza" },
+    { name: "Kraken", mono: "KR", slug: "kraken", cat: "Exchange", line: "MiCA-licensed, FCA-registered and publishes proof of reserves — its entry-tier Pro fees are the highest of the five.", metric: `${kr?.m1 ?? "—"} entry taker fee`, cta: "Review →", href: "/exchanges/kraken" },
+    { name: "Stake", mono: "ST", slug: "stake", cat: "Casino", line: `${(coinsBy["stake"] ?? []).length} of the ${coinDefs.length} coins we track on the cashier and VIP rakeback with no wagering on its weekly bonus, but no withdrawal time stated in its help centre.`, metric: `${(coinsBy["stake"] ?? []).length} coins accepted`, cta: "Review →", href: "/casinos/stake" },
+    { name: "Phantom", mono: "PH", slug: "phantom", cat: "Wallet", line: "Solana-first self-custody wallet with transaction previews before you approve, audited by Kudelski and Least Authority.", metric: ph?.m2 ?? "—", cta: "Review →", href: "/wallets/phantom" },
+    { name: "Hacksaw Gaming", mono: "HG", slug: "hacksaw-gaming", cat: "Provider", line: "Lists every RTP version it licenses on each game page, so you can see how low a casino's build could go. Volatility is not for everyone.", metric: hg?.rtp ?? "—", cta: "Studio profile →", href: "/providers/hacksaw-gaming" },
+    { name: "Cloudbet", mono: "CB", slug: "cloudbet", cat: "Sportsbook", line: `${cbBook && parseFloat(cbBook.margin) === lowestMargin ? "Lowest listed margin of the sportsbooks on our index" : "Sportsbook and casino on one balance"}. The casino welcome offer carries ${cb?.wager ?? "—"}× wagering.`, metric: `${cbBook?.margin ?? "—"} listed margin`, cta: "Sportsbooks →", href: "/sportsbooks" },
+    { name: "Ledger", mono: "LG", slug: "ledger", cat: "Wallet", line: "Hardware wallet with keys in a Secure Element and a Transaction Check before you sign.", metric: `${lg?.m2 ?? "—"}`, cta: "Review →", href: "/wallets/ledger" },
+    { name: "Nolimit City", mono: "NC", slug: "nolimit-city", cat: "Provider", line: "Extreme volatility by design. The max-win ceilings are high and the base game will test your bankroll.", metric: nc?.rtp ?? "—", cta: "Studio profile →", href: "/providers/nolimit-city" },
   ];
 }
 
@@ -94,18 +92,8 @@ export default function HomePage() {
   const c = siteCounts;
   const featured = buildFeatured();
 
-  const topCasino = topScore(ops);
-  const topLive = topScore(liveCasinos);
+  // Highest studio-published RTP — a factual sort, not a rating.
   const topSlot = [...slots].sort((a, b) => rtpSortValue(b) - rtpSortValue(a))[0];
-  const topProvider = topScore(providers);
-  const topBook = topScore(ops.filter((o) => o.sports));
-  const topWallet = topScore(walletRows);
-
-  // "Best operator" lookups for the sportsbook/esports hub items below —
-  // sportsMarkets/esportsTitles name a `best` operator by name but not
-  // its score, so pull it from ops the same way every other "top" figure
-  // on this page is derived rather than hardcoded.
-  const scoreFor = (opName: string) => ops.find((o) => o.name === opName)?.score.toFixed(1);
 
   const categoryHub = {
     kicker: "By category",
@@ -117,8 +105,8 @@ export default function HomePage() {
       { label: "Lowest wagering", href: "/lowest-wagering", filter: "lowwager" as const },
       { label: "Casino + sportsbook", href: "/casino-sportsbooks", filter: "sports" as const },
     ].map((it, i) => {
-      const top = topScore(ops.filter(filterFns[it.filter]));
-      return { n: String(i + 1).padStart(2, "0"), label: it.label, href: it.href, top: top ? `${top.name} ${top.score.toFixed(1)}` : "—", topColor: top?.name === "Roobet" ? "#FFCC00" : "#5C6A72" };
+      const n = ops.filter(filterFns[it.filter]).length;
+      return { n: String(i + 1).padStart(2, "0"), label: it.label, href: it.href, top: `${n} casinos`, topColor: "#5C6A72" };
     }),
   };
   const sportsHub = {
@@ -129,7 +117,7 @@ export default function HomePage() {
       n: String(i + 1).padStart(2, "0"),
       label: m.name,
       href: `/betting/${slug(m.name)}`,
-      top: `${m.best} ${scoreFor(m.best) ?? ""}`.trim(),
+      top: m.best,
       topColor: m.best === "Roobet" ? "#FFCC00" : "#5C6A72",
     })),
   };
@@ -141,15 +129,15 @@ export default function HomePage() {
       n: String(i + 1).padStart(2, "0"),
       label: t.name,
       href: `/betting/${slug(t.name)}`,
-      top: `${t.best} ${scoreFor(t.best) ?? ""}`.trim(),
+      top: t.best,
       topColor: t.best === "Roobet" ? "#FFCC00" : "#5C6A72",
     })),
   };
   const hubs = [categoryHub, sportsHub, esportsHub];
 
   const toolLists = [
-    { kicker: "Wallets", title: "Where the bankroll lives", blurb: "Custody model, chain coverage, and how each handles gas.", href: "/wallets", items: walletRows },
-    { kicker: "Exchanges", title: "Getting on and off chain", blurb: "Entry fees, fiat rails and withdrawal limits, from each exchange's own pages.", href: "/exchanges", items: exchangeRows },
+    { kicker: "Wallets", title: "Where the bankroll lives", blurb: "Custody model, chain coverage, and how each handles gas.", href: "/wallets", items: [...walletRows].sort((a, b) => a.name.localeCompare(b.name)) },
+    { kicker: "Exchanges", title: "Getting on and off chain", blurb: "Entry fees, fiat rails and withdrawal limits, from each exchange's own pages.", href: "/exchanges", items: [...exchangeRows].sort((a, b) => a.name.localeCompare(b.name)) },
   ];
 
   const coinTiles = coinDefs.map((coin) => ({
@@ -158,12 +146,12 @@ export default function HomePage() {
   }));
 
   const verticals = [
-    { icon: "♠️", title: "Crypto casinos", tint: "#00C2CC", count: c.casinos, top: topCasino?.name ?? "—", topScore: topCasino?.score.toFixed(1) ?? "—", href: "/crypto-casinos" },
-    { icon: "🃏", title: "Live casino", tint: "#FF7EB6", count: c.live, top: topLive?.name ?? "—", topScore: topLive?.score.toFixed(1) ?? "—", href: "/live-casino" },
-    { icon: "🎰", title: "Slots & RTP", tint: "#FFB347", count: c.slots, top: topSlot?.name ?? "—", topScore: topSlot ? `${topSlot.rtp.toFixed(1)}%` : "—", href: "/slots" },
-    { icon: "🎮", title: "Game studios", tint: "#B284FF", count: c.providers, top: topProvider?.name ?? "—", topScore: topProvider?.score.toFixed(1) ?? "—", href: "/providers" },
-    { icon: "⚽", title: "Sportsbooks", tint: "#57E39A", count: c.books, top: topBook?.name ?? "—", topScore: topBook?.score.toFixed(1) ?? "—", href: "/sportsbooks" },
-    { icon: "👛", title: "Wallets", tint: "#6BC7FF", count: c.wallets, top: topWallet?.name ?? "—", topScore: topWallet?.score.toFixed(1) ?? "—", href: "/wallets" },
+    { icon: "♠️", title: "Crypto casinos", tint: "#00C2CC", count: c.casinos, factLabel: "No-KYC", factValue: String(ops.filter((o) => o.kyc === "none").length), href: "/crypto-casinos" },
+    { icon: "🃏", title: "Live casino", tint: "#FF7EB6", count: c.live, factLabel: "Live casinos", factValue: String(liveCasinos.length), href: "/live-casino" },
+    { icon: "🎰", title: "Slots & RTP", tint: "#FFB347", count: c.slots, factLabel: topSlot?.name ?? "—", factValue: topSlot ? `${topSlot.rtp.toFixed(1)}%` : "—", href: "/slots" },
+    { icon: "🎮", title: "Game studios", tint: "#B284FF", count: c.providers, factLabel: "All RTPs listed", factValue: String(allVersionsListedStudios(providers)), href: "/providers" },
+    { icon: "⚽", title: "Sportsbooks", tint: "#57E39A", count: c.books, factLabel: "With esports", factValue: String(ops.filter((o) => o.esports).length), href: "/sportsbooks" },
+    { icon: "👛", title: "Wallets", tint: "#6BC7FF", count: c.wallets, factLabel: "Self-custody", factValue: String(selfCustodyWallets(walletRows)), href: "/wallets" },
   ];
 
   return (
@@ -207,7 +195,7 @@ export default function HomePage() {
               </span>
             </h1>
             <p style={{ margin: "0 0 30px", maxWidth: 530, fontSize: 17.5, lineHeight: 1.6, color: "#9AAAB3", textWrap: "pretty" }}>
-              Crypto casinos, wallets and exchanges scored against their published terms and public records; a figure
+              Crypto casinos, wallets and exchanges reviewed against their published terms and public records; a figure
               only says tested when a funded account backs it. Slots, providers and sportsbooks assessed from public
               paytables and posted odds. Every review says which is which — start with a number, not a banner.
             </p>
@@ -343,8 +331,8 @@ export default function HomePage() {
                   <span>listed</span>
                 </div>
                 <div style={{ display: "flex", alignItems: "baseline", gap: 7, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12.5, letterSpacing: ".04em", color: "#9AAAB3", minWidth: 0 }}>
-                  <span style={{ overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{v.top}</span>
-                  <span style={{ color: "#fff" }}>{v.topScore}</span>
+                  <span style={{ overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{v.factLabel}</span>
+                  <span style={{ color: "#fff" }}>{v.factValue}</span>
                 </div>
               </Link>
             ))}
@@ -368,7 +356,7 @@ export default function HomePage() {
               Latest reviews
             </h2>
             <p style={{ margin: 0, fontSize: 15, color: "#8DA0AA" }}>
-              Across every vertical we cover. Scores and figures come from the index; each review says what was checked and how.
+              Across every vertical we cover. Figures come from the index; each review says what was checked and how.
             </p>
           </div>
           <Link href="/search" style={{ fontSize: 14, fontWeight: 600, color: "#00C2CC", whiteSpace: "nowrap" }}>
@@ -391,7 +379,6 @@ export default function HomePage() {
                   <div style={{ fontSize: 14.5, fontWeight: 600, color: "#E8EDF0", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{f.name}</div>
                   <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".06em", textTransform: "uppercase", color: "#00C2CC", marginTop: 2 }}>{f.cat}</div>
                 </div>
-                <span style={{ marginLeft: "auto", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 17, fontWeight: 500, color: "#fff" }}>{f.score}</span>
               </div>
               <p style={{ margin: "0 0 16px", fontSize: 13, lineHeight: 1.55, color: "#8DA0AA", textWrap: "pretty" }}>{f.line}</p>
               <div style={{ marginTop: "auto", paddingTop: 14, borderTop: "1px solid rgba(255,255,255,.06)", display: "flex", justifyContent: "space-between", gap: 10, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#4E5A62" }}>
@@ -410,7 +397,7 @@ export default function HomePage() {
             <h2 style={{ margin: "0 0 8px", fontSize: 32, letterSpacing: "-.03em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>
               Crypto casino index
             </h2>
-            <p style={{ margin: 0, fontSize: 15, color: "#8DA0AA" }}>Ranked by score — click a column to re-sort.</p>
+            <p style={{ margin: 0, fontSize: 15, color: "#8DA0AA" }}>Listed A–Z — click a column to re-sort.</p>
           </div>
           <Link href="/crypto-casinos" style={{ fontSize: 14, fontWeight: 600, color: "#00C2CC", whiteSpace: "nowrap" }}>
             See all {c.casinos} casinos →
@@ -521,14 +508,13 @@ export default function HomePage() {
                     key={it.slug}
                     href={`${t.href}/${it.slug}`}
                     className="hover:!bg-[#141A1E]"
-                    style={{ display: "grid", gridTemplateColumns: "56px minmax(90px,1fr) minmax(110px,1.4fr) 52px", alignItems: "center", gap: 12, padding: "12px 14px", background: "#0F1417" }}
+                    style={{ display: "grid", gridTemplateColumns: "56px minmax(90px,1fr) minmax(110px,1.4fr)", alignItems: "center", gap: 12, padding: "12px 14px", background: "#0F1417" }}
                   >
                     <div style={{ width: 30, height: 30 }}>
                       <BrandMark slug={it.slug} mono={it.mono} tint={t.kicker === "Wallets" ? "#9B8FC4" : "#5FE3E8"} fontSize={10} />
                     </div>
                     <span style={{ fontSize: 13.5, fontWeight: 600, color: "#E8EDF0", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{it.name}</span>
                     <span style={{ fontSize: 12, color: "#7B8A93", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{it.note}</span>
-                    <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 13, color: "#fff", textAlign: "right" }}>{it.score.toFixed(1)}</span>
                   </Link>
                 ))}
               </div>
@@ -542,9 +528,9 @@ export default function HomePage() {
         <div style={{ padding: 44, borderRadius: 16, background: "linear-gradient(150deg,#0E1417,#0A0E10)", border: "1px solid rgba(255,255,255,.07)" }}>
           <div style={{ display: "grid", gridTemplateColumns: "minmax(260px,.85fr) minmax(300px,1.15fr)", gap: 56, alignItems: "start" }}>
             <div>
-              <h2 style={{ margin: "0 0 14px", fontSize: 30, letterSpacing: "-.03em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Six criteria. No paid placement inside a score.</h2>
+              <h2 style={{ margin: "0 0 14px", fontSize: 30, letterSpacing: "-.03em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Six criteria. No paid placement in a review.</h2>
               <p style={{ margin: "0 0 22px", fontSize: 15, lineHeight: 1.65, color: "#8DA0AA", textWrap: "pretty" }}>
-                Crypto casinos, wallets and exchanges are scored against their own published terms. A funded-account field test is added to a review only when one has actually been run, and the review says so. Slots and providers are assessed from published paytables and the studios&apos; stated RTPs. Commercial relationships are disclosed on every page and excluded from scoring inputs.
+                Crypto casinos, wallets and exchanges are reviewed against their own published terms, and every fact in a review is cited. A funded-account field test is added to a review only when one has actually been run, and the review says so. Slots and providers are assessed from published paytables and the studios&apos; stated RTPs. Commercial relationships are disclosed on every page and never change what a review says.
               </p>
               <Link href="/how-we-rate" style={{ display: "inline-flex", alignItems: "center", gap: 8, fontSize: 14, fontWeight: 600, color: "#00C2CC" }}>
                 Read the full methodology <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace" }}>→</span>
@@ -555,7 +541,6 @@ export default function HomePage() {
                 <div key={cr.name} style={{ padding: "18px 20px", background: "rgba(12,16,19,.66)" }}>
                   <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 10, marginBottom: 8 }}>
                     <span style={{ fontSize: 13.5, fontWeight: 600, color: "#E8EDF0" }}>{cr.name}</span>
-                    <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#5C6A72" }}>{cr.weight}</span>
                   </div>
                   <div style={{ fontSize: 12, lineHeight: 1.5, color: "#75858E" }}>{cr.desc}</div>
                 </div>

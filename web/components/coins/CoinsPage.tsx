@@ -20,7 +20,7 @@ export function CoinsPage() {
   const coinOps = (t: string) => ops.filter((o) => (coinsBy[o.slug] ?? []).map(String).includes(t));
   const rows = coinDefs.filter((c) => sel === "all" || c.ticker === sel);
 
-  const detail = sel === "all" ? [] : [...coinOps(sel)].sort((a, b) => b.score - a.score);
+  const detail = sel === "all" ? [] : [...coinOps(sel)].sort((a, b) => a.name.localeCompare(b.name));
 
   return (
     <main>
@@ -52,7 +52,7 @@ export function CoinsPage() {
               Deposit and withdraw, coin by coin
             </h1>
             <p style={{ margin: 0, maxWidth: "74ch", fontSize: 16, lineHeight: 1.6, color: "#93A3AC", textWrap: "pretty" }}>
-              Which coins the operators on our index accept, credit time and confirmations as published, and what the network typically charges to move it. Timing figures below are pending our own funded-account field-test pass — see how we rate.
+              Which coins the operators on our index accept, credit time and confirmations as published, and what the network typically charges to move it. Timing figures below are pending our own funded-account field-test pass — see how we source information.
             </p>
           </div>
           <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#4E5A62", whiteSpace: "nowrap" }}>
@@ -110,10 +110,10 @@ export function CoinsPage() {
             <h2 style={{ margin: "0 0 7px", fontSize: 26, letterSpacing: "-.028em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>
               Casinos that credit {coinDefs.find((c) => c.ticker === sel)?.name ?? sel}
             </h2>
-            <p style={{ margin: 0, fontSize: 14.5, color: "#8DA0AA" }}>{detail.length} operators, ranked by overall score. Payout time is the operator&apos;s listed figure, not one we have timed.</p>
+            <p style={{ margin: 0, fontSize: 14.5, color: "#8DA0AA" }}>{detail.length} operators, listed A–Z. Payout time is the operator&apos;s listed figure, not one we have timed.</p>
           </div>
           <div style={{ display: "grid", minWidth: 0, gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))", gap: 12 }}>
-            {detail.map((o, i) => (
+            {detail.map((o) => (
               <Link key={o.slug} href={o.hasCustomReview ? "/casinos/roobet" : `/casinos/${o.slug}`} style={{ display: "flex", flexDirection: "column", gap: 16, padding: 20, borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.06)" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
                   <div style={{ width: 28, height: 28, flex: "none" }}>
@@ -121,9 +121,8 @@ export function CoinsPage() {
                   </div>
                   <div style={{ minWidth: 0 }}>
                     <div style={{ fontSize: 14.5, fontWeight: 600, color: "#E8EDF0", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{o.name}</div>
-                    <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#5C6A72", marginTop: 2 }}>{String(i + 1).padStart(2, "0")} on the index</div>
+                    <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#5C6A72", marginTop: 2 }}>{o.licence} licence</div>
                   </div>
-                  <span style={{ marginLeft: "auto", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 17, fontWeight: 500, color: "#fff" }}>{o.score.toFixed(1)}</span>
                 </div>
                 <div style={{ display: "flex", gap: 7, flexWrap: "wrap", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".04em" }}>
                   <span style={{ padding: "4px 8px", borderRadius: 4, background: "rgba(255,255,255,.05)", color: "#B7C4CB" }}>{payoutView(o).label}</span>

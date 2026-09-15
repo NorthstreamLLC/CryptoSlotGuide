@@ -3,15 +3,14 @@
 import Link from "next/link";
 import { useState } from "react";
 import type { EntityView } from "@/lib/entity-view";
-import { backLink, ctaLabel, scoreMeta, editorialTake } from "@/lib/entity-view";
+import { backLink, ctaLabel, editorialTake } from "@/lib/entity-view";
 import { reviewTierFor, TIER_LABEL, TIER_TINT } from "@/lib/review-tier";
 import { isEditoriallyAudited } from "@/lib/field-tested";
-import { criterionSourcing } from "@/lib/criterion-sourcing";
-import { scoreTier, SCORE_TIER_LABEL, SCORE_TIER_COLOR } from "@/lib/score-tier";
 import { OnChainActivity } from "./OnChainActivity";
 import { CasinoSpecSheet } from "./CasinoSpecSheet";
 import { CasinoBonuses } from "./CasinoBonuses";
 import { BrandMark } from "@/components/ui/BrandMark";
+import { GlanceCard } from "./GlanceCard";
 
 /**
  * Ported from the `isEntity` block in CryptoSlotGuide.dc.html — the
@@ -22,7 +21,6 @@ import { BrandMark } from "@/components/ui/BrandMark";
 export function EntityReviewPage({ e }: { e: EntityView }) {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const back = backLink(e.type);
-  const { label: scoreLabel, unit: scoreUnit } = scoreMeta(e.type);
   const take = editorialTake(e.type, e.slug);
   // What leads the hero now — real hand-written opinion where one exists
   // (6 entities total, see data/editorial.json), else the same computed
@@ -36,7 +34,6 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
   const isCasino = e.type === "casino";
   const tier = reviewTierFor(e.type, e.slug);
   const audited = tier === "pending" && isEditoriallyAudited(e.slug);
-  const isProofScored = scoreUnit === "/ 10";
   const statCols = e.stats.length === 4 ? 2 : Math.min(3, e.stats.length);
 
   return (
@@ -95,80 +92,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
             </div>
 
             <div style={{ padding: 26, borderRadius: 16, background: "#12181C", border: "1px solid rgba(255,255,255,.09)", boxShadow: "0 20px 60px rgba(0,0,0,.5)" }}>
-              <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#5C6A72", marginBottom: 12 }}>
-                {scoreLabel}
-              </div>
-              {e.type === "market" ? (
-                <div style={{ marginBottom: 22, fontSize: 14.5, lineHeight: 1.6, color: "#8DA0AA", textWrap: "pretty" }}>
-                  Markets are not scored as a whole. The ratings below are for this market at the best book we found.
-                </div>
-              ) : isProofScored ? (
-                <div style={{ display: "flex", alignItems: "baseline", gap: 10, marginBottom: 22, flexWrap: "wrap" }}>
-                  <span
-                    style={{
-                      fontSize: 26,
-                      fontWeight: 800,
-                      letterSpacing: "-.02em",
-                      color: SCORE_TIER_COLOR[scoreTier(Number(e.score))],
-                    }}
-                  >
-                    {SCORE_TIER_LABEL[scoreTier(Number(e.score))]}
-                  </span>
-                  <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 13, color: "#5C6A72" }}>{e.score} {scoreUnit}</span>
-                </div>
-              ) : (
-                <div style={{ display: "flex", alignItems: "flex-end", gap: 12, marginBottom: 22 }}>
-                  <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 60, fontWeight: 700, lineHeight: 0.85, color: "#fff", letterSpacing: "-.045em" }}>
-                    {e.score}
-                  </span>
-                  <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 13, color: "#5C6A72", paddingBottom: 8 }}>{e.score === "—" ? "not published" : scoreUnit}</span>
-                </div>
-              )}
-              <div style={{ display: "flex", flexDirection: "column", gap: 1, marginBottom: 24, borderRadius: 9, overflow: "hidden" }}>
-                {e.criteria.map((c) => {
-                  const sourcing = isCasino ? criterionSourcing(c.name, e.slug) : undefined;
-                  const ct = scoreTier(c.val);
-                  return (
-                    <div key={c.name} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10, padding: "8px 0" }}>
-                      <span style={{ fontSize: 12.5, color: "#A8B6BE" }}>{c.name}</span>
-                      <div style={{ display: "flex", alignItems: "center", gap: 8, flex: "none" }}>
-                        {sourcing && (
-                          <span style={{ display: "flex", alignItems: "center", gap: 5 }}>
-                            <span style={{ width: 5, height: 5, borderRadius: "50%", background: TIER_TINT[sourcing], flex: "none" }} />
-                            <span
-                              style={{
-                                fontFamily: "var(--font-jetbrains-mono), monospace",
-                                fontSize: 8.5,
-                                letterSpacing: ".04em",
-                                textTransform: "uppercase",
-                                color: TIER_TINT[sourcing],
-                                whiteSpace: "nowrap",
-                              }}
-                            >
-                              {TIER_LABEL[sourcing]}
-                            </span>
-                          </span>
-                        )}
-                        <span
-                          style={{
-                            fontFamily: "var(--font-jetbrains-mono), monospace",
-                            fontSize: 10,
-                            fontWeight: 700,
-                            letterSpacing: ".04em",
-                            padding: "2px 7px",
-                            borderRadius: 4,
-                            color: SCORE_TIER_COLOR[ct],
-                            background: `${SCORE_TIER_COLOR[ct]}18`,
-                            whiteSpace: "nowrap",
-                          }}
-                        >
-                          {SCORE_TIER_LABEL[ct]}
-                        </span>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
+              <GlanceCard rows={e.glance} />
               {e.signupUrl ? (
                 <a
                   href={e.signupUrl}
@@ -220,9 +144,11 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
               ? "Every figure below came from our own funded account. Raw log linked at the foot of the page."
               : tier === "pending"
               ? audited
-                ? "Bonus terms, coin support and licence below are checked against public terms and registries. Payout speed and support responsiveness are community-reported, not yet timed on our own funded account. See how we rate for what that means here."
-                : "Every figure below is the operator's own published number, pending our desk-research and funded-account passes. See how we rate for what that means here."
-              : "Every figure below is assessed from public sources — published paytables, RTP certificates and posted odds, not a funded account. See how we rate for what that means here.")
+                ? "Bonus terms, coin support and licence below are checked against public terms and registries. Payout speed and support responsiveness are community-reported, not yet timed on our own funded account. See how we source information for what that means here."
+                : isCasino
+                ? "Each figure below is the operator's own stated number — cited in the fact table further down where we could confirm it. None are timed on our own funded account yet."
+                : "Every figure below is the published number, pending our own field test. See how we source information for what that means here."
+              : "Every figure below is assessed from public sources — published paytables, RTP certificates and posted odds, not a funded account. See how we source information for what that means here.")
           }
         />
         <div style={{ display: "grid", gridTemplateColumns: `repeat(${statCols}, 1fr)`, gap: 1, background: "rgba(255,255,255,.07)", border: "1px solid rgba(255,255,255,.07)", borderRadius: 13, overflow: "hidden", marginBottom: 38 }}>
@@ -266,7 +192,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
           )}
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14, marginBottom: 38 }}>
+        <div style={{ display: "grid", gridTemplateColumns: e.cons.length ? "1fr 1fr" : "1fr", gap: 14, marginBottom: 38 }}>
           <div style={{ padding: 24, borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
             <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 14 }}>
               Holds up
@@ -280,6 +206,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
               ))}
             </div>
           </div>
+          {e.cons.length > 0 && (
           <div style={{ padding: 24, borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
             <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#DA9877", marginBottom: 14 }}>
               Falls short
@@ -293,6 +220,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
               ))}
             </div>
           </div>
+          )}
         </div>
 
         {e.spec.length > 0 && <SectionHeading title={e.specTitle} sub={e.specSub} maxWidth="80ch" />}
@@ -366,11 +294,11 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
           <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
             <Link href={back.href} style={{ display: "flex", flexDirection: "column", gap: 14, padding: 24, borderRadius: 13, background: "#101519", border: "1px solid rgba(255,255,255,.07)" }}>
               <span style={{ fontSize: 15.5, fontWeight: 700, color: "#fff", letterSpacing: "-.015em" }}>{back.label}</span>
-              <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".05em", color: "#5FE3E8" }}>Same six criteria →</span>
+              <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".05em", color: "#5FE3E8" }}>Same facts, side by side →</span>
             </Link>
             <Link href="/how-we-rate" style={{ display: "flex", flexDirection: "column", gap: 14, padding: 24, borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
-              <span style={{ fontSize: 15.5, fontWeight: 700, color: "#E8EDF0", letterSpacing: "-.015em" }}>How we rate</span>
-              <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".05em", color: "#00C2CC" }}>Published weights →</span>
+              <span style={{ fontSize: 15.5, fontWeight: 700, color: "#E8EDF0", letterSpacing: "-.015em" }}>How we source information</span>
+              <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".05em", color: "#00C2CC" }}>Where each fact comes from →</span>
             </Link>
           </div>
         </div>

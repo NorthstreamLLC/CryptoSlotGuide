@@ -85,13 +85,13 @@
   },
   "our-scoring-sheet": {
     "key": [
-      "Six criteria, published weights",
+      "Six criteria, every fact cited",
       "Commission is not an input",
       "Every criterion says how it was sourced"
     ],
     "body": [
-      "Payout speed carries 25%, bonus fairness 20%, crypto support 15%, trust and licensing 15%, game and RTP quality 15%, support 10%. Those weights are fixed across every operator and published so a score can be re-derived.",
-      "Commercial relationships are not an input. We earn commission when a reader signs up through our links, including at operators we rank first, and the rate is not visible to whoever assigns the score.",
+      "Every review covers the same six areas: payout speed, bonus fairness, crypto support, trust and licensing, game and RTP quality, and support. There is no score or weighting. A review states what the operator publishes on each, with a citation, so you can check it yourself.",
+      "Commercial relationships are not an input. We earn commission when a reader signs up through our links, and the rate is not visible to whoever writes the review. It never changes what a review says.",
       "Each criterion is labelled field-tested, community-reported or editorially assessed, so you can see which inputs came from a funded account and which came from public sources."
     ]
   }

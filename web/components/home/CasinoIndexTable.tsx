@@ -18,12 +18,12 @@ const columns: Column<Operator>[] = [
     ),
   },
   {
-    key: "score",
-    label: "Score",
+    key: "licence",
+    label: "Licence",
     sortable: true,
     align: "right",
-    sortValue: (o) => o.score,
-    render: (o) => <span className="text-accent-bright">{o.score.toFixed(1)}</span>,
+    sortValue: (o) => o.licence,
+    render: (o) => o.licence,
   },
   {
     key: "payout",
@@ -43,6 +43,8 @@ const columns: Column<Operator>[] = [
   },
 ];
 
+/** Rows start in alphabetical order; no default ranking. */
 export function CasinoIndexTable({ operators }: { operators: Operator[] }) {
-  return <Table columns={columns} rows={operators} rowKey={(o) => o.slug} />;
+  const rows = [...operators].sort((a, b) => a.name.localeCompare(b.name));
+  return <Table columns={columns} rows={rows} rowKey={(o) => o.slug} />;
 }

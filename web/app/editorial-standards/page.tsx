@@ -3,7 +3,7 @@ import { pageMetadata } from "@/lib/seo";
 
 /**
  * Editorial integrity policy — distinct from /how-we-rate, which covers
- * the scoring methodology itself. This page covers the things that
+ * the review methodology itself. This page covers the things that
  * apply regardless of category: independence from advertisers,
  * corrections, sourcing standards, conflicts of interest. Cross-links
  * to How We Rate rather than duplicating its content.
@@ -18,8 +18,8 @@ const SECTIONS: { title: string; body: string[] }[] = [
   {
     title: "Independence from advertisers",
     body: [
-      "We earn commission through affiliate links, disclosed on every page where it applies. No operator has ever been shown a score before publication, no operator can pay for a higher ranking or placement on any table, and commission rates are kept away from the people who assign scores. If an operator we work with performs badly on our criteria, that's what gets published.",
-      "Where we recommend an operator prominently — a homepage feature, a \"#1\" badge — that placement is earned on the same published criteria as everything else, not purchased.",
+      "We earn commission through affiliate links, disclosed on every page where it applies. No operator is shown a review before publication, no operator can pay for placement on any table or page, and commission rates are kept away from the people who write reviews. If an operator we work with has poor terms or a bad record, that's what gets published.",
+      "Where we feature an operator prominently — on the homepage or as an editor's pick — the card states the cited fact behind it. That placement is never purchased.",
     ],
   },
   {
@@ -33,7 +33,7 @@ const SECTIONS: { title: string; body: string[] }[] = [
     title: "Corrections",
     body: [
       "If something on this site is wrong, we want to know before a reader acts on it. Reader-reported inaccuracies that we can reproduce trigger a re-check, and the page is updated with a new date rather than a silent edit — we don't quietly change a number and pretend it was always right.",
-      "Significant corrections (a materially different score, a reversed recommendation) are treated as newsworthy in their own right, not buried in a changelog.",
+      "Significant corrections (a materially wrong figure, a reversed recommendation) are treated as newsworthy in their own right, not buried in a changelog.",
     ],
   },
   {
@@ -45,7 +45,7 @@ const SECTIONS: { title: string; body: string[] }[] = [
   {
     title: "Conflicts of interest",
     body: [
-      "Anyone involved in scoring an operator discloses any personal relationship with that operator beyond the standard affiliate arrangement — ownership, employment, or paid consulting. Where a conflict exists, that review is reassigned or the conflict is disclosed directly on the page.",
+      "Anyone involved in reviewing an operator discloses any personal relationship with that operator beyond the standard affiliate arrangement — ownership, employment, or paid consulting. Where a conflict exists, that review is reassigned or the conflict is disclosed directly on the page.",
     ],
   },
   {
@@ -68,8 +68,8 @@ export default function Page() {
             Editorial standards
           </h1>
           <p style={{ margin: 0, maxWidth: "66ch", fontSize: 16, lineHeight: 1.65, color: "#93A3AC", textWrap: "pretty" }}>
-            This page covers how we keep commercial relationships out of editorial decisions. For the scoring model itself — the six criteria, their weights, and how each is sourced — see{" "}
-            <Link href="/how-we-rate" style={{ color: "#00C2CC" }}>How we rate</Link>.
+            This page covers how we keep commercial relationships out of editorial decisions. For how reviews are put together — the six criteria and how each is sourced — see{" "}
+            <Link href="/how-we-rate" style={{ color: "#00C2CC" }}>How we source information</Link>.
           </p>
         </div>
       </section>

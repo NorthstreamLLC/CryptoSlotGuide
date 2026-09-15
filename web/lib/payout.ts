@@ -33,12 +33,12 @@ export function payoutView(o: Operator): PayoutView {
   return { kind: "none", label: "Not stated", mins: null, caption: "none published" };
 }
 
-/** Ascending by known minutes; operators with no stated time go last, ties broken by score. */
+/** Ascending by known minutes; operators with no stated time go last, ties broken by name. */
 export function comparePayout(a: Operator, b: Operator): number {
   const pa = payoutView(a).mins;
   const pb = payoutView(b).mins;
-  if (pa === null && pb === null) return b.score - a.score;
+  if (pa === null && pb === null) return a.name.localeCompare(b.name);
   if (pa === null) return 1;
   if (pb === null) return -1;
-  return pa - pb || b.score - a.score;
+  return pa - pb || a.name.localeCompare(b.name);
 }

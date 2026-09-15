@@ -5,15 +5,15 @@ import { entityBreadcrumbSchema, faqSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 
 export const metadata = pageMetadata(
-  "Roobet review 2026: stated instant withdrawals, no-wager rakeback, no crypto withdrawal fee",
-  "Roobet reviewed from its own terms and help centre: stated instant withdrawals, no fee on crypto withdrawals, rakeback with no wagering multiplier. Payouts not yet timed by us.",
+  "Roobet: stated instant withdrawals, no-wager rakeback, no crypto withdrawal fee",
+  "Roobet, from its own terms and help centre: stated instant withdrawals, no fee on crypto withdrawals, rakeback with no wagering multiplier. Payouts not yet timed by us.",
   "/casinos/roobet"
 );
 
 export default function Page() {
   return (
     <>
-      <JsonLd data={[entityBreadcrumbSchema("Casino review", "/crypto-casinos", "Roobet", "/casinos/roobet"), faqSchema(faqData)]} />
+      <JsonLd data={[entityBreadcrumbSchema("Casino profile", "/crypto-casinos", "Roobet", "/casinos/roobet"), faqSchema(faqData)]} />
       <RoobetReviewPage />
     </>
   );

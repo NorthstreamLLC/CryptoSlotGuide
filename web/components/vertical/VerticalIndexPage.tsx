@@ -15,7 +15,7 @@ import { BrandMark } from "@/components/ui/BrandMark";
 export function VerticalIndexPage({ kind, tabIdx = 0 }: { kind: VerticalKind; tabIdx?: number }) {
   const router = useRouter();
   const vp = getVerticalPage(kind, tabIdx);
-  const hasScore = vp.scoreLabel !== "";
+  const hasStat = vp.statLabel !== "";
 
   return (
     <main>
@@ -136,7 +136,7 @@ export function VerticalIndexPage({ kind, tabIdx = 0 }: { kind: VerticalKind; ta
             style={{
               display: "grid",
               minWidth: 1020,
-              gridTemplateColumns: `54px minmax(300px,1.5fr) 150px 140px 160px ${hasScore ? "84px" : "0px"} 132px`,
+              gridTemplateColumns: `54px minmax(300px,1.5fr) 150px 140px 160px ${hasStat ? "84px" : "0px"} 132px`,
               background: "#101519",
               borderBottom: "1px solid rgba(255,255,255,.07)",
             }}
@@ -146,12 +146,12 @@ export function VerticalIndexPage({ kind, tabIdx = 0 }: { kind: VerticalKind; ta
             <HeadCell>{vp.cols[0]}</HeadCell>
             <HeadCell>{vp.cols[1]}</HeadCell>
             <HeadCell>{vp.cols[2]}</HeadCell>
-            {hasScore && <HeadCell muted>{vp.scoreLabel}</HeadCell>}
+            {hasStat && <HeadCell muted>{vp.statLabel}</HeadCell>}
             <div role="columnheader" style={{ padding: "14px 16px" }} />
           </div>
 
           {vp.rows.map((r, i) => (
-            <VerticalRowView key={r.slug} r={r} pos={i + 1} hasScore={hasScore} onNavigate={() => router.push(r.href)} />
+            <VerticalRowView key={r.slug} r={r} pos={i + 1} hasStat={hasStat} onNavigate={() => router.push(r.href)} />
           ))}
 
           <div style={{ display: "flex", alignItems: "center", gap: 12, padding: "14px 16px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#4E5A62", whiteSpace: "nowrap" }}>
@@ -174,8 +174,8 @@ export function VerticalIndexPage({ kind, tabIdx = 0 }: { kind: VerticalKind; ta
             href="/how-we-rate"
             style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", gap: 20, padding: "28px 32px", borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}
           >
-            <div style={{ fontSize: 16, fontWeight: 700, color: "#fff", letterSpacing: "-.015em" }}>Full scoring sheet</div>
-            <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".05em", color: "#00C2CC" }}>Six criteria, published weights →</div>
+            <div style={{ fontSize: 16, fontWeight: 700, color: "#fff", letterSpacing: "-.015em" }}>How we review</div>
+            <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".05em", color: "#00C2CC" }}>What we check, and where each fact comes from →</div>
           </Link>
         </div>
       </section>
@@ -210,7 +210,7 @@ function HeadCell({ children, muted }: { children: React.ReactNode; muted?: bool
   );
 }
 
-function VerticalRowView({ r, pos, hasScore, onNavigate }: { r: VerticalRow; pos: number; hasScore: boolean; onNavigate: () => void }) {
+function VerticalRowView({ r, pos, hasStat, onNavigate }: { r: VerticalRow; pos: number; hasStat: boolean; onNavigate: () => void }) {
   return (
     <div
       role="row"
@@ -218,7 +218,7 @@ function VerticalRowView({ r, pos, hasScore, onNavigate }: { r: VerticalRow; pos
       style={{
         display: "grid",
         minWidth: 1020,
-        gridTemplateColumns: `54px minmax(300px,1.5fr) 150px 140px 160px ${hasScore ? "84px" : "0px"} 132px`,
+        gridTemplateColumns: `54px minmax(300px,1.5fr) 150px 140px 160px ${hasStat ? "84px" : "0px"} 132px`,
         alignItems: "center",
         borderBottom: "1px solid rgba(255,255,255,.05)",
         cursor: "pointer",
@@ -247,9 +247,9 @@ function VerticalRowView({ r, pos, hasScore, onNavigate }: { r: VerticalRow; pos
       <Cell>{r.m1}</Cell>
       <Cell>{r.m2}</Cell>
       <Cell>{r.m3}</Cell>
-      {hasScore && (
-        <div role="cell" style={{ padding: 16, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 15, fontWeight: 500, color: r.score === "—" ? "#4E5A62" : "#fff" }}>
-          {r.score}
+      {hasStat && (
+        <div role="cell" style={{ padding: 16, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 15, fontWeight: 500, color: r.stat === "—" ? "#4E5A62" : "#fff" }}>
+          {r.stat}
         </div>
       )}
       <div role="cell" style={{ padding: "12px 16px" }}>

@@ -17,6 +17,8 @@ export function SearchPage({ initialQuery = "" }: { initialQuery?: string }) {
 
   const query = q.trim().toLowerCase();
   const hit = (s: string) => !query || s.toLowerCase().includes(query);
+  // Result groups are listed A–Z, never in a ranked order.
+  const byName = <T extends { name: string }>(a: T, b: T) => a.name.localeCompare(b.name);
 
   const groups = useMemo(() => {
     const g = [
@@ -24,7 +26,8 @@ export function SearchPage({ initialQuery = "" }: { initialQuery?: string }) {
         label: "Casinos",
         items: ops
           .filter((o) => hit(o.name) || hit(o.bonus) || hit(o.licence))
-          .map((o) => ({ name: o.name, note: `${payoutView(o).kind === "none" ? "" : `${payoutView(o).label} withdrawals · `}${o.wager}× wagering`, meta: o.score.toFixed(1), href: o.hasCustomReview ? "/casinos/roobet" : `/casinos/${o.slug}` })),
+          .sort(byName)
+          .map((o) => ({ name: o.name, note: `${payoutView(o).kind === "none" ? "" : `${payoutView(o).label} withdrawals · `}${o.wager}× wagering`, meta: o.licence, href: o.hasCustomReview ? "/casinos/roobet" : `/casinos/${o.slug}` })),
       },
       {
         label: "Slots",
@@ -36,19 +39,22 @@ export function SearchPage({ initialQuery = "" }: { initialQuery?: string }) {
         label: "Providers",
         items: providers
           .filter((p) => hit(p.name) || hit(p.note))
-          .map((p) => ({ name: p.name, note: `${p.rtp} · ${p.licences}`, meta: p.score.toFixed(1), href: `/providers/${p.slug}` })),
+          .sort(byName)
+          .map((p) => ({ name: p.name, note: `${p.rtp} · ${p.licences}`, meta: p.titlesStated ?? "", href: `/providers/${p.slug}` })),
       },
       {
         label: "Wallets",
         items: walletRows
           .filter((w) => hit(w.name) || hit(w.note))
-          .map((w) => ({ name: w.name, note: `${w.m1} · ${w.m2}`, meta: w.score.toFixed(1), href: `/wallets/${w.slug}` })),
+          .sort(byName)
+          .map((w) => ({ name: w.name, note: `${w.m1} · ${w.m2}`, meta: /not stated/i.test(w.m3) ? "" : `${w.m3} swap fee`, href: `/wallets/${w.slug}` })),
       },
       {
         label: "Exchanges",
         items: exchangeRows
           .filter((x) => hit(x.name) || hit(x.note))
-          .map((x) => ({ name: x.name, note: `${x.m1} taker fee · ${x.m2}`, meta: x.score.toFixed(1), href: `/exchanges/${x.slug}` })),
+          .sort(byName)
+          .map((x) => ({ name: x.name, note: `${x.m1} taker fee · ${x.m2}`, meta: x.m3, href: `/exchanges/${x.slug}` })),
       },
       {
         label: "Markets",

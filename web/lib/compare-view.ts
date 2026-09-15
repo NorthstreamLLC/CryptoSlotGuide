@@ -2,12 +2,12 @@
  * Ported from the `isCompare` block in CryptoSlotGuide.dc.html plus
  * `cmpDefs`/`cmpScore`/`cmpRows`/`cmpHeads` in renderVals() (search for
  * (search for "Compare builder" comment block). Winner-per-row logic matches exactly: lower
- * is better on payout/wagering/confirmations, higher on score/coins,
+ * is better on payout/wagering/confirmations, higher on coins (the site
+ * no longer scores operators, so there's no score row),
  * licence and headline offer are deliberately never marked.
  */
 import type { Operator } from "./types";
 import type { CoinsByOperator } from "./types";
-import { SCORE_BRAND } from "./score-tier";
 import { payoutView } from "./payout";
 
 export interface CompareCell {
@@ -22,11 +22,10 @@ export interface CompareRow {
   cells: CompareCell[];
 }
 
-type ScoreKind = "high" | "lowPayout" | "highCoins" | "lowWager" | "kyc" | "lowConf" | "yes" | "none";
+type ScoreKind = "lowPayout" | "highCoins" | "lowWager" | "kyc" | "lowConf" | "yes" | "none";
 
 export function getCompareRows(cmpOps: Operator[], coinsBy: CoinsByOperator): CompareRow[] {
   const defs: [string, (o: Operator) => string, ScoreKind][] = [
-    [SCORE_BRAND, (o) => o.score.toFixed(1), "high"],
     ["Withdrawal time", (o) => `${payoutView(o).label} (${payoutView(o).caption})`, "lowPayout"],
     ["Coins credited", (o) => String((coinsBy[o.slug] ?? []).length), "highCoins"],
     ["Wagering", (o) => `${o.wager}×`, "lowWager"],
@@ -40,7 +39,6 @@ export function getCompareRows(cmpOps: Operator[], coinsBy: CoinsByOperator): Co
   ];
 
   const score: Record<ScoreKind, (o: Operator) => number | null> = {
-    high: (o) => o.score,
     lowPayout: (o) => { const m = payoutView(o).mins; return m === null ? null : -m; },
     highCoins: (o) => (coinsBy[o.slug] ?? []).length,
     lowWager: (o) => -o.wager,

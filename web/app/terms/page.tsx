@@ -37,13 +37,13 @@ const SECTIONS: { title: string; body: string[] }[] = [
   {
     title: "Affiliate relationships",
     body: [
-      "We earn commission when a reader signs up through some of the links on this site, including at operators we rank first. This is disclosed on every relevant page. Commission rates differ between operators and are never an input to a score — see How We Rate for how that separation is enforced.",
+      "We earn commission when a reader signs up through some of the links on this site, including at operators we feature prominently. This is disclosed on every relevant page. Commission rates differ between operators and never change what a review says — see How We Rate for how that separation is enforced.",
     ],
   },
   {
     title: "Intellectual property",
     body: [
-      "The text, design, scoring methodology, and original content on this site are owned by CryptoSlotGuide unless otherwise credited. Operator logos and trademarks are the property of their respective owners and are used here for identification purposes under fair use.",
+      "The text, design, review methodology, and original content on this site are owned by CryptoSlotGuide unless otherwise credited. Operator logos and trademarks are the property of their respective owners and are used here for identification purposes under fair use.",
       "You may link to this site and quote brief excerpts with attribution. Reproducing substantial portions of our content elsewhere without permission isn't allowed.",
     ],
   },

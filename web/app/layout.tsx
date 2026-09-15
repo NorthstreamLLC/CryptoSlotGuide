@@ -23,7 +23,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "CryptoSlotGuide — crypto casino & slot reviews",
+    default: "CryptoSlotGuide — crypto casino, slot and wallet information",
     template: `%s | ${SITE_NAME}`,
   },
   description:

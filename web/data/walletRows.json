@@ -7,8 +7,7 @@
     "note": "Hardware wallet; keys never leave the Secure Element chip",
     "m1": "Secure element",
     "m2": "100+ chains",
-    "m3": "Not stated",
-    "score": 9.1
+    "m3": "Not stated"
   },
   {
     "slug": "metamask",
@@ -18,8 +17,7 @@
     "note": "Security alerts flag risky transactions; code is public but not open-licensed",
     "m1": "Local, encrypted",
     "m2": "EVM + BTC, SOL, Tron",
-    "m3": "0.875%",
-    "score": 8.7
+    "m3": "0.875%"
   },
   {
     "slug": "phantom",
@@ -29,8 +27,7 @@
     "note": "Audited by Kudelski and Least Authority; 0.85% fee on select swaps",
     "m1": "Self-custody",
     "m2": "Solana, EVM, Bitcoin",
-    "m3": "0.85% (select pairs)",
-    "score": 8.6
+    "m3": "0.85% (select pairs)"
   },
   {
     "slug": "rabby",
@@ -40,8 +37,7 @@
     "note": "Open source and audited; EVM networks only",
     "m1": "Local, encrypted",
     "m2": "EVM only (90+)",
-    "m3": "0.25%",
-    "score": 8.5
+    "m3": "0.25%"
   },
   {
     "slug": "trust-wallet",
@@ -51,7 +47,6 @@
     "note": "Mobile-first, broadest chain list; audits from five firms linked",
     "m1": "Local, encrypted",
     "m2": "100+ chains",
-    "m3": "Not stated",
-    "score": 8.2
+    "m3": "Not stated"
   }
 ]

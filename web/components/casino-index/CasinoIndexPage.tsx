@@ -30,7 +30,8 @@ const btcFaqData = [
 export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
   const { ops, coinsBy, coinDefs } = siteData;
   // The fastest-payouts view is about speed, so it opens sorted by stated withdrawal time.
-  const [sortKey, setSortKey] = useState<SortKey>(filter === "fast" ? "payout" : "rank");
+  // Speed and wagering views open on that fact; everything else is alphabetical — there's no score to rank by.
+  const [sortKey, setSortKey] = useState<SortKey>(filter === "fast" ? "payout" : filter === "lowwager" ? "wager" : "name");
   const [sortDir, setSortDir] = useState<SortDir>("asc");
   const [coinSel, setCoinSel] = useState<string>("all");
   const [showAll, setShowAll] = useState(false);
@@ -52,7 +53,9 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
   // The plain (non-spotlight) hero promotes row 0 into the "Top of this
   // list" card, so the table below excludes it — same list, same current
   // sort, just sliced — rather than showing it twice.
-  const btcTop = spotlight ? null : sorted[0];
+  // Only highlight the first row when the list is sorted on a fact that makes "first" mean something.
+  const btcTop = spotlight || (filter !== "fast" && filter !== "lowwager") ? null : sorted[0];
+  const btcTopLabel = filter === "fast" ? "Fastest stated withdrawal" : "Lowest wagering";
   const tableAll = spotlight ? sorted : sorted.slice(1);
   const posOffset = spotlight ? 0 : 1;
   const rows = showAll ? tableAll : tableAll.slice(0, 20);
@@ -98,10 +101,10 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
                 <p style={{ margin: "0 0 30px", maxWidth: 560, fontSize: 17, lineHeight: 1.62, color: "#93A3AC", textWrap: "pretty" }}>{view.p}</p>
                 <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginBottom: 28 }}>
                   <OutboundOrReview o={roobet} style={{ display: "inline-flex", alignItems: "center", gap: 10, padding: "15px 24px", borderRadius: 9, background: "#00C2CC", color: "#04191B", fontSize: 14.5, fontWeight: 700, boxShadow: "0 8px 26px rgba(0,194,204,.24)", whiteSpace: "nowrap" }}>
-                    Visit Roobet — {roobet.score.toFixed(1)}, our top score <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 13 }}>→</span>
+                    Visit Roobet <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 13 }}>→</span>
                   </OutboundOrReview>
                   <Link href="/casinos/roobet" style={{ display: "inline-flex", alignItems: "center", gap: 9, padding: "15px 24px", borderRadius: 9, border: "1px solid rgba(255,255,255,.16)", color: "#DCE5E9", fontSize: 14.5, fontWeight: 600, whiteSpace: "nowrap" }}>
-                    Read the review
+                    View the profile
                   </Link>
                 </div>
               </div>
@@ -110,15 +113,15 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/assets/roobet-logo.png" alt="Roobet" style={{ height: 30, width: "auto", display: "block" }} />
                   <span style={{ padding: "5px 10px", borderRadius: 5, background: "rgba(255,204,0,.12)", border: "1px solid rgba(255,204,0,.3)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, fontWeight: 700, letterSpacing: ".05em", color: "#FFCC00", whiteSpace: "nowrap" }}>
-                    #1 OVERALL
+                    MOST DETAILED REVIEW
                   </span>
                 </div>
                 <div style={{ display: "flex", alignItems: "flex-end", gap: 14, marginBottom: 22 }}>
-                  <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 52, fontWeight: 700, lineHeight: 0.9, color: "#fff", letterSpacing: "-.04em" }}>{roobet.score.toFixed(1)}</span>
-                  <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, color: "#5C6A72", paddingBottom: 7 }}>/ 10 · {isFieldTestedOperator(roobet.slug) ? "field-tested" : "not yet timed by us"}</span>
+                  <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 44, fontWeight: 700, lineHeight: 0.9, color: "#fff", letterSpacing: "-.04em" }}>{payoutView(roobet).label}</span>
+                  <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, color: "#5C6A72", paddingBottom: 5 }}>withdrawals · {isFieldTestedOperator(roobet.slug) ? "timed by us" : "operator-stated"}</span>
                 </div>
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 1, background: "rgba(255,255,255,.07)", borderRadius: 10, overflow: "hidden", marginBottom: 22 }}>
-                  <StatTile label="Withdrawal time" value={payoutView(roobet).label} />
+                  <StatTile label="Licence" value={roobet.licence} />
                   <StatTile label="Confirmations" value={String(roobet.conf)} />
                   <StatTile label="Lightning" value={roobet.ln ? "Yes" : "No"} color={roobet.ln ? "#5FE3E8" : undefined} />
                   <StatTile label="Bonus wagering" value={`${roobet.wager}×`} />
@@ -135,7 +138,7 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
                 </div>
                 <div style={{ display: "flex", gap: 10 }}>
                   <OutboundOrReview o={roobet} style={{ flex: 1, textAlign: "center", padding: 13, borderRadius: 8, background: "#FFCC00", color: "#1A1400", fontSize: 13.5, fontWeight: 700 }}>Visit Roobet</OutboundOrReview>
-                  <Link href="/casinos/roobet" style={{ padding: "13px 18px", borderRadius: 8, border: "1px solid rgba(255,255,255,.14)", color: "#DCE5E9", fontSize: 13.5, fontWeight: 600, whiteSpace: "nowrap" }}>Full review</Link>
+                  <Link href="/casinos/roobet" style={{ padding: "13px 18px", borderRadius: 8, border: "1px solid rgba(255,255,255,.14)", color: "#DCE5E9", fontSize: 13.5, fontWeight: 600, whiteSpace: "nowrap" }}>Full profile</Link>
                 </div>
                 <div style={{ marginTop: 14, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#4E5A62" }}>{roobet.signupUrl ? "Affiliate link · " : ""}18+ · T&amp;Cs apply</div>
               </div>
@@ -152,15 +155,15 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
               {btcTop && (
                 <Link href={`/casinos/${btcTop.slug}`} style={{ display: "block", padding: 24, borderRadius: 15, background: "linear-gradient(168deg,#141A1E,#0E1215)", border: "1px solid rgba(255,255,255,.10)", boxShadow: "0 18px 50px rgba(0,0,0,.45)" }}>
                   <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 14, marginBottom: 18 }}>
-                    <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".08em", textTransform: "uppercase", color: "#5C6A72" }}>Top of this list</span>
-                    <span style={{ padding: "4px 9px", borderRadius: 5, background: "rgba(0,194,204,.12)", border: "1px solid rgba(0,194,204,.3)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".05em", color: "#5FE3E8" }}>#1</span>
+                    <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".08em", textTransform: "uppercase", color: "#5C6A72" }}>{btcTopLabel}</span>
+                    
                   </div>
                   <div style={{ display: "flex", alignItems: "center", gap: 13, marginBottom: 20 }}>
                     <div style={{ width: 38, height: 38, flex: "none" }}>
                       <BrandMark slug={btcTop.slug} mono={btcTop.mono} tint={tintFor(btcTop.slug)} fontSize={13} />
                     </div>
                     <span style={{ fontSize: 20, fontWeight: 700, letterSpacing: "-.025em", color: "#fff" }}>{btcTop.name}</span>
-                    <span style={{ marginLeft: "auto", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 26, color: "#fff" }}>{btcTop.score.toFixed(1)}</span>
+                    <span style={{ marginLeft: "auto", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 20, color: "#fff" }}>{filter === "fast" ? payoutView(btcTop).label : `${btcTop.wager}×`}</span>
                   </div>
                   <div style={{ display: "flex", flexDirection: "column", gap: 9, paddingTop: 16, borderTop: "1px solid rgba(255,255,255,.08)" }}>
                     <TopRow label="Withdrawal time" value={`${payoutView(btcTop).label} · ${payoutView(btcTop).caption}`} />
@@ -218,7 +221,7 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
             </p>
           </div>
           <div style={{ display: "flex", gap: 7 }}>
-            {(["score", "payout", "name"] as SortKey[]).map((k) => (
+            {(["name", "payout", "wager"] as SortKey[]).map((k) => (
               <button
                 key={k}
                 type="button"
@@ -226,7 +229,7 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
                 className="hover:!border-accent hover:!text-accent"
                 style={{ padding: "9px 13px", borderRadius: 7, border: "1px solid rgba(255,255,255,.14)", background: "rgba(12,16,19,.66)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".04em", textTransform: "uppercase", color: "#93A3AC", whiteSpace: "nowrap" }}
               >
-                {k === "name" ? "A–Z" : k} {arrow(k)}
+                {k === "name" ? "A–Z" : k === "payout" ? "Withdrawal" : "Wagering"} {arrow(k)}
               </button>
             ))}
           </div>
@@ -282,7 +285,7 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
               Almost none of the variance is the chain. It&apos;s the operator&apos;s internal batching interval and whether a withdrawal trips a manual review. Sites that batch every few minutes and auto-approve under a threshold clear in single-digit minutes; sites that batch hourly and review everything over $500 take an hour or more.
             </p>
             <p style={{ margin: 0, fontSize: 14.5, lineHeight: 1.65, color: "#93A3AC", textWrap: "pretty" }}>
-              When we field-test an operator we time from confirmed request to first on-chain broadcast, so network congestion is excluded and the number reflects what the operator controls. The payout times on this page are listed figures, not yet timed by us.
+              When we field-test an operator we time from confirmed request to first on-chain broadcast, so network congestion is excluded and the number reflects what the operator controls. The withdrawal times on this page are each operator's own stated figure, not yet timed by us.
             </p>
           </div>
           <div style={{ padding: 26, borderRadius: 13, background: "rgba(12,16,19,.66)", border: "1px solid rgba(255,255,255,.07)" }}>
@@ -358,7 +361,7 @@ function OpRow({ o, pos, coins }: { o: Operator; pos: number; coins: string[] })
         </Link>
       </div>
       <div style={{ padding: "14px 8px" }}>
-        <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 15, fontWeight: 500, color: o.hasCustomReview ? "#FFCC00" : "#fff" }}>{o.score.toFixed(1)}</span>
+        <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11.5, color: o.hasCustomReview ? "#FFCC00" : "#B7C4CB" }}>{o.licence}</span>
       </div>
       <div style={{ padding: "14px 8px" }}>
         <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12.5, color: "#B7C4CB" }}>{payoutView(o).label}</div>
@@ -403,7 +406,7 @@ function OpRow({ o, pos, coins }: { o: Operator; pos: number; coins: string[] })
             whiteSpace: "nowrap",
           }}
         >
-          {o.signupUrl ? `Visit ${o.name}` : "Read review"}
+          {o.signupUrl ? `Visit ${o.name}` : "View profile"}
         </OutboundOrReview>
       </div>
     </div>

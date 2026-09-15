@@ -10,7 +10,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const g = siteData.liveGames.find((x) => x.slug === slug);
   if (!g) return {};
   return pageMetadata(
-    `${g.name} review 2026: ${g.rtp.toFixed(2)}% return, ${g.stake} stakes, ${g.studio}`,
+    `${g.name}: ${g.rtp.toFixed(2)}% published return, ${g.stake} stakes, ${g.studio}`,
     g.why,
     `/live-casino/${slug}`
   );

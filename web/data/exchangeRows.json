@@ -7,8 +7,7 @@
     "note": "Regulated in the EU and UK and publishes proof of reserves; entry-tier Pro fees are the highest of the five",
     "m1": "0.80%",
     "m2": "ACH, SEPA, FPS, SWIFT",
-    "m3": "$100K/day cash",
-    "score": 8.9
+    "m3": "$100K/day cash"
   },
   {
     "slug": "okx",
@@ -18,8 +17,7 @@
     "note": "MiCA-licensed via Malta; US pages list ACH and wire, 0.20% / 0.35% entry fees",
     "m1": "0.35%",
     "m2": "ACH, wire (US)",
-    "m3": "$10M/day crypto",
-    "score": 8.6
+    "m3": "$10M/day crypto"
   },
   {
     "slug": "coinbase",
@@ -29,8 +27,7 @@
     "note": "ACH, wire, card and PayPal; no exchange-wide proof of reserves found",
     "m1": "0.60%",
     "m2": "ACH, wire, card, PayPal",
-    "m3": "$100K/day (Exchange)",
-    "score": 8.1
+    "m3": "$100K/day (Exchange)"
   },
   {
     "slug": "bybit",
@@ -40,8 +37,7 @@
     "note": "Lowest entry fees of the five alongside KuCoin; Merkle-tree proof of reserves",
     "m1": "0.10%",
     "m2": "SEPA, PIX, e-wallets",
-    "m3": "1M USDT/day",
-    "score": 8
+    "m3": "1M USDT/day"
   },
   {
     "slug": "kucoin",
@@ -51,7 +47,6 @@
     "note": "SEPA and SEPA Instant plus card and P2P for verified users; MiCAR-licensed in Austria",
     "m1": "0.10%",
     "m2": "SEPA, card, P2P",
-    "m3": "1M USDT/day",
-    "score": 7.6
+    "m3": "1M USDT/day"
   }
 ]

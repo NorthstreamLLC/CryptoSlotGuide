@@ -65,14 +65,14 @@ export const filterFns: Record<BtcFilterKey, (o: Operator) => boolean> = {
   lowwager: (o) => o.wager <= 1,
 };
 
-export type SortKey = "rank" | "score" | "payout" | "name";
+/** No score sort — the site doesn't score casinos. Sorts are on cited facts or name. */
+export type SortKey = "payout" | "wager" | "name";
 export type SortDir = "asc" | "desc";
 
 export function sortOps(list: Operator[], key: SortKey, dir: SortDir): Operator[] {
   const d = dir === "asc" ? 1 : -1;
   const out = [...list];
-  if (key === "rank") out.sort((a, b) => b.score - a.score);
-  else if (key === "score") out.sort((a, b) => (b.score - a.score) * d);
+  if (key === "wager") out.sort((a, b) => (a.wager - b.wager) * d || a.name.localeCompare(b.name));
   else if (key === "payout") out.sort((a, b) => (d === 1 ? comparePayout(a, b) : comparePayout(b, a)));
   else if (key === "name") out.sort((a, b) => a.name.localeCompare(b.name) * d);
   return out;

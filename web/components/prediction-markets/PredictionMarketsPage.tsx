@@ -18,7 +18,8 @@ import { siteData } from "@/lib/site-data";
 export function PredictionMarketsPage({ initialTab = "crypto" }: { initialTab?: "crypto" | "fiat" }) {
   const { predMarkets } = siteData;
   const [tab, setTab] = useState<"crypto" | "fiat">(initialTab);
-  const rows = predMarkets[tab];
+  // Listed A–Z; venues are not ranked.
+  const rows = [...predMarkets[tab]].sort((a, b) => a.name.localeCompare(b.name));
 
   return (
     <main>
@@ -85,13 +86,13 @@ export function PredictionMarketsPage({ initialTab = "crypto" }: { initialTab?: 
 
       <section style={{ maxWidth: 1400, margin: "0 auto", padding: "36px 40px 80px" }}>
         <div style={{ border: "1px solid rgba(255,255,255,.08)", borderRadius: 14, overflowX: "auto" }}>
-          <div style={{ display: "grid", minWidth: 1020, gridTemplateColumns: "52px minmax(180px,1.1fr) minmax(150px,1fr) 140px 120px 140px 96px", background: "rgba(255,255,255,.03)", borderBottom: "1px solid rgba(255,255,255,.08)" }}>
-            {["#", "Venue", "Settlement", "Cost to trade", "Identity", "Payout", "Score"].map((h) => (
+          <div style={{ display: "grid", minWidth: 1020, gridTemplateColumns: "52px minmax(180px,1.1fr) minmax(150px,1fr) 140px 120px 140px", background: "rgba(255,255,255,.03)", borderBottom: "1px solid rgba(255,255,255,.08)" }}>
+            {["#", "Venue", "Settlement", "Cost to trade", "Identity", "Payout"].map((h) => (
               <div key={h} style={{ padding: "14px 16px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".07em", textTransform: "uppercase", color: "#5C6A72" }}>{h}</div>
             ))}
           </div>
           {rows.map((m, i) => (
-            <div key={m.name} style={{ display: "grid", minWidth: 1020, gridTemplateColumns: "52px minmax(180px,1.1fr) minmax(150px,1fr) 140px 120px 140px 96px", alignItems: "center", borderBottom: "1px solid rgba(255,255,255,.05)" }}>
+            <div key={m.name} style={{ display: "grid", minWidth: 1020, gridTemplateColumns: "52px minmax(180px,1.1fr) minmax(150px,1fr) 140px 120px 140px", alignItems: "center", borderBottom: "1px solid rgba(255,255,255,.05)" }}>
               <div style={{ padding: 16, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12.5, color: "#5C6A72" }}>{String(i + 1).padStart(2, "0")}</div>
               <div style={{ padding: "14px 16px" }}>
                 <div style={{ fontSize: 14.5, fontWeight: 700, letterSpacing: "-.015em", color: "#fff" }}>{m.name}</div>
@@ -101,7 +102,6 @@ export function PredictionMarketsPage({ initialTab = "crypto" }: { initialTab?: 
               <div style={{ padding: "14px 16px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, color: "#DCE5E9" }}>{m.fee}</div>
               <div style={{ padding: "14px 16px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, color: "#8DA0AA" }}>{m.kyc}</div>
               <div style={{ padding: "14px 16px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, color: "#8DA0AA" }}>{m.payout}</div>
-              <div style={{ padding: "14px 16px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 16, color: "#fff" }}>{m.score.toFixed(1)}</div>
             </div>
           ))}
         </div>

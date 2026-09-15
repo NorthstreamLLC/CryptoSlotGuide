@@ -19,6 +19,7 @@ export function LiveCasinoPage({ initialType }: { initialType?: LiveGame["type"]
   const bestReturn = [...liveGames].sort((a, b) => b.rtp - a.rtp)[0];
   const fastest = [...liveCasinos].sort((a, b) => parseInt(a.latency, 10) - parseInt(b.latency, 10))[0];
   const rows = type ? liveGames.filter((g) => g.type === type) : liveGames;
+  const operators = [...liveCasinos].sort((a, b) => a.name.localeCompare(b.name));
 
   return (
     <main>
@@ -43,7 +44,7 @@ export function LiveCasinoPage({ initialType }: { initialType?: LiveGame["type"]
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 1, background: "rgba(255,255,255,.08)", border: "1px solid rgba(255,255,255,.08)", borderRadius: 13, overflow: "hidden" }}>
               <div style={{ padding: "18px 20px", background: "rgba(12,16,19,.9)" }}>
-                <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 9.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#5C6A72", marginBottom: 8 }}>Best return live</div>
+                <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 9.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#5C6A72", marginBottom: 8 }}>Highest return live</div>
                 <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 23, color: "#fff" }}>{bestReturn.rtp.toFixed(2)}%</div>
                 <div style={{ fontSize: 11.5, color: "#7B8A93", marginTop: 3 }}>{bestReturn.name}</div>
               </div>
@@ -60,13 +61,13 @@ export function LiveCasinoPage({ initialType }: { initialType?: LiveGame["type"]
       <section style={{ maxWidth: 1400, margin: "0 auto", padding: "56px 40px 0" }}>
         <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 32, flexWrap: "wrap", marginBottom: 22 }}>
           <div>
-            <h2 style={{ margin: "0 0 8px", fontSize: 30, letterSpacing: "-.03em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Top live casinos</h2>
-            <p style={{ margin: 0, fontSize: 15, color: "#8DA0AA" }}>Scored on studio breadth, seat limits and how quickly the stream reacts.</p>
+            <h2 style={{ margin: "0 0 8px", fontSize: 30, letterSpacing: "-.03em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Live casinos</h2>
+            <p style={{ margin: 0, fontSize: 15, color: "#8DA0AA" }}>Listed A–Z, with studio breadth, seat limits and listed stream latency for each.</p>
           </div>
           <Link href="/compare" style={{ fontSize: 14, fontWeight: 600, color: "#00C2CC", whiteSpace: "nowrap" }}>Compare operators →</Link>
         </div>
         <div style={{ display: "grid", minWidth: 0, gridTemplateColumns: "repeat(auto-fit,minmax(292px,1fr))", gap: 14 }}>
-          {liveCasinos.map((o) => (
+          {operators.map((o) => (
             <Link
               key={o.slug}
               href={`/casinos/${o.slug}`}
@@ -81,7 +82,6 @@ export function LiveCasinoPage({ initialType }: { initialType?: LiveGame["type"]
                   <div style={{ fontSize: 16, fontWeight: 700, letterSpacing: "-.02em", color: "#fff" }}>{o.name}</div>
                   <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".06em", textTransform: "uppercase", color: o.tint, marginTop: 3 }}>{o.tables} tables</div>
                 </div>
-                <span style={{ marginLeft: "auto", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 20, color: "#fff" }}>{o.score.toFixed(1)}</span>
               </div>
               <p style={{ margin: "0 0 16px", fontSize: 13, lineHeight: 1.55, color: "#8DA0AA", textWrap: "pretty" }}>{o.note}</p>
               <div style={{ marginTop: "auto", display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 10, paddingTop: 14, borderTop: "1px solid rgba(255,255,255,.07)" }}>
@@ -134,7 +134,7 @@ export function LiveCasinoPage({ initialType }: { initialType?: LiveGame["type"]
                 <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#5C6A72" }}>min {g.stake}</span>
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: 7, marginTop: 11, fontSize: 11.5, color: "#8DA0AA" }}>
-                <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 9.5, letterSpacing: ".07em", textTransform: "uppercase", color: "#4E5A62" }}>best at</span>
+                <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 9.5, letterSpacing: ".07em", textTransform: "uppercase", color: "#4E5A62" }}>cheapest at</span>
                 {g.best}
               </div>
             </Link>

@@ -26,8 +26,6 @@ export interface Operator {
   name: string;
   /** Short monogram/wordmark fallback when a logo asset isn't set. */
   mono: string;
-  /** 5.5–9.9, see lib/scoring.ts `crit`. */
-  score: number;
   /**
    * Prototype median withdrawal time in minutes, and its label. UNSOURCED —
    * never display or rank on these directly; go through lib/payout.ts,
@@ -119,7 +117,6 @@ export interface SlotCategoryDef {
 export interface LiveCasino {
   slug: string;
   name: string;
-  score: number;
   tables: number;
   studios: string[];
   stakes: string;
@@ -155,7 +152,6 @@ export interface LiveGame {
 
 export interface PredictionMarket {
   name: string;
-  score: number;
   /** Settlement asset/chain description, e.g. "USDC · Polygon" — not an enum. */
   settle: string;
   fee: string;
@@ -175,7 +171,6 @@ export interface PredictionMarkets {
 export interface FiatCasino {
   slug: string;
   name: string;
-  score: number;
   licence: string;
   rails: string;
   payout: string;
@@ -195,7 +190,6 @@ export interface Provider {
   name: string;
   mono: string;
   tint: string;
-  score: number;
   note: string;
   /** How the studio publishes RTP on its own game pages (checked on its site, see sourceUrl). */
   rtpPolicy: "multiple" | "single" | "unpublished" | "bonus-buy";
@@ -217,7 +211,6 @@ export interface WalletOrExchangeRow {
   m1: string;
   m2: string;
   m3: string;
-  score: number;
 }
 
 export interface HouseGame {
@@ -361,14 +354,6 @@ export type EntityType =
   | "wallet"
   | "exchange"
   | "betting";
-
-/** Six scored criteria + six measured stats, per README "Derived, never stored". */
-export interface ScoreBar {
-  name: string;
-  val: number;
-  pct: number;
-  color: string;
-}
 
 export interface Flag {
   label: string;

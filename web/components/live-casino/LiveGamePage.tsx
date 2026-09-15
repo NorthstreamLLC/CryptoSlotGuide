@@ -59,7 +59,7 @@ export function LiveGamePage({ g }: { g: LiveGame }) {
                 <div key={h} style={{ padding: "13px 16px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".07em", textTransform: "uppercase", color: "#5C6A72" }}>{h}</div>
               ))}
             </div>
-            {liveCasinos.map((c) => {
+            {[...liveCasinos].sort((a, b) => a.name.localeCompare(b.name)).map((c) => {
               const [min, max] = c.stakes.split("–").map((s) => s.trim());
               return (
                 <div key={c.slug} style={{ display: "grid", gridTemplateColumns: "minmax(160px,1.2fr) 96px 110px 96px 92px", alignItems: "center", borderBottom: "1px solid rgba(255,255,255,.05)" }}>

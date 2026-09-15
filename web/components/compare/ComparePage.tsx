@@ -90,7 +90,7 @@ export function ComparePage() {
                     <Link href={o.hasCustomReview ? "/casinos/roobet" : `/casinos/${o.slug}`} className="hover:!text-accent" style={{ display: "block", fontSize: 14, fontWeight: 700, color: "#fff" }}>
                       {o.name}
                     </Link>
-                    <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#5C6A72", marginTop: 2 }}>score {o.score.toFixed(1)}</div>
+                    <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#5C6A72", marginTop: 2 }}>{o.licence}</div>
                   </div>
                 ))}
               </div>
@@ -106,7 +106,7 @@ export function ComparePage() {
               ))}
             </div>
             <p style={{ margin: "18px 0 0", maxWidth: "88ch", fontSize: 13.5, lineHeight: 1.65, color: "#6E7F88", textWrap: "pretty" }}>
-              Lower is better on withdrawal time, wagering and confirmations; higher is better on score and coin count. Licence and headline offer are stated without a winner because neither is comparable on a single axis.
+              Lower is better on withdrawal time, wagering and confirmations; higher is better on coin count. Licence and headline offer are stated without a winner because neither is comparable on a single axis.
             </p>
           </>
         )}

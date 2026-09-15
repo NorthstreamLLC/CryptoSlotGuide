@@ -134,10 +134,6 @@ export function lowestTakerFee(exchangeRows: WalletOrExchangeRow[]): string {
   return [...exchangeRows].sort((a, b) => parseFloat(a.m1) - parseFloat(b.m1))[0]?.m1 ?? "—";
 }
 
-export function topScore<T extends { score: number }>(list: T[]): T | undefined {
-  return [...list].sort((a, b) => b.score - a.score)[0];
-}
-
 export function feeAbsorbers(ops: Operator[]): number {
   return ops.filter((o) => o.absorbsFee).length;
 }
@@ -191,34 +187,6 @@ export function missingCoins(coinsBy: CoinsByOperator, coinDefs: CoinDef[], slug
   return coinDefs.map((c) => c.ticker).filter((t) => !has.includes(t));
 }
 
-/**
- * Walks an operator's own record in priority order, same as the source's
- * `casinoCons(o)`: wagering, confirmations, payout vs. median, the live
- * criticism (if it runs a live casino), fee absorption, missing coins,
- * Lightning, KYC/manual-review risk, sportsbook/esports gaps, then a
- * catch-all — so there are always at least four candidates and the first
- * four that genuinely apply are used.
- */
-export function casinoCons(
-  o: Operator,
-  ctx: { ops: Operator[]; liveCasinos: LiveCasino[]; coinsBy: CoinsByOperator; coinDefs: CoinDef[] }
-): string[] {
-  const missing = missingCoins(ctx.coinsBy, ctx.coinDefs, o.slug);
-  const out: (string | null)[] = [];
-  if (o.wager > 1) out.push(`${o.wager}× wagering makes the headline offer far less valuable than it reads`);
-  if (o.conf > 1) out.push(`${o.conf} confirmations before the balance is playable, so a busy block costs you real time`);
-  if (!o.payoutStated) out.push("No withdrawal time stated on its own pages");
-  if (ctx.liveCasinos.some((l) => l.slug === o.slug)) out.push(liveCon(ctx.liveCasinos, o.slug));
-  if (!o.absorbsFee) out.push("Network fee is deducted from the withdrawal rather than absorbed");
-  if (missing.length) out.push(`No ${missing.slice(0, 2).join(" or ")} support on the cashier`);
-  if (!o.ln) out.push("No Lightning, so small deposits still pay an on-chain fee");
-  if (o.kyc === "required") out.push("Documents required before the first withdrawal clears");
-  else out.push("A large withdrawal can still trigger a manual review");
-  if (!o.sports) out.push("No sportsbook, so a single balance cannot cover both");
-  else if (!o.esports) out.push("Sportsbook carries no esports markets");
-  out.push("Restricted-country list in the terms is worth checking before you deposit");
-  return out.filter((x): x is string => Boolean(x)).slice(0, 4);
-}
 
 /**
  * The category leader has nothing to answer for on breadth — the only

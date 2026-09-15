@@ -10,7 +10,7 @@ const footerCols = [
   {
     title: "Casinos",
     links: [
-      { l: "Top crypto casinos", href: "/crypto-casinos" },
+      { l: "All crypto casinos", href: "/crypto-casinos" },
       { l: "No-KYC casinos", href: "/crypto-casinos/no-kyc" },
       { l: "Fastest payouts", href: "/fastest-payouts" },
       { l: "Live casinos", href: "/live-casino" },
@@ -43,7 +43,7 @@ const footerCols = [
   {
     title: "About",
     links: [
-      { l: "How we rate", href: "/how-we-rate" },
+      { l: "How we source information", href: "/how-we-rate" },
       { l: "Wallets", href: "/wallets" },
       { l: "Exchanges", href: "/exchanges" },
       { l: "Coins we track", href: "/coins" },
@@ -86,7 +86,7 @@ export function Footer() {
           <p style={{ margin: "0 0 18px", fontSize: 13, lineHeight: 1.6, color: "#6E7F88", maxWidth: "34ch" }}>
             Independent crypto gambling and Web3 product reviews. We field-test what we can fund by hand and disclose
             exactly which reviews that covers — see{" "}
-            <Link href="/how-we-rate" style={{ color: "#8DA0AA" }}>how we rate</Link>.
+            <Link href="/how-we-rate" style={{ color: "#8DA0AA" }}>how we source information</Link>.
           </p>
           <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
             {["18+ ONLY", "BEGAMBLEAWARE", "GAMSTOP"].map((badge) => (

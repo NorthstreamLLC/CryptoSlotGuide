@@ -10,10 +10,10 @@ import { BrandMark } from "@/components/ui/BrandMark";
 
 /**
  * Ported from the `isHouseGame` block in CryptoSlotGuide.dc.html (search
- * for `HOUSE GAME (how to play)`). "Where to play it" uses our top-scored
- * casinos (the game is identical everywhere, so the source's own advice
- * is to pick on payout/wagering) rather than a per-game operator list our
- * data model doesn't carry.
+ * for `HOUSE GAME (how to play)`). "Where to play it" lists casinos by
+ * fastest stated withdrawal time (the game is identical everywhere, so the
+ * source's own advice is to pick on payout/wagering) rather than a per-game
+ * operator list our data model doesn't carry.
  */
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -32,7 +32,11 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const h = houseGames.find((g) => g.slug === slug);
   if (!h) notFound();
 
-  const where = [...ops].sort((a, b) => b.score - a.score).slice(0, 6);
+  // Fastest operator-stated withdrawal first, A–Z within a tie; operators that state no time are left out.
+  const where = ops
+    .filter((o) => payoutView(o).mins !== null)
+    .sort((a, b) => (payoutView(a).mins ?? 0) - (payoutView(b).mins ?? 0) || a.name.localeCompare(b.name))
+    .slice(0, 6);
   const others = houseGames.filter((g) => g.slug !== h.slug).slice(0, 4);
 
   return (
@@ -102,7 +106,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         </div>
 
         <h2 style={{ margin: "0 0 8px", fontSize: 28, letterSpacing: "-.028em", fontWeight: 800, fontStretch: "112%", color: "#E8EDF0" }}>Where to play it</h2>
-        <p style={{ margin: "0 0 20px", fontSize: 15, color: "#8DA0AA" }}>The game is identical everywhere, so pick on payout speed and wagering instead.</p>
+        <p style={{ margin: "0 0 20px", fontSize: 15, color: "#8DA0AA" }}>The game is identical everywhere, so pick on payout speed and wagering instead. Listed by fastest stated withdrawal time.</p>
         <div style={{ display: "grid", minWidth: 0, gridTemplateColumns: "repeat(auto-fit,minmax(258px,1fr))", gap: 12, marginBottom: 38 }}>
           {where.map((o) => (
             <Link key={o.slug} href={o.hasCustomReview ? "/casinos/roobet" : `/casinos/${o.slug}`} style={{ display: "flex", alignItems: "center", gap: 12, padding: 18, borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
@@ -113,7 +117,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
                 <div style={{ fontSize: 14, fontWeight: 600, color: "#E8EDF0", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{o.name}</div>
                 <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#5C6A72", marginTop: 2 }}>{payoutView(o).kind === "none" ? "Withdrawal time not stated" : `${payoutView(o).label} withdrawals`}</div>
               </div>
-              <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 14, color: "#fff" }}>{o.score.toFixed(1)}</span>
+              <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 14, color: "#fff" }}>{o.wager === 1 ? "No wagering" : `${o.wager}× wagering`}</span>
             </Link>
           ))}
         </div>

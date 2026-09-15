@@ -59,8 +59,8 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
               ],
             },
             {
-              title: "Top casino reviews",
-              links: ["Roobet", "Stake", "BC.Game", "Shuffle", "Rollbit"].map((name) => ({
+              title: "Casino profiles",
+              links: ["BC.Game", "Rollbit", "Roobet", "Shuffle", "Stake"].map((name) => ({
                 label: name,
                 href: `/casinos/${slug(name)}`,
               })),
@@ -107,7 +107,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
                 { label: "RTP Watch · live board", href: "/rtp-watch", dot: "#DA9877" },
                 { label: `All ${c.slots} slot reviews`, href: "/slots" },
                 { label: "How casino RTP versions work", href: "/guides/how-casino-rtp-versions-work" },
-                { label: "How we rate", href: "/how-we-rate" },
+                { label: "How we source information", href: "/how-we-rate" },
               ],
             },
             {
@@ -118,7 +118,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
               })),
             },
             {
-              title: "Top slot reviews",
+              title: "Slot profiles",
               links: ["Money Train 4", "Sweet Bonanza", "Razor Shark", "Gates of Olympus"].map((name) => ({
                 label: name,
                 href: `/slots/${slug(name)}`,
@@ -141,8 +141,8 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
               ],
             },
             {
-              title: "Top studios",
-              links: ["Hacksaw Gaming", "Push Gaming", "Nolimit City", "Pragmatic Play", "Relax Gaming"].map(
+              title: "Studio profiles",
+              links: ["Hacksaw Gaming", "Nolimit City", "Pragmatic Play", "Push Gaming", "Relax Gaming"].map(
                 (name) => ({ label: name, href: `/providers/${slug(name)}` })
               ),
             },
@@ -189,7 +189,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
               links: [
                 { label: "Reading wagering requirements", href: "/guides/reading-wagering-requirements" },
                 { label: "KYC thresholds, explained", href: "/guides/kyc-thresholds-explained" },
-                { label: "Our scoring sheet", href: "/how-we-rate" },
+                { label: "How we review", href: "/how-we-rate" },
               ],
             },
           ],
@@ -223,7 +223,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
           href: "/sportsbooks",
           columns: [
             {
-              title: "Rankings",
+              title: "Browse",
               links: [
                 { label: `All ${c.books} sportsbooks`, href: "/sportsbooks" },
                 { label: "Compare side by side", href: "/compare" },
@@ -231,8 +231,8 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
               ],
             },
             {
-              title: "Top book reviews",
-              links: ["Cloudbet", "Stake", "Roobet", "BC.Game"].map((name) => ({
+              title: "Book reviews",
+              links: ["BC.Game", "Cloudbet", "Roobet", "Stake"].map((name) => ({
                 label: name,
                 href: `/casinos/${slug(name)}`,
               })),
@@ -321,7 +321,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
               links: [
                 { label: "All regulated venues", href: "/prediction-markets?tab=fiat" },
                 { label: "Exchanges to fund with", href: "/exchanges" },
-                { label: "How we rate", href: "/how-we-rate" },
+                { label: "How we source information", href: "/how-we-rate" },
               ],
             },
           ],
@@ -343,7 +343,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
             {
               title: "Method",
               links: [
-                { label: "How we rate", href: "/how-we-rate" },
+                { label: "How we source information", href: "/how-we-rate" },
                 { label: "Sportsbook margin, explained", href: "/guides/sportsbook-margin-measured" },
                 { label: "Compare operators", href: "/compare" },
               ],
@@ -363,7 +363,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
           href: "/wallets",
           columns: [
             {
-              title: "Wallet reviews",
+              title: "Wallet profiles",
               links: siteData.walletRows.slice(0, 5).map((w) => ({ label: w.name, href: `/wallets/${w.slug}` })),
             },
             {
@@ -383,7 +383,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
           href: "/exchanges",
           columns: [
             {
-              title: "Exchange reviews",
+              title: "Exchange profiles",
               links: siteData.exchangeRows.slice(0, 5).map((x) => ({ label: x.name, href: `/exchanges/${x.slug}` })),
             },
             {
@@ -391,7 +391,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
               links: [
                 { label: "All exchange reviews", href: "/exchanges" },
                 { label: "Depositing over Lightning", href: "/guides/depositing-over-lightning" },
-                { label: "Our scoring sheet", href: "/how-we-rate" },
+                { label: "How we review", href: "/how-we-rate" },
               ],
             },
           ],
@@ -416,7 +416,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
                 { label: "RTP Watch · live board", href: "/rtp-watch", dot: "#DA9877" },
                 { label: "Prediction markets", href: "/prediction-markets" },
                 { label: "Compare operators", href: "/compare" },
-                { label: "How we rate", href: "/how-we-rate" },
+                { label: "How we source information", href: "/how-we-rate" },
               ],
             },
           ],
