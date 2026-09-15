@@ -3,6 +3,22 @@
     "operatorSlug": "1win",
     "sources": [
       {
+        "source": "FairGambling",
+        "metric": "30-day deposit volume",
+        "value": "$115.0M",
+        "note": "2.5% market share · 72.3K unique depositors · 411.9K total deposits",
+        "asOf": "2026-09-03",
+        "sourceUrl": "https://www.fairgambling.com/1win"
+      },
+      {
+        "source": "FairGambling",
+        "metric": "Hot wallet balance (all chains)",
+        "value": "$18.2M",
+        "note": "TRX, TON, BSC, ETH, SOL, POLYGON, LTC, BTC, XRP, STELLAR, DOGE",
+        "asOf": "2026-09-03",
+        "sourceUrl": "https://www.fairgambling.com/1win"
+      },
+      {
         "source": "Tanzanite",
         "metric": "30-day deposit volume",
         "value": "$119.5M",
@@ -15,6 +31,22 @@
   {
     "operatorSlug": "500-casino",
     "sources": [
+      {
+        "source": "FairGambling",
+        "metric": "30-day deposit volume",
+        "value": "$25.2M",
+        "note": "0.5% market share · 10.0K unique depositors · 62.8K total deposits",
+        "asOf": "2026-09-07",
+        "sourceUrl": "https://www.fairgambling.com/500casino"
+      },
+      {
+        "source": "FairGambling",
+        "metric": "Hot wallet balance (all chains)",
+        "value": "$2.3M",
+        "note": "ETH, SOL, TRX, BSC, POLYGON, LTC, BTC, DOGE, AVAX, CARDANO, BCH, XRP, STELLAR",
+        "asOf": "2026-09-07",
+        "sourceUrl": "https://www.fairgambling.com/500casino"
+      },
       {
         "source": "Tanzanite",
         "metric": "30-day deposit volume",
@@ -29,6 +61,22 @@
     "operatorSlug": "acebet",
     "sources": [
       {
+        "source": "FairGambling",
+        "metric": "30-day deposit volume",
+        "value": "$5.4M",
+        "note": "0.1% market share · 3.7K unique depositors · 11.4K total deposits",
+        "asOf": "2026-09-03",
+        "sourceUrl": "https://www.fairgambling.com/acebet"
+      },
+      {
+        "source": "FairGambling",
+        "metric": "Hot wallet balance (all chains)",
+        "value": "$474.1K",
+        "note": "ETH, SOL, LTC, BTC, XRP, BSC",
+        "asOf": "2026-09-03",
+        "sourceUrl": "https://www.fairgambling.com/acebet"
+      },
+      {
         "source": "Tanzanite",
         "metric": "30-day deposit volume",
         "value": "$5.4M",
@@ -42,6 +90,22 @@
     "operatorSlug": "bc-game",
     "sources": [
       {
+        "source": "FairGambling",
+        "metric": "30-day deposit volume",
+        "value": "$152.8M",
+        "note": "3.3% market share · 29.1K unique depositors · 93.4K total deposits",
+        "asOf": "2026-09-14",
+        "sourceUrl": "https://www.fairgambling.com/bcgame"
+      },
+      {
+        "source": "FairGambling",
+        "metric": "Hot wallet balance (all chains)",
+        "value": "$9.4M",
+        "note": "SOL, TRX, XRP, ETH, BSC",
+        "asOf": "2026-09-14",
+        "sourceUrl": "https://www.fairgambling.com/bcgame"
+      },
+      {
         "source": "Tanzanite",
         "metric": "30-day deposit volume",
         "value": "$217.9M",
@@ -54,6 +118,22 @@
   {
     "operatorSlug": "betfury",
     "sources": [
+      {
+        "source": "FairGambling",
+        "metric": "30-day deposit volume",
+        "value": "$22.9M",
+        "note": "0.5% market share · 8.4K unique depositors · 37.9K total deposits",
+        "asOf": "2026-09-04",
+        "sourceUrl": "https://www.fairgambling.com/betfury"
+      },
+      {
+        "source": "FairGambling",
+        "metric": "Hot wallet balance (all chains)",
+        "value": "$6.1M",
+        "note": "BSC, TRX, ETH, SOL, POLYGON, OPTIMISM, AVAX, XRP, ARB, TON",
+        "asOf": "2026-09-04",
+        "sourceUrl": "https://www.fairgambling.com/betfury"
+      },
       {
         "source": "Tanzanite",
         "metric": "30-day deposit volume",
@@ -81,6 +161,22 @@
     "operatorSlug": "cloudbet",
     "sources": [
       {
+        "source": "FairGambling",
+        "metric": "30-day deposit volume",
+        "value": "$23.6M",
+        "note": "0.5% market share · 4.1K unique depositors · 10.8K total deposits",
+        "asOf": "2026-09-03",
+        "sourceUrl": "https://www.fairgambling.com/cloudbet"
+      },
+      {
+        "source": "FairGambling",
+        "metric": "Hot wallet balance (all chains)",
+        "value": "$11.4M",
+        "note": "SOL, ETH, TRX, POLYGON, BTC, BSC, BASE, CARDANO, DASH, TON, AVAX, BCH, DOGE, STELLAR, LTC",
+        "asOf": "2026-09-03",
+        "sourceUrl": "https://www.fairgambling.com/cloudbet"
+      },
+      {
         "source": "Tanzanite",
         "metric": "30-day deposit volume",
         "value": "$31.7M",
@@ -93,6 +189,22 @@
   {
     "operatorSlug": "coincasino",
     "sources": [
+      {
+        "source": "FairGambling",
+        "metric": "30-day deposit volume",
+        "value": "$6.1M",
+        "note": "0.1% market share · 3.0K unique depositors · 19.8K total deposits",
+        "asOf": "2026-09-03",
+        "sourceUrl": "https://www.fairgambling.com/coincasino"
+      },
+      {
+        "source": "FairGambling",
+        "metric": "Hot wallet balance (all chains)",
+        "value": "$2.8M",
+        "note": "ETH, BSC, TRX, SOL, TON",
+        "asOf": "2026-09-03",
+        "sourceUrl": "https://www.fairgambling.com/coincasino"
+      },
       {
         "source": "Tanzanite",
         "metric": "30-day deposit volume",
@@ -107,6 +219,22 @@
     "operatorSlug": "cybet",
     "sources": [
       {
+        "source": "FairGambling",
+        "metric": "30-day deposit volume",
+        "value": "$400.1K",
+        "note": "0.0% market share · 1.6K unique depositors · 3.0K total deposits",
+        "asOf": "2026-07-28",
+        "sourceUrl": "https://www.fairgambling.com/cybet"
+      },
+      {
+        "source": "FairGambling",
+        "metric": "Hot wallet balance (all chains)",
+        "value": "$47.0K",
+        "note": "SOL, BTC, TRX, XRP, STELLAR, BSC, ETH, POLYGON",
+        "asOf": "2026-07-28",
+        "sourceUrl": "https://www.fairgambling.com/cybet"
+      },
+      {
         "source": "Tanzanite",
         "metric": "30-day deposit volume",
         "value": "$439.0K",
@@ -117,8 +245,45 @@
     ]
   },
   {
+    "operatorSlug": "degen",
+    "sources": [
+      {
+        "source": "FairGambling",
+        "metric": "30-day deposit volume",
+        "value": "$6.0M",
+        "note": "0.1% market share · 4.0K unique depositors · 16.9K total deposits",
+        "asOf": "2026-07-28",
+        "sourceUrl": "https://www.fairgambling.com/degen"
+      },
+      {
+        "source": "FairGambling",
+        "metric": "Hot wallet balance (all chains)",
+        "value": "$482.7K",
+        "note": "TRX, ETH, SOL",
+        "asOf": "2026-07-28",
+        "sourceUrl": "https://www.fairgambling.com/degen"
+      }
+    ]
+  },
+  {
     "operatorSlug": "degencity",
     "sources": [
+      {
+        "source": "FairGambling",
+        "metric": "30-day deposit volume",
+        "value": "$5.6M",
+        "note": "0.1% market share · 6.2K unique depositors · 17.5K total deposits",
+        "asOf": "2026-08-12",
+        "sourceUrl": "https://www.fairgambling.com/degencity"
+      },
+      {
+        "source": "FairGambling",
+        "metric": "Hot wallet balance (all chains)",
+        "value": "$757.8K",
+        "note": "ETH, TRX, SOL, LTC, BTC, BSC",
+        "asOf": "2026-08-12",
+        "sourceUrl": "https://www.fairgambling.com/degencity"
+      },
       {
         "source": "Tanzanite",
         "metric": "30-day deposit volume",
@@ -133,6 +298,22 @@
     "operatorSlug": "dicey",
     "sources": [
       {
+        "source": "FairGambling",
+        "metric": "30-day deposit volume",
+        "value": "$22.7M",
+        "note": "0.5% market share · 2.7K unique depositors · 12.8K total deposits",
+        "asOf": "2026-07-31",
+        "sourceUrl": "https://www.fairgambling.com/dicey"
+      },
+      {
+        "source": "FairGambling",
+        "metric": "Hot wallet balance (all chains)",
+        "value": "$14.0M",
+        "note": "ETH, SOL, TRX, BTC",
+        "asOf": "2026-07-31",
+        "sourceUrl": "https://www.fairgambling.com/dicey"
+      },
+      {
         "source": "Tanzanite",
         "metric": "30-day deposit volume",
         "value": "$20.4M",
@@ -145,6 +326,22 @@
   {
     "operatorSlug": "duel",
     "sources": [
+      {
+        "source": "FairGambling",
+        "metric": "30-day deposit volume",
+        "value": "$358.0M",
+        "note": "7.8% market share · 54.6K unique depositors · 247.0K total deposits",
+        "asOf": "2026-09-11",
+        "sourceUrl": "https://www.fairgambling.com/duel"
+      },
+      {
+        "source": "FairGambling",
+        "metric": "Hot wallet balance (all chains)",
+        "value": "$16.8M",
+        "note": "ETH, SOL, TRX, BSC, TON, AVAX, XRP, HEDERA, DOGE",
+        "asOf": "2026-09-11",
+        "sourceUrl": "https://www.fairgambling.com/duel"
+      },
       {
         "source": "Tanzanite",
         "metric": "30-day deposit volume",
@@ -159,6 +356,22 @@
     "operatorSlug": "duelbits",
     "sources": [
       {
+        "source": "FairGambling",
+        "metric": "30-day deposit volume",
+        "value": "$25.0M",
+        "note": "0.5% market share · 10.2K unique depositors · 48.6K total deposits",
+        "asOf": "2026-09-03",
+        "sourceUrl": "https://www.fairgambling.com/duelbits"
+      },
+      {
+        "source": "FairGambling",
+        "metric": "Hot wallet balance (all chains)",
+        "value": "$5.0M",
+        "note": "ETH, SOL, BSC, XRP, TRX",
+        "asOf": "2026-09-03",
+        "sourceUrl": "https://www.fairgambling.com/duelbits"
+      },
+      {
         "source": "Tanzanite",
         "metric": "30-day deposit volume",
         "value": "$26.1M",
@@ -169,8 +382,45 @@
     ]
   },
   {
+    "operatorSlug": "dustbit",
+    "sources": [
+      {
+        "source": "FairGambling",
+        "metric": "30-day deposit volume",
+        "value": "$214.4K",
+        "note": "0.0% market share · 457 unique depositors · 1.1K total deposits",
+        "asOf": "2026-08-03",
+        "sourceUrl": "https://www.fairgambling.com/dustbit"
+      },
+      {
+        "source": "FairGambling",
+        "metric": "Hot wallet balance (all chains)",
+        "value": "$28.1K",
+        "note": "SOL, ETH, TRX, BSC",
+        "asOf": "2026-08-03",
+        "sourceUrl": "https://www.fairgambling.com/dustbit"
+      }
+    ]
+  },
+  {
     "operatorSlug": "flush",
     "sources": [
+      {
+        "source": "FairGambling",
+        "metric": "30-day deposit volume",
+        "value": "$114.0K",
+        "note": "0.0% market share · 222 unique depositors · 488 total deposits",
+        "asOf": "2026-07-28",
+        "sourceUrl": "https://www.fairgambling.com/flush"
+      },
+      {
+        "source": "FairGambling",
+        "metric": "Hot wallet balance (all chains)",
+        "value": "$25.0K",
+        "note": "TRX, ETH, POLYGON, DOGE, BSC, BTC",
+        "asOf": "2026-07-28",
+        "sourceUrl": "https://www.fairgambling.com/flush"
+      },
       {
         "source": "Tanzanite",
         "metric": "30-day deposit volume",
@@ -185,6 +435,22 @@
     "operatorSlug": "gamba",
     "sources": [
       {
+        "source": "FairGambling",
+        "metric": "30-day deposit volume",
+        "value": "$15.0M",
+        "note": "0.3% market share · 10.6K unique depositors · 74.7K total deposits",
+        "asOf": "2026-07-28",
+        "sourceUrl": "https://www.fairgambling.com/gamba"
+      },
+      {
+        "source": "FairGambling",
+        "metric": "Hot wallet balance (all chains)",
+        "value": "$1.2M",
+        "note": "ETH, SOL, XRP, TRX, BSC, POLYGON, TON",
+        "asOf": "2026-07-28",
+        "sourceUrl": "https://www.fairgambling.com/gamba"
+      },
+      {
         "source": "Tanzanite",
         "metric": "30-day deposit volume",
         "value": "$9.7M",
@@ -197,6 +463,22 @@
   {
     "operatorSlug": "gamdom",
     "sources": [
+      {
+        "source": "FairGambling",
+        "metric": "30-day deposit volume",
+        "value": "$218.6M",
+        "note": "4.7% market share · 30.7K unique depositors · 182.6K total deposits",
+        "asOf": "2026-09-03",
+        "sourceUrl": "https://www.fairgambling.com/gamdom"
+      },
+      {
+        "source": "FairGambling",
+        "metric": "Hot wallet balance (all chains)",
+        "value": "$8.6M",
+        "note": "ETH, SOL, BSC, TRX, XRP",
+        "asOf": "2026-09-03",
+        "sourceUrl": "https://www.fairgambling.com/gamdom"
+      },
       {
         "source": "Tanzanite",
         "metric": "30-day deposit volume",
@@ -211,6 +493,22 @@
     "operatorSlug": "goated",
     "sources": [
       {
+        "source": "FairGambling",
+        "metric": "30-day deposit volume",
+        "value": "$3.4M",
+        "note": "0.1% market share · 3.3K unique depositors · 20.5K total deposits",
+        "asOf": "2026-09-03",
+        "sourceUrl": "https://www.fairgambling.com/goated"
+      },
+      {
+        "source": "FairGambling",
+        "metric": "Hot wallet balance (all chains)",
+        "value": "$1.5M",
+        "note": "ETH, SOL, TRX, BSC, XRP, LTC, BTC",
+        "asOf": "2026-09-03",
+        "sourceUrl": "https://www.fairgambling.com/goated"
+      },
+      {
         "source": "Tanzanite",
         "metric": "30-day deposit volume",
         "value": "$3.2M",
@@ -223,6 +521,22 @@
   {
     "operatorSlug": "housebets",
     "sources": [
+      {
+        "source": "FairGambling",
+        "metric": "30-day deposit volume",
+        "value": "$1.4M",
+        "note": "0.0% market share · 402 unique depositors · 1.0K total deposits",
+        "asOf": "2026-09-03",
+        "sourceUrl": "https://www.fairgambling.com/housebets"
+      },
+      {
+        "source": "FairGambling",
+        "metric": "Hot wallet balance (all chains)",
+        "value": "$217.1K",
+        "note": "ETH, BSC, SOL, TRX",
+        "asOf": "2026-09-03",
+        "sourceUrl": "https://www.fairgambling.com/housebets"
+      },
       {
         "source": "Tanzanite",
         "metric": "30-day deposit volume",
@@ -237,6 +551,22 @@
     "operatorSlug": "jackpotbet",
     "sources": [
       {
+        "source": "FairGambling",
+        "metric": "30-day deposit volume",
+        "value": "$252.8K",
+        "note": "0.0% market share · 1.0K unique depositors · 4.7K total deposits",
+        "asOf": "2026-07-28",
+        "sourceUrl": "https://www.fairgambling.com/jackpotbet"
+      },
+      {
+        "source": "FairGambling",
+        "metric": "Hot wallet balance (all chains)",
+        "value": "$76.9K",
+        "note": "SOL, TRX, ETH, BSC, LTC, XRP",
+        "asOf": "2026-07-28",
+        "sourceUrl": "https://www.fairgambling.com/jackpotbet"
+      },
+      {
         "source": "Tanzanite",
         "metric": "30-day deposit volume",
         "value": "$291.7K",
@@ -249,6 +579,22 @@
   {
     "operatorSlug": "metawin",
     "sources": [
+      {
+        "source": "FairGambling",
+        "metric": "30-day deposit volume",
+        "value": "$19.5M",
+        "note": "0.4% market share · 9.3K unique depositors · 55.7K total deposits",
+        "asOf": "2026-08-30",
+        "sourceUrl": "https://www.fairgambling.com/metawin"
+      },
+      {
+        "source": "FairGambling",
+        "metric": "Hot wallet balance (all chains)",
+        "value": "$5.0M",
+        "note": "ETH, SOL, TRX, LTC, BTC, BSC",
+        "asOf": "2026-08-30",
+        "sourceUrl": "https://www.fairgambling.com/metawin"
+      },
       {
         "source": "Tanzanite",
         "metric": "30-day deposit volume",
@@ -263,6 +609,22 @@
     "operatorSlug": "qzino",
     "sources": [
       {
+        "source": "FairGambling",
+        "metric": "30-day deposit volume",
+        "value": "$3.8M",
+        "note": "0.1% market share · 5.3K unique depositors · 18.4K total deposits",
+        "asOf": "2026-09-03",
+        "sourceUrl": "https://www.fairgambling.com/qzino"
+      },
+      {
+        "source": "FairGambling",
+        "metric": "Hot wallet balance (all chains)",
+        "value": "$2.3M",
+        "note": "TON, TRX, BSC, ETH, SOL, POLYGON",
+        "asOf": "2026-09-03",
+        "sourceUrl": "https://www.fairgambling.com/qzino"
+      },
+      {
         "source": "Tanzanite",
         "metric": "30-day deposit volume",
         "value": "$3.8M",
@@ -276,6 +638,22 @@
     "operatorSlug": "rainbet",
     "sources": [
       {
+        "source": "FairGambling",
+        "metric": "30-day deposit volume",
+        "value": "$279.0M",
+        "note": "6.0% market share · 92.1K unique depositors · 888.3K total deposits",
+        "asOf": "2026-09-03",
+        "sourceUrl": "https://www.fairgambling.com/rainbet"
+      },
+      {
+        "source": "FairGambling",
+        "metric": "Hot wallet balance (all chains)",
+        "value": "$92.1M",
+        "note": "ETH, SOL, TRX, BSC, BTC, LTC, TON, DOGE, CARDANO",
+        "asOf": "2026-09-03",
+        "sourceUrl": "https://www.fairgambling.com/rainbet"
+      },
+      {
         "source": "Tanzanite",
         "metric": "30-day deposit volume",
         "value": "$316.0M",
@@ -288,6 +666,22 @@
   {
     "operatorSlug": "razed",
     "sources": [
+      {
+        "source": "FairGambling",
+        "metric": "30-day deposit volume",
+        "value": "$23.2M",
+        "note": "0.5% market share · 18.7K unique depositors · 46.7K total deposits",
+        "asOf": "2026-09-03",
+        "sourceUrl": "https://www.fairgambling.com/razed"
+      },
+      {
+        "source": "FairGambling",
+        "metric": "Hot wallet balance (all chains)",
+        "value": "$4.6M",
+        "note": "ETH, TRX, SOL, LTC, BSC",
+        "asOf": "2026-09-03",
+        "sourceUrl": "https://www.fairgambling.com/razed"
+      },
       {
         "source": "Tanzanite",
         "metric": "30-day deposit volume",
@@ -316,16 +710,17 @@
     "sources": [
       {
         "source": "FairGambling",
-        "metric": "Deposit volume (reported period)",
-        "value": "$381.2M",
-        "note": "8.5% market share",
+        "metric": "30-day deposit volume",
+        "value": "$419.9M",
+        "note": "9.1% market share · 56.7K unique depositors · 664.7K total deposits",
         "asOf": "2026-09-03",
         "sourceUrl": "https://www.fairgambling.com/roobet"
       },
       {
         "source": "FairGambling",
         "metric": "Hot wallet balance (all chains)",
-        "value": "$31.4M",
+        "value": "$30.2M",
+        "note": "ETH, TRX, BTC, SOL, XRP, BSC, BASE, LTC, DOGE",
         "asOf": "2026-09-03",
         "sourceUrl": "https://www.fairgambling.com/roobet"
       },
@@ -343,6 +738,22 @@
     "operatorSlug": "shock",
     "sources": [
       {
+        "source": "FairGambling",
+        "metric": "30-day deposit volume",
+        "value": "$3.2M",
+        "note": "0.1% market share · 1.5K unique depositors · 7.0K total deposits",
+        "asOf": "2026-07-28",
+        "sourceUrl": "https://www.fairgambling.com/shock"
+      },
+      {
+        "source": "FairGambling",
+        "metric": "Hot wallet balance (all chains)",
+        "value": "$61.2K",
+        "note": "BTC, ETH, LTC, SOL, XRP",
+        "asOf": "2026-07-28",
+        "sourceUrl": "https://www.fairgambling.com/shock"
+      },
+      {
         "source": "Tanzanite",
         "metric": "30-day deposit volume",
         "value": "$1.5M",
@@ -356,6 +767,22 @@
     "operatorSlug": "shuffle",
     "sources": [
       {
+        "source": "FairGambling",
+        "metric": "30-day deposit volume",
+        "value": "$211.1M",
+        "note": "4.6% market share · 66.9K unique depositors · 550.0K total deposits",
+        "asOf": "2026-09-03",
+        "sourceUrl": "https://www.fairgambling.com/shuffle"
+      },
+      {
+        "source": "FairGambling",
+        "metric": "Hot wallet balance (all chains)",
+        "value": "$21.3M",
+        "note": "BSC, ETH, SOL, TRX, POLYGON, XRP, LTC, BTC, TON, AVAX, DOGE",
+        "asOf": "2026-09-03",
+        "sourceUrl": "https://www.fairgambling.com/shuffle"
+      },
+      {
         "source": "Tanzanite",
         "metric": "30-day deposit volume",
         "value": "$209.3M",
@@ -368,6 +795,22 @@
   {
     "operatorSlug": "solcasino",
     "sources": [
+      {
+        "source": "FairGambling",
+        "metric": "30-day deposit volume",
+        "value": "$14.3M",
+        "note": "0.3% market share · 7.7K unique depositors · 61.1K total deposits",
+        "asOf": "2026-07-28",
+        "sourceUrl": "https://www.fairgambling.com/solcasino"
+      },
+      {
+        "source": "FairGambling",
+        "metric": "Hot wallet balance (all chains)",
+        "value": "$7.1M",
+        "note": "SOL, TRX, POLYGON, XRP, ETH, BASE, AVAX, HYPE, BSC, DOGE, TON, OPTIMISM",
+        "asOf": "2026-07-28",
+        "sourceUrl": "https://www.fairgambling.com/solcasino"
+      },
       {
         "source": "Tanzanite",
         "metric": "30-day deposit volume",
@@ -409,16 +852,17 @@
     "sources": [
       {
         "source": "FairGambling",
-        "metric": "Deposit volume (reported period)",
+        "metric": "30-day deposit volume",
         "value": "$2.2B",
-        "note": "48.4% market share",
+        "note": "47.7% market share · 1.0M unique depositors · 3.3M total deposits",
         "asOf": "2026-09-07",
         "sourceUrl": "https://www.fairgambling.com/stake"
       },
       {
         "source": "FairGambling",
         "metric": "Hot wallet balance (all chains)",
-        "value": "$137.4M",
+        "value": "$115.9M",
+        "note": "SOL, ETH, TRX, POLYGON, BSC, XRP",
         "asOf": "2026-09-07",
         "sourceUrl": "https://www.fairgambling.com/stake"
       },
@@ -436,6 +880,22 @@
     "operatorSlug": "thrill",
     "sources": [
       {
+        "source": "FairGambling",
+        "metric": "30-day deposit volume",
+        "value": "$48.2M",
+        "note": "1.0% market share · 12.2K unique depositors · 141.3K total deposits",
+        "asOf": "2026-09-03",
+        "sourceUrl": "https://www.fairgambling.com/thrill"
+      },
+      {
+        "source": "FairGambling",
+        "metric": "Hot wallet balance (all chains)",
+        "value": "$1.8M",
+        "note": "BSC, ETH, SOL, TRX, POLYGON, XRP, BASE, BTC, DOGE, BCH, ARB",
+        "asOf": "2026-09-03",
+        "sourceUrl": "https://www.fairgambling.com/thrill"
+      },
+      {
         "source": "Tanzanite",
         "metric": "30-day deposit volume",
         "value": "$48.2M",
@@ -448,6 +908,22 @@
   {
     "operatorSlug": "toshibet",
     "sources": [
+      {
+        "source": "FairGambling",
+        "metric": "30-day deposit volume",
+        "value": "$9.3M",
+        "note": "0.2% market share · 5.0K unique depositors · 21.0K total deposits",
+        "asOf": "2026-09-03",
+        "sourceUrl": "https://www.fairgambling.com/toshibet"
+      },
+      {
+        "source": "FairGambling",
+        "metric": "Hot wallet balance (all chains)",
+        "value": "$564.8K",
+        "note": "ETH, SOL, TRX, POLYGON, BTC, BSC, LTC, MONAD, BASE, DASH, DOGE, AVAX",
+        "asOf": "2026-09-03",
+        "sourceUrl": "https://www.fairgambling.com/toshibet"
+      },
       {
         "source": "Tanzanite",
         "metric": "30-day deposit volume",
@@ -475,6 +951,22 @@
     "operatorSlug": "whale-io",
     "sources": [
       {
+        "source": "FairGambling",
+        "metric": "30-day deposit volume",
+        "value": "$2.9M",
+        "note": "0.1% market share · 3.1K unique depositors · 14.0K total deposits",
+        "asOf": "2026-09-03",
+        "sourceUrl": "https://www.fairgambling.com/whaleio"
+      },
+      {
+        "source": "FairGambling",
+        "metric": "Hot wallet balance (all chains)",
+        "value": "$47.6K",
+        "note": "SOL, BSC, ETH, TRX",
+        "asOf": "2026-09-03",
+        "sourceUrl": "https://www.fairgambling.com/whaleio"
+      },
+      {
         "source": "Tanzanite",
         "metric": "30-day deposit volume",
         "value": "$4.6M",
@@ -488,6 +980,22 @@
     "operatorSlug": "winna",
     "sources": [
       {
+        "source": "FairGambling",
+        "metric": "30-day deposit volume",
+        "value": "$47.6M",
+        "note": "1.0% market share · 24.3K unique depositors · 60.7K total deposits",
+        "asOf": "2026-09-03",
+        "sourceUrl": "https://www.fairgambling.com/winna"
+      },
+      {
+        "source": "FairGambling",
+        "metric": "Hot wallet balance (all chains)",
+        "value": "$1.5M",
+        "note": "ETH, TRX, BSC, SOL, XRP, TON, LTC, BTC, DOGE",
+        "asOf": "2026-09-03",
+        "sourceUrl": "https://www.fairgambling.com/winna"
+      },
+      {
         "source": "Tanzanite",
         "metric": "30-day deposit volume",
         "value": "$44.5M",
@@ -500,6 +1008,22 @@
   {
     "operatorSlug": "yeet",
     "sources": [
+      {
+        "source": "FairGambling",
+        "metric": "30-day deposit volume",
+        "value": "$24.7M",
+        "note": "0.5% market share · 6.7K unique depositors · 37.0K total deposits",
+        "asOf": "2026-09-04",
+        "sourceUrl": "https://www.fairgambling.com/yeet"
+      },
+      {
+        "source": "FairGambling",
+        "metric": "Hot wallet balance (all chains)",
+        "value": "$5.9M",
+        "note": "ETH, TRX, SOL, BASE, BSC, POLYGON, BTC, LTC, XRP, ARB, DOGE",
+        "asOf": "2026-09-04",
+        "sourceUrl": "https://www.fairgambling.com/yeet"
+      },
       {
         "source": "Tanzanite",
         "metric": "30-day deposit volume",
