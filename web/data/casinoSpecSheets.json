@@ -3093,6 +3093,82 @@
             "asOf": "2026-09-15"
           }
         ]
+      },
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Withdrawal fees",
+            "value": "No withdrawal fees beyond on-chain gas, which is previewed before you send",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.rollbit.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Minimum withdrawal",
+            "value": "$5 for USDC and USDT; BTC 0.0002, ETH 0.002, SOL 0.05, LTC 0.01, TRX 10, RLB 100",
+            "sourcing": "editorial",
+            "sourceUrl": "https://rollbit.com/withdraw",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal requirements",
+            "value": "New accounts must deposit $10 and wager $10; after that, no limits on withdrawals (help article dated May 2022)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.rollbit.com/",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": [
+              "BTC",
+              "ETH",
+              "USDT",
+              "USDC",
+              "DAI",
+              "PYUSD",
+              "SOL",
+              "LTC",
+              "XRP",
+              "TRX",
+              "DOGE",
+              "BNB",
+              "ADA",
+              "BCH",
+              "LINK",
+              "POL",
+              "WETH",
+              "RLB",
+              "APE",
+              "BOME",
+              "BONK",
+              "CRO",
+              "JUP",
+              "MEW",
+              "PEPE",
+              "POPCAT",
+              "RAY",
+              "SHIB",
+              "UNI",
+              "WIF"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://rollbit.com/deposit",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "$5 for stablecoins; BTC 0.0001, ETH 0.002, SOL 0.05, LTC 0.01, XRP 4, DOGE 1, TRX 10 — deposits below the minimum don't credit and can't be recovered; no deposit fees",
+            "sourcing": "editorial",
+            "sourceUrl": "https://rollbit.com/deposit",
+            "asOf": "2026-09-15"
+          }
+        ]
       }
     ]
   },
