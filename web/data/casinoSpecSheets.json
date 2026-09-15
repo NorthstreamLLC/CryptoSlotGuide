@@ -3017,6 +3017,39 @@
             "asOf": "2026-09-15"
           }
         ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": [
+              "BTC",
+              "ETH",
+              "USDT",
+              "USDC",
+              "LTC",
+              "SOL",
+              "XRP",
+              "TRX",
+              "DOGE",
+              "DAI",
+              "BCH",
+              "ALGO",
+              "SHFL"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.razed.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Card and bank",
+            "value": "No direct card or cash deposits for EUR; crypto can be bought with bank or card (Visa, Mastercard) through the cashier",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.razed.com/",
+            "asOf": "2026-09-15"
+          }
+        ]
       }
     ]
   },

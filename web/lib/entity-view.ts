@@ -546,6 +546,8 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
   const sheetFactCount = sheet?.groups.reduce((n, g) => n + g.facts.filter((f) => f.sourcing === "editorial").length, 0) ?? 0;
   const hasSheet = sheetFactCount > 0;
   const coinsFact = getSpecFact(o.slug, "Coins & deposit limits", "Coins accepted");
+  // The operator's own full coin list when cited (can include coins beyond the 8 we track), else our tracked list.
+  const coinCount = coinsFact?.chips?.length ?? coins.length;
   const kycFact = getSpecFact(o.slug, "Compliance", "KYC policy");
   const onChain =
     siteData.onChainVolume.find((e) => e.operatorSlug === o.slug)?.sources.find((x) => x.source === "FairGambling" && x.metric === "30-day deposit volume") ??
@@ -560,8 +562,8 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
     tint: tintFor(o.slug),
     // The exact payout figure only leads the headline once we've timed it ourselves.
     headline: checked
-      ? `${o.name}: ${o.payoutLabel} median withdrawal, ${o.licence} licence, ${coins.length} coins`
-      : `${o.name}: ${pv.kind === "none" ? "" : `${pv.label.toLowerCase()} withdrawals, `}${licenceFact ? `${o.licence} licence, ` : ""}${coins.length} coins accepted`,
+      ? `${o.name}: ${o.payoutLabel} median withdrawal, ${o.licence} licence, ${coinCount} coins`
+      : `${o.name}: ${pv.kind === "none" ? "" : `${pv.label.toLowerCase()} withdrawals, `}${licenceFact ? `${o.licence} licence, ` : ""}${coinCount} coins accepted`,
     standfirst: checked
       ? `We ran a funded ${o.name} account — timing real withdrawals and reading the bonus terms line by line.`
       : hasSheet
@@ -583,14 +585,14 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
         : `${o.name} doesn't state a withdrawal time we could find.`,
       wagerFact ? `Bonus wagering: ${wagerFact.value}.` : null,
       licenceFact ? `Licence: ${licenceFact.value}.` : null,
-      `Accepts ${coins.length} coins.`,
+      `Accepts ${coinCount} coins.`,
     ]
       .filter(Boolean)
       .join(" "),
     glance: [
       { label: "Withdrawal time", value: pv.label, source: pv.kind === "timed" ? "timed" : pv.kind === "stated" ? "cited" : "unchecked" },
       { label: "Bonus wagering", value: wagerFact ? `${o.wager}×` : "Not stated", source: wagerFact ? "cited" : "unchecked" },
-      { label: "Coins accepted", value: String(coins.length), source: coinsFact?.sourcing === "editorial" ? "cited" : "unchecked" },
+      { label: "Coins accepted", value: String(coinCount), source: coinsFact?.sourcing === "editorial" ? "cited" : "unchecked" },
       { label: "Licence", value: licenceFact ? o.licence : "Not confirmed", source: licenceFact ? "cited" : "unchecked" },
       { label: "KYC", value: kycFact ? KYC_LABEL[o.kyc] : "Not confirmed", source: kycFact ? "cited" : "unchecked" },
       onChain
@@ -603,7 +605,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
         : statedPayout
         ? { label: "Stated withdrawal time", value: statedPayout.value ?? "", note: `Operator's own figure · ${statedHost}` }
         : { label: "Stated withdrawal time", value: "Not stated", note: "None found on the operator's own pages" },
-      { label: "Coins accepted", value: String(coins.length), note: coins.slice(0, 4).join(", ") + (coins.length > 4 ? " and more" : "") },
+      { label: "Coins accepted", value: String(coinCount), note: (coinsFact?.chips ?? coins).slice(0, 4).join(", ") + (coinCount > 4 ? " and more" : "") },
       { label: "Bonus wagering", value: wagerFact ? `${o.wager}×` : "Not stated", note: wagerFact?.value ?? "None found in its bonus terms" },
       { label: "KYC", value: kycFact ? KYC_LABEL[o.kyc] : "Not confirmed", note: kycFact?.value ?? "No KYC policy found on its own pages" },
       { label: "Licence", value: licenceFact ? o.licence : "Not confirmed", note: licenceFact?.value ?? "No licence details found on its own pages" },
@@ -644,7 +646,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
         : statedPayout
         ? `States withdrawals as "${statedPayout.value}"`
         : `Licensed in ${o.licence}`,
-      wagerFact && lowWager ? `Bonus wagering: ${wagerFact.value}` : `${coins.length} coins accepted`,
+      wagerFact && lowWager ? `Bonus wagering: ${wagerFact.value}` : `${coinCount} coins accepted`,
       ...(licenceFact ? [`Licence: ${licenceFact.value}`] : []),
     ].filter((x, i, a) => a.indexOf(x) === i),
     // Only cons built from cited facts — confirmations, Lightning and fee absorption are prototype listings and aren't shown.
