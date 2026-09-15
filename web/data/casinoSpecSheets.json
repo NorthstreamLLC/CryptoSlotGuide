@@ -1135,8 +1135,40 @@
         "title": "Coins & deposit limits",
         "facts": [
           {
+            "label": "Coins accepted",
+            "chips": [
+              "BTC",
+              "ETH",
+              "USDT",
+              "USDC",
+              "SOL",
+              "XRP",
+              "TRX",
+              "LTC",
+              "DOGE",
+              "BCH",
+              "ADA",
+              "AVAX",
+              "POL",
+              "TON",
+              "SHIB",
+              "PEPE",
+              "BONK"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.coincasino.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "Set per coin in the cashier, e.g. 5 USDT or USDC, 10 TRX, 1 XRP, 0.01 SOL or LTC; BTC, ETH and BCH show 0.00",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.coincasino.com/",
+            "asOf": "2026-09-15"
+          },
+          {
             "label": "Card and bank",
-            "value": "Terms cover credit and debit card deposits through third-party payment processors; site also links to Buy Crypto",
+            "value": "Fiat deposits listed in the cashier (USD, EUR, JPY, NOK and more); terms say card deposits go through third-party payment processors; Buy Crypto and WalletConnect deposits also offered",
             "sourcing": "editorial",
             "sourceUrl": "https://www.coincasino.com/",
             "asOf": "2026-09-15"
@@ -1223,7 +1255,7 @@
           },
           {
             "label": "KYC policy",
-            "value": "May require verification (photo ID, proof of address, selfie or a call) before betting or withdrawing",
+            "value": "Level 1 account details (name, date of birth, phone, address) required before fiat deposits; terms say ID, proof of address, a selfie or a call may be required before betting or withdrawing",
             "sourcing": "editorial",
             "sourceUrl": "https://www.coincasino.com/",
             "asOf": "2026-09-15"
