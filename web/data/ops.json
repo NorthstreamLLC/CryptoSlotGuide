@@ -836,16 +836,19 @@
     "mono": "CC",
     "payout": 11,
     "payoutLabel": "11m 00s",
-    "licence": "Curaçao",
-    "kyc": "required",
-    "bonus": "Not published on site",
+    "licence": "Gaming Services Provider N.V.",
+    "kyc": "tiered",
+    "bonus": "200% welcome bonus up to $30,000 + 50 Super Spins",
     "wager": 40,
     "conf": 3,
     "absorbsFee": false,
     "ln": false,
     "sports": true,
     "esports": false,
-    "hasCustomReview": false
+    "hasCustomReview": false,
+    "cashoutCap": "Max convertible 10× bonus",
+    "payoutStated": "Instant–24 hr",
+    "payoutStatedMaxMins": 1440
   },
   {
     "slug": "bluff",

@@ -192,7 +192,8 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
           )}
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: e.cons.length ? "1fr 1fr" : "1fr", gap: 14, marginBottom: 38 }}>
+        <div style={{ display: "grid", gridTemplateColumns: e.cons.length && e.pros.length ? "1fr 1fr" : "1fr", gap: 14, marginBottom: 38 }}>
+          {e.pros.length > 0 && (
           <div style={{ padding: 24, borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
             <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 14 }}>
               Holds up
@@ -206,6 +207,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
               ))}
             </div>
           </div>
+          )}
           {e.cons.length > 0 && (
           <div style={{ padding: 24, borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
             <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#DA9877", marginBottom: 14 }}>

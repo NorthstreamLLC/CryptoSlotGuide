@@ -314,5 +314,83 @@
         "sourceUrl": "https://betplay.io/en/info/promotions"
       }
     ]
+  },
+  {
+    "operatorSlug": "coincasino",
+    "bonuses": [
+      {
+        "title": "Welcome bonus",
+        "category": "Deposit bonus · new players",
+        "headline": "200%",
+        "subCopy": "Up to $30,000 plus 50 Super Spins. CoinCasino's bonus terms say the welcome offer carries its own wagering requirement, which we haven't found stated yet.",
+        "stats": [
+          {
+            "label": "Up to",
+            "value": "$30,000"
+          },
+          {
+            "label": "Max cashout",
+            "value": "10× bonus"
+          }
+        ],
+        "asOf": "2026-09-15",
+        "sourceUrl": "https://www.coincasino.com/",
+        "sourceNote": "CoinCasino's own Promotions page and bonus terms, screenshot-verified — coincasino.com blocks automated fetches"
+      },
+      {
+        "title": "VIP Club",
+        "category": "VIP · all players",
+        "headline": "Bronze – Diamond",
+        "subCopy": "Weekly cashback, monthly and weekly bonuses and a level-up bonus from Bronze; a personal VIP host and custom instant bonuses from Platinum; real-life events from Sapphire.",
+        "stats": [
+          {
+            "label": "Bronze",
+            "value": "$10K wagered"
+          },
+          {
+            "label": "Diamond",
+            "value": "$25M+ wagered"
+          }
+        ],
+        "asOf": "2026-09-15",
+        "sourceUrl": "https://www.coincasino.com/",
+        "sourceNote": "CoinCasino's own VIP Club page, screenshot-verified — coincasino.com blocks automated fetches"
+      },
+      {
+        "title": "Switch Your VIP Status",
+        "category": "Promotion · switching casinos",
+        "headline": "200%",
+        "subCopy": "Match your VIP level from another casino, boost your perks and get 200% up to $30,000.",
+        "stats": [
+          {
+            "label": "Up to",
+            "value": "$30,000"
+          }
+        ],
+        "asOf": "2026-09-15",
+        "sourceUrl": "https://www.coincasino.com/",
+        "sourceNote": "CoinCasino's own Promotions page, screenshot-verified — coincasino.com blocks automated fetches"
+      },
+      {
+        "title": "Pragmatic Drops & Wins",
+        "category": "Tournament · slots",
+        "headline": "€25,000,000",
+        "subCopy": "Daily tournaments and weekly wins run by Pragmatic Play. CoinCasino also lists Spinomenal's Spinoleague, an 8-stage series with a €12,000,000 max prize pool.",
+        "stats": [
+          {
+            "label": "Drops & Wins",
+            "value": "4 Mar 2026 – 3 Mar 2027"
+          },
+          {
+            "label": "Spinoleague",
+            "value": "5 Mar 2026 – 1 Mar 2027"
+          }
+        ],
+        "asOf": "2026-09-15",
+        "endsLabel": "Ends 3 Mar 2027",
+        "sourceUrl": "https://www.coincasino.com/",
+        "sourceNote": "CoinCasino's own Promotions page, screenshot-verified — coincasino.com blocks automated fetches"
+      }
+    ]
   }
 ]

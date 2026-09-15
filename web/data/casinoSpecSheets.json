@@ -1089,6 +1089,150 @@
     ]
   },
   {
+    "operatorSlug": "coincasino",
+    "groups": [
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Stated withdrawal time",
+            "value": "Usually processed straight away and credited once confirmed on the blockchain; in rare cases a team review can take up to 24 hours",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.coincasino.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal fees",
+            "value": "None if the deposit is wagered at least 1×; otherwise an 8% fee, minimum €4",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.coincasino.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Minimum withdrawal",
+            "value": "€10 or equivalent per transaction (full balance allowed on account closure)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.coincasino.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal limits",
+            "value": "Crypto: €150,000 per calendar month by default, higher for VIPs at its discretion. Fiat: €4,000 per day, €10,000 per week, €20,000 per month",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.coincasino.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Inactive accounts",
+            "value": "After 180 days with no bets, a fee of 10% of the balance per month may be deducted until it falls to €10, after 30 days' notice",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.coincasino.com/",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Card and bank",
+            "value": "Terms cover credit and debit card deposits through third-party payment processors; site also links to Buy Crypto",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.coincasino.com/",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "200% welcome bonus up to $30,000 + 50 Super Spins",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.coincasino.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Standard bonus wagering",
+            "value": "35× the bonus amount; its bonus terms say the welcome offer has a different requirement",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.coincasino.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Max cashout",
+            "value": "10× the bonus amount",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.coincasino.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Bonus play rules",
+            "value": "Max bet $/€20 per round; no feature buys; bonus funds can't be used on live casino or table games. Contribution: slots 100%, live game shows 50%, other games 20%, dice, arcade and crash 0%",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.coincasino.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "VIP Club",
+            "value": "Bronze ($10K wagered), Silver ($50K), Gold ($100K), Platinum I–III ($250K–$2.5M), Sapphire I–III ($2.5M–$25M), Diamond I–V ($25M+). Weekly cashback and level-up bonus at every level; personal VIP host from Platinum",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.coincasino.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "VIP switch",
+            "value": "Match your VIP level from another casino and get 200% up to $30,000",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.coincasino.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Tournaments",
+            "value": "Pragmatic Drops & Wins (€25,000,000 pool, 4 Mar 2026 – 3 Mar 2027); Spinomenal Spinoleague (€12,000,000 max pool, 5 Mar 2026 – 1 Mar 2027); CoinJackpot (banner says €5,000,000, card text says €6,000,000+)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.coincasino.com/",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Licence",
+            "value": "Its terms name Gaming Services Provider N.V. as its licensing body",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.coincasino.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Company",
+            "value": "Deep Sea Tech Ventures (named in its withdrawal terms)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.coincasino.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "KYC policy",
+            "value": "May require verification (photo ID, proof of address, selfie or a call) before betting or withdrawing",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.coincasino.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Restricted countries",
+            "value": "Includes the USA and its territories, United Kingdom, Bulgaria, Malta, Lithuania, Curaçao, Aruba, Sint Maarten, French overseas territories, North Korea, Iran, Cuba, Syria, Afghanistan and others",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.coincasino.com/",
+            "asOf": "2026-09-15"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "operatorSlug": "cybet",
     "groups": [
       {
