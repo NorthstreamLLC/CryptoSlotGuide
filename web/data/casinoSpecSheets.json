@@ -46,15 +46,24 @@
             "sourcing": "editorial",
             "sourceUrl": "https://1win.com/",
             "asOf": "2026-09-15"
-          }
-        ]
-      },
-      {
-        "title": "Compliance",
-        "facts": [
+          },
           {
-            "label": "KYC policy",
-            "value": "Risk-based identity checks, initial and ongoing: name, residential address and source of funds at minimum; ID, proof of address and a bank statement may be requested at any time",
+            "label": "Wagering rules",
+            "value": "Set per promotion and shown in its Promotions & Bonuses section; applies to the bonus amount only, not the deposit",
+            "sourcing": "editorial",
+            "sourceUrl": "https://1win.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Max win rules",
+            "value": "A maximum win may apply, set in each bonus's own terms",
+            "sourcing": "editorial",
+            "sourceUrl": "https://1win.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Bonus rules",
+            "value": "One active casino bonus and one sports bonus at a time; bonus funds are only used once the real balance is spent; no-deposit bonuses can't be withdrawn before a first deposit",
             "sourcing": "editorial",
             "sourceUrl": "https://1win.com/",
             "asOf": "2026-09-15"
@@ -91,6 +100,72 @@
           {
             "label": "Card and bank",
             "value": "Fiat deposit currency picker lists at least 62 currencies, including USD, EUR, CAD, AUD, JPY, KRW, BRL, MXN, TRY and NOK; in NOK the methods shown were Visa or Mastercard card, Apple Pay and Google Pay (methods may differ by currency); crypto deposits can also be made by connecting a wallet such as MetaMask or WalletConnect",
+            "sourcing": "editorial",
+            "sourceUrl": "https://1win.com/",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Stated withdrawal time",
+            "value": "Terms: up to $50 paid in 1 to 60 minutes; above $50 within 5 days; further delays of up to 3 business days possible depending on the bank or payment system",
+            "sourcing": "editorial",
+            "sourceUrl": "https://1win.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal fees",
+            "value": "May charge a commission covering its costs when withdrawing funds that weren't played; bank transfer costs are paid by the recipient",
+            "sourcing": "editorial",
+            "sourceUrl": "https://1win.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal conditions",
+            "value": "Each deposit must be bet or wagered at least 100% before withdrawals unlock; the profile must be filled out",
+            "sourcing": "editorial",
+            "sourceUrl": "https://1win.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal limits",
+            "value": "On winnings above $50,000 it may set an individual daily withdrawal limit",
+            "sourcing": "editorial",
+            "sourceUrl": "https://1win.com/",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Licence",
+            "value": "No licence number or regulator named in its terms or footer (the footer shows a Gamecheck Trust Seal); its homepage FAQ says it operates under an international license",
+            "sourcing": "editorial",
+            "sourceUrl": "https://1win.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Register check",
+            "value": "1Win N.V. is on the Curaçao Gaming Authority's online gaming licence register: OGL/2024/587/0621 (B2C), issued 6 Sep 2025, expiry 6 Mar 2026, status Assessment in progress (list dated 14 Sep 2026). 1win's own pages don't name 1Win N.V.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.cga.cw/en/133i348441001",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "KYC policy",
+            "value": "Risk-based checks: ID may be requested once total withdrawals exceed $500 (plus photos of both sides of a deposit card); ID, proof of address and a bank statement can be requested at any time, and balances can be withheld until verified",
+            "sourcing": "editorial",
+            "sourceUrl": "https://1win.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Restricted countries",
+            "value": "Includes the United States, United Kingdom, Australia, France, Germany, Spain, Italy, Netherlands, Sweden, Switzerland, Poland, Ukraine, Turkey, Japan, South Korea, Mexico, Singapore, Thailand, Curaçao and many others; VPNs are prohibited",
             "sourcing": "editorial",
             "sourceUrl": "https://1win.com/",
             "asOf": "2026-09-15"

@@ -652,7 +652,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
         ? `States withdrawals as "${statedPayout.value}"`
         : null,
       wagerFact && lowWager ? `Bonus wagering: ${wagerFact.value}` : coinsFact ? `${coinCount} coins accepted` : null,
-      ...(licenceFact ? [`Licence: ${licenceFact.value}`] : []),
+      ...(licenceFact && !/no gaming licence|no licence number/i.test(licenceFact.value ?? "") ? [`Licence: ${licenceFact.value}`] : []),
     ].filter((x, i, a): x is string => x !== null && a.indexOf(x) === i),
     // Only cons built from cited facts — confirmations, Lightning and fee absorption are prototype listings and aren't shown.
     cons: [

@@ -884,6 +884,8 @@
     "ln": false,
     "sports": true,
     "esports": true,
-    "hasCustomReview": false
+    "hasCustomReview": false,
+    "payoutStated": "1 min–5 days",
+    "payoutStatedMaxMins": 7200
   }
 ]
