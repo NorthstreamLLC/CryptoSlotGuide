@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { siteData, siteCounts } from "@/lib/site-data";
 import { tintFor } from "@/lib/logo";
+import { payoutView } from "@/lib/payout";
 import { BrandMark } from "@/components/ui/BrandMark";
 
 /**
@@ -125,7 +126,7 @@ export function CoinsPage() {
                   <span style={{ marginLeft: "auto", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 17, fontWeight: 500, color: "#fff" }}>{o.score.toFixed(1)}</span>
                 </div>
                 <div style={{ display: "flex", gap: 7, flexWrap: "wrap", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".04em" }}>
-                  <span style={{ padding: "4px 8px", borderRadius: 4, background: "rgba(255,255,255,.05)", color: "#B7C4CB" }}>{o.payoutLabel}</span>
+                  <span style={{ padding: "4px 8px", borderRadius: 4, background: "rgba(255,255,255,.05)", color: "#B7C4CB" }}>{payoutView(o).label}</span>
                   <span style={{ padding: "4px 8px", borderRadius: 4, background: "rgba(255,255,255,.05)", color: "#B7C4CB" }}>{o.conf} confirms</span>
                   {o.ln && <span style={{ padding: "4px 8px", borderRadius: 4, background: "rgba(0,194,204,.10)", color: "#5FE3E8" }}>Lightning</span>}
                 </div>

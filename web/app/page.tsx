@@ -41,7 +41,6 @@ const wallCols: string[][] = [
   ["hacksaw-gaming", "pragmatic-play", "nolimit-city", "push-gaming", "relax-gaming", "print-studios", "phantom", "bybit"],
 ];
 const wallAnims = ["csg-up 34s linear infinite", "csg-down 43s linear infinite", "csg-up 39s linear infinite"];
-const wallTints = ["#00C2CC", "#FF7EB6", "#B284FF"];
 
 const quickChips = [
   { label: "Bitcoin casinos", href: "/crypto-casinos" },
@@ -69,7 +68,6 @@ function buildFeatured() {
   const sb = slot("sweet-bonanza");
   const kr = exch("kraken");
   const st = op("stake");
-  const fastest = [...ops].sort((a, b) => a.payout - b.payout)[0];
   const ph = wal("phantom");
   const hg = prov("hacksaw-gaming");
   const cb = op("cloudbet");
@@ -81,7 +79,7 @@ function buildFeatured() {
   return [
     { name: "Sweet Bonanza", mono: "SWB", slug: "sweet-bonanza", cat: "Slot", score: sb ? `${sb.rtp.toFixed(2)}%` : "—", line: `Published at ${sb ? `${sb.rtp.toFixed(2)}%` : "its studio RTP"}, but operators can licence a lower build. Check the RTP in the game's info screen before you spin.`, metric: `Max win ${sb?.maxWin ?? "—"}`, cta: "Slot review →", href: "/slots/sweet-bonanza" },
     { name: "Kraken", mono: "KR", slug: "kraken", cat: "Exchange", score: score(kr?.score), line: "Tightest listed spread of the exchanges on our index, and no daily withdrawal cap once the account is verified.", metric: `Listed spread ${kr?.m1 ?? "—"}`, cta: "Review →", href: "/exchanges/kraken" },
-    { name: "Stake", mono: "ST", slug: "stake", cat: "Casino", score: score(st?.score), line: `${(coinsBy["stake"] ?? []).length} of the ${coinDefs.length} coins we track on the cashier and 1× rakeback, but its listed payout trails ${fastest?.name ?? "the fastest on our index"}.`, metric: `${st?.payoutLabel ?? "—"} listed payout`, cta: "Review →", href: "/casinos/stake" },
+    { name: "Stake", mono: "ST", slug: "stake", cat: "Casino", score: score(st?.score), line: `${(coinsBy["stake"] ?? []).length} of the ${coinDefs.length} coins we track on the cashier and VIP rakeback with no wagering on its weekly bonus, but no withdrawal time stated in its help centre.`, metric: `${(coinsBy["stake"] ?? []).length} coins accepted`, cta: "Review →", href: "/casinos/stake" },
     { name: "Phantom", mono: "PH", slug: "phantom", cat: "Wallet", score: score(ph?.score), line: "Solana-first self-custody wallet with automatic priority fees. Chain coverage is narrower than MetaMask's.", metric: ph?.m2 ?? "—", cta: "Review →", href: "/wallets/phantom" },
     { name: "Hacksaw Gaming", mono: "HG", slug: "hacksaw-gaming", cat: "Provider", score: score(hg?.score), line: "Publishes one RTP per title, which is rarer than it should be. Volatility is not for everyone.", metric: `${hg?.titles ?? "—"} titles`, cta: "Studio profile →", href: "/providers/hacksaw-gaming" },
     { name: "Cloudbet", mono: "CB", slug: "cloudbet", cat: "Sportsbook", score: score(cb?.score), line: `${cbBook && parseFloat(cbBook.margin) === lowestMargin ? "Lowest listed margin of the sportsbooks on our index" : "Sportsbook and casino on one balance"}. The casino welcome offer carries ${cb?.wager ?? "—"}× wagering.`, metric: `${cbBook?.margin ?? "—"} listed margin`, cta: "Sportsbooks →", href: "/sportsbooks" },

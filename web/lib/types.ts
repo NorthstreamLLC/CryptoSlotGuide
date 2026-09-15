@@ -28,9 +28,17 @@ export interface Operator {
   mono: string;
   /** 5.5–9.9, see lib/scoring.ts `crit`. */
   score: number;
-  /** Median withdrawal time in minutes. */
+  /**
+   * Prototype median withdrawal time in minutes, and its label. UNSOURCED —
+   * never display or rank on these directly; go through lib/payout.ts,
+   * which only uses them for operators we've field-tested.
+   */
   payout: number;
   payoutLabel: string;
+  /** Short form of the operator's own stated withdrawal time, cited in casinoSpecSheets.json ("Stated withdrawal time"), e.g. "Instant", "5–15 min". */
+  payoutStated?: string;
+  /** Worst case of that stated time in minutes (0 = instant), for sorting and the fastest-payouts filter. */
+  payoutStatedMaxMins?: number;
   licence: string;
   kyc: "none" | "tiered" | "required";
   /** The operator's standard, published welcome bonus or leaderboard/rakeback program — never a streamer deal or promo code, which aren't standing public terms and can't be verified the same way. */

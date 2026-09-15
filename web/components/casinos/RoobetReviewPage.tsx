@@ -5,7 +5,8 @@ import { useState } from "react";
 import { siteData } from "@/lib/site-data";
 import { criterionSourcing } from "@/lib/criterion-sourcing";
 import { editorialTake } from "@/lib/entity-view";
-import { fmtMins, indexMedianPayout, isStaleReading, liveCon, payoutClaim } from "@/lib/derived";
+import { isStaleReading, liveCon } from "@/lib/derived";
+import { payoutView } from "@/lib/payout";
 import { tintFor } from "@/lib/logo";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { TIER_LABEL, TIER_TINT } from "@/lib/review-tier";
@@ -66,7 +67,6 @@ export function RoobetReviewPage() {
   const coins = coinsBy["roobet"] ?? [];
   const top = [...ops].sort((a, b) => b.score - a.score);
   const alsoConsidered = top.filter((o) => o.slug !== "roobet").slice(0, 4);
-  const medianPayout = indexMedianPayout(ops);
   const con = liveCon(liveCasinos, "roobet");
   const roobetLive = liveCasinos.find((c) => c.slug === "roobet");
   const tableLeader = [...liveCasinos].sort((a, b) => b.tables - a.tables)[0];
@@ -127,7 +127,7 @@ export function RoobetReviewPage() {
 
   const verdict = `Roobet's edge is operational, not promotional. ${
     checked
-      ? `Withdrawals cleared in a median ${roobet.payoutLabel} on our own funded account (index median ${fmtMins(medianPayout)}),`
+      ? `Withdrawals cleared in a median ${roobet.payoutLabel} on our own funded account,`
       : `It says withdrawals are sent instantly on request — not yet timed by us —`
   } and its rakeback carries no stated wagering multiplier, where match bonuses elsewhere often sit at 40×.${con ? ` It loses points on live tables — ${con}.` : ""}`;
   // Real hand-written opinion (data/editorial.json's "casino:roobet"
@@ -270,8 +270,8 @@ export function RoobetReviewPage() {
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 1, background: "rgba(255,255,255,.07)", border: "1px solid rgba(255,255,255,.07)", borderRadius: 13, overflow: "hidden", marginBottom: 38 }}>
             <Measurement
               label={checked ? "Median withdrawal" : "Stated withdrawal time"}
-              value={checked ? roobet.payoutLabel : "Instant"}
-              note={checked ? `Timed on our own account. Index median: ${fmtMins(medianPayout)}.` : "Roobet's help centre: sent on request; arrival depends on blockchain confirmations. Not yet timed by us."}
+              value={payoutView(roobet).label}
+              note={checked ? "Timed on our own funded account." : "Roobet's help centre: sent on request; arrival depends on blockchain confirmations. Not yet timed by us."}
             />
             <Measurement label="Slowest withdrawal" value="Not yet timed" note={checked ? "Not published here yet." : "Needs withdrawals from our own funded account."} />
             <Measurement
@@ -325,7 +325,6 @@ export function RoobetReviewPage() {
               <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 14 }}>Holds up</div>
               <div style={{ display: "flex", flexDirection: "column", gap: 11 }}>
                 {[
-                  checked && payoutClaim(ops, "roobet") ? `${payoutClaim(ops, "roobet")}.` : null,
                   "No wagering multiplier on rakeback — the only turnover rule is wagering a deposit once before withdrawing it.",
                   "No Roobet fee on crypto withdrawals; network fees only.",
                   readingRows.length > 0

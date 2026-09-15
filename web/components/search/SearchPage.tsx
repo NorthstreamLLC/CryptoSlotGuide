@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { siteData } from "@/lib/site-data";
+import { payoutView } from "@/lib/payout";
 
 /**
  * Ported from the `isSearch` block in CryptoSlotGuide.dc.html (search
@@ -23,7 +24,7 @@ export function SearchPage({ initialQuery = "" }: { initialQuery?: string }) {
         label: "Casinos",
         items: ops
           .filter((o) => hit(o.name) || hit(o.bonus) || hit(o.licence))
-          .map((o) => ({ name: o.name, note: `${o.payoutLabel} payout · ${o.wager}× wagering`, meta: o.score.toFixed(1), href: o.hasCustomReview ? "/casinos/roobet" : `/casinos/${o.slug}` })),
+          .map((o) => ({ name: o.name, note: `${payoutView(o).kind === "none" ? "" : `${payoutView(o).label} withdrawals · `}${o.wager}× wagering`, meta: o.score.toFixed(1), href: o.hasCustomReview ? "/casinos/roobet" : `/casinos/${o.slug}` })),
       },
       {
         label: "Slots",

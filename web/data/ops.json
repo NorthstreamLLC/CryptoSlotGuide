@@ -17,7 +17,9 @@
     "sports": true,
     "esports": true,
     "hasCustomReview": true,
-    "bonusExpiry": "Instant Rakeback never expires; Weekly lapses when the next week's is available"
+    "bonusExpiry": "Instant Rakeback never expires; Weekly lapses when the next week's is available",
+    "payoutStated": "Instant",
+    "payoutStatedMaxMins": 0
   },
   {
     "slug": "stake",
@@ -74,7 +76,9 @@
     "ln": true,
     "sports": true,
     "esports": true,
-    "hasCustomReview": false
+    "hasCustomReview": false,
+    "payoutStated": "Instant",
+    "payoutStatedMaxMins": 0
   },
   {
     "slug": "rollbit",
@@ -111,7 +115,9 @@
     "sports": false,
     "esports": false,
     "hasCustomReview": false,
-    "bonusExpiry": "Welcome Package bonuses valid for 7 days"
+    "bonusExpiry": "Welcome Package bonuses valid for 7 days",
+    "payoutStated": "Within 1 hr",
+    "payoutStatedMaxMins": 60
   },
   {
     "slug": "cloudbet",
@@ -130,7 +136,9 @@
     "sports": true,
     "esports": true,
     "hasCustomReview": false,
-    "bonusExpiry": "Valid up to 30 days from first deposit"
+    "bonusExpiry": "Valid up to 30 days from first deposit",
+    "payoutStated": "Instant–24 hr",
+    "payoutStatedMaxMins": 1440
   },
   {
     "slug": "gamdom",
@@ -149,7 +157,9 @@
     "sports": true,
     "esports": true,
     "hasCustomReview": false,
-    "bonusExpiry": "New-account boost valid 7 days once activated"
+    "bonusExpiry": "New-account boost valid 7 days once activated",
+    "payoutStated": "5 min–1 hr",
+    "payoutStatedMaxMins": 60
   },
   {
     "slug": "duelbits",
@@ -167,7 +177,9 @@
     "ln": false,
     "sports": true,
     "esports": true,
-    "hasCustomReview": false
+    "hasCustomReview": false,
+    "payoutStated": "Seconds–30 min",
+    "payoutStatedMaxMins": 30
   },
   {
     "slug": "rainbet",
@@ -185,7 +197,9 @@
     "ln": false,
     "sports": true,
     "esports": true,
-    "hasCustomReview": false
+    "hasCustomReview": false,
+    "payoutStated": "5–15 min",
+    "payoutStatedMaxMins": 15
   },
   {
     "slug": "bitcasino-io",
@@ -347,7 +361,9 @@
     "ln": true,
     "sports": true,
     "esports": true,
-    "hasCustomReview": false
+    "hasCustomReview": false,
+    "payoutStated": "Instant",
+    "payoutStatedMaxMins": 0
   },
   {
     "slug": "thrill",
@@ -365,7 +381,9 @@
     "ln": true,
     "sports": true,
     "esports": true,
-    "hasCustomReview": false
+    "hasCustomReview": false,
+    "payoutStated": "Instant",
+    "payoutStatedMaxMins": 0
   },
   {
     "slug": "duel",

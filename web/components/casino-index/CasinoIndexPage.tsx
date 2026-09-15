@@ -18,6 +18,7 @@ import {
   type SortKey,
 } from "@/lib/casino-index";
 import type { Operator } from "@/lib/types";
+import { payoutView } from "@/lib/payout";
 
 const btcFaqData = [
   { q: "How many confirmations before I can play?", a: "Most operators here credit at one confirmation, which is roughly ten minutes. Three-confirmation sites can leave you waiting half an hour on a busy block." },
@@ -28,7 +29,8 @@ const btcFaqData = [
 
 export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
   const { ops, coinsBy, coinDefs } = siteData;
-  const [sortKey, setSortKey] = useState<SortKey>("rank");
+  // The fastest-payouts view is about speed, so it opens sorted by stated withdrawal time.
+  const [sortKey, setSortKey] = useState<SortKey>(filter === "fast" ? "payout" : "rank");
   const [sortDir, setSortDir] = useState<SortDir>("asc");
   const [coinSel, setCoinSel] = useState<string>("all");
   const [showAll, setShowAll] = useState(false);
@@ -95,9 +97,9 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
                 <h1 style={{ margin: "0 0 20px", fontSize: 54, lineHeight: 1.02, letterSpacing: "-.038em", fontWeight: 800, fontStretch: "116%", color: "#fff", textWrap: "balance" }}>{view.h1}</h1>
                 <p style={{ margin: "0 0 30px", maxWidth: 560, fontSize: 17, lineHeight: 1.62, color: "#93A3AC", textWrap: "pretty" }}>{view.p}</p>
                 <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginBottom: 28 }}>
-                  <Link href={`/casinos/${roobet.slug}`} style={{ display: "inline-flex", alignItems: "center", gap: 10, padding: "15px 24px", borderRadius: 9, background: "#00C2CC", color: "#04191B", fontSize: 14.5, fontWeight: 700, boxShadow: "0 8px 26px rgba(0,194,204,.24)", whiteSpace: "nowrap" }}>
+                  <OutboundOrReview o={roobet} style={{ display: "inline-flex", alignItems: "center", gap: 10, padding: "15px 24px", borderRadius: 9, background: "#00C2CC", color: "#04191B", fontSize: 14.5, fontWeight: 700, boxShadow: "0 8px 26px rgba(0,194,204,.24)", whiteSpace: "nowrap" }}>
                     Visit Roobet — {roobet.score.toFixed(1)}, our top score <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 13 }}>→</span>
-                  </Link>
+                  </OutboundOrReview>
                   <Link href="/casinos/roobet" style={{ display: "inline-flex", alignItems: "center", gap: 9, padding: "15px 24px", borderRadius: 9, border: "1px solid rgba(255,255,255,.16)", color: "#DCE5E9", fontSize: 14.5, fontWeight: 600, whiteSpace: "nowrap" }}>
                     Read the review
                   </Link>
@@ -113,10 +115,10 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
                 </div>
                 <div style={{ display: "flex", alignItems: "flex-end", gap: 14, marginBottom: 22 }}>
                   <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 52, fontWeight: 700, lineHeight: 0.9, color: "#fff", letterSpacing: "-.04em" }}>{roobet.score.toFixed(1)}</span>
-                  <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, color: "#5C6A72", paddingBottom: 7 }}>/ 10 · {isFieldTestedOperator(roobet.slug) ? "field-tested" : "payouts not yet timed"}</span>
+                  <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, color: "#5C6A72", paddingBottom: 7 }}>/ 10 · {isFieldTestedOperator(roobet.slug) ? "field-tested" : "not yet timed by us"}</span>
                 </div>
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 1, background: "rgba(255,255,255,.07)", borderRadius: 10, overflow: "hidden", marginBottom: 22 }}>
-                  <StatTile label="Listed payout" value={roobet.payoutLabel} />
+                  <StatTile label="Withdrawal time" value={payoutView(roobet).label} />
                   <StatTile label="Confirmations" value={String(roobet.conf)} />
                   <StatTile label="Lightning" value={roobet.ln ? "Yes" : "No"} color={roobet.ln ? "#5FE3E8" : undefined} />
                   <StatTile label="Bonus wagering" value={`${roobet.wager}×`} />
@@ -132,10 +134,10 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
                   </div>
                 </div>
                 <div style={{ display: "flex", gap: 10 }}>
-                  <Link href={`/casinos/${roobet.slug}`} style={{ flex: 1, textAlign: "center", padding: 13, borderRadius: 8, background: "#FFCC00", color: "#1A1400", fontSize: 13.5, fontWeight: 700 }}>Visit Roobet</Link>
+                  <OutboundOrReview o={roobet} style={{ flex: 1, textAlign: "center", padding: 13, borderRadius: 8, background: "#FFCC00", color: "#1A1400", fontSize: 13.5, fontWeight: 700 }}>Visit Roobet</OutboundOrReview>
                   <Link href="/casinos/roobet" style={{ padding: "13px 18px", borderRadius: 8, border: "1px solid rgba(255,255,255,.14)", color: "#DCE5E9", fontSize: 13.5, fontWeight: 600, whiteSpace: "nowrap" }}>Full review</Link>
                 </div>
-                <div style={{ marginTop: 14, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#4E5A62" }}>Affiliate link · 18+ · T&amp;Cs apply</div>
+                <div style={{ marginTop: 14, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#4E5A62" }}>{roobet.signupUrl ? "Affiliate link · " : ""}18+ · T&amp;Cs apply</div>
               </div>
             </div>
           ) : (
@@ -161,7 +163,7 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
                     <span style={{ marginLeft: "auto", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 26, color: "#fff" }}>{btcTop.score.toFixed(1)}</span>
                   </div>
                   <div style={{ display: "flex", flexDirection: "column", gap: 9, paddingTop: 16, borderTop: "1px solid rgba(255,255,255,.08)" }}>
-                    <TopRow label="Listed median payout" value={btcTop.payoutLabel} />
+                    <TopRow label="Withdrawal time" value={`${payoutView(btcTop).label} · ${payoutView(btcTop).caption}`} />
                     <TopRow label="Licence · KYC" value={`${btcTop.licence} · ${btcTop.kyc}`} />
                     <TopRow label="Offer" value={btcTop.bonus} />
                   </div>
@@ -359,8 +361,8 @@ function OpRow({ o, pos, coins }: { o: Operator; pos: number; coins: string[] })
         <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 15, fontWeight: 500, color: o.hasCustomReview ? "#FFCC00" : "#fff" }}>{o.score.toFixed(1)}</span>
       </div>
       <div style={{ padding: "14px 8px" }}>
-        <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12.5, color: "#B7C4CB" }}>{o.payoutLabel}</div>
-        <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#5C6A72", marginTop: 2 }}>listed median</div>
+        <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12.5, color: "#B7C4CB" }}>{payoutView(o).label}</div>
+        <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#5C6A72", marginTop: 2 }}>{payoutView(o).caption}</div>
       </div>
       <div style={{ padding: "14px 8px", minWidth: 0 }}>
         <div style={{ display: "flex", gap: 4, flexWrap: "nowrap", overflow: "hidden" }}>
@@ -385,8 +387,8 @@ function OpRow({ o, pos, coins }: { o: Operator; pos: number; coins: string[] })
         </div>
       </div>
       <div style={{ padding: "10px 8px" }}>
-        <Link
-          href={o.hasCustomReview ? "/casinos/roobet" : `/casinos/${o.slug}`}
+        <OutboundOrReview
+          o={o}
           className="hover:!border-accent hover:!text-accent"
           style={{
             display: "block",
@@ -401,9 +403,30 @@ function OpRow({ o, pos, coins }: { o: Operator; pos: number; coins: string[] })
             whiteSpace: "nowrap",
           }}
         >
-          {o.hasCustomReview ? "Visit Roobet" : "Visit site"}
-        </Link>
+          {o.signupUrl ? `Visit ${o.name}` : "Read review"}
+        </OutboundOrReview>
       </div>
     </div>
+  );
+}
+
+/**
+ * "Visit" buttons go to the operator's own site only when a real sign-up
+ * URL is on file (Operator.signupUrl) — otherwise the button is honest
+ * about going to our review instead of dressing an internal link up as an
+ * outbound affiliate one.
+ */
+function OutboundOrReview({ o, style, className, children }: { o: Operator; style: React.CSSProperties; className?: string; children: React.ReactNode }) {
+  if (o.signupUrl) {
+    return (
+      <a href={o.signupUrl} target="_blank" rel="nofollow sponsored noopener" className={className} style={style}>
+        {children}
+      </a>
+    );
+  }
+  return (
+    <Link href={o.hasCustomReview ? "/casinos/roobet" : `/casinos/${o.slug}`} className={className} style={style}>
+      {children}
+    </Link>
   );
 }

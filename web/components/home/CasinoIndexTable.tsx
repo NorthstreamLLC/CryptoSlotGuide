@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import type { Operator } from "@/lib/types";
+import { payoutView } from "@/lib/payout";
 import { Table, type Column } from "@/components/ui/Table";
 
 const columns: Column<Operator>[] = [
@@ -26,11 +27,11 @@ const columns: Column<Operator>[] = [
   },
   {
     key: "payout",
-    label: "Payout",
+    label: "Withdrawal time",
     sortable: true,
     align: "right",
-    sortValue: (o) => o.payout,
-    render: (o) => o.payoutLabel,
+    sortValue: (o) => payoutView(o).mins ?? Number.MAX_SAFE_INTEGER,
+    render: (o) => payoutView(o).label,
   },
   {
     key: "wager",

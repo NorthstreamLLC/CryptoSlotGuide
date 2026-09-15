@@ -7,6 +7,7 @@
  * /lowest-wagering, /casino-sportsbooks, /esports-casinos.
  */
 import type { Operator } from "./types";
+import { comparePayout, payoutView } from "./payout";
 
 export type BtcFilterKey = "all" | "nokyc" | "fast" | "lowwager" | "sports" | "esports";
 
@@ -15,7 +16,7 @@ export const btcViews: Record<BtcFilterKey, { crumb: string; kicker: string; h1:
     crumb: "Crypto casinos",
     kicker: "operators · 8 coins tracked",
     h1: "Best crypto casinos, compared on payout speed",
-    p: "Which cryptos each operator credits, the confirmations it waits for, and whether Lightning works — the three things that decide how long you wait. Payout times are listed figures; we haven't timed withdrawals on our own funded accounts yet.",
+    p: "Which cryptos each operator credits, the confirmations it waits for, and whether Lightning works — the three things that decide how long you wait. Withdrawal times are each operator's own stated figure, cited on its review; we haven't timed them on our own funded accounts yet.",
     note: "Showing operators that credit ",
   },
   nokyc: {
@@ -27,10 +28,10 @@ export const btcViews: Record<BtcFilterKey, { crumb: string; kicker: string; h1:
   },
   fast: {
     crumb: "Fastest payouts",
-    kicker: "operators under 6 minutes · listed",
+    kicker: "operators stating 15 minutes or less",
     h1: "Fastest-paying crypto casinos",
-    p: "Ranked on listed median time from a confirmed withdrawal request to the first on-chain broadcast, not yet timed by us. When we field-test an operator we time that interval across three withdrawal sizes and exclude network congestion, so the number reflects the operator's own batching and review policy.",
-    note: "Sub-6-minute operators that credit ",
+    p: "Ranked on each operator's own stated withdrawal time — the worst case where it gives a range — cited on its review page. We haven't timed these ourselves, and operators that publish no time are left out rather than guessed. When we field-test an operator, its timed median replaces the stated figure.",
+    note: "Operators stating 15 minutes or less that credit ",
   },
   lowwager: {
     crumb: "Lowest wagering",
@@ -60,7 +61,7 @@ export const filterFns: Record<BtcFilterKey, (o: Operator) => boolean> = {
   nokyc: (o) => o.kyc === "none",
   sports: (o) => o.sports,
   esports: (o) => o.esports,
-  fast: (o) => o.payout <= 6,
+  fast: (o) => { const p = payoutView(o); return p.mins !== null && p.mins <= 15; },
   lowwager: (o) => o.wager <= 1,
 };
 
@@ -72,7 +73,7 @@ export function sortOps(list: Operator[], key: SortKey, dir: SortDir): Operator[
   const out = [...list];
   if (key === "rank") out.sort((a, b) => b.score - a.score);
   else if (key === "score") out.sort((a, b) => (b.score - a.score) * d);
-  else if (key === "payout") out.sort((a, b) => (a.payout - b.payout) * d);
+  else if (key === "payout") out.sort((a, b) => (d === 1 ? comparePayout(a, b) : comparePayout(b, a)));
   else if (key === "name") out.sort((a, b) => a.name.localeCompare(b.name) * d);
   return out;
 }
@@ -88,12 +89,8 @@ export { logoFor } from "./logo";
 
 /** Median payout stat block above the table, computed against the currently filtered list. */
 export function btcStats(list: Operator[]): { v: string; l: string }[] {
-  const p = [...list.map((o) => o.payout)].sort((a, b) => a - b);
-  const mid = p.length ? (p.length % 2 ? p[(p.length - 1) / 2] : (p[p.length / 2 - 1] + p[p.length / 2]) / 2) : 0;
-  const m = Math.floor(mid);
-  const sec = Math.round((mid - m) * 60);
   return [
-    { v: `${m}m ${String(sec).padStart(2, "0")}s`, l: "listed median payout" },
+    { v: String(list.filter((o) => payoutView(o).kind !== "none").length), l: "state a withdrawal time" },
     { v: String(list.filter((o) => o.conf === 1).length), l: "clear at 1 confirmation" },
     { v: String(list.filter((o) => o.ln).length), l: "support Lightning" },
     { v: String(list.filter((o) => o.wager === 1).length), l: "at 1× wagering" },

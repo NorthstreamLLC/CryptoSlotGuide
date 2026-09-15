@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { siteData } from "@/lib/site-data";
 import { tintFor } from "@/lib/logo";
+import { payoutView } from "@/lib/payout";
 import { pageMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -110,7 +111,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
               </div>
               <div style={{ minWidth: 0, flex: 1 }}>
                 <div style={{ fontSize: 14, fontWeight: 600, color: "#E8EDF0", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{o.name}</div>
-                <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#5C6A72", marginTop: 2 }}>{o.payoutLabel} payout</div>
+                <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#5C6A72", marginTop: 2 }}>{payoutView(o).kind === "none" ? "Withdrawal time not stated" : `${payoutView(o).label} withdrawals`}</div>
               </div>
               <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 14, color: "#fff" }}>{o.score.toFixed(1)}</span>
             </Link>

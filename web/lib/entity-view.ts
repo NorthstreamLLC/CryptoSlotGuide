@@ -11,7 +11,8 @@
  */
 import { siteData } from "./site-data";
 import { crit, flag } from "./scoring";
-import { casinoCons, fmtMins, indexMedianPayout, isStaleReading } from "./derived";
+import { casinoCons, isStaleReading } from "./derived";
+import { payoutView } from "./payout";
 import { isFieldTestedOperator, isEditoriallyAudited } from "./field-tested";
 import { SCORE_BRAND } from "./score-tier";
 import { tintFor } from "./logo";
@@ -486,10 +487,10 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
   // casino (default)
   const o = ops.find((r) => r.slug === slug);
   if (!o) return null;
-  const fast = o.payout <= 6;
+  const pv = payoutView(o);
+  const fast = pv.mins !== null && pv.mins <= 15;
   const lowWager = o.wager <= 1;
   const coins = coinsBy[o.slug] ?? ["BTC", "ETH", "USDT"];
-  const medianPayout = indexMedianPayout(ops);
   const checked = isFieldTestedOperator(o.slug);
   const audited = isEditoriallyAudited(o.slug);
   // Only real, non-stale RTP Watch readings for this operator — never a
@@ -530,10 +531,10 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       : "Unchecked listing · desk audit and funded-account testing not yet done",
     verdict: `${
       checked
-        ? `${o.name} cleared our withdrawals in a median ${o.payoutLabel} against an index median of ${fmtMins(medianPayout)}`
+        ? `${o.name} cleared our withdrawals in a median ${o.payoutLabel}`
         : statedPayout
         ? `${o.name} states its withdrawal time as "${statedPayout.value}"`
-        : `${o.name} lists a median withdrawal of ${o.payoutLabel}, not yet timed by us`
+        : `${o.name} doesn't state a withdrawal time we could find`
     }, accepts ${coins.length} coins, and runs its headline offer at ${o.wager}× wagering. ${
       lowWager
         ? "That wagering figure is the difference that compounds: on a $100 credit you turn over $100, not $4,000."
@@ -545,7 +546,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
         ? { label: "Median withdrawal", value: o.payoutLabel, note: "Timed on our own funded account" }
         : statedPayout
         ? { label: "Stated withdrawal time", value: statedPayout.value ?? "", note: `Operator's own figure · ${statedHost}` }
-        : { label: "Listed withdrawal", value: o.payoutLabel, note: "Unsourced listing, not yet timed by us" },
+        : { label: "Stated withdrawal time", value: "Not stated", note: "None found on the operator's own pages" },
       { label: "Coins accepted", value: String(coins.length), note: coins.slice(0, 4).join(", ") + (coins.length > 4 ? " and more" : "") },
       { label: "Confirmations", value: String(o.conf), note: "Before the balance is playable" },
       { label: "Bonus wagering", value: `${o.wager}×`, note: lowWager ? "Turnover once, then withdraw" : "On the headline offer" },
@@ -584,7 +585,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
     tableNote: "A reduced build is the operator's choice, not the studio's. Where we find one we name the title here and link the studio profile for the published figure.",
     pros: [
       checked
-        ? `Median withdrawal of ${o.payoutLabel}${fast ? ", inside the fastest quartile" : ""}`
+        ? `Median withdrawal of ${o.payoutLabel} on our own account`
         : statedPayout
         ? `States withdrawals as "${statedPayout.value}"`
         : `Licensed in ${o.licence}`,
@@ -601,7 +602,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
           ? `Median ${o.payoutLabel} across the withdrawals we timed on our own account.`
           : statedPayout
           ? `${o.name}'s own help pages say "${statedPayout.value}". We haven't timed withdrawals there ourselves yet — see how we rate for what's field-tested so far.`
-          : `We haven't timed withdrawals at ${o.name} ourselves yet, and the ${o.payoutLabel} figure isn't sourced — treat it as unverified.` },
+          : `${o.name} doesn't publish a withdrawal time we could find, and we haven't timed withdrawals there ourselves yet.` },
     ],
     signupUrl: o.signupUrl,
   };
