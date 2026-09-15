@@ -90,8 +90,15 @@ export interface Slot {
   rtp: number;
   vol: "low" | "medium" | "high" | "very-high" | "extreme";
   maxWin: string;
+  /** Prototype "best casino" claim — unsourced, not displayed anywhere. */
   bestAt: string;
   tint: string;
+  /** All RTP configurations the studio publishes, highest first, e.g. "96.38 / 94.55 / 92.33 / 88.42". */
+  rtpVersions?: string;
+  /** The studio's own game page these figures were checked against. */
+  sourceUrl?: string;
+  /** Figures the studio doesn't publish — shown as "Not published", never filled from a slot database. */
+  unpublished?: ("rtp" | "vol" | "maxWin")[];
 }
 
 export type SlotMechanicTag =
@@ -190,9 +197,15 @@ export interface Provider {
   tint: string;
   score: number;
   note: string;
-  titles: number;
+  /** How the studio publishes RTP on its own game pages (checked on its site, see sourceUrl). */
+  rtpPolicy: "multiple" | "single" | "unpublished" | "bonus-buy";
+  /** Short display label for rtpPolicy, e.g. "Every RTP version listed". */
   rtp: string;
-  casinos: number;
+  /** Licensing as stated on the studio's own site. */
+  licences: string;
+  /** Catalogue size — only when the studio itself states one. */
+  titlesStated?: string;
+  sourceUrl: string;
 }
 
 export interface WalletOrExchangeRow {

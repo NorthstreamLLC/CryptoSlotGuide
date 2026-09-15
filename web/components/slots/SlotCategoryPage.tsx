@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { maxWinLabel, rtpLabel, rtpSortValue, volLabel } from "@/lib/slot-facts";
 import { siteData, siteCounts } from "@/lib/site-data";
 import type { SlotMechanicTag } from "@/lib/types";
 
@@ -12,7 +13,7 @@ export function SlotCategoryPage({ tag }: { tag: SlotMechanicTag }) {
   const cat = slotCatDefs.find((c) => c.tag === tag) ?? slotCatDefs[0];
   const rows = slots
     .filter((s) => (slotTags[s.slug] ?? []).includes(tag))
-    .sort((a, b) => b.rtp - a.rtp);
+    .sort((a, b) => rtpSortValue(b) - rtpSortValue(a));
 
   return (
     <main>
@@ -64,7 +65,7 @@ export function SlotCategoryPage({ tag }: { tag: SlotMechanicTag }) {
                     <div style={{ fontSize: 15, fontWeight: 700, letterSpacing: "-.02em", color: "#fff" }}>{s.name}</div>
                     <div style={{ fontSize: 12, color: "#7B8A93", marginTop: 2 }}>{s.provider}</div>
                   </div>
-                  <span style={{ marginLeft: "auto", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 15, color: "#fff" }}>{s.rtp.toFixed(2)}%</span>
+                  <span style={{ marginLeft: "auto", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 15, color: "#fff" }}>{rtpLabel(s)}</span>
                 </div>
                 <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: 14 }}>
                   {otherTags.map((t) => (
@@ -74,8 +75,8 @@ export function SlotCategoryPage({ tag }: { tag: SlotMechanicTag }) {
                   ))}
                 </div>
                 <div style={{ marginTop: "auto", display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 10, paddingTop: 13, borderTop: "1px solid rgba(255,255,255,.07)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#5C6A72" }}>
-                  <span>{s.vol} · {s.maxWin}</span>
-                  <span style={{ color: "#9AAAB3" }}>listed at {s.bestAt}</span>
+                  <span>{volLabel(s)} · {maxWinLabel(s)}</span>
+                  <span style={{ color: "#9AAAB3" }}>{s.rtpVersions ? `${s.rtpVersions.split("/").length} RTP versions` : "studio-published"}</span>
                 </div>
               </Link>
             );

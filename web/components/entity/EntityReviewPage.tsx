@@ -121,7 +121,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
                   <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 60, fontWeight: 700, lineHeight: 0.85, color: "#fff", letterSpacing: "-.045em" }}>
                     {e.score}
                   </span>
-                  <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 13, color: "#5C6A72", paddingBottom: 8 }}>{scoreUnit}</span>
+                  <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 13, color: "#5C6A72", paddingBottom: 8 }}>{e.score === "—" ? "not published" : scoreUnit}</span>
                 </div>
               )}
               <div style={{ display: "flex", flexDirection: "column", gap: 1, marginBottom: 24, borderRadius: 9, overflow: "hidden" }}>

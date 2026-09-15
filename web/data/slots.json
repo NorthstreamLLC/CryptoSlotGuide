@@ -5,10 +5,14 @@
     "mono": "MT4",
     "provider": "Relax Gaming",
     "rtp": 96.1,
-    "vol": "very-high",
+    "vol": "high",
     "maxWin": "150,000x",
     "bestAt": "Roobet",
-    "tint": "#7BE0B8"
+    "tint": "#7BE0B8",
+    "unpublished": [
+      "rtp"
+    ],
+    "sourceUrl": "https://www.relax-gaming.com/products/casino/moneytrain4"
   },
   {
     "slug": "mental",
@@ -19,7 +23,8 @@
     "vol": "extreme",
     "maxWin": "66,666x",
     "bestAt": "Roobet",
-    "tint": "#D6B65C"
+    "tint": "#D6B65C",
+    "sourceUrl": "https://nolimitcity.com/games/mental/"
   },
   {
     "slug": "razor-shark",
@@ -30,7 +35,12 @@
     "vol": "high",
     "maxWin": "50,000x",
     "bestAt": "Stake",
-    "tint": "#8FA5C9"
+    "tint": "#8FA5C9",
+    "rtpVersions": "96.70 / 94.06",
+    "unpublished": [
+      "maxWin"
+    ],
+    "sourceUrl": "https://www.pushgaming.com/games/razor-shark.html"
   },
   {
     "slug": "wanted-dead-or-a-wild",
@@ -41,29 +51,37 @@
     "vol": "very-high",
     "maxWin": "12,500x",
     "bestAt": "Roobet",
-    "tint": "#E0A67B"
+    "tint": "#E0A67B",
+    "rtpVersions": "96.38 / 94.55 / 92.33 / 88.42",
+    "sourceUrl": "https://www.hacksawgaming.com/games/wanted-dead-or-a-wild"
   },
   {
     "slug": "sweet-bonanza",
     "name": "Sweet Bonanza",
     "mono": "SWB",
     "provider": "Pragmatic Play",
-    "rtp": 96.51,
+    "rtp": 96.48,
     "vol": "high",
     "maxWin": "21,100x",
     "bestAt": "Shuffle",
-    "tint": "#E39BC4"
+    "tint": "#E39BC4",
+    "unpublished": [
+      "vol",
+      "maxWin"
+    ],
+    "sourceUrl": "https://www.pragmaticplay.com/en/games/sweet-bonanza-slot/"
   },
   {
     "slug": "fire-in-the-hole-2",
     "name": "Fire in the Hole 2",
     "mono": "FH2",
     "provider": "Nolimit City",
-    "rtp": 96.06,
+    "rtp": 96.07,
     "vol": "extreme",
-    "maxWin": "60,000x",
+    "maxWin": "65,000x",
     "bestAt": "Roobet",
-    "tint": "#D68A6E"
+    "tint": "#D68A6E",
+    "sourceUrl": "https://nolimitcity.com/games/fire-in-the-hole-2/"
   },
   {
     "slug": "gates-of-olympus",
@@ -74,18 +92,25 @@
     "vol": "very-high",
     "maxWin": "5,000x",
     "bestAt": "BC.Game",
-    "tint": "#9FB6E0"
+    "tint": "#9FB6E0",
+    "unpublished": [
+      "vol",
+      "maxWin"
+    ],
+    "sourceUrl": "https://www.pragmaticplay.com/en/games/gates-of-olympus/"
   },
   {
     "slug": "le-bandit",
     "name": "Le Bandit",
     "mono": "LEB",
     "provider": "Hacksaw Gaming",
-    "rtp": 96.31,
+    "rtp": 96.34,
     "vol": "high",
-    "maxWin": "20,000x",
+    "maxWin": "10,000x",
     "bestAt": "Roobet",
-    "tint": "#C9D67B"
+    "tint": "#C9D67B",
+    "rtpVersions": "96.34 / 94.23 / 92.17 / 88.36",
+    "sourceUrl": "https://www.hacksawgaming.com/games/le-bandit"
   },
   {
     "slug": "san-quentin-xways",
@@ -96,7 +121,8 @@
     "vol": "extreme",
     "maxWin": "150,000x",
     "bestAt": "Gamdom",
-    "tint": "#B4B8BB"
+    "tint": "#B4B8BB",
+    "sourceUrl": "https://nolimitcity.com/games/san-quentin/"
   },
   {
     "slug": "big-bass-bonanza",
@@ -107,7 +133,12 @@
     "vol": "medium",
     "maxWin": "2,100x",
     "bestAt": "Cloudbet",
-    "tint": "#7BC9E0"
+    "tint": "#7BC9E0",
+    "unpublished": [
+      "vol",
+      "maxWin"
+    ],
+    "sourceUrl": "https://www.pragmaticplay.com/en/games/big-bass-bonanza/"
   },
   {
     "slug": "bonanza-megaways",
@@ -116,20 +147,28 @@
     "provider": "Big Time Gaming",
     "rtp": 96,
     "vol": "high",
-    "maxWin": "12,000x",
+    "maxWin": "26,000x",
     "bestAt": "Stake",
-    "tint": "#D6B65C"
+    "tint": "#D6B65C",
+    "unpublished": [
+      "vol"
+    ],
+    "sourceUrl": "https://www.bigtimegaming.com/games/bonanza"
   },
   {
     "slug": "gonzo-s-quest-megaways",
     "name": "Gonzo’s Quest Megaways",
     "mono": "GQM",
     "provider": "Red Tiger",
-    "rtp": 95.97,
+    "rtp": 95.77,
     "vol": "high",
-    "maxWin": "21,000x",
+    "maxWin": "20,972x",
     "bestAt": "BC.Game",
-    "tint": "#9AAE5E"
+    "tint": "#9AAE5E",
+    "unpublished": [
+      "vol"
+    ],
+    "sourceUrl": "https://redtiger.com/games/gonzos-quest-megaways"
   },
   {
     "slug": "jammin-jars",
@@ -140,7 +179,12 @@
     "vol": "high",
     "maxWin": "20,000x",
     "bestAt": "Roobet",
-    "tint": "#E39BC4"
+    "tint": "#E39BC4",
+    "rtpVersions": "96.83 / 94.25",
+    "unpublished": [
+      "maxWin"
+    ],
+    "sourceUrl": "https://www.pushgaming.com/games/jammin-jars.html"
   },
   {
     "slug": "reactoonz",
@@ -151,7 +195,9 @@
     "vol": "high",
     "maxWin": "4,570x",
     "bestAt": "Shuffle",
-    "tint": "#B284FF"
+    "tint": "#B284FF",
+    "rtpVersions": "96.51 / 94.51 / 91.49 / 87.50 / 84.51",
+    "sourceUrl": "https://www.playngo.com/games/reactoonz"
   },
   {
     "slug": "divine-fortune",
@@ -160,19 +206,9 @@
     "provider": "NetEnt",
     "rtp": 96.59,
     "vol": "medium",
-    "maxWin": "6,000x",
+    "maxWin": "1,000x",
     "bestAt": "Cloudbet",
-    "tint": "#C7A45C"
-  },
-  {
-    "slug": "mega-moolah",
-    "name": "Mega Moolah",
-    "mono": "MML",
-    "provider": "Microgaming",
-    "rtp": 88.12,
-    "vol": "high",
-    "maxWin": "225,000x",
-    "bestAt": "Bitstarz",
-    "tint": "#C4795A"
+    "tint": "#C7A45C",
+    "sourceUrl": "https://netent.com/games/divine-fortune"
   }
 ]

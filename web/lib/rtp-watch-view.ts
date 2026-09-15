@@ -27,6 +27,7 @@
  * showing an unverified one."
  */
 import { siteData } from "./site-data";
+import { rtpLabel } from "./slot-facts";
 import { isStaleReading } from "./derived";
 
 export interface WatchCell {
@@ -68,7 +69,7 @@ export function getWatchRows(): WatchRow[] {
       name: s.name,
       provider: s.provider,
       seen,
-      bestLabel: `${s.rtp.toFixed(2)}%`,
+      bestLabel: rtpLabel(s),
       cut: worst > 0,
       cleanCount: `${cuts.filter((c, i) => readings[i] && c === 0).length}/${checkedCount}`,
       worstColor: worst ? "#DA9877" : checkedCount ? "#5FE3E8" : "#4E5A62",

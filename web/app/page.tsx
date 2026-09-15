@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { rtpSortValue } from "@/lib/slot-facts";
 import { siteData, siteCounts } from "@/lib/site-data";
 import { topScore } from "@/lib/derived";
 import { tintFor } from "@/lib/logo";
@@ -77,14 +78,14 @@ function buildFeatured() {
   const nc = prov("nolimit-city");
 
   return [
-    { name: "Sweet Bonanza", mono: "SWB", slug: "sweet-bonanza", cat: "Slot", score: sb ? `${sb.rtp.toFixed(2)}%` : "—", line: `Published at ${sb ? `${sb.rtp.toFixed(2)}%` : "its studio RTP"}, but operators can licence a lower build. Check the RTP in the game's info screen before you spin.`, metric: `Max win ${sb?.maxWin ?? "—"}`, cta: "Slot review →", href: "/slots/sweet-bonanza" },
+    { name: "Sweet Bonanza", mono: "SWB", slug: "sweet-bonanza", cat: "Slot", score: sb ? `${sb.rtp.toFixed(2)}%` : "—", line: `Published at ${sb ? `${sb.rtp.toFixed(2)}%` : "its studio RTP"}, but operators can licence a lower build. Check the RTP in the game's info screen before you spin.`, metric: sb ? `${sb.provider} game page` : "—", cta: "Slot review →", href: "/slots/sweet-bonanza" },
     { name: "Kraken", mono: "KR", slug: "kraken", cat: "Exchange", score: score(kr?.score), line: "Tightest listed spread of the exchanges on our index, and no daily withdrawal cap once the account is verified.", metric: `Listed spread ${kr?.m1 ?? "—"}`, cta: "Review →", href: "/exchanges/kraken" },
     { name: "Stake", mono: "ST", slug: "stake", cat: "Casino", score: score(st?.score), line: `${(coinsBy["stake"] ?? []).length} of the ${coinDefs.length} coins we track on the cashier and VIP rakeback with no wagering on its weekly bonus, but no withdrawal time stated in its help centre.`, metric: `${(coinsBy["stake"] ?? []).length} coins accepted`, cta: "Review →", href: "/casinos/stake" },
     { name: "Phantom", mono: "PH", slug: "phantom", cat: "Wallet", score: score(ph?.score), line: "Solana-first self-custody wallet with automatic priority fees. Chain coverage is narrower than MetaMask's.", metric: ph?.m2 ?? "—", cta: "Review →", href: "/wallets/phantom" },
-    { name: "Hacksaw Gaming", mono: "HG", slug: "hacksaw-gaming", cat: "Provider", score: score(hg?.score), line: "Publishes one RTP per title, which is rarer than it should be. Volatility is not for everyone.", metric: `${hg?.titles ?? "—"} titles`, cta: "Studio profile →", href: "/providers/hacksaw-gaming" },
+    { name: "Hacksaw Gaming", mono: "HG", slug: "hacksaw-gaming", cat: "Provider", score: score(hg?.score), line: "Lists every RTP version it licenses on each game page, so you can see how low a casino's build could go. Volatility is not for everyone.", metric: hg?.rtp ?? "—", cta: "Studio profile →", href: "/providers/hacksaw-gaming" },
     { name: "Cloudbet", mono: "CB", slug: "cloudbet", cat: "Sportsbook", score: score(cb?.score), line: `${cbBook && parseFloat(cbBook.margin) === lowestMargin ? "Lowest listed margin of the sportsbooks on our index" : "Sportsbook and casino on one balance"}. The casino welcome offer carries ${cb?.wager ?? "—"}× wagering.`, metric: `${cbBook?.margin ?? "—"} listed margin`, cta: "Sportsbooks →", href: "/sportsbooks" },
     { name: "Ledger", mono: "LG", slug: "ledger", cat: "Wallet", score: score(lg?.score), line: "The reference hardware wallet for cold storage. Gas is set by hand per chain, which adds a step to every casino deposit.", metric: `${lg?.m2 ?? "—"}`, cta: "Review →", href: "/wallets/ledger" },
-    { name: "Nolimit City", mono: "NC", slug: "nolimit-city", cat: "Provider", score: score(nc?.score), line: "Extreme volatility by design. The max-win ceilings are high and the base game will test your bankroll.", metric: `RTP ${nc?.rtp ?? "—"}`, cta: "Studio profile →", href: "/providers/nolimit-city" },
+    { name: "Nolimit City", mono: "NC", slug: "nolimit-city", cat: "Provider", score: score(nc?.score), line: "Extreme volatility by design. The max-win ceilings are high and the base game will test your bankroll.", metric: nc?.rtp ?? "—", cta: "Studio profile →", href: "/providers/nolimit-city" },
   ];
 }
 
@@ -95,7 +96,7 @@ export default function HomePage() {
 
   const topCasino = topScore(ops);
   const topLive = topScore(liveCasinos);
-  const topSlot = [...slots].sort((a, b) => b.rtp - a.rtp)[0];
+  const topSlot = [...slots].sort((a, b) => rtpSortValue(b) - rtpSortValue(a))[0];
   const topProvider = topScore(providers);
   const topBook = topScore(ops.filter((o) => o.sports));
   const topWallet = topScore(walletRows);
@@ -451,9 +452,9 @@ export default function HomePage() {
               <div style={{ fontSize: 14.5, fontWeight: 600, color: "#E8EDF0", marginBottom: 5 }}>{p.name}</div>
               <div style={{ fontSize: 12, lineHeight: 1.5, color: "#7B8A93", marginBottom: 14 }}>{p.note}</div>
               <div style={{ display: "flex", flexDirection: "column", gap: 6, paddingTop: 12, borderTop: "1px solid rgba(255,255,255,.07)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#5C6A72" }}>
-                <div style={{ display: "flex", justifyContent: "space-between", gap: 8 }}><span>titles</span><span style={{ color: "#C3CFD5" }}>{p.titles}</span></div>
-                <div style={{ display: "flex", justifyContent: "space-between", gap: 8 }}><span>rtp</span><span style={{ color: "#C3CFD5" }}>{p.rtp}</span></div>
-                <div style={{ display: "flex", justifyContent: "space-between", gap: 8 }}><span>casinos</span><span style={{ color: "#C3CFD5" }}>{p.casinos}</span></div>
+                <div style={{ display: "flex", justifyContent: "space-between", gap: 8 }}><span>rtp</span><span style={{ color: "#C3CFD5", textAlign: "right" }}>{p.rtp}</span></div>
+                <div style={{ display: "flex", justifyContent: "space-between", gap: 8 }}><span>catalogue</span><span style={{ color: "#C3CFD5", textAlign: "right" }}>{p.titlesStated ?? "not stated"}</span></div>
+                
               </div>
             </Link>
           ))}

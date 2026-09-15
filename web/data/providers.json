@@ -5,10 +5,11 @@
     "mono": "HG",
     "tint": "#E0A67B",
     "score": 9,
-    "note": "Single RTP version per title. Short, sharp, very high variance.",
-    "titles": 180,
-    "rtp": "96.3%",
-    "casinos": 16
+    "note": "Lists every RTP version it licenses on each game page — usually four, e.g. 96.38% down to 88.42%.",
+    "rtpPolicy": "multiple",
+    "rtp": "Every RTP version listed",
+    "licences": "MGA, UKGC, Ontario, Greece, Romania, Denmark",
+    "sourceUrl": "https://www.hacksawgaming.com/"
   },
   {
     "slug": "push-gaming",
@@ -16,10 +17,11 @@
     "mono": "PG",
     "tint": "#8FA5C9",
     "score": 8.9,
-    "note": "Mechanic-led, consistently high RTP. Fewer releases, better tuned.",
-    "titles": 85,
-    "rtp": "96.5–96.7%",
-    "casinos": 14
+    "note": "Game pages say RTPs may vary by casino and list both versions, e.g. 96.70% / 94.06%.",
+    "rtpPolicy": "multiple",
+    "rtp": "Every RTP version listed",
+    "licences": "MGA, UKGC",
+    "sourceUrl": "https://www.pushgaming.com/games/"
   },
   {
     "slug": "nolimit-city",
@@ -27,10 +29,11 @@
     "mono": "NC",
     "tint": "#D68A6E",
     "score": 8.8,
-    "note": "Extreme volatility by design. Highest published max-win ceilings on the index.",
-    "titles": 95,
-    "rtp": "96.0–96.1%",
-    "casinos": 15
+    "note": "Extreme-volatility studio in the Evolution group; each game page shows a single RTP.",
+    "rtpPolicy": "single",
+    "rtp": "One RTP per game page",
+    "licences": "MGA",
+    "sourceUrl": "https://nolimitcity.com/"
   },
   {
     "slug": "relax-gaming",
@@ -38,10 +41,11 @@
     "mono": "RG",
     "tint": "#7BE0B8",
     "score": 8.5,
-    "note": "Money Train line plus a large third-party aggregation arm.",
-    "titles": 240,
-    "rtp": "96.1–96.6%",
-    "casinos": 17
+    "note": "Money Train studio; its game pages don't publish an RTP.",
+    "rtpPolicy": "unpublished",
+    "rtp": "RTP not published",
+    "licences": "MGA, UKGC, Gibraltar, Ontario, Sweden, Denmark, Pennsylvania and more",
+    "sourceUrl": "https://www.relax-gaming.com/terms/license-info"
   },
   {
     "slug": "print-studios",
@@ -49,10 +53,11 @@
     "mono": "PS",
     "tint": "#C9D67B",
     "score": 8.2,
-    "note": "Newer studio, strong bonus-buy maths, thin catalogue so far.",
-    "titles": 40,
-    "rtp": "96.2%",
-    "casinos": 11
+    "note": "Lists a base RTP and a separate bonus-buy RTP on each game page.",
+    "rtpPolicy": "bonus-buy",
+    "rtp": "Base and bonus-buy RTP listed",
+    "licences": "Not shown on its site",
+    "sourceUrl": "https://www.printstudios.com/"
   },
   {
     "slug": "pragmatic-play",
@@ -60,9 +65,11 @@
     "mono": "PP",
     "tint": "#9FB6E0",
     "score": 7.6,
-    "note": "Volume studio. Same title often ships at three different RTPs.",
-    "titles": 620,
-    "rtp": "94.5–96.5%",
-    "casinos": 18
+    "note": "Volume studio; game pages show one RTP each without saying whether lower builds exist.",
+    "rtpPolicy": "single",
+    "rtp": "One RTP per game page",
+    "licences": "Licensed or certified in over 30 jurisdictions (its claim)",
+    "titlesStated": "Over 500 games",
+    "sourceUrl": "https://www.pragmaticplay.com/en/"
   }
 ]

@@ -36,7 +36,7 @@ export function SearchPage({ initialQuery = "" }: { initialQuery?: string }) {
         label: "Providers",
         items: providers
           .filter((p) => hit(p.name) || hit(p.note))
-          .map((p) => ({ name: p.name, note: `${p.titles} titles · ${p.rtp}`, meta: p.score.toFixed(1), href: `/providers/${p.slug}` })),
+          .map((p) => ({ name: p.name, note: `${p.rtp} · ${p.licences}`, meta: p.score.toFixed(1), href: `/providers/${p.slug}` })),
       },
       {
         label: "Wallets",

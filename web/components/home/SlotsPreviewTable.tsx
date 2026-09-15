@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { hasMaxWin, hasVol, maxWinLabel, rtpLabel, rtpSortValue } from "@/lib/slot-facts";
 import type { Slot } from "@/lib/types";
 import { Table, type Column } from "@/components/ui/Table";
 
@@ -42,13 +43,14 @@ const columns: Column<Slot>[] = [
     label: "RTP",
     sortable: true,
     align: "right",
-    sortValue: (s) => s.rtp,
-    render: (s) => <span className="text-text-primary">{s.rtp.toFixed(2)}%</span>,
+    sortValue: (s) => rtpSortValue(s),
+    render: (s) => <span className="text-text-primary">{rtpLabel(s)}</span>,
   },
   {
     key: "vol",
     label: "Volatility",
     render: (s) => {
+      if (!hasVol(s)) return <span className="font-mono text-[10px] text-text-dim-2">Not published</span>;
       const style = VOL_STYLE[s.vol];
       return (
         <span
@@ -65,13 +67,13 @@ const columns: Column<Slot>[] = [
     label: "Max win",
     sortable: true,
     align: "right",
-    sortValue: (s) => Number(String(s.maxWin).replace(/[^0-9.]/g, "")) || 0,
-    render: (s) => s.maxWin,
+    sortValue: (s) => (hasMaxWin(s) ? Number(String(s.maxWin).replace(/[^0-9.]/g, "")) || 0 : -1),
+    render: (s) => maxWinLabel(s),
   },
   {
-    key: "bestAt",
-    label: "Listed at",
-    render: (s) => <span style={{ color: s.bestAt === "Roobet" ? "#FFCC00" : "#B7C4CB" }}>{s.bestAt}</span>,
+    key: "versions",
+    label: "RTP versions",
+    render: (s) => <span style={{ color: "#B7C4CB" }}>{s.rtpVersions ? s.rtpVersions.split("/").length : "—"}</span>,
   },
 ];
 

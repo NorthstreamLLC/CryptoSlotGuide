@@ -93,7 +93,8 @@ function median(nums: number[]): number {
  */
 
 export function medianRtp(slots: Slot[]): number {
-  return median(slots.map((s) => s.rtp));
+  // Only studio-published RTPs — see lib/slot-facts.ts.
+  return median(slots.filter((s) => !s.unpublished?.includes("rtp")).map((s) => s.rtp));
 }
 
 /**
@@ -146,21 +147,21 @@ export function lightningOps(ops: Operator[]): number {
 }
 
 /** A studio "ships one RTP" when it publishes a single figure, not a range. */
-export function singleRtpStudios(providers: Provider[]): number {
-  return providers.filter((p) => !p.rtp.includes("–")).length;
+/** Studios whose own game pages list every RTP version they license. */
+export function allVersionsListedStudios(providers: Provider[]): number {
+  return providers.filter((p) => p.rtpPolicy === "multiple").length;
 }
 
-export function rangeRtpStudios(providers: Provider[]): number {
-  return providers.length - singleRtpStudios(providers);
+/** Studios whose game pages publish no RTP at all. */
+export function unpublishedRtpStudios(providers: Provider[]): number {
+  return providers.filter((p) => p.rtpPolicy === "unpublished").length;
 }
 
 export function selfCustodyWallets(rows: WalletOrExchangeRow[]): number {
   return rows.filter((r) => /self/i.test(r.m1)).length;
 }
 
-export function largestCatalogue(providers: Provider[]): number {
-  return Math.max(0, ...providers.map((p) => p.titles || 0));
-}
+
 
 /** Resolves {casinos}/{fee}/{ln}/{coins}/{slots}/{studios} tokens in prose so copy can't drift from data. */
 export function fill(

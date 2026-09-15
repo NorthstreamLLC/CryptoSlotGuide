@@ -13,6 +13,7 @@ import { siteData } from "./site-data";
 import { crit, flag } from "./scoring";
 import { casinoCons, isStaleReading } from "./derived";
 import { payoutView } from "./payout";
+import { hasMaxWin, hasVol, maxWinLabel, rtpLabel, hasRtp, rtpSortValue, volLabel } from "./slot-facts";
 import { isFieldTestedOperator, isEditoriallyAudited } from "./field-tested";
 import { SCORE_BRAND } from "./score-tier";
 import { tintFor } from "./logo";
@@ -245,13 +246,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
     const readings = rtpWatch.filter((r) => r.slotSlug === s.slug && !isStaleReading(r.checkedAt));
     // "Checked" means a real, non-stale reading exists for this exact
     // slot × operator pair — not just that the operator is field-tested
-    // in general. data/rtpWatch.json only ever holds real readings
-    // (scripts/import-rtp-readings.mjs), empty until the first real
-    // import, so today every slot page falls into the "not yet verified
-    // per operator" branch below, honestly. Gating on the operator alone
-    // was a real bug: it would make every title look verified at an
-    // operator the moment *any* title there was checked. See
-    // lib/rtp-watch-view.ts's header for the same fix.
+    // in general. See lib/rtp-watch-view.ts's header for the same rule.
     const checkedOps = watchOps.filter((op) => readings.some((r) => r.operatorSlug === op.slug));
     const cuts = checkedOps.map((op) => {
       const r = readings.find((x) => x.operatorSlug === op.slug);
@@ -259,6 +254,16 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
     });
     const clean = cuts.filter((c) => c === 0).length;
     const anyChecked = checkedOps.length > 0;
+    // Studio-published figures only (lib/slot-facts.ts); anything the studio
+    // doesn't publish reads "Not published" rather than a database number.
+    const rtpTxt = rtpLabel(s);
+    const facts = [
+      hasRtp(s) ? `${rtpTxt} published RTP` : null,
+      hasVol(s) ? `${s.vol} volatility` : null,
+      hasMaxWin(s) ? `${s.maxWin} max win` : null,
+    ].filter(Boolean) as string[];
+    const describe = `${s.name} is ${hasVol(s) ? `a ${s.vol}-volatility` : "a"} ${s.provider} title${hasMaxWin(s) ? ` with a ${s.maxWin} max win` : ""}${hasRtp(s) ? ` and a published return of ${rtpTxt}` : ""}.`;
+    const versionsNote = s.rtpVersions ? ` ${s.provider} publishes ${s.rtpVersions.split("/").length} configurations: ${s.rtpVersions}%.` : "";
     return {
       type,
       kicker: "Slot review",
@@ -266,39 +271,45 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       slug: s.slug,
       mono: s.mono,
       tint: s.tint,
-      score: s.rtp.toFixed(2),
-      headline: `${s.name} review: ${s.rtp.toFixed(2)}% at best, ${s.vol} volatility, ${s.maxWin} ceiling`,
+      score: hasRtp(s) ? s.rtp.toFixed(2) : "—",
+      headline: `${s.name} review: ${facts.length ? facts.join(", ") : `${s.provider} slot`}`,
       standfirst: anyChecked
-        ? `We opened ${s.name} in ${checkedOps.length} operator ${checkedOps.length === 1 ? "account" : "accounts"} on our index and read the paytable inside each build. ${clean} of ${cuts.length} ship the full ${s.rtp.toFixed(2)}% version.`
-        : `${s.name} publishes a return of ${s.rtp.toFixed(2)}%. Studios license more than one configuration of the same title, and which one an operator ships isn't disclosed in the lobby — we check that per operator as our RTP Watch program covers them, and none of the operators carrying this title are checked yet.`,
-      tags: anyChecked ? ["PAYTABLE READ PER CASINO", `${s.vol.toUpperCase()} VOLATILITY`, "CHECKED IN-CLIENT"] : ["PUBLISHED RTP", `${s.vol.toUpperCase()} VOLATILITY`, "PER-OPERATOR CHECK PENDING"],
+        ? `We opened ${s.name} in ${checkedOps.length} operator ${checkedOps.length === 1 ? "account" : "accounts"} on our index and read the paytable inside each build. ${clean} of ${cuts.length} ship the full ${rtpTxt} version.`
+        : `${hasRtp(s) ? `${s.provider} publishes a return of ${rtpTxt} for ${s.name}.` : `${s.provider} doesn't publish an RTP for ${s.name} on its game page.`}${versionsNote} Which configuration an operator ships isn't disclosed in the lobby — RTP Watch checks that per operator, and none carrying this title are checked yet.`,
+      tags: [
+        anyChecked ? "PAYTABLE READ PER CASINO" : "STUDIO-PUBLISHED FIGURES",
+        hasVol(s) ? `${s.vol.toUpperCase()} VOLATILITY` : "VOLATILITY NOT PUBLISHED",
+        anyChecked ? "CHECKED IN-CLIENT" : "PER-OPERATOR CHECK PENDING",
+      ],
       byline: anyChecked
         ? `Read by the games desk · ${s.provider} · verified in ${cuts.length} operator ${cuts.length === 1 ? "build" : "builds"}`
-        : `Published return · ${s.provider} · per-operator build not yet field-tested`,
+        : `${s.provider}'s own game page · per-operator build not yet field-tested`,
       verdict: anyChecked
-        ? `${s.name} is a ${s.vol}-volatility ${s.provider} title with a ${s.maxWin} ceiling and a published return of ${s.rtp.toFixed(2)}%. ${
+        ? `${describe} ${
             clean === cuts.length
               ? "Every operator we checked ships that build, so the only variable left is where you want your money held."
               : `Only ${clean} of the ${cuts.length} operators we checked ship it. The rest run a reduced configuration, and the lobby does not tell you which.`
           }`
-        : `${s.name} is a ${s.vol}-volatility ${s.provider} title with a ${s.maxWin} ceiling and a published return of ${s.rtp.toFixed(2)}%. Operators can legally ship a reduced-RTP configuration of the same title without disclosing it in the lobby; we haven't yet field-tested any operator carrying this title to confirm which build they run.`,
-      criteria: crit(Math.min(9.6, s.rtp - 86.5), [0.3, -0.4, 0.2, 0.4, -0.2, 0.1], ["Return (best build)", "Build consistency", "Max win ceiling", "Mechanic design", "Base-game pacing", "Bonus-buy value"]),
+        : `${describe} Operators can legally ship a reduced-RTP configuration of the same title without disclosing it in the lobby; we haven't yet field-tested any operator carrying this title to confirm which build they run.`,
+      criteria: crit(hasRtp(s) ? Math.min(9.6, s.rtp - 86.5) : 8.5, [0.3, -0.4, 0.2, 0.4, -0.2, 0.1], ["Return (best build)", "Build consistency", "Max win ceiling", "Mechanic design", "Base-game pacing", "Bonus-buy value"]),
       stats: [
-        { label: "Published RTP", value: `${s.rtp.toFixed(2)}%`, note: `As certified by ${s.provider}` },
-        { label: "Volatility", value: s.vol, note: "Studio's published rating" },
-        { label: "Max win", value: s.maxWin, note: "Published cap" },
+        { label: "Published RTP", value: rtpTxt, note: s.rtpVersions ? `Highest of ${s.rtpVersions.split("/").length} published versions` : hasRtp(s) ? `Per ${s.provider}'s game page` : `${s.provider} doesn't publish one` },
+        { label: "Volatility", value: volLabel(s), note: hasVol(s) ? "Studio's published rating" : `${s.provider} doesn't publish one` },
+        { label: "Max win", value: maxWinLabel(s), note: hasMaxWin(s) ? "Studio's published cap" : `${s.provider} doesn't publish one` },
         { label: "Provider", value: s.provider, note: "See the studio profile for RTP policy" },
         { label: "Operators checked", value: String(checkedOps.length), note: anyChecked ? `${clean} at the full published rate` : "Not yet field-tested" },
       ],
       chipLabel: "Where the full build runs",
       chips: anyChecked ? checkedOps.filter((_, i) => cuts[i] === 0).map((o) => ({ t: o.name, tint: "#5FE3E8" })) : [],
       specTitle: anyChecked ? "What the paytable says" : "Published figures",
-      specSub: anyChecked ? "Read inside the game client, not from a marketing page." : "The studio's published figures. Per-operator builds fill in as RTP Watch reads them.",
+      specSub: s.sourceUrl ? `From ${s.provider}'s own game page, checked 15 Sep 2026. Per-operator builds fill in as RTP Watch reads them.` : "The studio's published figures. Per-operator builds fill in as RTP Watch reads them.",
       spec: [
-        spec("Published return", `${s.rtp.toFixed(2)}% in the full build`, "ok"),
-        spec("Configurations", anyChecked ? (cuts.some((c) => c) ? "Multiple, operator-selectable" : "Single configuration") : "Not yet confirmed per operator", anyChecked ? (cuts.some((c) => c) ? "bad" : "ok") : "watch"),
-        spec("Volatility", `${s.vol} — long dry spells between features`, "watch"),
-        spec("Max win", `${s.maxWin} stake, stated in the paytable`, "ok"),
+        hasRtp(s) ? spec("Published return", `${rtpTxt} in the full build`, "ok") : unconfirmed("Published return"),
+        s.rtpVersions
+          ? spec("Configurations", `${s.rtpVersions}% — operator-selectable`, "bad")
+          : spec("Configurations", anyChecked ? (cuts.some((c) => c) ? "Multiple, operator-selectable" : "Single configuration") : "Not published on the game page", anyChecked ? (cuts.some((c) => c) ? "bad" : "ok") : "watch"),
+        hasVol(s) ? spec("Volatility", s.vol, "watch") : unconfirmed("Volatility"),
+        hasMaxWin(s) ? spec("Max win", `${s.maxWin} stake`, "ok") : unconfirmed("Max win"),
       ],
       tableTitle: "RTP by casino build",
       tableSub: anyChecked ? "The figure in each operator's own client on the date shown." : "Field-tested per operator as our RTP Watch program covers them — none checked yet for this title.",
@@ -314,13 +325,13 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
         : [],
       tableNote: "The operator chooses the build, not the studio. Where a casino ships a reduced configuration of a title we track, it costs that casino points on game and RTP quality.",
       pros: [
-        `Published return of ${s.rtp.toFixed(2)}% in the full build`,
-        `${s.maxWin} published max win`,
-        anyChecked ? `${clean} of ${cuts.length} major operators ship the full version` : `${s.provider} publishes the return for the full build`,
-      ],
+        hasRtp(s) ? `Published return of ${rtpTxt} in the full build` : `${s.provider} title on our slot index`,
+        hasMaxWin(s) ? `${s.maxWin} published max win` : null,
+        anyChecked ? `${clean} of ${cuts.length} major operators ship the full version` : s.rtpVersions ? `${s.provider} discloses every RTP version it licenses` : null,
+      ].filter(Boolean) as string[],
       cons: [
-        anyChecked ? (cuts.some((c) => c) ? "Reduced builds exist and the lobby does not flag them" : "Volatility makes short sessions unrepresentative") : "Per-operator build not yet field-tested — a reduced configuration could be running anywhere it's offered",
-        `${s.vol} volatility: the base game will test a bankroll`,
+        s.rtpVersions ? `Lower-RTP versions exist (${s.rtpVersions}%), and the lobby doesn't say which one is loaded` : "Per-operator build not yet field-tested — a reduced configuration could be running anywhere it's offered",
+        hasVol(s) ? `${s.vol} volatility: the base game will test a bankroll` : `${s.provider} doesn't publish a volatility rating for it`,
         "Bonus buys move variance, not expected value",
       ],
       faqs: [
@@ -334,7 +345,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
         { q: "Is the max win realistic?", a: "It is real but rare. Treat it as the tail of the distribution, not a target — the median session ends nowhere near it." },
       ],
       measuredSub: anyChecked
-        ? `Volatility, max win and mechanic design are assessed from public sources. The RTP-by-build figures are real — read inside ${checkedOps.length === 1 ? "an operator's" : `${checkedOps.length} operators'`} own client${checkedOps.length === 1 ? "" : "s"}, not published data. See how we rate for what that means here.`
+        ? `Volatility, max win and mechanic design are from ${s.provider}'s own game page. The RTP-by-build figures are real — read inside ${checkedOps.length === 1 ? "an operator's" : `${checkedOps.length} operators'`} own client${checkedOps.length === 1 ? "" : "s"}. See how we rate for what that means here.`
         : undefined,
     };
   }
@@ -342,16 +353,22 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
   if (type === "provider") {
     const p = providers.find((r) => r.slug === slug);
     if (!p) return null;
-    // Only this studio's own titles — the prototype fell back to
-    // slots.slice(0, 4) (other studios' games) when none matched, and
-    // described paytables "read in every operator build" that were never
-    // read. Titles/RTP/casino counts are providers.json listing data.
+    // Everything here comes from the studio's own site (providers.json
+    // sourceUrl, checked 15 Sep 2026) or from its titles on our slot index.
+    // The prototype's title counts, casino counts and "RTP range" had no
+    // source and are gone.
     const titles = slots.filter((s) => s.provider === p.name);
-    const single = !p.rtp.includes("–");
-    const topMaxWin = titles[0]?.maxWin;
-    const volCounts = titles.reduce<Record<string, number>>((acc, s) => ({ ...acc, [s.vol]: (acc[s.vol] ?? 0) + 1 }), {});
+    const topMaxWin = titles.filter(hasMaxWin)[0]?.maxWin;
+    const volCounts = titles.filter(hasVol).reduce<Record<string, number>>((acc, s) => ({ ...acc, [s.vol]: (acc[s.vol] ?? 0) + 1 }), {});
     const modalVol = Object.entries(volCounts).sort((a, b) => b[1] - a[1])[0]?.[0];
     const readAny = rtpWatch.some((r) => titles.some((t) => t.slug === r.slotSlug) && !isStaleReading(r.checkedAt));
+    const policy = p.rtpPolicy;
+    const policyVerdict: Record<typeof policy, string> = {
+      multiple: `${p.name} lists every RTP configuration it licenses on each game page. That doesn't stop an operator shipping a lower one, but it means you can check exactly how far below the headline figure a build could be.`,
+      single: `${p.name}'s game pages show a single RTP per title. They don't say whether lower configurations are licensed, so the paytable inside the game is still the only confirmation of the build you're playing.`,
+      unpublished: `${p.name}'s game pages don't publish an RTP at all, so the only place to find a title's return is the paytable inside the game — and that's the figure worth checking before you play.`,
+      "bonus-buy": `${p.name} lists a base RTP and a separate bonus-buy RTP per game. Whether lower configurations exist isn't stated, so check the paytable in-game.`,
+    };
     return {
       type,
       kicker: "Provider profile",
@@ -360,48 +377,42 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       mono: p.mono,
       tint: p.tint,
       score: (p.score || 8.8).toFixed(1),
-      headline: `${p.name} profile 2026: ${p.titles} titles, ${p.rtp} RTP, on ${p.casinos} casinos`,
-      standfirst: readAny
-        ? `${p.note} Where RTP Watch has read one of this studio's titles inside a casino's own client, that per-build figure is shown on the title's page.`
-        : `${p.note} Figures below are the studio's published data — we haven't read any of its titles inside a casino's own build yet.`,
-      tags: [single ? "SINGLE RTP VERSION" : "MULTIPLE RTP VERSIONS", "PUBLISHED RTP DATA", readAny ? "BUILDS READ IN-CLIENT" : "PER-BUILD CHECKS PENDING"],
-      byline: readAny ? "Published studio data · some builds read in-client" : "Published studio data · per-build paytable checks pending",
-      verdict: single
-        ? `${p.name} publishes one configuration per title, which removes the single largest source of hidden variance in crypto casino play: the maths should be the same wherever its games are offered.`
-        : `${p.name} publishes an RTP range, which means operators can license reduced configurations. The studio isn't hiding it — the range is public — but the title you load is only as good as the casino that licensed it.`,
-      criteria: crit(p.score || 8.8, [single ? 0.6 : -0.9, 0.2, 0.4, -0.3, 0.3, single ? 0.5 : -0.6], ["RTP discipline", "Volatility range", "Mechanic design", "Catalogue depth", "Operator reach", "Transparency"]),
+      headline: `${p.name} profile 2026: ${p.rtp.toLowerCase()}, ${titles.length} title${titles.length === 1 ? "" : "s"} on our index`,
+      standfirst: `${p.note} Figures below are from ${p.name}'s own site; ${readAny ? "some of its titles have also been read inside casino builds." : "we haven't read any of its titles inside a casino's own build yet."}`,
+      tags: [policy === "multiple" ? "EVERY RTP VERSION LISTED" : policy === "unpublished" ? "RTP NOT PUBLISHED" : policy === "bonus-buy" ? "BASE + BONUS-BUY RTP" : "ONE RTP PER GAME PAGE", "STUDIO'S OWN SITE", readAny ? "BUILDS READ IN-CLIENT" : "PER-BUILD CHECKS PENDING"],
+      byline: readAny ? `${p.name}'s own site · some builds read in-client` : `${p.name}'s own site · per-build paytable checks pending`,
+      verdict: policyVerdict[policy],
+      criteria: crit(p.score || 8.8, [policy === "multiple" ? 0.6 : policy === "unpublished" ? -0.9 : 0, 0.2, 0.4, -0.3, 0.3, policy === "multiple" ? 0.5 : policy === "unpublished" ? -0.6 : 0], ["RTP discipline", "Volatility range", "Mechanic design", "Catalogue depth", "Operator reach", "Transparency"]),
       stats: [
-        { label: "Titles", value: String(p.titles), note: "As listed" },
-        { label: "Published RTP", value: p.rtp, note: single ? "One configuration only" : "Operator-selectable range" },
-        { label: "Listed on", value: `${p.casinos} casinos`, note: "As listed" },
-        ...(topMaxWin ? [{ label: "Highest max win", value: topMaxWin, note: "Published cap, titles on our slot index" }] : []),
+        { label: "RTP disclosure", value: p.rtp, note: "On its own game pages" },
+        { label: "Licensing", value: p.licences, note: "As stated on its site" },
+        { label: "Catalogue", value: p.titlesStated ?? "Not stated", note: p.titlesStated ? "Its own figure" : "No count on its site" },
+        ...(topMaxWin ? [{ label: "Highest max win", value: topMaxWin, note: "Published cap, titles on our index" }] : []),
         ...(modalVol ? [{ label: "Typical volatility", value: modalVol, note: "Most common across titles on our index" }] : []),
       ],
       chipLabel: "Mechanics this studio is known for",
       chips: p.name === "Nolimit City" ? ["xWays", "xNudge", "xBomb"].map((t, i) => ({ t, tint: ["#2FA8B0", "#C7A45C", "#9B8FC4"][i] })) : [],
       chipsEmpty: "Not catalogued for this studio yet.",
       specTitle: "RTP policy",
-      specSub: "What the studio publishes. Rows marked unconfirmed haven't been checked in live casino builds yet.",
+      specSub: `What ${p.name} publishes on its own site. Rows marked unconfirmed haven't been checked in live casino builds.`,
       spec: [
-        spec("Configurations", single ? "One published RTP per title" : "Published as a range, operator-selectable", single ? "ok" : "bad"),
+        spec("Configurations", p.rtp, policy === "multiple" ? "ok" : policy === "unpublished" ? "bad" : "watch"),
+        spec("Licensing", p.licences, "ok"),
         unconfirmed("RTP shown in-game"),
         unconfirmed("Max win honoured"),
-        unconfirmed("Bonus buy availability"),
       ],
       tableTitle: "Titles we track from this studio",
-      tableSub: "Published RTP, volatility and max win for this studio's titles on our slot index.",
+      tableSub: `Published RTP, volatility and max win from ${p.name}'s own game pages.`,
       tableCols: ["RTP", "Volatility", "Max win"],
-      tableRows: titles.map((s) => ({ name: s.name, note: `${s.vol} volatility`, m1: `${s.rtp.toFixed(2)}%`, m2: s.vol, m3: s.maxWin })),
+      tableRows: [...titles].sort((a, b) => rtpSortValue(b) - rtpSortValue(a)).map((s) => ({ name: s.name, note: s.rtpVersions ? `${s.rtpVersions.split("/").length} published RTP versions` : `${s.provider} game page`, m1: rtpLabel(s), m2: hasVol(s) ? s.vol : "Not published", m3: maxWinLabel(s) })),
       tableEmpty: "None of this studio's titles are on our slot index yet.",
       tableNote: "Where a casino ships a reduced configuration of one of these titles we name it in that casino's review rather than here, because the studio is not the party that chose it.",
       pros: [
-        single ? "One RTP configuration per title, so the build shouldn't depend on the operator" : "Published RTP range, so the variance is at least disclosed",
-        `Listed on ${p.casinos} casinos`,
-        `${p.titles} titles in the catalogue`,
+        policy === "multiple" ? "Lists every RTP version it licenses, so builds can be checked against the full set" : policy === "single" ? "One RTP shown per game page" : policy === "bonus-buy" ? "Separate bonus-buy RTP disclosed" : `${titles.length} title${titles.length === 1 ? "" : "s"} on our slot index`,
+        `Licensing: ${p.licences}`,
       ],
       cons: [
-        single ? "Thinner catalogue than the volume studios" : "Operators can license reduced configurations",
-        "High-volatility titles test a bankroll in the base game",
+        policy === "multiple" ? "Lower-RTP versions exist, and the lobby doesn't say which one is loaded" : policy === "unpublished" ? "No RTP published on its game pages" : "Doesn't say whether lower-RTP configurations are licensed",
         readAny ? "Per-build checks cover only some titles so far" : "No per-build paytable reads yet for this studio's titles",
       ],
       faqs: [
