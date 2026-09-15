@@ -654,7 +654,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       ...(wagerFact && !lowWager ? [`${o.wager}× wagering on the headline offer`] : []),
       ...(pv.kind === "none" ? ["No withdrawal time stated on its own pages"] : pv.mins !== null && pv.mins >= 1440 ? [`Stated withdrawal time runs up to ${pv.label.split("–").pop()}`] : []),
       ...(coins.length < siteData.coinDefs.length ? [`Accepts ${coins.length} of the ${siteData.coinDefs.length} coins we track`] : []),
-      ...(!licenceFact ? ["No licence details found on its own pages"] : []),
+      ...(!licenceFact ? ["No licence details found on its own pages"] : /no gaming licence/i.test(licenceFact.value ?? "") ? ["No gaming licence stated on its own site"] : []),
     ],
     faqs: [
       { q: `Is ${o.name} available in my country?`, a: `${o.name} restricts a list of jurisdictions under its ${o.licence} licence. Check the restricted list in its terms before depositing rather than after — we haven't independently tested where it blocks access.` },
