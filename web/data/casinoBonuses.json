@@ -96,6 +96,26 @@
     "operatorSlug": "razed",
     "bonuses": [
       {
+        "title": "$100,000 Monthly Race",
+        "category": "Leaderboard · all players",
+        "headline": "$100,000",
+        "subCopy": "Monthly wager leaderboard with a $30,000 top prize. Razed also runs a $10,000 Weekly Race and a $10,000 Wicked Rush Race.",
+        "stats": [
+          {
+            "label": "1st / 2nd / 3rd",
+            "value": "$30K / $10K / $6K"
+          },
+          {
+            "label": "Other races",
+            "value": "$10K weekly · $10K Wicked Rush"
+          }
+        ],
+        "asOf": "2026-09-15",
+        "endsLabel": "Current round ends ~30 Sep 2026",
+        "sourceUrl": "https://www.razed.com/promotions/",
+        "sourceNote": "Razed's own in-account race page, screenshot-verified — razed.com blocks automated fetches"
+      },
+      {
         "title": "VIP rank-up rewards",
         "category": "VIP Club · all players",
         "headline": "$20 – $500K",
