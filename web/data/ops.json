@@ -341,16 +341,17 @@
     "mono": "BP",
     "payout": 8.4,
     "payoutLabel": "8m 24s",
-    "licence": "Curaçao",
+    "licence": "Not stated",
     "kyc": "none",
-    "bonus": "No-KYC cashback only",
-    "wager": 1,
+    "bonus": "Welcome: up to 5,000 USDT over 3 deposits + 10% weekly cashback",
+    "wager": 60,
     "conf": 1,
     "absorbsFee": true,
     "ln": true,
     "sports": true,
     "esports": false,
-    "hasCustomReview": false
+    "hasCustomReview": false,
+    "bonusExpiry": "7 days to claim, 30 days to complete"
   },
   {
     "slug": "winna",

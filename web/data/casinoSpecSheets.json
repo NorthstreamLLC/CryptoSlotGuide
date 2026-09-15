@@ -422,6 +422,148 @@
     ]
   },
   {
+    "operatorSlug": "betplay",
+    "groups": [
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Withdrawal speed",
+            "value": "Promotes lightning-fast payouts via the Bitcoin Lightning Network; no processing time stated",
+            "sourcing": "editorial",
+            "sourceUrl": "https://betplay.io/en/info/about",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal limit",
+            "value": "$8,000 per 24 hours, plus same-day deposits; higher VIP levels can raise it",
+            "sourcing": "editorial",
+            "sourceUrl": "https://betplay.io/en/info/terms",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal requirements",
+            "value": "Every deposit must be wagered once before withdrawing; withdrawals go out in the currency deposited",
+            "sourcing": "editorial",
+            "sourceUrl": "https://betplay.io/en/info/terms",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": [
+              "BTC",
+              "ETH",
+              "USDT",
+              "USDC",
+              "LTC",
+              "DOGE",
+              "XRP",
+              "TRX",
+              "BNB",
+              "SHIB",
+              "TON"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://betplay.io/en/casino",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "Welcome bonus over 3 deposits: 100% up to 1,000 USDT, 50% up to 2,000 USDT, 100% up to 2,000 USDT",
+            "sourcing": "editorial",
+            "sourceUrl": "https://betplay.io/en/info/promotions",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Wagering",
+            "value": "60× the total deposit amount; wagers above the max bet only count up to the max bet",
+            "sourcing": "editorial",
+            "sourceUrl": "https://betplay.io/en/info/promotions",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Expiry",
+            "value": "7 days to claim each bonus, 30 days to complete it",
+            "sourcing": "editorial",
+            "sourceUrl": "https://betplay.io/en/info/promotions",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Restrictions",
+            "value": "Live dealer, table games and some other games excluded from the welcome bonus; cashback excludes sportsbook and live dealer",
+            "sourcing": "editorial",
+            "sourceUrl": "https://betplay.io/en/info/promotions",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Weekly cashback",
+            "value": "10% weekly cashback from VIP Bronze I, paid Thursdays around 13:00 UTC; up to $20,000 a week",
+            "sourcing": "editorial",
+            "sourceUrl": "https://betplay.io/en/info/promotions",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "VIP levels",
+            "value": "Bronze I to Obsidian: free spins at every level, crypto cash drops at set levels (Doge, Litecoin, Bitcoin)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://betplay.io/en/info/promotions",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Leaderboards",
+            "value": "$2,000 Weekly Raffle ($100 per winning ticket), $1,000 Weekly Race, $1,500 Originals Tournament",
+            "sourcing": "editorial",
+            "sourceUrl": "https://betplay.io/en/info/promotions",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Licence",
+            "value": "No gaming licence stated on its site; terms are governed by Costa Rican law",
+            "sourcing": "editorial",
+            "sourceUrl": "https://betplay.io/en/info/terms",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Company",
+            "value": "LAMA TECH, LIMITADA (Costa Rica, corporate ID 3-102-857685)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://betplay.io/en/casino",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "KYC policy",
+            "value": "No verification requirement in its terms; personal data collected is listed as email address and usage data",
+            "sourcing": "editorial",
+            "sourceUrl": "https://betplay.io/en/info/terms",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Restricted countries",
+            "value": "Aruba, Austria, Bonaire, Curaçao, French Guiana, French Polynesia, Guernsey, Gibraltar, Hungary, Isle of Man, Japan, Jersey, Liechtenstein, Luxembourg, Martinique, Mayotte, Réunion, Slovakia, Spain, United States, United Kingdom, Turkey, Poland",
+            "sourcing": "editorial",
+            "sourceUrl": "https://betplay.io/en/info/terms",
+            "asOf": "2026-09-15"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "operatorSlug": "bitcasino-io",
     "groups": [
       {

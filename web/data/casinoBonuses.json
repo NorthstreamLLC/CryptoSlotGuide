@@ -254,5 +254,65 @@
         "sourceNote": "Rollbit's own race page, screenshot-verified — rollbit.com blocks automated fetches"
       }
     ]
+  },
+  {
+    "operatorSlug": "betplay",
+    "bonuses": [
+      {
+        "title": "Welcome bonus",
+        "category": "Deposit bonus · new players",
+        "headline": "5,000 USDT",
+        "subCopy": "Across the first three deposits: 100% up to 1,000 USDT, then 50% up to 2,000, then 100% up to 2,000. Live dealer and table games don't count.",
+        "stats": [
+          {
+            "label": "Wagering",
+            "value": "60× deposit"
+          },
+          {
+            "label": "Time to complete",
+            "value": "30 days"
+          }
+        ],
+        "asOf": "2026-09-15",
+        "sourceUrl": "https://betplay.io/en/info/promotions"
+      },
+      {
+        "title": "10% Weekly Cashback",
+        "category": "VIP · Bronze I and up",
+        "headline": "10%",
+        "subCopy": "Paid automatically every Thursday around 13:00 UTC; higher VIP levels raise the share. Sportsbook and live dealer bets excluded.",
+        "stats": [
+          {
+            "label": "Paid",
+            "value": "Thursdays"
+          },
+          {
+            "label": "Weekly cap",
+            "value": "$20,000"
+          }
+        ],
+        "asOf": "2026-09-15",
+        "sourceUrl": "https://betplay.io/en/info/promotions"
+      },
+      {
+        "title": "Weekly Raffle",
+        "category": "Raffle · all players",
+        "headline": "$2,000",
+        "subCopy": "Tickets earned by wagering; 20 winning tickets pay $100 each. Betplay also runs a $1,000 Weekly Race.",
+        "stats": [
+          {
+            "label": "Per ticket",
+            "value": "$100"
+          },
+          {
+            "label": "Draw time",
+            "value": "15:00"
+          }
+        ],
+        "asOf": "2026-09-15",
+        "endsLabel": "Draws weekly",
+        "sourceUrl": "https://betplay.io/en/info/promotions"
+      }
+    ]
   }
 ]
