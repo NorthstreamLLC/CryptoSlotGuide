@@ -192,5 +192,30 @@
         "sourceUrl": "https://www.razed.com/promotions/vip-transfer/"
       }
     ]
+  },
+  {
+    "operatorSlug": "rollbit",
+    "bonuses": [
+      {
+        "title": "$25K Daily Race",
+        "category": "Leaderboard · resets daily",
+        "headline": "$25,000",
+        "subCopy": "Daily wager race paying the top places, from $10,000 for 1st down to $300 for 10th.",
+        "stats": [
+          {
+            "label": "1st / 2nd / 3rd",
+            "value": "$10K / $5K / $2K"
+          },
+          {
+            "label": "10th place",
+            "value": "$300"
+          }
+        ],
+        "asOf": "2026-09-15",
+        "endsLabel": "Resets every 24 hours",
+        "sourceUrl": "https://rollbit.com/",
+        "sourceNote": "Rollbit's own race page, screenshot-verified — rollbit.com blocks automated fetches"
+      }
+    ]
   }
 ]
