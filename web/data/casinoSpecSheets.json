@@ -4510,6 +4510,63 @@
     "operatorSlug": "toshibet",
     "groups": [
       {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Stated withdrawal time",
+            "value": "Its site title advertises Instant Withdrawals; its own guide says withdrawals are typically processed quickly, depending on the cryptocurrency",
+            "sourcing": "editorial",
+            "sourceUrl": "https://toshi.bet/blog/how-to-navigate-toshi-bet-your-ultimate-guide",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": [
+              "BTC",
+              "ETH",
+              "USDT",
+              "USDC",
+              "SOL",
+              "LTC",
+              "DOGE",
+              "XRP",
+              "BNB",
+              "AVAX",
+              "TON"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://toshi.bet/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Coin list note",
+            "value": "The footer's Accepted Currencies badge shows 8 coins; its deposit links cover 11, adding BNB, AVAX and TON",
+            "sourcing": "editorial",
+            "sourceUrl": "https://toshi.bet/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Deposit limits",
+            "value": "No maximum deposit for any cryptocurrency; minimums are shown per coin in the cashier",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.toshi.bet/en/articles/9986441-crypto-deposit-rules",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Deposit fees",
+            "value": "You pay the blockchain network fee; most coins are credited as soon as they confirm, up to about a minute for coins like BTC or DOGE",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.toshi.bet/en/articles/9986153-crypto-deposit-assistance",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
         "title": "Bonus terms",
         "facts": [
           {
@@ -4525,10 +4582,31 @@
         "title": "Compliance",
         "facts": [
           {
+            "label": "Licence",
+            "value": "Anjouan, licence ALSI-202601015-FI1 issued by the Offshore Finance Authority; the licence validator linked from its site showed Operating status VALID on 15 Sep 2026, with toshibet.com as the registered website (the casino runs on toshi.bet)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://toshi.bet/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Company",
+            "value": "BowToYourSensei Ltd, Suite 305, Griffith Corporate Centre, Kingstown, St Vincent and the Grenadines",
+            "sourcing": "editorial",
+            "sourceUrl": "https://toshi.bet/",
+            "asOf": "2026-09-15"
+          },
+          {
             "label": "KYC policy",
             "value": "Its help centre says it will never KYC you, whatever the amount",
             "sourcing": "editorial",
             "sourceUrl": "https://help.toshi.bet/en/articles/9986441-crypto-deposit-rules",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Restricted countries",
+            "value": "Its Anjouan licence doesn't cover Australia, Comoros, France, Netherlands, Spain, the United Kingdom or the USA, or FATF-blacklisted and sanctioned jurisdictions",
+            "sourcing": "editorial",
+            "sourceUrl": "https://toshi.bet/",
             "asOf": "2026-09-15"
           }
         ]

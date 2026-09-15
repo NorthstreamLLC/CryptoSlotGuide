@@ -346,7 +346,9 @@
     "ETH",
     "USDT",
     "LTC",
-    "DOGE"
+    "SOL",
+    "DOGE",
+    "XRP"
   ],
   "flush": [
     "BTC",

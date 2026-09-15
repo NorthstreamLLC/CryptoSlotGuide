@@ -753,7 +753,9 @@
     "ln": false,
     "sports": true,
     "esports": false,
-    "hasCustomReview": false
+    "hasCustomReview": false,
+    "payoutStated": "Instant",
+    "payoutStatedMaxMins": 0
   },
   {
     "slug": "flush",
