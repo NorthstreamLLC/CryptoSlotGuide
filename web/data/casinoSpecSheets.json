@@ -83,6 +83,116 @@
     ]
   },
   {
+    "operatorSlug": "7bit",
+    "groups": [
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Stated withdrawal time",
+            "value": "BTC withdrawals listed as instant; FAQ: approved-ID requests processed instantly",
+            "sourcing": "editorial",
+            "sourceUrl": "https://7bitcasino.com/payments",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal fees",
+            "value": "BTC listed as free; its FAQ mentions minor charges from 7Bit",
+            "sourcing": "editorial",
+            "sourceUrl": "https://7bitcasino.com/payments",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Minimum withdrawal",
+            "value": "BTC 1 mBTC (its FAQ says 0.26 mBTC)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://7bitcasino.com/payments",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": [
+              "BTC",
+              "ETH",
+              "USDT",
+              "LTC",
+              "DOGE",
+              "XRP",
+              "TRX"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://7bitcasino.com/faq",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "First deposit 100% + 100 free spins (page text: 325% up to 5.25 BTC over 4 deposits)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://7bitcasino.com/bonuses",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Wagering",
+            "value": "35×",
+            "sourcing": "editorial",
+            "sourceUrl": "https://7bitcasino.com/bonuses",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Expiry",
+            "value": "Bonuses expire after 14 days if wagering isn't met",
+            "sourcing": "editorial",
+            "sourceUrl": "https://7bitcasino.com/bonuses",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Max cashout",
+            "value": "Free-spin max win 1.3 mBTC",
+            "sourcing": "editorial",
+            "sourceUrl": "https://7bitcasino.com/bonuses",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Licence",
+            "value": "Curaçao Gaming Authority, licence OGL/2024/1307/0748",
+            "sourcing": "editorial",
+            "sourceUrl": "https://7bitcasino.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Company",
+            "value": "Scores55 Tech B.V. (Curaçao, reg. 162990)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://7bitcasino.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "KYC policy",
+            "value": "Withdrawals unlock after verification: ID, address and payment proof",
+            "sourcing": "editorial",
+            "sourceUrl": "https://7bitcasino.com/terms-and-conditions",
+            "asOf": "2026-09-15"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "operatorSlug": "acebet",
     "groups": [
       {
@@ -203,6 +313,109 @@
             "sourcing": "editorial",
             "sourceUrl": "https://bc.game/licenses",
             "asOf": "2026-09-14"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "operatorSlug": "betfury",
+    "groups": [
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Stated withdrawal time",
+            "value": "Over 95% processed within minutes; can take 24–72 hours (terms: up to 7 days or more)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://betfury.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal fees",
+            "value": "Terms reserve the right to change the withdrawal fee; amount not stated",
+            "sourcing": "editorial",
+            "sourceUrl": "https://docs.betfury.com/betfury/terms-of-services/terms-and-conditions",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": [
+              "BTC",
+              "ETH",
+              "USDT",
+              "LTC",
+              "SOL",
+              "DOGE",
+              "TRX"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://betfury.com/",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "Welcome pack up to 590% deposit bonus + 225 free spins over 3 deposits",
+            "sourcing": "editorial",
+            "sourceUrl": "https://betfury.com/promo/welcome-pack-bonus",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Wagering",
+            "value": "40× on slots and live games",
+            "sourcing": "editorial",
+            "sourceUrl": "https://betfury.com/promo/welcome-pack-bonus",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Expiry",
+            "value": "14 days to wager each welcome bonus",
+            "sourcing": "editorial",
+            "sourceUrl": "https://betfury.com/promo/welcome-pack-bonus",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Max cashout",
+            "value": "Free-spin winnings max $550; max deposit bonus $10,500",
+            "sourcing": "editorial",
+            "sourceUrl": "https://betfury.com/promo/welcome-pack-bonus",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Licence",
+            "value": "Curaçao, OGL/2024/1494/0942 (footer: operating on a certificate while the application concludes)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://docs.betfury.com/betfury/terms-of-services/terms-and-conditions",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Company",
+            "value": "Universe B Games B.V., reg. 155126 (footer says N.V.)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://docs.betfury.com/betfury/terms-of-services/terms-and-conditions",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "KYC policy",
+            "value": "May request KYC documentation at any time",
+            "sourcing": "editorial",
+            "sourceUrl": "https://docs.betfury.com/betfury/terms-of-services/terms-and-conditions",
+            "asOf": "2026-09-15"
           }
         ]
       }
@@ -1215,6 +1428,206 @@
     ]
   },
   {
+    "operatorSlug": "fortunejack",
+    "groups": [
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Stated withdrawal time",
+            "value": "Crypto: usually within 30 minutes (its USDC page says around three minutes on average)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://fortunejack.com/faq/faq",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal fees",
+            "value": "May include a small network or processing fee, shown at withdrawal",
+            "sourcing": "editorial",
+            "sourceUrl": "https://fortunejack.com/faq/terms_and_conditions",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Minimum withdrawal",
+            "value": "Shown on site when withdrawing; fiat minimum €20",
+            "sourcing": "editorial",
+            "sourceUrl": "https://fortunejack.com/faq/terms_and_conditions",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": [
+              "BTC",
+              "ETH",
+              "USDT",
+              "LTC",
+              "SOL",
+              "DOGE",
+              "TRX"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://fortunejack.com/faq/terms_and_conditions",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "Up to 500% casino welcome bonus, paid as free spins over 4 missions",
+            "sourcing": "editorial",
+            "sourceUrl": "https://fortunejack.com/promotions/welcome-bonus",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Wagering",
+            "value": "Deposit wagered 10× per mission to unlock the free spins",
+            "sourcing": "editorial",
+            "sourceUrl": "https://fortunejack.com/promotions/welcome-bonus",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Expiry",
+            "value": "14 days to complete missions; free spins used within 3 days",
+            "sourcing": "editorial",
+            "sourceUrl": "https://fortunejack.com/promotions/welcome-bonus",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Licence",
+            "value": "Anjouan, licence ALSI-202411021-FI1",
+            "sourcing": "editorial",
+            "sourceUrl": "https://fortunejack.com/faq/terms_and_conditions",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Company",
+            "value": "PlayWave SRL (Costa Rica, reg. 3-102-914970)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://fortunejack.com/faq/terms_and_conditions",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "KYC policy",
+            "value": "ID and proof of address once total deposits reach $10,000, or on suspicious activity",
+            "sourcing": "editorial",
+            "sourceUrl": "https://fortunejack.com/faq/faq",
+            "asOf": "2026-09-15"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "operatorSlug": "gamba",
+    "groups": [
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Stated withdrawal time",
+            "value": "Over 90% processed instantly; manual reviews average under 3 minutes",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.gamba.com/en/articles/8271522-how-to-make-a-withdrawal",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal fees",
+            "value": "Network fee deducted from the withdrawal; no Gamba fee stated",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.gamba.com/en/articles/8271519-minimum-deposit-withdrawal-limits",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Minimum withdrawal",
+            "value": "1.5× the current network transaction fee",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.gamba.com/en/articles/8271519-minimum-deposit-withdrawal-limits",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": [
+              "BTC",
+              "ETH",
+              "USDT",
+              "LTC",
+              "SOL",
+              "DOGE",
+              "XRP",
+              "TRX"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.gamba.com/en/articles/8271506-how-to-make-a-deposit",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "Rakeback on every bet, up to 10% at the highest VIP levels",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.gamba.com/en/articles/8271547-rakeback-bonus-explained",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Expiry",
+            "value": "Rakeback never expires",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.gamba.com/en/articles/8271547-rakeback-bonus-explained",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Licence",
+            "value": "Anjouan, licence ALSI-152512013-F13",
+            "sourcing": "editorial",
+            "sourceUrl": "https://gamba.com/policies/license",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Company",
+            "value": "Gamba Gaming N.V. (reg. 162205)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://gamba.com/policies/license",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "KYC policy",
+            "value": "No KYC required to play; four optional verification levels",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.gamba.com/en/articles/14277353-kyc-verification-on-gamba",
+            "asOf": "2026-09-15"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "operatorSlug": "gamdom",
     "groups": [
       {
@@ -1545,6 +1958,115 @@
     ]
   },
   {
+    "operatorSlug": "mbit",
+    "groups": [
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Stated withdrawal time",
+            "value": "Processed within a maximum of 10 minutes (homepage: 95% approved in under 15 minutes)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.mbitcasino.io/en/articles/4421708-how-long-does-a-withdrawal-take-to-be-approved",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal fees",
+            "value": "No mBit fee; blockchain or wallet fees may apply",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.mbitcasino.io/en/articles/4383567-are-there-any-fees-for-deposits-and-withdrawals",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Minimum withdrawal",
+            "value": "Per coin, e.g. BTC 0.00035, ETH 0.010, USDT 10",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.mbitcasino.io/payment-methods",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": [
+              "BTC",
+              "ETH",
+              "USDT",
+              "LTC",
+              "XRP",
+              "TRX"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.mbitcasino.io/payment-methods",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "First deposit: 100% up to 1 BTC + 100 free spins (minimum 30 USDT)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.mbitcasino.io/promotions/first-deposit-bonus",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Wagering",
+            "value": "40× the bonus",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.mbitcasino.io/terms/bonus-terms",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Expiry",
+            "value": "Deposit bonuses valid for 1 day unless stated otherwise",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.mbitcasino.io/terms/bonus-terms",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Max cashout",
+            "value": "Welcome free-spin winnings capped at 0.00048 BTC",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.mbitcasino.io/terms/bonus-terms",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Licence",
+            "value": "Curaçao Gaming Control Board, licence OGL/2024/1307/0748",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.mbitcasino.io/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Company",
+            "value": "Scores55 Tech B.V. (Curaçao, reg. 162990)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.mbitcasino.io/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "KYC policy",
+            "value": "May check identity before paying out; extra checks above 1 BTC",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.mbitcasino.io/terms/player-terms",
+            "asOf": "2026-09-15"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "operatorSlug": "metawin",
     "groups": [
       {
@@ -1794,6 +2316,54 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.rainbet.com/en/articles/15264824-kyc",
             "asOf": "2026-09-14"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "operatorSlug": "razed",
+    "groups": [
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Withdrawal fees",
+            "value": "Each coin has its own fee, which sets the minimum withdrawal",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.razed.com/en/articles/8777871-cryptocurrency-withdrawal-limits",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Minimum withdrawal",
+            "value": "Shown in the cashier per coin; no maximum withdrawal",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.razed.com/en/articles/8777871-cryptocurrency-withdrawal-limits",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "VIP rank-up cash rewards (e.g. $20 at $10,000 wagered) plus rakeback",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.razed.com/en/articles/9079076-razed-com-vip-program-overview",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "KYC policy",
+            "value": "Compliance team may request any necessary documents",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.razed.com/en/articles/8777486-acceptable-documents-for-proof-of-identity",
+            "asOf": "2026-09-15"
           }
         ]
       }

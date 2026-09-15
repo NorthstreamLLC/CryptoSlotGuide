@@ -258,6 +258,31 @@ What changed on the site because of it:
 `editoriallyAuditedOperators.json` was deliberately not extended — the
 per-criterion badges now reflect exactly which facts exist instead.
 
+## Full-index sourcing pass — 42 of 46 casinos
+
+Extended 15 Sep 2026 to every casino on the index, same rules as the
+top-12 pass above (operator's own pages only, wording kept, NOT FOUND
+left blank). 42 of 46 now carry a cited spec sheet. Withdrawal times shown
+anywhere on the site come from `lib/payout.ts`: timed figure if
+field-tested, else the operator's stated time (`payoutStated`,
+`payoutStatedMaxMins` = its worst case), else "Not stated". The
+prototype `payout`/`payoutLabel` values are no longer displayed or
+ranked on.
+
+- **Removed:** Betstrike — its site now shows only a shut-down notice.
+- **No data (blocked everywhere tried):** Rollbit, Betplay, CoinCasino,
+  1win. Their pages show "Not stated" / "Not yet checked".
+- **Partial (geo-walls):** Degen and DegenCity licence pages, Razed's main
+  site, Toshibet's main site, Whale.io's FAQ, Duel's cashier.
+- **Corrections found in this pass:** FortuneJack is Anjouan-licensed
+  (was Curaçao); wagering corrected for mBit (40×), 7Bit (35×), BetFury
+  (40×), Rainbet, Cloudbet, Goated (35×), Flush (30×), Bluff (40×),
+  Sportsbet.io (40× casino), 500 Casino (40×); several KYC levels and
+  sportsbook/esports flags; coin lists for most operators.
+- **Conflicts on operators' own sites** are recorded on the fact itself
+  (e.g. Acebet's FAQ says 5–15 minutes, its terms two banking days), and
+  sorting uses the worst case.
+
 ## Casino bonuses section + the sign-up CTA was never actually a link
 
 Added 14 Sep 2026. The goal, per the site owner: since CryptoSlotGuide

@@ -134,6 +134,7 @@
     "ETH",
     "USDT",
     "LTC",
+    "SOL",
     "DOGE",
     "TRX"
   ],
@@ -142,7 +143,8 @@
     "ETH",
     "USDT",
     "LTC",
-    "DOGE"
+    "XRP",
+    "TRX"
   ],
   "7bit": [
     "BTC",
@@ -150,7 +152,8 @@
     "USDT",
     "LTC",
     "DOGE",
-    "XRP"
+    "XRP",
+    "TRX"
   ],
   "betplay": [
     "BTC",
@@ -221,15 +224,17 @@
     "LTC",
     "SOL",
     "DOGE",
-    "XRP",
     "TRX"
   ],
   "gamba": [
     "BTC",
     "ETH",
     "USDT",
+    "LTC",
     "SOL",
-    "DOGE"
+    "DOGE",
+    "XRP",
+    "TRX"
   ],
   "solcasino": [
     "BTC",
