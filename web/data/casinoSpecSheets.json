@@ -1,5 +1,171 @@
 [
   {
+    "operatorSlug": "500-casino",
+    "groups": [
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Stated withdrawal time",
+            "value": "All crypto withdrawals are instant; a small share flagged for review may take longer",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.500.casino/en/articles/5925226-how-long-does-it-take-for-my-cryptocurrency-withdraw-to-get-sent",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal fees",
+            "value": "Crypto transaction fee covered by the user, deducted from the amount; some coins have no fee",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.500.casino/en/articles/5971747-do-i-have-to-pay-an-additional-fee-when-withdrawing-cryptocurrency",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "Welcome Package: 300% of deposit up to $15,000 as a rakeback boost, plus 50 free spins",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.500.casino/en/articles/9239792-how-does-the-new-welcome-package-work",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Wagering",
+            "value": "Bonus balance 40× (casino); rakeback boost unlocks $1 per $400 wagered",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.500.casino/en/articles/9239792-how-does-the-new-welcome-package-work",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Expiry",
+            "value": "Bonus available 14 days; rakeback boost active 90 days",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.500.casino/en/articles/9239792-how-does-the-new-welcome-package-work",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Max cashout",
+            "value": "3× the rakeback boost of the original deposit, plus $1,000 from free spins",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.500.casino/en/articles/9239792-how-does-the-new-welcome-package-work",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Licence",
+            "value": "Curaçao Gaming Control Board, licence OGL/2024/1354/0882",
+            "sourcing": "editorial",
+            "sourceUrl": "https://500.casino/static/terms/terms-of-service.pdf",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Company",
+            "value": "Perfect Storm B.V. (reg. 150536, Curaçao)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://500.casino/static/terms/terms-of-service.pdf",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "KYC policy",
+            "value": "May request any KYC documentation, to be provided within 7 calendar days",
+            "sourcing": "editorial",
+            "sourceUrl": "https://500.casino/static/terms/terms-of-service.pdf",
+            "asOf": "2026-09-15"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "operatorSlug": "acebet",
+    "groups": [
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Stated withdrawal time",
+            "value": "FAQ: typically 5–15 minutes; terms: within two banking days",
+            "sourcing": "editorial",
+            "sourceUrl": "https://acebet.co/policies/terms-of-service",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": [
+              "BTC",
+              "ETH",
+              "USDT",
+              "LTC",
+              "SOL",
+              "DOGE",
+              "XRP",
+              "TRX"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://acebet.co/",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "Free $10 plus up to 200% bonus on deposits up to $10",
+            "sourcing": "editorial",
+            "sourceUrl": "https://acebet.co/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Expiry",
+            "value": "Unused bonus may be removed after 1 month",
+            "sourcing": "editorial",
+            "sourceUrl": "https://acebet.co/policies/terms-of-service",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Licence",
+            "value": "Anjouan Offshore Financial Authority; FAQ cites no. 15831 (the footer calls it a company registration)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://acebet.co/policies/licensing",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Company",
+            "value": "Golden Frog Inc., Anjouan (reg. 15831)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://acebet.co/policies/licensing",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "KYC policy",
+            "value": "May require KYC/AML documents at its discretion",
+            "sourcing": "editorial",
+            "sourceUrl": "https://acebet.co/policies/terms-of-service",
+            "asOf": "2026-09-15"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "operatorSlug": "bc-game",
     "groups": [
       {
@@ -37,6 +203,109 @@
             "sourcing": "editorial",
             "sourceUrl": "https://bc.game/licenses",
             "asOf": "2026-09-14"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "operatorSlug": "bitcasino-io",
+    "groups": [
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Stated withdrawal time",
+            "value": "Most withdrawals processed within a few minutes; large or unusual ones handled manually",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bitcasino.io/help-center/help-your-transactions/how-long-does-deposit-withdrawal-take-",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal fees",
+            "value": "Reserves the right to deduct incurred transaction fees; any method fee shown in the cashier",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bitcasino.io/help-center/help-terms-and-conditions/bitcasino-terms-and-conditions-of-use-of-services-of-the-company",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Minimum withdrawal",
+            "value": "Varies by coin, e.g. BTC 0.0005, ETH 0.01, USDT 20",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bitcasino.io/help-center/help-your-transactions/what-is-the-minimum-withdrawal",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": [
+              "BTC",
+              "ETH",
+              "USDT",
+              "LTC",
+              "DOGE",
+              "XRP",
+              "TRX"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://bitcasino.io/help-center/help-payment-options/what-cryptocurrencies-do-you-support",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "Welcome: up to 5,000 USDT over three deposits (its reward T&C also says it offers no welcome rewards)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bitcasino.io/promotions/2025-05-22-bitcasino-welcome-row",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Wagering",
+            "value": "30× on bonus money",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bitcasino.io/promotions/2025-05-22-bitcasino-welcome-row",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Expiry",
+            "value": "Wagering must be completed within 7 days",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bitcasino.io/promotions/2025-05-22-bitcasino-welcome-row",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Licence",
+            "value": "Curaçao, licence OGL/2023/111/0069 (issued by GCB, extended by CGA)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bitcasino.io/help-center/help-terms-and-conditions/our-license",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Company",
+            "value": "Moon Technologies B.V. (Curaçao)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bitcasino.io/help-center/help-terms-and-conditions/our-license",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "KYC policy",
+            "value": "Additional KYC may apply to withdrawals over €2,500, or smaller ones",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bitcasino.io/help-center/help-terms-and-conditions/bitcasino-terms-and-conditions-of-use-of-services-of-the-company",
+            "asOf": "2026-09-15"
           }
         ]
       }
@@ -147,6 +416,82 @@
     ]
   },
   {
+    "operatorSlug": "bluff",
+    "groups": [
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Stated withdrawal time",
+            "value": "Usually arrive within seconds or minutes; not guaranteed",
+            "sourcing": "editorial",
+            "sourceUrl": "https://intercom.help/playlink/en/articles/14536822-withdrawal-timeframe",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Minimum withdrawal",
+            "value": "USD 20 or equivalent",
+            "sourcing": "editorial",
+            "sourceUrl": "https://intercom.help/playlink/en/articles/14536391-before-you-withdraw",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "120% first USDT deposit match up to $1,000 (an older FAQ says 100%)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://intercom.help/playlink/en/articles/15363485-120-first-deposit-bonus-usdt-only-up-to-1-000",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Wagering",
+            "value": "40× (deposit + bonus)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://intercom.help/playlink/en/articles/15363485-120-first-deposit-bonus-usdt-only-up-to-1-000",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Max cashout",
+            "value": "Maximum convertible amount $1,200",
+            "sourcing": "editorial",
+            "sourceUrl": "https://intercom.help/playlink/en/articles/15363485-120-first-deposit-bonus-usdt-only-up-to-1-000",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Licence",
+            "value": "Anjouan, licence ALSI-202506028-FI1",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bluff.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Company",
+            "value": "Wink Wink Ltd (Anjouan, reg. 16036)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bluff.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "KYC policy",
+            "value": "Usually not needed to withdraw; required if you opt into a bonus",
+            "sourcing": "editorial",
+            "sourceUrl": "https://intercom.help/playlink/en/articles/14536391-before-you-withdraw",
+            "asOf": "2026-09-15"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "operatorSlug": "cloudbet",
     "groups": [
       {
@@ -251,6 +596,364 @@
     ]
   },
   {
+    "operatorSlug": "cybet",
+    "groups": [
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Stated withdrawal time",
+            "value": "From a few minutes up to one hour",
+            "sourcing": "editorial",
+            "sourceUrl": "https://guidebook.cybet.com/withdrawal/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal fees",
+            "value": "Withdrawal fee of $1 to $3",
+            "sourcing": "editorial",
+            "sourceUrl": "https://guidebook.cybet.com/withdrawal/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Minimum withdrawal",
+            "value": "$10",
+            "sourcing": "editorial",
+            "sourceUrl": "https://guidebook.cybet.com/withdrawal/",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": [
+              "BTC",
+              "ETH",
+              "USDT",
+              "LTC",
+              "SOL",
+              "DOGE",
+              "TRX"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://guidebook.cybet.com/about-cybet/",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "100% Welcome Bonus on the first deposit (listed for 1 June – 1 October 2026)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://cybet.com/promotions/details/DepositBonusCode",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Wagering",
+            "value": "40× base; effectively 40×–400× depending on game type",
+            "sourcing": "editorial",
+            "sourceUrl": "https://cybet.com/promotions/details/DepositBonusCode",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Expiry",
+            "value": "Valid for 14 days from activation",
+            "sourcing": "editorial",
+            "sourceUrl": "https://cybet.com/promotions/details/DepositBonusCode",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Max cashout",
+            "value": "5× initial deposit (promo page); its guidebook says 10× deposit + bonus",
+            "sourcing": "editorial",
+            "sourceUrl": "https://cybet.com/promotions/details/DepositBonusCode",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Licence",
+            "value": "Anjouan, licence ALSI-202409034-FI2",
+            "sourcing": "editorial",
+            "sourceUrl": "https://cybet.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Company",
+            "value": "Eskimo Adventures Ltd (Belize, reg. 000043034)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://cybet.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "KYC policy",
+            "value": "Risk-based; full KYC only when needed for security or compliance",
+            "sourcing": "editorial",
+            "sourceUrl": "https://guidebook.cybet.com/kyc/",
+            "asOf": "2026-09-15"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "operatorSlug": "degen",
+    "groups": [
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Stated withdrawal time",
+            "value": "Usually instant once submitted",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.degen.com/en/articles/12573437-how-long-do-withdrawals-take",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": [
+              "BTC",
+              "ETH",
+              "USDT",
+              "LTC",
+              "SOL",
+              "XRP"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.degen.com/en/articles/12573245-which-cryptocurrencies-and-networks-are-supported",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "Rakeback from 3%, rising to 8% by VIP rank",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.degen.com/en/articles/12570521-rakeback",
+            "asOf": "2026-09-15"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "operatorSlug": "degencity",
+    "groups": [
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Stated withdrawal time",
+            "value": "Usually processed instantly; should arrive within up to 1 hour",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.degencity.com/en/articles/13868915-how-to-withdraw",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": [
+              "BTC",
+              "ETH",
+              "USDT",
+              "LTC",
+              "TRX"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.degencity.com/en/articles/13868262-how-to-deposit-crypto",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "Instant, weekly and monthly rakeback from Chiplet rank; rakeback doesn't expire",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.degencity.com/en/articles/13870117-what-are-rakeback-rewards-and-how-do-i-claim-them",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "KYC policy",
+            "value": "Can generally deposit, play and withdraw without KYC",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.degencity.com/en/articles/13869866-how-to-verify-my-identity",
+            "asOf": "2026-09-15"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "operatorSlug": "dicey",
+    "groups": [
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Withdrawal fees",
+            "value": "Network fees deducted from the withdrawal; no Dicey fee stated",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.dicey.com/en/articles/12611645-how-to-deposit-and-withdraw",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Minimum withdrawal",
+            "value": "$1 per token; USDT (TRX) $2.50",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.dicey.com/en/articles/12611654-supported-currencies-and-tokens",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": [
+              "BTC",
+              "ETH",
+              "USDT",
+              "SOL"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.dicey.com/en/articles/12611654-supported-currencies-and-tokens",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "Sports Welcome Bonus: 100% match up to $1,000",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.dicey.com/en/articles/16182871-how-does-the-sports-welcome-bonus-work",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Wagering",
+            "value": "15× deposit + bonus on sports, minimum odds 1.5",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.dicey.com/en/articles/16182871-how-does-the-sports-welcome-bonus-work",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Licence",
+            "value": "Anjouan, licence ALSI-202511054-FI2",
+            "sourcing": "editorial",
+            "sourceUrl": "https://dicey.com/casino",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Company",
+            "value": "3-102-943011 S.R.L.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://dicey.com/casino",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "KYC policy",
+            "value": "May require verification and photo ID, including before withdrawals",
+            "sourcing": "editorial",
+            "sourceUrl": "https://dicey.com/terms-of-service",
+            "asOf": "2026-09-15"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "operatorSlug": "duel",
+    "groups": [
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Withdrawal fees",
+            "value": "Duel doesn't profit from withdrawal fees; users cover network/processing fees",
+            "sourcing": "editorial",
+            "sourceUrl": "https://duel.com/policies/tos",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "No deposit bonuses — Duel publishes a page arguing against them",
+            "sourcing": "editorial",
+            "sourceUrl": "https://duel.com/about/why-bonuses-suck",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Licence",
+            "value": "Anjouan, licence ALSI-202411026-FI1",
+            "sourcing": "editorial",
+            "sourceUrl": "https://duel.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Company",
+            "value": "Immortal Snail LLC (reg. L22982, Nevis)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://duel.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "KYC policy",
+            "value": "Reserves the right to request KYC before processing a withdrawal",
+            "sourcing": "editorial",
+            "sourceUrl": "https://duel.com/policies/tos",
+            "asOf": "2026-09-15"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "operatorSlug": "duelbits",
     "groups": [
       {
@@ -348,6 +1051,170 @@
     ]
   },
   {
+    "operatorSlug": "dustbit",
+    "groups": [
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Stated withdrawal time",
+            "value": "Usually processed within 5–10 minutes",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.dustbit.com/en/articles/14667156-how-long-do-withdrawals-take",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal fees",
+            "value": "Fees, if applicable, disclosed before the transaction",
+            "sourcing": "editorial",
+            "sourceUrl": "https://dustbit.com/legal/terms",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": [
+              "BTC",
+              "LTC",
+              "SOL",
+              "DOGE",
+              "XRP",
+              "TRX"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://dustbit.com/faqs",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "VIP rakeback up to 50%, depending on VIP level",
+            "sourcing": "editorial",
+            "sourceUrl": "https://dustbit.com/vip-program",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Licence",
+            "value": "Anjouan, licence ALSI-202509012-FI1",
+            "sourcing": "editorial",
+            "sourceUrl": "https://dustbit.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Company",
+            "value": "Oxilium Limited (Belize, 000047923)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://dustbit.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "KYC policy",
+            "value": "No KYC required to play or withdraw; may request ID or source of funds",
+            "sourcing": "editorial",
+            "sourceUrl": "https://dustbit.com/faqs",
+            "asOf": "2026-09-15"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "operatorSlug": "flush",
+    "groups": [
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Stated withdrawal time",
+            "value": "Under 2 minutes (homepage); FAQ: processed instantly on Flush's side, most arrive within minutes",
+            "sourcing": "editorial",
+            "sourceUrl": "https://flush.com/faq/withdrawals/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal fees",
+            "value": "No platform fee; blockchain network fee only",
+            "sourcing": "editorial",
+            "sourceUrl": "https://flush.com/faq/withdrawals/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Minimum withdrawal",
+            "value": "Terms: $10 per transaction; FAQ: $1 for most coins, ETH $10, BTC $30",
+            "sourcing": "editorial",
+            "sourceUrl": "https://flush.com/terms-of-service/",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "Welcome bonus across the first 3 deposits, up to $3,000 total",
+            "sourcing": "editorial",
+            "sourceUrl": "https://flush.com/faq/bonuses/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Wagering",
+            "value": "30× deposit + bonus (35× on the 150% tier)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://flush.com/faq/bonuses/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Expiry",
+            "value": "Each bonus tier expires 30 days after activation",
+            "sourcing": "editorial",
+            "sourceUrl": "https://flush.com/bonus-terms/",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Licence",
+            "value": "Anjouan, licence ALSI-202509008-FI1",
+            "sourcing": "editorial",
+            "sourceUrl": "https://flush.com/terms-of-service/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Company",
+            "value": "Fordegens Limitada (Costa Rica, 3102928865)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://flush.com/terms-of-service/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "KYC policy",
+            "value": "Not required for standard play; may be requested in specific cases",
+            "sourcing": "editorial",
+            "sourceUrl": "https://flush.com/faq/",
+            "asOf": "2026-09-15"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "operatorSlug": "gamdom",
     "groups": [
       {
@@ -425,6 +1292,412 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.gamdom.com/en/articles/13250444-how-and-when-to-verify-your-account",
             "asOf": "2026-09-14"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "operatorSlug": "goated",
+    "groups": [
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Stated withdrawal time",
+            "value": "Instant withdrawals — a homepage title claim; no timeframe in its help centre",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.goated.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal fees",
+            "value": "Payment methods may include additional fees",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.goated.com/policies/terms",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": [
+              "BTC",
+              "ETH",
+              "USDT",
+              "LTC",
+              "SOL",
+              "XRP",
+              "TRX"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.goated.com/help/article/9378854-supported-deposits-and-withdrawals",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "100% first deposit bonus up to $1,000 (minimum deposit $20)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.goated.com/help/article/16424322-100-first-deposit-bonus-up-to-1-000-usd",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Wagering",
+            "value": "35× (deposit + bonus)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.goated.com/help/article/16424322-100-first-deposit-bonus-up-to-1-000-usd",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Licence",
+            "value": "Anjouan, licence ALSI-202411063-FI2",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.goated.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Company",
+            "value": "Mirai Kaze Ltd (reg. 16180, Anjouan)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.goated.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "KYC policy",
+            "value": "Level 1 (name, date of birth, address) required to bet and withdraw; ID and address at higher levels",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.goated.com/",
+            "asOf": "2026-09-15"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "operatorSlug": "housebets",
+    "groups": [
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Stated withdrawal time",
+            "value": "Instant — paid out automatically as soon as you submit the request",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.housebets.com/en/articles/819710-how-long-do-withdrawals-take",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal fees",
+            "value": "Fee shown per coin and network in the wallet; no fixed figure stated",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.housebets.com/en/articles/822146-what-are-the-deposit-and-withdrawal-minimums-and-fees",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Minimum withdrawal",
+            "value": "Differs per coin and network; no single figure",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.housebets.com/en/articles/822146-what-are-the-deposit-and-withdrawal-minimums-and-fees",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": [
+              "BTC",
+              "ETH",
+              "USDT",
+              "LTC",
+              "SOL",
+              "DOGE",
+              "TRX"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.housebets.com/en/articles/822145-which-currencies-and-networks-can-i-use",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "Rewards Slider: instant, daily, weekly and monthly rakeback or lossback",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.housebets.com/en/articles/822155-how-to-set-your-weekly-and-monthly-rewards-sliders",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Wagering",
+            "value": "0× on regular rakeback; deposits need 1× playthrough",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.housebets.com/en/articles/822162-do-bonuses-have-wagering-requirements-or-an-expiry",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Expiry",
+            "value": "Unclaimed bonuses may be cancelled after the claim period or 60 days, whichever is shorter",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.housebets.com/en/articles/822162-do-bonuses-have-wagering-requirements-or-an-expiry",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Licence",
+            "value": "Curaçao Gaming Control Board, licence OGL/2024/431/0231",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.housebets.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Company",
+            "value": "Bridge Technologies B.V. (reg. 160264(0))",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.housebets.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "KYC policy",
+            "value": "Not a standard step; most players are never asked for documents",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.housebets.com/en/articles/819721-check-your-verification-status",
+            "asOf": "2026-09-15"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "operatorSlug": "jackpotbet",
+    "groups": [
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Stated withdrawal time",
+            "value": "Typically processed instantly; can take up to two working days",
+            "sourcing": "editorial",
+            "sourceUrl": "https://jackpot.bet/trust?tab=tos",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Expiry",
+            "value": "Standard bonus-funds expiry is 30 days",
+            "sourcing": "editorial",
+            "sourceUrl": "https://jackpot.bet/trust?tab=tos",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Licence",
+            "value": "Anjouan (terms governed by Anjouan law; licence number not stated)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://jackpot.bet/trust?tab=tos",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Company",
+            "value": "Take The Crown LLC, St Vincent & the Grenadines (3701 LLC 2024)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://jackpot.bet/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "KYC policy",
+            "value": "Reserves the right to verify identity; documents may be required",
+            "sourcing": "editorial",
+            "sourceUrl": "https://jackpot.bet/trust?tab=tos",
+            "asOf": "2026-09-15"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "operatorSlug": "metawin",
+    "groups": [
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Stated withdrawal time",
+            "value": "Typically instant; in some instances up to 24 hours",
+            "sourcing": "editorial",
+            "sourceUrl": "https://metawin.com/faq/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal fees",
+            "value": "$2.50 fee on all withdrawals",
+            "sourcing": "editorial",
+            "sourceUrl": "https://metawin.com/faq/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Minimum withdrawal",
+            "value": "$20 minimum swap-out (custodial or Web3 wallet)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://metawin.com/faq/",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": [
+              "BTC",
+              "ETH",
+              "USDT",
+              "LTC",
+              "SOL",
+              "DOGE",
+              "XRP",
+              "TRX"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://metawin.com/faq/",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "MetaMax loyalty program; rank-up prizes up to $1,000,000",
+            "sourcing": "editorial",
+            "sourceUrl": "https://metawin.com/faq/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Expiry",
+            "value": "Some MetaMax rewards expire if not claimed in time",
+            "sourcing": "editorial",
+            "sourceUrl": "https://metawin.com/faq/",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Licence",
+            "value": "Anjouan, licence ALSI-202602025-FI1",
+            "sourcing": "editorial",
+            "sourceUrl": "https://metawin.com/terms-and-conditions/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Company",
+            "value": "Rivolo Limited, Nevis (C62588)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://metawin.com/terms-and-conditions/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "KYC policy",
+            "value": "Identification at onboarding and ongoing; photo ID and selfie",
+            "sourcing": "editorial",
+            "sourceUrl": "https://metawin.com/kyc/",
+            "asOf": "2026-09-15"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "operatorSlug": "qzino",
+    "groups": [
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Stated withdrawal time",
+            "value": "Processing can take up to seven days or longer",
+            "sourcing": "editorial",
+            "sourceUrl": "https://qzino.tech/docs/Qzino_Terms_and_Conditions.pdf",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal fees",
+            "value": "Reserves the right to change withdrawal fees without notice (amount not stated)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://qzino.tech/docs/Qzino_Terms_and_Conditions.pdf",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "Cashback up to 40% twice a week; rakeback up to 15%",
+            "sourcing": "editorial",
+            "sourceUrl": "https://qzino.ai/vip-club",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Licence",
+            "value": "Anjouan, licence ALSI-202503015-FI1",
+            "sourcing": "editorial",
+            "sourceUrl": "https://qzino.ai/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Company",
+            "value": "CG Universe, Costa Rica (reg. 3-102-919306)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://qzino.ai/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "KYC policy",
+            "value": "May require verification: photo ID and proof of address",
+            "sourcing": "editorial",
+            "sourceUrl": "https://qzino.tech/docs/Qzino_Terms_and_Conditions.pdf",
+            "asOf": "2026-09-15"
           }
         ]
       }
@@ -648,6 +1921,102 @@
     ]
   },
   {
+    "operatorSlug": "shock",
+    "groups": [
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Stated withdrawal time",
+            "value": "Most withdrawals processed within a few minutes; crypto mostly within 1–5 minutes",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.shock.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal fees",
+            "value": "Network fees apply; no Shock fee stated",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.shock.com/en/articles/10070289-how-to-withdraw-tokens-from-your-wallet",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": [
+              "BTC",
+              "ETH",
+              "USDT",
+              "LTC",
+              "SOL",
+              "XRP",
+              "TRX"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.shock.com/en/articles/10396330-supported-cryptocurrency-networks",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "Welcome Bonus: 100% match on the first deposit, up to a $1,500 deposit (claimed via support)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.shock.com/policies/bonus-terms",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Wagering",
+            "value": "35× deposit + bonus; $10 max bet",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.shock.com/policies/bonus-terms",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Expiry",
+            "value": "Bonus amounts don't expire",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.shock.com/policies/bonus-terms",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Licence",
+            "value": "Government of Curaçao gaming licence",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.shock.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Company",
+            "value": "PR Entertainment N.V. (reg. 163398)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.shock.com/policies/terms",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "KYC policy",
+            "value": "Email, name, address, occupation and date of birth required to deposit or withdraw; ID checks at its discretion",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.shock.com/policies/aml-kyc",
+            "asOf": "2026-09-15"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "operatorSlug": "shuffle",
     "groups": [
       {
@@ -732,6 +2101,306 @@
             "sourcing": "editorial",
             "sourceUrl": "https://shuffle.com/info/terms",
             "asOf": "2026-09-14"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "operatorSlug": "solcasino",
+    "groups": [
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Stated withdrawal time",
+            "value": "Aims to pay out within 1 hour; terms also cite a 10-minute average",
+            "sourcing": "editorial",
+            "sourceUrl": "https://docs.solcasino.io/rules-and-conditions/terms-and-condition",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal fees",
+            "value": "No fee to a Web3 wallet (network gas only); flat-rate fee to a non-Web3 wallet",
+            "sourcing": "editorial",
+            "sourceUrl": "https://docs.solcasino.io/rules-and-conditions/terms-and-condition",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": [
+              "BTC",
+              "ETH",
+              "USDT",
+              "SOL",
+              "DOGE",
+              "XRP"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://docs.solcasino.io/how-to-play/supported-tokens",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "180% / 240% / 300% / 360% deposit bonuses in USDB on the first four deposits; 5% default rakeback",
+            "sourcing": "editorial",
+            "sourceUrl": "https://docs.solcasino.io/calendar-bonuses-and-rewards/360-deposit-bonus",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Wagering",
+            "value": "USDB unlocks gradually at 1‰ of the amount wagered",
+            "sourcing": "editorial",
+            "sourceUrl": "https://docs.solcasino.io/calendar-bonuses-and-rewards/360-deposit-bonus",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Max cashout",
+            "value": "Up to 20,000 / 40,000 / 60,000 / 100,000 USDB per deposit tier",
+            "sourcing": "editorial",
+            "sourceUrl": "https://docs.solcasino.io/calendar-bonuses-and-rewards/360-deposit-bonus",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Licence",
+            "value": "Tobique Gaming Commission (licence number not stated)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://docs.solcasino.io/rules-and-conditions/terms-and-condition",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Company",
+            "value": "Three Gaming Limitada, Costa Rica (reg. 3-102-910242)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://docs.solcasino.io/rules-and-conditions/terms-and-condition",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "KYC policy",
+            "value": "Users agree to KYC checks via Sumsub; a selfie with ID may be required",
+            "sourcing": "editorial",
+            "sourceUrl": "https://docs.solcasino.io/rules-and-conditions/terms-and-condition",
+            "asOf": "2026-09-15"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "operatorSlug": "spartans",
+    "groups": [
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Stated withdrawal time",
+            "value": "FAQ: most processed in under 15 minutes; terms: within minutes after verification",
+            "sourcing": "editorial",
+            "sourceUrl": "https://spartans.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal fees",
+            "value": "Network fees not covered by Spartans; no Spartans fee stated",
+            "sourcing": "editorial",
+            "sourceUrl": "https://spartans.com/help-center/general-terms-and-conditions",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": [
+              "BTC",
+              "ETH",
+              "USDT",
+              "LTC",
+              "SOL"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://spartans.com/help-center/general-terms-and-conditions",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "33% CashRake, capped at 33% of deposits",
+            "sourcing": "editorial",
+            "sourceUrl": "https://spartans.com/how-cashrake-works",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Wagering",
+            "value": "None — credited as real cash",
+            "sourcing": "editorial",
+            "sourceUrl": "https://spartans.com/promotions",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Expiry",
+            "value": "Claim within 24 hours to avoid expiry",
+            "sourcing": "editorial",
+            "sourceUrl": "https://spartans.com/how-cashrake-works",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Licence",
+            "value": "Anjouan, licence ALSI-202409038-FI2",
+            "sourcing": "editorial",
+            "sourceUrl": "https://spartans.com/help-center/about-us",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Company",
+            "value": "Nexus International Entertainment Ltd (Belize, reg. 000043488)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://spartans.com/help-center/about-us",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "KYC policy",
+            "value": "ID verification before the first withdrawal",
+            "sourcing": "editorial",
+            "sourceUrl": "https://spartans.com/help-center/kyc-policy",
+            "asOf": "2026-09-15"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "operatorSlug": "sportsbet-io",
+    "groups": [
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Stated withdrawal time",
+            "value": "Most cryptocurrency withdrawals are processed instantly",
+            "sourcing": "editorial",
+            "sourceUrl": "https://sportsbet.io/help-centre/help-getting-started/help-transactions/how-long-do-withdrawals-take",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal fees",
+            "value": "Help centre: Sportsbet.io covers the crypto transaction fee; T&C reserves the right to deduct fees",
+            "sourcing": "editorial",
+            "sourceUrl": "https://sportsbet.io/help-centre/help-getting-started/help-transactions/what-is-the-minimum-withdrawal",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Minimum withdrawal",
+            "value": "Varies by coin, e.g. BTC 0.0005, USDT 20",
+            "sourcing": "editorial",
+            "sourceUrl": "https://sportsbet.io/help-centre/help-getting-started/help-transactions/what-is-the-minimum-withdrawal",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": [
+              "BTC",
+              "ETH",
+              "USDT",
+              "LTC",
+              "SOL",
+              "DOGE",
+              "XRP",
+              "TRX"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://sportsbet.io/help-centre/help-payments/help-payments-using-crypto/what-cryptocurrencies-do-you-support",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "Champions Welcome: 100% up to 300 USDT, sports or casino, for selected first-time depositors",
+            "sourcing": "editorial",
+            "sourceUrl": "https://sportsbet.io/promotions/2025-04-welcome-champion",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Wagering",
+            "value": "25× on the sports bonus; 40× on the casino bonus",
+            "sourcing": "editorial",
+            "sourceUrl": "https://sportsbet.io/promotions/2025-04-welcome-champion",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Expiry",
+            "value": "Wagering within 7 days of claiming",
+            "sourcing": "editorial",
+            "sourceUrl": "https://sportsbet.io/promotions/2025-04-welcome-champion",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Max cashout",
+            "value": "Max release amount is 10× the max bonus amount",
+            "sourcing": "editorial",
+            "sourceUrl": "https://sportsbet.io/promotions/2025-04-welcome-champion",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Licence",
+            "value": "Curaçao Gaming Authority, licence OGL/2023/110/0072",
+            "sourcing": "editorial",
+            "sourceUrl": "https://sportsbet.io/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Company",
+            "value": "mBet Solutions N.V. (no. 129230, Curaçao)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://sportsbet.io/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "KYC policy",
+            "value": "Additional KYC may apply to withdrawals over €2,500, or smaller ones",
+            "sourcing": "editorial",
+            "sourceUrl": "https://sportsbet.io/help-centre/help-other/help-other-terms-and-conditions/general-terms-conditions",
+            "asOf": "2026-09-15"
           }
         ]
       }
@@ -916,6 +2585,236 @@
     ]
   },
   {
+    "operatorSlug": "toshibet",
+    "groups": [
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "200% / 150% / 100% on the first three deposits; $1 unlocked per $250 wagered",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.toshi.bet/en/articles/10017165-deposit-bonus-how-does-it-work",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "KYC policy",
+            "value": "Its help centre says it will never KYC you, whatever the amount",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.toshi.bet/en/articles/9986441-crypto-deposit-rules",
+            "asOf": "2026-09-15"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "operatorSlug": "vave",
+    "groups": [
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Stated withdrawal time",
+            "value": "Varies by currency and method; some requests may take a few hours (help article dated 2023)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.vave.com/withdrawals/how-long-does-it-take-to-withdraw-money/",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": [
+              "BTC",
+              "ETH",
+              "USDT",
+              "LTC",
+              "DOGE",
+              "XRP",
+              "TRX"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.vave.com/platform/what-cryptocurrencies-are-accepted-at-vave/",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "Welcome: 100% cashback bonus (casino and sports), minimum first deposit 20 USDT",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.vave.com/bonuses-and-promotions/is-there-a-welcome-bonus-at-vave/",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Licence",
+            "value": "Curaçao (licence number not stated)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.vave.com/platform/is-vave-crypto-casino-licensed-and-regulated/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Company",
+            "value": "TechOptions Group B.V.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.vave.com/platform/is-vave-crypto-casino-licensed-and-regulated/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "KYC policy",
+            "value": "Generally no documents needed; ID or a selfie may be requested if issues arise",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.vave.com/platform/do-i-need-to-send-you-any-of-my-documents/",
+            "asOf": "2026-09-15"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "operatorSlug": "wager-com",
+    "groups": [
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Withdrawal fees",
+            "value": "None if the deposit is wagered 1×; otherwise an 8% fee (min €4)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://wager.com/policy/term-and-conditions/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Minimum withdrawal",
+            "value": "€10 per transaction (or equivalent)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://wager.com/policy/term-and-conditions/",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Licence",
+            "value": "Anjouan, licence ALSI-2025 01037-FI2 (as written)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://wager.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Company",
+            "value": "Scivias Ltd (Anjouan, reg. 15923)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://wager.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "KYC policy",
+            "value": "Due diligence on withdrawal requests and at EUR 2,000 cumulative withdrawals",
+            "sourcing": "editorial",
+            "sourceUrl": "https://wager.com/policy/aml-policy/",
+            "asOf": "2026-09-15"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "operatorSlug": "whale-io",
+    "groups": [
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Withdrawal fees",
+            "value": "Reserves the right to deduct applicable transaction fees",
+            "sourcing": "editorial",
+            "sourceUrl": "https://whale.io/terms-and-conditions",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Minimum withdrawal",
+            "value": "5 USD (or crypto equivalent)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://whale.io/terms-and-conditions",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "Daily cashback 1–25% by level, plus weekly and monthly bonuses",
+            "sourcing": "editorial",
+            "sourceUrl": "https://whale.io/terms-and-conditions",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Wagering",
+            "value": "1× on cashback, weekly, monthly and personal bonuses",
+            "sourcing": "editorial",
+            "sourceUrl": "https://whale.io/terms-and-conditions",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Expiry",
+            "value": "30 days after crediting if wagering isn't met",
+            "sourcing": "editorial",
+            "sourceUrl": "https://whale.io/terms-and-conditions",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Licence",
+            "value": "Anjouan, licence ALSI-202503012-FI1",
+            "sourcing": "editorial",
+            "sourceUrl": "https://whale.io/terms-and-conditions",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Company",
+            "value": "Whale Operations Ltd., Seychelles",
+            "sourcing": "editorial",
+            "sourceUrl": "https://whale.io/terms-and-conditions",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "KYC policy",
+            "value": "May require KYC for any withdrawal or reward redemption",
+            "sourcing": "editorial",
+            "sourceUrl": "https://whale.io/terms-and-conditions",
+            "asOf": "2026-09-15"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "operatorSlug": "winna",
     "groups": [
       {
@@ -1000,6 +2899,103 @@
             "sourcing": "editorial",
             "sourceUrl": "https://winna.com/aml-kyc",
             "asOf": "2026-09-14"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "operatorSlug": "yeet",
+    "groups": [
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Stated withdrawal time",
+            "value": "Crypto withdrawals typically take a few minutes, or up to 24 hours",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.yeet.com/en/articles/12052341-deposits-withdrawals",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal fees",
+            "value": "Withdrawal fees apply depending on the coin and network congestion",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.yeet.com/en/articles/12052341-deposits-withdrawals",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Minimum withdrawal",
+            "value": "Varies by coin; listed in the cashier",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.yeet.com/en/articles/12052341-deposits-withdrawals",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": [
+              "BTC",
+              "ETH",
+              "USDT",
+              "LTC",
+              "SOL",
+              "DOGE",
+              "XRP",
+              "TRX"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.yeet.com/en/articles/12052341-deposits-withdrawals",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "Instant Rakeback: 5% from Bronze VIP, up to 10% at Chairman",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.yeet.com/en/articles/14046420-instant-rakeback",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Expiry",
+            "value": "Instant Rakeback does not expire",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.yeet.com/en/articles/14046420-instant-rakeback",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Licence",
+            "value": "Anjouan, licence ALSI-20251036-FI2",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.yeet.com/en/articles/12052402-license-regulation",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Company",
+            "value": "Pacific Edge Ltd (named as operator reference in its complaints policy)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.yeet.com/en/articles/15692217-complaints-policy",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "KYC policy",
+            "value": "Level 1 KYC required to deposit; further KYC may be requested on any withdrawal",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.yeet.com/en/articles/12052341-deposits-withdrawals",
+            "asOf": "2026-09-15"
           }
         ]
       }

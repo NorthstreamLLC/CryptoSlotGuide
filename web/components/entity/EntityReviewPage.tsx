@@ -246,7 +246,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
 
         {isCasino && <CasinoBonuses slug={e.slug} />}
         {isCasino && <OnChainActivity slug={e.slug} />}
-        {isCasino && <CasinoSpecSheet slug={e.slug} />}
+        {(isCasino || e.type === "wallet" || e.type === "exchange") && <CasinoSpecSheet slug={e.slug} kind={e.type === "wallet" ? "wallet" : e.type === "exchange" ? "exchange" : "casino"} />}
 
         <div style={{ padding: "20px 24px", borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)", marginBottom: 38 }}>
           <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 13 }}>

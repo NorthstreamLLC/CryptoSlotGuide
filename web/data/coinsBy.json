@@ -99,15 +99,19 @@
     "ETH",
     "USDT",
     "LTC",
-    "TRX",
-    "XRP"
+    "DOGE",
+    "XRP",
+    "TRX"
   ],
   "sportsbet-io": [
     "BTC",
     "ETH",
     "USDT",
     "LTC",
-    "XRP"
+    "SOL",
+    "DOGE",
+    "XRP",
+    "TRX"
   ],
   "500-casino": [
     "BTC",
@@ -121,7 +125,9 @@
     "ETH",
     "USDT",
     "LTC",
-    "DOGE"
+    "DOGE",
+    "XRP",
+    "TRX"
   ],
   "fortunejack": [
     "BTC",
@@ -187,14 +193,19 @@
     "ETH",
     "USDT",
     "LTC",
-    "SOL"
+    "SOL",
+    "XRP",
+    "TRX"
   ],
   "yeet": [
     "BTC",
     "ETH",
     "USDT",
+    "LTC",
     "SOL",
-    "DOGE"
+    "DOGE",
+    "XRP",
+    "TRX"
   ],
   "razed": [
     "BTC",
@@ -221,16 +232,22 @@
     "DOGE"
   ],
   "solcasino": [
-    "SOL",
-    "USDT",
     "BTC",
-    "ETH"
-  ],
-  "metawin": [
     "ETH",
     "USDT",
+    "SOL",
+    "DOGE",
+    "XRP"
+  ],
+  "metawin": [
     "BTC",
-    "SOL"
+    "ETH",
+    "USDT",
+    "LTC",
+    "SOL",
+    "DOGE",
+    "XRP",
+    "TRX"
   ],
   "whale-io": [
     "BTC",
@@ -244,7 +261,10 @@
     "ETH",
     "USDT",
     "LTC",
-    "DOGE"
+    "SOL",
+    "DOGE",
+    "XRP",
+    "TRX"
   ],
   "jackpotbet": [
     "BTC",
@@ -254,10 +274,12 @@
     "DOGE"
   ],
   "degen": [
-    "SOL",
+    "BTC",
     "ETH",
     "USDT",
-    "BTC"
+    "LTC",
+    "SOL",
+    "XRP"
   ],
   "qzino": [
     "BTC",
@@ -271,20 +293,27 @@
     "ETH",
     "USDT",
     "LTC",
-    "SOL"
+    "SOL",
+    "XRP",
+    "TRX"
   ],
   "cybet": [
     "BTC",
     "ETH",
     "USDT",
+    "LTC",
     "SOL",
-    "DOGE"
+    "DOGE",
+    "TRX"
   ],
   "housebets": [
     "BTC",
     "ETH",
     "USDT",
-    "LTC"
+    "LTC",
+    "SOL",
+    "DOGE",
+    "TRX"
   ],
   "dicey": [
     "BTC",
@@ -297,14 +326,7 @@
     "ETH",
     "USDT",
     "LTC",
-    "DOGE"
-  ],
-  "betstrike": [
-    "BTC",
-    "ETH",
-    "USDT",
-    "LTC",
-    "XRP"
+    "SOL"
   ],
   "toshibet": [
     "BTC",
@@ -321,16 +343,19 @@
     "SOL"
   ],
   "degencity": [
-    "SOL",
-    "ETH",
-    "USDT",
-    "BTC"
-  ],
-  "dustbit": [
     "BTC",
     "ETH",
     "USDT",
-    "LTC"
+    "LTC",
+    "TRX"
+  ],
+  "dustbit": [
+    "BTC",
+    "LTC",
+    "SOL",
+    "DOGE",
+    "XRP",
+    "TRX"
   ],
   "wager-com": [
     "BTC",

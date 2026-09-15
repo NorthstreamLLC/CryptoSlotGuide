@@ -137,7 +137,13 @@ function main() {
 
   const ops = readJson("ops.json");
   const sheets = readJson("casinoSpecSheets.json");
-  const opSlugs = new Set(ops.map((o) => o.slug));
+  // Casinos, plus wallets and exchanges — their review pages use the same
+  // sourced fact table (slugs don't collide across these datasets).
+  const opSlugs = new Set([
+    ...ops.map((o) => o.slug),
+    ...readJson("walletRows.json").map((w) => w.slug),
+    ...readJson("exchangeRows.json").map((x) => x.slug),
+  ]);
 
   const raw = readFileSync(resolvedPath, "utf8");
   const table = parseCsv(raw);
@@ -176,7 +182,7 @@ function main() {
     const sourceUrl = get("source_url") || undefined;
     const asOf = get("as_of") || undefined;
 
-    if (!opSlugs.has(operatorSlug)) errors.push(`Line ${lineNo}: unknown operator_slug "${operatorSlug}" (not in data/ops.json)`);
+    if (!opSlugs.has(operatorSlug)) errors.push(`Line ${lineNo}: unknown operator_slug "${operatorSlug}" (not in ops.json, walletRows.json or exchangeRows.json)`);
     if (!groupTitle) errors.push(`Line ${lineNo}: group_title is required`);
     if (!label) errors.push(`Line ${lineNo}: label is required`);
     if (!value && !chips) errors.push(`Line ${lineNo}: needs either value or chips`);

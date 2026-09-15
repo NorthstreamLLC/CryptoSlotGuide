@@ -11,9 +11,10 @@ import type { SpecFact, SpecGroup } from "@/lib/types";
  * it doesn't — see uniformGroupSourcing's comment for why that split is
  * real, not cosmetic.
  */
-export function CasinoSpecSheet({ slug }: { slug: string }) {
+export function CasinoSpecSheet({ slug, kind = "casino" }: { slug: string; kind?: "casino" | "wallet" | "exchange" }) {
   const sheet = getCasinoSpecSheet(slug);
   if (!sheet || sheet.groups.length === 0) return null;
+  const owner = kind === "wallet" ? "wallet maker" : kind === "exchange" ? "exchange" : "operator";
 
   return (
     <div style={{ marginBottom: 38 }}>
@@ -21,9 +22,10 @@ export function CasinoSpecSheet({ slug }: { slug: string }) {
         The full spec sheet
       </h2>
       <p style={{ margin: "0 0 20px", maxWidth: "84ch", fontSize: 15, color: "#8DA0AA", textWrap: "pretty" }}>
-        Every fact below is checked directly against the operator&apos;s own pages, or drawn from data already
-        established elsewhere on this site — see each row for where it came from. On-chain deposit and custody
-        figures, cited separately above, are the one part sourced from a third party rather than verified by us.
+        Every fact below is checked directly against the {owner}&apos;s own pages
+        {kind === "casino" ? ", or drawn from data already established elsewhere on this site" : ""} — see each row for where it
+        came from.
+        {kind === "casino" && " On-chain deposit and custody figures, cited separately above, are the one part sourced from a third party rather than verified by us."}
       </p>
 
       <div style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 13, background: "#0C1013", overflow: "hidden", boxShadow: "0 12px 40px rgba(0,0,0,.35)" }}>
