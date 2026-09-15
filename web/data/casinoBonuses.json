@@ -8,8 +8,14 @@
         "headline": "500%",
         "subCopy": "Cumulative across 4 deposits, unlocked as you wager. Currently at its 220% first tier.",
         "stats": [
-          { "label": "First tier", "value": "220%" },
-          { "label": "Cycle resets", "value": "16d 07h" }
+          {
+            "label": "First tier",
+            "value": "220%"
+          },
+          {
+            "label": "Cycle resets",
+            "value": "16d 07h"
+          }
         ],
         "asOf": "2026-09-14",
         "sourceUrl": "https://bc.game/promotions",
@@ -21,8 +27,14 @@
         "headline": "$20,000",
         "subCopy": "Prize pool, drawn weekly. Tickets are earned by wagering, not purchased.",
         "stats": [
-          { "label": "Ticket = wager", "value": "$100 / day" },
-          { "label": "Or per", "value": "$1,000 wagered" }
+          {
+            "label": "Ticket = wager",
+            "value": "$100 / day"
+          },
+          {
+            "label": "Or per",
+            "value": "$1,000 wagered"
+          }
         ],
         "asOf": "2026-09-14",
         "sourceUrl": "https://bc.game/promotions/weekly-raffle",
@@ -77,6 +89,68 @@
         "endsLabel": "Runs through 1 Jan",
         "sourceUrl": "https://bc.game/promotions",
         "sourceNote": "Operator's own Promotions grid, screenshot-verified"
+      }
+    ]
+  },
+  {
+    "operatorSlug": "razed",
+    "bonuses": [
+      {
+        "title": "VIP rank-up rewards",
+        "category": "VIP Club · all players",
+        "headline": "$20 – $500K",
+        "subCopy": "Cash paid at each new rank, from $20 at Bronze 1 to $500,000 at Onyx. Rakeback, weekly and monthly bonuses start at Bronze.",
+        "stats": [
+          {
+            "label": "Bronze 1",
+            "value": "$10K wagered"
+          },
+          {
+            "label": "Onyx",
+            "value": "$1B wagered"
+          }
+        ],
+        "asOf": "2026-09-15",
+        "sourceUrl": "https://www.razed.com/vip-program/",
+        "sourceNote": "Razed's own in-account VIP page, screenshot-verified — razed.com blocks automated fetches"
+      },
+      {
+        "title": "Daily reload & VIP host",
+        "category": "VIP Club · Gold and up",
+        "headline": "Gold 1",
+        "subCopy": "Daily reload unlocks at Gold 1; a dedicated VIP host from Gold 4; birthday bonus from Platinum 1.",
+        "stats": [
+          {
+            "label": "Gold 1",
+            "value": "$200K wagered"
+          },
+          {
+            "label": "Platinum 1",
+            "value": "$750K wagered"
+          }
+        ],
+        "asOf": "2026-09-15",
+        "sourceUrl": "https://www.razed.com/vip-program/",
+        "sourceNote": "Razed's own in-account VIP page, screenshot-verified — razed.com blocks automated fetches"
+      },
+      {
+        "title": "Milestone prizes",
+        "category": "VIP Club · first to reach",
+        "headline": "Lamborghini",
+        "subCopy": "The first player to reach each top rank wins a prize — a Mercedes G-Wagon at Red Diamond, a Lamborghini Huracán STO at Blue Diamond and a Revuelto at Onyx. Lower-rank prizes are already claimed.",
+        "stats": [
+          {
+            "label": "Red Diamond",
+            "value": "$250M wagered"
+          },
+          {
+            "label": "Onyx",
+            "value": "$1B wagered"
+          }
+        ],
+        "asOf": "2026-09-15",
+        "sourceUrl": "https://www.razed.com/vip-program/",
+        "sourceNote": "Razed's own in-account VIP page, screenshot-verified — razed.com blocks automated fetches"
       }
     ]
   }
