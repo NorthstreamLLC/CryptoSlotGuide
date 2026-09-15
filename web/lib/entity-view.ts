@@ -538,6 +538,9 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
   // formula presented as paytable reads; see data/README.md.
   const readings = rtpWatch.filter((r) => r.operatorSlug === o.slug && !isStaleReading(r.checkedAt));
   const licenceFact = getSpecFact(o.slug, "Compliance", "Licence");
+  // A regulator register check that came back empty outranks the operator naming its own licence body.
+  const notOnRegister = /not found/i.test(getSpecFact(o.slug, "Compliance", "Register check")?.value ?? "");
+  const licenceShown = notOnRegister ? "Not on register" : o.licence;
   // The operator's own stated processing time, cited — preferred over the
   // prototype's precise payoutLabel, which has no source. See data/README.md.
   const statedPayout = getSpecFact(o.slug, "Payouts & fees", "Stated withdrawal time");
@@ -563,7 +566,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
     // The exact payout figure only leads the headline once we've timed it ourselves.
     headline: checked
       ? `${o.name}: ${o.payoutLabel} median withdrawal, ${o.licence} licence, ${coinCount} coins`
-      : `${o.name}: ${pv.kind === "none" ? "" : `${pv.label.toLowerCase()} withdrawals, `}${licenceFact ? (/^not stated$/i.test(o.licence) ? "no licence stated" : `${o.licence} licence`) : ""}${licenceFact && coinsFact ? ", " : ""}${coinsFact ? `${coinCount} coins accepted` : ""}`.replace(/, $/, "").replace(/: $/, ": casino profile"),
+      : `${o.name}: ${pv.kind === "none" ? "" : `${pv.label.toLowerCase()} withdrawals, `}${licenceFact ? (notOnRegister ? "licence not on regulator register" : /^not stated$/i.test(o.licence) ? "no licence stated" : `${o.licence} licence`) : ""}${licenceFact && coinsFact ? ", " : ""}${coinsFact ? `${coinCount} coins accepted` : ""}`.replace(/, $/, "").replace(/: $/, ": casino profile"),
     standfirst: checked
       ? `We ran a funded ${o.name} account — timing real withdrawals and reading the bonus terms line by line.`
       : hasSheet
@@ -593,7 +596,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       { label: "Withdrawal time", value: pv.label, source: pv.kind === "timed" ? "timed" : pv.kind === "stated" ? "cited" : "unchecked" },
       { label: "Bonus wagering", value: wagerFact ? `${o.wager}×` : "Not stated", source: wagerFact ? "cited" : "unchecked" },
       { label: "Coins accepted", value: coinsFact ? String(coinCount) : "Not confirmed", source: coinsFact?.sourcing === "editorial" ? "cited" : "unchecked" },
-      { label: "Licence", value: licenceFact ? o.licence : "Not confirmed", source: licenceFact ? "cited" : "unchecked" },
+      { label: "Licence", value: licenceFact ? licenceShown : "Not confirmed", source: licenceFact ? "cited" : "unchecked" },
       { label: "KYC", value: kycFact ? KYC_LABEL[o.kyc] : "Not confirmed", source: kycFact ? "cited" : "unchecked" },
       onChain
         ? { label: "30-day deposits", value: onChain.value, source: "third-party", sourceName: onChain.source }
@@ -610,7 +613,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
         : { label: "Coins accepted", value: "Not confirmed", note: "No coin list found on its own pages yet" },
       { label: "Bonus wagering", value: wagerFact ? `${o.wager}×` : "Not stated", note: wagerFact?.value ?? "Not found for its headline offer" },
       { label: "KYC", value: kycFact ? KYC_LABEL[o.kyc] : "Not confirmed", note: kycFact?.value ?? "No KYC policy found on its own pages" },
-      { label: "Licence", value: licenceFact ? o.licence : "Not confirmed", note: licenceFact?.value ?? "No licence details found on its own pages" },
+      { label: "Licence", value: licenceFact ? licenceShown : "Not confirmed", note: licenceFact?.value ?? "No licence details found on its own pages" },
     ],
     chipLabel: checked ? "Coins credited on our account" : "Coins accepted",
     chips: coins.map((t) => ({ t, tint: coinTint(t) })),
@@ -656,6 +659,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       ...(wagerFact && !lowWager ? [`${o.wager}× wagering on the headline offer`] : []),
       ...(pv.kind === "none" ? ["No withdrawal time stated on its own pages"] : pv.mins !== null && pv.mins >= 1440 ? [`Stated withdrawal time runs up to ${pv.label.split("–").pop()}`] : []),
       ...(coinsFact && coins.length < siteData.coinDefs.length ? [`Accepts ${coins.length} of the ${siteData.coinDefs.length} coins we track`] : []),
+      ...(notOnRegister ? ["Not found on the regulator's licence register"] : []),
       ...(!licenceFact ? ["No licence details found on its own pages"] : /no gaming licence/i.test(licenceFact.value ?? "") ? ["No gaming licence stated on its own site"] : /no licence number/i.test(licenceFact.value ?? "") ? ["No licence number shown on its own site"] : []),
     ],
     faqs: [
