@@ -3126,6 +3126,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://rollbit.com/",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "KYC policy",
+            "value": "Full KYC: verification in up to 5 levels (ID and camera check), depending on the account",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.rollbit.com/",
+            "asOf": "2026-09-15"
           }
         ]
       },
@@ -3149,6 +3156,13 @@
           {
             "label": "Withdrawal requirements",
             "value": "New accounts must deposit $10 and wager $10; after that, no limits on withdrawals (help article dated May 2022)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.rollbit.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Stated withdrawal time",
+            "value": "Generally instant — a few seconds to 60 minutes, depending on the coin and network traffic",
             "sourcing": "editorial",
             "sourceUrl": "https://help.rollbit.com/",
             "asOf": "2026-09-15"

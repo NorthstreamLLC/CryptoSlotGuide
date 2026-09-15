@@ -83,7 +83,7 @@
     "payout": 7.2,
     "payoutLabel": "7m 12s",
     "licence": "Curaçao",
-    "kyc": "tiered",
+    "kyc": "required",
     "bonus": "5% rakeback + daily, weekly, monthly and rank-up bonuses",
     "wager": 5,
     "conf": 2,
@@ -92,7 +92,9 @@
     "sports": true,
     "esports": false,
     "hasCustomReview": false,
-    "bonusExpiry": "Calendar rewards expire 24 hours after unlocking"
+    "bonusExpiry": "Calendar rewards expire 24 hours after unlocking",
+    "payoutStated": "Seconds–60 min",
+    "payoutStatedMaxMins": 60
   },
   {
     "slug": "bitstarz",
