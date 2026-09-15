@@ -3065,6 +3065,41 @@
             "sourcing": "editorial",
             "sourceUrl": "https://rollbit.com/",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Standing offer",
+            "value": "Rewards Calendar: 5% rakeback on all bets, plus daily, weekly, monthly and rank-up bonuses and discretionary VIP bonuses via support",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.rollbit.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Wagering",
+            "value": "Bonus Balance (lottery and Discord giveaway winnings) must be wagered 5×; no wagering stated on calendar rewards",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.rollbit.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "How rewards pay out",
+            "value": "Rakeback 50% now, 50% over 3 days; daily and weekly 20% now, 80% over 7 days; rank-up 80% over 21 days; monthly 80% over 30 days",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.rollbit.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Expiry",
+            "value": "Calendar unlocks at 00:00, 08:00 and 16:00 UTC; each unlock expires if not claimed within 24 hours",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.rollbit.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Restrictions",
+            "value": "Bonus Balance can be used on casino and house games, not crypto trading, challenges, bonus battles or NFT lootboxes",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.rollbit.com/",
+            "asOf": "2026-09-15"
           }
         ]
       },

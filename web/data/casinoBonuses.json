@@ -197,6 +197,43 @@
     "operatorSlug": "rollbit",
     "bonuses": [
       {
+        "title": "5% Rakeback",
+        "category": "Rewards Calendar · all players",
+        "headline": "5%",
+        "subCopy": "Rakeback on every bet, claimable every 30 minutes — half paid straight to your balance, half added to the Rewards Calendar over 3 days. Each calendar claim adds an hour of +15% Rakeboost.",
+        "stats": [
+          {
+            "label": "Claim every",
+            "value": "30 minutes"
+          },
+          {
+            "label": "Paid now",
+            "value": "50%"
+          }
+        ],
+        "asOf": "2026-09-15",
+        "sourceUrl": "https://help.rollbit.com/"
+      },
+      {
+        "title": "Daily, weekly & monthly bonuses",
+        "category": "Rewards Calendar · all players",
+        "headline": "3 recurring",
+        "subCopy": "Personalised on your wagering and profit and loss, with lossback in the weekly and monthly. 20% is paid immediately; the rest drips through the calendar over 7, 7 and 30 days.",
+        "stats": [
+          {
+            "label": "Weekly drops",
+            "value": "Sundays"
+          },
+          {
+            "label": "Monthly drops",
+            "value": "1st of month"
+          }
+        ],
+        "asOf": "2026-09-15",
+        "endsLabel": "Unlocked rewards expire after 24 hours",
+        "sourceUrl": "https://help.rollbit.com/"
+      },
+      {
         "title": "$25K Daily Race",
         "category": "Leaderboard · resets daily",
         "headline": "$25,000",
