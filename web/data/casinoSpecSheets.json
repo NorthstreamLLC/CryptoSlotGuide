@@ -60,6 +60,42 @@
             "asOf": "2026-09-15"
           }
         ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": [
+              "BTC",
+              "ETH",
+              "USDT",
+              "USDC",
+              "SOL",
+              "BNB",
+              "TRX",
+              "TON",
+              "LTC",
+              "BCH",
+              "XRP",
+              "DOGE",
+              "XLM",
+              "DASH",
+              "ZEC",
+              "XMR"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://1win.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Card and bank",
+            "value": "Fiat deposits by Visa or Mastercard card, Apple Pay and Google Pay (shown in NOK on the account checked); crypto deposits can also be made by connecting a wallet such as MetaMask or WalletConnect",
+            "sourcing": "editorial",
+            "sourceUrl": "https://1win.com/",
+            "asOf": "2026-09-15"
+          }
+        ]
       }
     ]
   },
