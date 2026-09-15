@@ -1,5 +1,69 @@
 [
   {
+    "operatorSlug": "1win",
+    "groups": [
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "Welcome deposit bonuses up to 500% across the first four deposits: 100% + 70 free spins, 120% + 100 FS, 130% + 150 FS, 150% + 180 FS",
+            "sourcing": "editorial",
+            "sourceUrl": "https://1win.com/bonuses",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Claim window",
+            "value": "Each welcome bonus showed a countdown of just under 30 days on a new account when checked",
+            "sourcing": "editorial",
+            "sourceUrl": "https://1win.com/bonuses",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "First deposit offer",
+            "value": "+100% on the first deposit; minimum deposit shown as kr250 on the account checked (currency varies by region)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://1win.com/bonuses",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Bonus withdrawals",
+            "value": "Its homepage FAQ says bonus funds are withdrawable once wagering requirements are met; no wagering figure found yet",
+            "sourcing": "editorial",
+            "sourceUrl": "https://1win.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "VIP levels",
+            "value": "20 levels by total bet amount: Bronze 1–3 (starting level, then $5,000 and $10,000), Silver 1–3 ($25K–$100K), Gold 1–3 ($250K–$1M), Platinum 1–3 ($2.5M–$10M), Diamond 1–3 ($25M–$100M), Black 1–5 ($250M–$5B)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://1win.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Perks by level",
+            "value": "Cashback from Bronze 1, higher at each level; rakeback from Bronze 2; VIP Club access and private tournaments from Gold 3; VIP manager, concierge, manager bonuses, gifts and merch from Platinum 1; trips to VIP events from Platinum 3",
+            "sourcing": "editorial",
+            "sourceUrl": "https://1win.com/",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "KYC policy",
+            "value": "Risk-based identity checks, initial and ongoing: name, residential address and source of funds at minimum; ID, proof of address and a bank statement may be requested at any time",
+            "sourcing": "editorial",
+            "sourceUrl": "https://1win.com/",
+            "asOf": "2026-09-15"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "operatorSlug": "500-casino",
     "groups": [
       {

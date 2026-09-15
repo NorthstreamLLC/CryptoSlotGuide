@@ -392,5 +392,49 @@
         "sourceNote": "CoinCasino's own Promotions page, screenshot-verified — coincasino.com blocks automated fetches"
       }
     ]
+  },
+  {
+    "operatorSlug": "1win",
+    "bonuses": [
+      {
+        "title": "Welcome deposit bonuses",
+        "category": "Deposit bonus · new players",
+        "headline": "Up to 500%",
+        "subCopy": "Across the first four deposits, each with free spins: 100% + 70 FS, 120% + 100 FS, 130% + 150 FS and 150% + 180 FS. We haven't found the wagering requirement yet.",
+        "stats": [
+          {
+            "label": "1st deposit",
+            "value": "100% + 70 FS"
+          },
+          {
+            "label": "4th deposit",
+            "value": "150% + 180 FS"
+          }
+        ],
+        "asOf": "2026-09-15",
+        "endsLabel": "Just under 30 days to claim on a new account",
+        "sourceUrl": "https://1win.com/bonuses",
+        "sourceNote": "1win's own in-account Bonus page, screenshot-verified"
+      },
+      {
+        "title": "Levels and Rewards",
+        "category": "VIP · all players",
+        "headline": "20 levels",
+        "subCopy": "Cashback from Bronze 1 and rakeback from Bronze 2. VIP Club access and private tournaments unlock at Gold 3, a VIP manager and concierge at Platinum 1, and trips to VIP events at Platinum 3.",
+        "stats": [
+          {
+            "label": "Gold 3",
+            "value": "$1M bet"
+          },
+          {
+            "label": "Black 5",
+            "value": "$5B bet"
+          }
+        ],
+        "asOf": "2026-09-15",
+        "sourceUrl": "https://1win.com/",
+        "sourceNote": "1win's own in-account VIP page, screenshot-verified"
+      }
+    ]
   }
 ]
