@@ -90,7 +90,7 @@
           },
           {
             "label": "Card and bank",
-            "value": "Fiat deposits by Visa or Mastercard card, Apple Pay and Google Pay (shown in NOK on the account checked); crypto deposits can also be made by connecting a wallet such as MetaMask or WalletConnect",
+            "value": "Fiat deposit currency picker lists at least 62 currencies, including USD, EUR, CAD, AUD, JPY, KRW, BRL, MXN, TRY and NOK; in NOK the methods shown were Visa or Mastercard card, Apple Pay and Google Pay (methods may differ by currency); crypto deposits can also be made by connecting a wallet such as MetaMask or WalletConnect",
             "sourcing": "editorial",
             "sourceUrl": "https://1win.com/",
             "asOf": "2026-09-15"
