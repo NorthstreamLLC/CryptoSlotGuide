@@ -119,7 +119,7 @@
         "title": "VIP rank-up rewards",
         "category": "VIP Club · all players",
         "headline": "$20 – $500K",
-        "subCopy": "Cash paid at each new rank, from $20 at Bronze 1 to $500,000 at Onyx. Rakeback, weekly and monthly bonuses start at Bronze.",
+        "subCopy": "Cash paid at each new rank, from $20 at Bronze 1 to $500,000 at Onyx. Rakeback and the monthly bonus start from Starter; the weekly bonus from Bronze 1.",
         "stats": [
           {
             "label": "Bronze 1",
@@ -138,7 +138,7 @@
         "title": "Daily reload & VIP host",
         "category": "VIP Club · Gold and up",
         "headline": "Gold 1",
-        "subCopy": "Daily reload unlocks at Gold 1; a dedicated VIP host from Gold 4; birthday bonus from Platinum 1.",
+        "subCopy": "Daily reload from Gold 1, based on your last 7 days of play; a dedicated VIP host from Gold 4; birthday bonus from Platinum for verified profiles.",
         "stats": [
           {
             "label": "Gold 1",
@@ -150,7 +150,7 @@
           }
         ],
         "asOf": "2026-09-15",
-        "sourceUrl": "https://www.razed.com/vip-program/",
+        "sourceUrl": "https://www.razed.com/promotions/vip-transfer/",
         "sourceNote": "Razed's own in-account VIP page, screenshot-verified — razed.com blocks automated fetches"
       },
       {
@@ -171,6 +171,25 @@
         "asOf": "2026-09-15",
         "sourceUrl": "https://www.razed.com/vip-program/",
         "sourceNote": "Razed's own in-account VIP page, screenshot-verified — razed.com blocks automated fetches"
+      },
+      {
+        "title": "VIP transfer",
+        "category": "Promotion · switching casinos",
+        "headline": "Bronze 1 – Diamond",
+        "subCopy": "Bring a VIP rank from another casino through live support, with proof of status. The rank unlocks permanently once you hit set deposit and wager targets. One per person and household.",
+        "stats": [
+          {
+            "label": "Published",
+            "value": "2 Aug 2025"
+          },
+          {
+            "label": "Valid until",
+            "value": "29 Jan 2027"
+          }
+        ],
+        "asOf": "2026-09-15",
+        "endsLabel": "Valid until 29 Jan 2027",
+        "sourceUrl": "https://www.razed.com/promotions/vip-transfer/"
       }
     ]
   }

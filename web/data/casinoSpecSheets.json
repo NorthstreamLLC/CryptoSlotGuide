@@ -2923,6 +2923,13 @@
         "title": "Payouts & fees",
         "facts": [
           {
+            "label": "Stated withdrawal time",
+            "value": "Instant crypto deposits and withdrawals (VIP transfer page)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.razed.com/promotions/vip-transfer/",
+            "asOf": "2026-09-15"
+          },
+          {
             "label": "Withdrawal fees",
             "value": "Each coin has its own fee, which sets the minimum withdrawal",
             "sourcing": "editorial",
@@ -2943,9 +2950,9 @@
         "facts": [
           {
             "label": "Standing offer",
-            "value": "VIP Club: instant rakeback, weekly, monthly and rank-up bonuses from Bronze; VIP host and daily bonus from Gold; birthday bonus from Platinum; personalised benefits and milestone rewards at Diamond+",
+            "value": "VIP Club: rakeback and monthly bonus from Starter; weekly bonus and rank-up rewards from Bronze 1; reward points you allocate to spins, cases, lossback, reloads, bonus buys or rakeback",
             "sourcing": "editorial",
-            "sourceUrl": "https://www.razed.com/vip-program/",
+            "sourceUrl": "https://www.razed.com/promotions/vip-transfer/",
             "asOf": "2026-09-15"
           },
           {
@@ -2957,9 +2964,9 @@
           },
           {
             "label": "Perks by rank",
-            "value": "Daily reload from Gold 1; dedicated VIP host from Gold 4; birthday bonus from Platinum 1; personalised benefits from Diamond",
+            "value": "Daily reload from Gold 1 (based on the last 7 days); VIP host from Gold 4; birthday bonus from Platinum for verified profiles; personalised benefits from Diamond",
             "sourcing": "editorial",
-            "sourceUrl": "https://www.razed.com/vip-program/",
+            "sourceUrl": "https://www.razed.com/promotions/vip-transfer/",
             "asOf": "2026-09-15"
           },
           {
@@ -2975,6 +2982,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://www.razed.com/promotions/",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "VIP transfer",
+            "value": "Bring a VIP rank from another casino (Bronze 1 to Diamond) via live support; one per person and household; rank unlocks permanently after set wager targets",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.razed.com/promotions/vip-transfer/",
+            "asOf": "2026-09-15"
           }
         ]
       },
@@ -2982,8 +2996,22 @@
         "title": "Compliance",
         "facts": [
           {
+            "label": "Licence",
+            "value": "Anjouan, licence ALSI-132405034-FI3",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.razed.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Company",
+            "value": "Wild Technology Ltd. (Costa Rica, reg. 3-102-898807); payment agent DEDARIO LTD (Cyprus, HE 478894)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.razed.com/",
+            "asOf": "2026-09-15"
+          },
+          {
             "label": "KYC policy",
-            "value": "No KYC for crypto play, per its VIP transfer page; its AML policy says ID documents are requested when you withdraw",
+            "value": "Describes itself as a No-KYC crypto casino; its AML policy says ID documents are requested when you withdraw",
             "sourcing": "editorial",
             "sourceUrl": "https://www.razed.com/promotions/vip-transfer/",
             "asOf": "2026-09-15"

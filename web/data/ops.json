@@ -451,14 +451,16 @@
     "payoutLabel": "7m 00s",
     "licence": "Anjouan",
     "kyc": "none",
-    "bonus": "VIP Club: instant rakeback, weekly, monthly and rank-up bonuses",
+    "bonus": "VIP Club: rakeback, weekly and monthly bonuses, rank-up rewards",
     "wager": 1,
     "conf": 1,
     "absorbsFee": false,
     "ln": false,
     "sports": true,
     "esports": false,
-    "hasCustomReview": false
+    "hasCustomReview": false,
+    "payoutStated": "Instant",
+    "payoutStatedMaxMins": 0
   },
   {
     "slug": "betfury",
