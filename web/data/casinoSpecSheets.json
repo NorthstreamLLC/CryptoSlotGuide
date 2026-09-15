@@ -1168,7 +1168,7 @@
           },
           {
             "label": "Card and bank",
-            "value": "Fiat deposits listed in the cashier (USD, EUR, JPY, NOK and more); terms say card deposits go through third-party payment processors; Buy Crypto and WalletConnect deposits also offered",
+            "value": "Fiat deposits in 9 currencies listed in the cashier: USD, EUR, CAD, AUD, NZD, BRL, JPY, NOK and PLN; terms say card deposits go through third-party payment processors; Buy Crypto and WalletConnect deposits also offered",
             "sourcing": "editorial",
             "sourceUrl": "https://www.coincasino.com/",
             "asOf": "2026-09-15"
