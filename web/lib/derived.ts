@@ -225,7 +225,7 @@ export function casinoCons(
   const out: (string | null)[] = [];
   if (o.wager > 1) out.push(`${o.wager}× wagering makes the headline offer far less valuable than it reads`);
   if (o.conf > 1) out.push(`${o.conf} confirmations before the balance is playable, so a busy block costs you real time`);
-  if (o.payout > med) out.push(`Median withdrawal of ${o.payoutLabel} sits above the index median of ${fmtMins(med)}`);
+  if (o.payout > med) out.push(`Listed withdrawal time of ${o.payoutLabel} sits above the index median of ${fmtMins(med)}`);
   if (ctx.liveCasinos.some((l) => l.slug === o.slug)) out.push(liveCon(ctx.liveCasinos, o.slug));
   if (!o.absorbsFee) out.push("Network fee is deducted from the withdrawal rather than absorbed");
   if (missing.length) out.push(`No ${missing.slice(0, 2).join(" or ")} support on the cashier`);

@@ -497,6 +497,10 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
   // formula presented as paytable reads; see data/README.md.
   const readings = rtpWatch.filter((r) => r.operatorSlug === o.slug && !isStaleReading(r.checkedAt));
   const licenceFact = getSpecFact(o.slug, "Compliance", "Licence");
+  // The operator's own stated processing time, cited — preferred over the
+  // prototype's precise payoutLabel, which has no source. See data/README.md.
+  const statedPayout = getSpecFact(o.slug, "Payouts & fees", "Stated withdrawal time");
+  const statedHost = statedPayout?.sourceUrl ? new URL(statedPayout.sourceUrl).hostname.replace(/^www./, "") : "";
   return {
     type: "casino",
     kicker: "Casino review",
@@ -505,7 +509,10 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
     mono: o.mono,
     tint: tintFor(o.slug),
     score: o.score.toFixed(1),
-    headline: `${o.name} review 2026: ${o.payoutLabel} median payout, ${o.wager}× wagering, ${o.kyc === "none" ? "no" : o.kyc} KYC`,
+    // The exact payout figure only leads the headline once we've timed it ourselves.
+    headline: checked
+      ? `${o.name} review 2026: ${o.payoutLabel} median payout, ${o.wager}× wagering, ${o.kyc === "none" ? "no" : o.kyc} KYC`
+      : `${o.name} review 2026: ${o.wager}× wagering, ${o.kyc === "none" ? "no" : o.kyc} KYC, ${coins.length} coins`,
     standfirst: checked
       ? `We ran a funded ${o.name} account across slots and, where offered, sportsbook and esports markets — timing real withdrawals and reading the bonus terms line by line.`
       : audited
@@ -521,14 +528,24 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       : audited
       ? "Desk-audited against public terms and registries · payout timing not yet field-tested"
       : "Unchecked listing · desk audit and funded-account testing not yet done",
-    verdict: `${o.name} ${checked ? "cleared our withdrawals in a median" : "lists a median withdrawal of"} ${o.payoutLabel} against an index median of ${fmtMins(medianPayout)}, accepts ${coins.length} coins, and runs its headline offer at ${o.wager}× wagering. ${
+    verdict: `${
+      checked
+        ? `${o.name} cleared our withdrawals in a median ${o.payoutLabel} against an index median of ${fmtMins(medianPayout)}`
+        : statedPayout
+        ? `${o.name} states its withdrawal time as "${statedPayout.value}"`
+        : `${o.name} lists a median withdrawal of ${o.payoutLabel}, not yet timed by us`
+    }, accepts ${coins.length} coins, and runs its headline offer at ${o.wager}× wagering. ${
       lowWager
         ? "That wagering figure is the difference that compounds: on a $100 credit you turn over $100, not $4,000."
         : `That wagering figure is the catch: on a $100 credit you turn over $${(o.wager * 100).toLocaleString()} before withdrawal.`
     }`,
     criteria: crit(o.score, [fast ? 0.4 : -0.6, lowWager ? 0.3 : -1.0, 0.1, -0.2, 0.2, -0.7], ["Payout speed", "Bonus fairness", "Crypto support", "Trust & licensing", "Game & RTP quality", "Support"]),
     stats: [
-      { label: "Median withdrawal", value: o.payoutLabel, note: checked ? "Timed on our own funded account" : "Not yet timed by us" },
+      checked
+        ? { label: "Median withdrawal", value: o.payoutLabel, note: "Timed on our own funded account" }
+        : statedPayout
+        ? { label: "Stated withdrawal time", value: statedPayout.value ?? "", note: `Operator's own figure · ${statedHost}` }
+        : { label: "Listed withdrawal", value: o.payoutLabel, note: "Unsourced listing, not yet timed by us" },
       { label: "Coins accepted", value: String(coins.length), note: coins.slice(0, 4).join(", ") + (coins.length > 4 ? " and more" : "") },
       { label: "Confirmations", value: String(o.conf), note: "Before the balance is playable" },
       { label: "Bonus wagering", value: `${o.wager}×`, note: lowWager ? "Turnover once, then withdraw" : "On the headline offer" },
@@ -566,7 +583,11 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
     tableEmpty: "No slot builds read at this operator yet — none are shown rather than guessed.",
     tableNote: "A reduced build is the operator's choice, not the studio's. Where we find one we name the title here and link the studio profile for the published figure.",
     pros: [
-      `${checked ? "Median withdrawal" : "Listed median withdrawal"} of ${o.payoutLabel}${fast ? ", inside the fastest quartile" : ""}`,
+      checked
+        ? `Median withdrawal of ${o.payoutLabel}${fast ? ", inside the fastest quartile" : ""}`
+        : statedPayout
+        ? `States withdrawals as "${statedPayout.value}"`
+        : `Licensed in ${o.licence}`,
       lowWager ? "Headline rewards carry 1× wagering" : `${coins.length} coins accepted, including stablecoin rails`,
       o.ln ? "Lightning supported, so small deposits avoid on-chain fees" : `Deposits credited at ${o.conf} confirmation${o.conf > 1 ? "s" : ""}`,
       o.esports ? "Esports markets alongside the casino" : o.sports ? "Sportsbook and casino on one balance" : "Casino-only, no sportsbook distractions",
@@ -576,7 +597,11 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       { q: `Is ${o.name} available in my country?`, a: `${o.name} restricts a list of jurisdictions under its ${o.licence} licence. Check the restricted list in its terms before depositing rather than after — we haven't independently tested where it blocks access.` },
       { q: "Do I have to complete KYC?", a: o.kyc === "none" ? "Published policy is no documents requested, but the operator reserves the right to ask, and we haven't yet confirmed that at volume ourselves." : o.kyc === "tiered" ? "Not for small volumes, per the operator's published policy. Withdrawals below a cumulative threshold are said to clear with no document request; above it, expect a standard ID and address check." : "Yes. Verification is required before the first withdrawal is processed." },
       { q: `What does ${o.wager}× wagering actually mean?`, a: lowWager ? "Credit must be turned over once before withdrawal. On a $100 credit that is $100 of wagering." : `Credit must be turned over ${o.wager} times before withdrawal. On a $100 credit that is $${(o.wager * 100).toLocaleString()} of wagering.` },
-      { q: "How fast are withdrawals really?", a: checked ? `Median ${o.payoutLabel} across the withdrawals we timed on our own account.` : `We haven't timed withdrawals at ${o.name} ourselves yet, so treat the ${o.payoutLabel} figure as unverified — see how we rate for what's field-tested so far.` },
+      { q: "How fast are withdrawals really?", a: checked
+          ? `Median ${o.payoutLabel} across the withdrawals we timed on our own account.`
+          : statedPayout
+          ? `${o.name}'s own help pages say "${statedPayout.value}". We haven't timed withdrawals there ourselves yet — see how we rate for what's field-tested so far.`
+          : `We haven't timed withdrawals at ${o.name} ourselves yet, and the ${o.payoutLabel} figure isn't sourced — treat it as unverified.` },
     ],
     signupUrl: o.signupUrl,
   };

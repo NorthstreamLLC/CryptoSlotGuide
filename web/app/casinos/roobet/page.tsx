@@ -5,8 +5,8 @@ import { entityBreadcrumbSchema, faqSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 
 export const metadata = pageMetadata(
-  "Roobet review 2026: payout speed, 1× wagering, tiered KYC",
-  "Roobet leads our index on listed figures — payout speed, wagering and KYC compared against every other operator we track. Payouts not yet timed by us.",
+  "Roobet review 2026: stated instant withdrawals, no-wager rakeback, no crypto withdrawal fee",
+  "Roobet reviewed from its own terms and help centre: stated instant withdrawals, no fee on crypto withdrawals, rakeback with no wagering multiplier. Payouts not yet timed by us.",
   "/casinos/roobet"
 );
 

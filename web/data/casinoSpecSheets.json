@@ -1,74 +1,5 @@
 [
   {
-    "operatorSlug": "roobet",
-    "groups": [
-      {
-        "title": "Coins & deposit limits",
-        "facts": [
-          {
-            "label": "Coins accepted",
-            "chips": ["BTC", "ETH", "USDT", "LTC", "SOL", "DOGE", "TRX", "XRP"],
-            "sourcing": "site-data"
-          }
-        ]
-      },
-      {
-        "title": "Crypto & custody",
-        "facts": [
-          {
-            "label": "Withdrawal fees",
-            "value": "No withdrawal fee — network fee only, varies by coin",
-            "sourcing": "editorial",
-            "sourceUrl": "https://help.roobet.com/en/articles/4797515-does-roobet-charge-withdrawal-fees",
-            "asOf": "2026-09-10"
-          }
-        ]
-      },
-      {
-        "title": "Compliance",
-        "facts": [
-          {
-            "label": "Licence",
-            "value": "Curaçao, licence OGL/2024/687/0427",
-            "sourcing": "editorial",
-            "sourceUrl": "https://roobet.com/kyc-aml-policy",
-            "asOf": "2026-09-10"
-          },
-          {
-            "label": "Company",
-            "value": "Raw Entertainment B.V., Reg No 157205",
-            "sourcing": "editorial",
-            "sourceUrl": "https://roobet.com/kyc-aml-policy",
-            "asOf": "2026-09-10"
-          },
-          {
-            "label": "Geo-blocking",
-            "value": "Confirmed active — blocked a restricted-region test request",
-            "flag": { "label": "Enforced", "color": "#7BE0B8", "background": "rgba(123,224,184,.12)" },
-            "sourcing": "editorial",
-            "sourceUrl": "https://roobet.com/fair",
-            "asOf": "2026-09-10"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "operatorSlug": "stake",
-    "groups": [
-      {
-        "title": "Coins & deposit limits",
-        "facts": [
-          {
-            "label": "Coins accepted",
-            "chips": ["BTC", "ETH", "USDT", "LTC", "SOL", "DOGE", "XRP", "TRX"],
-            "sourcing": "site-data"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "operatorSlug": "bc-game",
     "groups": [
       {
@@ -76,7 +7,16 @@
         "facts": [
           {
             "label": "Coins accepted",
-            "chips": ["BTC", "ETH", "USDT", "LTC", "SOL", "DOGE", "XRP", "TRX"],
+            "chips": [
+              "BTC",
+              "ETH",
+              "USDT",
+              "LTC",
+              "SOL",
+              "DOGE",
+              "XRP",
+              "TRX"
+            ],
             "sourcing": "site-data"
           }
         ]
@@ -93,9 +33,972 @@
           },
           {
             "label": "Company",
-            "value": "Twocent Technology Limited, Belize, Reg No 000041939",
+            "value": "Twocent Technology Limited (Belize, reg. no. 000041939)",
             "sourcing": "editorial",
             "sourceUrl": "https://bc.game/licenses",
+            "asOf": "2026-09-14"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "operatorSlug": "bitstarz",
+    "groups": [
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Stated withdrawal time",
+            "value": "Aims to pay within 1 hour, some take longer (terms); payments page lists BTC as instant",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bitstarz.com/terms",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "Withdrawal fees",
+            "value": "No fees from BitStarz or its payment processor",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bitstarz.com/terms",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "Minimum withdrawal",
+            "value": "BTC: min 0, max 1 BTC per transaction",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bitstarz.com/payments",
+            "asOf": "2026-09-14"
+          }
+        ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": [
+              "BTC",
+              "ETH",
+              "USDT",
+              "LTC",
+              "SOL",
+              "DOGE",
+              "XRP",
+              "TRX"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://bitstarz.com/payments",
+            "asOf": "2026-09-14"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "Welcome package: 5 BTC + 180 free spins",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bitstarz.com/",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "Wagering",
+            "value": "40× on bonuses unless otherwise specified; 40× on free-spin winnings",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bitstarz.com/bonus-terms-and-conditions",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "Expiry",
+            "value": "Welcome Package bonuses valid for 7 days",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bitstarz.com/bonus-terms-and-conditions",
+            "asOf": "2026-09-14"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Licence",
+            "value": "Curaçao Gaming Authority, licence OGL/2024/165/0185",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bitstarz.com/terms",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "Company",
+            "value": "Gareton B.V. (Curaçao reg. 160656)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bitstarz.com/terms",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "KYC policy",
+            "value": "KYC documents required to receive payments; extra checks possible at withdrawal",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bitstarz.com/terms",
+            "asOf": "2026-09-14"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "operatorSlug": "cloudbet",
+    "groups": [
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Stated withdrawal time",
+            "value": "Most crypto withdrawals instant; some take up to 24 hours",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.cloudbet.com/en/support/articles/103214-how-long-will-my-withdrawal-take",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "Withdrawal fees",
+            "value": "Help centre: no additional fees beyond network; terms reserve a handling charge of up to 5%",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.cloudbet.com/en/help/terms",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "Minimum withdrawal",
+            "value": "Varies by coin and network, e.g. BTC 0.00001, ETH 0.0002, USDT 0.1 (ERC-20) / 5 (TRON)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.cloudbet.com/en/crypto-transaction-fees",
+            "asOf": "2026-09-14"
+          }
+        ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": [
+              "BTC",
+              "ETH",
+              "USDT",
+              "LTC",
+              "SOL",
+              "DOGE",
+              "XRP",
+              "TRX"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.cloudbet.com/en/support/articles/103244-what-currencies-are-accepted-on-cloudbet",
+            "asOf": "2026-09-14"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "Welcome Package, up to $2,500 cash",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.cloudbet.com/en/promotions/general/welcome-package",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "Wagering",
+            "value": "No rollovers on rewards",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.cloudbet.com/en/promotions/general/welcome-package",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "Expiry",
+            "value": "Valid for up to 30 days from the first deposit",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.cloudbet.com/en/promotions/general/welcome-package",
+            "asOf": "2026-09-14"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Licence",
+            "value": "Curaçao Gaming Authority, licence OGL/2024/328/0599",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.cloudbet.com/en/help/terms",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "Company",
+            "value": "Halcyon Super Holdings B.V. (company no. 148526)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.cloudbet.com/en/help/terms",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "KYC policy",
+            "value": "Identity verification required once cumulative deposits reach USD $2,200",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.cloudbet.com/en/help/terms",
+            "asOf": "2026-09-14"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "operatorSlug": "duelbits",
+    "groups": [
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Stated withdrawal time",
+            "value": "Per coin: BTC 10–30 minutes; LTC/SOL/DOGE a few minutes; USDT (TRC-20) seconds",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.duelbits.com/en/articles/16798784-duelbits-fees-limits-processing-times",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "Withdrawal fees",
+            "value": "No platform fees; blockchain network fees only",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.duelbits.com/en/articles/16798784-duelbits-fees-limits-processing-times",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "Minimum withdrawal",
+            "value": "BTC/ETH $50; LTC/SOL/DOGE/XRP/TRX $10; USDT $10 (TRC-20) / $50 (ERC-20)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.duelbits.com/en/articles/16798784-duelbits-fees-limits-processing-times",
+            "asOf": "2026-09-14"
+          }
+        ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": [
+              "BTC",
+              "ETH",
+              "USDT",
+              "LTC",
+              "SOL",
+              "DOGE",
+              "XRP",
+              "TRX"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.duelbits.com/en/articles/16798784-duelbits-fees-limits-processing-times",
+            "asOf": "2026-09-14"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "Ace's Rewards rakeback: 25% across Instant, Daily, Weekly and Monthly",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.duelbits.com/en/articles/12547694-rakeback-bits-at-duelbits",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "Expiry",
+            "value": "Unclaimed rakeback resets: daily at 00:00 UTC, weekly on Monday, monthly on the 1st",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.duelbits.com/en/articles/12547694-rakeback-bits-at-duelbits",
+            "asOf": "2026-09-14"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Licence",
+            "value": "Curaçao Gaming Authority, licence OGL/2024/1507/0838",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.duelbits.com/en/articles/16335255-is-duelbits-legit-licence-security-trust",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "Company",
+            "value": "Liquid Entertainment N.V. (reg. no. 153298)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.duelbits.com/en/articles/16335255-is-duelbits-legit-licence-security-trust",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "KYC policy",
+            "value": "May request documents; access can be restricted until verification is complete",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.duelbits.com/en/articles/8865846-kyc-guidelines-for-submissions",
+            "asOf": "2026-09-14"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "operatorSlug": "gamdom",
+    "groups": [
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Stated withdrawal time",
+            "value": "Usually 5 minutes to 1 hour, depending on network confirmations",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.gamdom.com/en/articles/9734074-how-to-withdraw",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "Withdrawal fees",
+            "value": "Blockchain network fee only",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.gamdom.com/en/articles/9734074-how-to-withdraw",
+            "asOf": "2026-09-14"
+          }
+        ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": [
+              "BTC",
+              "ETH",
+              "USDT",
+              "LTC",
+              "SOL",
+              "DOGE",
+              "XRP",
+              "TRX"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.gamdom.com/en/articles/8981140-deposit-methods",
+            "asOf": "2026-09-14"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "Gamdom Rewards; 15% Boosted Instant Rewards for new accounts",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.gamdom.com/en/articles/10290516-gamdom-rewards",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "Expiry",
+            "value": "New-account boost valid 7 days once activated",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.gamdom.com/en/articles/10290516-gamdom-rewards",
+            "asOf": "2026-09-14"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Licence",
+            "value": "Anjouan Gaming Authority, licence ALSI-152406043-FI (the same article also refers to Curaçao)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.gamdom.com/en/articles/8511042-is-gamdom-a-legit-casino",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "KYC policy",
+            "value": "Not required to deposit, play or withdraw unless specifically requested",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.gamdom.com/en/articles/13250444-how-and-when-to-verify-your-account",
+            "asOf": "2026-09-14"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "operatorSlug": "rainbet",
+    "groups": [
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Stated withdrawal time",
+            "value": "Typically processed within 5–15 minutes",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.rainbet.com/en/articles/8403745-how-much-time-does-it-take-for-a-withdrawal",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "Withdrawal fees",
+            "value": "No Rainbet transaction fees; network fees only (terms: no commission once the deposit is wagered 1×)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.rainbet.com/en/articles/15254412-how-to-make-a-crypto-withdraw",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "Minimum withdrawal",
+            "value": "$15 per transaction (or equivalent)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://rainbet.com/terms",
+            "asOf": "2026-09-14"
+          }
+        ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": [
+              "BTC",
+              "ETH",
+              "USDT",
+              "LTC",
+              "SOL",
+              "XRP",
+              "TRX"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://rainbet.com/",
+            "asOf": "2026-09-14"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "First-deposit bonus, wager-locked",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.rainbet.com/en/articles/15268657-first-deposit-promotion",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "Wagering",
+            "value": "40× turnover of combined deposit and bonus funds",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.rainbet.com/en/articles/15268657-first-deposit-promotion",
+            "asOf": "2026-09-14"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Licence",
+            "value": "Anjouan (licence number not stated)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://rainbet.com/terms",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "Company",
+            "value": "RBGAMING N.V. (reg. no. 16077)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://rainbet.com/terms",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "KYC policy",
+            "value": "Crypto play and withdrawals need no KYC; may be requested for suspicious activity",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.rainbet.com/en/articles/15264824-kyc",
+            "asOf": "2026-09-14"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "operatorSlug": "roobet",
+    "groups": [
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Stated withdrawal time",
+            "value": "Sent instantly on request; arrival depends on blockchain confirmations",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.roobet.com/en/articles/4733940-i-have-not-received-my-withdrawal",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "Withdrawal fees",
+            "value": "No Roobet fee on crypto withdrawals, network fees only. Fiat: 2% per withdrawal from the 10th in a 30-day period",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.roobet.com/en/articles/4797515-does-roobet-charge-withdrawal-fees",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "Minimum withdrawal",
+            "value": "Set at Roobet's discretion and shown on site; card withdrawals must exceed $15",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.roobet.com/en/articles/6042657-withdrawing-using-a-credit-card",
+            "asOf": "2026-09-14"
+          }
+        ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": [
+              "BTC",
+              "ETH",
+              "USDT",
+              "LTC",
+              "SOL",
+              "DOGE",
+              "TRX",
+              "XRP"
+            ],
+            "sourcing": "site-data"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "Rakeback — Instant, Daily, Weekly and Monthly — tied to a 30-level system",
+            "sourcing": "editorial",
+            "sourceUrl": "https://roobet.com/bonus-and-promotion-policy",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "Wagering",
+            "value": "No multiplier stated for rakeback; deposits must be wagered 100% before withdrawal (anti-money-laundering rule)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.roobet.com/en/articles/13239839-wagering-requirements",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "Expiry",
+            "value": "Instant Rakeback never expires; Weekly lapses when the next week's is available; Vault releases expire after 24 hours",
+            "sourcing": "editorial",
+            "sourceUrl": "https://roobet.com/bonus-and-promotion-policy",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "Restricted countries",
+            "value": "Aruba, Australia, Bonaire, Cuba, Curaçao, Cyprus, Gibraltar, Haiti, Iran, Iraq, Malta, Myanmar, Netherlands, Nicaragua, North Korea, Saba, Saint Maarten, Saint Martin, South Sudan, Statia, Syria, United States, United Kingdom, Yemen, Zimbabwe",
+            "sourcing": "editorial",
+            "sourceUrl": "https://roobet.com/terms-and-conditions",
+            "asOf": "2026-09-14"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Licence",
+            "value": "Curaçao, licence OGL/2024/687/0427",
+            "sourcing": "editorial",
+            "sourceUrl": "https://roobet.com/terms-and-conditions",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "Company",
+            "value": "Raw Entertainment B.V. (Curaçao, company no. 157205)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://roobet.com/terms-and-conditions",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "KYC policy",
+            "value": "Documents may be requested at any time; withdrawals can be refused until identity is fully verified",
+            "sourcing": "editorial",
+            "sourceUrl": "https://roobet.com/terms-and-conditions",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "Geo-blocking",
+            "value": "Confirmed active — blocked a restricted-region test request",
+            "flag": {
+              "label": "Enforced",
+              "color": "#7BE0B8",
+              "background": "rgba(123,224,184,.12)"
+            },
+            "sourcing": "editorial",
+            "sourceUrl": "https://roobet.com/fair",
+            "asOf": "2026-09-10"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "operatorSlug": "shuffle",
+    "groups": [
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Stated withdrawal time",
+            "value": "Instant withdrawals — a homepage claim; its help centre gives no timeframe",
+            "sourcing": "editorial",
+            "sourceUrl": "https://shuffle.com/",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "Withdrawal fees",
+            "value": "Shuffle may charge a fee, shown before you confirm; a network fee may be deducted",
+            "sourcing": "editorial",
+            "sourceUrl": "https://shuffle.com/info/terms",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "Minimum withdrawal",
+            "value": "Shown in the cashier per payment method",
+            "sourcing": "editorial",
+            "sourceUrl": "https://shuffle.com/info/terms",
+            "asOf": "2026-09-14"
+          }
+        ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": [
+              "BTC",
+              "ETH",
+              "USDT",
+              "LTC",
+              "SOL",
+              "DOGE",
+              "XRP",
+              "TRX"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.shuffle.com/en/articles/6966242-assets-supported-for-deposits-and-withdrawals",
+            "asOf": "2026-09-14"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "Rakeback: 5% of the house edge back as cash on casino games",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.shuffle.com/en/articles/10020509-how-does-rakeback-work",
+            "asOf": "2026-09-14"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Licence",
+            "value": "Curaçao, licence OGL/2024/1337/0628",
+            "sourcing": "editorial",
+            "sourceUrl": "https://shuffle.com/info/license",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "Company",
+            "value": "Natural Nine B.V. (Curaçao reg. 160998)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://shuffle.com/info/license",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "KYC policy",
+            "value": "ID check at a threshold Shuffle sets, and in any event before the first withdrawal",
+            "sourcing": "editorial",
+            "sourceUrl": "https://shuffle.com/info/terms",
+            "asOf": "2026-09-14"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "operatorSlug": "stake",
+    "groups": [
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Withdrawal fees",
+            "value": "A per-coin withdrawal fee is deducted from your balance (e.g. BTC 0.00001571)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.stake.com/en/articles/4793601-crypto-what-are-the-withdrawal-limits",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "Minimum withdrawal",
+            "value": "Varies by coin: BTC 0.00002504, ETH 0.001, USDT 2.5",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.stake.com/en/articles/4793601-crypto-what-are-the-withdrawal-limits",
+            "asOf": "2026-09-14"
+          }
+        ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": [
+              "BTC",
+              "ETH",
+              "USDT",
+              "LTC",
+              "SOL",
+              "DOGE",
+              "XRP",
+              "TRX"
+            ],
+            "sourcing": "site-data"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "VIP Rakeback: 3.5% of the house edge, unlocked at Bronze after $10,000 wagered",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.stake.com/en/articles/4821738-what-is-rakeback",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "Wagering",
+            "value": "Weekly Bonus is free to withdraw once above the minimum limit",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.stake.com/en/articles/9946687-do-i-have-to-wager-my-weekly-bonus",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "Expiry",
+            "value": "Earned rakeback can be claimed at any time",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.stake.com/en/articles/4821738-what-is-rakeback",
+            "asOf": "2026-09-14"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "KYC policy",
+            "value": "Compliance team may request any documentation at any time",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.stake.com/en/articles/5886574-proof-of-identity-acceptable-documentation",
+            "asOf": "2026-09-14"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "operatorSlug": "thrill",
+    "groups": [
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Stated withdrawal time",
+            "value": "Instant",
+            "sourcing": "editorial",
+            "sourceUrl": "https://intercom.help/thrill/en/articles/10078699-about-thrill",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "Withdrawal fees",
+            "value": "Fixed per-coin fee shown before confirming (e.g. BTC 0.00001571); not stated whether it's the network fee",
+            "sourcing": "editorial",
+            "sourceUrl": "https://intercom.help/thrill/en/articles/10130013-crypto-withdrawal-limits-and-fees",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "Minimum withdrawal",
+            "value": "Per coin, e.g. BTC 0.00002504, ETH 0.001, USDT 2.5",
+            "sourcing": "editorial",
+            "sourceUrl": "https://intercom.help/thrill/en/articles/10130013-crypto-withdrawal-limits-and-fees",
+            "asOf": "2026-09-14"
+          }
+        ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": [
+              "BTC",
+              "ETH",
+              "USDT",
+              "LTC",
+              "SOL",
+              "DOGE",
+              "XRP",
+              "TRX"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://intercom.help/thrill/en/articles/10353861-supported-cryptocurrencies",
+            "asOf": "2026-09-14"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "Thrill Rewards: Instant Rakeback plus weekly and monthly bonuses",
+            "sourcing": "editorial",
+            "sourceUrl": "https://intercom.help/thrill/en/articles/11882893-what-are-the-rewards-levels-and-benefits-at-thrill",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "Expiry",
+            "value": "Weekly Bonus expires if unclaimed when the next one drops",
+            "sourcing": "editorial",
+            "sourceUrl": "https://intercom.help/thrill/en/articles/13544510-where-is-the-weekly-bonus-posted-and-how-do-i-claim-it",
+            "asOf": "2026-09-14"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Licence",
+            "value": "Anjouan, licence ALSI-202506019-FI1",
+            "sourcing": "editorial",
+            "sourceUrl": "https://thrill.com/",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "Company",
+            "value": "Gravity Unleashed Limitada (reg. no. 3-102-923055)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://thrill.com/",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "KYC policy",
+            "value": "No KYC to register; verification may be required later",
+            "sourcing": "editorial",
+            "sourceUrl": "https://thrill.com/policies/terms-and-conditions",
+            "asOf": "2026-09-14"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "operatorSlug": "winna",
+    "groups": [
+      {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Stated withdrawal time",
+            "value": "Instant (homepage); help centre says times vary with network congestion and security checks",
+            "sourcing": "editorial",
+            "sourceUrl": "https://winna.com/",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "Withdrawal fees",
+            "value": "Blockchain fees may apply; multiple withdrawals within 24 hours may incur a processing fee",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.winna.com/en/articles/10430796-making-a-withdrawal-on-winna",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "Minimum withdrawal",
+            "value": "$20 USD equivalent",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.winna.com/en/articles/10430796-making-a-withdrawal-on-winna",
+            "asOf": "2026-09-14"
+          }
+        ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": [
+              "BTC",
+              "ETH",
+              "USDT",
+              "LTC",
+              "SOL",
+              "DOGE",
+              "XRP",
+              "TRX"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.winna.com/en/articles/10335429-acceptable-coins-for-deposits-and-withdrawals",
+            "asOf": "2026-09-14"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "VIP Program: Instant Rakeback, claimable every 7 minutes",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.winna.com/en/articles/10431169-the-winna-vip-program",
+            "asOf": "2026-09-14"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Licence",
+            "value": "Tobique Gaming Commission (licence number not stated)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://winna.com/about-us",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "Company",
+            "value": "GG Gaming LLC (San José, Costa Rica)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://winna.com/tos",
+            "asOf": "2026-09-14"
+          },
+          {
+            "label": "KYC policy",
+            "value": "Due diligence within 30 days of first deposit, before first withdrawal, or before wagering EUR 2,000",
+            "sourcing": "editorial",
+            "sourceUrl": "https://winna.com/aml-kyc",
             "asOf": "2026-09-14"
           }
         ]

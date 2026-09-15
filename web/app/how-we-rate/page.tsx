@@ -153,7 +153,7 @@ export default function Page() {
         </div>
         <h2 style={{ margin: "0 0 8px", fontSize: 28, letterSpacing: "-.028em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>The six criteria, their weights, and how each is sourced</h2>
         <p style={{ margin: "0 0 20px", maxWidth: "74ch", fontSize: 15, lineHeight: 1.65, color: "#8DA0AA", textWrap: "pretty" }}>
-          These weights produce the score on every crypto casino review and the order of the casino index. They are not applied to any other category. Four of the six don&apos;t require a funded account at all — only payout speed and support responsiveness depend on either field-testing or a cited community source.
+          These weights produce the score on every crypto casino review and the order of the casino index. They are not applied to any other category. Four of the six start from the operator&apos;s own public pages. Support responsiveness and the RTP build an operator ships can only be checked from a funded account, and payout speed moves from the operator&apos;s stated time to our own timings once field-tested. Each review marks any criterion that hasn&apos;t been checked for that operator yet.
         </p>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 1, background: "rgba(255,255,255,.07)", border: "1px solid rgba(255,255,255,.07)", borderRadius: 14, overflow: "hidden" }}>
           {criteria.map((c) => (

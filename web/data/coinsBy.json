@@ -33,9 +33,11 @@
     "BTC",
     "ETH",
     "USDT",
-    "SOL",
     "LTC",
-    "DOGE"
+    "SOL",
+    "DOGE",
+    "XRP",
+    "TRX"
   ],
   "rollbit": [
     "BTC",
@@ -48,8 +50,10 @@
     "ETH",
     "USDT",
     "LTC",
+    "SOL",
     "DOGE",
-    "XRP"
+    "XRP",
+    "TRX"
   ],
   "cloudbet": [
     "BTC",
@@ -58,7 +62,8 @@
     "LTC",
     "SOL",
     "DOGE",
-    "XRP"
+    "XRP",
+    "TRX"
   ],
   "gamdom": [
     "BTC",
@@ -66,14 +71,19 @@
     "USDT",
     "LTC",
     "SOL",
-    "DOGE"
+    "DOGE",
+    "XRP",
+    "TRX"
   ],
   "duelbits": [
     "BTC",
     "ETH",
     "USDT",
     "LTC",
-    "DOGE"
+    "SOL",
+    "DOGE",
+    "XRP",
+    "TRX"
   ],
   "rainbet": [
     "BTC",
@@ -81,7 +91,7 @@
     "USDT",
     "LTC",
     "SOL",
-    "DOGE",
+    "XRP",
     "TRX"
   ],
   "bitcasino-io": [
@@ -151,6 +161,7 @@
     "LTC",
     "SOL",
     "DOGE",
+    "XRP",
     "TRX"
   ],
   "thrill": [
@@ -160,7 +171,8 @@
     "LTC",
     "SOL",
     "DOGE",
-    "XRP"
+    "XRP",
+    "TRX"
   ],
   "duel": [
     "BTC",

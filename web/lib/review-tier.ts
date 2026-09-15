@@ -31,7 +31,7 @@ import { isFieldTestedOperator } from "./field-tested";
  * entity pages; reviewTier(type) alone is for category-level copy (How
  * We Rate) that isn't about one entity.
  */
-export type ReviewTier = "field-tested" | "community-reported" | "editorial" | "pending";
+export type ReviewTier = "field-tested" | "community-reported" | "editorial" | "pending" | "unchecked";
 
 const FIELD_TESTED_TYPES: EntityType[] = ["casino", "wallet", "exchange"];
 
@@ -51,6 +51,7 @@ export const TIER_LABEL: Record<ReviewTier, string> = {
   "community-reported": "Community-reported",
   editorial: "Editorially assessed",
   pending: "Field-test pending",
+  unchecked: "Not yet checked",
 };
 
 export const TIER_DESC: Record<ReviewTier, string> = {
@@ -58,6 +59,7 @@ export const TIER_DESC: Record<ReviewTier, string> = {
   "community-reported": "Aggregated from public review sites (AskGamblers, Casino.Guru, Trustpilot) and cited — not personally measured.",
   editorial: "Read from the operator's own public pages and public registries — no account needed.",
   pending: "This category is field-tested by opening a real account, but this specific entity hasn't been checked yet — figures below are published, not verified.",
+  unchecked: "Nothing on file backs this rating for this operator yet — it is an editorial estimate until checked.",
 };
 
 export const TIER_TINT: Record<ReviewTier, string> = {
@@ -65,4 +67,5 @@ export const TIER_TINT: Record<ReviewTier, string> = {
   "community-reported": "#9B8FC4",
   editorial: "#C7A45C",
   pending: "#5C6A72",
+  unchecked: "#5C6A72",
 };

@@ -214,6 +214,50 @@ is real, but it's not a full audit. This is the whole point of doing
 real per-operator research incrementally instead of writing 47 rows at
 once: it surfaces exactly this kind of thing.
 
+## Top-12 sourcing pass — stated payout times, fees, licences, bonus terms
+
+Done 14 Sep 2026. The prototype's payout times (`ops.json` `payout`/
+`payoutLabel`, e.g. "5m 06s") have no source, and neither did most
+licence/bonus fields. For the 12 highest-scored casinos, each operator's
+own help centre, terms and licence pages were read directly and every
+fact recorded in `casinoSpecSheets.json` with its URL and date (groups:
+Payouts & fees, Coins & deposit limits, Bonus terms, Compliance). No
+third-party review site is cited anywhere; operators' wording is kept
+("instant", "5 minutes to 1 hour") rather than converted into a precise
+figure.
+
+What changed on the site because of it:
+- **Stated withdrawal time replaces the unsourced figure** on review
+  pages where one exists (`lib/entity-view.ts`); where none exists the
+  old figure shows as "Unsourced listing". The exact payout figure no
+  longer leads any H1 unless the operator is field-tested.
+- **Criterion badges are per operator** (`lib/criterion-sourcing.ts`):
+  "Editorially assessed" only when the backing fact is on file for that
+  casino, otherwise "Not yet checked". Payout speed is now sourced from
+  the operator's stated time (was "community-reported", with no community
+  citations ever collected); Support and Game & RTP quality need a funded
+  account, so they read "Not yet checked" everywhere today.
+- **Corrections found:** Shuffle is Curaçao-licensed (was Anjouan);
+  Rainbet is Anjouan (was Curaçao) and its welcome offer is 40× (was 1×);
+  Gamdom cites an Anjouan licence number (was Curaçao — its own article
+  also mentions Curaçao, noted on the fact); Cloudbet's welcome package is
+  up to $2,500 with no rollover (was "100% up to $4,500", 30×). KYC
+  levels corrected for Winna, Shuffle (required before first withdrawal),
+  Rainbet and Gamdom (none unless requested). Coin lists updated from
+  operators' own pages for 8 casinos.
+- **Roobet's bonus terms were wrong.** The review page's hand-typed rows
+  (7-day cashback expiry, $5 max bet, 1× on RooWards, "several US
+  states") were either contradicted by or absent from Roobet's own terms.
+  They're replaced by the cited rows; the whole US is restricted, and the
+  unsourced "2 BTC KYC threshold" is gone from the head-to-head and FAQ.
+- **Couldn't reach:** Rollbit (Cloudflare on every page), stake.com's
+  terms/licence (Cloudflare — help.stake.com was readable), BC.Game's help
+  pages (region block), Gamdom/Duelbits terms pages (geo-wall; their help
+  centres were readable). Those facts are absent, not guessed.
+
+`editoriallyAuditedOperators.json` was deliberately not extended — the
+per-criterion badges now reflect exactly which facts exist instead.
+
 ## Casino bonuses section + the sign-up CTA was never actually a link
 
 Added 14 Sep 2026. The goal, per the site owner: since CryptoSlotGuide

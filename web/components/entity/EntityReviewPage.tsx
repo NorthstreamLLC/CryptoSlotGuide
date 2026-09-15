@@ -6,17 +6,12 @@ import type { EntityView } from "@/lib/entity-view";
 import { backLink, ctaLabel, scoreMeta, editorialTake } from "@/lib/entity-view";
 import { reviewTierFor, TIER_LABEL, TIER_TINT } from "@/lib/review-tier";
 import { isEditoriallyAudited } from "@/lib/field-tested";
-import { siteData } from "@/lib/site-data";
+import { criterionSourcing } from "@/lib/criterion-sourcing";
 import { scoreTier, SCORE_TIER_LABEL, SCORE_TIER_COLOR } from "@/lib/score-tier";
 import { OnChainActivity } from "./OnChainActivity";
 import { CasinoSpecSheet } from "./CasinoSpecSheet";
 import { CasinoBonuses } from "./CasinoBonuses";
 import { BrandMark } from "@/components/ui/BrandMark";
-
-/** Casino criteria bars use the same 6 names as data/criteria.json — see
- * that file's `sourcing` field. Other entity types have their own
- * criteria names not covered by it, so this only matches for casinos. */
-const CRITERION_SOURCING = new Map(siteData.criteria.map((c) => [c.name, c.sourcing]));
 
 /**
  * Ported from the `isEntity` block in CryptoSlotGuide.dc.html — the
@@ -131,7 +126,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
               )}
               <div style={{ display: "flex", flexDirection: "column", gap: 1, marginBottom: 24, borderRadius: 9, overflow: "hidden" }}>
                 {e.criteria.map((c) => {
-                  const sourcing = CRITERION_SOURCING.get(c.name);
+                  const sourcing = isCasino ? criterionSourcing(c.name, e.slug) : undefined;
                   const ct = scoreTier(c.val);
                   return (
                     <div key={c.name} style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10, padding: "8px 0" }}>
@@ -241,7 +236,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
               <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".07em", textTransform: "uppercase", color: "#5C6A72", marginBottom: 8 }}>
                 {m.label}
               </div>
-              <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 22, fontWeight: 500, color: "#E8EDF0", letterSpacing: "-.02em", marginBottom: 5 }}>
+              <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: m.value.length > 16 ? 15 : 22, lineHeight: 1.35, fontWeight: 500, color: "#E8EDF0", letterSpacing: "-.02em", marginBottom: 5 }}>
                 {m.value}
               </div>
               <div style={{ fontSize: 12.5, lineHeight: 1.45, color: "#7B8A93", textWrap: "pretty" }}>{m.note}</div>
