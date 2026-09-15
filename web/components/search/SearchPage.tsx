@@ -48,7 +48,7 @@ export function SearchPage({ initialQuery = "" }: { initialQuery?: string }) {
         label: "Exchanges",
         items: exchangeRows
           .filter((x) => hit(x.name) || hit(x.note))
-          .map((x) => ({ name: x.name, note: `${x.m1} spread · ${x.m2}`, meta: x.score.toFixed(1), href: `/exchanges/${x.slug}` })),
+          .map((x) => ({ name: x.name, note: `${x.m1} taker fee · ${x.m2}`, meta: x.score.toFixed(1), href: `/exchanges/${x.slug}` })),
       },
       {
         label: "Markets",

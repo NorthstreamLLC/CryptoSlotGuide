@@ -12,7 +12,7 @@
 import { siteData } from "./site-data";
 import { hasRtp, hasVol, maxWinLabel, rtpLabel } from "./slot-facts";
 import {
-  bestSpread,
+  lowestTakerFee,
   fill,
   medianReadMins,
   medianRtp,
@@ -221,13 +221,13 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
     return {
       kicker: "Wallets",
       title: "Where the bankroll lives",
-      sub: "Custody model, chain coverage and gas handling — the three things that decide how a wallet works with a casino cashier.",
+      sub: "Where keys live, which chains are covered and what in-wallet swaps cost — each from the wallet maker's own docs.",
       stats: [
         [String(walletRows.length), "Wallets listed"],
         [String(selfCustodyWallets(walletRows)), "Self-custody"],
         [(topScore(walletRows)?.score ?? 0).toFixed(1), "Top score"],
       ],
-      cols: ["Custody", "Chains", "Gas handling"],
+      cols: ["Key storage", "Chains", "Swap fee"],
       scoreLabel: "Score",
       note: "Keep the playing balance and the holding balance in different wallets. Any operator can freeze an account pending a manual review, and whatever is held there waits with it.",
       rows: walletRows.map((w) => ({
@@ -248,30 +248,30 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
 
   if (kind === "exchanges") {
     // Editorial picks, not measurement results. Every metric shown on a
-    // card is read from that venue's exchangeRows record (m1 = listed
-    // spread, m2 = fiat rails, m3 = withdrawal limit) — nothing hardcoded.
+    // card is read from that venue's exchangeRows record (m1 = entry taker
+    // fee, m2 = fiat rails, m3 = withdrawal limit — each cited on its review).
     type ExField = "m1" | "m2" | "m3" | "score";
     const rawAwards: { award: string; name: string; why: string; m: [string, ExField][] }[] = [
-      { award: "Top pick overall", name: "Kraken", why: "Tightest listed spread of the five and no daily withdrawal cap once the account is verified.", m: [["Spread", "m1"], ["Fiat rails", "m2"], ["Score", "score"]] },
-      { award: "Pick for beginners", name: "Coinbase", why: "Card, ACH and SEPA on one account. The trade-off is the widest listed spread of the five.", m: [["Spread", "m1"], ["Rails", "m2"], ["Score", "score"]] },
-      { award: "Pick for low spreads", name: "OKX", why: "Second-tightest listed spread behind Kraken, with card and SEPA deposits.", m: [["Spread", "m1"], ["Limit", "m3"], ["Score", "score"]] },
-      { award: "Pick for high limits", name: "Bybit", why: "The highest capped daily withdrawal limit listed of the five.", m: [["Limit", "m3"], ["Spread", "m1"], ["Score", "score"]] },
-      { award: "Pick for altcoin range", name: "KuCoin", why: "Picked for breadth of listings rather than price. Fiat access is P2P only.", m: [["Spread", "m1"], ["Rails", "m2"], ["Score", "score"]] },
+      { award: "Top pick overall", name: "Kraken", why: "MiCA-licensed, FCA-registered and publishes proof of reserves. Its entry-tier Pro fees are the highest of the five.", m: [["Taker fee", "m1"], ["Fiat rails", "m2"], ["Score", "score"]] },
+      { award: "Pick for US fiat", name: "Coinbase", why: "The widest US fiat rails of the five — ACH, wire, card and PayPal. No exchange-wide proof of reserves found.", m: [["Rails", "m2"], ["Taker fee", "m1"], ["Score", "score"]] },
+      { award: "Pick for reserves reporting", name: "OKX", why: "46 proof-of-reserves reports published, and a $10M daily crypto withdrawal limit on its US pages.", m: [["Limit", "m3"], ["Taker fee", "m1"], ["Score", "score"]] },
+      { award: "Pick for low fees", name: "Bybit", why: "0.10% maker and taker at the entry tier, and 1M USDT a day in crypto withdrawals on standard KYC.", m: [["Taker fee", "m1"], ["Limit", "m3"], ["Score", "score"]] },
+      { award: "Pick for EUR deposits", name: "KuCoin", why: "SEPA and SEPA Instant, plus card and P2P for verified users, at 0.10% on major pairs.", m: [["Rails", "m2"], ["Taker fee", "m1"], ["Score", "score"]] },
     ];
     return {
       kicker: "Exchanges",
       title: "Getting on and off chain",
-      sub: "Listed spreads on BTC, ETH and USDT pairs, fiat rails and withdrawal limits for each venue, side by side.",
+      sub: "Entry-tier fees, fiat rails and withdrawal limits for each venue, side by side — each from the exchange's own fee schedule and help centre.",
       stats: [
         [String(exchangeRows.length), "Exchanges listed"],
-        [bestSpread(exchangeRows), "Tightest listed spread"],
+        [lowestTakerFee(exchangeRows), "Lowest entry taker fee"],
         [(topScore(exchangeRows)?.score ?? 0).toFixed(1), "Top score"],
       ],
-      cols: ["Spread", "Fiat rails", "Withdrawal limit"],
+      cols: ["Entry taker fee", "Fiat rails", "Withdrawal limit"],
       scoreLabel: "Score",
-      note: "Spread plus withdrawal fee is the true cost of an onramp. The cheapest headline maker fee on this list is not the cheapest way to fund an account.",
+      note: "The fee schedule is only part of the cost of an onramp — the spread you cross and the withdrawal fee matter as much. Exchanges don't publish spreads, so compare the live price before moving a bankroll.",
       awardTitle: "Editor's picks: crypto exchanges",
-      awardSub: "One pick per venue, based on the listed figures in the table below. No venue holds two.",
+      awardSub: "One editorial pick per venue, based on the cited figures in the table below. No venue holds two.",
       awards: rawAwards.map((a, i) => {
         const match = exchangeRows.find((x) => x.name === a.name);
         const slug = match?.slug ?? a.name.toLowerCase();

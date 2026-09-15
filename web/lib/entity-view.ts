@@ -113,11 +113,14 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
     if (!x) return null;
     const s = x.score;
     const checked = isFieldTestedOperator(x.slug);
-    // Spread, rails and limit come from exchangeRows.json (prototype data,
-    // not yet sampled or confirmed by us). Everything here is framed as
-    // listed until a real field test exists — the prototype's "336 hourly
-    // samples", "4h 10m fiat payout" and per-pair depth figures were
-    // invented and have been removed rather than gated. See data/README.md.
+    // Fees, rails, limits, verification, regulation and proof of reserves
+    // are cited from the exchange's own pages in casinoSpecSheets.json
+    // (rendered below as the spec sheet); exchangeRows holds short
+    // summaries of those same facts. Spreads aren't published anywhere,
+    // so they only appear once we sample an order book ourselves.
+    const fact = (group: string, label: string) => getSpecFact(x.slug, group, label)?.value;
+    const por = fact("Compliance", "Proof of reserves");
+    const reg = fact("Compliance", "Regulation");
     return {
       type,
       kicker: "Exchange review",
@@ -126,55 +129,44 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       mono: x.mono,
       tint: "#5FE3E8",
       score: s.toFixed(1),
-      headline: `${x.name} review 2026: ${x.m1} ${checked ? "measured" : "listed"} spread, ${x.m2} rails`,
+      headline: `${x.name} review 2026: ${x.hed}`,
       standfirst: checked
         ? `We sampled ${x.name}'s order book and moved real money out through the fiat rails it offers. ${x.note}.`
-        : `${x.name}'s spread, fiat rails and limits below are listed figures, not yet sampled or confirmed on our own account. ${x.note}.`,
-      tags: checked ? ["SPREADS SAMPLED", "FIAT PAYOUT TIMED", "FIELD-TESTED"] : ["LISTED SPREAD", "FIAT RAILS LISTED"],
-      byline: checked ? "Field-tested on our own verified account" : "Listed figures · order book and fiat payouts not yet field-tested",
-      verdict: `Spread plus withdrawal fee is the real cost of an onramp. ${x.name} ${checked ? "came in at" : "lists"} a ${x.m1} spread on majors (withdrawal limit: ${x.m3}). ${x.note}, which is the trade-off to weigh before you route a bankroll through it.`,
+        : `${x.note}. Fees, limits and licensing below are from ${x.name}'s own pages; we haven't moved money through an account here yet.`,
+      tags: checked ? ["SPREADS SAMPLED", "FIAT PAYOUT TIMED", "FIELD-TESTED"] : ["FEES FROM ITS OWN SCHEDULE", por?.startsWith("Yes") ? "PROOF OF RESERVES PUBLISHED" : "NO PROOF OF RESERVES FOUND"],
+      byline: checked ? "Field-tested on our own verified account" : `${x.name}'s own fee schedule and help centre · not yet field-tested`,
+      verdict: `The fee schedule is only part of an onramp's cost — the spread you cross and the withdrawal fee matter too. ${x.name}'s entry-tier taker fee is ${x.m1}, its fiat rails are ${x.m2}, and its stated withdrawal limit is ${x.m3}.${reg ? ` Regulation: ${reg}.` : ""}`,
       criteria: crit(s, [0.4, -0.2, 0.2, -0.4, 0.5, -0.5], ["Spread & fees", "Fiat rails", "Liquidity", "Security posture", "Withdrawal speed", "Support"]),
       stats: [
-        { label: checked ? "Measured spread" : "Listed spread", value: x.m1, note: checked ? "Sampled on BTC/ETH/USDT pairs" : "Not yet sampled by us" },
-        { label: "Fiat rails", value: x.m2, note: checked ? "Confirmed on a verified account" : "As listed, not yet confirmed" },
-        { label: "Withdrawal limit", value: x.m3, note: checked ? "After full verification" : "As listed, not yet confirmed" },
+        { label: "Entry taker fee", value: x.m1, note: "Entry tier, from its fee schedule" },
+        { label: "Fiat rails", value: x.m2, note: "Per its help centre; varies by region" },
+        { label: "Withdrawal limit", value: x.m3, note: "Entry verified tier, as stated" },
       ],
-      chipLabel: checked ? "Fiat rails confirmed" : "Fiat rails listed",
-      chips: x.m2.split(",").map((t, i) => ({ t: t.trim().toUpperCase(), tint: ["#2FA8B0", "#7E93B8", "#C7A45C"][i % 3] })),
-      specTitle: "Fees and limits",
-      specSub: "Listed figures first; rows marked unconfirmed haven't been checked against the exchange's own fee page yet.",
-      spec: [
-        spec("Spread", `${x.m1} on majors`, "watch"),
-        spec("Withdrawal limit", x.m3, "watch"),
-        unconfirmed("Crypto withdrawal fee"),
-        unconfirmed("Fiat withdrawal fee"),
-        unconfirmed("Verification tier"),
-      ],
+      chipLabel: "Fiat rails",
+      chips: x.m2.split(",").map((t, i) => ({ t: t.trim().toUpperCase(), tint: ["#2FA8B0", "#7E93B8", "#C7A45C", "#9B8FC4"][i % 4] })),
+      specTitle: "",
+      specSub: "",
+      spec: [],
       tableTitle: "Spread by pair",
       tableSub: "Median spread and resting depth per pair, from our own order-book sampling.",
       tableCols: ["Spread", "Depth at 0.5%", "Taker fee"],
       tableRows: [],
-      tableEmpty: "We haven't sampled this exchange's order book yet — no per-pair spreads are shown rather than estimated.",
+      tableEmpty: "Exchanges don't publish spreads, and we haven't sampled this order book yet — none are shown rather than estimated.",
       tableNote: "Spreads widen materially in the first minutes after a major print, so a single quote is never representative. Once we sample a venue we report those windows separately from the median.",
       pros: [
-        `${checked ? "Measured" : "Listed"} spread of ${x.m1} on majors`,
-        `${x.m2} as fiat rails`,
-        `Withdrawal limit: ${x.m3}`,
+        `${x.m1} entry-tier taker fee`,
+        `Fiat rails: ${x.m2}`,
+        ...(por?.startsWith("Yes") ? ["Publishes proof of reserves"] : []),
       ],
       cons: [
-        checked ? "Entry-tier fees only improve at volume most readers will not reach" : "Spread, fees and fiat payout time not yet checked on our own account",
+        ...(por && !por.startsWith("Yes") ? ["No exchange-wide proof of reserves found"] : []),
         "Exchange withdrawals that land on a gambling site can trigger a compliance review",
-        "Fees vary by account tier — check the live fee page before moving a bankroll",
+        "Fees and rails vary by region and account tier — check the live schedule before moving a bankroll",
       ],
       faqs: [
-        { q: "Can I deposit straight from here into a casino?", a: "Usually yes, on-chain — but we route through a self-custody wallet first. An exchange withdrawal address that ends up on a gambling site is the pattern most likely to trigger a compliance review on your account." },
+        { q: "Can I deposit straight from here into a casino?", a: "Usually yes, on-chain — but route through a self-custody wallet first. An exchange withdrawal address that ends up on a gambling site is the pattern most likely to trigger a compliance review on your account." },
         { q: "Is the advertised fee the fee I pay?", a: "Not on its own. The spread you cross is part of the cost, and on majors it can be comparable to the taker fee itself. Only the sum of the two matters." },
-        {
-          q: "How long do fiat withdrawals take?",
-          a: checked
-            ? "See the timed figure above — measured request-to-funds on our own verified account."
-            : `We haven't timed fiat withdrawals at ${x.name} ourselves yet. First withdrawals on any exchange tend to be slower while the account is reviewed.`,
-        },
+        { q: "How long do fiat withdrawals take?", a: checked ? "See the timed figure above — measured request-to-funds on our own verified account." : `We haven't timed fiat withdrawals at ${x.name} ourselves yet. First withdrawals on any exchange tend to be slower while the account is reviewed.` },
       ],
     };
   }
@@ -183,11 +175,15 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
     const w = walletRows.find((r) => r.slug === slug);
     if (!w) return null;
     const s = w.score;
-    const cold = w.name === "Ledger";
     const checked = isFieldTestedOperator(w.slug);
-    // The prototype's per-chain deposit timings (Roobet/Stake/Shuffle),
-    // "tested a full restore", audit-history claims and hardcoded chain
-    // chips were invented — removed rather than gated. See data/README.md.
+    // Custody, protection, recovery, audits, chains and swap fee are cited
+    // from the wallet maker's own docs in casinoSpecSheets.json (rendered
+    // below as the spec sheet). Casino deposit timings only appear once we
+    // make real test deposits.
+    const fact = (group: string, label: string) => getSpecFact(w.slug, group, label)?.value;
+    const protection = fact("Custody & security", "Transaction protection");
+    const recovery = fact("Custody & security", "Recovery");
+    const audits = fact("Custody & security", "Security audits");
     return {
       type,
       kicker: "Wallet review",
@@ -196,40 +192,40 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       mono: w.mono,
       tint: "#9B8FC4",
       score: s.toFixed(1),
-      headline: `${w.name} review 2026: ${w.hed || w.note}`,
+      headline: `${w.name} review 2026: ${w.hed}`,
       standfirst: checked
         ? `We funded ${w.name} and moved money in and out of casino cashiers on the chains it supports, watching what it signs, what it simulates, and what it hides. ${w.note}.`
-        : `${w.name}'s custody model and chain coverage below are as published, pending our own field test on real casino deposits. ${w.note}.`,
-      tags: checked ? ["DEPOSITS TESTED", "SIGNING BEHAVIOUR AUDITED", "FIELD-TESTED"] : ["PUBLISHED SPECS", "SIGNING BEHAVIOUR NOT YET AUDITED"],
-      byline: checked ? "Field-tested on real casino deposits" : "Published specs · signing behaviour not yet field-tested",
-      verdict: `${w.note}. For gambling specifically, what matters is how the wallet behaves at the moment of signing: whether it tells you what a cashier contract will do before you approve it, and whether the fee it sets gets your deposit credited in one block or three.`,
+        : `${w.note}. Everything below is from ${w.name}'s own docs; we haven't made test casino deposits from it yet.`,
+      tags: checked ? ["DEPOSITS TESTED", "SIGNING BEHAVIOUR AUDITED", "FIELD-TESTED"] : ["FROM ITS OWN DOCS", audits?.startsWith("Yes") ? "AUDITS PUBLISHED" : "NO AUDITS FOUND"],
+      byline: checked ? "Field-tested on real casino deposits" : `${w.name}'s own docs · casino deposits not yet field-tested`,
+      verdict: `For gambling specifically, what matters is how a wallet behaves at the moment of signing: whether it tells you what a cashier contract will do before you approve it.${protection ? ` ${w.name}: ${protection.charAt(0).toLowerCase()}${protection.slice(1)}.` : ""}`,
       criteria: crit(s, [0.5, -0.3, 0.4, -0.5, 0.1, -0.4], ["Custody model", "Chain coverage", "Transaction safety", "Everyday UX", "Fee handling", "Recovery & support"]),
       stats: [
-        { label: "Custody", value: w.m1, note: cold ? "Keys held on the hardware device" : "Keys held by you, on this device" },
-        { label: "Chains", value: w.m2, note: checked ? "Confirmed by a live deposit each" : "As published, not yet deposit-tested" },
-        { label: "Gas handling", value: w.m3, note: checked ? "Observed on real transactions" : "As published" },
+        { label: "Key storage", value: w.m1, note: "Per its own docs" },
+        { label: "Chains", value: w.m2, note: checked ? "Confirmed by a live deposit each" : "As stated, not yet deposit-tested" },
+        { label: "Swap fee", value: w.m3, note: w.m3 === "Not stated" ? "No fee published" : "Its own published fee" },
       ],
       chipLabel: "Chains we deposited from",
       chips: [],
       chipsEmpty: "No test deposits made from this wallet yet.",
-      specTitle: "Security model",
-      specSub: "What the wallet holds and how you recover it. Rows marked unconfirmed haven't been checked by us yet.",
-      spec: [
-        spec("Key storage", cold ? "Secure element, keys never touch the host machine" : "Encrypted in the browser or app keystore", cold ? "ok" : "watch"),
-        spec("Recovery path", "Seed phrase only. No custodial reset, no account recovery", "watch"),
-        unconfirmed("Blind-signing protection"),
-        unconfirmed("Audit history"),
-      ],
+      specTitle: "",
+      specSub: "",
+      spec: [],
       tableTitle: "Casino deposits, by chain",
       tableSub: "One real deposit per chain into a live operator, timed from broadcast to playable balance.",
       tableCols: ["Credited in", "Fee paid", "Operator used"],
       tableRows: [],
       tableEmpty: "We haven't made test deposits from this wallet yet — no timings are shown rather than estimated.",
       tableNote: "Deposit credit times are the operator's confirmation policy, not the wallet's. The wallet controls the fee it sets — and a fee set too low is the most common cause of a deposit that appears stuck.",
-      pros: [`${w.m1} with keys under your control`, `Covers ${w.m2}`, `Gas handling: ${w.m3.toLowerCase()}`],
+      pros: [
+        `Keys: ${w.m1.toLowerCase()}`,
+        `Covers ${w.m2}`,
+        ...(protection ? ["Warns or simulates before you sign"] : []),
+        ...(audits?.startsWith("Yes") ? ["Publishes security audits"] : []),
+      ],
       cons: [
-        cold ? "Slower to use for frequent small deposits than a hot wallet" : "No hardware isolation — a compromised host is a compromised wallet",
-        "Recovery is seed-only: lose it and the balance is gone",
+        ...(w.m3 !== "Not stated" ? [`${w.m3} swap fee on in-wallet swaps`] : []),
+        recovery ? `Recovery: ${recovery.charAt(0).toLowerCase()}${recovery.slice(1)} — lose it and the balance is gone` : "Recovery is seed-only: lose it and the balance is gone",
         ...(checked ? [] : ["Not yet field-tested on real casino deposits"]),
       ],
       faqs: [

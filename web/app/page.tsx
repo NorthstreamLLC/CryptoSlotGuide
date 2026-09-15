@@ -79,12 +79,12 @@ function buildFeatured() {
 
   return [
     { name: "Sweet Bonanza", mono: "SWB", slug: "sweet-bonanza", cat: "Slot", score: sb ? `${sb.rtp.toFixed(2)}%` : "—", line: `Published at ${sb ? `${sb.rtp.toFixed(2)}%` : "its studio RTP"}, but operators can licence a lower build. Check the RTP in the game's info screen before you spin.`, metric: sb ? `${sb.provider} game page` : "—", cta: "Slot review →", href: "/slots/sweet-bonanza" },
-    { name: "Kraken", mono: "KR", slug: "kraken", cat: "Exchange", score: score(kr?.score), line: "Tightest listed spread of the exchanges on our index, and no daily withdrawal cap once the account is verified.", metric: `Listed spread ${kr?.m1 ?? "—"}`, cta: "Review →", href: "/exchanges/kraken" },
+    { name: "Kraken", mono: "KR", slug: "kraken", cat: "Exchange", score: score(kr?.score), line: "MiCA-licensed, FCA-registered and publishes proof of reserves — its entry-tier Pro fees are the highest of the five.", metric: `${kr?.m1 ?? "—"} entry taker fee`, cta: "Review →", href: "/exchanges/kraken" },
     { name: "Stake", mono: "ST", slug: "stake", cat: "Casino", score: score(st?.score), line: `${(coinsBy["stake"] ?? []).length} of the ${coinDefs.length} coins we track on the cashier and VIP rakeback with no wagering on its weekly bonus, but no withdrawal time stated in its help centre.`, metric: `${(coinsBy["stake"] ?? []).length} coins accepted`, cta: "Review →", href: "/casinos/stake" },
-    { name: "Phantom", mono: "PH", slug: "phantom", cat: "Wallet", score: score(ph?.score), line: "Solana-first self-custody wallet with automatic priority fees. Chain coverage is narrower than MetaMask's.", metric: ph?.m2 ?? "—", cta: "Review →", href: "/wallets/phantom" },
+    { name: "Phantom", mono: "PH", slug: "phantom", cat: "Wallet", score: score(ph?.score), line: "Solana-first self-custody wallet with transaction previews before you approve, audited by Kudelski and Least Authority.", metric: ph?.m2 ?? "—", cta: "Review →", href: "/wallets/phantom" },
     { name: "Hacksaw Gaming", mono: "HG", slug: "hacksaw-gaming", cat: "Provider", score: score(hg?.score), line: "Lists every RTP version it licenses on each game page, so you can see how low a casino's build could go. Volatility is not for everyone.", metric: hg?.rtp ?? "—", cta: "Studio profile →", href: "/providers/hacksaw-gaming" },
     { name: "Cloudbet", mono: "CB", slug: "cloudbet", cat: "Sportsbook", score: score(cb?.score), line: `${cbBook && parseFloat(cbBook.margin) === lowestMargin ? "Lowest listed margin of the sportsbooks on our index" : "Sportsbook and casino on one balance"}. The casino welcome offer carries ${cb?.wager ?? "—"}× wagering.`, metric: `${cbBook?.margin ?? "—"} listed margin`, cta: "Sportsbooks →", href: "/sportsbooks" },
-    { name: "Ledger", mono: "LG", slug: "ledger", cat: "Wallet", score: score(lg?.score), line: "The reference hardware wallet for cold storage. Gas is set by hand per chain, which adds a step to every casino deposit.", metric: `${lg?.m2 ?? "—"}`, cta: "Review →", href: "/wallets/ledger" },
+    { name: "Ledger", mono: "LG", slug: "ledger", cat: "Wallet", score: score(lg?.score), line: "Hardware wallet with keys in a Secure Element and a Transaction Check before you sign.", metric: `${lg?.m2 ?? "—"}`, cta: "Review →", href: "/wallets/ledger" },
     { name: "Nolimit City", mono: "NC", slug: "nolimit-city", cat: "Provider", score: score(nc?.score), line: "Extreme volatility by design. The max-win ceilings are high and the base game will test your bankroll.", metric: nc?.rtp ?? "—", cta: "Studio profile →", href: "/providers/nolimit-city" },
   ];
 }
@@ -149,7 +149,7 @@ export default function HomePage() {
 
   const toolLists = [
     { kicker: "Wallets", title: "Where the bankroll lives", blurb: "Custody model, chain coverage, and how each handles gas.", href: "/wallets", items: walletRows },
-    { kicker: "Exchanges", title: "Getting on and off chain", blurb: "Listed spreads, fiat rails and withdrawal limits.", href: "/exchanges", items: exchangeRows },
+    { kicker: "Exchanges", title: "Getting on and off chain", blurb: "Entry fees, fiat rails and withdrawal limits, from each exchange's own pages.", href: "/exchanges", items: exchangeRows },
   ];
 
   const coinTiles = coinDefs.map((coin) => ({

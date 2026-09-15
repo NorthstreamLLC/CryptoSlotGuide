@@ -295,7 +295,8 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
           </div>
         </div>
 
-        <SectionHeading title={e.specTitle} sub={e.specSub} maxWidth="80ch" />
+        {e.spec.length > 0 && <SectionHeading title={e.specTitle} sub={e.specSub} maxWidth="80ch" />}
+        {e.spec.length > 0 && (
         <div style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 13, overflow: "hidden", background: "#0C1013", marginBottom: 38 }}>
           {e.spec.map((row) => (
             <div key={row.k} style={{ display: "grid", gridTemplateColumns: "210px 1fr 150px", borderBottom: "1px solid rgba(255,255,255,.05)" }}>
@@ -309,6 +310,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
             </div>
           ))}
         </div>
+        )}
 
         <SectionHeading title={e.tableTitle} sub={e.tableSub} maxWidth="80ch" />
         {e.tableRows.length === 0 && (

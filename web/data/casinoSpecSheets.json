@@ -705,6 +705,75 @@
     ]
   },
   {
+    "operatorSlug": "bybit",
+    "groups": [
+      {
+        "title": "Fees",
+        "facts": [
+          {
+            "label": "Spot trading fees",
+            "value": "VIP 0 crypto pairs: 0.10% maker / 0.10% taker; may vary by region",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.bybit.com/en/help-center/article/Trading-Fee-Structure",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Crypto withdrawal fees",
+            "value": "Fixed fee per coin and chain, shown in the withdrawal window",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.bybit.com/en/help-center/article/FAQ-Crypto-Withdrawal",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Fiat & limits",
+        "facts": [
+          {
+            "label": "Fiat rails",
+            "value": "SEPA, PIX, online banking and e-wallets; varies by currency and region",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.bybit.com/en/help-center/article/FAQ-Fiat-Deposit",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal limits",
+            "value": "Standard KYC (non-VIP): up to 1M USDT/day in crypto, no monthly limit",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.bybit.com/en/help-center/article/Individual-KYC-FAQ",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Verification",
+            "value": "Standard identity verification mandatory for all products",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.bybit.com/en/help-center/article/Individual-KYC-FAQ",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Regulation",
+            "value": "EU: MiCAR licence from Austria's Financial Market Authority (May 2025)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.bybit.com/en/learn/regulations/crypto-regulations-in-eu",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Proof of reserves",
+            "value": "Yes — Merkle-tree proof of reserves with account self-verification",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.bybit.com/en/help-center/article/How-to-Verify-the-Assets-in-Your-Account",
+            "asOf": "2026-09-15"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "operatorSlug": "cloudbet",
     "groups": [
       {
@@ -803,6 +872,75 @@
             "sourcing": "editorial",
             "sourceUrl": "https://www.cloudbet.com/en/help/terms",
             "asOf": "2026-09-14"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "operatorSlug": "coinbase",
+    "groups": [
+      {
+        "title": "Fees",
+        "facts": [
+          {
+            "label": "Spot trading fees",
+            "value": "Coinbase Exchange up to $10K: 0.40% maker / 0.60% taker (retail Advanced schedule needs sign-in)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://exchange.coinbase.com/fees",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Crypto withdrawal fees",
+            "value": "Network fee based on Coinbase's estimate of prevailing network fees, shown at transaction",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.coinbase.com/en/coinbase/trading-and-funding/pricing-and-fees/fees",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Fiat & limits",
+        "facts": [
+          {
+            "label": "Fiat rails",
+            "value": "US: ACH, wire, debit card, PayPal, Apple/Google Pay; Canada: Interac, EFT; Brazil: Pix",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.coinbase.com/en/coinbase/getting-started/add-a-payment-method/payment-methods-for-us-customers",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal limits",
+            "value": "Coinbase Exchange default $100,000/day (USD ACH and Fedwire); retail limits vary by account",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.coinbase.com/en/exchange/funding/deposit-and-withdrawal-limits",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Verification",
+            "value": "ID verification required at account creation",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.coinbase.com/en/coinbase/getting-started/getting-started-with-coinbase/id-doc-verification",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Regulation",
+            "value": "EU: MiCA licence from Luxembourg's CSSF covering all 27 member states",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.coinbase.com/blog/coinbase-secures-mica-licence-a-milestone-in-europes-crypto-evolution",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Proof of reserves",
+            "value": "Published for wrapped assets only (e.g. cbBTC); no exchange-wide report found",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.coinbase.com/cbbtc/proof-of-reserves",
+            "asOf": "2026-09-15"
           }
         ]
       }
@@ -1958,6 +2096,194 @@
     ]
   },
   {
+    "operatorSlug": "kraken",
+    "groups": [
+      {
+        "title": "Fees",
+        "facts": [
+          {
+            "label": "Spot trading fees",
+            "value": "Kraken Pro Tier 1 ($0+ 30-day volume): 0.40% maker / 0.80% taker",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.kraken.com/features/fee-schedule",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Crypto withdrawal fees",
+            "value": "Flat fee per asset and network, e.g. BTC 0.000015 (min 0.000218)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://support.kraken.com/articles/360000767986-cryptocurrency-withdrawal-fees-and-minimums",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Fiat & limits",
+        "facts": [
+          {
+            "label": "Fiat rails",
+            "value": "US: ACH, FedWire, RTP; EU: SEPA and Instant SEPA; UK: FPS; SWIFT worldwide; card purchases",
+            "sourcing": "editorial",
+            "sourceUrl": "https://support.kraken.com/articles/360000423043-cash-withdrawal-options-fees-minimums-and-processing-times-",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal limits",
+            "value": "Verified individual cash: $100K/day and $500K/30 days; crypto limits are dynamic",
+            "sourcing": "editorial",
+            "sourceUrl": "https://support.kraken.com/articles/360001449826-deposit-and-withdrawal-limits-by-verification-level",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Verification",
+            "value": "Verification required to buy, sell and deposit; ID and proof of address generally required",
+            "sourcing": "editorial",
+            "sourceUrl": "https://support.kraken.com/articles/360001395743-verification-levels-explained",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Regulation",
+            "value": "EU: MiCA CASP, Central Bank of Ireland (C468360); UK: FCA-registered (FRN 928768)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://support.kraken.com/articles/where-is-kraken-licensed-or-regulated",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Proof of reserves",
+            "value": "Yes — snapshot 30 June 2026 (e.g. BTC reserve ratio 102.9%)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.kraken.com/proof-of-reserves",
+            "asOf": "2026-09-15"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "operatorSlug": "kucoin",
+    "groups": [
+      {
+        "title": "Fees",
+        "facts": [
+          {
+            "label": "Spot trading fees",
+            "value": "VIP 0 Class A pairs: 0.1% maker / 0.1% taker (Class B 0.2%, Class C 0.3%)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.kucoin.com/vip/privilege/fee",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Crypto withdrawal fees",
+            "value": "Fixed fee per coin and network, e.g. BTC native 0.00009 (min 0.00018)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.kucoin.com/vip/privilege/fee",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Fiat & limits",
+        "facts": [
+          {
+            "label": "Fiat rails",
+            "value": "EUR via SEPA and SEPA Instant; card and P2P purchases for verified users",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.kucoin.com/support/4414853291033",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal limits",
+            "value": "VIP 0: 1,000,000 USDT per 24h",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.kucoin.com/vip/privilege/fee",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Verification",
+            "value": "New users must complete identity verification to use its products",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.kucoin.com/support/360015102254",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Regulation",
+            "value": "EU: MiCAR CASP with Austria's FMA (KuCoin EU Exchange GmbH); Australia: AUSTRAC-registered",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.kucoin.com/blog/en-kucoin-secures-landmark-micar-license-expanding-regulated-digital-asset-services-across-europe",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Proof of reserves",
+            "value": "Yes — e.g. BTC reserve ratio 107% (data at 31 Aug 2026)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.kucoin.com/proof-of-reserves",
+            "asOf": "2026-09-15"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "operatorSlug": "ledger",
+    "groups": [
+      {
+        "title": "Custody & security",
+        "facts": [
+          {
+            "label": "Custody model",
+            "value": "Self-custody; private keys generated and stored in the Secure Element chip",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.ledger.com/academy/security/the-secure-element-whistanding-security-attacks",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Transaction protection",
+            "value": "Clear Signing plus Transaction Check threat alerts before you sign",
+            "sourcing": "editorial",
+            "sourceUrl": "https://shop.ledger.com/pages/clear-signing",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Recovery",
+            "value": "24-word Secret Recovery Phrase; optional paid Ledger Recover service",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.ledger.com/academy/basic-basics/ledgers-ecosystem/why-is-ledger-nano-so-secure",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Open source",
+            "value": "Partly — Ledger Live is open source; parts of the OS following",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.ledger.com/academy/topics/ledgersolutions/is-ledger-open-source",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Coverage & fees",
+        "facts": [
+          {
+            "label": "Supported chains",
+            "value": "100+ chains",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.ledger.com/ledger-live",
+            "asOf": "2026-09-15"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "operatorSlug": "mbit",
     "groups": [
       {
@@ -2067,6 +2393,70 @@
     ]
   },
   {
+    "operatorSlug": "metamask",
+    "groups": [
+      {
+        "title": "Custody & security",
+        "facts": [
+          {
+            "label": "Custody model",
+            "value": "Self-custody; recovery phrase and keys stored encrypted on the device",
+            "sourcing": "editorial",
+            "sourceUrl": "https://metamask.io/faqs",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Transaction protection",
+            "value": "Security alerts check transactions for fund-loss risk",
+            "sourcing": "editorial",
+            "sourceUrl": "https://support.metamask.io/configure/wallet/security-alerts/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Recovery",
+            "value": "12-word Secret Recovery Phrase; optional social-login backup",
+            "sourcing": "editorial",
+            "sourceUrl": "https://support.metamask.io/start/user-guide-secret-recovery-phrase-password-and-private-keys/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Open source",
+            "value": "Code public on GitHub, but its licence restricts copying, modifying and distribution",
+            "sourcing": "editorial",
+            "sourceUrl": "https://github.com/MetaMask/metamask-extension",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Security audits",
+            "value": "Yes — audit reports published",
+            "sourcing": "editorial",
+            "sourceUrl": "https://metamask.io/security/metamask-security-program",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Coverage & fees",
+        "facts": [
+          {
+            "label": "Supported chains",
+            "value": "EVM networks (custom RPCs addable) plus Bitcoin, Solana and Tron",
+            "sourcing": "editorial",
+            "sourceUrl": "https://support.metamask.io/configure/networks/how-to-add-a-custom-network-rpc/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Swap fee",
+            "value": "0.875% MetaMask fee",
+            "sourcing": "editorial",
+            "sourceUrl": "https://support.metamask.io/trade/swap/user-guide-swaps/",
+            "asOf": "2026-09-15"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "operatorSlug": "metawin",
     "groups": [
       {
@@ -2164,6 +2554,147 @@
     ]
   },
   {
+    "operatorSlug": "okx",
+    "groups": [
+      {
+        "title": "Fees",
+        "facts": [
+          {
+            "label": "Spot trading fees",
+            "value": "OKX US regular user: 0.20% maker / 0.35% taker (US pages)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.okx.com/en-us/fees",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Crypto withdrawal fees",
+            "value": "Network fee per coin and network, e.g. BTC 0.000015 (min 0.000095) — US pages",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.okx.com/en-us/fees/withdrawal-info",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Fiat & limits",
+        "facts": [
+          {
+            "label": "Fiat rails",
+            "value": "US (verified, eligible states): ACH bank transfer and domestic wire",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.okx.com/en-us/help/introducing-usd-deposits-and-withdrawals",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal limits",
+            "value": "OKX US regular user: $10,000,000 per 24h in crypto",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.okx.com/en-us/fees",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Verification",
+            "value": "Identity verification required to withdraw",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.okx.com/en-us/help/why-cant-i-withdraw",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Regulation",
+            "value": "MiCA licence via its EEA hub in Malta, passported across the EEA",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.okx.com/en-us/learn/our-mica-license",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Proof of reserves",
+            "value": "Yes — 46th report: $22.96B in primary assets",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.okx.com/en-us/proof-of-reserves",
+            "asOf": "2026-09-15"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "operatorSlug": "phantom",
+    "groups": [
+      {
+        "title": "Custody & security",
+        "facts": [
+          {
+            "label": "Custody model",
+            "value": "Self-custody; Phantom never holds recovery phrases or private keys",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.phantom.com/articles/create-a-new-phantom-wallet-8071074929043",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Transaction protection",
+            "value": "Transaction previews flag malicious transactions before approval",
+            "sourcing": "editorial",
+            "sourceUrl": "https://phantom.com/learn/blog/security-at-phantom",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Recovery",
+            "value": "12-word recovery phrase, or a Google/Apple account plus 4-digit PIN",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.phantom.com/articles/create-a-new-phantom-wallet-8071074929043",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Open source",
+            "value": "Wallet not stated as open source; its phishing blocklist is",
+            "sourcing": "editorial",
+            "sourceUrl": "https://phantom.com/security",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Security audits",
+            "value": "Yes — Kudelski Security (2021) and Least Authority (2024) reports",
+            "sourcing": "editorial",
+            "sourceUrl": "https://github.com/phantom/audit-reports",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Coverage & fees",
+        "facts": [
+          {
+            "label": "Supported chains",
+            "chips": [
+              "Solana",
+              "Ethereum",
+              "Polygon",
+              "Bitcoin",
+              "Base",
+              "HyperEVM",
+              "Robinhood Chain"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.phantom.com/articles/can-i-manually-add-a-network-to-phantom-46595961428627",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Swap fee",
+            "value": "0.85% on select swap pairs",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.phantom.com/articles/5985106844435",
+            "asOf": "2026-09-15"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "operatorSlug": "qzino",
     "groups": [
       {
@@ -2219,6 +2750,70 @@
             "value": "May require verification: photo ID and proof of address",
             "sourcing": "editorial",
             "sourceUrl": "https://qzino.tech/docs/Qzino_Terms_and_Conditions.pdf",
+            "asOf": "2026-09-15"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "operatorSlug": "rabby",
+    "groups": [
+      {
+        "title": "Custody & security",
+        "facts": [
+          {
+            "label": "Custody model",
+            "value": "Self-custody; data stored locally on the device, encrypted with your password",
+            "sourcing": "editorial",
+            "sourceUrl": "https://support.rabby.io/en/articles/14150618-how-secure-is-rabby-wallet",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Transaction protection",
+            "value": "Transaction simulation previews outcomes to avoid blind signing; Security Engine risk checks",
+            "sourcing": "editorial",
+            "sourceUrl": "https://support.rabby.io/en/articles/14124199-understanding-rabby-s-transaction-simulation",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Recovery",
+            "value": "12-word seed phrase or private key backup",
+            "sourcing": "editorial",
+            "sourceUrl": "https://support.rabby.io/en/articles/14120234-getting-started-with-rabby-extension",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Open source",
+            "value": "Yes — open source on its official GitHub",
+            "sourcing": "editorial",
+            "sourceUrl": "https://github.com/RabbyHub/Rabby",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Security audits",
+            "value": "Yes — SlowMist and Least Authority (2025) plus earlier reports",
+            "sourcing": "editorial",
+            "sourceUrl": "https://github.com/RabbyHub/Rabby/tree/develop/audits",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Coverage & fees",
+        "facts": [
+          {
+            "label": "Supported chains",
+            "value": "EVM-compatible networks only; 90+ natively integrated",
+            "sourcing": "editorial",
+            "sourceUrl": "https://support.rabby.io/en/articles/14120079-what-is-rabby-wallet",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Swap fee",
+            "value": "0.25%, included in the quote; waived on some same-chain stablecoin and ETH pairs",
+            "sourcing": "editorial",
+            "sourceUrl": "https://support.rabby.io/en/articles/14134156-how-to-use-rabby-swap",
             "asOf": "2026-09-15"
           }
         ]
@@ -3177,6 +3772,63 @@
             "value": "Its help centre says it will never KYC you, whatever the amount",
             "sourcing": "editorial",
             "sourceUrl": "https://help.toshi.bet/en/articles/9986441-crypto-deposit-rules",
+            "asOf": "2026-09-15"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "operatorSlug": "trust-wallet",
+    "groups": [
+      {
+        "title": "Custody & security",
+        "facts": [
+          {
+            "label": "Custody model",
+            "value": "Self-custody; keys stored locally on the device, encrypted, PIN or biometric protected",
+            "sourcing": "editorial",
+            "sourceUrl": "https://trustwallet.com/security",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Transaction protection",
+            "value": "Security Scanner simulates transactions and warns of risky approvals (some networks)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://trustwallet.com/blog/security/how-trust-wallet-security-scanner-works",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Recovery",
+            "value": "12-word recovery phrase; optional Encrypted Cloud Backup",
+            "sourcing": "editorial",
+            "sourceUrl": "https://trustwallet.com/security",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Open source",
+            "value": "Partly — its Wallet Core cryptographic library is open source",
+            "sourcing": "editorial",
+            "sourceUrl": "https://github.com/trustwallet/wallet-core",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Security audits",
+            "value": "Yes — CertiK, Cure53, Halborn, Kudelski and Quantstamp reports linked",
+            "sourcing": "editorial",
+            "sourceUrl": "https://trustwallet.com/blog/security/complete-overview-of-trust-wallet-security",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Coverage & fees",
+        "facts": [
+          {
+            "label": "Supported chains",
+            "value": "100+ blockchains",
+            "sourcing": "editorial",
+            "sourceUrl": "https://trustwallet.com/",
             "asOf": "2026-09-15"
           }
         ]

@@ -129,9 +129,9 @@ export function medianReadMins(guides: GuideRow[]): number {
   return median(guides.map((g) => g.readMins));
 }
 
-/** Tightest exchange spread — same sort-and-take-first the source uses (m1 is a "%" string). */
-export function bestSpread(exchangeRows: WalletOrExchangeRow[]): string {
-  return [...exchangeRows].map((x) => x.m1).sort()[0] ?? "—";
+/** Lowest entry-tier taker fee (m1, e.g. "0.10%"), from each exchange's own fee schedule. */
+export function lowestTakerFee(exchangeRows: WalletOrExchangeRow[]): string {
+  return [...exchangeRows].sort((a, b) => parseFloat(a.m1) - parseFloat(b.m1))[0]?.m1 ?? "—";
 }
 
 export function topScore<T extends { score: number }>(list: T[]): T | undefined {
