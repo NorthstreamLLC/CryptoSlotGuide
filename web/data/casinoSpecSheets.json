@@ -2095,6 +2095,49 @@
             "asOf": "2026-09-15"
           }
         ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": [
+              "BTC",
+              "ETH",
+              "USDT",
+              "USDC",
+              "LTC",
+              "BCH",
+              "BNB",
+              "TRX",
+              "SOL",
+              "XRP",
+              "DOGE",
+              "ADA",
+              "LINK",
+              "AVAX",
+              "GRAM",
+              "HBAR"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://duel.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Card and bank",
+            "value": "No direct fiat balance: a Deposit with Cash screen buys crypto for your account with Visa, MasterCard, Skrill, Neteller, paysafecard, Rapid Transfer, bank transfer, Google Pay, Apple Pay or Papara",
+            "sourcing": "editorial",
+            "sourceUrl": "https://duel.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Gift cards",
+            "value": "Duel gift cards of $10, $25, $50, $100, $250 or $500 can be bought through Kinguin and redeemed with a code; the final price varies with Kinguin's processing fees and the currency you pay in",
+            "sourcing": "editorial",
+            "sourceUrl": "https://duel.com/",
+            "asOf": "2026-09-15"
+          }
+        ]
       }
     ]
   },
