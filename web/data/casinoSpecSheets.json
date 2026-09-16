@@ -5249,16 +5249,16 @@
         "facts": [
           {
             "label": "Withdrawal fees",
-            "value": "No commission if the deposit is wagered at least once; otherwise an 8% fee with a €4 minimum. A €50 administration fee applies to any chargeback",
+            "value": "The blockchain network fee is deducted from the amount you withdraw. No commission if the deposit is wagered at least once; otherwise an 8% fee with a €4 minimum. A €50 administration fee applies to any chargeback",
             "sourcing": "editorial",
             "sourceUrl": "https://wager.com/policy/term-and-conditions/",
             "asOf": "2026-09-15"
           },
           {
             "label": "Minimum withdrawal",
-            "value": "€10 per transaction, or the full balance when closing the account",
+            "value": "Its help centre says the minimum is the equivalent of $20; its terms say €10 per transaction, or the full balance when closing the account",
             "sourcing": "editorial",
-            "sourceUrl": "https://wager.com/policy/term-and-conditions/",
+            "sourceUrl": "https://help.wager.com/",
             "asOf": "2026-09-15"
           },
           {
@@ -5273,6 +5273,13 @@
             "value": "Withdrawals go back to the method used to deposit; another method is allowed only at its discretion and with extra checks. A wallet stays locked while a wagering requirement runs on it",
             "sourcing": "editorial",
             "sourceUrl": "https://wager.com/policy/term-and-conditions/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal conditions",
+            "value": "Every deposit must be wagered at least once before it can be withdrawn; blockchain withdrawals are final and it takes no responsibility for funds sent to a wrong address",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.wager.com/",
             "asOf": "2026-09-15"
           }
         ]
@@ -5302,9 +5309,23 @@
           },
           {
             "label": "Card and bank",
-            "value": "Card and local-currency deposits run through third-party processors, and it points players to MoonPay to buy crypto on the platform; it says it usually absorbs deposit transaction fees",
+            "value": "Crypto-first: there is no fiat balance. Its help centre says cards (Visa, Mastercard) buy crypto through Banxa, whose fees it doesn't set and which isn't available everywhere; a separate site page names MoonPay for the same job",
             "sourcing": "editorial",
-            "sourceUrl": "https://wager.com/policy/term-and-conditions/",
+            "sourceUrl": "https://help.wager.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "No set minimum: technically $0.01 equivalent, but it advises against depositing under $5 because network and processing fees can exceed the deposit",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.wager.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Deposit warnings",
+            "value": "XRP and TON deposits need the correct destination tag or funds can be lost permanently, and funds sent on unsupported networks cannot be recovered; it takes no responsibility for either",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.wager.com/",
             "asOf": "2026-09-15"
           }
         ]
@@ -5389,9 +5410,9 @@
           },
           {
             "label": "KYC policy",
-            "value": "Four tiers applied by risk: email at registration, then basic details (name, date of birth, address, occupation), then government ID, then proof of address. Its help page says not all withdrawals need verification, but large or unusual ones can, and its terms allow a selfie or verification call; its AML policy adds due diligence at EUR 2,000 of cumulative withdrawals",
+            "value": "Four tiers applied by risk: email at registration, then basic details (name, date of birth, address, occupation), then government ID, then proof of address. Email plus Level 1 basic information must be done before you can deposit at all; its help page says not all withdrawals need verification, though large or unusual ones can, and its terms allow a selfie or verification call. Its AML policy adds due diligence at EUR 2,000 of cumulative withdrawals",
             "sourcing": "editorial",
-            "sourceUrl": "https://wager.com/policy/aml-policy/",
+            "sourceUrl": "https://help.wager.com/",
             "asOf": "2026-09-15"
           },
           {
