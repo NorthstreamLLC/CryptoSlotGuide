@@ -1665,6 +1665,27 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.degen.com/en/articles/12573437-how-long-do-withdrawals-take",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal fees",
+            "value": "Its terms say processing fees may apply in some cases and would be disclosed then; no fee schedule is published",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.degen.com/policies/terms-of-service",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Minimum withdrawal",
+            "value": "Its terms say minimum and maximum withdrawal limits may be set and published on the site; we found none published",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.degen.com/policies/terms-of-service",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal rules",
+            "value": "Withdrawals generally go back to the payment method used to deposit, and can be delayed for verification or extra documents",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.degen.com/policies/terms-of-service",
+            "asOf": "2026-09-15"
           }
         ]
       },
@@ -1773,6 +1794,20 @@
             "value": "Degen Legend Limitada (Costa Rica, reg. 3-102-932227), Barrio Dent, San José - Montes de Oca",
             "sourcing": "editorial",
             "sourceUrl": "https://www.degen.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "KYC policy",
+            "value": "Registration asks for full name, date of birth and address; its terms reserve the right to verify identity, request source-of-funds documents and run extra KYC checks before crypto withdrawals",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.degen.com/policies/terms-of-service",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Account rules",
+            "value": "One account per person; VPNs or proxies used to get around restricted jurisdictions breach its terms. The terms name no restricted countries",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.degen.com/policies/terms-of-service",
             "asOf": "2026-09-15"
           }
         ]
