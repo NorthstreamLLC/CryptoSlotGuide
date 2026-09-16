@@ -489,10 +489,10 @@
         "facts": [
           {
             "label": "Standing offer",
-            "value": "Free $10 plus up to 200% bonus on deposits up to $10",
+            "value": "Free spins credited after email verification with no deposit needed, plus 100% of the first deposit up to $1,000 in any supported crypto; both need Acebet's own promo code at registration. Its About page instead says new players get a 1% deposit match, and an earlier homepage offer was a free $10 plus up to 200% on deposits up to $10",
             "sourcing": "editorial",
             "sourceUrl": "https://acebet.co/",
-            "asOf": "2026-09-15"
+            "asOf": "2026-09-16"
           },
           {
             "label": "Expiry",
@@ -500,6 +500,20 @@
             "sourcing": "editorial",
             "sourceUrl": "https://acebet.co/policies/terms-of-service",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Wagering rules",
+            "value": "Bonus funds must meet its standard playthrough before withdrawal; the multiplier and game contribution rates are only shown in the bonus terms at sign-up",
+            "sourcing": "editorial",
+            "sourceUrl": "https://acebet.co/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Game contribution",
+            "value": "Bonus funds can be used across the whole catalogue, including slots, live dealer tables and Acebet Originals; contribution rates are only shown at sign-up",
+            "sourcing": "editorial",
+            "sourceUrl": "https://acebet.co/",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -526,6 +540,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://acebet.co/policies/terms-of-service",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Payment processor",
+            "value": "Payments are handled by 51 Plus One Ltd, Strovolos, Nicosia, Cyprus",
+            "sourcing": "editorial",
+            "sourceUrl": "https://acebet.co/",
+            "asOf": "2026-09-16"
           }
         ]
       }

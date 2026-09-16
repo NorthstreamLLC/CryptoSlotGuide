@@ -620,7 +620,7 @@
     "payoutLabel": "7m 48s",
     "licence": "Anjouan",
     "kyc": "tiered",
-    "bonus": "Free $10 + up to 200% on deposits up to $10",
+    "bonus": "100% first deposit up to $1,000 + no-deposit free spins",
     "wager": 35,
     "conf": 2,
     "absorbsFee": false,
@@ -631,7 +631,7 @@
     "payoutStated": "5–15 min (terms: 2 days)",
     "payoutStatedMaxMins": 2880,
     "bonusExpiry": "Unused bonus may be removed after 1 month",
-    "bonusShort": "Up to 200% deposit bonus"
+    "bonusShort": "100% up to $1,000 + free spins"
   },
   {
     "slug": "jackpotbet",
