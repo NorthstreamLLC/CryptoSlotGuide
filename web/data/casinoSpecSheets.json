@@ -5692,17 +5692,17 @@
         "facts": [
           {
             "label": "Standing offer",
-            "value": "Champions Welcome: 100% up to 300 USDT, sports or casino, for selected first-time depositors",
+            "value": "Champions Welcome: 100% of the first deposit up to 300 USDT, as either a sports or a casino bonus you enable in Rewards before depositing; for selected first-time depositors, in USDT, mBTC, TRX, TON or CAD (selected markets), running 14 April 2024 to 31 May 2027",
             "sourcing": "editorial",
             "sourceUrl": "https://sportsbet.io/promotions/2025-04-welcome-champion",
-            "asOf": "2026-09-15"
+            "asOf": "2026-09-16"
           },
           {
             "label": "Wagering",
-            "value": "25× on the sports bonus; 40× on the casino bonus",
+            "value": "25× on sports for the sports bonus, 40× on casino games for the casino bonus; the whole deposit stays locked until the bonus is wagered or forfeited. The terms don't say whether the multiplier covers the deposit too",
             "sourcing": "editorial",
             "sourceUrl": "https://sportsbet.io/promotions/2025-04-welcome-champion",
-            "asOf": "2026-09-15"
+            "asOf": "2026-09-16"
           },
           {
             "label": "Expiry",
@@ -5713,16 +5713,16 @@
           },
           {
             "label": "Max cashout",
-            "value": "Max release amount is 10× the max bonus amount",
+            "value": "10× the maximum bonus amount (3,000 USDT)",
             "sourcing": "editorial",
             "sourceUrl": "https://sportsbet.io/promotions/2025-04-welcome-champion",
-            "asOf": "2026-09-15"
+            "asOf": "2026-09-16"
           },
           {
             "label": "Game contribution",
-            "value": "Sportsbook bet slips at total odds of 1.50 or more and slots count 100%; live game shows 20%; Originals, table and RNG games, and live baccarat, roulette and blackjack 10%. Bets count once settled, and some games are excluded entirely",
+            "value": "Sports bonus: sportsbook bets at odds of 1.50 or more count 100%. Casino bonus: slots 100%, live game shows 20%, live baccarat, roulette and blackjack 10%, table and RNG games 10%; some games are excluded entirely",
             "sourcing": "editorial",
-            "sourceUrl": "https://sportsbet.io/help-centre/help-other/help-other-terms-and-conditions/sportsbet-bonus-terms-conditions",
+            "sourceUrl": "https://sportsbet.io/promotions/2025-04-welcome-champion",
             "asOf": "2026-09-16"
           },
           {
@@ -5730,6 +5730,27 @@
             "value": "Selected players can switch on offers that release a reward once a wagering target is hit in time, in the offer's currency; winnings from the reward may carry their own wagering",
             "sourcing": "editorial",
             "sourceUrl": "https://sportsbet.io/help-centre/help-other/help-other-terms-and-conditions/sportsbet-bonus-terms-conditions",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max bet",
+            "value": "Equal to the maximum bonus amount (300 USDT)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://sportsbet.io/promotions/2025-04-welcome-champion",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "10 USDT in a single deposit made straight after enabling the bonus; smaller deposits don't count and aren't combined",
+            "sourcing": "editorial",
+            "sourceUrl": "https://sportsbet.io/promotions/2025-04-welcome-champion",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Bonus play rules",
+            "value": "Once per player, IP address, household, device, payment method or email, and it can't be combined with any other offer",
+            "sourcing": "editorial",
+            "sourceUrl": "https://sportsbet.io/promotions/2025-04-welcome-champion",
             "asOf": "2026-09-16"
           }
         ]

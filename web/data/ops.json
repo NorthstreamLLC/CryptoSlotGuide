@@ -249,7 +249,7 @@
     "payoutStated": "Instant",
     "payoutStatedMaxMins": 0,
     "bonusExpiry": "Wagering within 7 days",
-    "cashoutCap": "10× the max bonus amount",
+    "cashoutCap": "Max release 3,000 USDT (10× max bonus)",
     "bonusShort": "100% up to 300 USDT",
     "wagerBasis": "on casino, 25× on sports"
   },
