@@ -6093,6 +6093,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://toshi.bet/",
             "asOf": "2026-09-16"
+          },
+          {
+            "label": "Weekly raffle",
+            "value": "$25,000 drawn weekly across 100 winning tickets ($2,500 for 1st, $1,800 for 2nd, $1,250 for 3rd, down to $375 for 10th, then 90 more); 1 ticket per $100 wagered on casino, 3 per $100 on sports, and tickets can also be bought with Toshi Gold at a price that doubles every 1,500 tickets",
+            "sourcing": "editorial",
+            "sourceUrl": "https://toshi.bet/raffle",
+            "asOf": "2026-09-16"
           }
         ]
       },

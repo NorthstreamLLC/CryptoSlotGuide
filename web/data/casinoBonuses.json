@@ -795,5 +795,58 @@
         "sourceNote": "Bitcasino’s own promotion page"
       }
     ]
+  },
+  {
+    "operatorSlug": "toshibet",
+    "bonuses": [
+      {
+        "title": "Deposit bonus",
+        "category": "Deposit bonus · first 3 deposits",
+        "headline": "200%",
+        "subCopy": "200%, 150% and 100% on the first three deposits, released as you play at $1 for every $250 wagered, with at most $60,000 claimable in total.",
+        "stats": [
+          {
+            "label": "Unlock rate",
+            "value": "$1 per $250"
+          },
+          {
+            "label": "Max claim",
+            "value": "$60,000"
+          }
+        ],
+        "asOf": "2026-09-16",
+        "sourceUrl": "https://help.toshi.bet/en/articles/10017165-deposit-bonus-how-does-it-work",
+        "sourceNote": "Toshibet’s own help centre and user agreement"
+      },
+      {
+        "title": "$25,000 Weekly Raffle",
+        "category": "Raffle · all players",
+        "headline": "$25,000",
+        "subCopy": "100 tickets drawn each week, from $2,500 for first down to the 100th. Earn 1 ticket per $100 wagered on casino or 3 per $100 on sports, or buy them with Toshi Gold.",
+        "stats": [
+          {
+            "label": "1st prize",
+            "value": "$2,500"
+          },
+          {
+            "label": "Winners",
+            "value": "100"
+          }
+        ],
+        "asOf": "2026-09-16",
+        "endsLabel": "Draws weekly",
+        "sourceUrl": "https://toshi.bet/raffle",
+        "sourceNote": "Toshibet’s own raffle page"
+      },
+      {
+        "title": "VIP rakeback",
+        "category": "VIP · all players",
+        "headline": "No wagering",
+        "subCopy": "Every player earns rakeback automatically, rising with rank in the Toshi Whale Club. VIP rewards can be withdrawn as cash as soon as they’re claimed.",
+        "asOf": "2026-09-16",
+        "sourceUrl": "https://toshi.bet/vip",
+        "sourceNote": "Toshibet’s own VIP FAQ"
+      }
+    ]
   }
 ]
