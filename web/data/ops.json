@@ -490,8 +490,8 @@
     "payoutLabel": "7m 00s",
     "licence": "Anjouan",
     "kyc": "none",
-    "bonus": "VIP Club: rakeback, weekly and monthly bonuses, rank-up rewards",
-    "wager": 1,
+    "bonus": "100% first deposit up to $300 + up to 150 free spins",
+    "wager": 40,
     "conf": 1,
     "absorbsFee": false,
     "ln": false,
@@ -499,7 +499,11 @@
     "esports": false,
     "hasCustomReview": false,
     "payoutStated": "Instant",
-    "payoutStatedMaxMins": 0
+    "payoutStatedMaxMins": 0,
+    "bonusShort": "100% up to $300 + up to 150 free spins",
+    "wagerBasis": "deposit + bonus",
+    "bonusExpiry": "7 days to complete wagering",
+    "cashoutCap": "Max withdrawable $3,000"
   },
   {
     "slug": "betfury",

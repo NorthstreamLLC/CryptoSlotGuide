@@ -96,6 +96,26 @@
     "operatorSlug": "razed",
     "bonuses": [
       {
+        "title": "Welcome bonus",
+        "category": "Deposit bonus · new players",
+        "headline": "100%",
+        "subCopy": "First deposit matched up to $300, plus 100 free spins on Sugar Rush 1000 for a $100–$199 deposit or 150 for $200 and up, over 5 days. The deposit and bonus together carry 40× wagering, to be completed within 7 days.",
+        "stats": [
+          {
+            "label": "Wagering",
+            "value": "40× deposit + bonus"
+          },
+          {
+            "label": "Max withdrawable",
+            "value": "$3,000"
+          }
+        ],
+        "asOf": "2026-09-16",
+        "endsLabel": "7 days to clear",
+        "sourceUrl": "https://www.razed.com/promotions/",
+        "sourceNote": "Razed’s own promotion page (updated 4 Aug 2026)"
+      },
+      {
         "title": "$100,000 Monthly Race",
         "category": "Leaderboard · all players",
         "headline": "$100,000",

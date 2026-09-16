@@ -4093,10 +4093,10 @@
         "facts": [
           {
             "label": "Standing offer",
-            "value": "VIP Club: rakeback and monthly bonus from Starter; weekly bonus and rank-up rewards from Bronze 1; reward points you allocate to spins, cases, lossback, reloads, bonus buys or rakeback",
+            "value": "Welcome bonus: 100% match on the first deposit up to $300, claimed as you wager, opted into on the deposit screen, plus 100 free spins on Sugar Rush 1000 for a $100–$199 deposit or 150 for $200 and up, spread over 5 days",
             "sourcing": "editorial",
-            "sourceUrl": "https://www.razed.com/promotions/vip-transfer/",
-            "asOf": "2026-09-15"
+            "sourceUrl": "https://www.razed.com/promotions/",
+            "asOf": "2026-09-16"
           },
           {
             "label": "Rank-up rewards",
@@ -4132,6 +4132,41 @@
             "sourcing": "editorial",
             "sourceUrl": "https://www.razed.com/promotions/vip-transfer/",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Wagering",
+            "value": "Your deposit and the bonus go into one bonus balance with a 40× wagering requirement. Originals, Unoriginals and live casino (except game shows and roulette) count 20%; sports bets don't count",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.razed.com/promotions/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Expiry",
+            "value": "7 days to complete the wagering requirement",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.razed.com/promotions/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max cashout",
+            "value": "$3,000 can be withdrawn from the bonus once wagering is complete",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.razed.com/promotions/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Bonus play rules",
+            "value": "Max bet $50 while clearing the bonus and $20 while wagering free-spin winnings; free spins need a first deposit of at least $100; new players only, once per person",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.razed.com/promotions/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "VIP Club",
+            "value": "Rakeback and monthly bonus from Starter; weekly bonus and rank-up rewards from Bronze 1; reward points you allocate to spins, cases, lossback, reloads, bonus buys or rakeback",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.razed.com/promotions/vip-transfer/",
+            "asOf": "2026-09-16"
           }
         ]
       },
