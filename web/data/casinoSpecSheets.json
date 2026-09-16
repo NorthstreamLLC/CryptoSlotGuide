@@ -5249,16 +5249,116 @@
         "facts": [
           {
             "label": "Withdrawal fees",
-            "value": "None if the deposit is wagered 1×; otherwise an 8% fee (min €4)",
+            "value": "No commission if the deposit is wagered at least once; otherwise an 8% fee with a €4 minimum. A €50 administration fee applies to any chargeback",
             "sourcing": "editorial",
             "sourceUrl": "https://wager.com/policy/term-and-conditions/",
             "asOf": "2026-09-15"
           },
           {
             "label": "Minimum withdrawal",
-            "value": "€10 per transaction (or equivalent)",
+            "value": "€10 per transaction, or the full balance when closing the account",
             "sourcing": "editorial",
             "sourceUrl": "https://wager.com/policy/term-and-conditions/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Monthly withdrawal caps",
+            "value": "€10,000 a month normally, but only €5,000 a month if your balance is at least 10 times your total deposits. Single or monthly withdrawals over USD 50,000 can be paid in instalments capped at USD 50,000 a month",
+            "sourcing": "editorial",
+            "sourceUrl": "https://wager.com/policy/term-and-conditions/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal rules",
+            "value": "Withdrawals go back to the method used to deposit; another method is allowed only at its discretion and with extra checks. A wallet stays locked while a wagering requirement runs on it",
+            "sourcing": "editorial",
+            "sourceUrl": "https://wager.com/policy/term-and-conditions/",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": [
+              "BTC",
+              "ETH",
+              "USDT",
+              "USDC",
+              "LTC",
+              "SOL",
+              "TRX",
+              "XRP",
+              "DOGE",
+              "BNB",
+              "ADA",
+              "BCH"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://wager.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Card and bank",
+            "value": "Card and local-currency deposits run through third-party processors, and it points players to MoonPay to buy crypto on the platform; it says it usually absorbs deposit transaction fees",
+            "sourcing": "editorial",
+            "sourceUrl": "https://wager.com/policy/term-and-conditions/",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "Its own site page advertises a 150% deposit bonus up to $3,000 on a first crypto deposit, credited automatically with no bonus code; the in-account Promotions panel showed “No promotions available” when checked",
+            "sourcing": "editorial",
+            "sourceUrl": "https://wager.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Wagering",
+            "value": "40× the bonus amount on eligible games before it can be withdrawn",
+            "sourcing": "editorial",
+            "sourceUrl": "https://wager.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "VIP club",
+            "value": "Its own page describes rakeback, reloads and more as you move up the VIP ranks, without publishing the rates",
+            "sourcing": "editorial",
+            "sourceUrl": "https://wager.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Bonus eligibility",
+            "value": "One bonus per user, household, IP address, device, wallet address or payment method unless a promotion says otherwise; rakeback and cashback can be switched off while a deposit bonus is being cleared",
+            "sourcing": "editorial",
+            "sourceUrl": "https://wager.com/policy/bonus-terms-and-conditions/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Bonus restrictions",
+            "value": "It can exclude games, providers, bet types or odds ranges from wagering, rakeback and VIP progression at any time, without notice, and says wagers on excluded games don't count even if you didn't know",
+            "sourcing": "editorial",
+            "sourceUrl": "https://wager.com/policy/bonus-terms-and-conditions/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Leaderboards",
+            "value": "Its Promotions panel lists a $10,000 Weekly Race, a $100,000 Monthly Race and a $1,000,000 invite-only race, all marked Coming Soon rather than running",
+            "sourcing": "editorial",
+            "sourceUrl": "https://wager.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "VIP transfer",
+            "value": "Offers to match a VIP status held at another casino, skipping the early levels, handled by a transfer team; it promises to beat the rewards elsewhere without publishing rates",
+            "sourcing": "editorial",
+            "sourceUrl": "https://wager.com/",
             "asOf": "2026-09-15"
           }
         ]
@@ -5268,23 +5368,51 @@
         "facts": [
           {
             "label": "Licence",
-            "value": "Anjouan, licence ALSI-2025 01037-FI2 (as written)",
+            "value": "Anjouan, licence ALSI-2025 01037-FI2 (as written), under the Computer Gaming Licensing Act 007 of 2005; the footer seal links to a validator",
             "sourcing": "editorial",
             "sourceUrl": "https://wager.com/",
             "asOf": "2026-09-15"
           },
           {
             "label": "Company",
-            "value": "Scivias Ltd (Anjouan, reg. 15923)",
+            "value": "Scivias Ltd (Anjouan, reg. 15923), Hamchako, Mutsamudu, Autonomous Island of Anjouan",
             "sourcing": "editorial",
             "sourceUrl": "https://wager.com/",
             "asOf": "2026-09-15"
           },
           {
+            "label": "Sister domain",
+            "value": "Its terms say the same company and terms cover both wager.com and wager.ltd",
+            "sourcing": "editorial",
+            "sourceUrl": "https://wager.com/policy/term-and-conditions/",
+            "asOf": "2026-09-15"
+          },
+          {
             "label": "KYC policy",
-            "value": "Due diligence on withdrawal requests and at EUR 2,000 cumulative withdrawals",
+            "value": "Four tiers applied by risk: email at registration, then basic details (name, date of birth, address, occupation), then government ID, then proof of address. Its help page says not all withdrawals need verification, but large or unusual ones can, and its terms allow a selfie or verification call; its AML policy adds due diligence at EUR 2,000 of cumulative withdrawals",
             "sourcing": "editorial",
             "sourceUrl": "https://wager.com/policy/aml-policy/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Restricted countries",
+            "value": "Austria, France, Germany, Netherlands, Spain, Union of Comoros, United Kingdom, USA and their territories, plus all FATF-blacklisted countries; VPNs are prohibited",
+            "sourcing": "editorial",
+            "sourceUrl": "https://wager.com/policy/term-and-conditions/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Data collected",
+            "value": "Its privacy policy lists name, address, phone, date of birth, IP and device data, betting and transaction history, chat and email records, and says phone calls may be recorded",
+            "sourcing": "editorial",
+            "sourceUrl": "https://wager.com/policy/privacy-policy/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Complaints",
+            "value": "Disputes over settled bets must be raised within 3 days per its terms, while its bonus policy allows 14 days for game outcomes and 30 days for account or bonus issues; unresolved cases go to arbitration or an independent ADR provider, which it doesn't name",
+            "sourcing": "editorial",
+            "sourceUrl": "https://wager.com/policy/term-and-conditions/",
             "asOf": "2026-09-15"
           }
         ]

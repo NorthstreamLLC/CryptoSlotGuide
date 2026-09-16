@@ -825,14 +825,15 @@
     "payoutLabel": "8m 00s",
     "licence": "Anjouan",
     "kyc": "tiered",
-    "bonus": "Launch promos",
-    "wager": 1,
+    "bonus": "150% first deposit up to $3,000",
+    "wager": 40,
     "conf": 2,
     "absorbsFee": false,
     "ln": false,
     "sports": true,
     "esports": true,
-    "hasCustomReview": false
+    "hasCustomReview": false,
+    "cashoutCap": "Max €5,000/month if balance ≥10× deposits"
   },
   {
     "slug": "coincasino",

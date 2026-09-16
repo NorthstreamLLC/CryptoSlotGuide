@@ -384,7 +384,10 @@
     "ETH",
     "USDT",
     "LTC",
-    "SOL"
+    "SOL",
+    "DOGE",
+    "XRP",
+    "TRX"
   ],
   "coincasino": [
     "BTC",

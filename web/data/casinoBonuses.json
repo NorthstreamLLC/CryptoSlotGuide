@@ -615,5 +615,58 @@
         "sourceNote": "Duel’s own Why Bonuses Suck page"
       }
     ]
+  },
+  {
+    "operatorSlug": "wager-com",
+    "bonuses": [
+      {
+        "title": "Welcome bonus",
+        "category": "Deposit bonus · new players",
+        "headline": "150%",
+        "subCopy": "Up to $3,000 on a first crypto deposit, credited automatically with no code, at 40× wagering on the bonus amount. Its in-account Promotions panel showed no live promotions when we checked.",
+        "stats": [
+          {
+            "label": "Max bonus",
+            "value": "$3,000"
+          },
+          {
+            "label": "Wagering",
+            "value": "40× bonus"
+          }
+        ],
+        "asOf": "2026-09-15",
+        "sourceUrl": "https://wager.com/",
+        "sourceNote": "Wager.com’s own site page and bonus policy"
+      },
+      {
+        "title": "Races (coming soon)",
+        "category": "Leaderboard · not yet running",
+        "headline": "$1,000,000",
+        "subCopy": "Its Promotions panel lists a $10,000 Weekly Race, a $100,000 Monthly Race and a $1,000,000 invite-only race, all marked Coming Soon rather than live.",
+        "stats": [
+          {
+            "label": "Weekly",
+            "value": "$10,000"
+          },
+          {
+            "label": "Monthly",
+            "value": "$100,000"
+          }
+        ],
+        "asOf": "2026-09-15",
+        "endsLabel": "Marked Coming Soon",
+        "sourceUrl": "https://wager.com/",
+        "sourceNote": "Wager.com’s own Promotions panel, screenshot-verified"
+      },
+      {
+        "title": "VIP transfer",
+        "category": "Promotion · switching casinos",
+        "headline": "Status match",
+        "subCopy": "Matches a VIP status held at another casino so you skip the early levels, handled by a transfer team. It says it will beat the rewards you get elsewhere, but publishes no rates.",
+        "asOf": "2026-09-15",
+        "sourceUrl": "https://wager.com/",
+        "sourceNote": "Wager.com’s own VIP Transfer page"
+      }
+    ]
   }
 ]
