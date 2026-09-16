@@ -420,15 +420,15 @@
         "title": "Welcome deposit bonuses",
         "category": "Deposit bonus · new players",
         "headline": "Up to 500%",
-        "subCopy": "Across the first four deposits, each with free spins: 100% + 70 FS, 120% + 100 FS, 130% + 150 FS and 150% + 180 FS. We haven't found the wagering requirement yet.",
+        "subCopy": "Over the first four deposits with 500 free spins in total (up to 600% on a crypto account). The first-deposit bonus carries 30× wagering on the bonus, a $10 minimum deposit and a $500 maximum bonus.",
         "stats": [
           {
-            "label": "1st deposit",
-            "value": "100% + 70 FS"
+            "label": "Wagering",
+            "value": "30× bonus"
           },
           {
-            "label": "4th deposit",
-            "value": "150% + 180 FS"
+            "label": "Min deposit",
+            "value": "$10"
           }
         ],
         "asOf": "2026-09-15",

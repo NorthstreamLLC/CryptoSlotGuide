@@ -959,8 +959,8 @@
     "payoutLabel": "12m 36s",
     "licence": "Curaçao",
     "kyc": "tiered",
-    "bonus": "Up to 500% across the first four deposits, plus free spins",
-    "wager": 45,
+    "bonus": "Up to 500% + 500 free spins over 4 deposits (600% on crypto accounts)",
+    "wager": 30,
     "conf": 3,
     "absorbsFee": false,
     "ln": false,
@@ -969,6 +969,8 @@
     "hasCustomReview": false,
     "payoutStated": "1 min–5 days",
     "payoutStatedMaxMins": 7200,
-    "bonusShort": "Up to 500% over 4 deposits"
+    "bonusShort": "Up to 500% + 500 FS over 4 deposits (600% on crypto)",
+    "wagerBasis": "bonus",
+    "cashoutCap": "Max withdrawal ×1, max bonus $500"
   }
 ]

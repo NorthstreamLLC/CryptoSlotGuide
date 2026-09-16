@@ -7,10 +7,10 @@
         "facts": [
           {
             "label": "Standing offer",
-            "value": "Welcome deposit bonuses up to 500% across the first four deposits: 100% + 70 free spins, 120% + 100 FS, 130% + 150 FS, 150% + 180 FS",
+            "value": "Welcome bonuses over the first four deposits, 500 free spins in total. Fiat accounts get up to 500%: 100% + 70 FS, 120% + 100 FS, 130% + 150 FS, 150% + 180 FS. Crypto accounts get up to 600%: 130% + 70 FS, 140% + 100 FS, 160% + 150 FS, 170% + 180 FS. The free spins unlock once the percentage bonus has been used",
             "sourcing": "editorial",
             "sourceUrl": "https://1win.com/bonuses",
-            "asOf": "2026-09-15"
+            "asOf": "2026-09-16"
           },
           {
             "label": "Claim window",
@@ -63,14 +63,42 @@
           },
           {
             "label": "Bonus rules",
-            "value": "One active casino bonus and one sports bonus at a time; bonus funds are only used once the real balance is spent; no-deposit bonuses can't be withdrawn before a first deposit",
+            "value": "Bonus funds sit in a separate balance and are only used once your real balance drops below $0.50 with no open bets. One casino and one sports bonus can be active at a time, with others queued; activating a queued bonus cancels the current one, and withdrawing while a bonus is active or pending cancels it too. Rakeback starts at Bronze 2",
             "sourcing": "editorial",
-            "sourceUrl": "https://1win.com/",
-            "asOf": "2026-09-15"
+            "sourceUrl": "https://1win.com/bonuses",
+            "asOf": "2026-09-16"
           },
           {
             "label": "Game contribution",
-            "value": "Bonus funds work on the games in the Casino section's Bonus Wagering category; contribution rates aren't published",
+            "value": "Casino bonuses can only be wagered on games in the Bonus Wagering category, and sports bonuses only on sports bets; contribution rates aren't published",
+            "sourcing": "editorial",
+            "sourceUrl": "https://1win.com/bonuses",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Wagering",
+            "value": "30× on the first-deposit bonus (100%, shown in USD), per its bonus card; its terms say wagering applies to the bonus amount only",
+            "sourcing": "editorial",
+            "sourceUrl": "https://1win.com/bonuses",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Expiry",
+            "value": "Each bonus card shows a countdown (just under 30 days on a new account); a bonus is cancelled if it isn't claimed, or isn't wagered, before it expires",
+            "sourcing": "editorial",
+            "sourceUrl": "https://1win.com/bonuses",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max cashout",
+            "value": "The first-deposit bonus card lists a maximum bonus of $500 and a maximum withdrawal of ×1",
+            "sourcing": "editorial",
+            "sourceUrl": "https://1win.com/bonuses",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "$10 for the first-deposit bonus, shown on each bonus card",
             "sourcing": "editorial",
             "sourceUrl": "https://1win.com/bonuses",
             "asOf": "2026-09-16"
