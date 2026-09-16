@@ -561,5 +561,59 @@
         "sourceNote": "JackpotBet’s own VIP page, screenshot-verified"
       }
     ]
+  },
+  {
+    "operatorSlug": "duel",
+    "bonuses": [
+      {
+        "title": "$3,000,000 Monthly Leaderboard",
+        "category": "Leaderboard · all players",
+        "headline": "$3,000,000",
+        "subCopy": "Monthly wager race with $1,500,000 for first place, $345,000 for second and $225,000 for third, still paying $30,000 at tenth and running well beyond the top 50.",
+        "stats": [
+          {
+            "label": "1st place",
+            "value": "$1,500,000"
+          },
+          {
+            "label": "10th place",
+            "value": "$30,000"
+          }
+        ],
+        "asOf": "2026-09-15",
+        "endsLabel": "Resets monthly",
+        "sourceUrl": "https://duel.com/casino#leaderboard",
+        "sourceNote": "Duel’s own casino leaderboard"
+      },
+      {
+        "title": "$25,000 Daily Leaderboard",
+        "category": "Leaderboard · resets daily",
+        "headline": "$25,000",
+        "subCopy": "Daily wager race paying $12,500 for first, $3,750 for second and $1,875 for third, down to $250 at tenth.",
+        "stats": [
+          {
+            "label": "1st place",
+            "value": "$12,500"
+          },
+          {
+            "label": "Resets",
+            "value": "Every 24 hours"
+          }
+        ],
+        "asOf": "2026-09-15",
+        "endsLabel": "Resets daily",
+        "sourceUrl": "https://duel.com/casino#leaderboard",
+        "sourceNote": "Duel’s own casino leaderboard"
+      },
+      {
+        "title": "No deposit bonuses",
+        "category": "Policy · all players",
+        "headline": "None",
+        "subCopy": "Duel publishes a page arguing against deposit bonuses and runs none. Instead it says it returns 50% of the house edge you pay on slots as instant rakeback, and runs the leaderboards above.",
+        "asOf": "2026-09-15",
+        "sourceUrl": "https://duel.com/about/why-bonuses-suck",
+        "sourceNote": "Duel’s own Why Bonuses Suck page"
+      }
+    ]
   }
 ]

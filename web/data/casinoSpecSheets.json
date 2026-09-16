@@ -2039,6 +2039,20 @@
             "sourcing": "editorial",
             "sourceUrl": "https://duel.com/about/why-duel",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Leaderboards",
+            "value": "Two wager leaderboards run on the casino page: a $3,000,000 monthly race and a $25,000 daily race, both paying at least 50 places",
+            "sourcing": "editorial",
+            "sourceUrl": "https://duel.com/casino#leaderboard",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Leaderboard prizes",
+            "value": "Monthly: $1,500,000 for 1st, $345,000 for 2nd, $225,000 for 3rd, $30,000 at 10th. Daily: $12,500, $3,750, $1,875, down to $250 at 10th",
+            "sourcing": "editorial",
+            "sourceUrl": "https://duel.com/casino#leaderboard",
+            "asOf": "2026-09-15"
           }
         ]
       },
