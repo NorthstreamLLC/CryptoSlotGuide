@@ -2779,7 +2779,7 @@
         "facts": [
           {
             "label": "Stated withdrawal time",
-            "value": "Typically processed instantly; can take up to two working days",
+            "value": "Typically processed instantly, but can take up to two working days, and longer with payment-channel delays, extra account checks or public holidays",
             "sourcing": "editorial",
             "sourceUrl": "https://jackpot.bet/trust?tab=tos",
             "asOf": "2026-09-15"
@@ -2789,6 +2789,27 @@
             "value": "The withdrawal screen carries a Withdraw Fee line, but the amount is only shown in the cashier; no fee schedule is published",
             "sourcing": "editorial",
             "sourceUrl": "https://jackpot.bet/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal conditions",
+            "value": "A deposit must be wagered at least once before withdrawing, and withdrawals go back to the method used to deposit; only one pending withdrawal per method, and some methods allow just one request per 24 hours",
+            "sourcing": "editorial",
+            "sourceUrl": "https://jackpot.bet/trust?tab=tos",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Payout caps",
+            "value": "Wins over EUR 50,000 can be paid in monthly instalments of up to EUR 50,000 (progressive jackpots paid in full), and daily winnings are capped at EUR 100,000 unless the casino agrees otherwise",
+            "sourcing": "editorial",
+            "sourceUrl": "https://jackpot.bet/trust?tab=tos",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Flagged accounts",
+            "value": "A flagged account is held to EUR 10,000 in any 24 hours and EUR 50,000 over 30 days",
+            "sourcing": "editorial",
+            "sourceUrl": "https://jackpot.bet/trust?tab=tos",
             "asOf": "2026-09-15"
           }
         ]
@@ -2805,7 +2826,7 @@
           },
           {
             "label": "Expiry",
-            "value": "Standard bonus-funds expiry is 30 days",
+            "value": "Standard bonus-funds expiry is 30 days, and an unused bonus can be removed after a month",
             "sourcing": "editorial",
             "sourceUrl": "https://jackpot.bet/trust?tab=tos",
             "asOf": "2026-09-15"
@@ -2830,6 +2851,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://jackpot.bet/",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Wagering rules",
+            "value": "Wagering is a multiple of the bonus, or of bonus plus deposit, set per promotion and worked out against a standard 3.5% house edge. Most slots count 100%, table games 10%, and blackjack, roulette, video poker, arcade and craps 5%; the same list gives baccarat and Sic Bo as both 5% and 0%. Covering 24 or more roulette numbers voids winnings",
+            "sourcing": "editorial",
+            "sourceUrl": "https://jackpot.bet/trust?tab=tos",
+            "asOf": "2026-09-15"
           }
         ]
       },
@@ -2838,21 +2866,42 @@
         "facts": [
           {
             "label": "Licence",
-            "value": "Anjouan (terms governed by Anjouan law; licence number not stated)",
+            "value": "Anjouan (its terms are governed by Anjouan law and name its courts; no licence number is stated)",
             "sourcing": "editorial",
             "sourceUrl": "https://jackpot.bet/trust?tab=tos",
             "asOf": "2026-09-15"
           },
           {
             "label": "Company",
-            "value": "Take The Crown LLC, St Vincent & the Grenadines (3701 LLC 2024)",
+            "value": "Take The Crown LLC (St Vincent & the Grenadines, reg. 3701 LLC 2024), Euro House, Richmond Hill Road, Kingstown",
             "sourcing": "editorial",
             "sourceUrl": "https://jackpot.bet/",
             "asOf": "2026-09-15"
           },
           {
             "label": "KYC policy",
-            "value": "Reserves the right to verify identity; documents may be required",
+            "value": "Its AML policy asks for proof of identity and address plus a selfie holding the ID both when any deposit is made and when a withdrawal is requested",
+            "sourcing": "editorial",
+            "sourceUrl": "https://jackpot.bet/trust?tab=aml",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "KYC thresholds",
+            "value": "Deposits or withdrawals from EUR 5,000, counted cumulatively, also need source-of-wealth evidence and put the request on hold until verified; re-checks follow a changed deposit pattern or a mismatched address, and records are refreshed every 24 months",
+            "sourcing": "editorial",
+            "sourceUrl": "https://jackpot.bet/trust?tab=aml",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Customer risk rules",
+            "value": "Customers are scored low, medium or high risk on adverse media, PEP status, sanctions lists and FATF high-risk countries; high-risk customers are refused an account",
+            "sourcing": "editorial",
+            "sourceUrl": "https://jackpot.bet/trust?tab=aml",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Restricted countries",
+            "value": "Aruba, Austria, Australia, Bonaire, Curacao, France, Germany, Iran, Iraq, North Korea, Netherlands, Saba, Spain, St Maarten, Statia, Singapore, USA, United Kingdom, Union of Comoros, Ukraine and all FATF-blacklisted countries, plus their territories; VPNs are prohibited",
             "sourcing": "editorial",
             "sourceUrl": "https://jackpot.bet/trust?tab=tos",
             "asOf": "2026-09-15"
