@@ -884,6 +884,27 @@
             "sourcing": "editorial",
             "sourceUrl": "https://betplay.io/en/info/terms",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal fees",
+            "value": "No withdrawal fee from Betplay; you pay the blockchain network fee, and on-chain Bitcoin withdrawals offer low, medium and high priority at different fees. It suggests Lightning or Liquid to avoid Bitcoin fees",
+            "sourcing": "editorial",
+            "sourceUrl": "https://betplay.io/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Minimum withdrawal",
+            "value": "Set per coin: 5 uBTC, 5 mETH, 10 mLTC, 25 DOGE, 5 USDT, 5 USDC, 0.01 BNB, 0.03 XMR and 10 TRX",
+            "sourcing": "editorial",
+            "sourceUrl": "https://betplay.io/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Withdrawal limits",
+            "value": "Up to $8,000 of crypto every 24 hours, plus whatever you deposited the same day; higher VIP levels can raise the daily limit",
+            "sourcing": "editorial",
+            "sourceUrl": "https://betplay.io/",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -897,17 +918,26 @@
               "ETH",
               "USDT",
               "USDC",
-              "LTC",
-              "DOGE",
-              "XRP",
-              "TRX",
               "BNB",
+              "SOL",
+              "XRP",
+              "DOGE",
+              "TRX",
+              "TON",
               "SHIB",
-              "TON"
+              "LTC",
+              "XMR"
             ],
             "sourcing": "editorial",
-            "sourceUrl": "https://betplay.io/en/casino",
-            "asOf": "2026-09-15"
+            "sourceUrl": "https://betplay.io/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "No minimum on most coins, except 20 uBTC over the Lightning Network; TON deposits under 0.05 and TRX under 1 are treated as dust and not credited. Bitcoin can be deposited on-chain or over Lightning",
+            "sourcing": "editorial",
+            "sourceUrl": "https://betplay.io/",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -923,17 +953,17 @@
           },
           {
             "label": "Wagering",
-            "value": "60× the total deposit amount; wagers above the max bet only count up to the max bet",
+            "value": "60× the total deposit amount; the bonus is paid once wagering is complete and can then be withdrawn straight away",
             "sourcing": "editorial",
             "sourceUrl": "https://betplay.io/en/info/promotions",
-            "asOf": "2026-09-15"
+            "asOf": "2026-09-16"
           },
           {
             "label": "Expiry",
-            "value": "7 days to claim each bonus, 30 days to complete it",
+            "value": "7 days to claim each deposit bonus and 30 days to complete it; further deposits or withdrawals don't cancel it",
             "sourcing": "editorial",
             "sourceUrl": "https://betplay.io/en/info/promotions",
-            "asOf": "2026-09-15"
+            "asOf": "2026-09-16"
           },
           {
             "label": "Restrictions",
@@ -962,6 +992,27 @@
             "sourcing": "editorial",
             "sourceUrl": "https://betplay.io/en/info/promotions",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Max bet",
+            "value": "A max bet applies, and bets above it only count up to that amount toward wagering; the figure is shown in the bonus offer",
+            "sourcing": "editorial",
+            "sourceUrl": "https://betplay.io/en/info/promotions",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max cashout",
+            "value": "No cap stated: once wagering is done, the bonus is withdrawable with no strings attached",
+            "sourcing": "editorial",
+            "sourceUrl": "https://betplay.io/en/info/promotions",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Game contribution",
+            "value": "Live dealer, table games and some other games are excluded; the full list of included games is shown in the bonus offer",
+            "sourcing": "editorial",
+            "sourceUrl": "https://betplay.io/en/info/promotions",
+            "asOf": "2026-09-16"
           }
         ]
       },
