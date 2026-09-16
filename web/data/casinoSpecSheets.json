@@ -178,6 +178,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://1win.com/blog/crypto/vivod%20s-1win%20ENG",
             "asOf": "2026-09-16"
+          },
+          {
+            "label": "Win and withdrawal caps",
+            "value": "Its user agreement says 1win limits the maximum prizes that can be won, and the amounts that can be withdrawn, per day, week or month, without publishing the figures; winnings over $50,000 can get an individual daily withdrawal limit",
+            "sourcing": "editorial",
+            "sourceUrl": "https://1win.com/rules",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -211,6 +218,20 @@
             "sourcing": "editorial",
             "sourceUrl": "https://1win.com/",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Data and privacy",
+            "value": "Account data is kept for five years after an account closes, and can be shared with 1win's group companies, payment and service providers, affiliates who referred you and regulators. Its terms and privacy policy never name the operating company",
+            "sourcing": "editorial",
+            "sourceUrl": "https://1win.com/rules",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Complaints",
+            "value": "Complaints go to support by chat or email and are answered within 4 weeks, or up to 8 if more checks are needed; claims about a bet or its result must be made within 10 days. No independent dispute body is named",
+            "sourcing": "editorial",
+            "sourceUrl": "https://1win.com/rules",
+            "asOf": "2026-09-16"
           }
         ]
       }
