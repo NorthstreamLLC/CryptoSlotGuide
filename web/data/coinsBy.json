@@ -284,7 +284,9 @@
     "ETH",
     "USDT",
     "LTC",
-    "DOGE"
+    "SOL",
+    "DOGE",
+    "XRP"
   ],
   "degen": [
     "BTC",

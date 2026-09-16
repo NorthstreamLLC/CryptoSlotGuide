@@ -2907,6 +2907,42 @@
             "asOf": "2026-09-15"
           }
         ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": [
+              "BTC",
+              "ETH",
+              "USDT",
+              "USDC",
+              "LTC",
+              "DOGE",
+              "XRP",
+              "BNB",
+              "SOL"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://jackpot.bet/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Coin list note",
+            "value": "Its own guide names these nine coins and says more are supported; the full list and the networks for each only appear in the cashier once you are logged in",
+            "sourcing": "editorial",
+            "sourceUrl": "https://jackpot.bet/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Card and bank",
+            "value": "Its own guide says card payments are supported via Visa, Mastercard, Apple Pay and Google Pay alongside crypto",
+            "sourcing": "editorial",
+            "sourceUrl": "https://jackpot.bet/",
+            "asOf": "2026-09-15"
+          }
+        ]
       }
     ]
   },
