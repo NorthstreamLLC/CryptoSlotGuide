@@ -6305,6 +6305,27 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.vave.com/withdrawals/are-there-withdrawal-limits/",
             "asOf": "2026-09-16"
+          },
+          {
+            "label": "Withdrawal limits",
+            "value": "A help article dated 18 Sep 2023 says there are no withdrawal restrictions at the moment",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.vave.com/withdrawals/are-there-withdrawal-limits/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Withdrawal delays",
+            "value": "Vave says withdrawals sometimes take longer for security reasons, when it suspects fraud or money laundering",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.vave.com/withdrawals/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Withdrawal options",
+            "value": "Withdraw straight to your own crypto wallet, or cash out to fiat through Changelly and Onramper",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.vave.com/withdrawals/",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -6315,16 +6336,39 @@
             "label": "Coins accepted",
             "chips": [
               "BTC",
+              "BCH",
               "ETH",
               "USDT",
               "LTC",
               "DOGE",
               "XRP",
-              "TRX"
+              "TRX",
+              "ADA"
             ],
             "sourcing": "editorial",
-            "sourceUrl": "https://help.vave.com/platform/what-cryptocurrencies-are-accepted-at-vave/",
-            "asOf": "2026-09-15"
+            "sourceUrl": "https://vave.com/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "Per coin (help article dated 18 Sep 2023): 0.0014965 BTC or BCH, 42.18 DOGE, 0.0109934 ETH, 0.0347 LTC, 38.82 TRX, 5 USDT on TRC-20, 19.99 USDT on ERC-20, 3 USDT on Solana, 7.8 XRP",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.vave.com/deposits/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Deposit credit times",
+            "value": "Credited after 1 network confirmation for BTC, LTC, BCH, DOGE, XRP and TRX, and after 2 for ETH and USDT",
+            "sourcing": "editorial",
+            "sourceUrl": "https://vave.com/information/terms",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Card and bank",
+            "value": "No fiat balance; crypto can be bought through Changelly from the site's Buy Crypto button",
+            "sourcing": "editorial",
+            "sourceUrl": "https://vave.com/",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -6333,16 +6377,51 @@
         "facts": [
           {
             "label": "Standing offer",
-            "value": "Welcome: 100% cashback bonus (casino and sports), minimum first deposit 20 USDT",
+            "value": "First Deposit Casino Bonus of 150% up to 1.5 BTC plus 100 free spins, unlocked by playing slots, or a First Deposit Sport Bonus of 100% up to 1 BTC, unlocked with sports bets. An older help article (2023) describes the welcome offer as a 100% cashback bonus",
             "sourcing": "editorial",
-            "sourceUrl": "https://help.vave.com/bonuses-and-promotions/is-there-a-welcome-bonus-at-vave/",
-            "asOf": "2026-09-15"
+            "sourceUrl": "https://vave.com/promotions",
+            "asOf": "2026-09-16"
           },
           {
             "label": "Minimum deposit",
-            "value": "A first deposit of at least 20 USDT to qualify for the welcome cashback bonus",
+            "value": "20 USDT or equivalent in a single transaction, first deposit only; one welcome casino bonus per customer",
             "sourcing": "editorial",
-            "sourceUrl": "https://help.vave.com/bonuses-and-promotions/is-there-a-welcome-bonus-at-vave/",
+            "sourceUrl": "https://vave.com/promotions",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Wagering rules",
+            "value": "The bonus is paid in instalments as you wager, which you move across with Credit To Balance; the requirement itself is only shown in the info tab on the bonus card",
+            "sourcing": "editorial",
+            "sourceUrl": "https://vave.com/promotions",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Expiry",
+            "value": "30 days to wager the bonus; the free spins arrive as 25 a day for 4 days",
+            "sourcing": "editorial",
+            "sourceUrl": "https://vave.com/promotions",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max bet",
+            "value": "No maximum bet while wagering this bonus; the free spins are excluded from that",
+            "sourcing": "editorial",
+            "sourceUrl": "https://vave.com/promotions",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max cashout",
+            "value": "No withdrawal cap is stated; the maximum bonus is 1.5 BTC or equivalent",
+            "sourcing": "editorial",
+            "sourceUrl": "https://vave.com/promotions",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Game contribution",
+            "value": "The casino bonus is unlocked by playing slots and the sports bonus by placing sports bets; no contribution rates are published",
+            "sourcing": "editorial",
+            "sourceUrl": "https://vave.com/promotions",
             "asOf": "2026-09-16"
           }
         ]

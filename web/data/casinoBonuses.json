@@ -848,5 +848,48 @@
         "sourceNote": "Toshibet’s own VIP FAQ"
       }
     ]
+  },
+  {
+    "operatorSlug": "vave",
+    "bonuses": [
+      {
+        "title": "First Deposit Casino Bonus",
+        "category": "Deposit bonus · new players",
+        "headline": "150%",
+        "subCopy": "Up to 1.5 BTC plus 100 free spins (25 a day for 4 days), paid out in instalments as you play slots. 30 days to wager, and no maximum bet while you do.",
+        "stats": [
+          {
+            "label": "Min deposit",
+            "value": "20 USDT"
+          },
+          {
+            "label": "Time limit",
+            "value": "30 days"
+          }
+        ],
+        "asOf": "2026-09-16",
+        "sourceUrl": "https://vave.com/promotions",
+        "sourceNote": "Vave’s own promotion page and bonus terms"
+      },
+      {
+        "title": "First Deposit Sport Bonus",
+        "category": "Sports bonus · new players",
+        "headline": "100%",
+        "subCopy": "Up to 1 BTC on the first deposit, unlocked by placing sports bets.",
+        "stats": [
+          {
+            "label": "Min deposit",
+            "value": "20 USDT"
+          },
+          {
+            "label": "Max bonus",
+            "value": "1 BTC"
+          }
+        ],
+        "asOf": "2026-09-16",
+        "sourceUrl": "https://vave.com/promotions",
+        "sourceNote": "Vave’s own promotion page"
+      }
+    ]
   }
 ]
