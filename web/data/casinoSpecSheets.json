@@ -6108,10 +6108,10 @@
         "facts": [
           {
             "label": "Licence",
-            "value": "Anjouan, licence ALSI-202601015-FI1 issued by the Offshore Finance Authority; the licence validator linked from its site showed Operating status VALID on 15 Sep 2026, with toshibet.com as the registered website (the casino runs on toshi.bet)",
+            "value": "Anjouan, licence ALSI-202601015-FI1 issued by the Offshore Finance Authority under the Computer Gaming Licensing Act 007 of 2005; the licence validator linked from its site showed Operating status VALID on 16 Sep 2026, with toshibet.com as the registered website (the casino runs on toshi.bet)",
             "sourcing": "editorial",
             "sourceUrl": "https://toshi.bet/",
-            "asOf": "2026-09-15"
+            "asOf": "2026-09-16"
           },
           {
             "label": "Company",
@@ -6139,6 +6139,13 @@
             "value": "Its user agreement caps its total liability for any claim at €100",
             "sourcing": "editorial",
             "sourceUrl": "https://toshi.bet/policies/user-agreement",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Licence exclusions",
+            "value": "The Anjouan licence doesn't cover Australia, Comoros, France, the Netherlands, Spain, the United Kingdom or the USA, or FATF-blacklisted and sanctioned countries; complaints from players there fall outside the regulator's scope",
+            "sourcing": "editorial",
+            "sourceUrl": "https://toshi.bet/",
             "asOf": "2026-09-16"
           }
         ]
