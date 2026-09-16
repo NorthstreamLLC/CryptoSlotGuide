@@ -1077,6 +1077,27 @@
             "sourcing": "editorial",
             "sourceUrl": "https://bitcasino.io/help-center/help-your-transactions/what-is-the-minimum-withdrawal",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal rules",
+            "value": "Your email must be verified and a deposit needs 3 blockchain confirmations before it can be withdrawn; fiat withdrawals can take up to 3 working days once approved. It may require the deposit to be wagered once (5× if it suspects the account is used as a mixer), and very large withdrawals can be paid at no more than 1 million USDT a week",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bitcasino.io/help-center/help-terms-and-conditions",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Withdrawal holds",
+            "value": "Withdrawals are blocked for 48 hours after a password change, and random account health checks can temporarily restrict deposits and withdrawals",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bitcasino.io/help-center/help-terms-and-conditions",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Inactive accounts",
+            "value": "After 3 months without using a positive balance you get a notice, and the balance can be removed a month later (recoverable through its safety team); after 12 months inactive, a 5% monthly administration fee can be deducted",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bitcasino.io/help-center/help-terms-and-conditions",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -1097,6 +1118,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://bitcasino.io/help-center/help-payment-options/what-cryptocurrencies-do-you-support",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Deposit rules",
+            "value": "Crypto or fiat deposits from your own accounts; deposits below the per-transaction minimum listed in its help centre are void and neither credited nor returned, and some methods show a fee in the cashier",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bitcasino.io/help-center/help-terms-and-conditions",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -1123,6 +1151,34 @@
             "sourcing": "editorial",
             "sourceUrl": "https://bitcasino.io/promotions/2025-05-22-bitcasino-welcome-row",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Game contribution",
+            "value": "Slots 100%, live game shows 20%, live dealer 10%, table and RNG games 10%, Bitcasino Originals 10%; some casino games are excluded from reward wagering",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bitcasino.io/help-center/help-terms-and-conditions",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Bonus play rules",
+            "value": "Rewards must be used within 72 hours unless their own terms say otherwise; with a deposit reward, the deposit can't be withdrawn until wagering is met, and withdrawing early removes the reward and its winnings. One reward per person, household, IP address or shared device",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bitcasino.io/help-center/help-terms-and-conditions",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Weekly rakeback",
+            "value": "Opt-in weekly rakeback on selected slots: 3% for 1,000–49,999 USDT wagered in a week, 5% for 50,000 USDT or more, worked out as wager × house edge × rate and capped at 2,000 USDT a week, paid in USDT on Mondays by 15:00 GMT (runs 20 July to 31 October)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bitcasino.io/promotions",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Wager Streak Rush",
+            "value": "A 30,000 USDT prize pool for 3-day wagering streaks (daily minimum 1,000 USDT on slots or 3,000 USDT on Originals or live casino), shared across Bronze (6 streaks, 5,000 USDT), Silver (8, 10,000 USDT) and Gold (10, 15,000 USDT); streak periods run 22 September to 21 October",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bitcasino.io/promotions",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -1138,10 +1194,10 @@
           },
           {
             "label": "Company",
-            "value": "Moon Technologies B.V. (Curaçao)",
+            "value": "Moon Technologies B.V., Schout Bij Nacht Doormanweg 40, Curaçao",
             "sourcing": "editorial",
-            "sourceUrl": "https://bitcasino.io/help-center/help-terms-and-conditions/our-license",
-            "asOf": "2026-09-15"
+            "sourceUrl": "https://bitcasino.io/help-center/help-terms-and-conditions",
+            "asOf": "2026-09-16"
           },
           {
             "label": "KYC policy",
@@ -1149,6 +1205,20 @@
             "sourcing": "editorial",
             "sourceUrl": "https://bitcasino.io/help-center/help-terms-and-conditions/bitcasino-terms-and-conditions-of-use-of-services-of-the-company",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Restricted countries",
+            "value": "Players in its restricted jurisdictions can't register, and playing from Japan is named as prohibited; the full list is on its help centre",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bitcasino.io/help-center/help-terms-and-conditions/restricted-jurisdictions",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Complaints",
+            "value": "Complaints must be filed within 6 months on its template; unresolved ones can go to a CGA-certified ADR provider, whose decision is final",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bitcasino.io/help-center/help-terms-and-conditions",
+            "asOf": "2026-09-16"
           }
         ]
       }
