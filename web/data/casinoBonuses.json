@@ -640,10 +640,10 @@
     "operatorSlug": "wager-com",
     "bonuses": [
       {
-        "title": "Welcome bonus",
-        "category": "Deposit bonus · new players",
+        "title": "Advertised welcome bonus",
+        "category": "Deposit bonus · not shown in account",
         "headline": "150%",
-        "subCopy": "Up to $3,000 on a first crypto deposit, credited automatically with no code, at 40× wagering on the bonus amount. Its in-account Promotions panel showed no live promotions when we checked.",
+        "subCopy": "Its site page advertises 150% up to $3,000 on a first crypto deposit at 40× the bonus, but the in-account Promotions panel said “No promotions available” when checked. Confirm it’s live before depositing for it.",
         "stats": [
           {
             "label": "Max bonus",
@@ -686,6 +686,25 @@
         "asOf": "2026-09-15",
         "sourceUrl": "https://wager.com/",
         "sourceNote": "Wager.com’s own VIP Transfer page"
+      },
+      {
+        "title": "VIP club",
+        "category": "VIP · XP levels",
+        "headline": "10 levels",
+        "subCopy": "Rock to Adamantium plus invite-only Void Stone, with sports bets earning XP three times faster than casino. Rakeback, weekly, monthly and level-up bonuses and a VIP host; no rates published.",
+        "stats": [
+          {
+            "label": "Casino",
+            "value": "1 XP per $1"
+          },
+          {
+            "label": "Sports",
+            "value": "3 XP per $1"
+          }
+        ],
+        "asOf": "2026-09-16",
+        "sourceUrl": "https://wager.com/",
+        "sourceNote": "Wager.com’s own site page"
       }
     ]
   },
