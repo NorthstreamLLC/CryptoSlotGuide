@@ -5677,6 +5677,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://sportsbet.io/help-centre",
             "asOf": "2026-09-16"
+          },
+          {
+            "label": "Coin list note",
+            "value": "Its supported-coins list and network guide include Solana, but its step-by-step deposit guide lists 13 coins in the dropdown without SOL",
+            "sourcing": "editorial",
+            "sourceUrl": "https://sportsbet.io/help-centre",
+            "asOf": "2026-09-16"
           }
         ]
       },
