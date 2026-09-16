@@ -875,15 +875,15 @@
         "title": "First Deposit Sport Bonus",
         "category": "Sports bonus · new players",
         "headline": "100%",
-        "subCopy": "Up to 1 BTC on the first deposit, unlocked by placing sports bets.",
+        "subCopy": "Up to 1 BTC on the first deposit, paid in instalments as you bet, with 30 days to wager and no maximum bet. Only settled bets at odds of 1.7 or more count, each event once; cashed-out, drawn and free bets don’t.",
         "stats": [
           {
-            "label": "Min deposit",
-            "value": "20 USDT"
+            "label": "Min odds",
+            "value": "1.7"
           },
           {
-            "label": "Max bonus",
-            "value": "1 BTC"
+            "label": "Time limit",
+            "value": "30 days"
           }
         ],
         "asOf": "2026-09-16",
