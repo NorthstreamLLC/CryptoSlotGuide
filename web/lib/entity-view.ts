@@ -606,7 +606,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       checked
         ? { label: "Median withdrawal", value: o.payoutLabel, note: "Timed on our own funded account" }
         : statedPayout
-        ? { label: "Stated withdrawal time", value: statedPayout.value ?? "", note: `Operator's own figure · ${statedHost}` }
+        ? { label: "Stated withdrawal time", value: pv.kind === "stated" ? pv.label : statedPayout.value ?? "", note: `${statedPayout.value ?? ""} · ${statedHost}` }
         : { label: "Stated withdrawal time", value: "Not stated", note: "None found on the operator's own pages" },
       coinsFact
         ? { label: "Coins accepted", value: String(coinCount), note: (coinsFact.chips ?? coins).slice(0, 4).join(", ") + (coinCount > 4 ? " and more" : "") }
