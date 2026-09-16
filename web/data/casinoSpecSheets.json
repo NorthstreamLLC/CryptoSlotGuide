@@ -2819,10 +2819,10 @@
         "facts": [
           {
             "label": "Stated withdrawal time",
-            "value": "Usually processed within 5–10 minutes",
+            "value": "Crypto withdrawals are usually processed within 5–10 minutes; some are briefly reviewed, and most of those still finish within minutes",
             "sourcing": "editorial",
-            "sourceUrl": "https://help.dustbit.com/en/articles/14667156-how-long-do-withdrawals-take",
-            "asOf": "2026-09-15"
+            "sourceUrl": "https://help.dustbit.com/en/collections/19493307-crypto-payments",
+            "asOf": "2026-09-16"
           },
           {
             "label": "Withdrawal fees",
@@ -2840,15 +2840,31 @@
             "label": "Coins accepted",
             "chips": [
               "BTC",
+              "ETH",
+              "USDT",
+              "USDC",
+              "DAI",
               "LTC",
-              "SOL",
               "DOGE",
-              "XRP",
-              "TRX"
+              "BCH",
+              "DASH",
+              "XMR",
+              "ADA",
+              "SOL",
+              "TRX",
+              "BNB",
+              "XRP"
             ],
             "sourcing": "editorial",
-            "sourceUrl": "https://dustbit.com/faqs",
-            "asOf": "2026-09-15"
+            "sourceUrl": "https://help.dustbit.com/en/collections/19493307-crypto-payments",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Coin list note",
+            "value": "Built from its footer icons and its deposit guide, which names BCH, DASH, XMR and ADA as single-network coins; one further footer icon couldn't be identified. Sending on the wrong network can lose the funds permanently",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.dustbit.com/en/collections/19493307-crypto-payments",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -2857,10 +2873,45 @@
         "facts": [
           {
             "label": "Standing offer",
-            "value": "VIP rakeback up to 50%, depending on VIP level",
+            "value": "VIP rakeback of up to 50% depending on VIP level, paid out daily, weekly and monthly and claimed from the homepage; its FAQ also confirms a welcome bonus exists but gives no figures",
             "sourcing": "editorial",
-            "sourceUrl": "https://dustbit.com/vip-program",
-            "asOf": "2026-09-15"
+            "sourceUrl": "https://help.dustbit.com/en/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Wagering rules",
+            "value": "Bonus funds move to your main balance once their wagering is complete; its help centre only uses 10× the bonus as an example and says eligible games are shown under My Profile › Promotions. Accounts on a bonus hold can't receive bonuses",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.dustbit.com/en/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Bonus play rules",
+            "value": "Only one active bonus at a time unless a promotion says otherwise",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.dustbit.com/en/collections/19494708-bonuses-promotions",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "VIP transfer",
+            "value": "Request it through support with verification details; the team reviews it and lets you know when it's done",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.dustbit.com/en/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Predict & Win",
+            "value": "A weekly sports prediction contest entered on its social channels (follow, like, share and comment with your prediction and username); one random correct entry wins a free bet that starts at $25 and rolls over to $50, then $75, if nobody is right. Free bets need odds of 1.50 on singles or 3.00 on combos",
+            "sourcing": "editorial",
+            "sourceUrl": "https://dustbit.com/promotions",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Early payout",
+            "value": "Pre-match 1X2 football bets are settled as won if your team goes two goals ahead, even if it later loses; covers the World Cup, Champions League, Europa League, Premier League, La Liga, Bundesliga, Serie A, Ligue 1, MLS, Liga MX and other listed competitions. No opt-in; cash-outs and in-play bets don't qualify",
+            "sourcing": "editorial",
+            "sourceUrl": "https://dustbit.com/promotions",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -2876,10 +2927,10 @@
           },
           {
             "label": "Company",
-            "value": "Oxilium Limited (Belize, 000047923)",
+            "value": "Oxilium Limited (Belize, reg. 000047923)",
             "sourcing": "editorial",
             "sourceUrl": "https://dustbit.com/",
-            "asOf": "2026-09-15"
+            "asOf": "2026-09-16"
           },
           {
             "label": "KYC policy",

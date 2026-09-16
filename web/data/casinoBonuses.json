@@ -891,5 +891,50 @@
         "sourceNote": "Vave’s own promotion page"
       }
     ]
+  },
+  {
+    "operatorSlug": "dustbit",
+    "bonuses": [
+      {
+        "title": "VIP rakeback",
+        "category": "VIP · all players",
+        "headline": "Up to 50%",
+        "subCopy": "Rakeback rising with VIP level, paid out daily, weekly and monthly and claimed from the homepage. VIP status from another casino can be transferred through support.",
+        "stats": [
+          {
+            "label": "Paid",
+            "value": "Daily · weekly · monthly"
+          }
+        ],
+        "asOf": "2026-09-16",
+        "sourceUrl": "https://help.dustbit.com/en/",
+        "sourceNote": "Dustbit’s own help centre"
+      },
+      {
+        "title": "Early Payout",
+        "category": "Sportsbook · football",
+        "headline": "2-goal lead",
+        "subCopy": "Pre-match match-winner bets are paid as won the moment your team goes two goals ahead, even if it later loses. Covers the World Cup, the big European leagues, MLS and Liga MX. No opt-in.",
+        "asOf": "2026-09-16",
+        "sourceUrl": "https://dustbit.com/promotions",
+        "sourceNote": "Dustbit’s own promotion page"
+      },
+      {
+        "title": "Predict & Win",
+        "category": "Weekly contest · sports",
+        "headline": "$25+ free bet",
+        "subCopy": "Predict a featured match through Dustbit’s social channels; one random correct entry wins a free bet that grows to $50, then $75, while nobody gets it right.",
+        "stats": [
+          {
+            "label": "Min odds",
+            "value": "1.50 single · 3.00 combo"
+          }
+        ],
+        "asOf": "2026-09-16",
+        "endsLabel": "Runs weekly",
+        "sourceUrl": "https://dustbit.com/promotions",
+        "sourceNote": "Dustbit’s own promotion page"
+      }
+    ]
   }
 ]
