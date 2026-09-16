@@ -1073,10 +1073,10 @@
           },
           {
             "label": "Minimum withdrawal",
-            "value": "Varies by coin, e.g. BTC 0.0005, ETH 0.01, USDT 20",
+            "value": "Per coin: 0.0005 BTC, 0.01 ETH, 0.1 LTC, 20 USDT or USDC, 20 XRP, 10 ADA, 200 TRX, 100 DOGE, 0.07 BNB, 10 TON, 20 POL, 2,000,000 SHIB, and CAD 10; it can vary by payment method, and the cashier shows the current figure",
             "sourcing": "editorial",
             "sourceUrl": "https://bitcasino.io/help-center/help-your-transactions/what-is-the-minimum-withdrawal",
-            "asOf": "2026-09-15"
+            "asOf": "2026-09-16"
           },
           {
             "label": "Withdrawal rules",
@@ -1110,20 +1110,40 @@
               "BTC",
               "ETH",
               "USDT",
+              "USDC",
               "LTC",
-              "DOGE",
               "XRP",
-              "TRX"
+              "TRX",
+              "DOGE",
+              "ADA",
+              "BNB",
+              "TON",
+              "POL",
+              "SHIB"
             ],
             "sourcing": "editorial",
-            "sourceUrl": "https://bitcasino.io/help-center/help-payment-options/what-cryptocurrencies-do-you-support",
-            "asOf": "2026-09-15"
+            "sourceUrl": "https://bitcasino.io/help-center/help-your-transactions/what-is-the-minimum-deposit-",
+            "asOf": "2026-09-16"
           },
           {
             "label": "Deposit rules",
             "value": "Crypto or fiat deposits from your own accounts; deposits below the per-transaction minimum listed in its help centre are void and neither credited nor returned, and some methods show a fee in the cashier",
             "sourcing": "editorial",
             "sourceUrl": "https://bitcasino.io/help-center/help-terms-and-conditions",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "Per coin: 0.000007 BTC, 0.00013 ETH, 0.002 LTC, 0.25 USDT or USDC, 3 TRX, 0.31 XRP, 0.694 ADA, 3.535 DOGE, 0.0009 BNB, 0.18 TON, 0.32556 POL, 10,000 SHIB, and CAD 10; it can vary by payment method, and the cashier shows the current figure",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bitcasino.io/help-center/help-your-transactions/what-is-the-minimum-deposit-",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Card and bank",
+            "value": "Fiat is supported alongside crypto, with CAD listed in its deposit and withdrawal minimums; fiat withdrawals go back the way you deposited and can take up to 3 working days",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bitcasino.io/help-center/help-your-transactions/what-is-the-minimum-deposit-",
             "asOf": "2026-09-16"
           }
         ]
