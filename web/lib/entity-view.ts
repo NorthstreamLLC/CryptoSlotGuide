@@ -617,13 +617,13 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
         ? { label: "Median withdrawal", value: o.payoutLabel, note: "Timed on our own funded account" }
         : statedPayout
         ? { label: "Stated withdrawal time", value: pv.kind === "stated" ? pv.label : statedPayout.value ?? "", note: `${statedPayout.value ?? ""} · ${statedHost}` }
-        : { label: "Stated withdrawal time", value: "Not stated", note: "None found on the operator's own pages" },
+        : { label: "Stated withdrawal time", value: "Not stated", note: "Not found in our search of its own pages yet" },
       coinsFact
         ? { label: "Coins accepted", value: String(coinCount), note: (coinsFact.chips ?? coins).slice(0, 4).join(", ") + (coinCount > 4 ? " and more" : "") }
         : { label: "Coins accepted", value: "Not confirmed", note: "No coin list found on its own pages yet" },
       { label: "Welcome bonus", value: bonusWithWager(o), note: wagerFact?.value ?? noBonusFact?.value ?? noteFact?.value ?? (offerFact ? `${offerFact.value} — no wagering figure found in its terms` : "No headline offer found on its own pages") },
-      { label: "KYC", value: kycFact ? KYC_LABEL[o.kyc] : "Not confirmed", note: kycFact?.value ?? "No KYC policy found on its own pages" },
-      { label: "Licence", value: licenceFact ? licenceShown : "Not confirmed", note: licenceFact?.value ?? "No licence details found on its own pages" },
+      { label: "KYC", value: kycFact ? KYC_LABEL[o.kyc] : "Not confirmed", note: kycFact?.value ?? "No KYC policy found in our search of its pages yet" },
+      { label: "Licence", value: licenceFact ? licenceShown : "Not confirmed", note: licenceFact?.value ?? "No licence details found in our search of its pages yet" },
     ],
     chipLabel: checked ? "Coins credited on our account" : "Coins accepted",
     chips: coins.map((t) => ({ t, tint: coinTint(t) })),
@@ -676,10 +676,10 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
     // Only cons built from cited facts — confirmations, Lightning and fee absorption are prototype listings and aren't shown.
     cons: [
       ...(wagerFact && !lowWager ? [`${wv.label} wagering on the headline offer`] : []),
-      ...(pv.kind === "none" ? ["No withdrawal time stated on its own pages"] : pv.mins !== null && pv.mins >= 1440 ? [`Stated withdrawal time runs up to ${pv.label.split("–").pop()}`] : []),
+      ...(pv.kind === "none" ? ["No withdrawal time found on its pages yet"] : pv.mins !== null && pv.mins >= 1440 ? [`Stated withdrawal time runs up to ${pv.label.split("–").pop()}`] : []),
       ...(coinsFact && coins.length < siteData.coinDefs.length ? [`Accepts ${coins.length} of the ${siteData.coinDefs.length} coins we track`] : []),
       ...(notOnRegister ? ["Not found on the regulator's licence register"] : []),
-      ...(!licenceFact ? ["No licence details found on its own pages"] : /no gaming licence/i.test(licenceFact.value ?? "") ? ["No gaming licence stated on its own site"] : /no licence number/i.test(licenceFact.value ?? "") ? ["No licence number shown on its own site"] : []),
+      ...(!licenceFact ? ["No licence details found in our search of its pages yet"] : /no gaming licence/i.test(licenceFact.value ?? "") ? ["No gaming licence stated on its own site"] : /no licence number/i.test(licenceFact.value ?? "") ? ["No licence number shown on its own site"] : []),
     ],
     faqs: [
       { q: `Is ${o.name} available in my country?`, a: `${o.name} restricts a list of jurisdictions under its ${o.licence} licence. Check the restricted list in its terms before depositing rather than after — we haven't independently tested where it blocks access.` },

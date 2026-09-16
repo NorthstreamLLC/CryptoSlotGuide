@@ -5982,10 +5982,24 @@
           },
           {
             "label": "Minimum withdrawal",
-            "value": "Varies by coin: BTC 0.00002504, ETH 0.001, USDT 2.5",
+            "value": "Set per coin and shown with its fee at the bottom of the withdrawal screen, e.g. 0.00002504 BTC (fee 0.00001571), 0.0006261 ETH (fee 0.00067447), 0.01857329 LTC (fee 0.000138), 2.5 USDT (fee 1), 5.5 DOGE (fee 0.52), 7.82 TRX (fee 0.073)",
             "sourcing": "editorial",
-            "sourceUrl": "https://help.stake.com/en/articles/4793601-crypto-what-are-the-withdrawal-limits",
-            "asOf": "2026-09-14"
+            "sourceUrl": "https://stake.com/blog/deposit-withdrawal-methods-online-betting",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Stated withdrawal time",
+            "value": "Crypto withdrawals should be processed immediately; bank transfers can take up to 3 business days, and support should be contacted if a withdrawal isn't approved within 3 business days",
+            "sourcing": "editorial",
+            "sourceUrl": "https://stake.com/blog/deposit-withdrawal-methods-online-betting",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Withdrawal limits",
+            "value": "No maximum withdrawal; limits may apply to some local-currency payment methods",
+            "sourcing": "editorial",
+            "sourceUrl": "https://stake.com/blog/deposit-withdrawal-methods-online-betting",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -6005,6 +6019,20 @@
               "TRX"
             ],
             "sourcing": "site-data"
+          },
+          {
+            "label": "Deposit limits",
+            "value": "No minimum or maximum on crypto deposits; some local-currency methods have limits",
+            "sourcing": "editorial",
+            "sourceUrl": "https://stake.com/blog/deposit-withdrawal-methods-online-betting",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Card and bank",
+            "value": "Local-currency deposits through third-party providers (guides cover CAD, TRY, VND, ARS, CLP, MXN, INR, SAR, MAD, NZD, CRC and USD in Ecuador), and crypto can be bought in the wallet through MoonPay, Swapped, Swap Connect or Mesh with cards, Apple Pay, Google Pay, SEPA, UK Faster Payments or PIX",
+            "sourcing": "editorial",
+            "sourceUrl": "https://stake.com/blog/deposit-withdrawal-methods-online-betting",
+            "asOf": "2026-09-16"
           }
         ]
       },

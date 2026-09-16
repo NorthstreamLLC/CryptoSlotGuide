@@ -39,7 +39,9 @@
     "esports": true,
     "hasCustomReview": false,
     "bonusExpiry": "Earned rakeback can be claimed at any time",
-    "noDepositBonus": true
+    "noDepositBonus": true,
+    "payoutStated": "Instant (crypto)",
+    "payoutStatedMaxMins": 0
   },
   {
     "slug": "bc-game",
