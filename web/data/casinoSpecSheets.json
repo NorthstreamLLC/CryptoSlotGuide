@@ -662,6 +662,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.bc.support/en/articles/8911028-withdrawal-restrictions-after-password-changes",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Minimum withdrawal",
+            "value": "The equivalent of 20 USDT for major cryptocurrencies. Limits depend on the method and currency.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://betting.bc.game/guidebook/bc-game-sport-withdrawal/",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -812,10 +819,17 @@
           },
           {
             "label": "Withdrawal fees",
-            "value": "Terms reserve the right to change the withdrawal fee; amount not stated",
+            "value": "A fee applies, based on the coin and network. For example, BTC withdrawals cost 0.00025 BTC on the native network and 0.00000112 BTC on BNB Chain. The terms say the fee can change at any time without notice.",
             "sourcing": "editorial",
-            "sourceUrl": "https://docs.betfury.com/betfury/terms-of-services/terms-and-conditions",
-            "asOf": "2026-09-15"
+            "sourceUrl": "https://bf1.io/news/deposit-withdrawal-betfury",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Minimum withdrawal",
+            "value": "Depends on the coin and network; for example, 1 USDT (0.5 USDT on BNB Chain).",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bf1.io/news/deposit-withdrawal-betfury",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -851,9 +865,9 @@
           },
           {
             "label": "Wagering",
-            "value": "40× on slots and live games, with the amount to wager shown on the bonus card; the page doesn't say whether it applies to the bonus or to deposit plus bonus",
+            "value": "40× on slots and live games. The Welcome Pack terms say each bonus has its own multiplier (shown in the bonus details pop-up), and that slots and live games count at 1.0 while BetFury Originals count at 0.2. Each bet is split between your main and bonus balances according to how much is in each. The terms still don't say whether the multiplier applies to the bonus alone or to deposit + bonus.",
             "sourcing": "editorial",
-            "sourceUrl": "https://betfury.com/promo/welcome-pack-bonus",
+            "sourceUrl": "https://docs.betfury.com/betfury/bonus-system/welcome-pack-terms-and-conditions",
             "asOf": "2026-09-16"
           },
           {
@@ -882,6 +896,13 @@
             "value": "$5 in any currency",
             "sourcing": "editorial",
             "sourceUrl": "https://betfury.com/promo/welcome-pack-bonus",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max bet",
+            "value": "$10 per bet in any game while a deposit bonus or free spins are active (bets from $0.10 to $10 count toward wagering).",
+            "sourcing": "editorial",
+            "sourceUrl": "https://docs.betfury.com/betfury/bonus-system/welcome-pack-terms-and-conditions",
             "asOf": "2026-09-16"
           }
         ]
@@ -960,6 +981,13 @@
             "value": "Up to $8,000 of crypto every 24 hours, plus whatever you deposited the same day; higher VIP levels can raise the daily limit",
             "sourcing": "editorial",
             "sourceUrl": "https://betplay.io/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Stated withdrawal time",
+            "value": "Advertised as cashing out to your wallet 'in seconds', promoted alongside Bitcoin Lightning. No formal processing time is published.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://betplay.io/en/",
             "asOf": "2026-09-16"
           }
         ]
@@ -1347,6 +1375,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://bitstarz.com/payments",
             "asOf": "2026-09-14"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "Depends on the currency and is shown on the deposit page. The promotions page says a 0.0002 BTC deposit qualifies for the first-deposit 100% match and 180 free spins. An older blog post about a previous welcome package gave a €20 minimum.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.bitstarz.com/terms",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -1386,6 +1421,13 @@
             "value": "Table, live, instant-win, lottery and bingo games typically count 5%; progressive-jackpot and accumulating-mechanic games don't count, and other games may be restricted",
             "sourcing": "editorial",
             "sourceUrl": "https://bitstarz.com/bonus-terms-and-conditions",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max cashout",
+            "value": "No cap is stated for the deposit welcome bonus. Winnings from bonuses or free spins given without a deposit are capped at 100 EUR/USD/USDT (150 CAD/AUD/NZD), and anything above that is forfeited.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.bitstarz.com/bonus-terms-and-conditions",
             "asOf": "2026-09-16"
           }
         ]
@@ -1440,9 +1482,21 @@
           },
           {
             "label": "Withdrawal fees",
-            "value": "Its terms say fees may apply to deposits and withdrawals and are detailed on the site, and that it usually covers deposit fees; no withdrawal fee figure is published",
+            "value": "Fees may apply to withdrawals. Bluff's terms say the fees are listed on the website, and the withdrawal form shows the fee in the coin you are withdrawing before you confirm. Bluff publishes no fixed fee or percentage. In most cases Bluff covers deposit transaction fees, but your wallet provider or the network may still charge its own fees.",
             "sourcing": "editorial",
-            "sourceUrl": "https://bluff.com/terms",
+            "sourceUrl": "https://www.bluff.com/terms",
+            "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Minimum deposit",
+            "value": "Bluff lists no platform-wide minimum or maximum deposit. It says the deposit options shown in your account are the guide to current limits.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://intercom.help/playlink/en/articles/14537028-before-you-deposit",
             "asOf": "2026-09-16"
           }
         ]
@@ -1677,6 +1731,20 @@
             "value": "No minimum: any deposit amount activates the Welcome Package",
             "sourcing": "editorial",
             "sourceUrl": "https://www.cloudbet.com/en/promotions/general/welcome-package",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max bet",
+            "value": "The welcome package pays real cash with no rollover, so no max bet applies to it. Under Cloudbet's general promotional bonus terms, you may not bet 25% or more of your deposit on a single game round.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.cloudbet.com/en/help/terms",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Game contribution",
+            "value": "The welcome package has no rollover. For promotional bonuses that do have wagering, slots count 100% and live casino and table games count 10%. Some excluded games count 0%.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.cloudbet.com/en/help/terms",
             "asOf": "2026-09-16"
           }
         ]
@@ -2557,6 +2625,20 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.dicey.com/en/articles/16182871-how-does-the-sports-welcome-bonus-work",
             "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max bet",
+            "value": "The Sports Welcome Bonus sets no maximum stake. A single sports bet counts toward wagering by at most the bonus amount, and only at odds of 1.5 or higher.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.dicey.com/en/articles/16182871-how-does-the-sports-welcome-bonus-work",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Expiry",
+            "value": "The welcome Rakeboost (a higher rakeback rate for new accounts) lasts 48 hours from sign-up, or ends sooner if total bets reach a set amount. The Sports Welcome Bonus terms give no time limit, and Wager Bounties run on a timer shown on the bounty.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.dicey.com/en/articles/12611571-creating-a-dicey-account",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -2810,6 +2892,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.duelbits.com/en/articles/16798784-duelbits-fees-limits-processing-times",
             "asOf": "2026-09-14"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "Depends on the coin, and Duelbits' own guide contradicts itself. The per-coin list shows no minimum for BTC, ETH, LTC, SOL, DOGE, XRP, BNB, TRX and USDT on TRC-20, and gives these minimums: $1 for USDC on Solana; $10 for SHIB, DAI, USDC on ERC-20 and USDT on BNB Chain; $50 for USDT on ERC-20. Another section of the same guide says there are no minimum or maximum deposit limits.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://duelbits.com/blog/guide/how-to-deposit-withdraw-funds/",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -3458,9 +3547,9 @@
           },
           {
             "label": "Wagering rules",
-            "value": "Its deposit bonus must be wagered a multiple of the deposit amount, set by the offer shown to each player; no fixed number is published",
+            "value": "Gamdom’s own help pages disagree. Its deposit bonus guide says a deposit bonus must be wagered a multiple of the deposit, set by the offer each player sees. Its FAQ says Gamdom doesn’t offer traditional bonuses. Either way, deposits and free-spin winnings must be wagered at least once before withdrawal, and no fixed multiplier is published. The current welcome offer is instant rakeback, boosted to 15% for your first week.",
             "sourcing": "editorial",
-            "sourceUrl": "https://help.gamdom.com/en/articles/16108950-deposit-bonus-guide",
+            "sourceUrl": "https://help.gamdom.com/en/articles/13256297-frequently-asked-questions",
             "asOf": "2026-09-16"
           },
           {
@@ -3502,6 +3591,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.gamdom.com/en/articles/13250444-how-and-when-to-verify-your-account",
             "asOf": "2026-09-14"
+          },
+          {
+            "label": "Company",
+            "value": "Moon Revolution Limitada (registration number 3-102-903008), n. 400, La Ceiba Street, San Rafael district, Escazu, San José, Costa Rica",
+            "sourcing": "editorial",
+            "sourceUrl": "https://gamdom.com/help/terms",
+            "asOf": "2026-09-16"
           }
         ]
       }
@@ -3663,6 +3759,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.housebets.com/en/articles/822145-which-currencies-and-networks-can-i-use",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "Each coin and network has its own minimum, shown in Wallet > Deposit, so there is no single figure. Deposits below the minimum are not credited automatically.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.housebets.com/en/articles/822146-what-are-the-deposit-and-withdrawal-minimums-and-fees",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -3857,10 +3960,10 @@
         "facts": [
           {
             "label": "Licence",
-            "value": "Anjouan (its terms are governed by Anjouan law and name its courts; no licence number is stated)",
+            "value": "Anjouan: Internet Gaming Licence No. ALSI-202409051-FI2, issued by the Offshore Finance Authority of the State of Anjouan to Take The Crown LLC (status: valid on the Anjouan validator).",
             "sourcing": "editorial",
-            "sourceUrl": "https://jackpot.bet/trust?tab=tos",
-            "asOf": "2026-09-15"
+            "sourceUrl": "https://verification.anjouangamingboard.org/validate?domain=jackpot.bet&seal_id=0aa147cac96fea2bdcc26d68ba54d939e96bfe0de2fde863945c4334c3f46e334b91cb2e3cf15b45b7ff49bb94748259&stamp=e561d596bdee644d17216071bcf9b0b2",
+            "asOf": "2026-09-16"
           },
           {
             "label": "Company",
@@ -4377,6 +4480,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://metawin.com/faq/",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "Depends on the coin: 0.0001 BTC and 0.05 SOL (MetaWin guides). For Web3-wallet swaps, the minimum is 0.002 ETH (help centre).",
+            "sourcing": "editorial",
+            "sourceUrl": "https://metawin.com/hub/guides/deposit-play-btc-metawin/",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -4590,14 +4700,26 @@
           },
           {
             "label": "Withdrawal fees",
-            "value": "Reserves the right to change withdrawal fees without notice (amount not stated)",
+            "value": "The terms say fees may apply to deposits and withdrawals and are shown on the website. Qzino says it does not charge deposit fees and usually covers deposit transaction fees, but it can change withdrawal fees at any time without notice. The terms give no withdrawal fee amount, and players pay their own wallet and blockchain fees.",
             "sourcing": "editorial",
             "sourceUrl": "https://qzino.tech/docs/Qzino_Terms_and_Conditions.pdf",
-            "asOf": "2026-09-15"
+            "asOf": "2026-09-16"
           },
           {
             "label": "Withdrawal conditions",
             "value": "Each deposit must be wagered in full before withdrawing, except for players at level 15 or above",
+            "sourcing": "editorial",
+            "sourceUrl": "https://qzino.tech/docs/Qzino_Terms_and_Conditions.pdf",
+            "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Minimum deposit",
+            "value": "Each coin has its own minimum deposit, but the terms give no figure. Deposits below the minimum may be lost and are not refunded. There is no maximum deposit.",
             "sourcing": "editorial",
             "sourceUrl": "https://qzino.tech/docs/Qzino_Terms_and_Conditions.pdf",
             "asOf": "2026-09-16"
@@ -4761,6 +4883,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://rainbet.com/",
             "asOf": "2026-09-14"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "No site-wide minimum is published. The first-deposit promotions (40x Wager Lock and No Wager Lock) require a deposit of at least $30 in value, and at most $700.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://rainbet.com/deposit-promotion-terms",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -4794,6 +4923,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.rainbet.com/en/articles/15268657-first-deposit-promotion",
             "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max cashout",
+            "value": "No cap is stated for the 40x first-deposit bonus. The general terms cap welcome promo codes at $50 withdrawable. Winnings from free-spins promotions are capped at $250,000 unless the promotion says otherwise.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://rainbet.com/terms",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -4802,10 +4938,10 @@
         "facts": [
           {
             "label": "Licence",
-            "value": "Anjouan (licence number not stated)",
+            "value": "Anjouan, licence no. ALSI-152406029-FI2, held by RBGAMING N.V. and shown as VALID on the Anjouan Gaming validator linked from Rainbet's footer seal",
             "sourcing": "editorial",
-            "sourceUrl": "https://rainbet.com/terms",
-            "asOf": "2026-09-14"
+            "sourceUrl": "https://verification.anjouangamingboard.org/validate?domain=rainbet.com&seal_id=bb1e239badc7447877a76594d7ae6858a8f9822770ab5f171f95c6004550f72a3b73a0497133eaab2c6af36e3fd68090&stamp=e561d596bdee644d17216071bcf9b0b2",
+            "asOf": "2026-09-16"
           },
           {
             "label": "Company",
@@ -5231,6 +5367,13 @@
               "XRP"
             ],
             "sourcing": "site-data"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "$10 for card deposits (any amount between $10 and $5,000). The crypto deposit guide states no minimum.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.roobet.com/en/articles/6391927-how-to-deposit-using-a-credit-card",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -5464,6 +5607,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.shuffle.com/en/articles/6966242-assets-supported-for-deposits-and-withdrawals",
             "asOf": "2026-09-14"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "$0.01 or the crypto equivalent on all supported coins; the wallet shows the exact figure for each coin and network. You need to deposit at least $20 to claim a deposit bonus, unless the offer says otherwise.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://shuffle.com/blog/payment-methods",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -5709,6 +5859,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://spartans.com/help-center/general-terms-and-conditions",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "1 USDT, according to the General Terms. The FAQ adds that deposit and withdrawal limits vary by payment method and location.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://spartans.com/help-center/general-terms-and-conditions",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -6033,6 +6190,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://stake.com/blog/deposit-withdrawal-methods-online-betting",
             "asOf": "2026-09-16"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "No minimum on crypto deposits; some local-currency methods set their own",
+            "sourcing": "editorial",
+            "sourceUrl": "https://stake.com/blog/deposit-withdrawal-methods-online-betting",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -6112,10 +6276,10 @@
           },
           {
             "label": "Withdrawal fees",
-            "value": "Fixed per-coin fee shown before confirming (e.g. BTC 0.00001571); not stated whether it's the network fee",
+            "value": "Each coin and network has a fixed withdrawal fee, published in the help centre and shown before you confirm. Examples: BTC 0.00001571, USDT on Ethereum 1, USDT on Solana 0.5, SOL 0.000005. The terms say fees may apply and will be shown during the transaction, and that your wallet or exchange may charge more. Thrill does not say whether its fee is the network fee.",
             "sourcing": "editorial",
             "sourceUrl": "https://intercom.help/thrill/en/articles/10130013-crypto-withdrawal-limits-and-fees",
-            "asOf": "2026-09-14"
+            "asOf": "2026-09-16"
           },
           {
             "label": "Minimum withdrawal",
@@ -6144,6 +6308,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://intercom.help/thrill/en/articles/10353861-supported-cryptocurrencies",
             "asOf": "2026-09-14"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "No minimum (and no maximum) deposit for any supported cryptocurrency",
+            "sourcing": "editorial",
+            "sourceUrl": "https://intercom.help/thrill/en/articles/10110969-crypto-how-to-make-a-deposit-faqs",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -6636,10 +6807,10 @@
         "facts": [
           {
             "label": "Licence",
-            "value": "Curaçao (licence number not stated)",
+            "value": "Curaçao. Vave's help centre says the site is run by TechOptions Group B.V., which holds a licence from the Curaçao gaming authority. A November 2024 post on Vave's blog gives the licence number as GLH-OCCHKTW0702282021. This number is not confirmed on the Curaçao Gaming Authority register.",
             "sourcing": "editorial",
-            "sourceUrl": "https://help.vave.com/platform/is-vave-crypto-casino-licensed-and-regulated/",
-            "asOf": "2026-09-15"
+            "sourceUrl": "https://blog.vave.com/casino/what-are-live-dealer-games/",
+            "asOf": "2026-09-16"
           },
           {
             "label": "Company",
@@ -6705,6 +6876,13 @@
             "value": "Crypto transactions are only allowed if the first deposit was in crypto, and later transactions must use that same cryptocurrency; Wager doesn't exchange crypto for fiat or back",
             "sourcing": "editorial",
             "sourceUrl": "https://wager.com/policy/aml-policy/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Stated withdrawal time",
+            "value": "Wager says it offers instant withdrawals and instant crypto payouts. It gives no timeframe in minutes or hours.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://wager.com/",
             "asOf": "2026-09-16"
           }
         ]
@@ -6884,6 +7062,44 @@
             "sourcing": "editorial",
             "sourceUrl": "https://whale.io/terms-and-conditions",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Stated withdrawal time",
+            "value": "Instant, according to Whale's own pages (crypto withdrawals are 'processed instantly' and gas-free). The terms and conditions give no processing time.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://whale.io/casino/tokacity",
+            "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Minimum deposit",
+            "value": "The equivalent of $1 (at the exchange rate when you deposit).",
+            "sourcing": "editorial",
+            "sourceUrl": "https://whale.io/terms-and-conditions",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Coins accepted",
+            "chips": [
+              "GRAM",
+              "USDT",
+              "USDC",
+              "BTC",
+              "ETH",
+              "SOL",
+              "BNB",
+              "NOT",
+              "CUSD",
+              "TRUMP",
+              "BONK"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://whale.io/casino/pragmaticplay",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -6914,6 +7130,13 @@
           {
             "label": "Wagering rules",
             "value": "On the first qualifying deposit, 200% of the deposit goes into a Bonus Balance that unlocks bit by bit each time you claim Daily Cashback, the Weekly Bonus or the Monthly Bonus; unlocked amounts become withdrawable cash with no extra wagering",
+            "sourcing": "editorial",
+            "sourceUrl": "https://whale.io/terms-and-conditions",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Game contribution",
+            "value": "The general terms say slots typically count 100% and table games 10–20%, and that these rates can change. Whale's current cashback rewards are paid as real cash with no wagering.",
             "sourcing": "editorial",
             "sourceUrl": "https://whale.io/terms-and-conditions",
             "asOf": "2026-09-16"
@@ -6995,6 +7218,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.winna.com/en/articles/10335429-acceptable-coins-for-deposits-and-withdrawals",
             "asOf": "2026-09-14"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "$5 USD equivalent. This is stated in the help article on depositing via a connected wallet or exchange, and smaller transfers may not be credited.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.winna.com/en/articles/15960277-deposit-via-wallet-or-exchange",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -7022,10 +7252,10 @@
         "facts": [
           {
             "label": "Licence",
-            "value": "Tobique Gaming Commission (licence number not stated)",
+            "value": "Tobique Gaming Commission (licence number not stated). The commission's licence-holder register lists GG Gaming S.R.L with a B2C licence that expires on 8 May 2027. Winna's About page says to search the register for that name. Winna's footer and terms name the operator as GG Gaming LLC.",
             "sourcing": "editorial",
-            "sourceUrl": "https://winna.com/about-us",
-            "asOf": "2026-09-14"
+            "sourceUrl": "https://thetgc.ca/license-holders/",
+            "asOf": "2026-09-16"
           },
           {
             "label": "Company",
@@ -7092,6 +7322,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.yeet.com/en/articles/12052341-deposits-withdrawals",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "Varies by cryptocurrency; the minimum for each coin is shown on the deposit page (no amounts are published in the help centre). No deposit fees are charged.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.yeet.com/en/articles/12052341-deposits-withdrawals",
+            "asOf": "2026-09-16"
           }
         ]
       },
