@@ -5618,23 +5618,30 @@
           },
           {
             "label": "Withdrawal fees",
-            "value": "Help centre: Sportsbet.io covers the crypto transaction fee; T&C reserves the right to deduct fees",
+            "value": "Sportsbet.io covers the crypto transaction fee, so the amount you withdraw is what arrives; its general terms still reserve the right to deduct fees",
             "sourcing": "editorial",
-            "sourceUrl": "https://sportsbet.io/help-centre/help-getting-started/help-transactions/what-is-the-minimum-withdrawal",
-            "asOf": "2026-09-15"
+            "sourceUrl": "https://sportsbet.io/help-centre/help-payments",
+            "asOf": "2026-09-16"
           },
           {
             "label": "Minimum withdrawal",
-            "value": "Varies by coin, e.g. BTC 0.0005, USDT 20",
+            "value": "Per coin: 0.0005 BTC, 0.01 ETH, 0.1 LTC, 20 USDT or USDC, 20 XRP, 10 ADA, 200 TRX, 100 DOGE, 0.07 BNB, 10 TON, 20 POL, 2,000,000 SHIB, plus TRY 2,000 and CAD 10; the cashier shows the current figure",
             "sourcing": "editorial",
-            "sourceUrl": "https://sportsbet.io/help-centre/help-getting-started/help-transactions/what-is-the-minimum-withdrawal",
-            "asOf": "2026-09-15"
+            "sourceUrl": "https://sportsbet.io/help-centre/help-payments",
+            "asOf": "2026-09-16"
           },
           {
             "label": "Fiat withdrawals",
             "value": "CAD via Interac: 10 to 25,000 per transaction, processed within 5 minutes once confirmed, subject to your bank. TRY via bank transfer (2,000 to 1,000,000) or Papara (2,000 to 100,000) per 24 hours; Papara takes about 20 minutes. TRY withdrawals need a TRY deposit or your national ID, and deposits wagered once",
             "sourcing": "editorial",
             "sourceUrl": "https://sportsbet.io/help-centre",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Withdrawal limits",
+            "value": "No limit on crypto withdrawals, though very large ones may be split into several transactions; fiat limits depend on the payment method",
+            "sourcing": "editorial",
+            "sourceUrl": "https://sportsbet.io/help-centre/help-payments",
             "asOf": "2026-09-16"
           }
         ]
@@ -5683,6 +5690,13 @@
             "value": "Its supported-coins list and network guide include Solana, but its step-by-step deposit guide lists 13 coins in the dropdown without SOL",
             "sourcing": "editorial",
             "sourceUrl": "https://sportsbet.io/help-centre",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "Per coin, as received after network fees: 0.000007 BTC, 0.00013 ETH, 0.002 LTC, 0.25 USDT or USDC, 3 TRX, 0.31 XRP, 0.694 ADA, 3.535 DOGE, 0.0009 BNB, 0.18 TON, 0.32556 POL, 10,000 SHIB. Third-party wallets and exchanges can delay a deposit reaching the blockchain by hours",
+            "sourcing": "editorial",
+            "sourceUrl": "https://sportsbet.io/help-centre/help-payments",
             "asOf": "2026-09-16"
           }
         ]
