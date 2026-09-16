@@ -54,6 +54,14 @@ export interface Operator {
   cashoutCap?: string;
   /** Wagering requirement multiplier, e.g. 30 = 30x. */
   wager: number;
+  /** Short headline bonus, e.g. "100% deposit bonus" — shown with the cited multiplier beside it. */
+  bonusShort?: string;
+  /** The operator confirms it runs no deposit bonus (rakeback or VIP rewards only). */
+  noDepositBonus?: boolean;
+  /** The operator's own unlock rule where the bonus has no plain multiplier, e.g. "$1 unlocked per $250 wagered". */
+  wagerNote?: string;
+  /** What the cited multiplier applies to, e.g. "deposit + bonus". */
+  wagerBasis?: string;
   /**
    * Where the site's own sign-up CTA points. Starts as the operator's
    * plain public homepage (real, not fabricated — same as any other URL

@@ -1,5 +1,6 @@
 "use client";
 
+import { wagerView, bonusWithWager } from "@/lib/wager";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { siteData } from "@/lib/site-data";
@@ -124,7 +125,7 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
                   <StatTile label="Licence" value={roobet.licence} />
                   <StatTile label="Confirmations" value={String(roobet.conf)} />
                   <StatTile label="Lightning" value={roobet.ln ? "Yes" : "No"} color={roobet.ln ? "#5FE3E8" : undefined} />
-                  <StatTile label="Bonus wagering" value={`${roobet.wager}×`} />
+                  <StatTile label="Bonus wagering" value={wagerView(roobet).label} />
                 </div>
                 <div style={{ marginBottom: 18 }}>
                   <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".07em", textTransform: "uppercase", color: "#5C6A72", marginBottom: 9 }}>Coins credited</div>
@@ -163,7 +164,7 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
                       <BrandMark slug={btcTop.slug} mono={btcTop.mono} tint={tintFor(btcTop.slug)} fontSize={13} />
                     </div>
                     <span style={{ fontSize: 20, fontWeight: 700, letterSpacing: "-.025em", color: "#fff" }}>{btcTop.name}</span>
-                    <span style={{ marginLeft: "auto", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 20, color: "#fff" }}>{filter === "fast" ? payoutView(btcTop).label : `${btcTop.wager}×`}</span>
+                    <span style={{ marginLeft: "auto", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 20, color: "#fff" }}>{filter === "fast" ? payoutView(btcTop).label : wagerView(btcTop).label}</span>
                   </div>
                   <div style={{ display: "flex", flexDirection: "column", gap: 9, paddingTop: 16, borderTop: "1px solid rgba(255,255,255,.08)" }}>
                     <TopRow label="Withdrawal time" value={`${payoutView(btcTop).label} · ${payoutView(btcTop).caption}`} />
@@ -384,9 +385,9 @@ function OpRow({ o, pos, coins }: { o: Operator; pos: number; coins: string[] })
         </span>
       </div>
       <div style={{ padding: "14px 8px", minWidth: 0 }}>
-        <div style={{ fontSize: 12.5, color: "#B7C4CB", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{o.bonus}</div>
+        <div style={{ fontSize: 12.5, color: "#B7C4CB", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{bonusWithWager(o)}</div>
         <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#5C6A72", marginTop: 2 }}>
-          {o.wager}× wagering · KYC <span style={{ color: kycColor, background: kycBg, padding: "0 4px", borderRadius: 3 }}>{o.kyc}</span>
+          KYC <span style={{ color: kycColor, background: kycBg, padding: "0 4px", borderRadius: 3 }}>{o.kyc}</span>
         </div>
       </div>
       <div style={{ padding: "10px 8px" }}>

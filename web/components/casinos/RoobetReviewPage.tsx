@@ -1,5 +1,6 @@
 "use client";
 
+import { wagerView } from "@/lib/wager";
 import Link from "next/link";
 import { useState } from "react";
 import { siteData } from "@/lib/site-data";
@@ -73,7 +74,7 @@ export function RoobetReviewPage() {
     h2hRaw.push(
       // Stated times aren't comparable figures (and Stake/BC.Game don't state one we could reach), so no row winner.
       ["Stated withdrawal time", "Instant", "Not stated", "Not reachable", -1],
-      ["Wagering on headline offer", `${r.wager}×`, `${s.wager}×`, `${b.wager}×`, bestIdx([r.wager, s.wager, b.wager], "min")],
+      ["Wagering on headline offer", wagerView(r).label, wagerView(s).label, wagerView(b).label, [r, s, b].every((x) => wagerView(x).kind === "cited") ? bestIdx([r.wager, s.wager, b.wager], "min") : -1],
       ["Coins accepted", String(coinCounts[0]), String(coinCounts[1]), String(coinCounts[2]), bestIdx(coinCounts, "max")],
     );
     if (h2hLive.every(Boolean)) {

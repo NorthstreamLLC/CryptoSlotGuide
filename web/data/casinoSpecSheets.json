@@ -197,6 +197,31 @@
         ]
       },
       {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": [
+              "BTC",
+              "ETH",
+              "LTC",
+              "XRP",
+              "USDT"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.500.casino/en/articles/5925218-can-i-withdraw-my-balance-in-real-money",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Coin list note",
+            "value": "Its help centre names these five and ends the list with “etc.”, so more may be supported",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.500.casino/en/articles/5925218-can-i-withdraw-my-balance-in-real-money",
+            "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
         "title": "Bonus terms",
         "facts": [
           {
@@ -538,6 +563,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.bc.support/en/articles/10702437-a-guide-to-your-wallet-features",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Wagering rules",
+            "value": "The monthly deposit bonus (up to 4 stages, 180%–360%) is added as locked rakeback that unlocks step by step as you wager on non-PvP games; the rate depends on game type, house edge and turnover, with no fixed multiplier, no minimum and no expiry",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.bc.support/en/articles/15839846-monthly-4-deposit-bonus",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -1054,6 +1086,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://intercom.help/playlink/en/articles/14536391-before-you-withdraw",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal fees",
+            "value": "Its terms say fees may apply to deposits and withdrawals and are detailed on the site, and that it usually covers deposit fees; no withdrawal fee figure is published",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bluff.com/terms",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -2257,6 +2296,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.duelbits.com/en/articles/12547694-rakeback-bits-at-duelbits",
             "asOf": "2026-09-14"
+          },
+          {
+            "label": "Deposit bonus",
+            "value": "None: its help centre lists weekly promos, VIP rakeback, giveaways and ACE's Rewards, with no deposit bonus",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.duelbits.com/en/articles/6758643-duelbits-promotions-and-bonuses",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -2395,6 +2441,29 @@
             "sourcing": "editorial",
             "sourceUrl": "https://flush.com/terms-of-service/",
             "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Coins & deposit limits",
+        "facts": [
+          {
+            "label": "Coins accepted",
+            "chips": [
+              "BTC",
+              "ETH",
+              "BNB",
+              "LTC",
+              "USDT",
+              "USDC",
+              "TRX",
+              "POL",
+              "DOGE",
+              "SOL"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://flush.com/",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -2621,6 +2690,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.gamba.com/en/articles/8271547-rakeback-bonus-explained",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Wagering rules",
+            "value": "Deposit bonus rollover applies to the deposit plus the bonus, with the multiplier set per bonus under View Details; its own worked example uses 20×",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.gamba.com/en/articles/14075964-deposit-bonuses-on-gamba",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -2671,6 +2747,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.gamdom.com/en/articles/9734074-how-to-withdraw",
             "asOf": "2026-09-14"
+          },
+          {
+            "label": "Minimum withdrawal",
+            "value": "No fixed figure: it varies by coin and can change with the network fees Gamdom is paying",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.gamdom.com/en/articles/7998196-cryptocurrency-transaction-fees",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -2711,6 +2794,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.gamdom.com/en/articles/10290516-gamdom-rewards",
             "asOf": "2026-09-14"
+          },
+          {
+            "label": "Wagering rules",
+            "value": "Its deposit bonus must be wagered a multiple of the deposit amount, set by the offer shown to each player; no fixed number is published",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.gamdom.com/en/articles/16108950-deposit-bonus-guide",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -3554,6 +3644,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://metawin.com/faq/",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Deposit bonus",
+            "value": "None: its deposit-linked offer is 30% back as Prize Funds, usable only to enter the $2k Daily Drop, with no wagering stated",
+            "sourcing": "editorial",
+            "sourceUrl": "https://metawin.com/promotions/prize-funds/",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -3745,6 +3842,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://qzino.tech/docs/Qzino_Terms_and_Conditions.pdf",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal conditions",
+            "value": "Each deposit must be wagered in full before withdrawing, except for players at level 15 or above",
+            "sourcing": "editorial",
+            "sourceUrl": "https://qzino.tech/docs/Qzino_Terms_and_Conditions.pdf",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -3757,6 +3861,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://qzino.ai/vip-club",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Deposit bonus",
+            "value": "None: its Bonus Hub lists cashback, rakeback, weekly and monthly bonuses, a Wheel of Luck and VIP-only bonuses, with no deposit-match offer",
+            "sourcing": "editorial",
+            "sourceUrl": "https://qzino.ai/bonuses",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -4529,6 +4640,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.shuffle.com/en/articles/10020509-how-does-rakeback-work",
             "asOf": "2026-09-14"
+          },
+          {
+            "label": "Deposit bonus",
+            "value": "Its promotions page says a deposit bonus applies to the first deposit only and withdrawals stay locked until its rollover is complete; the amount and multiplier only appear inside an account",
+            "sourcing": "editorial",
+            "sourceUrl": "https://shuffle.com/promotions",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -4579,6 +4697,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://docs.solcasino.io/rules-and-conditions/terms-and-condition",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal conditions",
+            "value": "New accounts must deposit and wager at least $10 before withdrawals are enabled (poker and trading don't count); core tokens have a default limit of $10,000 a day. No minimum withdrawal is published",
+            "sourcing": "editorial",
+            "sourceUrl": "https://docs.solcasino.io/faq/withdrawal-issues",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -4674,6 +4799,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://spartans.com/help-center/general-terms-and-conditions",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Minimum withdrawal",
+            "value": "The cashier settings built into its site set crypto minimums of 15 USDT or USDC, 0.00014 BTC, 0.0035 ETH, 0.05 SOL and 0.50 LTC, with no withdrawal fee on those; its FAQ says limits vary by method and country",
+            "sourcing": "editorial",
+            "sourceUrl": "https://spartans.com/",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -5007,6 +5139,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://intercom.help/thrill/en/articles/13544510-where-is-the-weekly-bonus-posted-and-how-do-i-claim-it",
             "asOf": "2026-09-14"
+          },
+          {
+            "label": "Deposit bonus",
+            "value": "None: its rewards come from rakeback paid out as weekly, monthly and level-up bonuses, with no deposit-bonus article in its help centre",
+            "sourcing": "editorial",
+            "sourceUrl": "https://intercom.help/thrill/en/articles/13545285-what-is-rakeback",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -5214,6 +5353,20 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.vave.com/withdrawals/how-long-does-it-take-to-withdraw-money/",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal fees",
+            "value": "Its help centre says Vave doesn't charge users any fees directly, though a bank or payment provider may charge its own on currency-conversion deposits; the statement sits in an article about deposit fees",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.vave.com/deposits/what-fees-do-i-pay-when-making-a-deposit/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Minimum withdrawal",
+            "value": "No minimum stated; a help article dated 18 Sep 2023 says there are no withdrawal limits at the moment",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.vave.com/withdrawals/are-there-withdrawal-limits/",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -5611,6 +5764,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.winna.com/en/articles/10431169-the-winna-vip-program",
             "asOf": "2026-09-14"
+          },
+          {
+            "label": "Deposit bonus",
+            "value": "None found: its help centre's Rewards & Bonuses section lists only VIP rewards (rakeback, reloads, lossback, free spins, monthly and quarterly bonuses)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.winna.com/en/collections/11549842-rewards-bonuses",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -5708,6 +5868,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.yeet.com/en/articles/14046420-instant-rakeback",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Wagering",
+            "value": "First deposit bonus, capped at $1,000, must be wagered 35× the deposit plus the bonus; no max-win or cashout cap",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.yeet.com/en/articles/13464278-deposit-bonus-faqs",
+            "asOf": "2026-09-16"
           }
         ]
       },

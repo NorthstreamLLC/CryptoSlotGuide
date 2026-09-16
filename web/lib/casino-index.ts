@@ -6,6 +6,7 @@
  * /crypto-casinos, /crypto-casinos/no-kyc, /fastest-payouts,
  * /lowest-wagering, /casino-sportsbooks, /esports-casinos.
  */
+import { wagerView, compareWager } from "./wager";
 import type { Operator } from "./types";
 import { comparePayout, payoutView } from "./payout";
 
@@ -62,7 +63,7 @@ export const filterFns: Record<BtcFilterKey, (o: Operator) => boolean> = {
   sports: (o) => o.sports,
   esports: (o) => o.esports,
   fast: (o) => { const p = payoutView(o); return p.mins !== null && p.mins <= 15; },
-  lowwager: (o) => o.wager <= 1,
+  lowwager: (o) => { const w = wagerView(o); return w.kind === "none" || (w.mult !== null && w.mult <= 1); },
 };
 
 /** No score sort — the site doesn't score casinos. Sorts are on cited facts or name. */
@@ -72,7 +73,7 @@ export type SortDir = "asc" | "desc";
 export function sortOps(list: Operator[], key: SortKey, dir: SortDir): Operator[] {
   const d = dir === "asc" ? 1 : -1;
   const out = [...list];
-  if (key === "wager") out.sort((a, b) => (a.wager - b.wager) * d || a.name.localeCompare(b.name));
+  if (key === "wager") out.sort((a, b) => (d === 1 ? compareWager(a, b) : compareWager(b, a)));
   else if (key === "payout") out.sort((a, b) => (d === 1 ? comparePayout(a, b) : comparePayout(b, a)));
   else if (key === "name") out.sort((a, b) => a.name.localeCompare(b.name) * d);
   return out;
@@ -93,6 +94,6 @@ export function btcStats(list: Operator[]): { v: string; l: string }[] {
     { v: String(list.filter((o) => payoutView(o).kind !== "none").length), l: "state a withdrawal time" },
     { v: String(list.filter((o) => o.conf === 1).length), l: "clear at 1 confirmation" },
     { v: String(list.filter((o) => o.ln).length), l: "support Lightning" },
-    { v: String(list.filter((o) => o.wager === 1).length), l: "at 1× wagering" },
+    { v: String(list.filter((o) => wagerView(o).kind === "cited").length), l: "state a bonus wagering figure" },
   ];
 }

@@ -1,5 +1,6 @@
 "use client";
 
+import { bonusWithWager } from "@/lib/wager";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { siteData } from "@/lib/site-data";
@@ -27,7 +28,7 @@ export function SearchPage({ initialQuery = "" }: { initialQuery?: string }) {
         items: ops
           .filter((o) => hit(o.name) || hit(o.bonus) || hit(o.licence))
           .sort(byName)
-          .map((o) => ({ name: o.name, note: `${payoutView(o).kind === "none" ? "" : `${payoutView(o).label} withdrawals · `}${o.wager}× wagering`, meta: o.licence, href: o.hasCustomReview ? "/casinos/roobet" : `/casinos/${o.slug}` })),
+          .map((o) => ({ name: o.name, note: `${payoutView(o).kind === "none" ? "" : `${payoutView(o).label} withdrawals · `}${bonusWithWager(o)}`, meta: o.licence, href: o.hasCustomReview ? "/casinos/roobet" : `/casinos/${o.slug}` })),
       },
       {
         label: "Slots",

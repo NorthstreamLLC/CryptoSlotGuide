@@ -1,3 +1,4 @@
+import { bonusWithWager } from "@/lib/wager";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { siteData } from "@/lib/site-data";
@@ -117,7 +118,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
                 <div style={{ fontSize: 14, fontWeight: 600, color: "#E8EDF0", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{o.name}</div>
                 <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#5C6A72", marginTop: 2 }}>{payoutView(o).kind === "none" ? "Withdrawal time not stated" : `${payoutView(o).label} withdrawals`}</div>
               </div>
-              <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 14, color: "#fff" }}>{o.wager === 1 ? "No wagering" : `${o.wager}× wagering`}</span>
+              <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 14, color: "#fff" }}>{bonusWithWager(o)}</span>
             </Link>
           ))}
         </div>

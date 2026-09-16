@@ -1,5 +1,6 @@
 "use client";
 
+import { wagerView, compareWager } from "@/lib/wager";
 import Link from "next/link";
 import { useState } from "react";
 import { siteData } from "@/lib/site-data";
@@ -18,8 +19,10 @@ import { BrandMark } from "@/components/ui/BrandMark";
  */
 type Filter = "all" | "cashback" | "rakeback" | "deposit";
 
-function classify(bonus: string): { type: string; filter: Filter } {
-  const b = bonus.toLowerCase();
+function classify(o: { bonus: string; bonusShort?: string; noDepositBonus?: boolean }): { type: string; filter: Filter } {
+  if (o.noDepositBonus) return { type: "Rakeback", filter: "rakeback" };
+  const b = (o.bonusShort ?? o.bonus).toLowerCase();
+  if (b.includes("%") && (b.includes("deposit") || b.includes("match") || b.includes("welcome"))) return { type: "Deposit match", filter: "deposit" };
   if (b.includes("cashback")) return { type: "Cashback", filter: "cashback" };
   if (b.includes("rakeback") || b.includes("rakewards") || b.includes("rewards")) return { type: "Rakeback", filter: "rakeback" };
   if (b.includes("match") || b.includes("deposit") || b.includes("btc")) return { type: "Deposit match", filter: "deposit" };
@@ -31,9 +34,9 @@ export function BonusesPage() {
   const [filter, setFilter] = useState<Filter>("all");
 
   const rows = ops
-    .map((o) => ({ o, ...classify(o.bonus) }))
+    .map((o) => ({ o, ...classify(o) }))
     .filter((r) => filter === "all" || r.filter === filter)
-    .sort((a, b) => a.o.wager - b.o.wager);
+    .sort((a, b) => compareWager(a.o, b.o));
 
   const filters: { key: Filter; label: string }[] = [
     { key: "all", label: "All" },
@@ -41,9 +44,9 @@ export function BonusesPage() {
     { key: "rakeback", label: "Rakeback" },
     { key: "deposit", label: "Deposit match" },
   ];
-  const countFor = (f: Filter) => (f === "all" ? ops.length : ops.filter((o) => classify(o.bonus).filter === f).length);
+  const countFor = (f: Filter) => (f === "all" ? ops.length : ops.filter((o) => classify(o).filter === f).length);
 
-  const lowCount = ops.filter((o) => o.wager <= 1).length;
+  const lowCount = ops.filter((o) => wagerView(o).kind === "none" || (wagerView(o).mult ?? 99) <= 1).length;
   const confirmedCount = ops.filter((o) => o.bonusExpiry && o.cashoutCap).length;
 
   return (
@@ -64,7 +67,7 @@ export function BonusesPage() {
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: 1, borderRadius: 12, overflow: "hidden", border: "1px solid rgba(255,255,255,.08)" }}>
               <StatRow label="Offers tracked" value={String(ops.length)} />
-              <StatRow label="At 1× wagering" value={String(lowCount)} color="#5FE3E8" />
+              <StatRow label="No wagering or 1×" value={String(lowCount)} color="#5FE3E8" />
               <StatRow label="Cap & expiry confirmed" value={String(confirmedCount)} color={confirmedCount > 0 ? "#5FE3E8" : undefined} />
             </div>
           </div>
@@ -95,11 +98,15 @@ export function BonusesPage() {
             ))}
           </div>
           {rows.map(({ o, type }) => {
-            const low = o.wager <= 1;
-            const mid = o.wager > 1 && o.wager <= 35;
-            const cost = low ? "$100" : `$${(o.wager * 100).toLocaleString()}`;
-            const costColor = low ? "#5FE3E8" : mid ? "#E8EDF0" : "#DA9877";
-            const flag = low ? { label: "Fair", bg: "rgba(0,194,204,.12)", color: "#5FE3E8" } : mid ? { label: "Watch", bg: "rgba(214,182,92,.14)", color: "#D6B65C" } : { label: "Limits withdrawal", bg: "rgba(196,101,58,.12)", color: "#DA9877" };
+            const wv = wagerView(o);
+            const m = wv.mult;
+            const low = wv.kind === "none" || (m !== null && m <= 1);
+            const mid = m !== null && m > 1 && m <= 35;
+            // Per $100 of bonus credit. Where the multiplier also covers the deposit, the deposit's turnover comes on top.
+            const perHundred = m === null ? null : m <= 1 ? "$100" : `$${(m * 100).toLocaleString()}`;
+            const cost = wv.kind === "none" ? "—" : perHundred === null ? "Not stated" : o.wagerBasis === "deposit" ? `${m}× the deposit` : o.wagerBasis?.includes("deposit") ? `${perHundred} + deposit × ${m}` : perHundred;
+            const costColor = m === null ? "#5C6A72" : low ? "#5FE3E8" : mid ? "#E8EDF0" : "#DA9877";
+            const flag = wv.kind === "note" ? { label: "See terms", bg: "rgba(255,255,255,.05)", color: "#8DA0AA" } : wv.kind === "unknown" ? { label: "Not stated", bg: "rgba(255,255,255,.05)", color: "#8DA0AA" } : wv.kind === "none" ? { label: "No bonus", bg: "rgba(255,255,255,.05)", color: "#8DA0AA" } : low ? { label: "Fair", bg: "rgba(0,194,204,.12)", color: "#5FE3E8" } : mid ? { label: "Watch", bg: "rgba(214,182,92,.14)", color: "#D6B65C" } : { label: "Limits withdrawal", bg: "rgba(196,101,58,.12)", color: "#DA9877" };
             return (
               <div key={o.slug} role="row" style={{ display: "grid", minWidth: 1120, gridTemplateColumns: "minmax(210px,1fr) minmax(220px,1.3fr) 140px 96px 150px 110px 108px", alignItems: "center", borderBottom: "1px solid rgba(255,255,255,.05)" }}>
                 <div role="cell" style={{ padding: "12px 18px", display: "flex", alignItems: "center", gap: 11, minWidth: 0 }}>
@@ -109,13 +116,13 @@ export function BonusesPage() {
                   <Link href={o.hasCustomReview ? "/casinos/roobet" : `/casinos/${o.slug}`} className="hover:!text-accent" style={{ fontSize: 14, fontWeight: 600, color: "#E8EDF0", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{o.name}</Link>
                 </div>
                 <div role="cell" style={{ padding: 14, fontSize: 13, color: "#B7C4CB", minWidth: 0 }}>
-                  <span style={{ display: "block", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{o.bonus}</span>
+                  <span style={{ display: "block", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{o.bonusShort ?? o.bonus}</span>
                   <span style={{ display: "block", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: o.bonusExpiry ? "#5C6A72" : "#4E5A62", marginTop: 3, fontStyle: o.bonusExpiry ? "normal" : "italic" }}>
                     {o.bonusExpiry ?? "expiry not yet confirmed"}
                   </span>
                 </div>
                 <div role="cell" style={{ padding: 14, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11.5, color: "#8DA0AA" }}>{type}</div>
-                <div role="cell" style={{ padding: 14, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 13, color: "#E8EDF0" }}>{o.wager}×</div>
+                <div role="cell" style={{ padding: 14, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 13, color: m === null ? "#5C6A72" : "#E8EDF0" }}>{wv.label}</div>
                 <div role="cell" style={{ padding: 14, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 14, fontWeight: 500, color: costColor }}>{cost}</div>
                 <div role="cell" style={{ padding: 14, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11.5, color: o.cashoutCap ? "#B7C4CB" : "#4E5A62" }}>{o.cashoutCap ?? "—"}</div>
                 <div role="cell" style={{ padding: 14 }}>

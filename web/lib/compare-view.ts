@@ -6,6 +6,7 @@
  * no longer scores operators, so there's no score row),
  * licence and headline offer are deliberately never marked.
  */
+import { wagerView, bonusWithWager } from "./wager";
 import type { Operator } from "./types";
 import type { CoinsByOperator } from "./types";
 import { payoutView } from "./payout";
@@ -28,20 +29,19 @@ export function getCompareRows(cmpOps: Operator[], coinsBy: CoinsByOperator): Co
   const defs: [string, (o: Operator) => string, ScoreKind][] = [
     ["Withdrawal time", (o) => `${payoutView(o).label} (${payoutView(o).caption})`, "lowPayout"],
     ["Coins credited", (o) => String((coinsBy[o.slug] ?? []).length), "highCoins"],
-    ["Wagering", (o) => `${o.wager}×`, "lowWager"],
+    ["Welcome bonus", (o) => bonusWithWager(o), "lowWager"],
     ["KYC", (o) => o.kyc, "kyc"],
     ["Confirmations", (o) => String(o.conf), "lowConf"],
     ["Lightning", (o) => (o.ln ? "Yes" : "No"), "yes"],
     ["Sportsbook", (o) => (o.sports ? "Yes" : "No"), "yes"],
     ["Esports", (o) => (o.esports ? "Yes" : "No"), "yes"],
     ["Licence", (o) => o.licence, "none"],
-    ["Headline offer", (o) => o.bonus, "none"],
-  ];
+      ];
 
   const score: Record<ScoreKind, (o: Operator) => number | null> = {
     lowPayout: (o) => { const m = payoutView(o).mins; return m === null ? null : -m; },
     highCoins: (o) => (coinsBy[o.slug] ?? []).length,
-    lowWager: (o) => -o.wager,
+    lowWager: (o) => { const m = wagerView(o).mult; return m === null ? null : -m; },
     kyc: (o) => (o.kyc === "none" ? 2 : o.kyc === "tiered" ? 1 : 0),
     lowConf: (o) => -o.conf,
     yes: () => 0,

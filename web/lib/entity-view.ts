@@ -13,6 +13,7 @@ import { siteData } from "./site-data";
 import { flag } from "./scoring";
 import { isStaleReading } from "./derived";
 import { payoutView } from "./payout";
+import { wagerView, bonusWithWager } from "./wager";
 import { hasMaxWin, hasVol, maxWinLabel, rtpLabel, hasRtp, rtpSortValue, volLabel } from "./slot-facts";
 import { isFieldTestedOperator, isEditoriallyAudited } from "./field-tested";
 import { tintFor } from "./logo";
@@ -544,7 +545,10 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
   // The operator's own stated processing time, cited — preferred over the
   // prototype's precise payoutLabel, which has no source. See data/README.md.
   const statedPayout = getSpecFact(o.slug, "Payouts & fees", "Stated withdrawal time");
-  const wagerFact = getSpecFact(o.slug, "Bonus terms", "Wagering");
+  const wv = wagerView(o);
+  const wagerFact = wv.kind === "cited" ? getSpecFact(o.slug, "Bonus terms", "Wagering") : undefined;
+  const noBonusFact = wv.kind === "none" ? getSpecFact(o.slug, "Bonus terms", "Deposit bonus") ?? offerFact : undefined;
+  const noteFact = wv.kind === "note" ? offerFact : undefined;
   const sheet = getCasinoSpecSheet(o.slug);
   const sheetFactCount = sheet?.groups.reduce((n, g) => n + g.facts.filter((f) => f.sourcing === "editorial").length, 0) ?? 0;
   const hasSheet = sheetFactCount > 0;
@@ -594,7 +598,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       .join(" "),
     glance: [
       { label: "Withdrawal time", value: pv.label, source: pv.kind === "timed" ? "timed" : pv.kind === "stated" ? "cited" : "unchecked" },
-      { label: "Bonus wagering", value: wagerFact ? `${o.wager}×` : "Not stated", source: wagerFact ? "cited" : "unchecked" },
+      { label: "Welcome bonus", value: bonusWithWager(o), source: wagerFact || noBonusFact ? "cited" : offerFact ? "cited" : "unchecked" },
       { label: "Coins accepted", value: coinsFact ? String(coinCount) : "Not confirmed", source: coinsFact?.sourcing === "editorial" ? "cited" : "unchecked" },
       { label: "Licence", value: licenceFact ? licenceShown : "Not confirmed", source: licenceFact ? "cited" : "unchecked" },
       { label: "KYC", value: kycFact ? KYC_LABEL[o.kyc] : "Not confirmed", source: kycFact ? "cited" : "unchecked" },
@@ -611,7 +615,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       coinsFact
         ? { label: "Coins accepted", value: String(coinCount), note: (coinsFact.chips ?? coins).slice(0, 4).join(", ") + (coinCount > 4 ? " and more" : "") }
         : { label: "Coins accepted", value: "Not confirmed", note: "No coin list found on its own pages yet" },
-      { label: "Bonus wagering", value: wagerFact ? `${o.wager}×` : "Not stated", note: wagerFact?.value ?? "Not found for its headline offer" },
+      { label: "Welcome bonus", value: bonusWithWager(o), note: wagerFact?.value ?? noBonusFact?.value ?? noteFact?.value ?? (offerFact ? `${offerFact.value} — no wagering figure found in its terms` : "No headline offer found on its own pages") },
       { label: "KYC", value: kycFact ? KYC_LABEL[o.kyc] : "Not confirmed", note: kycFact?.value ?? "No KYC policy found on its own pages" },
       { label: "Licence", value: licenceFact ? licenceShown : "Not confirmed", note: licenceFact?.value ?? "No licence details found on its own pages" },
     ],
@@ -623,7 +627,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       : "The headline offer as listed. Expiry and cashout cap show only once confirmed against the operator's own terms.",
     spec: [
       offerFact ? spec("Headline offer", offerFact.value ?? o.bonus, "watch") : unconfirmed("Headline offer"),
-      wagerFact ? spec("Wagering", wagerFact.value ?? `${o.wager}×`, lowWager ? "ok" : "bad") : unconfirmed("Wagering"),
+      wagerFact ? spec("Wagering", wagerFact.value ?? `${o.wager}×`, lowWager ? "ok" : "bad") : wv.kind === "none" ? spec("Wagering", "No deposit bonus to clear", "ok") : unconfirmed("Wagering"),
       o.bonusExpiry ? spec("Bonus expiry", o.bonusExpiry, "ok") : unconfirmed("Bonus expiry"),
       o.cashoutCap ? spec("Max cashout", o.cashoutCap, "ok") : unconfirmed("Max cashout"),
     ],

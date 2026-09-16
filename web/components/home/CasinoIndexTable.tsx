@@ -1,5 +1,6 @@
 "use client";
 
+import { wagerView } from "@/lib/wager";
 import Link from "next/link";
 import type { Operator } from "@/lib/types";
 import { payoutView } from "@/lib/payout";
@@ -38,8 +39,8 @@ const columns: Column<Operator>[] = [
     label: "Wagering",
     sortable: true,
     align: "right",
-    sortValue: (o) => o.wager,
-    render: (o) => (o.wager === 1 ? "None" : `${o.wager}x`),
+    sortValue: (o) => wagerView(o).mult ?? Number.MAX_SAFE_INTEGER,
+    render: (o) => wagerView(o).label,
   },
 ];
 
