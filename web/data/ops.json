@@ -822,7 +822,8 @@
     "payoutStated": "Instant",
     "payoutStatedMaxMins": 0,
     "bonusShort": "200% / 150% / 100% on first 3 deposits",
-    "wagerNote": "$1 unlocked per $250 wagered"
+    "wagerNote": "$1 unlocked per $250 wagered",
+    "cashoutCap": "Max $60,000 from the deposit bonus"
   },
   {
     "slug": "flush",

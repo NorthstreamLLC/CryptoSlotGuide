@@ -6065,6 +6065,34 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.toshi.bet/en/articles/10017165-deposit-bonus-how-does-it-work",
             "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max cashout",
+            "value": "The most that can be claimed from the deposit bonus is $60,000",
+            "sourcing": "editorial",
+            "sourceUrl": "https://toshi.bet/policies/user-agreement",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Bonus play rules",
+            "value": "One bonus per person, household or shared IP address unless stated otherwise; any wagering or withdrawal conditions are shown when you join, and bonus funds can be removed if irregular play is found",
+            "sourcing": "editorial",
+            "sourceUrl": "https://toshi.bet/policies/user-agreement",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "VIP rewards",
+            "value": "Every player earns rakeback automatically, rising with rank in the Toshi Whale Club; VIP rewards carry no wagering and can be withdrawn as cash as soon as they're claimed",
+            "sourcing": "editorial",
+            "sourceUrl": "https://toshi.bet/vip",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Promotions",
+            "value": "Current promotions include an instant VIP match (VIP host and lossback, arranged through live chat), a $25,000 weekly raffle, a two-goals-ahead early payout on football and a $500,000 prize promotion",
+            "sourcing": "editorial",
+            "sourceUrl": "https://toshi.bet/",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -6094,10 +6122,17 @@
           },
           {
             "label": "Restricted countries",
-            "value": "Its Anjouan licence doesn't cover Australia, Comoros, France, Netherlands, Spain, the United Kingdom or the USA, or FATF-blacklisted and sanctioned jurisdictions",
+            "value": "Afghanistan, Argentina, Australia, Austria, Belgium, Brazil, Cayman Islands, Colombia, Côte d'Ivoire, Cuba, Curaçao, Cyprus, Czech Republic, DR Congo, Denmark, France, Germany, Greece, Iran, Iraq, Israel, Italy, Liberia, Libya, Lithuania, Malta, Netherlands, North Korea, Ontario, Peru, Poland, Portugal, Serbia, Slovakia, South Africa, South Sudan, Spain, Sudan, Sweden, Switzerland, Syria, UAE, United Kingdom, United States and Zimbabwe; VPNs to get around this breach its terms",
             "sourcing": "editorial",
-            "sourceUrl": "https://toshi.bet/",
-            "asOf": "2026-09-15"
+            "sourceUrl": "https://toshi.bet/policies/user-agreement",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Liability cap",
+            "value": "Its user agreement caps its total liability for any claim at €100",
+            "sourcing": "editorial",
+            "sourceUrl": "https://toshi.bet/policies/user-agreement",
+            "asOf": "2026-09-16"
           }
         ]
       }
