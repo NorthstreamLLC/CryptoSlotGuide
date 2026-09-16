@@ -146,24 +146,24 @@
         "facts": [
           {
             "label": "Stated withdrawal time",
-            "value": "Terms: up to $50 paid in 1 to 60 minutes; above $50 within 5 days; further delays of up to 3 business days possible depending on the bank or payment system",
+            "value": "Its crypto withdrawal guide says payouts are sent instantly and usually confirm in about 3 minutes on TRC-20, BEP-20 and TON (up to 15 minutes at busy times). Its terms are slower: up to $50 paid in 1 to 60 minutes, above $50 within 5 days, with up to 3 more business days possible",
             "sourcing": "editorial",
-            "sourceUrl": "https://1win.com/",
-            "asOf": "2026-09-15"
+            "sourceUrl": "https://1win.com/blog/crypto/vivod%20s-1win%20ENG",
+            "asOf": "2026-09-16"
           },
           {
             "label": "Withdrawal fees",
-            "value": "May charge a commission covering its costs when withdrawing funds that weren't played; bank transfer costs are paid by the recipient",
+            "value": "Its crypto guide says 1win charges no withdrawal fee, only the blockchain network fee; its terms allow a commission covering its costs on funds that weren't played, and bank transfer costs fall on the recipient",
             "sourcing": "editorial",
-            "sourceUrl": "https://1win.com/",
-            "asOf": "2026-09-15"
+            "sourceUrl": "https://1win.com/blog/crypto/vivod%20s-1win%20ENG",
+            "asOf": "2026-09-16"
           },
           {
             "label": "Withdrawal conditions",
-            "value": "Each deposit must be bet or wagered at least 100% before withdrawals unlock; the profile must be filled out",
+            "value": "Each deposit must be wagered at least once before withdrawals unlock, and crypto must be withdrawn to the same wallet address it was deposited from; the profile must be filled out",
             "sourcing": "editorial",
-            "sourceUrl": "https://1win.com/",
-            "asOf": "2026-09-15"
+            "sourceUrl": "https://1win.com/blog/crypto/vivod%20s-1win%20ENG",
+            "asOf": "2026-09-16"
           },
           {
             "label": "Withdrawal limits",
@@ -171,6 +171,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://1win.com/",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Minimum withdrawal",
+            "value": "Set per coin and network and shown in the withdrawal window; for example 15 USDT on TRC-20",
+            "sourcing": "editorial",
+            "sourceUrl": "https://1win.com/blog/crypto/vivod%20s-1win%20ENG",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -193,10 +200,10 @@
           },
           {
             "label": "KYC policy",
-            "value": "Risk-based checks: ID may be requested once total withdrawals exceed $500 (plus photos of both sides of a deposit card); ID, proof of address and a bank statement can be requested at any time, and balances can be withheld until verified",
+            "value": "Its crypto guide says there's no mandatory KYC on every withdrawal, with documents requested only in exceptional cases such as suspected multiple accounts, fraud or unusual activity. Its terms are stricter: ID may be requested once total withdrawals pass $500 (plus photos of a deposit card), and ID, proof of address or a bank statement can be requested at any time",
             "sourcing": "editorial",
-            "sourceUrl": "https://1win.com/",
-            "asOf": "2026-09-15"
+            "sourceUrl": "https://1win.com/rules",
+            "asOf": "2026-09-16"
           },
           {
             "label": "Restricted countries",
