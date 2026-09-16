@@ -6036,6 +6036,27 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.stake.com/en/articles/5886574-proof-of-identity-acceptable-documentation",
             "asOf": "2026-09-14"
+          },
+          {
+            "label": "Company",
+            "value": "Medium Rare N.V. (registration 145353), Seru Loraweg 17 B, Curaçao; payment agents are Medium Rare Limited and MRS Tech Limited",
+            "sourcing": "editorial",
+            "sourceUrl": "https://stake.com/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Licence",
+            "value": "Its footer names no regulator or licence number (it shows Tanzanite Certified and GameCheck badges); Curaçao's licence register lists its operating company, Medium Rare N.V.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://stake.com/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Register check",
+            "value": "Medium Rare N.V. is on the Curaçao Gaming Authority's online gaming licence register: OGL/2024/285/0330 (B2C), issued 9 Dec 2025, expiry 9 Jun 2026, status Assessment in progress (list dated 14 Sep 2026). The register gives company number 160959, while Stake's footer gives 145353",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.cga.cw/en/133i348441001",
+            "asOf": "2026-09-16"
           }
         ]
       }
