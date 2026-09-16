@@ -2472,7 +2472,14 @@
           },
           {
             "label": "Licence",
-            "value": "Its footer carries a licence validator seal marked VALID in the style used by Anjouan-licensed sites, but the footer text gives no regulator or licence number. It also shows a Tanzanite Certified badge",
+            "value": "Anjouan, licence ALSI-202601025-FI1 issued by the Offshore Finance Authority under the Computer Gaming Licensing Act 007 of 2005; the validator linked from its footer showed Operating status VALID on 16 Sep 2026 for 3-102-939867 Limitada, with degencity.com as the registered website. It also shows a Tanzanite Certified badge",
+            "sourcing": "editorial",
+            "sourceUrl": "https://degencity.com/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Licence exclusions",
+            "value": "The Anjouan licence doesn't cover Australia, Comoros, France, the Netherlands, Spain, the United Kingdom or the USA, or FATF-blacklisted and sanctioned countries; complaints from players there fall outside the regulator's scope",
             "sourcing": "editorial",
             "sourceUrl": "https://degencity.com/",
             "asOf": "2026-09-16"
