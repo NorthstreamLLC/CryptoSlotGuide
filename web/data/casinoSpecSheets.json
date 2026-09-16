@@ -2840,7 +2840,7 @@
           },
           {
             "label": "VIP levels",
-            "value": "New players are Unranked; $10,000 wagered reaches Bronze, which unlocks instant rakeback, weekly bonuses (every Friday), monthly bonuses and level-up bonuses",
+            "value": "Ten ranks by total wagered: Bronze $10,000, Silver $50,000, Gold $100,000, Platinum $250,000, Diamond $500,000, Elite $1M, Premier $2.5M, Champion $5M, Supreme $10M, Apex $25M. Every rank gets instant rakeback plus its own weekly and monthly bonus; a dedicated VIP host starts at Elite",
             "sourcing": "editorial",
             "sourceUrl": "https://jackpot.bet/",
             "asOf": "2026-09-15"

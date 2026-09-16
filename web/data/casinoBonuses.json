@@ -499,5 +499,67 @@
         "sourceNote": "Degen’s own help centre"
       }
     ]
+  },
+  {
+    "operatorSlug": "jackpotbet",
+    "bonuses": [
+      {
+        "title": "Welcome offer",
+        "category": "Deposit bonus · new players",
+        "headline": "100%",
+        "subCopy": "First deposit matched, with free spins, instant rakeback and a VIP rank transfer from another casino. Its wagering is set per promotion and worked out against a standard 3.5% house edge.",
+        "stats": [
+          {
+            "label": "Bonus expiry",
+            "value": "30 days"
+          },
+          {
+            "label": "Slots count",
+            "value": "100%"
+          }
+        ],
+        "asOf": "2026-09-15",
+        "sourceUrl": "https://jackpot.bet/",
+        "sourceNote": "JackpotBet’s own site and terms of service"
+      },
+      {
+        "title": "Instant rakeback",
+        "category": "VIP · Bronze and up",
+        "headline": "6%",
+        "subCopy": "Six percent of the house edge back on every bet, claimable straight away with no cap. Unlocks at Bronze, which takes $10,000 wagered.",
+        "stats": [
+          {
+            "label": "Bronze at",
+            "value": "$10,000 wagered"
+          },
+          {
+            "label": "Claim",
+            "value": "After every bet"
+          }
+        ],
+        "asOf": "2026-09-15",
+        "sourceUrl": "https://jackpot.bet/",
+        "sourceNote": "JackpotBet’s own VIP page"
+      },
+      {
+        "title": "VIP ranks",
+        "category": "VIP · ten ranks",
+        "headline": "Bronze – Apex",
+        "subCopy": "Ten ranks from Bronze ($10,000 wagered) to Apex ($25M). Each one carries instant rakeback plus its own weekly and monthly bonus, and a dedicated VIP host from Elite upwards.",
+        "stats": [
+          {
+            "label": "Elite",
+            "value": "$1M wagered"
+          },
+          {
+            "label": "Apex",
+            "value": "$25M wagered"
+          }
+        ],
+        "asOf": "2026-09-15",
+        "sourceUrl": "https://jackpot.bet/",
+        "sourceNote": "JackpotBet’s own VIP page, screenshot-verified"
+      }
+    ]
   }
 ]
