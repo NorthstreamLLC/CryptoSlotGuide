@@ -6377,7 +6377,7 @@
         "facts": [
           {
             "label": "Standing offer",
-            "value": "First Deposit Casino Bonus of 150% up to 1.5 BTC plus 100 free spins, unlocked by playing slots, or a First Deposit Sport Bonus of 100% up to 1 BTC, unlocked with sports bets. An older help article (2023) describes the welcome offer as a 100% cashback bonus",
+            "value": "Casino bonuses on the first four deposits: 150% up to 1.5 BTC plus 100 free spins, then 100% up to 1 BTC, 50% up to 1 BTC and 25% up to 0.5 BTC (up to 4 BTC in total), each unlocked by playing casino games. Alternatively, a First Deposit Sport Bonus of 100% up to 1 BTC. An older help article (2023) describes the welcome offer as a 100% cashback bonus",
             "sourcing": "editorial",
             "sourceUrl": "https://vave.com/promotions",
             "asOf": "2026-09-16"
@@ -6427,6 +6427,13 @@
           {
             "label": "Sports bonus rules",
             "value": "The 100% sports bonus (up to 1 BTC, 20 USDT minimum, 30 days) is also paid in instalments with no maximum bet. Only settled single or multi bets at odds of 1.7 or more count, each event only once; returned, cancelled, drawn, cashed-out and free bets don't count",
+            "sourcing": "editorial",
+            "sourceUrl": "https://vave.com/promotions",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Reload bonuses",
+            "value": "The 2nd, 3rd and 4th deposit bonuses follow the same rules as the first: a single deposit of at least 20 USDT, one per customer, paid in instalments as you wager, 30 days to complete and no maximum bet",
             "sourcing": "editorial",
             "sourceUrl": "https://vave.com/promotions",
             "asOf": "2026-09-16"

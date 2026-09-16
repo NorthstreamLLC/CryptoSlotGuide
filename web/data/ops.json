@@ -284,7 +284,7 @@
     "payoutLabel": "11m 24s",
     "licence": "Curaçao",
     "kyc": "tiered",
-    "bonus": "150% first deposit up to 1.5 BTC + 100 free spins",
+    "bonus": "150% / 100% / 50% / 25% on the first four deposits, up to 4 BTC + 100 free spins",
     "wager": 40,
     "conf": 3,
     "absorbsFee": false,
@@ -293,7 +293,7 @@
     "esports": true,
     "hasCustomReview": false,
     "payoutStated": "Varies, up to hours",
-    "bonusShort": "150% up to 1.5 BTC + 100 free spins",
+    "bonusShort": "Up to 4 BTC over 4 deposits + 100 free spins",
     "wagerNote": "paid in instalments as you wager",
     "bonusExpiry": "30 days to wager"
   },
