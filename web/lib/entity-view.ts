@@ -110,6 +110,11 @@ function spec(k: string, v: string, state: "ok" | "watch" | "bad"): SpecRow {
   return { k, v, ...flag(state) };
 }
 
+/** A term quoted from the operator's own bonus rules — no verdict attached. */
+function cited(k: string, v: string): SpecRow {
+  return { k, v, label: "Cited", color: "#8FD6DA", background: "rgba(0,194,204,.08)" };
+}
+
 /** Neutral flag for a method step that hasn't been run yet. */
 const PENDING = { label: "Not yet run", color: "#8DA0AA", background: "rgba(255,255,255,.05)" };
 
@@ -546,6 +551,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
   // prototype's precise payoutLabel, which has no source. See data/README.md.
   const statedPayout = getSpecFact(o.slug, "Payouts & fees", "Stated withdrawal time");
   const wv = wagerView(o);
+  const bonusFact = (label: string) => getSpecFact(o.slug, "Bonus terms", label)?.value;
   const wagerFact = wv.kind === "cited" ? getSpecFact(o.slug, "Bonus terms", "Wagering") : undefined;
   const noBonusFact = wv.kind === "none" ? getSpecFact(o.slug, "Bonus terms", "Deposit bonus") ?? offerFact : undefined;
   const noteFact = wv.kind === "note" ? offerFact : undefined;
@@ -624,13 +630,22 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
     specTitle: "Bonus terms",
     specSub: audited
       ? "Checked against the operator's own terms page. We flag anything that materially limits withdrawal."
-      : "The headline offer as listed. Expiry and cashout cap show only once confirmed against the operator's own terms.",
-    spec: [
-      offerFact ? spec("Headline offer", offerFact.value ?? o.bonus, "watch") : unconfirmed("Headline offer"),
-      wagerFact ? spec("Wagering", wagerFact.value ?? `${o.wager}×`, lowWager ? "ok" : "bad") : wv.kind === "none" ? spec("Wagering", "No deposit bonus to clear", "ok") : unconfirmed("Wagering"),
-      o.bonusExpiry ? spec("Bonus expiry", o.bonusExpiry, "ok") : unconfirmed("Bonus expiry"),
-      o.cashoutCap ? spec("Max cashout", o.cashoutCap, "ok") : unconfirmed("Max cashout"),
-    ],
+      : wv.kind === "none"
+      ? `${o.name} runs no deposit bonus, so there is nothing to wager through. Its rewards are listed under current bonuses.`
+      : "The rules that decide what a bonus is really worth, each quoted from the operator's own terms. Anything we haven't found yet is marked unconfirmed.",
+    spec: wv.kind === "none"
+      ? [offerFact ? cited("Rewards", offerFact.value ?? o.bonus) : unconfirmed("Rewards"), spec("Wagering", "No deposit bonus to clear", "ok")]
+      : [
+          offerFact ? cited("Offer", offerFact.value ?? o.bonus) : unconfirmed("Offer"),
+          wagerFact
+            ? spec("Wagering", wagerFact.value ?? `${o.wager}×`, (wv.mult ?? 0) <= 1 ? "ok" : (wv.mult ?? 0) > 35 ? "bad" : "watch")
+            : bonusFact("Wagering rules") ? cited("Wagering", bonusFact("Wagering rules")!) : unconfirmed("Wagering"),
+          bonusFact("Expiry") ? cited("Time limit", bonusFact("Expiry")!) : o.bonusExpiry ? cited("Time limit", o.bonusExpiry) : unconfirmed("Time limit"),
+          bonusFact("Max bet") ? cited("Max bet", bonusFact("Max bet")!) : bonusFact("Bonus play rules") ? cited("Play rules", bonusFact("Bonus play rules")!) : unconfirmed("Max bet"),
+          bonusFact("Max cashout") ? cited("Max cashout", bonusFact("Max cashout")!) : o.cashoutCap ? cited("Max cashout", o.cashoutCap) : unconfirmed("Max cashout"),
+          bonusFact("Game contribution") ? cited("Game contribution", bonusFact("Game contribution")!) : unconfirmed("Game contribution"),
+          bonusFact("Minimum deposit") ? cited("Minimum deposit", bonusFact("Minimum deposit")!) : unconfirmed("Minimum deposit"),
+        ],
     tableTitle: "Slot RTP in this build",
     tableSub: readings.length
       ? "Read from the paytable inside this operator's own client, against the studio's published figure."
@@ -660,7 +675,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
     ].filter((x, i, a): x is string => x !== null && a.indexOf(x) === i),
     // Only cons built from cited facts — confirmations, Lightning and fee absorption are prototype listings and aren't shown.
     cons: [
-      ...(wagerFact && !lowWager ? [`${o.wager}× wagering on the headline offer`] : []),
+      ...(wagerFact && !lowWager ? [`${wv.label} wagering on the headline offer`] : []),
       ...(pv.kind === "none" ? ["No withdrawal time stated on its own pages"] : pv.mins !== null && pv.mins >= 1440 ? [`Stated withdrawal time runs up to ${pv.label.split("–").pop()}`] : []),
       ...(coinsFact && coins.length < siteData.coinDefs.length ? [`Accepts ${coins.length} of the ${siteData.coinDefs.length} coins we track`] : []),
       ...(notOnRegister ? ["Not found on the regulator's licence register"] : []),

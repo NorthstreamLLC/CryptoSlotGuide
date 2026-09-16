@@ -4135,7 +4135,7 @@
           },
           {
             "label": "Wagering",
-            "value": "Your deposit and the bonus go into one bonus balance with a 40× wagering requirement. Originals, Unoriginals and live casino (except game shows and roulette) count 20%; sports bets don't count",
+            "value": "40× on one bonus balance that holds both your deposit and the bonus",
             "sourcing": "editorial",
             "sourceUrl": "https://www.razed.com/promotions/",
             "asOf": "2026-09-16"
@@ -4156,7 +4156,7 @@
           },
           {
             "label": "Bonus play rules",
-            "value": "Max bet $50 while clearing the bonus and $20 while wagering free-spin winnings; free spins need a first deposit of at least $100; new players only, once per person",
+            "value": "New players only, once per person and account; opt in on the deposit screen before depositing",
             "sourcing": "editorial",
             "sourceUrl": "https://www.razed.com/promotions/",
             "asOf": "2026-09-16"
@@ -4166,6 +4166,27 @@
             "value": "Rakeback and monthly bonus from Starter; weekly bonus and rank-up rewards from Bronze 1; reward points you allocate to spins, cases, lossback, reloads, bonus buys or rakeback",
             "sourcing": "editorial",
             "sourceUrl": "https://www.razed.com/promotions/vip-transfer/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max bet",
+            "value": "$50 while clearing the bonus; $20 while wagering free-spin winnings",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.razed.com/promotions/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Game contribution",
+            "value": "Originals, Unoriginals and live casino (except game shows and roulette) count 20%; sports bets don't count",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.razed.com/promotions/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "$100 first deposit to get the free spins; the page also says the match bonus starts at $100",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.razed.com/promotions/",
             "asOf": "2026-09-16"
           }
         ]
