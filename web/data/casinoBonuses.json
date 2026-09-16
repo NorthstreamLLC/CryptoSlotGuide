@@ -955,5 +955,38 @@
         "sourceNote": "Dustbit’s own promotion page"
       }
     ]
+  },
+  {
+    "operatorSlug": "degencity",
+    "bonuses": [
+      {
+        "title": "7-Day 10% Cashback",
+        "category": "Welcome offer · new players",
+        "headline": "10%",
+        "subCopy": "10% of your net slot losses in the first 7 days after registering, credited automatically once you’ve made a deposit. Only the first $5 of each spin counts; live casino, game shows and bonus buys are excluded.",
+        "stats": [
+          {
+            "label": "Window",
+            "value": "7 days"
+          },
+          {
+            "label": "Counted per spin",
+            "value": "$5"
+          }
+        ],
+        "asOf": "2026-09-16",
+        "sourceUrl": "https://degencity.com/promotions",
+        "sourceNote": "Degencity’s own promotion page"
+      },
+      {
+        "title": "Rakeback & VIP bonuses",
+        "category": "VIP · Chiplet and up",
+        "headline": "Instant",
+        "subCopy": "Instant rakeback from the first bet, with weekly and monthly bonuses from the Chiplet rank. VIP starts at Hustler, with a VIP host from Card Shark.",
+        "asOf": "2026-09-16",
+        "sourceUrl": "https://help.degencity.com/en/articles/13870117-what-are-rakeback-rewards-and-how-do-i-claim-them",
+        "sourceNote": "Degencity’s own help centre"
+      }
+    ]
   }
 ]

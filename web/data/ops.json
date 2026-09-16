@@ -858,7 +858,7 @@
     "payoutLabel": "5m 48s",
     "licence": "Anjouan",
     "kyc": "none",
-    "bonus": "Instant, weekly and monthly rakeback",
+    "bonus": "7-day 10% cashback on slot losses + instant rakeback",
     "wager": 1,
     "conf": 1,
     "absorbsFee": false,
@@ -868,7 +868,9 @@
     "hasCustomReview": false,
     "payoutStated": "Instant–1 hr",
     "payoutStatedMaxMins": 60,
-    "noDepositBonus": true
+    "noDepositBonus": false,
+    "bonusShort": "7-day 10% slot cashback",
+    "wagerNote": "credited automatically, no wagering stated"
   },
   {
     "slug": "dustbit",

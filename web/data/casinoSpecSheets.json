@@ -2397,10 +2397,10 @@
         "facts": [
           {
             "label": "Standing offer",
-            "value": "Instant rakeback, weekly and monthly rewards from the Chiplet rank, plus rank-up bonuses; instant rakeback is a share of the house edge on every eligible bet",
+            "value": "7-Day 10% Cashback: 10% of net slot losses in your first 7 days after registering is credited automatically, for players who have made at least one deposit; plus instant rakeback from the first bet, and weekly and monthly bonuses from the Chiplet rank",
             "sourcing": "editorial",
-            "sourceUrl": "https://help.degencity.com/en/articles/13870117-what-are-rakeback-rewards-and-how-do-i-claim-them",
-            "asOf": "2026-09-15"
+            "sourceUrl": "https://degencity.com/promotions",
+            "asOf": "2026-09-16"
           },
           {
             "label": "VIP tiers",
@@ -2415,6 +2415,34 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.degencity.com/en/articles/13885383-is-vip-transfer-supported",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Game contribution",
+            "value": "Only slot losses count toward the cashback; live casino, game shows and bonus buys are excluded, and wins on other games don't offset slot losses",
+            "sourcing": "editorial",
+            "sourceUrl": "https://degencity.com/promotions",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max bet",
+            "value": "Only the first $5 of any slot spin counts toward the cashback calculation",
+            "sourcing": "editorial",
+            "sourceUrl": "https://degencity.com/promotions",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Expiry",
+            "value": "The cashback window starts automatically at registration and runs 7 days; rakeback and VIP bonuses don't expire",
+            "sourcing": "editorial",
+            "sourceUrl": "https://degencity.com/promotions",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "At least one successful deposit; no minimum amount is stated",
+            "sourcing": "editorial",
+            "sourceUrl": "https://degencity.com/promotions",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -2427,6 +2455,20 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.degencity.com/en/articles/13869866-how-to-verify-my-identity",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Company",
+            "value": "3-102-939867 LIMITADA (Costa Rica, reg. 3-102-939867), Escazú, San José",
+            "sourcing": "editorial",
+            "sourceUrl": "https://degencity.com/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Licence",
+            "value": "Its footer carries a licence validator seal marked VALID in the style used by Anjouan-licensed sites, but the footer text gives no regulator or licence number. It also shows a Tanzanite Certified badge",
+            "sourcing": "editorial",
+            "sourceUrl": "https://degencity.com/",
+            "asOf": "2026-09-16"
           }
         ]
       }
