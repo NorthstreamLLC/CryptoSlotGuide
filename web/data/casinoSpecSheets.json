@@ -1843,7 +1843,14 @@
         "facts": [
           {
             "label": "Stated withdrawal time",
-            "value": "Usually processed instantly; should arrive within up to 1 hour",
+            "value": "Usually processed instantly; blockchain confirmations can take a few minutes, and funds should arrive within up to 1 hour",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.degencity.com/en/articles/13868915-how-to-withdraw",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal conditions",
+            "value": "Crypto withdrawals only, a verified email address is required, and every deposit must be fully wagered at least once before you can withdraw",
             "sourcing": "editorial",
             "sourceUrl": "https://help.degencity.com/en/articles/13868915-how-to-withdraw",
             "asOf": "2026-09-15"
@@ -1859,11 +1866,26 @@
               "BTC",
               "ETH",
               "USDT",
+              "USDC",
               "LTC",
               "TRX"
             ],
             "sourcing": "editorial",
             "sourceUrl": "https://help.degencity.com/en/articles/13868262-how-to-deposit-crypto",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "Per coin and network: $5 for BTC, ETH, USDC and USDT on ERC-20, but $20 for USDT on Tron; $1 for LTC and TRX. Its help centre says these can change and to check the deposit screen",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.degencity.com/en/articles/13868262-how-to-deposit-crypto",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Card and bank",
+            "value": "Card and bank deposits are converted straight into crypto through a Cards, Banks & More option; the balance is crypto, with a fiat figure shown for reference only",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.degencity.com/en/articles/13868515-how-to-deposit-via-bank-transfer-or-card",
             "asOf": "2026-09-15"
           }
         ]
@@ -1873,9 +1895,23 @@
         "facts": [
           {
             "label": "Standing offer",
-            "value": "Instant, weekly and monthly rakeback from Chiplet rank; rakeback doesn't expire",
+            "value": "Instant rakeback, weekly and monthly rewards from the Chiplet rank, plus rank-up bonuses; instant rakeback is a share of the house edge on every eligible bet",
             "sourcing": "editorial",
             "sourceUrl": "https://help.degencity.com/en/articles/13870117-what-are-rakeback-rewards-and-how-do-i-claim-them",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "VIP tiers",
+            "value": "VIP starts at Hustler (250,000–700,000 XP); Card Shark (1M–3M XP) adds a bonus increase and a VIP host; Pitboss (5M–15M XP) adds bespoke rewards and exclusive access; Ace (22M–100M XP) adds event invitations",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.degencity.com/en/articles/13885358-how-do-i-become-a-vip",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "VIP transfer",
+            "value": "Matches VIP status from another casino: you email a screen recording showing your tier, total wagered and account email, and it takes up to 48 hours to review; the tier granted is at its discretion",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.degencity.com/en/articles/13885383-is-vip-transfer-supported",
             "asOf": "2026-09-15"
           }
         ]
@@ -1885,7 +1921,7 @@
         "facts": [
           {
             "label": "KYC policy",
-            "value": "Can generally deposit, play and withdraw without KYC",
+            "value": "Can generally deposit, play and withdraw without KYC, though a verified email address is required to withdraw",
             "sourcing": "editorial",
             "sourceUrl": "https://help.degencity.com/en/articles/13869866-how-to-verify-my-identity",
             "asOf": "2026-09-15"
