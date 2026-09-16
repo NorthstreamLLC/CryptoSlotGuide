@@ -576,7 +576,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
     // The exact payout figure only leads the headline once we've timed it ourselves.
     headline: checked
       ? `${o.name}: ${o.payoutLabel} median withdrawal, ${o.licence} licence, ${coinCount} coins`
-      : `${o.name}: ${pv.kind === "none" ? "" : `${pv.label.toLowerCase()} withdrawals, `}${licenceFact ? (notOnRegister ? "licence not on regulator register" : /^not stated$/i.test(o.licence) ? "no licence stated" : `${o.licence} licence`) : ""}${licenceFact && coinsFact ? ", " : ""}${coinsFact ? `${coinCount} coins accepted` : ""}`.replace(/, $/, "").replace(/: $/, ": casino profile"),
+      : `${o.name}: ${pv.kind === "none" ? "" : `${pv.label.toLowerCase()} withdrawals, `}${licenceFact ? (notOnRegister ? "licence not on regulator register" : /^not stated$/i.test(o.licence) ? "no licence stated" : /^unconfirmed$/i.test(o.licence) ? "licence unconfirmed" : `${o.licence} licence`) : ""}${licenceFact && coinsFact ? ", " : ""}${coinsFact ? `${coinCount} coins accepted` : ""}`.replace(/, $/, "").replace(/: $/, ": casino profile"),
     standfirst: checked
       ? `We ran a funded ${o.name} account — timing real withdrawals and reading the bonus terms line by line.`
       : hasSheet
