@@ -1667,24 +1667,31 @@
             "asOf": "2026-09-15"
           },
           {
-            "label": "Withdrawal fees",
-            "value": "Its terms say processing fees may apply in some cases and would be disclosed then; no fee schedule is published",
-            "sourcing": "editorial",
-            "sourceUrl": "https://www.degen.com/policies/terms-of-service",
-            "asOf": "2026-09-15"
-          },
-          {
-            "label": "Minimum withdrawal",
-            "value": "Its terms say minimum and maximum withdrawal limits may be set and published on the site; we found none published",
-            "sourcing": "editorial",
-            "sourceUrl": "https://www.degen.com/policies/terms-of-service",
-            "asOf": "2026-09-15"
-          },
-          {
             "label": "Withdrawal rules",
             "value": "Withdrawals generally go back to the payment method used to deposit, and can be delayed for verification or extra documents",
             "sourcing": "editorial",
             "sourceUrl": "https://www.degen.com/policies/terms-of-service",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal fees",
+            "value": "Its payouts policy says withdrawals may carry transaction fees, currency conversion costs or blockchain network fees; no rates are published",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.degen.com/policies/accounts-and-payouts",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Minimum withdrawal",
+            "value": "Its payouts policy says minimum and maximum withdrawal thresholds are shown in the cashier; no figure is published outside an account",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.degen.com/policies/accounts-and-payouts",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Dormant accounts",
+            "value": "An account counts as dormant after a period with no login or betting activity, given as 12 months by way of example; no dormancy fee is mentioned",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.degen.com/policies/accounts-and-payouts",
             "asOf": "2026-09-15"
           }
         ]
@@ -1714,6 +1721,13 @@
             "value": "$20 to qualify for the first-deposit bonus",
             "sourcing": "editorial",
             "sourceUrl": "https://help.degen.com/en/articles/15558569-unlock-up-to-1-500-on-your-first-deposit",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Deposit rules",
+            "value": "Deposit methods must be in your own name, with third-party deposits refused; minimum and maximum deposit limits are shown in the cashier. Deposits from mixers can freeze the account",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.degen.com/policies/accounts-and-payouts",
             "asOf": "2026-09-15"
           }
         ]
@@ -1808,6 +1822,13 @@
             "value": "One account per person; VPNs or proxies used to get around restricted jurisdictions breach its terms. The terms name no restricted countries",
             "sourcing": "editorial",
             "sourceUrl": "https://www.degen.com/policies/terms-of-service",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Dispute body",
+            "value": "Its payouts policy points unresolved disputes to its regulator, but the published text still carries the placeholder “[Anjouan Authority or Other Jurisdiction License]” instead of naming one",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.degen.com/policies/accounts-and-payouts",
             "asOf": "2026-09-15"
           }
         ]
