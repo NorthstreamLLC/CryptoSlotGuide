@@ -688,5 +688,67 @@
         "sourceNote": "Wager.com’s own VIP Transfer page"
       }
     ]
+  },
+  {
+    "operatorSlug": "acebet",
+    "bonuses": [
+      {
+        "title": "Welcome package",
+        "category": "Deposit bonus · new players",
+        "headline": "100%",
+        "subCopy": "First deposit matched up to $1,000, plus free spins after email verification with no deposit needed. Both need Acebet’s own sign-up code, and the wagering requirement is only shown at sign-up.",
+        "stats": [
+          {
+            "label": "Max match",
+            "value": "$1,000"
+          },
+          {
+            "label": "Wagering",
+            "value": "Not published"
+          }
+        ],
+        "asOf": "2026-09-16",
+        "sourceUrl": "https://acebet.co/",
+        "sourceNote": "Acebet’s own welcome page"
+      },
+      {
+        "title": "Rakeback ranks",
+        "category": "VIP · all players",
+        "headline": "5% – 25%",
+        "subCopy": "Share of the house edge returned on every wager, rising over 27 ranks from Bronze I to Apex, paid into instant, daily, weekly and monthly vaults.",
+        "stats": [
+          {
+            "label": "Bronze I",
+            "value": "5.00% · $0"
+          },
+          {
+            "label": "Apex",
+            "value": "25.00% · $1B wagered"
+          }
+        ],
+        "asOf": "2026-09-16",
+        "sourceUrl": "https://acebet.co/",
+        "sourceNote": "Acebet’s own in-account Rewards page, screenshot-verified"
+      },
+      {
+        "title": "Missions",
+        "category": "Rewards · new players",
+        "headline": "15 missions",
+        "subCopy": "Small cash rewards from $0.10 to $5.00 for completing tasks in order, such as a $10 deposit, $200 wagered, reaching level 10 or a $50 withdrawal.",
+        "stats": [
+          {
+            "label": "Rewards",
+            "value": "$0.10 – $5.00"
+          },
+          {
+            "label": "Total",
+            "value": "About $21"
+          }
+        ],
+        "asOf": "2026-09-16",
+        "sourceUrl": "https://acebet.co/",
+        "sourceNote": "Acebet’s own in-account Missions panel, screenshot-verified"
+      }
+    ]
   }
 ]
