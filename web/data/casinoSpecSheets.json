@@ -1988,7 +1988,21 @@
         "facts": [
           {
             "label": "Withdrawal fees",
-            "value": "Duel doesn't profit from withdrawal fees; users cover network/processing fees",
+            "value": "Duel says it takes no profit from deposit or withdrawal fees; players cover third-party network or processing fees",
+            "sourcing": "editorial",
+            "sourceUrl": "https://duel.com/policies/tos",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Deposit and withdrawal rules",
+            "value": "Deposits are not refunded by default, must come from your own payment method, and third parties can't deposit or withdraw on your account. Getting the address or network wrong is the player's risk",
+            "sourcing": "editorial",
+            "sourceUrl": "https://duel.com/policies/tos",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Dormant accounts",
+            "value": "After six years with no login, an account counts as dormant and Duel may reclaim the remaining balance; it may try to email first but is not obliged to",
             "sourcing": "editorial",
             "sourceUrl": "https://duel.com/policies/tos",
             "asOf": "2026-09-15"
@@ -2003,6 +2017,27 @@
             "value": "No deposit bonuses — Duel publishes a page arguing against them",
             "sourcing": "editorial",
             "sourceUrl": "https://duel.com/about/why-bonuses-suck",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Rakeback",
+            "value": "Says it instantly returns 50% of the house edge you pay on slots, which it describes as turning a 4% edge into an effective 2%",
+            "sourcing": "editorial",
+            "sourceUrl": "https://duel.com/about/why-duel",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "House edge claim",
+            "value": "Says its house games run at 99.9% RTP, with a stated goal of reaching 100%, and compares that to the 99% it says is standard elsewhere. We haven't verified those figures",
+            "sourcing": "editorial",
+            "sourceUrl": "https://duel.com/about/why-duel",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Referrals",
+            "value": "Its referral system is described as an early version with manual payouts roughly every 1 to 7 days and no committed commission rates",
+            "sourcing": "editorial",
+            "sourceUrl": "https://duel.com/about/why-duel",
             "asOf": "2026-09-15"
           }
         ]
@@ -2019,16 +2054,44 @@
           },
           {
             "label": "Company",
-            "value": "Immortal Snail LLC (reg. L22982, Nevis)",
+            "value": "Immortal Snail LLC (Nevis, reg. L22982), Arthur L. Evelyn Building, Suite 5, Main Street, Charlestown",
             "sourcing": "editorial",
             "sourceUrl": "https://duel.com/",
             "asOf": "2026-09-15"
           },
           {
             "label": "KYC policy",
-            "value": "Reserves the right to request KYC before processing a withdrawal",
+            "value": "Reserves the right to request KYC before processing a withdrawal, and says it isn't liable if funds stay locked when documents aren't provided; ID documents are handled through Checkin.com",
             "sourcing": "editorial",
             "sourceUrl": "https://duel.com/policies/tos",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Restricted countries",
+            "value": "Afghanistan, Armenia, Australia, Central African Republic, DR Congo, France, Germany, Iran, Iraq, Jordan, Kuwait, Libya, Lithuania, Mali, Montenegro, Myanmar, Netherlands (including Curaçao), North Korea, St Kitts and Nevis, Slovakia, Somalia, South Sudan, Spain, Sudan, Syria, UAE, United Kingdom, USA and its territories, Venezuela and Yemen",
+            "sourcing": "editorial",
+            "sourceUrl": "https://duel.com/policies/tos",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Disputes",
+            "value": "Complaints go to its support team; unresolved disputes go to binding arbitration in Anjouan, with each side paying its own costs and a class-action waiver",
+            "sourcing": "editorial",
+            "sourceUrl": "https://duel.com/policies/tos",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Law enforcement",
+            "value": "Its AML section reserves the right to freeze funds during an investigation, hand over account data, and transfer funds to an authority where a court orders it, without notifying you where the law forbids it",
+            "sourcing": "editorial",
+            "sourceUrl": "https://duel.com/policies/tos",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Operator",
+            "value": "Its own about page says Duel is run by the operator known as Monarch, who previously ran the CS skin casino CSGOEmpire, and that the team is around 100 people",
+            "sourcing": "editorial",
+            "sourceUrl": "https://duel.com/about/why-duel",
             "asOf": "2026-09-15"
           }
         ]
