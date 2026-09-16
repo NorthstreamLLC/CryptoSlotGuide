@@ -454,21 +454,90 @@
     "operatorSlug": "bc-game",
     "groups": [
       {
+        "title": "Payouts & fees",
+        "facts": [
+          {
+            "label": "Stated withdrawal time",
+            "value": "Fiat withdrawals take anywhere between 5 minutes and a few days, depending on your bank; no crypto withdrawal time stated in its help centre",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.bc.support/en/articles/7846669-how-to-deposit-and-withdraw-fiat-currency",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal fees",
+            "value": "Fiat withdrawal fees vary by payment gateway and currency: a percentage of the amount, a fixed fee per transaction, or both",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.bc.support/en/articles/8755805-fiat-withdrawal-fee-update",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal holds",
+            "value": "Withdrawals are suspended for 24 hours after any password change",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.bc.support/en/articles/8911028-withdrawal-restrictions-after-password-changes",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
         "title": "Coins & deposit limits",
         "facts": [
           {
             "label": "Coins accepted",
             "chips": [
+              "BCD",
+              "BC",
               "BTC",
               "ETH",
               "USDT",
+              "USDC",
+              "TRX",
+              "BNB",
               "LTC",
-              "SOL",
-              "DOGE",
               "XRP",
-              "TRX"
+              "DOGE",
+              "SOL",
+              "XLM",
+              "SATS",
+              "MATIC",
+              "WLD"
             ],
-            "sourcing": "site-data"
+            "sourcing": "editorial",
+            "sourceUrl": "https://bc.game/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Coin list note",
+            "value": "The wallet shows these as its main balances; the deposit picker lists well over a hundred more coins and tokenised stocks such as AAPLx and TSLAx. BCD and BC are BC.Game's own tokens",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bc.game/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Card and bank",
+            "value": "Fiat deposits and withdrawals run through payment gateways, with the account balance shown in a chosen fiat currency (NOK on the account checked)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.bc.support/en/articles/7846669-how-to-deposit-and-withdraw-fiat-currency",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Bonus terms",
+        "facts": [
+          {
+            "label": "Standing offer",
+            "value": "Sign-up offer advertised on site as a 220% deposit bonus; its promotions page shows a monthly deposit bonus of up to 500% across four deposits",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bc.game/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Vault Pro interest",
+            "value": "Balances left in Vault Pro earn 10% a year on BCD and 5% a year on other currencies",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.bc.support/en/articles/10702437-a-guide-to-your-wallet-features",
+            "asOf": "2026-09-15"
           }
         ]
       },
@@ -484,10 +553,31 @@
           },
           {
             "label": "Company",
-            "value": "Twocent Technology Limited (Belize, reg. no. 000041939)",
+            "value": "Twocent Technology Limited (Belize, reg. no. 000041939), Sea Urchin Street, San Pedro, Ambergris Caye",
             "sourcing": "editorial",
             "sourceUrl": "https://bc.game/licenses",
             "asOf": "2026-09-14"
+          },
+          {
+            "label": "Other licences",
+            "value": "Its licences page also lists bcbet.ng under a Nigerian National Sports Betting Permit (#2005793, to 31 Jul 2028) and bcgame.mx under Mexican permit DGAJS/SCEVF/P-06/2005-Ter",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bc.game/licenses",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "KYC policy",
+            "value": "Basic KYC is a government photo ID (front and back) plus a selfie from five angles; advanced KYC, if requested, adds proof of address from the last 3 months",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.bc.support/en/articles/11114036-guide-to-kyc-verification",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Restricted countries",
+            "value": "Its licences page says it blocks countries where it cannot accept customers, naming the US, without publishing the full list there",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bc.game/licenses",
+            "asOf": "2026-09-15"
           }
         ]
       }

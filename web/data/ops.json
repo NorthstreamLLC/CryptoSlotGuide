@@ -55,7 +55,8 @@
     "ln": false,
     "sports": true,
     "esports": true,
-    "hasCustomReview": false
+    "hasCustomReview": false,
+    "payoutStated": "5 min–days (fiat)"
   },
   {
     "slug": "shuffle",
