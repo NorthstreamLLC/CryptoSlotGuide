@@ -1654,7 +1654,14 @@
         "facts": [
           {
             "label": "Stated withdrawal time",
-            "value": "Usually instant once submitted",
+            "value": "Usually instant once submitted; some take a few minutes depending on network confirmation, and larger or flagged withdrawals go to manual review",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.degen.com/en/articles/12573437-how-long-do-withdrawals-take",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Pending withdrawals",
+            "value": "Its help centre says to contact support if a withdrawal stays Pending for more than an hour; delays are put down to network congestion or a compliance review",
             "sourcing": "editorial",
             "sourceUrl": "https://help.degen.com/en/articles/12573437-how-long-do-withdrawals-take",
             "asOf": "2026-09-15"
@@ -1670,12 +1677,22 @@
               "BTC",
               "ETH",
               "USDT",
+              "USDC",
               "LTC",
-              "SOL",
-              "XRP"
+              "DOGE",
+              "TRX",
+              "XRP",
+              "SOL"
             ],
             "sourcing": "editorial",
-            "sourceUrl": "https://help.degen.com/en/articles/12573245-which-cryptocurrencies-and-networks-are-supported",
+            "sourceUrl": "https://www.degen.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "$20 to qualify for the first-deposit bonus",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.degen.com/en/articles/15558569-unlock-up-to-1-500-on-your-first-deposit",
             "asOf": "2026-09-15"
           }
         ]
@@ -1685,9 +1702,49 @@
         "facts": [
           {
             "label": "Standing offer",
-            "value": "Rakeback from 3%, rising to 8% by VIP rank",
+            "value": "100% first deposit match up to $1,500, plus rakeback from 3% rising to 8% by VIP rank",
             "sourcing": "editorial",
-            "sourceUrl": "https://help.degen.com/en/articles/12570521-rakeback",
+            "sourceUrl": "https://help.degen.com/en/articles/15558569-unlock-up-to-1-500-on-your-first-deposit",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Wagering",
+            "value": "30× deposit plus bonus, with no time limit; wagers count towards it by the game's house edge",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.degen.com/en/articles/15558569-unlock-up-to-1-500-on-your-first-deposit",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Bonus play rules",
+            "value": "Maximum $10 per wager while clearing the rollover; challenges, accumulator games and slot bonus buys don't count",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.degen.com/en/articles/15558569-unlock-up-to-1-500-on-your-first-deposit",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Recurring bonuses",
+            "value": "Weekly bonus every Monday and monthly bonus on the 1st, both from Bronze VIP and up; neither stacks, so an unclaimed one expires when the next is issued. Rank-up bonuses do stack",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.degen.com/en/articles/12570453-weekly-bonus",
+            "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Compliance",
+        "facts": [
+          {
+            "label": "Licence",
+            "value": "Anjouan, Union of Comoros, licence ALSI-202509061-FI2",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.degen.com/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Company",
+            "value": "Degen Legend Limitada (Costa Rica, reg. 3-102-932227), Barrio Dent, San José - Montes de Oca",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.degen.com/",
             "asOf": "2026-09-15"
           }
         ]

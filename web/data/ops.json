@@ -612,8 +612,8 @@
     "payoutLabel": "5m 12s",
     "licence": "Anjouan",
     "kyc": "tiered",
-    "bonus": "Rakeback 3–8% by VIP rank",
-    "wager": 1,
+    "bonus": "100% first deposit up to $1,500 + 3-8% rakeback",
+    "wager": 30,
     "conf": 1,
     "absorbsFee": false,
     "ln": false,
@@ -621,7 +621,8 @@
     "esports": false,
     "hasCustomReview": false,
     "payoutStated": "Instant",
-    "payoutStatedMaxMins": 0
+    "payoutStatedMaxMins": 0,
+    "bonusExpiry": "No time limit on the rollover"
   },
   {
     "slug": "qzino",
