@@ -1702,7 +1702,7 @@
         "facts": [
           {
             "label": "Standing offer",
-            "value": "100% first deposit match up to $1,500, plus rakeback from 3% rising to 8% by VIP rank",
+            "value": "100% first deposit match up to $1,500 (first deposit only, minimum $20, and the account must be registered under an eligible referral code), plus rakeback from 3% rising to 8% by VIP rank",
             "sourcing": "editorial",
             "sourceUrl": "https://help.degen.com/en/articles/15558569-unlock-up-to-1-500-on-your-first-deposit",
             "asOf": "2026-09-15"
@@ -1726,6 +1726,34 @@
             "value": "Weekly bonus every Monday and monthly bonus on the 1st, both from Bronze VIP and up; neither stacks, so an unclaimed one expires when the next is issued. Rank-up bonuses do stack",
             "sourcing": "editorial",
             "sourceUrl": "https://help.degen.com/en/articles/12570453-weekly-bonus",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Rollover contribution",
+            "value": "Each wager counts as stake × (game house edge ÷ 0.04), so a $5 bet on a 1% edge game contributes $1.25; sports bets need odds of 1.30 or better",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.degen.com/promotions",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "During rollover",
+            "value": "Withdrawals, vault transfers and tips in the bonus currency are blocked until the rollover is finished or forfeited; the bonus can only be forfeited before any qualifying play",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.degen.com/promotions",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Bonus eligibility",
+            "value": "One account per player, household, IP address and payment method; claiming the welcome bonus may rule out other welcome or deposit offers",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.degen.com/promotions",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Leaderboards",
+            "value": "$25,000 Weekly Race, shared between the top 20 players and reset weekly; casino, slots and sports wagers all count",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.degen.com/promotions",
             "asOf": "2026-09-15"
           }
         ]

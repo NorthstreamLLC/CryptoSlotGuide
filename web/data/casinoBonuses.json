@@ -436,5 +436,68 @@
         "sourceNote": "1win's own in-account VIP page, screenshot-verified"
       }
     ]
+  },
+  {
+    "operatorSlug": "degen",
+    "bonuses": [
+      {
+        "title": "Welcome bonus",
+        "category": "Deposit bonus · new players",
+        "headline": "100%",
+        "subCopy": "First deposit matched up to $1,500. The account has to be registered under an eligible referral code, and rollover is 30× deposit plus bonus with no time limit.",
+        "stats": [
+          {
+            "label": "Max bonus",
+            "value": "$1,500"
+          },
+          {
+            "label": "Min deposit",
+            "value": "$20"
+          }
+        ],
+        "asOf": "2026-09-15",
+        "sourceUrl": "https://www.degen.com/promotions",
+        "sourceNote": "Degen’s own promotions page and help centre"
+      },
+      {
+        "title": "$25,000 Weekly Race",
+        "category": "Leaderboard · all players",
+        "headline": "$25,000",
+        "subCopy": "Weekly wager leaderboard shared between the top 20 players, reset every week. Casino, slots, live casino and sports wagers all count.",
+        "stats": [
+          {
+            "label": "Paid places",
+            "value": "Top 20"
+          },
+          {
+            "label": "Resets",
+            "value": "Weekly"
+          }
+        ],
+        "asOf": "2026-09-15",
+        "endsLabel": "Resets weekly",
+        "sourceUrl": "https://www.degen.com/promotions",
+        "sourceNote": "Degen’s own promotions page"
+      },
+      {
+        "title": "Rakeback & VIP bonuses",
+        "category": "VIP · Bronze and up",
+        "headline": "3–8%",
+        "subCopy": "Rakeback rises from 3% to 8% by VIP rank. A weekly bonus lands each Monday and a monthly bonus on the 1st, both from Bronze VIP; neither stacks, so an unclaimed one expires.",
+        "stats": [
+          {
+            "label": "Weekly",
+            "value": "Mondays"
+          },
+          {
+            "label": "Monthly",
+            "value": "1st"
+          }
+        ],
+        "asOf": "2026-09-15",
+        "sourceUrl": "https://help.degen.com/en/articles/12570521-rakeback",
+        "sourceNote": "Degen’s own help centre"
+      }
+    ]
   }
 ]
