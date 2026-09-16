@@ -2389,6 +2389,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.degencity.com/en/articles/13868515-how-to-deposit-via-bank-transfer-or-card",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Deposit credit times",
+            "value": "Deposits are credited after 1 confirmation for BTC and LTC, 6 for ETH and USDT, around 20 for TRX and around 30 for USDC on ERC-20; deposits below a coin's minimum may not be credited",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.degencity.com/en/collections/18702125-deposits-and-withdrawals",
+            "asOf": "2026-09-16"
           }
         ]
       },
