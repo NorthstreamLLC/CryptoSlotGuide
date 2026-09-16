@@ -5629,6 +5629,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://sportsbet.io/help-centre/help-getting-started/help-transactions/what-is-the-minimum-withdrawal",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Fiat withdrawals",
+            "value": "CAD via Interac: 10 to 25,000 per transaction, processed within 5 minutes once confirmed, subject to your bank. TRY via bank transfer (2,000 to 1,000,000) or Papara (2,000 to 100,000) per 24 hours; Papara takes about 20 minutes. TRY withdrawals need a TRY deposit or your national ID, and deposits wagered once",
+            "sourcing": "editorial",
+            "sourceUrl": "https://sportsbet.io/help-centre",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -5641,15 +5648,35 @@
               "BTC",
               "ETH",
               "USDT",
+              "USDC",
               "LTC",
-              "SOL",
-              "DOGE",
+              "TRX",
               "XRP",
-              "TRX"
+              "ADA",
+              "DOGE",
+              "BNB",
+              "POL",
+              "SOL",
+              "TON",
+              "SHIB"
             ],
             "sourcing": "editorial",
-            "sourceUrl": "https://sportsbet.io/help-centre/help-payments/help-payments-using-crypto/what-cryptocurrencies-do-you-support",
-            "asOf": "2026-09-15"
+            "sourceUrl": "https://sportsbet.io/help-centre",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Networks",
+            "value": "USDT on ERC-20, TRC-20, BSC or Polygon; USDC on ERC-20, BSC, Base, Solana or Polygon; BNB on BEP-20, BEP-2 or BSC; ETH and SHIB on ERC-20 only; TON (listed as GRAM) on its main network. Coins sent on any other network aren't credited, and XRP tags must be converted to an X-address",
+            "sourcing": "editorial",
+            "sourceUrl": "https://sportsbet.io/help-centre",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Card and bank",
+            "value": "CAD deposits by Interac (10 to 10,000 per transaction, credited instantly) and TRY by bank transfer or Papara (from 2,000); other currencies can buy crypto through third-party services in the cashier. Balances can't be exchanged between currencies",
+            "sourcing": "editorial",
+            "sourceUrl": "https://sportsbet.io/help-centre",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -5683,6 +5710,20 @@
             "sourcing": "editorial",
             "sourceUrl": "https://sportsbet.io/promotions/2025-04-welcome-champion",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Game contribution",
+            "value": "Sportsbook bet slips at total odds of 1.50 or more and slots count 100%; live game shows 20%; Originals, table and RNG games, and live baccarat, roulette and blackjack 10%. Bets count once settled, and some games are excluded entirely",
+            "sourcing": "editorial",
+            "sourceUrl": "https://sportsbet.io/help-centre/help-other/help-other-terms-and-conditions/sportsbet-bonus-terms-conditions",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Wagering-triggered rewards",
+            "value": "Selected players can switch on offers that release a reward once a wagering target is hit in time, in the offer's currency; winnings from the reward may carry their own wagering",
+            "sourcing": "editorial",
+            "sourceUrl": "https://sportsbet.io/help-centre/help-other/help-other-terms-and-conditions/sportsbet-bonus-terms-conditions",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -5691,17 +5732,17 @@
         "facts": [
           {
             "label": "Licence",
-            "value": "Curaçao Gaming Authority, licence OGL/2023/110/0072",
+            "value": "Curaçao Gaming Authority, licence OGL/2023/110/0072, issued 22 July 2024 and extended under the LOK",
             "sourcing": "editorial",
             "sourceUrl": "https://sportsbet.io/",
-            "asOf": "2026-09-15"
+            "asOf": "2026-09-16"
           },
           {
             "label": "Company",
-            "value": "mBet Solutions N.V. (no. 129230, Curaçao)",
+            "value": "mBet Solutions N.V. (no. 129230), Schout Bij Nacht Doormanweg 40, Curaçao; some payments are handled by its subsidiary mProcessing Solutions Ltd in Nicosia, Cyprus",
             "sourcing": "editorial",
             "sourceUrl": "https://sportsbet.io/",
-            "asOf": "2026-09-15"
+            "asOf": "2026-09-16"
           },
           {
             "label": "KYC policy",
@@ -5709,6 +5750,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://sportsbet.io/help-centre/help-other/help-other-terms-and-conditions/general-terms-conditions",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Terms changes",
+            "value": "Updated general terms take effect at least two weeks after they're announced, so existing users can stop playing first",
+            "sourcing": "editorial",
+            "sourceUrl": "https://sportsbet.io/",
+            "asOf": "2026-09-16"
           }
         ]
       }
