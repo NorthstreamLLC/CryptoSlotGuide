@@ -2785,13 +2785,6 @@
             "asOf": "2026-09-15"
           },
           {
-            "label": "Withdrawal fees",
-            "value": "The withdrawal screen carries a Withdraw Fee line, but the amount is only shown in the cashier; no fee schedule is published",
-            "sourcing": "editorial",
-            "sourceUrl": "https://jackpot.bet/",
-            "asOf": "2026-09-15"
-          },
-          {
             "label": "Withdrawal conditions",
             "value": "A deposit must be wagered at least once before withdrawing, and withdrawals go back to the method used to deposit; only one pending withdrawal per method, and some methods allow just one request per 24 hours",
             "sourcing": "editorial",
@@ -2810,6 +2803,27 @@
             "value": "A flagged account is held to EUR 10,000 in any 24 hours and EUR 50,000 over 30 days",
             "sourcing": "editorial",
             "sourceUrl": "https://jackpot.bet/trust?tab=tos",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal fees",
+            "value": "Only the blockchain network fee, capped per coin and network: for example 3 USDT on Ethereum but 0.2 USDT on BNB Smart Chain, Tron or Polygon, and 0.0000068 BTC via BNB Smart Chain. The cap is shown before you confirm",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.jackpot.bet/en/articles/8511648-withdrawals-fees-limits",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Minimum withdrawal",
+            "value": "Set per coin and network: 0.0008 BTC, 0.008 ETH, 0.012 LTC, 6 USDT or USDC on Ethereum but 0.4 on BNB Smart Chain, Tron or Polygon, 12 DOGE, 6 XRP, 4 TRX, 0.0002 SOL",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.jackpot.bet/en/articles/8511648-withdrawals-fees-limits",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal maximum",
+            "value": "No maximum withdrawal limit, though any withdrawal may be held for verification",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.jackpot.bet/en/articles/8511648-withdrawals-fees-limits",
             "asOf": "2026-09-15"
           }
         ]
@@ -2921,23 +2935,34 @@
               "LTC",
               "DOGE",
               "XRP",
+              "TRX",
+              "SOL",
               "BNB",
-              "SOL"
+              "ADA",
+              "MATIC",
+              "BCH",
+              "SHIB",
+              "LINK",
+              "DAI",
+              "WBTC",
+              "ETC",
+              "TUSD",
+              "BUSD"
             ],
             "sourcing": "editorial",
-            "sourceUrl": "https://jackpot.bet/",
+            "sourceUrl": "https://help.jackpot.bet/en/articles/8511648-withdrawals-fees-limits",
             "asOf": "2026-09-15"
           },
           {
-            "label": "Coin list note",
-            "value": "Its own guide names these nine coins and says more are supported; the full list and the networks for each only appear in the cashier once you are logged in",
+            "label": "Networks",
+            "value": "Stablecoins can be moved on Ethereum, BNB Smart Chain, Tron or Polygon; its guide says the faster chains cut both fees and minimums",
             "sourcing": "editorial",
-            "sourceUrl": "https://jackpot.bet/",
+            "sourceUrl": "https://help.jackpot.bet/en/articles/8511648-withdrawals-fees-limits",
             "asOf": "2026-09-15"
           },
           {
             "label": "Card and bank",
-            "value": "Its own guide says card payments are supported via Visa, Mastercard, Apple Pay and Google Pay alongside crypto",
+            "value": "Its guide says cards are accepted for deposits (Visa, Mastercard, Apple Pay, Google Pay), but withdrawals are paid only in crypto to your own wallet",
             "sourcing": "editorial",
             "sourceUrl": "https://jackpot.bet/",
             "asOf": "2026-09-15"
