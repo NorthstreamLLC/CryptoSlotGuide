@@ -80,7 +80,8 @@
     "hasCustomReview": false,
     "payoutStated": "Instant",
     "payoutStatedMaxMins": 0,
-    "bonusShort": "First deposit bonus"
+    "bonusShort": "First deposit bonus",
+    "wagerNote": "deposit + bonus × a multiplier set per promotion"
   },
   {
     "slug": "rollbit",
@@ -314,7 +315,7 @@
     "payoutStatedMaxMins": 30,
     "bonusExpiry": "14 days for missions; spins within 3 days",
     "bonusShort": "Up to 500% as free spins",
-    "wagerNote": "deposit wagered 10× per mission"
+    "wagerNote": "10× per mission; 30× the bonus by default"
   },
   {
     "slug": "mbit",
@@ -525,7 +526,8 @@
     "payoutStatedMaxMins": 4320,
     "bonusExpiry": "14 days per bonus",
     "cashoutCap": "Free-spin winnings max $550",
-    "bonusShort": "Up to 590% + 225 free spins"
+    "bonusShort": "Up to 590% + 225 free spins",
+    "wagerBasis": ""
   },
   {
     "slug": "gamba",
@@ -607,7 +609,8 @@
     "esports": false,
     "hasCustomReview": false,
     "bonusExpiry": "30 days if wagering isn't met",
-    "bonusShort": "Daily cashback 1–25%"
+    "bonusShort": "200% first-deposit bonus balance",
+    "wagerNote": "unlocks as you claim cashback and bonuses"
   },
   {
     "slug": "acebet",
@@ -649,7 +652,8 @@
     "payoutStated": "Instant–2 days",
     "payoutStatedMaxMins": 2880,
     "bonusExpiry": "Bonus funds expire after 30 days",
-    "bonusShort": "100% deposit bonus + free spins"
+    "bonusShort": "100% up to $1,000 + free spins",
+    "wagerBasis": "deposit + bonus"
   },
   {
     "slug": "degen",
@@ -734,7 +738,9 @@
     "payoutStated": "Minutes–1 hr",
     "payoutStatedMaxMins": 60,
     "bonusExpiry": "14 days from activation",
-    "bonusShort": "100% first deposit bonus"
+    "bonusShort": "100% first deposit bonus",
+    "wagerBasis": "deposit + bonus (up to 400× by game)",
+    "cashoutCap": "Max 5× initial deposit"
   },
   {
     "slug": "housebets",

@@ -645,7 +645,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
           bonusFact("Max cashout") ? cited("Max cashout", bonusFact("Max cashout")!) : o.cashoutCap ? cited("Max cashout", o.cashoutCap) : unconfirmed("Max cashout"),
           bonusFact("Game contribution") ? cited("Game contribution", bonusFact("Game contribution")!) : unconfirmed("Game contribution"),
           bonusFact("Minimum deposit") ? cited("Minimum deposit", bonusFact("Minimum deposit")!) : unconfirmed("Minimum deposit"),
-        ],
+        ].filter((r) => !(wv.mult === 0 && r.label === "Unconfirmed" && (r.k === "Max bet" || r.k === "Game contribution"))),
     tableTitle: "Slot RTP in this build",
     tableSub: readings.length
       ? "Read from the paytable inside this operator's own client, against the studio's published figure."

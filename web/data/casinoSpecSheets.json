@@ -67,6 +67,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://1win.com/",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Game contribution",
+            "value": "Bonus funds work on the games in the Casino section's Bonus Wagering category; contribution rates aren't published",
+            "sourcing": "editorial",
+            "sourceUrl": "https://1win.com/bonuses",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -240,17 +247,45 @@
           },
           {
             "label": "Expiry",
-            "value": "Bonus available 14 days; rakeback boost active 90 days",
+            "value": "Deposit within 7 days of registering; the rakeback boost lasts 90 days, free spins must be claimed within 48 hours, and unclaimed bonus balance is lost after 14 days",
             "sourcing": "editorial",
             "sourceUrl": "https://help.500.casino/en/articles/9239792-how-does-the-new-welcome-package-work",
-            "asOf": "2026-09-15"
+            "asOf": "2026-09-16"
           },
           {
             "label": "Max cashout",
-            "value": "3× the rakeback boost of the original deposit, plus $1,000 from free spins",
+            "value": "Up to 3× your deposit as rakeback boost (max $15,000), plus up to $1,000 from free-spin winnings",
             "sourcing": "editorial",
             "sourceUrl": "https://help.500.casino/en/articles/9239792-how-does-the-new-welcome-package-work",
-            "asOf": "2026-09-15"
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Wagering rules",
+            "value": "The 300% match is a rakeback boost that unlocks at $1 per $400 wagered, and the deposit must be wagered at least once; free-spin winnings go to a bonus balance with 40× wagering on casino games",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.500.casino/en/articles/9239792-how-does-the-new-welcome-package-work",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max bet",
+            "value": "$100 per bet made with bonus balance",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.500.casino/en/articles/9239792-how-does-the-new-welcome-package-work",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Game contribution",
+            "value": "Every bet counts toward the rakeback boost; for the bonus balance, games at 96% RTP or lower count 1:1 and a 99.6% RTP game counts 1:10, and Duels, Sportsbook, Cases and some casino games may be restricted",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.500.casino/en/articles/9239792-how-does-the-new-welcome-package-work",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "The first eligible deposit over $25 triggers the Welcome Package (help article dated 5 Mar 2025)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.500.casino/en/articles/9239792-how-does-the-new-welcome-package-work",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -343,24 +378,45 @@
           },
           {
             "label": "Wagering",
-            "value": "35×",
+            "value": "Its bonus terms say welcome-package bonuses and free-spin winnings must be wagered 35×; its bonuses page says most bonuses need 40–45× unless stated otherwise. Both apply the multiplier to the bonus",
             "sourcing": "editorial",
-            "sourceUrl": "https://7bitcasino.com/bonuses",
-            "asOf": "2026-09-15"
+            "sourceUrl": "https://7bitcasino.com/bonus-terms",
+            "asOf": "2026-09-16"
           },
           {
             "label": "Expiry",
-            "value": "Bonuses expire after 14 days if wagering isn't met",
+            "value": "Bonuses expire after 14 days if wagering isn't finished; each set of free spins must be activated within 24 hours and played within 1 day",
             "sourcing": "editorial",
-            "sourceUrl": "https://7bitcasino.com/bonuses",
-            "asOf": "2026-09-15"
+            "sourceUrl": "https://7bitcasino.com/bonus-terms",
+            "asOf": "2026-09-16"
           },
           {
             "label": "Max cashout",
-            "value": "Free-spin max win 1.3 mBTC",
+            "value": "No cap stated on the match bonus; bonus free-spin winnings are capped at 1.3 mBTC unless stated otherwise",
             "sourcing": "editorial",
-            "sourceUrl": "https://7bitcasino.com/bonuses",
-            "asOf": "2026-09-15"
+            "sourceUrl": "https://7bitcasino.com/bonus-terms",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max bet",
+            "value": "13 μBTC per spin while wagering any welcome-package bonus",
+            "sourcing": "editorial",
+            "sourceUrl": "https://7bitcasino.com/bonus-terms",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Game contribution",
+            "value": "Video slots count 100%, all other games 5% and live casino 0%; bonus money and free spins can't be used on progressive jackpot slots",
+            "sourcing": "editorial",
+            "sourceUrl": "https://7bitcasino.com/bonus-terms",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "0.26 mBTC for any part of the welcome package",
+            "sourcing": "editorial",
+            "sourceUrl": "https://7bitcasino.com/bonus-terms",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -566,7 +622,28 @@
           },
           {
             "label": "Wagering rules",
-            "value": "The monthly deposit bonus (up to 4 stages, 180%–360%) is added as locked rakeback that unlocks step by step as you wager on non-PvP games; the rate depends on game type, house edge and turnover, with no fixed multiplier, no minimum and no expiry",
+            "value": "No multiplier: each bonus is added as locked rakeback that unlocks as you play, at a rate set by game type, house edge and turnover (rakeback = amount wagered × house edge × 1%)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.bc.support/en/articles/14468629-new-bonus-system-faq",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Expiry",
+            "value": "No expiry date and no minimum unlock threshold; all four deposit stages reset on the 1st of each month at 00:00 UTC",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.bc.support/en/articles/14468629-new-bonus-system-faq",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Game contribution",
+            "value": "Only bets on non-PvP games count toward unlocking, at a rate that depends on each game's house edge",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.bc.support/en/articles/15839846-monthly-4-deposit-bonus",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "$5 for stage 1 (180%), $10 for stage 2 (240%), $20 for stage 3 (300%) and $30 for stage 4 (360%), claimed in order; fiat minimums vary by currency",
             "sourcing": "editorial",
             "sourceUrl": "https://help.bc.support/en/articles/15839846-monthly-4-deposit-bonus",
             "asOf": "2026-09-16"
@@ -669,24 +746,38 @@
           },
           {
             "label": "Wagering",
-            "value": "40× on slots and live games",
+            "value": "40× on slots and live games, with the amount to wager shown on the bonus card; the page doesn't say whether it applies to the bonus or to deposit plus bonus",
             "sourcing": "editorial",
             "sourceUrl": "https://betfury.com/promo/welcome-pack-bonus",
-            "asOf": "2026-09-15"
+            "asOf": "2026-09-16"
           },
           {
             "label": "Expiry",
-            "value": "14 days to wager each welcome bonus",
+            "value": "The first bonus must be activated within 7 days of registering and each later one within 7 days of the previous; each bonus and its free spins must be wagered within 14 days",
             "sourcing": "editorial",
             "sourceUrl": "https://betfury.com/promo/welcome-pack-bonus",
-            "asOf": "2026-09-15"
+            "asOf": "2026-09-16"
           },
           {
             "label": "Max cashout",
-            "value": "Free-spin winnings max $550; max deposit bonus $10,500",
+            "value": "No cap stated on the deposit bonus; free-spin winnings across the pack are capped at $550",
             "sourcing": "editorial",
             "sourceUrl": "https://betfury.com/promo/welcome-pack-bonus",
-            "asOf": "2026-09-15"
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Game contribution",
+            "value": "Slots, live games and BetFury Originals in the Bonus Wagering category count, with Originals at a 0.2 coefficient",
+            "sourcing": "editorial",
+            "sourceUrl": "https://betfury.com/promo/welcome-pack-bonus",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "$5 in any currency",
+            "sourcing": "editorial",
+            "sourceUrl": "https://betfury.com/promo/welcome-pack-bonus",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -1025,17 +1116,31 @@
           },
           {
             "label": "Wagering",
-            "value": "40× on bonuses unless otherwise specified; 40× on free-spin winnings",
+            "value": "40× for all bonuses unless stated otherwise; the terms don't say whether that applies to the bonus alone or to deposit plus bonus for deposit bonuses",
             "sourcing": "editorial",
             "sourceUrl": "https://bitstarz.com/bonus-terms-and-conditions",
-            "asOf": "2026-09-14"
+            "asOf": "2026-09-16"
           },
           {
             "label": "Expiry",
-            "value": "Welcome Package bonuses valid for 7 days",
+            "value": "Welcome Package bonuses are valid for 7 days; to get the welcome free spins the deposit must be wagered once within 24 hours, and free spins must be opened within 1 day",
             "sourcing": "editorial",
             "sourceUrl": "https://bitstarz.com/bonus-terms-and-conditions",
-            "asOf": "2026-09-14"
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max bet",
+            "value": "5 EUR/USD/USDT or 0.00006 BTC (other coins listed) per bet until wagering is complete, including double-ups and bonus buys",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bitstarz.com/bonus-terms-and-conditions",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Game contribution",
+            "value": "Table, live, instant-win, lottery and bingo games typically count 5%; progressive-jackpot and accumulating-mechanic games don't count, and other games may be restricted",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bitstarz.com/bonus-terms-and-conditions",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -1108,17 +1213,31 @@
           },
           {
             "label": "Wagering",
-            "value": "40× (deposit + bonus)",
+            "value": "40× the deposit plus the bonus; only bets on eligible games count",
             "sourcing": "editorial",
             "sourceUrl": "https://intercom.help/playlink/en/articles/15363485-120-first-deposit-bonus-usdt-only-up-to-1-000",
-            "asOf": "2026-09-15"
+            "asOf": "2026-09-16"
           },
           {
             "label": "Max cashout",
-            "value": "Maximum convertible amount $1,200",
+            "value": "At most $1,200 from this promotion can become withdrawable; anything above is removed once wagering is complete",
             "sourcing": "editorial",
             "sourceUrl": "https://intercom.help/playlink/en/articles/15363485-120-first-deposit-bonus-usdt-only-up-to-1-000",
-            "asOf": "2026-09-15"
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max bet",
+            "value": "$10 per bet while the bonus is active; betting more may forfeit the bonus and its winnings",
+            "sourcing": "editorial",
+            "sourceUrl": "https://intercom.help/playlink/en/articles/15363485-120-first-deposit-bonus-usdt-only-up-to-1-000",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Game contribution",
+            "value": "Slots count 100%; originals, game shows, live casino, table games and instant-win games (Crash, Mines, Keno, Plinko, Hilo, Dice) count 10%; the sportsbook is excluded",
+            "sourcing": "editorial",
+            "sourceUrl": "https://intercom.help/playlink/en/articles/15363485-120-first-deposit-bonus-usdt-only-up-to-1-000",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -1288,10 +1407,31 @@
           },
           {
             "label": "Expiry",
-            "value": "Valid for up to 30 days from the first deposit",
+            "value": "30 days from the first deposit or until the $2,500 cap is reached, whichever comes first; the Cash Vault opens on day 30",
             "sourcing": "editorial",
             "sourceUrl": "https://www.cloudbet.com/en/promotions/general/welcome-package",
-            "asOf": "2026-09-14"
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Wagering rules",
+            "value": "No wagering: the package pays cash (10% rakeback of the house edge plus daily and weekly cash drops) with no wagering requirements",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.cloudbet.com/en/promotions/general/welcome-package",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max cashout",
+            "value": "Reloads and rakeback are capped at $2,500 in total; the Cash Vault sits outside that cap and has no stated limit",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.cloudbet.com/en/promotions/general/welcome-package",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "No minimum: any deposit amount activates the Welcome Package",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.cloudbet.com/en/promotions/general/welcome-package",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -1636,24 +1776,38 @@
           },
           {
             "label": "Wagering",
-            "value": "40× base; effectively 40×–400× depending on game type",
+            "value": "A base target of 40× effective wagering, applied to deposit plus bonus in its worked example; with game weighting the real wagering runs from 40× to 400×. The page's own example has arithmetic errors",
             "sourcing": "editorial",
             "sourceUrl": "https://cybet.com/promotions/details/DepositBonusCode",
-            "asOf": "2026-09-15"
+            "asOf": "2026-09-16"
           },
           {
             "label": "Expiry",
-            "value": "Valid for 14 days from activation",
+            "value": "14 days from activation, then cancelled automatically; the promotion runs from 1 June to 1 October 2026",
             "sourcing": "editorial",
             "sourceUrl": "https://cybet.com/promotions/details/DepositBonusCode",
-            "asOf": "2026-09-15"
+            "asOf": "2026-09-16"
           },
           {
             "label": "Max cashout",
-            "value": "5× initial deposit (promo page); its guidebook says 10× deposit + bonus",
+            "value": "Capped at 5× your initial deposit once wagering is complete, with the rest forfeited; cancelling early pays 0.475× the remaining redeemable amount or your balance, whichever is lower",
             "sourcing": "editorial",
             "sourceUrl": "https://cybet.com/promotions/details/DepositBonusCode",
-            "asOf": "2026-09-15"
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Game contribution",
+            "value": "Slots count 25% to 100% depending on RTP (higher RTP counts less) and Originals 10%; live casino, game shows and sports don't count and can't be played with bonus coins",
+            "sourcing": "editorial",
+            "sourceUrl": "https://cybet.com/promotions/details/DepositBonusCode",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "$10",
+            "sourcing": "editorial",
+            "sourceUrl": "https://cybet.com/promotions/details/DepositBonusCode",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -1783,10 +1937,10 @@
           },
           {
             "label": "Wagering",
-            "value": "30× deposit plus bonus, with no time limit; wagers count towards it by the game's house edge",
+            "value": "30× the deposit plus the bonus, so $100 + $100 needs $6,000 of wagering",
             "sourcing": "editorial",
             "sourceUrl": "https://help.degen.com/en/articles/15558569-unlock-up-to-1-500-on-your-first-deposit",
-            "asOf": "2026-09-15"
+            "asOf": "2026-09-16"
           },
           {
             "label": "Bonus play rules",
@@ -1829,6 +1983,34 @@
             "sourcing": "editorial",
             "sourceUrl": "https://www.degen.com/promotions",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Expiry",
+            "value": "No time limit to finish the rollover; the bonus must be activated in the Wallet before the qualifying deposit",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.degen.com/en/articles/15558569-unlock-up-to-1-500-on-your-first-deposit",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max bet",
+            "value": "$10 per wager while the rollover is active, unless stated otherwise",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.degen.com/en/articles/15558569-unlock-up-to-1-500-on-your-first-deposit",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Game contribution",
+            "value": "Each bet counts by the game's house edge (wager × edge ÷ 0.04). Sports bets count once settled at odds of 1.30 or higher; challenges, accumulator games and slot bonus buys aren't allowed",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.degen.com/en/articles/15558569-unlock-up-to-1-500-on-your-first-deposit",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "$20",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.degen.com/en/articles/15558569-unlock-up-to-1-500-on-your-first-deposit",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -2020,10 +2202,24 @@
           },
           {
             "label": "Wagering",
-            "value": "15× deposit + bonus on sports, minimum odds 1.5",
+            "value": "15× the deposit plus the bonus on the Sports Welcome Bonus (the page also calls it a multiple of the bonus, but its examples use deposit plus bonus); the deposit itself must also be wagered once",
             "sourcing": "editorial",
             "sourceUrl": "https://help.dicey.com/en/articles/16182871-how-does-the-sports-welcome-bonus-work",
-            "asOf": "2026-09-15"
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Game contribution",
+            "value": "Only settled or cashed-out sports bets at odds of 1.5 or higher count, each for no more than the bonus amount; casino play and pushed bets count 0%, and bonus funds can't be used on casino games",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.dicey.com/en/articles/16182871-how-does-the-sports-welcome-bonus-work",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "$20",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.dicey.com/en/articles/16182871-how-does-the-sports-welcome-bonus-work",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -2479,17 +2675,38 @@
           },
           {
             "label": "Wagering",
-            "value": "30× deposit + bonus (35× on the 150% tier)",
+            "value": "30× deposit plus bonus on the 100% first-deposit tier; its worked example for the 150% tier uses 35×",
             "sourcing": "editorial",
             "sourceUrl": "https://flush.com/faq/bonuses/",
-            "asOf": "2026-09-15"
+            "asOf": "2026-09-16"
           },
           {
             "label": "Expiry",
-            "value": "Each bonus tier expires 30 days after activation",
+            "value": "Each bonus tier expires 30 days after activation if wagering isn't finished; uncleared bonus money and its winnings are removed, but deposited cash isn't",
             "sourcing": "editorial",
-            "sourceUrl": "https://flush.com/bonus-terms/",
-            "asOf": "2026-09-15"
+            "sourceUrl": "https://flush.com/faq/bonuses/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max bet",
+            "value": "Only bets of $5 or less count toward wagering, and repeated bigger bets can void the bonus",
+            "sourcing": "editorial",
+            "sourceUrl": "https://flush.com/faq/bonuses/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Game contribution",
+            "value": "Slots count 100%, live casino and table games 10%, and Flush originals (Crash, Dice, Plinko) 5%; some games are restricted",
+            "sourcing": "editorial",
+            "sourceUrl": "https://flush.com/faq/bonuses/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "$10 for the 100% first-deposit tier ($10–$200) and $200 for the 150% tier ($200–$1,000); second and third deposits need at least $10",
+            "sourcing": "editorial",
+            "sourceUrl": "https://flush.com/faq/bonuses/",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -2589,10 +2806,45 @@
           },
           {
             "label": "Expiry",
-            "value": "14 days to complete missions; free spins used within 3 days",
+            "value": "Bonuses expire after 7 days by default; free spins must be activated within 7 days and used within 24 hours",
+            "sourcing": "editorial",
+            "sourceUrl": "https://fortunejack.com/faq/bonus_tnc",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Wagering rules",
+            "value": "Each of the four welcome missions says to wager 10× in slots or Aviator to unlock free spins, without saying 10× of what; its general bonus terms default to 30× the bonus unless an offer says otherwise",
             "sourcing": "editorial",
             "sourceUrl": "https://fortunejack.com/promotions/welcome-bonus",
-            "asOf": "2026-09-15"
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max bet",
+            "value": "10 USD or equivalent per bet while a bonus is pending or active",
+            "sourcing": "editorial",
+            "sourceUrl": "https://fortunejack.com/faq/bonus_tnc",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max cashout",
+            "value": "Winnings from a wagering bonus are capped at 5× the original bonus; anything above is forfeited",
+            "sourcing": "editorial",
+            "sourceUrl": "https://fortunejack.com/faq/bonus_tnc",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Game contribution",
+            "value": "Slots count 100%, with other games' rates in each bonus's terms; gamble features, free spins and bonus rounds don't count, and a separate list of games is excluded",
+            "sourcing": "editorial",
+            "sourceUrl": "https://fortunejack.com/faq/bonus_tnc",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "0.002 BTC or equivalent by default, unless a bonus says otherwise",
+            "sourcing": "editorial",
+            "sourceUrl": "https://fortunejack.com/faq/bonus_tnc",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -2686,14 +2938,35 @@
           },
           {
             "label": "Expiry",
-            "value": "Rakeback never expires",
+            "value": "Some bonuses have a time limit for the rollover, shown on each bonus rather than published",
             "sourcing": "editorial",
-            "sourceUrl": "https://help.gamba.com/en/articles/8271547-rakeback-bonus-explained",
-            "asOf": "2026-09-15"
+            "sourceUrl": "https://help.gamba.com/en/articles/14075964-deposit-bonuses-on-gamba",
+            "asOf": "2026-09-16"
           },
           {
             "label": "Wagering rules",
             "value": "Deposit bonus rollover applies to the deposit plus the bonus, with the multiplier set per bonus under View Details; its own worked example uses 20×",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.gamba.com/en/articles/14075964-deposit-bonuses-on-gamba",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max bet",
+            "value": "A maximum percentage of the bonus per round, shown on each bonus rather than published",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.gamba.com/en/articles/14075964-deposit-bonuses-on-gamba",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Game contribution",
+            "value": "Games count by their house edge, so lower-edge games may count less; at 50% contribution a $100 bet counts $50",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.gamba.com/en/articles/14075964-deposit-bonuses-on-gamba",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "Set per bonus and shown on each one rather than published",
             "sourcing": "editorial",
             "sourceUrl": "https://help.gamba.com/en/articles/14075964-deposit-bonuses-on-gamba",
             "asOf": "2026-09-16"
@@ -2801,6 +3074,27 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.gamdom.com/en/articles/16108950-deposit-bonus-guide",
             "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max bet",
+            "value": "No figure given; its guide says bet limits apply and can vary by account and currency",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.gamdom.com/en/articles/16108950-deposit-bonus-guide",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Game contribution",
+            "value": "Lower-RTP games count more and higher-RTP games less; Originals and a long list of named games (many live baccarat and roulette tables, Aviator, Limbo) don't count, and sports betting is off while the bonus is active",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.gamdom.com/en/articles/16108950-deposit-bonus-guide",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "Varies by offer and is shown on your Promotions page; you must opt in before depositing",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.gamdom.com/en/articles/16108950-deposit-bonus-guide",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -2879,10 +3173,31 @@
           },
           {
             "label": "Wagering",
-            "value": "35× (deposit + bonus)",
+            "value": "35× the deposit plus the bonus, so a $1,000 deposit with a $1,000 bonus needs $70,000 of wagering",
             "sourcing": "editorial",
             "sourceUrl": "https://www.goated.com/help/article/16424322-100-first-deposit-bonus-up-to-1-000-usd",
-            "asOf": "2026-09-15"
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max bet",
+            "value": "$10 per wager while the rollover is in progress",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.goated.com/help/article/16424322-100-first-deposit-bonus-up-to-1-000-usd",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Game contribution",
+            "value": "Each bet counts as wager × (game edge ÷ 0.04), so a $5 dice bet at 1% edge counts $1.25. Only Goated Originals, slots, sports (odds 1.3+) and live games are allowed; challenges, accumulator games and slot bonus buys aren't",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.goated.com/help/article/16424322-100-first-deposit-bonus-up-to-1-000-usd",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "$20",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.goated.com/help/article/16424322-100-first-deposit-bonus-up-to-1-000-usd",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -3118,6 +3433,34 @@
             "sourcing": "editorial",
             "sourceUrl": "https://jackpot.bet/trust?tab=tos",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Wagering",
+            "value": "35× the deposit plus the bonus on the regular 100% up to $1,000 offer; the same page says all its deposit bonuses carry either a 35× or a 40× rollover",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.jackpot.bet/en/articles/9607235-deposit-bonuses-terms-conditions",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max bet",
+            "value": "5% of the deposit plus the bonus on the regular offer, with a $5 floor if that works out lower",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.jackpot.bet/en/articles/9607235-deposit-bonuses-terms-conditions",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Game contribution",
+            "value": "Each bet counts by the game's house edge against the rollover rate, so a $5 bet on 1%-edge Plinko counts about $1.43; progressive games and sportsbook bets in the rollover currency aren't allowed",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.jackpot.bet/en/articles/9607235-deposit-bonuses-terms-conditions",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "$20 for the regular 100% up to $1,000 offer; other offers set their own",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.jackpot.bet/en/articles/9607235-deposit-bonuses-terms-conditions",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -3465,24 +3808,45 @@
           },
           {
             "label": "Wagering",
-            "value": "40× the bonus",
+            "value": "40× the bonus amount; the deposit, bonus and winnings stay locked until it's met, and free-spin winnings also carry 40×",
             "sourcing": "editorial",
             "sourceUrl": "https://www.mbitcasino.io/terms/bonus-terms",
-            "asOf": "2026-09-15"
+            "asOf": "2026-09-16"
           },
           {
             "label": "Expiry",
-            "value": "Deposit bonuses valid for 1 day unless stated otherwise",
+            "value": "Deposit bonuses, free spins and their winnings are valid for 1 day unless a promotion says otherwise",
             "sourcing": "editorial",
             "sourceUrl": "https://www.mbitcasino.io/terms/bonus-terms",
-            "asOf": "2026-09-15"
+            "asOf": "2026-09-16"
           },
           {
             "label": "Max cashout",
-            "value": "Welcome free-spin winnings capped at 0.00048 BTC",
+            "value": "No cap stated on the match bonus; free-spin winnings in any welcome package are capped at 50 USDT or 0.00048 BTC",
             "sourcing": "editorial",
             "sourceUrl": "https://www.mbitcasino.io/terms/bonus-terms",
-            "asOf": "2026-09-15"
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max bet",
+            "value": "0.003 BTC, 28 USDT or 0.12 ETH (other coins listed) until wagering is complete; going over forfeits the bonus and winnings",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.mbitcasino.io/terms/bonus-terms",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Game contribution",
+            "value": "Slots and other games count 100%; video poker, table games and live blackjack, roulette and baccarat count 0%. Bonus funds work on slots only, and some named slots are blocked until wagering is done",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.mbitcasino.io/terms/bonus-terms",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "30 USDT or equivalent",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.mbitcasino.io/promotions/first-deposit-bonus",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -4024,10 +4388,24 @@
           },
           {
             "label": "Wagering",
-            "value": "40× turnover of combined deposit and bonus funds",
+            "value": "40× the combined deposit and bonus, so $100 + $100 needs $8,000 of wagering",
             "sourcing": "editorial",
             "sourceUrl": "https://help.rainbet.com/en/articles/15268657-first-deposit-promotion",
-            "asOf": "2026-09-14"
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max bet",
+            "value": "1% of the deposit amount per bet while the rollover is active, unless stated otherwise",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.rainbet.com/en/articles/9831951-deposit-bonus-terms-and-conditions",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Game contribution",
+            "value": "Games above 97.4% RTP are disabled while the promotion is active; no other contribution rates are given",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.rainbet.com/en/articles/15268657-first-deposit-promotion",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -4595,17 +4973,31 @@
           },
           {
             "label": "Wagering",
-            "value": "35× deposit + bonus; $10 max bet",
+            "value": "35× the deposit plus the bonus as standard, unless an offer says otherwise",
             "sourcing": "editorial",
             "sourceUrl": "https://www.shock.com/policies/bonus-terms",
-            "asOf": "2026-09-15"
+            "asOf": "2026-09-16"
           },
           {
             "label": "Expiry",
-            "value": "Bonus amounts don't expire",
+            "value": "Bonus amounts don't expire; you ask support for the bonus after depositing and before wagering the balance",
             "sourcing": "editorial",
             "sourceUrl": "https://www.shock.com/policies/bonus-terms",
-            "asOf": "2026-09-15"
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max bet",
+            "value": "$10 or equivalent while playing with a rollover balance",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.shock.com/policies/bonus-terms",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Game contribution",
+            "value": "Each bet counts by the game's house edge against a 4% base (wager × edge ÷ 0.04). Originals, slots, live casino, game shows, table games and instant win are allowed, but many individual games are blocked and marked in the app",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.shock.com/policies/bonus-terms",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -4702,6 +5094,41 @@
             "value": "Its promotions page says a deposit bonus applies to the first deposit only and withdrawals stay locked until its rollover is complete; the amount and multiplier only appear inside an account",
             "sourcing": "editorial",
             "sourceUrl": "https://shuffle.com/promotions",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Wagering rules",
+            "value": "Unless a promotion says otherwise, the requirement is (eligible deposit + bonus) × a multiplier shown on each promotion; its terms give no fixed figure beyond a 35× worked example",
+            "sourcing": "editorial",
+            "sourceUrl": "https://shuffle.com/info/terms",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Expiry",
+            "value": "30 days from the bonus being credited unless a promotion says otherwise; an unclaimed bonus may be cancelled after its claim period or 60 days",
+            "sourcing": "editorial",
+            "sourceUrl": "https://shuffle.com/info/terms",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max bet",
+            "value": "$10 equivalent per wager while wagering is active, unless a promotion says otherwise",
+            "sourcing": "editorial",
+            "sourceUrl": "https://shuffle.com/info/terms",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max cashout",
+            "value": "Only where a promotion sets a maximum profit, as a multiple of the eligible deposit shown before you claim",
+            "sourcing": "editorial",
+            "sourceUrl": "https://shuffle.com/info/terms",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Game contribution",
+            "value": "Progress = wager × (game house edge ÷ 4%); accumulator games, Challenges, slot bonus buys and restricted games are excluded, and sports bets need odds of 1.30 or more",
+            "sourcing": "editorial",
+            "sourceUrl": "https://shuffle.com/info/terms",
             "asOf": "2026-09-16"
           }
         ]
@@ -4805,6 +5232,20 @@
             "sourcing": "editorial",
             "sourceUrl": "https://docs.solcasino.io/calendar-bonuses-and-rewards/360-deposit-bonus",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Wagering rules",
+            "value": "Paid as USDB that unlocks gradually: each wager unlocks 0.1% of its amount (1 USDB per $1,000 wagered). At least 5 USDB must be unlocked to claim, and withdrawing at any time cancels the rest of the bonus",
+            "sourcing": "editorial",
+            "sourceUrl": "https://docs.solcasino.io/calendar-bonuses-and-rewards/360-deposit-bonus",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "$10 for the 1st deposit bonus (180%), $50 for the 2nd (240%), $100 for the 3rd (300%) and $200 for the 4th (360%)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://docs.solcasino.io/calendar-bonuses-and-rewards/360-deposit-bonus",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -5302,6 +5743,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.toshi.bet/en/articles/10017165-deposit-bonus-how-does-it-work",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Wagering rules",
+            "value": "The bonus unlocks as you play: $1 is released for every $250 wagered, claimable once $5 has built up",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.toshi.bet/en/articles/10017165-deposit-bonus-how-does-it-work",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -5455,6 +5903,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.vave.com/bonuses-and-promotions/is-there-a-welcome-bonus-at-vave/",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "A first deposit of at least 20 USDT to qualify for the welcome cashback bonus",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.vave.com/bonuses-and-promotions/is-there-a-welcome-bonus-at-vave/",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -5590,7 +6045,7 @@
             "value": "40× the bonus amount on eligible games before it can be withdrawn",
             "sourcing": "editorial",
             "sourceUrl": "https://wager.com/",
-            "asOf": "2026-09-15"
+            "asOf": "2026-09-16"
           },
           {
             "label": "VIP club",
@@ -5730,6 +6185,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://whale.io/terms-and-conditions",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Wagering rules",
+            "value": "On the first qualifying deposit, 200% of the deposit goes into a Bonus Balance that unlocks bit by bit each time you claim Daily Cashback, the Weekly Bonus or the Monthly Bonus; unlocked amounts become withdrawable cash with no extra wagering",
+            "sourcing": "editorial",
+            "sourceUrl": "https://whale.io/terms-and-conditions",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -5920,14 +6382,35 @@
           },
           {
             "label": "Expiry",
-            "value": "Instant Rakeback does not expire",
+            "value": "90 days from when the bonus is credited, after which the bonus and its winnings are removed",
             "sourcing": "editorial",
-            "sourceUrl": "https://help.yeet.com/en/articles/14046420-instant-rakeback",
-            "asOf": "2026-09-15"
+            "sourceUrl": "https://help.yeet.com/en/articles/13464278-deposit-bonus-faqs",
+            "asOf": "2026-09-16"
           },
           {
             "label": "Wagering",
-            "value": "First deposit bonus, capped at $1,000, must be wagered 35× the deposit plus the bonus; no max-win or cashout cap",
+            "value": "35× the deposit plus the bonus, so a $100 deposit with a $100 bonus needs $7,000 of wagering",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.yeet.com/en/articles/13464278-deposit-bonus-faqs",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max bet",
+            "value": "$10 or crypto equivalent per bet or spin while a bonus is active, unless a promotion says otherwise",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.yeet.com/en/articles/13464278-deposit-bonus-faqs",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max cashout",
+            "value": "No cap: Yeet says there's no maximum win or cashout on the first deposit bonus, only the $1,000 bonus limit",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.yeet.com/en/articles/13464278-deposit-bonus-faqs",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Game contribution",
+            "value": "Each bet counts as wager × (game edge ÷ 0.04), so lower-edge games count less; sports bets don't count",
             "sourcing": "editorial",
             "sourceUrl": "https://help.yeet.com/en/articles/13464278-deposit-bonus-faqs",
             "asOf": "2026-09-16"
