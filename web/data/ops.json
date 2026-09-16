@@ -295,7 +295,8 @@
     "payoutStated": "Varies, up to hours",
     "bonusShort": "Up to 4 BTC over 4 deposits + 100 free spins",
     "wagerNote": "paid in instalments as you wager",
-    "bonusExpiry": "30 days to wager"
+    "bonusExpiry": "30 days to wager",
+    "cashoutCap": "Bonus winnings capped at 10,000 USDT"
   },
   {
     "slug": "fortunejack",

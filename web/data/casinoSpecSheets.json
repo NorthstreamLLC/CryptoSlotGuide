@@ -6470,9 +6470,9 @@
           },
           {
             "label": "Wagering rules",
-            "value": "The bonus is paid in instalments as you wager, which you move across with Credit To Balance; the requirement itself is only shown in the info tab on the bonus card",
+            "value": "Deposit bonuses must be wagered the number of times set in each bonus's terms, and the welcome bonus is paid in instalments as you go; the multiplier itself is only shown in the info tab on the bonus card",
             "sourcing": "editorial",
-            "sourceUrl": "https://vave.com/promotions",
+            "sourceUrl": "https://vave.com/information/bonus-terms",
             "asOf": "2026-09-16"
           },
           {
@@ -6484,23 +6484,23 @@
           },
           {
             "label": "Max bet",
-            "value": "No maximum bet while wagering this bonus; the free spins are excluded from that",
+            "value": "The welcome bonus terms say there's no maximum bet while wagering it (free spins excluded). Its general bonus terms set 5 USDT with an active casino bonus unless a bonus's own terms say otherwise, counting feature buys, respins and double-ups toward the bet",
             "sourcing": "editorial",
-            "sourceUrl": "https://vave.com/promotions",
+            "sourceUrl": "https://vave.com/information/bonus-terms",
             "asOf": "2026-09-16"
           },
           {
             "label": "Max cashout",
-            "value": "No withdrawal cap is stated; the maximum bonus is 1.5 BTC or equivalent",
+            "value": "Winnings from any deposit, cashback, VIP, weekly, tournament or Vave points bonus are capped at 10,000 USDT, with the excess forfeited before withdrawal (cases reviewed within 14 working days); winnings from no-deposit bonuses or free spins are capped at 50 USDT",
             "sourcing": "editorial",
-            "sourceUrl": "https://vave.com/promotions",
+            "sourceUrl": "https://vave.com/information/bonus-terms",
             "asOf": "2026-09-16"
           },
           {
             "label": "Game contribution",
-            "value": "The casino bonus is unlocked by playing slots and the sports bonus by placing sports bets; no contribution rates are published",
+            "value": "Slots count 100% except a long list of excluded titles (including Dead or Alive 2, Book of Shadows and jackpot games); table and live dealer games don't count at all. For sports bonuses, only settled bets on unique events count, and outrights, racing, cashed-out, drawn and free bets don't",
             "sourcing": "editorial",
-            "sourceUrl": "https://vave.com/promotions",
+            "sourceUrl": "https://vave.com/information/bonus-terms",
             "asOf": "2026-09-16"
           },
           {
@@ -6515,6 +6515,13 @@
             "value": "The 2nd, 3rd and 4th deposit bonuses follow the same rules as the first: a single deposit of at least 20 USDT, one per customer, paid in instalments as you wager, 30 days to complete and no maximum bet",
             "sourcing": "editorial",
             "sourceUrl": "https://vave.com/promotions",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Bonus play rules",
+            "value": "One bonus per person, device or IP, and only one at a time; real money is played before bonus money. Withdrawing the deposit early forfeits the bonus and its winnings, and both are removed if the bonus expires. Free spins can be cancelled unless the deposit behind them is wagered 3 times (table games excluded). Sports bonuses aren't available to players from Russia",
+            "sourcing": "editorial",
+            "sourceUrl": "https://vave.com/information/bonus-terms",
             "asOf": "2026-09-16"
           }
         ]
