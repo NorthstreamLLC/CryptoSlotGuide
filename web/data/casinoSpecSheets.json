@@ -2783,6 +2783,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://jackpot.bet/trust?tab=tos",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal fees",
+            "value": "The withdrawal screen carries a Withdraw Fee line, but the amount is only shown in the cashier; no fee schedule is published",
+            "sourcing": "editorial",
+            "sourceUrl": "https://jackpot.bet/",
+            "asOf": "2026-09-15"
           }
         ]
       },
@@ -2790,10 +2797,38 @@
         "title": "Bonus terms",
         "facts": [
           {
+            "label": "Standing offer",
+            "value": "Welcome offer: 100% deposit bonus plus free spins, with instant rakeback and a VIP rank transfer",
+            "sourcing": "editorial",
+            "sourceUrl": "https://jackpot.bet/",
+            "asOf": "2026-09-15"
+          },
+          {
             "label": "Expiry",
             "value": "Standard bonus-funds expiry is 30 days",
             "sourcing": "editorial",
             "sourceUrl": "https://jackpot.bet/trust?tab=tos",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "Rakeback",
+            "value": "Instant rakeback is 6% of the house edge on every bet, claimable straight away with no cap on claims",
+            "sourcing": "editorial",
+            "sourceUrl": "https://jackpot.bet/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "VIP levels",
+            "value": "New players are Unranked; $10,000 wagered reaches Bronze, which unlocks instant rakeback, weekly bonuses (every Friday), monthly bonuses and level-up bonuses",
+            "sourcing": "editorial",
+            "sourceUrl": "https://jackpot.bet/",
+            "asOf": "2026-09-15"
+          },
+          {
+            "label": "VIP transfer",
+            "value": "Matches a VIP rank held at another casino, with instant access to its Gold loyalty rank in that offer",
+            "sourcing": "editorial",
+            "sourceUrl": "https://jackpot.bet/",
             "asOf": "2026-09-15"
           }
         ]
