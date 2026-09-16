@@ -814,7 +814,7 @@
     "bonus": "200% / 150% / 100% on first three deposits",
     "wager": 30,
     "conf": 2,
-    "absorbsFee": false,
+    "absorbsFee": true,
     "ln": false,
     "sports": true,
     "esports": false,

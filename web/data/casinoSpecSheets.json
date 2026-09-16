@@ -6029,6 +6029,27 @@
             "sourcing": "editorial",
             "sourceUrl": "https://toshi.bet/blog/how-to-navigate-toshi-bet-your-ultimate-guide",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal fees",
+            "value": "None: its own page describes withdrawals as completely fee-free",
+            "sourcing": "editorial",
+            "sourceUrl": "https://toshi.bet/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Minimum withdrawal",
+            "value": "$5",
+            "sourcing": "editorial",
+            "sourceUrl": "https://toshi.bet/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Withdrawal limits",
+            "value": "No withdrawal limits; processing is described as near-instant",
+            "sourcing": "editorial",
+            "sourceUrl": "https://toshi.bet/",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -6063,10 +6084,10 @@
           },
           {
             "label": "Deposit limits",
-            "value": "No maximum deposit for any cryptocurrency; minimums are shown per coin in the cashier",
+            "value": "No minimum deposit for general play and no maximum for any coin; minimums per coin are shown in the cashier",
             "sourcing": "editorial",
             "sourceUrl": "https://help.toshi.bet/en/articles/9986441-crypto-deposit-rules",
-            "asOf": "2026-09-15"
+            "asOf": "2026-09-16"
           },
           {
             "label": "Deposit fees",
@@ -6074,6 +6095,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.toshi.bet/en/articles/9986153-crypto-deposit-assistance",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Card and bank",
+            "value": "No fiat balance: crypto can be bought through MoonPay with Visa, Mastercard, Apple Pay or Google Pay, or through Changelly and Banxa",
+            "sourcing": "editorial",
+            "sourceUrl": "https://toshi.bet/",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -6127,6 +6155,20 @@
             "value": "$25,000 drawn weekly across 100 winning tickets ($2,500 for 1st, $1,800 for 2nd, $1,250 for 3rd, down to $375 for 10th, then 90 more); 1 ticket per $100 wagered on casino, 3 per $100 on sports, and tickets can also be bought with Toshi Gold at a price that doubles every 1,500 tickets",
             "sourcing": "editorial",
             "sourceUrl": "https://toshi.bet/raffle",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "$10 to qualify for the welcome bonus",
+            "sourcing": "editorial",
+            "sourceUrl": "https://toshi.bet/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "VIP ranks",
+            "value": "Ranks by total wagered, including Fish ($2,500: level-up rewards, daily hunts and 3× daily rakeback boosts), Seal ($25,000: adds rain rewards), Piranha ($100,000: exclusive promotions) and Shark ($250,000: upgraded weekly bonuses and VIP treatment). Rewards include rakeback boosts three times a day, level-up cash, a weekly bonus on Fridays, a monthly bonus on the 1st and daily dollar hunts, all without wagering",
+            "sourcing": "editorial",
+            "sourceUrl": "https://toshi.bet/vip",
             "asOf": "2026-09-16"
           }
         ]
