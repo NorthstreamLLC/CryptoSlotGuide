@@ -915,7 +915,7 @@
     "licence": "Gaming Services Provider N.V.",
     "kyc": "tiered",
     "bonus": "200% welcome bonus up to $30,000 + 50 Super Spins",
-    "wager": 40,
+    "wager": 60,
     "conf": 3,
     "absorbsFee": false,
     "ln": false,
@@ -925,7 +925,9 @@
     "cashoutCap": "Max convertible 10× bonus",
     "payoutStated": "Instant–24 hr",
     "payoutStatedMaxMins": 1440,
-    "bonusShort": "200% up to $30,000 + 50 Super Spins"
+    "bonusShort": "200% up to $30,000 + up to 50 Super Spins",
+    "wagerBasis": "deposit; 75× on bonuses over $10,000",
+    "bonusExpiry": "14 days to finish wagering"
   },
   {
     "slug": "bluff",

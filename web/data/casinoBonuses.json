@@ -342,20 +342,20 @@
         "title": "Welcome bonus",
         "category": "Deposit bonus · new players",
         "headline": "200%",
-        "subCopy": "Up to $30,000 plus 50 Super Spins. CoinCasino's bonus terms say the welcome offer carries its own wagering requirement, which we haven't found stated yet.",
+        "subCopy": "First deposit matched 200% up to $30,000, plus up to 50 Super Spins on Wanted Dead or a Wild. Wagering is 60× the deposit, released in 10% instalments, with 14 days to finish.",
         "stats": [
           {
-            "label": "Up to",
-            "value": "$30,000"
+            "label": "Wagering",
+            "value": "60× deposit"
           },
           {
-            "label": "Max cashout",
-            "value": "10× bonus"
+            "label": "Time limit",
+            "value": "14 days"
           }
         ],
         "asOf": "2026-09-15",
         "sourceUrl": "https://www.coincasino.com/",
-        "sourceNote": "CoinCasino's own Promotions page and bonus terms, screenshot-verified — coincasino.com blocks automated fetches"
+        "sourceNote": "CoinCasino’s own welcome offer terms"
       },
       {
         "title": "VIP Club",

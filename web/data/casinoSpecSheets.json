@@ -1624,10 +1624,10 @@
         "facts": [
           {
             "label": "Standing offer",
-            "value": "200% welcome bonus up to $30,000 + 50 Super Spins",
+            "value": "200% on the first deposit up to $30,000, plus free spins on Wanted Dead or a Wild by deposit size: 20 at $0.20 for $10–$99.99, 20 at $1 for $100–$249.99, 50 at $1 for $250–$999.99, and 50 Super Spins at $4 for $1,000 or more. First deposit only, for players registered after December 2024",
             "sourcing": "editorial",
             "sourceUrl": "https://www.coincasino.com/",
-            "asOf": "2026-09-15"
+            "asOf": "2026-09-16"
           },
           {
             "label": "Standard bonus wagering",
@@ -1670,6 +1670,41 @@
             "sourcing": "editorial",
             "sourceUrl": "https://www.coincasino.com/",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Wagering",
+            "value": "60× the deposit, so a $100 deposit needs $6,000 of bets to unlock the $200 bonus; the bonus is released in 10% instalments each time you wager 6× the deposit. Bonuses above $10,000 carry 75× and are credited in one go at the end of the 14 days. Free spins carry 35×",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.coincasino.com/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Expiry",
+            "value": "The first deposit must be made within 7 days of registering, then 14 days to finish the wagering (its terms say this period is included in the 7 days); unreleased bonus is forfeited. Free spins expire after 7 days",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.coincasino.com/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max bet",
+            "value": "$/€20 per round with bonus funds, under its general bonus terms",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.coincasino.com/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Game contribution",
+            "value": "Slots 100%, live game shows 50%, roulette and live roulette 5%, all dice and arcade games 0%, all other games 20%; sports bets don't count, and some named games don't count at all",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.coincasino.com/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "$10",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.coincasino.com/",
+            "asOf": "2026-09-16"
           }
         ]
       },
