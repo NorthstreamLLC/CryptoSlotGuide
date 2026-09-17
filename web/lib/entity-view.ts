@@ -721,16 +721,19 @@ function sportsBonusSpec(slug: string, name: string) {
   const f = (label: string) => getSpecFact(slug, "Sports bonus terms", label)?.value;
   const offer = f("Offer");
   const none = !!offer && /^(no |there is no )/i.test(offer);
+  const rotating = !!offer && /^rotating /i.test(offer);
   const row = (k: string, label = k) => (f(label) ? cited(k, f(label)!) : unconfirmed(k));
   if (!offer) {
     return { title: "Sports bonus terms", sub: `We haven't found ${name}'s sports offer on its own pages yet.`, rows: [unconfirmed("Offer")] };
   }
   return {
     title: "Sports bonus terms",
-    sub: none
+    sub: rotating
+      ? `${name} changes its sportsbook promotions often, so we list how it runs them rather than a single offer.`
+      : none
       ? `${name} runs no standing sports welcome offer.`
       : "The rules on the sportsbook offer, each quoted from the operator's own terms. Anything we haven't found yet is marked unconfirmed.",
-    rows: none
+    rows: none || rotating
       ? [cited("Offer", offer!)]
       : [row("Offer"), row("Wagering"), row("Minimum odds"), row("Max bet"), row("Time limit", "Expiry"), row("Qualifying bets"), row("Minimum deposit"), row("Max cashout")],
   };
