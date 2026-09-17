@@ -20,6 +20,7 @@ import {
 } from "@/lib/casino-index";
 import type { Operator } from "@/lib/types";
 import { payoutView } from "@/lib/payout";
+import { getSpecFact } from "@/lib/spec-sheet";
 
 const btcFaqData = [
   { q: "How many confirmations before I can play?", a: "It depends on the casino and the coin. Operators set their own confirmation requirements and most show them in the cashier, so check there before you send. Bitcoin blocks come roughly every ten minutes, so each extra confirmation adds waiting time." },
@@ -125,7 +126,7 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
                   <StatTile label="Licence" value={roobet.licence} />
                   <StatTile label="Coins" value={String((coinsBy["roobet"] ?? []).length)} />
                   <StatTile label="KYC" value={roobet.kyc === "none" ? "Not required" : roobet.kyc === "tiered" ? "At a threshold" : "Before withdrawal"} />
-                  <StatTile label="Bonus wagering" value={wagerView(roobet).label} />
+                  {getSpecFact(roobet.slug, "Bonus terms", "Weekly raffle") ? <StatTile label="Weekly raffle" value={getSpecFact(roobet.slug, "Bonus terms", "Weekly raffle")!.value!.split(" Weekly")[0]} color="#FFCC00" /> : <StatTile label="Bonus wagering" value={wagerView(roobet).label} />}
                 </div>
                 <div style={{ marginBottom: 18 }}>
                   <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".07em", textTransform: "uppercase", color: "#5C6A72", marginBottom: 9 }}>Coins credited</div>
