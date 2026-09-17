@@ -9,6 +9,8 @@ import { CryptoTicker } from "@/components/home/CryptoTicker";
 import { SlotsPreviewTable } from "@/components/home/SlotsPreviewTable";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { filterFns } from "@/lib/casino-index";
+import { casinoFacts } from "@/lib/casino-facts";
+import { CasinoCard } from "@/components/casino/CasinoCard";
 
 /**
  * A slug in the hero logo wall (wallCols, below) can be a casino, wallet,
@@ -90,6 +92,11 @@ export default function HomePage() {
   const { ops, slots, houseGames, providers, walletRows, exchangeRows, coinDefs, coinsBy, esportsTitles, criteria } = siteData;
   const c = siteCounts;
   const featured = buildFeatured();
+  // Featured placements first, then the fastest stated withdrawals among casinos with a cited offer.
+  const topOffers = [...ops]
+    .filter((o) => o.featured || (o.payoutStatedMaxMins !== undefined && !!casinoFacts(o).offer && !!casinoFacts(o).wagering && casinoFacts(o).wagering !== "See terms"))
+    .sort((a, b) => Number(!!b.featured) - Number(!!a.featured) || (a.payoutStatedMaxMins ?? 9e9) - (b.payoutStatedMaxMins ?? 9e9) || a.name.localeCompare(b.name))
+    .slice(0, 8);
 
   // Highest studio-published RTP — a factual sort, not a rating.
   const topSlot = [...slots].sort((a, b) => rtpSortValue(b) - rtpSortValue(a))[0];
@@ -343,6 +350,24 @@ export default function HomePage() {
             logging once nothing behind it was real. */}
         <div style={{ position: "relative", maxWidth: 1400, margin: "0 auto", padding: "0 40px 26px" }}>
           <CryptoTicker coins={siteData.coinDefs} />
+        </div>
+      </section>
+
+      {/* Top offers */}
+      <section style={{ maxWidth: 1400, margin: "0 auto", padding: "68px 40px 0" }}>
+        <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 32, flexWrap: "wrap", marginBottom: 22 }}>
+          <div>
+            <h2 style={{ margin: "0 0 8px", fontSize: 32, letterSpacing: "-.03em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Top casino offers</h2>
+            <p style={{ margin: 0, fontSize: 15, color: "#8DA0AA" }}>Welcome offers, withdrawal speed and coins at a glance, each backed by the casino&apos;s own terms.</p>
+          </div>
+          <Link href="/crypto-casinos" style={{ fontSize: 14, fontWeight: 600, color: "#00C2CC", whiteSpace: "nowrap" }}>
+            All {c.casinos} casinos →
+          </Link>
+        </div>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 14 }}>
+          {topOffers.map((o) => (
+            <CasinoCard key={o.slug} o={o} />
+          ))}
         </div>
       </section>
 
