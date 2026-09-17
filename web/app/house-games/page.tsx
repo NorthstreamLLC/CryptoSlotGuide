@@ -10,12 +10,13 @@ import { JsonLd } from "@/components/seo/JsonLd";
  */
 export const metadata = pageMetadata(
   "Originals, and how to play them",
-  "The in-house games are the only titles on a crypto casino where the maths is published, provable and identical everywhere. Here is the edge on each one, what the game actually asks you to decide, and where the play is honest.",
+  "Dice, crash, plinko and the other in-house games that crypto casinos build themselves. Each casino publishes its own house edge for its version, so here is what each one says, what the game asks you to decide, and how provably fair results work.",
   "/house-games"
 );
 
 export default function Page() {
-  const { houseGames } = siteData;
+  const { houseGames, houseCasinoWide, ops } = siteData;
+  const nameOf = (slug: string) => ops.find((o) => o.slug === slug)?.name ?? slug;
 
   return (
     <main>
@@ -29,7 +30,7 @@ export default function Page() {
             Originals, and how to play them
           </h1>
           <p style={{ margin: 0, maxWidth: "72ch", fontSize: 16.5, lineHeight: 1.65, color: "#93A3AC", textWrap: "pretty" }}>
-            The in-house games are the only titles on a crypto casino where the maths is published, provable and identical everywhere. Here is the edge on each one, what the game actually asks you to decide, and where the play is honest.
+            Dice, crash, plinko and the other in-house games that crypto casinos build themselves. Each casino publishes its own house edge for its version, so here is what each one says, what the game asks you to decide, and how provably fair results work.
           </p>
         </div>
       </section>
@@ -48,8 +49,8 @@ export default function Page() {
               <p style={{ margin: "0 0 18px", fontSize: 12.5, lineHeight: 1.55, color: "#7B8A93", textWrap: "pretty" }}>{g.note}</p>
               <div style={{ marginTop: "auto", display: "flex", flexDirection: "column", gap: 1, borderRadius: 9, overflow: "hidden" }}>
                 <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 10, padding: "9px 11px", background: "#0F1417" }}>
-                  <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 9.5, letterSpacing: ".06em", textTransform: "uppercase", color: "#5C6A72" }}>House edge</span>
-                  <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12.5, color: "#5FE3E8" }}>{g.edge}</span>
+                  <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 9.5, letterSpacing: ".06em", textTransform: "uppercase", color: "#5C6A72" }}>Published edges</span>
+                  <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12.5, color: "#5FE3E8" }}>{g.edgeRange} <span style={{ color: "#5C6A72", fontSize: 10.5 }}>· {g.edges.length} casinos</span></span>
                 </div>
                 <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 10, padding: "9px 11px", background: "#0F1417" }}>
                   <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 9.5, letterSpacing: ".06em", textTransform: "uppercase", color: "#5C6A72" }}>Provably fair</span>
@@ -57,6 +58,22 @@ export default function Page() {
                 </div>
               </div>
             </Link>
+          ))}
+        </div>
+      </section>
+
+      <section style={{ maxWidth: 1400, margin: "0 auto", padding: "32px 40px 0" }}>
+        <h2 style={{ margin: "0 0 8px", fontSize: 24, letterSpacing: "-.025em", fontWeight: 800, fontStretch: "112%", color: "#E8EDF0" }}>Casino-wide policies</h2>
+        <p style={{ margin: "0 0 16px", maxWidth: "80ch", fontSize: 14.5, lineHeight: 1.6, color: "#8DA0AA" }}>Some casinos state an edge for all their originals rather than per game.</p>
+        <div style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 13, overflow: "hidden", background: "#0C1013" }}>
+          {houseCasinoWide.map((c) => (
+            <div key={c.casino} style={{ display: "grid", gridTemplateColumns: "160px 1fr", borderBottom: "1px solid rgba(255,255,255,.05)" }}>
+              <Link href={`/casinos/${c.casino}`} style={{ padding: "14px 18px", fontSize: 14, fontWeight: 600, color: "#E8EDF0" }}>{nameOf(c.casino)}</Link>
+              <div style={{ padding: "14px 18px", fontSize: 13.5, lineHeight: 1.55, color: "#B7C4CB" }}>
+                {c.text}{" "}
+                <a href={c.url} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#5FE3E8", whiteSpace: "nowrap" }}>{new URL(c.url).hostname.replace(/^www\./, "")} ↗</a>
+              </div>
+            </div>
           ))}
         </div>
       </section>
@@ -71,7 +88,7 @@ export default function Page() {
               It means you can verify after the fact that the result was fixed before you bet: a server seed, your client seed and a nonce, hashed. It is a real guarantee and worth having.
             </p>
             <p style={{ margin: 0, maxWidth: "80ch", fontSize: 15, lineHeight: 1.7, color: "#93A3AC", textWrap: "pretty" }}>
-              It does not mean the game is beatable. A 1% house edge is still a 1% house edge whether or not you can prove the roll was clean. Verification protects you from manipulation, not from the maths.
+              It does not mean the game is beatable. A house edge is still a house edge whether or not you can prove the roll was clean. Verification protects you from manipulation, not from the maths.
             </p>
           </div>
           <Link href="/rtp-watch" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", gap: 20, padding: "28px 32px", borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>

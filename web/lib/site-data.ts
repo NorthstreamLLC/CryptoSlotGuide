@@ -18,6 +18,7 @@ import esportsTitles from "@/data/esportsTitles.json";
 import guideRows from "@/data/guideRows.json";
 import guideBodies from "@/data/guideBodies.json";
 import houseGames from "@/data/houseGames.json";
+import houseCasinoWide from "@/data/houseCasinoWide.json";
 import fiatCasinos from "@/data/fiatCasinos.json";
 import predMarkets from "@/data/predMarkets.json";
 import tickerFacts from "@/data/tickerFacts.json";
@@ -83,6 +84,7 @@ export const siteData = {
   guideRows: guideRows as GuideRow[],
   guideBodies: guideBodies as GuideBodies,
   houseGames: houseGames as HouseGame[],
+  houseCasinoWide: houseCasinoWide as { casino: string; text: string; url: string }[],
   fiatCasinos: fiatCasinos as FiatCasino[],
   predMarkets: predMarkets as PredictionMarkets,
   tickerFacts: tickerFacts as TickerFact[],

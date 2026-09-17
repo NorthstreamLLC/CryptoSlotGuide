@@ -226,8 +226,10 @@ export interface HouseGame {
   name: string;
   mono: string;
   tint: string;
-  edge: string;
-  rtp: string;
+  /** Span of the edges casinos publish for this game, e.g. "0–4%". */
+  edgeRange: string;
+  /** Each casino's own published figure for this game. */
+  edges: { casino: string; value: string; url: string; note?: string }[];
   fair: string;
   speed: string;
   note: string;
