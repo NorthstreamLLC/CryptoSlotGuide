@@ -112,8 +112,10 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
               </Link>
               <div style={{ marginTop: 14, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, lineHeight: 1.5, color: "#4E5A62" }}>
                 {isCasino
-                  ? e.signupUrl
+                  ? e.signupUrl && e.affiliate
                     ? "Affiliate link. 18+. T&Cs apply. Play within your limits."
+                    : e.signupUrl
+                    ? "18+. T&Cs apply. Play within your limits."
                     : "18+. T&Cs apply. Play within your limits. Sign-up link not yet added for this operator."
                   : "Not financial advice. We hold no position in any asset named here."}
               </div>

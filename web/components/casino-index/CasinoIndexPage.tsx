@@ -142,7 +142,7 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
                   <OutboundOrReview o={roobet} style={{ flex: 1, textAlign: "center", padding: 13, borderRadius: 8, background: "#FFCC00", color: "#1A1400", fontSize: 13.5, fontWeight: 700 }}>Visit Roobet</OutboundOrReview>
                   <Link href="/casinos/roobet" style={{ padding: "13px 18px", borderRadius: 8, border: "1px solid rgba(255,255,255,.14)", color: "#DCE5E9", fontSize: 13.5, fontWeight: 600, whiteSpace: "nowrap" }}>Full profile</Link>
                 </div>
-                <div style={{ marginTop: 14, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#4E5A62" }}>Featured placement · {roobet.signupUrl ? "Affiliate link · " : ""}18+ · T&amp;Cs apply</div>
+                <div style={{ marginTop: 14, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#4E5A62" }}>Featured placement · {roobet.affiliate ? "Affiliate link · " : ""}18+ · T&amp;Cs apply</div>
               </div>
             </div>
           ) : (

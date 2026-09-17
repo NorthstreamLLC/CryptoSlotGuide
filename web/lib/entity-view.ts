@@ -85,6 +85,8 @@ export interface EntityView {
   faqs: { q: string; a: string }[];
   /** Where the sidebar CTA points — only set for casinos with a real Operator.signupUrl on file. Absent means the CTA renders as plain, non-link text rather than a fabricated affiliate link. */
   signupUrl?: string;
+  /** signupUrl is a real affiliate link (drives the disclosure wording). */
+  affiliate?: boolean;
   /**
    * Overrides EntityReviewPage's default tier-based "What we measured"
    * subhead. Needed for slots specifically: the page mixes editorially-
@@ -680,6 +682,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
           : `${o.name} doesn't publish a withdrawal time we could find, and we haven't timed withdrawals there ourselves yet.` },
     ],
     signupUrl: o.signupUrl,
+    affiliate: o.affiliate,
     measuredSub: checked
       ? undefined
       : hasSheet

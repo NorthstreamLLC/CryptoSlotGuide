@@ -73,6 +73,8 @@ export interface Operator {
    * text when this is absent instead of claiming a link that isn't one.
    */
   signupUrl?: string;
+  /** True once signupUrl is a real affiliate-tracking link; only then is "Affiliate link" shown. */
+  affiliate?: boolean;
   /** Confirmations required before a deposit/withdrawal clears. */
   conf: number;
   absorbsFee: boolean;
