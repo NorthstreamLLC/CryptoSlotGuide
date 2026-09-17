@@ -20,7 +20,8 @@
     "payoutStated": "Instant",
     "payoutStatedMaxMins": 0,
     "noDepositBonus": true,
-    "featured": true
+    "featured": true,
+    "bonusShort": "Instant rakeback + a $100,000 weekly raffle"
   },
   {
     "slug": "stake",

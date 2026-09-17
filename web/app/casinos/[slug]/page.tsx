@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { getEntityView, backLink } from "@/lib/entity-view";
-import { EntityReviewPage } from "@/components/entity/EntityReviewPage";
+import { CasinoReport } from "@/components/casino/CasinoReport";
 import { pageMetadata } from "@/lib/seo";
 import { entityBreadcrumbSchema, faqSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -19,7 +19,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   return (
     <>
       <JsonLd data={[entityBreadcrumbSchema(view.kicker, backLink("casino").href, view.name, `/casinos/${slug}`), faqSchema(view.faqs)]} />
-      <EntityReviewPage e={view} />
+      <CasinoReport e={view} />
     </>
   );
 }
