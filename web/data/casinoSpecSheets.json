@@ -6964,15 +6964,21 @@
             "label": "Coins accepted",
             "chips": [
               "BTC",
-              "ETH",
               "USDT",
-              "LTC",
+              "USDC",
+              "ETH",
               "SOL",
-              "DOGE",
+              "SUI",
+              "BNB",
+              "XRP",
               "TRX",
-              "XRP"
+              "LTC",
+              "DOGE",
+              "CASH"
             ],
-            "sourcing": "site-data"
+            "sourcing": "editorial",
+            "sourceUrl": "https://roobet.com/",
+            "asOf": "2026-09-17"
           },
           {
             "label": "Minimum deposit",
