@@ -3681,6 +3681,25 @@
         ]
       },
       {
+        "title": "Sports bonus terms",
+        "facts": [
+          {
+            "label": "Offer",
+            "value": "No sports welcome offer: the Sports tab of its promotions page lists no welcome or deposit bonus (September 2026)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://duelbits.com/en/promotions",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Other sports promotions",
+            "value": "2 Up, You're Up: football bets on markets with the 2Up icon pay out as wins once your team leads by 2 goals. Sports wagers earn 3x points on its daily and weekly leaderboards, which share a monthly prize pool of $400,000+. It also promotes Same Game Parlays and MLB coverage",
+            "sourcing": "editorial",
+            "sourceUrl": "https://duelbits.com/en/promotions",
+            "asOf": "2026-09-17"
+          }
+        ]
+      },
+      {
         "title": "Compliance",
         "facts": [
           {
