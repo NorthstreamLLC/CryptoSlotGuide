@@ -4707,38 +4707,10 @@
         "facts": [
           {
             "label": "Standing offer",
-            "value": "100% first deposit bonus up to $1,000 (minimum deposit $20)",
+            "value": "No welcome or deposit bonus. Goated points players to its ongoing promotions, VIP rewards and $GOATED token airdrop instead",
             "sourcing": "editorial",
-            "sourceUrl": "https://www.goated.com/help/article/16424322-100-first-deposit-bonus-up-to-1-000-usd",
-            "asOf": "2026-09-15"
-          },
-          {
-            "label": "Wagering",
-            "value": "35× the deposit plus the bonus, so a $1,000 deposit with a $1,000 bonus needs $70,000 of wagering",
-            "sourcing": "editorial",
-            "sourceUrl": "https://www.goated.com/help/article/16424322-100-first-deposit-bonus-up-to-1-000-usd",
-            "asOf": "2026-09-16"
-          },
-          {
-            "label": "Max bet",
-            "value": "$10 per wager while the rollover is in progress",
-            "sourcing": "editorial",
-            "sourceUrl": "https://www.goated.com/help/article/16424322-100-first-deposit-bonus-up-to-1-000-usd",
-            "asOf": "2026-09-16"
-          },
-          {
-            "label": "Game contribution",
-            "value": "Each bet counts as wager × (game edge ÷ 0.04), so a $5 dice bet at 1% edge counts $1.25. Only Goated Originals, slots, sports (odds 1.3+) and live games are allowed; challenges, accumulator games and slot bonus buys aren't",
-            "sourcing": "editorial",
-            "sourceUrl": "https://www.goated.com/help/article/16424322-100-first-deposit-bonus-up-to-1-000-usd",
-            "asOf": "2026-09-16"
-          },
-          {
-            "label": "Minimum deposit",
-            "value": "$20",
-            "sourcing": "editorial",
-            "sourceUrl": "https://www.goated.com/help/article/16424322-100-first-deposit-bonus-up-to-1-000-usd",
-            "asOf": "2026-09-16"
+            "sourceUrl": "https://www.goated.com/llms-full.txt",
+            "asOf": "2026-09-17"
           }
         ]
       },

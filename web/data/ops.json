@@ -456,8 +456,8 @@
     "payoutLabel": "6m 36s",
     "licence": "Anjouan",
     "kyc": "required",
-    "bonus": "100% first deposit up to $1,000",
-    "wager": 35,
+    "bonus": "VIP rewards, ongoing promotions and token airdrops",
+    "wager": 0,
     "conf": 1,
     "absorbsFee": false,
     "ln": false,
@@ -466,8 +466,8 @@
     "hasCustomReview": false,
     "payoutStated": "Instant",
     "payoutStatedMaxMins": 0,
-    "bonusShort": "100% first deposit up to $1,000",
-    "wagerBasis": "deposit + bonus"
+    "bonusShort": "VIP rewards, promotions and token airdrops",
+    "noDepositBonus": true
   },
   {
     "slug": "yeet",
