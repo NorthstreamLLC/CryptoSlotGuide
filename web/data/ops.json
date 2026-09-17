@@ -19,7 +19,8 @@
     "bonusExpiry": "Instant Rakeback never expires; Weekly lapses when the next week's is available",
     "payoutStated": "Instant",
     "payoutStatedMaxMins": 0,
-    "noDepositBonus": true
+    "noDepositBonus": true,
+    "featured": true
   },
   {
     "slug": "stake",

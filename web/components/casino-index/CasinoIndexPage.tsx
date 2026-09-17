@@ -42,11 +42,11 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
   const btcFn = filterFns[filter];
   const coinOk = (o: Operator) => coinSel === "all" || (coinsBy[o.slug] ?? []).map(String).includes(coinSel);
 
-  const roobet = ops.find((o) => o.hasCustomReview);
+  const roobet = ops.find((o) => o.featured);
   const spotlight = !!roobet && btcFn(roobet);
 
   const filtered = useMemo(
-    () => ops.filter((o) => btcFn(o) && coinOk(o) && !(spotlight && o.hasCustomReview)),
+    () => ops.filter((o) => btcFn(o) && coinOk(o) && !(spotlight && o.featured)),
     [ops, filter, coinSel, spotlight]
   );
   const sorted = sortOps(filtered, sortKey, sortDir);
@@ -114,7 +114,7 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/assets/roobet-logo.png" alt="Roobet" style={{ height: 30, width: "auto", display: "block" }} />
                   <span style={{ padding: "5px 10px", borderRadius: 5, background: "rgba(255,204,0,.12)", border: "1px solid rgba(255,204,0,.3)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, fontWeight: 700, letterSpacing: ".05em", color: "#FFCC00", whiteSpace: "nowrap" }}>
-                    SPOTLIGHT
+                    FEATURED
                   </span>
                 </div>
                 <div style={{ display: "flex", alignItems: "flex-end", gap: 14, marginBottom: 22 }}>
@@ -124,7 +124,7 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 1, background: "rgba(255,255,255,.07)", borderRadius: 10, overflow: "hidden", marginBottom: 22 }}>
                   <StatTile label="Licence" value={roobet.licence} />
                   <StatTile label="Coins" value={String((coinsBy["roobet"] ?? []).length)} />
-                  <StatTile label="Sportsbook" value={roobet.sports ? "Yes" : "No"} />
+                  <StatTile label="KYC" value={roobet.kyc === "none" ? "Not required" : roobet.kyc === "tiered" ? "At a threshold" : "Before withdrawal"} />
                   <StatTile label="Bonus wagering" value={wagerView(roobet).label} />
                 </div>
                 <div style={{ marginBottom: 18 }}>
@@ -141,7 +141,7 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
                   <OutboundOrReview o={roobet} style={{ flex: 1, textAlign: "center", padding: 13, borderRadius: 8, background: "#FFCC00", color: "#1A1400", fontSize: 13.5, fontWeight: 700 }}>Visit Roobet</OutboundOrReview>
                   <Link href="/casinos/roobet" style={{ padding: "13px 18px", borderRadius: 8, border: "1px solid rgba(255,255,255,.14)", color: "#DCE5E9", fontSize: 13.5, fontWeight: 600, whiteSpace: "nowrap" }}>Full profile</Link>
                 </div>
-                <div style={{ marginTop: 14, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#4E5A62" }}>{roobet.signupUrl ? "Affiliate link · " : ""}18+ · T&amp;Cs apply</div>
+                <div style={{ marginTop: 14, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#4E5A62" }}>Featured placement · {roobet.signupUrl ? "Affiliate link · " : ""}18+ · T&amp;Cs apply</div>
               </div>
             </div>
           ) : (

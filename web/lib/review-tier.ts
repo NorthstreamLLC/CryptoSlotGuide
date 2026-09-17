@@ -56,7 +56,7 @@ export const TIER_LABEL: Record<ReviewTier, string> = {
 
 export const TIER_DESC: Record<ReviewTier, string> = {
   "field-tested": "Opened with real money on a funded account and measured by hand.",
-  "community-reported": "Aggregated from public review sites (AskGamblers, Casino.Guru, Trustpilot) and cited — not personally measured.",
+  "community-reported": "Not used: we don't take figures from review or community sites.",
   editorial: "Read from the operator's own public pages and public registries — no account needed.",
   pending: "This category is field-tested by opening a real account, but this specific entity hasn't been checked yet — figures below are published, not verified.",
   unchecked: "Nothing on file backs this rating for this operator yet — it is an editorial estimate until checked.",

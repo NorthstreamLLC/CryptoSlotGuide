@@ -80,8 +80,10 @@ export interface Operator {
   ln: boolean;
   sports: boolean;
   esports: boolean;
-  /** True only for Roobet — routes to the hand-written review. */
+  /** Legacy flag from the retired hand-written Roobet page; always false now. */
   hasCustomReview: boolean;
+  /** Commercial featured placement (casino list spotlight, homepage card). Always labelled "Featured"; never changes profile facts. */
+  featured?: boolean;
 }
 
 /** Coin support is derived, never a numeric field on Operator — see coinsBy. */

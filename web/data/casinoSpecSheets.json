@@ -240,7 +240,7 @@
         "facts": [
           {
             "label": "Offer",
-            "value": "No dedicated sports welcome offer listed. The welcome deposit bonuses (100% + 70FS, 120% + 100FS, 130% + 150FS and 150% + 180FS on the 1st to 4th deposits) are used in the Casino section's 'Bonus Wagering' games, per the bonuses page FAQ.",
+            "value": "Rotating sportsbook promotions rather than one fixed welcome offer. 1win regularly runs and replaces its own sports promotions, so check its promotions page for what's live. Its four welcome deposit bonuses are for casino games.",
             "sourcing": "editorial",
             "sourceUrl": "https://1win.com/bonuses",
             "asOf": "2026-09-17"
@@ -1884,9 +1884,9 @@
         "facts": [
           {
             "label": "Offer",
-            "value": "No sports welcome offer. The welcome deposit bonus (120% match up to $1,000, USDT only) is casino-only and excludes the sportsbook. Sources disagree on the match: another FAQ, also dated August 12, 2026, describes it as a 100% match up to $1,000 ('The 1K Rush'), also casino-only.",
+            "value": "Rotating sportsbook promotions rather than one fixed welcome offer. Bluff regularly runs and replaces its own sports promotions, so check its promotions page for what's live. Its welcome deposit bonus is casino-only; a weekly free bet on net sports losses runs separately.",
             "sourcing": "editorial",
-            "sourceUrl": "https://intercom.help/playlink/en/articles/15363485-120-first-deposit-bonus-usdt-only-up-to-1-000",
+            "sourceUrl": "https://intercom.help/playlink/en/articles/14626107-weekly-free-bet-promotion",
             "asOf": "2026-09-17"
           }
         ]
@@ -3678,14 +3678,7 @@
         "facts": [
           {
             "label": "Offer",
-            "value": "No sports welcome offer: the Sports tab of its promotions page lists no welcome or deposit bonus (September 2026)",
-            "sourcing": "editorial",
-            "sourceUrl": "https://duelbits.com/en/promotions",
-            "asOf": "2026-09-17"
-          },
-          {
-            "label": "Other sports promotions",
-            "value": "2 Up, You're Up: football bets on markets with the 2Up icon pay out as wins once your team leads by 2 goals",
+            "value": "Rotating sportsbook promotions rather than one fixed welcome offer. Duelbits regularly runs and replaces its own sports promotions, so check its promotions page for what's live. Standing features include 2 Up, You're Up early payouts on tagged football markets.",
             "sourcing": "editorial",
             "sourceUrl": "https://duelbits.com/en/promotions",
             "asOf": "2026-09-17"
@@ -3866,6 +3859,18 @@
             "sourcing": "editorial",
             "sourceUrl": "https://dustbit.com/legal/sportsbook-rules",
             "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
+        "title": "Sports bonus terms",
+        "facts": [
+          {
+            "label": "Offer",
+            "value": "Rotating sportsbook promotions rather than one fixed welcome offer. Dustbit regularly runs and replaces its own sports promotions, so check its promotions page for what's live. Its sports promotions include Predict & Win and Early Payout.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://dustbit.com/promotions",
+            "asOf": "2026-09-17"
           }
         ]
       },
@@ -4435,6 +4440,18 @@
         ]
       },
       {
+        "title": "Sports bonus terms",
+        "facts": [
+          {
+            "label": "Offer",
+            "value": "Rotating sportsbook promotions rather than one fixed welcome offer. Gamba regularly runs and replaces its own sports promotions, so check its promotions page for what's live.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://gamba.com/promotions",
+            "asOf": "2026-09-17"
+          }
+        ]
+      },
+      {
         "title": "Compliance",
         "facts": [
           {
@@ -4608,7 +4625,7 @@
         "facts": [
           {
             "label": "Offer",
-            "value": "No sports betting while Gamdom's first-deposit bonus is active. The bonus has to be finished before you can place sports bets. The % and cap vary by account. (Help article updated early September 2026.)",
+            "value": "Rotating sportsbook promotions rather than one fixed welcome offer. Gamdom regularly runs and replaces its own sports promotions, so check its promotions page for what's live. Sports betting is unavailable while its first-deposit bonus is active.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.gamdom.com/en/articles/16108950-deposit-bonus-guide",
             "asOf": "2026-09-17"
@@ -4944,10 +4961,10 @@
         "facts": [
           {
             "label": "Offer",
-            "value": "There is no standing sports bonus. Sports bets earn XP and leaderboard progress, and any sports reload is offered case by case.",
+            "value": "Rotating sportsbook promotions rather than one fixed welcome offer. Housebets regularly runs and replaces its own sports promotions, so check its promotions page for what's live. Sports bets earn XP and leaderboard progress, and sports reloads are offered case by case.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.housebets.com/en/articles/822179-does-housebets-offer-sports-bonuses",
-            "asOf": "2026-09-16"
+            "asOf": "2026-09-17"
           }
         ]
       },
@@ -8379,6 +8396,18 @@
         ]
       },
       {
+        "title": "Sports bonus terms",
+        "facts": [
+          {
+            "label": "Offer",
+            "value": "Rotating sportsbook promotions rather than one fixed welcome offer. Stake regularly runs and replaces its own sports promotions, so check its promotions page for what's live.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://stake.com/promotions",
+            "asOf": "2026-09-17"
+          }
+        ]
+      },
+      {
         "title": "Compliance",
         "facts": [
           {
@@ -8526,6 +8555,18 @@
             "sourcing": "editorial",
             "sourceUrl": "https://intercom.help/thrill/en/articles/11464076-sportsbook-bet-types",
             "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
+        "title": "Sports bonus terms",
+        "facts": [
+          {
+            "label": "Offer",
+            "value": "Rotating sportsbook promotions rather than one fixed welcome offer. Thrill regularly runs and replaces its own sports promotions, so check its promotions page for what's live. Its help centre lists Comboboost and Odds Boost for sports bets.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://intercom.help/thrill/en/",
+            "asOf": "2026-09-17"
           }
         ]
       },
@@ -9616,6 +9657,18 @@
         ]
       },
       {
+        "title": "Sports bonus terms",
+        "facts": [
+          {
+            "label": "Offer",
+            "value": "Rotating sportsbook promotions rather than one fixed welcome offer. Winna regularly runs and replaces its own sports promotions, so check its promotions page for what's live. VIP players also get a monthly sportsbook free bet.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://winna.com/promotions",
+            "asOf": "2026-09-17"
+          }
+        ]
+      },
+      {
         "title": "Compliance",
         "facts": [
           {
@@ -9785,7 +9838,7 @@
         "facts": [
           {
             "label": "Offer",
-            "value": "No sports welcome offer: sports bets are excluded from Yeet's 100% first deposit bonus (up to $1,000) (help article dated February 24, 2026)",
+            "value": "Rotating sportsbook promotions rather than one fixed welcome offer. Yeet regularly runs and replaces its own sports promotions, so check its promotions page for what's live. Its 100% first deposit bonus excludes sports bets.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.yeet.com/en/articles/13464278-deposit-bonus-faqs",
             "asOf": "2026-09-17"

@@ -72,9 +72,10 @@ function buildFeatured() {
   const hg = prov("hacksaw-gaming");
   const books = ops.filter((o) => o.sports).length;
   const lg = wal("ledger");
-  const nc = prov("nolimit-city");
 
+  const rb = op("roobet");
   return [
+    { name: "Roobet", mono: "RB", slug: "roobet", cat: "Featured", line: "Roobet says withdrawals are sent instantly on request, charges no fee on crypto withdrawals, and pays rakeback with no wagering multiplier.", metric: rb ? `${(coinsBy["roobet"] ?? []).length} coins accepted` : "—", cta: "Profile →", href: "/casinos/roobet" },
     { name: "Sweet Bonanza", mono: "SWB", slug: "sweet-bonanza", cat: "Slot", line: `Published at ${sb ? `${sb.rtp.toFixed(2)}%` : "its studio RTP"}, but operators can licence a lower build. Check the RTP in the game's info screen before you spin.`, metric: sb ? `${sb.provider} game page` : "—", cta: "Slot review →", href: "/slots/sweet-bonanza" },
     { name: "Kraken", mono: "KR", slug: "kraken", cat: "Exchange", line: "MiCA-licensed, FCA-registered and publishes proof of reserves — its entry-tier Pro fees are the highest of the five.", metric: `${kr?.m1 ?? "—"} entry taker fee`, cta: "Review →", href: "/exchanges/kraken" },
     { name: "Stake", mono: "ST", slug: "stake", cat: "Casino", line: `Stake says crypto withdrawals are processed immediately, with no maximum withdrawal. ${(coinsBy["stake"] ?? []).length} of the ${coinDefs.length} coins we track are on its cashier.`, metric: `${(coinsBy["stake"] ?? []).length} coins accepted`, cta: "Review →", href: "/casinos/stake" },
@@ -82,7 +83,6 @@ function buildFeatured() {
     { name: "Hacksaw Gaming", mono: "HG", slug: "hacksaw-gaming", cat: "Provider", line: "Lists every RTP version it licenses on each game page, so you can see how low a casino's build could go. Volatility is not for everyone.", metric: hg?.rtp ?? "—", cta: "Studio profile →", href: "/providers/hacksaw-gaming" },
     { name: "Cloudbet", mono: "CB", slug: "cloudbet", cat: "Sportsbook", line: "Sportsbook and casino on one balance. Its welcome package covers both, paid as cash drops and rakeback over the first 30 days.", metric: `${books} sportsbooks listed`, cta: "Sportsbooks →", href: "/sportsbooks" },
     { name: "Ledger", mono: "LG", slug: "ledger", cat: "Wallet", line: "Hardware wallet with keys in a Secure Element and a Transaction Check before you sign.", metric: `${lg?.m2 ?? "—"}`, cta: "Review →", href: "/wallets/ledger" },
-    { name: "Nolimit City", mono: "NC", slug: "nolimit-city", cat: "Provider", line: "Extreme volatility by design. The max-win ceilings are high and the base game will test your bankroll.", metric: nc?.rtp ?? "—", cta: "Studio profile →", href: "/providers/nolimit-city" },
   ];
 }
 

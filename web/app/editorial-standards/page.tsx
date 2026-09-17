@@ -18,15 +18,15 @@ const SECTIONS: { title: string; body: string[] }[] = [
   {
     title: "Independence from advertisers",
     body: [
-      "We earn commission through affiliate links, disclosed on every page where it applies. No operator is shown a review before publication, no operator can pay for placement on any table or page, and commission rates are kept away from the people who write reviews. If an operator we work with has poor terms or a bad record, that's what gets published.",
-      "Where we feature an operator prominently, such as on the homepage, the card states the cited fact behind it. That placement is never purchased.",
+      "We earn commission through affiliate links, disclosed on every page where it applies. No operator is shown a review before publication, and commission rates are kept away from the people who write reviews. If an operator we work with has poor terms or a bad record, that's what gets published.",
+      "Some operators get a featured placement, such as a spotlight on the homepage or at the top of a casino list, and that placement can reflect a commercial partnership. Featured placements are always labelled \"Featured\", show the same cited facts as the operator's profile, and never change what the profile says. Everything else on the site is listed by facts or alphabetically.",
     ],
   },
   {
     title: "How we source what we publish",
     body: [
-      "Every figure on this site traces to one of three sources, and every review says which: field-tested (a real funded account, opened and measured by hand), community-reported (aggregated from public review sites like AskGamblers, Casino.Guru, and Trustpilot, cited as such), or editorially assessed (read from an operator's own public terms, help pages, and licensing registries). See How We Rate for the full breakdown of which criteria use which.",
-      "We do not publish a figure we can't trace to one of those three sources. Where we don't yet have a reliable figure, the page says so rather than estimating one.",
+      "Every figure on this site comes from the operator's own pages (its terms, help centre, promotions and blog), an official regulator or licence register, official network or studio documentation, on-chain data, or our own testing on a funded account. We don't take figures from review, affiliate or comparison sites. Each fact links to its source. See How We Source Information for the details.",
+      "We do not publish a figure we can't trace to one of those sources. Where we don't yet have a reliable figure, the page says so rather than estimating one.",
     ],
   },
   {
@@ -39,7 +39,7 @@ const SECTIONS: { title: string; body: string[] }[] = [
   {
     title: "Author and reviewer identity",
     body: [
-      "Reviews that carry real field-testing are attributed to the person who did the work. Reviews sourced editorially or from community reports are attributed to the desk that assembled them, since no single person is claiming to have personally verified the figures.",
+      "Reviews that carry real field-testing are attributed to the person who did the work. Reviews sourced from operators' own pages and public registries are attributed to the desk that assembled them, since no single person is claiming to have personally verified the figures.",
     ],
   },
   {

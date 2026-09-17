@@ -91,10 +91,10 @@ export default function Page() {
       <section style={{ maxWidth: 1180, margin: "0 auto", padding: "44px 40px 0" }}>
         <h2 style={{ margin: "0 0 8px", fontSize: 28, letterSpacing: "-.028em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>How we back a figure</h2>
         <p style={{ margin: "0 0 20px", maxWidth: "80ch", fontSize: 15, lineHeight: 1.65, color: "#8DA0AA", textWrap: "pretty" }}>
-          Not every figure gets the same kind of check, and we&apos;d rather say so than blur it. The first three apply fact by fact within a single casino review (see the six checks below); the fourth backs a small set of figures — on-chain deposit flow, hot-wallet balances — that need infrastructure this site doesn&apos;t have yet. Every number traces back to whichever one applies.
+          Not every figure gets the same kind of check, and we&apos;d rather say so than blur it. The first two apply fact by fact within a single casino review (see the six checks below); the third backs a small set of figures — on-chain deposit flow, hot-wallet balances — that need infrastructure this site doesn&apos;t have yet. Every number traces back to whichever one applies.
         </p>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))", gap: 1, background: "rgba(255,255,255,.07)", border: "1px solid rgba(255,255,255,.07)", borderRadius: 14, overflow: "hidden" }}>
-          {(["field-tested", "community-reported", "editorial"] as const).map((tier) => (
+          {(["field-tested", "editorial"] as const).map((tier) => (
             <div key={tier} style={{ padding: 24, background: "#0C1013" }}>
               <span
                 style={{
