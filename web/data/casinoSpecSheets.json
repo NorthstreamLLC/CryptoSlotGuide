@@ -6197,10 +6197,10 @@
         "facts": [
           {
             "label": "Sportsbook",
-            "value": "Yes, offers sports betting (help article dated March 19, 2024); all sports turnover counted 3x toward VIP progress",
+            "value": "Yes. Its sportsbook menu lists more than 40 sports, including soccer, American football, basketball, tennis, ice hockey, baseball, MMA, boxing, cricket, rugby, darts, golf, Formula 1, NASCAR, snooker and e-sports simulations such as eSoccer and eCricket. All sports turnover counts 3x toward VIP progress.",
             "sourcing": "editorial",
-            "sourceUrl": "https://help.razed.com/en/articles/9086608-sports-betting",
-            "asOf": "2026-09-16"
+            "sourceUrl": "https://www.razed.com/sports",
+            "asOf": "2026-09-17"
           },
           {
             "label": "Esports",
@@ -6237,6 +6237,13 @@
               "Mobile Legends",
               "Cricket 24"
             ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.razed.com/sports",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Racing",
+            "value": "Horse racing, greyhound and harness racing, under a separate Racing tab.",
             "sourcing": "editorial",
             "sourceUrl": "https://www.razed.com/sports",
             "asOf": "2026-09-17"
