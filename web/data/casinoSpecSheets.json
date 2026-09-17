@@ -6986,6 +6986,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.roobet.com/en/articles/6391927-how-to-deposit-using-a-credit-card",
             "asOf": "2026-09-16"
+          },
+          {
+            "label": "Card and bank",
+            "value": "Footer payment partners: Skrill, AstroPay, Interac, Pix, Webpay and UPI",
+            "sourcing": "editorial",
+            "sourceUrl": "https://roobet.com/",
+            "asOf": "2026-09-17"
           }
         ]
       },
@@ -7097,17 +7104,17 @@
         "facts": [
           {
             "label": "Licence",
-            "value": "Curaçao, licence OGL/2024/687/0427",
+            "value": "Curaçao, licence OGL/2024/687/0427; its footer carries the GCB (cert.gcb.cw) and xnext validator seals",
             "sourcing": "editorial",
-            "sourceUrl": "https://roobet.com/terms-and-conditions",
-            "asOf": "2026-09-14"
+            "sourceUrl": "https://roobet.com/",
+            "asOf": "2026-09-17"
           },
           {
             "label": "Company",
-            "value": "Raw Entertainment B.V. (Curaçao, company no. 157205)",
+            "value": "Raw Entertainment B.V. (Curaçao, reg. no. 157205), Korporaalweg 10, Curaçao. Raw Entertainment Ltd (Cyprus, reg. no. HE421735, Limassol) acts as its paying and operational agent",
             "sourcing": "editorial",
-            "sourceUrl": "https://roobet.com/terms-and-conditions",
-            "asOf": "2026-09-14"
+            "sourceUrl": "https://roobet.com/",
+            "asOf": "2026-09-17"
           },
           {
             "label": "KYC policy",
@@ -7127,6 +7134,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://roobet.com/fair",
             "asOf": "2026-09-10"
+          },
+          {
+            "label": "Awards",
+            "value": "Its footer lists SiGMA Best Crypto Casino 2025 and three 2023 MiGEA Malta Excellence Awards (Best Start-Up Company, Best Online Casino Operator and Best Online Casino Product of the Year)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://roobet.com/",
+            "asOf": "2026-09-17"
           }
         ]
       }
