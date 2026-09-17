@@ -6583,6 +6583,53 @@
         ]
       },
       {
+        "title": "Sports bonus terms",
+        "facts": [
+          {
+            "label": "Offer",
+            "value": "$50 Sports Welcome Bonus: a $50 free bet, credited after your first qualifying deposit and wagering (page updated 15 Sep 2026)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.razed.com/promotions/",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Wagering",
+            "value": "Its page disagrees: the terms and FAQ say $250 of sports bets, the feature list says $500. Sports bets only, and the free bet is credited once it's complete",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.razed.com/promotions/",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Minimum odds",
+            "value": "1.50 decimal (-200 American)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.razed.com/promotions/",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Qualifying bets",
+            "value": "Sports bets at odds of 1.50 or more; cashed-out bets don't count. The free bet can be used on any sport",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.razed.com/promotions/",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "$50, first deposit only",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.razed.com/promotions/",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Other sports promotions",
+            "value": "Early Payout: pre-match bets on tagged Soccer 1x2, NHL and NBA winner markets settle as wins once a team leads by 2 goals, 3 goals or 20 points, capped at $5,000 per match. Also a $10,000 Sports Race (September 2026) ranked by the highest-multiplier sports bets",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.razed.com/promotions/",
+            "asOf": "2026-09-17"
+          }
+        ]
+      },
+      {
         "title": "Compliance",
         "facts": [
           {
