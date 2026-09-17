@@ -43,7 +43,8 @@
     "bonusExpiry": "Earned rakeback can be claimed at any time",
     "noDepositBonus": true,
     "payoutStated": "Instant (crypto)",
-    "payoutStatedMaxMins": 0
+    "payoutStatedMaxMins": 0,
+    "bonusShort": "3.5% VIP rakeback + weekly bonuses"
   },
   {
     "slug": "bc-game",
@@ -84,7 +85,7 @@
     "hasCustomReview": false,
     "payoutStated": "Instant",
     "payoutStatedMaxMins": 0,
-    "bonusShort": "First deposit bonus",
+    "bonusShort": "5% rakeback paid as cash",
     "wagerNote": "deposit + bonus × a multiplier set per promotion"
   },
   {
@@ -106,7 +107,8 @@
     "bonusExpiry": "Calendar rewards expire 24 hours after unlocking",
     "payoutStated": "Seconds–60 min",
     "payoutStatedMaxMins": 60,
-    "noDepositBonus": true
+    "noDepositBonus": true,
+    "bonusShort": "5% rakeback + daily, weekly & monthly bonuses"
   },
   {
     "slug": "bitstarz",
@@ -148,7 +150,7 @@
     "bonusExpiry": "Valid up to 30 days from first deposit",
     "payoutStated": "Instant–24 hr",
     "payoutStatedMaxMins": 1440,
-    "bonusShort": "Welcome package up to $2,500"
+    "bonusShort": "Up to $2,500 cash, no rollover"
   },
   {
     "slug": "gamdom",
@@ -169,7 +171,7 @@
     "bonusExpiry": "New-account boost valid 7 days once activated",
     "payoutStated": "5 min–1 hr",
     "payoutStatedMaxMins": 60,
-    "bonusShort": "15% boosted rakeback for new accounts",
+    "bonusShort": "15% boosted rakeback for new players",
     "wagerNote": "deposits wagered once"
   },
   {
@@ -190,7 +192,8 @@
     "hasCustomReview": false,
     "payoutStated": "Seconds–30 min",
     "payoutStatedMaxMins": 30,
-    "noDepositBonus": true
+    "noDepositBonus": true,
+    "bonusShort": "25% rakeback, paid instant to monthly"
   },
   {
     "slug": "rainbet",
@@ -210,7 +213,7 @@
     "hasCustomReview": false,
     "payoutStated": "5–15 min",
     "payoutStatedMaxMins": 15,
-    "bonusShort": "First deposit bonus",
+    "bonusShort": "First deposit bonus (40× wager lock)",
     "wagerBasis": "deposit + bonus"
   },
   {
@@ -231,7 +234,7 @@
     "hasCustomReview": false,
     "payoutStated": "Within minutes",
     "bonusExpiry": "Wagering within 7 days",
-    "bonusShort": "Up to 5,000 USDT welcome",
+    "bonusShort": "Up to 5,000 USDT over 3 deposits",
     "wagerBasis": "bonus"
   },
   {
@@ -297,7 +300,7 @@
     "esports": true,
     "hasCustomReview": false,
     "payoutStated": "Varies, up to hours",
-    "bonusShort": "Up to 4 BTC over 4 deposits + 100 free spins",
+    "bonusShort": "Up to 4 BTC + 100 free spins",
     "wagerNote": "paid in instalments as you wager",
     "bonusExpiry": "30 days to wager",
     "cashoutCap": "Bonus winnings capped at 10,000 USDT"
@@ -321,7 +324,7 @@
     "payoutStated": "Within 30 min",
     "payoutStatedMaxMins": 30,
     "bonusExpiry": "14 days for missions; spins within 3 days",
-    "bonusShort": "Up to 500% as free spins",
+    "bonusShort": "Up to 500% in free spins",
     "wagerNote": "10× per mission; 30× the bonus by default"
   },
   {
@@ -386,7 +389,7 @@
     "esports": true,
     "hasCustomReview": false,
     "bonusExpiry": "7 days to claim, 30 days to complete",
-    "bonusShort": "250% up to 5,000 USDT over 3 deposits",
+    "bonusShort": "Up to 5,000 USDT over 3 deposits",
     "wagerBasis": "deposit",
     "payoutStated": "In seconds (advertised)"
   },
@@ -408,7 +411,8 @@
     "hasCustomReview": false,
     "payoutStated": "Instant",
     "payoutStatedMaxMins": 0,
-    "noDepositBonus": true
+    "noDepositBonus": true,
+    "bonusShort": "Instant rakeback every 7 minutes"
   },
   {
     "slug": "thrill",
@@ -428,7 +432,8 @@
     "hasCustomReview": false,
     "payoutStated": "Instant",
     "payoutStatedMaxMins": 0,
-    "noDepositBonus": true
+    "noDepositBonus": true,
+    "bonusShort": "Instant rakeback + weekly & monthly bonuses"
   },
   {
     "slug": "duel",
@@ -446,7 +451,8 @@
     "sports": true,
     "esports": true,
     "hasCustomReview": false,
-    "noDepositBonus": true
+    "noDepositBonus": true,
+    "bonusShort": "$3M monthly race + zero-edge originals"
   },
   {
     "slug": "goated",
@@ -488,7 +494,7 @@
     "payoutStated": "Minutes–24 hr",
     "payoutStatedMaxMins": 1440,
     "bonusExpiry": "Instant Rakeback does not expire",
-    "bonusShort": "First deposit bonus up to $1,000",
+    "bonusShort": "100% up to $1,000 + up to 10% rakeback",
     "wagerBasis": "deposit + bonus"
   },
   {
@@ -556,7 +562,7 @@
     "payoutStated": "Instant",
     "payoutStatedMaxMins": 0,
     "bonusExpiry": "Rakeback never expires",
-    "bonusShort": "Deposit bonuses",
+    "bonusShort": "Rakeback up to 10% on every bet",
     "wagerNote": "multiplier set per bonus, on deposit + bonus"
   },
   {
@@ -577,7 +583,7 @@
     "hasCustomReview": false,
     "payoutStated": "Within 1 hr",
     "payoutStatedMaxMins": 60,
-    "bonusShort": "180–360% deposit bonuses in USDB",
+    "bonusShort": "Up to 360% deposit bonuses + 5% rakeback",
     "wagerNote": "unlocks at 0.1% of the amount wagered"
   },
   {
@@ -598,7 +604,8 @@
     "hasCustomReview": false,
     "payoutStated": "Instant–24 hr",
     "payoutStatedMaxMins": 1440,
-    "noDepositBonus": true
+    "noDepositBonus": true,
+    "bonusShort": "MetaMax rewards, rank prizes up to $1M"
   },
   {
     "slug": "whale-io",
@@ -617,7 +624,7 @@
     "esports": true,
     "hasCustomReview": false,
     "bonusExpiry": "30 days if wagering isn't met",
-    "bonusShort": "200% first-deposit bonus balance",
+    "bonusShort": "200% bonus balance + up to 25% cashback",
     "wagerNote": "unlocks as you claim cashback and bonuses",
     "payoutStated": "Instant (crypto)",
     "payoutStatedMaxMins": 0
@@ -662,7 +669,7 @@
     "payoutStated": "Instant–2 days",
     "payoutStatedMaxMins": 2880,
     "bonusExpiry": "Bonus funds expire after 30 days",
-    "bonusShort": "100% up to $1,000 + free spins",
+    "bonusShort": "100% up to $1,000 + 6% instant rakeback",
     "wagerBasis": "deposit + bonus"
   },
   {
@@ -705,7 +712,8 @@
     "hasCustomReview": false,
     "payoutStated": "Up to 7 days",
     "payoutStatedMaxMins": 10080,
-    "noDepositBonus": true
+    "noDepositBonus": true,
+    "bonusShort": "Up to 40% cashback + 15% rakeback"
   },
   {
     "slug": "shock",
@@ -726,7 +734,7 @@
     "payoutStated": "1–5 min (crypto)",
     "payoutStatedMaxMins": 5,
     "bonusExpiry": "Bonus amounts don't expire",
-    "bonusShort": "100% first deposit match",
+    "bonusShort": "100% first deposit up to $1,500",
     "wagerBasis": "deposit + bonus"
   },
   {
@@ -771,7 +779,7 @@
     "payoutStated": "Instant",
     "payoutStatedMaxMins": 0,
     "bonusExpiry": "Unclaimed after claim period or 60 days",
-    "bonusShort": "Rakeback slider"
+    "bonusShort": "Rakeback or lossback slider, no wagering"
   },
   {
     "slug": "dicey",
@@ -789,7 +797,7 @@
     "sports": true,
     "esports": true,
     "hasCustomReview": false,
-    "bonusShort": "100% sports welcome up to $1,000",
+    "bonusShort": "100% sports bonus up to $1,000",
     "wagerBasis": "deposit + bonus"
   },
   {
@@ -811,7 +819,7 @@
     "payoutStated": "Under 15 min",
     "payoutStatedMaxMins": 15,
     "bonusExpiry": "Claim within 24 hours",
-    "bonusShort": "33% CashRake on deposits"
+    "bonusShort": "33% CashRake, no wagering"
   },
   {
     "slug": "toshibet",
@@ -831,7 +839,7 @@
     "hasCustomReview": false,
     "payoutStated": "Instant",
     "payoutStatedMaxMins": 0,
-    "bonusShort": "200% / 150% / 100% on first 3 deposits",
+    "bonusShort": "Up to 200% on your first 3 deposits",
     "wagerNote": "$1 unlocked per $250 wagered",
     "cashoutCap": "Max $60,000 from the deposit bonus"
   },
@@ -876,7 +884,7 @@
     "payoutStated": "Instant–1 hr",
     "payoutStatedMaxMins": 60,
     "noDepositBonus": false,
-    "bonusShort": "7-day 10% slot cashback",
+    "bonusShort": "10% slot cashback for 7 days + rakeback",
     "wagerNote": "credited automatically, no wagering stated"
   },
   {
@@ -897,7 +905,7 @@
     "hasCustomReview": false,
     "payoutStated": "5–10 min",
     "payoutStatedMaxMins": 10,
-    "bonusShort": "Welcome bonus + up to 50% rakeback"
+    "bonusShort": "Up to 50% VIP rakeback"
   },
   {
     "slug": "wager-com",
@@ -916,7 +924,7 @@
     "esports": false,
     "hasCustomReview": false,
     "cashoutCap": "Max €5,000/month if balance ≥10× deposits",
-    "bonusShort": "Advertised 150% up to $3,000",
+    "bonusShort": "150% up to $3,000 (advertised)",
     "wagerBasis": "bonus",
     "payoutStated": "Instant (crypto)",
     "payoutStatedMaxMins": 0
@@ -940,7 +948,7 @@
     "cashoutCap": "Max convertible 10× bonus",
     "payoutStated": "Instant–24 hr",
     "payoutStatedMaxMins": 1440,
-    "bonusShort": "200% up to $30,000 + up to 50 Super Spins",
+    "bonusShort": "200% up to $30,000 + 50 Super Spins",
     "wagerBasis": "deposit; 75× on bonuses over $10,000",
     "bonusExpiry": "14 days to finish wagering"
   },
@@ -983,7 +991,7 @@
     "hasCustomReview": false,
     "payoutStated": "1 min–5 days",
     "payoutStatedMaxMins": 7200,
-    "bonusShort": "Up to 500% + 500 FS over 4 deposits (600% on crypto)",
+    "bonusShort": "Up to 600% + 500 free spins",
     "wagerBasis": "bonus",
     "cashoutCap": "Max withdrawal ×1, max bonus $500"
   }
