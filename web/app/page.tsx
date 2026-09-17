@@ -4,32 +4,13 @@ import { rtpSortValue } from "@/lib/slot-facts";
 import { siteData, siteCounts } from "@/lib/site-data";
 import { allVersionsListedStudios, selfCustodyWallets } from "@/lib/derived";
 import { tintFor } from "@/lib/logo";
-import { CasinoIndexTable } from "@/components/home/CasinoIndexTable";
 import { CryptoTicker } from "@/components/home/CryptoTicker";
 import { SlotsPreviewTable } from "@/components/home/SlotsPreviewTable";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { filterFns } from "@/lib/casino-index";
 import { casinoFacts } from "@/lib/casino-facts";
 import { CasinoCard } from "@/components/casino/CasinoCard";
-
-/**
- * A slug in the hero logo wall (wallCols, below) can be a casino, wallet,
- * exchange or provider — the only four data sources that carry a `mono`
- * field. Casinos/wallets/exchanges don't carry their own brand tint (see
- * lib/logo.ts's tintFor for why), so this falls back to that for them;
- * providers already have a real one.
- */
-function brandFor(slug: string): { mono: string; tint: string } {
-  const { ops, providers, walletRows, exchangeRows } = siteData;
-  const p = providers.find((x) => x.slug === slug);
-  if (p) return { mono: p.mono, tint: p.tint };
-  const w = walletRows.find((x) => x.slug === slug);
-  if (w) return { mono: w.mono, tint: "#9B8FC4" };
-  const x = exchangeRows.find((x) => x.slug === slug);
-  if (x) return { mono: x.mono, tint: "#5FE3E8" };
-  const o = ops.find((x) => x.slug === slug);
-  return { mono: o?.mono ?? slug.slice(0, 2).toUpperCase(), tint: tintFor(slug) };
-}
+import { CasinoOfferList } from "@/components/casino/CasinoOfferList";
 
 /**
  * Ported from the HOME section of CryptoSlotGuide.dc.html (hero through
@@ -38,13 +19,6 @@ function brandFor(slug: string): { mono: string; tint: string } {
  * casino index table below it is this app's own addition (the prototype
  * doesn't have one on the homepage), kept because it's genuinely useful.
  */
-
-const wallCols: string[][] = [
-  ["stake", "bc-game", "shuffle", "rollbit", "gamdom", "duelbits", "kraken", "ledger"],
-  ["cloudbet", "bitstarz", "rainbet", "vave", "mbit", "500-casino", "okx", "metamask"],
-  ["hacksaw-gaming", "pragmatic-play", "nolimit-city", "push-gaming", "relax-gaming", "print-studios", "phantom", "bybit"],
-];
-const wallAnims = ["csg-up 34s linear infinite", "csg-down 43s linear infinite", "csg-up 39s linear infinite"];
 
 const quickChips = [
   { label: "Bitcoin casinos", href: "/crypto-casinos" },
@@ -77,10 +51,10 @@ function buildFeatured() {
 
   const rb = op("roobet");
   return [
-    { name: "Roobet", mono: "RB", slug: "roobet", cat: "Featured", line: "Roobet says withdrawals are sent instantly on request, charges no fee on crypto withdrawals, and pays rakeback with no wagering multiplier.", metric: rb ? `${(coinsBy["roobet"] ?? []).length} coins accepted` : "—", cta: "Profile →", href: "/casinos/roobet" },
+    { name: "Roobet", mono: "RB", slug: "roobet", cat: "Featured", line: "Roobet says withdrawals are sent instantly on request, charges no fee on crypto withdrawals, and pays rakeback with no wagering multiplier.", metric: rb ? `${casinoFacts(rb).coins.length} coins accepted` : "—", cta: "Profile →", href: "/casinos/roobet" },
     { name: "Sweet Bonanza", mono: "SWB", slug: "sweet-bonanza", cat: "Slot", line: `Published at ${sb ? `${sb.rtp.toFixed(2)}%` : "its studio RTP"}, but operators can licence a lower build. Check the RTP in the game's info screen before you spin.`, metric: sb ? `${sb.provider} game page` : "—", cta: "Slot review →", href: "/slots/sweet-bonanza" },
     { name: "Kraken", mono: "KR", slug: "kraken", cat: "Exchange", line: "MiCA-licensed, FCA-registered and publishes proof of reserves — its entry-tier Pro fees are the highest of the five.", metric: `${kr?.m1 ?? "—"} entry taker fee`, cta: "Review →", href: "/exchanges/kraken" },
-    { name: "Stake", mono: "ST", slug: "stake", cat: "Casino", line: `Stake says crypto withdrawals are processed immediately, with no maximum withdrawal. ${(coinsBy["stake"] ?? []).length} of the ${coinDefs.length} coins we track are on its cashier.`, metric: `${(coinsBy["stake"] ?? []).length} coins accepted`, cta: "Review →", href: "/casinos/stake" },
+    { name: "Stake", mono: "ST", slug: "stake", cat: "Casino", line: `Stake says crypto withdrawals are processed immediately, with no maximum withdrawal. It lists ${casinoFacts(op("stake")!).coins.length} coins on its cashier.`, metric: `${casinoFacts(op("stake")!).coins.length} coins accepted`, cta: "Review →", href: "/casinos/stake" },
     { name: "Phantom", mono: "PH", slug: "phantom", cat: "Wallet", line: "Solana-first self-custody wallet with transaction previews before you approve, audited by Kudelski and Least Authority.", metric: ph?.m2 ?? "—", cta: "Review →", href: "/wallets/phantom" },
     { name: "Hacksaw Gaming", mono: "HG", slug: "hacksaw-gaming", cat: "Provider", line: "Lists every RTP version it licenses on each game page, so you can see how low a casino's build could go. Volatility is not for everyone.", metric: hg?.rtp ?? "—", cta: "Studio profile →", href: "/providers/hacksaw-gaming" },
     { name: "Cloudbet", mono: "CB", slug: "cloudbet", cat: "Sportsbook", line: "Sportsbook and casino on one balance. Its welcome package covers both, paid as cash drops and rakeback over the first 30 days.", metric: `${books} sportsbooks listed`, cta: "Sportsbooks →", href: "/sportsbooks" },
@@ -92,11 +66,12 @@ export default function HomePage() {
   const { ops, slots, houseGames, providers, walletRows, exchangeRows, coinDefs, coinsBy, esportsTitles, criteria } = siteData;
   const c = siteCounts;
   const featured = buildFeatured();
+  const featuredOp = ops.find((o) => o.featured);
   // Featured placements first, then the fastest stated withdrawals among casinos with a cited offer.
   const topOffers = [...ops]
-    .filter((o) => o.featured || (o.payoutStatedMaxMins !== undefined && !!casinoFacts(o).offer && !!casinoFacts(o).wagering && casinoFacts(o).wagering !== "See terms"))
+    .filter((o) => o.featured || (o.payoutStatedMaxMins !== undefined && !!casinoFacts(o).offer && !!casinoFacts(o).wagering && casinoFacts(o).wagering !== "See terms" && !/^advertised/i.test(casinoFacts(o).headline)))
     .sort((a, b) => Number(!!b.featured) - Number(!!a.featured) || (a.payoutStatedMaxMins ?? 9e9) - (b.payoutStatedMaxMins ?? 9e9) || a.name.localeCompare(b.name))
-    .slice(0, 8);
+    .slice(0, 10);
 
   // Highest studio-published RTP — a factual sort, not a rating.
   const topSlot = [...slots].sort((a, b) => rtpSortValue(b) - rtpSortValue(a))[0];
@@ -257,52 +232,12 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Animated logo wall */}
-          <div style={{ position: "relative", height: 462, overflow: "hidden", animation: "csg-rise .5s ease both" }}>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 12, height: "100%" }}>
-              {wallCols.map((col, ci) => {
-                const doubled = [...col, ...col];
-                return (
-                  <div key={ci} style={{ display: "flex", flexDirection: "column", gap: 12, animation: wallAnims[ci] }}>
-                    {doubled.map((slug, i) => {
-                      const b = brandFor(slug);
-                      return (
-                        <div
-                          key={`${slug}-${i}`}
-                          style={{
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            width: "100%",
-                            aspectRatio: "1.55",
-                            flex: "none",
-                            borderRadius: 14,
-                            background: i % 3 === 0 ? "rgba(255,255,255,.07)" : "rgba(255,255,255,.03)",
-                            border: "1px solid rgba(255,255,255,.07)",
-                          }}
-                        >
-                          <span
-                            style={{
-                              fontFamily: "var(--font-jetbrains-mono), monospace",
-                              fontSize: 22,
-                              fontWeight: 700,
-                              letterSpacing: ".02em",
-                              color: b.tint,
-                              opacity: 0.92,
-                            }}
-                          >
-                            {b.mono}
-                          </span>
-                        </div>
-                      );
-                    })}
-                  </div>
-                );
-              })}
+          {/* Featured offer */}
+          {featuredOp && (
+            <div style={{ alignSelf: "center", width: "100%", maxWidth: 460, justifySelf: "end", animation: "csg-rise .5s ease both" }}>
+              <CasinoCard o={featuredOp} />
             </div>
-            <div style={{ position: "absolute", inset: 0, pointerEvents: "none", background: "linear-gradient(180deg,#090C0F 0%,rgba(9,12,15,0) 22%,rgba(9,12,15,0) 78%,#090C0F 100%)" }} />
-            <div style={{ position: "absolute", inset: 0, pointerEvents: "none", background: "linear-gradient(90deg,#090C0F 0%,rgba(9,12,15,0) 14%)" }} />
-          </div>
+          )}
         </div>
 
         {/* Vertical strip */}
@@ -364,11 +299,7 @@ export default function HomePage() {
             All {c.casinos} casinos →
           </Link>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 14 }}>
-          {topOffers.map((o) => (
-            <CasinoCard key={o.slug} o={o} />
-          ))}
-        </div>
+        <CasinoOfferList ops={topOffers} />
       </section>
 
       {/* Featured reviews */}
@@ -411,22 +342,6 @@ export default function HomePage() {
             </Link>
           ))}
         </div>
-      </section>
-
-      {/* Casino index — this app's own addition, not in the prototype */}
-      <section style={{ maxWidth: 1400, margin: "0 auto", padding: "68px 40px 62px" }}>
-        <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 32, flexWrap: "wrap", marginBottom: 22 }}>
-          <div>
-            <h2 style={{ margin: "0 0 8px", fontSize: 32, letterSpacing: "-.03em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>
-              Crypto casino index
-            </h2>
-            <p style={{ margin: 0, fontSize: 15, color: "#8DA0AA" }}>Listed A–Z — click a column to re-sort.</p>
-          </div>
-          <Link href="/crypto-casinos" style={{ fontSize: 14, fontWeight: 600, color: "#00C2CC", whiteSpace: "nowrap" }}>
-            See all {c.casinos} casinos →
-          </Link>
-        </div>
-        <CasinoIndexTable operators={ops} />
       </section>
 
       {/* Slots */}
