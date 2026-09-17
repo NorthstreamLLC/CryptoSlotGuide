@@ -251,35 +251,11 @@ export interface CoinDef {
   facts: { label: string; text: string; url: string }[];
 }
 
-export interface SportsbookRow {
-  margin: string;
-  markets: number;
-  /** Bet-settlement time, e.g. "< 2 min" — not a crypto/fiat distinction. */
-  settle: string;
-}
-
-/** Keyed by operator slug. */
-export type SportsbookData = Record<string, SportsbookRow>;
-
-export interface SportsMarket {
-  name: string;
-  mono: string;
-  tint: string;
-  note: string;
-  /** Operator with the best price/coverage for this market. */
-  best: string;
-  m2: string;
-  m3: string;
-}
-
 export interface EsportsTitle {
   name: string;
   mono: string;
   tint: string;
   note: string;
-  best: string;
-  m2: string;
-  m3: string;
 }
 
 export interface GuideRow {

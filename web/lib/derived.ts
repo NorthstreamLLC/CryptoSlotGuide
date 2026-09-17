@@ -11,7 +11,6 @@ import type {
   Provider,
   RtpReading,
   Slot,
-  SportsMarket,
   WalletOrExchangeRow,
 } from "./types";
 
@@ -51,7 +50,6 @@ export function counts(data: {
   providers: Provider[];
   walletRows: WalletOrExchangeRow[];
   exchangeRows: WalletOrExchangeRow[];
-  sportsMarkets: SportsMarket[];
   esportsTitles: EsportsTitle[];
   guideRows: GuideRow[];
   houseGames: HouseGame[];
@@ -67,7 +65,7 @@ export function counts(data: {
     wallets: data.walletRows.length,
     exchanges: data.exchangeRows.length,
     books: data.ops.filter((o) => o.sports).length,
-    markets: data.sportsMarkets.length + data.esportsTitles.length,
+    markets: data.esportsTitles.length,
     guides: data.guideRows.length,
     house: data.houseGames.length,
     fiat: data.fiatCasinos.length,

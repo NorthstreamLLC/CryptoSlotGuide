@@ -189,6 +189,53 @@
         ]
       },
       {
+        "title": "Sportsbook",
+        "facts": [
+          {
+            "label": "Sportsbook",
+            "value": "Yes, 1win has a sportsbook at 1win.com/betting with prematch, live and esports betting.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://1win.com/betting",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports",
+            "value": "Yes. The esports page names CS2, Dota 2, LoL and Valorant. The sitemap also lists Age of Empires, Halo, Heroes 3, Honor of Kings, Mobile Legends, Overwatch 2, Rainbow Six, Standoff 2, StarCraft: Brood War and StarCraft 2 esports pages.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://1win.com/betting/esport",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Cash-out",
+            "value": "Yes, for pre-match and live bets, both single and multiple, at the company's discretion. A multiple can only be cashed out as a whole.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://1win.com/rules",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports titles",
+            "chips": [
+              "CS2",
+              "Dota 2",
+              "League of Legends",
+              "Valorant",
+              "Age of Empires",
+              "Halo",
+              "Heroes 3",
+              "Honor of Kings",
+              "Mobile Legends",
+              "Overwatch",
+              "Rainbow Six",
+              "Standoff 2",
+              "StarCraft"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://1win.com/betting/esport",
+            "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
         "title": "Compliance",
         "facts": [
           {
@@ -341,6 +388,62 @@
             "value": "The first eligible deposit over $25 triggers the Welcome Package (help article dated 5 Mar 2025)",
             "sourcing": "editorial",
             "sourceUrl": "https://help.500.casino/en/articles/9239792-how-does-the-new-welcome-package-work",
+            "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
+        "title": "Sportsbook",
+        "facts": [
+          {
+            "label": "Sportsbook",
+            "value": "500 Casino has a Sportsbook ('Matchbetting') and a Sportsbook section in its help centre. Bets can be singles or combos and can mix sports and esports.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.500.casino/en/articles/5970868-how-does-matchbetting-work",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports",
+            "value": "Yes. Its help centre mentions esports betting and uses CS:GO match markets as its example. No full list of titles was found (the sports page is geo-blocked from the research location).",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.500.casino/en/articles/5970866-guide-to-matchbetting",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Cash-out",
+            "value": "Yes. The Sportsbook Terms describe Cash Out, which may be available for pre-match and live bets at the sportsbook's discretion.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://500.casino/terms-of-service/sportsbook",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Bet builder",
+            "value": "Yes. The Sportsbook Terms describe Bet Builder (multiple selections from different markets within the same event). Availability is at the sportsbook's discretion.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://500.casino/terms-of-service/sportsbook",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max payout",
+            "value": "No fixed maximum payout is published. The help centre says maximum win limits may be applied case by case and that there is no set limit amount (limits depend on the match, the tournament and the account's betting history).",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.500.casino/en/articles/5970868-how-does-matchbetting-work",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Sports offer",
+            "value": "Sportsbook-themed Welcome Package: 300% of the first eligible deposit (over $25) as rakeback boost, up to $15,000, plus a free sportsbook bet matching the deposit, up to $500. The deposit must be made within 7 days of registration. The freebet takes odds 1.6x–6x, and freebet winnings carry a 1x wager in the Sportsbook.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.500.casino/en/articles/9239792-how-does-the-new-welcome-package-work",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports titles",
+            "chips": [
+              "CS2"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.500.casino/en/articles/5970866-guide-to-matchbetting",
             "asOf": "2026-09-16"
           }
         ]
@@ -602,6 +705,32 @@
         ]
       },
       {
+        "title": "Sportsbook",
+        "facts": [
+          {
+            "label": "Sportsbook",
+            "value": "Yes. Acebet's Crypto Sportsbook is available in certain countries.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://acebet.co/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports",
+            "value": "Yes, but no game titles are named. The sports page is titled 'Sports & Esports Betting & Live Odds'.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://acebet.co/sports",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max payout",
+            "value": "EUR 100,000 per customer per day (00:00–23:59 GMT). This is a general Terms of Service clause, not one specific to sports.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://acebet.co/policies/terms-of-service",
+            "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
         "title": "Compliance",
         "facts": [
           {
@@ -763,6 +892,35 @@
         ]
       },
       {
+        "title": "Sportsbook",
+        "facts": [
+          {
+            "label": "Sportsbook",
+            "value": "BC.GAME has a sportsbook with pre-match and in-play odds.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bc.game/sports",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports",
+            "value": "Yes. BC.GAME's own betting guide site (betting.bc.game) lists Counter-Strike 2 and Dota 2 as esports categories and has a CS2 betting guide (published 7 Feb 2025). The official blog also has Valorant and Dota 2 betting guides, but those guides do not confirm the titles are currently offered.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://betting.bc.game/guidebook/how-to-bet-on-cs2-bc-game/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports titles",
+            "chips": [
+              "CS2",
+              "Dota 2"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://betting.bc.game/guidebook/how-to-bet-on-cs2-bc-game/",
+            "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
         "title": "Compliance",
         "facts": [
           {
@@ -903,6 +1061,63 @@
             "value": "$10 per bet in any game while a deposit bonus or free spins are active (bets from $0.10 to $10 count toward wagering).",
             "sourcing": "editorial",
             "sourceUrl": "https://docs.betfury.com/betfury/bonus-system/welcome-pack-terms-and-conditions",
+            "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
+        "title": "Sportsbook",
+        "facts": [
+          {
+            "label": "Sportsbook",
+            "value": "Yes, sports betting in crypto and some fiat currencies, minimum bet 0.1 USD/EUR",
+            "sourcing": "editorial",
+            "sourceUrl": "https://docs.betfury.com/betfury/sports-betting",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports",
+            "value": "Yes; its esports page names these titles and says 20+ titles are offered",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bf1.io/esports",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Cash-out",
+            "value": "Yes, may be available for pre-match and live bets, at the sportsbook's discretion",
+            "sourcing": "editorial",
+            "sourceUrl": "https://docs.betfury.com/betfury/terms-of-services/sports-betting-terms-and-conditions",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Bet builder",
+            "value": "Yes, Bet Builder (multiple markets within the same event)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://docs.betfury.com/betfury/terms-of-services/sports-betting-terms-and-conditions",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Sports offer",
+            "value": "No sports welcome or deposit offer found. It runs a standing Weekly Sport Bonus: up to $12,000 in free bets each week once a wager target is met, paid as 3 equal free bets",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bf1.io/promo/sports-bonuses",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports titles",
+            "chips": [
+              "CS2",
+              "Dota 2",
+              "League of Legends",
+              "Valorant",
+              "StarCraft",
+              "Overwatch",
+              "Honor of Kings",
+              "Arena of Valor",
+              "Warcraft 3"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://bf1.io/esports",
             "asOf": "2026-09-16"
           }
         ]
@@ -1096,6 +1311,46 @@
             "value": "Live dealer, table games and some other games are excluded; the full list of included games is shown in the bonus offer",
             "sourcing": "editorial",
             "sourceUrl": "https://betplay.io/en/info/promotions",
+            "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
+        "title": "Sportsbook",
+        "facts": [
+          {
+            "label": "Sportsbook",
+            "value": "Yes. It has a sportsbook with live streams and live betting. The site blocks fetching, so this comes from a Google snippet.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://betplay.io/en/sportsbook",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports",
+            "value": "Yes. Its news/blog section publishes esports odds, e.g. 'IEM Chengdu 2025 Futures Odds'. No list of esports titles was found on its own pages.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://betplay.io/en/news/iem-chengdu-2025-futures-odds",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Cash-out",
+            "value": "Yes. The sports betting rules say Cash Out may be offered for pre-match and live bets, the player can accept or reject it, and the sportsbook can change or withhold the offer. Cashed-out bets are not eligible for Comboboost.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://betplay.io/info/sports-betting-rules",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Bet builder",
+            "value": "Yes. The sports betting rules define Bet Builder as a bet on multiple markets of the same event.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://betplay.io/info/sports-betting-rules",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max payout",
+            "value": "The maximum accumulated winnings for Multiple Bets in one calendar day is 1 BTC (1,000,000 uBTC). No per-single-bet cap was found.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://betplay.io/info/sports-betting-rules",
             "asOf": "2026-09-16"
           }
         ]
@@ -1542,6 +1797,39 @@
         ]
       },
       {
+        "title": "Sportsbook",
+        "facts": [
+          {
+            "label": "Sportsbook",
+            "value": "Yes. Bluff's help centre has a Sportsbook section. From the US, bluff.com shows a predictions product and /sports returns 'page not found'.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://intercom.help/playlink/en/collections/12727939-sportsbook",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Cash-out",
+            "value": "Yes, on some bets. The help centre explains when Cash Out may be unavailable, such as some player-prop or live bets, or suspended markets.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://intercom.help/playlink/en/articles/11183306-why-is-cash-out-is-not-available-for-my-bet",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Bet builder",
+            "value": "Yes, as Bet Builder / Same-Game Multi, on eligible events.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://intercom.help/playlink/en/articles/14628469-bet-builder-same-game-multi-bets-at-bluff",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max payout",
+            "value": "USD 1,000,000 winnings cap, stated in a general help article about withdrawals. The article does not say whether it applies to sports specifically.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://intercom.help/playlink/en/articles/14536391-before-you-withdraw",
+            "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
         "title": "Compliance",
         "facts": [
           {
@@ -1745,6 +2033,69 @@
             "value": "The welcome package has no rollover. For promotional bonuses that do have wagering, slots count 100% and live casino and table games count 10%. Some excluded games count 0%.",
             "sourcing": "editorial",
             "sourceUrl": "https://www.cloudbet.com/en/help/terms",
+            "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
+        "title": "Sportsbook",
+        "facts": [
+          {
+            "label": "Sportsbook",
+            "value": "Cloudbet has a sportsbook at cloudbet.com/en/sports.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.cloudbet.com/en/sports",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports",
+            "value": "Yes. Cloudbet's esports page names Counter-Strike, Dota 2, FIFA, League of Legends, NBA2K, Rainbow Six, StarCraft and Valorant. The page title names CS2, LoL and Dota 2.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.cloudbet.com/en/esports",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Cash-out",
+            "value": "Yes, on selected live and pre-match bets. It depends on odds and liquidity and is not guaranteed for every bet.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.cloudbet.com/en/support/articles/103137-how-to-cash-out-a-bet",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Bet builder",
+            "value": "Yes. Bet Builder (same-game parlays) is offered pre-match only, for selected leagues in American football, baseball, basketball, soccer, tennis, rugby league, rugby union, ice hockey and cricket.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.cloudbet.com/en/support/articles/372750-how-to-place-a-same-game-parlay-with-bet-builder",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max payout",
+            "value": "No maximum-win figure is stated. Cloudbet's no-limits page says there are no limits on wins, but it also says each click has a maximum stake (bets can be repeated to build a bigger position) and that limits depend on market liquidity.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.cloudbet.com/en/lp/no-limits",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Sports offer",
+            "value": "Welcome Package worth up to $2,500 in rewards, covering both casino and sports: daily cash drops, weekly cash drops and 10% rakeback over the first 30 days. The help article says the weekly cash drops are earned through sports betting.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.cloudbet.com/en/support/articles/103253-how-do-i-claim-my-welcome-package",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports titles",
+            "chips": [
+              "CS2",
+              "Dota 2",
+              "EA Sports FC / FIFA",
+              "League of Legends",
+              "NBA 2K",
+              "Rainbow Six",
+              "StarCraft",
+              "Valorant"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.cloudbet.com/en/esports",
             "asOf": "2026-09-16"
           }
         ]
@@ -2161,6 +2512,51 @@
         ]
       },
       {
+        "title": "Sportsbook",
+        "facts": [
+          {
+            "label": "Sportsbook",
+            "value": "Yes. Cybet describes itself as a crypto casino and sportsbook, and has a sportsbook at cybet.com/sportsbook.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://guidebook.cybet.com/about-cybet/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports",
+            "value": "Yes. The guidebook names CS2, Dota 2, League of Legends and Valorant, and the Sportsbetting Rules (Betting Rules 2.0) have CS2, Dota 2 and Valorant rule sections.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://guidebook.cybet.com/solana-casino/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Cash-out",
+            "value": "Yes. Cash Out is defined in the Sportsbetting Rules linked from the cybet.com footer.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://s3.ap-south-1.amazonaws.com/cybet.com/BettingRules",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Bet builder",
+            "value": "Yes. Bet Builder is defined in the Sportsbetting Rules.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://s3.ap-south-1.amazonaws.com/cybet.com/BettingRules",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports titles",
+            "chips": [
+              "CS2",
+              "Dota 2",
+              "League of Legends",
+              "Valorant"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://guidebook.cybet.com/solana-casino/",
+            "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
         "title": "Compliance",
         "facts": [
           {
@@ -2359,6 +2755,34 @@
             "value": "$20",
             "sourcing": "editorial",
             "sourceUrl": "https://help.degen.com/en/articles/15558569-unlock-up-to-1-500-on-your-first-deposit",
+            "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
+        "title": "Sportsbook",
+        "facts": [
+          {
+            "label": "Sportsbook",
+            "value": "Yes, per the page metadata for degen.com/sports and a 'Sportsbook Policy' page, both found in the site's own app code. From the US, degen.com shows a free-to-play social casino instead, so the sportsbook could not be viewed.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://degen.com/sports",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports",
+            "value": "Only Counter-Strike appears, as a sports menu item in the site's app code. There is no explicit statement about esports.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://degen.com/sports?sport=counter-strike",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports titles",
+            "chips": [
+              "CS2"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://degen.com/sports?sport=counter-strike",
             "asOf": "2026-09-16"
           }
         ]
@@ -2643,6 +3067,63 @@
         ]
       },
       {
+        "title": "Sportsbook",
+        "facts": [
+          {
+            "label": "Sportsbook",
+            "value": "Yes, Dicey has a sportsbook at dicey.com/sports.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://dicey.com/sports",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports",
+            "value": "Yes. The esports lobby lists CS2, League of Legends, Dota 2, Valorant, Rainbow Six, Mobile Legends, King of Glory, Crossfire, Rocket League, CS2 Duels, eFootball, eBasketball and eCricket.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://dicey.com/esports",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Cash-out",
+            "value": "Yes, on selected events and markets, both pre-match and live, for singles, combos and SGPs. Only full cashout is offered, and it is available only on the listed sports.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.dicey.com/en/articles/15892292-how-to-cashout-your-sports-bet",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Bet builder",
+            "value": "Yes, as Same Game Parlays (SGPs), which Dicey says are also called bet builders.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.dicey.com/en/articles/15220417-same-game-parlays-at-dicey",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Sports offer",
+            "value": "Sports Welcome Bonus: 100% match on the first qualifying deposit up to $1,000. Minimum deposit is $20, and the wager requirement is 15x (deposit + bonus).",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.dicey.com/en/articles/16182871-how-does-the-sports-welcome-bonus-work",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports titles",
+            "chips": [
+              "CS2",
+              "League of Legends",
+              "Dota 2",
+              "Valorant",
+              "Rainbow Six",
+              "Mobile Legends",
+              "Honor of Kings",
+              "Crossfire",
+              "Rocket League"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://dicey.com/esports",
+            "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
         "title": "Compliance",
         "facts": [
           {
@@ -2743,6 +3224,25 @@
             "sourcing": "editorial",
             "sourceUrl": "https://duel.com/casino#leaderboard",
             "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Sportsbook",
+        "facts": [
+          {
+            "label": "Sportsbook",
+            "value": "Offers sports betting (Sports section at duel.com/sports; a 'Sports Betting Rules' page exists at /policies/sports-betting-rules)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://duel.com/sports",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports",
+            "value": "Yes, esports betting is offered; no specific titles named in the site text that could be read",
+            "sourcing": "editorial",
+            "sourceUrl": "https://duel.com/sports",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -2929,6 +3429,50 @@
         ]
       },
       {
+        "title": "Sportsbook",
+        "facts": [
+          {
+            "label": "Sportsbook",
+            "value": "Duelbits has a sportsbook at duelbits.com/en/sportsbook.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://duelbits.com/en/sportsbook",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports",
+            "value": "Yes. A Duelbits blog guide names CS2, Dota 2 and League of Legends. The Duelbits blog also has betting guides for CS2 (IEM Cologne 2026) and Rocket League (RLCS Paris Major 2026).",
+            "sourcing": "editorial",
+            "sourceUrl": "https://duelbits.com/blog/guide/duelbits-review/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Cash-out",
+            "value": "Yes, wherever the Cash Out button is shown. Duelbits' betting rules say it is available only on selected markets and events, pre-match and live.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.duelbits.com/en/articles/6505340-cash-out",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Bet builder",
+            "value": "Yes. Duelbits' own Betting Rules and Policies PDF has a Bet Builder section: if any selection is voided, the whole bet is void. The PDF is hosted on Duelbits' Contentful asset CDN (assets.ctfassets.net), not on duelbits.com. Duelbits blog snippets also mention Bet Builder but could not be fetched.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://assets.ctfassets.net/im9yudtc78wp/4OboyHmjneSScIQIBDq93x/cb8f79993a1f96d32a462cb00cbb8db7/RULESNEW.pdf",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports titles",
+            "chips": [
+              "CS2",
+              "Dota 2",
+              "League of Legends"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://duelbits.com/blog/guide/duelbits-review/",
+            "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
         "title": "Compliance",
         "facts": [
           {
@@ -3061,6 +3605,51 @@
         ]
       },
       {
+        "title": "Sportsbook",
+        "facts": [
+          {
+            "label": "Sportsbook",
+            "value": "Yes, Dustbit has a sportsbook at dustbit.com/sports.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://dustbit.com/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports",
+            "value": "Yes. The E-Sports section of the Sports Rules covers Dota 2, League of Legends, CS2 and Valorant.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://dustbit.com/legal/sportsbook-rules",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Cash-out",
+            "value": "Yes. Cash-Out and Partial Cash-Out are offered for pre-live and live markets, on single and combo bets but not system bets.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://dustbit.com/legal/sportsbook-rules",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Bet builder",
+            "value": "Yes, called Match Parlay (Bet Builder).",
+            "sourcing": "editorial",
+            "sourceUrl": "https://dustbit.com/legal/sportsbook-rules",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports titles",
+            "chips": [
+              "Dota 2",
+              "League of Legends",
+              "CS2",
+              "Valorant"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://dustbit.com/legal/sportsbook-rules",
+            "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
         "title": "Compliance",
         "facts": [
           {
@@ -3183,6 +3772,57 @@
             "value": "$10 for the 100% first-deposit tier ($10–$200) and $200 for the 150% tier ($200–$1,000); second and third deposits need at least $10",
             "sourcing": "editorial",
             "sourceUrl": "https://flush.com/faq/bonuses/",
+            "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
+        "title": "Sportsbook",
+        "facts": [
+          {
+            "label": "Sportsbook",
+            "value": "Yes, Flush has a sportsbook at flush.com/sports.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://flush.com/faq/games-sports/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports",
+            "value": "Yes, with ten esports titles.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://flush.com/sports/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Cash-out",
+            "value": "Yes. Cash Out is defined in the Sports Betting T&Cs.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://flush.com/terms-sports/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Bet builder",
+            "value": "Yes.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://flush.com/faq/games-sports/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports titles",
+            "chips": [
+              "CS2",
+              "Dota 2",
+              "League of Legends",
+              "Valorant",
+              "PUBG",
+              "Rainbow Six",
+              "Call of Duty",
+              "Mobile Legends",
+              "Teamfight Tactics",
+              "World of Tanks"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://flush.com/sports/",
             "asOf": "2026-09-16"
           }
         ]
@@ -3326,6 +3966,72 @@
         ]
       },
       {
+        "title": "Sportsbook",
+        "facts": [
+          {
+            "label": "Sportsbook",
+            "value": "Yes. The sportsbook covers football, tennis, basketball, ice hockey and MMA with in-play markets, and the same DOGE balance is used for the casino and the sportsbook.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://fortunejack.com/best-dogecoin-casino/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports",
+            "value": "Yes. It names CS2, Dota 2, League of Legends and Valorant in its esports book. Its sportsbook navigation also lists Counter Strike, Dota 2, League of Legends and Valorant.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://fortunejack.com/best-dogecoin-casino/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Provider",
+            "value": "Betby. The sportsbook is listed as the game 'Sportsbook' by provider Betby, and the sportsbook terms point to 'Betby Games Almanac' as the results page for esports simulation events.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://fortunejack.com/game/betby.sportsbook",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Cash-out",
+            "value": "Yes. The sportsbook terms say Cash Out may be offered for pre-match and live bets, and the sportsbook can change or withdraw Cash Out offers at its discretion.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://fortunejack.com/faq/sportsbook",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Bet builder",
+            "value": "Yes. Bet Builder combines several markets within the same event. There is a dedicated Bet Builder promotion page, and the sportsbook terms (section 4.6) say availability is at the sportsbook's discretion.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://fortunejack.com/promotions/bet-builder",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max payout",
+            "value": "Sources disagree. The general Terms & Conditions cap winnings on any single bet or spin at EUR 300,000 (the 'Maximum Win Limit'); this clause is not specific to sports. A Google snippet of the sportsbook terms quoted a sportsbook cap of EUR 100,000 per single bet, but that clause is not on the sportsbook terms page served on 2026-09-16. The current sportsbook terms only say limits and maximum winnings per bet or market may be changed.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://fortunejack.com/faq/terms_and_conditions",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Sports offer",
+            "value": "100% Sports Welcome Bonus, paid as a Freebet. A June 14, 2024 blog post described it as a 100% Freebet up to $300 on the first deposit; the current promotions page does not state a cap.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://fortunejack.com/promotions",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports titles",
+            "chips": [
+              "CS2",
+              "Dota 2",
+              "League of Legends",
+              "Valorant"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://fortunejack.com/best-dogecoin-casino/",
+            "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
         "title": "Compliance",
         "facts": [
           {
@@ -3446,6 +4152,59 @@
             "value": "Set per bonus and shown on each one rather than published",
             "sourcing": "editorial",
             "sourceUrl": "https://help.gamba.com/en/articles/14075964-deposit-bonuses-on-gamba",
+            "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
+        "title": "Sportsbook",
+        "facts": [
+          {
+            "label": "Sportsbook",
+            "value": "Yes, Gamba has a sportsbook at gamba.com/sports.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://gamba.com/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports",
+            "value": "Yes. Gamba's Sports Rules have separate rule sections for CS:GO, Valorant, Dota 2, League of Legends and King of Glory. The homepage sports menu links to CS2 and DOTA 2.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://gamba.com/policies/sportsbook",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Cash-out",
+            "value": "Yes. Live Cashout is offered, but it is not always available. Bet Builder and player prop bets cannot be cashed out.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.gamba.com/en/articles/8271639-why-can-t-i-cash-out-my-sports-bet",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Bet builder",
+            "value": "Yes. The homepage lists 'Parlay Builders' as a sportsbook feature, and the help centre mentions Bet Builder bets.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.gamba.com/en/articles/8271639-why-can-t-i-cash-out-my-sports-bet",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max payout",
+            "value": "No figure is stated. The daily multiple-bet winnings line in the Sports Rules is left blank. The help centre says limits depend on the player's tier and the event's market tier.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.gamba.com/en/articles/14884430-sports-betting-limits",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports titles",
+            "chips": [
+              "CS2",
+              "Valorant",
+              "Dota 2",
+              "League of Legends",
+              "Honor of Kings"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://gamba.com/policies/sportsbook",
             "asOf": "2026-09-16"
           }
         ]
@@ -3576,6 +4335,50 @@
         ]
       },
       {
+        "title": "Sportsbook",
+        "facts": [
+          {
+            "label": "Sportsbook",
+            "value": "Gamdom has a sportsbook (gamdom.com/sports). Its help centre has a guide to sports betting.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.gamdom.com/en/articles/13238563-sports-betting-how-to-bet-key-details-features",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports",
+            "value": "Yes. The help centre names League of Legends, Dota 2 and Counter-Strike.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.gamdom.com/en/articles/13239748-getting-started-at-gamdom",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Cash-out",
+            "value": "Yes, but only for certain events and markets: in-play, and for some pre-match bets.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.gamdom.com/en/articles/13238563-sports-betting-how-to-bet-key-details-features",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max payout",
+            "value": "Each event and market has its own maximum payout per bet, and winnings above it are capped. No figure is stated.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.gamdom.com/en/articles/13238563-sports-betting-how-to-bet-key-details-features",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports titles",
+            "chips": [
+              "League of Legends",
+              "Dota 2",
+              "CS2"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.gamdom.com/en/articles/13239748-getting-started-at-gamdom",
+            "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
         "title": "Compliance",
         "facts": [
           {
@@ -3681,6 +4484,58 @@
             "value": "$20",
             "sourcing": "editorial",
             "sourceUrl": "https://www.goated.com/help/article/16424322-100-first-deposit-bonus-up-to-1-000-usd",
+            "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
+        "title": "Sportsbook",
+        "facts": [
+          {
+            "label": "Sportsbook",
+            "value": "Offers a crypto sportsbook with live in-play odds",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.goated.com/sports",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports",
+            "value": "Yes; its sportsbook rules have sections for these esports titles",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.goated.com/policies/sports",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Cash-out",
+            "value": "Yes, on selected events and markets, pre-match and live, for singles and multis; not available for Same Game Multi bets",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.goated.com/policies/sports",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Bet builder",
+            "value": "Yes, Same Game Multi (Bet Builder), including combined SGMs",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.goated.com/policies/sports",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports titles",
+            "chips": [
+              "CS2",
+              "Valorant",
+              "Dota 2",
+              "League of Legends",
+              "Honor of Kings",
+              "Mobile Legends",
+              "Wild Rift",
+              "Rainbow Six",
+              "Call of Duty",
+              "Crossfire",
+              "EA Sports FC / FIFA"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.goated.com/policies/sports",
             "asOf": "2026-09-16"
           }
         ]
@@ -3792,6 +4647,53 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.housebets.com/en/articles/822162-do-bonuses-have-wagering-requirements-or-an-expiry",
             "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Sportsbook",
+        "facts": [
+          {
+            "label": "Sportsbook",
+            "value": "Yes. The sportsbook is at housebets.com/sports, operated by Bridge Technologies B.V.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.housebets.com/legal/sportsbook-rules",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports",
+            "value": "Yes, the site has an Esports sports-menu link. No game titles were found in the text.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.housebets.com/sports/109",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Provider",
+            "value": "Betby",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.housebets.com/legal/sportsbook-rules",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Cash-out",
+            "value": "Yes, where available.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.housebets.com/legal/sportsbook-rules",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max payout",
+            "value": "There is no universal maximum win cap. Limits are set per market.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.housebets.com/legal/sportsbook-rules",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Sports offer",
+            "value": "There is no standing sports bonus. Sports bets earn XP and leaderboard progress, and any sports reload is offered case by case.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.housebets.com/en/articles/822179-does-housebets-offer-sports-bonuses",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -3951,6 +4853,59 @@
             "value": "$20 for the regular 100% up to $1,000 offer; other offers set their own",
             "sourcing": "editorial",
             "sourceUrl": "https://help.jackpot.bet/en/articles/9607235-deposit-bonuses-terms-conditions",
+            "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
+        "title": "Sportsbook",
+        "facts": [
+          {
+            "label": "Sportsbook",
+            "value": "Yes, jackpot.bet has a sportsbook with live and prematch betting.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://jackpot.bet/sportsbook",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports",
+            "value": "Yes. The sportsbook menu has an E-Sports category, and the linked Sports Rules PDF has rules or markets for Counter Strike: GO, Dota2, League of Legends, Call of Duty and Overwatch.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://jackpot.bet/assets/legal/sport-settlement-rules.pdf",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Provider",
+            "value": "Altenar. The name is taken from the embedded title of the Sports Rules PDF linked in the site footer; the page text does not name a provider.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://jackpot.bet/assets/legal/sport-settlement-rules.pdf",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Cash-out",
+            "value": "Yes. Players can settle bets early with Cash-Out, subject to company approval.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://jackpot.bet/trust?tab=sport-tos",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Bet builder",
+            "value": "Yes. The Sports Rules PDF has a Bet Builder section.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://jackpot.bet/assets/legal/sport-settlement-rules.pdf",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports titles",
+            "chips": [
+              "CS2",
+              "Dota 2",
+              "League of Legends",
+              "Call of Duty",
+              "Overwatch"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://jackpot.bet/assets/legal/sport-settlement-rules.pdf",
             "asOf": "2026-09-16"
           }
         ]
@@ -4517,6 +5472,52 @@
         ]
       },
       {
+        "title": "Sportsbook",
+        "facts": [
+          {
+            "label": "Sportsbook",
+            "value": "Yes, MetaWin Sports covers 25+ sports.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://metawin.com/hub/sports/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports",
+            "value": "Yes. MetaWin names CS2, League of Legends, Dota 2, Valorant and Rainbow Six.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://metawin.com/hub/sports/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Bet builder",
+            "value": "Yes, same-game parlays are offered (stated on the Super Bowl betting page).",
+            "sourcing": "editorial",
+            "sourceUrl": "https://metawin.com/hub/sports/american-football/super-bowl/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max payout",
+            "value": "Sportsbook net winnings are capped at $100,000 (USD) per customer per calendar day (00:00–23:59 CET/CEST), across all sports, markets and bet types. Separately, the maximum win on any wager is capped at $1,500,000. The T&Cs say they were updated in January 2026.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://metawin.com/terms-and-conditions/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports titles",
+            "chips": [
+              "CS2",
+              "League of Legends",
+              "Dota 2",
+              "Valorant",
+              "Rainbow Six"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://metawin.com/hub/sports/",
+            "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
         "title": "Compliance",
         "facts": [
           {
@@ -4746,6 +5747,59 @@
         ]
       },
       {
+        "title": "Sportsbook",
+        "facts": [
+          {
+            "label": "Sportsbook",
+            "value": "Yes. Qzino describes itself as a crypto casino and sportsbook, and its canonical sportsbook URL is qzino.com/sports, which redirects to qzino.ai/sports.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://qzino.ai/llms.txt",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports",
+            "value": "Yes. The Sports Betting Rules (dated April 23, 2026) have game-specific rules for Counter-Strike 2, Valorant, Dota 2, League of Legends and King of Glory. The sports menu also links Counter-Strike and League of Legends.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://qzino.tech/docs/Qzino_Sports_Betting_Rules.pdf",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Cash-out",
+            "value": "Yes. Cash Out is an optional offer and may be available for both pre-match and live bets.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://qzino.tech/docs/Qzino_Sports_Betting_Rules.pdf",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Bet builder",
+            "value": "Yes. The Sports Betting Rules define Bet Builder, but availability is at Qzino's discretion.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://qzino.tech/docs/Qzino_Sports_Betting_Rules.pdf",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max payout",
+            "value": "USD 100,000 in total winnings from multiple bets per calendar day.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://qzino.tech/docs/Qzino_Sports_Betting_Rules.pdf",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports titles",
+            "chips": [
+              "CS2",
+              "Valorant",
+              "Dota 2",
+              "League of Legends",
+              "Honor of Kings"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://qzino.tech/docs/Qzino_Sports_Betting_Rules.pdf",
+            "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
         "title": "Compliance",
         "facts": [
           {
@@ -4934,6 +5988,51 @@
         ]
       },
       {
+        "title": "Sportsbook",
+        "facts": [
+          {
+            "label": "Sportsbook",
+            "value": "Rainbet has a sportsbook section at /sportsbook, with live matches and sports including American football, football, baseball, boxing, tennis, ice hockey, MMA and basketball.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://rainbet.com/sportsbook",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports",
+            "value": "Yes. The sportsbook menu lists CS2, League of Legends, Dota 2 and Valorant. The Sportsbook Rules also include esports sections.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://rainbet.com/sportsbook",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Cash-out",
+            "value": "Yes. The Sportsbook Rules describe Cash Out, which may be available for pre-match and live bets at the sportsbook's discretion.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://rainbet.com/sportsbook-rules",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Bet builder",
+            "value": "Yes. The Sportsbook Rules describe Bet Builder (multiple selections from different markets within the same event). Availability is at the sportsbook's discretion.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://rainbet.com/sportsbook-rules",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports titles",
+            "chips": [
+              "CS2",
+              "League of Legends",
+              "Dota 2",
+              "Valorant"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://rainbet.com/sportsbook",
+            "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
         "title": "Compliance",
         "facts": [
           {
@@ -5094,6 +6193,48 @@
         ]
       },
       {
+        "title": "Sportsbook",
+        "facts": [
+          {
+            "label": "Sportsbook",
+            "value": "Yes, offers sports betting (help article dated March 19, 2024); all sports turnover counted 3x toward VIP progress",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.razed.com/en/articles/9086608-sports-betting",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports",
+            "value": "Yes, esports betting offered; official CS2 partnership with HEROIC (razed.com blocks fetching, so this is from search snippets)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://razed.com/fr/promotions/heroic",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Cash-out",
+            "value": "Yes, on selected events and markets, pre-match and live, for singles and multis",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.razed.com/en/articles/9086615-why-is-cash-out-not-available",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Bet builder",
+            "value": "Yes, Bet Builder on sports marked with a Bet Builder tab",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.razed.com/policy/sports-terms/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports titles",
+            "chips": [
+              "CS2"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://razed.com/fr/promotions/heroic",
+            "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
         "title": "Compliance",
         "facts": [
           {
@@ -5201,6 +6342,47 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.rollbit.com/",
             "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Sportsbook",
+        "facts": [
+          {
+            "label": "Sportsbook",
+            "value": "Rollbit runs a sportsbook at rollbit.com/sports (the page blocks fetching; the Rollbit blog links to it).",
+            "sourcing": "editorial",
+            "sourceUrl": "https://blog.rollbit.com/sports-event-of-the-week-esports/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports",
+            "value": "Yes. A Rollbit blog post names Counter-Strike: Global Offensive, Dota 2, League of Legends, Valorant, StarCraft, Rainbow Six Siege and Arena of Valor. The post is undated and uses the older CS:GO name. Other Rollbit blog posts cover CS2 betting tournaments.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://blog.rollbit.com/sports-event-of-the-week-esports/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Cash-out",
+            "value": "Cash out is offered on some bets but not on every market. The cash-out price is lower than the odds you would get by letting the bet run.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.rollbit.com/en/articles/6221249-why-is-cashout-not-available",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports titles",
+            "chips": [
+              "CS2",
+              "Dota 2",
+              "League of Legends",
+              "Valorant",
+              "StarCraft",
+              "Rainbow Six",
+              "Arena of Valor"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://blog.rollbit.com/sports-event-of-the-week-esports/",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -5411,6 +6593,57 @@
         ]
       },
       {
+        "title": "Sportsbook",
+        "facts": [
+          {
+            "label": "Sportsbook",
+            "value": "Roobet has a sportsbook with pre-match sports betting and a Sports Betting section in its help centre.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://roobet.com/sports",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports",
+            "value": "Yes. Its sports page names Counter-Strike 2 and League of Legends and says there are more. It also has dedicated pages for CS2, Dota 2 and League of Legends.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://roobet.com/sports",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Cash-out",
+            "value": "Yes. The Sportsbook Policy (last updated 9 June 2026) defines Cash Out. Roobet may offer, adjust, suspend or withdraw Cash Out offers at its sole discretion.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://roobet.com/sportsbook-policy",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Bet builder",
+            "value": "Yes. The Sportsbook Policy defines Bet Builder, and the sportsbook may amend, suspend or remove the feature at any time.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://roobet.com/sportsbook-policy",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max payout",
+            "value": "Winnings are capped at USD 500,000. The clause refers to wins that would pay out more than that; it does not say whether the cap is per bet or per day. Maximum odds are x1000. (Sportsbook Policy, last updated 9 June 2026)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://roobet.com/sportsbook-policy",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports titles",
+            "chips": [
+              "CS2",
+              "League of Legends",
+              "Dota 2"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://roobet.com/sports",
+            "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
         "title": "Compliance",
         "facts": [
           {
@@ -5528,6 +6761,64 @@
             "value": "Each bet counts by the game's house edge against a 4% base (wager × edge ÷ 0.04). Originals, slots, live casino, game shows, table games and instant win are allowed, but many individual games are blocked and marked in the app",
             "sourcing": "editorial",
             "sourceUrl": "https://www.shock.com/policies/bonus-terms",
+            "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
+        "title": "Sportsbook",
+        "facts": [
+          {
+            "label": "Sportsbook",
+            "value": "Yes, Shock has a sportsbook at shock.com/sportsbook and publishes Sportsbook rules.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.shock.com/policies/sportsbook",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports",
+            "value": "Yes. The Sportsbook rules have esports sections, including Counter-Strike 2, Dota 2, Valorant, League of Legends, Mobile Legends: Bang Bang, Wild Rift, Deadlock, Rainbow Six: Siege, Marvel Rivals, Overwatch 2, Rocket League, Standoff 2 and battle-royale titles.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.shock.com/policies/sportsbook",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Cash-out",
+            "value": "Yes, for both pre-match and live bets, at the sportsbook's discretion.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.shock.com/policies/sportsbook",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Bet builder",
+            "value": "Yes, at the sportsbook's discretion.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.shock.com/policies/sportsbook",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports titles",
+            "chips": [
+              "CS2",
+              "Dota 2",
+              "Valorant",
+              "League of Legends",
+              "Mobile Legends",
+              "Wild Rift",
+              "Deadlock",
+              "Rainbow Six",
+              "Marvel Rivals",
+              "Overwatch",
+              "Rocket League",
+              "Standoff 2",
+              "Call of Duty",
+              "PUBG",
+              "Free Fire",
+              "Fortnite",
+              "Apex Legends"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.shock.com/policies/sportsbook",
             "asOf": "2026-09-16"
           }
         ]
@@ -5672,6 +6963,64 @@
         ]
       },
       {
+        "title": "Sportsbook",
+        "facts": [
+          {
+            "label": "Sportsbook",
+            "value": "Shuffle has a crypto sportsbook with pre-match and live betting.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://shuffle.com/sports?section=all",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports",
+            "value": "Yes. Shuffle says it covers more than twenty titles. Its esports page names League of Legends, Counter-Strike 2, Dota 2, Valorant, Rocket League, Fortnite, StarCraft and Mobile Legends, plus eFootball and eCricket.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://shuffle.com/sports/esports",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Cash-out",
+            "value": "Yes, on eligible markets, but it is not guaranteed. The sports rules say Cash Out is not available on Same-Game Multis or outright markets.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://shuffle.com/info/sports",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Bet builder",
+            "value": "Yes, as Same-Game Multis on eligible markets. All legs must win.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://shuffle.com/sports?section=all",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max payout",
+            "value": "A Maximum Win Limit of USD 500,000 applies to all sports bets. The rules set a customer's maximum daily winnings at US$500,000 unless Shuffle has agreed otherwise. The rules page shows no date.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://shuffle.com/info/sports",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports titles",
+            "chips": [
+              "League of Legends",
+              "CS2",
+              "Dota 2",
+              "Valorant",
+              "Rocket League",
+              "Fortnite",
+              "StarCraft",
+              "Mobile Legends",
+              "EA Sports FC / FIFA",
+              "eCricket"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://shuffle.com/sports/esports",
+            "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
         "title": "Compliance",
         "facts": [
           {
@@ -5788,6 +7137,73 @@
         ]
       },
       {
+        "title": "Sportsbook",
+        "facts": [
+          {
+            "label": "Sportsbook",
+            "value": "Yes, Solcasino offers a full sportsbook.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://docs.solcasino.io/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports",
+            "value": "Yes. The Sportsbook T&Cs have esports rules for Counter-Strike 2, Valorant, Dota 2, League of Legends and King of Glory, plus FIFA, eBasketball, eNBA, eFighting and eTennis.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://docs.solcasino.io/rules-and-conditions/sportsbook-terms-and-conditions",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Provider",
+            "value": "Betby",
+            "sourcing": "editorial",
+            "sourceUrl": "https://docs.solcasino.io/rules-and-conditions/terms-and-condition",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Cash-out",
+            "value": "Yes. The Sportsbook T&Cs define Cash Out as an offer the sportsbook makes to the player, who can accept or reject it.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://docs.solcasino.io/rules-and-conditions/sportsbook-terms-and-conditions",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Bet builder",
+            "value": "Yes. The Sportsbook T&Cs define Bet Builder, but availability is at the sportsbook's discretion.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://docs.solcasino.io/rules-and-conditions/sportsbook-terms-and-conditions",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max payout",
+            "value": "The Sportsbook T&Cs say there is no limit on total daily winnings from multiple bets. The sportsbook may still limit bet or stake amounts at its discretion.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://docs.solcasino.io/rules-and-conditions/sportsbook-terms-and-conditions",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Sports offer",
+            "value": "This is a free sports bet promotion, not a deposit bonus, and no amount is given. The cap changes with current promotions, and the free bet expires after 7 days.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://docs.solcasino.io/rules-and-conditions/free-sports-bet-promotion",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports titles",
+            "chips": [
+              "CS2",
+              "Valorant",
+              "Dota 2",
+              "League of Legends",
+              "Honor of Kings"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://docs.solcasino.io/rules-and-conditions/sportsbook-terms-and-conditions",
+            "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
         "title": "Compliance",
         "facts": [
           {
@@ -5892,6 +7308,59 @@
             "sourcing": "editorial",
             "sourceUrl": "https://spartans.com/how-cashrake-works",
             "asOf": "2026-09-15"
+          }
+        ]
+      },
+      {
+        "title": "Sportsbook",
+        "facts": [
+          {
+            "label": "Sportsbook",
+            "value": "Yes, the sportsbook is at spartans.com/sports/odds88.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://spartans.com/help-center/sportsbook-rules-odds88",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports",
+            "value": "The Sportsbook Rules (Odds88) have esports rules for Counter-Strike 2, Dota 2, Valorant, League of Legends, Call of Duty and others. The sports lobby menu seen did not list esports.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://spartans.com/help-center/sportsbook-rules-odds88",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Provider",
+            "value": "Odds88. This is the label Spartans uses for its sportsbook section and rules page.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://spartans.com/help-center/sportsbook-rules-odds88",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Cash-out",
+            "value": "Yes. Cash Out may be available for pre-match and live bets.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://spartans.com/help-center/sportsbook-rules-odds88",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Bet builder",
+            "value": "Yes, at the sportsbook's discretion.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://spartans.com/help-center/sportsbook-rules-odds88",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports titles",
+            "chips": [
+              "CS2",
+              "Dota 2",
+              "Valorant",
+              "League of Legends",
+              "Call of Duty"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://spartans.com/help-center/sportsbook-rules-odds88",
+            "asOf": "2026-09-16"
           }
         ]
       },
@@ -6090,6 +7559,68 @@
         ]
       },
       {
+        "title": "Sportsbook",
+        "facts": [
+          {
+            "label": "Sportsbook",
+            "value": "Sportsbet.io offers sports betting. Its help centre publishes maximum-winnings limits for each sport.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://sportsbet.io/help-centre/help-getting-started/help-getting-started-my-bets/sports-maximum-winnings",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports",
+            "value": "Yes. Its esports betting page names League of Legends (including LCK), Dota 2, Counter-Strike (listed as CS:GO), StarCraft 2, VALORANT, and the virtual sports titles NBA 2K and FIFA/EA Sports FC.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://sportsbet.io/sports/esports-betting",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Cash-out",
+            "value": "Yes. Cash Out lets players settle a bet before the event ends. It is not available for all markets or events, and the auto-accept threshold is 2%.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://sportsbet.io/help-centre/help-our-features/help-our-features-cashout/what-is-cash-out",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Bet builder",
+            "value": "Yes. Bet Builder combines selections from a single game into one wager and needs at least two selections.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://sportsbet.io/blog/sportsbet-tips/bet-builder-betting-tips",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max payout",
+            "value": "Maximum winnings apply per sport in any 24-hour period, are quoted in EUR and exclude stake (VIPs: as agreed). The highest caps are €1,000,000 per single bet: top football (international fixtures, UCL/UEL, EPL, Ligue 1, Bundesliga, Serie A, La Liga), tennis Grand Slams and the Super Bowl. NBA is €500,000. Esports top competitions (LoL, Dota, CS) are €100,000. 'Other Sports' is €10,000. On a multiple, the lowest limit applies.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://sportsbet.io/help-centre/help-getting-started/help-getting-started-my-bets/sports-maximum-winnings",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Sports offer",
+            "value": "Champions Welcome Bonus – Sports: 100% up to 300 USDT with a minimum deposit of 10 USDT. New players choose either the Sports or the Casino version.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://sportsbet.io/promotions/2025-04-welcome-champion",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports titles",
+            "chips": [
+              "League of Legends",
+              "Dota 2",
+              "CS2",
+              "StarCraft",
+              "Valorant",
+              "NBA 2K",
+              "EA Sports FC / FIFA"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://sportsbet.io/sports/esports-betting",
+            "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
         "title": "Compliance",
         "facts": [
           {
@@ -6227,6 +7758,64 @@
         ]
       },
       {
+        "title": "Sportsbook",
+        "facts": [
+          {
+            "label": "Sportsbook",
+            "value": "Stake runs a sportsbook covering sports and esports.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://stake.com/sports/home",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports",
+            "value": "Yes. The esports page names Call of Duty, CS2, CS2 Duels, Dota 2, Dota 2 Duels, FIFA, League of Legends, Madden, Mobile Legends, NBA2K, Overwatch 2 and Valorant, and says there are more. The page blocked fetching, so this comes from a search snippet.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://stake.com/sports/esports",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Cash-out",
+            "value": "Yes, on eligible bets. Cashout may not be available on some markets or events. It is not available on Same Game Multi bets, and on player-prop bets it is available pre-match only.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.stake.com/en/articles/4872560-why-is-cashout-not-available-for-my-bet",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Bet builder",
+            "value": "Yes, as Same Game Multi. The help article says it is popular for the NBA, NFL, MLB and NHL. All selections must win.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.stake.com/en/articles/9949694-what-is-a-same-game-multi",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max payout",
+            "value": "The only figure found is in the horse racing rules: payouts on exotic racing bets are capped at USD 100k per account per race. No general sportsbook cap was found, because stake.com/policies/sportsbook blocks fetching.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://stake.com/policies/racing-rules",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports titles",
+            "chips": [
+              "Call of Duty",
+              "CS2",
+              "Dota 2",
+              "EA Sports FC / FIFA",
+              "League of Legends",
+              "Madden",
+              "Mobile Legends",
+              "NBA 2K",
+              "Overwatch",
+              "Valorant"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://stake.com/sports/esports",
+            "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
         "title": "Compliance",
         "facts": [
           {
@@ -6340,6 +7929,39 @@
             "value": "None: its rewards come from rakeback paid out as weekly, monthly and level-up bonuses, with no deposit-bonus article in its help centre",
             "sourcing": "editorial",
             "sourceUrl": "https://intercom.help/thrill/en/articles/13545285-what-is-rakeback",
+            "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
+        "title": "Sportsbook",
+        "facts": [
+          {
+            "label": "Sportsbook",
+            "value": "Yes. The help centre has a Sportsbook collection with general rules, bet types, limits, promotions and early payout articles.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://intercom.help/thrill/en/articles/10587465-sportsbook-general-rules",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports",
+            "value": "Yes, according to the sports page title. The sports page is geo-blocked from our location, and no esports titles were found on its own pages.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://thrill.com/es/sports",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Cash-out",
+            "value": "Yes. You can settle bets early at the offered rate, but availability isn't guaranteed. There is also a separate 'Early Payout' feature (help article dated May 29, 2025).",
+            "sourcing": "editorial",
+            "sourceUrl": "https://intercom.help/thrill/en/articles/11464076-sportsbook-bet-types",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Bet builder",
+            "value": "Yes. Bet Builder creates custom bets from a single fixture, and all selected outcomes must happen.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://intercom.help/thrill/en/articles/11464076-sportsbook-bet-types",
             "asOf": "2026-09-16"
           }
         ]
@@ -6803,6 +8425,44 @@
         ]
       },
       {
+        "title": "Sportsbook",
+        "facts": [
+          {
+            "label": "Sportsbook",
+            "value": "Vave runs a sportsbook (pre-match section at vave.com/prematch). Its blog says it covers over 30 sports and esports.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://blog.vave.com/betting/vave-casino-sports-betting-options-odds-tips/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports",
+            "value": "Yes. Its blog (published 2024-09-13, updated 2025-04-04) names CS:GO, Dota 2, League of Legends and Call of Duty. A separate blog post (2024-07-25) covers CS2 betting markets at Vave.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://blog.vave.com/betting/vave-casino-sports-betting-options-odds-tips/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Sports offer",
+            "value": "Blog guide (updated 2025-02-12): the sports welcome offer is a 100% free bet up to 500 USDT on a minimum 20 USDT deposit, with 10x wagering. The bonus must be used within 14 days and the free bet within 7 days. This could not be checked on the live promotions page (geo-blocked).",
+            "sourcing": "editorial",
+            "sourceUrl": "https://blog.vave.com/vave-guides/guide-to-vave-crypto-casino-bonuses/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports titles",
+            "chips": [
+              "CS2",
+              "Dota 2",
+              "League of Legends",
+              "Call of Duty"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://blog.vave.com/betting/vave-casino-sports-betting-options-odds-tips/",
+            "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
         "title": "Compliance",
         "facts": [
           {
@@ -6988,6 +8648,25 @@
         ]
       },
       {
+        "title": "Sportsbook",
+        "facts": [
+          {
+            "label": "Sportsbook",
+            "value": "Yes, Wager has a sportsbook at wager.com/sports.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://wager.com/sports/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Provider",
+            "value": "Betby (from the sports page's meta description).",
+            "sourcing": "editorial",
+            "sourceUrl": "https://wager.com/sports/",
+            "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
         "title": "Compliance",
         "facts": [
           {
@@ -7144,6 +8823,25 @@
         ]
       },
       {
+        "title": "Sportsbook",
+        "facts": [
+          {
+            "label": "Sportsbook",
+            "value": "Yes. Whale's T&Cs refer to its sportsbook, and the page title of whale.io/sportsbook is 'Crypto Sportsbook - Bet on Sports & eSports'.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://whale.io/terms-and-conditions",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports",
+            "value": "Yes, according to the page title of the sportsbook page. No game titles are named.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://whale.io/sportsbook",
+            "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
         "title": "Compliance",
         "facts": [
           {
@@ -7243,6 +8941,35 @@
             "value": "None found: its help centre's Rewards & Bonuses section lists only VIP rewards (rakeback, reloads, lossback, free spins, monthly and quarterly bonuses)",
             "sourcing": "editorial",
             "sourceUrl": "https://help.winna.com/en/collections/11549842-rewards-bonuses",
+            "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
+        "title": "Sportsbook",
+        "facts": [
+          {
+            "label": "Sportsbook",
+            "value": "Yes. The homepage describes a sportsbook with 30+ sports. The help centre says Free Bets are found under My Bets at winna.com/sportsbook.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://winna.com/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports",
+            "value": "Yes. The homepage names DOTA 2 and CS:GO, and the Betting Rules list 'Esports Related Rules' as a section.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://winna.com/",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports titles",
+            "chips": [
+              "Dota 2",
+              "CS2"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://winna.com/",
             "asOf": "2026-09-16"
           }
         ]
@@ -7375,6 +9102,39 @@
             "value": "Each bet counts as wager × (game edge ÷ 0.04), so lower-edge games count less; sports bets don't count",
             "sourcing": "editorial",
             "sourceUrl": "https://help.yeet.com/en/articles/13464278-deposit-bonus-faqs",
+            "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
+        "title": "Sportsbook",
+        "facts": [
+          {
+            "label": "Sportsbook",
+            "value": "Yes, offers a sportsbook (help centre FAQ dated January 15, 2026)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.yeet.com/en/articles/12052482-other",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports",
+            "value": "Yes, eSports listed in the sportsbook; no specific titles named",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.yeet.com/en/articles/12052482-other",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Cash-out",
+            "value": "Cash-out (full or partial) is referenced in the Yeet Boost terms; cashing out removes the boost",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.yeet.com/en/articles/16973186-yeet-boost",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Bet builder",
+            "value": "Same game multis are referenced in the Yeet Boost terms (no standalone bet builder description found)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.yeet.com/en/articles/16973186-yeet-boost",
             "asOf": "2026-09-16"
           }
         ]

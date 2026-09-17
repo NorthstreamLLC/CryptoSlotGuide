@@ -46,7 +46,7 @@ function slugPath(base: string, slug: string): string {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const { ops, slots, providers, walletRows, exchangeRows, sportsMarkets, esportsTitles, guideRows, houseGames } = siteData;
+  const { ops, slots, providers, walletRows, exchangeRows, esportsTitles, guideRows, houseGames } = siteData;
 
   const dynamicPaths = [
     ...ops.map((o) => slugPath("/casinos", o.slug)),
@@ -54,7 +54,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...providers.map((p) => slugPath("/providers", p.slug)),
     ...walletRows.map((w) => slugPath("/wallets", w.slug)),
     ...exchangeRows.map((x) => slugPath("/exchanges", x.slug)),
-    ...sportsMarkets.map((m) => slugPath("/betting", slug(m.name))),
     ...esportsTitles.map((t) => slugPath("/betting", slug(t.name))),
     ...guideRows.map((g) => slugPath("/guides", g.slug)),
     ...houseGames.map((h) => slugPath("/house-games", h.slug)),

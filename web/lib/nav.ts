@@ -202,27 +202,11 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
               ],
             },
             {
-              title: "Book reviews",
+              title: "Book profiles",
               links: ["BC.Game", "Cloudbet", "Roobet", "Stake"].map((name) => ({
                 label: name,
                 href: `/casinos/${slug(name)}`,
               })),
-            },
-          ],
-        },
-        {
-          mono: "⚽",
-          label: "Sports betting",
-          tint: "#9FB6E0",
-          href: "/sportsbooks?tab=1",
-          columns: [
-            {
-              title: "By sport",
-              links: siteData.sportsMarkets.slice(0, 3).map((m) => ({ label: m.name, href: `/betting/${slug(m.name)}` })),
-            },
-            {
-              title: "More markets",
-              links: siteData.sportsMarkets.slice(3, 6).map((m) => ({ label: m.name, href: `/betting/${slug(m.name)}` })),
             },
           ],
         },
@@ -234,12 +218,13 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
           columns: [
             {
               title: "By title",
-              links: siteData.esportsTitles.slice(0, 3).map((t) => ({ label: t.name, href: `/betting/${slug(t.name)}` })),
+              links: siteData.esportsTitles.slice(0, 4).map((t) => ({ label: t.name, href: `/betting/${slug(t.name)}` })),
             },
             {
               title: "Where to bet it",
               links: [
-                { label: "All esports markets", href: "/sportsbooks?tab=2" },
+                { label: "All esports titles", href: "/sportsbooks?tab=2" },
+                { label: "Casinos with esports", href: "/esports-casinos" },
                 { label: "Sportsbook margin, explained", href: "/guides/sportsbook-margin-explained" },
                 { label: "Compare books", href: "/compare" },
               ],

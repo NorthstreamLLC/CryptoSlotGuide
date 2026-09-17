@@ -18,6 +18,7 @@ import { hasMaxWin, hasVol, maxWinLabel, rtpLabel, hasRtp, rtpSortValue, volLabe
 import { isFieldTestedOperator, isEditoriallyAudited } from "./field-tested";
 import { tintFor } from "./logo";
 import { getCasinoSpecSheet, getSpecFact } from "./spec-sheet";
+import { sportsFacts, booksForTitle, esportsLabel, maxPayoutShort } from "./sports";
 import type { Flag } from "./types";
 
 export type EntityType = "casino" | "slot" | "wallet" | "exchange" | "provider" | "market";
@@ -459,77 +460,57 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
 
   if (type === "market") {
     const toSlug = (n: string) => n.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
-    const all = [...siteData.sportsMarkets, ...siteData.esportsTitles];
-    const m = all.find((r) => toSlug(r.name) === slug);
+    const m = siteData.esportsTitles.find((r) => toSlug(r.name) === slug);
     if (!m) return null;
-    const esport = siteData.esportsTitles.some((t) => t.name === m.name);
-    const books = ops
-      .filter((o2) => (esport ? o2.esports : o2.sports))
-      .sort((a, b) => a.name.localeCompare(b.name))
-      .slice(0, 6)
-      .map((o2) => ({ ...(siteData.sbData[o2.slug] ?? {}), name: o2.name }));
-    // Margin, market counts, settlement times and "best" book come from
-    // sportsMarkets/esportsTitles/sbData.json — listing data we haven't
-    // priced ourselves. The prototype's "40 selections per book, priced
-    // at matched times, tournament week" method never happened, so it's
-    // described here as how pricing will work, not as done.
-
+    const books = booksForTitle(m.name);
+    const facts = (s: string) => sportsFacts(s);
     return {
       type,
-      kicker: esport ? "Esports market" : "Sports market",
+      kicker: "Esports title",
       name: m.name,
       slug: toSlug(m.name),
       mono: m.mono,
       tint: m.tint,
-      headline: `${m.name} betting: ${books.length} crypto books, ${esport ? `${m.m2} listed live markets` : `${m.m2} listed margin`}`,
-      standfirst: `${m.note}. Margins and market counts below are listed figures — we haven't yet priced ${m.name} selections across these books ourselves.`,
-      tags: [esport ? "LISTED MARKET COUNTS" : "LISTED MARGIN", "NOT YET PRICED BY US", `${books.length} BOOKS`],
-      byline: "Listed figures · matched-time pricing not yet done",
-      verdict: `For ${m.name}, ${m.best} is listed with the ${esport ? `deepest live book at ${m.m2} markets` : `tightest margin at ${m.m2}`}. Margin is the cost that compounds, so it's worth checking the live price across books before you place anything — the gap usually matters more than any promotion.`,
+      headline: `${m.name} betting: ${books.length} crypto casinos name it on their own pages`,
+      standfirst: `${m.note}. The casinos below list ${m.name} in their sportsbook or esports rules. We haven't priced any ${m.name} markets ourselves.`,
+      tags: ["FROM EACH CASINO'S OWN PAGES", "NOT PRICED BY US", `${books.length} BOOKS`],
+      byline: "Each casino's own sportsbook pages and rules",
+      verdict: `Line shopping matters more in esports than in football: books price the majors tightly and everything else loosely. Check the live price at two or three of these books before you bet on ${m.name}.`,
+      measuredSub: "Counts below come from each casino's own sportsbook pages and betting rules. We haven't priced any markets.",
       glance: [
-        { label: "Books offering it", value: String(books.length), source: "index" },
-        { label: "Listed top book", value: m.best, source: "unchecked" },
-        { label: esport ? "Live markets" : "Margin", value: m.m2, source: "unchecked" },
-        { label: esport ? "Settlement" : "Markets posted", value: m.m3, source: "unchecked" },
+        { label: "Books naming it", value: String(books.length), source: "cited" },
+        { label: "With cash-out", value: String(books.filter((b) => facts(b.slug).cashout).length), source: "cited" },
+        { label: "With a payout cap stated", value: String(books.filter((b) => facts(b.slug).maxPayout).length), source: "cited" },
       ],
       stats: [
-        { label: "Listed top book", value: m.best, note: "Not yet priced by us" },
-        { label: esport ? "Live markets" : "Margin", value: m.m2, note: "As listed" },
-        { label: esport ? "Settlement" : "Markets posted", value: m.m3, note: "As listed" },
-        { label: "Books offering it", value: String(books.length), note: "Of the operators we list" },
+        { label: "Books naming it", value: String(books.length), note: "Of the sportsbooks we list" },
+        { label: "Cash-out offered", value: String(books.filter((b) => facts(b.slug).cashout).length), note: "Per each book's own rules" },
+        { label: "Bet builder offered", value: String(books.filter((b) => facts(b.slug).betBuilder).length), note: "Per each book's own rules" },
       ],
-      chipLabel: "Books posting this market",
+      chipLabel: "Books that name this title",
       chips: books.map((b) => ({ t: b.name, tint: "#5FE3E8" })),
-      specTitle: "How pricing will work",
-      specSub: "The method a price check on this market follows. None has been run yet, so the figures above stay labelled as listed.",
-      spec: [
-        { k: "Sample", v: "The same selections priced at every book", ...PENDING },
-        { k: "Timing", v: "Priced at matched times to remove drift", ...PENDING },
-        { k: "Boosts", v: "Price boosts and enhanced odds excluded", ...PENDING },
-        spec("Limits", "Maximum stake varies by book and usually tightens in-play", "watch"),
-      ],
-      tableTitle: "Books on this market",
-      tableSub: "Listed margin, live market counts and settlement for the operators posting it — not yet priced by us.",
-      tableCols: ["Margin", "Live markets", "Settlement"],
+      chipsEmpty: "No sportsbook on our index names this title yet.",
+      specTitle: "",
+      specSub: "",
+      spec: [],
+      tableTitle: "Books offering it",
+      tableSub: `What each casino's own pages say about its sportsbook. Full wording and sources are on each profile.`,
+      tableCols: ["Cash-out", "Bet builder", "Max payout"],
       tableRows: books.map((b) => ({
         name: b.name,
-        note: "Listed figures, not yet priced by us",
-        m1: "margin" in b ? (b.margin as string) : "—",
-        m2: "markets" in b ? String(b.markets) : "—",
-        m3: "settle" in b ? (b.settle as string) : "—",
+        note: esportsLabel(b.slug),
+        m1: facts(b.slug).cashout ? "Yes" : "Not found",
+        m2: facts(b.slug).betBuilder ? "Yes" : "Not found",
+        m3: maxPayoutShort(b.slug),
       })),
-      tableEmpty: "No crypto books on our index list this market yet.",
-      tableNote: "Margin is the number that compounds. Over a season, the gap between the tightest and widest book on a market is usually worth more than any sign-up offer attached to either.",
-      pros: [
-        `${m.best} listed as the top book`,
-        esport ? `${m.m2} live markets listed` : `${m.m2} listed margin at the top book`,
-        `${books.length} books post it, so line shopping is realistic`,
-      ],
-      cons: ["Prices widen sharply outside marquee events", "In-play limits tighten without notice", "Void and postponement rules differ between books on the same event"],
+      tableEmpty: "No sportsbook on our index names this title yet.",
+      tableNote: "Esports limits are usually lower than football limits at the same book, and they tighten in-play. Check a book's betting rules before a large stake.",
+      pros: [`${books.length} books on our index name ${m.name}`],
+      cons: ["Prices widen sharply outside the major tournaments", "In-play limits tighten without notice", "Void and postponement rules differ between books"],
       faqs: [
         { q: "Is line shopping worth the effort?", a: "Usually, yes. A point or two of margin between books is larger than what most bonuses return over the same betting volume." },
-        { q: "Why not just use the book with the best bonus?", a: "Because margin applies to every bet and a bonus applies once. Rank books on the recurring cost first." },
-        { q: "Have you priced this market yourselves?", a: "Not yet. The figures here are listed, and this page will say so until a real matched-time price check has been run." },
+        { q: `Which casinos take ${m.name} bets?`, a: books.length ? `On our index: ${books.map((b) => b.name).join(", ")}. Each one names ${m.name} on its own pages.` : `None of the sportsbooks on our index name ${m.name} yet.` },
+        { q: "Have you priced these markets yourselves?", a: "Not yet. This page lists what each casino says it offers; it doesn't compare prices." },
       ],
     };
   }
@@ -710,7 +691,7 @@ const BACK: Record<EntityType, { label: string; href: string }> = {
   wallet: { label: "Compare all wallets", href: "/wallets" },
   slot: { label: "Every slot we track", href: "/slots" },
   provider: { label: "Compare all studios", href: "/providers" },
-  market: { label: "Every market we price", href: "/sportsbooks" },
+  market: { label: "All esports titles", href: "/sportsbooks?tab=2" },
 };
 
 const CTA: Record<EntityType, (name: string) => string> = {
@@ -719,7 +700,7 @@ const CTA: Record<EntityType, (name: string) => string> = {
   wallet: (name) => `Get ${name}`,
   slot: () => "Where to play it",
   provider: () => "See every title",
-  market: () => "Best book for this market",
+  market: () => "Compare the books",
 };
 
 export function backLink(type: EntityType) {

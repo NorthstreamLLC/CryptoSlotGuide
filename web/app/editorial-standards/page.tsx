@@ -19,7 +19,7 @@ const SECTIONS: { title: string; body: string[] }[] = [
     title: "Independence from advertisers",
     body: [
       "We earn commission through affiliate links, disclosed on every page where it applies. No operator is shown a review before publication, no operator can pay for placement on any table or page, and commission rates are kept away from the people who write reviews. If an operator we work with has poor terms or a bad record, that's what gets published.",
-      "Where we feature an operator prominently — on the homepage or as an editor's pick — the card states the cited fact behind it. That placement is never purchased.",
+      "Where we feature an operator prominently, such as on the homepage, the card states the cited fact behind it. That placement is never purchased.",
     ],
   },
   {

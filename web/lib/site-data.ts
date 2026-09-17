@@ -12,8 +12,6 @@ import liveGames from "@/data/liveGames.json";
 import providers from "@/data/providers.json";
 import walletRows from "@/data/walletRows.json";
 import exchangeRows from "@/data/exchangeRows.json";
-import sportsMarkets from "@/data/sportsMarkets.json";
-import sbData from "@/data/sbData.json";
 import esportsTitles from "@/data/esportsTitles.json";
 import guideRows from "@/data/guideRows.json";
 import guideBodies from "@/data/guideBodies.json";
@@ -60,8 +58,6 @@ import type {
   Slot,
   SlotCategoryDef,
   SlotTags,
-  SportsbookData,
-  SportsMarket,
   TickerFact,
   WalletOrExchangeRow,
   WatchOperator,
@@ -78,8 +74,6 @@ export const siteData = {
   providers: providers as Provider[],
   walletRows: walletRows as WalletOrExchangeRow[],
   exchangeRows: exchangeRows as WalletOrExchangeRow[],
-  sportsMarkets: sportsMarkets as SportsMarket[],
-  sbData: sbData as SportsbookData,
   esportsTitles: esportsTitles as EsportsTitle[],
   guideRows: guideRows as GuideRow[],
   guideBodies: guideBodies as GuideBodies,

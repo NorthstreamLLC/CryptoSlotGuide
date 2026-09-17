@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { sportsFacts, booksForTitle } from "@/lib/sports";
 import { rtpSortValue } from "@/lib/slot-facts";
 import { siteData, siteCounts } from "@/lib/site-data";
 import { allVersionsListedStudios, selfCustodyWallets } from "@/lib/derived";
@@ -58,7 +59,7 @@ const quickChips = [
  * per-card dates — nothing here has a real re-test date behind it.
  */
 function buildFeatured() {
-  const { ops, slots, providers, walletRows, exchangeRows, sbData, coinsBy, coinDefs } = siteData;
+  const { ops, slots, providers, walletRows, exchangeRows, coinsBy, coinDefs } = siteData;
   const op = (s: string) => ops.find((x) => x.slug === s);
   const slot = (s: string) => slots.find((x) => x.slug === s);
   const prov = (s: string) => providers.find((x) => x.slug === s);
@@ -69,26 +70,24 @@ function buildFeatured() {
   const kr = exch("kraken");
   const ph = wal("phantom");
   const hg = prov("hacksaw-gaming");
-  const cb = op("cloudbet");
-  const cbBook = sbData["cloudbet"];
-  const lowestMargin = Math.min(...Object.values(sbData).map((b) => parseFloat(b.margin)));
+  const books = ops.filter((o) => o.sports).length;
   const lg = wal("ledger");
   const nc = prov("nolimit-city");
 
   return [
     { name: "Sweet Bonanza", mono: "SWB", slug: "sweet-bonanza", cat: "Slot", line: `Published at ${sb ? `${sb.rtp.toFixed(2)}%` : "its studio RTP"}, but operators can licence a lower build. Check the RTP in the game's info screen before you spin.`, metric: sb ? `${sb.provider} game page` : "—", cta: "Slot review →", href: "/slots/sweet-bonanza" },
     { name: "Kraken", mono: "KR", slug: "kraken", cat: "Exchange", line: "MiCA-licensed, FCA-registered and publishes proof of reserves — its entry-tier Pro fees are the highest of the five.", metric: `${kr?.m1 ?? "—"} entry taker fee`, cta: "Review →", href: "/exchanges/kraken" },
-    { name: "Stake", mono: "ST", slug: "stake", cat: "Casino", line: `${(coinsBy["stake"] ?? []).length} of the ${coinDefs.length} coins we track on the cashier and VIP rakeback with no wagering on its weekly bonus, but no withdrawal time stated in its help centre.`, metric: `${(coinsBy["stake"] ?? []).length} coins accepted`, cta: "Review →", href: "/casinos/stake" },
+    { name: "Stake", mono: "ST", slug: "stake", cat: "Casino", line: `Stake says crypto withdrawals are processed immediately, with no maximum withdrawal. ${(coinsBy["stake"] ?? []).length} of the ${coinDefs.length} coins we track are on its cashier.`, metric: `${(coinsBy["stake"] ?? []).length} coins accepted`, cta: "Review →", href: "/casinos/stake" },
     { name: "Phantom", mono: "PH", slug: "phantom", cat: "Wallet", line: "Solana-first self-custody wallet with transaction previews before you approve, audited by Kudelski and Least Authority.", metric: ph?.m2 ?? "—", cta: "Review →", href: "/wallets/phantom" },
     { name: "Hacksaw Gaming", mono: "HG", slug: "hacksaw-gaming", cat: "Provider", line: "Lists every RTP version it licenses on each game page, so you can see how low a casino's build could go. Volatility is not for everyone.", metric: hg?.rtp ?? "—", cta: "Studio profile →", href: "/providers/hacksaw-gaming" },
-    { name: "Cloudbet", mono: "CB", slug: "cloudbet", cat: "Sportsbook", line: `${cbBook && parseFloat(cbBook.margin) === lowestMargin ? "Lowest listed margin of the sportsbooks on our index" : "Sportsbook and casino on one balance"}. The casino welcome offer carries ${cb?.wager ?? "—"}× wagering.`, metric: `${cbBook?.margin ?? "—"} listed margin`, cta: "Sportsbooks →", href: "/sportsbooks" },
+    { name: "Cloudbet", mono: "CB", slug: "cloudbet", cat: "Sportsbook", line: "Sportsbook and casino on one balance. Its welcome package covers both, paid as cash drops and rakeback over the first 30 days.", metric: `${books} sportsbooks listed`, cta: "Sportsbooks →", href: "/sportsbooks" },
     { name: "Ledger", mono: "LG", slug: "ledger", cat: "Wallet", line: "Hardware wallet with keys in a Secure Element and a Transaction Check before you sign.", metric: `${lg?.m2 ?? "—"}`, cta: "Review →", href: "/wallets/ledger" },
     { name: "Nolimit City", mono: "NC", slug: "nolimit-city", cat: "Provider", line: "Extreme volatility by design. The max-win ceilings are high and the base game will test your bankroll.", metric: nc?.rtp ?? "—", cta: "Studio profile →", href: "/providers/nolimit-city" },
   ];
 }
 
 export default function HomePage() {
-  const { ops, slots, houseGames, providers, walletRows, exchangeRows, coinDefs, coinsBy, sportsMarkets, esportsTitles, criteria } = siteData;
+  const { ops, slots, houseGames, providers, walletRows, exchangeRows, coinDefs, coinsBy, esportsTitles, criteria } = siteData;
   const c = siteCounts;
   const featured = buildFeatured();
 
@@ -112,25 +111,24 @@ export default function HomePage() {
   const sportsHub = {
     kicker: "Sportsbooks",
     title: "Betting with crypto",
-    blurb: "Margin, market depth and settlement speed on the events readers bet most.",
-    items: sportsMarkets.slice(0, 4).map((m, i) => ({
-      n: String(i + 1).padStart(2, "0"),
-      label: m.name,
-      href: `/betting/${slug(m.name)}`,
-      top: m.best,
-      topColor: m.best === "Roobet" ? "#FFCC00" : "#5C6A72",
-    })),
+    blurb: "Cash-out, bet builder and payout caps, from each book's own betting rules.",
+    items: [
+      { label: "All sportsbooks", href: "/sportsbooks", n: ops.filter((o) => o.sports).length },
+      { label: "Casinos with esports", href: "/esports-casinos", n: ops.filter((o) => o.esports).length },
+      { label: "State a payout cap", href: "/sportsbooks", n: ops.filter((o) => sportsFacts(o.slug).maxPayout).length },
+      { label: "Offer cash-out", href: "/sportsbooks", n: ops.filter((o) => sportsFacts(o.slug).cashout).length },
+    ].map((it, i) => ({ n: String(i + 1).padStart(2, "0"), label: it.label, href: it.href, top: `${it.n} casinos`, topColor: "#5C6A72" })),
   };
   const esportsHub = {
     kicker: "Esports",
-    title: "Where the markets are",
-    blurb: "Listed live market counts per title, and the operator carrying the most.",
+    title: "Which books take which titles",
+    blurb: "The casinos that name each title on their own sportsbook pages.",
     items: esportsTitles.slice(0, 4).map((t, i) => ({
       n: String(i + 1).padStart(2, "0"),
       label: t.name,
       href: `/betting/${slug(t.name)}`,
-      top: t.best,
-      topColor: t.best === "Roobet" ? "#FFCC00" : "#5C6A72",
+      top: `${booksForTitle(t.name).length} books`,
+      topColor: "#5C6A72",
     })),
   };
   const hubs = [categoryHub, sportsHub, esportsHub];

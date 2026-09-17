@@ -10,6 +10,7 @@
  * 2894-2900) are all exchanges now present in exchangeRows.json.
  */
 import { siteData } from "./site-data";
+import { sportsFacts, sportsbookOps, booksForTitle, esportsLabel, maxPayoutShort } from "./sports";
 import { hasRtp, hasVol, maxWinLabel, rtpLabel } from "./slot-facts";
 import {
   lowestTakerFee,
@@ -72,7 +73,8 @@ export interface VerticalPage {
 }
 
 export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
-  const { slots, providers, walletRows, exchangeRows, guideRows, ops, sportsMarkets, esportsTitles, rtpWatch, sbData } = siteData;
+  const { slots, providers, walletRows, exchangeRows, guideRows, ops, esportsTitles, rtpWatch } = siteData;
+  const toSlug = (n: string) => n.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 
   if (kind === "slots") {
     // rtpWatch only ever holds real readings (empty until the first real
@@ -137,88 +139,62 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
   }
 
   if (kind === "sportsbooks") {
-    const tab = Math.min(tabIdx, 2);
-    const cols: [string, string, string][] = [
-      ["Margin", "Live markets", "Settlement"],
-      ["Best price at", "Margin", "Markets"],
-      ["Best price at", "Live markets", "Settlement"],
-    ];
-    // Margin, market and settlement figures are listed values carried over
-    // from the prototype dataset (data/sbData.json, data/esportsTitles.json),
-    // not first-hand measurements — label them that way.
-    const margins = Object.values(sbData).map((b) => parseFloat(b.margin)).filter((n) => !Number.isNaN(n));
-    const esportsMarkets = esportsTitles.map((t) => parseInt(t.m2, 10)).filter((n) => !Number.isNaN(n));
+    const tab = Math.min(tabIdx, 1);
+    const books = sportsbookOps();
     const base = {
       kicker: "Sportsbooks",
       title: "Betting with crypto",
-      sub: "Margin, live market depth and settlement time as listed for each book, side by side. A book's review says which figures have been checked and how.",
+      sub: "The crypto casinos on our index that run a sportsbook: esports coverage, cash-out, bet builder and the payout caps in their own betting rules, each cited on the casino's profile.",
       stats: [
-        [String(ops.filter((o) => o.sports).length), "Books listed"],
-        [margins.length ? `${Math.min(...margins).toFixed(1)}%` : "—", "Lowest listed margin"],
-        [esportsMarkets.length ? String(Math.max(...esportsMarkets)) : "—", "Most listed esports markets"],
+        [String(books.length), "Sportsbooks listed"],
+        [String(books.filter((o) => sportsFacts(o.slug).titles.length).length), "Name their esports titles"],
+        [String(books.filter((o) => sportsFacts(o.slug).maxPayout).length), "State a payout cap"],
       ] as [string, string][],
-      cols: cols[tab],
+      cols: (tab === 0 ? ["Esports", "Cash-out · builder", "Max payout"] : ["Books naming it", "Includes", "Listed as"]) as [string, string, string],
       statLabel: "",
-      note: "Margin is the number that compounds. A book a point tighter on football costs you less over a season than any welcome offer returns.",
-      tabs: ["Sportsbooks", "Sports", "Esports"],
+      note: "We haven't priced any markets, so there are no margins here. Books quote tighter on marquee events and wider elsewhere; compare the live price across books before you bet.",
+      tabs: ["Sportsbooks", "Esports"],
     };
     if (tab === 1) {
       return {
         ...base,
-        rows: sportsMarkets.map((m) => ({
-          slug: m.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, ""),
-          name: m.name,
-          mono: m.mono,
-          tint: m.tint,
-          note: m.note,
-          m1: m.best,
-          m2: m.m2,
-          m3: m.m3,
-          stat: "—",
-          cta: "Market page",
-          href: "/betting/" + m.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, ""),
-        })),
-      };
-    }
-    if (tab === 2) {
-      return {
-        ...base,
-        rows: esportsTitles.map((m) => ({
-          slug: m.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, ""),
-          name: m.name,
-          mono: m.name.slice(0, 2).toUpperCase(),
-          tint: "#C4795A",
-          note: m.note,
-          m1: "—",
-          m2: "—",
-          m3: "—",
-          stat: "—",
-          cta: "Title page",
-          href: "/betting/" + m.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, ""),
-        })),
+        rows: esportsTitles.map((m) => {
+          const bks = booksForTitle(m.name);
+          return {
+            slug: toSlug(m.name),
+            name: m.name,
+            mono: m.mono,
+            tint: m.tint,
+            note: m.note,
+            m1: String(bks.length),
+            m2: bks.slice(0, 2).map((b) => b.name).join(", ") || "—",
+            m3: "Title page",
+            stat: "—",
+            cta: "Title page",
+            href: "/betting/" + toSlug(m.name),
+          };
+        }),
       };
     }
     return {
       ...base,
-      rows: ops
-        .filter((o) => o.sports)
-        .sort(byName)
-        .map((o) => {
-          const sb = sbData[o.slug];
-          return {
-            slug: o.slug,
-            name: o.name,
-            mono: o.mono,
-            tint: "#57B98C",
-            note: o.bonus,
-            m1: sb?.margin ?? "—",
-            m2: sb ? String(sb.markets) : "—",
-            m3: sb?.settle ?? "—",
-            stat: "—",
-            cta: "View profile",
-            href: `/casinos/${o.slug}`,
-          };
-        }),
+      rows: books.map((o) => {
+        const s = sportsFacts(o.slug);
+        const yes = (f: unknown) => (f ? "Yes" : "—");
+        return {
+          slug: o.slug,
+          name: o.name,
+          mono: o.mono,
+          tint: "#57B98C",
+          note: !s.sportsbook ? "Sportsbook facts not checked yet" : s.provider ? `Runs on ${s.provider.value?.split(/[.(]/)[0].trim()}` : "Sportsbook confirmed on its own pages",
+          m1: esportsLabel(o.slug),
+          m2: `${yes(s.cashout)} · ${yes(s.betBuilder)}`,
+          m3: maxPayoutShort(o.slug),
+          stat: "—",
+          cta: "View profile",
+          href: `/casinos/${o.slug}`,
+        };
+      }),
     };
   }
 

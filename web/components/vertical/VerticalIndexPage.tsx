@@ -189,7 +189,7 @@ function vertHref(kind: VerticalKind, tab: number): string {
   // casino-index filtered views (see lib/casino-index.ts) — a different
   // page from this vertical's Sports/Esports market-list tabs, so those
   // tabs live under a query param on /sportsbooks instead of their own URL.
-  return tab === 0 ? "/sportsbooks" : `/sportsbooks?tab=${tab}`;
+  return tab === 0 ? "/sportsbooks" : "/sportsbooks?tab=2";
 }
 
 function HeadCell({ children, muted }: { children: React.ReactNode; muted?: boolean }) {

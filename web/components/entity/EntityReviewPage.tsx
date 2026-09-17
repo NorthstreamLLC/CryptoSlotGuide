@@ -148,7 +148,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
                 : isCasino
                 ? "Each figure below is the operator's own stated number — cited in the fact table further down where we could confirm it. None are timed on our own funded account yet."
                 : "Every figure below is the published number, pending our own field test. See how we source information for what that means here."
-              : "Every figure below is assessed from public sources — published paytables, RTP certificates and posted odds, not a funded account. See how we source information for what that means here.")
+              : "Every figure below is assessed from public sources — published paytables, RTP certificates and each operator's own pages, not a funded account. See how we source information for what that means here.")
           }
         />
         <div style={{ display: "grid", gridTemplateColumns: `repeat(${statCols}, 1fr)`, gap: 1, background: "rgba(255,255,255,.07)", border: "1px solid rgba(255,255,255,.07)", borderRadius: 13, overflow: "hidden", marginBottom: 38 }}>
