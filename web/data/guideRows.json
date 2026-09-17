@@ -37,27 +37,27 @@
     "standfirst": "When channel capacity becomes the limit",
     "category": "Crypto",
     "readMins": 4,
-    "updated": "16 Aug"
+    "updated": "16 Sep"
   },
   {
     "slug": "who-pays-the-network-fee",
     "title": "Who pays the network fee",
     "mono": "FE",
     "tint": "#9AAE5E",
-    "standfirst": "{fee} of {casinos} operators absorb it. The rest deduct",
+    "standfirst": "Some operators cover it, others deduct it, and the chain matters more",
     "category": "Crypto",
     "readMins": 4,
-    "updated": "14 Aug"
+    "updated": "16 Sep"
   },
   {
-    "slug": "sportsbook-margin-measured",
+    "slug": "sportsbook-margin-explained",
     "title": "Sportsbook margin, explained",
     "mono": "MG",
     "tint": "#57B98C",
     "standfirst": "How overround is computed, and why one market is not enough",
     "category": "Betting",
     "readMins": 8,
-    "updated": "12 Aug"
+    "updated": "16 Sep"
   },
   {
     "slug": "bankroll-separation",
@@ -74,9 +74,9 @@
     "title": "How we source information",
     "mono": "SC",
     "tint": "#C47A97",
-    "standfirst": "The six criteria and their weights, line by line",
+    "standfirst": "The six areas every profile covers, and where each fact comes from",
     "category": "Method",
     "readMins": 9,
-    "updated": "08 Aug"
+    "updated": "16 Sep"
   }
 ]

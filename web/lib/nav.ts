@@ -55,7 +55,6 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
                 { label: "Fastest payouts", href: "/fastest-payouts" },
                 { label: "Lowest wagering", href: "/lowest-wagering" },
                 { label: "Compare side by side", href: "/compare" },
-                { label: "Fiat casinos (separate list)", href: "/fiat-casinos" },
               ],
             },
             {
@@ -64,34 +63,6 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
                 label: name,
                 href: `/casinos/${slug(name)}`,
               })),
-            },
-          ],
-        },
-        {
-          mono: "🃏",
-          label: "Live casino",
-          tint: "#FF7EB6",
-          href: "/live-casino",
-          columns: [
-            {
-              title: "Live tables",
-              links: [
-                { label: "All live casinos", href: "/live-casino", dot: "#FF5A78" },
-                { label: "Blackjack tables", href: "/live-casino?type=Blackjack" },
-                { label: "Roulette tables", href: "/live-casino?type=Roulette" },
-                { label: "Baccarat tables", href: "/live-casino?type=Baccarat" },
-                { label: "Game shows", href: "/live-casino?type=Game+show" },
-              ],
-            },
-            {
-              title: "Popular tables",
-              links: [
-                "Crazy Time",
-                "Lightning Roulette",
-                "Infinite Blackjack",
-                "Speed Baccarat A",
-                "Monopoly Big Baller",
-              ].map((name) => ({ label: name, href: `/live-casino/${slug(name)}` })),
             },
           ],
         },
@@ -227,7 +198,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
               links: [
                 { label: `All ${c.books} sportsbooks`, href: "/sportsbooks" },
                 { label: "Compare side by side", href: "/compare" },
-                { label: "Sportsbook margin, explained", href: "/guides/sportsbook-margin-measured" },
+                { label: "Sportsbook margin, explained", href: "/guides/sportsbook-margin-explained" },
               ],
             },
             {
@@ -269,7 +240,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
               title: "Where to bet it",
               links: [
                 { label: "All esports markets", href: "/sportsbooks?tab=2" },
-                { label: "Sportsbook margin, explained", href: "/guides/sportsbook-margin-measured" },
+                { label: "Sportsbook margin, explained", href: "/guides/sportsbook-margin-explained" },
                 { label: "Compare books", href: "/compare" },
               ],
             },
@@ -344,7 +315,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
               title: "Method",
               links: [
                 { label: "How we source information", href: "/how-we-rate" },
-                { label: "Sportsbook margin, explained", href: "/guides/sportsbook-margin-measured" },
+                { label: "Sportsbook margin, explained", href: "/guides/sportsbook-margin-explained" },
                 { label: "Compare operators", href: "/compare" },
               ],
             },

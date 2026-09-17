@@ -2,7 +2,7 @@
  * Ported from the `isCompare` block in CryptoSlotGuide.dc.html plus
  * `cmpDefs`/`cmpScore`/`cmpRows`/`cmpHeads` in renderVals() (search for
  * (search for "Compare builder" comment block). Winner-per-row logic matches exactly: lower
- * is better on payout/wagering/confirmations, higher on coins (the site
+ * is better on payout/wagering, higher on coins (the site
  * no longer scores operators, so there's no score row),
  * licence and headline offer are deliberately never marked.
  */
@@ -23,7 +23,7 @@ export interface CompareRow {
   cells: CompareCell[];
 }
 
-type ScoreKind = "lowPayout" | "highCoins" | "lowWager" | "kyc" | "lowConf" | "yes" | "none";
+type ScoreKind = "lowPayout" | "highCoins" | "lowWager" | "kyc" | "yes" | "none";
 
 export function getCompareRows(cmpOps: Operator[], coinsBy: CoinsByOperator): CompareRow[] {
   const defs: [string, (o: Operator) => string, ScoreKind][] = [
@@ -31,8 +31,6 @@ export function getCompareRows(cmpOps: Operator[], coinsBy: CoinsByOperator): Co
     ["Coins credited", (o) => String((coinsBy[o.slug] ?? []).length), "highCoins"],
     ["Welcome bonus", (o) => bonusWithWager(o), "lowWager"],
     ["KYC", (o) => o.kyc, "kyc"],
-    ["Confirmations", (o) => String(o.conf), "lowConf"],
-    ["Lightning", (o) => (o.ln ? "Yes" : "No"), "yes"],
     ["Sportsbook", (o) => (o.sports ? "Yes" : "No"), "yes"],
     ["Esports", (o) => (o.esports ? "Yes" : "No"), "yes"],
     ["Licence", (o) => o.licence, "none"],
@@ -43,7 +41,6 @@ export function getCompareRows(cmpOps: Operator[], coinsBy: CoinsByOperator): Co
     highCoins: (o) => (coinsBy[o.slug] ?? []).length,
     lowWager: (o) => { const m = wagerView(o).mult; return m === null ? null : -m; },
     kyc: (o) => (o.kyc === "none" ? 2 : o.kyc === "tiered" ? 1 : 0),
-    lowConf: (o) => -o.conf,
     yes: () => 0,
     none: () => null,
   };

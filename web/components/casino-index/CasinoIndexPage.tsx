@@ -22,9 +22,9 @@ import type { Operator } from "@/lib/types";
 import { payoutView } from "@/lib/payout";
 
 const btcFaqData = [
-  { q: "How many confirmations before I can play?", a: "Most operators here credit at one confirmation, which is roughly ten minutes. Three-confirmation sites can leave you waiting half an hour on a busy block." },
-  { q: "Should I use Lightning?", a: "If the operator supports it and your amount is small, yes — it settles in seconds and avoids on-chain fees entirely. Above about 0.05 BTC channel capacity starts to be the limiting factor." },
-  { q: "Who pays the network fee?", a: "{fee} of the {casinos} operators absorb it. The rest deduct it from your withdrawal, which matters most on small, frequent cash-outs." },
+  { q: "How many confirmations before I can play?", a: "It depends on the casino and the coin. Operators set their own confirmation requirements and most show them in the cashier, so check there before you send. Bitcoin blocks come roughly every ten minutes, so each extra confirmation adds waiting time." },
+  { q: "Should I use Lightning?", a: "If the operator supports it and your amount is small, it's usually the quicker route: Lightning payments settle in seconds without an on-chain transaction. Larger payments are more likely to fail on channel capacity. Check the casino's cashier for whether it's offered." },
+  { q: "Who pays the network fee?", a: "It varies. Some operators say they cover it; others deduct it from your withdrawal or charge a fixed per-coin fee. Each casino profile quotes the operator's own wording, and it matters most on small, frequent cash-outs." },
   { q: "Is a Bitcoin-only casino safer?", a: "No. Coin support tells you nothing about licensing, segregation of player funds, or whether the operator honours its own terms. Judge those separately." },
 ];
 
@@ -114,7 +114,7 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/assets/roobet-logo.png" alt="Roobet" style={{ height: 30, width: "auto", display: "block" }} />
                   <span style={{ padding: "5px 10px", borderRadius: 5, background: "rgba(255,204,0,.12)", border: "1px solid rgba(255,204,0,.3)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, fontWeight: 700, letterSpacing: ".05em", color: "#FFCC00", whiteSpace: "nowrap" }}>
-                    MOST DETAILED REVIEW
+                    SPOTLIGHT
                   </span>
                 </div>
                 <div style={{ display: "flex", alignItems: "flex-end", gap: 14, marginBottom: 22 }}>
@@ -123,8 +123,8 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
                 </div>
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 1, background: "rgba(255,255,255,.07)", borderRadius: 10, overflow: "hidden", marginBottom: 22 }}>
                   <StatTile label="Licence" value={roobet.licence} />
-                  <StatTile label="Confirmations" value={String(roobet.conf)} />
-                  <StatTile label="Lightning" value={roobet.ln ? "Yes" : "No"} color={roobet.ln ? "#5FE3E8" : undefined} />
+                  <StatTile label="Coins" value={String((coinsBy["roobet"] ?? []).length)} />
+                  <StatTile label="Sportsbook" value={roobet.sports ? "Yes" : "No"} />
                   <StatTile label="Bonus wagering" value={wagerView(roobet).label} />
                 </div>
                 <div style={{ marginBottom: 18 }}>
@@ -169,7 +169,7 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
                   <div style={{ display: "flex", flexDirection: "column", gap: 9, paddingTop: 16, borderTop: "1px solid rgba(255,255,255,.08)" }}>
                     <TopRow label="Withdrawal time" value={`${payoutView(btcTop).label} · ${payoutView(btcTop).caption}`} />
                     <TopRow label="Licence · KYC" value={`${btcTop.licence} · ${btcTop.kyc}`} />
-                    <TopRow label="Offer" value={btcTop.bonus} />
+                    <TopRow label="Offer" value={bonusWithWager(btcTop)} />
                   </div>
                 </Link>
               )}
@@ -377,11 +377,11 @@ function OpRow({ o, pos, coins }: { o: Operator; pos: number; coins: string[] })
           ))}
           {more > 0 && <span style={{ flex: "none", padding: "3px 6px", borderRadius: 4, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 9.5, color: "#5C6A72" }}>+{more}</span>}
         </div>
-        <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#5C6A72", marginTop: 4 }}>{coins.length} coins · {o.conf} confirms</div>
+        <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#5C6A72", marginTop: 4 }}>{coins.length} coins</div>
       </div>
       <div style={{ padding: "14px 8px" }}>
-        <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, padding: "3px 7px", borderRadius: 4, background: o.ln ? "rgba(0,194,204,.12)" : "rgba(255,255,255,.05)", color: o.ln ? "#5FE3E8" : "#8DA0AA" }}>
-          {o.ln ? "Yes" : "No"}
+        <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, padding: "3px 7px", borderRadius: 4, background: o.sports ? "rgba(0,194,204,.12)" : "rgba(255,255,255,.05)", color: o.sports ? "#5FE3E8" : "#8DA0AA" }} title={o.sports ? "Has a sportsbook" : "No sportsbook"}>
+          {o.sports ? "Sports" : "Casino"}
         </span>
       </div>
       <div style={{ padding: "14px 8px", minWidth: 0 }}>

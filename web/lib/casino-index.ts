@@ -16,8 +16,8 @@ export const btcViews: Record<BtcFilterKey, { crumb: string; kicker: string; h1:
   all: {
     crumb: "Crypto casinos",
     kicker: "operators · 8 coins tracked",
-    h1: "Best crypto casinos, compared on payout speed",
-    p: "Which cryptos each operator credits, the confirmations it waits for, and whether Lightning works — the three things that decide how long you wait. Withdrawal times are each operator's own stated figure, cited on its review; we haven't timed them on our own funded accounts yet.",
+    h1: "Crypto casinos, compared on payout speed",
+    p: "Which cryptos each operator credits, what it says about withdrawal speed, and what its bonus asks of you. Every figure is the operator's own, cited on its profile; we haven't timed withdrawals on our own funded accounts yet.",
     note: "Showing operators that credit ",
   },
   nokyc: {
@@ -92,8 +92,8 @@ export { logoFor } from "./logo";
 export function btcStats(list: Operator[]): { v: string; l: string }[] {
   return [
     { v: String(list.filter((o) => payoutView(o).kind !== "none").length), l: "state a withdrawal time" },
-    { v: String(list.filter((o) => o.conf === 1).length), l: "clear at 1 confirmation" },
-    { v: String(list.filter((o) => o.ln).length), l: "support Lightning" },
+    { v: String(list.filter((o) => o.kyc === "none").length), l: "say KYC isn't required" },
+    { v: String(list.filter((o) => o.sports).length), l: "run a sportsbook" },
     { v: String(list.filter((o) => wagerView(o).kind === "cited").length), l: "state a bonus wagering figure" },
   ];
 }

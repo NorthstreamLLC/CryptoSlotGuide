@@ -1,7 +1,7 @@
 [
-  { "tag": "bonus-buy", "label": "Bonus buy", "standfirst": "Paying to skip the base game changes the maths: most feature buys price the round at 20× to 100× stake and the published RTP of the bought round is often lower than the base game." },
-  { "tag": "megaways", "label": "Megaways", "standfirst": "Reel heights change every spin, up to 117,649 ways to win. High hit frequency, thin individual wins, and licensed to dozens of studios — quality varies wildly." },
-  { "tag": "jackpot", "label": "Jackpot", "standfirst": "Progressive pools are funded out of the base return, which is why jackpot slots publish the lowest RTPs on the index. You are paying for the tail." },
-  { "tag": "cluster-pays", "label": "Cluster pays", "standfirst": "Wins pay on groups of adjacent symbols rather than lines, with tumbling refills. Longer sessions, more small wins, the same house edge." },
-  { "tag": "high-volatility", "label": "High volatility", "standfirst": "Long dry spells and rare large hits. The RTP is identical to a low-variance game over infinite spins — your bankroll is not infinite." }
+  {"tag": "bonus-buy", "label": "Bonus buy", "standfirst": "Paying to skip the base game changes the maths: a feature buy costs a multiple of your stake, and some studios publish a separate RTP for the bought round. Check the game page for both figures."},
+  {"tag": "megaways", "label": "Megaways", "standfirst": "Reel heights change every spin, up to 117,649 ways to win. High hit frequency, thin individual wins, and licensed to many studios, so the games differ more than the name suggests."},
+  {"tag": "jackpot", "label": "Jackpot", "standfirst": "Progressive pools are funded out of the base return, which is why jackpot slots tend to publish lower RTPs. You are paying for the tail."},
+  {"tag": "cluster-pays", "label": "Cluster pays", "standfirst": "Wins pay on groups of adjacent symbols rather than lines, with tumbling refills. Longer sessions, more small wins, the same house edge."},
+  {"tag": "high-volatility", "label": "High volatility", "standfirst": "Long dry spells and rare large hits. The RTP is identical to a low-variance game over infinite spins — your bankroll is not infinite."}
 ]

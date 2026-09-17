@@ -1,8 +1,8 @@
 {
-  "casino:roobet": "Roobet does the operational things well and does not dress them up. Stated instant withdrawals and 1× wagering are worth more over a year than any welcome offer on this index.",
+  "casino:roobet": "Roobet does the operational things well and does not dress them up. Stated instant withdrawals and rakeback with no wagering multiplier are worth more over a year than any welcome offer on this index.",
   "casino:stake": "Stake is the better product and the worse deal. The catalogue, the sportsbook and the interface are all a step above, but the rakeback needs volume most readers will never reach before it beats a straightforward cashback.",
   "exchange:kraken": "If you are funding a casino bankroll monthly, this is where we would do it. It is MiCA-licensed in the EU, FCA-registered in the UK and publishes proof of reserves, and ACH, SEPA, FPS and SWIFT cover most readers' fiat rails. The trade-off is fees: its entry-tier Pro taker fee is the highest of the five.",
   "wallet:rabby": "The pre-sign simulation shows what a transaction will do before you approve it. If you interact with cashier contracts at all, that is the safety feature to look for.",
-  "provider:hacksaw-gaming": "One RTP per title is a small policy with a large effect: it means the studio, not the casino, decides the maths. We wish more studios were this boring about it.",
-  "provider:pragmatic-play": "The catalogue is unavoidable and the RTP policy is the catch. A 94.5% build of a title published at 96.5% is the same game with two points of your money removed."
+  "provider:hacksaw-gaming": "Listing every RTP version on the game page is a small policy with a large effect: you can see which builds exist before a casino picks one for you. We wish more studios were this open about it.",
+  "provider:pragmatic-play": "The catalogue is unavoidable and the RTP disclosure is the catch. Its game pages show one figure without saying whether lower builds exist, so check the paytable inside the casino you play at."
 }

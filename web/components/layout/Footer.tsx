@@ -13,9 +13,7 @@ const footerCols = [
       { l: "All crypto casinos", href: "/crypto-casinos" },
       { l: "No-KYC casinos", href: "/crypto-casinos/no-kyc" },
       { l: "Fastest payouts", href: "/fastest-payouts" },
-      { l: "Live casinos", href: "/live-casino" },
       { l: "Bonuses tracked", href: "/bonuses" },
-      { l: "Fiat casinos", href: "/fiat-casinos" },
     ],
   },
   {

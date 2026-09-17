@@ -1,8 +1,32 @@
 [
-  { "name": "Payout speed", "weight": "25%", "desc": "The operator's own stated withdrawal processing time, cited from its help centre or terms. A field test replaces this with the median of at least three withdrawals we time ourselves, at different sizes.", "sourcing": "editorial" },
-  { "name": "Bonus fairness", "weight": "20%", "desc": "Wagering, game weighting, max-cashout caps read line by line from the operator's own terms.", "sourcing": "editorial" },
-  { "name": "Crypto support", "weight": "15%", "desc": "Coins, withdrawal fees and minimums — read from the operator's own help pages.", "sourcing": "editorial" },
-  { "name": "Trust & licensing", "weight": "15%", "desc": "Licence and operating company read from the operator's own licence page, checked against the regulator's register where one is public.", "sourcing": "editorial" },
-  { "name": "Game & RTP quality", "weight": "15%", "desc": "The RTP version each operator actually ships, read inside its own client via RTP Watch. No public source discloses it, so it shows as not yet checked until readings exist.", "sourcing": "field-tested" },
-  { "name": "Support", "weight": "10%", "desc": "Only measurable by opening tickets ourselves — three per operator, timed across time zones. Shows as not yet checked until a field test has run.", "sourcing": "field-tested" }
+  {
+    "name": "Payout speed",
+    "desc": "The operator's own stated withdrawal processing time, cited from its help centre or terms. A field test replaces this with the median of at least three withdrawals we time ourselves, at different sizes.",
+    "sourcing": "editorial"
+  },
+  {
+    "name": "Bonus fairness",
+    "desc": "Wagering, game weighting, max-cashout caps read line by line from the operator's own terms.",
+    "sourcing": "editorial"
+  },
+  {
+    "name": "Crypto support",
+    "desc": "Coins, withdrawal fees and minimums — read from the operator's own help pages.",
+    "sourcing": "editorial"
+  },
+  {
+    "name": "Trust & licensing",
+    "desc": "Licence and operating company read from the operator's own licence page, checked against the regulator's register where one is public.",
+    "sourcing": "editorial"
+  },
+  {
+    "name": "Game & RTP quality",
+    "desc": "The RTP version each operator actually ships, read inside its own client via RTP Watch. No public source discloses it, so it shows as not yet checked until readings exist.",
+    "sourcing": "field-tested"
+  },
+  {
+    "name": "Support",
+    "desc": "Only measurable by opening tickets ourselves — three per operator, timed across time zones. Shows as not yet checked until a field test has run.",
+    "sourcing": "field-tested"
+  }
 ]

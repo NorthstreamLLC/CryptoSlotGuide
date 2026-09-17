@@ -39,36 +39,24 @@
     "key": [
       "Seconds to credit, no on-chain fee",
       "Channel capacity caps the amount",
-      "{ln} of {casinos} operators on our index support it"
+      "Few operators support it, so check the cashier"
     ],
     "body": [
       "Lightning settles in seconds and avoids on-chain fees entirely, which makes it the correct rail for small, frequent deposits. Where an operator supports it, it is usually the quickest way to a playable balance in bitcoin.",
       "The constraint is capacity. Larger payments are more likely to hit channel limits, and when they do the payment fails rather than arriving slowly, which is confusing the first time it happens.",
-      "Support is thin: {ln} of {casinos} operators. We flag it per casino because it changes the economics of a small bankroll more than any bonus does."
+      "Support is thin. Each casino profile lists the coins and networks the operator itself names, so check there, and in the cashier, before relying on Lightning."
     ]
   },
   "who-pays-the-network-fee": {
     "key": [
-      "{fee} of {casinos} operators absorb it",
+      "Policies differ by casino, so read the profile",
       "It matters most on small, frequent cash-outs",
       "Chain choice moves it by two orders of magnitude"
     ],
     "body": [
-      "A withdrawal fee deducted from your balance is a real cost, and it compounds if you cash out often. {fee} operators on our index absorb the network fee; the rest pass it through, and some add a markup on top of it.",
+      "A withdrawal fee deducted from your balance is a real cost, and it compounds if you cash out often. Some operators say they cover the network fee; others pass it through, and some charge a fixed per-coin fee on top. Each casino profile quotes the operator's own wording on withdrawal fees.",
       "The chain matters more than the policy. An Ethereum withdrawal can cost dollars in gas at busy times; the same transfer on Solana costs a fraction of a cent. A fee-absorbing operator on an expensive chain can still be the worse deal.",
-      "The coins page lists a typical network fee per coin. Check the operator's own cashier for any markup it adds before you pick a chain."
-    ]
-  },
-  "sportsbook-margin-measured": {
-    "key": [
-      "Margin is the overround baked into the price",
-      "Compare across many markets, not one",
-      "One point of margin beats any welcome offer"
-    ],
-    "body": [
-      "Margin, or overround, is the amount by which a book's implied probabilities exceed 100%. It is the sportsbook equivalent of RTP, and unlike a bonus it applies to every bet you place.",
-      "To compare books fairly, take the same markets across football, basketball, tennis and esports, at the same time of day, and look at the median rather than one price. Books quote tighter on marquee events and wider on everything else, so a single-market comparison is misleading.",
-      "A book a point tighter costs you less over a season than any promotion returns. It is the least visible and most important number on a sportsbook review."
+      "The coins page explains how each network sets its fee. Check the operator's own withdrawal fee in its cashier before you pick a chain."
     ]
   },
   "bankroll-separation": {
@@ -85,14 +73,26 @@
   },
   "our-scoring-sheet": {
     "key": [
-      "Six criteria, every fact cited",
+      "Six areas, every fact cited",
       "Commission is not an input",
-      "Every criterion says how it was sourced"
+      "Gaps are marked, not guessed"
     ],
     "body": [
       "Every review covers the same six areas: payout speed, bonus fairness, crypto support, trust and licensing, game and RTP quality, and support. There is no score or weighting. A review states what the operator publishes on each, with a citation, so you can check it yourself.",
       "Commercial relationships are not an input. We earn commission when a reader signs up through our links, and the rate is not visible to whoever writes the review. It never changes what a review says.",
-      "Each criterion is labelled field-tested, community-reported or editorially assessed, so you can see which inputs came from a funded account and which came from public sources."
+      "Where an operator doesn't publish something, or we couldn't reach the page, the profile says so instead of filling the gap. Nothing on the site is field-tested yet; when we time withdrawals on a funded account, those figures will be labelled as ours."
+    ]
+  },
+  "sportsbook-margin-explained": {
+    "key": [
+      "Margin is the overround baked into the price",
+      "Compare across many markets, not one",
+      "One point of margin beats any welcome offer"
+    ],
+    "body": [
+      "Margin, or overround, is the amount by which a book's implied probabilities exceed 100%. It is the sportsbook equivalent of RTP, and unlike a bonus it applies to every bet you place.",
+      "To compare books fairly, take the same markets across football, basketball, tennis and esports, at the same time of day, and look at the median rather than one price. Books quote tighter on marquee events and wider on everything else, so a single-market comparison is misleading.",
+      "A book a point tighter costs you less over a season than any promotion returns. We haven't measured margins across books yet; when we do, the method above is the one we'll use."
     ]
   }
 }

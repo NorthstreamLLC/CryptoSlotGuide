@@ -65,6 +65,8 @@ export interface EntityView {
   chips: { t: string; tint: string }[];
   specTitle: string;
   specSub: string;
+  /** Page the spec rows are read from, shown as a link under the heading. */
+  specSource?: string;
   spec: SpecRow[];
   tableTitle: string;
   tableSub: string;
@@ -215,7 +217,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       standfirst: checked
         ? `We funded ${w.name} and moved money in and out of casino cashiers on the chains it supports, watching what it signs, what it simulates, and what it hides. ${w.note}.`
         : `${w.note}. Everything below is from ${w.name}'s own docs; we haven't made test casino deposits from it yet.`,
-      tags: checked ? ["DEPOSITS TESTED", "SIGNING BEHAVIOUR AUDITED", "FIELD-TESTED"] : ["FROM ITS OWN DOCS", audits?.startsWith("Yes") ? "AUDITS PUBLISHED" : "NO AUDITS FOUND"],
+      tags: checked ? ["DEPOSITS TESTED", "SIGNING BEHAVIOUR AUDITED", "FIELD-TESTED"] : ["FROM ITS OWN DOCS", ...(audits ? [audits.startsWith("Yes") ? "AUDITS PUBLISHED" : "NO AUDITS FOUND"] : [])],
       byline: checked ? "Field-tested on real casino deposits" : `${w.name}'s own docs · casino deposits not yet field-tested`,
       verdict: `For gambling specifically, what matters is how a wallet behaves at the moment of signing: whether it tells you what a cashier contract will do before you approve it.${protection ? ` ${w.name}: ${protection.charAt(0).toLowerCase()}${protection.slice(1)}.` : ""}`,
       glance: [
@@ -223,12 +225,12 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
         { label: "Chains", value: w.m2, source: fact("Coverage & fees", "Supported chains") ? "cited" : "unchecked" },
         { label: "Swap fee", value: w.m3, source: fact("Coverage & fees", "Swap fee") ? "cited" : "unchecked" },
         { label: "Pre-sign warnings", value: protection ? "Yes" : "Not stated", source: protection ? "cited" : "unchecked" },
-        { label: "Security audits", value: audits?.startsWith("Yes") ? "Published" : "Not found", source: audits ? "cited" : "unchecked" },
+        { label: "Security audits", value: audits ? (audits.startsWith("Yes") ? "Published" : "Not found") : "Not checked yet", source: audits ? "cited" : "unchecked" },
       ],
       stats: [
         { label: "Key storage", value: w.m1, note: "Per its own docs" },
         { label: "Chains", value: w.m2, note: checked ? "Confirmed by a live deposit each" : "As stated, not yet deposit-tested" },
-        { label: "Swap fee", value: w.m3, note: w.m3 === "Not stated" ? "No fee published" : "Its own published fee" },
+        { label: "Swap fee", value: w.m3, note: !fact("Coverage & fees", "Swap fee") ? "Not checked yet" : w.m3 === "Not stated" ? "No fee published" : "Its own published fee" },
       ],
       chipLabel: "Chains we deposited from",
       chips: [],
@@ -328,14 +330,15 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       chipLabel: "Where the full build runs",
       chips: anyChecked ? checkedOps.filter((_, i) => cuts[i] === 0).map((o) => ({ t: o.name, tint: "#5FE3E8" })) : [],
       specTitle: anyChecked ? "What the paytable says" : "Published figures",
+      specSource: s.sourceUrl,
       specSub: s.sourceUrl ? `From ${s.provider}'s own game page, checked 15 Sep 2026. Per-operator builds fill in as RTP Watch reads them.` : "The studio's published figures. Per-operator builds fill in as RTP Watch reads them.",
       spec: [
-        hasRtp(s) ? spec("Published return", `${rtpTxt} in the full build`, "ok") : unconfirmed("Published return"),
+        hasRtp(s) ? cited("Published return", `${rtpTxt} in the full build`) : unconfirmed("Published return"),
         s.rtpVersions
-          ? spec("Configurations", `${s.rtpVersions}% — operator-selectable`, "bad")
+          ? cited("Configurations", `${s.rtpVersions}% — operator-selectable`)
           : spec("Configurations", anyChecked ? (cuts.some((c) => c) ? "Multiple, operator-selectable" : "Single configuration") : "Not published on the game page", anyChecked ? (cuts.some((c) => c) ? "bad" : "ok") : "watch"),
-        hasVol(s) ? spec("Volatility", s.vol, "watch") : unconfirmed("Volatility"),
-        hasMaxWin(s) ? spec("Max win", `${s.maxWin} stake`, "ok") : unconfirmed("Max win"),
+        hasVol(s) ? cited("Volatility", s.vol) : unconfirmed("Volatility"),
+        hasMaxWin(s) ? cited("Max win", `${s.maxWin} stake`) : unconfirmed("Max win"),
       ],
       tableTitle: "RTP by casino build",
       tableSub: anyChecked ? "The figure in each operator's own client on the date shown." : "Field-tested per operator as our RTP Watch program covers them — none checked yet for this title.",
@@ -349,7 +352,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
             m3: cuts[i] ? "Cut" : "Clean",
           }))
         : [],
-      tableNote: "The operator chooses the build, not the studio. Where a casino ships a reduced configuration of a title we track, it costs that casino points on game and RTP quality.",
+      tableNote: "The operator chooses the build, not the studio. Where a casino ships a reduced configuration of a title we track, RTP Watch will show it here and on that casino's profile.",
       pros: [
         hasRtp(s) ? `Published return of ${rtpTxt} in the full build` : `${s.provider} title on our slot index`,
         hasMaxWin(s) ? `${s.maxWin} published max win` : null,
@@ -421,13 +424,14 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
         ...(modalVol ? [{ label: "Typical volatility", value: modalVol, note: "Most common across titles on our index" }] : []),
       ],
       chipLabel: "Mechanics this studio is known for",
-      chips: p.name === "Nolimit City" ? ["xWays", "xNudge", "xBomb"].map((t, i) => ({ t, tint: ["#2FA8B0", "#C7A45C", "#9B8FC4"][i] })) : [],
+      chips: [],
       chipsEmpty: "Not catalogued for this studio yet.",
       specTitle: "RTP policy",
+      specSource: p.sourceUrl,
       specSub: `What ${p.name} publishes on its own site. Rows marked unconfirmed haven't been checked in live casino builds.`,
       spec: [
-        spec("Configurations", p.rtp, policy === "multiple" ? "ok" : policy === "unpublished" ? "bad" : "watch"),
-        spec("Licensing", p.licences, "ok"),
+        cited("Configurations", p.rtp),
+        cited("Licensing", p.licences),
         unconfirmed("RTP shown in-game"),
         unconfirmed("Max win honoured"),
       ],

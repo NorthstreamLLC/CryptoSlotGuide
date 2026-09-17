@@ -14,7 +14,7 @@ import { payoutView } from "@/lib/payout";
  */
 export function SearchPage({ initialQuery = "" }: { initialQuery?: string }) {
   const [q, setQ] = useState(initialQuery);
-  const { ops, slots, providers, walletRows, exchangeRows, sportsMarkets, esportsTitles, liveGames, guideRows } = siteData;
+  const { ops, slots, providers, walletRows, exchangeRows, sportsMarkets, esportsTitles, guideRows } = siteData;
 
   const query = q.trim().toLowerCase();
   const hit = (s: string) => !query || s.toLowerCase().includes(query);
@@ -64,12 +64,6 @@ export function SearchPage({ initialQuery = "" }: { initialQuery?: string }) {
           .map((m) => ({ name: m.name, note: `Best price at ${m.best}`, meta: m.m2, href: `/betting/${m.name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}` })),
       },
       {
-        label: "Live tables",
-        items: liveGames
-          .filter((g2) => hit(g2.name) || hit(g2.type) || hit(g2.studio))
-          .map((g2) => ({ name: g2.name, note: `${g2.studio} · ${g2.type.toLowerCase()}`, meta: `${g2.rtp.toFixed(2)}%`, href: `/live-casino/${g2.slug}` })),
-      },
-      {
         label: "Guides",
         items: guideRows
           .filter((r) => hit(r.title) || hit(r.standfirst))
@@ -77,7 +71,7 @@ export function SearchPage({ initialQuery = "" }: { initialQuery?: string }) {
       },
     ];
     return g.filter((grp) => grp.items.length);
-  }, [query, ops, slots, providers, walletRows, exchangeRows, sportsMarkets, esportsTitles, liveGames, guideRows]);
+  }, [query, ops, slots, providers, walletRows, exchangeRows, sportsMarkets, esportsTitles, guideRows]);
 
   const total = groups.reduce((n, g) => n + g.items.length, 0);
   const suggestions = ["no-KYC", "Lightning", "Hacksaw", "wagering", "Solana", "esports"];

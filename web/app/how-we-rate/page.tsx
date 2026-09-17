@@ -22,14 +22,13 @@ export const metadata = pageMetadata(
 );
 
 /**
- * Live casino, wallets and exchanges are categories a field test covers,
+ * Wallets and exchanges are categories a field test covers,
  * but the badge has to reflect what has actually happened: it only reads
  * "Field-tested" once every entity in that category is in
  * data/fieldTestedOperators.json, and "Field-test pending" until then.
  * Every other category is editorial by design.
  */
 const FIELD_TEST_CATEGORY_SLUGS: Record<string, string[]> = {
-  "Live casino": siteData.liveCasinos.map((o) => o.slug),
   Wallets: siteData.walletRows.map((o) => o.slug),
   Exchanges: siteData.exchangeRows.map((o) => o.slug),
 };
@@ -68,7 +67,7 @@ export default function Page() {
             We don&apos;t score or rate anything. Every review is built from facts — each one cited to the operator&apos;s own page, a third-party tracker, or our own testing — and anything we haven&apos;t checked is marked as not yet checked. Commission never decides what a review says or which facts it shows.
           </p>
           <p style={{ margin: "0 auto", maxWidth: "66ch", fontSize: 15, lineHeight: 1.65, color: "#7B8A93", textWrap: "pretty" }}>
-            Everything else — live tables, slots, providers, sportsbooks, prediction markets, wallets, exchanges — is reviewed against its own checklist rather than forced into the casino model. Those checklists are below.
+            Everything else — slots, providers, sportsbooks, prediction markets, wallets, exchanges — is reviewed against its own checklist rather than forced into the casino model. Those checklists are below.
           </p>
         </div>
       </section>

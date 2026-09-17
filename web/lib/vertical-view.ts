@@ -252,17 +252,6 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
   }
 
   if (kind === "exchanges") {
-    // Editorial picks, not measurement results. Every metric shown on a
-    // card is read from that venue's exchangeRows record (m1 = entry taker
-    // fee, m2 = fiat rails, m3 = withdrawal limit — each cited on its review).
-    type ExField = "m1" | "m2" | "m3";
-    const rawAwards: { award: string; name: string; why: string; m: [string, ExField][] }[] = [
-      { award: "Pick for low fees", name: "Bybit", why: "0.10% maker and taker at the entry tier, and 1M USDT a day in crypto withdrawals on standard KYC.", m: [["Taker fee", "m1"], ["Limit", "m3"]] },
-      { award: "Pick for US fiat", name: "Coinbase", why: "The widest US fiat rails of the five — ACH, wire, card and PayPal. No exchange-wide proof of reserves found.", m: [["Rails", "m2"], ["Taker fee", "m1"]] },
-      { award: "Pick for regulation", name: "Kraken", why: "MiCA-licensed, FCA-registered and publishes proof of reserves. Its entry-tier Pro fees are the highest of the five.", m: [["Taker fee", "m1"], ["Fiat rails", "m2"]] },
-      { award: "Pick for EUR deposits", name: "KuCoin", why: "SEPA and SEPA Instant, plus card and P2P for verified users, at 0.10% on major pairs.", m: [["Rails", "m2"], ["Taker fee", "m1"]] },
-      { award: "Pick for reserves reporting", name: "OKX", why: "46 proof-of-reserves reports published, and a $10M daily crypto withdrawal limit on its US pages.", m: [["Limit", "m3"], ["Taker fee", "m1"]] },
-    ];
     const highestTakerFee = [...exchangeRows].sort((a, b) => parseFloat(b.m1) - parseFloat(a.m1))[0]?.m1 ?? "—";
     return {
       kicker: "Exchanges",
@@ -276,24 +265,6 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
       cols: ["Entry taker fee", "Fiat rails", "Withdrawal limit"],
       statLabel: "",
       note: "The fee schedule is only part of the cost of an onramp — the spread you cross and the withdrawal fee matter as much. Exchanges don't publish spreads, so compare the live price before moving a bankroll.",
-      awardTitle: "Editor's picks: crypto exchanges",
-      awardSub: "One editorial pick per venue, each for the cited figure named on the card. No venue holds two, and the order is alphabetical.",
-      awards: rawAwards.map((a) => {
-        const match = exchangeRows.find((x) => x.name === a.name);
-        const slug = match?.slug ?? a.name.toLowerCase();
-        return {
-          slug,
-          name: a.name,
-          award: a.award,
-          why: a.why,
-          metrics: a.m.map(([label, field]): [string, string] => [label, match ? match[field] : "—"]),
-          accent: "#00C2CC",
-          awardBg: "rgba(0,194,204,.10)",
-          awardBorder: "rgba(0,194,204,.28)",
-          mono: match?.mono ?? a.name.slice(0, 2).toUpperCase(),
-          href: `/exchanges/${slug}`,
-        };
-      }),
       rows: [...exchangeRows].sort(byName).map((x) => ({
         slug: x.slug,
         name: x.name,

@@ -226,6 +226,13 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
         </div>
 
         {e.spec.length > 0 && <SectionHeading title={e.specTitle} sub={e.specSub} maxWidth="80ch" />}
+        {e.spec.length > 0 && e.specSource && (
+          <div style={{ margin: "-6px 0 14px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11 }}>
+            <a href={e.specSource} target="_blank" rel="noopener noreferrer nofollow" style={{ color: "#5FE3E8" }}>
+              Source: {new URL(e.specSource).hostname.replace(/^www./, "")} ↗
+            </a>
+          </div>
+        )}
         {e.spec.length > 0 && (
         <div style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 13, overflow: "hidden", background: "#0C1013", marginBottom: 38 }}>
           {e.spec.map((row) => (

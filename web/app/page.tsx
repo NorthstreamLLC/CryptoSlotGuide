@@ -46,7 +46,7 @@ const wallAnims = ["csg-up 34s linear infinite", "csg-down 43s linear infinite",
 const quickChips = [
   { label: "Bitcoin casinos", href: "/crypto-casinos" },
   { label: "No-KYC", href: "/crypto-casinos/no-kyc" },
-  { label: "Live blackjack", href: "/live-casino" },
+  { label: "Provably fair games", href: "/house-games" },
   { label: "High RTP slots", href: "/slots" },
   { label: "Esports betting", href: "/sportsbooks?tab=2" },
   { label: "Hardware wallets", href: "/wallets" },
@@ -88,7 +88,7 @@ function buildFeatured() {
 }
 
 export default function HomePage() {
-  const { ops, slots, liveCasinos, providers, walletRows, exchangeRows, coinDefs, coinsBy, sportsMarkets, esportsTitles, criteria } = siteData;
+  const { ops, slots, houseGames, providers, walletRows, exchangeRows, coinDefs, coinsBy, sportsMarkets, esportsTitles, criteria } = siteData;
   const c = siteCounts;
   const featured = buildFeatured();
 
@@ -147,7 +147,7 @@ export default function HomePage() {
 
   const verticals = [
     { icon: "♠️", title: "Crypto casinos", tint: "#00C2CC", count: c.casinos, factLabel: "No-KYC", factValue: String(ops.filter((o) => o.kyc === "none").length), href: "/crypto-casinos" },
-    { icon: "🃏", title: "Live casino", tint: "#FF7EB6", count: c.live, factLabel: "Live casinos", factValue: String(liveCasinos.length), href: "/live-casino" },
+    { icon: "🎲", title: "House games", tint: "#FF7EB6", count: houseGames.length, factLabel: "Game types", factValue: String(houseGames.length), href: "/house-games" },
     { icon: "🎰", title: "Slots & RTP", tint: "#FFB347", count: c.slots, factLabel: topSlot?.name ?? "—", factValue: topSlot ? `${topSlot.rtp.toFixed(1)}%` : "—", href: "/slots" },
     { icon: "🎮", title: "Game studios", tint: "#B284FF", count: c.providers, factLabel: "All RTPs listed", factValue: String(allVersionsListedStudios(providers)), href: "/providers" },
     { icon: "⚽", title: "Sportsbooks", tint: "#57E39A", count: c.books, factLabel: "With esports", factValue: String(ops.filter((o) => o.esports).length), href: "/sportsbooks" },
@@ -217,7 +217,7 @@ export default function HomePage() {
             >
               <span style={{ color: "#3D4A52", fontFamily: "var(--font-jetbrains-mono), monospace" }}>⌕</span>
               <span style={{ flex: 1, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 13, color: "#5C6A72", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
-                casinos, live tables, slots, wallets, coins…
+                casinos, slots, sportsbooks, wallets, coins…
               </span>
               <span style={{ padding: "11px 18px", borderRadius: 8, border: 0, background: "#00C2CC", color: "#04191B", fontSize: 13, fontWeight: 700, whiteSpace: "nowrap" }}>
                 Search
@@ -248,7 +248,7 @@ export default function HomePage() {
             <div style={{ display: "flex", gap: 32, flexWrap: "wrap", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, color: "#5C6A72" }}>
               <span><strong style={{ color: "#DCE5E9", fontWeight: 500 }}>{c.casinos}</strong> crypto casinos listed</span>
               <span><strong style={{ color: "#DCE5E9", fontWeight: 500 }}>{c.slots}</strong> published slot RTPs</span>
-              <span><strong style={{ color: "#DCE5E9", fontWeight: 500 }}>{c.live}</strong> live table types listed</span>
+              <span><strong style={{ color: "#DCE5E9", fontWeight: 500 }}>{c.providers}</strong> game studios profiled</span>
             </div>
           </div>
 

@@ -15,7 +15,7 @@
     "ln": true,
     "sports": true,
     "esports": true,
-    "hasCustomReview": true,
+    "hasCustomReview": false,
     "bonusExpiry": "Instant Rakeback never expires; Weekly lapses when the next week's is available",
     "payoutStated": "Instant",
     "payoutStatedMaxMins": 0,

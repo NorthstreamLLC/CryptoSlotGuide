@@ -134,14 +134,6 @@ export function lowestTakerFee(exchangeRows: WalletOrExchangeRow[]): string {
   return [...exchangeRows].sort((a, b) => parseFloat(a.m1) - parseFloat(b.m1))[0]?.m1 ?? "—";
 }
 
-export function feeAbsorbers(ops: Operator[]): number {
-  return ops.filter((o) => o.absorbsFee).length;
-}
-
-export function lightningOps(ops: Operator[]): number {
-  return ops.filter((o) => o.ln).length;
-}
-
 /** A studio "ships one RTP" when it publishes a single figure, not a range. */
 /** Studios whose own game pages list every RTP version they license. */
 export function allVersionsListedStudios(providers: Provider[]): number {
@@ -159,15 +151,13 @@ export function selfCustodyWallets(rows: WalletOrExchangeRow[]): number {
 
 
 
-/** Resolves {casinos}/{fee}/{ln}/{coins}/{slots}/{studios} tokens in prose so copy can't drift from data. */
+/** Resolves {casinos}/{coins}/{slots}/{studios} tokens in prose so copy can't drift from data. */
 export function fill(
   template: string,
   data: { ops: Operator[]; slots: Slot[]; providers: Provider[]; coinDefs: CoinDef[] }
 ): string {
   const tokens: Record<string, string | number> = {
     casinos: data.ops.length,
-    fee: feeAbsorbers(data.ops),
-    ln: lightningOps(data.ops),
     coins: data.coinDefs.length,
     slots: data.slots.length,
     studios: data.providers.length,
@@ -188,18 +178,3 @@ export function missingCoins(coinsBy: CoinsByOperator, coinDefs: CoinDef[], slug
 }
 
 
-/**
- * The category leader has nothing to answer for on breadth — the only
- * honest live criticism there is latency, and only if someone beats it.
- */
-export function liveCon(liveCasinos: LiveCasino[], slug: string): string | null {
-  const ranked = [...liveCasinos].sort((a, b) => b.tables - a.tables);
-  const me = ranked.find((c) => c.slug === slug);
-  const best = ranked[0];
-  if (!me || !best) return null;
-  if (me.slug === best.slug) {
-    const quick = [...ranked].sort((a, b) => parseInt(a.latency, 10) - parseInt(b.latency, 10))[0];
-    return quick && quick.slug !== me.slug ? `Live stream runs ${me.latency} against ${quick.name}'s ${quick.latency}` : null;
-  }
-  return `Live catalogue trails ${best.name} — ${me.tables} tables against ${best.tables}`;
-}

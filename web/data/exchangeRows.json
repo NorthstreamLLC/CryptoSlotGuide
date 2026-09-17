@@ -23,9 +23,9 @@
     "slug": "coinbase",
     "name": "Coinbase",
     "mono": "CB",
-    "hed": "the widest US fiat rails, at a 0.60% entry taker fee",
+    "hed": "the widest US fiat rails of the five, and a 0.60% entry taker fee on Coinbase Exchange",
     "note": "ACH, wire, card and PayPal; no exchange-wide proof of reserves found",
-    "m1": "0.60%",
+    "m1": "0.60% (Exchange)",
     "m2": "ACH, wire, card, PayPal",
     "m3": "$100K/day (Exchange)"
   },
