@@ -236,6 +236,18 @@
         ]
       },
       {
+        "title": "Sports bonus terms",
+        "facts": [
+          {
+            "label": "Offer",
+            "value": "No dedicated sports welcome offer listed. The welcome deposit bonuses (100% + 70FS, 120% + 100FS, 130% + 150FS and 150% + 180FS on the 1st to 4th deposits) are used in the Casino section's 'Bonus Wagering' games, per the bonuses page FAQ.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://1win.com/bonuses",
+            "asOf": "2026-09-17"
+          }
+        ]
+      },
+      {
         "title": "Compliance",
         "facts": [
           {
@@ -1868,6 +1880,18 @@
         ]
       },
       {
+        "title": "Sports bonus terms",
+        "facts": [
+          {
+            "label": "Offer",
+            "value": "No sports welcome offer. The welcome deposit bonus (120% match up to $1,000, USDT only) is casino-only and excludes the sportsbook. Sources disagree on the match: another FAQ, also dated August 12, 2026, describes it as a 100% match up to $1,000 ('The 1K Rush'), also casino-only.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://intercom.help/playlink/en/articles/15363485-120-first-deposit-bonus-usdt-only-up-to-1-000",
+            "asOf": "2026-09-17"
+          }
+        ]
+      },
+      {
         "title": "Compliance",
         "facts": [
           {
@@ -2628,6 +2652,18 @@
         ]
       },
       {
+        "title": "Sports bonus terms",
+        "facts": [
+          {
+            "label": "Offer",
+            "value": "No sports bonus: bonus coins from the 100% Deposit Bonus cannot be used on the Sportsbook, Live Casino or Game Show. They can be used only on slots and Cybet Originals. (Page modified 2026-06-19.)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://guidebook.cybet.com/deposit-bonus/",
+            "asOf": "2026-09-17"
+          }
+        ]
+      },
+      {
         "title": "Compliance",
         "facts": [
           {
@@ -2855,6 +2891,60 @@
             "sourcing": "editorial",
             "sourceUrl": "https://degen.com/sports?sport=counter-strike",
             "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
+        "title": "Sports bonus terms",
+        "facts": [
+          {
+            "label": "Offer",
+            "value": "First Deposit Bonus: 100% match up to $1,500. It is not sports-only, but sports wagers can count toward rollover. You must register with an eligible referral code and activate the bonus before depositing. (Article dated July 22, 2026.)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.degen.com/en/articles/15558569-unlock-up-to-1-500-on-your-first-deposit",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Wagering",
+            "value": "30x (deposit + bonus). Each wager's contribution is weighted by house edge: wager x (game edge / 0.04).",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.degen.com/en/articles/15558569-unlock-up-to-1-500-on-your-first-deposit",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Minimum odds",
+            "value": "1.30",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.degen.com/en/articles/15558569-unlock-up-to-1-500-on-your-first-deposit",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Max bet",
+            "value": "$10 per wager during rollover, unless stated otherwise",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.degen.com/en/articles/15558569-unlock-up-to-1-500-on-your-first-deposit",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Expiry",
+            "value": "No time limit to complete the rollover",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.degen.com/en/articles/15558569-unlock-up-to-1-500-on-your-first-deposit",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Qualifying bets",
+            "value": "Only settled sports wagers at odds of 1.30 or higher count. Challenges, Accumulator Games and Slot Bonus Buy features are not allowed during rollover.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.degen.com/en/articles/15558569-unlock-up-to-1-500-on-your-first-deposit",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "$20",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.degen.com/en/articles/15558569-unlock-up-to-1-500-on-your-first-deposit",
+            "asOf": "2026-09-17"
           }
         ]
       },
@@ -4502,6 +4592,18 @@
         ]
       },
       {
+        "title": "Sports bonus terms",
+        "facts": [
+          {
+            "label": "Offer",
+            "value": "No sports betting while Gamdom's first-deposit bonus is active. The bonus has to be finished before you can place sports bets. The % and cap vary by account. Help article updated about 2 weeks ago.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.gamdom.com/en/articles/16108950-deposit-bonus-guide",
+            "asOf": "2026-09-17"
+          }
+        ]
+      },
+      {
         "title": "Compliance",
         "facts": [
           {
@@ -4660,6 +4762,18 @@
             "sourcing": "editorial",
             "sourceUrl": "https://www.goated.com/policies/sports",
             "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
+        "title": "Sports bonus terms",
+        "facts": [
+          {
+            "label": "Offer",
+            "value": "No traditional welcome or deposit bonus (site-wide statement, so no sports welcome offer either; Goated points to ongoing promotions, VIP rewards and its token/airdrop instead)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.goated.com/llms-full.txt",
+            "asOf": "2026-09-17"
           }
         ]
       },
@@ -5035,6 +5149,18 @@
             "sourcing": "editorial",
             "sourceUrl": "https://jackpot.bet/assets/legal/sport-settlement-rules.pdf",
             "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
+        "title": "Sports bonus terms",
+        "facts": [
+          {
+            "label": "Offer",
+            "value": "No sports bonus: you cannot bet on the Sportsbook with a currency that has an active deposit-bonus rollover. The regular casino offer is 100% up to $1,000 with 35x rollover. (Article dated January 15, 2026.)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.jackpot.bet/en/articles/9607235-deposit-bonuses-terms-conditions",
+            "asOf": "2026-09-17"
           }
         ]
       },
@@ -5646,6 +5772,18 @@
         ]
       },
       {
+        "title": "Sports bonus terms",
+        "facts": [
+          {
+            "label": "Offer",
+            "value": "No welcome bonus of any kind (so no sports welcome offer). Bonuses come only from MetaMax Rewards and occasional onsite promotions. (Help article shows 'Updated over a week ago', no exact date.)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.metawin.com/en/articles/13848305-are-there-any-bonuses-available-outside-of-metamax-rewards-and-onsite-promotions-on-metawin",
+            "asOf": "2026-09-17"
+          }
+        ]
+      },
+      {
         "title": "Compliance",
         "facts": [
           {
@@ -5928,6 +6066,60 @@
         ]
       },
       {
+        "title": "Sports bonus terms",
+        "facts": [
+          {
+            "label": "Wagering",
+            "value": "Set per offer on the offer card (visible after login). For deposit offers it is typically (your money + bonus) x the card's multiplier. The terms use 35x only as an example. Sports bets count only if the sports rules are met.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://qzino.tech/docs/Bonus_Balance_Terms_and_Conditions_04.09.26.pdf",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Minimum odds",
+            "value": "The minimum shown on the offer card or platform rules, 'commonly 1.50' (general Bonus Balance terms, not a specific offer)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://qzino.ai/blog/bonus-balance-terms-and-conditions",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Qualifying bets",
+            "value": "A sports bet from Bonus Balance counts only if it meets the minimum odds, has settled, and the event ends at least a set time before the offer ends ('commonly 4 hours'). System bets never count toward bonus wagering (Sports Betting Rules 8.1). (Blog dated Sep 6, 2026; PDF dated 04.09.26.)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://qzino.ai/blog/bonus-balance-terms-and-conditions",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Max bet",
+            "value": "Normally no hard maximum bet. Each offer card sets a cap on how much of one bet counts toward wagering.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://qzino.ai/blog/bonus-balance-terms-and-conditions",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Expiry",
+            "value": "Each offer card sets an activation window and a time limit for finishing wagering. The terms use '14 days after activation' only as an example.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://qzino.ai/blog/bonus-balance-terms-and-conditions",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Max cashout",
+            "value": "When wagering is complete, you keep all of your own-money part. The bonus part is capped at the claim cap on the offer card, 'commonly up to 1x the original bonus'.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://qzino.ai/blog/bonus-balance-terms-and-conditions",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Offer",
+            "value": "Offers are shown per account on offer cards after login; there is no named sports welcome offer. Its general Bonus Balance terms (September 2026) set the sports rules below.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://qzino.ai/blog/bonus-balance-terms-and-conditions",
+            "asOf": "2026-09-17"
+          }
+        ]
+      },
+      {
         "title": "Compliance",
         "facts": [
           {
@@ -6157,6 +6349,18 @@
             "sourcing": "editorial",
             "sourceUrl": "https://rainbet.com/sportsbook",
             "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
+        "title": "Sports bonus terms",
+        "facts": [
+          {
+            "label": "Offer",
+            "value": "No sports welcome bonus. Rainbet's first deposit bonus (40x wager lock) is for the casino only.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://rainbet.com/deposit-promotion-terms",
+            "asOf": "2026-09-17"
           }
         ]
       },
@@ -6968,6 +7172,18 @@
         ]
       },
       {
+        "title": "Sports bonus terms",
+        "facts": [
+          {
+            "label": "Offer",
+            "value": "No separate sports welcome offer is published. The Shock Deposit Bonus / Welcome Bonus (first deposit only; example given is a 100% match on up to $1,500 deposited) lists the categories allowed on a rollover balance as Originals, Slots, Live Casino, Game Shows, Table Games and Instant Win. Sports is not listed. The sports promotions pages list no welcome offer.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.shock.com/policies/bonus-terms",
+            "asOf": "2026-09-17"
+          }
+        ]
+      },
+      {
         "title": "Compliance",
         "facts": [
           {
@@ -7161,6 +7377,60 @@
             "sourcing": "editorial",
             "sourceUrl": "https://shuffle.com/sports/esports",
             "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
+        "title": "Sports bonus terms",
+        "facts": [
+          {
+            "label": "Offer",
+            "value": "General first deposit bonuses that sportsbook bets count toward; there is no sports-specific welcome offer. The bonus %, cap and minimum deposit are shown on each promotion, not in these terms (version 1.0, September 2026).",
+            "sourcing": "editorial",
+            "sourceUrl": "https://shuffle.com/info/deposit-bonus-tcs",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Wagering",
+            "value": "(Eligible deposit + bonus) x the promotion's wagering multiplier. The multiplier is not fixed on this page; 35x appears only as a worked example. Sportsbook bets count at a contribution rate Shuffle sets (the rate is not given here).",
+            "sourcing": "editorial",
+            "sourceUrl": "https://shuffle.com/info/deposit-bonus-tcs",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Minimum odds",
+            "value": "1.30 (decimal), unless the promotion states otherwise",
+            "sourcing": "editorial",
+            "sourceUrl": "https://shuffle.com/info/deposit-bonus-tcs",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Max bet",
+            "value": "$10 (USD equivalent) per bet while wagering is active, unless the promotion says otherwise",
+            "sourcing": "editorial",
+            "sourceUrl": "https://shuffle.com/info/deposit-bonus-tcs",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Expiry",
+            "value": "30 days from when the bonus is credited to finish wagering, unless the promotion says otherwise. An unclaimed bonus may be cancelled after the promotion's claim period or 60 days.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://shuffle.com/info/deposit-bonus-tcs",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Qualifying bets",
+            "value": "These bets do not count toward wagering: void, cancelled or abandoned bets, cashed-out bets, and bets on opposite outcomes in the same market. Sportsbook bets must also meet the minimum odds.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://shuffle.com/info/deposit-bonus-tcs",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Max cashout",
+            "value": "Capped only if the promotion sets a maximum profit, expressed as a multiple of the eligible deposit. No figure is given on this page.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://shuffle.com/info/deposit-bonus-tcs",
+            "asOf": "2026-09-17"
           }
         ]
       },
@@ -7517,6 +7787,18 @@
             "sourcing": "editorial",
             "sourceUrl": "https://spartans.com/help-center/sportsbook-rules-odds88",
             "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
+        "title": "Sports bonus terms",
+        "facts": [
+          {
+            "label": "Offer",
+            "value": "No sports welcome offer listed. The only deposit bonus on the promotions page is a 200% first-deposit bonus (Pix deposits, max bonus BRL 10,000, 60x bonus wagering), and only Slot games count toward its wagering. The other promotions listed are CashRake (up to 33% back) and a leaderboard.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://spartans.com/promotions/9fec46a5-3a1b-4ab0-9736-6c5d91309971",
+            "asOf": "2026-09-17"
           }
         ]
       },
@@ -8931,6 +9213,18 @@
         ]
       },
       {
+        "title": "Sports bonus terms",
+        "facts": [
+          {
+            "label": "Offer",
+            "value": "No sports welcome or deposit offer. The promotions page (All / Casino / Sports tabs) lists only Refer a Friend and VIP Transfer.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://wager.com/promotions/",
+            "asOf": "2026-09-17"
+          }
+        ]
+      },
+      {
         "title": "Compliance",
         "facts": [
           {
@@ -9102,6 +9396,18 @@
             "sourcing": "editorial",
             "sourceUrl": "https://whale.io/sportsbook",
             "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
+        "title": "Sports bonus terms",
+        "facts": [
+          {
+            "label": "Offer",
+            "value": "No sports-specific welcome offer is published. The T&C (last updated 03.07.2026) describe an 'Available Bonus' mechanic for the whole site: 200% of the first qualifying deposit goes into a Bonus Balance, and it is unlocked bit by bit when the player claims Daily Cashback, Weekly Bonus or Monthly Bonus. The T&C do not describe it as a sports offer.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://whale.io/terms-and-conditions",
+            "asOf": "2026-09-17"
           }
         ]
       },
@@ -9400,6 +9706,18 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.yeet.com/en/articles/16973186-yeet-boost",
             "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
+        "title": "Sports bonus terms",
+        "facts": [
+          {
+            "label": "Offer",
+            "value": "No sports welcome offer: sports bets are excluded from Yeet's 100% first deposit bonus (up to $1,000) (help article dated February 24, 2026)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.yeet.com/en/articles/13464278-deposit-bonus-faqs",
+            "asOf": "2026-09-17"
           }
         ]
       },
