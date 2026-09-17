@@ -10,6 +10,7 @@
  * 2894-2900) are all exchanges now present in exchangeRows.json.
  */
 import { siteData } from "./site-data";
+import { brandFor } from "./casino-facts";
 import { sportsFacts, sportsbookOps, booksForTitle, esportsLabel, maxPayoutShort } from "./sports";
 import { hasRtp, hasVol, maxWinLabel, rtpLabel } from "./slot-facts";
 import {
@@ -150,8 +151,8 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
         [String(books.filter((o) => sportsFacts(o.slug).titles.length).length), "Name their esports titles"],
         [String(books.filter((o) => sportsFacts(o.slug).maxPayout).length), "State a payout cap"],
       ] as [string, string][],
-      cols: (tab === 0 ? ["Esports", "Cash-out · builder", "Max payout"] : ["Books naming it", "Includes", "Listed as"]) as [string, string, string],
-      statLabel: "",
+      cols: (tab === 0 ? ["Esports", "Cash-out", "Bet builder"] : ["Books", "Includes", "Also at"]) as [string, string, string],
+      statLabel: tab === 0 ? "Max payout" : "",
       note: "Books quote tighter on marquee events and wider elsewhere. Compare the live price at two or three books before you bet; the gap is usually worth more than any promotion.",
       tabs: ["Sportsbooks", "Esports"],
     };
@@ -166,11 +167,11 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
             mono: m.mono,
             tint: m.tint,
             note: m.note,
-            m1: String(bks.length),
+            m1: `${bks.length} sportsbooks`,
             m2: bks.slice(0, 2).map((b) => b.name).join(", ") || "—",
-            m3: "Title page",
+            m3: bks.slice(2, 4).map((b) => b.name).join(", ") || "—",
             stat: "—",
-            cta: "Title page",
+            cta: "See books",
             href: "/betting/" + toSlug(m.name),
           };
         }),
@@ -181,17 +182,20 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
       rows: books.map((o) => {
         const s = sportsFacts(o.slug);
         const yes = (f: unknown) => (f ? "Yes" : "—");
+        const offer = s.offer?.value ?? "";
+        const offerNote = /^rotating/i.test(offer) ? "Rotating sports promotions" : /^no /i.test(offer) ? "No sports welcome offer" : offer ? offer.split(/[.:;]/)[0].replace(/^(Sports Welcome Bonus|Champions Welcome Bonus, sports version)s*/i, "").trim() : "";
+        const provider = s.provider?.value?.split(/[.(]/)[0].trim();
         return {
           slug: o.slug,
           name: o.name,
           mono: o.mono,
-          tint: "#57B98C",
-          note: !s.sportsbook ? "Sportsbook facts not checked yet" : s.provider ? `Runs on ${s.provider.value?.split(/[.(]/)[0].trim()}` : "Sportsbook confirmed on its own pages",
-          m1: esportsLabel(o.slug),
-          m2: `${yes(s.cashout)} · ${yes(s.betBuilder)}`,
-          m3: maxPayoutShort(o.slug),
-          stat: "—",
-          cta: "View profile",
+          tint: brandFor(o.slug),
+          note: [offerNote, provider ? `Powered by ${provider}` : ""].filter(Boolean).join(" · "),
+          m1: esportsLabel(o.slug).replace("Not found", "—"),
+          m2: yes(s.cashout),
+          m3: yes(s.betBuilder),
+          stat: maxPayoutShort(o.slug).replace("Not found", "—"),
+          cta: "View offer",
           href: `/casinos/${o.slug}`,
         };
       }),

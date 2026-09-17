@@ -1,127 +1,55 @@
 "use client";
 
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import type { VerticalKind, VerticalRow } from "@/lib/vertical-view";
 import { getVerticalPage } from "@/lib/vertical-view";
 import { BrandMark } from "@/components/ui/BrandMark";
+import { Icon } from "@/components/ui/Icon";
 
 /**
- * Ported from the `isVertical` block in CryptoSlotGuide.dc.html (search
- * for `<!-- ═══ VERTICAL INDEX`). Powers /slots, /providers,
- * /sportsbooks, /wallets, /exchanges, /guides — "one component, six
- * data sources" per design/README.md's build order.
+ * One list page for /slots, /providers, /sportsbooks, /wallets, /exchanges
+ * and /guides: hero, optional tabs, and a clean list with three fact columns.
  */
+const MONO = "var(--font-jetbrains-mono), monospace";
+
 export function VerticalIndexPage({ kind, tabIdx = 0 }: { kind: VerticalKind; tabIdx?: number }) {
-  const router = useRouter();
   const vp = getVerticalPage(kind, tabIdx);
   const hasStat = vp.statLabel !== "";
+  const cols = hasStat
+    ? "md:grid-cols-[minmax(220px,1.5fr)_minmax(110px,1fr)_minmax(110px,1fr)_minmax(110px,1fr)_90px_130px]"
+    : "md:grid-cols-[minmax(220px,1.5fr)_minmax(110px,1fr)_minmax(110px,1fr)_minmax(110px,1fr)_130px]";
 
   return (
-    <main>
-      <section
-        style={{
-          borderBottom: "1px solid rgba(255,255,255,.07)",
-          background: "radial-gradient(110% 100% at 82% 0%, rgba(0,194,204,.08), transparent 58%), #090C0F",
-        }}
-      >
-        <div style={{ maxWidth: 1400, margin: "0 auto", padding: "52px 40px 44px" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 9, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#4E5A62", marginBottom: 22 }}>
-            <Link href="/" style={{ color: "#5C6A72" }}>Index</Link>
-            <span>/</span>
-            <span style={{ color: "#00C2CC" }}>{vp.kicker}</span>
+    <main style={{ background: "#07090B" }}>
+      <section style={{ borderBottom: "1px solid rgba(255,255,255,.07)", background: "radial-gradient(80% 120% at 85% 0%, rgba(0,194,204,.09), transparent 55%), radial-gradient(60% 80% at 0% 100%, rgba(155,143,196,.06), transparent 60%), #0A0D10" }}>
+        <div style={{ maxWidth: 1280, margin: "0 auto", padding: "40px 24px 40px" }}>
+          <div style={{ fontFamily: MONO, fontSize: 11, color: "#5C6A72", marginBottom: 22 }}>
+            <Link href="/" style={{ color: "#5C6A72" }}>Home</Link> / <span style={{ color: "#A8B6BE" }}>{vp.kicker}</span>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "1.35fr .65fr", gap: 56, alignItems: "end" }}>
-            <div>
-              <h1 style={{ margin: "0 0 16px", fontSize: 52, lineHeight: 1.02, letterSpacing: "-.038em", fontWeight: 800, fontStretch: "116%", color: "#fff", textWrap: "balance" }}>
-                {vp.title}
-              </h1>
-              <p style={{ margin: 0, maxWidth: "62ch", fontSize: 16.5, lineHeight: 1.65, color: "#93A3AC", textWrap: "pretty" }}>{vp.sub}</p>
-            </div>
-            <div style={{ display: "flex", flexDirection: "column", gap: 1, borderRadius: 12, overflow: "hidden", border: "1px solid rgba(255,255,255,.08)" }}>
-              {vp.stats.map(([value, label]) => (
-                <div key={label} style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 16, padding: "13px 16px", background: "#0C1013" }}>
-                  <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".06em", textTransform: "uppercase", color: "#5C6A72" }}>{label}</span>
-                  <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 17, fontWeight: 500, color: "#fff" }}>{value}</span>
-                </div>
-              ))}
-            </div>
+          <div style={{ fontFamily: MONO, fontSize: 11, letterSpacing: ".1em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 12 }}>{vp.kicker}</div>
+          <h1 style={{ margin: "0 0 14px", fontSize: "clamp(36px, 4.6vw, 54px)", lineHeight: 1.02, letterSpacing: "-.035em", fontWeight: 800, fontStretch: "114%", color: "#fff", textWrap: "balance" }}>{vp.title}</h1>
+          <p style={{ margin: "0 0 26px", maxWidth: "62ch", fontSize: 16.5, lineHeight: 1.6, color: "#A8B6BE", textWrap: "pretty" }}>{vp.sub}</p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
+            {vp.stats.map(([value, label]) => (
+              <span key={label} style={{ display: "inline-flex", alignItems: "baseline", gap: 8, padding: "9px 14px", borderRadius: 100, background: "rgba(255,255,255,.045)", border: "1px solid rgba(255,255,255,.08)", fontSize: 13.5, color: "#A8B6BE" }}>
+                <strong style={{ fontSize: 15, fontWeight: 800, color: "#fff" }}>{value}</strong>
+                {label}
+              </span>
+            ))}
           </div>
         </div>
       </section>
 
-      {vp.awards && vp.awards.length > 0 && (
-        <section style={{ maxWidth: 1400, margin: "0 auto", padding: "40px 40px 0" }}>
-          <div style={{ marginBottom: 20 }}>
-            <h2 style={{ margin: "0 0 8px", fontSize: 27, letterSpacing: "-.028em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>
-              {vp.awardTitle}
-            </h2>
-            <p style={{ margin: 0, fontSize: 14.5, color: "#8DA0AA", maxWidth: "76ch", textWrap: "pretty" }}>{vp.awardSub}</p>
-          </div>
-          <div style={{ display: "grid", minWidth: 0, gridTemplateColumns: "repeat(auto-fit,minmax(198px,1fr))", gap: 12 }}>
-            {vp.awards.map((a) => (
-              <Link
-                key={a.slug}
-                href={a.href}
-                className="hover:!bg-[#0F1417] hover:!border-accent"
-                style={{ display: "flex", flexDirection: "column", padding: 20, borderRadius: 14, background: "#0C1013", border: `1px solid ${a.awardBorder}` }}
-              >
-                <span
-                  style={{
-                    alignSelf: "flex-start",
-                    padding: "5px 9px",
-                    borderRadius: 5,
-                    background: a.awardBg,
-                    fontFamily: "var(--font-jetbrains-mono), monospace",
-                    fontSize: 9.5,
-                    fontWeight: 700,
-                    letterSpacing: ".06em",
-                    textTransform: "uppercase",
-                    color: a.accent,
-                    marginBottom: 18,
-                  }}
-                >
-                  {a.award}
-                </span>
-                <div style={{ width: 40, height: 32, display: "flex", alignItems: "center", marginBottom: 14 }}>
-                  <BrandMark slug={a.slug} mono={a.mono} tint={a.accent} radius={7} fontSize={12} />
-                </div>
-                <div style={{ fontSize: 17, fontWeight: 700, letterSpacing: "-.02em", color: "#fff", marginBottom: 9 }}>{a.name}</div>
-                <p style={{ margin: "0 0 18px", fontSize: 12.5, lineHeight: 1.55, color: "#7B8A93", textWrap: "pretty" }}>{a.why}</p>
-                <div style={{ marginTop: "auto", display: "flex", flexDirection: "column", gap: 1, borderRadius: 9, overflow: "hidden" }}>
-                  {a.metrics.map(([label, value]) => (
-                    <div key={label} style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 10, padding: "9px 11px", background: "#0F1417" }}>
-                      <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 9.5, letterSpacing: ".06em", textTransform: "uppercase", color: "#5C6A72" }}>{label}</span>
-                      <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12.5, color: "#E8EDF0" }}>{value}</span>
-                    </div>
-                  ))}
-                </div>
-              </Link>
-            ))}
-          </div>
-        </section>
-      )}
-
-      <section style={{ maxWidth: 1400, margin: "0 auto", padding: "34px 40px 20px" }}>
+      <section style={{ maxWidth: 1280, margin: "0 auto", padding: "28px 24px 24px" }}>
         {vp.tabs && (
-          <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 20 }}>
+          <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 18 }}>
             {vp.tabs.map((t, i) => {
               const active = i === tabIdx;
               return (
                 <Link
                   key={t}
                   href={vertHref(kind, i)}
-                  style={{
-                    padding: "9px 16px",
-                    borderRadius: 100,
-                    border: `1px solid ${active ? "rgba(0,194,204,.45)" : "rgba(255,255,255,.12)"}`,
-                    background: active ? "rgba(0,194,204,.12)" : "transparent",
-                    fontFamily: "var(--font-jetbrains-mono), monospace",
-                    fontSize: 11,
-                    letterSpacing: ".05em",
-                    textTransform: "uppercase",
-                    color: active ? "#5FE3E8" : "#A8B6BE",
-                  }}
+                  style={{ padding: "9px 16px", borderRadius: 100, border: `1px solid ${active ? "rgba(0,194,204,.5)" : "rgba(255,255,255,.12)"}`, background: active ? "rgba(0,194,204,.14)" : "rgba(255,255,255,.02)", fontSize: 13.5, fontWeight: 600, color: active ? "#5FE3E8" : "#A8B6BE" }}
                 >
                   {t}
                 </Link>
@@ -130,52 +58,32 @@ export function VerticalIndexPage({ kind, tabIdx = 0 }: { kind: VerticalKind; ta
           </div>
         )}
 
-        <div role="table" style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 14, overflowX: "auto", background: "#0C1013", boxShadow: "0 12px 40px rgba(0,0,0,.35)" }}>
-          <div
-            role="row"
-            style={{
-              display: "grid",
-              minWidth: 1020,
-              gridTemplateColumns: `54px minmax(300px,1.5fr) 150px 140px 160px ${hasStat ? "84px" : "0px"} 132px`,
-              background: "#101519",
-              borderBottom: "1px solid rgba(255,255,255,.07)",
-            }}
-          >
-            <HeadCell muted>#</HeadCell>
-            <HeadCell muted>{vp.kicker}</HeadCell>
-            <HeadCell>{vp.cols[0]}</HeadCell>
-            <HeadCell>{vp.cols[1]}</HeadCell>
-            <HeadCell>{vp.cols[2]}</HeadCell>
-            {hasStat && <HeadCell muted>{vp.statLabel}</HeadCell>}
-            <div role="columnheader" style={{ padding: "14px 16px" }} />
+        <div style={{ borderRadius: 20, border: "1px solid rgba(255,255,255,.08)", background: "linear-gradient(180deg,#0E1317,#0A0E11)", overflow: "hidden" }}>
+          <div className={`hidden md:grid ${cols} items-center gap-4`} style={{ padding: "12px 20px", borderBottom: "1px solid rgba(255,255,255,.07)", fontFamily: MONO, fontSize: 10, letterSpacing: ".08em", textTransform: "uppercase", color: "#6E7F88" }}>
+            <span>{vp.kicker}</span>
+            <span>{vp.cols[0]}</span>
+            <span>{vp.cols[1]}</span>
+            <span>{vp.cols[2]}</span>
+            {hasStat && <span>{vp.statLabel}</span>}
+            <span />
           </div>
-
           {vp.rows.map((r, i) => (
-            <VerticalRowView key={r.slug} r={r} pos={i + 1} hasStat={hasStat} onNavigate={() => router.push(r.href)} />
+            <Row key={r.slug} r={r} first={i === 0} cols={cols} labels={[...vp.cols, vp.statLabel]} hasStat={hasStat} />
           ))}
-
-          <div style={{ display: "flex", alignItems: "center", gap: 12, padding: "14px 16px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#4E5A62", whiteSpace: "nowrap" }}>
-            <span>{vp.rows.length} entries</span>
-            <span>·</span>
-            <span>sources noted in each review</span>
-          </div>
         </div>
       </section>
 
-      <section style={{ maxWidth: 1400, margin: "0 auto", padding: "8px 40px 84px" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1.4fr .6fr", gap: 14 }}>
-          <div style={{ padding: "28px 32px", borderRadius: 14, background: "linear-gradient(150deg,#0E1417,#0A0E10)", border: "1px solid rgba(255,255,255,.07)" }}>
-            <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 12 }}>
-              What this table won&apos;t tell you
-            </div>
-            <p style={{ margin: 0, maxWidth: "76ch", fontSize: 15, lineHeight: 1.7, color: "#93A3AC", textWrap: "pretty" }}>{vp.note}</p>
+      <section style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px 80px" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 14 }}>
+          <div style={{ padding: "26px 28px", borderRadius: 18, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
+            <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 10 }}>Good to know</div>
+            <p style={{ margin: 0, fontSize: 15, lineHeight: 1.7, color: "#A8B6BE", textWrap: "pretty" }}>{vp.note}</p>
           </div>
-          <Link
-            href="/how-we-rate"
-            style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", gap: 20, padding: "28px 32px", borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}
-          >
-            <div style={{ fontSize: 16, fontWeight: 700, color: "#fff", letterSpacing: "-.015em" }}>How we review</div>
-            <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".05em", color: "#00C2CC" }}>What we check, and where each fact comes from →</div>
+          <Link href="/how-we-rate" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", gap: 18, padding: "26px 28px", borderRadius: 18, background: "linear-gradient(150deg,#10181B,#0B0F12)", border: "1px solid rgba(0,194,204,.2)" }}>
+            <div style={{ fontSize: 18, fontWeight: 800, color: "#fff", letterSpacing: "-.015em" }}>How we source every fact</div>
+            <div style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 13.5, fontWeight: 700, color: "#00C2CC" }}>
+              Our method <Icon name="arrow" size={14} />
+            </div>
           </Link>
         </div>
       </section>
@@ -183,93 +91,40 @@ export function VerticalIndexPage({ kind, tabIdx = 0 }: { kind: VerticalKind; ta
   );
 }
 
-function vertHref(kind: VerticalKind, tab: number): string {
-  if (kind !== "sportsbooks") return `/${kind}`;
-  // Note: /casino-sportsbooks and /esports-casinos are reserved for the
-  // casino-index filtered views (see lib/casino-index.ts) — a different
-  // page from this vertical's Sports/Esports market-list tabs, so those
-  // tabs live under a query param on /sportsbooks instead of their own URL.
-  return tab === 0 ? "/sportsbooks" : "/sportsbooks?tab=2";
-}
-
-function HeadCell({ children, muted }: { children: React.ReactNode; muted?: boolean }) {
-  return (
-    <div
-      role="columnheader"
-      style={{
-        padding: "14px 16px",
-        fontFamily: "var(--font-jetbrains-mono), monospace",
-        fontSize: 10.5,
-        letterSpacing: ".07em",
-        textTransform: "uppercase",
-        color: muted ? "#5C6A72" : "#8DA0AA",
-      }}
-    >
-      {children}
+function Row({ r, first, cols, labels, hasStat }: { r: VerticalRow; first: boolean; cols: string; labels: string[]; hasStat: boolean }) {
+  const cell = (label: string, value: string) => (
+    <div style={{ minWidth: 0 }}>
+      <div className="md:hidden" style={{ fontFamily: MONO, fontSize: 9, letterSpacing: ".07em", textTransform: "uppercase", color: "#6E7F88", marginBottom: 2 }}>{label}</div>
+      <div style={{ fontSize: 14, fontWeight: 700, lineHeight: 1.3, color: value === "—" || /^not /i.test(value) ? "#4E5A62" : "#fff", overflowWrap: "anywhere" }}>{value}</div>
     </div>
   );
-}
-
-function VerticalRowView({ r, pos, hasStat, onNavigate }: { r: VerticalRow; pos: number; hasStat: boolean; onNavigate: () => void }) {
   return (
-    <div
-      role="row"
-      onClick={onNavigate}
-      style={{
-        display: "grid",
-        minWidth: 1020,
-        gridTemplateColumns: `54px minmax(300px,1.5fr) 150px 140px 160px ${hasStat ? "84px" : "0px"} 132px`,
-        alignItems: "center",
-        borderBottom: "1px solid rgba(255,255,255,.05)",
-        cursor: "pointer",
-      }}
-      className="hover:!bg-white/[0.028]"
-    >
-      <div role="cell" style={{ padding: 16, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 13, color: "#5C6A72" }}>
-        {String(pos).padStart(2, "0")}
-      </div>
-      <div role="cell" style={{ padding: "13px 16px", display: "flex", alignItems: "center", gap: 12, minWidth: 0 }}>
-        <div style={{ width: 30, height: 30, flex: "none" }}>
-          <BrandMark slug={r.slug} mono={r.mono} tint={r.tint} />
-        </div>
-        <div style={{ minWidth: 0 }}>
-          <Link
-            href={r.href}
-            onClick={(e) => e.stopPropagation()}
-            className="hover:!text-accent"
-            style={{ display: "block", fontSize: 14.5, fontWeight: 600, color: "#E8EDF0", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}
-          >
-            {r.name}
-          </Link>
-          <div style={{ fontSize: 12, color: "#6E7F88", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", marginTop: 2 }}>{r.note}</div>
-        </div>
-      </div>
-      <Cell>{r.m1}</Cell>
-      <Cell>{r.m2}</Cell>
-      <Cell>{r.m3}</Cell>
-      {hasStat && (
-        <div role="cell" style={{ padding: 16, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 15, fontWeight: 500, color: r.stat === "—" ? "#4E5A62" : "#fff" }}>
-          {r.stat}
-        </div>
-      )}
-      <div role="cell" style={{ padding: "12px 16px" }}>
-        <Link
-          href={r.href}
-          onClick={(e) => e.stopPropagation()}
-          className="hover:!border-accent hover:!text-[#5FE3E8]"
-          style={{ display: "block", textAlign: "center", padding: 9, borderRadius: 7, border: "1px solid rgba(255,255,255,.16)", color: "#DCE5E9", fontSize: 12.5, fontWeight: 700, whiteSpace: "nowrap" }}
-        >
-          {r.cta}
+    <div className={`grid grid-cols-2 ${cols} items-center gap-x-4 gap-y-3 transition-colors hover:bg-white/[0.025]`} style={{ padding: "16px 20px", borderTop: first ? undefined : "1px solid rgba(255,255,255,.05)" }}>
+      <Link href={r.href} className="col-span-2 md:col-span-1" style={{ display: "flex", alignItems: "center", gap: 12, minWidth: 0 }}>
+        <span style={{ width: 36, height: 36, flex: "none", borderRadius: 10, overflow: "hidden" }}>
+          <BrandMark slug={r.slug} mono={r.mono} tint={r.tint} radius={10} fontSize={11} />
+        </span>
+        <span style={{ minWidth: 0 }}>
+          <span style={{ display: "block", fontSize: 15.5, fontWeight: 800, color: "#fff" }}>{r.name}</span>
+          {r.note && <span style={{ display: "block", fontSize: 12.5, lineHeight: 1.4, color: "#8DA0AA", marginTop: 2 }}>{r.note}</span>}
+        </span>
+      </Link>
+      {cell(labels[0], r.m1)}
+      {cell(labels[1], r.m2)}
+      {cell(labels[2], r.m3)}
+      {hasStat && cell(labels[3], r.stat)}
+      <div className="col-span-2 md:col-span-1">
+        <Link href={r.href} style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 6, padding: "10px 12px", borderRadius: 10, background: "#00C2CC", color: "#0A0D0F", fontSize: 13, fontWeight: 800, whiteSpace: "nowrap" }}>
+          {r.cta} <Icon name="arrow" size={14} />
         </Link>
       </div>
     </div>
   );
 }
 
-function Cell({ children }: { children: React.ReactNode }) {
-  return (
-    <div role="cell" style={{ padding: 16, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12.5, color: "#B7C4CB", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
-      {children}
-    </div>
-  );
+function vertHref(kind: VerticalKind, tab: number): string {
+  if (kind !== "sportsbooks") return `/${kind}`;
+  // /casino-sportsbooks and /esports-casinos are casino-list filters, so the
+  // sportsbook tabs live under a query param instead of their own URL.
+  return tab === 0 ? "/sportsbooks" : "/sportsbooks?tab=2";
 }

@@ -33,14 +33,14 @@ const MAX_PAYOUT_SHORT: Record<string, string> = {
   "sportsbet-io": "By sport, up to €1M",
   "500-casino": "Case by case",
   fortunejack: "Sources disagree",
-  betplay: "1 BTC a day on multiples",
+  betplay: "1 BTC a day",
   gamba: "Not stated",
-  solcasino: "No daily limit on multiples",
+  solcasino: "No daily limit",
   metawin: "$100,000 a day",
-  acebet: "€100,000 a day (general terms)",
-  qzino: "$100,000 a day on multiples",
+  acebet: "€100,000 a day",
+  qzino: "$100,000 a day",
   housebets: "Set per market",
-  bluff: "$1,000,000 (general terms)",
+  bluff: "$1,000,000",
 };
 
 export function maxPayoutShort(slug: string): string {
