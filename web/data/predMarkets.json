@@ -2,105 +2,448 @@
   "crypto": [
     {
       "name": "Polymarket",
-      "settle": "USDC · Polygon",
-      "fee": "No trading fee",
-      "kyc": "Email only",
-      "payout": "On-chain, instant",
-      "vol": "$1.2b / mo",
-      "note": "Deepest books in the category by a distance, and the only venue where election and macro markets clear size without moving.",
-      "tint": "#00C2CC"
+      "site": "https://polymarket.com",
+      "settle": "pUSD (USDC-backed) · Polygon",
+      "fee": "Takers only; rate set by category",
+      "kyc": "Email, Google or wallet",
+      "payout": "$1 per winning share",
+      "note": "Not available in the US, which is served by Polymarket US.",
+      "tint": "#00C2CC",
+      "facts": [
+        {
+          "label": "Availability",
+          "text": "Live internationally. Not available in certain countries and regions; the United States is on the list of fully restricted locations (help article last updated August 14, 2026). The US is served separately by Polymarket US.",
+          "url": "https://help.polymarket.com/en/articles/13364163-geographic-restrictions"
+        },
+        {
+          "label": "Settlement",
+          "text": "Collateral is Polymarket USD (pUSD) on Polygon, backed 1:1 by USDC. It replaced USDC.e in the exchange upgrade of April 28, 2026. The fee docs still describe fees and deposits in USDC. Deposits can be sent from several networks (e.g. Solana, Bitcoin, Polygon/EVM).",
+          "url": "https://help.polymarket.com/en/articles/14762452-polymarket-exchange-upgrade-april-28-2026"
+        },
+        {
+          "label": "Fees",
+          "text": "Only takers pay; makers are never charged. Taker fee = C x feeRate x p x (1-p). feeRate by category: Crypto 0.07; Sports 0.05; Finance/Politics/Mentions/Tech 0.04; Economics/Culture/Weather/Other 0.05; Geopolitics 0 (fee-free). Polymarket charges no fee to deposit or withdraw USDC, though intermediaries may charge their own.",
+          "url": "https://docs.polymarket.com/trading/fees"
+        },
+        {
+          "label": "Account and ID",
+          "text": "Sign up with Google, with an email address and a 6-digit code, or by connecting a crypto wallet (e.g. MetaMask, Rabby, Phantom). The sign-up guide doesn't mention identity checks.",
+          "url": "https://help.polymarket.com/en/articles/13369877-how-to-sign-up"
+        },
+        {
+          "label": "Payout",
+          "text": "When a market resolves, each winning share receives $1 and losing shares become worthless. To withdraw, you choose a token, amount and network and send the funds to an address you enter. The help article gives no processing time.",
+          "url": "https://help.polymarket.com/en/articles/13364518-how-are-prediction-markets-resolved"
+        },
+        {
+          "label": "Operator",
+          "text": "Adventure One QSS Inc. (named in the polymarket.com site footer copyright line)",
+          "url": "https://polymarket.com/tos"
+        },
+        {
+          "label": "Markets",
+          "text": "Bets on future events across many topics. The help centre's examples are politics/tech (a TikTok ban) and sports (NBA Finals). The fee schedule lists these categories: crypto, sports, finance, politics, mentions, tech, economics, culture, weather and geopolitics.",
+          "url": "https://help.polymarket.com/en/articles/13364060-what-is-polymarket"
+        }
+      ]
     },
     {
       "name": "Limitless",
+      "site": "https://limitless.exchange",
       "settle": "USDC · Base",
-      "fee": "0.5% taker",
-      "kyc": "Wallet only",
-      "payout": "On-chain, instant",
-      "vol": "$61m / mo",
-      "note": "Hourly crypto-price markets with an AMM behind them — thin on anything that is not BTC or ETH.",
-      "tint": "#B284FF"
-    },
-    {
-      "name": "Drift BET",
-      "settle": "USDC · Solana",
-      "fee": "0.3% taker",
-      "kyc": "Wallet only",
-      "payout": "On-chain, instant",
-      "vol": "$38m / mo",
-      "note": "Fast and cheap because it is Solana, and tied to the same account as the perps exchange.",
-      "tint": "#FF7EB6"
+      "fee": "0.40% on AMM markets; 0.40–3% taker on order books",
+      "kyc": "Wallet connection",
+      "payout": "$1 per winning share, redeemed on-chain",
+      "note": "Hourly and daily crypto and stock price markets. Not available in the US.",
+      "tint": "#B284FF",
+      "facts": [
+        {
+          "label": "Availability",
+          "text": "Live prediction market on Base. Trading is not available to users in the USA, 'Republic of China' (as written in the terms), Ontario or Alberta. Access is prohibited from sanctioned regions (Russia, Belarus, Cuba, Iran, North Korea, Syria, Crimea/Donetsk/Luhansk). Terms last updated September 15, 2026.",
+          "url": "https://docs.limitless.exchange/user-guide/terms-of-service.md"
+        },
+        {
+          "label": "Settlement",
+          "text": "USDC on Base. Each YES + NO share pair is fully backed by $1.00 USDC.",
+          "url": "https://docs.limitless.exchange/"
+        },
+        {
+          "label": "Fees",
+          "text": "AMM markets: a flat 0.40% (some promotional markets are lower or zero). Order-book (CLOB) markets: only takers pay, at a rate that depends on price. Buys cost 0.40%-3.00%, paid in outcome tokens. Sells cost 0.42%-1.50%, paid in USDC. Limit orders (makers) pay nothing.",
+          "url": "https://docs.limitless.exchange/user-guide/fees.md"
+        },
+        {
+          "label": "Account and ID",
+          "text": "An account requires connecting a supported crypto wallet. The terms reserve the right to ask for proof of age, identity or eligibility at any time.",
+          "url": "https://docs.limitless.exchange/user-guide/terms-of-service.md"
+        },
+        {
+          "label": "Payout",
+          "text": "Each winning share can be redeemed for $1.00 USDC once the payout is settled on-chain; redemption carries no trading fee. Pyth resolves most markets automatically at the deadline. Manually resolved markets usually resolve within 24-72 hours of the deadline.",
+          "url": "https://docs.limitless.exchange/user-guide/market-resolution.md"
+        },
+        {
+          "label": "Operator",
+          "text": "Street Chow Inc., a Panamanian company",
+          "url": "https://docs.limitless.exchange/user-guide/terms-of-service.md"
+        },
+        {
+          "label": "Markets",
+          "text": "Hourly and daily markets on crypto and stock prices",
+          "url": "https://docs.limitless.exchange/"
+        }
+      ]
     },
     {
       "name": "Overtime",
-      "settle": "USDC · Optimism",
-      "fee": "2% spread",
-      "kyc": "Wallet only",
-      "payout": "On-chain, instant",
-      "vol": "$22m / mo",
-      "note": "Sports-first parimutuel markets. Effective spread is wide, but no counterparty and no account.",
-      "tint": "#57E39A"
+      "site": "https://www.overtimemarkets.xyz",
+      "settle": "USDC, USDT or ETH · Optimism, Arbitrum, Base",
+      "fee": "2% protocol fee built into the odds",
+      "kyc": "Wallet or social login",
+      "payout": "Claimed manually; forfeited after 90 days",
+      "note": "On-chain sports and esports markets. Its docs say anyone can use it, but its terms list the US as prohibited.",
+      "tint": "#57E39A",
+      "facts": [
+        {
+          "label": "Availability",
+          "text": "Live on-chain sportsbook on Optimism, Arbitrum and Base. The docs describe it as permissionless, but the Terms of Use name the United States and several other countries as Prohibited Jurisdictions, so the two pages disagree.",
+          "url": "https://docs.overtime.io/resources/terms-of-use"
+        },
+        {
+          "label": "Settlement",
+          "text": "USDC, USDT and ETH are the core collaterals, on Optimism, Arbitrum or Base. The collateral API also lists THALES and OVER. Liquidity pools hold USDC, ETH, wBTC or cbBTC.",
+          "url": "https://docs.overtime.io/get-started/how-to-deposit"
+        },
+        {
+          "label": "Fees",
+          "text": "The AMM adds a protocol fee, currently 2%, on top of oracle-fed odds. Users who bet with $OVER get a reduced margin. The docs index has no separate fee schedule page.",
+          "url": "https://docs.overtime.io/learn-about-overtime/overtime-amm-and-liquidity-mechanics"
+        },
+        {
+          "label": "Account and ID",
+          "text": "No registration: log in with a wallet or a social login. Non-custodial.",
+          "url": "https://docs.overtime.io/get-started/what-is-overtime"
+        },
+        {
+          "label": "Payout",
+          "text": "Most settlement is automatic, with a 15-minute target; newer or specialised markets can take longer. Winnings are not paid automatically: you claim them on your profile's ticket page. Unclaimed winnings are forfeited 90 days after resolution.",
+          "url": "https://docs.overtime.io/learn-about-overtime/onchain-market-settlement"
+        },
+        {
+          "label": "Operator",
+          "text": "No operating company named. The terms say the platform runs on smart contracts, with upgrades managed by OVER governance token holders.",
+          "url": "https://docs.overtime.io/resources/terms-of-use"
+        },
+        {
+          "label": "Markets",
+          "text": "Sports and esports markets, including live markets and parlays, plus digital options trading. The docs also have an Overtime Casino section.",
+          "url": "https://docs.overtime.io/get-started/what-is-overtime"
+        }
+      ]
     },
     {
       "name": "Myriad",
-      "settle": "USDC · Abstract",
-      "fee": "1% taker",
-      "kyc": "Email only",
-      "payout": "On-chain, instant",
-      "vol": "$9m / mo",
-      "note": "Culture and crypto-media markets, small size. Interesting questions, shallow books.",
-      "tint": "#FFB347"
+      "site": "https://myriad.markets",
+      "settle": "USD1 · BNB Smart Chain",
+      "fee": "Takers up to 1.5%; makers pay nothing",
+      "kyc": "Google or other login",
+      "payout": "$1 per winning share, claimed after resolution",
+      "note": "Crypto, sports, politics and culture markets. Its homepage mentions USD₮ markets; its docs say balances are in USD1.",
+      "tint": "#FFB347",
+      "facts": [
+        {
+          "label": "Availability",
+          "text": "Live. Points markets and USD₮ markets are offered, and which ones you see depends on your country. The docs describe the cash balance in USD1 on BNB Smart Chain, so the homepage (USD₮) and the docs (USD1) disagree.",
+          "url": "https://myriad.markets/"
+        },
+        {
+          "label": "Settlement",
+          "text": "USD1, a dollar-pegged stablecoin on BNB Smart Chain. Abstract wallet users transfer USDC.e instead. MoonPay handles crypto and card deposits.",
+          "url": "https://docs.myriad.markets/deposit-and-withdraw"
+        },
+        {
+          "label": "Fees",
+          "text": "Order book: only takers pay. The rate scales linearly with price and peaks at 1.5% at $0.50; makers pay nothing and receive rebates. Spotlight markets charge 0% or 0.2%. Perpetual Sentiment Markets charge 0%.",
+          "url": "https://docs.myriad.markets/trading/order-book"
+        },
+        {
+          "label": "Account and ID",
+          "text": "Log in or sign up with Google or other methods. Its pages don't mention identity checks.",
+          "url": "https://myriad.markets/"
+        },
+        {
+          "label": "Payout",
+          "text": "Each winning share settles at $1, and winnings are claimed from the Portfolio after resolution. Markets resolve anywhere from a few minutes after expiry up to 48 hours. Withdrawals go to a BNB Smart Chain wallet in USD1, or to an Abstract wallet in USDC.e.",
+          "url": "https://docs.myriad.markets/trading"
+        },
+        {
+          "label": "Markets",
+          "text": "Crypto, politics, finance, sports and more. The homepage lists Crypto, Sports, Politics, Economy, Gaming and Culture.",
+          "url": "https://docs.myriad.markets/"
+        }
+      ]
     }
   ],
   "fiat": [
     {
       "name": "Kalshi",
-      "settle": "USD · CFTC-regulated",
-      "fee": "~1% on profit",
-      "kyc": "Full KYC",
-      "payout": "ACH, 1–3 days",
-      "vol": "$420m / mo",
-      "note": "The regulated benchmark: a real exchange with a real regulator, and the only place a US resident can trade event contracts without ambiguity.",
-      "tint": "#6BC7FF"
+      "site": "https://kalshi.com",
+      "settle": "USD",
+      "fee": "Taker fee on expected earnings; lower maker fee",
+      "kyc": "Government photo ID",
+      "payout": "To your cash balance, often within about 3 hours",
+      "note": "CFTC-designated contract market, open in the US and many other countries.",
+      "tint": "#6BC7FF",
+      "facts": [
+        {
+          "label": "Availability",
+          "text": "Live in the US and in many other countries. Eligibility outside the US depends on the Kalshi Member Agreement. International users can fund only by debit card, wire (minimum $1,000) or crypto; ACH, PayPal and Venmo are not available to them. Help article dated March 20, 2026.",
+          "url": "https://help.kalshi.com/en/articles/14026044-can-i-trade-on-kalshi-from-outside-the-united-states"
+        },
+        {
+          "label": "Settlement",
+          "text": "USD cash balance, funded by bank, debit card, wire, Venmo, Cash App or crypto. For US users, crypto transfers go through Zero Hash, which converts between crypto and fiat. Bank deposits are free, and debit deposits may carry a 2% fee.",
+          "url": "https://help.kalshi.com/en/articles/13823798-bank-deposits"
+        },
+        {
+          "label": "Fees",
+          "text": "A transaction fee on the contract's expected earnings; some markets carry different fees. Maker fees apply to resting orders. The published fee schedule PDF (titled 'Fee Schedule for July 2026 - 7.7.26 Update') gives the taker formula round up(M x 0.07 x C x P x (1-P)) and the maker formula round up(M x 0.0175 x C x P x (1-P)), where M is a multiplier that defaults to 1. The help article is dated April 19, 2026.",
+          "url": "https://help.kalshi.com/en/articles/13823805-fees"
+        },
+        {
+          "label": "Account and ID",
+          "text": "Full KYC. Your name and date of birth must match a government-issued photo ID (driver's licence or passport), and you take a live photo of the ID in the app. Commercial and PO box addresses are not accepted. You may be asked for proof of address, employment details or source of funds.",
+          "url": "https://help.kalshi.com/en/articles/13823782-what-information-is-required-to-verify-my-kalshi-account"
+        },
+        {
+          "label": "Payout",
+          "text": "Once a market settles, winning contracts are paid to your cash balance. Most markets settle within a few hours of the outcome being known, often within about 3 hours. Bank, debit card, Venmo and crypto withdrawals carry no Kalshi fee.",
+          "url": "https://help.kalshi.com/en/articles/13823821-market-faqs"
+        },
+        {
+          "label": "Regulation",
+          "text": "CFTC, as a Designated Contract Market (DCM). Perpetual futures clear through Kalshi Klear LLC, Kalshi's own CFTC-regulated clearinghouse.",
+          "url": "https://help.kalshi.com/en/articles/13823765-how-is-kalshi-regulated"
+        },
+        {
+          "label": "Markets",
+          "text": "Politics, Sports, Culture, Crypto and more, including economics and weather. Kalshi also offers perpetual futures.",
+          "url": "https://help.kalshi.com/en/articles/13823842-finding-markets"
+        }
+      ]
     },
     {
       "name": "Polymarket US",
-      "settle": "USD · CFTC-regulated",
-      "fee": "No trading fee",
-      "kyc": "Full KYC",
-      "payout": "ACH, 1–2 days",
-      "vol": "Ramping",
-      "note": "The licensed US venue running on the acquired QCX seat. Same interface, different rails, fewer markets so far.",
-      "tint": "#00C2CC"
+      "site": "https://polymarket.us",
+      "settle": "USD",
+      "fee": "Taker fee scaled by price; 0.0695 rate from 17 Sep 2026",
+      "kyc": "Full identity check",
+      "payout": "Withdrawals go back to the deposit method",
+      "note": "Operated by QCX LLC, a CFTC-registered exchange and clearing house.",
+      "tint": "#00C2CC",
+      "facts": [
+        {
+          "label": "Availability",
+          "text": "Live in the US. Polymarket describes it as a CFTC-designated contract market and clearing organization, fully launched since May 2026.",
+          "url": "https://polymarket.com/transparency"
+        },
+        {
+          "label": "Settlement",
+          "text": "US dollars (fiat). Deposits by debit card (up to $50,000 per day), ACH or wire.",
+          "url": "https://docs.polymarket.us/app-guide/home"
+        },
+        {
+          "label": "Fees",
+          "text": "Fee = Θ x C x p x (1-p). Taker Θ is 0.06, a maximum of $1.50 per contract at p = $0.50, effective July 1, 2026. Maker rebate Θ is -0.0125, up to -$0.31 per contract. The schedule says the taker Θ rises to 0.0695 at 11:59 PM ET on Wednesday, September 16, 2026. Fees are charged only when a trade executes. Tiered taker rebates apply above $250,000 of monthly taker volume.",
+          "url": "https://docs.polymarket.us/fees"
+        },
+        {
+          "label": "Account and ID",
+          "text": "Full KYC through Socure before any retail participant can trade. Most checks are instant; some need a document upload or a manual review.",
+          "url": "https://docs.polymarket.us/partners/onboarding/kyc/overview"
+        },
+        {
+          "label": "Payout",
+          "text": "Contracts settle at $1 if the event happens and $0 if not. A withdrawal is possible only after the deposit clears (debit card or ACH: 3-4 business days; wire: 1 business day). Withdrawals must go back to the payment method used to deposit and are processed first-in, first-out.",
+          "url": "https://docs.polymarket.us/polymarket-learn/deposits/withdraw-funds/rules"
+        },
+        {
+          "label": "Regulation",
+          "text": "CFTC-registered Designated Contract Market (DCM) and derivatives clearing organization (DCO), with a regulatory services agreement with the NFA.",
+          "url": "https://integrity.polymarket.us/"
+        },
+        {
+          "label": "Operator",
+          "text": "QCX LLC d/b/a Polymarket US",
+          "url": "https://polymarket.com/transparency"
+        },
+        {
+          "label": "Markets",
+          "text": "The app guide lists pro football, pro basketball, pro hockey and college football, with more markets planned. The polymarket.us site also shows election, tennis and Oscars event pages.",
+          "url": "https://docs.polymarket.us/app-guide/home"
+        }
+      ]
     },
     {
-      "name": "Robinhood Prediction",
-      "settle": "USD · via Kalshi",
-      "fee": "$0.01 / contract",
-      "kyc": "Full KYC",
-      "payout": "To brokerage cash",
-      "vol": "Not disclosed",
-      "note": "Cheapest per-contract cost in the category, wrapped in a broker app most people already have. Market list is curated, not complete.",
-      "tint": "#57E39A"
+      "name": "Robinhood Prediction Markets",
+      "site": "https://robinhood.com/us/en/prediction-markets/",
+      "settle": "USD",
+      "fee": "5% (Gold) or 10% commission, weighted by price, plus exchange fee",
+      "kyc": "Robinhood brokerage account, US, 18+",
+      "payout": "Withdrawable within 1 business day",
+      "note": "Contracts listed on Kalshi, ForecastEx and Rothera. Not available in every state.",
+      "tint": "#8DA0AA",
+      "facts": [
+        {
+          "label": "Availability",
+          "text": "Live for US residents aged 18+ with an individual brokerage account, but not in all states. Maryland residents can't trade sports contracts. Nevada residents can't open new sports contracts (since December 1, 2025).",
+          "url": "https://robinhood.com/us/en/support/articles/event-contracts-overview/"
+        },
+        {
+          "label": "Settlement",
+          "text": "USD. All positions settle in cash at $1 if correct and $0 if wrong.",
+          "url": "https://robinhood.com/us/en/support/articles/event-contracts-settlement/"
+        },
+        {
+          "label": "Fees",
+          "text": "Since June 1, 2026, the commission is probability-weighted: 5% with Robinhood Gold, 10% without. It is highest near $0.50. Exchanges add a fee of up to $0.01 per contract.",
+          "url": "https://robinhood.com/us/en/support/articles/event-contracts-overview/"
+        },
+        {
+          "label": "Account and ID",
+          "text": "A Robinhood individual brokerage account (full brokerage KYC) and approval for Robinhood Derivatives are required. You must be 18+ and a US resident.",
+          "url": "https://robinhood.com/us/en/support/articles/event-contracts-overview/"
+        },
+        {
+          "label": "Payout",
+          "text": "Payout proceeds are generally available to withdraw within 1 business day of settlement.",
+          "url": "https://robinhood.com/us/en/support/articles/event-contracts-settlement/"
+        },
+        {
+          "label": "Regulation",
+          "text": "Robinhood Derivatives, LLC is a registered futures commission merchant and NFA member. Contracts are listed on CFTC-regulated exchanges: KalshiEX, ForecastEx and Rothera Exchange and Clearing.",
+          "url": "https://robinhood.com/us/en/prediction-markets/"
+        },
+        {
+          "label": "Operator",
+          "text": "Robinhood Derivatives, LLC",
+          "url": "https://robinhood.com/us/en/prediction-markets/"
+        },
+        {
+          "label": "Markets",
+          "text": "Category tabs include sports (football, basketball, baseball, tennis, soccer, MMA and more), esports, crypto, climate, metals, entertainment, economics and politics",
+          "url": "https://robinhood.com/us/en/prediction-markets/"
+        },
+        {
+          "label": "Volume",
+          "text": "6.1 billion event contracts traded in July 2026 (July 2026 operating data, released August 12, 2026)",
+          "url": "https://investors.robinhood.com/news-releases/news-release-details/robinhood-markets-inc-reports-july-2026-operating-data"
+        }
+      ]
     },
     {
-      "name": "IBKR ForecastEx",
-      "settle": "USD · CFTC-regulated",
-      "fee": "$0.01 / contract",
-      "kyc": "Full KYC",
-      "payout": "To brokerage cash",
-      "vol": "Not disclosed",
-      "note": "Economics and climate contracts inside a professional platform. Pays interest on held positions, which nothing else does.",
-      "tint": "#B284FF"
+      "name": "ForecastEx",
+      "site": "https://forecastex.com",
+      "settle": "USD",
+      "fee": "$0.01 per matched Yes/No pair, plus broker costs",
+      "kyc": "Through a broker such as Interactive Brokers",
+      "payout": "$1 at settlement, plus a monthly coupon",
+      "note": "CFTC-registered exchange and clearing house for economic, political and climate contracts.",
+      "tint": "#B284FF",
+      "facts": [
+        {
+          "label": "Availability",
+          "text": "Live. Contracts are traded through ForecastEx's designated futures commission merchants (FCMs), such as Interactive Brokers; forecastex.com has a broker directory.",
+          "url": "https://forecastex.com/about/how-forecast-contracts-work"
+        },
+        {
+          "label": "Settlement",
+          "text": "USD. Contracts must be fully collateralised in cash. A correct contract pays $1.00 USD.",
+          "url": "https://data.forecastex.com/regulatory/KIDS/ForecastExKeyInformationDocument.pdf"
+        },
+        {
+          "label": "Fees",
+          "text": "$0.01 per matched Yes/No pair: ForecastEx collects $1.01 and pays out $1.00. The KID (dated 09/10/2025) shows this as USD 0.005 per contract, charged at settlement. Your broker may charge its own costs.",
+          "url": "https://data.forecastex.com/regulatory/KIDS/ForecastExKeyInformationDocument.pdf"
+        },
+        {
+          "label": "Account and ID",
+          "text": "Contracts must be bought through a ForecastEx member firm (FCM), which handles account opening. ForecastEx itself does not describe the KYC steps.",
+          "url": "https://data.forecastex.com/regulatory/KIDS/ForecastExKeyInformationDocument.pdf"
+        },
+        {
+          "label": "Payout",
+          "text": "The winning side receives $1.00 at settlement. Offsetting Yes/No pairs settle the next day. Holders also get a monthly 'Incentive Coupon' based on the Effective Federal Funds Rate, and brokers may deduct a spread from it.",
+          "url": "https://data.forecastex.com/regulatory/KIDS/ForecastExKeyInformationDocument.pdf"
+        },
+        {
+          "label": "Regulation",
+          "text": "CFTC-registered Designated Contract Market (DCM) and Derivatives Clearing Organization (DCO)",
+          "url": "https://forecastex.com/about"
+        },
+        {
+          "label": "Operator",
+          "text": "ForecastEx LLC. Its pages quote Interactive Brokers' founder but don't say who owns it.",
+          "url": "https://data.forecastex.com/regulatory/KIDS/ForecastExKeyInformationDocument.pdf"
+        },
+        {
+          "label": "Markets",
+          "text": "Yes/no contracts on economic, political and climate outcomes. The about page also lists capital markets, central banks and sovereign debt.",
+          "url": "https://forecastex.com/about"
+        }
+      ]
     },
     {
       "name": "PredictIt",
-      "settle": "USD · no-action relief",
-      "fee": "5% on profit, 5% withdrawal",
-      "kyc": "Full KYC",
-      "payout": "ACH, 3–5 days",
-      "vol": "$14m / mo",
-      "note": "The academic original. Position caps and double fees make it the most expensive way to be right.",
-      "tint": "#C7A45C"
+      "site": "https://www.predictit.org",
+      "settle": "USD",
+      "fee": "10% of profit; 5% on withdrawals",
+      "kyc": "Name, address and date of birth checked",
+      "payout": "$1 per correct share; 30-day hold after first deposit",
+      "note": "Not CFTC-regulated; runs political markets under a CFTC no-action letter. US persons only.",
+      "tint": "#C7A45C",
+      "facts": [
+        {
+          "label": "Availability",
+          "text": "Live and open only to U.S. Persons aged 18 or older. The terms call it an experimental research and educational facility of the Prediction Market Research Consortium (PMRC). The FAQ lists a $3,500 limit per contract.",
+          "url": "https://www.predictit.org/terms-and-conditions"
+        },
+        {
+          "label": "Settlement",
+          "text": "USD account balance. Trading requires a minimum balance of $10, and deposits are free.",
+          "url": "https://www.predictit.org/terms-and-conditions"
+        },
+        {
+          "label": "Fees",
+          "text": "10% of the profit on any share sold above its purchase price, and no fee otherwise. Opening an account and depositing are free. Withdrawals carry a 5% processing fee.",
+          "url": "https://www.predictit.org/support/faq?query=fees"
+        },
+        {
+          "label": "Account and ID",
+          "text": "Account opening requires your name, address and date of birth. Aristotle International, Inc. provides age and identity verification.",
+          "url": "https://www.predictit.org/terms-and-conditions"
+        },
+        {
+          "label": "Payout",
+          "text": "Correct shares are redeemed for $1 each, less the 10% profit fee. Withdrawals have a 30-day hold after your first deposit, a 5% processing fee, and any fees of the withdrawal method.",
+          "url": "https://www.predictit.org/support/faq?query=e"
+        },
+        {
+          "label": "Regulation",
+          "text": "The terms say PredictIt is not CFTC-regulated and its operators are not registered. It operates under a no-action letter from the CFTC Division of Market Oversight covering its political markets.",
+          "url": "https://www.predictit.org/terms-and-conditions"
+        },
+        {
+          "label": "Operator",
+          "text": "A project of the Prediction Market Research Consortium (PMRC). Aristotle International, Inc. provides clearing, processing and verification.",
+          "url": "https://www.predictit.org/terms-and-conditions"
+        },
+        {
+          "label": "Markets",
+          "text": "Political prediction markets. Site categories: Elections, President, Congress, State/Local, World, Weekly.",
+          "url": "https://www.predictit.org/"
+        }
+      ]
     }
   ]
 }

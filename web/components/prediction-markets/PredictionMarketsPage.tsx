@@ -18,7 +18,8 @@ import { siteData } from "@/lib/site-data";
 export function PredictionMarketsPage({ initialTab = "crypto" }: { initialTab?: "crypto" | "fiat" }) {
   const { predMarkets } = siteData;
   const [tab, setTab] = useState<"crypto" | "fiat">(initialTab);
-  // Listed A–Z; venues are not ranked.
+  const [open, setOpen] = useState<string | null>(null);
+  // Listed A–Z; venues are not ranked. Every figure is from the venue's own pages (see facts).
   const rows = [...predMarkets[tab]].sort((a, b) => a.name.localeCompare(b.name));
 
   return (
@@ -39,22 +40,22 @@ export function PredictionMarketsPage({ initialTab = "crypto" }: { initialTab?: 
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 1, background: "rgba(255,255,255,.08)", border: "1px solid rgba(255,255,255,.08)", borderRadius: 13, overflow: "hidden" }}>
               <div style={{ padding: "18px 20px", background: "rgba(12,16,19,.86)" }}>
-                <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 9.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#5C6A72", marginBottom: 8 }}>Deepest book</div>
-                <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 21, color: "#fff" }}>$1.2b</div>
-                <div style={{ fontSize: 11.5, color: "#7B8A93", marginTop: 3 }}>Polymarket, monthly</div>
+                <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 9.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#5C6A72", marginBottom: 8 }}>Crypto-settled</div>
+                <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 21, color: "#fff" }}>{predMarkets.crypto.length}</div>
+                <div style={{ fontSize: 11.5, color: "#7B8A93", marginTop: 3 }}>Venues listed</div>
               </div>
               <div style={{ padding: "18px 20px", background: "rgba(12,16,19,.86)" }}>
-                <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 9.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#5C6A72", marginBottom: 8 }}>Cheapest cost</div>
-                <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 21, color: "#fff" }}>$0.01</div>
-                <div style={{ fontSize: 11.5, color: "#7B8A93", marginTop: 3 }}>Per contract, brokered</div>
+                <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 9.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#5C6A72", marginBottom: 8 }}>Regulated fiat</div>
+                <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 21, color: "#fff" }}>{predMarkets.fiat.length}</div>
+                <div style={{ fontSize: 11.5, color: "#7B8A93", marginTop: 3 }}>Venues listed</div>
               </div>
             </div>
           </div>
           <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginTop: 32 }}>
             {(
               [
-                { key: "crypto" as const, label: "Crypto-settled", note: "USDC, wallet-only, instant" },
-                { key: "fiat" as const, label: "Regulated fiat", note: "USD, full KYC, ACH" },
+                { key: "crypto" as const, label: "Crypto-settled", note: "Stablecoins, wallet or email login" },
+                { key: "fiat" as const, label: "Regulated fiat", note: "USD, identity checks" },
               ]
             ).map((t) => {
               const active = tab === t.key;
@@ -86,14 +87,14 @@ export function PredictionMarketsPage({ initialTab = "crypto" }: { initialTab?: 
 
       <section style={{ maxWidth: 1400, margin: "0 auto", padding: "36px 40px 80px" }}>
         <div style={{ border: "1px solid rgba(255,255,255,.08)", borderRadius: 14, overflowX: "auto" }}>
-          <div style={{ display: "grid", minWidth: 1020, gridTemplateColumns: "52px minmax(180px,1.1fr) minmax(150px,1fr) 140px 120px 140px", background: "rgba(255,255,255,.03)", borderBottom: "1px solid rgba(255,255,255,.08)" }}>
-            {["#", "Venue", "Settlement", "Cost to trade", "Identity", "Payout"].map((h) => (
+          <div style={{ display: "grid", minWidth: 1020, gridTemplateColumns: "minmax(220px,1.3fr) minmax(150px,1fr) minmax(150px,1fr) 150px 170px 90px", background: "rgba(255,255,255,.03)", borderBottom: "1px solid rgba(255,255,255,.08)" }}>
+            {["Venue", "Settlement", "Cost to trade", "Account", "Payout", ""].map((h) => (
               <div key={h} style={{ padding: "14px 16px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".07em", textTransform: "uppercase", color: "#5C6A72" }}>{h}</div>
             ))}
           </div>
-          {rows.map((m, i) => (
-            <div key={m.name} style={{ display: "grid", minWidth: 1020, gridTemplateColumns: "52px minmax(180px,1.1fr) minmax(150px,1fr) 140px 120px 140px", alignItems: "center", borderBottom: "1px solid rgba(255,255,255,.05)" }}>
-              <div style={{ padding: 16, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12.5, color: "#5C6A72" }}>{String(i + 1).padStart(2, "0")}</div>
+          {rows.map((m) => (
+            <div key={m.name}>
+            <div style={{ display: "grid", minWidth: 1020, gridTemplateColumns: "minmax(220px,1.3fr) minmax(150px,1fr) minmax(150px,1fr) 150px 170px 90px", alignItems: "center", borderBottom: "1px solid rgba(255,255,255,.05)" }}>
               <div style={{ padding: "14px 16px" }}>
                 <div style={{ fontSize: 14.5, fontWeight: 700, letterSpacing: "-.015em", color: "#fff" }}>{m.name}</div>
                 <div style={{ fontSize: 12, lineHeight: 1.5, color: "#7B8A93", marginTop: 4, maxWidth: "52ch" }}>{m.note}</div>
@@ -102,6 +103,25 @@ export function PredictionMarketsPage({ initialTab = "crypto" }: { initialTab?: 
               <div style={{ padding: "14px 16px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, color: "#DCE5E9" }}>{m.fee}</div>
               <div style={{ padding: "14px 16px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, color: "#8DA0AA" }}>{m.kyc}</div>
               <div style={{ padding: "14px 16px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, color: "#8DA0AA" }}>{m.payout}</div>
+              <div style={{ padding: "14px 16px" }}>
+                <button type="button" onClick={() => setOpen(open === m.name ? null : m.name)} aria-expanded={open === m.name} style={{ padding: "7px 10px", borderRadius: 7, border: "1px solid rgba(255,255,255,.14)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#A8B6BE", whiteSpace: "nowrap" }}>
+                  {open === m.name ? "Hide" : "Sources"}
+                </button>
+              </div>
+            </div>
+            {open === m.name && (
+              <div style={{ minWidth: 1020, padding: "4px 16px 18px", borderBottom: "1px solid rgba(255,255,255,.05)", background: "rgba(255,255,255,.015)" }}>
+                {m.facts.map((f) => (
+                  <div key={f.label} style={{ display: "grid", gridTemplateColumns: "150px 1fr", gap: 14, padding: "9px 0", borderBottom: "1px solid rgba(255,255,255,.04)" }}>
+                    <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".05em", textTransform: "uppercase", color: "#5C6A72" }}>{f.label}</div>
+                    <div style={{ fontSize: 13, lineHeight: 1.55, color: "#B7C4CB" }}>
+                      {f.text}{" "}
+                      <a href={f.url} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#5FE3E8", whiteSpace: "nowrap" }}>{new URL(f.url).hostname.replace(/^www./, "")} ↗</a>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
             </div>
           ))}
         </div>

@@ -165,10 +165,11 @@ export interface PredictionMarket {
   fee: string;
   kyc: string;
   payout: string;
-  /** Monthly volume, e.g. "$1.2b / mo". */
-  vol: string;
   note: string;
   tint: string;
+  site: string;
+  /** Each from the venue's own pages. */
+  facts: { label: string; text: string; url: string }[];
 }
 
 export interface PredictionMarkets {

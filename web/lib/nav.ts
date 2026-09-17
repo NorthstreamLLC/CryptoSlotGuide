@@ -260,7 +260,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
           columns: [
             {
               title: "Venues",
-              links: ["Polymarket", "Limitless", "Drift BET", "Overtime", "Myriad"].map((name) => ({
+              links: ["Polymarket", "Limitless", "Overtime", "Myriad"].map((name) => ({
                 label: name,
                 href: "/prediction-markets",
               })),
@@ -283,7 +283,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
           columns: [
             {
               title: "Venues",
-              links: ["Kalshi", "Polymarket US", "Robinhood Prediction", "IBKR ForecastEx", "PredictIt"].map(
+              links: ["Kalshi", "Polymarket US", "Robinhood Prediction Markets", "ForecastEx", "PredictIt"].map(
                 (name) => ({ label: name, href: "/prediction-markets?tab=fiat" })
               ),
             },
