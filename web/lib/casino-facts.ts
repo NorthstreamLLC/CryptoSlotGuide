@@ -46,7 +46,29 @@ export function casinoFacts(o: Operator) {
     wagering: wv.kind === "none" ? "No wagering" : wv.kind === "cited" ? (wv.mult === 0 ? "No wagering" : `${wv.mult}×`) : wv.kind === "note" ? "See terms" : null,
     kyc: f("Compliance", "KYC policy") ? ({ none: "No KYC", tiered: "KYC at threshold", required: "KYC required" } as const)[o.kyc] : null,
     licence: f("Compliance", "Licence") ? licenceLabel(o.licence) : null,
+    expiry: shortDuration(f("Bonus terms", "Expiry")),
+    maxCashout: shortCap(f("Bonus terms", "Max cashout")),
+    maxBet: shortAmount(f("Bonus terms", "Max bet")),
   };
+}
+
+/** "30 days", "7 days", "48 hours" from a cited time-limit sentence. */
+export function shortDuration(f: Fact): string | null {
+  const v = f?.value;
+  if (!v) return null;
+  if (/never expire|no time limit|don't expire|do not expire/i.test(v.slice(0, 80)) || /bonus terms give no time limit/i.test(v)) return "No limit";
+  const m = v.match(/(\d+)\s*(day|hour|week|month)s?/i);
+  if (m) return `${m[1]} ${m[2].toLowerCase()}${m[1] === "1" ? "" : "s"}`;
+  return "See terms";
+}
+
+function shortCap(f: Fact): string | null {
+  const v = f?.value;
+  if (!v) return null;
+  if (/^no (cap|max|maximum|limit)|no cap\b|uncapped/i.test(v.slice(0, 60))) return "No cap";
+  const x = v.match(/(\d+)\s?[x×]\s?(the )?(bonus|deposit)/i);
+  if (x) return `${x[1]}× ${x[3].toLowerCase()}`;
+  return shortAmount(f) ?? "See terms";
 }
 
 export function licenceLabel(l: string): string {
