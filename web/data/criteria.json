@@ -21,12 +21,12 @@
   },
   {
     "name": "Game & RTP quality",
-    "desc": "The RTP version each operator actually ships, read inside its own client via RTP Watch. No public source discloses it, so it shows as not yet checked until readings exist.",
+    "desc": "The RTP version each operator actually ships, read inside its own client via RTP Watch. No public source discloses it.",
     "sourcing": "field-tested"
   },
   {
     "name": "Support",
-    "desc": "Only measurable by opening tickets ourselves — three per operator, timed across time zones. Shows as not yet checked until a field test has run.",
+    "desc": "Only measurable by opening tickets ourselves — three per operator, timed across time zones.",
     "sourcing": "field-tested"
   }
 ]

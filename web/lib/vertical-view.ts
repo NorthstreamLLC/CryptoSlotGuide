@@ -152,7 +152,7 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
       ] as [string, string][],
       cols: (tab === 0 ? ["Esports", "Cash-out · builder", "Max payout"] : ["Books naming it", "Includes", "Listed as"]) as [string, string, string],
       statLabel: "",
-      note: "We haven't priced any markets, so there are no margins here. Books quote tighter on marquee events and wider elsewhere; compare the live price across books before you bet.",
+      note: "Books quote tighter on marquee events and wider elsewhere. Compare the live price at two or three books before you bet; the gap is usually worth more than any promotion.",
       tabs: ["Sportsbooks", "Esports"],
     };
     if (tab === 1) {

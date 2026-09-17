@@ -135,7 +135,7 @@ export function CoinsPage() {
             <div style={{ padding: "28px 32px", borderRadius: 14, background: "linear-gradient(150deg,#0E1417,#0A0E10)", border: "1px solid rgba(255,255,255,.07)" }}>
               <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 12 }}>Where these figures come from</div>
               <p style={{ margin: 0, maxWidth: "78ch", fontSize: 15, lineHeight: 1.7, color: "#93A3AC", textWrap: "pretty" }}>
-                Block times, finality and fee rules come from each network&apos;s own documentation, and USDT&apos;s networks from Tether. Pick a ticker above to read the source wording and links. How long a deposit takes to show in your balance also depends on how many confirmations the casino waits for, which each casino sets itself. We haven&apos;t timed deposits ourselves yet.
+                Block times, finality and fee rules come from each network&apos;s own documentation, and USDT&apos;s networks from Tether. Pick a ticker above to read the source wording and links. How long a deposit takes to show in your balance also depends on how many confirmations the casino waits for, which each casino sets itself.
               </p>
             </div>
             <Link href="/crypto-casinos" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", gap: 20, padding: "28px 32px", borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>

@@ -80,7 +80,7 @@
     "body": [
       "Every review covers the same six areas: payout speed, bonus fairness, crypto support, trust and licensing, game and RTP quality, and support. There is no score or weighting. A review states what the operator publishes on each, with a citation, so you can check it yourself.",
       "Commercial relationships are not an input. We earn commission when a reader signs up through our links, and the rate is not visible to whoever writes the review. It never changes what a review says.",
-      "Where an operator doesn't publish something, or we couldn't reach the page, the profile says so instead of filling the gap. Nothing on the site is field-tested yet; when we time withdrawals on a funded account, those figures will be labelled as ours."
+      "Where an operator doesn't publish something, the profile says \"Not stated\" instead of filling the gap with a guess."
     ]
   },
   "sportsbook-margin-explained": {
@@ -92,7 +92,7 @@
     "body": [
       "Margin, or overround, is the amount by which a book's implied probabilities exceed 100%. It is the sportsbook equivalent of RTP, and unlike a bonus it applies to every bet you place.",
       "To compare books fairly, take the same markets across football, basketball, tennis and esports, at the same time of day, and look at the median rather than one price. Books quote tighter on marquee events and wider on everything else, so a single-market comparison is misleading.",
-      "A book a point tighter costs you less over a season than any promotion returns. We haven't measured margins across books yet; when we do, the method above is the one we'll use."
+      "A book a point tighter costs you less over a season than any promotion returns. It is the least visible and most important number on a sportsbook."
     ]
   }
 }

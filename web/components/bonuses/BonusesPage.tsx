@@ -118,7 +118,7 @@ export function BonusesPage() {
                 <div role="cell" style={{ padding: 14, fontSize: 13, color: "#B7C4CB", minWidth: 0 }}>
                   <span style={{ display: "block", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{o.bonusShort ?? o.bonus}</span>
                   <span style={{ display: "block", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: o.bonusExpiry ? "#5C6A72" : "#4E5A62", marginTop: 3, fontStyle: o.bonusExpiry ? "normal" : "italic" }}>
-                    {o.bonusExpiry ?? "expiry not yet confirmed"}
+                    {o.bonusExpiry ?? "expiry not stated"}
                   </span>
                 </div>
                 <div role="cell" style={{ padding: 14, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11.5, color: "#8DA0AA" }}>{type}</div>

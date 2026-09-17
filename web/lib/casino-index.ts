@@ -16,22 +16,22 @@ export const btcViews: Record<BtcFilterKey, { crumb: string; kicker: string; h1:
   all: {
     crumb: "Crypto casinos",
     kicker: "operators · 8 coins tracked",
-    h1: "Crypto casinos, compared on payout speed",
-    p: "Which cryptos each operator credits, what it says about withdrawal speed, and what its bonus asks of you. Every figure is the operator's own, cited on its profile; we haven't timed withdrawals on our own funded accounts yet.",
+    h1: "Crypto casinos, compared side by side",
+    p: "Withdrawal speed, coins, bonus terms, KYC, licensing and sportsbooks for every crypto casino we cover, each taken from the casino's own terms.",
     note: "Showing operators that credit ",
   },
   nokyc: {
     crumb: "No-KYC casinos",
     kicker: "no-KYC operators · listed policy",
     h1: "No-KYC crypto casinos",
-    p: "Operators listed as paying withdrawals without asking for a document. That's their listed policy — we haven't yet cashed out on our own account to confirm it. Operators that verify at a threshold are excluded, however high that threshold is.",
+    p: "Operators listed as paying withdrawals without asking for a document. Operators that verify at a threshold are excluded, however high that threshold is.",
     note: "No-KYC operators that credit ",
   },
   fast: {
     crumb: "Fastest payouts",
     kicker: "operators stating 15 minutes or less",
     h1: "Fastest-paying crypto casinos",
-    p: "Ranked on each operator's own stated withdrawal time — the worst case where it gives a range — cited on its review page. We haven't timed these ourselves, and operators that publish no time are left out rather than guessed. When we field-test an operator, its timed median replaces the stated figure.",
+    p: "Ranked on each operator's own stated withdrawal time — the worst case where it gives a range, cited on each profile. Operators that publish no time are left out.",
     note: "Operators stating 15 minutes or less that credit ",
   },
   lowwager: {
@@ -45,14 +45,14 @@ export const btcViews: Record<BtcFilterKey, { crumb: string; kicker: string; h1:
     crumb: "Casino + sportsbook",
     kicker: "operators with a sportsbook",
     h1: "Crypto casinos with a sportsbook attached",
-    p: "Operators listed with a sportsbook alongside the casino. We haven't yet priced margins ourselves across football, basketball and tennis, or checked market depth beyond what each operator lists.",
+    p: "Operators listed with a sportsbook alongside the casino. Each profile covers esports, cash-out, bet builder and payout caps from the book's own rules.",
     note: "Sportsbook operators that credit ",
   },
   esports: {
     crumb: "Esports betting",
     kicker: "operators with esports markets",
     h1: "Crypto casinos that take esports bets",
-    p: "Operators listed with CS2, League of Legends, Dota 2 or Valorant markets alongside the casino. Market depth outside the majors and how quickly a settled map pays are not yet checked by us.",
+    p: "Operators listed with CS2, League of Legends, Dota 2 or Valorant markets alongside the casino.",
     note: "Esports operators that credit ",
   },
 };

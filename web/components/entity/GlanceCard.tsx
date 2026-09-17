@@ -12,7 +12,7 @@ const SOURCE_STYLE: Record<GlanceSource, { label: string; color: string }> = {
   timed: { label: "Field-tested", color: "#00C2CC" },
   "third-party": { label: "Third-party", color: "#9B8FC4" },
   index: { label: "Our index", color: "#8DA0AA" },
-  unchecked: { label: "Not yet checked", color: "#5C6A72" },
+  unchecked: { label: "", color: "#5C6A72" },
 };
 
 export function GlanceCard({ rows }: { rows: GlanceRow[] }) {
@@ -31,7 +31,7 @@ export function GlanceCard({ rows }: { rows: GlanceRow[] }) {
                 {r.value}
               </dd>
               <span style={{ gridColumn: "2", justifySelf: "end", display: "flex", alignItems: "center", gap: 5, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 8.5, letterSpacing: ".04em", textTransform: "uppercase", color: s.color, whiteSpace: "nowrap" }}>
-                <span style={{ width: 5, height: 5, borderRadius: "50%", background: s.color, flex: "none" }} />
+                {s.label || r.sourceName ? <span style={{ width: 5, height: 5, borderRadius: "50%", background: s.color, flex: "none" }} /> : null}
                 {r.sourceName ?? s.label}
               </span>
             </div>

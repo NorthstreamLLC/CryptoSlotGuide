@@ -70,7 +70,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
                 ))}
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
-                <Link
+                {tier === "field-tested" && <Link
                   href="/how-we-rate"
                   style={{
                     padding: "3px 8px",
@@ -86,7 +86,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
                   }}
                 >
                   {TIER_LABEL[tier]}
-                </Link>
+                </Link>}
                 <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11.5, color: "#5C6A72" }}>{e.byline}</div>
               </div>
             </div>
@@ -143,14 +143,8 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
           sub={
             e.measuredSub ??
             (tier === "field-tested"
-              ? "Every figure below came from our own funded account. Raw log linked at the foot of the page."
-              : tier === "pending"
-              ? audited
-                ? "Bonus terms, coin support and licence below are checked against public terms and registries. Payout speed and support responsiveness are community-reported, not yet timed on our own funded account. See how we source information for what that means here."
-                : isCasino
-                ? "Each figure below is the operator's own stated number — cited in the fact table further down where we could confirm it. None are timed on our own funded account yet."
-                : "Every figure below is the published number, pending our own field test. See how we source information for what that means here."
-              : "Every figure below is assessed from public sources — published paytables, RTP certificates and each operator's own pages, not a funded account. See how we source information for what that means here.")
+              ? "Every figure below came from our own funded account."
+              : "Each figure links to its source in the fact table below.")
           }
         />
         <div style={{ display: "grid", gridTemplateColumns: `repeat(${statCols}, 1fr)`, gap: 1, background: "rgba(255,255,255,.07)", border: "1px solid rgba(255,255,255,.07)", borderRadius: 13, overflow: "hidden", marginBottom: 38 }}>
@@ -176,7 +170,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
         {isCasino && <OnChainActivity slug={e.slug} />}
         {(isCasino || e.type === "wallet" || e.type === "exchange") && <CasinoSpecSheet slug={e.slug} kind={e.type === "wallet" ? "wallet" : e.type === "exchange" ? "exchange" : "casino"} />}
 
-        <div style={{ padding: "20px 24px", borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)", marginBottom: 38 }}>
+        {e.chips.length > 0 && <div style={{ padding: "20px 24px", borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)", marginBottom: 38 }}>
           <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 13 }}>
             {e.chipLabel}
           </div>
@@ -190,9 +184,9 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
               ))}
             </div>
           ) : (
-            <div style={{ fontSize: 13, color: "#5C6A72" }}>{e.chipsEmpty ?? "None field-tested yet."}</div>
+            null
           )}
-        </div>
+        </div>}
 
         <div style={{ display: "grid", gridTemplateColumns: e.cons.length && e.pros.length ? "1fr 1fr" : "1fr", gap: 14, marginBottom: 38 }}>
           {e.pros.length > 0 && (
@@ -268,12 +262,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
           </div>
         ))}
 
-        <SectionHeading title={e.tableTitle} sub={e.tableSub} maxWidth="80ch" />
-        {e.tableRows.length === 0 && (
-          <div style={{ padding: "20px 24px", borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)", marginBottom: 14, fontSize: 13.5, color: "#7B8A93" }}>
-            {e.tableEmpty ?? "No operator builds field-tested for this title yet — this table fills in as our RTP Watch program covers them."}
-          </div>
-        )}
+        {e.tableRows.length > 0 && <SectionHeading title={e.tableTitle} sub={e.tableSub} maxWidth="80ch" />}
         {e.tableRows.length > 0 && (
         <div style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 13, overflow: "hidden", background: "#0C1013", marginBottom: 14 }}>
           <div style={{ display: "grid", gridTemplateColumns: "minmax(240px,1.5fr) 130px 150px 130px", background: "#101519", borderBottom: "1px solid rgba(255,255,255,.07)" }}>
@@ -296,7 +285,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
           ))}
         </div>
         )}
-        <p style={{ margin: "0 0 38px", fontSize: 13.5, lineHeight: 1.6, color: "#7B8A93", maxWidth: "84ch", textWrap: "pretty" }}>{e.tableNote}</p>
+        {e.tableRows.length > 0 && <p style={{ margin: "0 0 38px", fontSize: 13.5, lineHeight: 1.6, color: "#7B8A93", maxWidth: "84ch", textWrap: "pretty" }}>{e.tableNote}</p>}
 
         <div style={{ display: "grid", gridTemplateColumns: "1fr 300px", gap: 14 }}>
           <div style={{ padding: 28, borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>

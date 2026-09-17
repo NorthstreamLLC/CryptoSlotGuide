@@ -28,7 +28,7 @@ export function payoutView(o: Operator): PayoutView {
     return { kind: "timed", label: o.payoutLabel, mins: o.payout, caption: "timed by us" };
   }
   if (o.payoutStated) {
-    return { kind: "stated", label: o.payoutStated, mins: o.payoutStatedMaxMins ?? null, caption: "operator-stated" };
+    return { kind: "stated", label: o.payoutStated, mins: o.payoutStatedMaxMins ?? null, caption: "stated" };
   }
   return { kind: "none", label: "Not stated", mins: null, caption: "none published" };
 }

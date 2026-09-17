@@ -120,7 +120,7 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
                 </div>
                 <div style={{ display: "flex", alignItems: "flex-end", gap: 14, marginBottom: 22 }}>
                   <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 44, fontWeight: 700, lineHeight: 0.9, color: "#fff", letterSpacing: "-.04em" }}>{payoutView(roobet).label}</span>
-                  <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, color: "#5C6A72", paddingBottom: 5 }}>withdrawals · {isFieldTestedOperator(roobet.slug) ? "timed by us" : "operator-stated"}</span>
+                  <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, color: "#5C6A72", paddingBottom: 5 }}>withdrawals</span>
                 </div>
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 1, background: "rgba(255,255,255,.07)", borderRadius: 10, overflow: "hidden", marginBottom: 22 }}>
                   <StatTile label="Licence" value={roobet.licence} />
@@ -287,7 +287,7 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
               Almost none of the variance is the chain. It&apos;s the operator&apos;s internal batching interval and whether a withdrawal trips a manual review. Sites that batch every few minutes and auto-approve under a threshold clear in single-digit minutes; sites that batch hourly and review everything over $500 take an hour or more.
             </p>
             <p style={{ margin: 0, fontSize: 14.5, lineHeight: 1.65, color: "#93A3AC", textWrap: "pretty" }}>
-              When we field-test an operator we time from confirmed request to first on-chain broadcast, so network congestion is excluded and the number reflects what the operator controls. The withdrawal times on this page are each operator's own stated figure, not yet timed by us.
+              That's why a casino's stated withdrawal time is worth more than the chain it runs on: it tells you how that operator batches and reviews payouts.
             </p>
           </div>
           <div style={{ padding: 26, borderRadius: 13, background: "rgba(12,16,19,.66)", border: "1px solid rgba(255,255,255,.07)" }}>

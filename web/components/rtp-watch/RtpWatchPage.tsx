@@ -66,7 +66,7 @@ export function RtpWatchPage() {
           >
             Cut somewhere
           </button>
-          <span style={{ marginLeft: "auto", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#4E5A62" }}>Filled cells read in-client · orange = reduced build · — = not yet checked</span>
+          <span style={{ marginLeft: "auto", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#4E5A62" }}>Filled cells read in-client · orange = reduced build · — = no reading</span>
         </div>
 
         <div role="table" style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 14, overflowX: "auto", background: "#0C1013", boxShadow: "0 12px 40px rgba(0,0,0,.35)" }}>

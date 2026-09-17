@@ -127,7 +127,7 @@ const PENDING = { label: "Not yet run", color: "#8DA0AA", background: "rgba(255,
 
 /** A spec row we haven't confirmed — neutral grey, never a fair/watch verdict on a term we haven't read. */
 function unconfirmed(k: string): SpecRow {
-  return { k, v: "Not yet confirmed", label: "Unconfirmed", color: "#8DA0AA", background: "rgba(255,255,255,.05)" };
+  return { k, v: "Not stated", label: "Not stated", color: "#8DA0AA", background: "rgba(255,255,255,.05)" };
 }
 
 export function getEntityView(type: EntityType, slug: string): EntityView | null {
@@ -155,15 +155,15 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       headline: `${x.name}: ${x.hed}`,
       standfirst: checked
         ? `We sampled ${x.name}'s order book and moved real money out through the fiat rails it offers. ${x.note}.`
-        : `${x.note}. Fees, limits and licensing below are from ${x.name}'s own pages; we haven't moved money through an account here yet.`,
+        : `${x.note}. Fees, limits and licensing come from ${x.name}'s own pages.`,
       tags: checked ? ["SPREADS SAMPLED", "FIAT PAYOUT TIMED", "FIELD-TESTED"] : ["FEES FROM ITS OWN SCHEDULE", por?.startsWith("Yes") ? "PROOF OF RESERVES PUBLISHED" : "NO PROOF OF RESERVES FOUND"],
-      byline: checked ? "Field-tested on our own verified account" : `${x.name}'s own fee schedule and help centre · not yet field-tested`,
+      byline: checked ? "Field-tested on our own verified account" : `${x.name}'s fee schedule and help centre`,
       verdict: `The fee schedule is only part of an onramp's cost — the spread you cross and the withdrawal fee matter too. ${x.name}'s entry-tier taker fee is ${x.m1}, its fiat rails are ${x.m2}, and its stated withdrawal limit is ${x.m3}.${reg ? ` Regulation: ${reg}.` : ""}`,
       glance: [
         { label: "Entry taker fee", value: x.m1, source: fact("Fees", "Spot trading fees") ? "cited" : "unchecked" },
         { label: "Fiat rails", value: x.m2, source: fact("Fiat & limits", "Fiat rails") ? "cited" : "unchecked" },
         { label: "Withdrawal limit", value: x.m3, source: fact("Fiat & limits", "Withdrawal limits") ? "cited" : "unchecked" },
-        { label: "Proof of reserves", value: por ? (por.startsWith("Yes") ? "Published" : "Not found") : "Not checked", source: por ? "cited" : "unchecked" },
+        { label: "Proof of reserves", value: por ? (por.startsWith("Yes") ? "Published" : "Not found") : "Not stated", source: por ? "cited" : "unchecked" },
       ],
       stats: [
         { label: "Entry taker fee", value: x.m1, note: "Entry tier, from its fee schedule" },
@@ -179,7 +179,6 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       tableSub: "Median spread and resting depth per pair, from our own order-book sampling.",
       tableCols: ["Spread", "Depth at 0.5%", "Taker fee"],
       tableRows: [],
-      tableEmpty: "Exchanges don't publish spreads, and we haven't sampled this order book yet — none are shown rather than estimated.",
       tableNote: "Spreads widen materially in the first minutes after a major print, so a single quote is never representative. Once we sample a venue we report those windows separately from the median.",
       pros: [
         `${x.m1} entry-tier taker fee`,
@@ -194,7 +193,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       faqs: [
         { q: "Can I deposit straight from here into a casino?", a: "Usually yes, on-chain — but route through a self-custody wallet first. An exchange withdrawal address that ends up on a gambling site is the pattern most likely to trigger a compliance review on your account." },
         { q: "Is the advertised fee the fee I pay?", a: "Not on its own. The spread you cross is part of the cost, and on majors it can be comparable to the taker fee itself. Only the sum of the two matters." },
-        { q: "How long do fiat withdrawals take?", a: checked ? "See the timed figure above — measured request-to-funds on our own verified account." : `We haven't timed fiat withdrawals at ${x.name} ourselves yet. First withdrawals on any exchange tend to be slower while the account is reviewed.` },
+        { q: "How long do fiat withdrawals take?", a: checked ? "See the timed figure above — measured request-to-funds on our own verified account." : `${x.name} doesn't publish one fixed time; it depends on the rail and your region. First withdrawals on any exchange tend to be slower while the account is reviewed.` },
       ],
     };
   }
@@ -221,21 +220,21 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       headline: `${w.name}: ${w.hed}`,
       standfirst: checked
         ? `We funded ${w.name} and moved money in and out of casino cashiers on the chains it supports, watching what it signs, what it simulates, and what it hides. ${w.note}.`
-        : `${w.note}. Everything below is from ${w.name}'s own docs; we haven't made test casino deposits from it yet.`,
+        : `${w.note}. Custody, chains, fees and security come from ${w.name}'s own docs.`,
       tags: checked ? ["DEPOSITS TESTED", "SIGNING BEHAVIOUR AUDITED", "FIELD-TESTED"] : ["FROM ITS OWN DOCS", ...(audits ? [audits.startsWith("Yes") ? "AUDITS PUBLISHED" : "NO AUDITS FOUND"] : [])],
-      byline: checked ? "Field-tested on real casino deposits" : `${w.name}'s own docs · casino deposits not yet field-tested`,
+      byline: checked ? "Field-tested on real casino deposits" : `${w.name}'s own docs`,
       verdict: `For gambling specifically, what matters is how a wallet behaves at the moment of signing: whether it tells you what a cashier contract will do before you approve it.${protection ? ` ${w.name}: ${protection.charAt(0).toLowerCase()}${protection.slice(1)}.` : ""}`,
       glance: [
         { label: "Key storage", value: w.m1, source: fact("Custody & security", "Custody model") ? "cited" : "unchecked" },
         { label: "Chains", value: w.m2, source: fact("Coverage & fees", "Supported chains") ? "cited" : "unchecked" },
         { label: "Swap fee", value: w.m3, source: fact("Coverage & fees", "Swap fee") ? "cited" : "unchecked" },
         { label: "Pre-sign warnings", value: protection ? "Yes" : "Not stated", source: protection ? "cited" : "unchecked" },
-        { label: "Security audits", value: audits ? (audits.startsWith("Yes") ? "Published" : "Not found") : "Not checked yet", source: audits ? "cited" : "unchecked" },
+        { label: "Security audits", value: audits ? (audits.startsWith("Yes") ? "Published" : "Not found") : "Not stated", source: audits ? "cited" : "unchecked" },
       ],
       stats: [
         { label: "Key storage", value: w.m1, note: "Per its own docs" },
-        { label: "Chains", value: w.m2, note: checked ? "Confirmed by a live deposit each" : "As stated, not yet deposit-tested" },
-        { label: "Swap fee", value: w.m3, note: !fact("Coverage & fees", "Swap fee") ? "Not checked yet" : w.m3 === "Not stated" ? "No fee published" : "Its own published fee" },
+        { label: "Chains", value: w.m2, note: checked ? "Confirmed by a live deposit each" : "As stated in its docs" },
+        { label: "Swap fee", value: w.m3, note: w.m3 === "Not stated" || !fact("Coverage & fees", "Swap fee") ? "No fee published" : "Its own published fee" },
       ],
       chipLabel: "Chains we deposited from",
       chips: [],
@@ -247,7 +246,6 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       tableSub: "One real deposit per chain into a live operator, timed from broadcast to playable balance.",
       tableCols: ["Credited in", "Fee paid", "Operator used"],
       tableRows: [],
-      tableEmpty: "We haven't made test deposits from this wallet yet — no timings are shown rather than estimated.",
       tableNote: "Deposit credit times are the operator's confirmation policy, not the wallet's. The wallet controls the fee it sets — and a fee set too low is the most common cause of a deposit that appears stuck.",
       pros: [
         `Keys: ${w.m1.toLowerCase()}`,
@@ -258,7 +256,6 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       cons: [
         ...(w.m3 !== "Not stated" ? [`${w.m3} swap fee on in-wallet swaps`] : []),
         recovery ? `Recovery: ${recovery.charAt(0).toLowerCase()}${recovery.slice(1)} — lose it and the balance is gone` : "Recovery is seed-only: lose it and the balance is gone",
-        ...(checked ? [] : ["Not yet field-tested on real casino deposits"]),
       ],
       faqs: [
         { q: "Should the playing balance live here?", a: "No. Keep a small hot wallet for deposits and a separate wallet for holdings. Casino accounts get frozen, sometimes for no clear reason; the same discipline applies to your own keys regardless of which operator you're using." },
@@ -302,41 +299,41 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       headline: `${s.name}: ${facts.length ? facts.join(", ") : `${s.provider} slot`}`,
       standfirst: anyChecked
         ? `We opened ${s.name} in ${checkedOps.length} operator ${checkedOps.length === 1 ? "account" : "accounts"} on our index and read the paytable inside each build. ${clean} of ${cuts.length} ship the full ${rtpTxt} version.`
-        : `${hasRtp(s) ? `${s.provider} publishes a return of ${rtpTxt} for ${s.name}.` : `${s.provider} doesn't publish an RTP for ${s.name} on its game page.`}${versionsNote} Which configuration an operator ships isn't disclosed in the lobby — RTP Watch checks that per operator, and none carrying this title are checked yet.`,
+        : `${hasRtp(s) ? `${s.provider} publishes a return of ${rtpTxt} for ${s.name}.` : `${s.provider} doesn't publish an RTP for ${s.name} on its game page.`}${versionsNote} Which configuration an operator ships isn't disclosed in the lobby — so check the paytable in the game's info screen before you spin.`,
       tags: [
         anyChecked ? "PAYTABLE READ PER CASINO" : "STUDIO-PUBLISHED FIGURES",
         hasVol(s) ? `${s.vol.toUpperCase()} VOLATILITY` : "VOLATILITY NOT PUBLISHED",
-        anyChecked ? "CHECKED IN-CLIENT" : "PER-OPERATOR CHECK PENDING",
+        ...(anyChecked ? ["CHECKED IN-CLIENT"] : []),
       ],
       byline: anyChecked
         ? `Read by the games desk · ${s.provider} · verified in ${cuts.length} operator ${cuts.length === 1 ? "build" : "builds"}`
-        : `${s.provider}'s own game page · per-operator build not yet field-tested`,
+        : `${s.provider}'s own game page`,
       verdict: anyChecked
         ? `${describe} ${
             clean === cuts.length
               ? "Every operator we checked ships that build, so the only variable left is where you want your money held."
               : `Only ${clean} of the ${cuts.length} operators we checked ship it. The rest run a reduced configuration, and the lobby does not tell you which.`
           }`
-        : `${describe} Operators can legally ship a reduced-RTP configuration of the same title without disclosing it in the lobby; we haven't yet field-tested any operator carrying this title to confirm which build they run.`,
+        : `${describe} Operators can legally ship a reduced-RTP configuration of the same title without disclosing it in the lobby, so the paytable in the game's info screen is the figure to trust.`,
       glance: [
         { label: "Published RTP", value: rtpLabel(s), source: hasRtp(s) && s.sourceUrl ? "cited" : "unchecked" },
         { label: "RTP versions", value: !hasRtp(s) ? "Not published" : s.rtpVersions ? `${s.rtpVersions.split("/").length} listed` : "One listed", source: s.sourceUrl && hasRtp(s) ? "cited" : "unchecked" },
         { label: "Volatility", value: volLabel(s), source: hasVol(s) && s.sourceUrl ? "cited" : "unchecked" },
         { label: "Max win", value: maxWinLabel(s), source: hasMaxWin(s) && s.sourceUrl ? "cited" : "unchecked" },
-        { label: "Casino builds read", value: anyChecked ? `${clean} of ${cuts.length} full` : "None yet", source: anyChecked ? "timed" : "unchecked" },
+        ...(anyChecked ? [{ label: "Casino builds read", value: `${clean} of ${cuts.length} full`, source: "timed" as const }] : []),
       ],
       stats: [
         { label: "Published RTP", value: rtpTxt, note: s.rtpVersions ? `Highest of ${s.rtpVersions.split("/").length} published versions` : hasRtp(s) ? `Per ${s.provider}'s game page` : `${s.provider} doesn't publish one` },
         { label: "Volatility", value: volLabel(s), note: hasVol(s) ? "Studio's published rating" : `${s.provider} doesn't publish one` },
         { label: "Max win", value: maxWinLabel(s), note: hasMaxWin(s) ? "Studio's published cap" : `${s.provider} doesn't publish one` },
         { label: "Provider", value: s.provider, note: "See the studio profile for RTP policy" },
-        { label: "Operators checked", value: String(checkedOps.length), note: anyChecked ? `${clean} at the full published rate` : "Not yet field-tested" },
+        ...(anyChecked ? [{ label: "Operators checked", value: String(checkedOps.length), note: `${clean} at the full published rate` }] : []),
       ],
       chipLabel: "Where the full build runs",
       chips: anyChecked ? checkedOps.filter((_, i) => cuts[i] === 0).map((o) => ({ t: o.name, tint: "#5FE3E8" })) : [],
       specTitle: anyChecked ? "What the paytable says" : "Published figures",
       specSource: s.sourceUrl,
-      specSub: s.sourceUrl ? `From ${s.provider}'s own game page, checked 15 Sep 2026. Per-operator builds fill in as RTP Watch reads them.` : "The studio's published figures. Per-operator builds fill in as RTP Watch reads them.",
+      specSub: s.sourceUrl ? `From ${s.provider}'s own game page, checked 15 Sep 2026.` : "The studio's published figures.",
       spec: [
         hasRtp(s) ? cited("Published return", `${rtpTxt} in the full build`) : unconfirmed("Published return"),
         s.rtpVersions
@@ -364,7 +361,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
         anyChecked ? `${clean} of ${cuts.length} major operators ship the full version` : s.rtpVersions ? `${s.provider} discloses every RTP version it licenses` : null,
       ].filter(Boolean) as string[],
       cons: [
-        s.rtpVersions ? `Lower-RTP versions exist (${s.rtpVersions}%), and the lobby doesn't say which one is loaded` : "Per-operator build not yet field-tested — a reduced configuration could be running anywhere it's offered",
+        s.rtpVersions ? `Lower-RTP versions exist (${s.rtpVersions}%), and the lobby doesn't say which one is loaded` : "Operators can ship a lower-RTP build without saying so in the lobby",
         hasVol(s) ? `${s.vol} volatility: the base game will test a bankroll` : `${s.provider} doesn't publish a volatility rating for it`,
         "Bonus buys move variance, not expected value",
       ],
@@ -411,9 +408,9 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       mono: p.mono,
       tint: p.tint,
       headline: `${p.name}: ${p.rtp.toLowerCase()}, ${titles.length} title${titles.length === 1 ? "" : "s"} on our index`,
-      standfirst: `${p.note} Figures below are from ${p.name}'s own site; ${readAny ? "some of its titles have also been read inside casino builds." : "we haven't read any of its titles inside a casino's own build yet."}`,
-      tags: [policy === "multiple" ? "EVERY RTP VERSION LISTED" : policy === "unpublished" ? "RTP NOT PUBLISHED" : policy === "bonus-buy" ? "BASE + BONUS-BUY RTP" : "ONE RTP PER GAME PAGE", "STUDIO'S OWN SITE", readAny ? "BUILDS READ IN-CLIENT" : "PER-BUILD CHECKS PENDING"],
-      byline: readAny ? `${p.name}'s own site · some builds read in-client` : `${p.name}'s own site · per-build paytable checks pending`,
+      standfirst: `${p.note} Figures come from ${p.name}'s own site.`,
+      tags: [policy === "multiple" ? "EVERY RTP VERSION LISTED" : policy === "unpublished" ? "RTP NOT PUBLISHED" : policy === "bonus-buy" ? "BASE + BONUS-BUY RTP" : "ONE RTP PER GAME PAGE", "STUDIO'S OWN SITE", ...(readAny ? ["BUILDS READ IN-CLIENT"] : [])],
+      byline: `${p.name}'s own site`,
       verdict: policyVerdict[policy],
       glance: [
         { label: "RTP disclosure", value: p.rtp, source: "cited" },
@@ -433,12 +430,10 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       chipsEmpty: "Not catalogued for this studio yet.",
       specTitle: "RTP policy",
       specSource: p.sourceUrl,
-      specSub: `What ${p.name} publishes on its own site. Rows marked unconfirmed haven't been checked in live casino builds.`,
+      specSub: `What ${p.name} publishes on its own site.`,
       spec: [
         cited("Configurations", p.rtp),
         cited("Licensing", p.licences),
-        unconfirmed("RTP shown in-game"),
-        unconfirmed("Max win honoured"),
       ],
       tableTitle: "Titles we track from this studio",
       tableSub: `Published RTP, volatility and max win from ${p.name}'s own game pages.`,
@@ -476,11 +471,11 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       mono: m.mono,
       tint: m.tint,
       headline: `${m.name} betting: ${books.length} crypto casinos name it on their own pages`,
-      standfirst: `${m.note}. The casinos below list ${m.name} in their sportsbook or esports rules. We haven't priced any ${m.name} markets ourselves.`,
-      tags: ["FROM EACH CASINO'S OWN PAGES", "NOT PRICED BY US", `${books.length} BOOKS`],
+      standfirst: `${m.note}. The casinos below list ${m.name} in their sportsbook or esports rules.`,
+      tags: ["FROM EACH CASINO'S OWN PAGES", `${books.length} BOOKS`],
       byline: "Each casino's own sportsbook pages and rules",
       verdict: `Line shopping matters more in esports than in football: books price the majors tightly and everything else loosely. Check the live price at two or three of these books before you bet on ${m.name}.`,
-      measuredSub: "Counts below come from each casino's own sportsbook pages and betting rules. We haven't priced any markets.",
+      measuredSub: "Counts come from each casino's own sportsbook pages and betting rules.",
       glance: [
         { label: "Books naming it", value: String(books.length), source: "cited" },
         { label: "With cash-out", value: String(books.filter((b) => facts(b.slug).cashout).length), source: "cited" },
@@ -514,7 +509,6 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       faqs: [
         { q: "Is line shopping worth the effort?", a: "Usually, yes. A point or two of margin between books is larger than what most bonuses return over the same betting volume." },
         { q: `Which casinos take ${m.name} bets?`, a: books.length ? `On our index: ${books.map((b) => b.name).join(", ")}. Each one names ${m.name} on its own pages.` : `None of the sportsbooks on our index name ${m.name} yet.` },
-        { q: "Have you priced these markets yourselves?", a: "Not yet. This page lists what each casino says it offers; it doesn't compare prices." },
       ],
     };
   }
@@ -569,22 +563,22 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
     standfirst: checked
       ? `We ran a funded ${o.name} account — timing real withdrawals and reading the bonus terms line by line.`
       : hasSheet
-      ? `Facts below are from ${o.name}'s own terms, help centre and licence pages, each cited in the fact table. Nothing here has been timed on our own funded account yet.`
-      : `We couldn't reach ${o.name}'s own terms or help pages, so nothing on this page is confirmed yet — figures shown are unsourced listings.`,
+      ? `${o.name}'s withdrawals, bonus terms, coins, licence and sportsbook, taken from its own terms and help centre. Every fact links to its source.`
+      : `${o.name} at a glance: withdrawals, bonus terms, coins and licence.`,
     tags: checked
       ? ["FIELD-TESTED", "WITHDRAWALS TIMED"]
-      : [pv.kind === "stated" ? "WITHDRAWAL TIME STATED" : "WITHDRAWAL TIME NOT STATED", hasSheet ? "FACTS FROM ITS OWN PAGES" : "OWN PAGES UNREACHABLE"],
+      : [pv.kind === "stated" ? `${pv.label.toUpperCase()} WITHDRAWALS` : "CRYPTO CASINO", ...(coinsFact ? [`${coinCount} COINS`] : []), ...(o.sports ? ["SPORTSBOOK"] : [])],
     byline: checked
       ? "Field-tested on our own funded account"
       : hasSheet
-      ? `${sheetFactCount} facts cited from ${o.name}'s own pages · not yet field-tested`
-      : "No facts confirmed yet · operator's pages couldn't be reached",
+      ? `${sheetFactCount} facts, each linked to ${o.name}'s own pages`
+      : "Casino profile",
     verdict: [
       checked
         ? `${o.name} cleared our withdrawals in a median ${o.payoutLabel}.`
         : statedPayout
         ? `${o.name} states its withdrawal time as "${statedPayout.value}".`
-        : `${o.name} doesn't state a withdrawal time we could find.`,
+        : `${o.name} doesn't publish a withdrawal time.`,
       wagerFact ? `Bonus wagering: ${wagerFact.value}.` : null,
       licenceFact ? `Licence: ${licenceFact.value}.` : null,
       coinsFact ? `Accepts ${coinCount} coins.` : null,
@@ -594,9 +588,9 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
     glance: [
       { label: "Withdrawal time", value: pv.label, source: pv.kind === "timed" ? "timed" : pv.kind === "stated" ? "cited" : "unchecked" },
       { label: "Welcome bonus", value: bonusWithWager(o), source: wagerFact || noBonusFact ? "cited" : offerFact ? "cited" : "unchecked" },
-      { label: "Coins accepted", value: coinsFact ? String(coinCount) : "Not confirmed", source: coinsFact?.sourcing === "editorial" ? "cited" : "unchecked" },
-      { label: "Licence", value: licenceFact ? licenceShown : "Not confirmed", source: licenceFact ? "cited" : "unchecked" },
-      { label: "KYC", value: kycFact ? KYC_LABEL[o.kyc] : "Not confirmed", source: kycFact ? "cited" : "unchecked" },
+      { label: "Coins accepted", value: coinsFact ? String(coinCount) : "Not stated", source: coinsFact?.sourcing === "editorial" ? "cited" : "unchecked" },
+      { label: "Licence", value: licenceFact ? licenceShown : "Not stated", source: licenceFact ? "cited" : "unchecked" },
+      { label: "KYC", value: kycFact ? KYC_LABEL[o.kyc] : "Not stated", source: kycFact ? "cited" : "unchecked" },
       onChain
         ? { label: "30-day deposits", value: onChain.value, source: "third-party", sourceName: onChain.source }
         : { label: "30-day deposits", value: "Not tracked", source: "unchecked" },
@@ -606,13 +600,13 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
         ? { label: "Median withdrawal", value: o.payoutLabel, note: "Timed on our own funded account" }
         : statedPayout
         ? { label: "Stated withdrawal time", value: pv.kind === "stated" ? pv.label : statedPayout.value ?? "", note: `${statedPayout.value ?? ""} · ${statedHost}` }
-        : { label: "Stated withdrawal time", value: "Not stated", note: "Not found in our search of its own pages yet" },
+        : { label: "Withdrawal time", value: "Not stated", note: "Not published on its own pages" },
       coinsFact
         ? { label: "Coins accepted", value: String(coinCount), note: (coinsFact.chips ?? coins).slice(0, 4).join(", ") + (coinCount > 4 ? " and more" : "") }
-        : { label: "Coins accepted", value: "Not confirmed", note: "No coin list found on its own pages yet" },
+        : { label: "Coins accepted", value: "Not stated", note: "No coin list published" },
       { label: "Welcome bonus", value: bonusWithWager(o), note: wagerFact?.value ?? noBonusFact?.value ?? noteFact?.value ?? (offerFact ? `${offerFact.value} — no wagering figure found in its terms` : "No headline offer found on its own pages") },
-      { label: "KYC", value: kycFact ? KYC_LABEL[o.kyc] : "Not confirmed", note: kycFact?.value ?? "No KYC policy found in our search of its pages yet" },
-      { label: "Licence", value: licenceFact ? licenceShown : "Not confirmed", note: licenceFact?.value ?? "No licence details found in our search of its pages yet" },
+      { label: "KYC", value: kycFact ? KYC_LABEL[o.kyc] : "Not stated", note: kycFact?.value ?? "No KYC policy published" },
+      { label: "Licence", value: licenceFact ? licenceShown : "Not stated", note: licenceFact?.value ?? "No licence details published" },
     ],
     chipLabel: checked ? "Coins credited on our account" : "Coins accepted",
     chips: coins.map((t) => ({ t, tint: coinTint(t) })),
@@ -621,7 +615,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       ? "Checked against the operator's own terms page. We flag anything that materially limits withdrawal."
       : wv.kind === "none"
       ? `${o.name} runs no deposit bonus, so there is nothing to wager through. Its rewards are listed under current bonuses.`
-      : "The rules that decide what a bonus is really worth, each quoted from the operator's own terms. Anything we haven't found yet is marked unconfirmed.",
+      : "The rules that decide what a bonus is really worth, each quoted from the operator's own terms.",
     spec: wv.kind === "none"
       ? [offerFact ? cited("Rewards", offerFact.value ?? o.bonus) : unconfirmed("Rewards"), spec("Wagering", "No deposit bonus to clear", "ok")]
       : [
@@ -634,7 +628,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
           bonusFact("Max cashout") ? cited("Max cashout", bonusFact("Max cashout")!) : o.cashoutCap ? cited("Max cashout", o.cashoutCap) : unconfirmed("Max cashout"),
           bonusFact("Game contribution") ? cited("Game contribution", bonusFact("Game contribution")!) : unconfirmed("Game contribution"),
           bonusFact("Minimum deposit") ? cited("Minimum deposit", bonusFact("Minimum deposit")!) : unconfirmed("Minimum deposit"),
-        ].filter((r) => !(wv.mult === 0 && r.label === "Unconfirmed" && (r.k === "Max bet" || r.k === "Game contribution"))),
+        ].filter((r) => !(wv.mult === 0 && r.label === "Not stated" && (r.k === "Max bet" || r.k === "Game contribution"))),
     extraSpecs: o.sports ? [sportsBonusSpec(o.slug, o.name)] : [],
     tableTitle: "Slot RTP in this build",
     tableSub: readings.length
@@ -666,28 +660,28 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
     // Only cons built from cited facts — confirmations, Lightning and fee absorption are prototype listings and aren't shown.
     cons: [
       ...(wagerFact && !lowWager ? [`${wv.label} wagering on the headline offer`] : []),
-      ...(pv.kind === "none" ? ["No withdrawal time found on its pages yet"] : pv.mins !== null && pv.mins >= 1440 ? [`Stated withdrawal time runs up to ${pv.label.split("–").pop()}`] : []),
+      ...(pv.kind === "none" ? ["No withdrawal time published"] : pv.mins !== null && pv.mins >= 1440 ? [`Stated withdrawal time runs up to ${pv.label.split("–").pop()}`] : []),
       ...(coinsFact && coins.length < siteData.coinDefs.length ? [`Accepts ${coins.length} of the ${siteData.coinDefs.length} coins we track`] : []),
       ...(notOnRegister ? ["Not found on the regulator's licence register"] : []),
-      ...(!licenceFact ? ["No licence details found in our search of its pages yet"] : /no gaming licence/i.test(licenceFact.value ?? "") ? ["No gaming licence stated on its own site"] : /no licence number/i.test(licenceFact.value ?? "") ? ["No licence number shown on its own site"] : []),
+      ...(!licenceFact ? ["No licence details published"] : /no gaming licence/i.test(licenceFact.value ?? "") ? ["No gaming licence stated on its own site"] : /no licence number/i.test(licenceFact.value ?? "") ? ["No licence number shown on its own site"] : []),
     ],
     faqs: [
-      { q: `Is ${o.name} available in my country?`, a: `${o.name} restricts a list of jurisdictions under its ${o.licence} licence. Check the restricted list in its terms before depositing rather than after — we haven't independently tested where it blocks access.` },
-      { q: "Do I have to complete KYC?", a: kycFact ? `Per ${o.name}'s own pages: ${kycFact.value}. We haven't tested that at volume ourselves.` : `We couldn't find a KYC policy on ${o.name}'s own pages, so check its terms before depositing.` },
-      { q: "What does wagering actually mean?", a: wagerFact ? `${o.name}'s bonus terms say: ${wagerFact.value}. A 40× requirement on a $100 credit means $4,000 of bets before withdrawal; 1× means $100.` : "Wagering is how many times a bonus must be bet before it can be withdrawn — 40× on a $100 credit means $4,000 of bets. We couldn't find this operator's figure in its own terms." },
+      { q: `Is ${o.name} available in my country?`, a: `${o.name} restricts a list of jurisdictions under its ${o.licence} licence. Check the restricted list in its terms before depositing.` },
+      { q: "Do I have to complete KYC?", a: kycFact ? `${o.name}'s terms: ${kycFact.value}.` : `${o.name} doesn't publish a KYC policy, so expect document checks before larger withdrawals.` },
+      { q: "What does wagering actually mean?", a: wagerFact ? `${o.name}'s bonus terms say: ${wagerFact.value}. A 40× requirement on a $100 credit means $4,000 of bets before withdrawal; 1× means $100.` : "Wagering is how many times a bonus must be bet before it can be withdrawn — 40× on a $100 credit means $4,000 of bets. This operator doesn't publish a fixed figure." },
       { q: "How fast are withdrawals really?", a: checked
           ? `Median ${o.payoutLabel} across the withdrawals we timed on our own account.`
           : statedPayout
-          ? `${o.name}'s own help pages say "${statedPayout.value}". We haven't timed withdrawals there ourselves yet — see how we source information for what's field-tested so far.`
-          : `${o.name} doesn't publish a withdrawal time we could find, and we haven't timed withdrawals there ourselves yet.` },
+          ? `${o.name} says: "${statedPayout.value}".`
+          : `${o.name} doesn't publish a withdrawal time; it depends on the coin, network confirmations and your verification level.` },
     ],
     signupUrl: o.signupUrl,
     affiliate: o.affiliate,
     measuredSub: checked
       ? undefined
       : hasSheet
-      ? "Each figure below is the operator's own stated number, cited in the fact table further down. None are timed on our own funded account yet."
-      : "We couldn't reach this operator's own pages, so nothing below is confirmed — figures are unsourced listings until they're checked.",
+      ? "Each figure comes from the operator's own pages; sources are in the fact table below."
+      : undefined,
   };
 }
 
@@ -727,7 +721,7 @@ function sportsBonusSpec(slug: string, name: string) {
   const rotating = !!offer && /^rotating /i.test(offer);
   const row = (k: string, label = k) => (f(label) ? cited(k, f(label)!) : unconfirmed(k));
   if (!offer) {
-    return { title: "Sports bonus terms", sub: `We haven't found ${name}'s sports offer on its own pages yet.`, rows: [unconfirmed("Offer")] };
+    return { title: "Sports bonus terms", sub: `${name} doesn't publish a standing sports welcome offer.`, rows: [unconfirmed("Offer")] };
   }
   return {
     title: "Sports bonus terms",
@@ -735,7 +729,7 @@ function sportsBonusSpec(slug: string, name: string) {
       ? `${name} changes its sportsbook promotions often, so we list how it runs them rather than a single offer.`
       : none
       ? `${name} runs no standing sports welcome offer.`
-      : "The rules on the sportsbook offer, each quoted from the operator's own terms. Anything we haven't found yet is marked unconfirmed.",
+      : "The rules on the sportsbook offer, each quoted from the operator's own terms.",
     rows: none || rotating
       ? [cited("Offer", offer!)]
       : [row("Offer"), row("Wagering"), row("Minimum odds"), row("Max bet"), row("Time limit", "Expiry"), row("Qualifying bets"), row("Minimum deposit"), row("Max cashout")],

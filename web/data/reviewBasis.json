@@ -4,21 +4,21 @@
     "icon": "🎰",
     "tint": "#FFB347",
     "checks": "The RTP build each operator actually ships, volatility, max-win ceiling and how the mechanic pays.",
-    "measured": "Published RTP; per-operator builds via RTP Watch"
+    "measured": "Published RTP"
   },
   {
     "name": "Game providers",
     "icon": "🎮",
     "tint": "#B284FF",
     "checks": "Whether the studio permits reduced RTP configurations, its volatility range, and catalogue reach.",
-    "measured": "Configurations as published; in-client check via RTP Watch"
+    "measured": "Configurations as published"
   },
   {
     "name": "Sportsbooks",
     "icon": "🏆",
     "tint": "#57E39A",
     "checks": "Whether the operator runs a sportsbook and esports book, who supplies it, cash-out and bet-builder options, and the payout caps in its betting rules.",
-    "measured": "From each operator’s own pages; margin sampling pending"
+    "measured": "From each operator’s own pages"
   },
   {
     "name": "Prediction markets",
@@ -38,7 +38,7 @@
     "name": "Exchanges",
     "icon": "💱",
     "tint": "#5FE3E8",
-    "checks": "Entry fees, fiat rails, withdrawal limits, regulation and proof of reserves — and, once sampled, the spread you actually cross.",
-    "measured": "Fees, rails and limits from each exchange's own pages; spread sampling pending"
+    "checks": "Entry fees, fiat rails, withdrawal limits, regulation and proof of reserves.",
+    "measured": "Fees, rails and limits from each exchange's own pages"
   }
 ]

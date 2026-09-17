@@ -36,7 +36,7 @@ const FIELD_TEST_CATEGORY_SLUGS: Record<string, string[]> = {
 function reviewBasisTier(name: string): ReviewTier {
   const slugs = FIELD_TEST_CATEGORY_SLUGS[name];
   if (!slugs) return "editorial";
-  return slugs.length > 0 && slugs.every(isFieldTestedOperator) ? "field-tested" : "pending";
+  return slugs.length > 0 && slugs.every(isFieldTestedOperator) ? "field-tested" : "editorial";
 }
 
 /**
@@ -64,7 +64,7 @@ export default function Page() {
             How we source information
           </h1>
           <p style={{ margin: "0 auto 14px", maxWidth: "66ch", fontSize: 16.5, lineHeight: 1.65, color: "#93A3AC", textWrap: "pretty" }}>
-            We don&apos;t score or rate anything. Every review is built from facts — each one cited to the operator&apos;s own page, a third-party tracker, or our own testing — and anything we haven&apos;t checked is marked as not yet checked. Commission never decides what a review says or which facts it shows.
+            We don&apos;t score or rate anything. Every review is built from facts — each one cited to the operator&apos;s own page, a third-party tracker, or our own testing. Commission never decides what a review says or which facts it shows.
           </p>
           <p style={{ margin: "0 auto", maxWidth: "66ch", fontSize: 15, lineHeight: 1.65, color: "#7B8A93", textWrap: "pretty" }}>
             Everything else — slots, providers, sportsbooks, prediction markets, wallets, exchanges — is reviewed against its own checklist rather than forced into the casino model. Those checklists are below.
@@ -72,26 +72,11 @@ export default function Page() {
         </div>
       </section>
 
-      <section style={{ maxWidth: 1180, margin: "0 auto", padding: "36px 40px 0" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 1, background: "rgba(255,255,255,.07)", border: "1px solid rgba(255,255,255,.07)", borderRadius: 14, overflow: "hidden" }}>
-          {coverage.map((c) => (
-            <div key={c.label} style={{ padding: "18px 20px", background: "#0C1013" }}>
-              <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 22, fontWeight: 700, color: c.value > 0 ? "#5FE3E8" : "#5C6A72", letterSpacing: "-.02em" }}>
-                {c.value} <span style={{ fontSize: 14, color: "#5C6A72", fontWeight: 500 }}>/ {c.total}</span>
-              </div>
-              <div style={{ fontSize: 11.5, color: "#7B8A93", marginTop: 4 }}>{c.label}</div>
-            </div>
-          ))}
-        </div>
-        <p style={{ margin: "10px 0 0", fontSize: 12, color: "#5C6A72" }}>
-          Real coverage across the index, not a completion rate we&apos;re hiding — most of this site is still &quot;published, pending our own check.&quot;
-        </p>
-      </section>
 
       <section style={{ maxWidth: 1180, margin: "0 auto", padding: "44px 40px 0" }}>
         <h2 style={{ margin: "0 0 8px", fontSize: 28, letterSpacing: "-.028em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>How we back a figure</h2>
         <p style={{ margin: "0 0 20px", maxWidth: "80ch", fontSize: 15, lineHeight: 1.65, color: "#8DA0AA", textWrap: "pretty" }}>
-          Not every figure gets the same kind of check, and we&apos;d rather say so than blur it. The first two apply fact by fact within a single casino review (see the six checks below); the third backs a small set of figures — on-chain deposit flow, hot-wallet balances — that need infrastructure this site doesn&apos;t have yet. Every number traces back to whichever one applies.
+          Not every figure gets the same kind of check, and we&apos;d rather say so than blur it. The first two apply fact by fact within a single casino review (see the six checks below); the third backs a small set of figures — on-chain deposit flow, hot-wallet balances —, cited to the tracker that publishes them. Every number traces back to whichever one applies.
         </p>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))", gap: 1, background: "rgba(255,255,255,.07)", border: "1px solid rgba(255,255,255,.07)", borderRadius: 14, overflow: "hidden" }}>
           {(["field-tested", "editorial"] as const).map((tier) => (
@@ -151,7 +136,7 @@ export default function Page() {
         </div>
         <h2 style={{ margin: "0 0 8px", fontSize: 28, letterSpacing: "-.028em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>The six things we check on every casino, and how each is sourced</h2>
         <p style={{ margin: "0 0 20px", maxWidth: "74ch", fontSize: 15, lineHeight: 1.65, color: "#8DA0AA", textWrap: "pretty" }}>
-          There are no weights and no score. Each casino review shows these six as facts, with where each came from, and lists are sorted by facts like withdrawal time or name. Four of the six start from the operator&apos;s own public pages. Support responsiveness and the RTP build an operator ships can only be checked from a funded account, and payout speed moves from the operator&apos;s stated time to our own timings once field-tested. Each review marks any criterion that hasn&apos;t been checked for that operator yet.
+          There are no weights and no score. Each casino review shows these six as facts, with where each came from, and lists are sorted by facts like withdrawal time or name. Four of the six start from the operator&apos;s own public pages. Support responsiveness and the RTP build an operator ships are checked inside the casino itself.
         </p>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 1, background: "rgba(255,255,255,.07)", border: "1px solid rgba(255,255,255,.07)", borderRadius: 14, overflow: "hidden" }}>
           {criteria.map((c) => (

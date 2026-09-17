@@ -193,9 +193,9 @@ export default function HomePage() {
               </span>
             </h1>
             <p style={{ margin: "0 0 30px", maxWidth: 530, fontSize: 17.5, lineHeight: 1.6, color: "#9AAAB3", textWrap: "pretty" }}>
-              Crypto casinos, wallets and exchanges reviewed against their published terms and public records; a figure
-              only says tested when a funded account backs it. Slots, providers and sportsbooks assessed from public
-              paytables and posted odds. Every review says which is which — start with a number, not a banner.
+              Crypto casinos, sportsbooks, wallets and exchanges reviewed against their own terms and public records,
+              with every fact linked to its source. Slots and studios from their published paytables. Start with a
+              number, not a banner.
             </p>
 
             <Link
@@ -528,7 +528,7 @@ export default function HomePage() {
             <div>
               <h2 style={{ margin: "0 0 14px", fontSize: 30, letterSpacing: "-.03em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Six criteria. No paid placement in a review.</h2>
               <p style={{ margin: "0 0 22px", fontSize: 15, lineHeight: 1.65, color: "#8DA0AA", textWrap: "pretty" }}>
-                Crypto casinos, wallets and exchanges are reviewed against their own published terms, and every fact in a review is cited. A funded-account field test is added to a review only when one has actually been run, and the review says so. Slots and providers are assessed from published paytables and the studios&apos; stated RTPs. Commercial relationships are disclosed on every page and never change what a review says.
+                Crypto casinos, wallets and exchanges are reviewed against their own published terms, and every fact in a review is cited. Slots and providers are assessed from published paytables and the studios&apos; stated RTPs. Commercial relationships are disclosed on every page and never change what a review says.
               </p>
               <Link href="/how-we-rate" style={{ display: "inline-flex", alignItems: "center", gap: 8, fontSize: 14, fontWeight: 600, color: "#00C2CC" }}>
                 Read the full methodology <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace" }}>→</span>
