@@ -53,7 +53,7 @@ export function CoinsPage() {
               Deposit and withdraw, coin by coin
             </h1>
             <p style={{ margin: 0, maxWidth: "74ch", fontSize: 16, lineHeight: 1.6, color: "#93A3AC", textWrap: "pretty" }}>
-              Which coins the operators on our index accept, credit time and confirmations as published, and what the network typically charges to move it. Timing figures below are pending our own funded-account field-test pass — see how we source information.
+              Which coins the casinos on our index accept, and how each network confirms and charges for a transfer, from the network's own documentation. Casinos set their own confirmation requirements on top, so check the cashier before you send.
             </p>
           </div>
           <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#4E5A62", whiteSpace: "nowrap" }}>
@@ -62,8 +62,8 @@ export function CoinsPage() {
         </div>
 
         <div role="table" style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 14, overflowX: "auto", background: "#0C1013", boxShadow: "0 12px 40px rgba(0,0,0,.35)" }}>
-          <div role="row" style={{ display: "grid", minWidth: 1120, gridTemplateColumns: "minmax(240px,1.3fr) 120px 130px 116px 116px 150px 168px", background: "#101519", borderBottom: "1px solid rgba(255,255,255,.07)" }}>
-            {["Coin", "Accepted at", "Credit time", "Confirms", "Network fee", "Credit spread", ""].map((h) => (
+          <div role="row" style={{ display: "grid", minWidth: 1120, gridTemplateColumns: "minmax(240px,1.2fr) 110px 150px 190px minmax(200px,1fr) 168px", background: "#101519", borderBottom: "1px solid rgba(255,255,255,.07)" }}>
+            {["Coin", "Accepted at", "Block time", "Finality", "How fees work", ""].map((h) => (
               <div key={h} role="columnheader" style={{ padding: "14px 12px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".07em", textTransform: "uppercase", color: "#5C6A72" }}>{h}</div>
             ))}
           </div>
@@ -71,7 +71,7 @@ export function CoinsPage() {
             const opsForCoin = coinOps(c.ticker);
             const pct = ops.length ? Math.round((opsForCoin.length / ops.length) * 100) : 0;
             return (
-              <div key={c.ticker} role="row" style={{ display: "grid", minWidth: 1120, gridTemplateColumns: "minmax(240px,1.3fr) 120px 130px 116px 116px 150px 168px", alignItems: "center", borderBottom: "1px solid rgba(255,255,255,.05)" }}>
+              <div key={c.ticker} role="row" style={{ display: "grid", minWidth: 1120, gridTemplateColumns: "minmax(240px,1.2fr) 110px 150px 190px minmax(200px,1fr) 168px", alignItems: "center", borderBottom: "1px solid rgba(255,255,255,.05)" }}>
                 <div role="cell" style={{ padding: "14px 18px", display: "flex", alignItems: "center", gap: 13, minWidth: 0 }}>
                   <span style={{ width: 34, height: 34, flex: "none", borderRadius: "50%", background: c.tint, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 8.5, fontWeight: 700, color: "#0A0D0F" }}>{c.ticker}</span>
                   <div style={{ minWidth: 0 }}>
@@ -83,14 +83,9 @@ export function CoinsPage() {
                   <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 15, fontWeight: 500, color: "#fff" }}>{opsForCoin.length}</div>
                   <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#5C6A72", marginTop: 2 }}>{pct}% of index</div>
                 </div>
-                <div role="cell" style={{ padding: "14px 12px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12.5, color: "#B7C4CB" }}>{c.creditTime}</div>
-                <div role="cell" style={{ padding: "14px 12px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12.5, color: "#B7C4CB" }}>{c.confirms}</div>
-                <div role="cell" style={{ padding: "14px 12px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12.5, color: "#B7C4CB" }}>{c.fee}</div>
-                {/* Credit spread needs real deposit timings from field-testing; the prototype's
-                    `distribution` arrays in data/coinDefs.json are unsourced, so they are not drawn. */}
-                <div role="cell" style={{ padding: "14px 12px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#4E5A62" }}>
-                  Not yet timed
-                </div>
+                <div role="cell" style={{ padding: "14px 12px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12.5, color: "#B7C4CB" }}>{c.blockTime}</div>
+                <div role="cell" style={{ padding: "14px 12px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, color: "#B7C4CB" }}>{c.finality}</div>
+                <div role="cell" style={{ padding: "14px 12px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, color: "#B7C4CB" }}>{c.feeModel}</div>
                 <div role="cell" style={{ padding: "12px 18px", display: "flex", gap: 8 }}>
                   <Link href={`/crypto-casinos?coin=${c.ticker}`} className="hover:!border-accent hover:!text-[#5FE3E8]" style={{ flex: 1, textAlign: "center", padding: 9, borderRadius: 7, border: "1px solid rgba(255,255,255,.16)", color: "#DCE5E9", fontSize: 12.5, fontWeight: 700, whiteSpace: "nowrap" }}>
                     Casinos
@@ -107,11 +102,12 @@ export function CoinsPage() {
 
       {sel !== "all" ? (
         <section style={{ maxWidth: 1400, margin: "0 auto", padding: "38px 40px 84px" }}>
+          <CoinFacts ticker={sel} />
           <div style={{ marginBottom: 18 }}>
             <h2 style={{ margin: "0 0 7px", fontSize: 26, letterSpacing: "-.028em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>
               Casinos that credit {coinDefs.find((c) => c.ticker === sel)?.name ?? sel}
             </h2>
-            <p style={{ margin: 0, fontSize: 14.5, color: "#8DA0AA" }}>{detail.length} operators, listed A–Z. Payout time is the operator&apos;s listed figure, not one we have timed.</p>
+            <p style={{ margin: 0, fontSize: 14.5, color: "#8DA0AA" }}>{detail.length} casinos, listed A–Z. Payout time is the operator&apos;s listed figure, not one we have timed.</p>
           </div>
           <div style={{ display: "grid", minWidth: 0, gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))", gap: 12 }}>
             {detail.map((o) => (
@@ -137,9 +133,9 @@ export function CoinsPage() {
         <section style={{ maxWidth: 1400, margin: "0 auto", padding: "38px 40px 84px" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1.4fr .6fr", gap: 14 }}>
             <div style={{ padding: "28px 32px", borderRadius: 14, background: "linear-gradient(150deg,#0E1417,#0A0E10)", border: "1px solid rgba(255,255,255,.07)" }}>
-              <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 12 }}>How to read credit spread</div>
+              <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 12 }}>Where these figures come from</div>
               <p style={{ margin: 0, maxWidth: "78ch", fontSize: 15, lineHeight: 1.7, color: "#93A3AC", textWrap: "pretty" }}>
-                Credit spread will show how deposit times for each coin actually distribute across operators, fastest on the left. It stays empty until field-testing produces real deposit timings — we would rather show nothing than an estimate. When it fills in, a tall left edge means the coin credits predictably; a long tail usually means an operator batches deposits on a schedule rather than crediting on confirmation. Pick a ticker above to see which operators accept it.
+                Block times, finality and fee rules come from each network&apos;s own documentation, and USDT&apos;s networks from Tether. Pick a ticker above to read the source wording and links. How long a deposit takes to show in your balance also depends on how many confirmations the casino waits for, which each casino sets itself. We haven&apos;t timed deposits ourselves yet.
               </p>
             </div>
             <Link href="/crypto-casinos" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", gap: 20, padding: "28px 32px", borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
@@ -150,5 +146,25 @@ export function CoinsPage() {
         </section>
       )}
     </main>
+  );
+}
+
+function CoinFacts({ ticker }: { ticker: string }) {
+  const c = siteData.coinDefs.find((d) => d.ticker === ticker);
+  if (!c || !c.facts.length) return null;
+  return (
+    <div style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 13, overflow: "hidden", background: "#0C1013", marginBottom: 34 }}>
+      {c.facts.map((f) => (
+        <div key={f.label} style={{ display: "grid", gridTemplateColumns: "190px 1fr", borderBottom: "1px solid rgba(255,255,255,.05)" }}>
+          <div style={{ padding: "14px 18px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".05em", textTransform: "uppercase", color: "#5C6A72" }}>{f.label}</div>
+          <div style={{ padding: "14px 18px", fontSize: 13.5, lineHeight: 1.55, color: "#B7C4CB" }}>
+            {f.text}{" "}
+            <a href={f.url} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#5FE3E8", whiteSpace: "nowrap" }}>
+              {new URL(f.url).hostname.replace(/^www./, "")} ↗
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
   );
 }

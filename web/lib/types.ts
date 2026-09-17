@@ -239,13 +239,13 @@ export interface CoinDef {
   ticker: CoinTicker;
   tint: string;
   name: string;
-  creditTime: string;
-  /** Range string, e.g. "1–3" — confirmation requirements vary by operator. */
-  confirms: string;
-  fee: string;
   note: string;
-  /** Drives the bar spark on the coin page. */
-  distribution: number[];
+  /** Short forms of the cited facts below, for the table. */
+  blockTime: string;
+  finality: string;
+  feeModel: string;
+  /** Each from the network's or issuer's own documentation. */
+  facts: { label: string; text: string; url: string }[];
 }
 
 export interface SportsbookRow {

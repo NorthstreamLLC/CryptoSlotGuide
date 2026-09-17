@@ -1,10 +1,210 @@
 [
-  { "ticker": "BTC", "tint": "#F7931A", "name": "Bitcoin", "creditTime": "11m 40s", "confirms": "1–3", "fee": "$0.62", "note": "On-chain default everywhere. Lightning where offered.", "distribution": [3, 5, 8, 12, 9, 6, 4, 3, 2, 2, 1, 1] },
-  { "ticker": "ETH", "tint": "#8FA5C9", "name": "Ethereum", "creditTime": "48s", "confirms": "12–20", "fee": "$1.80", "note": "ERC-20 stablecoins ride the same rail.", "distribution": [2, 6, 11, 10, 7, 5, 3, 2, 2, 1, 1, 1] },
-  { "ticker": "USDT", "tint": "#5FBFA0", "name": "Tether", "creditTime": "1m 05s", "confirms": "1–20", "fee": "$1.10", "note": "Cheapest on Tron, dearest on Ethereum.", "distribution": [4, 9, 12, 8, 6, 4, 3, 2, 1, 1, 1, 0] },
-  { "ticker": "SOL", "tint": "#7BE0B8", "name": "Solana", "creditTime": "9s", "confirms": "1", "fee": "$0.01", "note": "Fastest listed credit time and lowest typical network fee.", "distribution": [14, 9, 5, 3, 2, 1, 1, 1, 0, 0, 0, 0] },
-  { "ticker": "LTC", "tint": "#B4B8BB", "name": "Litecoin", "creditTime": "2m 30s", "confirms": "2–6", "fee": "$0.03", "note": "Quietly the best-supported low-fee coin.", "distribution": [6, 10, 9, 7, 4, 3, 2, 2, 1, 1, 0, 0] },
-  { "ticker": "DOGE", "tint": "#D6B65C", "name": "Dogecoin", "creditTime": "3m 10s", "confirms": "3–6", "fee": "$0.04", "note": "Widely credited, rarely a withdrawal option.", "distribution": [5, 8, 9, 8, 5, 4, 3, 2, 1, 1, 1, 0] },
-  { "ticker": "XRP", "tint": "#9FB6E0", "name": "XRP", "creditTime": "14s", "confirms": "1", "fee": "$0.01", "note": "Needs a destination tag — a common cause of lost deposits.", "distribution": [12, 8, 5, 3, 2, 2, 1, 1, 0, 0, 0, 0] },
-  { "ticker": "TRX", "tint": "#C4795A", "name": "Tron", "creditTime": "1m 05s", "confirms": "19", "fee": "$1.10", "note": "Used mostly as the USDT-TRC20 carrier.", "distribution": [7, 10, 8, 6, 4, 3, 2, 1, 1, 1, 0, 0] }
+  {
+    "ticker": "BTC",
+    "tint": "#F7931A",
+    "name": "Bitcoin",
+    "note": "Lightning payments settle off-chain where a casino offers them",
+    "blockTime": "~10 min",
+    "finality": "6 confirmations for large sums",
+    "feeModel": "Paid to miners, by transaction size",
+    "facts": [
+      {
+        "label": "Block time",
+        "text": "New blocks are added approximately every 10 minutes on average; block discovery is probabilistic, with no guaranteed minimum or maximum delay.",
+        "url": "https://bitcoin.org/en/you-need-to-know"
+      },
+      {
+        "label": "Finality",
+        "text": "Transactions are not irreversible immediately; they collect confirmations, and each one makes reversal harder. bitcoin.org's guide: 0 confirmations is only safe if you trust the payer, 1 is somewhat reliable, 3 is mostly reliable, and 6 is the minimum recommendation for high-value transfers. A fee below what the network is currently prioritizing can make the first confirmation take much longer.",
+        "url": "https://bitcoin.org/en/you-need-to-know"
+      },
+      {
+        "label": "How fees work",
+        "text": "Fees go to the miner. They are based on the byte size of the signed transaction, and the fee per byte depends on current demand for block space. Miners fill blocks with the transactions paying the highest fee per byte first.",
+        "url": "https://developer.bitcoin.org/devguide/transactions.html"
+      },
+      {
+        "label": "Lightning",
+        "text": "lightning.network describes Lightning as instant payments without waiting for block confirmations, with very low fees because transactions are made and settled off-chain. It works through payment channels: two participants create a ledger entry on the blockchain, and both must sign before those funds can be spent.",
+        "url": "https://lightning.network/"
+      }
+    ]
+  },
+  {
+    "ticker": "ETH",
+    "tint": "#8FA5C9",
+    "name": "Ethereum",
+    "note": "ERC-20 tokens such as USDT move on the same network",
+    "blockTime": "12 s",
+    "finality": "~15 min (two epochs)",
+    "feeModel": "Gas × (base + tip); base fee burned",
+    "facts": [
+      {
+        "label": "Block time",
+        "text": "Time is divided into 12-second slots, so the block time is 12 seconds. A slot can occasionally be empty, for example when a validator is offline.",
+        "url": "https://ethereum.org/en/developers/docs/blocks/"
+      },
+      {
+        "label": "Finality",
+        "text": "ethereum.org says an Ethereum block takes about 15 minutes to finalize (finality happens across two epochs; one epoch is 32 slots of 12 seconds). A finalized block can't change without a large amount of ETH being burned. This page (last updated July 23, 2026) describes single-slot finality as a future roadmap item, not something live today.",
+        "url": "https://ethereum.org/en/roadmap/single-slot-finality/"
+      },
+      {
+        "label": "How fees work",
+        "text": "Fee = gas units used × (base fee + priority fee). The protocol sets the base fee, which is burned when the block is created. The priority fee is an optional tip to validators to get the transaction into the next block.",
+        "url": "https://ethereum.org/en/developers/docs/gas/"
+      }
+    ]
+  },
+  {
+    "ticker": "USDT",
+    "tint": "#5FBFA0",
+    "name": "Tether",
+    "note": "Issued on 14 networks; send on the one the cashier names",
+    "blockTime": "Depends on network",
+    "finality": "Depends on network",
+    "feeModel": "Paid in the host network's coin",
+    "facts": [
+      {
+        "label": "Networks",
+        "text": "Tether's page lists these supported protocols: Ethereum (ERC20), Avalanche, BNB Smart Chain, Cosmos (via Kava), Celo, Kaia, Tron (TRC20), Liquid, Solana, Polkadot AssetHub (formerly Statemint), Tezos, Near, Ton (Jetton) and Aptos (Fungible Asset). The page has no date. It does not mention Arbitrum, Polygon, Optimism, zkSync, Plasma, Hedera or Lightning.",
+        "url": "https://tether.to/en/supported-protocols/"
+      },
+      {
+        "label": "Discontinued networks",
+        "text": "Listed as deprecated: Algorand, EOS (now Vaulta), Kusama AssetHub (formerly Statemine), Omni Protocol on Bitcoin, and SLP on Bitcoin Cash. Tether says it no longer issues or is obliged to redeem USDT on these chains, and keeps their information for historical reference only.",
+        "url": "https://tether.to/en/supported-protocols/"
+      }
+    ]
+  },
+  {
+    "ticker": "SOL",
+    "tint": "#7BE0B8",
+    "name": "Solana",
+    "note": "Three commitment levels: processed, confirmed, finalized",
+    "blockTime": "300 ms (since Aug 2026)",
+    "finality": "\"Finalized\" commitment level",
+    "feeModel": "5,000 lamports per signature, plus optional priority fee",
+    "facts": [
+      {
+        "label": "Block time",
+        "text": "Official sources disagree. The Solana Foundation's Reduced Slot Times page (marked 'Updated September 2026') says the 350ms and 300ms cuts are live on mainnet (350ms from Aug 19, 2026 and 300ms from Aug 25, 2026, per page), so mainnet slot time is now 300ms. The 250ms and 200ms steps have no mainnet date yet. The undated developer confirmation guide still says slots last about 400ms.",
+        "url": "https://solana.com/upgrades/reduced-slot-times"
+      },
+      {
+        "label": "Older developer guide",
+        "text": "The undated developer guide says slots are set to about 400ms and can vary between 400ms and 600ms. This conflicts with the September 2026 upgrade page.",
+        "url": "https://solana.com/developers/guides/advanced/confirmation"
+      },
+      {
+        "label": "Finality",
+        "text": "There are three commitment levels. 'processed' is the newest view and can still be rolled back. 'confirmed' means more than two-thirds of active stake voted directly on the block. 'finalized' is the strongest state (maximum lockout). The confirmation guide says the latest finalized block usually trails the latest confirmed block by at least 32 slots.",
+        "url": "https://solana.com/docs/rpc"
+      },
+      {
+        "label": "How fees work",
+        "text": "Fees are paid in SOL. The base fee is 5,000 lamports per signature: half is burned and half goes to the validator. There is also an optional prioritization fee (compute unit price × compute unit limit), and all of it goes to the validator.",
+        "url": "https://solana.com/docs/core/fees"
+      }
+    ]
+  },
+  {
+    "ticker": "LTC",
+    "tint": "#B4B8BB",
+    "name": "Litecoin",
+    "note": "Fees go to the miner, with the block reward",
+    "blockTime": "~2.5 min",
+    "finality": "No general guidance published",
+    "feeModel": "Paid to miners",
+    "facts": [
+      {
+        "label": "Block time",
+        "text": "A block is produced approximately every 2.5 minutes (Litecoin Foundation, litecoin.com).",
+        "url": "https://litecoin.com/what-is-litecoin"
+      },
+      {
+        "label": "How fees work",
+        "text": "Miners who add a block get the block reward plus all fees from the transactions in that block. The page also says the average fee is under a penny; it gives no date for that figure.",
+        "url": "https://litecoin.com/learning-center/what-are-transaction-fees"
+      }
+    ]
+  },
+  {
+    "ticker": "DOGE",
+    "tint": "#D6B65C",
+    "name": "Dogecoin",
+    "note": "Figures from the official Dogecoin Core repository",
+    "blockTime": "~1 min",
+    "finality": "No guidance published",
+    "feeModel": "0.01 DOGE per kB (wallet default)",
+    "facts": [
+      {
+        "label": "Block time",
+        "text": "The target is one minute per block, and difficulty readjusts after every block. SOURCE NOTE: this is the official Dogecoin Core repository (github.com/dogecoin), not dogecoin.com. dogecoin.com only says confirmations are 'relatively fast'.",
+        "url": "https://github.com/dogecoin/dogecoin/blob/master/doc/FAQ.md"
+      },
+      {
+        "label": "How fees work",
+        "text": "Fees are charged on the exact byte size of the transaction. The Dogecoin Core wallet's recommended default is 0.01 DOGE per kilobyte, and the default miner inclusion policy uses that same rate. The default minimum relay fee is 0.001 DOGE/kB. These are software defaults 'last updated for 1.14.6', not protocol-fixed amounts. SOURCE NOTE: official Dogecoin Core repository (github.com/dogecoin), not dogecoin.com.",
+        "url": "https://github.com/dogecoin/dogecoin/blob/master/doc/fee-recommendation.md"
+      }
+    ]
+  },
+  {
+    "ticker": "XRP",
+    "tint": "#9FB6E0",
+    "name": "XRP",
+    "note": "Payments to a casino can need a destination tag",
+    "blockTime": "3–5 s",
+    "finality": "Final once the ledger is validated",
+    "feeModel": "10 drops minimum, destroyed",
+    "facts": [
+      {
+        "label": "Block time",
+        "text": "New ledger versions usually close about every 3 to 5 seconds.",
+        "url": "https://xrpl.org/docs/concepts/ledgers/ledger-close-times"
+      },
+      {
+        "label": "Finality",
+        "text": "Once the network agrees on a ledger version's contents, that version is validated and can never change.",
+        "url": "https://xrpl.org/docs/concepts/consensus-protocol/consensus-structure"
+      },
+      {
+        "label": "How fees work",
+        "text": "Each transaction destroys a small amount of XRP. No one receives it. The current minimum for a standard transaction is 10 drops, and the cost can rise when the network is under higher load. The fee is set in the transaction's Fee field and is destroyed once the transaction is in a validated ledger, even if the transaction fails.",
+        "url": "https://xrpl.org/docs/concepts/transactions/transaction-cost"
+      },
+      {
+        "label": "Destination tags",
+        "text": "A payment to an exchange or other business address can carry a destination tag that tells the business which customer to credit. If a casino gives you a tag, include it.",
+        "url": "https://xrpl.org/docs/concepts/transactions/source-and-destination-tags"
+      }
+    ]
+  },
+  {
+    "ticker": "TRX",
+    "tint": "#C4795A",
+    "name": "Tron",
+    "note": "USDT on Tron is a TRC-20 token contract",
+    "blockTime": "3 s",
+    "finality": "~1 min (19 of 27 producers)",
+    "feeModel": "Bandwidth and energy; TRX burned if not covered",
+    "facts": [
+      {
+        "label": "Block time",
+        "text": "27 Super Representatives, elected by staker votes, take turns producing a block every 3 seconds.",
+        "url": "https://developers.tron.network/docs/concensus"
+      },
+      {
+        "label": "Finality",
+        "text": "A block is 'solidified' (final, and cannot be replaced by a fork) once at least 19 of the 27 active SRs have each produced a block at that height or higher. The docs say this usually takes about 1 minute.",
+        "url": "https://developers.tron.network/docs/concensus"
+      },
+      {
+        "label": "How fees work",
+        "text": "TRON charges resources instead of a simple fee. Bandwidth pays for a transaction's byte size. Each account gets up to 600 free Bandwidth per rolling 24 hours (current getFreeNetLimit value), and staking TRX gives more. Energy pays for smart-contract execution: there is no free amount, so you must stake TRX or receive delegated Energy. USDT on TRON is a TRC20 contract, but that last point is our inference, not a TRON statement. If stake and free quota don't cover the cost, TRX is burned from the sender's balance at current chain-parameter rates, capped by fee_limit for contract calls.",
+        "url": "https://developers.tron.network/docs/resource-model"
+      }
+    ]
+  }
 ]
