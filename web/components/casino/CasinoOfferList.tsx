@@ -75,15 +75,9 @@ function Row({ o, pos }: { o: Operator; pos: number }) {
       <div className="col-span-3 md:col-span-1">{c.coins.length ? <CoinStack tickers={c.coins} max={5} size={22} /> : <span style={{ fontSize: 12, color: "#4E5A62" }}>—</span>}</div>
 
       <div className="col-span-3 md:col-span-1" style={{ display: "flex", gap: 8 }}>
-        {o.signupUrl ? (
-          <a href={o.signupUrl} target="_blank" rel="nofollow sponsored noopener" style={{ flex: 1, display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 6, padding: "10px 12px", borderRadius: 10, background: brand, color: "#0A0D0F", fontSize: 13, fontWeight: 800, whiteSpace: "nowrap" }}>
-            Claim <Icon name="arrow" size={14} />
-          </a>
-        ) : (
-          <Link href={href} style={{ flex: 1, textAlign: "center", padding: "10px 12px", borderRadius: 10, border: "1px solid rgba(255,255,255,.14)", color: "#DCE5E9", fontSize: 13, fontWeight: 700, whiteSpace: "nowrap" }}>
-            View report
-          </Link>
-        )}
+        <Link href={href} style={{ flex: 1, display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 6, padding: "10px 12px", borderRadius: 10, background: o.featured ? brand : "#00C2CC", color: "#0A0D0F", fontSize: 13, fontWeight: 800, whiteSpace: "nowrap" }}>
+          View offer <Icon name="arrow" size={14} />
+        </Link>
       </div>
     </div>
   );

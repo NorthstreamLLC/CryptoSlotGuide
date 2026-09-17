@@ -79,16 +79,9 @@ export function CasinoCard({ o, rank }: { o: Operator; rank?: number }) {
         )}
       </div>
 
-      <div style={{ display: "flex", gap: 8, marginTop: "auto" }}>
-        {o.signupUrl ? (
-          <a href={o.signupUrl} target="_blank" rel="nofollow sponsored noopener" style={{ flex: 1, display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 8, padding: "11px 14px", borderRadius: 11, background: brand, color: "#0A0D0F", fontSize: 13.5, fontWeight: 800 }}>
-            Claim offer <Icon name="arrow" size={15} />
-          </a>
-        ) : null}
-        <Link href={href} style={{ flex: o.signupUrl ? "none" : 1, textAlign: "center", padding: "11px 14px", borderRadius: 11, border: "1px solid rgba(255,255,255,.14)", color: "#DCE5E9", fontSize: 13.5, fontWeight: 700 }}>
-          {o.signupUrl ? "Report" : "Read the report"}
-        </Link>
-      </div>
+      <Link href={href} style={{ marginTop: "auto", display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 8, padding: "12px 14px", borderRadius: 11, background: o.featured ? brand : "#00C2CC", color: "#0A0D0F", fontSize: 14, fontWeight: 800 }}>
+        View offer <Icon name="arrow" size={15} />
+      </Link>
     </article>
   );
 }

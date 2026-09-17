@@ -100,11 +100,8 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
                 <h1 style={{ margin: "0 0 20px", fontSize: 54, lineHeight: 1.02, letterSpacing: "-.038em", fontWeight: 800, fontStretch: "116%", color: "#fff", textWrap: "balance" }}>{view.h1}</h1>
                 <p style={{ margin: "0 0 30px", maxWidth: 560, fontSize: 17, lineHeight: 1.62, color: "#93A3AC", textWrap: "pretty" }}>{view.p}</p>
                 <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginBottom: 28 }}>
-                  <OutboundOrReview o={roobet} style={{ display: "inline-flex", alignItems: "center", gap: 10, padding: "15px 24px", borderRadius: 9, background: "#00C2CC", color: "#04191B", fontSize: 14.5, fontWeight: 700, boxShadow: "0 8px 26px rgba(0,194,204,.24)", whiteSpace: "nowrap" }}>
-                    Visit Roobet <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 13 }}>→</span>
-                  </OutboundOrReview>
-                  <Link href="/casinos/roobet" style={{ display: "inline-flex", alignItems: "center", gap: 9, padding: "15px 24px", borderRadius: 9, border: "1px solid rgba(255,255,255,.16)", color: "#DCE5E9", fontSize: 14.5, fontWeight: 600, whiteSpace: "nowrap" }}>
-                    View the profile
+                  <Link href={`/casinos/${roobet.slug}`} style={{ display: "inline-flex", alignItems: "center", gap: 10, padding: "15px 24px", borderRadius: 9, background: "#00C2CC", color: "#04191B", fontSize: 14.5, fontWeight: 700, boxShadow: "0 8px 26px rgba(0,194,204,.24)", whiteSpace: "nowrap" }}>
+                    View {roobet.name}&apos;s offer <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 13 }}>→</span>
                   </Link>
                 </div>
               </div>
@@ -292,17 +289,3 @@ function TopRow({ label, value }: { label: string; value: string }) {
   );
 }
 
-function OutboundOrReview({ o, style, className, children }: { o: Operator; style: React.CSSProperties; className?: string; children: React.ReactNode }) {
-  if (o.signupUrl) {
-    return (
-      <a href={o.signupUrl} target="_blank" rel="nofollow sponsored noopener" className={className} style={style}>
-        {children}
-      </a>
-    );
-  }
-  return (
-    <Link href={o.hasCustomReview ? "/casinos/roobet" : `/casinos/${o.slug}`} className={className} style={style}>
-      {children}
-    </Link>
-  );
-}
