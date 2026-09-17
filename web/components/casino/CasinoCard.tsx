@@ -55,7 +55,7 @@ export function CasinoCard({ o, rank }: { o: Operator; rank?: number }) {
       </div>
 
       <div>
-        <div style={{ fontFamily: MONO, fontSize: 9.5, letterSpacing: ".1em", textTransform: "uppercase", color: brand, marginBottom: 6 }}>Welcome offer</div>
+        <div style={{ fontFamily: MONO, fontSize: 9.5, letterSpacing: ".1em", textTransform: "uppercase", color: brand, marginBottom: 6 }}>{o.noDepositBonus ? "Rewards" : "Welcome offer"}</div>
         <Link href={href} style={{ display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden", fontSize: 19, lineHeight: 1.2, fontWeight: 800, letterSpacing: "-.02em", color: "#fff", minHeight: 46 }}>
           {c.headline}
         </Link>

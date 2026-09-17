@@ -195,7 +195,7 @@ export function CasinoReport({ e }: { e: EntityView }) {
                 </div>
               </div>
 
-              <div style={{ fontFamily: MONO, fontSize: 11, letterSpacing: ".1em", textTransform: "uppercase", color: brand, marginBottom: 10 }}>Welcome offer</div>
+              <div style={{ fontFamily: MONO, fontSize: 11, letterSpacing: ".1em", textTransform: "uppercase", color: brand, marginBottom: 10 }}>{o.noDepositBonus ? "Rewards" : "Welcome offer"}</div>
               <h1 style={{ margin: "0 0 12px", fontSize: "clamp(34px, 4.4vw, 52px)", lineHeight: 1.02, letterSpacing: "-.035em", fontWeight: 800, fontStretch: "114%", color: "#fff", textWrap: "balance" }}>
                 {o.bonusShort ?? o.bonus}
               </h1>
@@ -280,7 +280,7 @@ export function CasinoReport({ e }: { e: EntityView }) {
         <Section id="bonuses" eyebrow="What you get" title="Bonuses & rewards">
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", gap: 16, alignItems: "start" }}>
             <Card glow={brand}>
-              <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: brand, marginBottom: 8 }}>Welcome offer</div>
+              <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: brand, marginBottom: 8 }}>{o.noDepositBonus ? "Rewards" : "Welcome offer"}</div>
               <div style={{ fontSize: 26, fontWeight: 800, letterSpacing: "-.02em", color: "#fff", marginBottom: 6 }}>{o.bonusShort ?? o.bonus}</div>
               <div style={{ fontSize: 14, color: "#A8B6BE", marginBottom: 14 }}>{offer?.value}</div>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 6 }}>
