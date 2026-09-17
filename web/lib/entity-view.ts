@@ -69,6 +69,8 @@ export interface EntityView {
   /** Page the spec rows are read from, shown as a link under the heading. */
   specSource?: string;
   spec: SpecRow[];
+  /** Further fact blocks shown after the main one (casino profiles: sports bonus terms). */
+  extraSpecs?: { title: string; sub: string; rows: SpecRow[] }[];
   tableTitle: string;
   tableSub: string;
   tableCols: [string, string, string];
@@ -631,6 +633,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
           bonusFact("Game contribution") ? cited("Game contribution", bonusFact("Game contribution")!) : unconfirmed("Game contribution"),
           bonusFact("Minimum deposit") ? cited("Minimum deposit", bonusFact("Minimum deposit")!) : unconfirmed("Minimum deposit"),
         ].filter((r) => !(wv.mult === 0 && r.label === "Unconfirmed" && (r.k === "Max bet" || r.k === "Game contribution"))),
+    extraSpecs: o.sports ? [sportsBonusSpec(o.slug, o.name)] : [],
     tableTitle: "Slot RTP in this build",
     tableSub: readings.length
       ? "Read from the paytable inside this operator's own client, against the studio's published figure."
@@ -711,4 +714,24 @@ export function ctaLabel(type: EntityType, name: string) {
 }
 export function editorialTake(type: EntityType, slug: string): string | undefined {
   return siteData.editorial[`${type}:${slug}`];
+}
+
+/** Sports bonus terms, each quoted from the operator's own sportsbook promotion terms. */
+function sportsBonusSpec(slug: string, name: string) {
+  const f = (label: string) => getSpecFact(slug, "Sports bonus terms", label)?.value;
+  const offer = f("Offer");
+  const none = !!offer && /^(no |there is no )/i.test(offer);
+  const row = (k: string, label = k) => (f(label) ? cited(k, f(label)!) : unconfirmed(k));
+  if (!offer) {
+    return { title: "Sports bonus terms", sub: `We haven't found ${name}'s sports offer on its own pages yet.`, rows: [unconfirmed("Offer")] };
+  }
+  return {
+    title: "Sports bonus terms",
+    sub: none
+      ? `${name} runs no standing sports welcome offer.`
+      : "The rules on the sportsbook offer, each quoted from the operator's own terms. Anything we haven't found yet is marked unconfirmed.",
+    rows: none
+      ? [cited("Offer", offer!)]
+      : [row("Offer"), row("Wagering"), row("Minimum odds"), row("Max bet"), row("Time limit", "Expiry"), row("Qualifying bets"), row("Minimum deposit"), row("Max cashout")],
+  };
 }

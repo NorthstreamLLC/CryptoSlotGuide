@@ -249,6 +249,23 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
         </div>
         )}
 
+        {(e.extraSpecs ?? []).map((block) => (
+          <div key={block.title}>
+            <SectionHeading title={block.title} sub={block.sub} maxWidth="80ch" />
+            <div style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 13, overflow: "hidden", background: "#0C1013", marginBottom: 38 }}>
+              {block.rows.map((row) => (
+                <div key={row.k} style={{ display: "grid", gridTemplateColumns: "210px 1fr 150px", borderBottom: "1px solid rgba(255,255,255,.05)" }}>
+                  <div style={{ padding: "14px 18px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".05em", textTransform: "uppercase", color: "#5C6A72" }}>{row.k}</div>
+                  <div style={{ padding: "14px 18px", fontSize: 13.5, lineHeight: 1.5, color: "#B7C4CB" }}>{row.v}</div>
+                  <div style={{ padding: "14px 18px" }}>
+                    <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".05em", padding: "3px 7px", borderRadius: 4, background: row.background, color: row.color, whiteSpace: "nowrap" }}>{row.label}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+
         <SectionHeading title={e.tableTitle} sub={e.tableSub} maxWidth="80ch" />
         {e.tableRows.length === 0 && (
           <div style={{ padding: "20px 24px", borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)", marginBottom: 14, fontSize: 13.5, color: "#7B8A93" }}>

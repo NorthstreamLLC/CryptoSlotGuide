@@ -431,13 +431,6 @@
             "asOf": "2026-09-16"
           },
           {
-            "label": "Sports offer",
-            "value": "Sportsbook-themed Welcome Package: 300% of the first eligible deposit (over $25) as rakeback boost, up to $15,000, plus a free sportsbook bet matching the deposit, up to $500. The deposit must be made within 7 days of registration. The freebet takes odds 1.6x–6x, and freebet winnings carry a 1x wager in the Sportsbook.",
-            "sourcing": "editorial",
-            "sourceUrl": "https://help.500.casino/en/articles/9239792-how-does-the-new-welcome-package-work",
-            "asOf": "2026-09-16"
-          },
-          {
             "label": "Esports titles",
             "chips": [
               "CS2"
@@ -445,6 +438,46 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.500.casino/en/articles/5970866-guide-to-matchbetting",
             "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
+        "title": "Sports bonus terms",
+        "facts": [
+          {
+            "label": "Offer",
+            "value": "Sportsbook Welcome Package: a 300% rakeback boost on the first eligible deposit, up to $15,000, plus a free bet matching the deposit, up to $500",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.500.casino/en/articles/9239792-how-does-the-new-welcome-package-work",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Wagering",
+            "value": "1× on free-bet winnings, in the sportsbook",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.500.casino/en/articles/9239792-how-does-the-new-welcome-package-work",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Minimum odds",
+            "value": "The free bet must be placed at odds between 1.6 and 6",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.500.casino/en/articles/9239792-how-does-the-new-welcome-package-work",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "The first eligible deposit must be over $25",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.500.casino/en/articles/9239792-how-does-the-new-welcome-package-work",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Expiry",
+            "value": "The qualifying deposit must be made within 7 days of registering",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.500.casino/en/articles/9239792-how-does-the-new-welcome-package-work",
+            "asOf": "2026-09-17"
           }
         ]
       },
@@ -1097,13 +1130,6 @@
             "asOf": "2026-09-16"
           },
           {
-            "label": "Sports offer",
-            "value": "No sports welcome or deposit offer found. It runs a standing Weekly Sport Bonus: up to $12,000 in free bets each week once a wager target is met, paid as 3 equal free bets",
-            "sourcing": "editorial",
-            "sourceUrl": "https://bf1.io/promo/sports-bonuses",
-            "asOf": "2026-09-16"
-          },
-          {
             "label": "Esports titles",
             "chips": [
               "CS2",
@@ -1118,6 +1144,18 @@
             ],
             "sourcing": "editorial",
             "sourceUrl": "https://bf1.io/esports",
+            "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
+        "title": "Sports bonus terms",
+        "facts": [
+          {
+            "label": "Offer",
+            "value": "No sports welcome or deposit offer found. It runs a standing Weekly Sport Bonus: up to $12,000 in free bets each week once a wager target is met, paid as 3 equal free bets",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bf1.io/promo/sports-bonuses",
             "asOf": "2026-09-16"
           }
         ]
@@ -2076,13 +2114,6 @@
             "asOf": "2026-09-16"
           },
           {
-            "label": "Sports offer",
-            "value": "Welcome Package worth up to $2,500 in rewards, covering both casino and sports: daily cash drops, weekly cash drops and 10% rakeback over the first 30 days. The help article says the weekly cash drops are earned through sports betting.",
-            "sourcing": "editorial",
-            "sourceUrl": "https://www.cloudbet.com/en/support/articles/103253-how-do-i-claim-my-welcome-package",
-            "asOf": "2026-09-16"
-          },
-          {
             "label": "Esports titles",
             "chips": [
               "CS2",
@@ -2097,6 +2128,46 @@
             "sourcing": "editorial",
             "sourceUrl": "https://www.cloudbet.com/en/esports",
             "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
+        "title": "Sports bonus terms",
+        "facts": [
+          {
+            "label": "Offer",
+            "value": "Welcome Package covering casino and sports: up to $2,500 in cash drops and 10% rakeback over the first 30 days; the weekly cash drops are earned through sports betting",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.cloudbet.com/en/support/articles/103253-how-do-i-claim-my-welcome-package",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Wagering",
+            "value": "No rollovers on rewards",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.cloudbet.com/en/promotions/general/welcome-package",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Expiry",
+            "value": "30 days from the first deposit or until the $2,500 cap is reached, whichever comes first",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.cloudbet.com/en/promotions/general/welcome-package",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "No minimum: any deposit activates the Welcome Package",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.cloudbet.com/en/promotions/general/welcome-package",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Max cashout",
+            "value": "Reloads and rakeback are capped at $2,500 in total",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.cloudbet.com/en/promotions/general/welcome-package",
+            "asOf": "2026-09-17"
           }
         ]
       },
@@ -3098,13 +3169,6 @@
             "asOf": "2026-09-16"
           },
           {
-            "label": "Sports offer",
-            "value": "Sports Welcome Bonus: 100% match on the first qualifying deposit up to $1,000. Minimum deposit is $20, and the wager requirement is 15x (deposit + bonus).",
-            "sourcing": "editorial",
-            "sourceUrl": "https://help.dicey.com/en/articles/16182871-how-does-the-sports-welcome-bonus-work",
-            "asOf": "2026-09-16"
-          },
-          {
             "label": "Esports titles",
             "chips": [
               "CS2",
@@ -3120,6 +3184,60 @@
             "sourcing": "editorial",
             "sourceUrl": "https://dicey.com/esports",
             "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
+        "title": "Sports bonus terms",
+        "facts": [
+          {
+            "label": "Offer",
+            "value": "Sports Welcome Bonus: 100% of the first qualifying deposit, up to $1,000",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.dicey.com/en/articles/16182871-how-does-the-sports-welcome-bonus-work",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Wagering",
+            "value": "15× the deposit plus the bonus (the page also calls it a multiple of the bonus, but its examples use deposit plus bonus); the deposit itself must also be wagered once",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.dicey.com/en/articles/16182871-how-does-the-sports-welcome-bonus-work",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Minimum odds",
+            "value": "1.5",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.dicey.com/en/articles/16182871-how-does-the-sports-welcome-bonus-work",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Max bet",
+            "value": "No maximum stake, but a single bet counts toward wagering by no more than the bonus amount",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.dicey.com/en/articles/16182871-how-does-the-sports-welcome-bonus-work",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Qualifying bets",
+            "value": "Settled or cashed-out sports bets at odds of 1.5 or higher; pushed bets and casino play don't count, and bonus funds can't be used on casino games",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.dicey.com/en/articles/16182871-how-does-the-sports-welcome-bonus-work",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "$20",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.dicey.com/en/articles/16182871-how-does-the-sports-welcome-bonus-work",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Expiry",
+            "value": "The Sports Welcome Bonus terms give no time limit",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.dicey.com/en/articles/16182871-how-does-the-sports-welcome-bonus-work",
+            "asOf": "2026-09-17"
           }
         ]
       },
@@ -4011,13 +4129,6 @@
             "asOf": "2026-09-16"
           },
           {
-            "label": "Sports offer",
-            "value": "100% Sports Welcome Bonus, paid as a Freebet. A June 14, 2024 blog post described it as a 100% Freebet up to $300 on the first deposit; the current promotions page does not state a cap.",
-            "sourcing": "editorial",
-            "sourceUrl": "https://fortunejack.com/promotions",
-            "asOf": "2026-09-16"
-          },
-          {
             "label": "Esports titles",
             "chips": [
               "CS2",
@@ -4027,6 +4138,18 @@
             ],
             "sourcing": "editorial",
             "sourceUrl": "https://fortunejack.com/best-dogecoin-casino/",
+            "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
+        "title": "Sports bonus terms",
+        "facts": [
+          {
+            "label": "Offer",
+            "value": "100% Sports Welcome Bonus, paid as a Freebet. A June 14, 2024 blog post described it as a 100% Freebet up to $300 on the first deposit; the current promotions page does not state a cap.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://fortunejack.com/promotions",
             "asOf": "2026-09-16"
           }
         ]
@@ -4687,9 +4810,14 @@
             "sourcing": "editorial",
             "sourceUrl": "https://www.housebets.com/legal/sportsbook-rules",
             "asOf": "2026-09-16"
-          },
+          }
+        ]
+      },
+      {
+        "title": "Sports bonus terms",
+        "facts": [
           {
-            "label": "Sports offer",
+            "label": "Offer",
             "value": "There is no standing sports bonus. Sports bets earn XP and leaderboard progress, and any sports reload is offered case by case.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.housebets.com/en/articles/822179-does-housebets-offer-sports-bonuses",
@@ -7198,13 +7326,6 @@
             "asOf": "2026-09-16"
           },
           {
-            "label": "Sports offer",
-            "value": "This is a free sports bet promotion, not a deposit bonus, and no amount is given. The cap changes with current promotions, and the free bet expires after 7 days.",
-            "sourcing": "editorial",
-            "sourceUrl": "https://docs.solcasino.io/rules-and-conditions/free-sports-bet-promotion",
-            "asOf": "2026-09-16"
-          },
-          {
             "label": "Esports titles",
             "chips": [
               "CS2",
@@ -7216,6 +7337,25 @@
             "sourcing": "editorial",
             "sourceUrl": "https://docs.solcasino.io/rules-and-conditions/sportsbook-terms-and-conditions",
             "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
+        "title": "Sports bonus terms",
+        "facts": [
+          {
+            "label": "Offer",
+            "value": "Free Sports Bet promotion (not a deposit bonus); the amount changes with current promotions",
+            "sourcing": "editorial",
+            "sourceUrl": "https://docs.solcasino.io/rules-and-conditions/free-sports-bet-promotion",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Expiry",
+            "value": "The free bet expires after 7 days",
+            "sourcing": "editorial",
+            "sourceUrl": "https://docs.solcasino.io/rules-and-conditions/free-sports-bet-promotion",
+            "asOf": "2026-09-17"
           }
         ]
       },
@@ -7613,13 +7753,6 @@
             "asOf": "2026-09-16"
           },
           {
-            "label": "Sports offer",
-            "value": "Champions Welcome Bonus – Sports: 100% up to 300 USDT with a minimum deposit of 10 USDT. New players choose either the Sports or the Casino version.",
-            "sourcing": "editorial",
-            "sourceUrl": "https://sportsbet.io/promotions/2025-04-welcome-champion",
-            "asOf": "2026-09-16"
-          },
-          {
             "label": "Esports titles",
             "chips": [
               "League of Legends",
@@ -7633,6 +7766,67 @@
             "sourcing": "editorial",
             "sourceUrl": "https://sportsbet.io/sports/esports-betting",
             "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
+        "title": "Sports bonus terms",
+        "facts": [
+          {
+            "label": "Offer",
+            "value": "Champions Welcome Bonus, sports version: 100% of the first deposit, up to 300 USDT. You choose the sports or casino version in Rewards before depositing",
+            "sourcing": "editorial",
+            "sourceUrl": "https://sportsbet.io/promotions/2025-04-welcome-champion",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Wagering",
+            "value": "25× on sports; the whole deposit stays locked until the bonus is wagered or forfeited. The terms don't say whether the multiplier covers the deposit too",
+            "sourcing": "editorial",
+            "sourceUrl": "https://sportsbet.io/promotions/2025-04-welcome-champion",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Minimum odds",
+            "value": "1.50",
+            "sourcing": "editorial",
+            "sourceUrl": "https://sportsbet.io/promotions/2025-04-welcome-champion",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Max bet",
+            "value": "Equal to the maximum bonus amount (300 USDT)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://sportsbet.io/promotions/2025-04-welcome-champion",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Expiry",
+            "value": "Wagering within 7 days of claiming",
+            "sourcing": "editorial",
+            "sourceUrl": "https://sportsbet.io/promotions/2025-04-welcome-champion",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Qualifying bets",
+            "value": "Sportsbook bets at odds of 1.50 or more count 100%",
+            "sourcing": "editorial",
+            "sourceUrl": "https://sportsbet.io/promotions/2025-04-welcome-champion",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "10 USDT in a single deposit made straight after enabling the bonus",
+            "sourcing": "editorial",
+            "sourceUrl": "https://sportsbet.io/promotions/2025-04-welcome-champion",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Max cashout",
+            "value": "10× the maximum bonus amount (3,000 USDT)",
+            "sourcing": "editorial",
+            "sourceUrl": "https://sportsbet.io/promotions/2025-04-welcome-champion",
+            "asOf": "2026-09-17"
           }
         ]
       },
@@ -8458,13 +8652,6 @@
             "asOf": "2026-09-16"
           },
           {
-            "label": "Sports offer",
-            "value": "Blog guide (updated 2025-02-12): the sports welcome offer is a 100% free bet up to 500 USDT on a minimum 20 USDT deposit, with 10x wagering. The bonus must be used within 14 days and the free bet within 7 days. This could not be checked on the live promotions page (geo-blocked).",
-            "sourcing": "editorial",
-            "sourceUrl": "https://blog.vave.com/vave-guides/guide-to-vave-crypto-casino-bonuses/",
-            "asOf": "2026-09-16"
-          },
-          {
             "label": "Esports titles",
             "chips": [
               "CS2",
@@ -8475,6 +8662,67 @@
             "sourcing": "editorial",
             "sourceUrl": "https://blog.vave.com/betting/vave-casino-sports-betting-options-odds-tips/",
             "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
+        "title": "Sports bonus terms",
+        "facts": [
+          {
+            "label": "Offer",
+            "value": "First Deposit Sport Bonus: 100% up to 1 BTC, paid in instalments as you wager",
+            "sourcing": "editorial",
+            "sourceUrl": "https://vave.com/promotions",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Wagering",
+            "value": "Set in the bonus's own terms and shown on the bonus card; not visible without an account",
+            "sourcing": "editorial",
+            "sourceUrl": "https://vave.com/information/bonus-terms",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Minimum odds",
+            "value": "1.7",
+            "sourcing": "editorial",
+            "sourceUrl": "https://vave.com/promotions",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Max bet",
+            "value": "No maximum bet",
+            "sourcing": "editorial",
+            "sourceUrl": "https://vave.com/promotions",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Expiry",
+            "value": "30 days",
+            "sourcing": "editorial",
+            "sourceUrl": "https://vave.com/promotions",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Qualifying bets",
+            "value": "Settled single or multi bets, each event counted once; returned, cancelled, drawn, cashed-out and free bets don't count. Vave's general bonus terms also exclude outrights and racing",
+            "sourcing": "editorial",
+            "sourceUrl": "https://vave.com/promotions",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "20 USDT",
+            "sourcing": "editorial",
+            "sourceUrl": "https://vave.com/promotions",
+            "asOf": "2026-09-17"
+          },
+          {
+            "label": "Max cashout",
+            "value": "Winnings from deposit bonuses are capped at 10,000 USDT",
+            "sourcing": "editorial",
+            "sourceUrl": "https://vave.com/information/bonus-terms",
+            "asOf": "2026-09-17"
           }
         ]
       },

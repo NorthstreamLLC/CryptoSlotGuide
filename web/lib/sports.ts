@@ -19,7 +19,7 @@ export function sportsFacts(slug: string) {
     cashout: f("Cash-out"),
     betBuilder: f("Bet builder"),
     maxPayout: f("Max payout"),
-    offer: f("Sports offer"),
+    offer: getSpecFact(slug, "Sports bonus terms", "Offer"),
   };
 }
 
