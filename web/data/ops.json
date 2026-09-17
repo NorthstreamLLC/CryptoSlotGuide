@@ -456,7 +456,7 @@
     "payoutLabel": "6m 36s",
     "licence": "Anjouan",
     "kyc": "required",
-    "bonus": "VIP rewards, ongoing promotions and token airdrops",
+    "bonus": "$25,000 weekly race + $2,500 daily race, plus VIP rewards",
     "wager": 0,
     "conf": 1,
     "absorbsFee": false,
@@ -466,7 +466,7 @@
     "hasCustomReview": false,
     "payoutStated": "Instant",
     "payoutStatedMaxMins": 0,
-    "bonusShort": "VIP rewards, promotions and token airdrops",
+    "bonusShort": "$25,000 weekly race + $2,500 daily race",
     "noDepositBonus": true
   },
   {
