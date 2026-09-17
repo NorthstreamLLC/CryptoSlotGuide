@@ -6204,10 +6204,10 @@
           },
           {
             "label": "Esports",
-            "value": "Yes, esports betting offered; official CS2 partnership with HEROIC (razed.com blocks fetching, so this is from search snippets)",
+            "value": "Yes. The sportsbook has Sports, Esports and Racing tabs, and the Esports tab lists Counter-Strike, League of Legends, Dota 2, Valorant, Rainbow Six, Crossfire, Rocket League, NBA 2K26, Mobile Legends and Cricket 24. It is also an official CS2 partner of HEROIC.",
             "sourcing": "editorial",
-            "sourceUrl": "https://razed.com/fr/promotions/heroic",
-            "asOf": "2026-09-16"
+            "sourceUrl": "https://www.razed.com/sports",
+            "asOf": "2026-09-17"
           },
           {
             "label": "Cash-out",
@@ -6226,11 +6226,20 @@
           {
             "label": "Esports titles",
             "chips": [
-              "CS2"
+              "CS2",
+              "League of Legends",
+              "Dota 2",
+              "Valorant",
+              "Rainbow Six",
+              "Crossfire",
+              "Rocket League",
+              "NBA 2K",
+              "Mobile Legends",
+              "Cricket 24"
             ],
             "sourcing": "editorial",
-            "sourceUrl": "https://razed.com/fr/promotions/heroic",
-            "asOf": "2026-09-16"
+            "sourceUrl": "https://www.razed.com/sports",
+            "asOf": "2026-09-17"
           }
         ]
       },
