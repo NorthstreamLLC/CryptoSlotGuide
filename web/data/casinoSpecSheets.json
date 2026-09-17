@@ -2425,13 +2425,6 @@
             "asOf": "2026-09-15"
           },
           {
-            "label": "Tournaments",
-            "value": "Pragmatic Drops & Wins (€25,000,000 pool, 4 Mar 2026 – 3 Mar 2027); Spinomenal Spinoleague (€12,000,000 max pool, 5 Mar 2026 – 1 Mar 2027); CoinJackpot (banner says €5,000,000, card text says €6,000,000+)",
-            "sourcing": "editorial",
-            "sourceUrl": "https://www.coincasino.com/",
-            "asOf": "2026-09-15"
-          },
-          {
             "label": "Wagering",
             "value": "60× the deposit, so a $100 deposit needs $6,000 of bets to unlock the $200 bonus; the bonus is released in 10% instalments each time you wager 6× the deposit. Bonuses above $10,000 carry 75× and are credited in one go at the end of the 14 days. Free spins carry 35×",
             "sourcing": "editorial",
@@ -3692,7 +3685,7 @@
           },
           {
             "label": "Other sports promotions",
-            "value": "2 Up, You're Up: football bets on markets with the 2Up icon pay out as wins once your team leads by 2 goals. Sports wagers earn 3x points on its daily and weekly leaderboards, which share a monthly prize pool of $400,000+. It also promotes Same Game Parlays and MLB coverage",
+            "value": "2 Up, You're Up: football bets on markets with the 2Up icon pay out as wins once your team leads by 2 goals",
             "sourcing": "editorial",
             "sourceUrl": "https://duelbits.com/en/promotions",
             "asOf": "2026-09-17"
@@ -6473,7 +6466,7 @@
           },
           {
             "label": "Leaderboards",
-            "value": "$100,000 Monthly Race ($30,000 top prize), $10,000 Weekly Race, $10,000 Wicked Rush Race",
+            "value": "$100,000 Monthly Race ($30,000 top prize) and $10,000 Weekly Race",
             "sourcing": "editorial",
             "sourceUrl": "https://www.razed.com/promotions/",
             "asOf": "2026-09-15"
@@ -6641,7 +6634,7 @@
           },
           {
             "label": "Other sports promotions",
-            "value": "Early Payout: pre-match bets on tagged Soccer 1x2, NHL and NBA winner markets settle as wins once a team leads by 2 goals, 3 goals or 20 points, capped at $5,000 per match. Also a $10,000 Sports Race (September 2026) ranked by the highest-multiplier sports bets",
+            "value": "Early Payout: pre-match bets on tagged Soccer 1x2, NHL and NBA winner markets settle as wins once a team leads by 2 goals, 3 goals or 20 points, capped at $5,000 per match",
             "sourcing": "editorial",
             "sourceUrl": "https://www.razed.com/promotions/",
             "asOf": "2026-09-17"
