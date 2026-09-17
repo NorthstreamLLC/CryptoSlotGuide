@@ -10,6 +10,8 @@ import { editorialTake, type EntityView } from "@/lib/entity-view";
 import { tintFor } from "@/lib/logo";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { CasinoSpecSheet } from "@/components/entity/CasinoSpecSheet";
+import { CoinList, CoinStack } from "@/components/ui/CoinIcon";
+import { Icon, type IconName } from "@/components/ui/Icon";
 import type { SpecFact } from "@/lib/types";
 
 /**
@@ -145,15 +147,22 @@ export function CasinoReport({ e }: { e: EntityView }) {
   const raffle = f("Bonus terms", "Weekly raffle");
   const payRows = [f("Coins & deposit limits", "Card and bank"), f("Coins & deposit limits", "Networks"), f("Coins & deposit limits", "Deposit rules"), f("Payouts & fees", "Withdrawal rules"), f("Payouts & fees", "Withdrawal conditions"), f("Payouts & fees", "Currency rule")].map((x) => ({ f: x }));
 
-  // Three reasons to play, each from a cited fact.
+  // Up to four reasons to play, each from a cited fact.
+  const clause = (v?: string) => (v ?? "").split(/[;.(]/)[0].trim().replace(/^Yes,?s*/i, "");
+  const rakeback = /rakeback/i.test(o.bonus);
+  const cap = (t: string) => t.charAt(0).toUpperCase() + t.slice(1);
   const perks = [
-    wdTime && pv.label !== "Not stated" ? { icon: "⚡", text: `${pv.label} withdrawals` } : null,
-    wdFee && shortAmount(wdFee) === "Free" ? { icon: "💸", text: "No withdrawal fee" } : null,
-    wv.kind === "none" || wv.mult === 0 ? { icon: "🎁", text: "Rewards with no wagering" } : wv.kind === "cited" ? { icon: "🎁", text: `${wv.label} wagering on the welcome bonus` } : null,
-    raffle ? { icon: "🎟️", text: raffle.value!.split(":")[0] } : null,
-    coinList.length ? { icon: "🪙", text: `${coinList.length} coins accepted` } : null,
-    o.sports ? { icon: "⚽", text: "Sportsbook and esports" } : null,
-  ].filter(Boolean).slice(0, 4) as { icon: string; text: string }[];
+    wdTime && pv.label !== "Not stated" ? { icon: "bolt" as const, title: `${pv.label} withdrawals`, sub: cap(clause(wdTime.value)) } : null,
+    wv.kind === "none" || wv.mult === 0
+      ? { icon: "gift" as const, title: rakeback ? "No-wager rakeback" : "No-wager rewards", sub: "No playthrough required" }
+      : wv.kind === "cited"
+      ? { icon: "gift" as const, title: `${wv.label} wagering`, sub: "On the welcome bonus" }
+      : null,
+    coinList.length ? { icon: "coins" as const, title: `${coinList.length} coins accepted`, sub: "", coins: coinList } : null,
+    raffle ? { icon: "ticket" as const, title: raffle.value!.split(":")[0].replace("Weekly Raffle", "weekly raffle"), sub: cap(clause(raffle.value!.split(":")[1]).replace(/ each week$/, "")) } : null,
+    wdFee && shortAmount(wdFee) === "None" ? { icon: "percent" as const, title: "No withdrawal fee", sub: clause(wdFee.value) } : null,
+    o.sports ? { icon: "ball" as const, title: "Sportsbook & esports", sub: sp.titles.length ? `${sp.titles.length} esports titles` : "Sports and esports betting" } : null,
+  ].filter(Boolean).slice(0, 4) as { icon: IconName; title: string; sub: string; coins?: string[] }[];
 
   const nav = [
     ["bonuses", "Bonuses & rewards"],
@@ -194,11 +203,16 @@ export function CasinoReport({ e }: { e: EntityView }) {
                 {take ?? offer?.value ?? bonusWithWager(o)}
               </p>
 
-              <ul style={{ listStyle: "none", margin: "0 0 28px", padding: 0, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(210px, 1fr))", gap: 10 }}>
+              <ul style={{ listStyle: "none", margin: "0 0 30px", padding: 0, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))", gap: 10 }}>
                 {perks.map((p) => (
-                  <li key={p.text} style={{ display: "flex", alignItems: "center", gap: 10, padding: "10px 12px", borderRadius: 11, background: "rgba(255,255,255,.04)", border: "1px solid rgba(255,255,255,.07)", fontSize: 14, fontWeight: 600, color: "#E8EDF0" }}>
-                    <span aria-hidden style={{ fontSize: 16 }}>{p.icon}</span>
-                    {p.text}
+                  <li key={p.title} style={{ display: "flex", alignItems: "center", gap: 14, padding: "14px 16px", borderRadius: 16, background: "linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.02))", border: "1px solid rgba(255,255,255,.08)", minWidth: 0 }}>
+                    <span style={{ width: 40, height: 40, flex: "none", borderRadius: 12, display: "inline-flex", alignItems: "center", justifyContent: "center", background: `${brand}1a`, color: brand, boxShadow: `inset 0 0 0 1px ${brand}33` }}>
+                      <Icon name={p.icon} size={20} />
+                    </span>
+                    <span style={{ minWidth: 0, display: "flex", flexDirection: "column", gap: 4 }}>
+                      <span style={{ fontSize: 14.5, fontWeight: 700, letterSpacing: "-.01em", color: "#fff" }}>{p.title}</span>
+                      {p.coins ? <CoinStack tickers={p.coins} max={6} size={18} /> : p.sub ? <span style={{ fontSize: 12.5, lineHeight: 1.35, color: "#8DA0AA" }}>{p.sub}</span> : null}
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -224,7 +238,7 @@ export function CasinoReport({ e }: { e: EntityView }) {
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }} data-keep-grid>
                 {[
                   ["Withdrawals", pv.label !== "Not stated" ? pv.label : null, wdTime],
-                  ["Withdrawal fee", shortAmount(wdFee) ?? (wdFee ? "Network fee" : null), wdFee],
+                  ["Withdrawal fee", shortAmount(wdFee) === "None" ? "Free" : shortAmount(wdFee) ?? (wdFee ? "Network fee" : null), wdFee],
                   ["Min deposit", shortAmount(minDep), minDep],
                   ["Min withdrawal", shortAmount(minWd), minWd],
                 ].map(([label, value, fact]) => (
@@ -237,13 +251,13 @@ export function CasinoReport({ e }: { e: EntityView }) {
               {coinList.length > 0 && (
                 <div style={{ marginTop: 16 }}>
                   <div style={{ fontFamily: MONO, fontSize: 9.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#6E7F88", marginBottom: 8 }}>{coinList.length} coins</div>
-                  <Chips items={coinList} />
+                  <CoinList tickers={coinList} />
                 </div>
               )}
               <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 16, paddingTop: 14, borderTop: "1px solid rgba(255,255,255,.07)", fontSize: 12.5, color: "#A8B6BE" }}>
-                <span>🛡️ {licence ? `${o.licence} licence` : "Licence not stated"}</span>
+                <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}><Icon name="shield" size={15} color="#8DA0AA" /> {licence ? `${o.licence} licence` : "Licence not stated"}</span>
                 <span style={{ color: "#3A454C" }}>·</span>
-                <span>🪪 KYC: {kyc ? ({ none: "not required", tiered: "at a threshold", required: "before withdrawal" } as const)[o.kyc] : "not stated"}</span>
+                <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}><Icon name="id" size={15} color="#8DA0AA" /> KYC: {kyc ? ({ none: "not required", tiered: "at a threshold", required: "before withdrawal" } as const)[o.kyc] : "not stated"}</span>
               </div>
             </div>
           </div>
@@ -311,7 +325,7 @@ export function CasinoReport({ e }: { e: EntityView }) {
         <Section id="banking" eyebrow="Money in, money out" title="Deposits & withdrawals">
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 12 }}>
             <Tile label="Withdrawal speed" value={pv.label !== "Not stated" ? pv.label : null} f={wdTime} accent={brand} />
-            <Tile label="Withdrawal fee" value={shortAmount(wdFee) ?? "Network fee"} f={wdFee} />
+            <Tile label="Withdrawal fee" value={shortAmount(wdFee) === "None" ? "Free" : shortAmount(wdFee) ?? "Network fee"} f={wdFee} />
             <Tile label="Min withdrawal" value={shortAmount(minWd)} f={minWd} />
             <Tile label="Max withdrawal" value={shortAmount(maxWd)} f={maxWd} />
             <Tile label="Min deposit" value={shortAmount(minDep)} f={minDep} />
@@ -322,7 +336,7 @@ export function CasinoReport({ e }: { e: EntityView }) {
               <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 12 }}>
                 {coinList.length ? `${coinList.length} coins accepted` : "Coins"}
               </div>
-              {coinList.length ? <Chips items={coinList} tint="#E8EDF0" /> : <div style={{ color: "#8DA0AA", fontSize: 14 }}>Not stated</div>}
+              {coinList.length ? <CoinList tickers={coinList} /> : <div style={{ color: "#8DA0AA", fontSize: 14 }}>Not stated</div>}
               <div style={{ marginTop: 10 }}>
                 <Source f={coins} />
               </div>
