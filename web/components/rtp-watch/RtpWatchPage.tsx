@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { siteData } from "@/lib/site-data";
-import { getWatchRows, watchStats } from "@/lib/rtp-watch-view";
+import { getWatchRows, watchStats, getHouseEdgeRows } from "@/lib/rtp-watch-view";
 
 /**
  * Ported from the `isWatch` block in CryptoSlotGuide.dc.html (search for
@@ -18,6 +18,7 @@ export function RtpWatchPage() {
   const stats = watchStats(allRows);
   const readCells = allRows.reduce((n, r) => n + r.cells.filter((c) => c.checked).length, 0);
   const rows = onlyCut ? allRows.filter((r) => r.cut) : allRows;
+  const houseRows = getHouseEdgeRows();
 
   return (
     <main>
@@ -66,11 +67,11 @@ export function RtpWatchPage() {
           >
             Cut somewhere
           </button>
-          <span style={{ marginLeft: "auto", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#4E5A62" }}>Filled cells read in-client · orange = reduced build · — = no reading · house edge = 100% minus full-build RTP</span>
+          <span style={{ marginLeft: "auto", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#4E5A62" }}>Filled cells read in-client · orange = reduced build · — = no reading</span>
         </div>
 
         <div role="table" style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 14, overflowX: "auto", background: "#0C1013", boxShadow: "0 12px 40px rgba(0,0,0,.35)" }}>
-          <div role="row" style={{ display: "grid", minWidth: 1180, gridTemplateColumns: `minmax(240px,1.4fr) 96px repeat(${watchOps.length},1fr) 92px 104px`, background: "#101519", borderBottom: "1px solid rgba(255,255,255,.07)" }}>
+          <div role="row" style={{ display: "grid", minWidth: 1180, gridTemplateColumns: `minmax(240px,1.4fr) 96px repeat(${watchOps.length},1fr) 92px`, background: "#101519", borderBottom: "1px solid rgba(255,255,255,.07)" }}>
             <HeadCell>Title</HeadCell>
             <HeadCell muted={false}>Best</HeadCell>
             {watchOps.map((o) => (
@@ -79,14 +80,13 @@ export function RtpWatchPage() {
               </div>
             ))}
             <HeadCell>Clean</HeadCell>
-            <HeadCell muted={false}>House edge</HeadCell>
           </div>
 
           {rows.map((r) => (
             <div
               key={r.slug}
               role="row"
-              style={{ display: "grid", minWidth: 1180, gridTemplateColumns: `minmax(240px,1.4fr) 96px repeat(${watchOps.length},1fr) 92px 104px`, alignItems: "center", borderBottom: "1px solid rgba(255,255,255,.05)" }}
+              style={{ display: "grid", minWidth: 1180, gridTemplateColumns: `minmax(240px,1.4fr) 96px repeat(${watchOps.length},1fr) 92px`, alignItems: "center", borderBottom: "1px solid rgba(255,255,255,.05)" }}
               className="hover:!bg-white/[0.028]"
             >
               <div role="cell" style={{ padding: "13px 18px", minWidth: 0 }}>
@@ -104,10 +104,48 @@ export function RtpWatchPage() {
                 </div>
               ))}
               <div role="cell" style={{ padding: "13px 12px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11.5, color: r.worstColor }}>{r.cleanCount}</div>
-              <div role="cell" style={{ padding: "13px 18px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12.5, color: "#E8EDF0" }}>{r.houseEdge}</div>
             </div>
           ))}
         </div>
+
+        <div style={{ margin: "44px 0 16px" }}>
+          <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#DA9877", marginBottom: 10 }}>House games</div>
+          <h2 style={{ margin: "0 0 8px", fontSize: 30, letterSpacing: "-.03em", fontWeight: 800, color: "#fff" }}>House edge on each casino&apos;s originals</h2>
+          <p style={{ margin: 0, maxWidth: "70ch", fontSize: 15, lineHeight: 1.6, color: "#93A3AC" }}>
+            Dice, Crash, Plinko and the rest are built in-house, so each casino sets its own edge. Lower is better for you. Each figure comes from the casino&apos;s own game page, help centre or blog; a range means its own pages give more than one figure, and + means the edge rises on high-risk settings.
+          </p>
+        </div>
+        <div role="table" style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 14, overflowX: "auto", background: "#0C1013" }}>
+          <div role="row" style={{ display: "grid", minWidth: 1180, gridTemplateColumns: `minmax(240px,1.4fr) 96px repeat(${watchOps.length},1fr) 92px`, background: "#101519", borderBottom: "1px solid rgba(255,255,255,.07)" }}>
+            <HeadCell>Game</HeadCell>
+            <HeadCell muted={false}>Range</HeadCell>
+            {watchOps.map((o) => (
+              <div key={o.slug} role="columnheader" style={{ padding: "14px 10px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".05em", textTransform: "uppercase", color: "#8DA0AA", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+                {o.name}
+              </div>
+            ))}
+            <span />
+          </div>
+          {houseRows.map((h) => {
+            const known = h.cells.filter((c) => c.edge !== null).map((c) => c.edge as number);
+            const best = known.length ? Math.min(...known) : null;
+            return (
+              <div key={h.slug} role="row" style={{ display: "grid", minWidth: 1180, gridTemplateColumns: `minmax(240px,1.4fr) 96px repeat(${watchOps.length},1fr) 92px`, alignItems: "center", borderBottom: "1px solid rgba(255,255,255,.05)" }}>
+                <div role="cell" style={{ padding: "13px 18px" }}>
+                  <Link href={`/house-games/${h.slug}`} style={{ fontSize: 14, fontWeight: 600, color: "#E8EDF0" }}>{h.name}</Link>
+                </div>
+                <div role="cell" style={{ padding: "13px 10px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12.5, color: "#fff" }}>{h.range}</div>
+                {h.cells.map((c, i) => (
+                  <div key={i} role="cell" style={{ padding: "13px 10px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12.5, fontWeight: c.edge !== null && c.edge === best ? 700 : 400, color: c.edge === null ? "#39454C" : c.edge === best ? "#5FE3E8" : c.edge >= 3 ? "#DA9877" : "#E8EDF0" }}>
+                    {c.label}
+                  </div>
+                ))}
+                <span />
+              </div>
+            );
+          })}
+        </div>
+        <div style={{ margin: "10px 0 0", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#4E5A62" }}>Teal = lowest edge on the board · orange = 3% or more · — = no published figure found</div>
 
         <div style={{ display: "grid", gridTemplateColumns: "1.4fr .6fr", gap: 14, marginTop: 24 }}>
           <div style={{ padding: "28px 32px", borderRadius: 14, background: "linear-gradient(150deg,#0E1417,#0A0E10)", border: "1px solid rgba(255,255,255,.07)" }}>

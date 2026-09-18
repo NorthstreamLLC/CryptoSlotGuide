@@ -44,8 +44,6 @@ export interface WatchRow {
   provider: string;
   seen: string;
   bestLabel: string;
-  /** House edge on the full build: 100 minus its RTP. */
-  houseEdge: string;
   cut: boolean;
   cleanCount: string;
   worstColor: string;
@@ -75,7 +73,6 @@ export function getWatchRows(): WatchRow[] {
       provider: s.provider,
       seen,
       bestLabel: rtpLabel(s),
-      houseEdge: `${(100 - s.rtp).toFixed(2)}%`,
       cut: worst > 0,
       cleanCount: `${cuts.filter((c, i) => readings[i] && c === 0).length}/${checkedCount}`,
       worstColor: worst ? "#DA9877" : checkedCount ? "#5FE3E8" : "#4E5A62",
@@ -118,4 +115,33 @@ export function rtpSummary(operatorSlug: string) {
     titles: readings.map((r) => `${name(r.slotSlug)} ${r.rtp.toFixed(2)}%`),
     cutTitles: cut.map((r) => `${name(r.slotSlug)} ${r.rtp.toFixed(2)}% (full build ${r.publishedRtp.toFixed(2)}%)`),
   };
+}
+
+/** Edge from one cited house-game figure: an explicit "x% edge", else 100 minus the stated RTP. */
+function edgeOf(value: string): number | null {
+  const e = value.match(/(\d+(?:\.\d+)?)%\s*(?:\([^)]*\)\s*)?edge/i);
+  if (e) return Number(e[1]);
+  const r = value.match(/(\d+(?:\.\d+)?)%/);
+  return r ? Math.round((100 - Number(r[1])) * 100) / 100 : null;
+}
+
+/** House games board: each original's house edge at each watched casino, from the cited figures in houseGames.json. */
+export function getHouseEdgeRows() {
+  const { houseGames, watchOps } = siteData;
+  const fmt = (n: number) => `${n % 1 ? n.toFixed(1) : n}%`;
+  return houseGames.map((g) => ({
+    slug: g.slug,
+    name: g.name,
+    range: g.edgeRange,
+    cells: watchOps.map((op) => {
+      const found = g.edges
+        .filter((e) => e.casino === op.slug)
+        .map((e) => ({ edge: edgeOf(e.value), dynamic: /higher|dynamic/i.test(e.value) }))
+        .filter((x) => x.edge !== null);
+      if (!found.length) return { label: "—", edge: null as number | null };
+      const lo = Math.min(...found.map((x) => x.edge!));
+      const hi = Math.max(...found.map((x) => x.edge!));
+      return { label: (lo === hi ? fmt(lo) : `${fmt(lo)}–${fmt(hi)}`) + (found.some((x) => x.dynamic) ? "+" : ""), edge: lo as number | null };
+    }),
+  }));
 }
