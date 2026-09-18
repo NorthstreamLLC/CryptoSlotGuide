@@ -54,6 +54,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
                 { label: "No-KYC casinos", href: "/crypto-casinos/no-kyc" },
                 { label: "Fastest payouts", href: "/fastest-payouts" },
                 { label: "Lowest wagering", href: "/lowest-wagering" },
+                { label: "Biggest races & raffles", href: "/races" },
                 { label: "Compare side by side", href: "/compare" },
               ],
             },

@@ -4,6 +4,7 @@ import { brandFor, casinoFacts } from "@/lib/casino-facts";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { CoinStack } from "@/components/ui/CoinIcon";
 import { Icon } from "@/components/ui/Icon";
+import { raceFor } from "@/lib/races";
 
 const MONO = "var(--font-jetbrains-mono), monospace";
 const COLS = "md:grid-cols-[36px_minmax(180px,1.1fr)_minmax(220px,1.6fr)_96px_96px_96px_150px_140px]";
@@ -61,11 +62,18 @@ function Row({ o, pos }: { o: Operator; pos: number }) {
 
       <Link href={href} className="col-span-3 md:col-span-1" style={{ fontSize: 15, lineHeight: 1.3, fontWeight: 700, color: "#E8EDF0", minWidth: 0 }}>
         {c.headline}
-        {c.fee === "Free" && (
-          <span style={{ display: "flex", alignItems: "center", gap: 5, marginTop: 3, fontSize: 11.5, fontWeight: 600, color: "#7BE0B8" }}>
-            <Icon name="percent" size={12} /> Free withdrawals
-          </span>
-        )}
+        <span style={{ display: "flex", flexWrap: "wrap", gap: "2px 12px", marginTop: 4 }}>
+          {raceFor(o.slug) && (
+            <span style={{ display: "inline-flex", alignItems: "center", gap: 5, fontSize: 11.5, fontWeight: 600, color: "#D6B65C" }}>
+              <Icon name="trophy" size={12} /> {raceFor(o.slug)!.label}
+            </span>
+          )}
+          {c.fee === "Free" && (
+            <span style={{ display: "inline-flex", alignItems: "center", gap: 5, fontSize: 11.5, fontWeight: 600, color: "#7BE0B8" }}>
+              <Icon name="percent" size={12} /> Free withdrawals
+            </span>
+          )}
+        </span>
       </Link>
 
       {cell("Withdrawals", c.withdrawals)}

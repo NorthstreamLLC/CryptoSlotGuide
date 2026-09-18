@@ -14,6 +14,7 @@ const STATIC_ROUTES = [
   "/crypto-casinos/no-kyc",
   "/fastest-payouts",
   "/lowest-wagering",
+  "/races",
   "/casino-sportsbooks",
   "/esports-casinos",
   "/slots",

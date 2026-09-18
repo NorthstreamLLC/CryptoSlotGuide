@@ -11,6 +11,8 @@ const PATHS: Record<string, string> = {
   shield: "M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Zm-3-10 2 2 4-4",
   id: "M3 5h18v14H3zM7 15c.5-1.5 1.6-2 2.5-2s2 .5 2.5 2M9.5 11a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM15 9h3M15 13h3",
   arrow: "M5 12h14M13 6l6 6-6 6",
+  trophy: "M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4ZM7 6H4v1a3 3 0 0 0 3 3M17 6h3v1a3 3 0 0 1-3 3",
+  handshake: "M11 17l2 2a1.5 1.5 0 0 0 2-2M14 16l2.5 2.5a1.5 1.5 0 0 0 2-2L15 13M3 11l5-5 4 2 2-1 7 5-3 3M3 11l4 4M8 16l1.5 1.5a1.5 1.5 0 0 0 2-2",
 };
 
 export type IconName = keyof typeof PATHS;

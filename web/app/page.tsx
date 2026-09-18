@@ -11,6 +11,7 @@ import { filterFns } from "@/lib/casino-index";
 import { casinoFacts } from "@/lib/casino-facts";
 import { CasinoCard } from "@/components/casino/CasinoCard";
 import { CasinoOfferList } from "@/components/casino/CasinoOfferList";
+import { raceFor, raceSlugs } from "@/lib/races";
 
 /**
  * Ported from the HOME section of CryptoSlotGuide.dc.html (hero through
@@ -23,6 +24,7 @@ import { CasinoOfferList } from "@/components/casino/CasinoOfferList";
 const quickChips = [
   { label: "Bitcoin casinos", href: "/crypto-casinos" },
   { label: "No-KYC", href: "/crypto-casinos/no-kyc" },
+  { label: "Biggest races", href: "/races" },
   { label: "Provably fair games", href: "/house-games" },
   { label: "High RTP slots", href: "/slots" },
   { label: "Esports betting", href: "/sportsbooks?tab=2" },
@@ -300,6 +302,36 @@ export default function HomePage() {
           </Link>
         </div>
         <CasinoOfferList ops={topOffers} />
+      </section>
+
+      {/* Biggest races */}
+      <section style={{ maxWidth: 1400, margin: "0 auto", padding: "56px 40px 0" }}>
+        <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 32, flexWrap: "wrap", marginBottom: 18 }}>
+          <div>
+            <h2 style={{ margin: "0 0 8px", fontSize: 32, letterSpacing: "-.03em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Biggest races & raffles</h2>
+            <p style={{ margin: 0, fontSize: 15, color: "#8DA0AA" }}>Daily, weekly and monthly prize pools you enter just by playing.</p>
+          </div>
+          <Link href="/races" style={{ fontSize: 14, fontWeight: 600, color: "#00C2CC", whiteSpace: "nowrap" }}>
+            All races →
+          </Link>
+        </div>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))", gap: 12 }}>
+          {raceSlugs().slice(0, 4).map((s) => {
+            const op = ops.find((x) => x.slug === s)!;
+            return (
+              <Link key={s} href={`/casinos/${s}`} style={{ display: "flex", flexDirection: "column", gap: 10, padding: 18, borderRadius: 16, background: "radial-gradient(120% 90% at 100% 0%, rgba(214,182,92,.12), transparent 60%), #0C1013", border: "1px solid rgba(214,182,92,.2)" }}>
+                <span style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                  <span style={{ width: 30, height: 30, flex: "none", borderRadius: 8, overflow: "hidden" }}>
+                    <BrandMark slug={s} mono={op.mono} tint={tintFor(s)} radius={8} fontSize={10} />
+                  </span>
+                  <span style={{ fontSize: 15, fontWeight: 800, color: "#fff" }}>{op.name}</span>
+                </span>
+                <span style={{ fontSize: 17, lineHeight: 1.25, fontWeight: 800, color: "#fff" }}>{raceFor(s)!.label}</span>
+                <span style={{ fontSize: 13, fontWeight: 700, color: "#D6B65C" }}>View offer →</span>
+              </Link>
+            );
+          })}
+        </div>
       </section>
 
       {/* Featured reviews */}

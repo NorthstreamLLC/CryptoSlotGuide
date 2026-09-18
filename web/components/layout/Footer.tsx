@@ -14,6 +14,7 @@ const footerCols = [
       { l: "No-KYC casinos", href: "/crypto-casinos/no-kyc" },
       { l: "Fastest payouts", href: "/fastest-payouts" },
       { l: "Bonuses tracked", href: "/bonuses" },
+      { l: "Races & raffles", href: "/races" },
     ],
   },
   {

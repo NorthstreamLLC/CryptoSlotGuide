@@ -4,6 +4,7 @@ import { brandFor, casinoFacts } from "@/lib/casino-facts";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { CoinStack } from "@/components/ui/CoinIcon";
 import { Icon } from "@/components/ui/Icon";
+import { raceFor, partnerFor } from "@/lib/races";
 
 const MONO = "var(--font-jetbrains-mono), monospace";
 
@@ -15,6 +16,8 @@ export function CasinoCard({ o, rank }: { o: Operator; rank?: number }) {
   const brand = brandFor(o.slug);
   const c = casinoFacts(o);
   const href = `/casinos/${o.slug}`;
+  const race = raceFor(o.slug);
+  const partner = partnerFor(o.slug);
   const stats: [string, string | null][] = [
     ["Withdrawals", c.withdrawals],
     ["Min deposit", c.minDeposit],
@@ -78,6 +81,23 @@ export function CasinoCard({ o, rank }: { o: Operator; rank?: number }) {
           </span>
         )}
       </div>
+
+      {(race || partner) && (
+        <div style={{ display: "flex", flexDirection: "column", gap: 6, paddingTop: 12, borderTop: "1px solid rgba(255,255,255,.06)" }}>
+          {race && (
+            <span style={{ display: "flex", alignItems: "center", gap: 7, fontSize: 12.5, fontWeight: 700, color: "#E8EDF0" }}>
+              <span style={{ color: brand, display: "inline-flex" }}><Icon name="trophy" size={14} /></span>
+              {race.label}
+            </span>
+          )}
+          {partner && (
+            <span style={{ display: "flex", alignItems: "center", gap: 7, fontSize: 12, color: "#A8B6BE" }}>
+              <span style={{ color: "#8DA0AA", display: "inline-flex" }}><Icon name="handshake" size={14} /></span>
+              Official partner of {partner}
+            </span>
+          )}
+        </div>
+      )}
 
       <Link href={href} style={{ marginTop: "auto", display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 8, padding: "12px 14px", borderRadius: 11, background: o.featured ? brand : "#00C2CC", color: "#0A0D0F", fontSize: 14, fontWeight: 800 }}>
         View offer <Icon name="arrow" size={15} />
