@@ -49,6 +49,7 @@ const RACES: Record<string, Race> = {
 };
 
 const PARTNERS: Record<string, string> = {
+  stake: "Drake, UFC & Everton FC",
   roobet: "Chelsea FC & 6 more",
   "bc-game": "Leicester City FC & 3 more",
   cloudbet: "PFL, Karate Combat & Tom Aspinall",
