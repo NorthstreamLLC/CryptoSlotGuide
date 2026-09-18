@@ -152,5 +152,16 @@
     "checkedBy": "CSG",
     "source": "in_client_paytable",
     "notes": "In-game paytable: theoretical payout 96.34%"
+  },
+  {
+    "id": "duck-hunters-2:stake:2026-09-18",
+    "slotSlug": "duck-hunters-2",
+    "operatorSlug": "stake",
+    "rtp": 96,
+    "publishedRtp": 96,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "RTP tag on Stake game page (Description tab): 96.00%"
   }
 ]
