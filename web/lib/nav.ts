@@ -55,6 +55,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
                 { label: "Fastest payouts", href: "/fastest-payouts" },
                 { label: "Lowest wagering", href: "/lowest-wagering" },
                 { label: "Biggest races & raffles", href: "/races" },
+                { label: "US sweepstakes casinos", href: "/sweepstakes-casinos" },
                 { label: "Compare side by side", href: "/compare" },
               ],
             },
