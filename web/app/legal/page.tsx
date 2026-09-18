@@ -24,7 +24,7 @@ export default function Page() {
       <section style={{ maxWidth: 1180, margin: "0 auto", padding: "26px 24px 80px" }}>
         <Tabs active="world" />
         <div style={{ padding: 18, borderRadius: 20, background: "#0B0F12", border: "1px solid rgba(255,255,255,.07)" }}>
-          <LegalMap shapes={WORLD_SHAPES} viewBox="0 0 960 470" statusOf={(c) => countryBy(c)?.onlineCasino} hrefOf={(c) => (c === "US" ? "/legal/us" : countryBy(c) ? `/legal/${c.toLowerCase()}` : null)} />
+          <LegalMap shapes={WORLD_SHAPES} viewBox="0 0 960 470" statusOf={(c) => (c === "US" ? "varies by state" : countryBy(c)?.onlineCasino)} hrefOf={(c) => (c === "US" ? "/legal/us" : countryBy(c) ? `/legal/${c.toLowerCase()}` : null)} />
         </div>
         {covered.length > 0 && (
           <>

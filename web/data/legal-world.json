@@ -1,1 +1,1095 @@
-[]
+[
+  {
+    "code": "GB",
+    "name": "United Kingdom",
+    "onlineCasino": "licensed market",
+    "sportsBetting": "licensed market",
+    "regulator": {
+      "name": "Gambling Commission",
+      "url": "https://www.gamblingcommission.gov.uk"
+    },
+    "minAge": "18+",
+    "crypto": "Not banned. The Commission reminds licensees that cryptoasset activity falls under the Money Laundering Regulations, supervised by the FCA. Credit cards are banned for gambling.",
+    "licensing": "Operators need a Gambling Commission licence to serve players in Great Britain. The Commission disrupts unlicensed sites by getting URLs removed from search results and cutting off their payments.",
+    "note": "Great Britain runs a fully licensed online casino and betting market for players aged 18 and over.",
+    "sources": [
+      {
+        "label": "UKGC: Gambling and young people (minimum age 18)",
+        "url": "https://www.gamblingcommission.gov.uk/public-and-players/guide/gambling-and-young-people"
+      },
+      {
+        "label": "UKGC: Our approach to tackling unlicensed gambling",
+        "url": "https://www.gamblingcommission.gov.uk/blog/post/unlicensed-gambling-our-approach-to-tackling-unlicensed-gambling"
+      },
+      {
+        "label": "UKGC: Cryptoassets and the amended Money Laundering Regulations",
+        "url": "https://www.gamblingcommission.gov.uk/news/article/cryptoassets-and-the-amended-money-laundering-regulations"
+      },
+      {
+        "label": "UKGC: Why we banned gambling with credit cards",
+        "url": "https://www.gamblingcommission.gov.uk/public-and-players/guide/page/why-we-banned-gambling-with-credit-cards"
+      }
+    ]
+  },
+  {
+    "code": "IE",
+    "name": "Ireland",
+    "onlineCasino": "no specific law",
+    "sportsBetting": "licensed market",
+    "regulator": {
+      "name": "Gambling Regulatory Authority of Ireland (GRAI)",
+      "url": "https://www.grai.ie"
+    },
+    "minAge": "18+",
+    "crypto": "Not stated by the regulator.",
+    "licensing": "Remote betting is licensed, and GRAI now issues Remote Betting and Remote Betting Intermediary licences under the Gambling Regulation Act 2024. Gaming licences come in later phases, so online casino has no licensing route yet. Offering betting without a GRAI licence is a serious offence.",
+    "note": "Ireland licenses online sports betting today, and online casino licensing is due in a later phase of the new GRAI regime.",
+    "sources": [
+      {
+        "label": "GRAI: Business-to-consumer licences",
+        "url": "https://www.grai.ie/licensing-regulation/business-to-consumer-licenses"
+      },
+      {
+        "label": "GRAI: Licence application guidance and phasing",
+        "url": "https://www.grai.ie/licensing-regulation/business-to-consumer-licenses/licensing-phasing"
+      },
+      {
+        "label": "GRAI homepage",
+        "url": "https://www.grai.ie/"
+      }
+    ]
+  },
+  {
+    "code": "DE",
+    "name": "Germany",
+    "onlineCasino": "licensed market",
+    "sportsBetting": "licensed market",
+    "regulator": {
+      "name": "Gemeinsame Glücksspielbehörde der Länder (GGL)",
+      "url": "https://www.gluecksspiel-behoerde.de"
+    },
+    "minAge": "18+",
+    "crypto": "Not stated by the regulator.",
+    "licensing": "Only operators on the GGL whitelist may serve German players. The GGL licenses virtual slots and online poker; online table games are left to the individual states. The GGL blocks unlicensed sites (IP blocking) and orders payment providers to stop processing their payments.",
+    "note": "Germany licenses online slots, poker and sports betting through the GGL and actively blocks unlicensed sites.",
+    "sources": [
+      {
+        "label": "GGL: Online poker and virtual slot machines",
+        "url": "https://www.gluecksspiel-behoerde.de/de/fuer-gluecksspielanbieter/online-poker-und-virtuelle-automatenspiele"
+      },
+      {
+        "label": "GGL: Sports and horse betting online",
+        "url": "https://www.gluecksspiel-behoerde.de/de/fuer-gluecksspielanbieter/sport-und-pferdewetten-im-internet"
+      },
+      {
+        "label": "GGL: Combating unlicensed gambling (IP and payment blocking)",
+        "url": "https://www.gluecksspiel-behoerde.de/de/bekaempfung-illegales-gluecksspiel/unerlaubtes-gluecksspiel"
+      },
+      {
+        "label": "GGL: Player protection under GlüStV 2021 (minors excluded)",
+        "url": "https://www.gluecksspiel-behoerde.de/de/fuer-spielende/die-spielerschutzmassnahmen-des-gluestv21-im-ueberblick"
+      },
+      {
+        "label": "GGL: Whitelist of permitted operators",
+        "url": "https://www.gluecksspiel-behoerde.de/de/fuer-spielende/uebersicht-erlaubter-anbieter-whitelist"
+      }
+    ]
+  },
+  {
+    "code": "NL",
+    "name": "Netherlands",
+    "onlineCasino": "licensed market",
+    "sportsBetting": "licensed market",
+    "regulator": {
+      "name": "Kansspelautoriteit (KSA)",
+      "url": "https://kansspelautoriteit.nl"
+    },
+    "minAge": "18+",
+    "crypto": "Not stated by the regulator.",
+    "licensing": "Since 1 October 2021 only KSA-licensed operators may offer online gambling in the Netherlands; every other online gambling offer for Dutch players is illegal. Licensees are listed in the KSA register.",
+    "note": "The Netherlands runs a licensed online casino and betting market, with extra deposit-limit checks for players aged 18 to 24.",
+    "sources": [
+      {
+        "label": "KSA: Tackling illegal online gambling",
+        "url": "https://kansspelautoriteit.nl/aanpak-misstanden"
+      },
+      {
+        "label": "KSA: 10 tips for gambling safely (age 18-24 limits)",
+        "url": "https://kansspelautoriteit.nl/10-tips-gambling-safely"
+      },
+      {
+        "label": "KSA: Register of licensees",
+        "url": "https://kansspelautoriteit.nl/register-licensees"
+      }
+    ]
+  },
+  {
+    "code": "BE",
+    "name": "Belgium",
+    "onlineCasino": "licensed market",
+    "sportsBetting": "licensed market",
+    "regulator": {
+      "name": "Gaming Commission (Kansspelcommissie)",
+      "url": "https://www.gamingcommission.be"
+    },
+    "minAge": "21+",
+    "crypto": "Not stated by the regulator.",
+    "licensing": "Online casino requires an A+ licence (linked to a land-based casino) and online betting an F1+ licence. Unlicensed sites go on the Gaming Commission's list of illegal sites, and players who knowingly use them can be fined.",
+    "note": "Belgium licenses online casinos and betting, and the minimum age for all gambling is 21.",
+    "sources": [
+      {
+        "label": "Gaming Commission: Minimum age FAQ (21 for all gambling)",
+        "url": "https://gamingcommission.be/nl/faq/leeftijd/wat-is-de-minimumleeftijd-om-deel-te-nemen-aan-kansspelen-of-weddenschappen"
+      },
+      {
+        "label": "Gaming Commission: Licences",
+        "url": "https://www.gamingcommission.be/en/operators/licences"
+      },
+      {
+        "label": "Gaming Commission: Illegal games of chance",
+        "url": "https://www.gamingcommission.be/en/gaming-commission/illegal-games-of-chance"
+      }
+    ]
+  },
+  {
+    "code": "FR",
+    "name": "France",
+    "onlineCasino": "not legal",
+    "sportsBetting": "licensed market",
+    "regulator": {
+      "name": "Autorité nationale des jeux (ANJ)",
+      "url": "https://anj.fr"
+    },
+    "minAge": "18+",
+    "crypto": "Not stated by the regulator.",
+    "licensing": "Only online sports betting, horse-race betting and poker can be licensed. Online casino games and slots are not authorised. Since 2022 the ANJ can order ISPs and search engines to block and delist illegal sites.",
+    "note": "France licenses online sports betting and poker but bans online casino games.",
+    "sources": [
+      {
+        "label": "ANJ: Game categories and distribution channels",
+        "url": "https://anj.fr/offre-de-jeu-et-marche/categories-de-jeux-et-canaux-de-distribution"
+      },
+      {
+        "label": "ANJ: Fighting the illegal offer (blocking)",
+        "url": "https://anj.fr/lutter-contre-loffre-illegale"
+      },
+      {
+        "label": "ANJ: Players and protection of minors",
+        "url": "https://anj.fr/joueurs"
+      }
+    ]
+  },
+  {
+    "code": "ES",
+    "name": "Spain",
+    "onlineCasino": "licensed market",
+    "sportsBetting": "licensed market",
+    "regulator": {
+      "name": "Dirección General de Ordenación del Juego (DGOJ)",
+      "url": "https://www.ordenacionjuego.es"
+    },
+    "minAge": "18+",
+    "crypto": "Not stated by the regulator.",
+    "licensing": "Operators need a state licence from the DGOJ to serve Spanish players. Licensed sites carry the 'Juego Seguro' seal, and minors are barred by law (Ley 13/2011, art. 6.2.a).",
+    "note": "Spain runs a licensed online casino and betting market under the DGOJ.",
+    "sources": [
+      {
+        "label": "DGOJ: Frequently asked questions (Juego Seguro seal, minors)",
+        "url": "https://www.ordenacionjuego.es/preguntas-frecuentes"
+      },
+      {
+        "label": "DGOJ: Rights and obligations of players",
+        "url": "https://www.ordenacionjuego.es/dgoj/normativa-vigor/derechos-obligaciones-participantes-juego"
+      }
+    ]
+  },
+  {
+    "code": "PT",
+    "name": "Portugal",
+    "onlineCasino": "licensed market",
+    "sportsBetting": "licensed market",
+    "regulator": {
+      "name": "Serviço de Regulação e Inspeção de Jogos (SRIJ)",
+      "url": "https://www.srij.turismodeportugal.pt"
+    },
+    "crypto": "Not stated by the regulator.",
+    "licensing": "SRIJ licenses online casino games and fixed-odds sports betting, and notifies ISPs to block illegal operator sites.",
+    "note": "Portugal licenses online casino and sports betting and blocks unlicensed sites.",
+    "sources": [
+      {
+        "label": "SRIJ homepage (licensed entities)",
+        "url": "http://www.srij.turismodeportugal.pt/pt"
+      },
+      {
+        "label": "SRIJ: The problem of illegal gambling",
+        "url": "http://www.srij.turismodeportugal.pt/pt/jogo-seguro/o-problema-do-jogo-ilegal"
+      }
+    ]
+  },
+  {
+    "code": "IT",
+    "name": "Italy",
+    "onlineCasino": "licensed market",
+    "sportsBetting": "licensed market",
+    "regulator": {
+      "name": "Agenzia delle Dogane e dei Monopoli (ADM)",
+      "url": "https://www.adm.gov.it"
+    },
+    "crypto": "Not stated by the regulator.",
+    "licensing": "Private operators run online gambling under ADM concessions. The ADM publishes a list of unauthorised sites that are blocked in Italy.",
+    "note": "Italy licenses online casinos and betting through ADM concessions and blocks unauthorised sites.",
+    "sources": [
+      {
+        "label": "ADM: Remote gambling (gioco a distanza)",
+        "url": "https://www.adm.gov.it/portale/monopoli/giochi/gioco_distanza"
+      },
+      {
+        "label": "ADM: Blocking of unauthorised gambling sites",
+        "url": "https://www.adm.gov.it/portale/inibizione-dei-siti-di-gioco-non-autorizzato"
+      },
+      {
+        "label": "ADM: Blocked gambling websites",
+        "url": "https://www.adm.gov.it/portale/siti-web-inibiti-giochi"
+      }
+    ]
+  },
+  {
+    "code": "CH",
+    "name": "Switzerland",
+    "onlineCasino": "licensed market",
+    "sportsBetting": "state monopoly",
+    "regulator": {
+      "name": "Federal Gaming Board (ESBK) for casino games; Gespa for lotteries and sports betting",
+      "url": "https://www.esbk.admin.ch"
+    },
+    "minAge": "18+",
+    "crypto": "Not stated by the regulator.",
+    "licensing": "Only Swiss land-based casinos with an extended concession may offer online casino games. Sports betting is run by the two lottery companies, Swisslos and Loterie Romande. Unauthorised foreign sites are blocked, but players are not punished for using them.",
+    "note": "Switzerland limits online casino to licensed Swiss casinos and sports betting to the two state lottery companies.",
+    "sources": [
+      {
+        "label": "ESBK: Unauthorised online games (blocking, Swiss online casinos)",
+        "url": "https://www.esbk.admin.ch/de/nicht-bewilligte-online-spiele"
+      },
+      {
+        "label": "ESBK: FAQ (minimum age 18, art. 72 BGS)",
+        "url": "https://www.esbk.admin.ch/de/fragen-antworten"
+      },
+      {
+        "label": "Gespa: Sports betting (Swisslos and Loterie Romande)",
+        "url": "https://www.gespa.ch/de/geldspielformen/sportwetten"
+      },
+      {
+        "label": "Gespa: Access blocking",
+        "url": "https://www.gespa.ch/en/fighting-illegal-gambling/access-blocking"
+      }
+    ]
+  },
+  {
+    "code": "AT",
+    "name": "Austria",
+    "onlineCasino": "state monopoly",
+    "sportsBetting": "licensed market",
+    "regulator": {
+      "name": "Federal Ministry of Finance (BMF)",
+      "url": "https://www.bmf.gv.at"
+    },
+    "minAge": "18+",
+    "crypto": "Not stated by the regulator.",
+    "licensing": "Online casino games are 'electronic lotteries' under the federal gambling monopoly, held by Österreichische Lotterien (win2day); licences from other EU countries do not count. Sports betting is not gambling under federal law and is licensed by the provinces. A reform notified in August 2026 opens online concessions and adds payment blocking, blacklists and network blocking; unlicensed operators must stop serving Austria by 1 January 2027 to qualify.",
+    "note": "Austria keeps online casino under a state monopoly while the provinces license sports betting, with an open online licensing system on the way.",
+    "sources": [
+      {
+        "label": "BMF: Gambling monopoly FAQ (online gambling, sports betting)",
+        "url": "https://www.bmf.gv.at/themen/gluecksspiel-spielerschutz/gesetzliche-grundlagen-gluecksspiel/faq-gluecksspielmonopol.html"
+      },
+      {
+        "label": "BMF: Licensees for lotteries, online gambling and casinos",
+        "url": "https://www.bmf.gv.at/themen/gluecksspiel-spielerschutz/gesetzliche-grundlagen-gluecksspiel/konzessionaere-ausspielbewilligte.html"
+      },
+      {
+        "label": "BMF press release: new gambling law (Aug 2026)",
+        "url": "https://www.bmf.gv.at/presse/pressemeldungen/2026/august-2026/gluecksspielgesetz.html"
+      }
+    ]
+  },
+  {
+    "code": "DK",
+    "name": "Denmark",
+    "onlineCasino": "licensed market",
+    "sportsBetting": "licensed market",
+    "regulator": {
+      "name": "Spillemyndigheden (Danish Gambling Authority)",
+      "url": "https://www.spillemyndigheden.dk"
+    },
+    "minAge": "18+",
+    "crypto": "Not stated by the regulator.",
+    "licensing": "Only operators licensed by the Danish Gambling Authority may offer or advertise gambling in Denmark. The Authority gets illegal gambling sites blocked through the courts.",
+    "note": "Denmark runs a licensed online casino and betting market and blocks illegal sites.",
+    "sources": [
+      {
+        "label": "Spillemyndigheden: Illegal gambling and advertising",
+        "url": "https://spillemyndigheden.dk/en-us/public-and-players/illegal-gambling-and-advertising"
+      },
+      {
+        "label": "Spillemyndigheden: Advice for people who gamble (age 18)",
+        "url": "https://spillemyndigheden.dk/en-us/public-and-players/helpful-advice-for-people-who-gamble"
+      },
+      {
+        "label": "Spillemyndigheden: Blocking of illegal websites upheld by the High Court",
+        "url": "https://spillemyndigheden.dk/en-us/news-articles/blocking-of-illegal-websites-upheld-by-the-high-court"
+      }
+    ]
+  },
+  {
+    "code": "SE",
+    "name": "Sweden",
+    "onlineCasino": "licensed market",
+    "sportsBetting": "licensed market",
+    "regulator": {
+      "name": "Spelinspektionen (Swedish Gambling Authority)",
+      "url": "https://www.spelinspektionen.se"
+    },
+    "minAge": "18+",
+    "crypto": "Not stated by the regulator.",
+    "licensing": "Online casino and betting require a Swedish licence under the Gambling Act (2018:1138). The authority can order ISPs to show warning messages on unlicensed gambling sites.",
+    "note": "Sweden runs a licensed online casino and betting market for players aged 18 and over.",
+    "sources": [
+      {
+        "label": "Gambling Act (2018:1138), Riksdagen",
+        "url": "https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/spellag-20181138_sfs-2018-1138/"
+      },
+      {
+        "label": "Spelinspektionen: Illegal gambling",
+        "url": "https://www.spelinspektionen.se/en/rules-and-regulation/illegal-gambling/"
+      },
+      {
+        "label": "Spelinspektionen: Licence and permit directory",
+        "url": "https://www.spelinspektionen.se/en/licence-and-permit/licence-and-permit-directory/"
+      }
+    ]
+  },
+  {
+    "code": "NO",
+    "name": "Norway",
+    "onlineCasino": "state monopoly",
+    "sportsBetting": "state monopoly",
+    "regulator": {
+      "name": "Lotteritilsynet (Norwegian Gambling and Foundation Authority)",
+      "url": "https://lottstift.no"
+    },
+    "crypto": "Not stated by the regulator.",
+    "licensing": "Norsk Tipping is the only company allowed to offer online casino games and betting (Norsk Rikstoto runs horse betting). Norway blocks payments to foreign gambling operators and has used DNS blocking of illegal sites since 2025.",
+    "note": "Norway keeps online casino and betting under a state monopoly and blocks foreign operators.",
+    "sources": [
+      {
+        "label": "Lotteritilsynet: Gambling in Norway",
+        "url": "https://lottstift.no/en/gambling-in-norway/"
+      }
+    ]
+  },
+  {
+    "code": "FI",
+    "name": "Finland",
+    "onlineCasino": "state monopoly",
+    "sportsBetting": "state monopoly",
+    "regulator": {
+      "name": "National Police Board (Finnish Supervisory Agency from 1 July 2027)",
+      "url": "https://intermin.fi/en/projects/reform-of-the-gambling"
+    },
+    "minAge": "18+",
+    "crypto": "Not stated by the regulator.",
+    "licensing": "Veikkaus holds the monopoly until 30 June 2027. The new Gambling Act opens online casino and betting to licensed operators: applications opened on 1 March 2026 and licensed services can start on 1 July 2027. No payment or network blocking is planned for now.",
+    "note": "Finland is moving from a Veikkaus monopoly to licensed online casino and betting from 1 July 2027.",
+    "sources": [
+      {
+        "label": "Ministry of the Interior: Reform of the gambling system",
+        "url": "https://intermin.fi/en/projects/reform-of-the-gambling"
+      },
+      {
+        "label": "Ministry of the Interior: Reform Q&A (timeline, blocking)",
+        "url": "https://intermin.fi/en/projects/reform-of-the-gambling/questions-and-answers"
+      }
+    ]
+  },
+  {
+    "code": "PL",
+    "name": "Poland",
+    "onlineCasino": "state monopoly",
+    "sportsBetting": "licensed market",
+    "regulator": {
+      "name": "Ministry of Finance",
+      "url": "https://www.gov.pl/web/finanse/legalny-hazard"
+    },
+    "minAge": "18+",
+    "crypto": "Not stated by the regulator.",
+    "licensing": "Online casino games are a state monopoly run by Totalizator Sportowy. Online sports betting is open to licensed bookmakers. Unlicensed gambling domains go on the Ministry's register of blocked domains.",
+    "note": "Poland licenses online sports betting but keeps online casino as a state monopoly.",
+    "sources": [
+      {
+        "label": "Ministry of Finance: Legal online gambling",
+        "url": "https://www.gov.pl/web/finanse/legalne-gry-hazardowe-przez-internet"
+      },
+      {
+        "label": "Ministry of Finance: Legal gambling",
+        "url": "https://www.gov.pl/web/finanse/legalny-hazard"
+      },
+      {
+        "label": "Register of domains offering illegal gambling",
+        "url": "https://hazard.mf.gov.pl/"
+      }
+    ]
+  },
+  {
+    "code": "CZ",
+    "name": "Czech Republic",
+    "onlineCasino": "licensed market",
+    "sportsBetting": "licensed market",
+    "regulator": {
+      "name": "Ministry of Finance",
+      "url": "https://mf.gov.cz/cs/kontrola-a-regulace/hazardni-hry"
+    },
+    "minAge": "18+",
+    "crypto": "Not stated by the regulator.",
+    "licensing": "Online casino games and betting are licensed under the Gambling Act (186/2016). The Ministry blocks unauthorised internet games.",
+    "note": "The Czech Republic licenses online casino and betting and blocks unauthorised sites.",
+    "sources": [
+      {
+        "label": "Ministry of Finance: Blocking of unauthorised internet games",
+        "url": "https://mf.gov.cz/cs/kontrola-a-regulace/hazardni-hry/blokace-nepovolenych-internetovych-her"
+      },
+      {
+        "label": "Gambling Act 186/2016 (age 18, internet games)",
+        "url": "https://www.zakonyprolidi.cz/cs/2016-186"
+      }
+    ]
+  },
+  {
+    "code": "GR",
+    "name": "Greece",
+    "onlineCasino": "licensed market",
+    "sportsBetting": "licensed market",
+    "regulator": {
+      "name": "Hellenic Gaming Commission (HGC)",
+      "url": "https://hgc.gov.gr"
+    },
+    "crypto": "Not stated by the regulator.",
+    "licensing": "The HGC issues separate online betting and online casino licences. Unlicensed providers go on the HGC blacklist.",
+    "note": "Greece licenses online casino and betting under the Hellenic Gaming Commission.",
+    "sources": [
+      {
+        "label": "HGC: Licences",
+        "url": "https://hgc.gov.gr/en/supervision-and-control/licences/"
+      },
+      {
+        "label": "HGC: Blacklist of unlicensed providers",
+        "url": "https://hgc.gov.gr/en/public-players/blacklist/"
+      }
+    ]
+  },
+  {
+    "code": "MT",
+    "name": "Malta",
+    "onlineCasino": "licensed market",
+    "sportsBetting": "licensed market",
+    "regulator": {
+      "name": "Malta Gaming Authority (MGA)",
+      "url": "https://www.mga.org.mt"
+    },
+    "minAge": "18+",
+    "crypto": "Allowed. The MGA's policy on distributed ledger technology lets authorised operators accept virtual financial assets under its rules (replacing its earlier crypto sandbox).",
+    "licensing": "The MGA licenses online casino and betting operators and publishes notices on unauthorised URLs that falsely claim an MGA licence.",
+    "note": "Malta is a major licensing hub and permits crypto for licensees under its DLT policy.",
+    "sources": [
+      {
+        "label": "MGA: Policy on the use of DLT by authorised persons",
+        "url": "https://www.mga.org.mt/the-mga-publishes-its-policy-on-the-use-of-distributed-ledger-technology-by-authorised-persons/"
+      },
+      {
+        "label": "MGA: Player hub (unauthorised URLs)",
+        "url": "https://www.mga.org.mt/player-hub/"
+      }
+    ]
+  },
+  {
+    "code": "CY",
+    "name": "Cyprus",
+    "onlineCasino": "not legal",
+    "sportsBetting": "licensed market",
+    "regulator": {
+      "name": "National Betting Authority (NBA)",
+      "url": "https://nba.gov.cy"
+    },
+    "minAge": "18+",
+    "crypto": "Not stated by the regulator.",
+    "licensing": "The NBA licenses online sports betting (Class B bookmaker licence) only. Online casino games are excluded from licensing, and the NBA keeps a blocking list of illegal sites.",
+    "note": "Cyprus licenses online sports betting but bans online casino games.",
+    "sources": [
+      {
+        "label": "NBA: Frequently asked questions (licence classes, online casino excluded)",
+        "url": "https://nba.gov.cy/en/frequently-asked-questions/"
+      },
+      {
+        "label": "NBA homepage (blocking list)",
+        "url": "https://nba.gov.cy/en/"
+      }
+    ]
+  },
+  {
+    "code": "EE",
+    "name": "Estonia",
+    "onlineCasino": "licensed market",
+    "sportsBetting": "licensed market",
+    "regulator": {
+      "name": "Estonian Tax and Customs Board (EMTA)",
+      "url": "https://www.emta.ee"
+    },
+    "minAge": "21+ (casino games), 18+ (betting)",
+    "crypto": "Allowed. Under the Gambling Act, remote bets may be received through a crypto-asset service provider licensed in the EEA.",
+    "licensing": "Remote gambling needs an Estonian licence. EMTA publishes lists of legal operators and blocked gambling websites, and the Gambling Act provides for restricting access to illegal remote gambling.",
+    "note": "Estonia licenses online casino and betting, allows EEA-licensed crypto payments, and sets 21 as the casino age.",
+    "sources": [
+      {
+        "label": "Gambling Act (Riigi Teataja, English translation)",
+        "url": "https://www.riigiteataja.ee/en/akt/513012026001"
+      },
+      {
+        "label": "EMTA: List of legal gambling operators",
+        "url": "https://www.emta.ee/en/business-client/registration-business/gambling-operators/list-legal-gambling-operators"
+      }
+    ]
+  },
+  {
+    "code": "LV",
+    "name": "Latvia",
+    "onlineCasino": "licensed market",
+    "sportsBetting": "licensed market",
+    "regulator": {
+      "name": "State Revenue Service (VID), lotteries and gambling supervision",
+      "url": "https://www.vid.gov.lv/lv/izlozu-un-azartspelu-uzraudziba-un-kontrole"
+    },
+    "minAge": "18+",
+    "crypto": "Not stated by the regulator.",
+    "licensing": "Interactive gambling requires a VID licence, and the law prohibits players from taking part in unlicensed interactive gambling.",
+    "note": "Latvia licenses online casino and betting through the State Revenue Service.",
+    "sources": [
+      {
+        "label": "Gambling and Lotteries Law (likumi.lv)",
+        "url": "https://likumi.lv/ta/id/122941"
+      },
+      {
+        "label": "VID: Lotteries and gambling supervision",
+        "url": "https://www.vid.gov.lv/lv/izlozu-un-azartspelu-uzraudziba-un-kontrole"
+      }
+    ]
+  },
+  {
+    "code": "RO",
+    "name": "Romania",
+    "onlineCasino": "licensed market",
+    "sportsBetting": "licensed market",
+    "regulator": {
+      "name": "Oficiul Național pentru Jocuri de Noroc (ONJN)",
+      "url": "https://onjn.gov.ro"
+    },
+    "crypto": "Not stated by the regulator.",
+    "licensing": "Online gambling operators need an ONJN Class I licence. ONJN publishes a blacklist of unauthorised gambling sites.",
+    "note": "Romania licenses online casino and betting and blacklists unauthorised sites.",
+    "sources": [
+      {
+        "label": "ONJN homepage (licensee lists, blacklist)",
+        "url": "https://onjn.gov.ro/"
+      }
+    ]
+  },
+  {
+    "code": "HU",
+    "name": "Hungary",
+    "onlineCasino": "licensed market",
+    "sportsBetting": "licensed market",
+    "regulator": {
+      "name": "Szabályozott Tevékenységek Felügyeleti Hatósága (SZTFH)",
+      "url": "https://sztfh.hu"
+    },
+    "minAge": "18+",
+    "crypto": "Not stated by the regulator.",
+    "licensing": "Only holders of a Hungarian land-casino concession may run online casino games, and remote betting also needs an SZTFH licence. The SZTFH keeps registers of blocked gambling websites and banned payment accounts.",
+    "note": "Hungary allows online casino and betting only through tightly restricted local licences and blocks unlicensed sites.",
+    "sources": [
+      {
+        "label": "SZTFH: Gambling types requiring a licence",
+        "url": "https://sztfh.hu/tevekenysegek/szerencsejatek-felugyelet/engedelykoteles-szerencsejatekok/"
+      },
+      {
+        "label": "SZTFH: Blocked gambling websites",
+        "url": "https://sztfh.hu/nyilvantartasok/szerencsejatekugyi-blokkolt-honlapok/"
+      },
+      {
+        "label": "Act XXXIV of 1991 on gambling (age 18, online casino concession rule)",
+        "url": "https://net.jogtar.hu/jogszabaly?docid=99100034.tv"
+      }
+    ]
+  },
+  {
+    "code": "SK",
+    "name": "Slovakia",
+    "onlineCasino": "licensed market",
+    "sportsBetting": "licensed market",
+    "regulator": {
+      "name": "Úrad pre reguláciu hazardných hier (ÚRHH)",
+      "url": "https://www.urhh.sk"
+    },
+    "crypto": "Not stated by the regulator.",
+    "licensing": "Online gambling needs an individual licence from the ÚRHH, which publishes the list of legal websites and a list of prohibited offers that are blocked.",
+    "note": "Slovakia licenses online casino and betting and blocks prohibited offers.",
+    "sources": [
+      {
+        "label": "ÚRHH: Legal websites",
+        "url": "https://www.urhh.sk/licencie-2/legalne-webove-stranky/"
+      },
+      {
+        "label": "ÚRHH: Prohibited offers",
+        "url": "https://www.urhh.sk/urad/dozor-a-kontrola/zakazane-ponuky/"
+      }
+    ]
+  },
+  {
+    "code": "SI",
+    "name": "Slovenia",
+    "onlineCasino": "licensed market",
+    "sportsBetting": "state monopoly",
+    "regulator": {
+      "name": "Ministry of Finance",
+      "url": "https://www.gov.si/teme/igre-na-sreco/"
+    },
+    "minAge": "18+",
+    "crypto": "Not stated by the regulator.",
+    "licensing": "Sports betting is a 'classic game of chance' that at most two concessionaires (the state lottery companies) may run. Online casino games are run under concessions held by Slovenian casinos.",
+    "note": "Slovenia keeps sports betting with two concessionaires and allows online casino only through local casino concessions.",
+    "sources": [
+      {
+        "label": "GOV.SI: Games of chance",
+        "url": "https://www.gov.si/teme/igre-na-sreco/"
+      }
+    ]
+  },
+  {
+    "code": "TR",
+    "name": "Turkey",
+    "onlineCasino": "not legal",
+    "sportsBetting": "state monopoly",
+    "regulator": {
+      "name": "Spor Toto Teşkilat Başkanlığı (Ministry of Youth and Sports)",
+      "url": "https://www.sportoto.gov.tr"
+    },
+    "minAge": "18+",
+    "crypto": "Not stated by the regulator.",
+    "licensing": "Only the state betting products (Spor Toto, iddaa) are legal. Enabling people in Turkey to bet on foreign sites over the internet carries 4 to 6 years in prison, and access to illegal sites is blocked under Law 5651.",
+    "note": "Turkey keeps sports betting under state control and treats online casino and foreign betting sites as crimes.",
+    "sources": [
+      {
+        "label": "Law 7258 (Mevzuat Bilgi Sistemi)",
+        "url": "https://www.mevzuat.gov.tr/mevzuat?MevzuatNo=7258&MevzuatTur=1&MevzuatTertip=3"
+      },
+      {
+        "label": "Spor Toto",
+        "url": "https://www.sportoto.gov.tr/"
+      }
+    ]
+  },
+  {
+    "code": "CA",
+    "name": "Canada",
+    "onlineCasino": "state monopoly",
+    "sportsBetting": "state monopoly",
+    "regulator": {
+      "name": "Provincial lottery and gaming authorities (Criminal Code s.207)",
+      "url": "https://laws-lois.justice.gc.ca/eng/acts/c-46/section-207.html"
+    },
+    "minAge": "18+ or 19+ (varies by province)",
+    "crypto": "Not stated by the regulator.",
+    "licensing": "The Criminal Code lets each provincial government conduct and manage gambling, so most provinces run their own online casino and betting sites. Ontario runs an open licensed market, and Alberta opened a registered iGaming market on July 13, 2026.",
+    "note": "Canada leaves online gambling to the provinces, most of which run their own sites, while Ontario and Alberta license private operators.",
+    "sources": [
+      {
+        "label": "Criminal Code s.207 (Justice Laws)",
+        "url": "https://laws-lois.justice.gc.ca/eng/acts/c-46/section-207.html"
+      },
+      {
+        "label": "AGLC: iGaming in Alberta",
+        "url": "https://aglc.ca/igaming"
+      }
+    ]
+  },
+  {
+    "code": "CA-ON",
+    "name": "Ontario (Canada)",
+    "onlineCasino": "licensed market",
+    "sportsBetting": "licensed market",
+    "regulator": {
+      "name": "AGCO (regulator) and iGaming Ontario",
+      "url": "https://igamingontario.ca"
+    },
+    "minAge": "19+",
+    "crypto": "Not stated by the regulator.",
+    "licensing": "Private operators must be registered with the AGCO and contracted with iGaming Ontario. Regulated sites display the iGaming Ontario and BetGuard logos, and players must be physically in Ontario.",
+    "note": "Ontario runs Canada's first open, licensed online casino and betting market for players aged 19 and over.",
+    "sources": [
+      {
+        "label": "iGaming Ontario: Regulated market (19+, located in Ontario)",
+        "url": "https://igamingontario.ca/en/player/regulated-igaming-market"
+      },
+      {
+        "label": "iGaming Ontario: Player FAQs",
+        "url": "https://igamingontario.ca/en/player/player-faqs"
+      },
+      {
+        "label": "AGCO: Registrar's Standards for Internet Gaming",
+        "url": "https://www.agco.ca/en/lottery-and-gaming/guides/registrars-standards-internet-gaming"
+      }
+    ]
+  },
+  {
+    "code": "MX",
+    "name": "Mexico",
+    "onlineCasino": "licensed market",
+    "sportsBetting": "licensed market",
+    "regulator": {
+      "name": "SEGOB, Dirección General de Juegos y Sorteos",
+      "url": "https://www.juegosysorteos.gob.mx"
+    },
+    "minAge": "18+",
+    "crypto": "Not stated by the regulator.",
+    "licensing": "Holders of SEGOB gaming permits offer online gambling; the Federal Games and Draws Regulation lets permit holders take bets via the internet. Minors may not place bets.",
+    "note": "Mexico allows online casino and betting through SEGOB permit holders.",
+    "sources": [
+      {
+        "label": "Reglamento de la Ley Federal de Juegos y Sorteos (arts. 5, 85)",
+        "url": "https://www.diputados.gob.mx/LeyesBiblio/regley/Reg_LFJS.pdf"
+      }
+    ]
+  },
+  {
+    "code": "BR",
+    "name": "Brazil",
+    "onlineCasino": "licensed market",
+    "sportsBetting": "licensed market",
+    "regulator": {
+      "name": "Secretaria de Prêmios e Apostas (SPA), Ministry of Finance",
+      "url": "https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas"
+    },
+    "minAge": "18+",
+    "crypto": "Prohibited. Licensed operators may not accept deposits in virtual assets or other crypto-assets (Portaria SPA/MF 615/2024).",
+    "licensing": "Since 1 January 2025 only SPA-authorised operators may offer fixed-odds betting and online games nationally, all on '.bet.br' domains. The law requires ISPs to block unauthorised sites.",
+    "note": "Brazil runs a licensed online casino and betting market on .bet.br domains and bans crypto deposits.",
+    "sources": [
+      {
+        "label": "SPA: Fixed-odds betting (authorisation, .bet.br)",
+        "url": "https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas/apostas-de-quota-fixa"
+      },
+      {
+        "label": "Law 14.790/2023 (age 18, online games, blocking)",
+        "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14790.htm"
+      },
+      {
+        "label": "Portaria SPA/MF 615/2024 (crypto ban)",
+        "url": "https://www.in.gov.br/en/web/dou/-/portaria-normativa-spa/mf-n-615-de-16-de-abril-de-2024-554928583"
+      }
+    ]
+  },
+  {
+    "code": "AR",
+    "name": "Argentina",
+    "onlineCasino": "licensed market",
+    "sportsBetting": "licensed market",
+    "regulator": {
+      "name": "Provincial regulators (e.g. Lotería de la Ciudad de Buenos Aires, LOTBA)",
+      "url": "https://www.loteriadelaciudad.gob.ar"
+    },
+    "crypto": "Not stated by the regulator.",
+    "licensing": "There is no national online gambling law; each province licenses its own operators. In Buenos Aires City, only agencies authorised by LOTBA may sell online gambling.",
+    "note": "Argentina licenses online casino and betting province by province.",
+    "sources": [
+      {
+        "label": "Juego Seguro y Legal (LOTBA): Authorised online gambling agencies",
+        "url": "https://juegosegurolegal.gob.ar/?page=agencias-juego-en-linea"
+      },
+      {
+        "label": "Lotería de la Ciudad de Buenos Aires",
+        "url": "https://www.loteriadelaciudad.gob.ar/"
+      }
+    ]
+  },
+  {
+    "code": "CO",
+    "name": "Colombia",
+    "onlineCasino": "licensed market",
+    "sportsBetting": "licensed market",
+    "regulator": {
+      "name": "Coljuegos",
+      "url": "https://www.coljuegos.gov.co"
+    },
+    "minAge": "18+",
+    "crypto": "Not stated by the regulator.",
+    "licensing": "Online casino and sports betting sites operate under Coljuegos concession contracts. Coljuegos pursues illegal operators and sanctions people who promote illegal gambling.",
+    "note": "Colombia was Latin America's first licensed online casino and betting market.",
+    "sources": [
+      {
+        "label": "Coljuegos: Novel games (online betting portals)",
+        "url": "https://www.coljuegos.gov.co/publicaciones/306305/juegos-novedosos/"
+      },
+      {
+        "label": "Coljuegos homepage",
+        "url": "https://www.coljuegos.gov.co/"
+      }
+    ]
+  },
+  {
+    "code": "AU",
+    "name": "Australia",
+    "onlineCasino": "not legal",
+    "sportsBetting": "licensed market",
+    "regulator": {
+      "name": "Australian Communications and Media Authority (ACMA)",
+      "url": "https://www.acma.gov.au"
+    },
+    "minAge": "18+",
+    "crypto": "Prohibited. The Interactive Gambling Act bans credit and digital currency (crypto) for online wagering.",
+    "licensing": "Offering online casino games to people in Australia is prohibited. Online sports and race betting is legal only through operators licensed in an Australian state or territory; the ACMA blocks unlicensed sites.",
+    "note": "Australia bans online casinos but licenses online sports and race betting, with no credit cards or crypto allowed.",
+    "sources": [
+      {
+        "label": "Interactive Gambling Act 2001 (s.15AA, Part 2B credit and digital currency)",
+        "url": "https://www.legislation.gov.au/C2004A00851/latest/text"
+      },
+      {
+        "label": "BetStop national self-exclusion register",
+        "url": "https://www.betstop.gov.au/"
+      }
+    ]
+  },
+  {
+    "code": "NZ",
+    "name": "New Zealand",
+    "onlineCasino": "no licensing yet (licences from early 2027)",
+    "sportsBetting": "state monopoly",
+    "regulator": {
+      "name": "Department of Internal Affairs (DIA)",
+      "url": "https://www.dia.govt.nz/Online-Casino-Gambling"
+    },
+    "crypto": "Not stated by the regulator.",
+    "licensing": "The Online Casino Gambling Act 2026 creates up to 15 online casino licences. From 1 December 2026 only operators that won the licence auction may serve New Zealanders, and licences are issued from early 2027. Since 28 June 2025, online racing and sports betting has been limited to TAB NZ.",
+    "note": "New Zealand is launching a licensed online casino market while TAB NZ keeps its sports betting monopoly.",
+    "sources": [
+      {
+        "label": "DIA: Online casino gambling",
+        "url": "https://www.dia.govt.nz/Online-Casino-Gambling"
+      },
+      {
+        "label": "DIA: Online gambling for players",
+        "url": "https://www.dia.govt.nz/Online-Gambling-for-players"
+      }
+    ]
+  },
+  {
+    "code": "JP",
+    "name": "Japan",
+    "onlineCasino": "not legal",
+    "sportsBetting": "state monopoly",
+    "regulator": {
+      "name": "National Police Agency (enforcement)",
+      "url": "https://www.npa.go.jp/bureau/safetylife/hoan/onlinecasino/onlinecasino.html"
+    },
+    "minAge": "19+ (toto)",
+    "crypto": "Not stated by the regulator.",
+    "licensing": "Gambling on online casinos is a crime in Japan even when the site is licensed abroad, and advertising them is now illegal. Only state-run betting such as toto and public racing is legal.",
+    "note": "Japan bans online casinos outright and allows only state-run sports and race betting.",
+    "sources": [
+      {
+        "label": "NPA: Gambling on online casinos is a crime",
+        "url": "https://www.npa.go.jp/bureau/safetylife/hoan/onlinecasino/onlinecasino.html"
+      },
+      {
+        "label": "toto (Japan Sport Council): under-19 ban",
+        "url": "https://www.toto-dream.com/"
+      }
+    ]
+  },
+  {
+    "code": "KR",
+    "name": "South Korea",
+    "onlineCasino": "not legal",
+    "sportsBetting": "state monopoly",
+    "regulator": {
+      "name": "National Gambling Control Commission (NGCC)",
+      "url": "https://www.ngcc.go.kr"
+    },
+    "crypto": "Not stated by the regulator.",
+    "licensing": "Only government-authorised gambling is legal, including sports toto (sports promotion betting). All other online gambling is illegal and can be reported to the NGCC's illegal gambling centre.",
+    "note": "South Korea allows only state-authorised sports toto and treats online casinos as illegal.",
+    "sources": [
+      {
+        "label": "NGCC: FAQ (legal gambling industries)",
+        "url": "https://www.ngcc.go.kr/police/faq.do"
+      },
+      {
+        "label": "NGCC homepage",
+        "url": "https://www.ngcc.go.kr/"
+      }
+    ]
+  },
+  {
+    "code": "IN",
+    "name": "India",
+    "onlineCasino": "not legal",
+    "sportsBetting": "not legal",
+    "regulator": {
+      "name": "Ministry of Electronics and Information Technology (MeitY)",
+      "url": "https://www.meity.gov.in"
+    },
+    "minAge": "Not applicable",
+    "crypto": "Not stated by the regulator.",
+    "licensing": "The Promotion and Regulation of Online Gaming Act, 2025 bans online money games, including online casino and betting, and bars banks from processing payments for them.",
+    "note": "India bans real-money online gaming, including online casino and sports betting.",
+    "sources": [
+      {
+        "label": "MeitY: Promotion and Regulation of Online Gaming Act, 2025",
+        "url": "https://www.meity.gov.in/documents/act-and-policies/promotion-and-regulation-of-online-gaming-act-2025-and-its-corrigenda-kTMxQjMtQWa?pageTitle=Promotion-and-Regulation-of-Online-Gaming-Act,-2025-and-its-Corrigenda"
+      }
+    ]
+  },
+  {
+    "code": "SG",
+    "name": "Singapore",
+    "onlineCasino": "not legal",
+    "sportsBetting": "state monopoly",
+    "regulator": {
+      "name": "Gambling Regulatory Authority (GRA)",
+      "url": "https://www.gra.gov.sg"
+    },
+    "crypto": "Not stated by the regulator.",
+    "licensing": "Singapore Pools is the only operator licensed for remote gambling. Taking part in unlicensed remote gambling is an offence, and the Singapore Police Force blocks unlawful sites, ads and payments.",
+    "note": "Singapore allows online betting only through Singapore Pools and makes using unlicensed sites a crime.",
+    "sources": [
+      {
+        "label": "GRA: Unlawful remote gambling activities",
+        "url": "https://www.gra.gov.sg/harm-minimisation/unlawful-remote-gambling-activities"
+      }
+    ]
+  },
+  {
+    "code": "PH",
+    "name": "Philippines",
+    "onlineCasino": "licensed market",
+    "sportsBetting": "licensed market",
+    "regulator": {
+      "name": "Philippine Amusement and Gaming Corporation (PAGCOR)",
+      "url": "https://www.pagcor.ph"
+    },
+    "minAge": "21+",
+    "crypto": "Not stated by the regulator.",
+    "licensing": "PAGCOR's Internet Gaming Licensing and Regulatory Group licenses electronic gaming operators serving players in the Philippines.",
+    "note": "The Philippines licenses online casino and betting through PAGCOR for players aged 21 and over.",
+    "sources": [
+      {
+        "label": "PAGCOR Regulatory (electronic gaming licensing, 21+)",
+        "url": "https://www.pagcor.ph/regulatory/index.php"
+      }
+    ]
+  },
+  {
+    "code": "ZA",
+    "name": "South Africa",
+    "onlineCasino": "not legal",
+    "sportsBetting": "licensed market",
+    "regulator": {
+      "name": "National Gambling Board (NGB) and provincial gambling boards",
+      "url": "https://www.ngb.org.za"
+    },
+    "minAge": "18+",
+    "crypto": "Not stated by the regulator.",
+    "licensing": "Online (interactive) casino games are illegal under section 11 of the National Gambling Act. Online sports betting is legal only with a provincial gambling board licence. The NGB is procuring a system to block illegal online gambling sites.",
+    "note": "South Africa licenses online sports betting through provincial boards but bans online casinos.",
+    "sources": [
+      {
+        "label": "NGB: FAQs (online gambling, age 18)",
+        "url": "https://www.ngb.org.za/faqs/"
+      },
+      {
+        "label": "NGB: Expression of interest to block illegal online gambling websites",
+        "url": "https://www.ngb.org.za/latest-news/ngb-expression-of-interest-to-block-illegal-online-gambling-websites/"
+      }
+    ]
+  },
+  {
+    "code": "KE",
+    "name": "Kenya",
+    "onlineCasino": "licensed market",
+    "sportsBetting": "licensed market",
+    "regulator": {
+      "name": "Gambling Regulatory Authority (formerly BCLB)",
+      "url": "https://gra.go.ke"
+    },
+    "minAge": "18+",
+    "crypto": "Not stated by the regulator.",
+    "licensing": "The Gambling Control Act 2025 creates online bookmaker, online casino and online lottery licences issued by the Gambling Regulatory Authority.",
+    "note": "Kenya licenses online casino and betting under the Gambling Control Act 2025.",
+    "sources": [
+      {
+        "label": "Gambling Control Act 2025 (PDF)",
+        "url": "http://gra.go.ke/wp-content/uploads/2026/03/Gambling-Control-Act.pdf"
+      },
+      {
+        "label": "Gambling Regulatory Authority homepage",
+        "url": "https://gra.go.ke/"
+      }
+    ]
+  },
+  {
+    "code": "UA",
+    "name": "Ukraine",
+    "onlineCasino": "licensed market",
+    "sportsBetting": "licensed market",
+    "regulator": {
+      "name": "PlayCity (State Agency for Gambling and Lotteries)",
+      "url": "https://playcity.gov.ua"
+    },
+    "minAge": "21+",
+    "crypto": "Not stated by the regulator.",
+    "licensing": "Online casino and online betting require a PlayCity licence under Law 768-IX. PlayCity blocks illegal online casinos.",
+    "note": "Ukraine licenses online casino and betting for players aged 21 and over.",
+    "sources": [
+      {
+        "label": "Law of Ukraine 768-IX on gambling (age 21, internet betting)",
+        "url": "https://zakon.rada.gov.ua/laws/show/768-20/print"
+      },
+      {
+        "label": "PlayCity homepage",
+        "url": "https://playcity.gov.ua/"
+      }
+    ]
+  },
+  {
+    "code": "CW",
+    "name": "Curaçao",
+    "onlineCasino": "licensed market",
+    "sportsBetting": "licensed market",
+    "regulator": {
+      "name": "Curaçao Gaming Authority (CGA)",
+      "url": "https://www.cga.cw"
+    },
+    "crypto": "Not stated by the regulator.",
+    "licensing": "Since 24 December 2024 the CGA licenses online gaming under the National Ordinance on Games of Chance (LOK), replacing the old master-licence system.",
+    "note": "Curaçao licenses online casino and betting operators under the LOK.",
+    "sources": [
+      {
+        "label": "CGA: Online gaming (LOK)",
+        "url": "https://www.cga.cw/regulation/online-gaming"
+      },
+      {
+        "label": "CGA homepage",
+        "url": "https://www.cga.cw/"
+      }
+    ]
+  }
+]

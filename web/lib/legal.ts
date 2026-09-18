@@ -69,15 +69,15 @@ export function toneOf(status?: string): Tone {
   const s = (status ?? "").toLowerCase();
   if (!s) return "none";
   if (/not legal|banned|prohibited|illegal/.test(s)) return "banned";
-  if (/monopoly|retail only|state-run/.test(s)) return "partial";
-  if (/no specific|grey|gray|unregulated/.test(s)) return "grey";
+  if (/monopoly|retail only|state-run|varies/.test(s)) return "partial";
+  if (/no specific|grey|gray|unregulated|no licensing yet/.test(s)) return "grey";
   if (/legal|licensed|allowed|online|regulated/.test(s)) return "legal";
   return "none";
 }
 
 export const TONE: Record<Tone, { fill: string; label: string }> = {
   legal: { fill: "#2FB67A", label: "Legal & licensed" },
-  partial: { fill: "#2FA8B0", label: "State monopoly / limited" },
+  partial: { fill: "#2FA8B0", label: "State monopoly / varies by state" },
   grey: { fill: "#C7A45C", label: "No specific law" },
   banned: { fill: "#C4653A", label: "Not legal" },
   none: { fill: "#2A3439", label: "Not yet covered" },
