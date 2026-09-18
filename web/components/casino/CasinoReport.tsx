@@ -11,6 +11,7 @@ import { tintFor } from "@/lib/logo";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { CasinoSpecSheet } from "@/components/entity/CasinoSpecSheet";
 import { CoinList, CoinStack } from "@/components/ui/CoinIcon";
+import { maxWithdrawal, maxDeposit } from "@/lib/casino-facts";
 import { Icon, type IconName } from "@/components/ui/Icon";
 import type { SpecFact } from "@/lib/types";
 
@@ -23,7 +24,7 @@ import type { SpecFact } from "@/lib/types";
 const MONO = "var(--font-jetbrains-mono), monospace";
 const BRAND: Record<string, string> = { roobet: "#FFCC00", stake: "#1FFF20", "bc-game": "#24EE89", shuffle: "#896CFF" };
 
-const REWARD_LABELS = ["Rakeback", "Cashback", "Weekly raffle", "Leaderboards", "VIP levels", "VIP ranks", "VIP Club", "VIP club", "Perks by level", "Missions", "VIP transfer", "Wagering-triggered rewards", "Reload bonuses"];
+const REWARD_LABELS = ["Rakeback", "Cashback", "Weekly raffle", "Leaderboards", "VIP levels", "VIP ranks", "VIP Club", "VIP club", "Perks by level", "Missions", "VIP transfer", "Wagering-triggered rewards", "Reload bonuses", "Referral program"];
 
 type Fact = SpecFact | undefined;
 
@@ -42,7 +43,7 @@ function shortAmount(f: Fact): string | null {
   if (!v) return null;
   if (/^(no|there is no|there isn't)\b[^.]*\b(minimum|maximum|limit|fee)/i.test(v) || /\bno (minimum|maximum|max|limit)s?\b/i.test(v.slice(0, 60))) return "None";
   if (/^(no fee|free|none\b|fee-free|no withdrawal fee)/i.test(v)) return "Free";
-  const m = v.match(/(?:(?:USD|EUR|USDT)\s?[\d.,]+(?:\s?(?:k|K|m|M|million))?|[$€£]\s?[\d.,]+(?:\s?(?:k|K|m|M|million))?|[\d.,]+\s?(?:USDT|USDC|USD|EUR|BTC|ETH|LTC|TRX|SOL|DOGE|mBTC)\b)/);
+  const m = v.match(/(?:(?:USD|EUR|USDT)\s?\d[\d.,]*(?:\s?(?:k|K|m|M|million))?|[$€£]\s?\d[\d.,]*(?:\s?(?:k|K|m|M|million))?|\d[\d.,]*\s?(?:USDT|USDC|USD|EUR|BTC|ETH|LTC|TRX|SOL|DOGE|mBTC)\b)/);
   if (m) return m[0].replace(/\s+/g, " ");
   if (/varies|depends|per coin|each coin|by coin|per currency/i.test(v)) return "Per coin";
   return null;
@@ -327,9 +328,9 @@ export function CasinoReport({ e }: { e: EntityView }) {
             <Tile label="Withdrawal speed" value={pv.label !== "Not stated" ? pv.label : null} f={wdTime} accent={brand} />
             <Tile label="Withdrawal fee" value={shortAmount(wdFee) === "None" ? "Free" : shortAmount(wdFee) ?? "Network fee"} f={wdFee} />
             <Tile label="Min withdrawal" value={shortAmount(minWd)} f={minWd} />
-            <Tile label="Max withdrawal" value={shortAmount(maxWd)} f={maxWd} />
+            <Tile label="Max withdrawal" value={maxWithdrawal(o.slug)} f={maxWd} />
             <Tile label="Min deposit" value={shortAmount(minDep)} f={minDep} />
-            <Tile label="Max deposit" value={shortAmount(maxDep)} f={maxDep} />
+            <Tile label="Max deposit" value={maxDeposit(o.slug)} f={maxDep} />
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", gap: 16, marginTop: 16 }}>
             <Card>
@@ -401,6 +402,7 @@ export function CasinoReport({ e }: { e: EntityView }) {
                 { k: "KYC", f: kyc },
                 { k: "Register check", f: f("Compliance", "Register check") },
                 { k: "Restricted", f: f("Compliance", "Restricted countries") },
+                { k: "Partners", f: f("Compliance", "Partners") },
                 { k: "Awards", f: f("Compliance", "Awards") },
               ]}
             />

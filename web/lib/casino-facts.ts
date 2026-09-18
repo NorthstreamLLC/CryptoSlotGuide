@@ -19,7 +19,7 @@ export function shortAmount(f: Fact): string | null {
   if (!v) return null;
   if (/^(no|there is no|there isn't)\b[^.]*\b(minimum|maximum|limit|fee)/i.test(v) || /\bno (minimum|maximum|max|limit)s?\b/i.test(v.slice(0, 60))) return "None";
   if (/^(no fee|free|none\b|fee-free|no withdrawal fee)/i.test(v)) return "Free";
-  const m = v.match(/(?:(?:USD|EUR|USDT)\s?[\d.,]+(?:\s?(?:k|K|m|M|million))?|[$€£]\s?[\d.,]+(?:\s?(?:k|K|m|M|million))?|[\d.,]+\s?(?:USDT|USDC|USD|EUR|BTC|ETH|LTC|TRX|SOL|DOGE|mBTC)\b)/);
+  const m = v.match(/(?:(?:USD|EUR|USDT)\s?\d[\d.,]*(?:\s?(?:k|K|m|M|million))?|[$€£]\s?\d[\d.,]*(?:\s?(?:k|K|m|M|million))?|\d[\d.,]*\s?(?:USDT|USDC|USD|EUR|BTC|ETH|LTC|TRX|SOL|DOGE|mBTC)\b)/);
   if (m) return m[0].replace(/\s+/g, " ");
   if (/varies|depends|per coin|each coin|by coin|per currency/i.test(v)) return "Per coin";
   return null;
@@ -76,4 +76,56 @@ export function licenceLabel(l: string): string {
   if (/^unconfirmed$/i.test(l)) return "Licence unconfirmed";
   if (/N\.V\.|B\.V\.|Ltd|LLC/.test(l)) return `Licensed via ${l}`;
   return `${l} licence`;
+}
+
+/**
+ * Short labels for each casino's cited maximum withdrawal and deposit
+ * ([withdrawal, deposit]); the full wording is shown underneath on the report.
+ */
+const MAX_LIMITS: Record<string, [string | null, string | null]> = {
+  stake: ["No max", "No max"],
+  bitstarz: ["1 BTC per withdrawal", "No max"],
+  cloudbet: ["No max once verified", "No max once verified"],
+  gamdom: [null, "No max stated"],
+  duelbits: ["No max stated", null],
+  rainbet: ["No max stated", "$700 on the bonus deposit"],
+  "bitcasino-io": ["No max (crypto)", "No max stated"],
+  "sportsbet-io": ["No max stated", "No max stated"],
+  "500-casino": ["No max stated", "No max stated"],
+  vave: ["No max", "Varies by method"],
+  fortunejack: ["EUR 2,000 per withdrawal", "EUR 2,000 per deposit"],
+  mbit: ["3 BTC a week, 10 BTC a month", "No max"],
+  "7bit": ["0.13 BTC a week, 0.52 BTC a month", "Varies by method"],
+  betplay: ["$8,000 a day", null],
+  thrill: ["No max", null],
+  yeet: ["No max", null],
+  razed: ["No max (crypto)", "$10,000 CAD per card deposit"],
+  betfury: ["$300,000 max win", null],
+  gamba: ["No max", "No max stated"],
+  solcasino: ["No max stated", "Varies by method"],
+  "whale-io": ["No max stated", "No max"],
+  acebet: ["EUR 100,000 a day", "No max stated"],
+  jackpotbet: ["No max", "No max"],
+  degen: ["About $1,000,000", "About $1,000,000 (USDT)"],
+  qzino: ["$300,000 max win", null],
+  shock: ["No max stated", null],
+  cybet: ["$100,000 per win", "No max"],
+  housebets: ["Set per coin", "Set per coin"],
+  dicey: ["No max stated", "No max stated"],
+  spartans: ["6,000 BRL a day", "No max stated"],
+  toshibet: ["No max", "No max"],
+  flush: ["$2,500 a day, $10,000 a month", "No max stated"],
+  degencity: ["No max stated", "No max stated"],
+  dustbit: ["No max stated", "No max stated"],
+  "wager-com": ["EUR 10,000 a month", "No max stated"],
+  coincasino: ["EUR 150,000 a month (crypto)", null],
+  bluff: ["$250,000 a month", "No max stated"],
+  "1win": ["Daily limit above $50,000", "No max"],
+};
+
+export function maxWithdrawal(slug: string): string | null {
+  return MAX_LIMITS[slug]?.[0] ?? null;
+}
+export function maxDeposit(slug: string): string | null {
+  return MAX_LIMITS[slug]?.[1] ?? null;
 }
