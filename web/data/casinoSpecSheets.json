@@ -8855,7 +8855,7 @@
           },
           {
             "label": "Prediction markets",
-            "value": "Yes. Roobet Predictions is powered by Polymarket. You buy Yes/No shares priced between $0.01 and $0.99, with the price showing the market's implied probability. Each winning share pays $1.00 and a losing share pays $0. You can sell before the market resolves, and trades use your normal Roobet balance. Categories on the page are Politics, Sports, Crypto, Finance, Geopolitics, Earnings, Tech, Culture, World, Economy, Trump and Elections. Money spent on positions does not count toward Roobet Rewards.",
+            "value": "Prediction Markets powered by Polymarket, traded from your normal Roobet balance: buy Yes or No shares priced $0.01 to $0.99, each winning share pays $1.00, and you can sell any time before the market resolves. Sports markets settle quickly after the game; complex events such as geopolitics can take much longer. Money spent on positions doesn't count toward Roobet Rewards. Availability can vary by region",
             "sourcing": "editorial",
             "sourceUrl": "https://help.roobet.com/en/articles/16056273-prediction-markets",
             "asOf": "2026-09-18"
