@@ -50,10 +50,13 @@ export interface WatchRow {
   cells: WatchCell[];
 }
 
+/** The titles on the board: most-played slots whose studios sell several RTP builds. */
+export const WATCH_SLOTS = ["sweet-bonanza", "gates-of-olympus", "big-bass-bonanza", "wanted-dead-or-a-wild", "le-bandit", "reactoonz", "money-train-4", "fire-in-the-hole-2"];
+
 export function getWatchRows(): WatchRow[] {
   const { slots, watchOps, rtpWatch } = siteData;
 
-  return slots.map((s) => {
+  return WATCH_SLOTS.map((slug) => slots.find((x) => x.slug === slug)!).filter(Boolean).map((s) => {
     const readings = watchOps.map((op) => {
       const r = rtpWatch.find((x) => x.slotSlug === s.slug && x.operatorSlug === op.slug);
       return r && !isStaleReading(r.checkedAt) ? r : undefined;
