@@ -38,8 +38,7 @@ function toWithdraw(o: Operator): { text: string; color: string } {
   const m = wv.mult;
   if (wv.kind === "none" || m === 0) return { text: "No wagering", color: "#7BE0B8" };
   if (m === null) return { text: "See terms", color: "#6E7F88" };
-  const basis = basisOf(o) === "deposit" ? " deposit" : basisOf(o) === "both" ? " bonus + dep." : " bonus";
-  return { text: `${m}×${basis}`, color: m <= 20 ? "#7BE0B8" : m <= 40 ? "#E8EDF0" : "#F0A77F" };
+  return { text: `${m}×`, color: m <= 20 ? "#7BE0B8" : m <= 40 ? "#E8EDF0" : "#F0A77F" };
 }
 
 /** What the multiplier applies to: the bonus, the deposit, or both. */
@@ -63,11 +62,11 @@ function earnedBy(o: Operator): string {
   const b = (o.bonusShort ?? o.bonus).toLowerCase();
   const rake = /rakeback|cashrake|rewards|drop/.test(b);
   const loss = /cashback|lossback/.test(b);
-  if (rake && loss) return "Every bet, or your losses";
-  if (loss) return "A share of your losses";
-  if (rake) return "A share of every bet";
-  if (/race|raffle|draw|leaderboard/.test(b)) return "Wagering, ranked";
-  return "Wagering";
+  if (rake && loss) return "Wagers or losses";
+  if (loss) return "Net losses";
+  if (rake) return "Every wager";
+  if (/race|raffle|draw|leaderboard/.test(b)) return "Wager leaderboard";
+  return "Every wager";
 }
 
 /** How often a reward pays out, from the casino's own rakeback, cashback and reload terms. */
