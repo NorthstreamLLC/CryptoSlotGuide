@@ -5615,10 +5615,10 @@
         "facts": [
           {
             "label": "Stated withdrawal time",
-            "value": "Instant withdrawals — a homepage title claim; no timeframe in its help centre",
+            "value": "Instant withdrawals, promoted on its homepage",
             "sourcing": "editorial",
             "sourceUrl": "https://www.goated.com/",
-            "asOf": "2026-09-15"
+            "asOf": "2026-09-18"
           },
           {
             "label": "Withdrawal fees",
@@ -5668,10 +5668,10 @@
           },
           {
             "label": "VIP levels",
-            "value": "Nine-tier XP-based VIP system: Copper (0 XP), Bronze (1,000), Silver (10,000), Gold (100,000), Platinum (450,000), Pearl (1,300,000), Sapphire (3,000,000), Emerald (7,000,000), Diamond (20,000,000), spanning levels 1-40. Recurring rewards attached to it: Rakeback from Bronze; Daily Bonus claimable once per day at 00:10 UTC on the previous day's wager volume; Weekly Bonus on Thursdays at 00:10 UTC expiring Wednesday 23:59 UTC (Bronze minimum); Monthly Bonus on the 1st at 00:10 UTC expiring the 14th at 23:59 UTC (Silver minimum); Level-Up Bonus within a tier; Tier-Up Reloads from Silver; Lossback from Platinum 1; monthly Top Goat Bonus; Birthday Bonus; higher referral commission from Platinum; event invites, dedicated VIP host and gifts at higher tiers. All claimed on the VIP page under Rewards.",
+            "value": "9 tiers of 5 levels each, from Copper to Diamond by amount wagered: Bronze 1 at $1,000, Silver 1 at $10,000, Gold 1 at $100,000, Platinum 1 at $450,000, Pearl 1 at $1.3M, Sapphire 1 at $3M, Emerald 1 at $7M and Diamond 1 at $20M, up to Diamond 5 at $40M. Every level pays a level-up bonus based on your level and the house edge of games played, from about $0.60 at Bronze to about $4,800 per level at Diamond (at a 1.2% edge), plus Tier-Up Reloads on reaching each new tier, from $5.40 at Silver to $7,800 at Diamond",
             "sourcing": "editorial",
-            "sourceUrl": "https://www.goated.com/llms-full.txt",
-            "asOf": "2026-09-17"
+            "sourceUrl": "https://www.goated.com/vip",
+            "asOf": "2026-09-18"
           },
           {
             "label": "Rakeback",
@@ -5693,6 +5693,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://www.goated.com/llms-full.txt",
             "asOf": "2026-09-17"
+          },
+          {
+            "label": "Perks by level",
+            "value": "From Bronze: instant rakeback, level-up bonus, birthday bonus and weekly bonus. Silver adds the monthly bonus and a bonus increase; Gold unlocks lossback (Platinum onward in full) and Platinum a referral increase. Sapphire adds VIP reloads, a VIP host and loans against future rewards; Emerald adds partial level-up bonuses; Diamond adds Goated event invitations",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.goated.com/vip",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -5701,10 +5708,10 @@
         "facts": [
           {
             "label": "Sportsbook",
-            "value": "Offers a crypto sportsbook with live in-play odds",
+            "value": "A crypto sportsbook with live in-play odds across 17+ sports, including soccer, American football, baseball, basketball, boxing, cricket, ice hockey, MMA, rugby, tennis, Formula 1 and golf, plus esports",
             "sourcing": "editorial",
             "sourceUrl": "https://www.goated.com/sports",
-            "asOf": "2026-09-16"
+            "asOf": "2026-09-18"
           },
           {
             "label": "Esports",
@@ -5753,10 +5760,10 @@
         "facts": [
           {
             "label": "Offer",
-            "value": "No traditional welcome or deposit bonus (site-wide statement, so no sports welcome offer either; Goated points to ongoing promotions, VIP rewards and its token/airdrop instead)",
+            "value": "Rotating sportsbook promotions, such as UFC split-decision insurance that refunds your stake if your fighter loses on a split decision, alongside featured odds on the Premier League and MLB",
             "sourcing": "editorial",
-            "sourceUrl": "https://www.goated.com/llms-full.txt",
-            "asOf": "2026-09-17"
+            "sourceUrl": "https://www.goated.com/sports",
+            "asOf": "2026-09-18"
           }
         ]
       },
