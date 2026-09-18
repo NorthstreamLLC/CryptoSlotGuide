@@ -4,8 +4,8 @@ import { breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 
 export const metadata = pageMetadata(
-  "What each offer actually costs you",
-  "Every live bonus on our index, with the turnover it demands per $100 of credit, the cashout cap, and the expiry — transcribed from the operator's own terms rather than the banner.",
+  "Compare the best crypto casino bonuses",
+  "Compare welcome bonuses, rakeback and cashback from every crypto casino we track: the headline offer, the wagering, the time limit and the max cashout, all from each casino's own bonus terms.",
   "/bonuses"
 );
 

@@ -8,6 +8,14 @@ import { brandFor, casinoFacts } from "@/lib/casino-facts";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { Icon } from "@/components/ui/Icon";
 import type { Operator } from "@/lib/types";
+import { raceFor, raceSlugs } from "@/lib/races";
+import { EmailSignup } from "@/components/ui/EmailSignup";
+
+/** The largest match percentage in an offer headline, e.g. 360 from "Up to 360% on 4 deposits". */
+function matchPct(o: Operator): number {
+  const all = [...(o.bonusShort ?? o.bonus).matchAll(/(\d{2,4})%/g)].map((m) => Number(m[1]));
+  return all.length ? Math.max(...all) : 0;
+}
 
 /**
  * Every casino offer side by side, sorted by how much you have to bet to
@@ -53,16 +61,28 @@ export function BonusesPage() {
   const countFor = (f: Filter) => (f === "all" ? ops.length : ops.filter((o) => classify(o).filter === f).length);
   const noWager = ops.filter((o) => wagerView(o).kind === "none" || wagerView(o).mult === 0).length;
 
+  const deposit = ops.filter((o) => classify(o).filter === "deposit");
+  const biggest = [...deposit].sort((a, b) => matchPct(b) - matchPct(a))[0];
+  const lowest = deposit.filter((o) => { const w = wagerView(o); return w.kind === "cited" && (w.mult ?? 0) > 0; }).sort((a, b) => (wagerView(a).mult ?? 0) - (wagerView(b).mult ?? 0))[0];
+  const featured = ops.find((o) => o.featured);
+  const raceTop = ops.find((o) => o.slug === raceSlugs()[0]);
+  const picks = [
+    featured && { tag: "Our featured pick", o: featured, line: featured.bonusShort ?? featured.bonus, icon: "gift" },
+    biggest && { tag: "Biggest match", o: biggest, line: biggest.bonusShort ?? biggest.bonus, icon: "percent" },
+    lowest && { tag: "Lowest wagering", o: lowest, line: `${wagerView(lowest).mult}× · ${lowest.bonusShort ?? lowest.bonus}`, icon: "bolt" },
+    raceTop && { tag: "Biggest races", o: raceTop, line: raceFor(raceTop.slug)?.label ?? "", icon: "trophy" },
+  ].filter(Boolean) as { tag: string; o: Operator; line: string; icon: "gift" | "percent" | "bolt" | "trophy" }[];
+
   return (
     <main style={{ background: "#07090B" }}>
       <section style={{ borderBottom: "1px solid rgba(255,255,255,.07)", background: "radial-gradient(80% 120% at 85% 0%, rgba(255,204,0,.08), transparent 55%), radial-gradient(60% 80% at 0% 100%, rgba(0,194,204,.07), transparent 60%), #0A0D10" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "48px 24px 40px" }}>
           <div style={{ fontFamily: MONO, fontSize: 11, letterSpacing: ".1em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 14 }}>Casino bonuses</div>
           <h1 style={{ margin: "0 0 14px", fontSize: "clamp(36px, 4.6vw, 54px)", lineHeight: 1.02, letterSpacing: "-.035em", fontWeight: 800, fontStretch: "114%", color: "#fff", textWrap: "balance" }}>
-            Every offer, and what it takes to cash out
+            Compare the best casino bonuses
           </h1>
           <p style={{ margin: "0 0 26px", maxWidth: "62ch", fontSize: 16.5, lineHeight: 1.6, color: "#A8B6BE" }}>
-            Welcome bonuses, rakeback and cashback from {ops.length} crypto casinos, sorted by how much you have to bet before you can withdraw. Every term comes from the casino&apos;s own bonus rules.
+            Welcome bonuses, rakeback and cashback from {ops.length} crypto casinos side by side: the headline offer, how much you have to bet before you can withdraw, the time limit and the max cashout. Every term comes from the casino&apos;s own bonus rules.
           </p>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
             {[
@@ -80,6 +100,30 @@ export function BonusesPage() {
       </section>
 
       <section style={{ maxWidth: 1280, margin: "0 auto", padding: "28px 24px 80px" }}>
+        <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#6E7F88", marginBottom: 12 }}>Best for</div>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 12, marginBottom: 30 }}>
+          {picks.map((pk) => {
+            const brand = brandFor(pk.o.slug);
+            return (
+              <Link key={pk.tag} href={`/casinos/${pk.o.slug}`} style={{ display: "flex", flexDirection: "column", gap: 10, padding: 18, borderRadius: 16, background: `radial-gradient(120% 90% at 100% 0%, ${brand}1a, transparent 60%), #0C1013`, border: `1px solid ${brand}33` }}>
+                <span style={{ display: "inline-flex", alignItems: "center", gap: 7, fontFamily: MONO, fontSize: 10, letterSpacing: ".07em", textTransform: "uppercase", color: brand }}>
+                  <Icon name={pk.icon} size={14} /> {pk.tag}
+                </span>
+                <span style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                  <span style={{ width: 30, height: 30, flex: "none", borderRadius: 8, overflow: "hidden" }}>
+                    <BrandMark slug={pk.o.slug} mono={pk.o.mono} tint={brand} radius={8} fontSize={10} />
+                  </span>
+                  <span style={{ fontSize: 15, fontWeight: 800, color: "#fff" }}>{pk.o.name}</span>
+                </span>
+                <span style={{ fontSize: 15.5, lineHeight: 1.3, fontWeight: 800, color: "#fff" }}>{pk.line}</span>
+                <span style={{ marginTop: "auto", display: "inline-flex", alignItems: "center", gap: 6, fontSize: 13, fontWeight: 700, color: "#00C2CC" }}>
+                  View offer <Icon name="arrow" size={14} />
+                </span>
+              </Link>
+            );
+          })}
+        </div>
+
         <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 18 }}>
           {filters.map((f) => {
             const active = filter === f.key;
@@ -152,7 +196,11 @@ export function BonusesPage() {
           })}
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 14, marginTop: 24 }}>
+        <div style={{ marginTop: 24 }}>
+          <EmailSignup source="bonuses" />
+        </div>
+
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 14, marginTop: 14 }}>
           <div style={{ padding: "26px 28px", borderRadius: 18, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
             <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 10 }}>How to read this</div>
             <p style={{ margin: 0, fontSize: 15, lineHeight: 1.7, color: "#A8B6BE" }}>
