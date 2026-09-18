@@ -51,7 +51,7 @@ const RACES: Record<string, Race> = {
 const PARTNERS: Record<string, string> = {
   stake: "Drake, UFC & Everton FC",
   roobet: "Chelsea FC & 6 more",
-  "bc-game": "Leicester City FC & 3 more",
+  "bc-game": "Leicester City FC, Jason Derulo & more",
   cloudbet: "PFL, Karate Combat & Tom Aspinall",
   shuffle: "Sunderland AFC",
   rainbet: "BKFC & 5 more",
