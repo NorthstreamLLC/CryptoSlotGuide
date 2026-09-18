@@ -144,8 +144,23 @@ export function RtpWatchPage() {
               </div>
             );
           })}
+          <div role="row" style={{ display: "grid", minWidth: 1180, gridTemplateColumns: `minmax(240px,1.4fr) 96px repeat(${houseCols.length},1fr) 92px`, alignItems: "center", background: "#101519", borderTop: "1px solid rgba(255,255,255,.1)" }}>
+            <div role="cell" style={{ padding: "15px 18px", fontSize: 14, fontWeight: 800, color: "#fff" }}>Average edge</div>
+            <div role="cell" style={{ padding: "15px 10px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#5C6A72" }}>games listed</div>
+            {houseCols.map((o, i) => {
+              const known = houseRows.map((h) => h.cells[i].edge).filter((x): x is number => x !== null);
+              const avg = known.length ? known.reduce((a, b) => a + b, 0) / known.length : null;
+              return (
+                <div key={o.slug} role="cell" style={{ padding: "15px 10px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 13.5, fontWeight: 800, color: avg === null ? "#39454C" : avg < 1 ? "#5FE3E8" : avg >= 2 ? "#DA9877" : "#fff" }}>
+                  {avg === null ? "—" : `${avg.toFixed(2)}%`}
+                  <div style={{ fontSize: 9.5, fontWeight: 400, color: "#5C6A72", marginTop: 2 }}>{known.length} games</div>
+                </div>
+              );
+            })}
+            <span />
+          </div>
         </div>
-        <div style={{ margin: "10px 0 0", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#4E5A62" }}>Teal = lowest edge on the board · orange = 3% or more · — = no published figure found</div>
+        <div style={{ margin: "10px 0 0", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#4E5A62" }}>Teal = lowest edge on the board · orange = 3% or more · — = no published figure found · average edge = simple average of the games listed for that casino, using its lowest stated figure</div>
 
         <div style={{ display: "grid", gridTemplateColumns: "1.4fr .6fr", gap: 14, marginTop: 24 }}>
           <div style={{ padding: "28px 32px", borderRadius: 14, background: "linear-gradient(150deg,#0E1417,#0A0E10)", border: "1px solid rgba(255,255,255,.07)" }}>

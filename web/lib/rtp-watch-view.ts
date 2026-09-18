@@ -134,7 +134,7 @@ export function getHouseEdgeRows() {
   const extra = HOUSE_EXTRA.map((slug) => ({ slug, name: ops.find((o) => o.slug === slug)?.name ?? slug }));
   const cols = [...watchOps, ...extra.filter((e) => !watchOps.some((w) => w.slug === e.slug))];
   const fmt = (n: number) => `${n % 1 ? n.toFixed(1) : n}%`;
-  return { cols, rows: houseGames.map((g) => ({
+  const all = houseGames.map((g) => ({
     slug: g.slug,
     name: g.name,
     range: g.edgeRange,
@@ -148,5 +148,14 @@ export function getHouseEdgeRows() {
       const hi = Math.max(...found.map((x) => x.edge!));
       return { label: (lo === hi ? fmt(lo) : `${fmt(lo)}–${fmt(hi)}`) + (found.some((x) => x.dynamic) ? "+" : ""), edge: lo as number | null };
     }),
-  })) };
+  }));
+  // Keep casinos with at least two published figures, and derive each range from what is shown.
+  const keep = cols.map((_, i) => all.filter((r) => r.cells[i].edge !== null).length >= 2);
+  const rows = all.map((r) => {
+    const cells = r.cells.filter((_, i) => keep[i]);
+    const known = cells.filter((c) => c.edge !== null).map((c) => c.edge as number);
+    const lo = Math.min(...known), hi = Math.max(...known);
+    return { ...r, cells, range: known.length ? (lo === hi ? fmt(lo) : `${fmt(lo).replace("%", "")}–${fmt(hi)}`) : r.range };
+  });
+  return { cols: cols.filter((_, i) => keep[i]), rows };
 }
