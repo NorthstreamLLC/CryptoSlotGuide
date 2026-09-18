@@ -29,6 +29,8 @@ const STATIC_ROUTES = [
   "/slots/cluster-pays",
   "/slots/high-volatility",
   "/providers",
+  "/providers/licences",
+  "/legal/europe",
   "/sportsbooks",
   "/prediction-markets",
   "/wallets",

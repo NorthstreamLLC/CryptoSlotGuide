@@ -1,0 +1,1725 @@
+[
+ {
+  "slug": "pragmatic-play",
+  "name": "Pragmatic Play",
+  "parent": "Veridian (Gibraltar) Limited",
+  "founded": null,
+  "sourceUrl": "https://www.pragmaticplay.com/en/about-us/",
+  "licences": [
+   {
+    "code": "GB",
+    "name": "Great Britain",
+    "regulator": "UK Gambling Commission",
+    "url": "https://www.gamblingcommission.gov.uk/public-register/business/detail/56015",
+    "note": "Account 56015 (footer)"
+   },
+   {
+    "code": "GI",
+    "name": "Gibraltar",
+    "regulator": "Gibraltar Licensing Authority / Gambling Commissioner",
+    "url": "https://gamblingdivision.gov.gi/",
+    "note": "RGL No. 107 (footer)"
+   },
+   {
+    "code": "MT",
+    "name": "Malta",
+    "regulator": "Malta Gaming Authority (MGA)",
+    "url": "https://www.mga.org.mt/",
+    "note": "MGA licence 2016; MGA recognition notice for bingo/live casino 2019 (press releases)"
+   },
+   {
+    "code": "RO",
+    "name": "Romania",
+    "regulator": "Oficiul National pentru Jocuri de Noroc (ONJN)",
+    "url": "https://onjn.gov.ro/licentiati-clasa-a-ii-a/",
+    "note": "Class 2 licence 2016; Class II for Bucharest live studio 2019 (press releases)"
+   },
+   {
+    "code": "IT",
+    "name": "Italy",
+    "regulator": "Agenzia delle Dogane e dei Monopoli (ADM)",
+    "url": "https://www.adm.gov.it/",
+    "note": "Named as an existing licence in 2017 press release"
+   },
+   {
+    "code": "DK",
+    "name": "Denmark",
+    "regulator": "Spillemyndigheden (Danish Gambling Authority)",
+    "url": "https://www.spillemyndigheden.dk/",
+    "note": "Regulatory approval, 2017 press release"
+   },
+   {
+    "code": "BS",
+    "name": "Bahamas",
+    "regulator": "Gaming Board for The Bahamas",
+    "url": "https://www.gamingboardbahamas.com/",
+    "note": "Supplier licence, 2017 press release"
+   },
+   {
+    "code": "PH",
+    "name": "Philippines",
+    "regulator": "PAGCOR",
+    "url": "https://www.pagcor.ph/",
+    "note": "PAGCOR licence, 2016 press release"
+   },
+   {
+    "code": "GR",
+    "name": "Greece",
+    "regulator": "Hellenic Gaming Commission (HGC)",
+    "url": "https://certifications.gamingcommission.gov.gr/publicRecordsOnline/SitePages/KataskevastesOnline.aspx",
+    "note": "A1 supplier licence, 2021 press release"
+   },
+   {
+    "code": "AR",
+    "name": "Argentina (Buenos Aires City)",
+    "regulator": "Lotería de la Ciudad de Buenos Aires (LOTBA)",
+    "url": "https://www.loteriadelaciudad.gob.ar/",
+    "note": "LOTBA accreditation, 2021 press release"
+   }
+  ]
+ },
+ {
+  "slug": "hacksaw-gaming",
+  "name": "Hacksaw Gaming",
+  "parent": "Hacksaw AB",
+  "founded": 2018,
+  "sourceUrl": "https://www.hacksawgroup.com/en/about/licenses/",
+  "licences": [
+   {
+    "code": "MT",
+    "name": "Malta",
+    "regulator": "Malta Gaming Authority (MGA)",
+    "url": "https://authorisation.mga.org.mt/verification.aspx?lang=EN&company=a8c91358-08c4-4127-9be5-d35529dcd01b&details=1",
+    "note": "MGA/CRP/501/2018"
+   },
+   {
+    "code": "GB",
+    "name": "Great Britain",
+    "regulator": "UK Gambling Commission",
+    "url": "https://registers.gamblingcommission.gov.uk/54059",
+    "note": "000-054059-R-331396-002"
+   },
+   {
+    "code": "GR",
+    "name": "Greece",
+    "regulator": "Hellenic Gaming Commission (HGC)",
+    "url": "https://certifications.gamingcommission.gov.gr/publicRecordsOnline/SitePages/KataskevastesOnline.aspx",
+    "note": "HGC-000055-MN"
+   },
+   {
+    "code": "RO",
+    "name": "Romania",
+    "regulator": "Oficiul National pentru Jocuri de Noroc (ONJN)",
+    "url": "https://onjn.gov.ro/licentiati-clasa-a-ii-a/",
+    "note": "L2223924Y001379"
+   },
+   {
+    "code": "CA-ON",
+    "name": "Ontario",
+    "regulator": "Alcohol and Gaming Commission of Ontario (AGCO)",
+    "url": "https://www.agco.ca/en/lottery-and-gaming/gaming-related-suppliers",
+    "note": "GRSM1241574"
+   },
+   {
+    "code": "SE",
+    "name": "Sweden",
+    "regulator": "Spelinspektionen (Swedish Gambling Authority)",
+    "url": "https://www.spelinspektionen.se/",
+    "note": "23Si638"
+   },
+   {
+    "code": "DK",
+    "name": "Denmark",
+    "regulator": "Spillemyndigheden (Danish Gambling Authority)",
+    "url": "https://www.spillemyndigheden.dk/",
+    "note": "24-432338"
+   },
+   {
+    "code": "IM",
+    "name": "Isle of Man",
+    "regulator": "Gambling Supervision Commission (GSC)",
+    "url": "https://www.isleofmangsc.com/gambling/general-supervision/online-gambling-licensee-register/"
+   },
+   {
+    "code": "PE",
+    "name": "Peru",
+    "regulator": "MINCETUR (DGJCMT)",
+    "url": "https://apuestasdeportivas.mincetur.gob.pe/proveedores_online.html"
+   },
+   {
+    "code": "CW",
+    "name": "Curaçao",
+    "regulator": "Curaçao Gaming Authority",
+    "url": "https://www.gamingcontrolcuracao.org/"
+   },
+   {
+    "code": "US-WV",
+    "name": "West Virginia",
+    "regulator": "West Virginia Lottery",
+    "url": "https://wvlottery.com/"
+   },
+   {
+    "code": "US-MI",
+    "name": "Michigan",
+    "regulator": "Michigan Gaming Control Board",
+    "url": "https://www.michigan.gov/mgcb",
+    "note": "Provisional Internet Gaming Supplier License"
+   },
+   {
+    "code": "US-PA",
+    "name": "Pennsylvania",
+    "regulator": "Pennsylvania Gaming Control Board",
+    "url": "https://gamingcontrolboard.pa.gov/"
+   },
+   {
+    "code": "US-NJ",
+    "name": "New Jersey",
+    "regulator": "New Jersey Division of Gaming Enforcement",
+    "url": "https://www.njoag.gov/about/divisions-and-offices/division-of-gaming-enforcement-home/",
+    "note": "Filing acceptance for CSIE"
+   },
+   {
+    "code": "KM",
+    "name": "Anjouan (Comoros)",
+    "regulator": "Anjouan Gaming",
+    "url": "https://anjouangaming.com/license-register/",
+    "note": "Recognition notice"
+   },
+   {
+    "code": "US-CT",
+    "name": "Connecticut",
+    "regulator": "Connecticut Department of Consumer Protection",
+    "url": "https://portal.ct.gov/dcp/gaming-division"
+   },
+   {
+    "code": "CA-AB",
+    "name": "Alberta",
+    "regulator": "Alberta Gaming, Liquor & Cannabis (AGLC)",
+    "url": "https://aglc.ca/"
+   },
+   {
+    "code": "AR",
+    "name": "Argentina (Buenos Aires City)",
+    "regulator": "Lotería de la Ciudad de Buenos Aires (LOTBA)",
+    "url": "https://www.loteriadelaciudad.gob.ar/"
+   }
+  ]
+ },
+ {
+  "slug": "nolimit-city",
+  "name": "Nolimit City",
+  "parent": "Evolution",
+  "founded": 2014,
+  "sourceUrl": "https://www.evolution.com/about/licences",
+  "licences": [
+   {
+    "code": "MT",
+    "name": "Malta",
+    "regulator": "Malta Gaming Authority (MGA)",
+    "url": "https://authorisation.mga.org.mt/verification.aspx?lang=EN&company=847309ce-34f5-49cc-ab97-7ea337bdfa82&details=1",
+    "note": "MGA/B2B/299/2015"
+   },
+   {
+    "code": "RO",
+    "name": "Romania",
+    "regulator": "Oficiul National pentru Jocuri de Noroc (ONJN)",
+    "url": "https://onjn.gov.ro/licentiati-clasa-a-ii-a/"
+   },
+   {
+    "code": "GB",
+    "name": "Great Britain",
+    "regulator": "UK Gambling Commission",
+    "url": "https://www.gamblingcommission.gov.uk/public-register"
+   },
+   {
+    "code": "DK",
+    "name": "Denmark",
+    "regulator": "Spillemyndigheden (Danish Gambling Authority)",
+    "url": "https://www.spillemyndigheden.dk/"
+   },
+   {
+    "code": "SE",
+    "name": "Sweden",
+    "regulator": "Spelinspektionen (Swedish Gambling Authority)",
+    "url": "https://www.spelinspektionen.se/"
+   }
+  ]
+ },
+ {
+  "slug": "push-gaming",
+  "name": "Push Gaming",
+  "parent": null,
+  "founded": null,
+  "sourceUrl": "https://www.pushgaming.com/responsible-gaming/licences-certifications/",
+  "licences": [
+   {
+    "code": "MT",
+    "name": "Malta",
+    "regulator": "Malta Gaming Authority (MGA)",
+    "url": "https://authorisation.mga.org.mt/verification.aspx?lang=EN&company=9f54a050-ead7-4bc6-8f68-e5cb053524b3&details=1",
+    "note": "MGA/B2B/779/2020"
+   },
+   {
+    "code": "GB",
+    "name": "Great Britain",
+    "regulator": "UK Gambling Commission",
+    "url": "https://www.gamblingcommission.gov.uk/public-register/business/detail/54984",
+    "note": "Account 054984"
+   },
+   {
+    "code": "RO",
+    "name": "Romania",
+    "regulator": "Oficiul National pentru Jocuri de Noroc (ONJN)",
+    "url": "https://onjn.gov.ro/licentiati-clasa-a-ii-a/"
+   },
+   {
+    "code": "CA-ON",
+    "name": "Ontario",
+    "regulator": "Alcohol and Gaming Commission of Ontario (AGCO)",
+    "url": "https://www.agco.ca/en/lottery-and-gaming/gaming-related-suppliers"
+   },
+   {
+    "code": "CA-AB",
+    "name": "Alberta",
+    "regulator": "Alberta Gaming, Liquor & Cannabis (AGLC)",
+    "url": "https://aglc.ca/"
+   },
+   {
+    "code": "GR",
+    "name": "Greece",
+    "regulator": "Hellenic Gaming Commission (HGC)",
+    "url": "https://certifications.gamingcommission.gov.gr/publicRecordsOnline/SitePages/KataskevastesOnline.aspx"
+   },
+   {
+    "code": "SE",
+    "name": "Sweden",
+    "regulator": "Spelinspektionen (Swedish Gambling Authority)",
+    "url": "https://www.spelinspektionen.se/"
+   },
+   {
+    "code": "GI",
+    "name": "Gibraltar",
+    "regulator": "Gibraltar Licensing Authority / Gambling Commissioner",
+    "url": "https://gamblingdivision.gov.gi/"
+   },
+   {
+    "code": "DK",
+    "name": "Denmark",
+    "regulator": "Spillemyndigheden (Danish Gambling Authority)",
+    "url": "https://www.spillemyndigheden.dk/"
+   },
+   {
+    "code": "US-MI",
+    "name": "Michigan",
+    "regulator": "Michigan Gaming Control Board",
+    "url": "https://www.michigan.gov/mgcb"
+   },
+   {
+    "code": "US-NJ",
+    "name": "New Jersey",
+    "regulator": "New Jersey Division of Gaming Enforcement",
+    "url": "https://www.njoag.gov/about/divisions-and-offices/division-of-gaming-enforcement-home/",
+    "note": "Transactional waiver"
+   }
+  ]
+ },
+ {
+  "slug": "relax-gaming",
+  "name": "Relax Gaming",
+  "parent": null,
+  "founded": null,
+  "sourceUrl": "https://www.relax-gaming.com/terms/license-info",
+  "licences": [
+   {
+    "code": "MT",
+    "name": "Malta",
+    "regulator": "Malta Gaming Authority (MGA)",
+    "url": "https://authorisation.mga.org.mt/verification.aspx?lang=EN&company=47a747e0-8923-4414-9bb6-0be487aa690f&details=1",
+    "note": "MGA/B2B/246/2013"
+   },
+   {
+    "code": "GB",
+    "name": "Great Britain",
+    "regulator": "UK Gambling Commission",
+    "url": "https://www.gamblingcommission.gov.uk/public-register/business/detail/37462",
+    "note": "000-037462-R-319357-015; Relax Gaming (Gibraltar) also holds 000-057758"
+   },
+   {
+    "code": "GI",
+    "name": "Gibraltar",
+    "regulator": "Gibraltar Licensing Authority / Gambling Commissioner",
+    "url": "https://gamblingdivision.gov.gi/",
+    "note": "Remote B2B Gaming Operator licence No. 124"
+   },
+   {
+    "code": "CA-ON",
+    "name": "Ontario",
+    "regulator": "Alcohol and Gaming Commission of Ontario (AGCO)",
+    "url": "https://www.agco.ca/en/lottery-and-gaming/gaming-related-suppliers",
+    "note": "GRSM1236604"
+   },
+   {
+    "code": "RO",
+    "name": "Romania",
+    "regulator": "Oficiul National pentru Jocuri de Noroc (ONJN)",
+    "url": "https://onjn.gov.ro/licentiati-clasa-a-ii-a/",
+    "note": "Class 2A licences 1121 and 1130"
+   },
+   {
+    "code": "GR",
+    "name": "Greece",
+    "regulator": "Hellenic Gaming Commission (HGC)",
+    "url": "https://certifications.gamingcommission.gov.gr/publicRecordsOnline/SitePages/KataskevastesOnline.aspx",
+    "note": "HGC-000099-MN"
+   },
+   {
+    "code": "SE",
+    "name": "Sweden",
+    "regulator": "Spelinspektionen (Swedish Gambling Authority)",
+    "url": "https://www.spelinspektionen.se/",
+    "note": "23Si636"
+   },
+   {
+    "code": "DK",
+    "name": "Denmark",
+    "regulator": "Spillemyndigheden (Danish Gambling Authority)",
+    "url": "https://www.spillemyndigheden.dk/",
+    "note": "24-437169"
+   },
+   {
+    "code": "PE",
+    "name": "Peru",
+    "regulator": "MINCETUR (DGJCMT)",
+    "url": "https://apuestasdeportivas.mincetur.gob.pe/proveedores_online.html",
+    "note": "Registration PSV0073"
+   },
+   {
+    "code": "US-PA",
+    "name": "Pennsylvania",
+    "regulator": "Pennsylvania Gaming Control Board",
+    "url": "https://gamingcontrolboard.pa.gov/",
+    "note": "Interactive Gaming Manufacturer 158634-1"
+   }
+  ]
+ },
+ {
+  "slug": "evolution",
+  "name": "Evolution",
+  "parent": null,
+  "founded": null,
+  "sourceUrl": "https://www.evolution.com/about/licences",
+  "licences": [
+   {
+    "code": "BE",
+    "name": "Belgium",
+    "regulator": "Belgian Gaming Commission",
+    "url": "https://www.gamingcommission.be/"
+   },
+   {
+    "code": "BG",
+    "name": "Bulgaria",
+    "regulator": "National Revenue Agency",
+    "url": "https://nra.bg/"
+   },
+   {
+    "code": "DK",
+    "name": "Denmark",
+    "regulator": "Spillemyndigheden (Danish Gambling Authority)",
+    "url": "https://www.spillemyndigheden.dk/"
+   },
+   {
+    "code": "GI",
+    "name": "Gibraltar",
+    "regulator": "Gibraltar Licensing Authority / Gambling Commissioner",
+    "url": "https://gamblingdivision.gov.gi/"
+   },
+   {
+    "code": "GR",
+    "name": "Greece",
+    "regulator": "Hellenic Gaming Commission (HGC)",
+    "url": "https://certifications.gamingcommission.gov.gr/publicRecordsOnline/SitePages/KataskevastesOnline.aspx"
+   },
+   {
+    "code": "GE",
+    "name": "Georgia",
+    "regulator": "Revenue Service / Ministry of Finance of Georgia",
+    "url": "https://www.rs.ge/"
+   },
+   {
+    "code": "IM",
+    "name": "Isle of Man",
+    "regulator": "Gambling Supervision Commission (GSC)",
+    "url": "https://www.isleofmangsc.com/gambling/general-supervision/online-gambling-licensee-register/"
+   },
+   {
+    "code": "LV",
+    "name": "Latvia",
+    "regulator": "State Revenue Service",
+    "url": "https://www.vid.gov.lv/"
+   },
+   {
+    "code": "MT",
+    "name": "Malta",
+    "regulator": "Malta Gaming Authority (MGA)",
+    "url": "https://authorisation.mga.org.mt/verification.aspx?lang=EN&company=f14d66a9-3f60-40ec-a19e-1f3c53c72473&details=1",
+    "note": "MGA/CRP/187/2010"
+   },
+   {
+    "code": "RO",
+    "name": "Romania",
+    "regulator": "Oficiul National pentru Jocuri de Noroc (ONJN)",
+    "url": "https://onjn.gov.ro/licentiati-clasa-a-ii-a/"
+   },
+   {
+    "code": "ES",
+    "name": "Spain",
+    "regulator": "Dirección General de Ordenación del Juego (DGOJ)",
+    "url": "https://www.ordenacionjuego.es/"
+   },
+   {
+    "code": "SE",
+    "name": "Sweden",
+    "regulator": "Spelinspektionen (Swedish Gambling Authority)",
+    "url": "https://www.spelinspektionen.se/"
+   },
+   {
+    "code": "GB",
+    "name": "Great Britain",
+    "regulator": "UK Gambling Commission",
+    "url": "https://www.gamblingcommission.gov.uk/public-register/business/detail/41655",
+    "note": "Account 41655"
+   },
+   {
+    "code": "ZA",
+    "name": "South Africa (Western Cape)",
+    "regulator": "Western Cape Gambling and Racing Board",
+    "url": "https://www.wcgrb.co.za/"
+   },
+   {
+    "code": "TZ",
+    "name": "Tanzania",
+    "regulator": "Gaming Board of Tanzania",
+    "url": "https://www.gamingboard.go.tz/"
+   },
+   {
+    "code": "CW",
+    "name": "Curaçao",
+    "regulator": "Antillephone N.V. (Curaçao)",
+    "url": "https://www.gamingcontrolcuracao.org/"
+   },
+   {
+    "code": "BS",
+    "name": "Bahamas",
+    "regulator": "Gaming Board for The Bahamas",
+    "url": "https://www.gamingboardbahamas.com/"
+   },
+   {
+    "code": "CA-AB",
+    "name": "Alberta",
+    "regulator": "Alberta Gaming, Liquor & Cannabis (AGLC)",
+    "url": "https://aglc.ca/"
+   },
+   {
+    "code": "CA-BC",
+    "name": "British Columbia",
+    "regulator": "Gambling Policy and Enforcement Branch (IGCO BC)",
+    "url": "https://www2.gov.bc.ca/gov/content/sports-culture/gambling-fundraising"
+   },
+   {
+    "code": "CA-NS",
+    "name": "Nova Scotia (Atlantic Lottery)",
+    "regulator": "Alcohol, Gaming, Fuel and Tobacco Division (Nova Scotia)",
+    "url": "https://novascotia.ca/"
+   },
+   {
+    "code": "CA-ON",
+    "name": "Ontario",
+    "regulator": "Alcohol and Gaming Commission of Ontario (AGCO)",
+    "url": "https://www.agco.ca/en/lottery-and-gaming/gaming-related-suppliers"
+   },
+   {
+    "code": "CA-QC",
+    "name": "Quebec",
+    "regulator": "Autorité des marchés financiers (Quebec)",
+    "url": "https://www.racj.gouv.qc.ca/",
+    "note": "Authorization to contract with a public body"
+   },
+   {
+    "code": "US-CT",
+    "name": "Connecticut",
+    "regulator": "Connecticut Department of Consumer Protection",
+    "url": "https://portal.ct.gov/dcp/gaming-division"
+   },
+   {
+    "code": "US-DE",
+    "name": "Delaware",
+    "regulator": "Delaware State Lottery Office",
+    "url": "https://www.delottery.com/"
+   },
+   {
+    "code": "US-MI",
+    "name": "Michigan",
+    "regulator": "Michigan Gaming Control Board",
+    "url": "https://www.michigan.gov/mgcb"
+   },
+   {
+    "code": "US-NJ",
+    "name": "New Jersey",
+    "regulator": "New Jersey Division of Gaming Enforcement",
+    "url": "https://www.njoag.gov/about/divisions-and-offices/division-of-gaming-enforcement-home/"
+   },
+   {
+    "code": "US-PA",
+    "name": "Pennsylvania",
+    "regulator": "Pennsylvania Gaming Control Board",
+    "url": "https://gamingcontrolboard.pa.gov/"
+   },
+   {
+    "code": "US-RI",
+    "name": "Rhode Island",
+    "regulator": "Rhode Island Department of Business Regulation",
+    "url": "https://dbr.ri.gov/"
+   },
+   {
+    "code": "US-WV",
+    "name": "West Virginia",
+    "regulator": "West Virginia Lottery",
+    "url": "https://wvlottery.com/"
+   },
+   {
+    "code": "AR",
+    "name": "Argentina (Buenos Aires City)",
+    "regulator": "Lotería de la Ciudad de Buenos Aires (LOTBA)",
+    "url": "https://www.loteriadelaciudad.gob.ar/"
+   },
+   {
+    "code": "PA",
+    "name": "Panama",
+    "regulator": "Junta de Control de Juegos",
+    "url": "https://www.jcj.gob.pa/"
+   },
+   {
+    "code": "PE",
+    "name": "Peru",
+    "regulator": "MINCETUR (DGJCMT)",
+    "url": "https://apuestasdeportivas.mincetur.gob.pe/proveedores_online.html"
+   }
+  ]
+ },
+ {
+  "slug": "netent",
+  "name": "NetEnt",
+  "parent": "Evolution",
+  "founded": 1996,
+  "sourceUrl": "https://www.evolution.com/about/licences",
+  "licences": [
+   {
+    "code": "MT",
+    "name": "Malta",
+    "regulator": "Malta Gaming Authority (MGA)",
+    "url": "https://authorisation.mga.org.mt/verification.aspx?lang=EN&company=f14d66a9-3f60-40ec-a19e-1f3c53c72473&details=1",
+    "note": "Footer names Evolution Gaming Malta Ltd MGA/CRP/187/2010; group licences listed under Evolution"
+   }
+  ]
+ },
+ {
+  "slug": "red-tiger",
+  "name": "Red Tiger",
+  "parent": "Evolution",
+  "founded": 2014,
+  "sourceUrl": "https://www.evolution.com/about/licences",
+  "licences": [
+   {
+    "code": "MT",
+    "name": "Malta",
+    "regulator": "Malta Gaming Authority (MGA)",
+    "url": "https://authorisation.mga.org.mt/verification.aspx?lang=EN&company=f14d66a9-3f60-40ec-a19e-1f3c53c72473&details=1",
+    "note": "Footer names Evolution Gaming Malta Ltd MGA/CRP/187/2010; group licences listed under Evolution"
+   }
+  ]
+ },
+ {
+  "slug": "big-time-gaming",
+  "name": "Big Time Gaming",
+  "parent": "Evolution",
+  "founded": 2011,
+  "sourceUrl": "https://www.evolution.com/about/licences",
+  "licences": [
+   {
+    "code": "SE",
+    "name": "Sweden",
+    "regulator": "Spelinspektionen (Swedish Gambling Authority)",
+    "url": "https://www.spelinspektionen.se/",
+    "note": "Gaming software licence (Evolution licences page)"
+   }
+  ]
+ },
+ {
+  "slug": "play-n-go",
+  "name": "Play'n GO",
+  "parent": null,
+  "founded": null,
+  "sourceUrl": "https://www.playngo.com/licences-certification",
+  "licences": [
+   {
+    "code": "CA-AB",
+    "name": "Alberta",
+    "regulator": "Alberta Gaming, Liquor & Cannabis (AGLC)",
+    "url": "https://aglc.ca/"
+   },
+   {
+    "code": "BE",
+    "name": "Belgium",
+    "regulator": "Belgian Gaming Commission",
+    "url": "https://www.gamingcommission.be/"
+   },
+   {
+    "code": "BW",
+    "name": "Botswana",
+    "regulator": "Gambling Authority Botswana",
+    "url": "https://www.gamblingauthority.co.bw/"
+   },
+   {
+    "code": "AR",
+    "name": "Argentina (Buenos Aires City)",
+    "regulator": "Lotería de la Ciudad de Buenos Aires (LOTBA)",
+    "url": "https://www.loteriadelaciudad.gob.ar/"
+   },
+   {
+    "code": "US-CT",
+    "name": "Connecticut",
+    "regulator": "Connecticut Department of Consumer Protection",
+    "url": "https://portal.ct.gov/dcp/gaming-division"
+   },
+   {
+    "code": "US-DE",
+    "name": "Delaware",
+    "regulator": "Delaware State Lottery Office",
+    "url": "https://www.delottery.com/"
+   },
+   {
+    "code": "DK",
+    "name": "Denmark",
+    "regulator": "Spillemyndigheden (Danish Gambling Authority)",
+    "url": "https://www.spillemyndigheden.dk/"
+   },
+   {
+    "code": "US-FL",
+    "name": "Florida",
+    "regulator": "Florida Gaming Control Commission",
+    "url": "https://flgaming.gov/",
+    "note": "Florida slot machine business licence"
+   },
+   {
+    "code": "GI",
+    "name": "Gibraltar",
+    "regulator": "Gibraltar Licensing Authority / Gambling Commissioner",
+    "url": "https://gamblingdivision.gov.gi/",
+    "note": "RGL No. 131"
+   },
+   {
+    "code": "GR",
+    "name": "Greece",
+    "regulator": "Hellenic Gaming Commission (HGC)",
+    "url": "https://certifications.gamingcommission.gov.gr/publicRecordsOnline/SitePages/KataskevastesOnline.aspx"
+   },
+   {
+    "code": "MT",
+    "name": "Malta",
+    "regulator": "Malta Gaming Authority (MGA)",
+    "url": "https://authorisation.mga.org.mt/verification.aspx?lang=EN&company=c559d848-4941-4f5e-b6f7-3f309183a7ce&details=1",
+    "note": "MGA/B2B/225/2012"
+   },
+   {
+    "code": "US-MI",
+    "name": "Michigan",
+    "regulator": "Michigan Gaming Control Board",
+    "url": "https://www.michigan.gov/mgcb"
+   },
+   {
+    "code": "US-NJ",
+    "name": "New Jersey",
+    "regulator": "New Jersey Division of Gaming Enforcement",
+    "url": "https://www.njoag.gov/about/divisions-and-offices/division-of-gaming-enforcement-home/",
+    "note": "Transactional waiver"
+   },
+   {
+    "code": "CA-ON",
+    "name": "Ontario",
+    "regulator": "Alcohol and Gaming Commission of Ontario (AGCO)",
+    "url": "https://www.agco.ca/en/lottery-and-gaming/gaming-related-suppliers"
+   },
+   {
+    "code": "US-PA",
+    "name": "Pennsylvania",
+    "regulator": "Pennsylvania Gaming Control Board",
+    "url": "https://gamingcontrolboard.pa.gov/"
+   },
+   {
+    "code": "PE",
+    "name": "Peru",
+    "regulator": "MINCETUR (DGJCMT)",
+    "url": "https://apuestasdeportivas.mincetur.gob.pe/proveedores_online.html",
+    "note": "PSV0054"
+   },
+   {
+    "code": "CA-QC",
+    "name": "Quebec",
+    "regulator": "Régie des alcools, des courses et des jeux (RACJ)",
+    "url": "https://www.racj.gouv.qc.ca/",
+    "note": "Qualified supplier to Loto-Québec"
+   },
+   {
+    "code": "RO",
+    "name": "Romania",
+    "regulator": "Oficiul National pentru Jocuri de Noroc (ONJN)",
+    "url": "https://onjn.gov.ro/licentiati-clasa-a-ii-a/"
+   },
+   {
+    "code": "ES",
+    "name": "Spain",
+    "regulator": "Dirección General de Ordenación del Juego (DGOJ)",
+    "url": "https://www.ordenacionjuego.es/"
+   },
+   {
+    "code": "SE",
+    "name": "Sweden",
+    "regulator": "Spelinspektionen (Swedish Gambling Authority)",
+    "url": "https://www.spelinspektionen.se/"
+   },
+   {
+    "code": "AE",
+    "name": "United Arab Emirates",
+    "regulator": "General Commercial Gaming Regulatory Authority (GCGRA)",
+    "url": "https://www.gcgra.gov.ae/"
+   },
+   {
+    "code": "GB",
+    "name": "Great Britain",
+    "regulator": "UK Gambling Commission",
+    "url": "https://www.gamblingcommission.gov.uk/public-register/business/detail/55949",
+    "note": "Account 55949; combined remote and non-remote operating licences"
+   },
+   {
+    "code": "US-WV",
+    "name": "West Virginia",
+    "regulator": "West Virginia Lottery",
+    "url": "https://wvlottery.com/"
+   },
+   {
+    "code": "ZA",
+    "name": "South Africa (Western Cape)",
+    "regulator": "Western Cape Gambling and Racing Board",
+    "url": "https://www.wcgrb.co.za/"
+   }
+  ]
+ },
+ {
+  "slug": "playtech",
+  "name": "Playtech",
+  "parent": null,
+  "founded": 1999,
+  "sourceUrl": "https://www.playtech.com/about-us/",
+  "licences": [
+   {
+    "code": "GB",
+    "name": "Great Britain",
+    "regulator": "UK Gambling Commission",
+    "url": "https://www.gamblingcommission.gov.uk/public-register/business/detail/38516",
+    "note": "Account 38516"
+   },
+   {
+    "code": "MT",
+    "name": "Malta",
+    "regulator": "Malta Gaming Authority (MGA)",
+    "url": "https://www.mga.org.mt/",
+    "note": "MGA/CRP/137/2007"
+   }
+  ]
+ },
+ {
+  "slug": "bgaming",
+  "name": "BGaming",
+  "parent": null,
+  "founded": 2018,
+  "sourceUrl": "https://bgaming.com/about",
+  "licences": [
+   {
+    "code": "MT",
+    "name": "Malta",
+    "regulator": "Malta Gaming Authority (MGA)",
+    "url": "https://www.mga.org.mt/",
+    "note": "Stable Games Ltd, MGA/B2B/785/2020"
+   }
+  ]
+ },
+ {
+  "slug": "thunderkick",
+  "name": "Thunderkick",
+  "parent": null,
+  "founded": 2012,
+  "sourceUrl": "https://www.thunderkick.com/about/",
+  "licences": [
+   {
+    "code": "GB",
+    "name": "Great Britain",
+    "regulator": "UK Gambling Commission",
+    "url": "https://www.gamblingcommission.gov.uk/public-register",
+    "note": "Accounts 40165 and 41752 (footer)"
+   },
+   {
+    "code": "DK",
+    "name": "Denmark",
+    "regulator": "Spillemyndigheden (Danish Gambling Authority)",
+    "url": "https://www.spillemyndigheden.dk/",
+    "note": "B2B supplier licence from 1 Jan 2025 (press release, Dec 2024)"
+   },
+   {
+    "code": "CA-ON",
+    "name": "Ontario",
+    "regulator": "Alcohol and Gaming Commission of Ontario (AGCO)",
+    "url": "https://www.agco.ca/en/lottery-and-gaming/gaming-related-suppliers",
+    "note": "Licensed by AGCO (press release, Jun 2024)"
+   }
+  ]
+ },
+ {
+  "slug": "quickspin",
+  "name": "Quickspin",
+  "parent": "Playtech",
+  "founded": 2011,
+  "sourceUrl": "https://quickspin.com/home-2/about-us/",
+  "licences": [
+   {
+    "code": "MT",
+    "name": "Malta",
+    "regulator": "Malta Gaming Authority (MGA)",
+    "url": "https://www.mga.org.mt/",
+    "note": "MGA/CRP/137/2007 (Playtech group corporate licence)"
+   },
+   {
+    "code": "GB",
+    "name": "Great Britain",
+    "regulator": "UK Gambling Commission",
+    "url": "https://www.gamblingcommission.gov.uk/public-register/business/detail/38516",
+    "note": "Account 38516"
+   }
+  ]
+ },
+ {
+  "slug": "yggdrasil",
+  "name": "Yggdrasil",
+  "parent": null,
+  "founded": null,
+  "sourceUrl": "https://yggdrasilgaming.com/about-us#section-11",
+  "licences": [
+   {
+    "code": "MT",
+    "name": "Malta",
+    "regulator": "Malta Gaming Authority (MGA)",
+    "url": "https://authorisation.mga.org.mt/verification.aspx?lang=EN&company=6258f4f7-c67f-4c91-b444-5848fa877c68&details=1",
+    "note": "MGA/B2B/230/2012"
+   },
+   {
+    "code": "GB",
+    "name": "Great Britain",
+    "regulator": "UK Gambling Commission",
+    "url": "https://www.gamblingcommission.gov.uk/public-register"
+   },
+   {
+    "code": "GI",
+    "name": "Gibraltar",
+    "regulator": "Gibraltar Licensing Authority / Gambling Commissioner",
+    "url": "https://gamblingdivision.gov.gi/"
+   },
+   {
+    "code": "RO",
+    "name": "Romania",
+    "regulator": "Oficiul National pentru Jocuri de Noroc (ONJN)",
+    "url": "https://onjn.gov.ro/licentiati-clasa-a-ii-a/",
+    "note": "Two Class 2 licences"
+   },
+   {
+    "code": "IM",
+    "name": "Isle of Man",
+    "regulator": "Gambling Supervision Commission (GSC)",
+    "url": "https://www.isleofmangsc.com/gambling/general-supervision/online-gambling-licensee-register/"
+   },
+   {
+    "code": "GR",
+    "name": "Greece",
+    "regulator": "Hellenic Gaming Commission (HGC)",
+    "url": "https://certifications.gamingcommission.gov.gr/publicRecordsOnline/SitePages/KataskevastesOnline.aspx"
+   },
+   {
+    "code": "BE",
+    "name": "Belgium",
+    "regulator": "Belgian Gaming Commission",
+    "url": "https://www.gamingcommission.be/",
+    "note": "Class E"
+   },
+   {
+    "code": "AR",
+    "name": "Argentina (Buenos Aires City)",
+    "regulator": "Lotería de la Ciudad de Buenos Aires (LOTBA)",
+    "url": "https://www.loteriadelaciudad.gob.ar/",
+    "note": "Buenos Aires City registry of suppliers"
+   }
+  ]
+ },
+ {
+  "slug": "elk-studios",
+  "name": "ELK Studios",
+  "parent": null,
+  "founded": 2013,
+  "sourceUrl": "https://www.elk-studios.com/about/",
+  "licences": [
+   {
+    "code": "GB",
+    "name": "Great Britain",
+    "regulator": "UK Gambling Commission",
+    "url": "https://www.gamblingcommission.gov.uk/public-register/business/detail/40844",
+    "note": "Account 40844"
+   },
+   {
+    "code": "MT",
+    "name": "Malta",
+    "regulator": "Malta Gaming Authority (MGA)",
+    "url": "https://authorisation.mga.org.mt/verification.aspx?lang=EN&company=e31da067-82fc-4cac-95cc-77f9338a0171&details=1",
+    "note": "MGA/B2B/605/2018"
+   },
+   {
+    "code": "RO",
+    "name": "Romania",
+    "regulator": "Oficiul National pentru Jocuri de Noroc (ONJN)",
+    "url": "https://onjn.gov.ro/licentiati-clasa-a-ii-a/",
+    "note": "821/15.05.2020 and 820/15.05.2020"
+   },
+   {
+    "code": "CA-ON",
+    "name": "Ontario",
+    "regulator": "Alcohol and Gaming Commission of Ontario (AGCO)",
+    "url": "https://www.agco.ca/en/lottery-and-gaming/gaming-related-suppliers",
+    "note": "Regulator badge in footer"
+   },
+   {
+    "code": "GR",
+    "name": "Greece",
+    "regulator": "Hellenic Gaming Commission (HGC)",
+    "url": "https://certifications.gamingcommission.gov.gr/publicRecordsOnline/SitePages/KataskevastesOnline.aspx",
+    "note": "Regulator badge in footer"
+   }
+  ]
+ },
+ {
+  "slug": "games-global",
+  "name": "Microgaming / Games Global",
+  "parent": null,
+  "founded": null,
+  "sourceUrl": "https://www.gamesglobal.com/Company/Licenses",
+  "licences": [
+   {
+    "code": "GG",
+    "name": "Alderney",
+    "regulator": "Alderney Gambling Control Commission",
+    "url": "https://www.gamblingcontrol.org/"
+   },
+   {
+    "code": "BE",
+    "name": "Belgium",
+    "regulator": "Belgian Gaming Commission",
+    "url": "https://www.gamingcommission.be/"
+   },
+   {
+    "code": "AR",
+    "name": "Argentina (Buenos Aires City)",
+    "regulator": "Lotería de la Ciudad de Buenos Aires (LOTBA)",
+    "url": "https://www.loteriadelaciudad.gob.ar/"
+   },
+   {
+    "code": "GI",
+    "name": "Gibraltar",
+    "regulator": "Gibraltar Licensing Authority / Gambling Commissioner",
+    "url": "https://gamblingdivision.gov.gi/uploads/Licence%20Holders%20Docs/Oakwood.pdf"
+   },
+   {
+    "code": "GR",
+    "name": "Greece",
+    "regulator": "Hellenic Gaming Commission (HGC)",
+    "url": "https://certifications.gamingcommission.gov.gr/publicRecordsOnline/SitePages/KataskevastesOnline.aspx"
+   },
+   {
+    "code": "MT",
+    "name": "Malta",
+    "regulator": "Malta Gaming Authority (MGA)",
+    "url": "https://authorisation.mga.org.mt/verification.aspx?lang=EN&company=2177a57c-4502-4747-b223-0b930673df31&details=1",
+    "note": "Prima Networks Ltd, MGA/CRP/926/2021"
+   },
+   {
+    "code": "CA-ON",
+    "name": "Ontario",
+    "regulator": "Alcohol and Gaming Commission of Ontario (AGCO)",
+    "url": "https://www.agco.ca/en/lottery-and-gaming/gaming-related-suppliers"
+   },
+   {
+    "code": "RO",
+    "name": "Romania",
+    "regulator": "Oficiul National pentru Jocuri de Noroc (ONJN)",
+    "url": "https://onjn.gov.ro/licentiati-clasa-a-ii-a/"
+   },
+   {
+    "code": "ES",
+    "name": "Spain",
+    "regulator": "Dirección General de Ordenación del Juego (DGOJ)",
+    "url": "https://www.ordenacionjuego.es/en/op-PrimaNetworksSpain"
+   },
+   {
+    "code": "GB",
+    "name": "Great Britain",
+    "regulator": "UK Gambling Commission",
+    "url": "https://www.gamblingcommission.gov.uk/public-register/business/detail/58841",
+    "note": "Account 58841"
+   },
+   {
+    "code": "SE",
+    "name": "Sweden",
+    "regulator": "Spelinspektionen (Swedish Gambling Authority)",
+    "url": "https://www.spelinspektionen.se/"
+   },
+   {
+    "code": "US-PA",
+    "name": "Pennsylvania",
+    "regulator": "Pennsylvania Gaming Control Board",
+    "url": "https://gamingcontrolboard.pa.gov/"
+   },
+   {
+    "code": "US-CT",
+    "name": "Connecticut",
+    "regulator": "Connecticut Department of Consumer Protection",
+    "url": "https://portal.ct.gov/dcp/gaming-division"
+   },
+   {
+    "code": "US-MI",
+    "name": "Michigan",
+    "regulator": "Michigan Gaming Control Board",
+    "url": "https://www.michigan.gov/mgcb"
+   },
+   {
+    "code": "US-NJ",
+    "name": "New Jersey",
+    "regulator": "New Jersey Division of Gaming Enforcement",
+    "url": "https://www.njoag.gov/about/divisions-and-offices/division-of-gaming-enforcement-home/"
+   },
+   {
+    "code": "PE",
+    "name": "Peru",
+    "regulator": "MINCETUR (DGJCMT)",
+    "url": "https://apuestasdeportivas.mincetur.gob.pe/proveedores_online.html"
+   },
+   {
+    "code": "DK",
+    "name": "Denmark",
+    "regulator": "Spillemyndigheden (Danish Gambling Authority)",
+    "url": "https://www.spillemyndigheden.dk/"
+   },
+   {
+    "code": "US-WV",
+    "name": "West Virginia",
+    "regulator": "West Virginia Lottery",
+    "url": "https://wvlottery.com/",
+    "note": "Regulator logo linking to the iGaming licence list (page shows logos only)"
+   }
+  ]
+ },
+ {
+  "slug": "blueprint-gaming",
+  "name": "Blueprint Gaming",
+  "parent": "Merkur Group (Gauselmann)",
+  "founded": null,
+  "sourceUrl": "https://blueprintgaming.com/",
+  "licences": [
+   {
+    "code": "GB",
+    "name": "Great Britain",
+    "regulator": "UK Gambling Commission",
+    "url": "https://www.gamblingcommission.gov.uk/public-register/business/detail/6516",
+    "note": "Account 6516"
+   },
+   {
+    "code": "MT",
+    "name": "Malta",
+    "regulator": "Malta Gaming Authority (MGA)",
+    "url": "https://authorisation.mga.org.mt/verification.aspx?lang=EN&company=692fe1eb-8bf4-446c-ac1b-5ffb77083620&details=1",
+    "note": "B2B Critical Supply Licence"
+   },
+   {
+    "code": "GI",
+    "name": "Gibraltar",
+    "regulator": "Gibraltar Licensing Authority / Gambling Commissioner",
+    "url": "https://gamblingdivision.gov.gi/",
+    "note": "Regulator badge in footer"
+   },
+   {
+    "code": "GG",
+    "name": "Alderney",
+    "regulator": "Alderney Gambling Control Commission",
+    "url": "https://www.gamblingcontrol.org/",
+    "note": "Regulator badge in footer"
+   }
+  ]
+ },
+ {
+  "slug": "light-and-wonder",
+  "name": "Light & Wonder",
+  "parent": null,
+  "founded": null,
+  "sourceUrl": "https://igaming.lnw.com/licensing-information/",
+  "licences": [
+   {
+    "code": "MT",
+    "name": "Malta",
+    "regulator": "Malta Gaming Authority (MGA)",
+    "url": "https://www.mga.org.mt/",
+    "note": "MGA/B2B/112/2004"
+   },
+   {
+    "code": "GR",
+    "name": "Greece",
+    "regulator": "Hellenic Gaming Commission (HGC)",
+    "url": "https://certifications.gamingcommission.gov.gr/publicRecordsOnline/SitePages/KataskevastesOnline.aspx",
+    "note": "HGC-000022-MN"
+   },
+   {
+    "code": "RO",
+    "name": "Romania",
+    "regulator": "Oficiul National pentru Jocuri de Noroc (ONJN)",
+    "url": "https://onjn.gov.ro/licentiati-clasa-a-ii-a/",
+    "note": "Class 2-a, Decizie Nr. 310"
+   },
+   {
+    "code": "SE",
+    "name": "Sweden",
+    "regulator": "Spelinspektionen (Swedish Gambling Authority)",
+    "url": "https://www.spelinspektionen.se/",
+    "note": "23Si756"
+   },
+   {
+    "code": "BE",
+    "name": "Belgium",
+    "regulator": "Belgian Gaming Commission",
+    "url": "https://www.gamingcommission.be/",
+    "note": "E563148"
+   },
+   {
+    "code": "DK",
+    "name": "Denmark",
+    "regulator": "Spillemyndigheden (Danish Gambling Authority)",
+    "url": "https://www.spillemyndigheden.dk/",
+    "note": "24-439710"
+   },
+   {
+    "code": "GI",
+    "name": "Gibraltar",
+    "regulator": "Gibraltar Licensing Authority / Gambling Commissioner",
+    "url": "https://gamblingdivision.gov.gi/",
+    "note": "RGL No. 073"
+   },
+   {
+    "code": "GB",
+    "name": "Great Britain",
+    "regulator": "UK Gambling Commission",
+    "url": "https://www.gamblingcommission.gov.uk/public-register",
+    "note": "000-040129, 000-008894 and 000-041115"
+   }
+  ]
+ },
+ {
+  "slug": "igt",
+  "name": "IGT",
+  "parent": null,
+  "founded": null,
+  "sourceUrl": "https://www.igt.com/explore-igt/about-igt/compliance",
+  "licences": [
+   {
+    "code": "GB",
+    "name": "Great Britain",
+    "regulator": "UK Gambling Commission",
+    "url": "https://www.gamblingcommission.gov.uk/public-register",
+    "note": "Accounts 64569, 64572, 64571, 64575, 64577, 60415, 64574, 64568, 64570, 64576, 54705"
+   },
+   {
+    "code": "MT",
+    "name": "Malta",
+    "regulator": "Malta Gaming Authority (MGA)",
+    "url": "https://www.mga.org.mt/",
+    "note": "MGA/CRP/359/2017, MGA/CRP/168/2007, MGA/B2B/624/2018"
+   }
+  ]
+ },
+ {
+  "slug": "wazdan",
+  "name": "Wazdan",
+  "parent": null,
+  "founded": 2010,
+  "sourceUrl": "https://wazdan.com/our-story",
+  "licences": [
+   {
+    "code": "MT",
+    "name": "Malta",
+    "regulator": "Malta Gaming Authority (MGA)",
+    "url": "https://authorisation.mga.org.mt/verification.aspx?lang=EN&company=c145727d-6717-49da-b683-4d8b6370b7b3&details=1",
+    "note": "MGA/B2B/206/2011"
+   },
+   {
+    "code": "GB",
+    "name": "Great Britain",
+    "regulator": "UK Gambling Commission",
+    "url": "https://www.gamblingcommission.gov.uk/public-register/business/detail/48872",
+    "note": "Account 48872"
+   },
+   {
+    "code": "RO",
+    "name": "Romania",
+    "regulator": "Oficiul National pentru Jocuri de Noroc (ONJN)",
+    "url": "https://onjn.gov.ro/licentiati-clasa-a-ii-a/",
+    "note": "ONJN licence obtained 2019 (company timeline)"
+   },
+   {
+    "code": "GR",
+    "name": "Greece",
+    "regulator": "Hellenic Gaming Commission (HGC)",
+    "url": "https://certifications.gamingcommission.gov.gr/publicRecordsOnline/Lists/Kataskevastes/DispForm.aspx?ID=61",
+    "note": "HGC licence obtained 2021"
+   },
+   {
+    "code": "US-NJ",
+    "name": "New Jersey",
+    "regulator": "New Jersey Division of Gaming Enforcement",
+    "url": "https://www.njoag.gov/about/divisions-and-offices/division-of-gaming-enforcement-home/",
+    "note": "Regulator badge in footer"
+   },
+   {
+    "code": "CA-ON",
+    "name": "Ontario",
+    "regulator": "Alcohol and Gaming Commission of Ontario (AGCO)",
+    "url": "https://www.iagco.agco.ca/prod/pub/en/Default.aspx?PossePresentation=Default&PosseObjectId=99311218",
+    "note": "AGCO registrant record linked in footer"
+   }
+  ]
+ },
+ {
+  "slug": "endorphina",
+  "name": "Endorphina",
+  "parent": null,
+  "founded": 2012,
+  "sourceUrl": "https://endorphina.com/",
+  "licences": [
+   {
+    "code": "MT",
+    "name": "Malta",
+    "regulator": "Malta Gaming Authority (MGA)",
+    "url": "https://authorisation.mga.org.mt/verification.aspx?lang=EN&company=94604f10-be91-40b7-9f43-5480134a3e41&details=1",
+    "note": "MGA/B2B/404/2017"
+   },
+   {
+    "code": "RO",
+    "name": "Romania",
+    "regulator": "Oficiul National pentru Jocuri de Noroc (ONJN)",
+    "url": "https://onjn.gov.ro/licentiati-clasa-a-ii-a/"
+   },
+   {
+    "code": "DK",
+    "name": "Denmark",
+    "regulator": "Spillemyndigheden (Danish Gambling Authority)",
+    "url": "https://www.spillemyndigheden.dk/"
+   },
+   {
+    "code": "SE",
+    "name": "Sweden",
+    "regulator": "Spelinspektionen (Swedish Gambling Authority)",
+    "url": "https://www.spelinspektionen.se/sok-licens/bolag/?holder=875E8004B41F4B9C3D11E70636B28AF4D4614BA960F11C2619E43E043C808364&l=447567678"
+   },
+   {
+    "code": "CA-ON",
+    "name": "Ontario",
+    "regulator": "iGaming Ontario / AGCO",
+    "url": "https://igamingontario.ca/",
+    "note": "Footer badge links to iGaming Ontario"
+   },
+   {
+    "code": "GR",
+    "name": "Greece",
+    "regulator": "Hellenic Gaming Commission (HGC)",
+    "url": "https://certifications.gamingcommission.gov.gr/publicRecordsOnline/Lists/Kataskevastes/DispForm.aspx?ID=78"
+   },
+   {
+    "code": "KM",
+    "name": "Anjouan (Comoros)",
+    "regulator": "Anjouan Gaming",
+    "url": "https://anjouangaming.com/license-register/"
+   },
+   {
+    "code": "PE",
+    "name": "Peru",
+    "regulator": "MINCETUR (DGJCMT)",
+    "url": "https://apuestasdeportivas.mincetur.gob.pe/proveedores_online.html"
+   },
+   {
+    "code": "CA-AB",
+    "name": "Alberta",
+    "regulator": "Alberta Gaming, Liquor & Cannabis (AGLC)",
+    "url": "https://aglc.ca/gaming-registrants?keywords=endorphina",
+    "note": "AGLC registrant search linked in footer"
+   }
+  ]
+ },
+ {
+  "slug": "spribe",
+  "name": "Spribe",
+  "parent": null,
+  "founded": 2018,
+  "sourceUrl": "https://spribe.co/about",
+  "licences": [
+   {
+    "code": "MT",
+    "name": "Malta",
+    "regulator": "Malta Gaming Authority (MGA)",
+    "url": "https://www.mga.org.mt/",
+    "note": "Recognition notice RN/189/2020"
+   },
+   {
+    "code": "GI",
+    "name": "Gibraltar",
+    "regulator": "Gibraltar Licensing Authority / Gambling Commissioner",
+    "url": "https://gamblingdivision.gov.gi/",
+    "note": "Full approval on game supply"
+   },
+   {
+    "code": "RO",
+    "name": "Romania",
+    "regulator": "Oficiul National pentru Jocuri de Noroc (ONJN)",
+    "url": "https://onjn.gov.ro/licentiati-clasa-a-ii-a/",
+    "note": "Class 2, Nr. 785/24.04.2020"
+   },
+   {
+    "code": "ZA",
+    "name": "South Africa (Western Cape)",
+    "regulator": "Western Cape Gambling and Racing Board",
+    "url": "https://www.wcgrb.co.za/",
+    "note": "Certificate of suitability 10189818-001"
+   },
+   {
+    "code": "GE",
+    "name": "Georgia",
+    "regulator": "Revenue Service / Ministry of Finance of Georgia",
+    "url": "https://www.rs.ge/",
+    "note": "Permit for game supply N19-02/05"
+   },
+   {
+    "code": "CA-ON",
+    "name": "Ontario",
+    "regulator": "Alcohol and Gaming Commission of Ontario (AGCO)",
+    "url": "https://www.agco.ca/en/lottery-and-gaming/gaming-related-suppliers",
+    "note": "GRSM1292973"
+   }
+  ]
+ },
+ {
+  "slug": "avatarux",
+  "name": "AvatarUX",
+  "parent": null,
+  "founded": null,
+  "sourceUrl": "https://avatarux.com/",
+  "licences": [
+   {
+    "code": "SE",
+    "name": "Sweden",
+    "regulator": "Spelinspektionen (Swedish Gambling Authority)",
+    "url": "https://www.spelinspektionen.se/",
+    "note": "23Si1469"
+   },
+   {
+    "code": "RO",
+    "name": "Romania",
+    "regulator": "Oficiul National pentru Jocuri de Noroc (ONJN)",
+    "url": "https://onjn.gov.ro/licentiati-clasa-a-ii-a/",
+    "note": "Class 2, L2254352Y001647"
+   },
+   {
+    "code": "MT",
+    "name": "Malta",
+    "regulator": "Malta Gaming Authority (MGA)",
+    "url": "https://www.mga.org.mt/",
+    "note": "Recognition notice RN/024/2025"
+   }
+  ]
+ },
+ {
+  "slug": "octoplay",
+  "name": "Octoplay",
+  "parent": null,
+  "founded": null,
+  "sourceUrl": "https://www.octoplay.com/",
+  "licences": [
+   {
+    "code": "MT",
+    "name": "Malta",
+    "regulator": "Malta Gaming Authority (MGA)",
+    "url": "https://authorisation.mga.org.mt/verification.aspx?lang=EN&company=e1702335-506e-44b5-9d14-1daed3d0ec6c&details=1",
+    "note": "MGA/CRP/981/2022"
+   },
+   {
+    "code": "RO",
+    "name": "Romania",
+    "regulator": "Oficiul National pentru Jocuri de Noroc (ONJN)",
+    "url": "https://onjn.gov.ro/licentiati-clasa-a-ii-a/",
+    "note": "Class 2, 1138/30.07.2024"
+   },
+   {
+    "code": "GR",
+    "name": "Greece",
+    "regulator": "Hellenic Gaming Commission (HGC)",
+    "url": "https://certifications.gamingcommission.gov.gr/publicRecordsOnline/SitePages/KataskevastesOnline.aspx",
+    "note": "HGC-000139-MN"
+   },
+   {
+    "code": "GB",
+    "name": "Great Britain",
+    "regulator": "UK Gambling Commission",
+    "url": "https://www.gamblingcommission.gov.uk/public-register/business/detail/61756",
+    "note": "000-061756-R-336614-001"
+   },
+   {
+    "code": "SE",
+    "name": "Sweden",
+    "regulator": "Spelinspektionen (Swedish Gambling Authority)",
+    "url": "https://www.spelinspektionen.se/",
+    "note": "23Si628 and 23Si626"
+   },
+   {
+    "code": "CA-ON",
+    "name": "Ontario",
+    "regulator": "Alcohol and Gaming Commission of Ontario (AGCO)",
+    "url": "https://www.agco.ca/en/lottery-and-gaming/gaming-related-suppliers",
+    "note": "GRSM1311915"
+   },
+   {
+    "code": "DK",
+    "name": "Denmark",
+    "regulator": "Spillemyndigheden (Danish Gambling Authority)",
+    "url": "https://www.spillemyndigheden.dk/",
+    "note": "24-438938"
+   },
+   {
+    "code": "US-MI",
+    "name": "Michigan",
+    "regulator": "Michigan Gaming Control Board",
+    "url": "https://www.michigan.gov/mgcb"
+   },
+   {
+    "code": "US-WV",
+    "name": "West Virginia",
+    "regulator": "West Virginia Lottery",
+    "url": "https://wvlottery.com/"
+   },
+   {
+    "code": "US-DE",
+    "name": "Delaware",
+    "regulator": "Delaware State Lottery Office",
+    "url": "https://www.delottery.com/"
+   },
+   {
+    "code": "CA-AB",
+    "name": "Alberta",
+    "regulator": "Alberta Gaming, Liquor & Cannabis (AGLC)",
+    "url": "https://aglc.ca/",
+    "note": "Conditional licence approval (May 2026)"
+   },
+   {
+    "code": "US-CT",
+    "name": "Connecticut",
+    "regulator": "Connecticut Department of Consumer Protection",
+    "url": "https://portal.ct.gov/dcp/gaming-division"
+   },
+   {
+    "code": "US-PA",
+    "name": "Pennsylvania",
+    "regulator": "Pennsylvania Gaming Control Board",
+    "url": "https://gamingcontrolboard.pa.gov/",
+    "note": "Interim authorization (Aug 2026)"
+   }
+  ]
+ },
+ {
+  "slug": "3-oaks-gaming",
+  "name": "3 Oaks Gaming",
+  "parent": "Green Rock Holding Limited",
+  "founded": null,
+  "sourceUrl": "https://3oaks.com/",
+  "licences": [
+   {
+    "code": "GB",
+    "name": "Great Britain",
+    "regulator": "UK Gambling Commission",
+    "url": "https://registers.gamblingcommission.gov.uk/63055",
+    "note": "Account 63055"
+   },
+   {
+    "code": "IM",
+    "name": "Isle of Man",
+    "regulator": "Gambling Supervision Commission (GSC)",
+    "url": "https://www.isleofmangsc.com/gambling/general-supervision/online-gambling-licensee-register/"
+   },
+   {
+    "code": "RO",
+    "name": "Romania",
+    "regulator": "Oficiul National pentru Jocuri de Noroc (ONJN)",
+    "url": "https://onjn.gov.ro/licentiati-clasa-a-ii-a/"
+   },
+   {
+    "code": "MT",
+    "name": "Malta",
+    "regulator": "Malta Gaming Authority (MGA)",
+    "url": "https://www.mga.org.mt/licensee-hub/recognition-notice-register/",
+    "note": "MGA recognition notice"
+   },
+   {
+    "code": "PE",
+    "name": "Peru",
+    "regulator": "MINCETUR (DGJCMT)",
+    "url": "https://apuestasdeportivas.mincetur.gob.pe/proveedores_online.html"
+   },
+   {
+    "code": "GR",
+    "name": "Greece",
+    "regulator": "Hellenic Gaming Commission (HGC)",
+    "url": "https://certifications.gamingcommission.gov.gr/publicRecordsOnline/Lists/Kataskevastes/DispForm.aspx?ID=147"
+   }
+  ]
+ },
+ {
+  "slug": "playson",
+  "name": "Playson",
+  "parent": null,
+  "founded": null,
+  "sourceUrl": "https://playson.com/about",
+  "licences": [
+   {
+    "code": "GB",
+    "name": "Great Britain",
+    "regulator": "UK Gambling Commission",
+    "url": "https://www.gamblingcommission.gov.uk/public-register/business/detail/41337",
+    "note": "Account 41337"
+   },
+   {
+    "code": "MT",
+    "name": "Malta",
+    "regulator": "Malta Gaming Authority (MGA)",
+    "url": "https://www.mga.org.mt/",
+    "note": "Recognition notice RN/101/2018"
+   },
+   {
+    "code": "RO",
+    "name": "Romania",
+    "regulator": "Oficiul National pentru Jocuri de Noroc (ONJN)",
+    "url": "https://onjn.gov.ro/licentiati-clasa-a-ii-a/"
+   },
+   {
+    "code": "SE",
+    "name": "Sweden",
+    "regulator": "Spelinspektionen (Swedish Gambling Authority)",
+    "url": "https://www.spelinspektionen.se/"
+   },
+   {
+    "code": "GR",
+    "name": "Greece",
+    "regulator": "Hellenic Gaming Commission (HGC)",
+    "url": "https://certifications.gamingcommission.gov.gr/publicRecordsOnline/SitePages/KataskevastesOnline.aspx"
+   },
+   {
+    "code": "CA-ON",
+    "name": "Ontario",
+    "regulator": "Alcohol and Gaming Commission of Ontario (AGCO)",
+    "url": "https://www.agco.ca/en/lottery-and-gaming/gaming-related-suppliers"
+   },
+   {
+    "code": "GI",
+    "name": "Gibraltar",
+    "regulator": "Gibraltar Licensing Authority / Gambling Commissioner",
+    "url": "https://gamblingdivision.gov.gi/",
+    "note": "B2B remote gambling licence"
+   },
+   {
+    "code": "PE",
+    "name": "Peru",
+    "regulator": "MINCETUR (DGJCMT)",
+    "url": "https://apuestasdeportivas.mincetur.gob.pe/proveedores_online.html"
+   }
+  ]
+ },
+ {
+  "slug": "booming-games",
+  "name": "Booming Games",
+  "parent": null,
+  "founded": null,
+  "sourceUrl": "https://www.booming-games.com/",
+  "licences": [
+   {
+    "code": "GB",
+    "name": "Great Britain",
+    "regulator": "UK Gambling Commission",
+    "url": "https://www.gamblingcommission.gov.uk/public-register/business/detail/57254",
+    "note": "Account 57254"
+   },
+   {
+    "code": "MT",
+    "name": "Malta",
+    "regulator": "Malta Gaming Authority (MGA)",
+    "url": "https://authorisation.mga.org.mt/verification.aspx?lang=EN&company=f85f8f08-c4d2-4028-9b75-528b54b6425b&details=1",
+    "note": "MGA/B2B/459/2018"
+   },
+   {
+    "code": "SE",
+    "name": "Sweden",
+    "regulator": "Spelinspektionen (Swedish Gambling Authority)",
+    "url": "https://www.spelinspektionen.se/sok-licens/bolag/?holder=2E1D5FD029DADD8AA8111E6F86100677798A78AD169BAF9D6B7AD1473A0F35E0&l=390196742",
+    "note": "Regulator badge in footer"
+   },
+   {
+    "code": "CA-ON",
+    "name": "Ontario",
+    "regulator": "Alcohol and Gaming Commission of Ontario (AGCO)",
+    "url": "https://www.iagco.agco.ca/prod/pub/en/Default.aspx?PossePresentation=Default&PosseObjectId=132848835",
+    "note": "AGCO registrant record linked in footer"
+   },
+   {
+    "code": "RO",
+    "name": "Romania",
+    "regulator": "Oficiul National pentru Jocuri de Noroc (ONJN)",
+    "url": "https://onjn.gov.ro/licentiati-clasa-a-ii-a/",
+    "note": "Regulator badge in footer"
+   },
+   {
+    "code": "DK",
+    "name": "Denmark",
+    "regulator": "Spillemyndigheden (Danish Gambling Authority)",
+    "url": "https://www.spillemyndigheden.dk/",
+    "note": "Regulator badge in footer"
+   },
+   {
+    "code": "GR",
+    "name": "Greece",
+    "regulator": "Hellenic Gaming Commission (HGC)",
+    "url": "https://certifications.gamingcommission.gov.gr/publicRecordsOnline/SitePages/KataskevastesOnline.aspx",
+    "note": "Regulator badge in footer"
+   },
+   {
+    "code": "BE",
+    "name": "Belgium",
+    "regulator": "Belgian Gaming Commission",
+    "url": "https://www.gamingcommission.be/",
+    "note": "Regulator badge in footer"
+   }
+  ]
+ }
+]

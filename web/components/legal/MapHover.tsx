@@ -9,6 +9,8 @@ export interface HoverInfo {
   casinos?: { name: string; logo: string | null }[];
   casinosTitle?: string;
   casinosNote?: string;
+  /** Hide the click-through line where regions do not link anywhere. */
+  noLink?: boolean;
 }
 
 const MONO = "var(--font-jetbrains-mono), monospace";
@@ -82,7 +84,7 @@ export function MapHover({ info, children }: { info: Record<string, HoverInfo>; 
               )}
             </div>
           )}
-          <div style={{ marginTop: 10, fontSize: 11.5, fontWeight: 700, color: "#00C2CC" }}>Click for the full picture →</div>
+          {!it.noLink && <div style={{ marginTop: 10, fontSize: 11.5, fontWeight: 700, color: "#00C2CC" }}>Click for the full picture →</div>}
         </div>
       )}
     </div>

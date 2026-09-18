@@ -110,6 +110,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
               title: "Studios",
               links: [
                 { label: `All ${c.providers} provider reviews`, href: "/providers" },
+                { label: "Studio licence map", href: "/providers/licences" },
                 { label: "Slots by provider", href: "/slots" },
                 { label: "How casino RTP versions work", href: "/guides/how-casino-rtp-versions-work" },
               ],
