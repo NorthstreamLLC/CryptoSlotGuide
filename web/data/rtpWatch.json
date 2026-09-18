@@ -207,5 +207,16 @@
     "checkedBy": "CSG",
     "source": "operator_game_page",
     "notes": "RTP tag on Stake game page (Description tab): 96.38%"
+  },
+  {
+    "id": "le-bandit:stake:2026-09-18",
+    "slotSlug": "le-bandit",
+    "operatorSlug": "stake",
+    "rtp": 96.34,
+    "publishedRtp": 96.34,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "RTP tag on Stake game page (Description tab): 96.34%"
   }
 ]
