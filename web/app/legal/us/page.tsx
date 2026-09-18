@@ -2,7 +2,9 @@ import Link from "next/link";
 import { pageMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { US_STATES, US_SHAPES, stateBy, toneOf } from "@/lib/legal";
+import { US_STATES, US_SHAPES, stateBy, toneOf, TONE, sweepsAvailableIn } from "@/lib/legal";
+import { MapHover, type HoverInfo } from "@/components/legal/MapHover";
+import { logoFor } from "@/lib/logo";
 import { LegalMap } from "@/components/legal/LegalMap";
 import { LegalHero, RegionGrid, Tabs, Disclaimer } from "@/components/legal/LegalUI";
 
@@ -24,6 +26,23 @@ export default async function Page({ searchParams }: { searchParams: Promise<{ l
   const states = [...US_STATES].sort((a, b) => a.name.localeCompare(b.name));
   const legalCasino = states.filter((s) => toneOf(s.onlineCasino) === "legal").length;
   const onlineSports = states.filter((s) => /online/i.test(s.sportsBetting)).length;
+  const row = (label: string, v?: string) => ({ label, value: v ?? "Not covered", color: TONE[toneOf(v)].fill });
+  const info: Record<string, HoverInfo> = Object.fromEntries(
+    states.map((s) => {
+      const banned = toneOf(s.sweepstakes) === "banned";
+      const open = banned ? [] : sweepsAvailableIn(s.name, s.code).filter((x) => x.known && !x.excluded);
+      return [
+        s.code,
+        {
+          name: s.name,
+          rows: [row("Online casinos", s.onlineCasino), row("Sports betting", s.sportsBetting), row("Online poker", s.pokerOnline), row("Sweepstakes", s.sweepstakes)],
+          casinosTitle: `Sweepstakes casinos available (${open.length})`,
+          casinos: open.map((x) => ({ name: x.s.name, logo: logoFor(x.s.slug) })),
+          casinosNote: banned ? `Sweepstakes casinos are banned in ${s.name}` : "None of our listed casinos accept this state",
+        },
+      ];
+    })
+  );
   return (
     <main style={{ background: "#07090B" }}>
       <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Gambling laws", path: "/legal" }, { name: "United States", path: "/legal/us" }])} />
@@ -55,7 +74,9 @@ export default async function Page({ searchParams }: { searchParams: Promise<{ l
           ))}
         </div>
         <div style={{ padding: 18, borderRadius: 20, background: "#0B0F12", border: "1px solid rgba(255,255,255,.07)" }}>
+          <MapHover info={info}>
           <LegalMap shapes={US_SHAPES} viewBox="0 0 975 610" labels statusOf={(c) => stateBy(c)?.[layer.field]} hrefOf={(c) => (stateBy(c) ? `/legal/us/${c.toLowerCase()}` : null)} />
+          </MapHover>
           <div style={{ marginTop: 8, fontSize: 12.5, color: "#6E7F88" }}>Colours show {layer.label.toLowerCase()} status. Open a state for the full picture: online casinos, sports betting, poker and sweepstakes.</div>
         </div>
         {states.length > 0 && (

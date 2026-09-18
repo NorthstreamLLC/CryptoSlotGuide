@@ -27,12 +27,11 @@ export function LegalMap({
           const href = s.code ? hrefOf(s.code) : null;
           const path = <path className="lm-r" d={s.d} fill={TONE[tone].fill} />;
           return href ? (
-            <a key={i} href={href} className="lm-a" aria-label={`${s.name}: ${TONE[tone].label}`}>
-              <title>{`${s.name}: ${TONE[tone].label}`}</title>
+            <a key={i} href={href} className="lm-a" data-code={s.code ?? undefined} aria-label={`${s.name}: ${TONE[tone].label}`}>
               {path}
             </a>
           ) : (
-            <g key={i}>
+            <g key={i} data-code={s.code ?? undefined}>
               <title>{`${s.name}: ${TONE[tone].label}`}</title>
               {path}
             </g>
