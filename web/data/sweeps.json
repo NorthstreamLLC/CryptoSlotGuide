@@ -1,1 +1,829 @@
-[]
+[
+  {
+    "slug": "realprize",
+    "name": "RealPrize",
+    "domain": "realprize.com",
+    "offer": "Free Sweep Coins welcome bonus + daily bonus",
+    "facts": [
+      {
+        "label": "Welcome offer",
+        "value": "Free Sweep Coins for registering and logging in within three days of sign-up, plus bonus Sweep Coins on designated Gold Coin packages",
+        "url": "https://realprize.com/p/ppr/"
+      },
+      {
+        "label": "Daily bonus",
+        "value": "Daily Bonus of free Sweep Coins, claimable once every 24 hours",
+        "url": "https://realprize.com/p/ppr/"
+      },
+      {
+        "label": "Promotions",
+        "value": "Social media giveaways and challenges, plus refer-a-friend bonuses paid in Sweep Coins",
+        "url": "https://realprize.com/p/ppr/"
+      },
+      {
+        "label": "VIP program",
+        "value": "RealPrize Loyalty Club: earn loyalty XP from daily logins and gameplay to climb levels and collect Gold Coin rewards",
+        "url": "https://realprize.com/p/ppr/"
+      },
+      {
+        "label": "Playthrough",
+        "value": "1x: Sweep Coins must be played at least once before they can be redeemed",
+        "url": "https://realprize.com/p/ppr/"
+      },
+      {
+        "label": "Minimum redemption",
+        "value": "45 SC ($45) for gift cards and 100 SC ($100) for cash; redemptions capped at $10,000 per day",
+        "url": "https://realprize.com/p/ppr/"
+      },
+      {
+        "label": "Purchase methods",
+        "value": "Visa, Mastercard, American Express, Discover, Apple Pay, Google Pay and Skrill",
+        "url": "https://realprize.com/"
+      },
+      {
+        "label": "Restricted states",
+        "value": "California, Connecticut, Delaware, Idaho, Indiana, Louisiana, Maine, Michigan, Montana, Nevada, New Jersey, New York, Tennessee and Washington",
+        "url": "https://realprize.com/p/ppr/"
+      },
+      {
+        "label": "Minimum age",
+        "value": "18+",
+        "url": "https://realprize.com/p/terms-of-use-service-agreement-lp/"
+      },
+      {
+        "label": "Games",
+        "value": "500+ games including slots, bingo, video poker and table games from providers such as NetEnt, Evolution, Relax Gaming and Nolimit City",
+        "url": "https://realprize.com/"
+      },
+      {
+        "label": "Company",
+        "value": "Realplay Tech Inc. (Kent, Delaware)",
+        "url": "https://realprize.com/"
+      },
+      {
+        "label": "Free entry",
+        "value": "Yes: mail a handwritten 4x6 request card in blue ink inside a #10 envelope",
+        "url": "https://realprize.com/p/ppr/"
+      }
+    ],
+    "asOf": "2026-09-18"
+  },
+  {
+    "slug": "funrize",
+    "name": "Funrize",
+    "domain": "funrize.com",
+    "offer": "125,000 coin welcome bonus",
+    "facts": [
+      {
+        "label": "Welcome offer",
+        "value": "125,000 coin welcome bonus on sign-up",
+        "url": "https://funrize.com/"
+      },
+      {
+        "label": "Promotions",
+        "value": "Hourly tournaments, jackpot games and 10+ special events daily",
+        "url": "https://funrize.com/"
+      },
+      {
+        "label": "VIP program",
+        "value": "VIP Club with progressive rewards",
+        "url": "https://funrize.com/"
+      },
+      {
+        "label": "Purchase methods",
+        "value": "Tournament Coin packages from $4.99 to $99.99, each with bonus Promotional Entries",
+        "url": "https://funrize.com/"
+      },
+      {
+        "label": "Restricted states",
+        "value": "Connecticut, Delaware, Idaho, Louisiana, Michigan, Montana, Nevada, New Jersey, New York, Rhode Island, Tennessee, Washington, West Virginia and Wyoming; California, Indiana, Maine and Maryland get Tournament Coin play only",
+        "url": "https://funrize.com/page/agreement"
+      },
+      {
+        "label": "Minimum age",
+        "value": "21+",
+        "url": "https://funrize.com/page/agreement"
+      },
+      {
+        "label": "Games",
+        "value": "1,000+ social casino games including slots, fishing games and jackpot games",
+        "url": "https://funrize.com/"
+      },
+      {
+        "label": "Company",
+        "value": "A1 Development LLC (Afton, Wyoming)",
+        "url": "https://funrize.com/page/agreement"
+      },
+      {
+        "label": "Free entry",
+        "value": "Yes: each handwritten mail-in request earns 1 Promotional Entry or 5 Free Plays",
+        "url": "https://funrize.com/page/alternative-method-of-entry"
+      }
+    ],
+    "asOf": "2026-09-18"
+  },
+  {
+    "slug": "nolimitcoins",
+    "name": "NoLimitCoins",
+    "domain": "nolimitcoins.com",
+    "offer": "Free extra coins on sign-up + 300% first-purchase boost",
+    "facts": [
+      {
+        "label": "Welcome offer",
+        "value": "Free extra coins on sign-up and a 300% boost on your first purchase",
+        "url": "https://nolimitcoins.com/"
+      },
+      {
+        "label": "Daily bonus",
+        "value": "Spin the Lucky Wheel twice a day for free coins",
+        "url": "https://nolimitcoins.com/"
+      },
+      {
+        "label": "Promotions",
+        "value": "Tournaments, coin drops and daily rewards",
+        "url": "https://nolimitcoins.com/"
+      },
+      {
+        "label": "Restricted states",
+        "value": "Connecticut, Delaware, Idaho, Louisiana, Michigan, Montana, Nevada, New Jersey, New York, Rhode Island, Tennessee, Washington, West Virginia and Wyoming; California, Indiana, Maine and Maryland get Gold Coins mode only",
+        "url": "https://nolimitcoins.com/page/agreement"
+      },
+      {
+        "label": "Minimum age",
+        "value": "21+",
+        "url": "https://nolimitcoins.com/"
+      },
+      {
+        "label": "Games",
+        "value": "Slots, Live Club live dealer games, fishing games, Rapid Link, Hold 'n' Link, Bonus Buy and jackpot games",
+        "url": "https://nolimitcoins.com/"
+      },
+      {
+        "label": "Company",
+        "value": "A1 Development LLC (Afton, Wyoming)",
+        "url": "https://nolimitcoins.com/"
+      },
+      {
+        "label": "Free entry",
+        "value": "Yes: each handwritten mail-in request earns 1 Super Coin or 5 Free Plays",
+        "url": "https://nolimitcoins.com/page/alternative-method-of-entry"
+      }
+    ],
+    "asOf": "2026-09-18"
+  },
+  {
+    "slug": "spree",
+    "name": "Spree",
+    "domain": "spree.com",
+    "offer": "Get 25,000 GC + 2.5 SC free, plus 200% extra GC on first purchase",
+    "facts": [
+      {
+        "label": "Welcome offer",
+        "value": "25,000 Gold Coins and 2.5 Spree Coins on sign-up, plus 200% extra Gold Coins on your first purchase",
+        "url": "https://support.spree.com/hc/en-us/articles/37595439875730-How-do-I-claim-the-Spree-Welcome-Offer"
+      },
+      {
+        "label": "Daily bonus",
+        "value": "Free Spree Coins every day for logging in, up to 2.50 SC a day, plus up to 3.55 SC across your first three days",
+        "url": "https://spree.com/sweepstakes-rules"
+      },
+      {
+        "label": "Promotions",
+        "value": "Weekly random draws for free Spree Coins with at least 100 winners, plus regular Facebook, Instagram and X giveaways. Refer a friend: 25 SC when they buy $50+ of Gold Coins, plus 75 SC more once they reach $1,000",
+        "url": "https://spree.com/sweepstakes-rules"
+      },
+      {
+        "label": "VIP program",
+        "value": "XP loyalty program with rewards every 10 levels, then Emerald, Ruby and Diamond tiers from Level 100; Diamond adds a personal host and premium shop",
+        "url": "https://support.spree.com/hc/en-us/articles/37658329115154-Understanding-Loyalty-Tiers"
+      },
+      {
+        "label": "Playthrough",
+        "value": "1x: free Spree Coins must be played once before they count toward a redemption",
+        "url": "https://spree.com/sweepstakes-rules"
+      },
+      {
+        "label": "Minimum redemption",
+        "value": "10 SC ($10) for gift cards and 100 SC ($100) for cash; 1 SC = $1",
+        "url": "https://spree.com/sweepstakes-rules"
+      },
+      {
+        "label": "Redemption time",
+        "value": "Verification usually takes 48-72 hours; redemptions then take 3-5 business days",
+        "url": "https://support.spree.com/hc/en-us/articles/17883450879250-How-long-is-Spree-verification"
+      },
+      {
+        "label": "Purchase methods",
+        "value": "Credit card, Skrill, Apple Pay and Google Pay",
+        "url": "https://support.spree.com/hc/en-us/articles/17883316846482-Why-am-I-getting-an-error-message-when-I-m-making-a-purchase"
+      },
+      {
+        "label": "Restricted states",
+        "value": "California, Connecticut, Delaware, Idaho, Indiana, Kentucky, Louisiana, Maine, Maryland, Michigan, Montana, Nevada, New Jersey, New York, Tennessee, Washington and West Virginia",
+        "url": "https://spree.com/terms-of-service"
+      },
+      {
+        "label": "Minimum age",
+        "value": "18+",
+        "url": "https://spree.com/terms-of-service"
+      },
+      {
+        "label": "Games",
+        "value": "3,500+ games including slots, 30+ live dealer games, arcade games and Spree-only SpreePotz progressive jackpots",
+        "url": "https://spree.com/"
+      },
+      {
+        "label": "Company",
+        "value": "Play Spree Ltd (Isle of Man)",
+        "url": "https://spree.com/sweepstakes-rules"
+      },
+      {
+        "label": "Free entry",
+        "value": "Yes: mail a handwritten request card with your Sweepstakes Request Code",
+        "url": "https://spree.com/sweepstakes-rules"
+      }
+    ],
+    "asOf": "2026-09-18"
+  },
+  {
+    "slug": "legendz",
+    "name": "Legendz",
+    "domain": "legendz.com",
+    "offer": "Get 500 GC + 3 SC free, plus 100% extra coins on first purchase",
+    "facts": [
+      {
+        "label": "Welcome offer",
+        "value": "500 GC and 3 SC on sign-up, plus 100% extra coins on your first purchase",
+        "url": "https://www.legendz.com/en-US/faq/features"
+      },
+      {
+        "label": "Daily bonus",
+        "value": "Free coins every day; complete the coin set to spin the Wheel of Legendz",
+        "url": "https://www.legendz.com/en-US/faq/general"
+      },
+      {
+        "label": "Promotions",
+        "value": "Daily races and leaderboards paying up to 100 free spins, with winnings in Sweeps Coins; refer a friend for 25 SC when they make a qualifying purchase within 30 days",
+        "url": "https://www.legendz.com/en-US/faq/features"
+      },
+      {
+        "label": "VIP program",
+        "value": "Five VIP tiers (Pioneer, Visionary, Master, Icon, Legend) with personal account managers, priority support, exclusive events and luxury gifts; VIP status from other sites can be transferred",
+        "url": "https://www.legendz.com/en-US/faq/features"
+      },
+      {
+        "label": "Playthrough",
+        "value": "1x: Sweeps Coins must be played once before they can be redeemed",
+        "url": "https://cdn.legendz.com/production/locales/Legendz%20Sweeps%20Rules%20Current.pdf"
+      },
+      {
+        "label": "Minimum redemption",
+        "value": "50 SC ($50) for gift cards via Prizeout and 100 SC ($100) for cash; 1 SC = $1",
+        "url": "https://cdn.legendz.com/production/locales/Legendz%20Sweeps%20Rules%20Current.pdf"
+      },
+      {
+        "label": "Purchase methods",
+        "value": "Debit and credit cards, Apple Pay, Skrill and online banking",
+        "url": "https://www.legendz.com/en-US/faq/payment_information"
+      },
+      {
+        "label": "Restricted states",
+        "value": "California, Connecticut, Idaho, Louisiana, Michigan, Montana, Nevada, New Jersey, New York, Tennessee and Washington",
+        "url": "https://cdn.legendz.com/production/locales/Legendz%20Sweeps%20Rules%20Current.pdf"
+      },
+      {
+        "label": "Minimum age",
+        "value": "18+",
+        "url": "https://cdn.legendz.com/production/locales/Legendz%20Sweeps%20Rules%20Current.pdf"
+      },
+      {
+        "label": "Games",
+        "value": "Slots, provably fair Legendz Originals (Mines, Plinko, Coinflip, Dice, Rock-Paper-Scissors, Cluck It) and live blackjack, roulette and baccarat. Social sportsbook alongside casino-style slots and social live casino",
+        "url": "https://www.legendz.com/en-US/faq/games"
+      },
+      {
+        "label": "Company",
+        "value": "Platinum Panther Ltd. (Malta C111924); payments processed by Platinum Panther, LLC",
+        "url": "https://www.legendz.com/en-US/"
+      },
+      {
+        "label": "Free entry",
+        "value": "Yes: mail a Sweeps Coin Request Card with your Postal Request Code to PO Box 628, Watertown, NY",
+        "url": "https://cdn.legendz.com/production/locales/Legendz%20Sweeps%20Rules%20Current.pdf"
+      }
+    ],
+    "asOf": "2026-09-18"
+  },
+  {
+    "slug": "dara-casino",
+    "name": "Dara Casino",
+    "domain": "daracasino.com",
+    "offer": "Free SC every day + welcome offer on sign-up",
+    "facts": [
+      {
+        "label": "Daily bonus",
+        "value": "Free Gold Coin bonus and free Sweepstakes Coins every 24 hours for logging in",
+        "url": "https://daracasino.com/"
+      },
+      {
+        "label": "Promotions",
+        "value": "Linked jackpot slots, social media competitions and extra SC for inviting friends",
+        "url": "https://daracasino.com/"
+      },
+      {
+        "label": "Playthrough",
+        "value": "1x by default; slots count 100% and live dealer and table games count 10% toward playthrough",
+        "url": "https://daracasino.com/sweepsRules"
+      },
+      {
+        "label": "Minimum redemption",
+        "value": "100 SC ($100) for cash; 1 SC = $1",
+        "url": "https://daracasino.com/sweepsRules"
+      },
+      {
+        "label": "Redemption time",
+        "value": "One redemption every 48 hours; reviews take at least 72 hours, Monday to Friday, 8am-5pm EST",
+        "url": "https://daracasino.com/sweepsRules"
+      },
+      {
+        "label": "Purchase methods",
+        "value": "Cards, including Mastercard",
+        "url": "https://daracasino.zendesk.com/hc/en-001/articles/9954067660687-How-do-I-pay-with-my-MasterCard"
+      },
+      {
+        "label": "Restricted states",
+        "value": "California, Connecticut, Idaho, Illinois, Indiana, Iowa, Louisiana, Maine, Michigan, Montana, Nevada, New Jersey, New York, Tennessee and Washington",
+        "url": "https://daracasino.com/sweepsRules"
+      },
+      {
+        "label": "Minimum age",
+        "value": "18+",
+        "url": "https://daracasino.com/sweepsRules"
+      },
+      {
+        "label": "Games",
+        "value": "Slots, fish shooting games, jackpots, instant win, table games and scratch cards from providers including JILI, 3 Oaks, Hacksaw and Playson",
+        "url": "https://daracasino.com/"
+      },
+      {
+        "label": "Company",
+        "value": "Gateway Guardian Administrators, LLC (Virginia Beach, Virginia)",
+        "url": "https://daracasino.com/sweepsRules"
+      },
+      {
+        "label": "Free entry",
+        "value": "Yes: each handwritten request card with your Mail-In Request Code earns 3 SC",
+        "url": "https://daracasino.com/sweepsRules"
+      }
+    ],
+    "asOf": "2026-09-18"
+  },
+  {
+    "slug": "rolla",
+    "name": "Rolla",
+    "domain": "rolla.com",
+    "offer": "Claim a free $10 coin pack (10.1 SC) on sign-up",
+    "facts": [
+      {
+        "label": "Welcome offer",
+        "value": "10.1 free SC on sign-up, claimed from the lobby after email and KYC verification. First-purchase store with +33% to +150% extra coins, plus a 200% offer that runs for 60 minutes once activated",
+        "url": "https://help.rolla.com/en/articles/12325898-rolla-welcome-bonus-10-1-free-sc"
+      },
+      {
+        "label": "Promotions",
+        "value": "Rock N' Rolla Friday race with a 5,000 SC weekly prize pool. Reel Quest: a daily SC challenge on a featured game. Weekly Rollback returns a share of SC losses to eligible players every Monday. Refer a friend: 25 SC when they buy $100+ and verify, plus 75 SC once they reach $1,500 in purchases",
+        "url": "https://help.rolla.com/en/articles/11384388-rolla-rock-n-rolla-5k-friday-race"
+      },
+      {
+        "label": "VIP program",
+        "value": "High Rolla VIP: 1 to 5 stars unlocking bigger bonuses, surprise drops, personalized perks and exclusive tournaments",
+        "url": "https://help.rolla.com/en/articles/11384435-high-rolla-vip-program-rolla-rewards"
+      },
+      {
+        "label": "Playthrough",
+        "value": "1x: SC must be played through once before it becomes redeemable",
+        "url": "https://help.rolla.com/en/articles/11383423-why-is-my-redeemable-balance-showing-0"
+      },
+      {
+        "label": "Minimum redemption",
+        "value": "50 SC for Prizeout gift cards; 100 SC for MassPay, Trustly and Skrill",
+        "url": "https://help.rolla.com/en/articles/11155650-how-do-i-redeem"
+      },
+      {
+        "label": "Redemption time",
+        "value": "First redemption 1-5 business days, then 1-3 business days; Skrill up to 24 business hours, Prizeout usually instant, MassPay 1-2 business days",
+        "url": "https://help.rolla.com/en/articles/15304811-when-will-my-redemption-be-processed"
+      },
+      {
+        "label": "Purchase methods",
+        "value": "Visa, Mastercard, American Express, Discover, Apple Pay, Google Pay, Trustly Online Banking and Skrill",
+        "url": "https://help.rolla.com/en/articles/11155545-which-payment-methods-are-available-to-use-for-purchases"
+      },
+      {
+        "label": "Restricted states",
+        "value": "No registration from Idaho, Nevada or Washington; no SC play in California, Connecticut, Illinois, Indiana, Louisiana, Maine, Maryland, Michigan, Montana, New Jersey, New York or Tennessee",
+        "url": "https://help.rolla.com/en/articles/11155704-which-states-and-territories-are-excluded"
+      },
+      {
+        "label": "Minimum age",
+        "value": "18+",
+        "url": "https://help.rolla.com/en/articles/11313725-what-s-the-minimum-age-to-play-at-rolla"
+      },
+      {
+        "label": "Games",
+        "value": "1,000+ games",
+        "url": "https://help.rolla.com/en/articles/11384435-high-rolla-vip-program-rolla-rewards"
+      },
+      {
+        "label": "Company",
+        "value": "MW Services Limited (Gibraltar); support and payments by WOWCOM Services Inc (Delaware)",
+        "url": "https://www.rolla.com/"
+      },
+      {
+        "label": "Free entry",
+        "value": "Yes: each valid mail-in request card earns 3 SC",
+        "url": "https://help.rolla.com/en/articles/15302965-what-is-amoe"
+      }
+    ],
+    "asOf": "2026-09-18"
+  },
+  {
+    "slug": "american-luck",
+    "name": "American Luck",
+    "domain": "americanluck.com",
+    "offer": "Get 70,000 GC + 6 SC free, plus 300% more value on first purchase",
+    "facts": [
+      {
+        "label": "Welcome offer",
+        "value": "70,000 GC and 6 SC on sign-up, plus a 300% more value offer for new players",
+        "url": "https://americanluck.com/"
+      },
+      {
+        "label": "Daily bonus",
+        "value": "Progressive daily login bonus that grows the more days you log in",
+        "url": "https://americanluck.com/"
+      },
+      {
+        "label": "Promotions",
+        "value": "Referral bonus for you and your friend, coin drops, themed events, sweepstakes contests and seasonal giveaways",
+        "url": "https://americanluck.com/"
+      },
+      {
+        "label": "Playthrough",
+        "value": "1x by default: Sweeps Coins must be played once before redemption",
+        "url": "https://americanluck.com/api/Document/ContentPage/sweeps-rules.pdf"
+      },
+      {
+        "label": "Minimum redemption",
+        "value": "50 SC; 100 SC redeem for $100",
+        "url": "https://americanluck.com/api/Document/ContentPage/sweeps-rules.pdf"
+      },
+      {
+        "label": "Redemption time",
+        "value": "Account verification takes 3-7 business days, after which you can redeem right away",
+        "url": "https://support.americanluck.com/portal/en/kb/articles/al-how-do-i-redeem-my-sweeps-coins"
+      },
+      {
+        "label": "Purchase methods",
+        "value": "Visa and Mastercard",
+        "url": "https://support.americanluck.com/portal/en/kb/articles/al-which-payment-methods-are-available"
+      },
+      {
+        "label": "Restricted states",
+        "value": "California, Connecticut, Delaware, Idaho, Illinois, Indiana, Louisiana, Maine, Michigan, Montana, Nevada, New Jersey, New York, Tennessee and Washington",
+        "url": "https://americanluck.com/api/Document/ContentPage/sweeps-rules.pdf"
+      },
+      {
+        "label": "Minimum age",
+        "value": "18+",
+        "url": "https://support.americanluck.com/portal/en/kb/articles/al-what-is-the-minimum-age-to-play-our-games"
+      },
+      {
+        "label": "Games",
+        "value": "1,500+ games including Megaways, Hold & Win and classic slots from Evoplay, Habanero, BGaming, Relax Gaming and more",
+        "url": "https://americanluck.com/"
+      },
+      {
+        "label": "Company",
+        "value": "SGSE LLC (Wilmington, Delaware)",
+        "url": "https://americanluck.com/"
+      },
+      {
+        "label": "Free entry",
+        "value": "Yes: a handwritten mail-in request with your Mail Code earns 5 SC",
+        "url": "https://americanluck.com/api/Document/ContentPage/sweeps-rules.pdf"
+      }
+    ],
+    "asOf": "2026-09-18"
+  },
+  {
+    "slug": "lonestar",
+    "name": "Lonestar",
+    "domain": "lonestarcasino.com",
+    "offer": "Welcome offer for new players + daily bonus",
+    "facts": [
+      {
+        "label": "Daily bonus",
+        "value": "Daily bonus, daily challenges and free spins",
+        "url": "https://lonestarcasino.com/"
+      },
+      {
+        "label": "Promotions",
+        "value": "Raffles, special events and a refer-a-friend bonus",
+        "url": "https://lonestarcasino.com/pages/promotions"
+      },
+      {
+        "label": "VIP program",
+        "value": "Loyalty program",
+        "url": "https://lonestarcasino.com/"
+      },
+      {
+        "label": "Purchase methods",
+        "value": "Visa, Mastercard and Apple Pay",
+        "url": "https://lonestarcasino.com/"
+      },
+      {
+        "label": "Restricted states",
+        "value": "Connecticut, Idaho, Michigan, Montana, Nevada, New York and Washington",
+        "url": "https://lonestarcasino.com/pages/terms-of-use-service-agreement-lp"
+      },
+      {
+        "label": "Minimum age",
+        "value": "18+",
+        "url": "https://lonestarcasino.com/pages/terms-of-use-service-agreement-lp"
+      },
+      {
+        "label": "Games",
+        "value": "500+ social casino games",
+        "url": "https://lonestarcasino.com/"
+      },
+      {
+        "label": "Company",
+        "value": "Realplay Tech Inc. (Kent, Delaware)",
+        "url": "https://lonestarcasino.com/"
+      }
+    ],
+    "asOf": "2026-09-18"
+  },
+  {
+    "slug": "punt",
+    "name": "Punt",
+    "domain": "punt.com",
+    "offer": "Spend $30, get $60 in coins on first purchase",
+    "facts": [
+      {
+        "label": "Welcome offer",
+        "value": "First-purchase reward: spend $30, get $60 in coins",
+        "url": "https://punt.com/"
+      },
+      {
+        "label": "Daily bonus",
+        "value": "Daily Boost of free Sweeps Coins from the store, claimable once every 24 hours",
+        "url": "https://punt.com/sweeps-rules/"
+      },
+      {
+        "label": "Promotions",
+        "value": "Races, drops, challenges, a Power Chance jackpot and refer-a-friend for up to 300 SC",
+        "url": "https://punt.com/"
+      },
+      {
+        "label": "VIP program",
+        "value": "VIP Club",
+        "url": "https://punt.com/"
+      },
+      {
+        "label": "Playthrough",
+        "value": "3x on bonus SC from Gold Coin purchases; 10x on SC from giveaways and bonus codes",
+        "url": "https://punt.com/payment-faq/"
+      },
+      {
+        "label": "Minimum redemption",
+        "value": "100 SC ($100); 1 SC = $1",
+        "url": "https://punt.com/sweeps-rules/"
+      },
+      {
+        "label": "Redemption time",
+        "value": "ACH transfer in 1-3 business days; instant bank transfer is immediate",
+        "url": "https://punt.com/payment-faq/"
+      },
+      {
+        "label": "Purchase methods",
+        "value": "Visa, Mastercard and Discover",
+        "url": "https://punt.com/payment-faq/"
+      },
+      {
+        "label": "Restricted states",
+        "value": "California, Connecticut, Idaho, Illinois, Indiana, Louisiana, Maine, Michigan, Montana, Nevada, New Jersey, New York, Tennessee and Washington",
+        "url": "https://punt.com/sweeps-rules/"
+      },
+      {
+        "label": "Minimum age",
+        "value": "18+",
+        "url": "https://punt.com/sweeps-rules/"
+      },
+      {
+        "label": "Games",
+        "value": "Slots, Punt Originals, live dealers, crash games, blackjack and Hold & Win games",
+        "url": "https://punt.com/"
+      },
+      {
+        "label": "Company",
+        "value": "Punt of Sheridan (Sheridan, Wyoming)",
+        "url": "https://punt.com/sweeps-rules/"
+      },
+      {
+        "label": "Free entry",
+        "value": "Yes: each handwritten Request Card with your Postal Request Code earns 5 SC",
+        "url": "https://punt.com/sweeps-rules/"
+      }
+    ],
+    "asOf": "2026-09-18"
+  },
+  {
+    "slug": "thrillzz",
+    "name": "Thrillzz",
+    "domain": "thrillzz.com",
+    "offer": "100% match up to $100 in coins on first purchase",
+    "facts": [
+      {
+        "label": "Welcome offer",
+        "value": "100% match up to $100 in coins on your first purchase",
+        "url": "https://thrillzz.com/faq/"
+      },
+      {
+        "label": "Daily bonus",
+        "value": "Free Thrillzz Coins you can claim every few hours",
+        "url": "https://thrillzz.com/faq/"
+      },
+      {
+        "label": "Promotions",
+        "value": "Huge daily odds boosts, leaderboards and Squads with friends. Refer a friend: 0.2 Sweeps per friend who signs up and makes a pick, and 20 Sweeps when a friend buys $20+ in coins within 30 days",
+        "url": "https://thrillzz.com/"
+      },
+      {
+        "label": "VIP program",
+        "value": "Loyalty levels with Coin rewards",
+        "url": "https://thrillzz.com/how-it-works/"
+      },
+      {
+        "label": "Minimum redemption",
+        "value": "50 Prize Tickets for cash; up to 1,000 Prize Tickets per day",
+        "url": "https://thrillzz.com/official-sweepstakes-rules/"
+      },
+      {
+        "label": "Redemption time",
+        "value": "Up to 60 days",
+        "url": "https://thrillzz.com/official-sweepstakes-rules/"
+      },
+      {
+        "label": "Purchase methods",
+        "value": "Visa, Mastercard and Skrill",
+        "url": "https://thrillzz.com/faq/"
+      },
+      {
+        "label": "Restricted states",
+        "value": "Georgia, Hawaii, Idaho, Indiana, Kentucky, Louisiana, Maine, Michigan, Mississippi, Montana, Nevada, New York, Ohio, Tennessee and Washington",
+        "url": "https://thrillzz.com/terms-of-use/"
+      },
+      {
+        "label": "Minimum age",
+        "value": "19+",
+        "url": "https://thrillzz.com/terms-of-use/"
+      },
+      {
+        "label": "Games",
+        "value": "Social sportsbook covering NFL, NBA, NCAA, MLB, NHL, MLS, tennis and more, plus 400+ free games; mobile only",
+        "url": "https://thrillzz.com/"
+      },
+      {
+        "label": "Company",
+        "value": "Thrillzz Inc. (Franklin, Tennessee)",
+        "url": "https://thrillzz.com/"
+      },
+      {
+        "label": "Free entry",
+        "value": "Yes: mail a handwritten 4x6 card in blue ink to Thrillzz in Franklin, TN",
+        "url": "https://thrillzz.com/official-sweepstakes-rules/"
+      }
+    ],
+    "asOf": "2026-09-18"
+  },
+  {
+    "slug": "sixty6",
+    "name": "Sixty6",
+    "domain": "sixty6.com",
+    "offer": "Get 75,000 GC + 2 SC free",
+    "facts": [
+      {
+        "label": "Welcome offer",
+        "value": "75,000 GC and 2 SC on sign-up",
+        "url": "https://sixty6.com/"
+      },
+      {
+        "label": "Daily bonus",
+        "value": "2,000-coin daily login refill plus a daily Fortune Wheel",
+        "url": "https://sixty6.com/promotions"
+      },
+      {
+        "label": "Promotions",
+        "value": "5,000,000-coin referral bonus, social bonuses and seasonal tournaments",
+        "url": "https://sixty6.com/promotions"
+      },
+      {
+        "label": "Minimum age",
+        "value": "21+",
+        "url": "https://sixty6.com/terms-and-conditions"
+      },
+      {
+        "label": "Games",
+        "value": "2,000+ games including slots, Hold'n'Link, cascading reels, fishing and social live and table games",
+        "url": "https://sixty6.com/"
+      },
+      {
+        "label": "Company",
+        "value": "Kinetix Ventures, Inc (Wilmington, Delaware)",
+        "url": "https://sixty6.com/"
+      },
+      {
+        "label": "Free entry",
+        "value": "Yes: an alternative method of entry is always available",
+        "url": "https://sixty6.com/"
+      }
+    ],
+    "asOf": "2026-09-18"
+  },
+  {
+    "slug": "moonspin",
+    "name": "Moonspin",
+    "domain": "moonspin.us",
+    "offer": "Get 60,000 GC + 3 SC free over your first three days",
+    "facts": [
+      {
+        "label": "Welcome offer",
+        "value": "20,000 GC and 1 SC on sign-up, then the same again on each of the next two days: 60,000 GC and 3 SC in total",
+        "url": "https://moonspin.us/blog/faq/"
+      },
+      {
+        "label": "Daily bonus",
+        "value": "1,000 GC and 0.5 SC every day",
+        "url": "https://moonspin.us/blog/faq/"
+      },
+      {
+        "label": "Promotions",
+        "value": "Recurring SC leaderboard races with 300-400 SC prize pools",
+        "url": "https://moonspin.us/promotions"
+      },
+      {
+        "label": "VIP program",
+        "value": "Moonspin Club: invite-only VIP with rakeback, coinback, VIP coupon discounts and premium deals",
+        "url": "https://moonspin.us/promotions"
+      },
+      {
+        "label": "Playthrough",
+        "value": "1x, counted on slot games only",
+        "url": "https://moonspin.us/blog/faq/"
+      },
+      {
+        "label": "Minimum redemption",
+        "value": "100 SC",
+        "url": "https://moonspin.us/documents/sweepstakes-rules"
+      },
+      {
+        "label": "Purchase methods",
+        "value": "ACH and card payments",
+        "url": "https://moonspin.us/blog/faq/"
+      },
+      {
+        "label": "Crypto",
+        "value": "Bitcoin, Ethereum, USDT, Litecoin, Tron, Ripple and Dogecoin",
+        "url": "https://moonspin.us/"
+      },
+      {
+        "label": "Restricted states",
+        "value": "California, Connecticut, Delaware, Georgia, Idaho, Indiana, Louisiana, Maine, Michigan, Montana, Nebraska, Nevada, New Jersey, New York, North Dakota, Tennessee and Washington",
+        "url": "https://moonspin.us/documents/sweepstakes-rules"
+      },
+      {
+        "label": "Minimum age",
+        "value": "18+",
+        "url": "https://moonspin.us/documents/sweepstakes-rules"
+      },
+      {
+        "label": "Games",
+        "value": "Provably fair Moonspin Originals, slots and tournaments",
+        "url": "https://moonspin.us/"
+      },
+      {
+        "label": "Company",
+        "value": "Solar Bloom LLC (Casper, Wyoming)",
+        "url": "https://moonspin.us/"
+      },
+      {
+        "label": "Free entry",
+        "value": "Yes: mail a Request Card with your Postal Request Code to PO Box 8213, Manchester, NH",
+        "url": "https://moonspin.us/documents/sweepstakes-rules"
+      }
+    ],
+    "asOf": "2026-09-18"
+  }
+]
