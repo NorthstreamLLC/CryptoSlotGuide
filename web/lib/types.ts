@@ -292,7 +292,7 @@ export interface RtpReading {
   publishedRtp: number;
   checkedAt: string; // ISO date
   checkedBy: string;
-  source: "in_client_paytable" | "operator_support" | "reader_report";
+  source: "in_client_paytable" | "operator_game_page" | "operator_support" | "reader_report";
   screenshotUrl?: string;
   notes?: string;
 }

@@ -51,7 +51,7 @@ export interface WatchRow {
 }
 
 /** The titles on the board: most-played slots whose studios sell several RTP builds. */
-export const WATCH_SLOTS = ["sweet-bonanza", "gates-of-olympus", "big-bass-bonanza", "wanted-dead-or-a-wild", "le-bandit", "reactoonz", "money-train-4", "fire-in-the-hole-2"];
+export const WATCH_SLOTS = ["sweet-bonanza-1000", "gates-of-olympus-1000", "sugar-rush-1000", "le-bandit", "wanted-dead-or-a-wild", "stormforged", "outsourced", "duck-hunters-2"];
 
 export function getWatchRows(): WatchRow[] {
   const { slots, watchOps, rtpWatch } = siteData;

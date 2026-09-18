@@ -210,5 +210,80 @@
     "bestAt": "Cloudbet",
     "tint": "#C7A45C",
     "sourceUrl": "https://netent.com/games/divine-fortune"
+  },
+  {
+    "slug": "sweet-bonanza-1000",
+    "name": "Sweet Bonanza 1000",
+    "mono": "SB1",
+    "provider": "Pragmatic Play",
+    "rtp": 96.53,
+    "vol": "medium",
+    "maxWin": "25,000x",
+    "bestAt": "",
+    "tint": "#E39BC4",
+    "unpublished": [
+      "vol",
+      "maxWin"
+    ],
+    "sourceUrl": "https://www.pragmaticplay.com/en/games/sweet-bonanza-1000/"
+  },
+  {
+    "slug": "gates-of-olympus-1000",
+    "name": "Gates of Olympus 1000",
+    "mono": "GO1",
+    "provider": "Pragmatic Play",
+    "rtp": 96.5,
+    "vol": "high",
+    "maxWin": "15,000x",
+    "bestAt": "",
+    "tint": "#E2B84F",
+    "unpublished": [
+      "vol",
+      "maxWin"
+    ],
+    "sourceUrl": "https://www.pragmaticplay.com/en/games/gates-of-olympus-1000/"
+  },
+  {
+    "slug": "sugar-rush-1000",
+    "name": "Sugar Rush 1000",
+    "mono": "SR1",
+    "provider": "Pragmatic Play",
+    "rtp": 96,
+    "vol": "high",
+    "maxWin": "25,000x",
+    "bestAt": "",
+    "tint": "#F08BB0",
+    "unpublished": [
+      "vol",
+      "maxWin"
+    ],
+    "sourceUrl": "https://www.pragmaticplay.com/en/games/sugar-rush-1000/"
+  },
+  {
+    "slug": "outsourced",
+    "name": "Outsourced",
+    "mono": "OUT",
+    "provider": "Nolimit City",
+    "rtp": 96.08,
+    "vol": "extreme",
+    "maxWin": "5,000x",
+    "bestAt": "",
+    "tint": "#9FB4C2",
+    "sourceUrl": "https://www.nolimitcity.com/games/outsourced"
+  },
+  {
+    "slug": "duck-hunters-2",
+    "name": "Duck Hunters 2",
+    "mono": "DH2",
+    "provider": "Nolimit City",
+    "rtp": 96,
+    "vol": "extreme",
+    "maxWin": "40,000x",
+    "bestAt": "",
+    "tint": "#8FB36B",
+    "unpublished": [
+      "vol"
+    ],
+    "sourceUrl": "https://www.nolimitcity.com/games/duck-hunters-2"
   }
 ]

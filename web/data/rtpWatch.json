@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "id": "sweet-bonanza-1000:roobet:2026-09-18",
+    "slotSlug": "sweet-bonanza-1000",
+    "operatorSlug": "roobet",
+    "rtp": 96.53,
+    "publishedRtp": 96.53,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "in_client_paytable",
+    "notes": "Paytable page 4/7: 96.53% base; ante bet 96.50%, buy free spins 96.52%, buy super free spins 96.55%"
+  },
+  {
+    "id": "sweet-bonanza-1000:razed:2026-09-18",
+    "slotSlug": "sweet-bonanza-1000",
+    "operatorSlug": "razed",
+    "rtp": 96.53,
+    "publishedRtp": 96.53,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "RTP tag on Razed game page: 96.53%"
+  }
+]
