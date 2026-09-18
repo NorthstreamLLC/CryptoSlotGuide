@@ -1417,20 +1417,6 @@
         "title": "Payouts & fees",
         "facts": [
           {
-            "label": "Withdrawal speed",
-            "value": "Promotes lightning-fast payouts via the Bitcoin Lightning Network; no processing time stated",
-            "sourcing": "editorial",
-            "sourceUrl": "https://betplay.io/en/info/about",
-            "asOf": "2026-09-15"
-          },
-          {
-            "label": "Withdrawal limit",
-            "value": "$8,000 per 24 hours, plus same-day deposits; higher VIP levels can raise it",
-            "sourcing": "editorial",
-            "sourceUrl": "https://betplay.io/en/info/terms",
-            "asOf": "2026-09-15"
-          },
-          {
             "label": "Withdrawal requirements",
             "value": "Every deposit must be wagered once before withdrawing; withdrawals go out in the currency deposited",
             "sourcing": "editorial",
@@ -1464,6 +1450,20 @@
             "sourcing": "editorial",
             "sourceUrl": "https://betplay.io/en/",
             "asOf": "2026-09-16"
+          },
+          {
+            "label": "Originals limits",
+            "value": "Betplay Originals: €0.10 minimum stake, €5,000 standard max bet and winnings capped at €100,000",
+            "sourcing": "editorial",
+            "sourceUrl": "https://betplay.io/en/info/terms",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Inactive accounts",
+            "value": "After 6 months with no activity the balance is deducted, with 14 days' email notice first and 10 days to appeal",
+            "sourcing": "editorial",
+            "sourceUrl": "https://betplay.io/en/info/terms",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -1505,10 +1505,10 @@
         "facts": [
           {
             "label": "Standing offer",
-            "value": "Welcome bonus over 3 deposits: 100% up to 1,000 USDT, 50% up to 2,000 USDT, 100% up to 2,000 USDT",
+            "value": "250% welcome bonus up to 5,000 USDT over the first 3 deposits: 100% up to 1,000 USDT, 50% up to 2,000 USDT, then 100% up to 2,000 USDT. Once wagering is complete the bonus can be withdrawn straight away, no strings attached",
             "sourcing": "editorial",
             "sourceUrl": "https://betplay.io/en/info/promotions",
-            "asOf": "2026-09-15"
+            "asOf": "2026-09-18"
           },
           {
             "label": "Wagering",
@@ -1532,18 +1532,11 @@
             "asOf": "2026-09-15"
           },
           {
-            "label": "Weekly cashback",
-            "value": "10% weekly cashback from VIP Bronze I, paid Thursdays around 13:00 UTC; up to $20,000 a week",
-            "sourcing": "editorial",
-            "sourceUrl": "https://betplay.io/en/info/promotions",
-            "asOf": "2026-09-15"
-          },
-          {
             "label": "VIP levels",
-            "value": "Bronze I to Obsidian: free spins at every level, crypto cash drops at set levels (Doge, Litecoin, Bitcoin)",
+            "value": "14 levels from Bronze I to Obsidian, earned by casino wagering (poker and sportsbook bets don't count). Free spins at every level, 10% cashback from Bronze I, and crypto cash drops at Bronze II and Gold III (Dogecoin), Bronze III and Platinum III (Litecoin) and Silver III (Bitcoin)",
             "sourcing": "editorial",
             "sourceUrl": "https://betplay.io/en/info/promotions",
-            "asOf": "2026-09-15"
+            "asOf": "2026-09-18"
           },
           {
             "label": "Leaderboards",
@@ -1572,6 +1565,20 @@
             "sourcing": "editorial",
             "sourceUrl": "https://betplay.io/en/info/promotions",
             "asOf": "2026-09-16"
+          },
+          {
+            "label": "Cashback",
+            "value": "10% weekly cashback on losses, paid automatically every Thursday around 13:00 UTC from VIP Bronze I. Higher VIP levels raise the share paid back, which also varies with wager size and game type; sportsbook and live dealer bets are excluded. Up to $20,000 a week",
+            "sourcing": "editorial",
+            "sourceUrl": "https://betplay.io/en/info/promotions",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Missions",
+            "value": "Challenges: a rotating board of slot and Originals challenges, e.g. hit a set multiplier on Gates of Olympus 1000 or Sweet Bonanza, with prizes up to $3,000 each and minimum bets from $0.20",
+            "sourcing": "editorial",
+            "sourceUrl": "https://betplay.io/",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -1580,17 +1587,17 @@
         "facts": [
           {
             "label": "Sportsbook",
-            "value": "Yes. It has a sportsbook with live streams and live betting. The site blocks fetching, so this comes from a Google snippet.",
+            "value": "Full sportsbook with live betting and streams, horse racing, and a Predictions tab, alongside a poker room",
             "sourcing": "editorial",
             "sourceUrl": "https://betplay.io/en/sportsbook",
-            "asOf": "2026-09-16"
+            "asOf": "2026-09-18"
           },
           {
             "label": "Esports",
-            "value": "Yes. Its news/blog section publishes esports odds, e.g. 'IEM Chengdu 2025 Futures Odds'. No list of esports titles was found on its own pages.",
+            "value": "Yes, with an esports hub of 158 events",
             "sourcing": "editorial",
-            "sourceUrl": "https://betplay.io/en/news/iem-chengdu-2025-futures-odds",
-            "asOf": "2026-09-16"
+            "sourceUrl": "https://betplay.io/en/sportsbook",
+            "asOf": "2026-09-18"
           },
           {
             "label": "Cash-out",
@@ -1612,6 +1619,33 @@
             "sourcing": "editorial",
             "sourceUrl": "https://betplay.io/info/sports-betting-rules",
             "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports titles",
+            "chips": [
+              "FC 26",
+              "Counter-Strike",
+              "Valorant",
+              "Dota 2",
+              "League of Legends",
+              "Rainbow Six",
+              "Mobile Legends",
+              "WarCraft III",
+              "Crossfire",
+              "Rocket League",
+              "NBA 2K26",
+              "Cricket 24"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://betplay.io/en/sportsbook",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Prediction markets",
+            "value": "Yes, a Predictions tab inside the sportsbook",
+            "sourcing": "editorial",
+            "sourceUrl": "https://betplay.io/en/sportsbook",
+            "asOf": "2026-09-18"
           }
         ]
       },

@@ -380,7 +380,7 @@
     "payoutLabel": "8m 24s",
     "licence": "Not stated",
     "kyc": "none",
-    "bonus": "Welcome: up to 5,000 USDT over 3 deposits + 10% weekly cashback",
+    "bonus": "250% up to 5,000 USDT over 3 deposits + 10% weekly cashback",
     "wager": 60,
     "conf": 1,
     "absorbsFee": true,
@@ -389,7 +389,7 @@
     "esports": true,
     "hasCustomReview": false,
     "bonusExpiry": "7 days to claim, 30 days to complete",
-    "bonusShort": "Up to 5,000 USDT over 3 deposits",
+    "bonusShort": "250% up to 5,000 USDT + 10% weekly cashback",
     "wagerBasis": "deposit",
     "payoutStated": "In seconds (advertised)"
   },
