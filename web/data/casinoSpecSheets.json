@@ -6635,6 +6635,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://metawin.com/faq/",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Withdrawal limits",
+            "value": "Net withdrawal limit per rolling 24 hours depends on MetaMax tier. The FAQ's wallet answers list Unranked $10,000, Bronze $25,000, Silver $50,000, Gold $100,000, Platinum $125,000 and Red Room $500,000. The FAQ's 'How do withdrawals work?' answer gives different figures: Bronze $50,000, Silver $75,000 and Red Room $200,000. The terms (updated January 2026) separately say swaps out are capped at 5 ETH per 24 hours. Minimum withdrawal is $20, with a $2.50 withdrawal fee. Withdrawals are typically instant and take up to 24 hours. All deposits must be wagered 1x before withdrawal.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://metawin.com/faq/",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -6663,6 +6670,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://metawin.com/hub/guides/deposit-play-btc-metawin/",
             "asOf": "2026-09-16"
+          },
+          {
+            "label": "Deposit limits",
+            "value": "No maximum deposit. Minimum deposits by coin: ETH 0.002, BTC 0.0001, SOL 0.05, USDT/USDC/DAI 5, LTC 0.08, DOGE 33.8, XRP 9, BNB 0.009, TRX 40, BCH 0.013, EOS 5, MATIC 5, RLB 71, SHFL 22, WIF 1.88, BNK1K 250. Deposits below the minimum are not credited and cannot be recovered. All deposits carry a 1x wagering requirement before withdrawal.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.metawin.com/en/articles/9453722-deposit-limits-using-web3",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -6671,10 +6685,10 @@
         "facts": [
           {
             "label": "Standing offer",
-            "value": "MetaMax loyalty program; rank-up prizes up to $1,000,000",
+            "value": "No welcome or sign-up bonus. The standing offer is 30% of every deposit credited as Prize Funds, which can only be used toward competition (prize draw) entries. They are used only when your real balance cannot cover the entry, and any remaining Prize Funds reset to $0 when you withdraw. MetaMax loyalty rewards run alongside it. The FAQ lists the maximum Rank Up prize as $1,000,000, for reaching Elite.",
             "sourcing": "editorial",
-            "sourceUrl": "https://metawin.com/faq/",
-            "asOf": "2026-09-15"
+            "sourceUrl": "https://help.metawin.com/en/articles/13827349-prize-funds",
+            "asOf": "2026-09-18"
           },
           {
             "label": "Expiry",
@@ -6689,6 +6703,48 @@
             "sourcing": "editorial",
             "sourceUrl": "https://metawin.com/promotions/prize-funds/",
             "asOf": "2026-09-16"
+          },
+          {
+            "label": "VIP levels",
+            "value": "MetaMax loyalty program: tiers Unranked, Bronze, Silver, Gold, Platinum, then invite-only Red Room (the FAQ also names an Elite rank with a $1,000,000 Rank Up prize). Tiers are based on lifetime wagering and ranks never decay. Each new tier pays a fixed Rank Up Reward (help centre: playable balance with 1x wagering; MetaWin Hub guides say 0x, so MetaWin's own pages disagree). Royal Reload from Platinum up is paid in 7 daily portions released at 12:00 UTC. Instant, Daily and Weekly bonuses scale with tier. Tier also sets the 24-hour withdrawal limit.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://metawin.com/terms-and-conditions/",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Rakeback",
+            "value": "Rakeback, which MetaWin calls WinBack, runs through MetaMax. The Instant Bonus pays a share of theoretical revenue (house edge on the last 30 minutes of wagering × tier multiplier). It is recalculated every 30 minutes and must be claimed within that 30-minute window. The Daily Bonus is based on the previous 24 hours of wagering × tier multiplier. It is available daily at 01:00 UTC (the help centre says it refreshes at midnight UTC) and must be claimed within 24 hours. The Daily Bonus requires Bronze rank or above. Zero House Edge games earn nothing, and games over 98% RTP count at 25%.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://metawin.com/terms-and-conditions/",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Cashback",
+            "value": "Weekly Bonus (also called a lossback bonus): calculated on wagering and net losses from Friday 00:00 UTC to Thursday 23:59 UTC. It combines a small base return on total wagering with an extra amount based on net losses, and is credited every Friday at 12:00 UTC. Bronze rank or above is required, and Zero House Edge games are excluded.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.metawin.com/en/articles/9455021-metamax-rewards",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Reload bonuses",
+            "value": "Free Spins Friday: every Friday, up to 20 free spins on a chosen game go to Bronze-rank-and-above players who met that week's wagering target, set between $50 and $1,000 over the previous 7 days. Spins are paid in USDT and must be used within 48 hours. Winnings carry 1x wagering. It is targeted, so not every player qualifies every week. Royal Reload (Platinum+) is paid daily for 7 days after each rank-up.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://metawin.com/promotions/free-spins-friday/",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Leaderboards",
+            "value": "Wager race with a $15,000 pool: 20 places paid, $7,500 to first, prizes in BTC with 1x playthrough. MetaWin's own pages disagree on how often it runs: the page title and period say Daily, while its terms and the promotions list call it a weekly race. There is also a recurring Multiplier Race schedule: 6-hourly $1,000 races (10 places paid, $500 top prize, biggest single multiplier on a featured slot that changes daily), with bigger $1,250 races on weekends, about $30,000 per week in playable BTC. The help centre says daily, weekly and monthly leaderboards run across slots and live games. Pragmatic Play Drops & Wins adds daily cash drops and weekly multiplier tournaments on qualifying Pragmatic titles.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://metawin.com/promotions/daily-race/",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Prize draws",
+            "value": "Monthly $250,000 prize draw with a $100,000 top prize. Free entries: 1 per 24h for logging in, 3 per 24h for depositing $20+, 1 per $100 casino wager (max 15,000) and 1 per $100 settled sports wager at 1.30+ odds (max 2,000). At least one deposit in the month is required. Prizes are paid in USDT with 1x wagering. MetaWin also runs a recurring schedule of on-chain prize competitions that you can enter with Prize Funds. The FAQ lists a weekly $150,000 Friday Fire ($50,000 to the winner), a $2,500 Daily Drop every day except Friday, and a $50 Surge Prize every 30 minutes. On 2026-09-18 the live Prizes page showed the $250,000 Comp, a Daily Drop (about $2,000) and a Holders Comp, but not Friday Fire.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://metawin.com/promotions/monthly-competition/",
+            "asOf": "2026-09-18"
           }
         ]
       },

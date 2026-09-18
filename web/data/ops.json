@@ -605,7 +605,7 @@
     "payoutStated": "Instant–24 hr",
     "payoutStatedMaxMins": 1440,
     "noDepositBonus": true,
-    "bonusShort": "MetaMax rewards, rank prizes up to $1M"
+    "bonusShort": "30% of every deposit as prize-draw funds + a $250,000 monthly draw"
   },
   {
     "slug": "whale-io",
