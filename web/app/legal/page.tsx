@@ -1,8 +1,9 @@
 import { pageMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { COUNTRIES, WORLD_SHAPES, countryBy, toneOf, TONE } from "@/lib/legal";
-import { MapHover, type HoverInfo } from "@/components/legal/MapHover";
+import { COUNTRIES, WORLD_SHAPES, countryBy } from "@/lib/legal";
+import { countryHoverInfo } from "@/lib/legal-hover";
+import { MapHover } from "@/components/legal/MapHover";
 import { LegalMap } from "@/components/legal/LegalMap";
 import { LegalHero, RegionGrid, Tabs, Disclaimer } from "@/components/legal/LegalUI";
 
@@ -14,9 +15,7 @@ export const metadata = pageMetadata(
 
 export default function Page() {
   const covered = [...COUNTRIES].sort((a, b) => a.name.localeCompare(b.name));
-  const row = (label: string, v?: string) => ({ label, value: v ?? "Not covered", color: TONE[toneOf(v)].fill });
-  const info: Record<string, HoverInfo> = Object.fromEntries(COUNTRIES.map((c) => [c.code, { name: c.name, rows: [row("Online casinos", c.onlineCasino), row("Sports betting", c.sportsBetting), ...(c.minAge ? [{ label: "Minimum age", value: c.minAge, color: "#6E7F88" }] : [])] }]));
-  info.US = { name: "United States", rows: [{ label: "Online casinos", value: "varies by state", color: TONE.partial.fill }, { label: "Sports betting", value: "varies by state", color: TONE.partial.fill }] };
+  const info = countryHoverInfo(WORLD_SHAPES.map((x) => x.code));
   return (
     <main style={{ background: "#07090B" }}>
       <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Gambling laws", path: "/legal" }])} />

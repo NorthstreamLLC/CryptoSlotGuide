@@ -77,8 +77,8 @@ export function RegionGrid({ items }: { items: { href: string; name: string; sta
   );
 }
 
-export function Tabs({ active }: { active: "world" | "us" }) {
-  const tab = (key: "world" | "us", label: string, href: string) => (
+export function Tabs({ active }: { active: "world" | "europe" | "us" }) {
+  const tab = (key: "world" | "europe" | "us", label: string, href: string) => (
     <Link href={href} style={{ padding: "9px 16px", borderRadius: 100, border: `1px solid ${active === key ? "rgba(47,182,122,.55)" : "rgba(255,255,255,.12)"}`, background: active === key ? "rgba(47,182,122,.14)" : "transparent", fontSize: 13.5, fontWeight: 700, color: active === key ? "#7BE0B8" : "#A8B6BE" }}>
       {label}
     </Link>
@@ -86,6 +86,7 @@ export function Tabs({ active }: { active: "world" | "us" }) {
   return (
     <div style={{ display: "flex", gap: 8, marginBottom: 18 }}>
       {tab("world", "World", "/legal")}
+      {tab("europe", "Europe", "/legal/europe")}
       {tab("us", "United States", "/legal/us")}
     </div>
   );

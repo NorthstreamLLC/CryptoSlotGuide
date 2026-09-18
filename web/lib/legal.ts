@@ -1,3 +1,5 @@
+import restricted from "@/data/restricted.json";
+import geoEurope from "@/data/geo-europe.json";
 import legalUS from "@/data/legal-us.json";
 import legalWorld from "@/data/legal-world.json";
 import geoWorld from "@/data/geo-world.json";
@@ -113,3 +115,40 @@ export const COUNTRY_ALIASES: Record<string, string[]> = {
   CW: ["curaçao", "curacao"],
   AE: ["united arab emirates", "uae"],
 };
+
+
+export const EUROPE_SHAPES = geoEurope as Shape[];
+
+interface Restricted {
+  slug: string;
+  codes: string[];
+  regions: string[];
+  complete: boolean;
+  url: string;
+  note?: string;
+}
+const RESTRICTED = restricted as Restricted[];
+export const restrictedFor = (slug: string) => RESTRICTED.find((r) => r.slug === slug) ?? null;
+
+export type Access = "accepts" | "restricted" | "partial";
+
+/**
+ * Whether a casino takes players from a country, from its own restricted-countries list:
+ * "restricted" if the list names the country, "accepts" if a complete list doesn't,
+ * "partial" if the list doesn't name it but the casino says it may restrict others too.
+ */
+export function accessIn(slug: string, code: string): Access | null {
+  const r = restrictedFor(slug);
+  if (!r || (!r.codes.length && !r.complete)) return null;
+  if (r.codes.includes(code.toUpperCase())) return "restricted";
+  return r.complete ? "accepts" : "partial";
+}
+
+export function casinosByAccess(code: string) {
+  const out: Record<Access, { slug: string; name: string; mono: string }[]> = { accepts: [], restricted: [], partial: [] };
+  for (const o of siteData.ops) {
+    const a = accessIn(o.slug, code);
+    if (a) out[a].push({ slug: o.slug, name: o.name, mono: o.mono });
+  }
+  return out;
+}

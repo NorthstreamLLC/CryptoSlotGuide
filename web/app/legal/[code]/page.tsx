@@ -3,11 +3,9 @@ import { notFound } from "next/navigation";
 import { pageMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { COUNTRIES, countryBy, casinosRestricting, COUNTRY_ALIASES } from "@/lib/legal";
+import { COUNTRIES, countryBy } from "@/lib/legal";
+import { CasinoAccess } from "@/components/legal/CasinoAccess";
 import { LegalHero, StatusTile, Sources, Disclaimer, MONO } from "@/components/legal/LegalUI";
-import { BrandMark } from "@/components/ui/BrandMark";
-import { brandFor } from "@/lib/casino-facts";
-import { siteData } from "@/lib/site-data";
 
 export function generateStaticParams() {
   return COUNTRIES.filter((c) => c.code !== "US").map((c) => ({ code: c.code.toLowerCase() }));
@@ -24,7 +22,6 @@ export default async function Page({ params }: { params: Promise<{ code: string 
   const { code } = await params;
   const c = countryBy(code);
   if (!c) notFound();
-  const restricting = casinosRestricting(c.name, COUNTRY_ALIASES[c.code] ?? []);
 
   const rows: [string, string | undefined | null][] = [
     ["Regulator", c.regulator?.name],
@@ -55,25 +52,7 @@ export default async function Page({ params }: { params: Promise<{ code: string 
           ))}
         </div>
 
-        {restricting.length > 0 && (
-          <>
-            <h2 style={{ margin: "34px 0 6px", fontSize: 24, fontWeight: 800, letterSpacing: "-.02em", color: "#fff" }}>Casinos that restrict players from {c.name}</h2>
-            <p style={{ margin: "0 0 14px", fontSize: 14, color: "#8DA0AA" }}>These casinos name {c.name} in their own restricted-countries list.</p>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: 8 }}>
-              {restricting.map((r) => {
-                const o = siteData.ops.find((x) => x.slug === r.slug)!;
-                return (
-                  <Link key={r.slug} href={`/casinos/${r.slug}`} style={{ display: "flex", alignItems: "center", gap: 10, padding: "10px 12px", borderRadius: 10, background: "#0C1013", border: "1px solid rgba(196,101,58,.3)", fontSize: 14, fontWeight: 700, color: "#E8EDF0" }}>
-                    <span style={{ width: 26, height: 26, flex: "none", borderRadius: 7, overflow: "hidden" }}>
-                      <BrandMark slug={r.slug} mono={o.mono} tint={brandFor(r.slug)} radius={7} fontSize={9} />
-                    </span>
-                    {r.name}
-                  </Link>
-                );
-              })}
-            </div>
-          </>
-        )}
+        <CasinoAccess code={c.code.split("-")[0]} name={c.name} />
 
         <Sources sources={c.sources} />
         <Disclaimer />

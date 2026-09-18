@@ -11,12 +11,17 @@ export function LegalMap({
   hrefOf,
   viewBox,
   labels,
+  fillOf,
+  legend,
 }: {
   shapes: Shape[];
   statusOf: (code: string) => string | undefined;
   hrefOf: (code: string) => string | null;
   viewBox: string;
   labels?: boolean;
+  /** Overrides the status colour, e.g. to shade by how many casinos accept a country. */
+  fillOf?: (code: string) => string | undefined;
+  legend?: { color: string; label: string }[];
 }) {
   return (
     <div>
@@ -25,7 +30,7 @@ export function LegalMap({
         {shapes.map((s, i) => {
           const tone: Tone = s.code ? toneOf(statusOf(s.code)) : "none";
           const href = s.code ? hrefOf(s.code) : null;
-          const path = <path className="lm-r" d={s.d} fill={TONE[tone].fill} />;
+          const path = <path className="lm-r" d={s.d} fill={(fillOf && s.code && fillOf(s.code)) || TONE[tone].fill} />;
           return href ? (
             <a key={i} href={href} className="lm-a" data-code={s.code ?? undefined} aria-label={`${s.name}: ${TONE[tone].label}`}>
               {path}
@@ -47,10 +52,10 @@ export function LegalMap({
           )}
       </svg>
       <div style={{ display: "flex", flexWrap: "wrap", gap: "8px 18px", marginTop: 14 }}>
-        {(Object.keys(TONE) as Tone[]).map((t) => (
-          <span key={t} style={{ display: "inline-flex", alignItems: "center", gap: 7, fontSize: 12.5, color: "#A8B6BE" }}>
-            <span style={{ width: 12, height: 12, borderRadius: 3, background: TONE[t].fill }} />
-            {TONE[t].label}
+        {(legend ?? (Object.keys(TONE) as Tone[]).map((t) => ({ color: TONE[t].fill, label: TONE[t].label }))).map((l) => (
+          <span key={l.label} style={{ display: "inline-flex", alignItems: "center", gap: 7, fontSize: 12.5, color: "#A8B6BE" }}>
+            <span style={{ width: 12, height: 12, borderRadius: 3, background: l.color }} />
+            {l.label}
           </span>
         ))}
       </div>
