@@ -15,7 +15,7 @@ export interface Race {
 
 const RACES: Record<string, Race> = {
   duel: { label: "$3M monthly + $25K daily races", monthly: 3_750_000, kind: "race" },
-  stake: { label: "$100K daily race + weekly raffle", monthly: 3_000_000, kind: "race" },
+  stake: { label: "$100K daily race + $75K weekly raffle", monthly: 3_470_000, kind: "race" },
   gamdom: { label: "$500K bi-weekly + $30K daily races", monthly: 1_900_000, kind: "race" },
   rainbet: { label: "$100K weekly + $25K daily races", monthly: 1_180_000, kind: "race" },
   winna: { label: "$50K weekly + $10K daily races", monthly: 515_000, kind: "race" },
@@ -57,6 +57,7 @@ const PARTNERS: Record<string, string> = {
   "bc-game": "Leicester City FC, Jason Derulo & more",
   cloudbet: "PFL, Karate Combat & Tom Aspinall",
   shuffle: "Sunderland AFC",
+  gamdom: "Dunfermline Athletic FC",
   rollbit: "FaZe Clan",
   duelbits: "Team Liquid, Michael Bisping & 2 more",
   "sportsbet-io": "Tottenham Hotspur & Aston Villa",

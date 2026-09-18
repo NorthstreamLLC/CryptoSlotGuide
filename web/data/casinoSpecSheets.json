@@ -5604,6 +5604,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.gamdom.com/en/articles/9717630-affiliate-program-everything-you-need-to-know",
             "asOf": "2026-09-18"
+          },
+          {
+            "label": "VIP transfer",
+            "value": "Bring your VIP status from another casino: contact live support, verify your tier, wager history and deposits, then make a first deposit of at least $5,000 and your matched tier goes live immediately. You get 30 days of premium transfer benefits, a dedicated VIP team, instant rakeback, weekly and monthly rewards with an option to boost them through reloads, a Royalty Up reward as you climb tiers, and 24/7 priority support. New customers only",
+            "sourcing": "editorial",
+            "sourceUrl": "https://gamdom.com/promotions",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -5686,6 +5693,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://gamdom.com/help/terms",
             "asOf": "2026-09-16"
+          },
+          {
+            "label": "Partners",
+            "value": "Gamdom News is a front-of-shirt level partner of Scottish Championship club Dunfermline Athletic FC",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.dafc.co.uk/",
+            "asOf": "2026-09-18"
           }
         ]
       }
@@ -5722,14 +5736,16 @@
               "BTC",
               "ETH",
               "USDT",
-              "LTC",
+              "USDC",
               "SOL",
+              "TRX",
+              "LTC",
               "XRP",
-              "TRX"
+              "BNB"
             ],
             "sourcing": "editorial",
-            "sourceUrl": "https://www.goated.com/help/article/9378854-supported-deposits-and-withdrawals",
-            "asOf": "2026-09-15"
+            "sourceUrl": "https://www.goated.com/help/article/9378854-deposits-and-withdrawals-on-goated",
+            "asOf": "2026-09-18"
           },
           {
             "label": "Minimum deposit",
@@ -5877,10 +5893,10 @@
           },
           {
             "label": "KYC policy",
-            "value": "Level 1 (name, date of birth, address) required to bet and withdraw; ID and address at higher levels",
+            "value": "Level 0 (email or wallet) at signup; Level 1 (name, date of birth, address) to bet and withdraw; Level 2 government ID and Level 3 proof of address for higher transaction limits. Withdrawals also need 100% of each deposit wagered",
             "sourcing": "editorial",
             "sourceUrl": "https://www.goated.com/",
-            "asOf": "2026-09-15"
+            "asOf": "2026-09-18"
           }
         ]
       }
@@ -10086,17 +10102,17 @@
           },
           {
             "label": "Weekly raffle",
-            "value": "A recurring weekly raffle with a $50K/$75K prize pool; one ticket is earned for every $1,000 wagered across the casino and sportsbook.",
+            "value": "$75,000 Weekly Raffle: one ticket for every $1,000 wagered across the casino and sportsbook, and the more you wager the more tickets you get",
             "sourcing": "editorial",
-            "sourceUrl": "https://help.stake.com/en/articles/4942138-what-are-the-promotions-and-bonuses-that-stake-offers",
-            "asOf": "2026-09-17"
+            "sourceUrl": "https://stake.com/vip-club",
+            "asOf": "2026-09-18"
           },
           {
             "label": "Leaderboards",
-            "value": "A $100K Race resets every 24 hours, with the top 5,000 racers winning prizes each cycle. Alongside it, Community Managers post a Forum Challenge weekly and host daily rains, trivia and roll hunts in Stake chat.",
+            "value": "$100,000 Daily Race that resets every 24 hours, with the top 5,000 racers winning prizes each cycle, plus Stake Wheel Wars with a $150,000 monthly prize pool and rotating Casino Challenges on selected games. Community Managers also post a weekly Forum Challenge and host daily rains, trivia and roll hunts in Stake chat",
             "sourcing": "editorial",
-            "sourceUrl": "https://help.stake.com/en/articles/4942138-what-are-the-promotions-and-bonuses-that-stake-offers",
-            "asOf": "2026-09-17"
+            "sourceUrl": "https://stake.com/promotions/category/casino",
+            "asOf": "2026-09-18"
           },
           {
             "label": "Reload bonuses",
@@ -10110,6 +10126,13 @@
             "value": "Anyone can join the affiliate programme and get a campaign link. The standard commission is 10%, scaled by house edge: casino pays house edge x wagered / 2 x commission rate; sportsbook uses a 3% theoretical edge (0.03 x wagered / 2 x rate); poker pays rake x rate. Affiliates with large portfolios can arrange custom packages with higher commission.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.stake.com/en/articles/9995651-how-to-get-an-affiliate-commission-with-stake",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Perks by level",
+            "value": "Boost: a fresh bonus every week and every month based on your recent games, plus extra for every $1,000 wagered in the period. Level-ups pay a fixed bonus that grows at each level, topped up with a recent-play bonus depending on your profit or loss between levels. Monthly bonus around the 15th (a one-time claim for Platinum and Diamond). Reloads on a daily or hourly interval, renewed with your VIP host. From Bronze, access to the VIP Telegram channel; higher up, a dedicated VIP host and bespoke benefits. Sports wagering progresses your level three times faster",
+            "sourcing": "editorial",
+            "sourceUrl": "https://stake.com/vip-club",
             "asOf": "2026-09-18"
           }
         ]
