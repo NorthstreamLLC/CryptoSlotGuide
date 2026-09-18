@@ -615,7 +615,7 @@
     "payoutLabel": "8m 48s",
     "licence": "Anjouan",
     "kyc": "tiered",
-    "bonus": "Daily cashback 1–25% + weekly and monthly bonuses",
+    "bonus": "200% first deposit + up to 25% daily cashback + weekly and monthly bonuses",
     "wager": 1,
     "conf": 2,
     "absorbsFee": false,
@@ -624,7 +624,7 @@
     "esports": true,
     "hasCustomReview": false,
     "bonusExpiry": "30 days if wagering isn't met",
-    "bonusShort": "200% bonus balance + up to 25% cashback",
+    "bonusShort": "200% first deposit + up to 25% daily cashback",
     "wagerNote": "unlocks as you claim cashback and bonuses",
     "payoutStated": "Instant (crypto)",
     "payoutStatedMaxMins": 0

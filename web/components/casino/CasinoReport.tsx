@@ -25,7 +25,7 @@ import type { SpecFact } from "@/lib/types";
 const MONO = "var(--font-jetbrains-mono), monospace";
 const BRAND: Record<string, string> = { roobet: "#FFCC00", stake: "#1FFF20", "bc-game": "#24EE89", shuffle: "#896CFF" };
 
-const REWARD_LABELS = ["Rakeback", "Cashback", "Weekly raffle", "Leaderboards", "VIP levels", "VIP ranks", "VIP Club", "VIP club", "Perks by level", "Missions", "VIP transfer", "Wagering-triggered rewards", "Reload bonuses", "Prize draws", "Referral program"];
+const REWARD_LABELS = ["Rakeback", "Cashback", "Weekly raffle", "Leaderboards", "VIP levels", "VIP ranks", "VIP Club", "VIP club", "Perks by level", "Missions", "VIP transfer", "Wagering-triggered rewards", "Reload bonuses", "Prize draws", "Lootboxes", "Referral program"];
 
 type Fact = SpecFact | undefined;
 

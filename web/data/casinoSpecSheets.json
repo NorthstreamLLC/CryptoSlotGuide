@@ -11177,10 +11177,10 @@
           },
           {
             "label": "Stated withdrawal time",
-            "value": "Instant, according to Whale's own pages (crypto withdrawals are 'processed instantly' and gas-free). The terms and conditions give no processing time.",
+            "value": "90-second withdrawals, promoted on its homepage alongside instant, gas-free crypto withdrawals",
             "sourcing": "editorial",
-            "sourceUrl": "https://whale.io/casino/tokacity",
-            "asOf": "2026-09-16"
+            "sourceUrl": "https://whale.io/",
+            "asOf": "2026-09-18"
           },
           {
             "label": "Withdrawal limits",
@@ -11234,10 +11234,10 @@
         "facts": [
           {
             "label": "Standing offer",
-            "value": "Daily cashback 1–25% by level, plus weekly and monthly bonuses",
+            "value": "200% on your first deposit (minimum $10), then ongoing cash rewards: up to 25% daily cashback, a weekly bonus and a monthly bonus, all paid as real cash",
             "sourcing": "editorial",
-            "sourceUrl": "https://whale.io/terms-and-conditions",
-            "asOf": "2026-09-15"
+            "sourceUrl": "https://whale.io/rewards",
+            "asOf": "2026-09-18"
           },
           {
             "label": "Wagering",
@@ -11269,24 +11269,38 @@
           },
           {
             "label": "Cashback",
-            "value": "Daily cashback set by your lifetime level, from 1% to 25%. To qualify you must have deposited the previous day and finished that day at a net loss (deposits minus withdrawals, ending balance and unsettled sports bets). It credits daily to your bonus balance, carries 1x wagering and expires 30 days after crediting if unwagered",
+            "value": "Daily cashback on the previous day's net loss, from 1% at Bronze 1 up 1% per level to 24% at Emerald 4 and 25% at Whale. Paid as real cash with 1x wagering, claimable from 07:00 UTC daily within 24 hours; each day starts at zero, so a big win yesterday doesn't reduce today's cashback",
             "sourcing": "editorial",
-            "sourceUrl": "https://whale.io/terms-and-conditions",
-            "asOf": "2026-09-17"
+            "sourceUrl": "https://whale.io/rewards",
+            "asOf": "2026-09-18"
           },
           {
             "label": "Rakeback",
-            "value": "Two continuous wager-based rebates: a weekly bonus of total wager x house margin x 2%, paid weekly, and a monthly bonus of total wager x house margin x 1.5%, paid on the 1st. Both accrue in real time, are open to all players and credit with 1x wagering",
+            "value": "Weekly bonus of 2% of your adjusted wager, paid in cash every Monday, and a monthly bonus of 1.5% of the month's adjusted wager, paid on the 1st. Both build on every bet and carry no wagering after claiming",
             "sourcing": "editorial",
-            "sourceUrl": "https://whale.io/terms-and-conditions",
-            "asOf": "2026-09-17"
+            "sourceUrl": "https://whale.io/rewards",
+            "asOf": "2026-09-18"
           },
           {
             "label": "VIP levels",
-            "value": "A permanent 25-level ladder across 7 ranks: Bronze, Silver, Gold, Platinum, Diamond, Emerald and Whale. Levels come from wagering and never reset, with no seasons. Your level sets your daily cashback percentage, and rank-up bonuses may be awarded on reaching a new rank. Season 5 Battlepass progress was migrated into this system, so any Battlepass wording elsewhere is out of date",
+            "value": "7 ranks with four levels each (Bronze, Silver, Gold, Platinum, then VIP ranks Diamond and Emerald, and Whale). Every level lifts your cashback, levels are permanent with no seasons or resets, and nothing is bought: you climb by playing",
             "sourcing": "editorial",
-            "sourceUrl": "https://whale.io/terms-and-conditions",
-            "asOf": "2026-09-17"
+            "sourceUrl": "https://whale.io/rewards",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Missions",
+            "value": "A missions hub that pays extra rewards: free spins as you level up, lootboxes, the $WHALE token, commissions on turnover for leading a Tribe, and sports freebets",
+            "sourcing": "editorial",
+            "sourceUrl": "https://whale.io/rewards",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Lootboxes",
+            "value": "Lootboxes that always pay a prize, which you can claim or sell straight back: free spins packs from $3, merch boxes from $1.50, a $150,000 Lamborghini box, and slot booster packs (from $20 for providers like Hacksaw, Pragmatic Play and Nolimit City) with free spins and bonus cash inside. Open to all players and shipped globally",
+            "sourcing": "editorial",
+            "sourceUrl": "https://whale.io/lootboxes",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -11295,17 +11309,17 @@
         "facts": [
           {
             "label": "Sportsbook",
-            "value": "Yes. Whale's T&Cs refer to its sportsbook, and the page title of whale.io/sportsbook is 'Crypto Sportsbook - Bet on Sports & eSports'.",
+            "value": "Yes, a crypto sportsbook covering sports and esports, with freebets in its missions hub",
             "sourcing": "editorial",
-            "sourceUrl": "https://whale.io/terms-and-conditions",
-            "asOf": "2026-09-16"
+            "sourceUrl": "https://whale.io/sportsbook",
+            "asOf": "2026-09-18"
           },
           {
             "label": "Esports",
-            "value": "Yes, according to the page title of the sportsbook page. No game titles are named.",
+            "value": "Yes, esports betting in the sportsbook",
             "sourcing": "editorial",
             "sourceUrl": "https://whale.io/sportsbook",
-            "asOf": "2026-09-16"
+            "asOf": "2026-09-18"
           }
         ]
       },
