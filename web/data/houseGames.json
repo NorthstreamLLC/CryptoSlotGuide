@@ -73,6 +73,12 @@
         "value": "1% edge · 99% RTP",
         "url": "https://www.goated.com/blog/goated-originals-dice",
         "note": "Blog post, Sep 2025"
+      },
+      {
+        "casino": "duel",
+        "value": "0% edge · 100% RTP",
+        "url": "https://duel.com/dice",
+        "note": "Zero Edge within Duel’s daily allowance; a scaling edge applies after it"
       }
     ]
   },
@@ -132,6 +138,18 @@
         "casino": "thrill",
         "value": "1% edge · 99% RTP",
         "url": "https://thrill.com/casino/play/thrill-crash"
+      },
+      {
+        "casino": "duel",
+        "value": "0% edge · 100% RTP",
+        "url": "https://duel.com/crash",
+        "note": "Zero Edge within Duel’s daily allowance; a scaling edge applies after it"
+      },
+      {
+        "casino": "duelbits",
+        "value": "5% edge · 95% RTP",
+        "url": "https://help.duelbits.com/en/articles/16213313-crash-how-it-works",
+        "note": "Help centre (updated Aug 2026)"
       }
     ]
   },
@@ -214,6 +232,12 @@
         "value": "99% RTP",
         "url": "https://www.goated.com/blog/goated-originals-plinko",
         "note": "Blog post, Sep 2025"
+      },
+      {
+        "casino": "duel",
+        "value": "0% edge · 100% RTP",
+        "url": "https://duel.com/plinko",
+        "note": "Zero Edge within Duel’s daily allowance; a scaling edge applies after it"
       }
     ]
   },
@@ -281,6 +305,18 @@
         "value": "99% RTP",
         "url": "https://www.goated.com/blog/goated-originals-mines",
         "note": "Blog post, Sep 2025"
+      },
+      {
+        "casino": "duel",
+        "value": "0% edge · 100% RTP",
+        "url": "https://duel.com/mines",
+        "note": "Zero Edge within Duel’s daily allowance; a scaling edge applies after it"
+      },
+      {
+        "casino": "bc-game",
+        "value": "99% RTP",
+        "url": "https://betting.bc.game/guidebook/slots-reviews/mine/",
+        "note": "Game is named 'Mine'; guidebook page (updated Mar 2026)"
       }
     ]
   },
@@ -418,6 +454,17 @@
         "value": "99% RTP",
         "url": "https://www.goated.com/blog/goated-originals-keno",
         "note": "Blog post, Sep 2025"
+      },
+      {
+        "casino": "duel",
+        "value": "0% edge · 100% RTP",
+        "url": "https://duel.com/keno",
+        "note": "Zero Edge within Duel’s daily allowance; a scaling edge applies after it"
+      },
+      {
+        "casino": "roobet",
+        "value": "1% edge",
+        "url": "https://roobet.com/casino/game/keno"
       }
     ]
   },
@@ -467,6 +514,11 @@
         "casino": "thrill",
         "value": "1% edge · 99% RTP",
         "url": "https://thrill.com/casino/play/thrill-hilo"
+      },
+      {
+        "casino": "shuffle",
+        "value": "99% RTP",
+        "url": "https://shuffle.com/games/originals/hilo"
       }
     ]
   },
