@@ -146,7 +146,8 @@ export function getHouseEdgeRows() {
       if (!found.length) return { label: "—", edge: null as number | null };
       const lo = Math.min(...found.map((x) => x.edge!));
       const hi = Math.max(...found.map((x) => x.edge!));
-      return { label: (lo === hi ? fmt(lo) : `${fmt(lo)}–${fmt(hi)}`) + (found.some((x) => x.dynamic) ? "+" : ""), edge: lo as number | null };
+      const rtp = (e: number) => fmt(Math.round((100 - e) * 100) / 100);
+      return { label: (lo === hi ? rtp(lo) : `${rtp(hi).replace("%", "")}–${rtp(lo)}`) + (found.some((x) => x.dynamic) ? " or less" : ""), edge: lo as number | null };
     }),
   }));
   // Keep casinos with at least two published figures, and derive each range from what is shown.
@@ -155,7 +156,8 @@ export function getHouseEdgeRows() {
     const cells = r.cells.filter((_, i) => keep[i]);
     const known = cells.filter((c) => c.edge !== null).map((c) => c.edge as number);
     const lo = Math.min(...known), hi = Math.max(...known);
-    return { ...r, cells, range: known.length ? (lo === hi ? fmt(lo) : `${fmt(lo).replace("%", "")}–${fmt(hi)}`) : r.range };
+    const rtp = (e: number) => fmt(Math.round((100 - e) * 100) / 100);
+    return { ...r, cells, range: known.length ? (lo === hi ? rtp(lo) : `${rtp(hi).replace("%", "")}–${rtp(lo)}`) : r.range };
   });
   return { cols: cols.filter((_, i) => keep[i]), rows };
 }
