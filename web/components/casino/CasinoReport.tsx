@@ -249,6 +249,11 @@ export function CasinoReport({ e }: { e: EntityView }) {
                     Claim offer at {o.name} <span aria-hidden>→</span>
                   </a>
                 ) : null}
+                {o.promoCode && (
+                  <span style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "13px 16px", borderRadius: 11, border: `1px dashed ${brand}80`, background: `${brand}12`, fontSize: 13.5, color: "#DCE5E9" }}>
+                    Use code <strong style={{ fontFamily: MONO, fontSize: 14.5, letterSpacing: ".04em", color: brand }}>{o.promoCode.toUpperCase()}</strong>
+                  </span>
+                )}
                 <a href="#bonuses" style={{ padding: "15px 20px", borderRadius: 11, border: "1px solid rgba(255,255,255,.16)", color: "#DCE5E9", fontSize: 14.5, fontWeight: 600 }}>
                   See the terms
                 </a>

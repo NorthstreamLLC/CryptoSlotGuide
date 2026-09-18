@@ -75,6 +75,8 @@ export interface Operator {
   signupUrl?: string;
   /** True once signupUrl is a real affiliate-tracking link; only then is "Affiliate link" shown. */
   affiliate?: boolean;
+  /** Referral code carried by the affiliate link, shown so players can also enter it at sign-up. */
+  promoCode?: string;
   /** Confirmations required before a deposit/withdrawal clears. */
   conf: number;
   absorbsFee: boolean;

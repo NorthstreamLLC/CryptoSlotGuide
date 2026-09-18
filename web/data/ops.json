@@ -9,7 +9,7 @@
     "kyc": "tiered",
     "bonus": "Rakeback (Instant, Daily, Weekly, Monthly) + 30-level VIP",
     "wager": 1,
-    "signupUrl": "https://roobet.com",
+    "signupUrl": "https://roobet.com/?ref=elite",
     "conf": 1,
     "absorbsFee": true,
     "ln": true,
@@ -21,7 +21,9 @@
     "payoutStatedMaxMins": 0,
     "noDepositBonus": true,
     "featured": true,
-    "bonusShort": "Instant rakeback + a $100,000 weekly raffle"
+    "bonusShort": "Instant rakeback + a $100,000 weekly raffle",
+    "affiliate": true,
+    "promoCode": "elite"
   },
   {
     "slug": "stake",
@@ -33,7 +35,7 @@
     "kyc": "tiered",
     "bonus": "VIP rakeback (3.5% of house edge) + weekly bonus",
     "wager": 1,
-    "signupUrl": "https://stake.com",
+    "signupUrl": "https://stake.com/?c=essentials",
     "conf": 1,
     "absorbsFee": true,
     "ln": true,
@@ -44,7 +46,9 @@
     "noDepositBonus": true,
     "payoutStated": "Instant (crypto)",
     "payoutStatedMaxMins": 0,
-    "bonusShort": "3.5% VIP rakeback + weekly bonuses"
+    "bonusShort": "3.5% VIP rakeback + weekly bonuses",
+    "affiliate": true,
+    "promoCode": "essentials"
   },
   {
     "slug": "bc-game",
@@ -86,7 +90,10 @@
     "payoutStated": "Instant",
     "payoutStatedMaxMins": 0,
     "bonusShort": "Rakeback on every bet + a $100,000 weekly race",
-    "wagerNote": "deposit + bonus × a multiplier set per promotion"
+    "wagerNote": "deposit + bonus × a multiplier set per promotion",
+    "signupUrl": "https://shuffle.com/?r=elite",
+    "affiliate": true,
+    "promoCode": "elite"
   },
   {
     "slug": "rollbit",
@@ -172,7 +179,10 @@
     "payoutStated": "5 min–1 hr",
     "payoutStatedMaxMins": 60,
     "bonusShort": "15% boosted rakeback for new players",
-    "wagerNote": "deposits wagered once"
+    "wagerNote": "deposits wagered once",
+    "signupUrl": "https://gamdom.com/r/spinkeep",
+    "affiliate": true,
+    "promoCode": "spinkeep"
   },
   {
     "slug": "duelbits",
@@ -193,7 +203,10 @@
     "payoutStated": "Seconds–30 min",
     "payoutStatedMaxMins": 30,
     "noDepositBonus": true,
-    "bonusShort": "25% rakeback, paid instant to monthly"
+    "bonusShort": "25% rakeback, paid instant to monthly",
+    "signupUrl": "https://duelbits.com/?a=essentials",
+    "affiliate": true,
+    "promoCode": "essentials"
   },
   {
     "slug": "rainbet",
@@ -214,7 +227,10 @@
     "payoutStated": "5–15 min",
     "payoutStatedMaxMins": 15,
     "bonusShort": "First deposit bonus (40× wager lock)",
-    "wagerBasis": "deposit + bonus"
+    "wagerBasis": "deposit + bonus",
+    "signupUrl": "https://rainbet.com/?r=essentials",
+    "affiliate": true,
+    "promoCode": "essentials"
   },
   {
     "slug": "bitcasino-io",
@@ -281,7 +297,10 @@
     "bonusExpiry": "Bonus 14 days; boost active 90 days",
     "cashoutCap": "3× boost of deposit + $1,000 from spins",
     "bonusShort": "300% rakeback boost + 50 free spins",
-    "wagerNote": "$1 unlocked per $400 wagered"
+    "wagerNote": "$1 unlocked per $400 wagered",
+    "signupUrl": "https://500.casino/r/DAILYGAMBA",
+    "affiliate": true,
+    "promoCode": "DAILYGAMBA"
   },
   {
     "slug": "vave",
@@ -412,7 +431,10 @@
     "payoutStated": "Instant",
     "payoutStatedMaxMins": 0,
     "noDepositBonus": true,
-    "bonusShort": "Instant rakeback + a $50,000 weekly race"
+    "bonusShort": "Instant rakeback + a $50,000 weekly race",
+    "signupUrl": "https://winna.com/?r=SpinKeep",
+    "affiliate": true,
+    "promoCode": "SpinKeep"
   },
   {
     "slug": "thrill",
@@ -433,7 +455,10 @@
     "payoutStated": "Instant",
     "payoutStatedMaxMins": 0,
     "noDepositBonus": true,
-    "bonusShort": "$75,000 weekly race + instant rakeback"
+    "bonusShort": "$75,000 weekly race + instant rakeback",
+    "signupUrl": "https://thrill.com/?r=SpinKeep",
+    "affiliate": true,
+    "promoCode": "SpinKeep"
   },
   {
     "slug": "duel",
@@ -452,7 +477,10 @@
     "esports": true,
     "hasCustomReview": false,
     "noDepositBonus": true,
-    "bonusShort": "$3M monthly race + zero-edge originals"
+    "bonusShort": "$3M monthly race + zero-edge originals",
+    "signupUrl": "https://duel.com/r/SpinKeep",
+    "affiliate": true,
+    "promoCode": "SpinKeep"
   },
   {
     "slug": "goated",
@@ -518,7 +546,10 @@
     "bonusShort": "100% up to $300 + up to 150 free spins",
     "wagerBasis": "deposit + bonus",
     "bonusExpiry": "7 days to complete wagering",
-    "cashoutCap": "Max withdrawable $3,000"
+    "cashoutCap": "Max withdrawable $3,000",
+    "signupUrl": "https://www.razed.com/signup/?raf=elite",
+    "affiliate": true,
+    "promoCode": "elite"
   },
   {
     "slug": "betfury",
