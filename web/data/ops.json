@@ -779,7 +779,7 @@
     "payoutStated": "Instant",
     "payoutStatedMaxMins": 0,
     "bonusExpiry": "Unclaimed after claim period or 60 days",
-    "bonusShort": "Rakeback or lossback slider (1x deposit playthrough)"
+    "bonusShort": "Rakeback or lossback slider, no wagering"
   },
   {
     "slug": "dicey",
