@@ -1,1 +1,1536 @@
-[]
+[
+  {
+    "code": "AL",
+    "name": "Alabama",
+    "onlineCasino": "not legal",
+    "sportsBetting": "not legal",
+    "sweepstakes": "allowed",
+    "pokerOnline": "not legal",
+    "minAge": "n/a",
+    "regulator": {
+      "name": "Alabama Attorney General",
+      "url": "https://www.alabamaag.gov/"
+    },
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "Alabama has no legal online casino, online poker or sports betting.",
+    "sources": [
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "AK",
+    "name": "Alaska",
+    "onlineCasino": "not legal",
+    "sportsBetting": "not legal",
+    "sweepstakes": "allowed",
+    "pokerOnline": "not legal",
+    "minAge": "n/a",
+    "regulator": {
+      "name": "Alaska Department of Revenue (Charitable Gaming)",
+      "url": "https://tax.alaska.gov/"
+    },
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "Alaska has no legal online casino, online poker or sports betting.",
+    "sources": [
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "AZ",
+    "name": "Arizona",
+    "onlineCasino": "not legal",
+    "sportsBetting": "online",
+    "sweepstakes": "banned",
+    "pokerOnline": "not legal",
+    "minAge": "21+",
+    "regulator": {
+      "name": "Arizona Department of Gaming",
+      "url": "https://gaming.az.gov/"
+    },
+    "sweepstakesDetail": "Regulator action: Department of Gaming cease-and-desist orders to sweepstakes platforms, June and August 2025",
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "Arizona allows online and retail sports betting (event wagering) but not online casinos, and its gaming regulator treats casino-style sweepstakes as illegal gambling.",
+    "sources": [
+      {
+        "label": "Arizona Department of Gaming - Sweepstakes guidance",
+        "url": "https://gaming.az.gov/resources/sweepstakes"
+      },
+      {
+        "label": "AGA State of the States 2026 report (cross-check)",
+        "url": "https://www.americangaming.org/wp-content/uploads/2026/05/AGA-State-of-the-States-2026.pdf"
+      },
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "AR",
+    "name": "Arkansas",
+    "onlineCasino": "not legal",
+    "sportsBetting": "online",
+    "sweepstakes": "allowed",
+    "pokerOnline": "not legal",
+    "minAge": "21+",
+    "regulator": {
+      "name": "Arkansas Racing Commission",
+      "url": "https://www.dfa.arkansas.gov/office/racing-commission/"
+    },
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "Arkansas allows retail and online sports betting through its licensed casinos; online casino gaming is not legal.",
+    "sources": [
+      {
+        "label": "Arkansas Racing Commission",
+        "url": "https://www.dfa.arkansas.gov/office/racing-commission/"
+      },
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "CA",
+    "name": "California",
+    "onlineCasino": "not legal",
+    "sportsBetting": "not legal",
+    "sweepstakes": "banned",
+    "pokerOnline": "not legal",
+    "minAge": "n/a",
+    "regulator": {
+      "name": "California Gambling Control Commission",
+      "url": "https://www.cgcc.ca.gov/"
+    },
+    "sweepstakesDetail": "Statute: AB 831, Chapter 623 Statutes of 2025, chaptered 2025-10-11, effective 2026-01-01",
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "California has no legal online casino or sports betting, and AB 831 (Chapter 623, Statutes of 2025) bans online sweepstakes casinos from January 1, 2026.",
+    "sources": [
+      {
+        "label": "California Legislature - AB 831 (Chapter 623, Statutes of 2025)",
+        "url": "https://leginfo.legislature.ca.gov/faces/billStatusClient.xhtml?bill_id=202520260AB831"
+      },
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "CO",
+    "name": "Colorado",
+    "onlineCasino": "not legal",
+    "sportsBetting": "online",
+    "sweepstakes": "allowed",
+    "pokerOnline": "not legal",
+    "minAge": "21+",
+    "regulator": {
+      "name": "Colorado Division of Gaming",
+      "url": "https://sbg.colorado.gov/"
+    },
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "Colorado licenses retail and internet sports betting; online casino gaming is not legal.",
+    "sources": [
+      {
+        "label": "Colorado Division of Gaming - Sports Betting (internet sports betting operator licenses)",
+        "url": "https://sbg.colorado.gov/gaming/sports-betting"
+      },
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "CT",
+    "name": "Connecticut",
+    "onlineCasino": "legal",
+    "sportsBetting": "online",
+    "sweepstakes": "banned",
+    "pokerOnline": "legal",
+    "minAge": "21+",
+    "regulator": {
+      "name": "Connecticut Department of Consumer Protection, Gaming Division",
+      "url": "https://portal.ct.gov/gaming"
+    },
+    "sweepstakesDetail": "Statute: Public Act 25-112 (SB 1235), signed 2025-06-24",
+    "licensedOnlineCasinos": [
+      "DraftKings Casino (Mashantucket Pequot Tribe)",
+      "FanDuel Casino (Mohegan Tribe)"
+    ],
+    "licensedListUrl": "https://portal.ct.gov/governor/News/Press-Releases/2021/10-2021/Governor-Lamont-Announces-Online-Sports-Wagering-iCasino-Opens-Tuesday",
+    "launchYear": "2021",
+    "note": "Connecticut's two tribes have offered online casino games, and the tribes plus the CT Lottery online sports betting, since October 19, 2021, and Public Act 25-112 bans sweepstakes casinos.",
+    "sources": [
+      {
+        "label": "CT Governor - Online Sports Wagering, iCasino Opens Tuesday to All Adults 21 and Older (Oct 18, 2021)",
+        "url": "https://portal.ct.gov/governor/News/Press-Releases/2021/10-2021/Governor-Lamont-Announces-Online-Sports-Wagering-iCasino-Opens-Tuesday"
+      },
+      {
+        "label": "CT General Statutes ch. 229b - online casino gaming definition includes poker; 21+",
+        "url": "https://www.cga.ct.gov/current/pub/chap_229b.htm"
+      },
+      {
+        "label": "CT General Assembly - SB 1235 (Public Act 25-112), signed 6/24/2025",
+        "url": "https://www.cga.ct.gov/asp/cgabillstatus/cgabillstatus.asp?selBillType=Bill&which_year=2025&bill_num=1235"
+      },
+      {
+        "label": "CT DCP Gaming - What's in Effect",
+        "url": "https://portal.ct.gov/gaming/whats-in-effect"
+      },
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "DE",
+    "name": "Delaware",
+    "onlineCasino": "legal",
+    "sportsBetting": "online",
+    "sweepstakes": "banned",
+    "pokerOnline": "legal",
+    "minAge": "21+",
+    "regulator": {
+      "name": "Delaware Lottery (Delaware Division of Gaming Enforcement enforces)",
+      "url": "https://www.delottery.com/"
+    },
+    "sweepstakesDetail": "Regulator action: Division of Gaming Enforcement and Delaware Lottery cease-and-desist, April 2025 (per AGA; not found on an official Delaware page)",
+    "licensedOnlineCasinos": [
+      "Delaware Park (delawarepark.betrivers.com)",
+      "Bally's Dover (ballycasino.betrivers.com)",
+      "Harrington Raceway & Casino (harrington.betrivers.com)"
+    ],
+    "licensedListUrl": "https://www.delottery.com/More/iGaming",
+    "note": "Delaware's three casinos run online casino games and online sports through the state lottery on the BetRivers platform, and state regulators forced a major sweepstakes operator out in 2025.",
+    "sources": [
+      {
+        "label": "Delaware Lottery - iGaming (BetRivers platform, 21+)",
+        "url": "https://www.delottery.com/More/iGaming"
+      },
+      {
+        "label": "AGA State of the States 2026 report (cross-check)",
+        "url": "https://www.americangaming.org/wp-content/uploads/2026/05/AGA-State-of-the-States-2026.pdf"
+      },
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "DC",
+    "name": "District of Columbia",
+    "onlineCasino": "not legal",
+    "sportsBetting": "online",
+    "sweepstakes": "allowed",
+    "pokerOnline": "not legal",
+    "minAge": "18+",
+    "regulator": {
+      "name": "DC Office of Lottery and Gaming",
+      "url": "https://olg.dc.gov/"
+    },
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "Washington, DC allows retail and online sports wagering; online casino gaming is not legal.",
+    "sources": [
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "FL",
+    "name": "Florida",
+    "onlineCasino": "not legal",
+    "sportsBetting": "online",
+    "sweepstakes": "banned",
+    "pokerOnline": "not legal",
+    "minAge": "21+",
+    "regulator": {
+      "name": "Florida Gaming Control Commission",
+      "url": "https://flgaming.gov/"
+    },
+    "sweepstakesDetail": "Attorney General action: lawsuits against Stake and VGW (Chumba, LuckyLand, Global Poker), 2026; no statute",
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "Florida allows online sports betting only through the Seminole Tribe's Hard Rock Bet, online casinos are illegal, and the Attorney General sued major sweepstakes casino operators in 2026.",
+    "sources": [
+      {
+        "label": "Florida Gaming Control Commission",
+        "url": "https://flgaming.gov/"
+      },
+      {
+        "label": "Florida Attorney General - lawsuits against operators of illegal online 'sweepstakes' casinos (2026)",
+        "url": "https://www.myfloridalegal.com/newsrelease/attorney-general-james-uthmeier-files-lawsuits-against-operators-illegal-online-casinos"
+      },
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "GA",
+    "name": "Georgia",
+    "onlineCasino": "not legal",
+    "sportsBetting": "not legal",
+    "sweepstakes": "allowed",
+    "pokerOnline": "not legal",
+    "minAge": "n/a",
+    "regulator": {
+      "name": "Georgia Lottery Corporation",
+      "url": "https://www.galottery.com/"
+    },
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "Georgia has no legal online casino, online poker or sports betting.",
+    "sources": [
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "HI",
+    "name": "Hawaii",
+    "onlineCasino": "not legal",
+    "sportsBetting": "not legal",
+    "sweepstakes": "allowed",
+    "pokerOnline": "not legal",
+    "minAge": "n/a",
+    "regulator": {
+      "name": "Hawaii Department of the Attorney General",
+      "url": "https://ag.hawaii.gov/"
+    },
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "Hawaii prohibits all forms of gambling, including online casinos and sports betting.",
+    "sources": [
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "ID",
+    "name": "Idaho",
+    "onlineCasino": "not legal",
+    "sportsBetting": "not legal",
+    "sweepstakes": "banned",
+    "pokerOnline": "not legal",
+    "minAge": "n/a",
+    "regulator": {
+      "name": "Idaho State Lottery",
+      "url": "https://www.idaholottery.com/"
+    },
+    "sweepstakesDetail": "Statute: Idaho Code 18-3801 (long-standing gambling definition)",
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "Idaho has no legal online casino or sports betting, and its gambling statute exempts promotional contests only when incidental to a bona fide non-gaming business.",
+    "sources": [
+      {
+        "label": "Idaho Code 18-3801 - Gambling defined",
+        "url": "https://legislature.idaho.gov/statutesrules/idstat/title18/t18ch38/sect18-3801/"
+      },
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "IL",
+    "name": "Illinois",
+    "onlineCasino": "not legal",
+    "sportsBetting": "online",
+    "sweepstakes": "allowed",
+    "pokerOnline": "not legal",
+    "minAge": "21+",
+    "regulator": {
+      "name": "Illinois Gaming Board",
+      "url": "https://igb.illinois.gov/"
+    },
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "Illinois licenses retail and online sports wagering; online casino gaming is not legal.",
+    "sources": [
+      {
+        "label": "Illinois Gaming Board - Sports Wagering",
+        "url": "https://igb.illinois.gov/sports-wagering.html"
+      },
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "IN",
+    "name": "Indiana",
+    "onlineCasino": "not legal",
+    "sportsBetting": "online",
+    "sweepstakes": "banned",
+    "pokerOnline": "not legal",
+    "minAge": "21+",
+    "regulator": {
+      "name": "Indiana Gaming Commission",
+      "url": "https://www.in.gov/igc/"
+    },
+    "sweepstakesDetail": "Statute: HEA 1052, P.L. 153-2026, signed 2026-03-12",
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "Indiana licenses retail and online sports wagering, online casinos are not legal, and HEA 1052 (Public Law 153-2026) set civil penalties for sweepstakes games.",
+    "sources": [
+      {
+        "label": "Indiana General Assembly - HB 1052 (2026), Public Law 153, signed 3/12/2026",
+        "url": "https://iga.in.gov/legislative/2026/bills/house/1052/details"
+      },
+      {
+        "label": "Indiana Gaming Commission",
+        "url": "https://www.in.gov/igc/"
+      },
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "IA",
+    "name": "Iowa",
+    "onlineCasino": "not legal",
+    "sportsBetting": "online",
+    "sweepstakes": "allowed",
+    "pokerOnline": "not legal",
+    "minAge": "21+",
+    "regulator": {
+      "name": "Iowa Racing and Gaming Commission",
+      "url": "https://irgc.iowa.gov/"
+    },
+    "sweepstakesDetail": "No categorical ban; SF 2289 (2026) gives IRGC cease-and-desist and injunction powers over unlicensed 'illegal sweepstakes'",
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "Iowa licenses retail and online sports wagering, online casinos are not legal, and SF 2289 (2026) lets the regulator issue cease-and-desist orders against illegal sweepstakes.",
+    "sources": [
+      {
+        "label": "Iowa Legislature - SF 2289 bill history (signed; effective 7/1/2026)",
+        "url": "https://www.legis.iowa.gov/legislation/billTracking/billHistory?billName=SF%202289&ga=91"
+      },
+      {
+        "label": "Iowa Legislature - SF 2289 enrolled text",
+        "url": "https://www.legis.iowa.gov/docs/publications/LGE/91/SF2289.pdf"
+      },
+      {
+        "label": "Iowa Racing and Gaming Commission",
+        "url": "https://irgc.iowa.gov/"
+      },
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "KS",
+    "name": "Kansas",
+    "onlineCasino": "not legal",
+    "sportsBetting": "online",
+    "sweepstakes": "allowed",
+    "pokerOnline": "not legal",
+    "minAge": "21+",
+    "regulator": {
+      "name": "Kansas Racing and Gaming Commission / Kansas Lottery",
+      "url": "https://www.kslottery.com/"
+    },
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "Kansas allows retail and online sports wagering through the Kansas Lottery and its casinos; online casino gaming is not legal.",
+    "sources": [
+      {
+        "label": "Kansas Lottery",
+        "url": "https://kslottery.com/"
+      },
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "KY",
+    "name": "Kentucky",
+    "onlineCasino": "not legal",
+    "sportsBetting": "online",
+    "sweepstakes": "allowed",
+    "pokerOnline": "not legal",
+    "minAge": "18+",
+    "regulator": {
+      "name": "Kentucky Horse Racing and Gaming Corporation",
+      "url": "https://khrgc.ky.gov/"
+    },
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "Kentucky allows retail and online sports wagering; online casino gaming is not legal.",
+    "sources": [
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "LA",
+    "name": "Louisiana",
+    "onlineCasino": "not legal",
+    "sportsBetting": "online",
+    "sweepstakes": "banned",
+    "pokerOnline": "not legal",
+    "minAge": "21+",
+    "regulator": {
+      "name": "Louisiana Gaming Control Board",
+      "url": "https://lgcb.dps.louisiana.gov/"
+    },
+    "sweepstakesDetail": "Statute: Act 182 of 2026 (HB 883), effective 2026-08-01",
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "Louisiana allows retail and online sports betting in approved parishes, online casinos are illegal, and Act 182 of 2026 makes dual-currency sweepstakes games illegal gambling by computer from August 1, 2026.",
+    "sources": [
+      {
+        "label": "Louisiana Legislature - HB 883 (Act 182 of 2026), effective 8/1/2026",
+        "url": "https://legis.la.gov/legis/BillInfo.aspx?s=26RS&b=HB883"
+      },
+      {
+        "label": "Louisiana Legislature - Resume Digest, Act 182 (HB 883)",
+        "url": "https://legis.la.gov/legis/ViewDocument.aspx?d=1484822"
+      },
+      {
+        "label": "Louisiana Gaming Control Board",
+        "url": "https://lgcb.dps.louisiana.gov/"
+      },
+      {
+        "label": "AGA State of the States 2026 report (cross-check)",
+        "url": "https://www.americangaming.org/wp-content/uploads/2026/05/AGA-State-of-the-States-2026.pdf"
+      },
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "ME",
+    "name": "Maine",
+    "onlineCasino": "legal, not yet live",
+    "sportsBetting": "online",
+    "sweepstakes": "banned",
+    "pokerOnline": "legal",
+    "minAge": "21+",
+    "regulator": {
+      "name": "Maine Gambling Control Unit (Department of Public Safety)",
+      "url": "https://www.maine.gov/dps/gcu/"
+    },
+    "sweepstakesDetail": "Statute: LD 2007, 8 M.R.S. ch. 38, effective 2026-07-29",
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "Maine authorized tribal internet gaming under Title 8, Chapter 39 with licensing underway (2026 revenue listed as TBA), offers online sports betting, and banned sweepstakes casinos effective July 29, 2026.",
+    "sources": [
+      {
+        "label": "Maine GCU - Internet Gaming (definition includes poker)",
+        "url": "https://www.maine.gov/dps/gcu/I-Gaming"
+      },
+      {
+        "label": "Maine GCU - I-Gaming Statute and Rules (Title 8 ch. 39)",
+        "url": "https://www.maine.gov/dps/gcu/I-Gaming/I-Gaming-statutes-and-rules"
+      },
+      {
+        "label": "Maine GCU - I-Gaming Revenue Distribution (2026 revenue TBA)",
+        "url": "https://www.maine.gov/dps/gcu/I-Gaming/I-Gaming-Revenue-Distribution"
+      },
+      {
+        "label": "Maine GCU press release, July 29, 2026 - LD 2007 online sweepstakes prohibition effective",
+        "url": "https://www.maine.gov/dps/sites/maine.gov.dps/files/inline-files/Press%20Release%20Sweeps%20and%20online%20gambling%207.29.26_2.pdf"
+      },
+      {
+        "label": "Maine GCU - Sports Wagering",
+        "url": "https://www.maine.gov/dps/gcu/sports-wagering"
+      },
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "MD",
+    "name": "Maryland",
+    "onlineCasino": "not legal",
+    "sportsBetting": "online",
+    "sweepstakes": "banned",
+    "pokerOnline": "not legal",
+    "minAge": "21+",
+    "regulator": {
+      "name": "Maryland Lottery and Gaming Control Agency",
+      "url": "https://www.mdgaming.com/"
+    },
+    "sweepstakesDetail": "Regulator action: Maryland Lottery and Gaming cease-and-desist orders to sweepstakes platforms during 2025 (per AGA; letters not located on mdgaming.com)",
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "Maryland licenses retail and mobile sports wagering, online casinos are not legal, and the state regulator has sent cease-and-desist orders to sweepstakes casino operators.",
+    "sources": [
+      {
+        "label": "Maryland Lottery and Gaming - Sports Wagering (facility and mobile licensees)",
+        "url": "https://www.mdgaming.com/maryland-sports-wagering/"
+      },
+      {
+        "label": "AGA State of the States 2026 report (cross-check)",
+        "url": "https://www.americangaming.org/wp-content/uploads/2026/05/AGA-State-of-the-States-2026.pdf"
+      },
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "MA",
+    "name": "Massachusetts",
+    "onlineCasino": "not legal",
+    "sportsBetting": "online",
+    "sweepstakes": "allowed",
+    "pokerOnline": "not legal",
+    "minAge": "21+",
+    "regulator": {
+      "name": "Massachusetts Gaming Commission",
+      "url": "https://massgaming.com/"
+    },
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "Massachusetts licenses retail and mobile sports wagering; online casino gaming is not legal.",
+    "sources": [
+      {
+        "label": "Massachusetts Gaming Commission",
+        "url": "https://massgaming.com/"
+      },
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "MI",
+    "name": "Michigan",
+    "onlineCasino": "legal",
+    "sportsBetting": "online",
+    "sweepstakes": "allowed",
+    "pokerOnline": "legal",
+    "minAge": "21+",
+    "regulator": {
+      "name": "Michigan Gaming Control Board",
+      "url": "https://www.michigan.gov/mgcb"
+    },
+    "licensedOnlineCasinos": [
+      "bet365",
+      "BetMGM Casino & Poker",
+      "betPARX Casino (Play Gun Lake)",
+      "BetRivers",
+      "Caesars Palace Online Casino",
+      "WSOP (poker)",
+      "Horseshoe Online Casino",
+      "DraftKings",
+      "Fanatics Sportsbook & Casino",
+      "FanDuel Casino & Poker",
+      "Eagle Casino & Sports (playeagle.com)",
+      "Golden Nugget Casino",
+      "Hard Rock Bet",
+      "FireKeepers Casino",
+      "Four Winds Casino",
+      "Hollywood Casino (theScore Bet)"
+    ],
+    "licensedListUrl": "https://www.michigan.gov/mgcb/internet-gaming-and-fantasy-contests/authorized-online-gaming-and-sports-betting-platform-providers-in-michigan",
+    "note": "Michigan licenses online casinos, online poker and online sports betting through Detroit's three casinos and tribal operators.",
+    "sources": [
+      {
+        "label": "MGCB - Authorized Online Gaming and Sports Betting Platform Providers",
+        "url": "https://www.michigan.gov/mgcb/internet-gaming-and-fantasy-contests/authorized-online-gaming-and-sports-betting-platform-providers-in-michigan"
+      },
+      {
+        "label": "MGCB - Internet Gaming and Fantasy Contests",
+        "url": "https://www.michigan.gov/mgcb/internet-gaming-and-fantasy-contests"
+      },
+      {
+        "label": "AGA State of the States 2026 report (cross-check)",
+        "url": "https://www.americangaming.org/wp-content/uploads/2026/05/AGA-State-of-the-States-2026.pdf"
+      },
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "MN",
+    "name": "Minnesota",
+    "onlineCasino": "not legal",
+    "sportsBetting": "not legal",
+    "sweepstakes": "allowed",
+    "pokerOnline": "not legal",
+    "minAge": "n/a",
+    "regulator": {
+      "name": "Minnesota Gambling Control Board",
+      "url": "https://mn.gov/gcb/"
+    },
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "Minnesota has no legal online casino, online poker or sports betting.",
+    "sources": [
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "MS",
+    "name": "Mississippi",
+    "onlineCasino": "not legal",
+    "sportsBetting": "retail only",
+    "sweepstakes": "banned",
+    "pokerOnline": "not legal",
+    "minAge": "21+",
+    "regulator": {
+      "name": "Mississippi Gaming Commission",
+      "url": "https://www.msgamingcommission.com/"
+    },
+    "sweepstakesDetail": "Regulator action: Gaming Commission cease-and-desist letters, June 2025 (per AGA); 2026 statutory ban bill SB 2104 died",
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "Mississippi allows sports betting only inside licensed casinos, online casinos are illegal, and the Gaming Commission ordered a major sweepstakes casino operator to stop serving the state in 2025.",
+    "sources": [
+      {
+        "label": "Mississippi Legislature - SB 2104 (2026) sweepstakes bill, died",
+        "url": "https://billstatus.ls.state.ms.us/2026/pdf/history/SB/SB2104.xml"
+      },
+      {
+        "label": "Mississippi Gaming Commission",
+        "url": "https://www.msgamingcommission.com/"
+      },
+      {
+        "label": "AGA State of the States 2026 report (cross-check)",
+        "url": "https://www.americangaming.org/wp-content/uploads/2026/05/AGA-State-of-the-States-2026.pdf"
+      },
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "MO",
+    "name": "Missouri",
+    "onlineCasino": "not legal",
+    "sportsBetting": "online",
+    "sweepstakes": "allowed",
+    "pokerOnline": "not legal",
+    "minAge": "21+",
+    "regulator": {
+      "name": "Missouri Gaming Commission",
+      "url": "https://www.mgc.dps.mo.gov/"
+    },
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "Missouri licenses retail and mobile sports wagering under Article III of its constitution; online casino gaming is not legal.",
+    "sources": [
+      {
+        "label": "Missouri Gaming Commission - Sports Wagering (approved mobile licensees)",
+        "url": "https://www.mgc.dps.mo.gov/SportsWagering/SW_index.html"
+      },
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "MT",
+    "name": "Montana",
+    "onlineCasino": "not legal",
+    "sportsBetting": "retail only",
+    "sweepstakes": "banned",
+    "pokerOnline": "not legal",
+    "minAge": "18+",
+    "regulator": {
+      "name": "Montana Department of Justice, Gambling Control Division",
+      "url": "https://dojmt.gov/gaming/"
+    },
+    "sweepstakesDetail": "Statute: MCA 23-5-112 as amended in 2025 (SB 555), effective 2025-10-01",
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "Montana allows sports betting only through the Montana Lottery's licensed locations, bans all other internet gambling, and its 2025 law expressly prohibits online casinos paying out in any form of currency.",
+    "sources": [
+      {
+        "label": "Montana DOJ Gambling Control Division FAQs - 'Can I gamble online in Montana?'",
+        "url": "https://dojmt.gov/gaming/faqs/"
+      },
+      {
+        "label": "MCA 23-5-112(23) - internet gambling includes online casinos 'by whatever name known' (amended 2025)",
+        "url": "https://mca.legmt.gov/bills/mca/title_0230/chapter_0050/part_0010/section_0120/0230-0050-0010-0120.html"
+      },
+      {
+        "label": "AGA State of the States 2026 report (cross-check)",
+        "url": "https://www.americangaming.org/wp-content/uploads/2026/05/AGA-State-of-the-States-2026.pdf"
+      },
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "NE",
+    "name": "Nebraska",
+    "onlineCasino": "not legal",
+    "sportsBetting": "retail only",
+    "sweepstakes": "allowed",
+    "pokerOnline": "not legal",
+    "minAge": "21+",
+    "regulator": {
+      "name": "Nebraska Racing and Gaming Commission",
+      "url": "https://nrgc.nebraska.gov/"
+    },
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "Nebraska allows sports betting only at licensed racetrack casinos; online casino gaming is not legal.",
+    "sources": [
+      {
+        "label": "Nebraska Racing and Gaming Commission",
+        "url": "https://nrgc.nebraska.gov/"
+      },
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "NV",
+    "name": "Nevada",
+    "onlineCasino": "not legal",
+    "sportsBetting": "online",
+    "sweepstakes": "allowed",
+    "pokerOnline": "legal",
+    "minAge": "21+",
+    "regulator": {
+      "name": "Nevada Gaming Control Board",
+      "url": "https://gaming.nv.gov/"
+    },
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "Nevada licenses online poker and mobile sports wagering through its casino licensees but does not permit online casino slots or table games.",
+    "sources": [
+      {
+        "label": "Nevada Gaming Control Board - Industry Notices (interactive gaming)",
+        "url": "https://gaming.nv.gov/about-us/industry-notices/"
+      },
+      {
+        "label": "Nevada Gaming Control Board",
+        "url": "https://gaming.nv.gov/"
+      },
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "NH",
+    "name": "New Hampshire",
+    "onlineCasino": "not legal",
+    "sportsBetting": "online",
+    "sweepstakes": "allowed",
+    "pokerOnline": "not legal",
+    "minAge": "18+",
+    "regulator": {
+      "name": "New Hampshire Lottery Commission",
+      "url": "https://www.nhlottery.com/"
+    },
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "New Hampshire allows online sports betting through the Lottery's exclusive partner and retail sportsbooks; online casino gaming is not legal.",
+    "sources": [
+      {
+        "label": "New Hampshire Lottery",
+        "url": "https://www.nhlottery.com/"
+      },
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "NJ",
+    "name": "New Jersey",
+    "onlineCasino": "legal",
+    "sportsBetting": "online",
+    "sweepstakes": "banned",
+    "pokerOnline": "legal",
+    "minAge": "21+",
+    "regulator": {
+      "name": "New Jersey Division of Gaming Enforcement",
+      "url": "https://www.njoag.gov/about/divisions-and-offices/division-of-gaming-enforcement-home/"
+    },
+    "sweepstakesDetail": "Statute: P.L.2025, c.128 (A5447), approved 2025-08-15",
+    "licensedOnlineCasinos": [
+      "Bally Bet (play.ballybet.com)",
+      "Fanatics Casino",
+      "Monopoly Casino",
+      "Borgata Casino & Poker",
+      "PartyCasino / partypoker",
+      "BetMGM Casino & Poker",
+      "Wheel of Fortune Casino",
+      "Stardust Casino",
+      "Ember Casino",
+      "Betinia",
+      "Vegas Club",
+      "Jackpocket Casino",
+      "betPARX Casino",
+      "Caesars Palace Online Casino",
+      "Horseshoe Online Casino",
+      "WSOP.com",
+      "Tropicana Casino",
+      "FanDuel Casino & Poker",
+      "Golden Nugget Casino",
+      "BetRivers Casino",
+      "Hard Rock Bet",
+      "bet365",
+      "Ocean Casino (betocean.com)",
+      "PlayStar / Jackie Casino",
+      "Resorts World Bet",
+      "Resorts Casino",
+      "theScore Bet / Hollywood Casino",
+      "DraftKings Casino",
+      "Mohegan Sun Casino",
+      "PokerStars NJ"
+    ],
+    "licensedListUrl": "https://www.njoag.gov/about/divisions-and-offices/division-of-gaming-enforcement-home/internet-gaming-sites/",
+    "note": "New Jersey licenses online casinos, online poker and online sports betting through Atlantic City casinos, and banned sweepstakes casinos under P.L.2025, c.128 (approved August 15, 2025).",
+    "sources": [
+      {
+        "label": "NJ DGE - Internet Gaming Authorized Sites",
+        "url": "https://www.njoag.gov/about/divisions-and-offices/division-of-gaming-enforcement-home/internet-gaming-sites/"
+      },
+      {
+        "label": "NJ DGE - Internet Gaming Information",
+        "url": "https://www.njoag.gov/about/divisions-and-offices/division-of-gaming-enforcement-home/internet-gaming-information/"
+      },
+      {
+        "label": "NJ Legislature - A5447 (P.L.2025, c.128), prohibits sweepstakes model of wagering",
+        "url": "https://www.njleg.state.nj.us/bill-search/2024/A5447"
+      },
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "NM",
+    "name": "New Mexico",
+    "onlineCasino": "not legal",
+    "sportsBetting": "retail only",
+    "sweepstakes": "allowed",
+    "pokerOnline": "not legal",
+    "minAge": "21+",
+    "regulator": {
+      "name": "New Mexico Gaming Control Board",
+      "url": "https://www.gcb.nm.gov/"
+    },
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "New Mexico sports betting is offered only at tribal casinos; online casino gaming is not legal.",
+    "sources": [
+      {
+        "label": "New Mexico Gaming Control Board",
+        "url": "https://www.gcb.nm.gov/"
+      },
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "NY",
+    "name": "New York",
+    "onlineCasino": "not legal",
+    "sportsBetting": "online",
+    "sweepstakes": "banned",
+    "pokerOnline": "not legal",
+    "minAge": "21+",
+    "regulator": {
+      "name": "New York State Gaming Commission",
+      "url": "https://gaming.ny.gov/"
+    },
+    "sweepstakesDetail": "Statute: S5935, Chapter 605 of 2025, signed 2025-12-05",
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "New York licenses mobile and retail sports wagering, online casinos are not legal, and Chapter 605 of 2025 prohibits online sweepstakes games.",
+    "sources": [
+      {
+        "label": "NY Assembly - S5935 (Chapter 605 of 2025), signed 12/05/2025",
+        "url": "https://nyassembly.gov/leg/?default_fld=&leg_video=&bn=S05935&term=2025&Summary=Y&Actions=Y"
+      },
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "NC",
+    "name": "North Carolina",
+    "onlineCasino": "not legal",
+    "sportsBetting": "online",
+    "sweepstakes": "allowed",
+    "pokerOnline": "not legal",
+    "minAge": "21+",
+    "regulator": {
+      "name": "North Carolina Lottery Commission",
+      "url": "https://ncgaming.gov/"
+    },
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "North Carolina licenses online sports wagering; online casino gaming is not legal.",
+    "sources": [
+      {
+        "label": "North Carolina Lottery Commission - Gaming",
+        "url": "https://ncgaming.gov/"
+      },
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "ND",
+    "name": "North Dakota",
+    "onlineCasino": "not legal",
+    "sportsBetting": "retail only",
+    "sweepstakes": "allowed",
+    "pokerOnline": "not legal",
+    "minAge": "21+",
+    "regulator": {
+      "name": "North Dakota Attorney General, Gaming Division",
+      "url": "https://attorneygeneral.nd.gov/gaming/"
+    },
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "North Dakota sports betting is offered only at tribal casinos; online casino gaming is not legal.",
+    "sources": [
+      {
+        "label": "ND Attorney General Gaming Division",
+        "url": "https://attorneygeneral.nd.gov/gaming/"
+      },
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "OH",
+    "name": "Ohio",
+    "onlineCasino": "not legal",
+    "sportsBetting": "online",
+    "sweepstakes": "allowed",
+    "pokerOnline": "not legal",
+    "minAge": "21+",
+    "regulator": {
+      "name": "Ohio Casino Control Commission",
+      "url": "https://casinocontrol.ohio.gov/"
+    },
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "Ohio licenses online and retail sports gaming; online casino gaming is not legal.",
+    "sources": [
+      {
+        "label": "Ohio Casino Control Commission",
+        "url": "https://casinocontrol.ohio.gov/"
+      },
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "OK",
+    "name": "Oklahoma",
+    "onlineCasino": "not legal",
+    "sportsBetting": "not legal",
+    "sweepstakes": "allowed (ban from Nov 1, 2026)",
+    "pokerOnline": "not legal",
+    "minAge": "n/a",
+    "regulator": {
+      "name": "Oklahoma Office of Management and Enterprise Services, Gaming Compliance Unit",
+      "url": "https://oklahoma.gov/omes.html"
+    },
+    "sweepstakesDetail": "Statute: SB 1589, veto overridden 2026-05-14, effective 2026-11-01",
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "Oklahoma has no legal online casino or sports betting, and SB 1589 makes dual-currency sweepstakes play illegal gambling effective November 1, 2026 after the Legislature overrode the governor's veto.",
+    "sources": [
+      {
+        "label": "Oklahoma Legislature - SB 1589 (2026), veto overridden 5/14/2026",
+        "url": "http://www.oklegislature.gov/BillInfo.aspx?Bill=SB1589&Session=2600"
+      },
+      {
+        "label": "Oklahoma Legislature - SB 1589 enrolled text (effective November 1, 2026)",
+        "url": "https://www.oklegislature.gov/cf_pdf/2025-26%20ENR/SB/SB1589%20ENR.PDF"
+      },
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "OR",
+    "name": "Oregon",
+    "onlineCasino": "not legal",
+    "sportsBetting": "online",
+    "sweepstakes": "allowed",
+    "pokerOnline": "not legal",
+    "minAge": "21+",
+    "regulator": {
+      "name": "Oregon Lottery",
+      "url": "https://www.oregonlottery.org/"
+    },
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "Oregon allows online sports betting through the Oregon Lottery and retail betting at tribal casinos; online casino gaming is not legal.",
+    "sources": [
+      {
+        "label": "Oregon Lottery",
+        "url": "https://www.oregonlottery.org/"
+      },
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "PA",
+    "name": "Pennsylvania",
+    "onlineCasino": "legal",
+    "sportsBetting": "online",
+    "sweepstakes": "allowed",
+    "pokerOnline": "legal",
+    "minAge": "21+",
+    "regulator": {
+      "name": "Pennsylvania Gaming Control Board",
+      "url": "https://gamingcontrolboard.pa.gov/"
+    },
+    "licensedOnlineCasinos": [
+      "Bally Bet",
+      "Bet365",
+      "BetMGM",
+      "BetParx",
+      "BetRivers",
+      "Borgata",
+      "Caesars Palace",
+      "Caesars Sportsbook and Casino",
+      "DraftKings",
+      "Fanatics",
+      "FanDuel",
+      "Golden Nugget",
+      "Hollywood Casino Online",
+      "Horseshoe",
+      "Imperial Treasures Casino",
+      "Mohegan PA",
+      "Monopoly Casino",
+      "PlayLive!",
+      "PlaySugarHouse",
+      "Resorts Casino",
+      "theScoreBet",
+      "Stardust Casino",
+      "Tropicana Casino",
+      "Wind Creek Online"
+    ],
+    "licensedListUrl": "https://gamingcontrolboard.pa.gov/interactive-gaming-operators",
+    "note": "Pennsylvania licenses online casinos, online poker and online sports wagering through the Gaming Control Board.",
+    "sources": [
+      {
+        "label": "PGCB - Interactive Gaming Operators",
+        "url": "https://gamingcontrolboard.pa.gov/interactive-gaming-operators"
+      },
+      {
+        "label": "PGCB - PA Licensed Online Gaming Operators (sports, iGaming, poker lists)",
+        "url": "https://gamingcontrolboard.pa.gov/pa-licensed-online-gaming-operators"
+      },
+      {
+        "label": "PGCB - Online Poker Operators",
+        "url": "https://gamingcontrolboard.pa.gov/online-poker-operators"
+      },
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "RI",
+    "name": "Rhode Island",
+    "onlineCasino": "legal",
+    "sportsBetting": "online",
+    "sweepstakes": "allowed",
+    "pokerOnline": "not legal",
+    "minAge": "21+ (online casino), 18+ (sports)",
+    "regulator": {
+      "name": "Rhode Island Lottery (Division of Lotteries)",
+      "url": "https://www.rilot.com/"
+    },
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "launchYear": "2024",
+    "note": "Rhode Island has run state-operated iGaming (online slots and live-dealer table games) through its licensed casinos since March 1, 2024, plus online sports betting through the Lottery.",
+    "sources": [
+      {
+        "label": "R.I. Gen. Laws 42-61.2-1 - iGaming defined as online slots and online (live-dealer) table games, age 21",
+        "url": "http://webserver.rilegislature.gov/Statutes/TITLE42/42-61.2/42-61.2-1.htm"
+      },
+      {
+        "label": "R.I. Gen. Laws 42-61.2-17 - iGaming requirements, effective March 1, 2024",
+        "url": "http://webserver.rilegislature.gov/Statutes/TITLE42/42-61.2/42-61.2-17.htm"
+      },
+      {
+        "label": "R.I. Gen. Laws 42-61.2-16 - online sports wagering",
+        "url": "http://webserver.rilegislature.gov/Statutes/TITLE42/42-61.2/42-61.2-16.htm"
+      },
+      {
+        "label": "RI Lottery - Sportsbook Rhode Island",
+        "url": "https://sportsbetrhodeisland.com/sports"
+      },
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "SC",
+    "name": "South Carolina",
+    "onlineCasino": "not legal",
+    "sportsBetting": "not legal",
+    "sweepstakes": "allowed",
+    "pokerOnline": "not legal",
+    "minAge": "n/a",
+    "regulator": {
+      "name": "South Carolina Attorney General",
+      "url": "https://www.scag.gov/"
+    },
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "South Carolina has no legal online casino, online poker or sports betting.",
+    "sources": [
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "SD",
+    "name": "South Dakota",
+    "onlineCasino": "not legal",
+    "sportsBetting": "retail only",
+    "sweepstakes": "allowed",
+    "pokerOnline": "not legal",
+    "minAge": "21+",
+    "regulator": {
+      "name": "South Dakota Commission on Gaming",
+      "url": "https://dor.sd.gov/businesses/gaming/"
+    },
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "South Dakota allows sports wagering only in Deadwood casinos and tribal casinos; online casino gaming is not legal.",
+    "sources": [
+      {
+        "label": "SD Department of Revenue - Gaming (21+ in Deadwood and tribal casinos)",
+        "url": "https://dor.sd.gov/businesses/gaming/"
+      },
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "TN",
+    "name": "Tennessee",
+    "onlineCasino": "not legal",
+    "sportsBetting": "online",
+    "sweepstakes": "banned",
+    "pokerOnline": "not legal",
+    "minAge": "21+",
+    "regulator": {
+      "name": "Tennessee Sports Wagering Council",
+      "url": "https://www.tn.gov/swc.html"
+    },
+    "sweepstakesDetail": "Statute: SB 2136, Public Chapter 1117, effective 2026-05-22 (after AG cease-and-desist orders to 38 platforms in December 2025)",
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "Tennessee allows online-only sports wagering, online casinos are illegal, and Public Chapter 1117 bans online sweepstakes games effective May 22, 2026.",
+    "sources": [
+      {
+        "label": "Tennessee General Assembly - SB 2136 (Public Chapter 1117), effective 5/22/2026",
+        "url": "https://wapp.capitol.tn.gov/apps/BillInfo/Default.aspx?BillNumber=SB2136&GA=114"
+      },
+      {
+        "label": "AGA State of the States 2026 report (cross-check)",
+        "url": "https://www.americangaming.org/wp-content/uploads/2026/05/AGA-State-of-the-States-2026.pdf"
+      },
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "TX",
+    "name": "Texas",
+    "onlineCasino": "not legal",
+    "sportsBetting": "not legal",
+    "sweepstakes": "allowed",
+    "pokerOnline": "not legal",
+    "minAge": "n/a",
+    "regulator": {
+      "name": "Texas Lottery (Texas Department of Licensing and Regulation)",
+      "url": "https://www.texaslottery.com/"
+    },
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "Texas has no legal online casino, online poker or sports betting.",
+    "sources": [
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "UT",
+    "name": "Utah",
+    "onlineCasino": "not legal",
+    "sportsBetting": "not legal",
+    "sweepstakes": "allowed",
+    "pokerOnline": "not legal",
+    "minAge": "n/a",
+    "regulator": {
+      "name": "Utah Attorney General",
+      "url": "https://attorneygeneral.utah.gov/"
+    },
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "Utah's constitution prohibits all gambling, including online casinos and sports betting.",
+    "sources": [
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "VT",
+    "name": "Vermont",
+    "onlineCasino": "not legal",
+    "sportsBetting": "online",
+    "sweepstakes": "allowed",
+    "pokerOnline": "not legal",
+    "minAge": "21+",
+    "regulator": {
+      "name": "Vermont Department of Liquor and Lottery",
+      "url": "https://liquorandlottery.vermont.gov/"
+    },
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "Vermont allows online-only sports wagering; online casino gaming is not legal.",
+    "sources": [
+      {
+        "label": "Vermont Department of Liquor and Lottery",
+        "url": "https://liquorandlottery.vermont.gov/"
+      },
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "VA",
+    "name": "Virginia",
+    "onlineCasino": "not legal",
+    "sportsBetting": "online",
+    "sweepstakes": "allowed",
+    "pokerOnline": "not legal",
+    "minAge": "21+",
+    "regulator": {
+      "name": "Virginia Lottery",
+      "url": "https://www.valottery.com/"
+    },
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "Virginia licenses online and casino sports betting through the Virginia Lottery; online casino gaming is not legal.",
+    "sources": [
+      {
+        "label": "Virginia Lottery",
+        "url": "https://www.valottery.com/"
+      },
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "WA",
+    "name": "Washington",
+    "onlineCasino": "not legal",
+    "sportsBetting": "retail only",
+    "sweepstakes": "banned",
+    "pokerOnline": "not legal",
+    "minAge": "18+ or 21+ (set by each tribe)",
+    "regulator": {
+      "name": "Washington State Gambling Commission",
+      "url": "https://wsgc.wa.gov/"
+    },
+    "sweepstakesDetail": "Statute: RCW 9.46.240 (long-standing internet gambling prohibition)",
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "Washington allows sports wagering only at tribal casinos (mobile only while on premises), and state law makes internet gambling a class C felony.",
+    "sources": [
+      {
+        "label": "WSGC - Sports wagering requirements (geofenced to casino premises)",
+        "url": "https://wsgc.wa.gov/tribal-partnerships/sports-wagering/sports-wagering-requirements-and-rules"
+      },
+      {
+        "label": "RCW 9.46.240 - internet gambling is a class C felony",
+        "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=9.46.240"
+      },
+      {
+        "label": "RCW 9.46.0356 - promotional contests limited to no-consideration business promotions",
+        "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=9.46.0356"
+      },
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "WV",
+    "name": "West Virginia",
+    "onlineCasino": "legal",
+    "sportsBetting": "online",
+    "sweepstakes": "allowed",
+    "pokerOnline": "legal",
+    "minAge": "21+",
+    "regulator": {
+      "name": "West Virginia Lottery Commission",
+      "url": "https://wvlottery.com/"
+    },
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "The West Virginia Lottery regulates online casino (interactive wagering) and sports wagering under the West Virginia Lottery Interactive Wagering Act.",
+    "sources": [
+      {
+        "label": "WV Lottery - Lottery History & Impact (regulates sports wagering and i-Gaming)",
+        "url": "https://wvlottery.com/about-us/lottery-history"
+      },
+      {
+        "label": "W. Va. Code 29-22E-3 - Interactive Wagering Act definitions (slots, table games)",
+        "url": "https://code.wvlegislature.gov/29-22E-3/"
+      },
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "WI",
+    "name": "Wisconsin",
+    "onlineCasino": "not legal",
+    "sportsBetting": "online",
+    "sweepstakes": "allowed",
+    "pokerOnline": "not legal",
+    "minAge": "21+",
+    "regulator": {
+      "name": "Wisconsin Department of Administration, Division of Gaming",
+      "url": "https://doa.wi.gov/Pages/AboutDOA/Gaming.aspx"
+    },
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "Wisconsin sports betting is run by tribes, and 2025 Wisconsin Act 247 (approved April 9, 2026) cleared the way for statewide online betting through tribal servers; online casino gaming is not legal.",
+    "sources": [
+      {
+        "label": "Wisconsin Legislature - 2025 AB 601 (2025 Wisconsin Act 247)",
+        "url": "https://docs.legis.wisconsin.gov/2025/proposals/ab601"
+      },
+      {
+        "label": "Wisconsin DOA - Gaming",
+        "url": "https://doa.wi.gov/Pages/AboutDOA/Gaming.aspx"
+      },
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  },
+  {
+    "code": "WY",
+    "name": "Wyoming",
+    "onlineCasino": "not legal",
+    "sportsBetting": "online",
+    "sweepstakes": "allowed",
+    "pokerOnline": "not legal",
+    "minAge": "18+",
+    "regulator": {
+      "name": "Wyoming Gaming Commission",
+      "url": "https://gaming.wyo.gov/"
+    },
+    "licensedOnlineCasinos": [],
+    "licensedListUrl": null,
+    "note": "Wyoming allows online sports wagering; online casino gaming is not legal.",
+    "sources": [
+      {
+        "label": "Wyoming Gaming Commission - Online Sports Wagering",
+        "url": "https://gaming.wyo.gov/"
+      },
+      {
+        "label": "American Gaming Association State of Play map (cross-check)",
+        "url": "https://www.americangaming.org/research/state-of-play-map/"
+      }
+    ]
+  }
+]

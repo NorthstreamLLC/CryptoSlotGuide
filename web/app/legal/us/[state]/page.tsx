@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { pageMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { US_STATES, stateBy, sweepsAvailableIn } from "@/lib/legal";
+import { US_STATES, stateBy, sweepsAvailableIn, toneOf } from "@/lib/legal";
 import { LegalHero, StatusTile, Sources, Disclaimer, MONO } from "@/components/legal/LegalUI";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { brandFor } from "@/lib/casino-facts";
@@ -26,6 +26,7 @@ export default async function Page({ params }: { params: Promise<{ state: string
   const sweeps = sweepsAvailableIn(s.name, s.code);
   const open = sweeps.filter((x) => x.known && !x.excluded);
   const closed = sweeps.filter((x) => x.excluded);
+  const sweepsBanned = toneOf(s.sweepstakes) === "banned";
 
   return (
     <main style={{ background: "#07090B" }}>
@@ -45,6 +46,7 @@ export default async function Page({ params }: { params: Promise<{ state: string
           {([
             ["Regulator", s.regulator?.name, s.regulator?.url],
             ["Minimum age", s.minAge],
+            ["Sweepstakes law", s.sweepstakesDetail],
             ["Licensed online casinos", s.licensedOnlineCasinos?.join(", "), s.licensedListUrl],
           ] as [string, string | undefined, string | undefined][])
             .filter(([, v]) => v)
@@ -58,7 +60,12 @@ export default async function Page({ params }: { params: Promise<{ state: string
             ))}
         </div>
 
-        {(open.length > 0 || closed.length > 0) && (
+        {sweepsBanned && (
+          <div style={{ marginTop: 28, padding: "18px 22px", borderRadius: 16, background: "rgba(196,101,58,.08)", border: "1px solid rgba(196,101,58,.35)", fontSize: 15, lineHeight: 1.6, color: "#E8EDF0" }}>
+            <strong>Sweepstakes casinos are banned in {s.name}.</strong> {s.sweepstakesDetail ?? "See the sources below."}
+          </div>
+        )}
+        {!sweepsBanned && (open.length > 0 || closed.length > 0) && (
           <>
             <h2 style={{ margin: "34px 0 6px", fontSize: 24, fontWeight: 800, letterSpacing: "-.02em", color: "#fff" }}>Sweepstakes casinos in {s.name}</h2>
             <p style={{ margin: "0 0 14px", fontSize: 14, color: "#8DA0AA" }}>Based on each casino&apos;s own restricted-states list.</p>

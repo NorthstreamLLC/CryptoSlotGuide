@@ -23,6 +23,8 @@ export interface USState {
   onlineCasino: string;
   sportsBetting: string;
   sweepstakes: string;
+  /** Whether a sweepstakes ban comes from a law or regulator action, with the bill or chapter and date. */
+  sweepstakesDetail?: string;
   pokerOnline?: string;
   minAge?: string;
   regulator?: { name: string; url: string };
@@ -98,7 +100,7 @@ export function sweepsAvailableIn(stateName: string, code: string) {
   return SWEEPS.filter((s) => s.facts.length).map((s) => {
     const f = sweepsFact(s, "Restricted states");
     const text = f?.value ?? "";
-    const excluded = !!text && (new RegExp(`\\b${stateName}\\b`, "i").test(text) || new RegExp(`\\b${code}\\b`).test(text));
+    const excluded = !!text && (new RegExp(`(?<!West )\\b${stateName}\\b`, "i").test(text) || new RegExp(`\\b${code}\\b`).test(text));
     return { s, excluded, known: !!f };
   });
 }

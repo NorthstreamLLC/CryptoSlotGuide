@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { pageMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -11,7 +12,15 @@ export const metadata = pageMetadata(
   "/legal/us"
 );
 
-export default function Page() {
+const LAYERS = [
+  { key: "casino", label: "Online casinos", field: "onlineCasino" },
+  { key: "sports", label: "Sports betting", field: "sportsBetting" },
+  { key: "sweeps", label: "Sweepstakes casinos", field: "sweepstakes" },
+] as const;
+
+export default async function Page({ searchParams }: { searchParams: Promise<{ layer?: string }> }) {
+  const { layer: lk } = await searchParams;
+  const layer = LAYERS.find((l) => l.key === lk) ?? LAYERS[0];
   const states = [...US_STATES].sort((a, b) => a.name.localeCompare(b.name));
   const legalCasino = states.filter((s) => toneOf(s.onlineCasino) === "legal").length;
   const onlineSports = states.filter((s) => /online/i.test(s.sportsBetting)).length;
@@ -38,9 +47,16 @@ export default function Page() {
       </LegalHero>
       <section style={{ maxWidth: 1180, margin: "0 auto", padding: "26px 24px 80px" }}>
         <Tabs active="us" />
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 12 }}>
+          {LAYERS.map((l) => (
+            <Link key={l.key} href={l.key === "casino" ? "/legal/us" : `/legal/us?layer=${l.key}`} scroll={false} style={{ padding: "8px 14px", borderRadius: 10, border: `1px solid ${l.key === layer.key ? "rgba(0,194,204,.5)" : "rgba(255,255,255,.1)"}`, background: l.key === layer.key ? "rgba(0,194,204,.12)" : "transparent", fontSize: 13, fontWeight: 700, color: l.key === layer.key ? "#5FE3E8" : "#A8B6BE" }}>
+              {l.label}
+            </Link>
+          ))}
+        </div>
         <div style={{ padding: 18, borderRadius: 20, background: "#0B0F12", border: "1px solid rgba(255,255,255,.07)" }}>
-          <LegalMap shapes={US_SHAPES} viewBox="0 0 975 610" labels statusOf={(c) => stateBy(c)?.onlineCasino} hrefOf={(c) => (stateBy(c) ? `/legal/us/${c.toLowerCase()}` : null)} />
-          <div style={{ marginTop: 8, fontSize: 12.5, color: "#6E7F88" }}>Colours show real-money online casino status. Open a state for sports betting, poker and sweepstakes.</div>
+          <LegalMap shapes={US_SHAPES} viewBox="0 0 975 610" labels statusOf={(c) => stateBy(c)?.[layer.field]} hrefOf={(c) => (stateBy(c) ? `/legal/us/${c.toLowerCase()}` : null)} />
+          <div style={{ marginTop: 8, fontSize: 12.5, color: "#6E7F88" }}>Colours show {layer.label.toLowerCase()} status. Open a state for the full picture: online casinos, sports betting, poker and sweepstakes.</div>
         </div>
         {states.length > 0 && (
           <>
