@@ -112,7 +112,7 @@ export function RtpWatchPage() {
           <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#DA9877", marginBottom: 10 }}>House games</div>
           <h2 style={{ margin: "0 0 8px", fontSize: 30, letterSpacing: "-.03em", fontWeight: 800, color: "#fff" }}>RTP and house edge on each casino&apos;s originals</h2>
           <p style={{ margin: 0, maxWidth: "70ch", fontSize: 15, lineHeight: 1.6, color: "#93A3AC" }}>
-            Dice, Crash, Plinko and the rest are built in-house, so each casino sets its own return. Higher RTP is better for you, and the bottom row turns it into one house edge per casino. Each figure comes from the casino&apos;s own game page, help centre or blog; a range means its own pages give more than one figure, and “or less” means the return drops on high-risk settings.
+            Dice, Crash, Plinko and the rest are built in-house, so each casino sets its own return. Higher RTP is better for you, and the bottom row turns it into one house edge per casino across these 8 games. It covers the core originals most casinos share, not a casino&apos;s full catalogue, so a casino-wide figure that includes roulette, blackjack or slots will read higher. Each figure comes from the casino&apos;s own game page, help centre or blog; a range means its own pages give more than one figure, and “or less” means the return drops on high-risk settings.
           </p>
         </div>
         <div role="table" style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 14, overflowX: "auto", background: "#0C1013" }}>
@@ -146,7 +146,7 @@ export function RtpWatchPage() {
           })}
           <div role="row" style={{ display: "grid", minWidth: 1180, gridTemplateColumns: `minmax(240px,1.4fr) 96px repeat(${houseCols.length},1fr) 92px`, alignItems: "center", background: "#101519", borderTop: "1px solid rgba(255,255,255,.1)" }}>
             <div role="cell" style={{ padding: "15px 18px", fontSize: 14, fontWeight: 800, color: "#fff" }}>House edge</div>
-            <div role="cell" style={{ padding: "15px 10px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#5C6A72" }}>average</div>
+            <div role="cell" style={{ padding: "15px 10px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#5C6A72" }}>avg. of these 8 games</div>
             {houseCols.map((o, i) => {
               const known = houseRows.map((h) => h.cells[i].edge).filter((x): x is number => x !== null);
               const avg = known.length ? known.reduce((a, b) => a + b, 0) / known.length : null;
@@ -160,7 +160,7 @@ export function RtpWatchPage() {
             <span />
           </div>
         </div>
-        <div style={{ margin: "10px 0 0", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#4E5A62" }}>Teal = best RTP on the board · orange = 97% or lower · — = no published figure found · house edge = simple average of 100% minus RTP across the games listed for that casino, using its best stated figure</div>
+        <div style={{ margin: "10px 0 0", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#4E5A62" }}>Teal = best RTP on the board · orange = 97% or lower · — = no published figure found · house edge = simple average of 100% minus RTP across the 8 games above that the casino publishes a figure for, using its best stated figure; not its full catalogue</div>
 
         <div style={{ display: "grid", gridTemplateColumns: "1.4fr .6fr", gap: 14, marginTop: 24 }}>
           <div style={{ padding: "28px 32px", borderRadius: 14, background: "linear-gradient(150deg,#0E1417,#0A0E10)", border: "1px solid rgba(255,255,255,.07)" }}>
