@@ -49,7 +49,7 @@ const RACES: Record<string, Race> = {
 };
 
 const PARTNERS: Record<string, string> = {
-  roobet: "Chelsea FC & 4 more",
+  roobet: "Chelsea FC & 6 more",
   "bc-game": "Leicester City FC & 3 more",
   cloudbet: "PFL, Karate Combat & Tom Aspinall",
   shuffle: "Sunderland AFC",
