@@ -14,6 +14,7 @@ import { CoinList, CoinStack } from "@/components/ui/CoinIcon";
 import { maxWithdrawal, maxDeposit } from "@/lib/casino-facts";
 import { Icon, type IconName } from "@/components/ui/Icon";
 import { raceFor, partnerFor, dropFor } from "@/lib/races";
+import { rtpSummary } from "@/lib/rtp-watch-view";
 import type { SpecFact } from "@/lib/types";
 
 /**
@@ -42,7 +43,7 @@ function host(url?: string) {
 function shortAmount(f: Fact): string | null {
   const v = f?.value;
   if (!v) return null;
-  if (/^(no|there is no|there isn't)\b[^.]*\b(minimum|maximum|limit|fee)/i.test(v) || /\bno (minimum|maximum|max|limit)s?\b/i.test(v.slice(0, 60))) return "None";
+  if (/^(no|there is no|there isn't)\b[^.]*\b(minimum|limit|fee)/i.test(v) || /\bno (minimum|limit)s?\b/i.test(v.slice(0, 60))) return "None";
   if (/^(no fee|free|none\b|fee-free|no withdrawal fee)/i.test(v)) return "Free";
   const m = v.match(/(?:(?:USD|EUR|USDT)\s?\d[\d.,]*(?:\s?(?:k|K|m|M|million))?|[$€£]\s?\d[\d.,]*(?:\s?(?:k|K|m|M|million))?|\d[\d.,]*\s?(?:USDT|USDC|USD|EUR|BTC|ETH|LTC|TRX|SOL|DOGE|mBTC)\b)/);
   if (m) return m[0].replace(/\s+/g, " ").replace(/[.,]+$/, "");
@@ -153,6 +154,16 @@ export function CasinoReport({ e }: { e: EntityView }) {
   const clause = (v?: string) => (v ?? "").split(/[;.(]/)[0].trim().replace(/^Yes,?s*/i, "");
   const rakeback = /rakeback/i.test(o.bonus);
   const cap = (t: string) => t.charAt(0).toUpperCase() + t.slice(1);
+  const rtp = rtpSummary(o.slug);
+  const rtpFact: Fact = rtp
+    ? {
+        label: "Slot RTP",
+        sourcing: "site-data",
+        value: rtp.cut
+          ? `Reduced RTP found on ${rtp.cut} of ${rtp.count} slots we checked: ${rtp.cutTitles.join("; ")}. Checked in-game, ${rtp.checkedAt}.`
+          : `Full RTP build on all ${rtp.count} slots we checked: ${rtp.titles.join(", ")}. Checked ${rtp.checkedAt}; see RTP Watch.`,
+      }
+    : undefined;
   const perks = [
     wdTime && pv.label !== "Not stated" ? { icon: "bolt" as const, title: `${pv.label} withdrawals`, sub: cap(clause(wdTime.value)) } : null,
     wv.kind === "none" || wv.mult === 0
@@ -200,6 +211,12 @@ export function CasinoReport({ e }: { e: EntityView }) {
                       <span style={{ color: brand, display: "inline-flex" }}><Icon name="handshake" size={14} /></span>
                       Official partner of {partnerFor(o.slug)}
                     </div>
+                  )}
+                  {rtp && (
+                    <Link href="/rtp-watch" style={{ display: "flex", alignItems: "center", gap: 6, marginTop: 4, fontSize: 12.5, fontWeight: 600, color: rtp.cut ? "#DA9877" : "#7BE0B8" }}>
+                      <Icon name="shield" size={14} />
+                      {rtp.cut ? `Reduced RTP on ${rtp.cut} of ${rtp.count} slots checked` : `Full RTP verified on ${rtp.count} slots`}
+                    </Link>
                   )}
                 </div>
               </div>
@@ -410,6 +427,7 @@ export function CasinoReport({ e }: { e: EntityView }) {
                 { k: "KYC", f: kyc },
                 { k: "Register check", f: f("Compliance", "Register check") },
                 { k: "Restricted", f: f("Compliance", "Restricted countries") },
+                { k: "Slot RTP", f: rtpFact },
                 { k: "Partners", f: f("Compliance", "Partners") },
                 { k: "Awards", f: f("Compliance", "Awards") },
               ]}

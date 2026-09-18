@@ -163,5 +163,49 @@
     "checkedBy": "CSG",
     "source": "operator_game_page",
     "notes": "RTP tag on Stake game page (Description tab): 96.00%"
+  },
+  {
+    "id": "gates-of-olympus-1000:stake:2026-09-18",
+    "slotSlug": "gates-of-olympus-1000",
+    "operatorSlug": "stake",
+    "rtp": 96.5,
+    "publishedRtp": 96.5,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "RTP tag on Stake game page (Description tab): 96.50%"
+  },
+  {
+    "id": "sweet-bonanza-1000:stake:2026-09-18",
+    "slotSlug": "sweet-bonanza-1000",
+    "operatorSlug": "stake",
+    "rtp": 96.53,
+    "publishedRtp": 96.53,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "RTP tag on Stake game page (Description tab): 96.53%"
+  },
+  {
+    "id": "sugar-rush-1000:stake:2026-09-18",
+    "slotSlug": "sugar-rush-1000",
+    "operatorSlug": "stake",
+    "rtp": 96.53,
+    "publishedRtp": 96.53,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "RTP tag on Stake game page (Description tab): 96.53%"
+  },
+  {
+    "id": "wanted-dead-or-a-wild:stake:2026-09-18",
+    "slotSlug": "wanted-dead-or-a-wild",
+    "operatorSlug": "stake",
+    "rtp": 96.38,
+    "publishedRtp": 96.38,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "RTP tag on Stake game page (Description tab): 96.38%"
   }
 ]

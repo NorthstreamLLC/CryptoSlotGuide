@@ -260,6 +260,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://1win.com/betting/esport",
             "asOf": "2026-09-16"
+          },
+          {
+            "label": "Prediction markets",
+            "value": "Yes. 1win Markets, under Markets in the main menu, is a prediction-market section covering politics, sports, crypto, culture, tech, cybersport, space, economy and celebrities, plus 1w Specials. Each market shows Yes/No outcomes priced as percentages, with trading volume and bet counts. Examples include the Ballon d'Or winner and crypto price targets.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://1win.com/betting/markets",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -919,6 +926,42 @@
             "sourcing": "editorial",
             "sourceUrl": "https://acebet.co/policies/terms-of-service",
             "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports titles",
+            "chips": [
+              "CS2",
+              "Dota 2",
+              "Valorant",
+              "EA Sports FC / FIFA",
+              "Mobile Legends",
+              "Rainbow Six",
+              "Honor of Kings",
+              "PUBG",
+              "StarCraft",
+              "NBA 2K",
+              "Age of Empires",
+              "Street Fighter",
+              "Tekken",
+              "World of Warcraft",
+              "CrossFire",
+              "Cricket 24"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://acebet.co/sports",
+            "asOf": "2026-09-18"
+          }
+        ]
+      },
+      {
+        "title": "Sports bonus terms",
+        "facts": [
+          {
+            "label": "Offer",
+            "value": "Rotating sportsbook promotions, alongside its $15K Monthly Race and $1K Daily Race",
+            "sourcing": "editorial",
+            "sourceUrl": "https://acebet.co/race/4",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -1172,6 +1215,46 @@
             "sourcing": "editorial",
             "sourceUrl": "https://betting.bc.game/guidebook/how-to-bet-on-cs2-bc-game/",
             "asOf": "2026-09-16"
+          },
+          {
+            "label": "Prediction markets",
+            "value": "Yes. BC.GAME has a Predictions section in its main menu (bc.game/predictions). Markets are Yes/No outcomes shown with percentage prices and trading volume. Categories are Crypto, Sports, Esports, Politics, Weather, Mentions, Elections, Iran, Finance, Geopolitics, Tech, Culture and Economy. The page offers Simple and Pro views, plus Orders and Favorites tabs.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bc.game/predictions",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Cash-out",
+            "value": "Yes. BC.GAME's sports rules say Cash out can be offered on both pre-match and live bets. You can accept or reject the offer, and the sportsbook can change or withdraw it without giving a reason.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bc.game/help/terms-sports",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Bet builder",
+            "value": "Yes. The sports rules define Bet Builder as a bet on several markets of the same event, such as totals, 1x2, team stats and player props, on markets marked with a Bet Builder tab. Every selection must win.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bc.game/help/terms-sports",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Max payout",
+            "value": "The sports rules give no fixed maximum-win figure. The sportsbook can change betting and payout limits without notice, and can cap the maximum bet or stake for any event, market or individual customer.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bc.game/help/terms-sports",
+            "asOf": "2026-09-18"
+          }
+        ]
+      },
+      {
+        "title": "Sports bonus terms",
+        "facts": [
+          {
+            "label": "Offer",
+            "value": "Rotating sportsbook promotions, plus two standing features in the sports rules. Comboboost raises multi-bet winnings by 1.01x for 2 selections, rising to 2x for 20 selections; each selection needs odds of 1.50 or more, and cashed-out bets don't qualify. Early Payout settles a bet as a win early on markets tagged \"Early Payout\" once the tagged condition is met.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bc.game/help/terms-sports",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -1423,6 +1506,20 @@
             "sourcing": "editorial",
             "sourceUrl": "https://bf1.io/esports",
             "asOf": "2026-09-16"
+          },
+          {
+            "label": "Prediction markets",
+            "value": "Yes. BetFury has a dedicated Predictions section in its sportsbook for betting on real-world events: Eurovision, politics and elections, crypto prices, stocks and finance, business and tech, and sports milestones. It works as fixed-odds betting: each event has defined outcomes, each with its own odds, settled on publicly available data when the event concludes.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://betfury.com/sports/predictions",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Max payout",
+            "value": "No fixed maximum payout is published. The sports betting rules say the sportsbook sets limits on stakes and maximum winnings per bet or per event, which can apply to all players or to an individual account and vary by sport, league and market.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://docs.betfury.com/betfury/terms-of-services/sports-betting-terms-and-conditions",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -2309,6 +2406,35 @@
             "sourcing": "editorial",
             "sourceUrl": "https://intercom.help/playlink/en/articles/14536391-before-you-withdraw",
             "asOf": "2026-09-16"
+          },
+          {
+            "label": "Prediction markets",
+            "value": "Yes. Bluff's main product is Predictions, where players trade on real-world outcomes: elections, finals, award shows and launches, across politics, sport, music, crypto and internet culture. It shares one account and balance with Bluff's Packs, Battles and UpDowns games.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.bluff.com/",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Esports",
+            "value": "Yes. The sportsbook menu includes All Esports, an Esports Center and Esports Rules, with esports tournaments such as The International, ESL Pro League, BLAST Rivals and LoL Worlds.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.bluff.com/",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Esports titles",
+            "chips": [
+              "CS2",
+              "League of Legends",
+              "Dota 2",
+              "Rainbow Six",
+              "King of Glory",
+              "PUBG",
+              "Valorant"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.bluff.com/",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -3245,6 +3371,20 @@
             "sourcing": "editorial",
             "sourceUrl": "https://guidebook.cybet.com/solana-casino/",
             "asOf": "2026-09-16"
+          },
+          {
+            "label": "Prediction markets",
+            "value": "Yes. The sportsbook has a Predictions section (cybet.com/sportsbook/predictions) with fixed-odds markets on politics, arts, entertainment, science and sporting milestones. Each market's settlement rules, deadline and official result source are shown in an info tooltip beside it.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://s3.ap-south-1.amazonaws.com/cybet.com/BettingRules",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Max payout",
+            "value": "No fixed figure is stated. The Sportsbetting Rules say limits, including maximum winnings per bet or per event, are set by the sportsbook, can apply to everyone or to one account, and vary by sport, league and market.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://s3.ap-south-1.amazonaws.com/cybet.com/BettingRules",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -3523,6 +3663,27 @@
             "sourcing": "editorial",
             "sourceUrl": "https://degen.com/sports?sport=counter-strike",
             "asOf": "2026-09-16"
+          },
+          {
+            "label": "Cash-out",
+            "value": "Yes. The Sportsbook Policy (last updated April 23, 2026) defines Cash out as an offer from the sportsbook that the player can accept or reject, for both pre-match and live bets.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://degen.com/policies/sportsbook-policy",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Bet builder",
+            "value": "Yes. The Sportsbook Policy defines Bet Builder (several markets on the same event in one bet), but availability is at the sportsbook's discretion.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://degen.com/policies/sportsbook-policy",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Max payout",
+            "value": "No fixed figure is stated. The Sportsbook Policy says the sportsbook can change betting limits and payout limits without notice, and can set maximum stakes per event, market or player.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://degen.com/policies/sportsbook-policy",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -4188,6 +4349,68 @@
             "sourcing": "editorial",
             "sourceUrl": "https://duel.com/sports",
             "asOf": "2026-09-16"
+          },
+          {
+            "label": "Cash-out",
+            "value": "Yes. Cash Out lets you settle a bet before the event ends at the sportsbook's offered terms, and may be available for both pre-match and live bets, at the sportsbook's discretion.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://duel.com/policies/sports-betting-rules",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Bet builder",
+            "value": "Yes. Bet Builder combines selections from different markets within the same event, and every selection must win. Availability is at the sportsbook's discretion.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://duel.com/policies/sports-betting-rules",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Max payout",
+            "value": "No fixed maximum payout is published. The sports betting rules say the sportsbook sets limits on stakes and maximum winnings per bet or per event, which can apply to all players or to an individual account and vary by sport, league and market.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://duel.com/policies/sports-betting-rules",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Esports titles",
+            "chips": [
+              "CS2",
+              "Dota 2",
+              "Valorant",
+              "League of Legends",
+              "Honor of Kings",
+              "Mobile Legends",
+              "Wild Rift",
+              "Deadlock",
+              "Rainbow Six",
+              "Call of Duty",
+              "Marvel Rivals",
+              "Crossfire",
+              "Tekken",
+              "Street Fighter",
+              "Overwatch 2",
+              "Rocket League",
+              "Standoff 2",
+              "EA Sports FC / FIFA",
+              "NBA 2K",
+              "Cricket 24",
+              "GeoGuessr"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://duel.com/policies/sports-betting-rules",
+            "asOf": "2026-09-18"
+          }
+        ]
+      },
+      {
+        "title": "Sports bonus terms",
+        "facts": [
+          {
+            "label": "Offer",
+            "value": "No bonus-style sports promotions by design: every sports bet earns instant rakeback worth 50% of the house edge instead",
+            "sourcing": "editorial",
+            "sourceUrl": "https://duel.com/wtf-duel",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -4463,6 +4686,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://duelbits.com/blog/guide/duelbits-review/",
             "asOf": "2026-09-16"
+          },
+          {
+            "label": "Prediction markets",
+            "value": "Yes. Duelbits Predict lets you trade on real-world events in sports and esports, crypto prices and trends, gaming and entertainment, culture and viral moments, and politics and finance. Markets are either Yes/No or multiple-choice with one winning outcome. Payout is stake × odds, and some markets offer early cashout based on live odds and liquidity. Predictions can't be changed or cancelled once confirmed.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.duelbits.com/en/articles/13056070-duelbits-predict",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -4940,6 +5170,25 @@
             "sourcing": "editorial",
             "sourceUrl": "https://flush.com/sports/",
             "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max payout",
+            "value": "No fixed maximum payout is published. The Sports Betting T&Cs say Flush can change betting and payout limits without notice, and can set a maximum stake for any event, market or player.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://flush.com/terms-sports/",
+            "asOf": "2026-09-18"
+          }
+        ]
+      },
+      {
+        "title": "Sports bonus terms",
+        "facts": [
+          {
+            "label": "Offer",
+            "value": "Rotating sportsbook promotions. Every sportsbook bet earns VIP rakeback and counts toward the $10,000 weekly race leaderboard.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://flush.com/special-bets/",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -6063,6 +6312,18 @@
             "sourcing": "editorial",
             "sourceUrl": "https://www.housebets.com/legal/sportsbook-rules",
             "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports titles",
+            "chips": [
+              "CS2",
+              "Dota 2",
+              "League of Legends",
+              "StarCraft"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.housebets.com/sports",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -6309,6 +6570,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://jackpot.bet/assets/legal/sport-settlement-rules.pdf",
             "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max payout",
+            "value": "No figure is stated. The Sports Rules PDF has a maximum-winnings-per-bet-slip clause, but the amount is left blank.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://jackpot.bet/assets/legal/sport-settlement-rules.pdf",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -7726,6 +7994,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://rainbet.com/sportsbook",
             "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max payout",
+            "value": "The rules give no fixed figure. Maximum winnings are set per bet or per event and can vary by sport, league or market. They can apply to everyone or to an individual account, and the sportsbook can change them at any time.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://rainbet.com/sportsbook-rules",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -7798,10 +8073,10 @@
           },
           {
             "label": "Minimum withdrawal",
-            "value": "Shown in the cashier per coin; no maximum withdrawal",
+            "value": "Set per coin by that coin's network fee and shown in the cashier before you confirm",
             "sourcing": "editorial",
             "sourceUrl": "https://help.razed.com/en/articles/8777871-cryptocurrency-withdrawal-limits",
-            "asOf": "2026-09-15"
+            "asOf": "2026-09-18"
           },
           {
             "label": "Withdrawal limits",
@@ -7998,6 +8273,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://www.razed.com/sports",
             "asOf": "2026-09-17"
+          },
+          {
+            "label": "Max payout",
+            "value": "No fixed maximum payout is published. The sports betting rules say the sportsbook sets limits on stakes and maximum winnings per bet or per event, which can apply to all players or to an individual account and vary by sport, league and market.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.razed.com/policy/sports-terms/",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -8111,6 +8393,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.razed.com/en/articles/11138244-fiat-deposit-limits",
             "asOf": "2026-09-17"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "Set per coin and shown in the cashier; card and regional fiat deposits start at $20 CAD",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.razed.com/en/articles/11138244-fiat-deposit-limits",
+            "asOf": "2026-09-18"
           }
         ]
       }
@@ -8563,6 +8852,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://roobet.com/sports",
             "asOf": "2026-09-16"
+          },
+          {
+            "label": "Prediction markets",
+            "value": "Yes. Roobet Predictions is powered by Polymarket. You buy Yes/No shares priced between $0.01 and $0.99, with the price showing the market's implied probability. Each winning share pays $1.00 and a losing share pays $0. You can sell before the market resolves, and trades use your normal Roobet balance. Categories on the page are Politics, Sports, Crypto, Finance, Geopolitics, Earnings, Tech, Culture, World, Economy, Trump and Elections. Money spent on positions does not count toward Roobet Rewards.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.roobet.com/en/articles/16056273-prediction-markets",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -8804,6 +9100,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://www.shock.com/policies/sportsbook",
             "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max payout",
+            "value": "No fixed figure is stated. The Sportsbook rules say limits, including maximum winnings per bet or per event, are set by the sportsbook, can apply to everyone or to one account, and vary by sport, league and market.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.shock.com/policies/sportsbook",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -9591,6 +9894,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://spartans.com/help-center/sportsbook-rules-odds88",
             "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max payout",
+            "value": "No single figure is published. The Sportsbook Rules say limits on maximum winnings per bet or per event are set by the sportsbook, can apply to everyone or to individual accounts, and vary by sport, league and market type.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://spartans.com/help-center/sportsbook-rules-odds88",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -10404,6 +10714,50 @@
             "sourcing": "editorial",
             "sourceUrl": "https://intercom.help/thrill/en/articles/11464076-sportsbook-bet-types",
             "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max payout",
+            "value": "No fixed maximum payout is published. Thrill's sports rules reserve the right to change betting limits and payout limits without notice and to cap stakes per event, market or player, and its help centre says limits reflect the profile of the event.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://thrill.com/policies/sports-rules",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Esports titles",
+            "chips": [
+              "CS2",
+              "Dota 2",
+              "Valorant",
+              "League of Legends",
+              "Honor of Kings",
+              "Arena of Valor",
+              "Mobile Legends",
+              "Wild Rift",
+              "PUBG",
+              "Free Fire",
+              "Fortnite",
+              "Apex Legends",
+              "Call of Duty",
+              "Deadlock",
+              "Rainbow Six",
+              "Marvel Rivals",
+              "Crossfire",
+              "Tekken",
+              "Street Fighter",
+              "Overwatch 2",
+              "Rocket League",
+              "StarCraft",
+              "Warcraft III",
+              "Age of Empires",
+              "Standoff 2",
+              "EA Sports FC / FIFA",
+              "NBA 2K",
+              "Cricket 24",
+              "GeoGuessr"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://thrill.com/policies/sports-rules",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -10667,6 +11021,25 @@
             "value": "A Predictions section with yes/no markets shown as probabilities, across weather, politics, business and tech, crypto, culture, economy, elections, films, geopolitics and music",
             "sourcing": "editorial",
             "sourceUrl": "https://toshi.bet/",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Cash-out",
+            "value": "Yes. Cash out is offered across Toshi.bet's in-play sports and esports markets and settles an open bet early at the current market price.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://toshi.bet/sports",
+            "asOf": "2026-09-18"
+          }
+        ]
+      },
+      {
+        "title": "Sports bonus terms",
+        "facts": [
+          {
+            "label": "Offer",
+            "value": "Rotating sportsbook promotions. The sportsbook page points to Toshi.bet's three-deposit bonus ladder (200%, 150% and 100%) as having no wagering requirements on any tier, and sportsbook wagering counts toward the VIP programme.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://toshi.bet/sports",
             "asOf": "2026-09-18"
           }
         ]
@@ -11315,6 +11688,20 @@
             "sourcing": "editorial",
             "sourceUrl": "https://wager.com/sports/",
             "asOf": "2026-09-16"
+          },
+          {
+            "label": "Esports",
+            "value": "Yes. Wager's Terms and Conditions include betting rules for eSport matches: a suspended or postponed match that doesn't resume within 72 hours has no action and stakes are refunded.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://wager.com/policy/term-and-conditions/",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Max payout",
+            "value": "No per-bet winnings cap is published. Wager sets minimum and maximum stakes for each event and can adjust them for individual accounts. Withdrawals are capped at €10,000 a month, or €5,000 a month if your balance is at least 10 times your total deposits.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://wager.com/policy/term-and-conditions/",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -11551,6 +11938,16 @@
             "sourcing": "editorial",
             "sourceUrl": "https://whale.io/sportsbook",
             "asOf": "2026-09-18"
+          },
+          {
+            "label": "Esports titles",
+            "chips": [
+              "CS2",
+              "Dota 2"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://whale.io/",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -11759,6 +12156,27 @@
             "sourcing": "editorial",
             "sourceUrl": "https://winna.com/",
             "asOf": "2026-09-16"
+          },
+          {
+            "label": "Cash-out",
+            "value": "Yes. Cash Out lets you settle a bet before the event ends at the sportsbook's offered terms, and may be available for both pre-match and live bets, at the sportsbook's discretion.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://winna.com/sports-terms",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Bet builder",
+            "value": "Yes. Bet Builder combines selections from different markets within the same event, and every selection must win. Availability is at the sportsbook's discretion.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://winna.com/sports-terms",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Max payout",
+            "value": "No fixed maximum payout is published. The sports betting rules say the sportsbook sets limits on stakes and maximum winnings per bet or per event, which can apply to all players or to an individual account and vary by sport, league and market.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://winna.com/sports-terms",
+            "asOf": "2026-09-18"
           }
         ]
       },

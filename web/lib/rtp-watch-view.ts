@@ -100,3 +100,19 @@ export function watchStats(rows: WatchRow[]) {
     { value: checkedTitles.length ? String(cutCells) : "—", label: "Reduced builds found" },
   ];
 }
+
+/** One casino's RTP Watch result, for its report: how many titles were read and whether any ran below the full build. */
+export function rtpSummary(operatorSlug: string) {
+  const { rtpWatch, slots } = siteData;
+  const readings = rtpWatch.filter((r) => r.operatorSlug === operatorSlug && !isStaleReading(r.checkedAt));
+  if (!readings.length) return null;
+  const cut = readings.filter((r) => r.rtp < r.publishedRtp);
+  const name = (slug: string) => slots.find((s) => s.slug === slug)?.name ?? slug;
+  return {
+    count: readings.length,
+    cut: cut.length,
+    checkedAt: readings.map((r) => r.checkedAt).sort().slice(-1)[0],
+    titles: readings.map((r) => `${name(r.slotSlug)} ${r.rtp.toFixed(2)}%`),
+    cutTitles: cut.map((r) => `${name(r.slotSlug)} ${r.rtp.toFixed(2)}% (full build ${r.publishedRtp.toFixed(2)}%)`),
+  };
+}
