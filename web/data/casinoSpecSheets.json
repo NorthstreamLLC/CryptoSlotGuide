@@ -8986,10 +8986,10 @@
           },
           {
             "label": "Rakeback",
-            "value": "Rakeback returns a percentage of the house edge on every casino bet, paid whether the bet wins or loses. The rate is not published: it is calculated as a percentage of the rake and depends on VIP level and amount wagered. Instant rakeback is credited immediately; weekly and monthly rakeback is credited periodically.",
+            "value": "Three layers of rakeback, calculated as a percentage of the rake with the rate set by your VIP level and amount wagered: instant rakeback credited straight after each bet, plus weekly and monthly rakeback. All of it can be played or withdrawn right away, and reloads are issued on reaching each new VIP rank",
             "sourcing": "editorial",
-            "sourceUrl": "https://help.shuffle.com/en/articles/10020506-what-is-rakeback",
-            "asOf": "2026-09-17"
+            "sourceUrl": "https://shuffle.com/vip-program",
+            "asOf": "2026-09-18"
           },
           {
             "label": "Reload bonuses",
