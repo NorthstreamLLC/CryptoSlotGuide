@@ -77,7 +77,7 @@ export function getWatchRows(): WatchRow[] {
       cleanCount: `${cuts.filter((c, i) => readings[i] && c === 0).length}/${checkedCount}`,
       worstColor: worst ? "#DA9877" : checkedCount ? "#5FE3E8" : "#4E5A62",
       cells: readings.map((r, i) => ({
-        label: r ? (s.rtp - cuts[i]).toFixed(2) : "—",
+        label: r ? r.rtp.toFixed(2) : "—",
         color: r ? (cuts[i] ? "#DA9877" : "#E8EDF0") : "#39454C",
         bg: r && cuts[i] ? "rgba(196,101,58,.12)" : "transparent",
         weight: r && cuts[i] ? "700" : "400",

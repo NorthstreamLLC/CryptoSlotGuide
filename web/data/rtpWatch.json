@@ -48,11 +48,11 @@
     "slotSlug": "sugar-rush-1000",
     "operatorSlug": "razed",
     "rtp": 96.53,
-    "publishedRtp": 96,
+    "publishedRtp": 96.53,
     "checkedAt": "2026-09-18",
     "checkedBy": "CSG",
     "source": "operator_game_page",
-    "notes": "Razed tag shows 96.53%, above the 96.00% on Pragmatic’s game page; to confirm in the in-game paytable"
+    "notes": "RTP tag on Razed game page: 96.53%, matching the in-game figure at Roobet"
   },
   {
     "id": "gates-of-olympus-1000:razed:2026-09-18",
@@ -97,5 +97,60 @@
     "checkedBy": "CSG",
     "source": "operator_game_page",
     "notes": "Hacksaw does not list Stormforged on its website; 96.41% is the figure Razed shows"
+  },
+  {
+    "id": "wanted-dead-or-a-wild:roobet:2026-09-18",
+    "slotSlug": "wanted-dead-or-a-wild",
+    "operatorSlug": "roobet",
+    "rtp": 96.38,
+    "publishedRtp": 96.38,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "in_client_paytable",
+    "notes": "In-game paytable: theoretical payout 96.38%"
+  },
+  {
+    "id": "duck-hunters-2:roobet:2026-09-18",
+    "slotSlug": "duck-hunters-2",
+    "operatorSlug": "roobet",
+    "rtp": 96,
+    "publishedRtp": 96,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "in_client_paytable",
+    "notes": "In-game rules: theoretical return 96.00%; feature buys 95.99%-96.11%"
+  },
+  {
+    "id": "sugar-rush-1000:roobet:2026-09-18",
+    "slotSlug": "sugar-rush-1000",
+    "operatorSlug": "roobet",
+    "rtp": 96.53,
+    "publishedRtp": 96.53,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "in_client_paytable",
+    "notes": "Game rules page 4/7: 96.53%; buy free spins 96.52%, buy super free spins 96.44%"
+  },
+  {
+    "id": "stormforged:roobet:2026-09-18",
+    "slotSlug": "stormforged",
+    "operatorSlug": "roobet",
+    "rtp": 96.41,
+    "publishedRtp": 96.41,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "in_client_paytable",
+    "notes": "In-game paytable: theoretical payout 96.41%"
+  },
+  {
+    "id": "le-bandit:roobet:2026-09-18",
+    "slotSlug": "le-bandit",
+    "operatorSlug": "roobet",
+    "rtp": 96.34,
+    "publishedRtp": 96.34,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "in_client_paytable",
+    "notes": "In-game paytable: theoretical payout 96.34%"
   }
 ]

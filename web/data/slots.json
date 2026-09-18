@@ -248,7 +248,7 @@
     "name": "Sugar Rush 1000",
     "mono": "SR1",
     "provider": "Pragmatic Play",
-    "rtp": 96,
+    "rtp": 96.53,
     "vol": "high",
     "maxWin": "25,000x",
     "bestAt": "",
@@ -257,7 +257,8 @@
       "vol",
       "maxWin"
     ],
-    "sourceUrl": "https://www.pragmaticplay.com/en/games/sugar-rush-1000/"
+    "sourceUrl": "https://www.pragmaticplay.com/en/games/sugar-rush-1000/",
+    "rtpVersions": "96.53 / 96.00"
   },
   {
     "slug": "outsourced",
