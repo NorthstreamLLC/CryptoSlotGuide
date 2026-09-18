@@ -160,7 +160,7 @@ export function CasinoReport({ e }: { e: EntityView }) {
         label: "Slot RTP",
         sourcing: "site-data",
         value: rtp.cut
-          ? `Reduced RTP found on ${rtp.cut} of ${rtp.count} slots we checked: ${rtp.cutTitles.join("; ")}. Checked in-game, ${rtp.checkedAt}.`
+          ? `Reduced RTP found on ${rtp.cut} of ${rtp.count} slots we checked: ${rtp.cutTitles.join("; ")}. Checked ${rtp.checkedAt}; see RTP Watch.`
           : `Full RTP build on all ${rtp.count} slots we checked: ${rtp.titles.join(", ")}. Checked ${rtp.checkedAt}; see RTP Watch.`,
       }
     : undefined;

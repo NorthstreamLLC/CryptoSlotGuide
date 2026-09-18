@@ -8,6 +8,10 @@
     "name": "Stake"
   },
   {
+    "slug": "bc-game",
+    "name": "BC.Game"
+  },
+  {
     "slug": "shuffle",
     "name": "Shuffle"
   },

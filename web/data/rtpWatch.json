@@ -515,5 +515,82 @@
     "checkedBy": "CSG",
     "source": "operator_game_page",
     "notes": "Shuffle game page: edge 3.92% (96.08% RTP)"
+  },
+  {
+    "id": "sugar-rush-1000:bc-game:2026-09-18",
+    "slotSlug": "sugar-rush-1000",
+    "operatorSlug": "bc-game",
+    "rtp": 96.53,
+    "publishedRtp": 96.53,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "BC.Game game page stats: house edge 3.47%, RTP 96.53%"
+  },
+  {
+    "id": "outsourced:bc-game:2026-09-18",
+    "slotSlug": "outsourced",
+    "operatorSlug": "bc-game",
+    "rtp": 96.08,
+    "publishedRtp": 96.08,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "BC.Game game page stats: house edge 3.92%, RTP 96.08%"
+  },
+  {
+    "id": "sweet-bonanza-1000:bc-game:2026-09-18",
+    "slotSlug": "sweet-bonanza-1000",
+    "operatorSlug": "bc-game",
+    "rtp": 96.53,
+    "publishedRtp": 96.53,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "BC.Game game page stats: house edge 3.47%, RTP 96.53%"
+  },
+  {
+    "id": "gates-of-olympus-1000:bc-game:2026-09-18",
+    "slotSlug": "gates-of-olympus-1000",
+    "operatorSlug": "bc-game",
+    "rtp": 96.5,
+    "publishedRtp": 96.5,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "BC.Game game page stats: house edge 3.50%, RTP 96.5%"
+  },
+  {
+    "id": "duck-hunters-2:bc-game:2026-09-18",
+    "slotSlug": "duck-hunters-2",
+    "operatorSlug": "bc-game",
+    "rtp": 96,
+    "publishedRtp": 96,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "BC.Game game page stats: house edge 4.00%, RTP 96%"
+  },
+  {
+    "id": "wanted-dead-or-a-wild:bc-game:2026-09-18",
+    "slotSlug": "wanted-dead-or-a-wild",
+    "operatorSlug": "bc-game",
+    "rtp": 96,
+    "publishedRtp": 96.38,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "BC.Game game page stats bar: house edge 4.00%, RTP 96%. Its own description on the same page says the RTP is set at 94.55% (Hacksaw’s second-tier build) and mentions adjustable RTP ranges. Full build is 96.38%"
+  },
+  {
+    "id": "stormforged:bc-game:2026-09-18",
+    "slotSlug": "stormforged",
+    "operatorSlug": "bc-game",
+    "rtp": 96,
+    "publishedRtp": 96.41,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "BC.Game game page stats bar: house edge 4.00%, RTP 96%. Its own description on the same page says the RTP is 94.28%. Full build is 96.41%"
   }
 ]
