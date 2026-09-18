@@ -218,5 +218,49 @@
     "checkedBy": "CSG",
     "source": "operator_game_page",
     "notes": "RTP tag on Stake game page (Description tab): 96.34%"
+  },
+  {
+    "id": "stormforged:stake:2026-09-18",
+    "slotSlug": "stormforged",
+    "operatorSlug": "stake",
+    "rtp": 96.41,
+    "publishedRtp": 96.41,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "RTP tag on Stake game page (Description tab): 96.41%"
+  },
+  {
+    "id": "outsourced:stake:2026-09-18",
+    "slotSlug": "outsourced",
+    "operatorSlug": "stake",
+    "rtp": 96.08,
+    "publishedRtp": 96.08,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "RTP tag on Stake game page (Description tab): 96.08%"
+  },
+  {
+    "id": "gates-of-olympus-1000:roobet:2026-09-18",
+    "slotSlug": "gates-of-olympus-1000",
+    "operatorSlug": "roobet",
+    "rtp": 96.5,
+    "publishedRtp": 96.5,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "in_client_paytable",
+    "notes": "Game rules page 4/7: 96.50%; ante bet 96.50%, buy free spins 96.49%"
+  },
+  {
+    "id": "outsourced:roobet:2026-09-18",
+    "slotSlug": "outsourced",
+    "operatorSlug": "roobet",
+    "rtp": 96.08,
+    "publishedRtp": 96.08,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "in_client_paytable",
+    "notes": "In-game rules: theoretical return 96.08%; feature buys 95.92%-96.17%"
   }
 ]
