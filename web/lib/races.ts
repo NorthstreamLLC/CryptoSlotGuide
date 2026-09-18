@@ -54,6 +54,7 @@ const PARTNERS: Record<string, string> = {
   "bc-game": "Leicester City FC, Jason Derulo & more",
   cloudbet: "PFL, Karate Combat & Tom Aspinall",
   shuffle: "Sunderland AFC",
+  duelbits: "Team Liquid & Michael Bisping",
   "sportsbet-io": "Tottenham Hotspur & Aston Villa",
   rainbet: "BKFC & 5 more",
   spartans: "Conor Benn & 2 more",
