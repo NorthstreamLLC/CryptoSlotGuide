@@ -20,5 +20,82 @@
     "checkedBy": "CSG",
     "source": "operator_game_page",
     "notes": "RTP tag on Razed game page: 96.53%"
+  },
+  {
+    "id": "wanted-dead-or-a-wild:razed:2026-09-18",
+    "slotSlug": "wanted-dead-or-a-wild",
+    "operatorSlug": "razed",
+    "rtp": 96.38,
+    "publishedRtp": 96.38,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "RTP tag on Razed game page: 96.38%"
+  },
+  {
+    "id": "le-bandit:razed:2026-09-18",
+    "slotSlug": "le-bandit",
+    "operatorSlug": "razed",
+    "rtp": 96.34,
+    "publishedRtp": 96.34,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "RTP tag on Razed game page: 96.34%"
+  },
+  {
+    "id": "sugar-rush-1000:razed:2026-09-18",
+    "slotSlug": "sugar-rush-1000",
+    "operatorSlug": "razed",
+    "rtp": 96.53,
+    "publishedRtp": 96,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "Razed tag shows 96.53%, above the 96.00% on Pragmatic’s game page; to confirm in the in-game paytable"
+  },
+  {
+    "id": "gates-of-olympus-1000:razed:2026-09-18",
+    "slotSlug": "gates-of-olympus-1000",
+    "operatorSlug": "razed",
+    "rtp": 96.5,
+    "publishedRtp": 96.5,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "RTP tag on Razed game page: 96.5%"
+  },
+  {
+    "id": "outsourced:razed:2026-09-18",
+    "slotSlug": "outsourced",
+    "operatorSlug": "razed",
+    "rtp": 96.08,
+    "publishedRtp": 96.08,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "RTP tag on Razed game page: 96.08%"
+  },
+  {
+    "id": "duck-hunters-2:razed:2026-09-18",
+    "slotSlug": "duck-hunters-2",
+    "operatorSlug": "razed",
+    "rtp": 96,
+    "publishedRtp": 96,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "RTP tag on Razed game page: 96%"
+  },
+  {
+    "id": "stormforged:razed:2026-09-18",
+    "slotSlug": "stormforged",
+    "operatorSlug": "razed",
+    "rtp": 96.41,
+    "publishedRtp": 96.41,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "Hacksaw does not list Stormforged on its website; 96.41% is the figure Razed shows"
   }
 ]

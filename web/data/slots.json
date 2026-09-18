@@ -285,5 +285,21 @@
       "vol"
     ],
     "sourceUrl": "https://www.nolimitcity.com/games/duck-hunters-2"
+  },
+  {
+    "slug": "stormforged",
+    "name": "Stormforged",
+    "mono": "STF",
+    "provider": "Hacksaw Gaming",
+    "rtp": 96.41,
+    "vol": "high",
+    "maxWin": "",
+    "bestAt": "",
+    "tint": "#8FA8D6",
+    "unpublished": [
+      "rtp",
+      "vol",
+      "maxWin"
+    ]
   }
 ]
