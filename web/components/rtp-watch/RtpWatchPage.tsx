@@ -66,11 +66,11 @@ export function RtpWatchPage() {
           >
             Cut somewhere
           </button>
-          <span style={{ marginLeft: "auto", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#4E5A62" }}>Filled cells read in-client · orange = reduced build · — = no reading</span>
+          <span style={{ marginLeft: "auto", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#4E5A62" }}>Filled cells read in-client · orange = reduced build · — = no reading · house edge = 100% minus full-build RTP</span>
         </div>
 
         <div role="table" style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 14, overflowX: "auto", background: "#0C1013", boxShadow: "0 12px 40px rgba(0,0,0,.35)" }}>
-          <div role="row" style={{ display: "grid", minWidth: 1180, gridTemplateColumns: `minmax(240px,1.4fr) 96px repeat(${watchOps.length},1fr) 92px`, background: "#101519", borderBottom: "1px solid rgba(255,255,255,.07)" }}>
+          <div role="row" style={{ display: "grid", minWidth: 1180, gridTemplateColumns: `minmax(240px,1.4fr) 96px repeat(${watchOps.length},1fr) 92px 104px`, background: "#101519", borderBottom: "1px solid rgba(255,255,255,.07)" }}>
             <HeadCell>Title</HeadCell>
             <HeadCell muted={false}>Best</HeadCell>
             {watchOps.map((o) => (
@@ -79,13 +79,14 @@ export function RtpWatchPage() {
               </div>
             ))}
             <HeadCell>Clean</HeadCell>
+            <HeadCell muted={false}>House edge</HeadCell>
           </div>
 
           {rows.map((r) => (
             <div
               key={r.slug}
               role="row"
-              style={{ display: "grid", minWidth: 1180, gridTemplateColumns: `minmax(240px,1.4fr) 96px repeat(${watchOps.length},1fr) 92px`, alignItems: "center", borderBottom: "1px solid rgba(255,255,255,.05)" }}
+              style={{ display: "grid", minWidth: 1180, gridTemplateColumns: `minmax(240px,1.4fr) 96px repeat(${watchOps.length},1fr) 92px 104px`, alignItems: "center", borderBottom: "1px solid rgba(255,255,255,.05)" }}
               className="hover:!bg-white/[0.028]"
             >
               <div role="cell" style={{ padding: "13px 18px", minWidth: 0 }}>
@@ -103,6 +104,7 @@ export function RtpWatchPage() {
                 </div>
               ))}
               <div role="cell" style={{ padding: "13px 12px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11.5, color: r.worstColor }}>{r.cleanCount}</div>
+              <div role="cell" style={{ padding: "13px 18px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12.5, color: "#E8EDF0" }}>{r.houseEdge}</div>
             </div>
           ))}
         </div>

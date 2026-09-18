@@ -44,6 +44,8 @@ export interface WatchRow {
   provider: string;
   seen: string;
   bestLabel: string;
+  /** House edge on the full build: 100 minus its RTP. */
+  houseEdge: string;
   cut: boolean;
   cleanCount: string;
   worstColor: string;
@@ -73,6 +75,7 @@ export function getWatchRows(): WatchRow[] {
       provider: s.provider,
       seen,
       bestLabel: rtpLabel(s),
+      houseEdge: `${(100 - s.rtp).toFixed(2)}%`,
       cut: worst > 0,
       cleanCount: `${cuts.filter((c, i) => readings[i] && c === 0).length}/${checkedCount}`,
       worstColor: worst ? "#DA9877" : checkedCount ? "#5FE3E8" : "#4E5A62",
