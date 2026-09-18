@@ -1041,10 +1041,10 @@
         "facts": [
           {
             "label": "Standing offer",
-            "value": "Its sign-up offer isn't on any BC.GAME page reachable from here: its promotions and VIP pages region-block and its help centre is behind a challenge. Its own blog describes a Welcome Shield covering 20% of net losses up to $5,000 for new players instead of a deposit match",
+            "value": "Monthly 4-Deposit Bonus: up to four deposit bonuses every month, resetting on the 1st at 00:00 UTC. Stage 1 pays 180% (minimum deposit $5), stage 2 240% ($10), stage 3 300% ($20) and stage 4 360% ($30), claimed strictly in order. Each bonus is added as locked rakeback that converts to withdrawable cash as you wager on non-PvP games, with no wagering multiplier and no expiry.",
             "sourcing": "editorial",
-            "sourceUrl": "https://blog.bc.game/bc-bonus-everything-you-need-to-know-about-the-new-leveling-and-bonus-system-at-bc-game/",
-            "asOf": "2026-09-17"
+            "sourceUrl": "https://help.bc.support/en/articles/15839846-monthly-4-deposit-bonus",
+            "asOf": "2026-09-18"
           },
           {
             "label": "Vault Pro interest",
@@ -1083,24 +1083,24 @@
           },
           {
             "label": "Cashback",
-            "value": "Instant Lossback returns a share of losses in real time as play happens. BC.GAME's own write-up of the new levelling system describes a Welcome Shield covering 20% of net losses up to $5,000 for a limited time after joining, and states the system gives extra compensation on top of the standard wager-based bonus when a player is at a net loss. Blog dated 14 April 2026. · BC Engine is a continuous reward stream rather than a one-off promo: the platform takes a share of the profits from its in-house games every hour and distributes it to players holding staked $BC, paid in BCD, its USD-pegged token, with each hourly amount calculated from token holdings at the moment of settlement. Blog dated 8 July 2026.",
+            "value": "VIP Lossback pays real money when a period ends in net loss, with no wagering requirement and no expiry once issued; eligible VIPs request it through support. VIP Weekly Free Spins are sized on Sunday-to-Saturday net loss, requested from Sunday and must be used within 7 days. New players get a Welcome Shield covering 20% of net losses up to $5,000 for a limited time after joining, and BC Engine pays an hourly share of in-house game profits to players holding staked $BC, in BCD.",
             "sourcing": "editorial",
-            "sourceUrl": "https://blog.bc.game/bc-bonus-everything-you-need-to-know-about-the-new-leveling-and-bonus-system-at-bc-game/",
-            "asOf": "2026-09-17"
+            "sourceUrl": "https://help.bc.support/en/articles/14468373-lossback-bonus",
+            "asOf": "2026-09-18"
           },
           {
             "label": "Reload bonuses",
-            "value": "Recurring VIP rewards: a Reload Bonus available monthly to active VIP players who keep up their gameplay, a monthly TopPlay Bonus recognising the most active players, and a GamePlay Bonus that appears at random intervals based on player activity. Blog dated 17 August 2026.",
+            "value": "Daily, weekly and monthly bonuses for all players, with no VIP level or minimum wager required and only non-PvP games counting. The Daily Bonus updates every 10 minutes, unlocks at 03:30 UTC and must be claimed within 24 hours. The Weekly Bonus is cashback on Friday-to-Thursday play, paid every Friday. The Monthly Bonus is cashback on the past 30 days, issued on the 15th and claimed manually. Lifetime VIPs also receive a periodic Reload Bonus based on activity.",
             "sourcing": "editorial",
-            "sourceUrl": "https://blog.bc.game/the-bc-game-vip-club-how-to-join-the-biggest-online-casinos-vip-circle-in-2026/",
-            "asOf": "2026-09-17"
+            "sourceUrl": "https://help.bc.support/en/articles/14483950-new-bonus-system-full-guide-overview",
+            "asOf": "2026-09-18"
           },
           {
             "label": "VIP levels",
-            "value": "VIP Club membership is invitation-only and granted automatically from activity and engagement; a VIP Transfer route exists for players with VIP status at another casino. BC.GAME does not publish tier names, wager thresholds or per-tier rakeback rates on its own pages — its rakeback guide only says rates track activity and VIP level, with higher tiers getting better rates. Levelling runs on an XP formula of wager × house edge × 100.",
+            "value": "Seven VIP tiers - Beginner, Bronze, Silver, Gold, Platinum, Diamond and Eternal - each split into Levels I to X. XP comes from settled bets on non-PvP games, and every level pays a level-up bonus with no expiry. From Diamond, players at 50% XP toward the next level can unlock half of that level's reward early through support. Separately, invitation-based lifetime VIPs get a dedicated host plus birthday, instant lossback and periodic reload bonuses, invitation-only events and merchandise gifts.",
             "sourcing": "editorial",
-            "sourceUrl": "https://blog.bc.game/the-bc-game-vip-club-how-to-join-the-biggest-online-casinos-vip-circle-in-2026/",
-            "asOf": "2026-09-17"
+            "sourceUrl": "https://help.bc.support/en/articles/14151207-vip-level-system",
+            "asOf": "2026-09-18"
           },
           {
             "label": "Rakeback",
@@ -1108,6 +1108,41 @@
             "sourcing": "editorial",
             "sourceUrl": "https://blog.bc.game/what-does-rakeback-mean-bc-game-a-players-guide/",
             "asOf": "2026-09-17"
+          },
+          {
+            "label": "Leaderboards",
+            "value": "Daily Wager Contest: every 24 hours the ten players who wager the most share the prize pool, which grows progressively as a small share of every bet is added to it.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.bc.support/en/articles/7831135-the-ultimate-collection-of-all-the-bonuses",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Weekly raffle",
+            "value": "$20,000 Weekly Raffle (Super Lucky Draw). Log in and wager $100 in a day for one ticket (up to 7 a week), then earn one more ticket per $1,000 wagered, up to 100 tickets a week; casino and sports wagers count. The draw runs every Monday at 12:00 UTC with 150 winners: $5,000, $3,500, $2,000, $1,500 and $1,000 for the top five, $500 for 6th-10th, $100 for 11th-20th, $50 for 21st-50th and $20 for 51st-150th. One prize per player per week, credited within 48 hours.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.bc.support/en/articles/8278975-weekly-raffle",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Prize draws",
+            "value": "Lottery: tickets cost $0.10 and draws run three times a day at 00:00, 08:00 and 16:00 UTC. Pick five numbers from 1-36 plus a jackpot ball from 1-10; all six wins the $100,000 jackpot (shared between winners), five main numbers pay $3,000, four pay $20 and three pay $1, and a ticket that misses every number is re-entered free into the next draw. Flash Drops add 3-6 bonus codes a day on Telegram and Discord, worth $2-$100 each, for players meeting a random 7-day wager threshold of $5,000-$200,000.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.bc.support/en/articles/7831138-lottery",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Missions",
+            "value": "Quest hub groups tasks into Special, Deposit, Wager, Wallet and Social categories; each task has its own deadline and pays cash, free bets or special bonuses once claimed. Master Medals reward long-term milestones, from 20 BCD for five medals up to 10,000 BCD for all 20.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.bc.support/en/articles/14480749-quest",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Referral program",
+            "value": "My Casino referral programme: up to $1,000 in USD rewards per referral, paid in steps as they climb from Bronze I to Platinum II, on top of commission of wager x 1% x commission rate, weighted 28% for in-house originals, 60% for third-party slots and live casino and 100% for sports.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.bc.support/en/articles/7831323-referral-system-my-casino",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -4284,10 +4319,10 @@
           },
           {
             "label": "Withdrawal limits",
-            "value": "Duelbits charges no withdrawal fees; only blockchain network costs apply, and the live transaction cost is shown under the amount input for each withdrawal method. No minimum, maximum or per-day withdrawal cap is published on Duelbits' own pages.",
+            "value": "No maximum withdrawal cap. Minimum withdrawals: $10 for LTC, SOL, DOGE, XRP, TRX, SHIB, TRUMP, USDT on TRC-20 and USDC on Solana; $25 for BNB; $50 for BTC, ETH, DAI, USDC on ERC-20 and USDT on ERC-20 or BSC. At least 10% of a deposit must be wagered before withdrawing. Duelbits charges no platform fees, and every withdrawal is paid in crypto.",
             "sourcing": "editorial",
-            "sourceUrl": "https://help.duelbits.com/en/articles/5351656-does-duelbits-charge-withdrawal-fees",
-            "asOf": "2026-09-17"
+            "sourceUrl": "https://help.duelbits.com/en/articles/16798784-duelbits-fees-limits-processing-times",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -4312,10 +4347,17 @@
           },
           {
             "label": "Minimum deposit",
-            "value": "Depends on the coin, and Duelbits' own guide contradicts itself. The per-coin list shows no minimum for BTC, ETH, LTC, SOL, DOGE, XRP, BNB, TRX and USDT on TRC-20, and gives these minimums: $1 for USDC on Solana; $10 for SHIB, DAI, USDC on ERC-20 and USDT on BNB Chain; $50 for USDT on ERC-20. Another section of the same guide says there are no minimum or maximum deposit limits.",
+            "value": "No minimum on BTC, ETH, LTC, SOL, DOGE, XRP, BNB, TRX, TRUMP and USDT on TRC-20; $1 for USDC on Solana; $10 for SHIB, DAI, USDC on ERC-20 and USDT on BSC; $50 for USDT on ERC-20.",
             "sourcing": "editorial",
-            "sourceUrl": "https://duelbits.com/blog/guide/how-to-deposit-withdraw-funds/",
-            "asOf": "2026-09-16"
+            "sourceUrl": "https://help.duelbits.com/en/articles/16798784-duelbits-fees-limits-processing-times",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Deposit limits",
+            "value": "No maximum deposit cap. Fiat deposits (PIX in Brazil, Interac in Canada, cards, Revolut and PayDo in Europe, JCB in Japan, UPI in India) buy crypto through a third-party provider, and gift cards can be redeemed in the cashier.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.duelbits.com/en/articles/16798784-duelbits-fees-limits-processing-times",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -4462,9 +4504,9 @@
           },
           {
             "label": "Partners",
-            "value": "Its Sponsorships page lists four current partners: esports organisation Team Liquid (teams in League of Legends, Dota 2, VALORANT and Counter-Strike), former UFC champion Michael Bisping, Kiro and the Battle of the Beasts event",
+            "value": "Current sponsorships: title sponsor of Team Liquid's Counter-Strike 2 roster; brand ambassador Michael Bisping, former UFC middleweight champion; Principal Partner and Official Crypto Gambling Partner of the CUPRA KIRO Formula E team for the 2025/26 season; and main sponsor of Battle of the Beasts, Eddie Hall's strongman series.",
             "sourcing": "editorial",
-            "sourceUrl": "https://duelbits.com/",
+            "sourceUrl": "https://help.duelbits.com/en/articles/16844073-duelbits-sponsorships",
             "asOf": "2026-09-18"
           }
         ]
@@ -5445,6 +5487,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.gamdom.com/en/articles/7998196-cryptocurrency-transaction-fees",
             "asOf": "2026-09-16"
+          },
+          {
+            "label": "Withdrawal limits",
+            "value": "No withdrawal limits, on fiat (USD, EUR, JPY) or crypto. Deposits and free-spin winnings must be wagered once before withdrawal, minimums vary by coin with network fees, and withdrawals go out in the same coin that was deposited. VIPs get fee-free withdrawals.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.gamdom.com/en/articles/13239748-getting-started-at-gamdom",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -5548,6 +5597,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://gamdom.com/promotions/stack-of-the-week",
             "asOf": "2026-09-17"
+          },
+          {
+            "label": "Referral program",
+            "value": "Any player can create a permanent affiliate code and link from the Affiliate section and earn a percentage of referred players' bets, based on wager amount, revenue share and game house edge. The referrer must have deposited, and earnings are calculated about once a day and claimed from the affiliates page; revenue-share deals are available on request.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.gamdom.com/en/articles/9717630-affiliate-program-everything-you-need-to-know",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -7602,6 +7658,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.rainbet.com/en/articles/15265421-vip-program",
             "asOf": "2026-09-17"
+          },
+          {
+            "label": "Missions",
+            "value": "Casino Challenges set targets on listed slots and Rainbet Originals, such as hitting a set multiplier at a minimum bet, with the prize going to the first player to complete each one. A verified account is required, several challenges can be played at once, and rewards are credited automatically.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.rainbet.com/en/articles/10331015-challenges",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -7655,10 +7718,10 @@
         "facts": [
           {
             "label": "Offer",
-            "value": "No sports welcome bonus. Rainbet's first deposit bonus (40x wager lock) is for the casino only.",
+            "value": "Rotating sportsbook promotions plus standing features: Early Payout settles a bet as a win once the backed team goes two goals up (Premier League, La Liga, Ligue 1, Bundesliga, Serie A, Champions League, Europa League and Conference League); ComboBoost adds a bonus to winnings on every combo bet; and Odds Boosts apply automatically on flagged matches.",
             "sourcing": "editorial",
-            "sourceUrl": "https://rainbet.com/deposit-promotion-terms",
-            "asOf": "2026-09-17"
+            "sourceUrl": "https://help.rainbet.com/en/articles/15266539-promotions",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -8098,6 +8161,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://blog.rollbit.com/rollbit-rewards-rewards-calendar/",
             "asOf": "2026-09-17"
+          },
+          {
+            "label": "Cashback",
+            "value": "Lossback is built into the Weekly and Monthly Bonuses, which are sized on recent activity with P&L as a main factor; each can be added to the Rewards Calendar once per period.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://blog.rollbit.com/rollbit-rewards-rewards-calendar/",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -8139,6 +8209,18 @@
             "sourcing": "editorial",
             "sourceUrl": "https://blog.rollbit.com/sports-event-of-the-week-esports/",
             "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
+        "title": "Sports bonus terms",
+        "facts": [
+          {
+            "label": "Offer",
+            "value": "2 Up Early Payout: pre-match 1x2 bets are paid as winners once the backed team goes two goals up, on the Premier League, Champions League, La Liga, Ligue 1, Bundesliga, Serie A, Europa League, Conference League, Brasileiro Serie A, Argentina Primera Division, Copa Libertadores and Copa Sudamericana. Free bets and cashed-out bets are excluded, and it pays once per bet.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://blog.rollbit.com/soccer-2-up-early-payout-2/",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -8286,6 +8368,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.roobet.com/en/articles/6042657-withdrawing-using-a-credit-card",
             "asOf": "2026-09-14"
+          },
+          {
+            "label": "Withdrawal limits",
+            "value": "Deposits must be wagered 100% before withdrawal. Roobet sets the minimum withdrawal and shows it on site, and card withdrawals must exceed $15. Fiat withdrawals carry a 2% fee from the 10th in a rolling 30-day period, and several pending withdrawals may be rejected and replaced by one combined request. The Terms of Service set no maximum withdrawal amount.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://roobet.com/terms-and-conditions",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -8325,6 +8414,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://roobet.com/",
             "asOf": "2026-09-17"
+          },
+          {
+            "label": "Deposit limits",
+            "value": "Card deposits run from $10 to $5,000 per transaction. Players can set their own deposit, wager and loss limits over daily, weekly or monthly periods, with up to three limits active at once.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.roobet.com/en/articles/6391927-how-to-deposit-using-a-credit-card",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -8386,6 +8482,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://roobet.com/vip",
             "asOf": "2026-09-17"
+          },
+          {
+            "label": "Referral program",
+            "value": "Referrers earn 5% of the mathematical house edge on their referrals' wagers, rising 1% per tier to 10% at tier 10; tiers climb as more players are referred. A referrer must be set within 24 hours of account creation and cannot be changed, and earnings unlock once 10 referred players have deposited and earnings exceed $5.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.roobet.com/en/articles/5017835-referrals-explained",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -8747,6 +8850,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://shuffle.com/info/terms",
             "asOf": "2026-09-14"
+          },
+          {
+            "label": "Withdrawal limits",
+            "value": "Canadian dollar withdrawals by Interac e-Transfer run from CA$5 to CA$10,000 per transaction, arrive instantly to 30 minutes, carry no Shuffle fee and need Level 2 verification. Crypto minimums are shown per method in the cashier. Deposits must be wagered 100% before withdrawal unless the funds go back to the same wallet on the same network.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.shuffle.com/en/articles/16879186-how-to-deposit-and-withdraw-in-canadian-dollars",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -8775,6 +8885,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://shuffle.com/blog/payment-methods",
             "asOf": "2026-09-16"
+          },
+          {
+            "label": "Deposit limits",
+            "value": "Crypto deposits start at $0.01 or the coin equivalent, and each method's minimum and maximum are shown in the cashier. Canadian dollar deposits by Interac e-Transfer or Interac Request Money run from CA$5 to CA$10,000 per transaction with no Shuffle fee.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.shuffle.com/en/articles/16879186-how-to-deposit-and-withdraw-in-canadian-dollars",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -8839,10 +8956,10 @@
           },
           {
             "label": "VIP levels",
-            "value": "Shuffle's own pages disagree on the ladder. The VIP Rewards Club page shows eight ranks — Bronze, Silver, Gold, Platinum, Jade, Sapphire, Ruby, Diamond — with Instant Rakeback, Weekly Bonus, Level-Up Bonus and Rank Up Bonus at every rank; Monthly Bonus and Bonus Increase from Silver; VIP Host from Platinum; and Invitation to Shuffle Events from Ruby. The help centre instead describes over 50 levels across Silver, Gold, Platinum, Jade, Sapphire, Ruby, Diamond, Opal, Dragon, Mythic, Dark and Legend, with XP requirements from 10,000 to 10 billion.",
+            "value": "Ranks by total wagered: Wood $500; Bronze 1-5 $1,000-$5,000; Silver 1-5 $10,000-$50,000; Gold 1-5 $100,000-$300,000; Platinum 1-5 $450,000-$1,050,000; Jade 1-5 $1.2M-$1.8M; Sapphire 1-5 $2.3M-$4.3M; Ruby 1-5 $5.8M-$11.8M; Diamond 1-5 $17M-$37M. Every rank pays an automatic level-up bonus in the VIP panel, from about $0.90 per Bronze rank up to about $9,360 at Diamond 1. With the Level Up promotion, the combined rewards come to about $25 at Silver 1, $210 at Gold 1, $720 at Platinum 1 and $1,500 at Jade 1, with a personalised bonus at Sapphire 1. Players generally get a VIP host at Sapphire; hosted players with Level 2 verification receive birthday bonuses.",
             "sourcing": "editorial",
-            "sourceUrl": "https://shuffle.com/vip-program",
-            "asOf": "2026-09-17"
+            "sourceUrl": "https://help.shuffle.com/en/articles/8528228-shuffle-level-up-bonus",
+            "asOf": "2026-09-18"
           },
           {
             "label": "Rakeback",
@@ -8853,17 +8970,31 @@
           },
           {
             "label": "Reload bonuses",
-            "value": "Reloads pay a fixed amount of bonus funds claimable at set intervals, and are also issued on reaching a new VIP rank. Alongside them: a Daily Bonus from Bronze awarded at 12:00 AM UTC on the previous 24 hours wagered, a Weekly Bonus from Silver paid each Thursday at 11:00 AM UTC, and a Monthly Bonus based on recent wagers. High-level members also get bonus drops in an exclusive VIP Telegram channel. The Level Up promotion adds a Rank Up reward, a Level Up Reload and a Recent Play boost each time a player hits a new level from Silver to Sapphire.",
+            "value": "Reloads are issued on reaching Silver 1, Gold 1, Platinum 1, Jade 1 and Sapphire, sized on recent wagering and profit and claimed at set intervals from the VIP page; a missed claim expires. From Sapphire, weekly reloads are arranged through a VIP host with a choice of 8-hour or 24-hour intervals. Alongside them: a Daily Bonus from Bronze at 12:00 AM UTC, a Weekly Bonus from Silver every Thursday at 11:00 AM UTC, a Monthly Bonus based on wagering, house edge and profit since the last one, a Pre-Monthly Bonus sent ahead of it, and bonus drop codes posted at random times each day in Shuffle's Telegram channels.",
             "sourcing": "editorial",
-            "sourceUrl": "https://help.shuffle.com/en/articles/9996771-the-shuffle-vip-program",
-            "asOf": "2026-09-17"
+            "sourceUrl": "https://help.shuffle.com/en/articles/10020491-what-is-the-shuffle-reload-bonus",
+            "asOf": "2026-09-18"
           },
           {
             "label": "Weekly raffle",
-            "value": "The SHFL Lottery runs continuously with a weekly draw; entries come from staking SHFL or buying tickets.",
+            "value": "SHFL Lottery: a provably fair draw every Friday. Each ticket takes 50 staked SHFL; players pick five numbers from 1-55 plus a Powerball from 1-18, and staked tickets are entered automatically into every weekly draw. Prizes are paid in USDC.",
             "sourcing": "editorial",
-            "sourceUrl": "https://shuffle.com/promotions",
-            "asOf": "2026-09-17"
+            "sourceUrl": "https://help.shuffle.com/en/articles/10024769-how-to-participate-in-the-shfl-lottery",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Missions",
+            "value": "Casino Challenges: the first player to hit a target multiplier on a listed game at the minimum bet wins that challenge's prize, one winner per challenge. Claiming needs at least Wood rank ($500 wagered), and prizes are claimed from the VIP panel.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.shuffle.com/en/articles/8117078-challenges-terms-conditions",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Referral program",
+            "value": "Affiliate earnings = (wagered amount x theoretical edge x affiliate rate) / 2, calculated in real time after bonuses and paid in the currencies referred players wager in. Affiliates can run multiple campaigns with custom codes.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.shuffle.com/en/articles/6969004-shuffle-affiliate-program",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -9966,6 +10097,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.stake.com/en/articles/7992896-what-is-a-reload",
             "asOf": "2026-09-17"
+          },
+          {
+            "label": "Referral program",
+            "value": "Anyone can join the affiliate programme and get a campaign link. The standard commission is 10%, scaled by house edge: casino pays house edge x wagered / 2 x commission rate; sportsbook uses a 3% theoretical edge (0.03 x wagered / 2 x rate); poker pays rake x rate. Affiliates with large portfolios can arrange custom packages with higher commission.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.stake.com/en/articles/9995651-how-to-get-an-affiliate-commission-with-stake",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -11445,6 +11583,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.winna.com/en/articles/10430796-making-a-withdrawal-on-winna",
             "asOf": "2026-09-14"
+          },
+          {
+            "label": "Withdrawal limits",
+            "value": "Standard withdrawal limit of $10,000 per 24 hours (or equivalent), which a VIP host can raise for higher VIP levels. Minimum $20 per withdrawal, except the full balance on account closure. Deposits carry a 1x wagering requirement, withdrawals of EUR 2,000 or more may need enhanced verification, and several withdrawals within 24 hours may incur a processing fee.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://winna.com/tos",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -11527,6 +11672,27 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.winna.com/en/articles/10431169-the-winna-vip-program",
             "asOf": "2026-09-17"
+          },
+          {
+            "label": "VIP transfer",
+            "value": "VIP Transfer: players with at least $1M wagered at another casino who deposit $100 or more and place a verification bet from their old account get 30 days of VIP perks from their first bet - reloads, increased bonuses, a custom lossback offer and a wager-target bonus - plus a dedicated VIP host. Apply by choosing VIP Transfer in Live Support.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.winna.com/en/articles/10436059-winna-casino-vip-transfer-overview",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Referral program",
+            "value": "Affiliates earn commission on every sports and casino wager their referred players make, based on each game's theoretical house edge and calculated instantly, with no cap on earnings and up to 10 campaign links; larger affiliates can negotiate custom deals.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.winna.com/en/articles/10436117-the-winna-affiliate-program",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Missions",
+            "value": "Challenges: the first player to hit a target multiplier (such as 2,000x-10,000x) on a listed game at the minimum base bet wins that challenge's reward. Only base-game bets count; bonus buys do not qualify.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.winna.com/en/articles/15054381-how-to-use-challenges",
+            "asOf": "2026-09-18"
           }
         ]
       },

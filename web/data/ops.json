@@ -54,7 +54,7 @@
     "payoutLabel": "5m 06s",
     "licence": "Anjouan",
     "kyc": "tiered",
-    "bonus": "Up to 500% deposit rakeback across 4 deposits (monthly promo, resets periodically)",
+    "bonus": "Monthly 4-deposit bonus: 180%, 240%, 300% and 360%, resetting every month",
     "wager": 40,
     "signupUrl": "https://bc.game",
     "conf": 2,
@@ -64,7 +64,7 @@
     "esports": true,
     "hasCustomReview": false,
     "payoutStated": "5 min–days (fiat)",
-    "bonusShort": "Welcome Shield: 20% of net losses up to $5,000",
+    "bonusShort": "Up to 360% on 4 deposits every month",
     "wagerNote": "unlocks gradually as you wager"
   },
   {
