@@ -44,7 +44,7 @@ function shortAmount(f: Fact): string | null {
   if (/^(no|there is no|there isn't)\b[^.]*\b(minimum|maximum|limit|fee)/i.test(v) || /\bno (minimum|maximum|max|limit)s?\b/i.test(v.slice(0, 60))) return "None";
   if (/^(no fee|free|none\b|fee-free|no withdrawal fee)/i.test(v)) return "Free";
   const m = v.match(/(?:(?:USD|EUR|USDT)\s?\d[\d.,]*(?:\s?(?:k|K|m|M|million))?|[$€£]\s?\d[\d.,]*(?:\s?(?:k|K|m|M|million))?|\d[\d.,]*\s?(?:USDT|USDC|USD|EUR|BTC|ETH|LTC|TRX|SOL|DOGE|mBTC)\b)/);
-  if (m) return m[0].replace(/\s+/g, " ");
+  if (m) return m[0].replace(/\s+/g, " ").replace(/[.,]+$/, "");
   if (/varies|depends|per coin|each coin|by coin|per currency/i.test(v)) return "Per coin";
   return null;
 }
@@ -160,7 +160,7 @@ export function CasinoReport({ e }: { e: EntityView }) {
       ? { icon: "gift" as const, title: `${wv.label} wagering`, sub: "On the welcome bonus" }
       : null,
     coinList.length ? { icon: "coins" as const, title: `${coinList.length} coins accepted`, sub: "", coins: coinList } : null,
-    raffle ? { icon: "ticket" as const, title: raffle.value!.split(":")[0].replace("Weekly Raffle", "weekly raffle"), sub: cap(clause(raffle.value!.split(":")[1]).replace(/ each week$/, "")) } : null,
+    raffle ? { icon: "ticket" as const, title: (raffle.value!.match(/[$€][\d,]+k? (?:weekly|daily|monthly) raffle/i)?.[0] ?? "Weekly raffle").replace(/Raffle/, "raffle"), sub: "Every wager earns tickets" } : null,
     wdFee && shortAmount(wdFee) === "None" ? { icon: "percent" as const, title: "No withdrawal fee", sub: clause(wdFee.value) } : null,
     o.sports ? { icon: "ball" as const, title: "Sportsbook & esports", sub: sp.titles.length ? `${sp.titles.length} esports titles` : "Sports and esports betting" } : null,
   ].filter(Boolean).slice(0, 4) as { icon: IconName; title: string; sub: string; coins?: string[] }[];

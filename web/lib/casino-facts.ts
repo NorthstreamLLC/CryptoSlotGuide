@@ -20,7 +20,7 @@ export function shortAmount(f: Fact): string | null {
   if (/^(no|there is no|there isn't)\b[^.]*\b(minimum|maximum|limit|fee)/i.test(v) || /\bno (minimum|maximum|max|limit)s?\b/i.test(v.slice(0, 60))) return "None";
   if (/^(no fee|free|none\b|fee-free|no withdrawal fee)/i.test(v)) return "Free";
   const m = v.match(/(?:(?:USD|EUR|USDT)\s?\d[\d.,]*(?:\s?(?:k|K|m|M|million))?|[$€£]\s?\d[\d.,]*(?:\s?(?:k|K|m|M|million))?|\d[\d.,]*\s?(?:USDT|USDC|USD|EUR|BTC|ETH|LTC|TRX|SOL|DOGE|mBTC)\b)/);
-  if (m) return m[0].replace(/\s+/g, " ");
+  if (m) return m[0].replace(/\s+/g, " ").replace(/[.,]+$/, "");
   if (/varies|depends|per coin|each coin|by coin|per currency/i.test(v)) return "Per coin";
   return null;
 }
