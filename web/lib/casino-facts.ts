@@ -118,7 +118,7 @@ const MAX_LIMITS: Record<string, [string | null, string | null]> = {
   degencity: ["No max stated", "No max stated"],
   dustbit: ["No max stated", "No max stated"],
   "wager-com": ["EUR 10,000 a month", "No max stated"],
-  coincasino: ["EUR 150,000 a month (crypto)", null],
+  coincasino: ["EUR 150,000 a month (crypto), higher for VIPs", "No max on crypto for VIPs"],
   bluff: ["$250,000 a month", "No max stated"],
   "1win": ["Daily limit above $50,000", "No max"],
   metawin: ["From $10,000 a day, by tier", "No max"],

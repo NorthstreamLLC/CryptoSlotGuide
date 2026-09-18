@@ -2803,15 +2803,8 @@
             "asOf": "2026-09-15"
           },
           {
-            "label": "VIP Club",
+            "label": "VIP levels",
             "value": "Bronze ($10K wagered), Silver ($50K), Gold ($100K), Platinum I–III ($250K–$2.5M), Sapphire I–III ($2.5M–$25M), Diamond I–V ($25M+). Weekly cashback and level-up bonus at every level; personal VIP host from Platinum",
-            "sourcing": "editorial",
-            "sourceUrl": "https://www.coincasino.com/",
-            "asOf": "2026-09-15"
-          },
-          {
-            "label": "VIP switch",
-            "value": "Match your VIP level from another casino and get 200% up to $30,000",
             "sourcing": "editorial",
             "sourceUrl": "https://www.coincasino.com/",
             "asOf": "2026-09-15"
@@ -2850,6 +2843,93 @@
             "sourcing": "editorial",
             "sourceUrl": "https://www.coincasino.com/",
             "asOf": "2026-09-16"
+          },
+          {
+            "label": "Cashback",
+            "value": "Weekly VIP cashback paid as real value, worked out from the house edge of the casino games you play (sports bets don't count). Tier qualification is based only on total wagering, and cashback percentages rise with each VIP tier",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.coincasino.com/en/vip",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Perks by level",
+            "value": "Up to 50% in weekly VIP rewards, a personal 24/7 VIP host, personalised bonuses set by your host from your level, activity, deposits and withdrawals, and exclusive events and gifts at the top tiers",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.coincasino.com/en/vip",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "VIP transfer",
+            "value": "Already a VIP at Stake, BC.Game, Rainbet, Rollbit or another casino? Submit proof of your tier through the VIP Match form and CoinCasino places you at the equivalent level, plus the 200% welcome bonus up to $30,000 and 50 Super Spins. New players only",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.coincasino.com/en/promotions",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Missions",
+            "value": "CoinQuests missions that level you up and pay rewards, plus the CoinJackpot progressive jackpot, advertised at over €6,000,000",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.coincasino.com/en/promotions",
+            "asOf": "2026-09-18"
+          }
+        ]
+      },
+      {
+        "title": "Sportsbook",
+        "facts": [
+          {
+            "label": "Sportsbook",
+            "value": "Over 60 sports, led by soccer (1,470 events listed), ice hockey, tennis, American football and basketball, plus horse racing, greyhounds and harness racing",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.coincasino.com/en/sports",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Esports",
+            "value": "Yes, with an esports hub of 181 events",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.coincasino.com/en/sports",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Esports titles",
+            "chips": [
+              "Counter-Strike",
+              "Dota 2",
+              "Valorant",
+              "League of Legends",
+              "Rainbow Six",
+              "Mobile Legends",
+              "King of Glory",
+              "WarCraft III",
+              "Crossfire",
+              "Rocket League",
+              "FC 26",
+              "NBA 2K26",
+              "Cricket 24"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.coincasino.com/en/sports",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Prediction markets",
+            "value": "A Predictions tab with over 100 markets on weather, politics, business and tech, crypto, culture, economy, elections, films, geopolitics, music and sport, priced as probability or odds",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.coincasino.com/en/sports",
+            "asOf": "2026-09-18"
+          }
+        ]
+      },
+      {
+        "title": "Sports bonus terms",
+        "facts": [
+          {
+            "label": "Offer",
+            "value": "ACCA Boost Club: up to 40% extra winnings on accumulators",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.coincasino.com/en/promotions",
+            "asOf": "2026-09-18"
           }
         ]
       },
