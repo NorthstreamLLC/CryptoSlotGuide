@@ -825,5 +825,1056 @@
       }
     ],
     "asOf": "2026-09-18"
+  },
+  {
+    "slug": "stake-us",
+    "name": "Stake.us",
+    "domain": "stake.us",
+    "offer": "Free daily Stake Cash + 5 SC per mail-in request",
+    "facts": [
+      {
+        "label": "Welcome offer",
+        "value": "New players get a welcome bonus by email within 48 hours of verifying their email and account in the first 72 hours; affiliate promo codes can be entered in the first 24 hours.",
+        "url": "https://help.stake.us/en/articles/6790413-affiliate-and-welcome-bonuses-and-how-to-get-them"
+      },
+      {
+        "label": "Daily bonus",
+        "value": "Log in every day to claim a free Daily Bonus of Gold Coins and Stake Cash.",
+        "url": "https://help.stake.us/en/articles/8513660-stake-us-social-casino"
+      },
+      {
+        "label": "Promotions",
+        "value": "Standing 50M GC Daily Races, a weekly GC + free SC entry draw, game challenges, the JAQKpot (up to SC1,000,000) and poker Bad Beat and All-in-or-Fold jackpots.",
+        "url": "https://stake.us/promotions"
+      },
+      {
+        "label": "VIP program",
+        "value": "VIP Club from Bronze to Obsidian with rakeback, level-up bonuses, weekly and monthly bonuses, reloads and a VIP host.",
+        "url": "https://help.stake.us/en/articles/6790075-stake-us-vip-program-overview"
+      },
+      {
+        "label": "Playthrough",
+        "value": "3x: Stake Cash must be played three times before redemption (SC won through play is exempt).",
+        "url": "https://stake.us/policies/terms"
+      },
+      {
+        "label": "Purchase methods",
+        "value": "Cryptocurrency or fiat; redemptions go back in the same type you purchased with.",
+        "url": "https://stake.us/policies/terms"
+      },
+      {
+        "label": "Crypto",
+        "value": "Crypto purchases and crypto prize redemptions are supported on multiple networks (e.g. ETH on ERC20/BEP20, USDC).",
+        "url": "https://help.stake.us/en/articles/9565991-supported-crypto-networks"
+      },
+      {
+        "label": "Restricted states",
+        "value": "Arizona, California, Connecticut, Delaware, Idaho, Illinois, Indiana, Kentucky, Louisiana, Michigan, Maine, Maryland, Montana, Nevada, New York, New Jersey, Pennsylvania, Rhode Island, Tennessee, Vermont, Washington and West Virginia.",
+        "url": "https://help.stake.us/en/articles/8570633-restricted-states-on-the-platform"
+      },
+      {
+        "label": "Minimum age",
+        "value": "21+",
+        "url": "https://stake.us/policies/terms"
+      },
+      {
+        "label": "Games",
+        "value": "13,000+ casino games plus poker: slots, Stake Originals (Plinko, Mines, Dice, Crash, Limbo, Hilo), live dealer, table games and scratch cards.",
+        "url": "https://stake.us/"
+      },
+      {
+        "label": "Company",
+        "value": "Sweepsteaks Limited (Cyprus, reg. HE436222).",
+        "url": "https://stake.us/"
+      },
+      {
+        "label": "Free entry",
+        "value": "Yes: handwritten postcard request for 5 free Stake Cash.",
+        "url": "https://stake.us/policies/terms"
+      }
+    ],
+    "asOf": "2026-09-18",
+    "signupUrl": "https://stake.us/?c=spinkeep",
+    "promoCode": "spinkeep",
+    "affiliate": true
+  },
+  {
+    "slug": "shuffle-us",
+    "name": "Shuffle.us",
+    "domain": "shuffle.us",
+    "offer": "Get 25,000 GC + 1 SC free on sign-up",
+    "facts": [
+      {
+        "label": "Welcome offer",
+        "value": "25,000 Gold Coins plus 1 Shuffle Cash (SC) free once you verify your email and complete level 1 verification.",
+        "url": "https://help.shuffle.us/en/articles/12494837-shuffle-us-welcome-bonus"
+      },
+      {
+        "label": "Daily bonus",
+        "value": "Daily bonus drops every day at 5 AM UTC (1 AM ET) for level-1 verified players; keep a 7-day streak and it grows to 0.4 SC plus 25,000 GC a day.",
+        "url": "https://help.shuffle.us/en/articles/12173977-daily-bonuses-everything-you-need-to-know"
+      },
+      {
+        "label": "Promotions",
+        "value": "Standing 10,000,000 GC Daily Race (top 100 paid) and 10,000 SC Weekly Race (top 50 paid), plus rotating multiplier challenges and tournaments.",
+        "url": "https://shuffle.us/promotions"
+      },
+      {
+        "label": "VIP program",
+        "value": "XP-based VIP club with ranks from Bronze to Diamond: instant rakeback, weekly, monthly, level-up and rank-up bonuses, reloads and a dedicated VIP host at higher ranks.",
+        "url": "https://shuffle.us/vip-program"
+      },
+      {
+        "label": "Playthrough",
+        "value": "1x playthrough on Shuffle Cash before it can be redeemed.",
+        "url": "https://help.shuffle.us/en/articles/12277636-redemption-limits-and-requirements"
+      },
+      {
+        "label": "Minimum redemption",
+        "value": "100 SC ($100); each SC won through play is worth $1. The 100 SC minimum applies to fiat redemptions and the rules also allow the crypto equivalent.",
+        "url": "https://shuffle.us/info/sweepstakes-rules"
+      },
+      {
+        "label": "Redemption time",
+        "value": "Shuffle says 90% of redemptions are processed in under one minute; bank (ACH) redemptions typically land within 1 business day, or a couple of hours with instant ACH.",
+        "url": "https://help.shuffle.us/en/articles/13626704-how-long-will-my-bank-transfer-take"
+      },
+      {
+        "label": "Purchase methods",
+        "value": "Crypto, Visa and Mastercard cards, and ACH bank transfer (accounts run in either Fiat mode or Crypto mode).",
+        "url": "https://help.shuffle.us/en/articles/13626676-understanding-payment-modes-on-shuffle-us"
+      },
+      {
+        "label": "Crypto",
+        "value": "BTC, ETH, LTC, USDT, USDC, TRX, POL, XRP, SOL, DOGE, BNB, AVAX, TON, SHIB, BONK, WIF, TRUMP, PUMP and DAI, for both purchases and redemptions.",
+        "url": "https://help.shuffle.us/en/articles/11882069-supported-crypto-assets-and-chains"
+      },
+      {
+        "label": "Restricted states",
+        "value": "California, Connecticut, Delaware, Florida, Georgia, Hawaii, Idaho, Illinois, Indiana, Kentucky, Louisiana, Maine, Maryland, Michigan, Montana, Nevada, New Jersey, New York, Pennsylvania, Rhode Island, Tennessee, Vermont, Washington and West Virginia.",
+        "url": "https://shuffle.us/info/sweepstakes-rules"
+      },
+      {
+        "label": "Minimum age",
+        "value": "18+ (or the age of majority in your state, if higher).",
+        "url": "https://shuffle.us/info/sweepstakes-rules"
+      },
+      {
+        "label": "Games",
+        "value": "Over 15,000 slots, provably fair Shuffle Originals (Dice, Mines, Plinko, Limbo, Blackjack, Blitz) and live dealer blackjack, roulette, baccarat and game shows.",
+        "url": "https://shuffle.us/"
+      },
+      {
+        "label": "Company",
+        "value": "Munyon Canyon Ltd (British Virgin Islands).",
+        "url": "https://shuffle.us/info/sweepstakes-rules"
+      },
+      {
+        "label": "Free entry",
+        "value": "Yes: mail-in request card (1 Shuffle Cash per valid request).",
+        "url": "https://shuffle.us/info/sweepstakes-rules"
+      }
+    ],
+    "asOf": "2026-09-18",
+    "signupUrl": "https://shuffle.us/?r=spinkeep",
+    "promoCode": "spinkeep",
+    "affiliate": true
+  },
+  {
+    "slug": "chumba-casino",
+    "name": "Chumba Casino",
+    "domain": "chumbacasino.com",
+    "offer": "Get 2,000,000 GC + 2 SC free",
+    "facts": [
+      {
+        "label": "Welcome offer",
+        "value": "2,000,000 Gold Coins plus 2 free Sweeps Coins on sign-up. First-purchase offer: 10M GC for $10 with 30 free SC.",
+        "url": "https://help.chumbacasino.com/article/CHU-Can-I-play-for-free"
+      },
+      {
+        "label": "Daily bonus",
+        "value": "Free Daily Login Gift claimable once every 24 hours from the Get Coins page, plus a free Gold Coin top-up whenever your balance drops below 12,500 GC.",
+        "url": "https://help.chumbacasino.com/article/CHU-Can-I-play-for-free"
+      },
+      {
+        "label": "Promotions",
+        "value": "Free Sweeps Coins through Facebook giveaway contests and email offers.",
+        "url": "https://help.chumbacasino.com/article/CHU-Can-I-play-for-free"
+      },
+      {
+        "label": "Playthrough",
+        "value": "1x: Sweeps Coins must be played once before redemption (Chumba can require up to 20x).",
+        "url": "https://www.chumbacasino.com/sweeps-rules"
+      },
+      {
+        "label": "Minimum redemption",
+        "value": "100 SC ($100) for cash prizes; each SC won through play is worth $1. Gift cards via Prizeout from 10 SC.",
+        "url": "https://www.chumbacasino.com/sweeps-rules"
+      },
+      {
+        "label": "Redemption time",
+        "value": "Payments team approves within 1-2 business days; cash then takes 5-10 business days to reach your bank, while gift cards arrive within 48 hours.",
+        "url": "https://help.chumbacasino.com/article/How-to-Check-Your-Redemption-Status-and-Understand-Processing-Times"
+      },
+      {
+        "label": "Purchase methods",
+        "value": "Debit/credit cards, Apple Pay, online banking, Skrill and the Chumba Prepaid Mastercard.",
+        "url": "https://help.chumbacasino.com/category-view?categoryCode=CHU_PAY"
+      },
+      {
+        "label": "Restricted states",
+        "value": "California, Connecticut, Delaware, Idaho, Indiana, Louisiana, Maine, Michigan, Mississippi, Montana, Nevada, New Jersey, New York, Tennessee, Washington and West Virginia.",
+        "url": "https://www.chumbacasino.com/sweeps-rules"
+      },
+      {
+        "label": "Minimum age",
+        "value": "21+",
+        "url": "https://www.chumbacasino.com/sweeps-rules"
+      },
+      {
+        "label": "Games",
+        "value": "Hundreds of games with new releases weekly: slots, jackpot slots, hold-and-spin games, table games and scratch cards.",
+        "url": "https://www.chumbacasino.com/"
+      },
+      {
+        "label": "Company",
+        "value": "VGW Malta Limited owns and operates Chumba; sweepstakes run by VGW Games Limited (VGW Group).",
+        "url": "https://www.chumbacasino.com/"
+      },
+      {
+        "label": "Free entry",
+        "value": "Yes: online entry request with a handwritten card you photograph (5 SC per valid request); no postal mail-in.",
+        "url": "https://www.chumbacasino.com/sweeps-rules"
+      }
+    ],
+    "asOf": "2026-09-18"
+  },
+  {
+    "slug": "luckyland-casino",
+    "name": "LuckyLand Casino",
+    "domain": "luckylandcasino.com",
+    "offer": "Get 777,000 GC + 2 SC free",
+    "facts": [
+      {
+        "label": "Welcome offer",
+        "value": "777,000 Gold Coins plus 2 Sweeps Coins free on sign-up (LuckyLand Slots now runs as LuckyLand Casino at luckylandcasino.com).",
+        "url": "https://luckylandcasino.com/"
+      },
+      {
+        "label": "Daily bonus",
+        "value": "Free daily bonus of Gold Coins and Sweeps Coins, collected by logging in and clicking the Gold or Sweeps icon.",
+        "url": "https://help.luckylandcasino.com/article/LLC-Can-I-play-for-free"
+      },
+      {
+        "label": "Promotions",
+        "value": "Free-entry slot tournaments lasting 15 minutes to 48 hours, paying GC and SC by leaderboard position, plus social media contests and email offers.",
+        "url": "https://help.luckylandcasino.com/article/LLC-How-do-tournaments-work"
+      },
+      {
+        "label": "Playthrough",
+        "value": "1x: Sweeps Coins must be played once before redemption (LuckyLand can require up to 20x).",
+        "url": "https://luckylandcasino.com/legal/sweeps-rules"
+      },
+      {
+        "label": "Minimum redemption",
+        "value": "50 SC ($50) for cash prizes; maximum 50,000 SC per cash redemption.",
+        "url": "https://help.luckylandcasino.com/article/LLC-What-you-need-to-know-to-redeem-your-prize"
+      },
+      {
+        "label": "Redemption time",
+        "value": "Review and approval takes 1-2 days, processing runs the next weekday morning, then 5-10 working days for funds to reach your bank.",
+        "url": "https://help.luckylandcasino.com/article/LLC-How-long-do-redemptions-take-to-process"
+      },
+      {
+        "label": "Purchase methods",
+        "value": "Debit/credit cards and Apple Pay; cash prizes go to a bank account.",
+        "url": "https://help.luckylandcasino.com/category-view?categoryCode=LLC_PAY"
+      },
+      {
+        "label": "Restricted states",
+        "value": "California, Connecticut, Delaware, Idaho, Indiana, Louisiana, Maine, Michigan, Mississippi, Montana, Nevada, New Jersey, New York, Tennessee, Washington and West Virginia.",
+        "url": "https://luckylandcasino.com/legal/sweeps-rules"
+      },
+      {
+        "label": "Minimum age",
+        "value": "21+",
+        "url": "https://luckylandcasino.com/legal/sweeps-rules"
+      },
+      {
+        "label": "Games",
+        "value": "Slots, jackpot slots, table games, instant-win games and a Social Live Casino, including exclusive titles.",
+        "url": "https://luckylandcasino.com/"
+      },
+      {
+        "label": "Company",
+        "value": "Beells Limited owns and operates LuckyLand; sweepstakes run by VGW Games Limited (VGW Group).",
+        "url": "https://luckylandcasino.com/"
+      },
+      {
+        "label": "Free entry",
+        "value": "Yes: online entry request (5 SC per valid request).",
+        "url": "https://luckylandcasino.com/legal/sweeps-rules"
+      }
+    ],
+    "asOf": "2026-09-18"
+  },
+  {
+    "slug": "global-poker",
+    "name": "Global Poker",
+    "domain": "globalpoker.com",
+    "offer": "Get 5,000 GC free + 100,000 GC on verification",
+    "facts": [
+      {
+        "label": "Welcome offer",
+        "value": "5,000 free Gold Coins on registration, plus a 100,000 GC verification offer with a Zeus avatar and 10 rare Jackpot Sit-N-Go GC entries.",
+        "url": "https://help.globalpoker.com/article/Can-I-play-for-free"
+      },
+      {
+        "label": "Daily bonus",
+        "value": "Free Daily Bonus claimed from the Get Coins store page.",
+        "url": "https://help.globalpoker.com/article/Can-I-play-for-free"
+      },
+      {
+        "label": "Promotions",
+        "value": "Monthly leaderboards with SC100,000 and GC100,000,000 in guaranteed prizes, the weekly Sunday Scrimmage and the Global Poker Championships.",
+        "url": "https://globalpoker.com/"
+      },
+      {
+        "label": "Playthrough",
+        "value": "1x: Sweeps Coins must be played once before redemption (Global Poker can require up to 20x).",
+        "url": "https://globalpoker.com/sweeps-rules"
+      },
+      {
+        "label": "Minimum redemption",
+        "value": "50 SC ($50); each SC won through play is worth $1. Prizeout gift cards also start at 50 SC.",
+        "url": "https://globalpoker.com/sweeps-rules"
+      },
+      {
+        "label": "Redemption time",
+        "value": "Approval takes 1-2 days, processing runs the next weekday morning, then 5-10 working days to your bank; gift cards arrive within 24 hours.",
+        "url": "https://help.globalpoker.com/article/How-do-I-check-the-status-of-my-redemption"
+      },
+      {
+        "label": "Purchase methods",
+        "value": "Debit/credit cards, Apple Pay, online banking, Skrill and EML.",
+        "url": "https://help.globalpoker.com/category-view?categoryCode=POK_PAY"
+      },
+      {
+        "label": "Restricted states",
+        "value": "California, Connecticut, Delaware, Idaho, Indiana (peer-to-peer poker allowed), Louisiana, Maine, Michigan, Mississippi, Montana, Nevada, New Jersey, New York, Tennessee, Washington and West Virginia.",
+        "url": "https://globalpoker.com/sweeps-rules"
+      },
+      {
+        "label": "Minimum age",
+        "value": "21+",
+        "url": "https://globalpoker.com/sweeps-rules"
+      },
+      {
+        "label": "Games",
+        "value": "Peer-to-peer social poker (Texas Hold'em, Omaha, Omaha Hi-Low, Crazy Pineapple, Jackpot Sit-N-Go, tournaments) plus slots and table games.",
+        "url": "https://globalpoker.com/"
+      },
+      {
+        "label": "Company",
+        "value": "VGW Games Limited (VGW Group), MGA-licensed.",
+        "url": "https://globalpoker.com/sweeps-rules"
+      },
+      {
+        "label": "Free entry",
+        "value": "Yes: online entry request (5 SC per valid request).",
+        "url": "https://globalpoker.com/sweeps-rules"
+      }
+    ],
+    "asOf": "2026-09-18"
+  },
+  {
+    "slug": "pulsz",
+    "name": "Pulsz",
+    "domain": "pulsz.com",
+    "offer": "Get 5,000 GC free + 200% extra coins on your welcome bundle",
+    "facts": [
+      {
+        "label": "Welcome offer",
+        "value": "5,000 free Gold Coins on sign-up, plus an exclusive first-purchase Welcome Bundle with 200%+ extra Gold Coins.",
+        "url": "https://www.pulsz.com/"
+      },
+      {
+        "label": "Daily bonus",
+        "value": "Daily login bonuses and daily coin rewards.",
+        "url": "https://www.pulsz.com/"
+      },
+      {
+        "label": "Promotions",
+        "value": "Weekly progressive Gold Mine Jackpot (minimum GC 1,000,000 prize), My Stash personal weekly jackpot, weekly tournaments and prize drops, free prize draws, social giveaways, and Refer a Friend worth 6,000 GC plus complimentary coins per friend.",
+        "url": "https://www.pulsz.com/promotions"
+      },
+      {
+        "label": "VIP program",
+        "value": "Free VIP Loyalty Rewards with six tiers (Bronze, Silver, Gold, Platinum, Diamond, Royal Diamond); points come from levelling up and GC purchases, with bigger multipliers each tier.",
+        "url": "https://support.pulsz.com/hc/en-us/articles/20837052269073-Understanding-VIP-Loyalty-Rewards-and-How-to-Level-Up"
+      },
+      {
+        "label": "Redemption time",
+        "value": "Redemptions are processed in 1-5 business days once your account is verified.",
+        "url": "https://support.pulsz.com/hc/en-us/articles/360017682078-How-long-is-Pulsz-verification"
+      },
+      {
+        "label": "Purchase methods",
+        "value": "Cards, Apple Pay, Google Pay, Trustly online banking, instant bank transfer and Skrill; redeem via bank transfer (Trustly or ACH), Skrill or gift cards.",
+        "url": "https://support.pulsz.com/hc/en-us"
+      },
+      {
+        "label": "Restricted states",
+        "value": "Arizona, California, Washington, Idaho, Nevada, Montana, Alabama, Tennessee, West Virginia, New York, Louisiana, Connecticut, Michigan and Maryland; Indiana, Maine, Mississippi, New Jersey and Oklahoma are Gold Coin only.",
+        "url": "https://support.pulsz.com/hc/en-us/articles/8595606374161-Where-can-I-find-Pulsz-in-the-US"
+      },
+      {
+        "label": "Minimum age",
+        "value": "21+",
+        "url": "https://support.pulsz.com/hc/en-us/articles/8595608673297-How-old-do-you-have-to-be-to-play-at-Pulsz-casino"
+      },
+      {
+        "label": "Games",
+        "value": "1,000+ casino-style games: slots (Megaways, Hold & Win, tumbling reels), jackpot slots, table games, scratch cards and Pulsz Social Live Casino with live dealers and hosts.",
+        "url": "https://www.pulsz.com/"
+      },
+      {
+        "label": "Company",
+        "value": "Yellow Social Interactive Limited (Gibraltar).",
+        "url": "https://www.pulsz.com/terms-of-use"
+      },
+      {
+        "label": "Free entry",
+        "value": "Yes: mail-in envelope requests.",
+        "url": "https://support.pulsz.com/hc/en-us/articles/360017808818-When-does-my-account-get-credited-for-envelopes"
+      }
+    ],
+    "asOf": "2026-09-18"
+  },
+  {
+    "slug": "wow-vegas",
+    "name": "WOW Vegas",
+    "domain": "wowvegas.com",
+    "offer": "Get 150,000 WOW Coins + 2 SC free",
+    "facts": [
+      {
+        "label": "Welcome offer",
+        "value": "150,000 WOW Coins plus 2 free SC on sign-up, with more rewards emailed on days 2 and 3. First-purchase offer: 1.5 million WOW Coins plus 30 SC at a discount.",
+        "url": "https://help.wowvegas.com/en/articles/10676733-sign-up-bonus-how-it-works"
+      },
+      {
+        "label": "Daily bonus",
+        "value": "Daily SC and WOW Coin rewards claimable every 24 hours, boosted 10-25% by VIP tier, plus daily SC missions.",
+        "url": "https://help.wowvegas.com/en/articles/12032830-wow-vegas-vip-levels-benefits-daily-rewards"
+      },
+      {
+        "label": "Promotions",
+        "value": "Races with automatic prize payouts, daily missions, opt-in WOW Jackpots, free spins, and Refer a Friend (20 SC + 5,000 WOW Coins per friend who buys $15+) with a monthly 5,000 SC referral leaderboard.",
+        "url": "https://help.wowvegas.com/en/articles/11969957-how-can-i-earn-free-sc-on-wow-vegas"
+      },
+      {
+        "label": "VIP program",
+        "value": "Tiered VIP from Bronze to Elite: bigger daily coin rewards, next-day redemptions at Gold, same-day redemptions and a VIP host team at Platinum, personal hosts at Elite.",
+        "url": "https://help.wowvegas.com/en/articles/12032830-wow-vegas-vip-levels-benefits-daily-rewards"
+      },
+      {
+        "label": "Playthrough",
+        "value": "1x playthrough on SC before redemption.",
+        "url": "https://help.wowvegas.com/en/articles/10676709-where-did-my-bonus-disappear-i-made-a-redemption-and-the-free-sc-i-received-are-no-longer-in-my-account"
+      },
+      {
+        "label": "Minimum redemption",
+        "value": "50 SC for cash prizes and 20 SC for gift cards.",
+        "url": "https://help.wowvegas.com/en/articles/10676686-how-do-i-redeem"
+      },
+      {
+        "label": "Redemption time",
+        "value": "Same business day for Elite and Platinum, next business day for Gold, within 3 business days for other tiers; then Skrill up to 24 business hours, Trustly 3-5 business days, Prizeout instant to 24 hours, MassPay 1-2 business days.",
+        "url": "https://help.wowvegas.com/en/articles/10676690-how-long-does-a-redemption-take"
+      },
+      {
+        "label": "Purchase methods",
+        "value": "Visa, Mastercard, American Express, Apple Pay, Google Pay, Trustly online banking and Skrill; redeem via Skrill, Prizeout, Trustly or MassPay.",
+        "url": "https://help.wowvegas.com/en/articles/10676680-which-payment-methods-can-i-use-to-make-a-purchase"
+      },
+      {
+        "label": "Restricted states",
+        "value": "No registration in Idaho, Nevada and Washington; no SC play in Michigan, Montana, Connecticut, Louisiana, Maryland, New Jersey, New York, California, Tennessee, Illinois, Indiana and Maine.",
+        "url": "https://help.wowvegas.com/en/articles/10676646-which-states-and-territories-are-excluded"
+      },
+      {
+        "label": "Minimum age",
+        "value": "18+",
+        "url": "https://www.wowvegas.com/terms-and-conditions"
+      },
+      {
+        "label": "Games",
+        "value": "2,000+ games including jackpot and classic slots, plus WOW Picks SC sports predictions.",
+        "url": "https://www.wowvegas.com/"
+      },
+      {
+        "label": "Company",
+        "value": "MW Services Limited (Gibraltar) and WOWCom Services Inc.",
+        "url": "https://www.wowvegas.com/terms-and-conditions"
+      },
+      {
+        "label": "Free entry",
+        "value": "Yes: mail-in AMOE request card (3 SC per valid request).",
+        "url": "https://help.wowvegas.com/en/articles/10676703-how-do-i-request-free-sc-by-mail"
+      }
+    ],
+    "asOf": "2026-09-18"
+  },
+  {
+    "slug": "high-5-casino",
+    "name": "High 5 Casino",
+    "domain": "high5casino.com",
+    "offer": "Get 200 spins on Billionaire's Bank for $9.99",
+    "facts": [
+      {
+        "label": "Welcome offer",
+        "value": "First-purchase sign-up bonus: 200 spins on Billionaire's Bank (valued at SC 0.10 each) for $9.99.",
+        "url": "https://high5casino.com/promotions/sign-up-bonus/"
+      },
+      {
+        "label": "Daily bonus",
+        "value": "Daily check-in for free Sweeps Coins and Game Coins, plus a 4-Hour Bonus of Game Coins and Diamonds.",
+        "url": "https://high5casino.com/promotions/daily-bonus/"
+      },
+      {
+        "label": "Promotions",
+        "value": "Bonus Drops of free GC, SC and Diamonds every few hours, Diamonds-powered Game Boosts, and referrals paying 600 Game Coins, 20 SC and 600 Diamonds per qualifying friend, plus periodic referral leaderboards.",
+        "url": "https://high5casino.com/promotions/referral-bonus/"
+      },
+      {
+        "label": "VIP program",
+        "value": "High 5 Prestige loyalty program: climb levels as you play for level-up rewards and bigger 4-hour GC and Diamond harvests.",
+        "url": "https://high5casino.com/promotions/high-5-prestige/"
+      },
+      {
+        "label": "Playthrough",
+        "value": "1x: Sweeps Coins must be played at least once before redemption.",
+        "url": "https://high5casino.com/sweepstakes-rules"
+      },
+      {
+        "label": "Minimum redemption",
+        "value": "100 SC ($100) for cash prizes and 50 SC for non-cash prizes; 1 SC = $1.",
+        "url": "https://high5casino.com/sweepstakes-rules"
+      },
+      {
+        "label": "Redemption time",
+        "value": "Skrill 1-2 business days, Trustly bank transfer 3-5 business days, gift cards instant to a few hours.",
+        "url": "https://high5casino.com/helpcenter/how-to-redeem-real-prizes/"
+      },
+      {
+        "label": "Purchase methods",
+        "value": "Credit cards, Apple Pay, Skrill and Trustly; redeem to Skrill, Trustly bank transfer or gift cards.",
+        "url": "https://high5casino.com/helpcenter/how-to-redeem-real-prizes/"
+      },
+      {
+        "label": "Restricted states",
+        "value": "Arizona, California, Connecticut, Delaware, Idaho, Indiana, Iowa, Kentucky, Louisiana, Maine, Maryland, Michigan, Montana, Nevada, New Jersey, New York, Pennsylvania, Rhode Island, Tennessee, Washington and West Virginia.",
+        "url": "https://high5casino.com/sweepstakes-rules"
+      },
+      {
+        "label": "Minimum age",
+        "value": "21+",
+        "url": "https://high5casino.com/sweepstakes-rules"
+      },
+      {
+        "label": "Games",
+        "value": "1,500+ slot games.",
+        "url": "https://high5casino.com/helpcenter/how-to-get-free-sweeps-coins/"
+      },
+      {
+        "label": "Company",
+        "value": "High 5 Entertainment, LLC (Mahwah, New Jersey).",
+        "url": "https://high5casino.com/sweepstakes-rules"
+      },
+      {
+        "label": "Free entry",
+        "value": "Yes: mail-in request card (3 SC per valid request).",
+        "url": "https://high5casino.com/sweepstakes-rules"
+      }
+    ],
+    "asOf": "2026-09-18"
+  },
+  {
+    "slug": "mcluck",
+    "name": "McLuck",
+    "domain": "mcluck.com",
+    "offer": "Get 7,500 GC + 2.5 SC free",
+    "facts": [
+      {
+        "label": "Welcome offer",
+        "value": "7,500 GC plus 2.5 free SC on sign-up, and a three-stage welcome offer across your first three purchases.",
+        "url": "https://www.mcluck.com/promotions"
+      },
+      {
+        "label": "Daily bonus",
+        "value": "Daily login rewards that grow with consecutive logins, up to 2.50 free SC a day; new accounts get up to 3.55 free SC over the first three days.",
+        "url": "https://www.mcluck.com/sweepstakes-rules"
+      },
+      {
+        "label": "Promotions",
+        "value": "4-tier Jackpot paying up to 200,000,000 GC or 100,000 SC, live dealer and slot tournaments, weekly random draws with at least 100 SC winners, coin boosts, social media competitions and Refer-a-Friend.",
+        "url": "https://www.mcluck.com/promotions"
+      },
+      {
+        "label": "VIP program",
+        "value": "Automatic Loyalty Club from Iron tier up, with tier rewards, a weekly coin boost deal, instant rewards from Platinum and VIP hosts at top tiers.",
+        "url": "https://support.mcluck.com/hc/en-us/articles/12323209827997-Why-should-I-join-the-McLuck-Loyalty-Program-scheme"
+      },
+      {
+        "label": "Playthrough",
+        "value": "1x: free SC must be played through once before it counts toward redemption.",
+        "url": "https://www.mcluck.com/sweepstakes-rules"
+      },
+      {
+        "label": "Minimum redemption",
+        "value": "75 SC ($75) for cash prizes; 10 SC for gift cards.",
+        "url": "https://www.mcluck.com/sweepstakes-rules"
+      },
+      {
+        "label": "Redemption time",
+        "value": "Gift cards typically within 48 hours, cash prizes in 3-5 business days.",
+        "url": "https://blog.mcluck.com/faq/mcluck-redemption-times/"
+      },
+      {
+        "label": "Restricted states",
+        "value": "California, Connecticut, Delaware, Idaho, Indiana, Kentucky, Louisiana, Maine, Maryland, Michigan, Montana, Nevada, New Jersey, New York, Tennessee, Washington and West Virginia.",
+        "url": "https://support.mcluck.com/hc/en-us/articles/8837446177693-Can-I-play-from-anywhere"
+      },
+      {
+        "label": "Minimum age",
+        "value": "21+",
+        "url": "https://www.mcluck.com/sweepstakes-rules"
+      },
+      {
+        "label": "Games",
+        "value": "Thousands of games: slots (75+ Hold and Win titles, Megaways), live casino with roulette, blackjack and game shows, arcade games and jackpots.",
+        "url": "https://www.mcluck.com/"
+      },
+      {
+        "label": "Company",
+        "value": "B-Two Operations Limited (Isle of Man).",
+        "url": "https://www.mcluck.com/sweepstakes-rules"
+      },
+      {
+        "label": "Free entry",
+        "value": "Yes: mail-in request (4 SC per valid request).",
+        "url": "https://www.mcluck.com/sweepstakes-rules"
+      }
+    ],
+    "asOf": "2026-09-18"
+  },
+  {
+    "slug": "crown-coins-casino",
+    "name": "Crown Coins Casino",
+    "domain": "crowncoinscasino.com",
+    "offer": "Get 100,000 Crown Coins + 2 SC free",
+    "facts": [
+      {
+        "label": "Welcome offer",
+        "value": "100,000 Crown Coins (CC) plus 2 free Sweeps Coins on registration.",
+        "url": "https://help.crowncoinscasino.com/en/articles/9183356-is-there-a-welcome-bonus-available-when-signing-up"
+      },
+      {
+        "label": "Daily bonus",
+        "value": "Daily login bonus resetting at 10:00 AM UTC, plus a 30-day milestone bar with special gifts on days 8, 15, 22 and 30.",
+        "url": "https://help.crowncoinscasino.com/en/articles/12808804-how-to-get-free-bonus-coins"
+      },
+      {
+        "label": "Promotions",
+        "value": "Refer a friend for 400,000 CC plus 20 SC per friend who spends $14.90+, daily missions, Crown Bingo Live and CrownSports predictions.",
+        "url": "https://help.crowncoinscasino.com/en/articles/9667065-invite-friends"
+      },
+      {
+        "label": "VIP program",
+        "value": "Every player is in the VIP Club: tier-up bonuses, a monthly VIP bonus of CC and SC, birthday bonus from Silver, and weekly Coinback from Bronze.",
+        "url": "https://help.crowncoinscasino.com/en/articles/12808804-how-to-get-free-bonus-coins"
+      },
+      {
+        "label": "Purchase methods",
+        "value": "Visa, Mastercard, American Express, Apple Pay, Google Pay, Skrill and PayNearMe cash payments; redeem via Instant Bank Transfer or Skrill.",
+        "url": "https://help.crowncoinscasino.com/en/articles/9183316-available-payment-methods-on-crowncoins"
+      },
+      {
+        "label": "Restricted states",
+        "value": "No access in Idaho, Louisiana, Michigan, Montana, Nevada and Washington; Crown Coins only (no SC) in Connecticut, New Jersey, Maine and Tennessee.",
+        "url": "https://help.crowncoinscasino.com/en/articles/9183363-how-to-solve-location-restrictions"
+      },
+      {
+        "label": "Minimum age",
+        "value": "18+",
+        "url": "https://help.crowncoinscasino.com/en/articles/9183321-what-is-the-minimum-age-to-play-crowncoins"
+      },
+      {
+        "label": "Games",
+        "value": "Slots, Crown Bingo Live, CrownSports predictions and mini-games such as Plincrown and CrownMiner.",
+        "url": "https://help.crowncoinscasino.com/en/articles/14298342-crownsports"
+      },
+      {
+        "label": "Company",
+        "value": "Sunflower Limited; payments processed by Sunflower Technology Inc.",
+        "url": "https://crowncoinscasino.com/"
+      },
+      {
+        "label": "Free entry",
+        "value": "Yes: mail-in entries for free SC.",
+        "url": "https://help.crowncoinscasino.com/en/articles/9183352-what-s-sweeps-coins-sc"
+      }
+    ],
+    "asOf": "2026-09-18"
+  },
+  {
+    "slug": "fortune-wins",
+    "name": "Fortune Wins",
+    "domain": "fortunewins.com",
+    "offer": "Get 600,000 GC + 1,000 FC on day 1",
+    "facts": [
+      {
+        "label": "Welcome offer",
+        "value": "600,000 GC plus 1,000 FC (Fortune Coins, the sweeps currency) on day 1, rising to 3,000,000 GC plus 3,000 FC across the first week. Fortune Coins now runs as Fortune Wins (fortunewins.com).",
+        "url": "https://fortunewins.com/promotions/promo/sign-up-bonus"
+      },
+      {
+        "label": "Daily bonus",
+        "value": "7-Day Bonus Bash: a different free bonus each day for 7 consecutive logins, ending with a bigger final reward; missing a day resets the streak.",
+        "url": "https://fortunewins.com/promotions/promo/daily-bonus"
+      },
+      {
+        "label": "Promotions",
+        "value": "Refer a Friend: you and your friend each get 15% of their first package value in bonus coins, for up to 5 referrals.",
+        "url": "https://fortunewins.com/promotions/promo/refer-a-friend-bonus"
+      },
+      {
+        "label": "VIP program",
+        "value": "Fortune Star VIP from Bronze up: free spins on each tier-up, and from Gold tier weekly Coinback up to 8%, monthly rewards and the Grand Olympus raffle.",
+        "url": "https://fortunewins.com/promotions/promo/vip-program"
+      },
+      {
+        "label": "Playthrough",
+        "value": "1x: FC must be played once before redemption.",
+        "url": "https://fortunewins.com/sweeps-rules"
+      },
+      {
+        "label": "Minimum redemption",
+        "value": "5,000 FC ($50); 100 FC = $1.",
+        "url": "https://fortunewins.com/sweeps-rules"
+      },
+      {
+        "label": "Purchase methods",
+        "value": "Visa, Mastercard, Discover, Skrill and ACH; prizes can be redeemed to a Visa virtual card.",
+        "url": "https://support.fortunewins.com/portal/en/kb/articles/what-payment-methods-are-available"
+      },
+      {
+        "label": "Restricted states",
+        "value": "Idaho, Michigan, New York, Washington, California, Louisiana, Tennessee, Nevada, Delaware, Connecticut, Illinois, Maine, Indiana, New Jersey and Montana.",
+        "url": "https://fortunewins.com/sweeps-rules"
+      },
+      {
+        "label": "Minimum age",
+        "value": "18+ (19+ in Canada).",
+        "url": "https://support.fortunewins.com/portal/en/kb/articles/what-is-the-minimum-age-to-play-our-games"
+      },
+      {
+        "label": "Games",
+        "value": "2,000+ games including slots, progressive jackpots, classic slots and fish/arcade games.",
+        "url": "https://fortunewins.com/"
+      },
+      {
+        "label": "Company",
+        "value": "Social Gaming LLC and Social Gaming LTD.",
+        "url": "https://fortunewins.com/sweeps-rules"
+      },
+      {
+        "label": "Free entry",
+        "value": "Yes: mail-in request with a Mail Code (500 FC per request).",
+        "url": "https://fortunewins.com/sweeps-rules"
+      }
+    ],
+    "asOf": "2026-09-18"
+  },
+  {
+    "slug": "modo",
+    "name": "Modo",
+    "domain": "modo.us",
+    "offer": "Get 20,000 GC free on sign-up",
+    "facts": [
+      {
+        "label": "Welcome offer",
+        "value": "20,000 GC welcome bonus for registering.",
+        "url": "https://modo.us/"
+      },
+      {
+        "label": "Daily bonus",
+        "value": "Daily bonus resetting at midnight ET; every 7th consecutive day unlocks a prize wheel spin.",
+        "url": "https://support.modo.us/en_us/daily-bonus-HJo7NJWPMl"
+      },
+      {
+        "label": "Promotions",
+        "value": "Monthly bonus of SC, GC or Modo Boxes based on last month's play, Click N Claim and Pick-Me-Up rewards, and Refer a Friend paying up to 19,000 Modo Stars as your friend ranks up.",
+        "url": "https://support.modo.us/en_us/what-is-the-monthly-bonuss-HkwDXSyYGe"
+      },
+      {
+        "label": "VIP program",
+        "value": "Modo Ranks: yearly loyalty ranks from Steel up, unlocking weekly discount bundles, Pick-Me-Up rewards, bigger daily bonuses and birthday rewards.",
+        "url": "https://support.modo.us/en_us/how-do-modo-ranks-work-By4c5aGxg"
+      },
+      {
+        "label": "Playthrough",
+        "value": "1x playthrough on SC before redemption.",
+        "url": "https://support.modo.us/en_us/is-there-a-minimum-playthrough-requirement-to-redeem-sc-HyqQRm1KMe"
+      },
+      {
+        "label": "Minimum redemption",
+        "value": "50 SC for bank account or Visa/Mastercard debit card redemptions. 20 SC for gift cards via Prizeout.",
+        "url": "https://support.modo.us/en_us/redeem-sc-to-a-bank-account-or-debit-card-rykrh1gZx"
+      },
+      {
+        "label": "Redemption time",
+        "value": "Modo processes most redemptions within 24 hours; standard ACH/debit then takes up to 5 business days, Trustly instant payouts arrive within minutes for a 3% fee, and gift cards are often instant.",
+        "url": "https://support.modo.us/en_us/how-long-does-sc-redemption-processing-take-HJqtAiElzg"
+      },
+      {
+        "label": "Purchase methods",
+        "value": "Payment cards at checkout (cards can be saved); redeem to bank account (Cash App supported as a bank), Visa/Mastercard debit card or gift cards.",
+        "url": "https://support.modo.us/en_us/redeem-sc-to-a-bank-account-or-debit-card-rykrh1gZx"
+      },
+      {
+        "label": "Restricted states",
+        "value": "Washington is fully blocked; Gold Coin play only (no SC) in Arizona, California, Connecticut, Delaware, Idaho, Indiana, Louisiana, Maine, Michigan, Montana, Nevada, New Jersey, New York, Rhode Island, Tennessee and West Virginia.",
+        "url": "https://support.modo.us/en_us/location-restrictions-by-state-ry3xccuV1e"
+      },
+      {
+        "label": "Minimum age",
+        "value": "18+ to join and play GC games and Modo Boxes; 21+ for Sweeps Coins play.",
+        "url": "https://support.modo.us/en_us/age-requirement-rJTK_bMQWx"
+      },
+      {
+        "label": "Games",
+        "value": "1,000+ casino-style games plus Modo Boxes, mystery boxes of real-world items.",
+        "url": "https://modo.us/"
+      },
+      {
+        "label": "Company",
+        "value": "ARB Gaming, LLC d/b/a Modo.",
+        "url": "https://modo.us/promo-rules.pdf"
+      },
+      {
+        "label": "Free entry",
+        "value": "Yes: mail-in AMOE postcard with a request code.",
+        "url": "https://support.modo.us/en_us/amoe-faqs-HJfVSgrGle"
+      }
+    ],
+    "asOf": "2026-09-18"
+  },
+  {
+    "slug": "hello-millions",
+    "name": "Hello Millions",
+    "domain": "hellomillions.com",
+    "offer": "Get 7,500 GC + 2.5 SC free",
+    "facts": [
+      {
+        "label": "Welcome offer",
+        "value": "7,500 GC plus 2.5 free SC for registering and verifying, no promo code needed. First-purchase offer: 120,000 GC plus 60 free SC and a Bronze Wheel spin worth up to 500 extra SC.",
+        "url": "https://www.hellomillions.com/"
+      },
+      {
+        "label": "Daily bonus",
+        "value": "Daily login rewards every 24 hours; new accounts get up to 3.55 free SC over the first three days of logins.",
+        "url": "https://www.hellomillions.com/sweepstakes-rules"
+      },
+      {
+        "label": "Promotions",
+        "value": "GC Jackpot with four growing tiers (Mini, Minor, Major, Grand), weekly random draws with at least 100 SC winners, tournaments, social media competitions and Refer a Friend.",
+        "url": "https://www.hellomillions.com/promotions"
+      },
+      {
+        "label": "VIP program",
+        "value": "Loyalty Lounge rewards for regular players.",
+        "url": "https://www.hellomillions.com/"
+      },
+      {
+        "label": "Playthrough",
+        "value": "1x: SC must be played through once before redemption.",
+        "url": "https://www.hellomillions.com/sweepstakes-rules"
+      },
+      {
+        "label": "Minimum redemption",
+        "value": "75 SC ($75) for cash prizes; 10 SC for gift cards.",
+        "url": "https://www.hellomillions.com/sweepstakes-rules"
+      },
+      {
+        "label": "Redemption time",
+        "value": "Redemptions take up to 10 days to process; ACH transfers arrive shortly after approval.",
+        "url": "https://www.hellomillions.com/sweepstakes-rules"
+      },
+      {
+        "label": "Restricted states",
+        "value": "California, Connecticut, Delaware, Idaho, Indiana, Kentucky, Louisiana, Maine, Maryland, Michigan, Montana, Nevada, New Jersey, New York, Tennessee, Washington and West Virginia.",
+        "url": "https://support.hellomillions.com/hc/en-us/articles/14650818054813-Can-I-play-from-anywhere"
+      },
+      {
+        "label": "Minimum age",
+        "value": "21+",
+        "url": "https://www.hellomillions.com/sweepstakes-rules"
+      },
+      {
+        "label": "Games",
+        "value": "1,500+ casino-style games: slots, live dealer tables, arcade games (Plinko, Coinsweeper and more) and exclusive GC games.",
+        "url": "https://www.hellomillions.com/"
+      },
+      {
+        "label": "Company",
+        "value": "B-Two Operations Limited (Isle of Man).",
+        "url": "https://www.hellomillions.com/sweepstakes-rules"
+      },
+      {
+        "label": "Free entry",
+        "value": "Yes: mail-in request (4 SC per valid request).",
+        "url": "https://www.hellomillions.com/sweepstakes-rules"
+      }
+    ],
+    "asOf": "2026-09-18"
+  },
+  {
+    "slug": "zula-casino",
+    "name": "Zula Casino",
+    "domain": "zulacasino.com",
+    "offer": "Get 120,000 GC + 10 SC free",
+    "facts": [
+      {
+        "label": "Welcome offer",
+        "value": "120,000 GC plus 10 SC sign-up bonus, claimed in steps after you register.",
+        "url": "https://www.zulacasino.com/promotions/promo/zula-casino-sign-up-promotion"
+      },
+      {
+        "label": "Daily bonus",
+        "value": "10,000 GC plus 1 SC free every day you log in.",
+        "url": "https://www.zulacasino.com/promotions/promo/daily-login-bonus"
+      },
+      {
+        "label": "Promotions",
+        "value": "5 Hour Turbo Tournaments with a 50M GC + 500 SC daily prize pool, the monthly Golden Era (GC 580M + SC 10,000), Birthday Drops, and Refer a Friend (20,000 GC + 2 SC for each of your first 10 sign-ups, plus purchase-match rewards).",
+        "url": "https://www.zulacasino.com/promotions"
+      },
+      {
+        "label": "VIP program",
+        "value": "VIP points for play and purchases (10 points per $1 spent, 1 per SC played) unlock individual bonuses and perks.",
+        "url": "https://www.zulacasino.com/promotions/promo/vip-program"
+      },
+      {
+        "label": "Playthrough",
+        "value": "1x: Sweeps Coins must be played once before redemption.",
+        "url": "https://www.zulacasino.com/sweeps-rules"
+      },
+      {
+        "label": "Minimum redemption",
+        "value": "50 SC ($50); 1 SC = $1.",
+        "url": "https://www.zulacasino.com/sweeps-rules"
+      },
+      {
+        "label": "Purchase methods",
+        "value": "Visa, Mastercard and Skrill.",
+        "url": "https://support.zulacasino.com/portal/en/kb/articles/what-payment-methods-are-available-11-8-2023"
+      },
+      {
+        "label": "Restricted states",
+        "value": "Idaho, Michigan, Delaware, New York, Washington, Nevada, California, Louisiana, Illinois, Tennessee, Connecticut, Indiana, Maine, New Jersey and Montana.",
+        "url": "https://www.zulacasino.com/sweeps-rules"
+      },
+      {
+        "label": "Minimum age",
+        "value": "18+",
+        "url": "https://www.zulacasino.com/sweeps-rules"
+      },
+      {
+        "label": "Games",
+        "value": "1,700+ slots from providers like Evoplay, Relax and Booming Games, plus fish, crash and card games.",
+        "url": "https://www.zulacasino.com/promotions/promo/daily-login-bonus"
+      },
+      {
+        "label": "Company",
+        "value": "SCPS LLC.",
+        "url": "https://www.zulacasino.com/sweeps-rules"
+      },
+      {
+        "label": "Free entry",
+        "value": "Yes: mail-in request with a Mail Code (5 SC per request).",
+        "url": "https://www.zulacasino.com/sweeps-rules"
+      }
+    ],
+    "asOf": "2026-09-18"
+  },
+  {
+    "slug": "sportzino",
+    "name": "Sportzino",
+    "domain": "sportzino.com",
+    "offer": "Get up to 170,000 GC + 7 SC free",
+    "facts": [
+      {
+        "label": "Welcome offer",
+        "value": "Up to 170,000 GC plus 7 SC across the sign-up steps, starting with 20,000 GC + 1 SC.",
+        "url": "https://sportzino.com/promotions/promo/sign-up-promotion/"
+      },
+      {
+        "label": "Daily bonus",
+        "value": "Daily login bonus every 24 hours starting at 20,000 GC + 1 SC, growing over a 7-day streak.",
+        "url": "https://sportzino.com/promotions/promo/daily-login-bonus/"
+      },
+      {
+        "label": "Promotions",
+        "value": "Refer a Friend worth up to GC 2,000,000 + SC 30 when friends buy their first qualifying package.",
+        "url": "https://sportzino.com/promotions/promo/refer-a-friend/"
+      },
+      {
+        "label": "VIP program",
+        "value": "Seven Hall of Fame VIP tiers: 1 point per SC played or 100,000 GC played, recalculated weekly, with perks that stack as you climb.",
+        "url": "https://sportzino.com/promotions/promo/sportzino-vip-program/"
+      },
+      {
+        "label": "Playthrough",
+        "value": "1x: Sweeps Coins must be played once before redemption.",
+        "url": "https://sportzino.com/sweeps-rules"
+      },
+      {
+        "label": "Minimum redemption",
+        "value": "50 SC ($50) per redemption request; 1 SC = $1.",
+        "url": "https://sportzino.com/sweeps-rules"
+      },
+      {
+        "label": "Purchase methods",
+        "value": "Visa, Mastercard and Discover; prizes redeem to your bank account or a Visa virtual card.",
+        "url": "https://support.sportzino.com/portal/en/kb/articles/what-payment-methods-are-available-1-11-2023"
+      },
+      {
+        "label": "Restricted states",
+        "value": "Idaho, Georgia, New York, Michigan, Washington, Nevada, Delaware, Connecticut, California, Louisiana, Tennessee, Illinois, Indiana, Maine, New Jersey and Montana.",
+        "url": "https://sportzino.com/sweeps-rules"
+      },
+      {
+        "label": "Minimum age",
+        "value": "18+",
+        "url": "https://sportzino.com/"
+      },
+      {
+        "label": "Games",
+        "value": "2,000+ casino games including jackpot slots and live casino, plus a social sportsbook for sports predictions with GC and SC.",
+        "url": "https://sportzino.com/"
+      },
+      {
+        "label": "Company",
+        "value": "SSPS LLC.",
+        "url": "https://sportzino.com/sweeps-rules"
+      },
+      {
+        "label": "Free entry",
+        "value": "Yes: mail-in request with a Mail Code (5 SC per request).",
+        "url": "https://sportzino.com/sweeps-rules"
+      }
+    ],
+    "asOf": "2026-09-18"
   }
 ]
