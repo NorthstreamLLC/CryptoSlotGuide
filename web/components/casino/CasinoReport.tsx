@@ -389,6 +389,7 @@ export function CasinoReport({ e }: { e: EntityView }) {
               <Tile label="Cash-out" value={sp.cashout ? "Yes" : null} f={sp.cashout} accent={brand} />
               <Tile label="Bet builder" value={sp.betBuilder ? "Yes" : null} f={sp.betBuilder} accent={brand} />
               <Tile label="Max payout" value={shortAmount(sp.maxPayout) ?? "See rules"} f={sp.maxPayout} />
+              {f("Sportsbook", "Prediction markets") && <Tile label="Prediction markets" value="Yes" f={f("Sportsbook", "Prediction markets")} accent={brand} />}
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", gap: 16, alignItems: "start" }}>
               <Card>
