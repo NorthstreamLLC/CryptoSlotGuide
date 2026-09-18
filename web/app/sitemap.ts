@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { siteData } from "@/lib/site-data";
 import { SITE_URL } from "@/lib/seo";
 import { sweepsSorted } from "@/lib/sweeps";
+import { US_STATES, COUNTRIES } from "@/lib/legal";
 
 /**
  * Not part of the original prototype — it's a design mockup with one
@@ -17,6 +18,8 @@ const STATIC_ROUTES = [
   "/lowest-wagering",
   "/races",
   "/sweepstakes-casinos",
+  "/legal",
+  "/legal/us",
   "/casino-sportsbooks",
   "/esports-casinos",
   "/slots",
@@ -61,6 +64,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...guideRows.map((g) => slugPath("/guides", g.slug)),
     ...houseGames.map((h) => slugPath("/house-games", h.slug)),
     ...sweepsSorted().map((w) => slugPath("/sweepstakes-casinos", w.slug)),
+    ...US_STATES.map((st) => slugPath("/legal/us", st.code.toLowerCase())),
+    ...COUNTRIES.filter((c) => c.code !== "US").map((c) => slugPath("/legal", c.code.toLowerCase())),
   ];
 
   const allPaths = [...STATIC_ROUTES, ...dynamicPaths];

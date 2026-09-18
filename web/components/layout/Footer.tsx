@@ -16,6 +16,7 @@ const footerCols = [
       { l: "Bonuses tracked", href: "/bonuses" },
       { l: "Races & raffles", href: "/races" },
       { l: "US sweepstakes casinos", href: "/sweepstakes-casinos" },
+      { l: "Gambling laws map", href: "/legal" },
     ],
   },
   {
