@@ -125,15 +125,20 @@ function edgeOf(value: string): number | null {
   return r ? Math.round((100 - Number(r[1])) * 100) / 100 : null;
 }
 
+/** Casinos shown on the house-games table beyond the slot board. */
+export const HOUSE_EXTRA = ["bc-game", "rollbit", "duelbits", "duel"];
+
 /** House games board: each original's house edge at each watched casino, from the cited figures in houseGames.json. */
 export function getHouseEdgeRows() {
-  const { houseGames, watchOps } = siteData;
+  const { houseGames, watchOps, ops } = siteData;
+  const extra = HOUSE_EXTRA.map((slug) => ({ slug, name: ops.find((o) => o.slug === slug)?.name ?? slug }));
+  const cols = [...watchOps, ...extra.filter((e) => !watchOps.some((w) => w.slug === e.slug))];
   const fmt = (n: number) => `${n % 1 ? n.toFixed(1) : n}%`;
-  return houseGames.map((g) => ({
+  return { cols, rows: houseGames.map((g) => ({
     slug: g.slug,
     name: g.name,
     range: g.edgeRange,
-    cells: watchOps.map((op) => {
+    cells: cols.map((op) => {
       const found = g.edges
         .filter((e) => e.casino === op.slug)
         .map((e) => ({ edge: edgeOf(e.value), dynamic: /higher|dynamic/i.test(e.value) }))
@@ -143,5 +148,5 @@ export function getHouseEdgeRows() {
       const hi = Math.max(...found.map((x) => x.edge!));
       return { label: (lo === hi ? fmt(lo) : `${fmt(lo)}–${fmt(hi)}`) + (found.some((x) => x.dynamic) ? "+" : ""), edge: lo as number | null };
     }),
-  }));
+  })) };
 }

@@ -438,5 +438,82 @@
     "checkedBy": "CSG",
     "source": "operator_game_page",
     "notes": "RTP shown on Gamdom game page: 96.53% (applies to the real money version)"
+  },
+  {
+    "id": "duck-hunters-2:shuffle:2026-09-18",
+    "slotSlug": "duck-hunters-2",
+    "operatorSlug": "shuffle",
+    "rtp": 96,
+    "publishedRtp": 96,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "Shuffle game page: edge 4.00% (96.00% RTP)"
+  },
+  {
+    "id": "wanted-dead-or-a-wild:shuffle:2026-09-18",
+    "slotSlug": "wanted-dead-or-a-wild",
+    "operatorSlug": "shuffle",
+    "rtp": 96.38,
+    "publishedRtp": 96.38,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "Shuffle game page: edge 3.62% (96.38% RTP)"
+  },
+  {
+    "id": "le-bandit:shuffle:2026-09-18",
+    "slotSlug": "le-bandit",
+    "operatorSlug": "shuffle",
+    "rtp": 96.34,
+    "publishedRtp": 96.34,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "Shuffle game page: edge 3.66% (96.34% RTP); its description text also says 96.33%"
+  },
+  {
+    "id": "stormforged:shuffle:2026-09-18",
+    "slotSlug": "stormforged",
+    "operatorSlug": "shuffle",
+    "rtp": 96.41,
+    "publishedRtp": 96.41,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "in_client_paytable",
+    "notes": "In-game paytable: 96.41%; Shuffle game page edge 3.59%"
+  },
+  {
+    "id": "sweet-bonanza-1000:shuffle:2026-09-18",
+    "slotSlug": "sweet-bonanza-1000",
+    "operatorSlug": "shuffle",
+    "rtp": 96.53,
+    "publishedRtp": 96.53,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "Shuffle game page: edge 3.47% (96.53% RTP)"
+  },
+  {
+    "id": "sugar-rush-1000:shuffle:2026-09-18",
+    "slotSlug": "sugar-rush-1000",
+    "operatorSlug": "shuffle",
+    "rtp": 96.53,
+    "publishedRtp": 96.53,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "Shuffle game page: edge 3.47% (96.53% RTP)"
+  },
+  {
+    "id": "outsourced:shuffle:2026-09-18",
+    "slotSlug": "outsourced",
+    "operatorSlug": "shuffle",
+    "rtp": 96.08,
+    "publishedRtp": 96.08,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "Shuffle game page: edge 3.92% (96.08% RTP)"
   }
 ]

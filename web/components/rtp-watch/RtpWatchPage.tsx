@@ -18,7 +18,7 @@ export function RtpWatchPage() {
   const stats = watchStats(allRows);
   const readCells = allRows.reduce((n, r) => n + r.cells.filter((c) => c.checked).length, 0);
   const rows = onlyCut ? allRows.filter((r) => r.cut) : allRows;
-  const houseRows = getHouseEdgeRows();
+  const { cols: houseCols, rows: houseRows } = getHouseEdgeRows();
 
   return (
     <main>
@@ -116,10 +116,10 @@ export function RtpWatchPage() {
           </p>
         </div>
         <div role="table" style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 14, overflowX: "auto", background: "#0C1013" }}>
-          <div role="row" style={{ display: "grid", minWidth: 1180, gridTemplateColumns: `minmax(240px,1.4fr) 96px repeat(${watchOps.length},1fr) 92px`, background: "#101519", borderBottom: "1px solid rgba(255,255,255,.07)" }}>
+          <div role="row" style={{ display: "grid", minWidth: 1180, gridTemplateColumns: `minmax(240px,1.4fr) 96px repeat(${houseCols.length},1fr) 92px`, background: "#101519", borderBottom: "1px solid rgba(255,255,255,.07)" }}>
             <HeadCell>Game</HeadCell>
             <HeadCell muted={false}>Range</HeadCell>
-            {watchOps.map((o) => (
+            {houseCols.map((o) => (
               <div key={o.slug} role="columnheader" style={{ padding: "14px 10px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".05em", textTransform: "uppercase", color: "#8DA0AA", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
                 {o.name}
               </div>
@@ -130,7 +130,7 @@ export function RtpWatchPage() {
             const known = h.cells.filter((c) => c.edge !== null).map((c) => c.edge as number);
             const best = known.length ? Math.min(...known) : null;
             return (
-              <div key={h.slug} role="row" style={{ display: "grid", minWidth: 1180, gridTemplateColumns: `minmax(240px,1.4fr) 96px repeat(${watchOps.length},1fr) 92px`, alignItems: "center", borderBottom: "1px solid rgba(255,255,255,.05)" }}>
+              <div key={h.slug} role="row" style={{ display: "grid", minWidth: 1180, gridTemplateColumns: `minmax(240px,1.4fr) 96px repeat(${houseCols.length},1fr) 92px`, alignItems: "center", borderBottom: "1px solid rgba(255,255,255,.05)" }}>
                 <div role="cell" style={{ padding: "13px 18px" }}>
                   <Link href={`/house-games/${h.slug}`} style={{ fontSize: 14, fontWeight: 600, color: "#E8EDF0" }}>{h.name}</Link>
                 </div>
