@@ -26,7 +26,7 @@ export function BrandMark({
   if (logo) {
     return (
       // eslint-disable-next-line @next/next/no-img-element
-      <img src={logo} alt="" style={{ width: "100%", height: "100%", objectFit: "contain" }} />
+      <img src={logo} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: radius, background: "#0C1013" }} />
     );
   }
   return (
