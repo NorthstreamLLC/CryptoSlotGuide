@@ -10237,10 +10237,10 @@
           },
           {
             "label": "Weekly raffle",
-            "value": "$25,000 drawn weekly across 100 winning tickets ($2,500 for 1st, $1,800 for 2nd, $1,250 for 3rd, down to $375 for 10th, then 90 more); 1 ticket per $100 wagered on casino, 3 per $100 on sports, and tickets can also be bought with Toshi Gold at a price that doubles every 1,500 tickets",
+            "value": "$25,000 Weekly Raffle: 1 ticket for every $100 wagered on casino and 3 tickets for every $100 wagered on sports, and Toshi Gold can also be exchanged for tickets. At the end of each week 100 tickets are drawn, paying $2,500 for first, $1,800 second and $1,250 third down to $375 for tenth, then 90 more winners; prizes are added to your balance automatically",
             "sourcing": "editorial",
-            "sourceUrl": "https://toshi.bet/raffle",
-            "asOf": "2026-09-16"
+            "sourceUrl": "https://toshi.bet/",
+            "asOf": "2026-09-18"
           },
           {
             "label": "Minimum deposit",
@@ -10255,6 +10255,53 @@
             "sourcing": "editorial",
             "sourceUrl": "https://toshi.bet/vip",
             "asOf": "2026-09-16"
+          }
+        ]
+      },
+      {
+        "title": "Sportsbook",
+        "facts": [
+          {
+            "label": "Sportsbook",
+            "value": "Yes. Its sportsbook covers more than 40 sports, including soccer, tennis, basketball, American football, MMA, boxing, ice hockey, cricket, darts, golf, Formula 1 and a range of e-sports simulations",
+            "sourcing": "editorial",
+            "sourceUrl": "https://toshi.bet/",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Esports",
+            "value": "Yes. Its esports menu lists Counter-Strike, League of Legends, Valorant, Dota 2, Rainbow Six, King of Glory, Mobile Legends, WarCraft III, Crossfire, Rocket League, FC 26, NBA 2K26 and Cricket 24",
+            "sourcing": "editorial",
+            "sourceUrl": "https://toshi.bet/",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Esports titles",
+            "chips": [
+              "CS2",
+              "League of Legends",
+              "Valorant",
+              "Dota 2",
+              "Rainbow Six",
+              "Honor of Kings",
+              "Mobile Legends",
+              "WarCraft III",
+              "Crossfire",
+              "Rocket League",
+              "EA Sports FC / FIFA",
+              "NBA 2K",
+              "Cricket 24"
+            ],
+            "sourcing": "editorial",
+            "sourceUrl": "https://toshi.bet/",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Prediction markets",
+            "value": "A Predictions section with yes/no markets shown as probabilities, across weather, politics, business and tech, crypto, culture, economy, elections, films, geopolitics and music",
+            "sourcing": "editorial",
+            "sourceUrl": "https://toshi.bet/",
+            "asOf": "2026-09-18"
           }
         ]
       },

@@ -835,7 +835,7 @@
     "absorbsFee": true,
     "ln": false,
     "sports": true,
-    "esports": false,
+    "esports": true,
     "hasCustomReview": false,
     "payoutStated": "Instant",
     "payoutStatedMaxMins": 0,
