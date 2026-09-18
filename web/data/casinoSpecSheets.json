@@ -10255,6 +10255,27 @@
             "sourcing": "editorial",
             "sourceUrl": "https://toshi.bet/vip",
             "asOf": "2026-09-16"
+          },
+          {
+            "label": "Rakeback",
+            "value": "Rakeback returns a percentage of your wagering as cash. All players earn it automatically, and the rate rises as you climb the VIP ranks of the Toshi Whale Club. A rakeback boost can be activated from the rewards page",
+            "sourcing": "editorial",
+            "sourceUrl": "https://toshi.bet/rewards",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "Reload bonuses",
+            "value": "Its rewards page runs a daily rewards calendar you claim each day, a weekly bonus that unlocks on Fridays, a monthly bonus paid on the 1st, Daily Dollars with a Daily Dollar Hunt progress bar, and extra rewards earned through play",
+            "sourcing": "editorial",
+            "sourceUrl": "https://toshi.bet/rewards",
+            "asOf": "2026-09-18"
+          },
+          {
+            "label": "VIP levels",
+            "value": "VIP ranks in the Toshi Whale Club, with level progress tracked by wagering on the rewards page; higher ranks unlock better rakeback rates, and VIPs get a dedicated host and customised bonuses",
+            "sourcing": "editorial",
+            "sourceUrl": "https://toshi.bet/rewards",
+            "asOf": "2026-09-18"
           }
         ]
       },
