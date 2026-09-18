@@ -740,6 +740,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://7bitcasino.com/vip",
             "asOf": "2026-09-17"
+          },
+          {
+            "label": "Leaderboards",
+            "value": "Four weekly slot tournaments: Lucky Spin ($1,500 plus 1,500 free spins, points for the amount bet, no minimum bet, $200 for 1st), Bgaming Spin Madness (5,000 free spins), 1spin4win X-treme Hunt (5,000 free spins) and Weekend Reel Rush (2,000 free spins).",
+            "sourcing": "editorial",
+            "sourceUrl": "https://7bitcasino.com/tournaments",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -1235,6 +1242,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://betfury.com/",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Deposit limits",
+            "value": "No maximum deposit. Each currency has its own minimum deposit, and anything sent below it is lost and not refunded. BetFury charges no deposit fee.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://docs.betfury.com/betfury/terms-of-services/terms-and-conditions.md",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -1317,6 +1331,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://docs.betfury.com/betfury/betfury-vip-club/super-vip-club.md",
             "asOf": "2026-09-17"
+          },
+          {
+            "label": "Leaderboards",
+            "value": "$20,000 Daily Battles every day: 1,000 winners share the pool, with $6,000 for 1st, counting bets on Original games, slots and sports. Rotating Sports Battles (up to $10,000), Provider Battles (up to $20,000) and Thematic Battles (up to $20,000) run alongside and take priority over the Daily Battle for their games. Rewards pay in BFG and USDT as soon as each Battle ends.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://docs.betfury.com/betfury/battles-and-tournaments/fight-and-share-up-to-usd100-000.md",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -4074,10 +4095,10 @@
           },
           {
             "label": "Rakeback",
-            "value": "Says it instantly returns 50% of the house edge you pay on slots, which it describes as turning a 4% edge into an effective 2%",
+            "value": "Third-party slots: 50% of the house edge paid comes back instantly, turning a 4% edge into an effective 2%. Duel Originals carry a 0.1% base edge, and while you are inside your daily zero-edge allowance every bet gets a matching 0.1% instant rakeback, so the net edge is zero. The allowance resets daily. Duel's original slots run at 100% RTP and carry no rakeback.",
             "sourcing": "editorial",
-            "sourceUrl": "https://duel.com/about/why-duel",
-            "asOf": "2026-09-15"
+            "sourceUrl": "https://duel.com/zero-edge-faq",
+            "asOf": "2026-09-18"
           },
           {
             "label": "House edge claim",
@@ -4106,6 +4127,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://duel.com/casino#leaderboard",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "VIP levels",
+            "value": "No VIP ladder or level-up rewards. Duel rejects daily, weekly and monthly level-up bonuses as retention tricks and returns value through instant rakeback instead.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://duel.com/wtf-duel",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -5615,17 +5643,17 @@
         "facts": [
           {
             "label": "Stated withdrawal time",
-            "value": "Instant withdrawals, promoted on its homepage",
+            "value": "Most withdrawals reach the blockchain within a minute or two; larger withdrawals go to a manual review first. Every withdrawal needs a two-factor code.",
             "sourcing": "editorial",
-            "sourceUrl": "https://www.goated.com/",
+            "sourceUrl": "https://www.goated.com/help/article/9378854-deposits-and-withdrawals-on-goated",
             "asOf": "2026-09-18"
           },
           {
             "label": "Withdrawal fees",
-            "value": "Payment methods may include additional fees",
+            "value": "The network fee is deducted from your balance on top of the amount you withdraw, so a 100 USDC withdrawal on Ethereum costs 103 USDC. All deposits must be wagered once (100%) before a withdrawal or tip.",
             "sourcing": "editorial",
-            "sourceUrl": "https://www.goated.com/policies/terms",
-            "asOf": "2026-09-15"
+            "sourceUrl": "https://www.goated.com/help/article/9378854-deposits-and-withdrawals-on-goated",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -5646,6 +5674,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://www.goated.com/help/article/9378854-supported-deposits-and-withdrawals",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Minimum deposit",
+            "value": "Set per asset and network so that a deposit is worth more than the network fee to move it; deposits under $0.01 are not recorded at all.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.goated.com/help/article/9378854-deposits-and-withdrawals-on-goated",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -5689,10 +5724,10 @@
           },
           {
             "label": "Reload bonuses",
-            "value": "Tier-Up Reloads are awarded for advancing to a new tier (for example Bronze to Silver), available from Silver tier onward and based on wagering activity. The help centre also carries a \"What is Weekly Reloads\" article.",
+            "value": "Weekly Reloads are awarded automatically every Tuesday at 00:10 UTC based on your past week's wagering, profit and VIP level, split into 168 hourly claims that each stay open for 12 hours (missed claims expire). They replaced support-requested VIP reloads on 4 August 2026. Separately, Tier-Up Reloads pay a one-time bonus on reaching each new VIP tier from Silver upward.",
             "sourcing": "editorial",
-            "sourceUrl": "https://www.goated.com/llms-full.txt",
-            "asOf": "2026-09-17"
+            "sourceUrl": "https://www.goated.com/help/article/16192691-what-is-weekly-reloads",
+            "asOf": "2026-09-18"
           },
           {
             "label": "Perks by level",
@@ -7162,6 +7197,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://qzino.tech/docs/Qzino_Terms_and_Conditions.pdf",
             "asOf": "2026-09-16"
+          },
+          {
+            "label": "Deposit limits",
+            "value": "No maximum deposit. Each coin has its own minimum, and deposits below it may be lost and are not refunded.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://qzino.tech/docs/Qzino_Terms_and_Conditions.pdf",
+            "asOf": "2026-09-18"
           }
         ]
       },
@@ -10100,6 +10142,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://intercom.help/thrill/en/articles/10110969-crypto-how-to-make-a-deposit-faqs",
             "asOf": "2026-09-16"
+          },
+          {
+            "label": "Deposit limits",
+            "value": "No minimum and no maximum deposit for any supported cryptocurrency",
+            "sourcing": "editorial",
+            "sourceUrl": "https://intercom.help/thrill/en/articles/10110969-crypto-how-to-make-a-deposit-faqs",
+            "asOf": "2026-09-18"
           }
         ]
       },
