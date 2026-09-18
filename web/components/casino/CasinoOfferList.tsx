@@ -4,7 +4,7 @@ import { brandFor, casinoFacts } from "@/lib/casino-facts";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { CoinStack } from "@/components/ui/CoinIcon";
 import { Icon } from "@/components/ui/Icon";
-import { raceFor } from "@/lib/races";
+import { raceFor, dropFor } from "@/lib/races";
 
 const MONO = "var(--font-jetbrains-mono), monospace";
 const COLS = "md:grid-cols-[36px_minmax(180px,1.1fr)_minmax(220px,1.6fr)_96px_96px_96px_150px_140px]";
@@ -66,6 +66,11 @@ function Row({ o, pos }: { o: Operator; pos: number }) {
           {raceFor(o.slug) && (
             <span style={{ display: "inline-flex", alignItems: "center", gap: 5, fontSize: 11.5, fontWeight: 600, color: "#D6B65C" }}>
               <Icon name="trophy" size={12} /> {raceFor(o.slug)!.label}
+            </span>
+          )}
+          {dropFor(o.slug) && (
+            <span style={{ display: "inline-flex", alignItems: "center", gap: 5, fontSize: 11.5, fontWeight: 600, color: "#9FD8FF" }}>
+              <Icon name="clock" size={12} /> {dropFor(o.slug)}
             </span>
           )}
           {c.fee === "Free" && (

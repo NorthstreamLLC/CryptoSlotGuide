@@ -4,7 +4,7 @@ import { brandFor, casinoFacts } from "@/lib/casino-facts";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { CoinStack } from "@/components/ui/CoinIcon";
 import { Icon } from "@/components/ui/Icon";
-import { raceFor, partnerFor } from "@/lib/races";
+import { raceFor, partnerFor, dropFor } from "@/lib/races";
 
 const MONO = "var(--font-jetbrains-mono), monospace";
 
@@ -18,6 +18,7 @@ export function CasinoCard({ o, rank }: { o: Operator; rank?: number }) {
   const href = `/casinos/${o.slug}`;
   const race = raceFor(o.slug);
   const partner = partnerFor(o.slug);
+  const drop = dropFor(o.slug);
   const stats: [string, string | null][] = [
     ["Withdrawals", c.withdrawals],
     ["Min deposit", c.minDeposit],
@@ -82,12 +83,18 @@ export function CasinoCard({ o, rank }: { o: Operator; rank?: number }) {
         )}
       </div>
 
-      {(race || partner) && (
+      {(race || partner || drop) && (
         <div style={{ display: "flex", flexDirection: "column", gap: 6, paddingTop: 12, borderTop: "1px solid rgba(255,255,255,.06)" }}>
           {race && (
             <span style={{ display: "flex", alignItems: "center", gap: 7, fontSize: 12.5, fontWeight: 700, color: "#E8EDF0" }}>
               <span style={{ color: brand, display: "inline-flex" }}><Icon name="trophy" size={14} /></span>
               {race.label}
+            </span>
+          )}
+          {drop && (
+            <span style={{ display: "flex", alignItems: "center", gap: 7, fontSize: 12.5, fontWeight: 700, color: "#E8EDF0" }}>
+              <span style={{ color: "#7BE0B8", display: "inline-flex" }}><Icon name="clock" size={14} /></span>
+              {drop}
             </span>
           )}
           {partner && (

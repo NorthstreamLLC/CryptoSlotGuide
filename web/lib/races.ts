@@ -67,6 +67,27 @@ const PARTNERS: Record<string, string> = {
   vave: "Judd Trump",
 };
 
+/** Timed reward drops: vaults, rewards calendars and fast-claim rakeback, each from a cited "Bonus terms" fact. */
+const DROPS: Record<string, string> = {
+  roobet: "Vault drops 3 times a day",
+  rollbit: "Rewards Calendar unlocks 3 times a day",
+  rainbet: "Daily, weekly & monthly reward calendar",
+  cloudbet: "Rewards Calendar cash drops",
+  toshibet: "Daily rewards calendar + Daily Dollars",
+  flush: "Rewards Calendar payouts",
+  goated: "Weekly reload in 168 hourly claims",
+  stake: "Daily or hourly reloads",
+  "bc-game": "Daily bonus, updated every 10 minutes",
+  "whale-io": "Daily cashback drop at 07:00 UTC",
+  winna: "Rakeback every 7 minutes",
+  betfury: "Rakeback every 20 minutes",
+  metawin: "Instant bonus every 30 minutes",
+  solcasino: "Rakeback every 30 minutes",
+  shock: "Rakeback every 30 minutes",
+  qzino: "Rakeback every 30 minutes",
+};
+
+export const dropFor = (slug: string): string | null => DROPS[slug] ?? null;
 export const raceFor = (slug: string): Race | null => RACES[slug] ?? null;
 export const partnerFor = (slug: string): string | null => PARTNERS[slug] ?? null;
 export const raceSlugs = () => Object.entries(RACES).sort((a, b) => b[1].monthly - a[1].monthly).map(([s]) => s);

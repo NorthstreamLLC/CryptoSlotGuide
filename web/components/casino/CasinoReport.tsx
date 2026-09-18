@@ -13,7 +13,7 @@ import { CasinoSpecSheet } from "@/components/entity/CasinoSpecSheet";
 import { CoinList, CoinStack } from "@/components/ui/CoinIcon";
 import { maxWithdrawal, maxDeposit } from "@/lib/casino-facts";
 import { Icon, type IconName } from "@/components/ui/Icon";
-import { raceFor, partnerFor } from "@/lib/races";
+import { raceFor, partnerFor, dropFor } from "@/lib/races";
 import type { SpecFact } from "@/lib/types";
 
 /**
@@ -160,8 +160,9 @@ export function CasinoReport({ e }: { e: EntityView }) {
       : wv.kind === "cited"
       ? { icon: "gift" as const, title: `${wv.label} wagering`, sub: "On the welcome bonus" }
       : null,
-    coinList.length ? { icon: "coins" as const, title: `${coinList.length} coins accepted`, sub: "", coins: coinList } : null,
     raffle ? { icon: "ticket" as const, title: (raffle.value!.match(/[$€][\d,]+k? (?:weekly|daily|monthly) raffle/i)?.[0] ?? "Weekly raffle").replace(/Raffle/, "raffle"), sub: "Every wager earns tickets" } : raceFor(o.slug) ? { icon: "trophy" as const, title: raceFor(o.slug)!.label, sub: "Recurring, prizes every cycle" } : null,
+    dropFor(o.slug) ? { icon: "clock" as const, title: dropFor(o.slug)!, sub: "Timed rewards you claim as they drop" } : null,
+    coinList.length ? { icon: "coins" as const, title: `${coinList.length} coins accepted`, sub: "", coins: coinList } : null,
     wdFee && shortAmount(wdFee) === "None" ? { icon: "percent" as const, title: "No withdrawal fee", sub: clause(wdFee.value) } : null,
     o.sports ? { icon: "ball" as const, title: "Sportsbook & esports", sub: sp.titles.length ? `${sp.titles.length} esports titles` : "Sports and esports betting" } : null,
   ].filter(Boolean).slice(0, 4) as { icon: IconName; title: string; sub: string; coins?: string[] }[];
