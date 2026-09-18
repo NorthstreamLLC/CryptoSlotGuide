@@ -350,5 +350,93 @@
     "checkedBy": "CSG",
     "source": "operator_game_page",
     "notes": "Rainbet game page, labelled Max RTP: 96.08%"
+  },
+  {
+    "id": "wanted-dead-or-a-wild:gamdom:2026-09-18",
+    "slotSlug": "wanted-dead-or-a-wild",
+    "operatorSlug": "gamdom",
+    "rtp": 96.38,
+    "publishedRtp": 96.38,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "RTP shown on Gamdom game page: 96.38%"
+  },
+  {
+    "id": "stormforged:gamdom:2026-09-18",
+    "slotSlug": "stormforged",
+    "operatorSlug": "gamdom",
+    "rtp": 96.41,
+    "publishedRtp": 96.41,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "RTP shown on Gamdom game page: 96.41%"
+  },
+  {
+    "id": "le-bandit:gamdom:2026-09-18",
+    "slotSlug": "le-bandit",
+    "operatorSlug": "gamdom",
+    "rtp": 96.34,
+    "publishedRtp": 96.34,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "RTP shown on Gamdom game page: 96.34%"
+  },
+  {
+    "id": "gates-of-olympus-1000:gamdom:2026-09-18",
+    "slotSlug": "gates-of-olympus-1000",
+    "operatorSlug": "gamdom",
+    "rtp": 96.5,
+    "publishedRtp": 96.5,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "RTP shown on Gamdom game page: 96.50%"
+  },
+  {
+    "id": "outsourced:gamdom:2026-09-18",
+    "slotSlug": "outsourced",
+    "operatorSlug": "gamdom",
+    "rtp": 96.08,
+    "publishedRtp": 96.08,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "RTP shown on Gamdom game page: 96.08%"
+  },
+  {
+    "id": "duck-hunters-2:gamdom:2026-09-18",
+    "slotSlug": "duck-hunters-2",
+    "operatorSlug": "gamdom",
+    "rtp": 96,
+    "publishedRtp": 96,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "RTP shown on Gamdom game page: 96.00%"
+  },
+  {
+    "id": "sweet-bonanza-1000:gamdom:2026-09-18",
+    "slotSlug": "sweet-bonanza-1000",
+    "operatorSlug": "gamdom",
+    "rtp": 96.53,
+    "publishedRtp": 96.53,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "RTP shown on Gamdom game page: 96.53%"
+  },
+  {
+    "id": "sugar-rush-1000:gamdom:2026-09-18",
+    "slotSlug": "sugar-rush-1000",
+    "operatorSlug": "gamdom",
+    "rtp": 96.53,
+    "publishedRtp": 96.53,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "RTP shown on Gamdom game page: 96.53% (applies to the real money version)"
   }
 ]
