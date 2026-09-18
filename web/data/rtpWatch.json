@@ -262,5 +262,93 @@
     "checkedBy": "CSG",
     "source": "in_client_paytable",
     "notes": "In-game rules: theoretical return 96.08%; feature buys 95.92%-96.17%"
+  },
+  {
+    "id": "sugar-rush-1000:rainbet:2026-09-18",
+    "slotSlug": "sugar-rush-1000",
+    "operatorSlug": "rainbet",
+    "rtp": 96.53,
+    "publishedRtp": 96.53,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "Rainbet game page, labelled Max RTP: 96.53%"
+  },
+  {
+    "id": "duck-hunters-2:rainbet:2026-09-18",
+    "slotSlug": "duck-hunters-2",
+    "operatorSlug": "rainbet",
+    "rtp": 96,
+    "publishedRtp": 96,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "Rainbet game page, labelled Max RTP: 96.00%"
+  },
+  {
+    "id": "gates-of-olympus-1000:rainbet:2026-09-18",
+    "slotSlug": "gates-of-olympus-1000",
+    "operatorSlug": "rainbet",
+    "rtp": 96.5,
+    "publishedRtp": 96.5,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "Rainbet game page, labelled Max RTP: 96.50%"
+  },
+  {
+    "id": "sweet-bonanza-1000:rainbet:2026-09-18",
+    "slotSlug": "sweet-bonanza-1000",
+    "operatorSlug": "rainbet",
+    "rtp": 96.53,
+    "publishedRtp": 96.53,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "Rainbet game page, labelled Max RTP: 96.53%"
+  },
+  {
+    "id": "le-bandit:rainbet:2026-09-18",
+    "slotSlug": "le-bandit",
+    "operatorSlug": "rainbet",
+    "rtp": 96.34,
+    "publishedRtp": 96.34,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "Rainbet game page, labelled Max RTP: 96.34%"
+  },
+  {
+    "id": "stormforged:rainbet:2026-09-18",
+    "slotSlug": "stormforged",
+    "operatorSlug": "rainbet",
+    "rtp": 96.41,
+    "publishedRtp": 96.41,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "Rainbet game page, labelled Max RTP: 96.41%"
+  },
+  {
+    "id": "wanted-dead-or-a-wild:rainbet:2026-09-18",
+    "slotSlug": "wanted-dead-or-a-wild",
+    "operatorSlug": "rainbet",
+    "rtp": 96.38,
+    "publishedRtp": 96.38,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "Rainbet game page, labelled Max RTP: 96.38%"
+  },
+  {
+    "id": "outsourced:rainbet:2026-09-18",
+    "slotSlug": "outsourced",
+    "operatorSlug": "rainbet",
+    "rtp": 96.08,
+    "publishedRtp": 96.08,
+    "checkedAt": "2026-09-18",
+    "checkedBy": "CSG",
+    "source": "operator_game_page",
+    "notes": "Rainbet game page, labelled Max RTP: 96.08%"
   }
 ]
