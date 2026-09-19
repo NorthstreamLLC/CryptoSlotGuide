@@ -144,11 +144,23 @@ export function accessIn(slug: string, code: string): Access | null {
   return r.complete ? "accepts" : "partial";
 }
 
+const REGION_COUNTRY: Record<string, string> = { Canada: "CA", Ukraine: "UA", "United States": "US", Argentina: "AR", Comoros: "KM" };
+
+/** Regions of a country a casino restricts even though it takes the rest of the country, e.g. ["Ontario"] for Canada. */
+export function exceptIn(slug: string, code: string): string[] {
+  const r = restrictedFor(slug);
+  if (!r) return [];
+  return r.regions
+    .map((g) => g.match(/^(.+?)\s*\(([^)]+)\)$/))
+    .filter((m): m is RegExpMatchArray => !!m && REGION_COUNTRY[m[2]] === code.toUpperCase())
+    .map((m) => m[1]);
+}
+
 export function casinosByAccess(code: string) {
-  const out: Record<Access, { slug: string; name: string; mono: string }[]> = { accepts: [], restricted: [], partial: [] };
+  const out: Record<Access, { slug: string; name: string; mono: string; except: string[] }[]> = { accepts: [], restricted: [], partial: [] };
   for (const o of siteData.ops) {
     const a = accessIn(o.slug, code);
-    if (a) out[a].push({ slug: o.slug, name: o.name, mono: o.mono });
+    if (a) out[a].push({ slug: o.slug, name: o.name, mono: o.mono, except: a === "restricted" ? [] : exceptIn(o.slug, code) });
   }
   return out;
 }

@@ -31,7 +31,7 @@ export function CasinoAccess({ code, name }: { code: string; name: string }) {
                   </span>
                   <span style={{ minWidth: 0 }}>
                     {o.name}
-                    <span style={{ display: "block", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 9.5, fontWeight: 600, color: g.tagColor }}>{g.tag}</span>
+                    <span style={{ display: "block", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 9.5, fontWeight: 600, color: g.tagColor }}>{o.except.length ? `${g.tag}, except ${o.except.join(", ")}` : g.tag}</span>
                   </span>
                 </Link>
               ))}

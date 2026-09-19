@@ -21,7 +21,7 @@ export function countryHoverInfo(codes: (string | null)[]): Record<string, Hover
       name: c?.name ?? (code === "US" ? "United States" : code),
       rows,
       casinosTitle: `Crypto casinos that accept players (${acc.length})`,
-      casinos: acc.map((o) => ({ name: o.name, logo: logoFor(o.slug) })),
+      casinos: acc.map((o) => ({ name: o.except.length ? `${o.name} (not ${o.except.join(", ")})` : o.name, logo: logoFor(o.slug) })),
       casinosNote: "None of our listed casinos accept players from here",
     };
   }
