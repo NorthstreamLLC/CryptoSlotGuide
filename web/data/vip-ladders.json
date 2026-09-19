@@ -2060,5 +2060,2720 @@
     "rewards": "Invite only; 10% instant rakeback and access to the founding team to design a custom rewards programme"
    }
   ]
+ },
+ "razed": {
+  "url": "https://help.razed.com/en/articles/9079076-razed-com-vip-program-overview",
+  "ranks": [
+   {
+    "rank": "Starter",
+    "wager": 0,
+    "rewards": "Rakeback and monthly bonus (includes some lossback)"
+   },
+   {
+    "rank": "Bronze 1",
+    "wager": 10000,
+    "rewards": "$20 rank-up cash bonus; weekly bonus unlocks"
+   },
+   {
+    "rank": "Bronze 2",
+    "wager": 20000,
+    "rewards": "$20 rank-up cash bonus"
+   },
+   {
+    "rank": "Bronze 3",
+    "wager": 30000,
+    "rewards": "$20 rank-up cash bonus"
+   },
+   {
+    "rank": "Silver 1",
+    "wager": 50000,
+    "rewards": "$50 rank-up cash bonus"
+   },
+   {
+    "rank": "Silver 2",
+    "wager": 75000,
+    "rewards": "$50 rank-up cash bonus"
+   },
+   {
+    "rank": "Silver 3",
+    "wager": 100000,
+    "rewards": "$50 rank-up cash bonus"
+   },
+   {
+    "rank": "Silver 4",
+    "wager": 125000,
+    "rewards": "$50 rank-up cash bonus"
+   },
+   {
+    "rank": "Silver 5",
+    "wager": 150000,
+    "rewards": "$50 rank-up cash bonus"
+   },
+   {
+    "rank": "Gold 1",
+    "wager": 200000,
+    "rewards": "$100 rank-up cash bonus; daily reload unlocks (sized on last 7 days of play)"
+   },
+   {
+    "rank": "Gold 2",
+    "wager": 300000,
+    "rewards": "$200 rank-up cash bonus"
+   },
+   {
+    "rank": "Gold 3",
+    "wager": 400000,
+    "rewards": "$200 rank-up cash bonus"
+   },
+   {
+    "rank": "Gold 4",
+    "wager": 500000,
+    "rewards": "$200 rank-up cash bonus; personal VIP host"
+   },
+   {
+    "rank": "Gold 5",
+    "wager": 600000,
+    "rewards": "$200 rank-up cash bonus"
+   },
+   {
+    "rank": "Platinum 1",
+    "wager": 750000,
+    "rewards": "$250 rank-up cash bonus; birthday bonus (verified profiles)"
+   },
+   {
+    "rank": "Platinum 2",
+    "wager": 1000000,
+    "rewards": "$500 rank-up cash bonus"
+   },
+   {
+    "rank": "Platinum 3",
+    "wager": 1500000,
+    "rewards": "$1,000 rank-up cash bonus"
+   },
+   {
+    "rank": "Platinum 4",
+    "wager": 2500000,
+    "rewards": "$1,750 rank-up cash bonus"
+   },
+   {
+    "rank": "Platinum 5",
+    "wager": 5000000,
+    "rewards": "$3,500 rank-up cash bonus"
+   },
+   {
+    "rank": "Platinum 6",
+    "wager": 10000000,
+    "rewards": "$7,000 rank-up cash bonus"
+   },
+   {
+    "rank": "Diamond",
+    "wager": 25000000,
+    "rewards": "$15,000 rank-up cash bonus; personalised benefits curated with the VIP team"
+   },
+   {
+    "rank": "Double Diamond",
+    "wager": 50000000,
+    "rewards": "$25,000 rank-up cash bonus"
+   },
+   {
+    "rank": "Pink Diamond",
+    "wager": 100000000,
+    "rewards": "$50,000 rank-up cash bonus"
+   },
+   {
+    "rank": "Red Diamond",
+    "wager": 250000000,
+    "rewards": "$150,000 rank-up cash bonus"
+   },
+   {
+    "rank": "Blue Diamond",
+    "wager": 500000000,
+    "rewards": "$250,000 rank-up cash bonus"
+   },
+   {
+    "rank": "Onyx",
+    "wager": 1000000000,
+    "rewards": "$500,000 rank-up cash bonus"
+   }
+  ]
+ },
+ "betfury": {
+  "url": "https://bf1.io/rank-system",
+  "ranks": [
+   {
+    "rank": "Rank 1 Newcomer",
+    "wager": 0,
+    "rewards": "5% cashback (up to, by game category)"
+   },
+   {
+    "rank": "Rank 2 Gambler I",
+    "wager": 3000,
+    "rewards": "5% cashback (up to, by game category); 3 USDT rank bonus"
+   },
+   {
+    "rank": "Rank 3 Gambler II",
+    "wager": 10000,
+    "rewards": "5% cashback (up to, by game category); 5 USDT rank bonus"
+   },
+   {
+    "rank": "Rank 4 Gambler III",
+    "wager": 25000,
+    "rewards": "5% cashback (up to, by game category); 10 USDT rank bonus"
+   },
+   {
+    "rank": "Rank 5 Bet maker I",
+    "wager": 50000,
+    "rewards": "5% cashback (up to, by game category); 15 USDT rank bonus"
+   },
+   {
+    "rank": "Rank 6 Bet maker II",
+    "wager": 100000,
+    "rewards": "6% cashback (up to, by game category); 25 USDT rank bonus"
+   },
+   {
+    "rank": "Rank 7 Bet maker III",
+    "wager": 200000,
+    "rewards": "7% cashback (up to, by game category); 50 USDT rank bonus"
+   },
+   {
+    "rank": "Rank 8 Game master I",
+    "wager": 400000,
+    "rewards": "8% cashback (up to, by game category); 75 USDT rank bonus"
+   },
+   {
+    "rank": "Rank 9 Game master II",
+    "wager": 650000,
+    "rewards": "9% cashback (up to, by game category); 100 USDT rank bonus"
+   },
+   {
+    "rank": "Rank 10 Game master III",
+    "wager": 1000000,
+    "rewards": "10% cashback (up to, by game category); 150 USDT rank bonus; VIP Club (Rank 10): personal VIP manager, VIP bonuses, better bonus distribution"
+   },
+   {
+    "rank": "Rank 11 High Roller I",
+    "wager": 2500000,
+    "rewards": "12% cashback (up to, by game category); 500 USDT rank bonus"
+   },
+   {
+    "rank": "Rank 12 High Roller II",
+    "wager": 5000000,
+    "rewards": "14% cashback (up to, by game category); 1,000 USDT rank bonus"
+   },
+   {
+    "rank": "Rank 13 High Roller III",
+    "wager": 10000000,
+    "rewards": "16% cashback (up to, by game category); 2,000 USDT rank bonus"
+   },
+   {
+    "rank": "Rank 14 Betfurian Pro I",
+    "wager": 25000000,
+    "rewards": "18% cashback (up to, by game category); 3,000 USDT rank bonus"
+   },
+   {
+    "rank": "Rank 15 Betfurian Pro II",
+    "wager": 50000000,
+    "rewards": "20% cashback (up to, by game category); 4,500 USDT rank bonus; Super VIP Club (Rank 15): x2 rakeback boost once a day, VIP concierge, 20-25% cashback tier"
+   },
+   {
+    "rank": "Rank 16 Betfurian Pro III",
+    "wager": 100000000,
+    "rewards": "21% cashback (up to, by game category); 6,000 USDT rank bonus"
+   },
+   {
+    "rank": "Rank 17 BF Hero I",
+    "wager": 200000000,
+    "rewards": "22% cashback (up to, by game category); 7,500 USDT rank bonus"
+   },
+   {
+    "rank": "Rank 18 BF Hero II",
+    "wager": 400000000,
+    "rewards": "23% cashback (up to, by game category); 10,000 USDT rank bonus"
+   },
+   {
+    "rank": "Rank 19 BF Hero III",
+    "wager": 650000000,
+    "rewards": "24% cashback (up to, by game category); 15,000 USDT rank bonus"
+   },
+   {
+    "rank": "Rank 20 BF Legend",
+    "wager": 1000000000,
+    "rewards": "25% cashback (up to, by game category); 30,000 USDT rank bonus"
+   }
+  ]
+ },
+ "gamba": {
+  "url": "https://help.gamba.com/en/articles/8271546-rank-up-bonus-system-explained",
+  "ranks": [
+   {
+    "rank": "Bronze 1",
+    "wager": null,
+    "xp": 5000,
+    "rewards": "$7.50 rank-up bonus in USDT; rakeback, weekly and monthly bonus rates rise with rank"
+   },
+   {
+    "rank": "Bronze 2",
+    "wager": null,
+    "xp": 10000,
+    "rewards": "$8 rank-up bonus in USDT; rakeback, weekly and monthly bonus rates rise with rank"
+   },
+   {
+    "rank": "Bronze 3",
+    "wager": null,
+    "xp": 15000,
+    "rewards": "$10 rank-up bonus in USDT; rakeback, weekly and monthly bonus rates rise with rank"
+   },
+   {
+    "rank": "Silver 1",
+    "wager": null,
+    "xp": 20000,
+    "rewards": "$12 rank-up bonus in USDT; rakeback, weekly and monthly bonus rates rise with rank"
+   },
+   {
+    "rank": "Silver 2",
+    "wager": null,
+    "xp": 35000,
+    "rewards": "$20 rank-up bonus in USDT; Daily Bonus is replaced by the 7-day ReJuice Bonus; rakeback, weekly and monthly bonus rates rise with rank"
+   },
+   {
+    "rank": "Silver 3",
+    "wager": null,
+    "xp": 50000,
+    "rewards": "$25 rank-up bonus in USDT; rakeback, weekly and monthly bonus rates rise with rank"
+   },
+   {
+    "rank": "Gold 1",
+    "wager": null,
+    "xp": 75000,
+    "rewards": "$45 rank-up bonus in USDT; rakeback, weekly and monthly bonus rates rise with rank"
+   },
+   {
+    "rank": "Gold 2",
+    "wager": null,
+    "xp": 100000,
+    "rewards": "$50 rank-up bonus in USDT; rakeback, weekly and monthly bonus rates rise with rank"
+   },
+   {
+    "rank": "Gold 3",
+    "wager": null,
+    "xp": 150000,
+    "rewards": "$60 rank-up bonus in USDT; rakeback, weekly and monthly bonus rates rise with rank"
+   },
+   {
+    "rank": "Platinum 1",
+    "wager": null,
+    "xp": 200000,
+    "rewards": "$80 rank-up bonus in USDT; rakeback, weekly and monthly bonus rates rise with rank"
+   },
+   {
+    "rank": "Platinum 2",
+    "wager": null,
+    "xp": 300000,
+    "rewards": "$120 rank-up bonus in USDT; rakeback, weekly and monthly bonus rates rise with rank"
+   },
+   {
+    "rank": "Platinum 3",
+    "wager": null,
+    "xp": 500000,
+    "rewards": "$250 rank-up bonus in USDT; rakeback, weekly and monthly bonus rates rise with rank"
+   },
+   {
+    "rank": "Diamond 1",
+    "wager": null,
+    "xp": 1000000,
+    "rewards": "$800 rank-up bonus in USDT; rakeback, weekly and monthly bonus rates rise with rank"
+   },
+   {
+    "rank": "Diamond 2",
+    "wager": null,
+    "xp": 2500000,
+    "rewards": "$1,600 rank-up bonus in USDT; rakeback, weekly and monthly bonus rates rise with rank"
+   },
+   {
+    "rank": "Diamond 3",
+    "wager": null,
+    "xp": 5000000,
+    "rewards": "$3,200 rank-up bonus in USDT; rakeback, weekly and monthly bonus rates rise with rank"
+   },
+   {
+    "rank": "Master 1",
+    "wager": null,
+    "xp": 10000000,
+    "rewards": "$6,500 rank-up bonus in USDT; rakeback, weekly and monthly bonus rates rise with rank"
+   },
+   {
+    "rank": "Master 2",
+    "wager": null,
+    "xp": 25000000,
+    "rewards": "$13,000 rank-up bonus in USDT; rakeback, weekly and monthly bonus rates rise with rank"
+   },
+   {
+    "rank": "Master 3",
+    "wager": null,
+    "xp": 50000000,
+    "rewards": "$26,000 rank-up bonus in USDT; rakeback, weekly and monthly bonus rates rise with rank"
+   },
+   {
+    "rank": "Immortal 1",
+    "wager": null,
+    "xp": 100000000,
+    "rewards": "$60,000 rank-up bonus in USDT; rakeback, weekly and monthly bonus rates rise with rank"
+   },
+   {
+    "rank": "Immortal 2",
+    "wager": null,
+    "xp": 250000000,
+    "rewards": "$150,000 rank-up bonus in USDT; rakeback, weekly and monthly bonus rates rise with rank"
+   },
+   {
+    "rank": "Immortal 3",
+    "wager": null,
+    "xp": 500000000,
+    "rewards": "$220,000 rank-up bonus in USDT; rakeback, weekly and monthly bonus rates rise with rank"
+   }
+  ]
+ },
+ "solcasino": {
+  "url": "https://docs.solcasino.io/calendar-bonuses-and-rewards/levels",
+  "ranks": [
+   {
+    "rank": "Level 1",
+    "wager": 0,
+    "rewards": "Rakeback (5% of house edge) and Daily Bonus"
+   },
+   {
+    "rank": "Level 2",
+    "wager": 80,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 3",
+    "wager": 240,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 4",
+    "wager": 510,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 5",
+    "wager": 880,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 6",
+    "wager": 1440,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 7",
+    "wager": 2240,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 8",
+    "wager": 3580,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 9",
+    "wager": 5520,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 10",
+    "wager": 8260,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 11",
+    "wager": 15950,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 12",
+    "wager": 26200,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 13",
+    "wager": 39010,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 14",
+    "wager": 54380,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 15",
+    "wager": 72310,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level); Weekly and Monthly Bonuses unlock"
+   },
+   {
+    "rank": "Level 16",
+    "wager": 103050,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 17",
+    "wager": 138910,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 18",
+    "wager": 179900,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 19",
+    "wager": 226010,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 20",
+    "wager": 277250,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 21",
+    "wager": 343860,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 22",
+    "wager": 418150,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 23",
+    "wager": 500130,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 24",
+    "wager": 589790,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 25",
+    "wager": 687140,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 26",
+    "wager": 828040,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 27",
+    "wager": 971500,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 28",
+    "wager": 1120140,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 29",
+    "wager": 1274580,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 30",
+    "wager": 1436750,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 31",
+    "wager": 1608580,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 32",
+    "wager": 1792000,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 33",
+    "wager": 1988950,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 34",
+    "wager": 2201360,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 35",
+    "wager": 2431160,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 36",
+    "wager": 2680280,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 37",
+    "wager": 2950660,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 38",
+    "wager": 3244220,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 39",
+    "wager": 3562900,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 40",
+    "wager": 3908640,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 41",
+    "wager": 4268540,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 42",
+    "wager": 4665150,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 43",
+    "wager": 5106030,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 44",
+    "wager": 5598740,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 45",
+    "wager": 6150830,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 46",
+    "wager": 6769860,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 47",
+    "wager": 7463390,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 48",
+    "wager": 8238980,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 49",
+    "wager": 9104190,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 50",
+    "wager": 10066570,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 51",
+    "wager": 11133680,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 52",
+    "wager": 12313080,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 53",
+    "wager": 13612330,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 54",
+    "wager": 15038990,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 55",
+    "wager": 16600610,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 56",
+    "wager": 18304750,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 57",
+    "wager": 20158970,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 58",
+    "wager": 22170830,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 59",
+    "wager": 24347880,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 60",
+    "wager": 26697690,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 61",
+    "wager": 29227810,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 62",
+    "wager": 31945800,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 63",
+    "wager": 34859210,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 64",
+    "wager": 37975610,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 65",
+    "wager": 41302550,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 66",
+    "wager": 44847590,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 67",
+    "wager": 48618290,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 68",
+    "wager": 52622210,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 69",
+    "wager": 56866910,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 70",
+    "wager": 61359940,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 71",
+    "wager": 66347390,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 72",
+    "wager": 71703910,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 73",
+    "wager": 77464410,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 74",
+    "wager": 83663810,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 75",
+    "wager": 90337010,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 76",
+    "wager": 97518930,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 77",
+    "wager": 105244480,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 78",
+    "wager": 113548580,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 79",
+    "wager": 122466130,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   },
+   {
+    "rank": "Level 80",
+    "wager": 132032050,
+    "rewards": "Level-up bonus (sized on profit and loss and wager since the previous level)"
+   }
+  ]
+ },
+ "metawin": {
+  "url": "https://help.metawin.com/en/articles/9455021-metamax-rewards",
+  "ranks": [
+   {
+    "rank": "Unranked",
+    "wager": null,
+    "rewards": "Instant Bonus (rakeback on the last 30 minutes of wagering)"
+   },
+   {
+    "rank": "Bronze",
+    "wager": null,
+    "rewards": "Rank Up Reward; Daily and Weekly (lossback) Bonuses and Free Spins Friday eligibility; Instant/Daily/Weekly bonuses scale with tier"
+   },
+   {
+    "rank": "Silver",
+    "wager": null,
+    "rewards": "Bigger Rank Up Reward; higher tier multiplier on Instant, Daily and Weekly Bonuses"
+   },
+   {
+    "rank": "Gold",
+    "wager": null,
+    "rewards": "Bigger Rank Up Reward; higher tier multiplier"
+   },
+   {
+    "rank": "Platinum",
+    "wager": null,
+    "rewards": "Bigger Rank Up Reward plus Royal Reload paid in 7 daily portions after each rank-up"
+   },
+   {
+    "rank": "Elite",
+    "wager": null,
+    "rewards": "Rank Up Reward of $1,000,000, the largest in the programme; Royal Reload"
+   },
+   {
+    "rank": "Red Room",
+    "wager": null,
+    "rewards": "Invitation-only membership with personal service; new members added monthly"
+   }
+  ]
+ },
+ "whale-io": {
+  "url": "https://whale.io/rewards",
+  "ranks": [
+   {
+    "rank": "Bronze 1",
+    "wager": null,
+    "rewards": "1% daily cashback on net losses; 2% weekly and 1.5% monthly bonus on adjusted wager"
+   },
+   {
+    "rank": "Bronze 2",
+    "wager": null,
+    "rewards": "2% daily cashback on net losses; 2% weekly and 1.5% monthly bonus on adjusted wager"
+   },
+   {
+    "rank": "Bronze 3",
+    "wager": null,
+    "rewards": "3% daily cashback on net losses; 2% weekly and 1.5% monthly bonus on adjusted wager"
+   },
+   {
+    "rank": "Bronze 4",
+    "wager": null,
+    "rewards": "4% daily cashback on net losses; 2% weekly and 1.5% monthly bonus on adjusted wager"
+   },
+   {
+    "rank": "Silver 1",
+    "wager": null,
+    "rewards": "5% daily cashback on net losses; 2% weekly and 1.5% monthly bonus on adjusted wager"
+   },
+   {
+    "rank": "Silver 2",
+    "wager": null,
+    "rewards": "6% daily cashback on net losses; 2% weekly and 1.5% monthly bonus on adjusted wager"
+   },
+   {
+    "rank": "Silver 3",
+    "wager": null,
+    "rewards": "7% daily cashback on net losses; 2% weekly and 1.5% monthly bonus on adjusted wager"
+   },
+   {
+    "rank": "Silver 4",
+    "wager": null,
+    "rewards": "8% daily cashback on net losses; 2% weekly and 1.5% monthly bonus on adjusted wager"
+   },
+   {
+    "rank": "Gold 1",
+    "wager": null,
+    "rewards": "9% daily cashback on net losses; 2% weekly and 1.5% monthly bonus on adjusted wager"
+   },
+   {
+    "rank": "Gold 2",
+    "wager": null,
+    "rewards": "10% daily cashback on net losses; 2% weekly and 1.5% monthly bonus on adjusted wager"
+   },
+   {
+    "rank": "Gold 3",
+    "wager": null,
+    "rewards": "11% daily cashback on net losses; 2% weekly and 1.5% monthly bonus on adjusted wager"
+   },
+   {
+    "rank": "Gold 4",
+    "wager": null,
+    "rewards": "12% daily cashback on net losses; 2% weekly and 1.5% monthly bonus on adjusted wager"
+   },
+   {
+    "rank": "Platinum 1",
+    "wager": null,
+    "rewards": "13% daily cashback on net losses; 2% weekly and 1.5% monthly bonus on adjusted wager"
+   },
+   {
+    "rank": "Platinum 2",
+    "wager": null,
+    "rewards": "14% daily cashback on net losses; 2% weekly and 1.5% monthly bonus on adjusted wager"
+   },
+   {
+    "rank": "Platinum 3",
+    "wager": null,
+    "rewards": "15% daily cashback on net losses; 2% weekly and 1.5% monthly bonus on adjusted wager"
+   },
+   {
+    "rank": "Platinum 4",
+    "wager": null,
+    "rewards": "16% daily cashback on net losses; 2% weekly and 1.5% monthly bonus on adjusted wager"
+   },
+   {
+    "rank": "Diamond 1",
+    "wager": null,
+    "rewards": "17% daily cashback on net losses; 2% weekly and 1.5% monthly bonus on adjusted wager; VIP ranks begin"
+   },
+   {
+    "rank": "Diamond 2",
+    "wager": null,
+    "rewards": "18% daily cashback on net losses; 2% weekly and 1.5% monthly bonus on adjusted wager"
+   },
+   {
+    "rank": "Diamond 3",
+    "wager": null,
+    "rewards": "19% daily cashback on net losses; 2% weekly and 1.5% monthly bonus on adjusted wager"
+   },
+   {
+    "rank": "Diamond 4",
+    "wager": null,
+    "rewards": "20% daily cashback on net losses; 2% weekly and 1.5% monthly bonus on adjusted wager"
+   },
+   {
+    "rank": "Emerald 1",
+    "wager": null,
+    "rewards": "21% daily cashback on net losses; 2% weekly and 1.5% monthly bonus on adjusted wager"
+   },
+   {
+    "rank": "Emerald 2",
+    "wager": null,
+    "rewards": "22% daily cashback on net losses; 2% weekly and 1.5% monthly bonus on adjusted wager"
+   },
+   {
+    "rank": "Emerald 3",
+    "wager": null,
+    "rewards": "23% daily cashback on net losses; 2% weekly and 1.5% monthly bonus on adjusted wager"
+   },
+   {
+    "rank": "Emerald 4",
+    "wager": null,
+    "rewards": "24% daily cashback on net losses; 2% weekly and 1.5% monthly bonus on adjusted wager"
+   },
+   {
+    "rank": "Whale",
+    "wager": null,
+    "rewards": "25% daily cashback (maximum); 2% weekly and 1.5% monthly bonus on adjusted wager"
+   }
+  ]
+ },
+ "acebet": {
+  "url": "https://acebet.co/api/rewards/edge-rakeback/config",
+  "ranks": [
+   {
+    "rank": "Bronze I",
+    "wager": 0,
+    "rewards": "5% of house edge back as rakeback, split 10% instant / 25% daily / 40% weekly / 25% monthly"
+   },
+   {
+    "rank": "Bronze II",
+    "wager": 12500,
+    "rewards": "5.77% of house edge back as rakeback, split 10% instant / 25% daily / 40% weekly / 25% monthly"
+   },
+   {
+    "rank": "Bronze III",
+    "wager": 25000,
+    "rewards": "6.54% of house edge back as rakeback, split 10% instant / 25% daily / 40% weekly / 25% monthly"
+   },
+   {
+    "rank": "Bronze IV",
+    "wager": 40000,
+    "rewards": "7.31% of house edge back as rakeback, split 10% instant / 25% daily / 40% weekly / 25% monthly"
+   },
+   {
+    "rank": "Bronze V",
+    "wager": 60000,
+    "rewards": "8.08% of house edge back as rakeback, split 10% instant / 25% daily / 40% weekly / 25% monthly"
+   },
+   {
+    "rank": "Silver I",
+    "wager": 85000,
+    "rewards": "8.85% of house edge back as rakeback, split 10% instant / 25% daily / 25% weekly / 15% pre-monthly / 25% monthly"
+   },
+   {
+    "rank": "Silver II",
+    "wager": 115000,
+    "rewards": "9.62% of house edge back as rakeback, split 10% instant / 25% daily / 25% weekly / 15% pre-monthly / 25% monthly"
+   },
+   {
+    "rank": "Silver III",
+    "wager": 150000,
+    "rewards": "10.38% of house edge back as rakeback, split 10% instant / 25% daily / 25% weekly / 15% pre-monthly / 25% monthly"
+   },
+   {
+    "rank": "Silver IV",
+    "wager": 190000,
+    "rewards": "11.15% of house edge back as rakeback, split 10% instant / 25% daily / 25% weekly / 15% pre-monthly / 25% monthly"
+   },
+   {
+    "rank": "Silver V",
+    "wager": 250000,
+    "rewards": "11.92% of house edge back as rakeback, split 10% instant / 25% daily / 25% weekly / 15% pre-monthly / 25% monthly"
+   },
+   {
+    "rank": "Gold I",
+    "wager": 350000,
+    "rewards": "12.69% of house edge back as rakeback, split 10% instant / 25% daily / 25% weekly / 15% pre-monthly / 25% monthly"
+   },
+   {
+    "rank": "Gold II",
+    "wager": 500000,
+    "rewards": "13.46% of house edge back as rakeback, split 10% instant / 25% daily / 25% weekly / 15% pre-monthly / 25% monthly"
+   },
+   {
+    "rank": "Gold III",
+    "wager": 750000,
+    "rewards": "14.23% of house edge back as rakeback, split 10% instant / 25% daily / 25% weekly / 15% pre-monthly / 25% monthly"
+   },
+   {
+    "rank": "Gold IV",
+    "wager": 1000000,
+    "rewards": "15% of house edge back as rakeback, split 10% instant / 25% daily / 25% weekly / 15% pre-monthly / 25% monthly"
+   },
+   {
+    "rank": "Gold V",
+    "wager": 1500000,
+    "rewards": "15.77% of house edge back as rakeback, split 10% instant / 25% daily / 25% weekly / 15% pre-monthly / 25% monthly"
+   },
+   {
+    "rank": "Ruby I",
+    "wager": 2250000,
+    "rewards": "16.54% of house edge back as rakeback, split 10% instant / 25% daily / 25% weekly / 15% pre-monthly / 25% monthly"
+   },
+   {
+    "rank": "Ruby II",
+    "wager": 3500000,
+    "rewards": "17.31% of house edge back as rakeback, split 10% instant / 25% daily / 25% weekly / 15% pre-monthly / 25% monthly"
+   },
+   {
+    "rank": "Ruby III",
+    "wager": 5000000,
+    "rewards": "18.08% of house edge back as rakeback, split 10% instant / 25% daily / 25% weekly / 15% pre-monthly / 25% monthly"
+   },
+   {
+    "rank": "Ruby IV",
+    "wager": 7500000,
+    "rewards": "18.85% of house edge back as rakeback, split 10% instant / 25% daily / 25% weekly / 15% pre-monthly / 25% monthly"
+   },
+   {
+    "rank": "Ruby V",
+    "wager": 10000000,
+    "rewards": "19.62% of house edge back as rakeback, split 10% instant / 25% daily / 25% weekly / 15% pre-monthly / 25% monthly"
+   },
+   {
+    "rank": "Emerald I",
+    "wager": 15000000,
+    "rewards": "20.38% of house edge back as rakeback, split 10% instant / 25% daily / 25% weekly / 15% pre-monthly / 25% monthly"
+   },
+   {
+    "rank": "Emerald II",
+    "wager": 25000000,
+    "rewards": "21.15% of house edge back as rakeback, split 10% instant / 25% daily / 25% weekly / 15% pre-monthly / 25% monthly"
+   },
+   {
+    "rank": "Emerald III",
+    "wager": 50000000,
+    "rewards": "21.92% of house edge back as rakeback, split 10% instant / 25% daily / 25% weekly / 15% pre-monthly / 25% monthly"
+   },
+   {
+    "rank": "Emerald IV",
+    "wager": 100000000,
+    "rewards": "22.69% of house edge back as rakeback, split 10% instant / 25% daily / 25% weekly / 15% pre-monthly / 25% monthly"
+   },
+   {
+    "rank": "Emerald V",
+    "wager": 250000000,
+    "rewards": "23.46% of house edge back as rakeback, split 10% instant / 25% daily / 25% weekly / 15% pre-monthly / 25% monthly"
+   },
+   {
+    "rank": "Sapphire",
+    "wager": 500000000,
+    "rewards": "24.23% of house edge back as rakeback, split 10% instant / 25% daily / 25% weekly / 15% pre-monthly / 25% monthly"
+   },
+   {
+    "rank": "Apex",
+    "wager": 1000000000,
+    "rewards": "25% of house edge back as rakeback, split 10% instant / 25% daily / 25% weekly / 15% pre-monthly / 25% monthly"
+   }
+  ]
+ },
+ "jackpotbet": {
+  "url": "https://help.jackpot.bet/en/articles/8439891-jackpot-loyalty-program-overview",
+  "ranks": [
+   {
+    "rank": "Unranked",
+    "wager": 0,
+    "rewards": "Rakeback accrues but is not yet claimable"
+   },
+   {
+    "rank": "Bronze",
+    "wager": 10000,
+    "rewards": "One-time rank-up bonus; instant rakeback (6% of house edge) becomes claimable; weekly and monthly bonuses unlock"
+   },
+   {
+    "rank": "Silver",
+    "wager": 50000,
+    "rewards": "Rank-up bonus; bigger weekly and monthly bonuses"
+   },
+   {
+    "rank": "Gold",
+    "wager": 100000,
+    "rewards": "Rank-up bonus; bigger weekly and monthly bonuses"
+   },
+   {
+    "rank": "Platinum",
+    "wager": 250000,
+    "rewards": "Rank-up bonus; bigger weekly and monthly bonuses"
+   },
+   {
+    "rank": "Diamond",
+    "wager": 500000,
+    "rewards": "Rank-up bonus; bigger weekly and monthly bonuses"
+   },
+   {
+    "rank": "Elite",
+    "wager": 1000000,
+    "rewards": "Rank-up bonus; dedicated VIP manager with customised bonuses"
+   },
+   {
+    "rank": "Premier",
+    "wager": 2500000,
+    "rewards": "Rank-up bonus; VIP manager; bigger weekly and monthly bonuses"
+   },
+   {
+    "rank": "Champion",
+    "wager": 5000000,
+    "rewards": "Rank-up bonus; VIP manager; bigger weekly and monthly bonuses"
+   },
+   {
+    "rank": "Supreme",
+    "wager": 10000000,
+    "rewards": "Rank-up bonus; VIP manager; bigger weekly and monthly bonuses"
+   },
+   {
+    "rank": "Apex",
+    "wager": 25000000,
+    "rewards": "Rank-up bonus; VIP manager; top weekly and monthly bonuses"
+   }
+  ]
+ },
+ "degen": {
+  "url": "https://api.degen.com/v1/bonus/vip-tiers",
+  "ranks": [
+   {
+    "rank": "Unranked",
+    "wager": 0,
+    "rewards": "No rank rewards yet"
+   },
+   {
+    "rank": "Bronze I",
+    "wager": 10000,
+    "rewards": "$10 level-up bonus; $10 rank-up bonus; 3% rakeback; 5% weekly bonus; 5% monthly bonus"
+   },
+   {
+    "rank": "Bronze II",
+    "wager": 20000,
+    "rewards": "$15 level-up bonus; 3% rakeback; 5% weekly bonus; 5% monthly bonus"
+   },
+   {
+    "rank": "Bronze III",
+    "wager": 30000,
+    "rewards": "$20 level-up bonus; 3.5% rakeback; 5% weekly bonus; 5% monthly bonus"
+   },
+   {
+    "rank": "Bronze IV",
+    "wager": 40000,
+    "rewards": "$30 level-up bonus; 3.5% rakeback; 5% weekly bonus; 5% monthly bonus"
+   },
+   {
+    "rank": "Silver I",
+    "wager": 52500,
+    "rewards": "$50 level-up bonus; $15 rank-up bonus; 4% rakeback; 5% weekly bonus; 6% monthly bonus"
+   },
+   {
+    "rank": "Silver II",
+    "wager": 65000,
+    "rewards": "$60 level-up bonus; 4% rakeback; 5% weekly bonus; 6% monthly bonus"
+   },
+   {
+    "rank": "Silver III",
+    "wager": 80000,
+    "rewards": "$70 level-up bonus; 4.5% rakeback; 5% weekly bonus; 6% monthly bonus"
+   },
+   {
+    "rank": "Silver IV",
+    "wager": 95000,
+    "rewards": "$80 level-up bonus; 4.5% rakeback; 5% weekly bonus; 6% monthly bonus"
+   },
+   {
+    "rank": "Gold I",
+    "wager": 130000,
+    "rewards": "$100 level-up bonus; $50 rank-up bonus; 5% rakeback; 5% weekly bonus; 7% monthly bonus"
+   },
+   {
+    "rank": "Gold II",
+    "wager": 165000,
+    "rewards": "$120 level-up bonus; 5% rakeback; 5% weekly bonus; 7% monthly bonus"
+   },
+   {
+    "rank": "Gold III",
+    "wager": 195000,
+    "rewards": "$140 level-up bonus; 5.5% rakeback; 5% weekly bonus; 7% monthly bonus"
+   },
+   {
+    "rank": "Gold IV",
+    "wager": 240000,
+    "rewards": "$180 level-up bonus; 5.5% rakeback; 5% weekly bonus; 7% monthly bonus"
+   },
+   {
+    "rank": "Platinum I",
+    "wager": 300000,
+    "rewards": "$200 level-up bonus; $100 rank-up bonus; 6% rakeback; 5% weekly bonus; 8% monthly bonus; VIP tier: daily reloads via VIP host"
+   },
+   {
+    "rank": "Platinum II",
+    "wager": 500000,
+    "rewards": "$600 level-up bonus; 6% rakeback; 5% weekly bonus; 8% monthly bonus; VIP tier: daily reloads via VIP host"
+   },
+   {
+    "rank": "Platinum III",
+    "wager": 1000000,
+    "rewards": "$1,000 level-up bonus; 6.5% rakeback; 5% weekly bonus; 8% monthly bonus; VIP tier: daily reloads via VIP host"
+   },
+   {
+    "rank": "Platinum IV",
+    "wager": 2500000,
+    "rewards": "$1,500 level-up bonus; 6.5% rakeback; 5% weekly bonus; 8% monthly bonus; VIP tier: daily reloads via VIP host"
+   },
+   {
+    "rank": "Sapphire I",
+    "wager": 5000000,
+    "rewards": "$1,800 level-up bonus; $900 rank-up bonus; 6.5% rakeback; 5% weekly bonus; 9% monthly bonus; VIP tier: daily reloads via VIP host"
+   },
+   {
+    "rank": "Sapphire II",
+    "wager": 7500000,
+    "rewards": "$3,000 level-up bonus; 6.5% rakeback; 5% weekly bonus; 9% monthly bonus; VIP tier: daily reloads via VIP host"
+   },
+   {
+    "rank": "Sapphire III",
+    "wager": 10000000,
+    "rewards": "$6,000 level-up bonus; 7% rakeback; 5% weekly bonus; 9% monthly bonus; VIP tier: daily reloads via VIP host"
+   },
+   {
+    "rank": "Ruby I",
+    "wager": 25000000,
+    "rewards": "$10,000 level-up bonus; $5,000 rank-up bonus; 7% rakeback; 5% weekly bonus; 10% monthly bonus; VIP tier: daily reloads via VIP host"
+   },
+   {
+    "rank": "Ruby II",
+    "wager": 50000000,
+    "rewards": "$20,000 level-up bonus; 7% rakeback; 5% weekly bonus; 10% monthly bonus; VIP tier: daily reloads via VIP host"
+   },
+   {
+    "rank": "Ruby III",
+    "wager": 150000000,
+    "rewards": "$35,000 level-up bonus; 7% rakeback; 5% weekly bonus; 10% monthly bonus; VIP tier: daily reloads via VIP host"
+   },
+   {
+    "rank": "Diamond I",
+    "wager": 250000000,
+    "rewards": "$50,000 level-up bonus; $20,000 rank-up bonus; 7.5% rakeback; 5% weekly bonus; 11% monthly bonus; VIP tier: daily reloads via VIP host"
+   },
+   {
+    "rank": "Diamond II",
+    "wager": 500000000,
+    "rewards": "$60,000 level-up bonus; 7.5% rakeback; 5% weekly bonus; 11% monthly bonus; VIP tier: daily reloads via VIP host"
+   },
+   {
+    "rank": "Diamond III",
+    "wager": 750000000,
+    "rewards": "$75,000 level-up bonus; 7.5% rakeback; 5% weekly bonus; 11% monthly bonus; VIP tier: daily reloads via VIP host"
+   },
+   {
+    "rank": "Degen",
+    "wager": 1000000000,
+    "rewards": "$100,000 level-up bonus; $60,000 rank-up bonus; 8% rakeback; 5% weekly bonus; 12% monthly bonus; VIP tier: daily reloads via VIP host"
+   }
+  ]
+ },
+ "qzino": {
+  "url": "https://qzino.ai/rank-system",
+  "ranks": [
+   {
+    "rank": "Newcomer (Level 0)",
+    "wager": 0,
+    "rewards": "3% cashback, 10% rakeback"
+   },
+   {
+    "rank": "Newcomer (Level 1)",
+    "wager": 250,
+    "rewards": "3% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Newcomer (Level 2)",
+    "wager": 600,
+    "rewards": "3% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Bronze 1 (Level 3)",
+    "wager": 1000,
+    "rewards": "3% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Bronze 1 (Level 4)",
+    "wager": 2000,
+    "rewards": "3% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Bronze 1 (Level 5)",
+    "wager": 3500,
+    "rewards": "3% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Bronze 2 (Level 6)",
+    "wager": 5000,
+    "rewards": "3% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Bronze 2 (Level 7)",
+    "wager": 7000,
+    "rewards": "3% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Bronze 2 (Level 8)",
+    "wager": 9000,
+    "rewards": "3% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Bronze 3 (Level 9)",
+    "wager": 12000,
+    "rewards": "3% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Bronze 3 (Level 10)",
+    "wager": 14000,
+    "rewards": "3% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Bronze 3 (Level 11)",
+    "wager": 17000,
+    "rewards": "3% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Bronze 4 (Level 12)",
+    "wager": 20000,
+    "rewards": "3% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Bronze 4 (Level 13)",
+    "wager": 30000,
+    "rewards": "3% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Bronze 4 (Level 14)",
+    "wager": 40000,
+    "rewards": "3% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Bronze 5 (Level 15)",
+    "wager": 50000,
+    "rewards": "3% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Bronze 5 (Level 16)",
+    "wager": 65000,
+    "rewards": "3% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Bronze 5 (Level 17)",
+    "wager": 80000,
+    "rewards": "3% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Bronze 6 (Level 18)",
+    "wager": 100000,
+    "rewards": "4% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Bronze 6 (Level 19)",
+    "wager": 130000,
+    "rewards": "4% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Bronze 6 (Level 20)",
+    "wager": 160000,
+    "rewards": "4% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Silver (Level 21)",
+    "wager": 200000,
+    "rewards": "5% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Silver (Level 22)",
+    "wager": 250000,
+    "rewards": "5% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Silver (Level 23)",
+    "wager": 300000,
+    "rewards": "5% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Silver 2 (Level 24)",
+    "wager": 400000,
+    "rewards": "6% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Silver 2 (Level 25)",
+    "wager": 500000,
+    "rewards": "6% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Silver 2 (Level 26)",
+    "wager": 600000,
+    "rewards": "6% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Silver 3 (Level 27)",
+    "wager": 700000,
+    "rewards": "7% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Silver 3 (Level 28)",
+    "wager": 800000,
+    "rewards": "7% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Silver 3 (Level 29)",
+    "wager": 900000,
+    "rewards": "7% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Gold (VIP) (Level 30)",
+    "wager": 1000000,
+    "rewards": "8% cashback, 10% rakeback; level-up bonus; VIP Club unlocks: VIP welcome, personal, birthday and weekly Royalty bonuses, Gold Wheel"
+   },
+   {
+    "rank": "Gold (VIP) (Level 31)",
+    "wager": 2000000,
+    "rewards": "8% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Gold (VIP) (Level 32)",
+    "wager": 3500000,
+    "rewards": "8% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Gold 2 (Level 33)",
+    "wager": 5000000,
+    "rewards": "9% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Gold 2 (Level 34)",
+    "wager": 6500000,
+    "rewards": "9% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Gold 2 (Level 35)",
+    "wager": 8000000,
+    "rewards": "9% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Gold 3 (Level 36)",
+    "wager": 10000000,
+    "rewards": "10% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Gold 3 (Level 37)",
+    "wager": 14000000,
+    "rewards": "10% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Gold 3 (Level 38)",
+    "wager": 18000000,
+    "rewards": "10% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Gold 4 (Level 39)",
+    "wager": 25000000,
+    "rewards": "11% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Gold 4 (Level 40)",
+    "wager": 33000000,
+    "rewards": "11% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Gold 4 (Level 41)",
+    "wager": 41000000,
+    "rewards": "11% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Super Gold (Level 42)",
+    "wager": 50000000,
+    "rewards": "12% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Super Gold (Level 43)",
+    "wager": 58000000,
+    "rewards": "12% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Super Gold (Level 44)",
+    "wager": 66000000,
+    "rewards": "12% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Super Gold 2 (Level 45)",
+    "wager": 75000000,
+    "rewards": "13% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Super Gold 2 (Level 46)",
+    "wager": 84000000,
+    "rewards": "13% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Super Gold 2 (Level 47)",
+    "wager": 92000000,
+    "rewards": "13% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Super Gold 3 (Level 48)",
+    "wager": 100000000,
+    "rewards": "14% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Super Gold 3 (Level 49)",
+    "wager": 115000000,
+    "rewards": "14% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Super Gold 3 (Level 50)",
+    "wager": 130000000,
+    "rewards": "14% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Super Gold 4 (Level 51)",
+    "wager": 150000000,
+    "rewards": "15% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Super Gold 4 (Level 52)",
+    "wager": 170000000,
+    "rewards": "15% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Super Gold 4 (Level 53)",
+    "wager": 200000000,
+    "rewards": "15% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Super Gold 5 (Level 54)",
+    "wager": 250000000,
+    "rewards": "16% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Super Gold 5 (Level 55)",
+    "wager": 325000000,
+    "rewards": "16% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Super Gold 5 (Level 56)",
+    "wager": 400000000,
+    "rewards": "16% cashback, 10% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Emerald (SVIP) (Level 57)",
+    "wager": 500000000,
+    "rewards": "17% cashback, 11% rakeback; level-up bonus; Super VIP unlocks: SVIP welcome, birthday, personal and Royalty bonuses, rising rakeback, SVIP lounge, Diamond Wheel"
+   },
+   {
+    "rank": "Emerald (SVIP) (Level 58)",
+    "wager": 600000000,
+    "rewards": "17% cashback, 11% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Emerald (SVIP) (Level 59)",
+    "wager": 700000000,
+    "rewards": "17% cashback, 11% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Ruby (Level 60)",
+    "wager": 777777777,
+    "rewards": "18% cashback, 12% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Ruby (Level 61)",
+    "wager": 880000000,
+    "rewards": "18% cashback, 12% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Ruby (Level 62)",
+    "wager": 1000000000,
+    "rewards": "18% cashback, 12% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Ruby 2 (Level 63)",
+    "wager": 1100000000,
+    "rewards": "20% cashback, 13% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Ruby 2 (Level 64)",
+    "wager": 1200000000,
+    "rewards": "20% cashback, 13% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Ruby 2 (Level 65)",
+    "wager": 1300000000,
+    "rewards": "20% cashback, 13% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Ruby 3 (Level 66)",
+    "wager": 1400000000,
+    "rewards": "25% cashback, 14% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Ruby 3 (Level 67)",
+    "wager": 1500000000,
+    "rewards": "25% cashback, 14% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Ruby 3 (Level 68)",
+    "wager": 1635000000,
+    "rewards": "25% cashback, 14% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Pink Diamond (Level 69)",
+    "wager": 1777777777,
+    "rewards": "30% cashback, 15% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Pink Diamond (Level 70)",
+    "wager": 1900000000,
+    "rewards": "30% cashback, 15% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Pink Diamond (Level 71)",
+    "wager": 2000000000,
+    "rewards": "30% cashback, 15% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Pink Diamond (Level 72)",
+    "wager": 2100000000,
+    "rewards": "30% cashback, 15% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Pink Diamond 2 (Level 73)",
+    "wager": 2200000000,
+    "rewards": "35% cashback, 15% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Pink Diamond 2 (Level 74)",
+    "wager": 2300000000,
+    "rewards": "35% cashback, 15% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Pink Diamond 2 (Level 75)",
+    "wager": 2400000000,
+    "rewards": "35% cashback, 15% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Pink Diamond 2 (Level 76)",
+    "wager": 2550000000,
+    "rewards": "35% cashback, 15% rakeback; level-up bonus"
+   },
+   {
+    "rank": "Blue Diamond (Level 77)",
+    "wager": 2777777777,
+    "rewards": "40% cashback, 15% rakeback; level-up bonus"
+   }
+  ]
+ },
+ "shock": {
+  "url": "https://help.shock.com/en/articles/10070298-ranks-rewards-and-bonuses",
+  "ranks": [
+   {
+    "rank": "No Rank",
+    "wager": 0,
+    "rewards": "Instant rakeback (claim every 30 minutes, Rakeboost), reloads every six hours, weekly and monthly bonuses for recent wagering"
+   },
+   {
+    "rank": "Bronze",
+    "wager": 10000,
+    "rewards": "Daily Bonus unlocks; higher reward rates on every eligible wager; level-up reward"
+   },
+   {
+    "rank": "Silver",
+    "wager": 50000,
+    "rewards": "Higher rewards rate; level-up reward"
+   },
+   {
+    "rank": "Gold",
+    "wager": 100000,
+    "rewards": "Pre-Monthly Bonus unlocks; higher reward rates; level-up reward"
+   },
+   {
+    "rank": "Platinum 1",
+    "wager": 250000,
+    "rewards": "Higher reward rates; level-up reward"
+   },
+   {
+    "rank": "Platinum 2",
+    "wager": 500000,
+    "rewards": "Even higher rewards rate; level-up reward"
+   },
+   {
+    "rank": "Platinum 3",
+    "wager": 1000000,
+    "rewards": "Stronger rewards rate; level-up reward"
+   },
+   {
+    "rank": "Platinum 4",
+    "wager": 2500000,
+    "rewards": "VIP benefits unlock: dedicated VIP support and tailored bonuses; level-up reward"
+   },
+   {
+    "rank": "Platinum 5",
+    "wager": 5000000,
+    "rewards": "Full VIP access with higher rates on every claim type; level-up reward"
+   },
+   {
+    "rank": "Diamond 1",
+    "wager": 10000000,
+    "rewards": "Full VIP access, premium rewards rates; level-up reward"
+   },
+   {
+    "rank": "Diamond 2",
+    "wager": 25000000,
+    "rewards": "Premium rewards rates, rising each Diamond tier; level-up reward"
+   },
+   {
+    "rank": "Diamond 3",
+    "wager": 50000000,
+    "rewards": "Premium rewards rates, rising each Diamond tier; level-up reward"
+   },
+   {
+    "rank": "Diamond 4",
+    "wager": 100000000,
+    "rewards": "Premium rewards rates, rising each Diamond tier; level-up reward"
+   },
+   {
+    "rank": "Diamond 5",
+    "wager": 250000000,
+    "rewards": "Premium rewards rates, rising each Diamond tier; level-up reward"
+   },
+   {
+    "rank": "Elite",
+    "wager": 500000000,
+    "rewards": "Top rank: dedicated support, personalised rewards and exclusive benefits; level-up reward"
+   }
+  ]
+ },
+ "cybet": {
+  "url": "https://cybet.com/vip",
+  "ranks": [
+   {
+    "rank": "Shell (Level 0)",
+    "wager": null,
+    "rewards": "Entry level: weekly, monthly and Rapid bonus cards on the VIP page"
+   },
+   {
+    "rank": "Pioneer",
+    "wager": null,
+    "rewards": "20% rakeback on qualifying casino wagers (credited automatically once it reaches $1)"
+   },
+   {
+    "rank": "Plat 43",
+    "wager": null,
+    "rewards": "Highest level matched instantly through the VIP Transfer Program"
+   }
+  ]
+ },
+ "housebets": {
+  "url": "https://www.housebets.com/rewards",
+  "ranks": [
+   {
+    "rank": "Rookie",
+    "wager": null,
+    "xp": 0,
+    "rewards": "Starting level; rewards begin at Bronze 1"
+   },
+   {
+    "rank": "Bronze 1",
+    "wager": null,
+    "xp": 200,
+    "rewards": "Instant and daily rakeback, level-up cash (level-up bonuses total $8.80 across the Bronze levels)"
+   },
+   {
+    "rank": "Bronze 2",
+    "wager": null,
+    "xp": 500,
+    "rewards": "Instant and daily rakeback, level-up cash (level-up bonuses total $8.80 across the Bronze levels)"
+   },
+   {
+    "rank": "Bronze 3",
+    "wager": null,
+    "xp": 1000,
+    "rewards": "Instant and daily rakeback, level-up cash (level-up bonuses total $8.80 across the Bronze levels)"
+   },
+   {
+    "rank": "Bronze 4",
+    "wager": null,
+    "xp": 2000,
+    "rewards": "Instant and daily rakeback, level-up cash (level-up bonuses total $8.80 across the Bronze levels)"
+   },
+   {
+    "rank": "Bronze 5",
+    "wager": null,
+    "xp": 5000,
+    "rewards": "Instant and daily rakeback, level-up cash (level-up bonuses total $8.80 across the Bronze levels)"
+   },
+   {
+    "rank": "Silver 1",
+    "wager": null,
+    "xp": 10000,
+    "rewards": "Increased daily rakeback and level-up cash; configurable weekly bonus unlocks (level-up bonuses total $49 across the Silver levels)"
+   },
+   {
+    "rank": "Silver 2",
+    "wager": null,
+    "xp": 20000,
+    "rewards": "Increased daily rakeback and level-up cash; configurable weekly bonus unlocks (level-up bonuses total $49 across the Silver levels)"
+   },
+   {
+    "rank": "Silver 3",
+    "wager": null,
+    "xp": 30000,
+    "rewards": "Increased daily rakeback and level-up cash; configurable weekly bonus unlocks (level-up bonuses total $49 across the Silver levels)"
+   },
+   {
+    "rank": "Silver 4",
+    "wager": null,
+    "xp": 40000,
+    "rewards": "Increased daily rakeback and level-up cash; configurable weekly bonus unlocks (level-up bonuses total $49 across the Silver levels)"
+   },
+   {
+    "rank": "Silver 5",
+    "wager": null,
+    "xp": 50000,
+    "rewards": "Increased daily rakeback and level-up cash; configurable weekly bonus unlocks (level-up bonuses total $49 across the Silver levels)"
+   },
+   {
+    "rank": "Gold 1",
+    "wager": null,
+    "xp": 100000,
+    "rewards": "Configurable monthly bonus unlocks; bigger weekly bonus (level-up bonuses total $250 across the Gold levels)"
+   },
+   {
+    "rank": "Gold 2",
+    "wager": null,
+    "xp": 150000,
+    "rewards": "Configurable monthly bonus unlocks; bigger weekly bonus (level-up bonuses total $250 across the Gold levels)"
+   },
+   {
+    "rank": "Gold 3",
+    "wager": null,
+    "xp": 200000,
+    "rewards": "Configurable monthly bonus unlocks; bigger weekly bonus (level-up bonuses total $250 across the Gold levels)"
+   },
+   {
+    "rank": "Gold 4",
+    "wager": null,
+    "xp": 250000,
+    "rewards": "Configurable monthly bonus unlocks; bigger weekly bonus (level-up bonuses total $250 across the Gold levels)"
+   },
+   {
+    "rank": "Gold 5",
+    "wager": null,
+    "xp": 300000,
+    "rewards": "Configurable monthly bonus unlocks; bigger weekly bonus (level-up bonuses total $250 across the Gold levels)"
+   },
+   {
+    "rank": "Platinum 1",
+    "wager": null,
+    "xp": 500000,
+    "rewards": "Bigger weekly and monthly bonuses; personal VIP host eligibility from Platinum 3 (level-up bonuses total $1,200 across the Platinum levels)"
+   },
+   {
+    "rank": "Platinum 2",
+    "wager": null,
+    "xp": 750000,
+    "rewards": "Bigger weekly and monthly bonuses; personal VIP host eligibility from Platinum 3 (level-up bonuses total $1,200 across the Platinum levels)"
+   },
+   {
+    "rank": "Platinum 3",
+    "wager": null,
+    "xp": 1000000,
+    "rewards": "Eligible for a dedicated VIP host; Bigger weekly and monthly bonuses; personal VIP host eligibility from Platinum 3 (level-up bonuses total $1,200 across the Platinum levels)"
+   },
+   {
+    "rank": "Platinum 4",
+    "wager": null,
+    "xp": 1250000,
+    "rewards": "Bigger weekly and monthly bonuses; personal VIP host eligibility from Platinum 3 (level-up bonuses total $1,200 across the Platinum levels)"
+   },
+   {
+    "rank": "Platinum 5",
+    "wager": null,
+    "xp": 1500000,
+    "rewards": "Bigger weekly and monthly bonuses; personal VIP host eligibility from Platinum 3 (level-up bonuses total $1,200 across the Platinum levels)"
+   },
+   {
+    "rank": "Pearl 1",
+    "wager": null,
+    "xp": 2000000,
+    "rewards": "Dedicated personal VIP host; bigger weekly and monthly bonuses (level-up bonuses total $3,500 across the Pearl levels)"
+   },
+   {
+    "rank": "Pearl 2",
+    "wager": null,
+    "xp": 2500000,
+    "rewards": "Dedicated personal VIP host; bigger weekly and monthly bonuses (level-up bonuses total $3,500 across the Pearl levels)"
+   },
+   {
+    "rank": "Pearl 3",
+    "wager": null,
+    "xp": 3250000,
+    "rewards": "Dedicated personal VIP host; bigger weekly and monthly bonuses (level-up bonuses total $3,500 across the Pearl levels)"
+   },
+   {
+    "rank": "Pearl 4",
+    "wager": null,
+    "xp": 4000000,
+    "rewards": "Dedicated personal VIP host; bigger weekly and monthly bonuses (level-up bonuses total $3,500 across the Pearl levels)"
+   },
+   {
+    "rank": "Pearl 5",
+    "wager": null,
+    "xp": 5000000,
+    "rewards": "Dedicated personal VIP host; bigger weekly and monthly bonuses (level-up bonuses total $3,500 across the Pearl levels)"
+   },
+   {
+    "rank": "Onyx 1",
+    "wager": null,
+    "xp": 6500000,
+    "rewards": "VIP host; bigger weekly and monthly bonuses (level-up bonuses total $15,000 across the Onyx levels)"
+   },
+   {
+    "rank": "Onyx 2",
+    "wager": null,
+    "xp": 8000000,
+    "rewards": "VIP host; bigger weekly and monthly bonuses (level-up bonuses total $15,000 across the Onyx levels)"
+   },
+   {
+    "rank": "Onyx 3",
+    "wager": null,
+    "xp": 10000000,
+    "rewards": "VIP host; bigger weekly and monthly bonuses (level-up bonuses total $15,000 across the Onyx levels)"
+   },
+   {
+    "rank": "Onyx 4",
+    "wager": null,
+    "xp": 15000000,
+    "rewards": "VIP host; bigger weekly and monthly bonuses (level-up bonuses total $15,000 across the Onyx levels)"
+   },
+   {
+    "rank": "Onyx 5",
+    "wager": null,
+    "xp": 20000000,
+    "rewards": "VIP host; bigger weekly and monthly bonuses (level-up bonuses total $15,000 across the Onyx levels)"
+   },
+   {
+    "rank": "Diamond 1",
+    "wager": null,
+    "xp": 25000000,
+    "rewards": "VIP host; bigger weekly and monthly bonuses (level-up bonuses total $35,000 across the Diamond levels)"
+   },
+   {
+    "rank": "Diamond 2",
+    "wager": null,
+    "xp": 32500000,
+    "rewards": "VIP host; bigger weekly and monthly bonuses (level-up bonuses total $35,000 across the Diamond levels)"
+   },
+   {
+    "rank": "Diamond 3",
+    "wager": null,
+    "xp": 40000000,
+    "rewards": "VIP host; bigger weekly and monthly bonuses (level-up bonuses total $35,000 across the Diamond levels)"
+   },
+   {
+    "rank": "Diamond 4",
+    "wager": null,
+    "xp": 50000000,
+    "rewards": "VIP host; bigger weekly and monthly bonuses (level-up bonuses total $35,000 across the Diamond levels)"
+   },
+   {
+    "rank": "Diamond 5",
+    "wager": null,
+    "xp": 65000000,
+    "rewards": "VIP host; bigger weekly and monthly bonuses (level-up bonuses total $35,000 across the Diamond levels)"
+   },
+   {
+    "rank": "Palladium 1",
+    "wager": null,
+    "xp": 80000000,
+    "rewards": "VIP host; bigger weekly and monthly bonuses (level-up bonuses total $60,000 across the Palladium levels)"
+   },
+   {
+    "rank": "Palladium 2",
+    "wager": null,
+    "xp": 100000000,
+    "rewards": "VIP host; bigger weekly and monthly bonuses (level-up bonuses total $60,000 across the Palladium levels)"
+   },
+   {
+    "rank": "Palladium 3",
+    "wager": null,
+    "xp": 150000000,
+    "rewards": "VIP host; bigger weekly and monthly bonuses (level-up bonuses total $60,000 across the Palladium levels)"
+   },
+   {
+    "rank": "Palladium 4",
+    "wager": null,
+    "xp": 200000000,
+    "rewards": "VIP host; bigger weekly and monthly bonuses (level-up bonuses total $60,000 across the Palladium levels)"
+   },
+   {
+    "rank": "Palladium 5",
+    "wager": null,
+    "xp": 250000000,
+    "rewards": "VIP host; bigger weekly and monthly bonuses (level-up bonuses total $60,000 across the Palladium levels)"
+   },
+   {
+    "rank": "Castle 1",
+    "wager": null,
+    "xp": 325000000,
+    "rewards": "VIP host; top weekly and monthly bonuses (level-up bonuses total $60,000 across the Castle levels)"
+   },
+   {
+    "rank": "Castle 2",
+    "wager": null,
+    "xp": 400000000,
+    "rewards": "VIP host; top weekly and monthly bonuses (level-up bonuses total $60,000 across the Castle levels)"
+   },
+   {
+    "rank": "Castle 3",
+    "wager": null,
+    "xp": 500000000,
+    "rewards": "VIP host; top weekly and monthly bonuses (level-up bonuses total $60,000 across the Castle levels)"
+   }
+  ]
+ },
+ "dicey": {
+  "url": "https://help.dicey.com/en/articles/13729989-understanding-the-rewards-program",
+  "ranks": [
+   {
+    "rank": "Bronze I",
+    "wager": null,
+    "xp": null,
+    "rewards": "Daily Bonus unlocks (Rakeboost +15% rakeback for 60 minutes after each claim); free spins on rank-up"
+   },
+   {
+    "rank": "Bronze II",
+    "wager": null,
+    "xp": null,
+    "rewards": "Free spins on rank-up"
+   },
+   {
+    "rank": "Bronze III",
+    "wager": null,
+    "xp": null,
+    "rewards": "Free spins on rank-up"
+   },
+   {
+    "rank": "Bronze IV",
+    "wager": null,
+    "xp": null,
+    "rewards": "Free spins on rank-up"
+   },
+   {
+    "rank": "Bronze V",
+    "wager": null,
+    "xp": null,
+    "rewards": "Free spins on rank-up"
+   },
+   {
+    "rank": "Silver I",
+    "wager": null,
+    "xp": null,
+    "rewards": "Weekly Bonus unlocks; free spins on rank-up"
+   },
+   {
+    "rank": "Silver II",
+    "wager": null,
+    "xp": null,
+    "rewards": "Free spins on rank-up"
+   },
+   {
+    "rank": "Silver III",
+    "wager": null,
+    "xp": null,
+    "rewards": "Free spins on rank-up"
+   },
+   {
+    "rank": "Silver IV",
+    "wager": null,
+    "xp": null,
+    "rewards": "Free spins on rank-up"
+   },
+   {
+    "rank": "Silver V",
+    "wager": null,
+    "xp": null,
+    "rewards": "Free spins on rank-up"
+   },
+   {
+    "rank": "Gold I",
+    "wager": null,
+    "xp": null,
+    "rewards": "Monthly Bonus unlocks; Rank Up Bonus wheel spin (flat cash) begins; free spins on rank-up"
+   },
+   {
+    "rank": "Gold II",
+    "wager": null,
+    "xp": null,
+    "rewards": "Free spins on rank-up; Rank Up Bonus wheel spin (flat cash)"
+   },
+   {
+    "rank": "Gold III",
+    "wager": null,
+    "xp": null,
+    "rewards": "Free spins on rank-up; Rank Up Bonus wheel spin (flat cash)"
+   },
+   {
+    "rank": "Gold IV",
+    "wager": null,
+    "xp": null,
+    "rewards": "Free spins on rank-up; Rank Up Bonus wheel spin (flat cash)"
+   },
+   {
+    "rank": "Gold V",
+    "wager": null,
+    "xp": null,
+    "rewards": "Free spins on rank-up; Rank Up Bonus wheel spin (flat cash)"
+   },
+   {
+    "rank": "Sapphire I",
+    "wager": null,
+    "xp": null,
+    "rewards": "Free spins on rank-up; Rank Up Bonus wheel spin (flat cash)"
+   },
+   {
+    "rank": "Sapphire II",
+    "wager": null,
+    "xp": null,
+    "rewards": "Free spins on rank-up; Rank Up Bonus wheel spin (flat cash)"
+   },
+   {
+    "rank": "Sapphire III",
+    "wager": null,
+    "xp": null,
+    "rewards": "Free spins on rank-up; Rank Up Bonus wheel spin (flat cash)"
+   },
+   {
+    "rank": "Sapphire IV",
+    "wager": null,
+    "xp": null,
+    "rewards": "Free spins on rank-up; Rank Up Bonus wheel spin (flat cash)"
+   },
+   {
+    "rank": "Sapphire V",
+    "wager": null,
+    "xp": null,
+    "rewards": "Free spins on rank-up; Rank Up Bonus wheel spin (flat cash)"
+   },
+   {
+    "rank": "Emerald I",
+    "wager": null,
+    "xp": null,
+    "rewards": "Free spins on rank-up; Rank Up Bonus wheel spin (flat cash)"
+   },
+   {
+    "rank": "Emerald II",
+    "wager": null,
+    "xp": null,
+    "rewards": "Free spins on rank-up; Rank Up Bonus wheel spin (flat cash)"
+   },
+   {
+    "rank": "Emerald III",
+    "wager": null,
+    "xp": null,
+    "rewards": "Free spins on rank-up; Rank Up Bonus wheel spin (flat cash)"
+   },
+   {
+    "rank": "Emerald IV",
+    "wager": null,
+    "xp": null,
+    "rewards": "Free spins on rank-up; Rank Up Bonus wheel spin (flat cash)"
+   },
+   {
+    "rank": "Emerald V",
+    "wager": null,
+    "xp": null,
+    "rewards": "Free spins on rank-up; Rank Up Bonus wheel spin (flat cash)"
+   },
+   {
+    "rank": "Holo I",
+    "wager": null,
+    "xp": null,
+    "rewards": "Free spins on rank-up; Rank Up Bonus wheel spin (flat cash); VIP host and concierge for top-tier players"
+   },
+   {
+    "rank": "Holo II",
+    "wager": null,
+    "xp": null,
+    "rewards": "Free spins on rank-up; Rank Up Bonus wheel spin (flat cash); VIP host and concierge for top-tier players"
+   },
+   {
+    "rank": "Holo III",
+    "wager": null,
+    "xp": null,
+    "rewards": "Free spins on rank-up; Rank Up Bonus wheel spin (flat cash); VIP host and concierge for top-tier players"
+   },
+   {
+    "rank": "Holo IV",
+    "wager": null,
+    "xp": null,
+    "rewards": "Free spins on rank-up; Rank Up Bonus wheel spin (flat cash); VIP host and concierge for top-tier players"
+   },
+   {
+    "rank": "Holo V",
+    "wager": null,
+    "xp": null,
+    "rewards": "Free spins on rank-up; Rank Up Bonus wheel spin (flat cash); VIP host and concierge for top-tier players"
+   }
+  ]
+ },
+ "spartans": {
+  "url": "https://spartans.com/vip-program",
+  "ranks": [
+   {
+    "rank": "Entry",
+    "wager": 0,
+    "rewards": "CashRake (rakeback plus cashback) across 5 claim windows: instant, hourly, daily, weekly, monthly"
+   },
+   {
+    "rank": "Bronze",
+    "wager": 25000,
+    "rewards": "CashRake at a higher rate; level can be bought with a single deposit (up to $5K)"
+   },
+   {
+    "rank": "Silver",
+    "wager": 250000,
+    "rewards": "Higher CashRake; monthly lossback unlocks; buyable (up to $25K)"
+   },
+   {
+    "rank": "Gold",
+    "wager": 1500000,
+    "rewards": "Higher CashRake; monthly lossback; personal VIP host; buyable (up to $150K)"
+   },
+   {
+    "rank": "Platinum",
+    "wager": 10000000,
+    "rewards": "Higher CashRake; monthly and weekly lossback; VIP host; buyable (up to $1M)"
+   },
+   {
+    "rank": "Elite",
+    "wager": 50000000,
+    "rewards": "Highest CashRake and lossback rates in the program; earned only, not buyable"
+   }
+  ]
+ },
+ "toshibet": {
+  "url": "https://toshi.bet/vip",
+  "ranks": [
+   {
+    "rank": "Fish",
+    "wager": 2500,
+    "rewards": "Level-up rewards, daily hunts and rakeback boosts three times a day"
+   },
+   {
+    "rank": "Seal",
+    "wager": 25000,
+    "rewards": "Adds rain rewards"
+   },
+   {
+    "rank": "Piranha",
+    "wager": 100000,
+    "rewards": "Adds exclusive promotions"
+   },
+   {
+    "rank": "Shark",
+    "wager": 250000,
+    "rewards": "Upgraded weekly bonuses and VIP treatment"
+   }
+  ]
+ },
+ "flush": {
+  "url": "https://flush.com/vip/",
+  "ranks": [
+   {
+    "rank": "Tier 1 Iron",
+    "wager": null,
+    "rewards": "Cash level-up reward on reaching the tier and a permanently higher rakeback rate"
+   },
+   {
+    "rank": "Tier 2 Bronze",
+    "wager": null,
+    "rewards": "Cash level-up reward on reaching the tier and a permanently higher rakeback rate"
+   },
+   {
+    "rank": "Tier 3 Silver",
+    "wager": null,
+    "rewards": "Cash level-up reward on reaching the tier and a permanently higher rakeback rate"
+   },
+   {
+    "rank": "Tier 4 Gold",
+    "wager": null,
+    "rewards": "Cash level-up reward on reaching the tier and a permanently higher rakeback rate"
+   },
+   {
+    "rank": "Tier 5 Platinum",
+    "wager": null,
+    "rewards": "Cash level-up reward on reaching the tier and a permanently higher rakeback rate"
+   },
+   {
+    "rank": "Tier 6 Diamond",
+    "wager": null,
+    "rewards": "Cash level-up reward on reaching the tier and a permanently higher rakeback rate; largest level-up payouts (Diamond to VIP)"
+   },
+   {
+    "rank": "Tier 7 Titanium",
+    "wager": null,
+    "rewards": "Cash level-up reward on reaching the tier and a permanently higher rakeback rate; largest level-up payouts (Diamond to VIP)"
+   },
+   {
+    "rank": "Tier 8 Obsidian",
+    "wager": null,
+    "rewards": "Cash level-up reward on reaching the tier and a permanently higher rakeback rate; largest level-up payouts (Diamond to VIP)"
+   },
+   {
+    "rank": "Tier 9 Emerald",
+    "wager": null,
+    "rewards": "Cash level-up reward on reaching the tier and a permanently higher rakeback rate; largest level-up payouts (Diamond to VIP)"
+   },
+   {
+    "rank": "Tier 10 Vibranium",
+    "wager": null,
+    "rewards": "Cash level-up reward on reaching the tier and a permanently higher rakeback rate; largest level-up payouts (Diamond to VIP)"
+   },
+   {
+    "rank": "Tier 11 VIP",
+    "wager": null,
+    "rewards": "Cash level-up reward on reaching the tier and a permanently higher rakeback rate; largest level-up payouts (Diamond to VIP); top tier for the highest-volume players"
+   }
+  ]
+ },
+ "degencity": {
+  "url": "https://help.degencity.com/en/articles/13885358-how-do-i-become-a-vip",
+  "ranks": [
+   {
+    "rank": "Chiplet",
+    "wager": null,
+    "xp": null,
+    "rewards": "Entry to rewards: instant rakeback, weekly and monthly rewards, coupons and other perks"
+   },
+   {
+    "rank": "Hustler",
+    "wager": null,
+    "xp": 250000,
+    "rewards": "VIP status begins (250,000-700,000 XP): instant rakeback, weekly bonus, monthly bonus, rank-up bonus, tier bonuses, exclusive VIP promotions"
+   },
+   {
+    "rank": "Card Shark",
+    "wager": null,
+    "xp": 1000000,
+    "rewards": "(1,000,000-3,000,000 XP) instant rakeback, weekly bonus, monthly bonus, rank-up bonus, tier bonuses, bonus increase, dedicated VIP host (weekly reloads, deposit bonuses, cashback offers)"
+   },
+   {
+    "rank": "Pitboss",
+    "wager": null,
+    "xp": 5000000,
+    "rewards": "(5,000,000-15,000,000 XP) adds bespoke rewards and exclusive access"
+   },
+   {
+    "rank": "Ace",
+    "wager": null,
+    "xp": 22000000,
+    "rewards": "(22,000,000-100,000,000 XP) adds event invitations"
+   }
+  ]
+ },
+ "dustbit": {
+  "url": "https://dustbit.com/vip-program",
+  "ranks": [
+   {
+    "rank": "NewComer",
+    "wager": 1000,
+    "rewards": "21% rakeback; rakeback rewards, exclusive promotions, VIP host"
+   },
+   {
+    "rank": "Climber I-IX",
+    "wager": 3000,
+    "rewards": "25% rakeback; rakeback rewards, exclusive promotions, VIP host"
+   },
+   {
+    "rank": "High Roller I-X",
+    "wager": 500000,
+    "rewards": "29% rakeback; rakeback rewards, exclusive promotions, VIP host"
+   },
+   {
+    "rank": "VIP Elite I-X",
+    "wager": 13000000,
+    "rewards": "32% rakeback; rakeback rewards, exclusive promotions, VIP host"
+   },
+   {
+    "rank": "Legend I-XIV",
+    "wager": 100000000,
+    "rewards": "35% rakeback; rakeback rewards, exclusive promotions, VIP host"
+   },
+   {
+    "rank": "Titan I-V",
+    "wager": 700000000,
+    "rewards": "40% rakeback; rakeback rewards, exclusive promotions, VIP host"
+   },
+   {
+    "rank": "Immortal Whale",
+    "wager": 1000000000,
+    "rewards": "50% rakeback; rakeback rewards, exclusive promotions, VIP host"
+   }
+  ]
+ },
+ "wager-com": {
+  "url": "https://wager.com/",
+  "ranks": [
+   {
+    "rank": "Rock",
+    "wager": null,
+    "xp": 1000,
+    "rewards": "Level-up bonus on reaching it; rakeback, weekly and monthly bonuses and boosts scale with level"
+   },
+   {
+    "rank": "Quartz",
+    "wager": null,
+    "xp": 5000,
+    "rewards": "Level-up bonus on reaching it; rakeback, weekly and monthly bonuses and boosts scale with level"
+   },
+   {
+    "rank": "Granite",
+    "wager": null,
+    "xp": 15000,
+    "rewards": "Level-up bonus on reaching it; rakeback, weekly and monthly bonuses and boosts scale with level"
+   },
+   {
+    "rank": "Iron",
+    "wager": null,
+    "xp": 40000,
+    "rewards": "Level-up bonus on reaching it; rakeback, weekly and monthly bonuses and boosts scale with level"
+   },
+   {
+    "rank": "Steel",
+    "wager": null,
+    "xp": 100000,
+    "rewards": "Level-up bonus on reaching it; rakeback, weekly and monthly bonuses and boosts scale with level"
+   },
+   {
+    "rank": "Damascus",
+    "wager": null,
+    "xp": 250000,
+    "rewards": "Level-up bonus on reaching it; rakeback, weekly and monthly bonuses and boosts scale with level"
+   },
+   {
+    "rank": "Gold",
+    "wager": null,
+    "xp": 600000,
+    "rewards": "Level-up bonus on reaching it; rakeback, weekly and monthly bonuses and boosts scale with level; premium perks and vip treatment"
+   },
+   {
+    "rank": "Diamond",
+    "wager": null,
+    "xp": 1500000,
+    "rewards": "Level-up bonus on reaching it; rakeback, weekly and monthly bonuses and boosts scale with level"
+   },
+   {
+    "rank": "Adamantium",
+    "wager": null,
+    "xp": 10000000,
+    "rewards": "Level-up bonus on reaching it; rakeback, weekly and monthly bonuses and boosts scale with level"
+   },
+   {
+    "rank": "Void Stone",
+    "wager": null,
+    "xp": null,
+    "rewards": "Invite-only tier; no further details published"
+   }
+  ]
+ },
+ "coincasino": {
+  "url": "https://www.coincasino.com/en/vip",
+  "ranks": [
+   {
+    "rank": "Bronze",
+    "wager": 10000,
+    "rewards": "Weekly cashback (rises each tier) and level-up bonus"
+   },
+   {
+    "rank": "Silver",
+    "wager": 50000,
+    "rewards": "Weekly cashback (rises each tier) and level-up bonus"
+   },
+   {
+    "rank": "Gold",
+    "wager": 100000,
+    "rewards": "Weekly cashback (rises each tier) and level-up bonus"
+   },
+   {
+    "rank": "Platinum I",
+    "wager": 250000,
+    "rewards": "Weekly cashback (rises each tier) and level-up bonus; personal 24/7 VIP host and host-set personalised bonuses"
+   },
+   {
+    "rank": "Platinum II",
+    "wager": null,
+    "rewards": "Weekly cashback (rises each tier) and level-up bonus; personal 24/7 VIP host and host-set personalised bonuses"
+   },
+   {
+    "rank": "Platinum III",
+    "wager": null,
+    "rewards": "Weekly cashback (rises each tier) and level-up bonus; personal 24/7 VIP host and host-set personalised bonuses"
+   },
+   {
+    "rank": "Sapphire I",
+    "wager": null,
+    "rewards": "Weekly cashback (rises each tier) and level-up bonus; personal 24/7 VIP host and host-set personalised bonuses"
+   },
+   {
+    "rank": "Sapphire II",
+    "wager": null,
+    "rewards": "Weekly cashback (rises each tier) and level-up bonus; personal 24/7 VIP host and host-set personalised bonuses"
+   },
+   {
+    "rank": "Sapphire III",
+    "wager": null,
+    "rewards": "Weekly cashback (rises each tier) and level-up bonus; personal 24/7 VIP host and host-set personalised bonuses"
+   },
+   {
+    "rank": "Diamond I",
+    "wager": null,
+    "rewards": "Weekly cashback (rises each tier) and level-up bonus; personal 24/7 VIP host and host-set personalised bonuses; exclusive events and gifts at the top tiers"
+   },
+   {
+    "rank": "Diamond II",
+    "wager": null,
+    "rewards": "Weekly cashback (rises each tier) and level-up bonus; personal 24/7 VIP host and host-set personalised bonuses; exclusive events and gifts at the top tiers"
+   },
+   {
+    "rank": "Diamond III",
+    "wager": null,
+    "rewards": "Weekly cashback (rises each tier) and level-up bonus; personal 24/7 VIP host and host-set personalised bonuses; exclusive events and gifts at the top tiers"
+   },
+   {
+    "rank": "Diamond IV",
+    "wager": null,
+    "rewards": "Weekly cashback (rises each tier) and level-up bonus; personal 24/7 VIP host and host-set personalised bonuses; exclusive events and gifts at the top tiers"
+   },
+   {
+    "rank": "Diamond V",
+    "wager": null,
+    "rewards": "Weekly cashback (rises each tier) and level-up bonus; personal 24/7 VIP host and host-set personalised bonuses; exclusive events and gifts at the top tiers"
+   }
+  ]
+ },
+ "bluff": {
+  "url": "https://bluff.com/vip",
+  "ranks": [
+   {
+    "rank": "Bronze (Level 1)",
+    "wager": 10000,
+    "rewards": "Weekly and monthly bonuses, rakeback, level-up bonus"
+   },
+   {
+    "rank": "Silver (Level 2)",
+    "wager": 50000,
+    "rewards": "Weekly and monthly bonuses, rakeback, level-up bonus"
+   },
+   {
+    "rank": "Gold (Level 3)",
+    "wager": 100000,
+    "rewards": "Weekly and monthly bonuses, rakeback, level-up bonus"
+   },
+   {
+    "rank": "Platinum (Level 4)",
+    "wager": 250000,
+    "rewards": "Weekly and monthly bonuses, rakeback, level-up bonus; instant lossback unlocks"
+   },
+   {
+    "rank": "Sapphire (Levels 5-7)",
+    "wager": 2500000,
+    "rewards": "Weekly and monthly bonuses, rakeback, level-up bonus; boosted lossback, reloads and a dedicated VIP host"
+   },
+   {
+    "rank": "Diamond (Levels 8-10)",
+    "wager": 25000000,
+    "rewards": "Weekly and monthly bonuses, rakeback, level-up bonus; mega-boosted lossback, boosted reloads, VIP host"
+   },
+   {
+    "rank": "Top tier, Obsidian (Levels 11-15)",
+    "wager": 1000000000,
+    "rewards": "Weekly and monthly bonuses, rakeback, level-up bonus; ultra-boosted lossback, boosted reloads, VIP host"
+   }
+  ]
+ },
+ "1win": {
+  "url": "https://1win.com/loyalty-program",
+  "ranks": [
+   {
+    "rank": "Bronze 1",
+    "wager": 0,
+    "rewards": "Cashback"
+   },
+   {
+    "rank": "Bronze 2",
+    "wager": 5000,
+    "rewards": "Higher cashback, Rakeback"
+   },
+   {
+    "rank": "Bronze 3",
+    "wager": 10000,
+    "rewards": "Higher cashback, Rakeback"
+   },
+   {
+    "rank": "Silver 1",
+    "wager": 25000,
+    "rewards": "Higher cashback, Rakeback"
+   },
+   {
+    "rank": "Silver 2",
+    "wager": 50000,
+    "rewards": "Higher cashback, Rakeback"
+   },
+   {
+    "rank": "Silver 3",
+    "wager": 100000,
+    "rewards": "Higher cashback, Rakeback"
+   },
+   {
+    "rank": "Gold 1",
+    "wager": 250000,
+    "rewards": "Higher cashback, Rakeback"
+   },
+   {
+    "rank": "Gold 2",
+    "wager": 500000,
+    "rewards": "Higher cashback, Rakeback"
+   },
+   {
+    "rank": "Gold 3",
+    "wager": 1000000,
+    "rewards": "Higher cashback, Rakeback, Access to VIP Club, Private tournaments"
+   },
+   {
+    "rank": "Platinum 1",
+    "wager": 2500000,
+    "rewards": "Higher cashback, Rakeback, Access to VIP Club, Private tournaments, VIP manager, Concierge service, Bonuses from VIP manager, Gifts and exclusive merch"
+   },
+   {
+    "rank": "Platinum 2",
+    "wager": 5000000,
+    "rewards": "Higher cashback, Rakeback, Access to VIP Club, Private tournaments, VIP manager, Concierge service, Bonuses from VIP manager, Gifts and exclusive merch"
+   },
+   {
+    "rank": "Platinum 3",
+    "wager": 10000000,
+    "rewards": "Higher cashback, Rakeback, Access to VIP Club, Private tournaments, VIP manager, Concierge service, Bonuses from VIP manager, Gifts and exclusive merch, Trips to VIP events"
+   },
+   {
+    "rank": "Diamond 1",
+    "wager": 25000000,
+    "rewards": "Higher cashback, rakeback, VIP Club, private tournaments, VIP manager, concierge, manager bonuses, gifts and merch, trips to VIP events"
+   },
+   {
+    "rank": "Diamond 2",
+    "wager": 50000000,
+    "rewards": "Higher cashback, rakeback, VIP Club, private tournaments, VIP manager, concierge, manager bonuses, gifts and merch, trips to VIP events"
+   },
+   {
+    "rank": "Diamond 3",
+    "wager": 100000000,
+    "rewards": "Higher cashback, rakeback, VIP Club, private tournaments, VIP manager, concierge, manager bonuses, gifts and merch, trips to VIP events"
+   },
+   {
+    "rank": "Black 1",
+    "wager": 250000000,
+    "rewards": "Higher cashback, rakeback, VIP Club, private tournaments, VIP manager, concierge, manager bonuses, gifts and merch, trips to VIP events"
+   },
+   {
+    "rank": "Black 2",
+    "wager": 500000000,
+    "rewards": "Higher cashback, rakeback, VIP Club, private tournaments, VIP manager, concierge, manager bonuses, gifts and merch, trips to VIP events"
+   },
+   {
+    "rank": "Black 3",
+    "wager": 1000000000,
+    "rewards": "Higher cashback, rakeback, VIP Club, private tournaments, VIP manager, concierge, manager bonuses, gifts and merch, trips to VIP events"
+   },
+   {
+    "rank": "Black 4",
+    "wager": 2500000000,
+    "rewards": "Higher cashback, rakeback, VIP Club, private tournaments, VIP manager, concierge, manager bonuses, gifts and merch, trips to VIP events"
+   },
+   {
+    "rank": "Black 5",
+    "wager": 5000000000,
+    "rewards": "Higher cashback, rakeback, VIP Club, private tournaments, VIP manager, concierge, manager bonuses, gifts and merch, trips to VIP events"
+   }
+  ]
  }
 }

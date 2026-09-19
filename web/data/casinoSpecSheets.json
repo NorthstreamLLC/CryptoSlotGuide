@@ -889,10 +889,10 @@
           },
           {
             "label": "Rakeback",
-            "value": "Rakeback returns a share of your wagers and the rate rises the more you play. The current rate and claim frequency are only shown on the signed-in Rewards tab, so no public figure is published. That tab also holds reload bonuses and challenges, and the site runs Chat Rain, which drops free balance to active verified players in chat",
+            "value": "Rakeback returns a share of the house edge on your wagers that rises with rank, from 5% at Bronze I to 25% at Apex (about 0.77 points per rank). It is paid across instant (claimable every 30 minutes), daily, weekly and monthly pots, and from Silver I ($85,000 wagered) a pre-monthly pot every 14 days is added: Bronze ranks get 10% instant, 25% daily, 40% weekly and 25% monthly; Silver I and above 10% instant, 25% daily, 25% weekly, 15% pre-monthly and 25% monthly. Claim windows are 24 hours for daily, 2 days for weekly, 3 days for pre-monthly and 7 days for monthly, and a claim streak multiplier adds up to 10%.",
             "sourcing": "editorial",
-            "sourceUrl": "https://acebet.co/",
-            "asOf": "2026-09-17"
+            "sourceUrl": "https://acebet.co/api/rewards/edge-rakeback/config",
+            "asOf": "2026-09-19"
           },
           {
             "label": "VIP ranks",
@@ -921,6 +921,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://acebet.co/race",
             "asOf": "2026-09-17"
+          },
+          {
+            "label": "Perks by level",
+            "value": "27 ranks by total wagered: Bronze I-V ($0 to $60,000), Silver I-V ($85,000 to $250,000), Gold I-V ($350,000 to $1.5 million), Ruby I-V ($2.25 million to $10 million), Emerald I-V ($15 million to $250 million), Sapphire ($500 million) and Apex ($1 billion). Each rank raises the share of house edge returned, from 5% to 25%, and Silver I unlocks the extra pre-monthly reward.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://acebet.co/api/rewards/edge-rakeback/config",
+            "asOf": "2026-09-19"
           }
         ]
       },
@@ -1484,6 +1491,20 @@
             "sourcing": "editorial",
             "sourceUrl": "https://docs.betfury.com/betfury/battles-and-tournaments/fight-and-share-up-to-usd100-000.md",
             "asOf": "2026-09-18"
+          },
+          {
+            "label": "Perks by level",
+            "value": "20 ranks by total wagered in USDT, with sports wagers counted at 3x: from Newcomer (5% cashback) through Gambler, Bet maker, Game master, High Roller, Betfurian Pro and BF Hero to BF Legend at 1 billion USDT (25% cashback). Each rank pays a one-off rank bonus, from 3 USDT at Gambler I ($3,000) to 30,000 USDT at BF Legend. Rank 10 (Game master III, $1 million) opens the VIP Club with a personal VIP manager, VIP bonuses and better payout terms on rakeback, weekly and monthly bonuses; Rank 15 (Betfurian Pro II, $50 million) opens the Super VIP Club with a daily x2 rakeback boost, VIP concierge and 20-25% cashback.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bf1.io/rank-system",
+            "asOf": "2026-09-19"
+          },
+          {
+            "label": "VIP transfer",
+            "value": "VIPs from other platforms apply via the Become VIP button on the VIP Club page with screenshots of their status, or a deposit proving a non-hot wallet holding at least $5,000. Approved players get a VIP manager, a raised rank and daily VIP Lounge bonuses for the first seven days, can request personal bonuses on day 7 and at $75,000 and $150,000 wagered, and must wager $200,000 within 30 days to keep VIP status for good. Failing that, the rank drops to match actual wager; level-up bonuses and the VIP Welcome bonus aren't available to transfer users.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://docs.betfury.com/betfury/betfury-vip-club/vip-transfer-program",
+            "asOf": "2026-09-19"
           }
         ]
       },
@@ -2422,6 +2443,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://intercom.help/playlink/en/articles/15450694-referral-program-benefits",
             "asOf": "2026-09-17"
+          },
+          {
+            "label": "Perks by level",
+            "value": "Every tier pays weekly and monthly bonuses, rakeback and a level-up bonus released within 24 hours of each new level, growing as you climb. Lossback starts at Platinum ($250,000 wagered); Sapphire ($2.5 million) adds boosted lossback, the Weekly Reload and a dedicated VIP host; Diamond ($25 million) brings mega-boosted lossback and boosted reloads; and the top tier ($1 billion) ultra-boosted lossback. XP is earned at 1 per $1 on casino and sports, and organically earned levels never drop.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bluff.com/vip",
+            "asOf": "2026-09-19"
           }
         ]
       },
@@ -3389,6 +3417,20 @@
             "sourcing": "editorial",
             "sourceUrl": "https://guidebook.cybet.com/vip/",
             "asOf": "2026-09-17"
+          },
+          {
+            "label": "VIP transfer",
+            "value": "VIPs from another licensed casino apply through the Telegram bot @cybet_vip_transfer_bot with proof of their level; reviews take 24 to 72 hours. Approved players get an instant status match up to Plat 43, dedicated VIP support, 25% Mission Lossback and 40% Mission Insurance Protection, then pick a 30-day VIP Mission: 100,000 XP pays $600, 300,000 XP $1,400, 500,000 XP $2,000 and 1,000,000 XP $3,000, up to $7,000 in total. Slots count 100% toward XP, Cybet Originals 25%, and live casino, game shows and sports 0%. Missing the mission forfeits the cash reward but keeps the matched status, and skipped levels' level-up bonuses aren't paid.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://cybet.com/promotions/details/VIP",
+            "asOf": "2026-09-19"
+          },
+          {
+            "label": "Referral program",
+            "value": "Players earn commission of up to 25% on the eligible wagers of friends who register through their referral link, win or lose, credited automatically under the platform's settlement rules with no deposit requirement and no cap on the number of referrals. Referred accounts must be new and unique; self-referrals are excluded.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://guidebook.cybet.com/referral-bonus/",
+            "asOf": "2026-09-19"
           }
         ]
       },
@@ -3698,6 +3740,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://api.degen.com/v1/bonus/vip-tiers",
             "asOf": "2026-09-17"
+          },
+          {
+            "label": "Perks by level",
+            "value": "Every level pays a level-up bonus, from $10 at Bronze I to $100,000 at Degen, and the first level of each new rank adds a rank-up bonus (Bronze I $10, Silver I $15, Gold I $50, Platinum I $100, Sapphire I $900, Ruby I $5,000, Diamond I $20,000, Degen $60,000). Rakeback rises from 3% at Bronze I to 8% at Degen, the monthly bonus from 5% to 12%, and the weekly bonus stays at 5%. VIP tiers start at Platinum I ($300,000 wagered), which adds daily reloads managed by a VIP host.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://api.degen.com/v1/bonus/vip-tiers",
+            "asOf": "2026-09-19"
           }
         ]
       },
@@ -3994,6 +4043,20 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.degencity.com/en/articles/13885419-what-is-a-vip-host",
             "asOf": "2026-09-17"
+          },
+          {
+            "label": "Cashback",
+            "value": "New players get 10% of net slot losses back over their first 7 days, credited automatically once they have made a deposit. From the Card Shark rank, the dedicated VIP host can also offer cashback deals.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://degencity.com/promotions",
+            "asOf": "2026-09-19"
+          },
+          {
+            "label": "Perks by level",
+            "value": "Instant rakeback, weekly and monthly rewards start at the Chiplet rank. VIP status begins automatically at Hustler (250,000 XP) with rank-up and tier bonuses and VIP promotions; Card Shark (1,000,000 XP) adds a bonus increase and a dedicated VIP host; Pitboss (5,000,000 XP) adds bespoke rewards and exclusive access; and Ace (22,000,000 XP) adds event invitations.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.degencity.com/en/articles/13885358-how-do-i-become-a-vip",
+            "asOf": "2026-09-19"
           }
         ]
       },
@@ -4171,6 +4234,20 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.dicey.com/en/articles/15630583-what-is-rain-and-how-does-it-work",
             "asOf": "2026-09-17"
+          },
+          {
+            "label": "VIP transfer",
+            "value": "Players with an active VIP level at another crypto casino (for example Stake) can request a VIP Transfer from the link at the bottom left of the homepage, uploading proof of their status and previous-site wager. Dicey matches them to the rank their previous wager qualifies for, with VIP perks, rewards and support; balances and wager history don't carry over. Requests are usually reviewed within 24 to 72 hours and answered on Telegram.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.dicey.com/en/articles/13740658-how-vip-transfer-works-and-what-it-means-for-you",
+            "asOf": "2026-09-19"
+          },
+          {
+            "label": "Perks by level",
+            "value": "Thirty levels in six tiers (Bronze, Silver, Gold, Sapphire, Emerald and Holo, each I to V), earned by XP from casino and sports wagering, with no decay. Instant rakeback runs from the start; the Daily Bonus unlocks at Bronze I (claiming it triggers a 60-minute Rakeboost of +15%), the Weekly Bonus at Silver I and the Monthly Bonus at Gold I. Every rank-up pays free spins, and from Gold I each rank-up also earns a Rank Up Bonus wheel spin paid as flat cash. Top-tier players get a VIP host and elite players a concierge service.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.dicey.com/en/articles/13729989-understanding-the-rewards-program",
+            "asOf": "2026-09-19"
           }
         ]
       },
@@ -4917,10 +4994,10 @@
           },
           {
             "label": "VIP transfer",
-            "value": "Request it through support with verification details; the team reviews it and lets you know when it's done",
+            "value": "Players with VIP status at another casino can ask support to transfer it. You provide a screenshot of your VIP level and account stats there, the wallet address you used for deposits and withdrawals, and the betslip link for a $0.01 bet on any Originals game at that casino to prove ownership. Once verified, Dustbit grants an equivalent or adjusted VIP status.",
             "sourcing": "editorial",
-            "sourceUrl": "https://help.dustbit.com/en/",
-            "asOf": "2026-09-16"
+            "sourceUrl": "https://help.dustbit.com/en/articles/14668073-what-is-vip-transfer",
+            "asOf": "2026-09-19"
           },
           {
             "label": "Predict & Win",
@@ -4963,6 +5040,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://dustbit.com/promotions/community-share",
             "asOf": "2026-09-17"
+          },
+          {
+            "label": "Perks by level",
+            "value": "Seven VIP tiers with a fixed rakeback rate each: NewComer 21% ($1,000 wagered), Climber 25% ($3,000), High Roller 29% ($500,000), VIP Elite 32% ($13 million), Legend 35% ($100 million), Titan 40% ($700 million) and Immortal Whale 50% ($1 billion). Every tier lists rakeback rewards, exclusive promotions and a VIP host, and weekly and monthly bonuses grow with recent play. XP is earned at 100 per $1 on casino and 50 per $1 on sports.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://dustbit.com/vip-program",
+            "asOf": "2026-09-19"
           }
         ]
       },
@@ -5196,6 +5280,20 @@
             "sourcing": "editorial",
             "sourceUrl": "https://flush.com/faq/bonuses/",
             "asOf": "2026-09-17"
+          },
+          {
+            "label": "Referral program",
+            "value": "A 3-tier referral programme paid in crypto on the 1st to 5th of each month: 20% commission on your top 5 direct referrals (Tier 1), 10% from the top 5 referrals of each Tier 1 player (Tier 2, up to 25 players) and 5% from Tier 3 (up to 125 players). Commission is a share of the house edge on referred players' real-money wagers across every game and sports market, win or lose; the referral link is permanent and referred players keep all their own rewards. Bonus bets and self-referrals don't count.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://flush.com/faq/bonuses/",
+            "asOf": "2026-09-19"
+          },
+          {
+            "label": "Perks by level",
+            "value": "Eleven tiers, Iron, Bronze, Silver, Gold, Platinum, Diamond, Titanium, Obsidian, Emerald, Vibranium and VIP, reached automatically at 1 VIP point per $1 wagered on any product. Crossing each tier pays a cash level-up reward and permanently raises the rakeback rate, with the largest payouts from Diamond up. Higher tiers add daily, weekly and monthly cashback, rakeboost, calendar and anniversary rewards, dedicated VIP managers and personalised reload offers.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://flush.com/faq/bonuses/",
+            "asOf": "2026-09-19"
           }
         ]
       },
@@ -5705,6 +5803,27 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.gamba.com/en/articles/8271549-rejuice-bonus-explained",
             "asOf": "2026-09-17"
+          },
+          {
+            "label": "Perks by level",
+            "value": "Each rank pays a fixed rank-up bonus in USDT, from $7.50 at Bronze 1 to $220,000 at Immortal 3, credited on rank-up or split into four claims at 25% progress steps if you choose Incremental Mode. Rakeback rises with rank to 10% at the top levels, the Weekly and Monthly Bonus percentages grow with each rank, and at Silver 2 the Daily Bonus is replaced by the 7-day ReJuice Bonus. XP is earned at 1 per $1 on casino and 3 per $1 on sports bets above 1.10 odds.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.gamba.com/en/articles/8271546-rank-up-bonus-system-explained",
+            "asOf": "2026-09-19"
+          },
+          {
+            "label": "Cashback",
+            "value": "Custom VIP lossback of 10-20% of losses, arranged through a VIP host. Players with $1,000+ in losses can ask live support for it; hosts are hand-picked on wager volume, profit and loss, deposits and activity rather than assigned automatically.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.gamba.com/en/articles/8271552-unlocking-a-vip-host",
+            "asOf": "2026-09-19"
+          },
+          {
+            "label": "Referral program",
+            "value": "Referrers earn a share of the house edge on their referred players bets, win or lose (sports counted at a 3% edge). The rate rises with the 30-day wager of all referrals: 10% up to $25,000, 12%, 14%, 16%, 18%, 20% from $500,001, and 25% above $2,000,000. Influencers and top affiliates can ask for up to 40%. Commission is claimable any time with no cooldown, in the currency referrals wagered.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.gamba.com/en/articles/8271581-how-is-commission-earned",
+            "asOf": "2026-09-19"
           }
         ]
       },
@@ -6384,6 +6503,27 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.housebets.com/en/articles/819736-can-housebets-match-my-vip-status-from-another-casino",
             "asOf": "2026-09-17"
+          },
+          {
+            "label": "Perks by level",
+            "value": "43 levels in nine families from Bronze (200 XP) to Castle 3 (500 million XP), where $1 wagered at a 1% house edge earns 1 XP. Instant and daily rakeback and level-up cash start at Bronze 1, the configurable weekly bonus at Silver 1 (10,000 XP) and the monthly bonus at Gold 1 (100,000 XP). A dedicated VIP host is available from Platinum 3 (1 million XP) and standard from Pearl. Level-up bonuses add up to $8.80 across Bronze, $49 across Silver, $250 across Gold, $1,200 across Platinum, $3,500 across Pearl, $15,000 across Onyx, $35,000 across Diamond and $60,000 each across Palladium and Castle.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.housebets.com/rewards",
+            "asOf": "2026-09-19"
+          },
+          {
+            "label": "Cashback",
+            "value": "The Rewards Slider lets you split your weekly and monthly rewards between rakeback (a share of every wager, win or lose) and lossback (a share of net losses, paid only if you finish the period down), set separately for each and applied from the next cycle. The default split is 50% rakeback and 50% lossback.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.housebets.com/rewards",
+            "asOf": "2026-09-19"
+          },
+          {
+            "label": "Referral program",
+            "value": "Every player can create referral codes in the Affiliate Program dashboard and earns a base 10% commission on the house edge of referred players' play, not on their wagers. Commission is claimed from the dashboard, subject to a monthly claim limit set in the affiliate terms. Self-referral is prohibited, and creators can apply separately to the Ambassador Program.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.housebets.com/en/articles/822198-how-does-the-housebets-affiliate-program-work",
+            "asOf": "2026-09-19"
           }
         ]
       },
@@ -6576,10 +6716,10 @@
           },
           {
             "label": "VIP transfer",
-            "value": "Matches a VIP rank held at another casino, with instant access to its Gold loyalty rank in that offer",
+            "value": "VIPs from other casinos get 30 days to hit a wager target set at 10% of their wager elsewhere; hitting it matches their rank and pays a cash bonus as a reload: $100,000 elsewhere needs $10,000 for Gold and $105, $250,000 needs $25,000 for Platinum and $262, $500,000 needs $50,000 for Diamond and $525, $1 million needs $100,000 for Elite and $1,050, up to $25 million needing $2.5 million for Apex and $26,250. A VIP host comes with Elite and above. Players who have already wagered $2,500 or taken another welcome offer aren't eligible, deposit-bonus wagering doesn't count, and matched ranks aren't downgraded.",
             "sourcing": "editorial",
-            "sourceUrl": "https://jackpot.bet/",
-            "asOf": "2026-09-15"
+            "sourceUrl": "https://help.jackpot.bet/en/articles/8487624-vip-transfer-program-up-to-25-000-bonus",
+            "asOf": "2026-09-19"
           },
           {
             "label": "Wagering rules",
@@ -6629,6 +6769,20 @@
             "sourcing": "editorial",
             "sourceUrl": "https://jackpot.bet/blog/jackpot-weekly-competitions-52",
             "asOf": "2026-09-17"
+          },
+          {
+            "label": "Referral program",
+            "value": "Every player gets a referral link in the Affiliate tab and earns about 10% commission on referred players' bets, calculated as raked amount x 40% x 10%. Commission can be claimed any time, straight to your account, in the currencies your referrals played with.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.jackpot.bet/en/articles/9039026-jackpot-affiliate-program",
+            "asOf": "2026-09-19"
+          },
+          {
+            "label": "Perks by level",
+            "value": "Ten ranks by total wagered, from Bronze ($10,000) to Apex ($25 million). Each new rank pays a one-time rank-up bonus claimed on the Loyalty tab. Bronze unlocks claimable 6% rakeback and the weekly and monthly bonuses, which grow with every rank, and Elite ($1 million) adds a dedicated VIP manager who can tailor bonuses.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.jackpot.bet/en/articles/8439891-jackpot-loyalty-program-overview",
+            "asOf": "2026-09-19"
           }
         ]
       },
@@ -7388,6 +7542,27 @@
             "sourcing": "editorial",
             "sourceUrl": "https://metawin.com/promotions/monthly-competition/",
             "asOf": "2026-09-18"
+          },
+          {
+            "label": "Referral program",
+            "value": "EARN, MetaWin's referral programme, pays 0.5% of referred players' qualifying wagering volume, win or lose, credited to your MetaWin account monthly. Qualifying wagering is all play on MetaWin Originals and slots with an RTP of 98% or lower. Self-referrals and abusive patterns are excluded.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://metawin.com/faq/",
+            "asOf": "2026-09-19"
+          },
+          {
+            "label": "VIP transfer",
+            "value": "MetaWin runs a VIP Transfer programme for players with VIP status elsewhere, announced on its X account (@MetaWin) when a transfer offer is live, with a joining incentive. VIP players get dedicated VIP hosts, exclusive VIP promotions and higher deposit, withdrawal and wagering limits.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.metawin.com/en/articles/9455035-vip-transfer",
+            "asOf": "2026-09-19"
+          },
+          {
+            "label": "Perks by level",
+            "value": "MetaMax ranks never decay. Each new tier pays a fixed Rank Up Reward (up to $1,000,000 for reaching Elite) that replaces the previous one rather than stacking, and the Instant, Daily and Weekly Bonuses all scale with a tier multiplier. The Weekly Bonus and Free Spins Friday need Bronze or above, Royal Reloads paid over seven days start at Platinum, and the top Red Room tier is invitation-only. Rank Up Points are earned 1 per $1 on standard games, 25% on games above 98% RTP and nothing on zero-edge games.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.metawin.com/en/articles/9455021-metamax-rewards",
+            "asOf": "2026-09-19"
           }
         ]
       },
@@ -7724,6 +7899,27 @@
             "sourcing": "editorial",
             "sourceUrl": "https://qzino.ai/bonuses",
             "asOf": "2026-09-17"
+          },
+          {
+            "label": "Perks by level",
+            "value": "77 levels grouped into ranks by total wagered, from Level 1 at $250 to Level 77 (Blue Diamond) at $2,777,777,777; ranks never go down. Casino cashback climbs from 3% at Newcomer to 8% at Gold (Level 30, $1 million), 17% at Emerald (Level 57, $500 million) and 40% at Blue Diamond, while rakeback holds at 10% up to Super Gold and rises to 15% from Pink Diamond. Every level pays a level-up bonus and Wheel of Luck spins, with weekly and monthly bonuses throughout. VIP perks (welcome, personal, birthday and weekly Royalty bonuses) start at Level 30, and Super VIP perks (SVIP bonuses, rising rakeback and SVIP concierge) at Level 57.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://qzino.ai/rank-system",
+            "asOf": "2026-09-19"
+          },
+          {
+            "label": "Referral program",
+            "value": "Referrers get a $2,000 referral reward and the invited friend $500, both locked until the friend meets the wagering requirements, plus a lifetime commission of up to 30% on the friend's wagering that varies by game category. During token drops referrers also earn 5% of the minting points their referrals generate. High-traffic partners can ask for a custom affiliate deal.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://qzino.ai/referral-and-earn",
+            "asOf": "2026-09-19"
+          },
+          {
+            "label": "VIP transfer",
+            "value": "VIP players from other platforms can verify their status there and start at an equivalent, higher Qzino rank for a limited trial period. Meeting the trial conditions confirms the VIP status; missing them returns you to the rank your Qzino activity earned. Transfer participants are excluded from the standard VIP conditions.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://qzino.ai/vip-club",
+            "asOf": "2026-09-19"
           }
         ]
       },
@@ -9182,6 +9378,20 @@
             "sourcing": "editorial",
             "sourceUrl": "https://www.shock.com/blog/rewards-3-0",
             "asOf": "2026-09-17"
+          },
+          {
+            "label": "Referral program",
+            "value": "Refer-a-friend pays 10% of half the house edge on referred friends' bets, win or lose. The referral dashboard shows friends referred, earnings, unclaimed commission, your code and link, and downloadable banners.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.shock.com/en/articles/10070304-how-to-refer-friends-and-earn-rewards",
+            "asOf": "2026-09-19"
+          },
+          {
+            "label": "Perks by level",
+            "value": "Ranks are wager-based and never reset, from Bronze at $10,000 to Elite at $500 million. Every rank-up pays a level-up reward that doesn't expire, and each rank raises the reward rate on every wager. Bronze unlocks the Daily Bonus, Gold the Pre-Monthly Bonus, Platinum 4 ($2.5 million) VIP support and tailored bonuses, and Elite dedicated support and personalised rewards.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.shock.com/blog/rewards-3-0",
+            "asOf": "2026-09-19"
           }
         ]
       },
@@ -9752,6 +9962,20 @@
             "sourcing": "editorial",
             "sourceUrl": "https://docs.solcasino.io/calendar-bonuses-and-rewards/levels.md",
             "asOf": "2026-09-17"
+          },
+          {
+            "label": "Referral program",
+            "value": "Referrers earn commission on every bet their invited players make, win or lose, calculated as effective house edge x wager x commission rate, paid in the currency the referral bet in; the commission rate rises with the referrer's VIP level. On top of that, referral rewards of up to $1,000 per invited player unlock as that player levels up, paid 50% instantly and 50% over 7 days on the Rewards Calendar.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://docs.solcasino.io/referral-and-partnerships/referral-commission",
+            "asOf": "2026-09-19"
+          },
+          {
+            "label": "Perks by level",
+            "value": "80 levels earned at 1 EXP per $1 wagered (PvP Poker excluded), from 80 EXP at Level 2 to 132,032,050 EXP at Level 80. Every level-up pays a Level-Up Bonus based on profit and loss and wager since the previous level (20% instantly, 80% over 21 days on the Rewards Calendar), and the Weekly and Monthly Bonuses unlock at Level 15 (72,310 EXP).",
+            "sourcing": "editorial",
+            "sourceUrl": "https://docs.solcasino.io/calendar-bonuses-and-rewards/level-up-bonuses",
+            "asOf": "2026-09-19"
           }
         ]
       },
@@ -9981,6 +10205,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://spartans.com/leaderboard",
             "asOf": "2026-09-17"
+          },
+          {
+            "label": "Perks by level",
+            "value": "Eighteen levels in six tiers, unlocked by lifetime wager and never reset. Every tier earns CashRake across five claim windows (instant, hourly, daily, weekly and monthly), with the rate rising each level and higher levels shifting more of the value into the instant share. Silver ($250K) adds monthly lossback, Gold ($1.5M) a personal VIP host, Platinum ($10M) weekly lossback, and Elite ($50M) the highest rates. The first level of Bronze, Silver, Gold and Platinum can be bought with a single deposit at up to $5K, $25K, $150K and $1M, with the price falling as you wager; Elite is earned only.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://spartans.com/vip-program",
+            "asOf": "2026-09-19"
           }
         ]
       },
@@ -11839,18 +12070,25 @@
             "asOf": "2026-09-17"
           },
           {
-            "label": "Rakeback",
-            "value": "Wager.com's Refer a Friend promotion is run as a continuous \"Rakeback Referral Program\" - rakeback earned on the house edge from the wagers of referred players, not on the referrer's own play. Ten progressive tiers run from 5% (Tier 1, 1 required) through 10% (Tier 5, 20 active players) to 45% (Tier 10, 150 active players). An active referral requires a minimum EUR 20 first deposit; minimum withdrawal EUR 10; payment speed instant; tiers reviewed monthly on the 1st; commission resets monthly with no negative carryover; a tier is lost if requirements are missed for two consecutive months; attribution window 24 hours after signup. This promotion is live on the /promotions/ panel and carries no start or end date in the page's own data.",
-            "sourcing": "editorial",
-            "sourceUrl": "https://wager.com/promotions/refer-a-friend/",
-            "asOf": "2026-09-17"
-          },
-          {
             "label": "Leaderboards",
             "value": "Wager.com runs a continuous Challenges board at /challenges/ with Active and Finished tabs, promoted by a permanent homepage banner. The active board carries multiplier targets from 500x up to 3000x (500x, 888x, 1000x, 1500x, 2000x, 2500x, 3000x). Min bet and Prize columns display \"--\" to a logged-out visitor, so stakes and prize pools are not published publicly. There is also a homepage banner keyed \"leaderboards\" that links to the slots lobby and carries no title, subtitle or description text in the page data, so no leaderboard rules or prize pools are stated anywhere on the site; the separate /tournaments/ page renders empty.",
             "sourcing": "editorial",
             "sourceUrl": "https://wager.com/challenges/",
             "asOf": "2026-09-17"
+          },
+          {
+            "label": "Referral program",
+            "value": "Refer a Friend runs as a rakeback referral programme: you earn a share of the house edge on referred players' wagers, rising through ten tiers from 5% (1 active referral) through 10% (20 active players) to 45% (150 active players). An active referral needs a first deposit of at least EUR 20; commission pays instantly with a EUR 10 minimum withdrawal, tiers are reviewed on the 1st of each month, and a tier is lost after two consecutive months below its requirement.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://wager.com/promotions/refer-a-friend/",
+            "asOf": "2026-09-19"
+          },
+          {
+            "label": "Perks by level",
+            "value": "Ten levels by XP (1 XP per $1 on casino and live casino, 3 XP per $1 on sports): Rock 1,000, Quartz 5,000, Granite 15,000, Iron 40,000, Steel 100,000, Damascus 250,000, Gold 600,000, Diamond 1,500,000, Adamantium 10,000,000 and invite-only Void Stone. Every new level pays a level-up bonus, along with rakeback, weekly and monthly bonuses, weekly and monthly boosts and bonuses on losses when you level up; VIPs get a dedicated host and bespoke benefits such as tailored bonuses and special withdrawal terms.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://wager.com/",
+            "asOf": "2026-09-19"
           }
         ]
       },
@@ -12101,6 +12339,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://whale.io/lootboxes",
             "asOf": "2026-09-18"
+          },
+          {
+            "label": "Perks by level",
+            "value": "25 levels across seven ranks (Bronze, Silver, Gold, Platinum, Diamond and Emerald with four levels each, then Whale). Daily cashback on the previous day's net losses rises by one point per level, from 1% at Bronze 1 to 24% at Emerald 4 and 25% at Whale, calculated as deposits minus withdrawals, current balance and unsettled bets. Levels are permanent and earned only by playing.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://whale.io/rewards",
+            "asOf": "2026-09-19"
           }
         ]
       },
