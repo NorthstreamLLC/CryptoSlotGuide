@@ -492,6 +492,20 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.500.casino/en/articles/5925550-what-kind-of-rewards-does-500-casino-offer",
             "asOf": "2026-09-17"
+          },
+          {
+            "label": "Perks by level",
+            "value": "VIP starts at Level 500 and runs through 12 tiers of 100 levels each: Silver (500), Gold (600), Sapphire (700), Emerald (800), Ruby (900), Diamond (1000), Pearl (1100), Obsidian (1200), Opal (1300), Stardust (1400), Nebula (1500) and Supernova (1600+). Every tier pays a one-time promotional bonus claimed by replying to the welcome message, and raises rakeback, weekly reloads (Fridays), lossback and the monthly bonus. Direct VIP host contact starts at Sapphire; preferential limits and the birthday bonus at Emerald. From Ruby the next level-up bonus is split into milestones every 20 levels, and reaching level 1200 (Obsidian) pays a Rolex watch.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://500.casino/vip",
+            "asOf": "2026-09-19"
+          },
+          {
+            "label": "Referral program",
+            "value": "Code owners earn 10% to 30% of the house edge on their referrals' bets, tiered by how many users are on the code: 10% from 0 users, 12% at 10+, 14% at 25+, 16% at 50+, 18% at 100+, 20% at 250+, 22% at 500+, 24% at 1,000+, 26% at 2,500+ and 30% at 5,000+. Moving up a tier re-rates all existing referrals, only referred users with a completed deposit count, and the minimum claim is $0.06.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.500.casino/en/articles/5925173-how-does-the-affiliate-referrals-system-work",
+            "asOf": "2026-09-19"
           }
         ]
       },
@@ -754,6 +768,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://7bitcasino.com/tournaments",
             "asOf": "2026-09-18"
+          },
+          {
+            "label": "Perks by level",
+            "value": "Twelve levels by Status Comp Points, earned at 1 point per 1 EUR, 1.10 USD or 1 USDT played on slots, and never lost once reached. Thresholds run from 350 points at Level 2 to 3,000,000 at Level 12. Weekly cashback is 5% at Levels 1-5, 10% at Levels 6-9, 15% at Levels 10-11 and 20% at Level 12. Level-up bonuses start at 30 free spins at Level 2 and reach 2,000 in the account currency at Level 12, with wagering falling from x50 to x5, and the Comp Point exchange rate improves from 100 CP = 1 to 100 CP = 1.50.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://7bitcasino.com/vip",
+            "asOf": "2026-09-19"
           }
         ]
       },
@@ -1186,6 +1207,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.bc.support/en/articles/7831323-referral-system-my-casino",
             "asOf": "2026-09-18"
+          },
+          {
+            "label": "Perks by level",
+            "value": "Every level from Beginner I to Eternal X pays a level-up bonus that never expires, and XP comes only from settled bets on non-PvP games. From Diamond I, a player at 50% XP toward the next level can ask support to release half of that level's bonus early. Daily, weekly and monthly bonuses are open to every player regardless of level. Lifetime VIP status is separate and invitation-based: a dedicated host, birthday bonus, instant lossback, periodic reloads, invitation-only events and merchandise gifts, plus a personal concierge, a Lossback Anytime claim and Weekly Free Spins requested every Monday for high-tier VIPs.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.bc.support/en/articles/14468629-new-bonus-system-faq",
+            "asOf": "2026-09-19"
           }
         ]
       },
@@ -2020,6 +2048,20 @@
             "sourcing": "editorial",
             "sourceUrl": "https://bitcasino.io/help-center/help-loyalty/what-are-the-loyalty-levels",
             "asOf": "2026-09-17"
+          },
+          {
+            "label": "Perks by level",
+            "value": "Seven Loyalty Club levels by loyalty points (5 LP per 1 USDT bet with real money). Higher levels raise the points multiplier (1x up to Expert, 1.25x Master, 1.5x Guru, 2x Legend, 3x Hero) and the value of milestone rewards: Fan has 1 milestone reward, Expert 6, Master 12, Guru 11, Legend 12 and Hero unlimited. Milestone rewards are free spins, free chips or cashback tailored to your play, paid as real money with no wagering.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bitcasino.io/loyalty",
+            "asOf": "2026-09-19"
+          },
+          {
+            "label": "Cashback",
+            "value": "Loyalty Club cashback is available at every level and can be claimed at each milestone, paid as real money with no wagering requirement.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://bitcasino.io/loyalty",
+            "asOf": "2026-09-19"
           }
         ]
       },
@@ -2201,6 +2243,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://www.bitstarz.com/promotions",
             "asOf": "2026-09-17"
+          },
+          {
+            "label": "Cashback",
+            "value": "Cashback prizes of 5% to 50% can be won on the Bonuz Mania game, which gives three spins for every deposit of $50 or more. A Cashback prize is activated within 7 days, then covers real-money net losses over the next 24 hours, capped at 2x the deposit that won it, and is credited within 6 hours as a cash prize with a 1x wagering requirement.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.bitstarz.com/promotions/bonuz-mania",
+            "asOf": "2026-09-19"
           }
         ]
       },
@@ -2692,11 +2741,25 @@
             "asOf": "2026-09-17"
           },
           {
-            "label": "Cashback",
-            "value": "The Rewards Calendar delivers cash drops daily, weekly and monthly, paid in the active currency with no wagering requirements, and a real-cash level-up bonus lands every time a tier threshold is crossed, reaching up to $1M per level at the highest tiers. The referral programme pays 2.5% lifetime rakeback on referred players' bets plus up to $2M in level-up bonuses.",
+            "label": "Referral program",
+            "value": "Referrers earn 2.5% rakeback on every eligible bet their referrals place, for life, plus cash rewards each time a referral levels up. Referrals must be brand-new Cloudbet accounts, there is no minimum bet, and earnings are based on settled bets and tracked per referral in the Referrals dashboard.",
             "sourcing": "editorial",
-            "sourceUrl": "https://www.cloudbet.com/en/lp/vip-club",
-            "asOf": "2026-09-17"
+            "sourceUrl": "https://www.cloudbet.com/en/support/articles/103138-how-to-share-your-referral-link-and-track-your-referrals",
+            "asOf": "2026-09-19"
+          },
+          {
+            "label": "VIP transfer",
+            "value": "Players with VIP status elsewhere can apply through the VIP transfer application. The VIP team reviews current tier, recent wagering volume and the platform being left, usually within 5 business days, and matches the player to a Cloudbet tier with a dedicated host. There is no single qualifying threshold, and any reward on transfer is at the VIP host's discretion.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.cloudbet.com/en/support/articles/502444-does-cloudbet-offer-a-vip-transfer-program",
+            "asOf": "2026-09-19"
+          },
+          {
+            "label": "Perks by level",
+            "value": "Eight tiers by lifetime turnover, kept permanently once reached. Base rakeback is 5% from Bronze to Ruby and 10% at Diamond and Blue Diamond; TURBO boosted rakeback rises from up to 10% (Bronze to Emerald) to 12.5% at Sapphire, 15% at Ruby, 20% at Diamond and 25% at Blue Diamond, with longer boost windows at higher tiers. Level-up rewards are paid at every level inside a tier, totalling $15 in Silver up to $9,970,000 in Blue Diamond. Daily, weekly and monthly cash drops run at every tier. VIP status and a dedicated host start at Sapphire.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.cloudbet.com/en/support/articles/163526-loyalty-tiers-and-benefits",
+            "asOf": "2026-09-19"
           }
         ]
       },
@@ -4330,6 +4393,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://duel.com/wtf-duel",
             "asOf": "2026-09-18"
+          },
+          {
+            "label": "Referral program",
+            "value": "Duel pays affiliates a share of the house edge their referrals generate, for life. Recent casino payouts have been 70% of the house edge on slots and live games (after deducting leaderboard prizes), 70% on Beef, and 70% of the expected value lost through player mistakes in Blackjack and Video Poker; sports payouts have been a 50% share of an implied 2% edge. Payouts are currently made manually about once a week.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://duel.com/referral-faq",
+            "asOf": "2026-09-19"
           }
         ]
       },
@@ -4642,6 +4712,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://duelbits.com/vip-club",
             "asOf": "2026-09-18"
+          },
+          {
+            "label": "Referral program",
+            "value": "Referrers earn 10% of the mathematical house edge on every wager their referrals place. The referral code must be set within 24 hours of the referred account's registration and cannot be changed afterwards, and earnings start accruing once the referral has wagered 2 Bits (1 Bit = $1).",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.duelbits.com/en/articles/5351626-affiliates-explained",
+            "asOf": "2026-09-19"
           }
         ]
       },
@@ -5376,6 +5453,20 @@
             "sourcing": "editorial",
             "sourceUrl": "https://fortunejack.com/tournaments",
             "asOf": "2026-09-17"
+          },
+          {
+            "label": "Perks by level",
+            "value": "Twenty ranks by Jack Points (1 JP per $1 on slots, 0.5 on sports, 0.25 on live casino, crash and other games). Monthly cashback climbs from 2% at Bronze I to 15% at Legend. Daily rakeback and the Monday reload start at Silver I, with the rakeback level rate rising from 0.5% to 5% and the reload match from 25% to 50%. VIP rewards (VIP manager, real-world experiences) unlock at Diamond I.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://fortunejack.com/jacks-loyalty-club",
+            "asOf": "2026-09-19"
+          },
+          {
+            "label": "VIP transfer",
+            "value": "VIP Transfer lets players bring their tier from another casino and get faster payouts from day one: request a transfer from the VIP page, and the VIP team (vip@fortunejack.com or Telegram) handles the match and assigns a VIP manager.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://fortunejack.com/vip",
+            "asOf": "2026-09-19"
           }
         ]
       },
@@ -5860,6 +5951,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://gamdom.com/promotions",
             "asOf": "2026-09-18"
+          },
+          {
+            "label": "Perks by level",
+            "value": "Royalty Up has 24 levels across 8 tiers (Bronze, Silver, Gold, Emerald, Sapphire, Ruby, Diamond, Opal), three levels each. Every rank-up pays a reward that builds as you progress, is revealed when the rank completes, must be claimed manually from the Rewards page and never expires. Progress is shown as a percentage because the wager needed depends on game RTP. The separate VIP programme is invitation-only and adds a dedicated VIP team, VIP-only reloads and promotions, fee-free withdrawals and a VIP Telegram channel.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.gamdom.com/en/articles/10290516-gamdom-rewards",
+            "asOf": "2026-09-19"
           }
         ]
       },
@@ -6056,6 +6154,20 @@
             "sourcing": "editorial",
             "sourceUrl": "https://www.goated.com/vip",
             "asOf": "2026-09-18"
+          },
+          {
+            "label": "Referral program",
+            "value": "Any player can create referral codes and campaigns from the Affiliates page. Commission = (house edge x amount wagered / 2) x commission rate, claimable instantly with the Collect button, and the commission rate increases once the referrer reaches Platinum.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.goated.com/help/article/9379067-affiliate-program",
+            "asOf": "2026-09-19"
+          },
+          {
+            "label": "VIP transfer",
+            "value": "Players with higher VIP status at Stake, Thrill, Roobet, Shuffle, Duel, Gamdom, BC.Game, Rainbet, Winna, Gamba or Rollbit can request a transfer through support, then must hit a casino-only wager target in their first 30 days: $10,000 for Gold 1, $50,000 for Platinum 1, $120,000 for Pearl 1, $250,000 for Sapphire 1, $500,000 for Emerald 1 or $1,000,000 for Diamond 1. The cash bonus is wager x game edge x 0.375. Only accounts with existing Goated wagering below 10% of the target qualify ($2,500 for Gold 1), and it is limited to one transfer per person.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.goated.com/help/article/9671083-vip-transfer",
+            "asOf": "2026-09-19"
           }
         ]
       },
@@ -7031,6 +7143,20 @@
             "sourcing": "editorial",
             "sourceUrl": "https://www.mbitcasino.io/casino-rewards-program",
             "asOf": "2026-09-17"
+          },
+          {
+            "label": "Perks by level",
+            "value": "Seven Stellar Club levels by Stellar Points from real-crypto slot play, reviewed monthly with possible downgrades. Daily MoneyBack rises from 2% (up to 30 USDT) at Space Lieutenant to 10% (up to 500 USDT) at Space General; the Friday-to-Sunday Weekly Deposit Match from 25% up to 50 USDT to 100% up to 500 USDT; Stellar Wheel spins from up to 50 to up to 150. One-time new-level bonuses pay 10, 20, 40 and 75 USDT from Space Captain to Space Brigadier, and wagering drops from x40 to x30 at Space Brigadier and x20 at the invitation-only Space General.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.mbitcasino.io/casino-rewards-program",
+            "asOf": "2026-09-19"
+          },
+          {
+            "label": "Referral program",
+            "value": "Refer a Friend pays 75 USDT (or crypto equivalent) each time a referred friend signs up through your personal link and makes a first deposit of at least $30, with no limit on referrals. The bonus carries a 40x wagering requirement and is claimed from the Refer a Friend section in account settings.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.mbitcasino.io/en/articles/8423842-refer-a-friend",
+            "asOf": "2026-09-19"
           }
         ]
       },
@@ -7949,6 +8075,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.rainbet.com/en/articles/10331015-challenges",
             "asOf": "2026-09-18"
+          },
+          {
+            "label": "Perks by level",
+            "value": "25 ranks from Bronze I at $4,000 wagered to Infernal Diamond at $1,000,000,000. Every rank-up pays a bonus sized on wager activity, the games played and performance since the last bonus, with part of it going to the Daily Reload. Weekly Free Spins start at Gold, and a lifetime wager of $2,500,000 qualifies for the VIP Program with a dedicated host, tailored bonuses and priority withdrawals.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://rainbet.com/rewards",
+            "asOf": "2026-09-19"
           }
         ]
       },
@@ -8801,6 +8934,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.roobet.com/en/articles/5017835-referrals-explained",
             "asOf": "2026-09-18"
+          },
+          {
+            "label": "Cashback",
+            "value": "VIP Cashback is activity-based cashback for eligible VIPs in the invite-only VIP Club. Roobet does not hand out bonuses, cashback or lossback through on-site live support; standing rewards come through the Rewards system and the Promotions page.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://roobet.com/vip",
+            "asOf": "2026-09-19"
           }
         ]
       },
@@ -10142,6 +10282,20 @@
             "sourcing": "editorial",
             "sourceUrl": "https://sportsbet.io/promotions",
             "asOf": "2026-09-17"
+          },
+          {
+            "label": "Perks by level",
+            "value": "Clubhouse has seven tiers by points: Steel, Bronze (5), Silver (3,750), Gold (30,000), Platinum (250,000), Titanium (750,000) and Diamond (3,750,000). Casino bets earn 5 points per USDT staked and sports bets 15 points per USDT of valid stake, multiplied by the tier multiplier (1x to Silver, 1.25x Gold, 1.5x Platinum, 2x Titanium, 3x Diamond). Higher tiers also boost the value of each milestone reward. The invite-only VIP Clubhouse sits on top, with a dedicated VIP manager, wager-free rewards, weekly bonuses and uncapped crypto deposits and withdrawals.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://sportsbet.io/help-centre/help-our-features/help-our-features-clubhouse/what-are-the-clubhouse-tiers",
+            "asOf": "2026-09-19"
+          },
+          {
+            "label": "Cashback",
+            "value": "Each Clubhouse milestone can be redeemed as free spins or chips, a sportsbook free bet, or cashback. The cashback option is worth slightly less but can be used without restrictions.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://sportsbet.io/help-centre/help-our-features/help-our-features-clubhouse/what-rewards-can-i-get-from-the-clubhouse",
+            "asOf": "2026-09-19"
           }
         ]
       },
@@ -10681,6 +10835,34 @@
             "sourcing": "editorial",
             "sourceUrl": "https://intercom.help/thrill/en/articles/11882893-what-are-the-rewards-levels-and-benefits-at-thrill",
             "asOf": "2026-09-17"
+          },
+          {
+            "label": "Perks by level",
+            "value": "Instant Rakeback, Weekly and Monthly bonuses from Base. Bronze adds the Thrill Telegram and level-up bonuses ($15 at Bronze rising to $12,800 at Diamond I); Silver adds the Weekly Increase; Gold adds the Monthly Increase and Vault X; Platinum I-III add level-up reloads; Platinum III adds partial level-ups; Emerald adds a VIP host, the High Rollers Telegram and host reloads; Diamond adds custom benefits.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://intercom.help/thrill/en/articles/11882893-what-are-the-rewards-levels-and-benefits-at-thrill",
+            "asOf": "2026-09-19"
+          },
+          {
+            "label": "Reload bonuses",
+            "value": "Level-up reloads are paid at Platinum I (14-day reload), Platinum II (28-day reload) and Platinum III (42-day reload), with the amount, duration and claim limits shown when the reload becomes available. Host reloads are added from Emerald.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://intercom.help/thrill/en/articles/11882961-what-are-the-level-up-bonuses",
+            "asOf": "2026-09-19"
+          },
+          {
+            "label": "Referral program",
+            "value": "Every Thrill account is in the referral programme automatically and earns 10% of the house edge on all eligible real-money wagers by referred players, for life, in real time and in the crypto the referral used. A referral code can only be applied within 24 hours of signing up and before the first deposit or bet.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://intercom.help/thrill/en/articles/11736577-refer-a-friend-and-earn-as-they-play",
+            "asOf": "2026-09-19"
+          },
+          {
+            "label": "VIP transfer",
+            "value": "Players who have wagered at least $1.5 million at another site and can prove their tier or wagering history can start a VIP Transfer from live chat. Thrill sets an XP target; hitting it within the agreed period unlocks a reward and immediate promotion to the matched tier. Not available once an account already has 25,000 XP, and limited to one account per person.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://intercom.help/thrill/en/articles/12305579-vip-transfer-program",
+            "asOf": "2026-09-19"
           }
         ]
       },
@@ -12127,6 +12309,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.winna.com/en/articles/15054381-how-to-use-challenges",
             "asOf": "2026-09-18"
+          },
+          {
+            "label": "Perks by level",
+            "value": "From Bronze 1: Instant Rakeback every 7 minutes, the Monthly Bonus on the 1st and the Pre-Monthly Bonus on the 25th. Silver 1 adds the Friday Weekly Boost, the Quarterly Bonus and chat Rain. Gold adds Wednesday free spins and a monthly free bet on the 16th. Platinum adds lossback of up to 25% (reviewed on request through support), 7-day reload bonuses, a personal VIP host and host bonuses. Every level-up also unlocks a spin on the Winna Slide.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.winna.com/en/articles/10431169-the-winna-vip-program",
+            "asOf": "2026-09-19"
           }
         ]
       },
@@ -12356,6 +12545,27 @@
             "sourcing": "editorial",
             "sourceUrl": "https://help.yeet.com/en/articles/12052425-offers-vip-program",
             "asOf": "2026-09-17"
+          },
+          {
+            "label": "Perks by level",
+            "value": "Tiers by total wagered: Copper $100, Bronze $1,000, Silver $10,000, Gold $50,000, Platinum $250,000, Jade $1,000,000, Diamond $5,000,000, Aether $10,000,000, The Void $50,000,000, Eternal $250,000,000, and Chairman by invitation. Each level pays a level-up bonus and each new tier a tier-up bonus, neither of which expires. Instant rakeback starts at Bronze (5%, 10% at Chairman), a personal VIP host is available from Diamond, and Chairman members get access to the founding team.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.yeet.com/en/articles/12052425-offers-vip-program",
+            "asOf": "2026-09-19"
+          },
+          {
+            "label": "Referral program",
+            "value": "Every player can create a referral code and earn from four generations of referrals: 14% for direct referrals, 6% for their referrals, 4% for the next level and 2% for the fourth. Affiliate PnL = wagered volume x house edge x commission / 2. Players with 50+ unique affiliates or $250,000 wagered under their referrals can apply to the Ambassador programme for higher tree commissions.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.yeet.com/en/articles/12052326-affiliate-program",
+            "asOf": "2026-09-19"
+          },
+          {
+            "label": "VIP transfer",
+            "value": "VIP Tier Match Bonus: players with active VIP status at another crypto casino and at least $250,000 historical wager, plus a $100 minimum deposit, verify through support and pick one casino-only wager target to hit within 45 days: $250,000 for $1,500, $500,000 for $3,000, $1,000,000 for $8,000, $2,500,000 for $15,000, $5,000,000 for $30,000, $10,000,000 for $60,000 or $25,000,000 for $150,000. Wagers count at amount x (house edge / 0.04), and the match is available once per player.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.yeet.com/en/articles/14837668-yeet-vip-tier-match-bonus-terms-and-conditions",
+            "asOf": "2026-09-19"
           }
         ]
       },
