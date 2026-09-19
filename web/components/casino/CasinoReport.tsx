@@ -15,6 +15,7 @@ import { maxWithdrawal, maxDeposit } from "@/lib/casino-facts";
 import { Icon, type IconName } from "@/components/ui/Icon";
 import { raceFor, partnerFor, dropFor } from "@/lib/races";
 import { rtpSummary } from "@/lib/rtp-watch-view";
+import { ReportUpdates } from "@/components/casino/ReportUpdates";
 import type { SpecFact } from "@/lib/types";
 
 /**
@@ -440,6 +441,8 @@ export function CasinoReport({ e }: { e: EntityView }) {
             />
           </Card>
         </Section>
+
+        <ReportUpdates slug={o.slug} name={o.name} />
 
         {/* FAQ */}
         {e.faqs.length > 0 && (

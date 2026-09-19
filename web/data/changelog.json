@@ -1,0 +1,1683 @@
+{
+ "stake": [
+  {
+   "date": "2026-09-18",
+   "group": "Bonus terms",
+   "label": "Leaderboards",
+   "from": "A $100K Race resets every 24 hours, with the top 5,000 racers winning prizes each cycle. Alongside it, Community Managers post a Forum Challenge weekly and host daily rains, trivia and roll hunts in Stake chat.",
+   "to": "$100,000 Daily Race that resets every 24 hours, with the top 5,000 racers winning prizes each cycle, plus Stake Wheel Wars with a $150,000 monthly prize pool and rotating Casino Challenges on selected games. Community Managers also post a w"
+  },
+  {
+   "date": "2026-09-18",
+   "group": "Bonus terms",
+   "label": "Weekly raffle",
+   "from": "A recurring weekly raffle with a $50K/$75K prize pool; one ticket is earned for every $1,000 wagered across the casino and sportsbook.",
+   "to": "$75,000 Weekly Raffle: one ticket for every $1,000 wagered across the casino and sportsbook, and the more you wager the more tickets you get"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "VIP Rakeback: 3.5% of the house edge, unlocked at Bronze after $10,000 wagered",
+   "to": "Recurring bonus programme beyond rakeback: a Monthly Bonus paid to all eligible players once a month; a Weekly Boost posted every Saturday at 12:30pm GMT in the VIP-only Telegram group; Drop Bonuses redeemed with a unique code; Level Up Bon"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Payouts & fees",
+   "label": "Withdrawal limits",
+   "from": "No maximum withdrawal; limits may apply to some local-currency payment methods",
+   "to": "No maximum withdrawal: the whole available balance can be withdrawn. Minimums vary by cryptocurrency, from 0.00002504 BTC up to 78,795.08659 SHIB. No daily or monthly cap is stated."
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Payouts & fees",
+   "label": "Minimum withdrawal",
+   "from": "Varies by coin: BTC 0.00002504, ETH 0.001, USDT 2.5",
+   "to": "Set per coin and shown with its fee at the bottom of the withdrawal screen, e.g. 0.00002504 BTC (fee 0.00001571), 0.0006261 ETH (fee 0.00067447), 0.01857329 LTC (fee 0.000138), 2.5 USDT (fee 1), 5.5 DOGE (fee 0.52), 7.82 TRX (fee 0.073)"
+  },
+  {
+   "date": "2026-09-14",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "1x rakeback + weekly reload",
+   "to": "VIP rakeback (3.5% of house edge) + weekly bonus"
+  },
+  {
+   "date": "2026-09-14",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "10% rakeback via code",
+   "to": "1x rakeback + weekly reload"
+  },
+  {
+   "date": "2026-08-26",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Weekly/monthly races",
+   "to": "10% rakeback via code"
+  }
+ ],
+ "bc-game": [
+  {
+   "date": "2026-09-18",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Welcome Shield: 20% of net losses up to $5,000",
+   "to": "Up to 360% on 4 deposits every month"
+  },
+  {
+   "date": "2026-09-18",
+   "group": "Bonus terms",
+   "label": "VIP levels",
+   "from": "VIP Club membership is invitation-only and granted automatically from activity and engagement; a VIP Transfer route exists for players with VIP status at another casino. BC.GAME does not publish tier names, wager thresholds or per-tier rake",
+   "to": "Seven VIP tiers - Beginner, Bronze, Silver, Gold, Platinum, Diamond and Eternal - each split into Levels I to X. XP comes from settled bets on non-PvP games, and every level pays a level-up bonus with no expiry. From Diamond, players at 50%"
+  },
+  {
+   "date": "2026-09-18",
+   "group": "Bonus terms",
+   "label": "Reload bonuses",
+   "from": "Recurring VIP rewards: a Reload Bonus available monthly to active VIP players who keep up their gameplay, a monthly TopPlay Bonus recognising the most active players, and a GamePlay Bonus that appears at random intervals based on player act",
+   "to": "Daily, weekly and monthly bonuses for all players, with no VIP level or minimum wager required and only non-PvP games counting. The Daily Bonus updates every 10 minutes, unlocks at 03:30 UTC and must be claimed within 24 hours. The Weekly B"
+  },
+  {
+   "date": "2026-09-18",
+   "group": "Bonus terms",
+   "label": "Cashback",
+   "from": "Instant Lossback returns a share of losses in real time as play happens. BC.GAME's own write-up of the new levelling system describes a Welcome Shield covering 20% of net losses up to $5,000 for a limited time after joining, and states the ",
+   "to": "VIP Lossback pays real money when a period ends in net loss, with no wagering requirement and no expiry once issued; eligible VIPs request it through support. VIP Weekly Free Spins are sized on Sunday-to-Saturday net loss, requested from Su"
+  },
+  {
+   "date": "2026-09-18",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "Its sign-up offer isn't on any BC.GAME page reachable from here: its promotions and VIP pages region-block and its help centre is behind a challenge. Its own blog describes a Welcome Shield covering 20% of net losses up to $5,000 for new pl",
+   "to": "Monthly 4-Deposit Bonus: up to four deposit bonuses every month, resetting on the 1st at 00:00 UTC. Stage 1 pays 180% (minimum deposit $5), stage 2 240% ($10), stage 3 300% ($20) and stage 4 360% ($30), claimed strictly in order. Each bonus"
+  },
+  {
+   "date": "2026-09-18",
+   "group": "Compliance",
+   "label": "Partners",
+   "from": "Partnerships announced on BC.GAME's own blog: principal partner of Leicester City FC (July 2024), global crypto casino sponsor of the Argentine Football Association (September 2022), a partnership with esports organisation Cloud9 (August 20",
+   "to": "Its Sponsorships menu lists Leicester City Football Club, where it became Official Principal Partner in 2024, alongside Guillermo Ochoa, O'Higgins, Jason Derulo, Lil Pump, Colby Covington, Miami Club, St Kitts & Nevis Patriots, Kwara United"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "220% deposit bonus",
+   "to": "Welcome Shield: 20% of net losses up to $5,000"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "Sign-up offer advertised on site as a 220% deposit bonus; its promotions page shows a monthly deposit bonus of up to 500% across four deposits",
+   "to": "Its sign-up offer isn't on any BC.GAME page reachable from here: its promotions and VIP pages region-block and its help centre is behind a challenge. Its own blog describes a Welcome Shield covering 20% of net losses up to $5,000 for new pl"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Bonus terms",
+   "label": "Wagering rules",
+   "from": "The monthly deposit bonus (up to 4 stages, 180%–360%) is added as locked rakeback that unlocks step by step as you wager on non-PvP games; the rate depends on game type, house edge and turnover, with no fixed multiplier, no minimum and no e",
+   "to": "No multiplier: each bonus is added as locked rakeback that unlocks as you play, at a rate set by game type, house edge and turnover (rakeback = amount wagered × house edge × 1%)"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Up to 500% deposit rakeback across 4 deposits (monthly promo, resets periodically)",
+   "to": "220% deposit bonus"
+  },
+  {
+   "date": "2026-09-14",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Up to 360% deposit match",
+   "to": "Up to 500% deposit rakeback across 4 deposits (monthly promo, resets periodically)"
+  },
+  {
+   "date": "2026-08-26",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "400% deposit match",
+   "to": "Up to 360% deposit match"
+  }
+ ],
+ "gamdom": [
+  {
+   "date": "2026-09-17",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "Gamdom Rewards; 15% Boosted Instant Rewards for new accounts",
+   "to": "New accounts get boosted instant rewards of up to 15%. Gamdom's two help articles put the window slightly differently: the rakeback article says up to 15% Instant Rakeback during the first 6 hours after creating the account, while the rewar"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Deposit bonus",
+   "to": "15% boosted rakeback for new accounts"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Bonus terms",
+   "label": "Wagering rules",
+   "from": "Its deposit bonus must be wagered a multiple of the deposit amount, set by the offer shown to each player; no fixed number is published",
+   "to": "Gamdom’s own help pages disagree. Its deposit bonus guide says a deposit bonus must be wagered a multiple of the deposit, set by the offer each player sees. Its FAQ says Gamdom doesn’t offer traditional bonuses. Either way, deposits and fre"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "15% Boosted Instant Rewards for new accounts",
+   "to": "Deposit bonus"
+  },
+  {
+   "date": "2026-08-26",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Rain events + rakeback",
+   "to": "15% instant rakeback"
+  }
+ ],
+ "vave": [
+  {
+   "date": "2026-09-17",
+   "group": "Bonus terms",
+   "label": "Reload bonuses",
+   "from": "The 2nd, 3rd and 4th deposit bonuses follow the same rules as the first: a single deposit of at least 20 USDT, one per customer, paid in instalments as you wager, 30 days to complete and no maximum bet",
+   "to": "Thursday Reload: deposit at least 20 USDT (or crypto equivalent) on a Thursday for a 100% bonus up to 2,500 USDT, selected as a bonus card in the deposit window. Daily Deposit Casino: deposit at least 100 USDT any day for a +10% daily bonus"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "Casino bonuses on the first four deposits: 150% up to 1.5 BTC plus 100 free spins, then 100% up to 1 BTC, 50% up to 1 BTC and 25% up to 0.5 BTC (up to 4 BTC in total), each unlocked by playing casino games. Alternatively, a First Deposit Sp",
+   "to": "Casino welcome package across four deposits, totalling up to 4 BTC plus 100 free spins: First Deposit Casino Bonus 150% up to 1.5 BTC + 100 Free Spins, Second Deposit 100% up to 1 BTC, Third Deposit 50% up to 1 BTC, Fourth Deposit 25% up to"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Payouts & fees",
+   "label": "Withdrawal limits",
+   "from": "A help article dated 18 Sep 2023 says there are no withdrawal restrictions at the moment",
+   "to": "The help centre article \"Are there withdrawal limits?\" states there are no restrictions at this moment (last updated 18/09/2023). The Terms and Conditions qualify this: if a withdrawal request exceeds the limit of a particular payment syste"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Up to 4 BTC over 4 deposits + 100 free spins",
+   "to": "Up to 4 BTC + 100 free spins"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Bonus terms",
+   "label": "Max cashout",
+   "from": "No withdrawal cap is stated; the maximum bonus is 1.5 BTC or equivalent",
+   "to": "Winnings from any deposit, cashback, VIP, weekly, tournament or Vave points bonus are capped at 10,000 USDT, with the excess forfeited before withdrawal (cases reviewed within 14 working days); winnings from no-deposit bonuses or free spins"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "150% up to 1.5 BTC + 100 free spins",
+   "to": "Up to 4 BTC over 4 deposits + 100 free spins"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "First Deposit Casino Bonus of 150% up to 1.5 BTC plus 100 free spins, unlocked by playing slots, or a First Deposit Sport Bonus of 100% up to 1 BTC, unlocked with sports bets. An older help article (2023) describes the welcome offer as a 10",
+   "to": "Casino bonuses on the first four deposits: 150% up to 1.5 BTC plus 100 free spins, then 100% up to 1 BTC, 50% up to 1 BTC and 25% up to 0.5 BTC (up to 4 BTC in total), each unlocked by playing casino games. Alternatively, a First Deposit Sp"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "100% cashback welcome bonus",
+   "to": "150% up to 1.5 BTC + 100 free spins"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "Welcome: 100% cashback bonus (casino and sports), minimum first deposit 20 USDT",
+   "to": "First Deposit Casino Bonus of 150% up to 1.5 BTC plus 100 free spins, unlocked by playing slots, or a First Deposit Sport Bonus of 100% up to 1 BTC, unlocked with sports bets. An older help article (2023) describes the welcome offer as a 10"
+  },
+  {
+   "date": "2026-09-15",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "100% up to 1 BTC",
+   "to": "100% cashback welcome bonus"
+  },
+  {
+   "date": "2026-08-26",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "150% welcome match",
+   "to": "100% up to 1 BTC"
+  }
+ ],
+ "roobet": [
+  {
+   "date": "2026-09-18",
+   "group": "Sportsbook",
+   "label": "Prediction markets",
+   "from": "Yes. Roobet Predictions is powered by Polymarket. You buy Yes/No shares priced between $0.01 and $0.99, with the price showing the market's implied probability. Each winning share pays $1.00 and a losing share pays $0. You can sell before t",
+   "to": "Prediction Markets powered by Polymarket, traded from your normal Roobet balance: buy Yes or No shares priced $0.01 to $0.99, each winning share pays $1.00, and you can sell any time before the market resolves. Sports markets settle quickly"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Bonus terms",
+   "label": "Weekly raffle",
+   "from": "$100,000 Weekly Raffle: all casino wagers earn tickets each week",
+   "to": "A $100,000 weekly raffle runs continuously; every wager earns tickets each week, with one ticket per $1,000 of qualified wagers (some games award 2 tickets per $1,000). The prize pool is usually $100,000 split among 100 winners. The live pr"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Rakeback (Instant, Daily, Weekly, Monthly) + 30-level VIP",
+   "to": "Instant rakeback + a $100,000 weekly raffle"
+  },
+  {
+   "date": "2026-09-14",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Weekly cashback + RooWards VIP",
+   "to": "Rakeback (Instant, Daily, Weekly, Monthly) + 30-level VIP"
+  }
+ ],
+ "shuffle": [
+  {
+   "date": "2026-09-18",
+   "group": "Bonus terms",
+   "label": "Weekly raffle",
+   "from": "The SHFL Lottery runs continuously with a weekly draw; entries come from staking SHFL or buying tickets.",
+   "to": "SHFL Lottery: a provably fair draw every Friday. Each ticket takes 50 staked SHFL; players pick five numbers from 1-55 plus a Powerball from 1-18, and staked tickets are entered automatically into every weekly draw. Prizes are paid in USDC."
+  },
+  {
+   "date": "2026-09-18",
+   "group": "Bonus terms",
+   "label": "Reload bonuses",
+   "from": "Reloads pay a fixed amount of bonus funds claimable at set intervals, and are also issued on reaching a new VIP rank. Alongside them: a Daily Bonus from Bronze awarded at 12:00 AM UTC on the previous 24 hours wagered, a Weekly Bonus from Si",
+   "to": "Reloads are issued on reaching Silver 1, Gold 1, Platinum 1, Jade 1 and Sapphire, sized on recent wagering and profit and claimed at set intervals from the VIP page; a missed claim expires. From Sapphire, weekly reloads are arranged through"
+  },
+  {
+   "date": "2026-09-18",
+   "group": "Bonus terms",
+   "label": "VIP levels",
+   "from": "Shuffle's own pages disagree on the ladder. The VIP Rewards Club page shows eight ranks — Bronze, Silver, Gold, Platinum, Jade, Sapphire, Ruby, Diamond — with Instant Rakeback, Weekly Bonus, Level-Up Bonus and Rank Up Bonus at every rank; M",
+   "to": "Ranks by total wagered: Wood $500; Bronze 1-5 $1,000-$5,000; Silver 1-5 $10,000-$50,000; Gold 1-5 $100,000-$300,000; Platinum 1-5 $450,000-$1,050,000; Jade 1-5 $1.2M-$1.8M; Sapphire 1-5 $2.3M-$4.3M; Ruby 1-5 $5.8M-$11.8M; Diamond 1-5 $17M-$"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "5% rakeback paid as cash",
+   "to": "Rakeback on every bet + a $100,000 weekly race"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "Rakeback: 5% of the house edge back as cash on casino games",
+   "to": "Rakeback on every casino bet, paid win or lose at a rate set by your VIP level; Shuffle publishes no percentage. Deposit bonuses are sized by each promotion, and a $100,000 leaderboard resets weekly"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "First deposit bonus",
+   "to": "5% rakeback paid as cash"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Rakeback: 5% of house edge as cash",
+   "to": "First deposit bonus"
+  },
+  {
+   "date": "2026-09-14",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Rakeback + XP shop",
+   "to": "Rakeback: 5% of house edge as cash"
+  }
+ ],
+ "cloudbet": [
+  {
+   "date": "2026-09-17",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Up to $2,500 cash, no rollover",
+   "to": "Up to $2,500 cash + 10% rakeback, no rollover"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "Welcome Package, up to $2,500 cash",
+   "to": "The welcome package is up to $2,500 in cash, and now also carries 10% rakeback from day one plus daily cash drops across the first 30 days. The terms confirm the package ends after 30 days from the first deposit or on reaching the $2,500 ca"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Bonus terms",
+   "label": "Expiry",
+   "from": "Valid for up to 30 days from the first deposit",
+   "to": "30 days from the first deposit or until the $2,500 cap is reached, whichever comes first; the Cash Vault opens on day 30"
+  },
+  {
+   "date": "2026-09-14",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "100% up to $4,500",
+   "to": "Welcome Package up to $2,500, no rollover"
+  }
+ ],
+ "duelbits": [
+  {
+   "date": "2026-09-18",
+   "group": "Compliance",
+   "label": "Partners",
+   "from": "Its Sponsorships page lists four current partners: esports organisation Team Liquid (teams in League of Legends, Dota 2, VALORANT and Counter-Strike), former UFC champion Michael Bisping, Kiro and the Battle of the Beasts event",
+   "to": "Current sponsorships: title sponsor of Team Liquid's Counter-Strike 2 roster; brand ambassador Michael Bisping, former UFC middleweight champion; Principal Partner and Official Crypto Gambling Partner of the CUPRA KIRO Formula E team for th"
+  },
+  {
+   "date": "2026-09-18",
+   "group": "Payouts & fees",
+   "label": "Withdrawal limits",
+   "from": "Duelbits charges no withdrawal fees; only blockchain network costs apply, and the live transaction cost is shown under the amount input for each withdrawal method. No minimum, maximum or per-day withdrawal cap is published on Duelbits' own ",
+   "to": "No maximum withdrawal cap. Minimum withdrawals: $10 for LTC, SOL, DOGE, XRP, TRX, SHIB, TRUMP, USDT on TRC-20 and USDC on Solana; $25 for BNB; $50 for BTC, ETH, DAI, USDC on ERC-20 and USDT on ERC-20 or BSC. At least 10% of a deposit must b"
+  },
+  {
+   "date": "2026-09-18",
+   "group": "Compliance",
+   "label": "Partners",
+   "from": "Its Sponsorships menu lists esports team Team Liquid, former UFC champion Michael Bisping, Kiro and the Battle of the Beasts event",
+   "to": "Its Sponsorships page lists four current partners: esports organisation Team Liquid (teams in League of Legends, Dota 2, VALORANT and Counter-Strike), former UFC champion Michael Bisping, Kiro and the Battle of the Beasts event"
+  },
+  {
+   "date": "2026-09-14",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Rakeback + weekly races",
+   "to": "Ace's Rewards: 25% rakeback across Instant, Daily, Weekly, Monthly"
+  }
+ ],
+ "rainbet": [
+  {
+   "date": "2026-09-17",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "First-deposit bonus, wager-locked",
+   "to": "Rainbet's help centre states there is one first-deposit promotion, the 40x Wager Locked bonus: deposit and bonus funds go to a promotional balance that must be turned over 40x (deposit $100 -> $200 in play funds -> $8,000 of wagering), with"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "First deposit bonus",
+   "to": "First deposit bonus (40× wager lock)"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Bonus terms",
+   "label": "Wagering",
+   "from": "40× turnover of combined deposit and bonus funds",
+   "to": "40× the combined deposit and bonus, so $100 + $100 needs $8,000 of wagering"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "First-deposit bonus, 40× wager-locked",
+   "to": "First deposit bonus"
+  },
+  {
+   "date": "2026-09-14",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Weekly bonus drops",
+   "to": "First-deposit bonus, 40× wager-locked"
+  }
+ ],
+ "winna": [
+  {
+   "date": "2026-09-17",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Instant rakeback every 7 minutes",
+   "to": "Instant rakeback + a $50,000 weekly race"
+  },
+  {
+   "date": "2026-09-14",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Rakeback + no-wager spins",
+   "to": "VIP Instant Rakeback, claimable every 7 minutes"
+  }
+ ],
+ "bitcasino-io": [
+  {
+   "date": "2026-09-17",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "Welcome: up to 5,000 USDT over three deposits (its reward T&C also says it offers no welcome rewards)",
+   "to": "\"Welcome to Bitcasino - Get up to 5,000 USDT in deposit rewards\": three bonuses on the first three deposits - 1st 100% up to 1,500 USDT, 2nd 50% up to 2,000 USDT, 3rd 100% up to 1,500 USDT - activated in the Rewards section, minimum 50 USDT"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Up to 5,000 USDT welcome",
+   "to": "Up to 5,000 USDT over 3 deposits"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Payouts & fees",
+   "label": "Minimum withdrawal",
+   "from": "Varies by coin, e.g. BTC 0.0005, ETH 0.01, USDT 20",
+   "to": "Per coin: 0.0005 BTC, 0.01 ETH, 0.1 LTC, 20 USDT or USDC, 20 XRP, 10 ADA, 200 TRX, 100 DOGE, 0.07 BNB, 10 TON, 20 POL, 2,000,000 SHIB, and CAD 10; it can vary by payment method, and the cashier shows the current figure"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Welcome: up to 5,000 USDT over 3 deposits",
+   "to": "Up to 5,000 USDT welcome"
+  },
+  {
+   "date": "2026-09-15",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Loyalty club tiers",
+   "to": "Welcome: up to 5,000 USDT over 3 deposits"
+  }
+ ],
+ "sportsbet-io": [
+  {
+   "date": "2026-09-17",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "Champions Welcome: 100% of the first deposit up to 300 USDT, as either a sports or a casino bonus you enable in Rewards before depositing; for selected first-time depositors, in USDT, mBTC, TRX, TON or CAD (selected markets), running 14 Apr",
+   "to": "Champions Welcome Bonus: a 100% deposit match up to 300 USDT usable on sports or casino, minimum deposit 10 USDT, opted into via the Rewards or Promotions tab, with its own wagering requirement and a 72-hour window after activation."
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Payouts & fees",
+   "label": "Withdrawal limits",
+   "from": "No limit on crypto withdrawals, though very large ones may be split into several transactions; fiat limits depend on the payment method",
+   "to": "No withdrawal ceiling is published for standard accounts; the promotions page states deposits and withdrawals carry no limits once VIP status is reached. Every deposit must clear a standard 1x wagering pass before withdrawal, and most crypt"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Payouts & fees",
+   "label": "Minimum withdrawal",
+   "from": "Varies by coin, e.g. BTC 0.0005, USDT 20",
+   "to": "Per coin: 0.0005 BTC, 0.01 ETH, 0.1 LTC, 20 USDT or USDC, 20 XRP, 10 ADA, 200 TRX, 100 DOGE, 0.07 BNB, 10 TON, 20 POL, 2,000,000 SHIB, plus TRY 2,000 and CAD 10; the cashier shows the current figure"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Bonus terms",
+   "label": "Max cashout",
+   "from": "Max release amount is 10× the max bonus amount",
+   "to": "10× the maximum bonus amount (3,000 USDT)"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "Champions Welcome: 100% up to 300 USDT, sports or casino, for selected first-time depositors",
+   "to": "Champions Welcome: 100% of the first deposit up to 300 USDT, as either a sports or a casino bonus you enable in Rewards before depositing; for selected first-time depositors, in USDT, mBTC, TRX, TON or CAD (selected markets), running 14 Apr"
+  },
+  {
+   "date": "2026-09-15",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Price boosts, no match",
+   "to": "100% up to 300 USDT (selected first-time depositors)"
+  }
+ ],
+ "500-casino": [
+  {
+   "date": "2026-09-17",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "Welcome Package: 300% of deposit up to $15,000 as a rakeback boost, plus 50 free spins",
+   "to": "Welcome Package, casino version: 300% of your deposit up to $15,000 added as a rakeback boost plus 50 free spins, triggered by a first eligible deposit over $25. The rakeback boost unlocks at $1 per $400 wagered; free spins land in the bonu"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Bonus terms",
+   "label": "Max cashout",
+   "from": "3× the rakeback boost of the original deposit, plus $1,000 from free spins",
+   "to": "Up to 3× your deposit as rakeback boost (max $15,000), plus up to $1,000 from free-spin winnings"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Bonus terms",
+   "label": "Expiry",
+   "from": "Bonus available 14 days; rakeback boost active 90 days",
+   "to": "Deposit within 7 days of registering; the rakeback boost lasts 90 days, free spins must be claimed within 48 hours, and unclaimed bonus balance is lost after 14 days"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "300% up to $15,000 as rakeback boost + 50 spins",
+   "to": "300% rakeback boost + 50 free spins"
+  },
+  {
+   "date": "2026-09-15",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Daily rain + rakeback",
+   "to": "300% up to $15,000 as rakeback boost + 50 spins"
+  }
+ ],
+ "goated": [
+  {
+   "date": "2026-09-18",
+   "group": "Bonus terms",
+   "label": "Reload bonuses",
+   "from": "Tier-Up Reloads are awarded for advancing to a new tier (for example Bronze to Silver), available from Silver tier onward and based on wagering activity. The help centre also carries a \"What is Weekly Reloads\" article.",
+   "to": "Weekly Reloads are awarded automatically every Tuesday at 00:10 UTC based on your past week's wagering, profit and VIP level, split into 168 hourly claims that each stay open for 12 hours (missed claims expire). They replaced support-reques"
+  },
+  {
+   "date": "2026-09-18",
+   "group": "Bonus terms",
+   "label": "VIP levels",
+   "from": "Nine-tier XP-based VIP system: Copper (0 XP), Bronze (1,000), Silver (10,000), Gold (100,000), Platinum (450,000), Pearl (1,300,000), Sapphire (3,000,000), Emerald (7,000,000), Diamond (20,000,000), spanning levels 1-40. Recurring rewards a",
+   "to": "9 tiers of 5 levels each, from Copper to Diamond by amount wagered: Bronze 1 at $1,000, Silver 1 at $10,000, Gold 1 at $100,000, Platinum 1 at $450,000, Pearl 1 at $1.3M, Sapphire 1 at $3M, Emerald 1 at $7M and Diamond 1 at $20M, up to Diam"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Bonus terms",
+   "label": "Leaderboards",
+   "from": "$25,000 Weekly Race (an extended winners list) and a $2,500 Daily Race; casino wagers count toward your place",
+   "to": "Two standing races. The $25,000 Weekly Race is a wagering leaderboard paying the top 20 (1st $5,000, 2nd $2,500, 3rd $2,000, down to $50 for 20th), credited to VIP rewards at the end of each weekly period; the live promotions page shows it "
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "No welcome or deposit bonus. Goated points players to its ongoing promotions, VIP rewards and $GOATED token airdrop instead",
+   "to": "Goated states it does not run a traditional welcome or deposit bonus, compensating instead through ongoing promotions, VIP rewards and its token ecosystem. Recurring promotions it names alongside the two races are Pragmatic Drops & Wins ($2"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "VIP rewards, promotions and token airdrops",
+   "to": "$25,000 weekly race + $2,500 daily race"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "100% first deposit up to $1,000",
+   "to": "VIP rewards, promotions and token airdrops"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "100% first deposit bonus up to $1,000 (minimum deposit $20)",
+   "to": "No welcome or deposit bonus. Goated points players to its ongoing promotions, VIP rewards and $GOATED token airdrop instead"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Bonus terms",
+   "label": "Wagering",
+   "from": "35× (deposit + bonus)",
+   "to": "35× the deposit plus the bonus, so a $1,000 deposit with a $1,000 bonus needs $70,000 of wagering"
+  },
+  {
+   "date": "2026-09-15",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Weekly rakeback",
+   "to": "100% first deposit up to $1,000"
+  }
+ ],
+ "yeet": [
+  {
+   "date": "2026-09-17",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "Instant Rakeback: 5% from Bronze VIP, up to 10% at Chairman",
+   "to": "100% first deposit bonus for new accounts, with a maximum bonus of $1,000 USD or crypto equivalent. Wagering is (deposit + bonus) x 35, must be completed within 90 days, maximum stake $10 per bet or spin while a bonus is active, rollover co"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "First deposit bonus up to $1,000",
+   "to": "100% up to $1,000 + up to 10% rakeback"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Bonus terms",
+   "label": "Wagering",
+   "from": "First deposit bonus, capped at $1,000, must be wagered 35× the deposit plus the bonus; no max-win or cashout cap",
+   "to": "35× the deposit plus the bonus, so a $100 deposit with a $100 bonus needs $7,000 of wagering"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Bonus terms",
+   "label": "Expiry",
+   "from": "Instant Rakeback does not expire",
+   "to": "90 days from when the bonus is credited, after which the bonus and its winnings are removed"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Instant Rakeback 5–10%",
+   "to": "First deposit bonus up to $1,000"
+  },
+  {
+   "date": "2026-09-15",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Level-up rewards",
+   "to": "Instant Rakeback 5–10%"
+  }
+ ],
+ "solcasino": [
+  {
+   "date": "2026-09-17",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Up to 360% deposit bonuses + 5% rakeback",
+   "to": "Up to 360% in USDB over 4 deposits + 5% rakeback"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "180% / 240% / 300% / 360% deposit bonuses in USDB on the first four deposits; 5% default rakeback",
+   "to": "Four deposit match bonuses paid in USDB, a reward denominated in USDT: 1st deposit 180% with a $10.00 minimum up to 20,000.00 USDB; 2nd 240% with a $50.00 minimum up to 40,000.00 USDB; 3rd 300% with a $100.00 minimum up to 60,000.00 USDB; 4"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "180–360% deposit bonuses in USDB",
+   "to": "Up to 360% deposit bonuses + 5% rakeback"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Deposit bonuses 180–360% in USDB + 5% rakeback",
+   "to": "180–360% deposit bonuses in USDB"
+  },
+  {
+   "date": "2026-09-15",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "SOL-native cashback",
+   "to": "Deposit bonuses 180–360% in USDB + 5% rakeback"
+  }
+ ],
+ "whale-io": [
+  {
+   "date": "2026-09-18",
+   "group": "Bonus terms",
+   "label": "VIP levels",
+   "from": "A permanent 25-level ladder across 7 ranks: Bronze, Silver, Gold, Platinum, Diamond, Emerald and Whale. Levels come from wagering and never reset, with no seasons. Your level sets your daily cashback percentage, and rank-up bonuses may be a",
+   "to": "7 ranks with four levels each (Bronze, Silver, Gold, Platinum, then VIP ranks Diamond and Emerald, and Whale). Every level lifts your cashback, levels are permanent with no seasons or resets, and nothing is bought: you climb by playing"
+  },
+  {
+   "date": "2026-09-18",
+   "group": "Bonus terms",
+   "label": "Rakeback",
+   "from": "Two continuous wager-based rebates: a weekly bonus of total wager x house margin x 2%, paid weekly, and a monthly bonus of total wager x house margin x 1.5%, paid on the 1st. Both accrue in real time, are open to all players and credit with",
+   "to": "Weekly bonus of 2% of your adjusted wager, paid in cash every Monday, and a monthly bonus of 1.5% of the month's adjusted wager, paid on the 1st. Both build on every bet and carry no wagering after claiming"
+  },
+  {
+   "date": "2026-09-18",
+   "group": "Bonus terms",
+   "label": "Cashback",
+   "from": "Daily cashback set by your lifetime level, from 1% to 25%. To qualify you must have deposited the previous day and finished that day at a net loss (deposits minus withdrawals, ending balance and unsettled sports bets). It credits daily to y",
+   "to": "Daily cashback on the previous day's net loss, from 1% at Bronze 1 up 1% per level to 24% at Emerald 4 and 25% at Whale. Paid as real cash with 1x wagering, claimable from 07:00 UTC daily within 24 hours; each day starts at zero, so a big w"
+  },
+  {
+   "date": "2026-09-18",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "Daily cashback 1–25% by level, plus weekly and monthly bonuses",
+   "to": "200% on your first deposit (minimum $10), then ongoing cash rewards: up to 25% daily cashback, a weekly bonus and a monthly bonus, all paid as real cash"
+  },
+  {
+   "date": "2026-09-18",
+   "group": "Payouts & fees",
+   "label": "Stated withdrawal time",
+   "from": "Instant, according to Whale's own pages (crypto withdrawals are 'processed instantly' and gas-free). The terms and conditions give no processing time.",
+   "to": "90-second withdrawals, promoted on its homepage alongside instant, gas-free crypto withdrawals"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "200% first-deposit bonus balance",
+   "to": "200% bonus balance + up to 25% cashback"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Daily cashback 1–25%",
+   "to": "200% first-deposit bonus balance"
+  },
+  {
+   "date": "2026-09-15",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Whale points + races",
+   "to": "Daily cashback 1–25% + weekly and monthly bonuses"
+  }
+ ],
+ "acebet": [
+  {
+   "date": "2026-09-17",
+   "group": "Bonus terms",
+   "label": "Rakeback",
+   "from": "5% of the house edge back on every wager at Bronze I, paid into vaults: instant every 30 minutes (0.50%), daily (1.25%), weekly (2.00%) and monthly (1.25%), plus a pre-monthly vault from Silver I",
+   "to": "Rakeback returns a share of your wagers and the rate rises the more you play. The current rate and claim frequency are only shown on the signed-in Rewards tab, so no public figure is published. That tab also holds reload bonuses and challen"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "Free spins credited after email verification with no deposit needed, plus 100% of the first deposit up to $1,000 in any supported crypto; both need Acebet's own promo code at registration. Its About page instead says new players get a 1% de",
+   "to": "20 free spins credited at sign-up after verification with no deposit needed, plus a 100% match on your first deposit up to $1,000. Its own pages disagree: the welcome page says 100% up to $1,000, while its about page says a 1% deposit match"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Up to 200% deposit bonus",
+   "to": "100% up to $1,000 + free spins"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "Free $10 plus up to 200% bonus on deposits up to $10",
+   "to": "Free spins credited after email verification with no deposit needed, plus 100% of the first deposit up to $1,000 in any supported crypto; both need Acebet's own promo code at registration. Its About page instead says new players get a 1% de"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Free $10 + up to 200% on deposits up to $10",
+   "to": "Up to 200% deposit bonus"
+  },
+  {
+   "date": "2026-09-15",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Deposit match",
+   "to": "Free $10 + up to 200% on deposits up to $10"
+  }
+ ],
+ "degen": [
+  {
+   "date": "2026-09-17",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "100% first deposit up to $1,500",
+   "to": "100% first deposit up to $1,500 + a $25,000 weekly race"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Bonus terms",
+   "label": "Leaderboards",
+   "from": "$25,000 Weekly Race, shared between the top 20 players and reset weekly; casino, slots and sports wagers all count",
+   "to": "A $25,000 Weekly Race that resets every week, open to house games, live casino, slots and sports betting. The top 20 share the pool, from $10,000 for first down to $100, paid automatically each week"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Bonus terms",
+   "label": "Wagering",
+   "from": "30× deposit plus bonus, with no time limit; wagers count towards it by the game's house edge",
+   "to": "30× the deposit plus the bonus, so $100 + $100 needs $6,000 of wagering"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "100% first deposit up to $1,500 + 3-8% rakeback",
+   "to": "100% first deposit up to $1,500"
+  },
+  {
+   "date": "2026-09-15",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "100% first deposit match up to $1,500, plus rakeback from 3% rising to 8% by VIP rank",
+   "to": "100% first deposit match up to $1,500 (first deposit only, minimum $20, and the account must be registered under an eligible referral code), plus rakeback from 3% rising to 8% by VIP rank"
+  },
+  {
+   "date": "2026-09-15",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Rakeback 3–8% by VIP rank",
+   "to": "100% first deposit up to $1,500 + 3-8% rakeback"
+  },
+  {
+   "date": "2026-09-15",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "Rakeback from 3%, rising to 8% by VIP rank",
+   "to": "100% first deposit match up to $1,500, plus rakeback from 3% rising to 8% by VIP rank"
+  },
+  {
+   "date": "2026-09-15",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Community rewards",
+   "to": "Rakeback 3–8% by VIP rank"
+  }
+ ],
+ "qzino": [
+  {
+   "date": "2026-09-15",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Reload bonuses",
+   "to": "Cashback up to 40% + rakeback up to 15%"
+  }
+ ],
+ "shock": [
+  {
+   "date": "2026-09-17",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "Welcome Bonus: 100% match on the first deposit, up to a $1,500 deposit (claimed via support)",
+   "to": "A 100% first-deposit match, capped on a $1,500 deposit, so a $2,000 deposit still gives a $1,500 bonus for a $3,500 total. One per person, household, device, IP or payment account, first deposit only, and the bonus balance is awarded by con"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "100% first deposit match",
+   "to": "100% first deposit up to $1,500"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Bonus terms",
+   "label": "Wagering",
+   "from": "35× deposit + bonus; $10 max bet",
+   "to": "35× the deposit plus the bonus as standard, unless an offer says otherwise"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "100% first deposit match up to $1,500",
+   "to": "100% first deposit match"
+  },
+  {
+   "date": "2026-09-15",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Welcome match",
+   "to": "100% first deposit match up to $1,500"
+  }
+ ],
+ "cybet": [
+  {
+   "date": "2026-09-16",
+   "group": "Bonus terms",
+   "label": "Max cashout",
+   "from": "5× initial deposit (promo page); its guidebook says 10× deposit + bonus",
+   "to": "Capped at 5× your initial deposit once wagering is complete, with the rest forfeited; cancelling early pays 0.475× the remaining redeemable amount or your balance, whichever is lower"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Bonus terms",
+   "label": "Expiry",
+   "from": "Valid for 14 days from activation",
+   "to": "14 days from activation, then cancelled automatically; the promotion runs from 1 June to 1 October 2026"
+  },
+  {
+   "date": "2026-09-15",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Esports-first promos",
+   "to": "100% first deposit welcome bonus (time-limited)"
+  }
+ ],
+ "housebets": [
+  {
+   "date": "2026-09-18",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Rakeback or lossback slider (1x deposit playthrough)",
+   "to": "Rakeback or lossback slider, no wagering"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Rakeback or lossback slider, no wagering",
+   "to": "Rakeback or lossback slider (1x deposit playthrough)"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "Rewards Slider: instant, daily, weekly and monthly rakeback or lossback",
+   "to": "The Rewards Slider: you set the balance between rakeback (a share of every wager, win or lose) and lossback (a share of net losses, which only pays if you finish the period down). Weekly and monthly have separate settings and a change appli"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Rewards Slider rakeback/lossback, 0× wagering",
+   "to": "Rakeback slider"
+  },
+  {
+   "date": "2026-09-15",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "House rakeback",
+   "to": "Rewards Slider rakeback/lossback, 0× wagering"
+  }
+ ],
+ "dicey": [
+  {
+   "date": "2026-09-17",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "100% sports bonus up to $1,000",
+   "to": "100% sports bonus up to $1,000 + a $35,000 weekly race"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "Sports Welcome Bonus: 100% match up to $1,000",
+   "to": "The 100% sports welcome bonus up to $1,000 is still current. It is a 100% match on the first qualifying deposit, minimum deposit $20, maximum eligible deposit $1,000 (so maximum bonus $1,000), with a 15x wager requirement on deposit plus bo"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Bonus terms",
+   "label": "Wagering",
+   "from": "15× deposit + bonus on sports, minimum odds 1.5",
+   "to": "15× the deposit plus the bonus on the Sports Welcome Bonus (the page also calls it a multiple of the bonus, but its examples use deposit plus bonus); the deposit itself must also be wagered once"
+  },
+  {
+   "date": "2026-09-15",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Originals rakeback",
+   "to": "Sports welcome: 100% up to $1,000"
+  }
+ ],
+ "spartans": [
+  {
+   "date": "2026-09-17",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "33% CashRake, capped at 33% of deposits",
+   "to": "CashRake is current and is the house standing offer, but the live wording is \"up to 33%\", not a flat 33%. It is available to all verified players on real-money wagers only (bonus funds excluded), calculated instantly, and credited as cash w"
+  },
+  {
+   "date": "2026-09-15",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Deposit match",
+   "to": "33% CashRake, no wagering"
+  }
+ ],
+ "toshibet": [
+  {
+   "date": "2026-09-18",
+   "group": "Bonus terms",
+   "label": "VIP levels",
+   "from": "VIP ranks in the Toshi Whale Club, with level progress tracked by wagering on the rewards page; higher ranks unlock better rakeback rates, and VIPs get a dedicated host and customised bonuses",
+   "to": "VIP ranks in the Toshi Whale Club, with level progress tracked by wagering on the rewards page; higher ranks unlock better rakeback rates. VIPs get rakeback, weekly and monthly bonuses, special promotions, the $25K weekly raffle and Daily D"
+  },
+  {
+   "date": "2026-09-18",
+   "group": "Bonus terms",
+   "label": "Weekly raffle",
+   "from": "$25,000 drawn weekly across 100 winning tickets ($2,500 for 1st, $1,800 for 2nd, $1,250 for 3rd, down to $375 for 10th, then 90 more); 1 ticket per $100 wagered on casino, 3 per $100 on sports, and tickets can also be bought with Toshi Gold",
+   "to": "$25,000 Weekly Raffle: 1 ticket for every $100 wagered on casino and 3 tickets for every $100 wagered on sports, and Toshi Gold can also be exchanged for tickets. At the end of each week 100 tickets are drawn, paying $2,500 for first, $1,80"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "200% / 150% / 100% on first 3 deposits",
+   "to": "Up to 200% on your first 3 deposits"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "200% / 150% / 100% on first three deposits",
+   "to": "200% / 150% / 100% on first 3 deposits"
+  },
+  {
+   "date": "2026-09-15",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Reload + cashback",
+   "to": "200% / 150% / 100% on first three deposits"
+  }
+ ],
+ "flush": [
+  {
+   "date": "2026-09-17",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Up to $3,000 over 3 deposits",
+   "to": "275% up to $3,000 over 3 deposits"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "Welcome bonus across the first 3 deposits, up to $3,000 total",
+   "to": "The live promotions page headlines a 275% welcome bonus worth up to $3,000 across the first three deposits. The same page contradicts itself further down, where the SEO copy says only \"Choose from two tiers based on your deposit, with up to"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Bonus terms",
+   "label": "Wagering",
+   "from": "30× deposit + bonus (35× on the 150% tier)",
+   "to": "30× deposit plus bonus on the 100% first-deposit tier; its worked example for the 150% tier uses 35×"
+  },
+  {
+   "date": "2026-09-15",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "No-KYC rakeback",
+   "to": "Welcome bonus over 3 deposits, up to $3,000"
+  }
+ ],
+ "dustbit": [
+  {
+   "date": "2026-09-17",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "VIP rakeback of up to 50% depending on VIP level, paid out daily, weekly and monthly and claimed from the homepage; its FAQ also confirms a welcome bonus exists but gives no figures",
+   "to": "An ongoing \"Community Rewards & Events\" programme totalling $1,500+ every month: a $500 monthly Discord engagement leaderboard, $600+ in monthly giveaways on Dustbit's Kick streams, and $400+ in regular Discord and Telegram giveaways. Prese"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Welcome bonus",
+   "to": "Welcome bonus + up to 50% rakeback"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "VIP rakeback up to 50%",
+   "to": "Welcome bonus"
+  },
+  {
+   "date": "2026-09-15",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Dust conversion perks",
+   "to": "VIP rakeback up to 50%"
+  }
+ ],
+ "bluff": [
+  {
+   "date": "2026-09-17",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "120% first deposit up to $1,000",
+   "to": "Drops & Wins, VIP matching and sports boosts"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "120% first USDT deposit match up to $1,000 (an older FAQ says 100%)",
+   "to": "No welcome or first-deposit offer appears on its live promotions page, which lists five items: Drops & Wins, VIP Matching Status, 2 Goals Ahead Early Payout, Combo Boost and Bet Builder. Two help articles from August 2026 still describe a f"
+  },
+  {
+   "date": "2026-09-15",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Poker-led promos",
+   "to": "120% first USDT deposit up to $1,000"
+  }
+ ],
+ "fortunejack": [
+  {
+   "date": "2026-09-17",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "Up to 500% casino welcome bonus, paid as free spins over 4 missions",
+   "to": "Welcome Bonus, choose casino or sports. Casino: a guaranteed 500% bonus spread over four missions - 1st 100%, 2nd 150%, 3rd 100%, 4th 150% + 15 Bonus Rounds - each unlocked by wagering 10x in Slots or Aviator for a guaranteed free spins bon"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Bonus terms",
+   "label": "Expiry",
+   "from": "14 days to complete missions; free spins used within 3 days",
+   "to": "Bonuses expire after 7 days by default; free spins must be activated within 7 days and used within 24 hours"
+  },
+  {
+   "date": "2026-09-15",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "110% up to 1.5 BTC",
+   "to": "Up to 500% welcome bonus as free spins"
+  }
+ ],
+ "mbit": [
+  {
+   "date": "2026-09-17",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "100% up to 1 BTC + 100 free spins",
+   "to": "325% up to 4 BTC + 325 free spins"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "First deposit: 100% up to 1 BTC + 100 free spins (minimum 30 USDT)",
+   "to": "Crypto Welcome Bonus: 325% deposit match up to 4 BTC plus 325 Free Spins across the first three deposits - 1st 100% up to 1 BTC + 100 Free Spins, 2nd 100% up to 1.5 BTC + 100 Free Spins, 3rd 125% up to 1.5 BTC + 125 Free Spins - each with a"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Bonus terms",
+   "label": "Max cashout",
+   "from": "Welcome free-spin winnings capped at 0.00048 BTC",
+   "to": "No cap stated on the match bonus; free-spin winnings in any welcome package are capped at 50 USDT or 0.00048 BTC"
+  },
+  {
+   "date": "2026-09-15",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "175% up to 5 BTC",
+   "to": "100% up to 1 BTC + 100 free spins"
+  }
+ ],
+ "betfury": [
+  {
+   "date": "2026-09-17",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "Welcome pack up to 590% deposit bonus + 225 free spins over 3 deposits",
+   "to": "The Casino Welcome Pack contains three welcome bonuses activated with three separate deposits, each with three deposit ranges and each pairing a deposit match with free spins, totalling up to $10,500 (590%) in deposit bonus plus 225 free sp"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Bonus terms",
+   "label": "Wagering",
+   "from": "40× on slots and live games, with the amount to wager shown on the bonus card; the page doesn't say whether it applies to the bonus or to deposit plus bonus",
+   "to": "40× on slots and live games. The Welcome Pack terms say each bonus has its own multiplier (shown in the bonus details pop-up), and that slots and live games count at 1.0 while BetFury Originals count at 0.2. Each bet is split between your m"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Bonus terms",
+   "label": "Max cashout",
+   "from": "Free-spin winnings max $550; max deposit bonus $10,500",
+   "to": "No cap stated on the deposit bonus; free-spin winnings across the pack are capped at $550"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Bonus terms",
+   "label": "Expiry",
+   "from": "14 days to wager each welcome bonus",
+   "to": "The first bonus must be activated within 7 days of registering and each later one within 7 days of the previous; each bonus and its free spins must be wagered within 14 days"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Up to 590% + 225 free spins over 3 deposits",
+   "to": "Up to 590% + 225 free spins"
+  },
+  {
+   "date": "2026-09-15",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "BFG staking dividends",
+   "to": "Up to 590% + 225 free spins over 3 deposits"
+  }
+ ],
+ "gamba": [
+  {
+   "date": "2026-09-17",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "Rakeback on every bet, up to 10% at the highest VIP levels",
+   "to": "Daily Free Spin Wheel: hitting the daily wager target for your VIP rank unlocks one free spin per day awarding 10 Plinko balls at a random per-ball value, with winnings credited in USDT automatically and progress resetting daily. Wager targ"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Deposit bonuses",
+   "to": "Rakeback up to 10% on every bet"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Rakeback up to 10%",
+   "to": "Deposit bonuses"
+  },
+  {
+   "date": "2026-09-15",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Deposit match + rakeback",
+   "to": "Rakeback up to 10%"
+  }
+ ],
+ "razed": [
+  {
+   "date": "2026-09-16",
+   "group": "Bonus terms",
+   "label": "Wagering",
+   "from": "Your deposit and the bonus go into one bonus balance with a 40× wagering requirement. Originals, Unoriginals and live casino (except game shows and roulette) count 20%; sports bets don't count",
+   "to": "40× on one bonus balance that holds both your deposit and the bonus"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "VIP Club: rakeback, weekly and monthly bonuses, rank-up rewards",
+   "to": "100% up to $300 + up to 150 free spins"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "VIP Club: rakeback and monthly bonus from Starter; weekly bonus and rank-up rewards from Bronze 1; reward points you allocate to spins, cases, lossback, reloads, bonus buys or rakeback",
+   "to": "Welcome bonus: 100% match on the first deposit up to $300, claimed as you wager, opted into on the deposit screen, plus 100 free spins on Sugar Rush 1000 for a $100–$199 deposit or 150 for $200 and up, spread over 5 days"
+  },
+  {
+   "date": "2026-09-15",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "VIP Club: instant rakeback, weekly, monthly and rank-up bonuses from Bronze; VIP host and daily bonus from Gold; birthday bonus from Platinum; personalised benefits and milestone rewards at Diamond+",
+   "to": "VIP Club: rakeback and monthly bonus from Starter; weekly bonus and rank-up rewards from Bronze 1; reward points you allocate to spins, cases, lossback, reloads, bonus buys or rakeback"
+  },
+  {
+   "date": "2026-09-15",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "VIP rank-up cash rewards (e.g. $20 at $10,000 wagered) plus rakeback",
+   "to": "VIP Club: instant rakeback, weekly, monthly and rank-up bonuses from Bronze; VIP host and daily bonus from Gold; birthday bonus from Platinum; personalised benefits and milestone rewards at Diamond+"
+  }
+ ],
+ "rollbit": [
+  {
+   "date": "2026-09-18",
+   "group": "Bonus terms",
+   "label": "Leaderboards",
+   "from": "A $25,000 sports betting tournament resets every week, taking qualifying bets from Monday 00:00 to Sunday 23:59. Ranking is pure turnover, with $1 wagered equalling 1 point, and 50 places pay out — $5,000 for first down to $175 for places 3",
+   "to": "$25,000 Daily Race, resetting every 24 hours: the top wagerers share the pool, from $10,000 for 1st, $5,000 for 2nd and $2,000 for 3rd down to $200 for 11th; wagers on every Rollbit product count, including sports, casino and crypto futures"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Bonus terms",
+   "label": "Leaderboards",
+   "from": "$25K Daily Race: $10,000 for 1st, $5,000 2nd, $2,000 3rd, down to $300 for 10th; resets daily",
+   "to": "A $25,000 sports betting tournament resets every week, taking qualifying bets from Monday 00:00 to Sunday 23:59. Ranking is pure turnover, with $1 wagered equalling 1 point, and 50 places pay out — $5,000 for first down to $175 for places 3"
+  },
+  {
+   "date": "2026-09-15",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "$25K Daily Race",
+   "to": "5% rakeback + daily, weekly, monthly and rank-up bonuses"
+  },
+  {
+   "date": "2026-09-15",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "RLB buyback rewards",
+   "to": "$25K Daily Race"
+  }
+ ],
+ "betplay": [
+  {
+   "date": "2026-09-18",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Up to 5,000 USDT over 3 deposits",
+   "to": "250% up to 5,000 USDT + 10% weekly cashback"
+  },
+  {
+   "date": "2026-09-18",
+   "group": "Bonus terms",
+   "label": "VIP levels",
+   "from": "Bronze I to Obsidian: free spins at every level, crypto cash drops at set levels (Doge, Litecoin, Bitcoin)",
+   "to": "14 levels from Bronze I to Obsidian, earned by casino wagering (poker and sportsbook bets don't count). Free spins at every level, 10% cashback from Bronze I, and crypto cash drops at Bronze II and Gold III (Dogecoin), Bronze III and Platin"
+  },
+  {
+   "date": "2026-09-18",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "Welcome bonus over 3 deposits: 100% up to 1,000 USDT, 50% up to 2,000 USDT, 100% up to 2,000 USDT",
+   "to": "250% welcome bonus up to 5,000 USDT over the first 3 deposits: 100% up to 1,000 USDT, 50% up to 2,000 USDT, then 100% up to 2,000 USDT. Once wagering is complete the bonus can be withdrawn straight away, no strings attached"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "250% up to 5,000 USDT over 3 deposits",
+   "to": "Up to 5,000 USDT over 3 deposits"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Up to 5,000 USDT over 3 deposits",
+   "to": "250% up to 5,000 USDT over 3 deposits"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Welcome: up to 5,000 USDT over 3 deposits + 10% weekly cashback",
+   "to": "Up to 5,000 USDT over 3 deposits"
+  },
+  {
+   "date": "2026-09-15",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "No-KYC cashback only",
+   "to": "Welcome: up to 5,000 USDT over 3 deposits + 10% weekly cashback"
+  }
+ ],
+ "coincasino": [
+  {
+   "date": "2026-09-16",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "200% welcome bonus up to $30,000 + 50 Super Spins",
+   "to": "200% on the first deposit up to $30,000, plus free spins on Wanted Dead or a Wild by deposit size: 20 at $0.20 for $10–$99.99, 20 at $1 for $100–$249.99, 50 at $1 for $250–$999.99, and 50 Super Spins at $4 for $1,000 or more. First deposit "
+  },
+  {
+   "date": "2026-09-15",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Not published on site",
+   "to": "200% welcome bonus up to $30,000 + 50 Super Spins"
+  }
+ ],
+ "jackpotbet": [
+  {
+   "date": "2026-09-17",
+   "group": "Bonus terms",
+   "label": "Rakeback",
+   "from": "Instant rakeback is 6% of the house edge on every bet, claimable straight away with no cap on claims",
+   "to": "Instant rakeback returns 6% of the house edge on every bet, claimable after each bet with no limit on claims. It accrues from your first bet while unranked but only becomes claimable at Bronze ($10,000 wagered), and is claimed on the Loyalt"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "Welcome offer: 100% deposit bonus plus free spins, with instant rakeback and a VIP rank transfer",
+   "to": "Its regular offer is 100% up to $1,000 with 35x rollover, a $20 minimum deposit and a 5% maximum bet while rollover is active. Free spins on Jackpot.bet Bonanza are added equal to 10% of the deposit unless the offer states a fixed number. D"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "100% up to $1,000 + free spins",
+   "to": "100% up to $1,000 + 6% instant rakeback"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "100% deposit bonus + free spins",
+   "to": "100% up to $1,000 + free spins"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "100% first deposit + free spins, 6% instant rakeback",
+   "to": "100% deposit bonus + free spins"
+  },
+  {
+   "date": "2026-09-15",
+   "group": "Bonus terms",
+   "label": "VIP levels",
+   "from": "New players are Unranked; $10,000 wagered reaches Bronze, which unlocks instant rakeback, weekly bonuses (every Friday), monthly bonuses and level-up bonuses",
+   "to": "Ten ranks by total wagered: Bronze $10,000, Silver $50,000, Gold $100,000, Platinum $250,000, Diamond $500,000, Elite $1M, Premier $2.5M, Champion $5M, Supreme $10M, Apex $25M. Every rank gets instant rakeback plus its own weekly and monthl"
+  },
+  {
+   "date": "2026-09-15",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Jackpot drops",
+   "to": "100% first deposit + free spins, 6% instant rakeback"
+  }
+ ],
+ "wager-com": [
+  {
+   "date": "2026-09-17",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "150% up to $3,000 (advertised)",
+   "to": "Weekly rebate up to EUR 500 + daily reload"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Bonus terms",
+   "label": "VIP club",
+   "from": "Its own page describes rakeback, reloads and more as you move up the VIP ranks, without publishing the rates",
+   "to": "Levels by XP, earned at 1 XP per $1 on casino and 3 XP per $1 on sports: Rock (1,000), Quartz (5,000), Granite (15,000), Iron (40,000), Steel (100,000), Damascus (250,000), Gold (600,000), Diamond (1,500,000), Adamantium (10,000,000) and in"
+  },
+  {
+   "date": "2026-09-15",
+   "group": "Payouts & fees",
+   "label": "Minimum withdrawal",
+   "from": "€10 per transaction, or the full balance when closing the account",
+   "to": "Its help centre says the minimum is the equivalent of $20; its terms say €10 per transaction, or the full balance when closing the account"
+  },
+  {
+   "date": "2026-09-15",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Launch promos",
+   "to": "150% first deposit up to $3,000"
+  }
+ ],
+ "1win": [
+  {
+   "date": "2026-09-17",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Up to 600% + 500 free spins",
+   "to": "Up to 500% + 500 free spins"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Payouts & fees",
+   "label": "Withdrawal limits",
+   "from": "On winnings above $50,000 it may set an individual daily withdrawal limit",
+   "to": "1win publishes no fixed maximum withdrawal figure. Its General Terms and Conditions state that where winnings exceed 50,000 USD or the equivalent, 1win reserves the right to set a daily withdrawal limit calculated individually for each clie"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Bonus terms",
+   "label": "VIP levels",
+   "from": "20 levels by total bet amount: Bronze 1–3 (starting level, then $5,000 and $10,000), Silver 1–3 ($25K–$100K), Gold 1–3 ($250K–$1M), Platinum 1–3 ($2.5M–$10M), Diamond 1–3 ($25M–$100M), Black 1–5 ($250M–$5B)",
+   "to": "VIP Loyalty Program with 20 levels, entered at Bronze 1 on registration, with lifetime turnover thresholds: Bronze 1 (no turnover requirement), Bronze 2 US$5,000, Bronze 3 US$10,000, Silver 1 US$25,000, Silver 2 US$50,000, Silver 3 US$100,0"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "Welcome bonuses over the first four deposits, 500 free spins in total. Fiat accounts get up to 500%: 100% + 70 FS, 120% + 100 FS, 130% + 150 FS, 150% + 180 FS. Crypto accounts get up to 600%: 130% + 70 FS, 140% + 100 FS, 160% + 150 FS, 170%",
+   "to": "1win Points is a continuously running rewards currency, awarded for completing tasks in the Free money section and for spinning the 1win Wheel, and exchangeable for real money at a published per-currency rate. The minimum exchange is 1,200 "
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Up to 500% + 500 FS over 4 deposits (600% on crypto)",
+   "to": "Up to 600% + 500 free spins"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Payouts & fees",
+   "label": "Stated withdrawal time",
+   "from": "Terms: up to $50 paid in 1 to 60 minutes; above $50 within 5 days; further delays of up to 3 business days possible depending on the bank or payment system",
+   "to": "Its crypto withdrawal guide says payouts are sent instantly and usually confirm in about 3 minutes on TRC-20, BEP-20 and TON (up to 15 minutes at busy times). Its terms are slower: up to $50 paid in 1 to 60 minutes, above $50 within 5 days,"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Up to 500% over 4 deposits",
+   "to": "Up to 500% + 500 FS over 4 deposits (600% on crypto)"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "Welcome deposit bonuses up to 500% across the first four deposits: 100% + 70 free spins, 120% + 100 FS, 130% + 150 FS, 150% + 180 FS",
+   "to": "Welcome bonuses over the first four deposits, 500 free spins in total. Fiat accounts get up to 500%: 100% + 70 FS, 120% + 100 FS, 130% + 150 FS, 150% + 180 FS. Crypto accounts get up to 600%: 130% + 70 FS, 140% + 100 FS, 160% + 150 FS, 170%"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Up to 500% across the first four deposits, plus free spins",
+   "to": "Up to 500% over 4 deposits"
+  }
+ ],
+ "7bit": [
+  {
+   "date": "2026-09-17",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "100% first deposit + 100 free spins",
+   "to": "325% up to 5.25 BTC + 250 free spins"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "First deposit 100% + 100 free spins (page text: 325% up to 5.25 BTC over 4 deposits)",
+   "to": "Welcome pack of 325% match up to 5.25 BTC and 250 Free Spins, covering the first four deposits. The first-deposit bonus needs no code; the 2nd, 3rd and 4th deposits are claimed with sign-up bonus codes. Most 7Bit bonuses carry 40-45x wageri"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Bonus terms",
+   "label": "Expiry",
+   "from": "Bonuses expire after 14 days if wagering isn't met",
+   "to": "Bonuses expire after 14 days if wagering isn't finished; each set of free spins must be activated within 24 hours and played within 1 day"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Bonus terms",
+   "label": "Wagering",
+   "from": "35×",
+   "to": "Its bonus terms say welcome-package bonuses and free-spin winnings must be wagered 35×; its bonuses page says most bonuses need 40–45× unless stated otherwise. Both apply the multiplier to the bonus"
+  }
+ ],
+ "bitstarz": [
+  {
+   "date": "2026-09-17",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "Welcome package: 5 BTC + 180 free spins",
+   "to": "The welcome package is 5 BTC + 180 free spins, opening with 100% up to 1 BTC + 180 Free Spins on the first deposit and further bonuses on deposits two to four."
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Bonus terms",
+   "label": "Expiry",
+   "from": "Welcome Package bonuses valid for 7 days",
+   "to": "Welcome Package bonuses are valid for 7 days; to get the welcome free spins the deposit must be wagered once within 24 hours, and free spins must be opened within 1 day"
+  }
+ ],
+ "degencity": [
+  {
+   "date": "2026-09-16",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Instant, weekly and monthly rakeback",
+   "to": "7-day 10% slot cashback"
+  },
+  {
+   "date": "2026-09-16",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "Instant rakeback, weekly and monthly rewards from the Chiplet rank, plus rank-up bonuses; instant rakeback is a share of the house edge on every eligible bet",
+   "to": "7-Day 10% Cashback: 10% of net slot losses in your first 7 days after registering is credited automatically, for players who have made at least one deposit; plus instant rakeback from the first bet, and weekly and monthly bonuses from the C"
+  }
+ ],
+ "duel": [
+  {
+   "date": "2026-09-18",
+   "group": "Bonus terms",
+   "label": "Rakeback",
+   "from": "Says it instantly returns 50% of the house edge you pay on slots, which it describes as turning a 4% edge into an effective 2%",
+   "to": "Third-party slots: 50% of the house edge paid comes back instantly, turning a 4% edge into an effective 2%. Duel Originals carry a 0.1% base edge, and while you are inside your daily zero-edge allowance every bet gets a matching 0.1% instan"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "No deposit bonuses — Duel publishes a page arguing against them",
+   "to": "Duel Originals are in-house games built to 100% RTP with zero house edge, and Duel Original Slots are presented as provably fair slots at 100% RTP. Duel positions itself against bonuses rather than offering them, with a dedicated \"Why Bonus"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "No deposit bonuses by policy",
+   "to": "$3M monthly race + zero-edge originals"
+  }
+ ],
+ "metawin": [
+  {
+   "date": "2026-09-18",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "MetaMax rewards, rank prizes up to $1M",
+   "to": "30% of every deposit as prize-draw funds + a $250,000 monthly draw"
+  },
+  {
+   "date": "2026-09-18",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "MetaMax loyalty program; rank-up prizes up to $1,000,000",
+   "to": "No welcome or sign-up bonus. The standing offer is 30% of every deposit credited as Prize Funds, which can only be used toward competition (prize draw) entries. They are used only when your real balance cannot cover the entry, and any remai"
+  },
+  {
+   "date": "2026-09-17",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "MetaMax loyalty program",
+   "to": "MetaMax rewards, rank prizes up to $1M"
+  }
+ ],
+ "thrill": [
+  {
+   "date": "2026-09-17",
+   "group": "Offer",
+   "label": "Headline offer",
+   "from": "Instant rakeback + weekly & monthly bonuses",
+   "to": "$75,000 weekly race + instant rakeback"
+  }
+ ]
+}
