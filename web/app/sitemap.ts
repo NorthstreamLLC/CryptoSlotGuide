@@ -4,6 +4,7 @@ import { SITE_URL } from "@/lib/seo";
 import { sweepsSorted } from "@/lib/sweeps";
 import { US_STATES, COUNTRIES } from "@/lib/legal";
 import { STUDIOS } from "@/lib/studios";
+import { versusPairs, pairSlug } from "@/lib/versus";
 
 /**
  * Not part of the original prototype — it's a design mockup with one
@@ -66,6 +67,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...esportsTitles.map((t) => slugPath("/betting", slug(t.name))),
     ...guideRows.map((g) => slugPath("/guides", g.slug)),
     ...houseGames.map((h) => slugPath("/house-games", h.slug)),
+    ...versusPairs().map(([a, b]) => slugPath("/compare", pairSlug(a, b))),
     ...sweepsSorted().map((w) => slugPath("/sweepstakes-casinos", w.slug)),
     ...US_STATES.map((st) => slugPath("/legal/us", st.code.toLowerCase())),
     ...COUNTRIES.filter((c) => c.code !== "US").map((c) => slugPath("/legal", c.code.toLowerCase())),
