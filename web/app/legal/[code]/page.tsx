@@ -5,6 +5,7 @@ import { breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { COUNTRIES, countryBy } from "@/lib/legal";
 import { CasinoAccess } from "@/components/legal/CasinoAccess";
+import { countryPages } from "@/lib/landing";
 import { LegalHero, StatusTile, Sources, Disclaimer, MONO } from "@/components/legal/LegalUI";
 import { HelpBox } from "@/components/legal/HelpBox";
 
@@ -54,6 +55,9 @@ export default async function Page({ params }: { params: Promise<{ code: string 
         </div>
 
         <CasinoAccess code={c.code.split("-")[0]} name={c.name} />
+        {countryPages().some((x) => x.c.code === c.code) && (
+          <Link href={`/crypto-casinos/in/${code}`} style={{ display: "inline-block", marginTop: 18, fontSize: 15, fontWeight: 800, color: "#00C2CC" }}>Compare the best crypto casinos in {c.name} →</Link>
+        )}
 
         <Sources sources={c.sources} />
         <HelpBox />
