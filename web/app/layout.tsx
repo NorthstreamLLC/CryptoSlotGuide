@@ -3,6 +3,7 @@ import { Archivo, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { NewsletterBand } from "@/components/layout/NewsletterBand";
 import { siteCounts } from "@/lib/site-data";
 import { SITE_URL, SITE_NAME } from "@/lib/seo";
 import { organizationSchema, websiteSchema } from "@/lib/schema";
@@ -42,6 +43,7 @@ export default function RootLayout({
         <JsonLd data={[organizationSchema(), websiteSchema()]} />
         <Header counts={siteCounts} />
         <main className="flex-1">{children}</main>
+        <NewsletterBand />
         <Footer />
       </body>
     </html>

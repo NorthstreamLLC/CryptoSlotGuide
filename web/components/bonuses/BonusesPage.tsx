@@ -8,7 +8,6 @@ import { Icon, type IconName } from "@/components/ui/Icon";
 import type { Operator } from "@/lib/types";
 import { raceFor, raceSlugs, dropFor } from "@/lib/races";
 import { getSpecFact } from "@/lib/spec-sheet";
-import { EmailSignup } from "@/components/ui/EmailSignup";
 
 /**
  * Compare casino bonuses, split by how each one works:
@@ -183,9 +182,6 @@ export function BonusesPage() {
           })}
         </Table>
 
-        <div style={{ marginTop: 28 }}>
-          <EmailSignup source="bonuses" />
-        </div>
 
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 14, marginTop: 14 }}>
           <div style={{ padding: "26px 28px", borderRadius: 18, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>

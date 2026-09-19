@@ -6,7 +6,6 @@ import { sweepsSorted, sweepsFact, shortFact } from "@/lib/sweeps";
 import { brandFor } from "@/lib/casino-facts";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { Icon } from "@/components/ui/Icon";
-import { EmailSignup } from "@/components/ui/EmailSignup";
 
 export const metadata = pageMetadata(
   "Best US sweepstakes casinos compared",
@@ -118,9 +117,6 @@ export default function Page() {
           ))}
         </div>
 
-        <div style={{ marginTop: 14 }}>
-          <EmailSignup source="sweeps" title="Get new sweepstakes offers first" sub="New welcome offers, daily bonus changes and fresh sweepstakes casinos, every week. No spam, unsubscribe any time." />
-        </div>
       </section>
     </main>
   );
