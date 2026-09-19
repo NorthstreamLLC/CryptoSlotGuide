@@ -7,6 +7,7 @@ import { MapHover, type HoverInfo } from "@/components/legal/MapHover";
 import { logoFor } from "@/lib/logo";
 import { LegalMap } from "@/components/legal/LegalMap";
 import { LegalHero, RegionGrid, Tabs, Disclaimer } from "@/components/legal/LegalUI";
+import { HelpBox } from "@/components/legal/HelpBox";
 
 export const metadata = pageMetadata(
   "Online casino & sports betting laws by US state: map",
@@ -85,6 +86,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<{ l
             <RegionGrid items={states.map((s) => ({ href: `/legal/us/${s.code.toLowerCase()}`, name: s.name, status: s.onlineCasino }))} />
           </>
         )}
+        <HelpBox />
         <Disclaimer />
       </section>
     </main>

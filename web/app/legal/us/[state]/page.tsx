@@ -5,6 +5,7 @@ import { breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { US_STATES, stateBy, sweepsAvailableIn, toneOf } from "@/lib/legal";
 import { LegalHero, StatusTile, Sources, Disclaimer, MONO } from "@/components/legal/LegalUI";
+import { HelpBox } from "@/components/legal/HelpBox";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { brandFor } from "@/lib/casino-facts";
 
@@ -86,6 +87,7 @@ export default async function Page({ params }: { params: Promise<{ state: string
         )}
 
         <Sources sources={s.sources} />
+        <HelpBox />
         <Disclaimer />
         <p style={{ margin: "18px 0 0" }}>
           <Link href="/legal/us" style={{ fontSize: 14, fontWeight: 700, color: "#00C2CC" }}>← Back to the US map</Link>

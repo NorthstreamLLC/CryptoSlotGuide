@@ -6,6 +6,7 @@ import { countryHoverInfo } from "@/lib/legal-hover";
 import { MapHover } from "@/components/legal/MapHover";
 import { LegalMap } from "@/components/legal/LegalMap";
 import { LegalHero, RegionGrid, Tabs, Disclaimer } from "@/components/legal/LegalUI";
+import { HelpBox } from "@/components/legal/HelpBox";
 
 export const metadata = pageMetadata(
   "Is online gambling legal in your country? World map",
@@ -37,6 +38,7 @@ export default function Page() {
             <RegionGrid items={covered.map((c) => ({ href: `/legal/${c.code.toLowerCase()}`, name: c.name, status: c.onlineCasino }))} />
           </>
         )}
+        <HelpBox />
         <Disclaimer />
       </section>
     </main>

@@ -6,6 +6,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { COUNTRIES, countryBy } from "@/lib/legal";
 import { CasinoAccess } from "@/components/legal/CasinoAccess";
 import { LegalHero, StatusTile, Sources, Disclaimer, MONO } from "@/components/legal/LegalUI";
+import { HelpBox } from "@/components/legal/HelpBox";
 
 export function generateStaticParams() {
   return COUNTRIES.filter((c) => c.code !== "US").map((c) => ({ code: c.code.toLowerCase() }));
@@ -55,6 +56,7 @@ export default async function Page({ params }: { params: Promise<{ code: string 
         <CasinoAccess code={c.code.split("-")[0]} name={c.name} />
 
         <Sources sources={c.sources} />
+        <HelpBox />
         <Disclaimer />
         <p style={{ margin: "18px 0 0" }}>
           <Link href="/legal" style={{ fontSize: 14, fontWeight: 700, color: "#00C2CC" }}>← Back to the world map</Link>

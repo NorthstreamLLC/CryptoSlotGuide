@@ -7,6 +7,7 @@ import { countryHoverInfo } from "@/lib/legal-hover";
 import { LegalMap } from "@/components/legal/LegalMap";
 import { MapHover } from "@/components/legal/MapHover";
 import { LegalHero, RegionGrid, Tabs, Disclaimer } from "@/components/legal/LegalUI";
+import { HelpBox } from "@/components/legal/HelpBox";
 
 export const metadata = pageMetadata(
   "Online gambling in Europe: laws and crypto casinos by country",
@@ -70,6 +71,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<{ l
             <RegionGrid items={covered.map((c) => ({ href: `/legal/${c!.code.toLowerCase()}`, name: c!.name, status: c!.onlineCasino }))} />
           </>
         )}
+        <HelpBox />
         <Disclaimer />
       </section>
     </main>
