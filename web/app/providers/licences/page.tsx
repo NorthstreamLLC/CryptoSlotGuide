@@ -2,7 +2,7 @@ import Link from "next/link";
 import { pageMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { WORLD_SHAPES, EUROPE_SHAPES } from "@/lib/legal";
+import { WORLD_SHAPES, EUROPE_SHAPES, US_SHAPES } from "@/lib/legal";
 import { STUDIOS, studiosIn, studioBy, countryOf } from "@/lib/studios";
 import { LegalMap } from "@/components/legal/LegalMap";
 import { MapHover, type HoverInfo } from "@/components/legal/MapHover";
@@ -27,15 +27,22 @@ export default async function Page({ searchParams }: { searchParams: Promise<{ s
   const { studio: sk, view } = await searchParams;
   const studio = sk ? studioBy(sk) : null;
   const europe = view === "europe";
-  const shapes = europe ? EUROPE_SHAPES : WORLD_SHAPES;
-  const licensedHere = new Set(studio?.licences.map((l) => countryOf(l.code)) ?? []);
+  const us = view === "us";
+  const shapes = us ? US_SHAPES : europe ? EUROPE_SHAPES : WORLD_SHAPES;
+  /** In the US view a region is a state: match "US-NJ"-style codes; otherwise match by country. */
+  const regionOf = (code: string) => (us ? (code.startsWith("US-") ? code.slice(3) : null) : countryOf(code));
+  const studiosInRegion = (region: string) =>
+    us
+      ? STUDIOS.filter((st) => st.licences.some((l) => l.code === `US-${region}`)).map((st) => ({ s: st, subs: [] as string[], licensed: true }))
+      : studiosIn(region);
+  const licensedHere = new Set(studio?.licences.map((l) => regionOf(l.code)).filter(Boolean) as string[]);
 
   const info: Record<string, HoverInfo> = {};
   for (const sh of shapes) {
     if (!sh.code || info[sh.code]) continue;
-    const list = studiosIn(sh.code);
+    const list = studiosInRegion(sh.code);
     if (!list.length) continue;
-    const mine = studio ? studio.licences.filter((l) => countryOf(l.code) === sh.code) : [];
+    const mine = studio ? studio.licences.filter((l) => regionOf(l.code) === sh.code) : [];
     info[sh.code] = {
       name: sh.name,
       rows: studio
@@ -49,13 +56,13 @@ export default async function Page({ searchParams }: { searchParams: Promise<{ s
 
   const fill = (code: string) => {
     if (studio) return licensedHere.has(code) ? "#2FB67A" : "#1C2328";
-    const n = studiosIn(code).length;
+    const n = studiosInRegion(code).length;
     return n ? SHADES.find((s) => n >= s.min)?.color : "#1C2328";
   };
   const q = (o: { studio?: string | null; view?: string | null }) => {
     const p = new URLSearchParams();
     const st = o.studio === undefined ? studio?.slug : o.studio;
-    const vw = o.view === undefined ? (europe ? "europe" : null) : o.view;
+    const vw = o.view === undefined ? (europe ? "europe" : us ? "us" : null) : o.view;
     if (st) p.set("studio", st);
     if (vw) p.set("view", vw);
     const s = p.toString();
@@ -68,15 +75,15 @@ export default async function Page({ searchParams }: { searchParams: Promise<{ s
       <LegalHero crumbs={[{ label: "Home", href: "/" }, { label: "Game providers", href: "/providers" }, { label: "Licence map" }]} eyebrow="Game studios" title={studio ? `Where ${studio.name} is licensed` : "Where game studios are licensed"}>
         <p style={{ margin: 0, maxWidth: "64ch", fontSize: 16.5, lineHeight: 1.6, color: "#A8B6BE" }}>
           {studio
-            ? `${studio.name} lists ${studio.licences.length} licences and approvals on its own site${studio.parent ? `; it is part of ${studio.parent}` : ""}. Hover a country for the regulator.`
+            ? `${studio.name} lists ${studio.licences.length} licences and approvals on its own site${studio.parent ? `; it is part of ${studio.parent}` : ""}. Hover a market for the regulator, or open its profile.`
             : `${STUDIOS.length} slot and live-casino studios and every licence they list on their own sites. Pick a studio to light up its markets, or hover a country to see who is licensed there.`}
         </p>
       </LegalHero>
 
       <section style={{ maxWidth: 1180, margin: "0 auto", padding: "26px 24px 80px" }}>
         <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 12 }}>
-          {[["World", null], ["Europe", "europe"]].map(([label, v]) => {
-            const on = (v === "europe") === europe;
+          {[["World", null], ["Europe", "europe"], ["US states", "us"]].map(([label, v]) => {
+            const on = (v ?? null) === (europe ? "europe" : us ? "us" : null);
             return (
               <Link key={label} href={q({ view: v })} scroll={false} style={{ padding: "8px 16px", borderRadius: 100, border: `1px solid ${on ? "rgba(47,182,122,.55)" : "rgba(255,255,255,.12)"}`, background: on ? "rgba(47,182,122,.14)" : "transparent", fontSize: 13.5, fontWeight: 700, color: on ? "#7BE0B8" : "#A8B6BE" }}>
                 {label}
@@ -98,7 +105,8 @@ export default async function Page({ searchParams }: { searchParams: Promise<{ s
           <MapHover info={info}>
             <LegalMap
               shapes={shapes}
-              viewBox={europe ? "0 0 960 680" : "0 0 960 470"}
+              viewBox={us ? "0 0 975 610" : europe ? "0 0 960 680" : "0 0 960 470"}
+              labels={us}
               statusOf={() => undefined}
               hrefOf={() => null}
               fillOf={fill}
@@ -107,6 +115,9 @@ export default async function Page({ searchParams }: { searchParams: Promise<{ s
           </MapHover>
         </div>
 
+        {studio && (
+          <Link href={`/providers/${studio.slug}`} style={{ display: "inline-block", marginTop: 16, fontSize: 14, fontWeight: 700, color: "#00C2CC" }}>Open the {studio.name} profile →</Link>
+        )}
         {studio && (
           <div style={{ marginTop: 22, padding: "8px 24px", borderRadius: 18, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
             {studio.licences.map((l, i) => (

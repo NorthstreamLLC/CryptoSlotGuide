@@ -3,6 +3,7 @@ import { siteData } from "@/lib/site-data";
 import { SITE_URL } from "@/lib/seo";
 import { sweepsSorted } from "@/lib/sweeps";
 import { US_STATES, COUNTRIES } from "@/lib/legal";
+import { STUDIOS } from "@/lib/studios";
 
 /**
  * Not part of the original prototype — it's a design mockup with one
@@ -59,7 +60,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const dynamicPaths = [
     ...ops.map((o) => slugPath("/casinos", o.slug)),
     ...slots.map((s) => slugPath("/slots", s.slug)),
-    ...providers.map((p) => slugPath("/providers", p.slug)),
+    ...[...new Set([...providers.map((p) => p.slug), ...STUDIOS.map((st) => st.slug)])].map((sl) => slugPath("/providers", sl)),
     ...walletRows.map((w) => slugPath("/wallets", w.slug)),
     ...exchangeRows.map((x) => slugPath("/exchanges", x.slug)),
     ...esportsTitles.map((t) => slugPath("/betting", slug(t.name))),
