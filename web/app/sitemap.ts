@@ -21,6 +21,7 @@ const STATIC_ROUTES = [
   "/lowest-wagering",
   "/races",
   "/vip-calculator",
+  "/find-my-casino",
   "/sweepstakes-casinos",
   "/legal",
   "/legal/us",

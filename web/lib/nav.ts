@@ -56,6 +56,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
                 { label: "Lowest wagering", href: "/lowest-wagering" },
                 { label: "Biggest races & raffles", href: "/races" },
                 { label: "VIP calculator", href: "/vip-calculator" },
+                { label: "Find my casino", href: "/find-my-casino" },
                 { label: "US sweepstakes casinos", href: "/sweepstakes-casinos" },
                 { label: "Gambling laws map", href: "/legal" },
                 { label: "Best Bitcoin casinos", href: "/crypto-casinos/accepting/bitcoin" },
