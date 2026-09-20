@@ -75,3 +75,17 @@ export function faqSchema(faqs: { q: string; a: string }[]) {
     })),
   };
 }
+
+/** Article markup for the guides carried over from the WordPress site. */
+export function articleSchema(headline: string, description: string, path: string, published: string, modified: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline,
+    description,
+    datePublished: published,
+    dateModified: modified,
+    mainEntityOfPage: `${SITE_URL}${path}`,
+    publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
+  };
+}

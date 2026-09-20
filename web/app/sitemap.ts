@@ -6,6 +6,7 @@ import { US_STATES, COUNTRIES } from "@/lib/legal";
 import { STUDIOS } from "@/lib/studios";
 import { versusPairs, pairSlug } from "@/lib/versus";
 import { countryPages, COIN_PAGES, casinosForCoin } from "@/lib/landing";
+import { LEGACY_ITEMS, LEGACY_CATEGORIES } from "@/lib/legacy";
 
 /**
  * Not part of the original prototype — it's a design mockup with one
@@ -22,6 +23,7 @@ const STATIC_ROUTES = [
   "/races",
   "/vip-calculator",
   "/find-my-casino",
+  "/blog",
   "/sweepstakes-casinos",
   "/legal",
   "/legal/us",
@@ -70,6 +72,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...esportsTitles.map((t) => slugPath("/betting", slug(t.name))),
     ...guideRows.map((g) => slugPath("/guides", g.slug)),
     ...houseGames.map((h) => slugPath("/house-games", h.slug)),
+    ...LEGACY_ITEMS.map((i) => slugPath("", i.slug)),
+    ...LEGACY_CATEGORIES.map((c) => slugPath("/category", c.slug)),
     ...countryPages().map(({ c }) => slugPath("/crypto-casinos/in", c.code.toLowerCase())),
     ...COIN_PAGES.filter((c) => casinosForCoin(c.ticker).length >= 3).map((c) => slugPath("/crypto-casinos/accepting", c.slug)),
     ...versusPairs().map(([a, b]) => slugPath("/compare", pairSlug(a, b))),

@@ -298,3 +298,35 @@ p {
     box-shadow: 0 0 0 7px rgba(255, 90, 120, 0);
   }
 }
+
+/* Guides carried over from the WordPress site: readable article typography. */
+.legacy-article {
+  font-size: 16.5px;
+  line-height: 1.75;
+  color: #C6D1D7;
+}
+.legacy-article > * + * { margin-top: 1.1em; }
+.legacy-article h2 {
+  margin-top: 2em;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+  color: #fff;
+}
+.legacy-article h3 { margin-top: 1.6em; font-size: 20px; font-weight: 800; color: #fff; }
+.legacy-article a { color: #5FE3E8; text-decoration: underline; text-underline-offset: 3px; }
+.legacy-article ul, .legacy-article ol { padding-left: 1.3em; }
+.legacy-article li + li { margin-top: 0.5em; }
+.legacy-article li::marker { color: #6E7F88; }
+.legacy-article strong { color: #fff; }
+.legacy-article img { max-width: 100%; height: auto; border-radius: 14px; }
+.legacy-article blockquote {
+  padding: 4px 0 4px 18px;
+  border-left: 3px solid rgba(0,194,204,.5);
+  color: #A8B6BE;
+  font-style: italic;
+}
+.legacy-article table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+.legacy-article th, .legacy-article td { padding: 10px 12px; border-top: 1px solid rgba(255,255,255,.08); text-align: left; }
+.legacy-article th { color: #fff; font-family: var(--font-jetbrains-mono), monospace; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; }
