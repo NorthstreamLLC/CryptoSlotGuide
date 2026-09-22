@@ -131,7 +131,7 @@ function More({ f, max = 130 }: { f: Fact; max?: number }) {
       <span>{short}</span>
       {long ? (
         <details style={{ marginTop: 6 }}>
-          <summary style={{ cursor: "pointer", fontSize: 12, fontWeight: 700, color: "#5FE3E8", listStyle: "none" }}>Full terms</summary>
+          <summary style={{ cursor: "pointer", display: "inline-block", padding: "5px 0", fontSize: 12, fontWeight: 700, color: "#5FE3E8", listStyle: "none" }}>Full terms</summary>
           <div style={{ marginTop: 6, fontSize: 13, lineHeight: 1.6, color: "#A8B6BE" }}>
             {f.value} <Source f={f} />
           </div>
