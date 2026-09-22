@@ -1,4 +1,4 @@
-import { logoFor, tintFor } from "@/lib/logo";
+import { logoFor, needsLightPlate, tintFor } from "@/lib/logo";
 
 /**
  * Renders a real logo image when one genuinely exists (see lib/logo.ts),
@@ -24,9 +24,23 @@ export function BrandMark({
 }) {
   const logo = logoFor(slug);
   if (logo) {
+    // A black-on-transparent mark needs a light ground to be seen at all, and
+    // has to be contained inside it rather than cropped to fill the square.
+    const plate = needsLightPlate(slug);
     return (
       // eslint-disable-next-line @next/next/no-img-element
-      <img src={logo} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: radius, background: "#0C1013" }} />
+      <img
+        src={logo}
+        alt=""
+        style={{
+          width: "100%",
+          height: "100%",
+          objectFit: plate ? "contain" : "cover",
+          padding: plate ? "14%" : 0,
+          borderRadius: radius,
+          background: plate ? "#EEF1F3" : "#0C1013",
+        }}
+      />
     );
   }
   return (

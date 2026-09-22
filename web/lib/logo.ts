@@ -8,7 +8,12 @@
  * from each casino's own domain (below); anything without one still
  * renders the tinted-monogram fallback via BrandMark.
  */
-/** Each casino's own square site icon (apple-touch-icon or favicon), taken from its own domain on 18 Sep 2026. Swap in affiliate brand-kit files as they arrive. */
+/**
+ * Each brand's own square site icon (apple-touch-icon, app icon or press mark), taken from its own
+ * domain — casinos and studios on 18 Sep 2026, wallets, exchanges and the remainder on 22 Sep 2026.
+ * data/logo-sources.json records the exact URL and size behind every file. Swap in affiliate
+ * brand-kit files as they arrive.
+ */
 const LOGOS: Record<string, string> = {
   "1win": "/assets/logos/1win.png",
   "3-oaks-gaming": "/assets/logos/3-oaks-gaming.png",
@@ -27,11 +32,14 @@ const LOGOS: Record<string, string> = {
   "blueprint-gaming": "/assets/logos/blueprint-gaming.png",
   "bluff": "/assets/logos/bluff.png",
   "booming-games": "/assets/logos/booming-games.png",
+  "bybit": "/assets/logos/bybit.png",
   "chumba-casino": "/assets/logos/chumba-casino.png",
   "cloudbet": "/assets/logos/cloudbet.png",
+  "coinbase": "/assets/logos/coinbase.png",
   "coincasino": "/assets/logos/coincasino.png",
   "crown-coins-casino": "/assets/logos/crown-coins-casino.png",
   "cybet": "/assets/logos/cybet.png",
+  "dara-casino": "/assets/logos/dara-casino.png",
   "degen": "/assets/logos/degen.png",
   "degencity": "/assets/logos/degencity.png",
   "dicey": "/assets/logos/dicey.png",
@@ -56,18 +64,25 @@ const LOGOS: Record<string, string> = {
   "housebets": "/assets/logos/housebets.png",
   "igt": "/assets/logos/igt.png",
   "jackpotbet": "/assets/logos/jackpotbet.png",
+  "kraken": "/assets/logos/kraken.png",
+  "kucoin": "/assets/logos/kucoin.png",
+  "ledger": "/assets/logos/ledger.png",
   "legendz": "/assets/logos/legendz.png",
   "light-and-wonder": "/assets/logos/light-and-wonder.png",
   "lonestar": "/assets/logos/lonestar.png",
   "luckyland-casino": "/assets/logos/luckyland-casino.png",
   "mbit": "/assets/logos/mbit.png",
   "mcluck": "/assets/logos/mcluck.png",
+  "metamask": "/assets/logos/metamask.png",
   "metawin": "/assets/logos/metawin.png",
   "modo": "/assets/logos/modo.png",
   "moonspin": "/assets/logos/moonspin.png",
   "netent": "/assets/logos/netent.png",
+  "nolimit-city": "/assets/logos/nolimit-city.svg",
   "nolimitcoins": "/assets/logos/nolimitcoins.png",
   "octoplay": "/assets/logos/octoplay.png",
+  "okx": "/assets/logos/okx.png",
+  "phantom": "/assets/logos/phantom.png",
   "play-n-go": "/assets/logos/play-n-go.png",
   "playson": "/assets/logos/playson.png",
   "playtech": "/assets/logos/playtech.png",
@@ -78,6 +93,7 @@ const LOGOS: Record<string, string> = {
   "push-gaming": "/assets/logos/push-gaming.png",
   "quickspin": "/assets/logos/quickspin.png",
   "qzino": "/assets/logos/qzino.png",
+  "rabby": "/assets/logos/rabby.png",
   "rainbet": "/assets/logos/rainbet.png",
   "razed": "/assets/logos/razed.png",
   "realprize": "/assets/logos/realprize.png",
@@ -87,8 +103,8 @@ const LOGOS: Record<string, string> = {
   "rollbit": "/assets/logos/rollbit.png",
   "roobet": "/assets/logos/roobet.png",
   "shock": "/assets/logos/shock.png",
-  "shuffle-us": "/assets/logos/shuffle-us.png",
   "shuffle": "/assets/logos/shuffle.png",
+  "shuffle-us": "/assets/logos/shuffle-us.png",
   "sixty6": "/assets/logos/sixty6.png",
   "solcasino": "/assets/logos/solcasino.png",
   "spartans": "/assets/logos/spartans.png",
@@ -96,12 +112,13 @@ const LOGOS: Record<string, string> = {
   "sportzino": "/assets/logos/sportzino.png",
   "spree": "/assets/logos/spree.png",
   "spribe": "/assets/logos/spribe.png",
-  "stake-us": "/assets/logos/stake-us.png",
   "stake": "/assets/logos/stake.png",
+  "stake-us": "/assets/logos/stake-us.png",
   "thrill": "/assets/logos/thrill.png",
   "thrillzz": "/assets/logos/thrillzz.png",
   "thunderkick": "/assets/logos/thunderkick.png",
   "toshibet": "/assets/logos/toshibet.png",
+  "trust-wallet": "/assets/logos/trust-wallet.svg",
   "vave": "/assets/logos/vave.png",
   "wager-com": "/assets/logos/wager-com.png",
   "wazdan": "/assets/logos/wazdan.png",
@@ -112,6 +129,27 @@ const LOGOS: Record<string, string> = {
   "yggdrasil": "/assets/logos/yggdrasil.png",
   "zula-casino": "/assets/logos/zula-casino.png",
 };
+
+/**
+ * Marks drawn in black or near-black on a transparent ground. On the site's
+ * dark tile they were all but invisible (measured: mean luminance under 50
+ * across the opaque pixels, with the art covering less than half the square),
+ * so these render on a light plate, contained rather than cropped.
+ */
+const LIGHT_PLATE = new Set([
+  "ledger",
+  "hacksaw-gaming",
+  "relax-gaming",
+  "spribe",
+  "thunderkick",
+  "playtech",
+  "wazdan",
+  "flush",
+]);
+
+export function needsLightPlate(slug: string): boolean {
+  return LIGHT_PLATE.has(slug);
+}
 
 export function logoFor(slug: string): string | null {
   return LOGOS[slug] ?? null;

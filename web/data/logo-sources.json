@@ -1,0 +1,67 @@
+{
+  "note": "Where each brand mark in public/assets/logos came from. Every file is the brand's own site icon, app icon or press mark, fetched from its own domain — never a logo aggregator or review site. The 12 entries below are the wallets, exchanges and stragglers fetched on 2026-09-22; the 101 casino and studio marks fetched on 2026-09-18 came from each brand's own apple-touch-icon or favicon by the same method, and their exact URLs are re-derivable with `node scripts/fetch-logos.mjs --all`.",
+  "logos": {
+    "ledger": {
+      "url": "https://ledger-wp-website-s3-prd.ledger.com/uploads/2021/11/Ledger_favicon.png",
+      "size": "300x300",
+      "fetchedAt": "2026-09-22"
+    },
+    "metamask": {
+      "url": "https://metamask.io/favicons/default/apple-touch-icon.png",
+      "size": "180x180",
+      "fetchedAt": "2026-09-22"
+    },
+    "phantom": {
+      "url": "https://phantom.com/_web_platform_assets/apple-touch-icon.png",
+      "size": "180x180",
+      "fetchedAt": "2026-09-22"
+    },
+    "rabby": {
+      "url": "https://rabby.io/assets/logos/logo_twitter.png",
+      "size": "512x512",
+      "fetchedAt": "2026-09-22"
+    },
+    "trust-wallet": {
+      "url": "https://trustwallet.com/icon.svg",
+      "size": "svg",
+      "fetchedAt": "2026-09-22"
+    },
+    "kraken": {
+      "url": "https://www.kraken.com/_assets/icons/apple-touch-icon.png",
+      "size": "180x180",
+      "fetchedAt": "2026-09-22"
+    },
+    "okx": {
+      "url": "https://www.okx.com/cdn/assets/imgs/253/59830BB78B18A776.png",
+      "size": "200x200",
+      "fetchedAt": "2026-09-22"
+    },
+    "coinbase": {
+      "url": "https://www.coinbase.com/apple-touch-icon.png",
+      "size": "512x512",
+      "fetchedAt": "2026-09-22"
+    },
+    "bybit": {
+      "url": "https://announcements.bybit.com/images/favicon.ico",
+      "size": "256x256",
+      "fetchedAt": "2026-09-22",
+      "note": "256px PNG extracted from the multi-size .ico; www.bybit.com serves only a 48px BMP."
+    },
+    "kucoin": {
+      "url": "https://www.kucoin.com/logo.png",
+      "size": "144x144",
+      "fetchedAt": "2026-09-22"
+    },
+    "dara-casino": {
+      "url": "https://daracasino.com/dara512x512.png",
+      "size": "512x512",
+      "fetchedAt": "2026-09-22"
+    },
+    "nolimit-city": {
+      "url": "https://fan-cdn.nolimitcity.com/nlcboltyellow_15_4f7b3d308b.svg",
+      "size": "svg 60x60",
+      "fetchedAt": "2026-09-22",
+      "note": "The studio's own bolt mark; its site serves only a 32px favicon.ico and a wide wordmark."
+    }
+  }
+}
