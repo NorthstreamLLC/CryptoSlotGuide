@@ -6,8 +6,9 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { COUNTRIES, countryBy } from "@/lib/legal";
 import { CasinoAccess } from "@/components/legal/CasinoAccess";
 import { countryPages } from "@/lib/landing";
-import { LegalHero, StatusTile, Sources, Disclaimer, MONO } from "@/components/legal/LegalUI";
+import { LegalHero, StatusTile, Sources, Disclaimer, JumpList, MONO } from "@/components/legal/LegalUI";
 import { HelpBox } from "@/components/legal/HelpBox";
+import { NextSteps } from "@/components/layout/NextSteps";
 
 export function generateStaticParams() {
   return COUNTRIES.filter((c) => c.code !== "US").map((c) => ({ code: c.code.toLowerCase() }));
@@ -24,6 +25,7 @@ export default async function Page({ params }: { params: Promise<{ code: string 
   const { code } = await params;
   const c = countryBy(code);
   if (!c) notFound();
+  const hasCountryPage = countryPages().some((x) => x.c.code === c.code);
 
   const rows: [string, string | undefined | null][] = [
     ["Regulator", c.regulator?.name],
@@ -55,16 +57,38 @@ export default async function Page({ params }: { params: Promise<{ code: string 
         </div>
 
         <CasinoAccess code={c.code.split("-")[0]} name={c.name} />
-        {countryPages().some((x) => x.c.code === c.code) && (
-          <Link href={`/crypto-casinos/in/${code}`} style={{ display: "inline-block", marginTop: 18, fontSize: 15, fontWeight: 800, color: "#00C2CC" }}>Compare the best crypto casinos in {c.name} →</Link>
+        {hasCountryPage && (
+          <Link
+            href={`/crypto-casinos/in/${code}`}
+            style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 16, marginTop: 20, padding: "22px 26px", borderRadius: 18, background: "radial-gradient(120% 130% at 100% 0%, rgba(0,194,204,.14), transparent 60%), #0C1013", border: "1px solid rgba(0,194,204,.28)" }}
+          >
+            <span style={{ maxWidth: "58ch" }}>
+              <span style={{ display: "block", fontSize: 19, fontWeight: 800, color: "#fff", marginBottom: 5 }}>Compare the best crypto casinos in {c.name}</span>
+              <span style={{ display: "block", fontSize: 14.5, lineHeight: 1.6, color: "#A8B6BE" }}>The casinos that accept {c.name} players, with the coins, payout times and welcome offers each one publishes.</span>
+            </span>
+            <span style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "13px 20px", borderRadius: 11, background: "#00C2CC", color: "#0A0D0F", fontSize: 14.5, fontWeight: 800, whiteSpace: "nowrap" }}>
+              See the list <span aria-hidden>→</span>
+            </span>
+          </Link>
         )}
 
         <Sources sources={c.sources} />
         <HelpBox />
         <Disclaimer />
-        <p style={{ margin: "18px 0 0" }}>
-          <Link href="/legal" style={{ fontSize: 14, fontWeight: 700, color: "#00C2CC" }}>← Back to the world map</Link>
-        </p>
+
+        <JumpList
+          title="Gambling law in another country"
+          items={COUNTRIES.filter((x) => x.code !== "US" && x.code !== c.code).map((x) => ({ label: x.name, href: `/legal/${x.code.toLowerCase()}` }))}
+        />
+
+        <NextSteps
+          steps={[
+            { href: "/legal", label: "The world map", hint: "Every country we cover, coloured by what its own regulator allows." },
+            { href: "/legal/us", label: "US state by state", hint: "All 50 states and DC, with each state's sweepstakes position." },
+            ...(hasCountryPage ? [{ href: `/crypto-casinos/in/${code}`, label: `Casinos for ${c.name}`, hint: "Filtered to the operators that accept players there." }] : [{ href: "/crypto-casinos", label: "All crypto casinos", hint: "Every casino we track, with its own restricted-country list cited." }]),
+            { href: "/how-we-rate", label: "How we source every fact", hint: "Each line above links to the regulator or government page it came from." },
+          ]}
+        />
       </section>
     </main>
   );

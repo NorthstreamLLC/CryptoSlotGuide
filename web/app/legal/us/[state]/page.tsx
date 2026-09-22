@@ -4,8 +4,9 @@ import { pageMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { US_STATES, stateBy, sweepsAvailableIn, toneOf } from "@/lib/legal";
-import { LegalHero, StatusTile, Sources, Disclaimer, MONO } from "@/components/legal/LegalUI";
+import { LegalHero, StatusTile, Sources, Disclaimer, JumpList, MONO } from "@/components/legal/LegalUI";
 import { HelpBox } from "@/components/legal/HelpBox";
+import { NextSteps } from "@/components/layout/NextSteps";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { brandFor } from "@/lib/casino-facts";
 
@@ -89,9 +90,22 @@ export default async function Page({ params }: { params: Promise<{ state: string
         <Sources sources={s.sources} />
         <HelpBox />
         <Disclaimer />
-        <p style={{ margin: "18px 0 0" }}>
-          <Link href="/legal/us" style={{ fontSize: 14, fontWeight: 700, color: "#00C2CC" }}>← Back to the US map</Link>
-        </p>
+
+        <JumpList
+          title="Gambling law in another state"
+          items={US_STATES.filter((x) => x.code !== s.code).map((x) => ({ label: x.name, href: `/legal/us/${x.code.toLowerCase()}` }))}
+        />
+
+        <NextSteps
+          steps={[
+            { href: "/legal/us", label: "The US map", hint: "All 50 states and DC, coloured by what each one allows today." },
+            ...(sweepsBanned || open.length === 0
+              ? [{ href: "/sweepstakes-casinos", label: "Sweepstakes casinos", hint: "Which states each sweepstakes casino still accepts, from its own rules." }]
+              : [{ href: "/sweepstakes-casinos", label: `Compare the ${open.length} available here`, hint: "Coin packages, redemption rules and the states each one excludes." }]),
+            { href: "/legal", label: "Gambling laws worldwide", hint: "The same breakdown for 45 countries outside the US." },
+            { href: "/how-we-rate", label: "How we source every fact", hint: "Every line above links to the regulator or statute it came from." },
+          ]}
+        />
       </section>
     </main>
   );

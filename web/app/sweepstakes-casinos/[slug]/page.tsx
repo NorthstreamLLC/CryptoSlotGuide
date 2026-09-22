@@ -7,6 +7,7 @@ import { SWEEPS, sweepsBySlug, sweepsFact, shortFact, type SweepsFact } from "@/
 import { brandFor } from "@/lib/casino-facts";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { Icon, type IconName } from "@/components/ui/Icon";
+import { NextSteps } from "@/components/layout/NextSteps";
 
 const MONO = "var(--font-jetbrains-mono), monospace";
 const GREEN = "#57E39A";
@@ -119,8 +120,17 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           ))}
         </div>
         <p style={{ margin: "18px 0 0", fontSize: 13, lineHeight: 1.6, color: "#7B8A93" }}>
-          Checked {s.asOf ?? "recently"} against {s.domain}&apos;s own pages. Sweepstakes rules and state lists change; the casino&apos;s current rules always apply. <Link href="/sweepstakes-casinos" style={{ color: "#00C2CC" }}>Compare all sweepstakes casinos →</Link>
+          Checked {s.asOf ?? "recently"} against {s.domain}&apos;s own pages. Sweepstakes rules and state lists change; the casino&apos;s current rules always apply.
         </p>
+
+        <NextSteps
+          steps={[
+            { href: "/sweepstakes-casinos", label: "Compare all sweepstakes casinos", hint: "Coin packages, redemption minimums and excluded states, side by side." },
+            { href: "/legal/us", label: "Is it legal in your state?", hint: "All 50 states and DC, with each state's sweepstakes position." },
+            { href: "/crypto-casinos", label: "Crypto casinos", hint: "The real-money side: coins, payout times and welcome offers." },
+            { href: "/how-we-rate", label: "How we source every fact", hint: "Every line above links to the casino's own rules page." },
+          ]}
+        />
       </section>
     </main>
   );

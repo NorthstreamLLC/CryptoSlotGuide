@@ -694,6 +694,50 @@ const BACK: Record<EntityType, { label: string; href: string }> = {
   market: { label: "All esports titles", href: "/sportsbooks?tab=2" },
 };
 
+/**
+ * The three or four links that follow a profile, so no profile is a dead end.
+ * Written per type rather than generated, so each hint describes what is
+ * really on the page it points at.
+ */
+const NEXT: Record<EntityType, { href: string; label: string; hint: string }[]> = {
+  casino: [
+    { href: "/crypto-casinos", label: "All crypto casinos", hint: "Filter by payout speed, KYC, wagering and sportsbook." },
+    { href: "/bonuses", label: "Every bonus, side by side", hint: "Welcome offers and rewards with the wagering each one carries." },
+    { href: "/how-we-rate", label: "How we source every fact", hint: "Why each figure links back to the operator's own page." },
+  ],
+  slot: [
+    { href: "/slots", label: "The slot RTP index", hint: "Every title we track, with the studio's published return." },
+    { href: "/rtp-watch", label: "RTP Watch", hint: "Which casinos ship a cut build of the same slot, per operator." },
+    { href: "/providers", label: "Game studios", hint: "Which studios publish every RTP version and which publish none." },
+    { href: "/crypto-casinos", label: "Where to play", hint: "The casinos we track, with coins, payouts and offers cited." },
+  ],
+  wallet: [
+    { href: "/wallets", label: "Compare all wallets", hint: "Key storage, chains covered and in-wallet swap fees." },
+    { href: "/coins", label: "Coins we track", hint: "Which casinos take each coin, and the network fees involved." },
+    { href: "/exchanges", label: "Exchanges", hint: "Entry-tier fees, fiat rails and withdrawal limits." },
+  ],
+  exchange: [
+    { href: "/exchanges", label: "Compare all exchanges", hint: "Entry taker fees, fiat rails and withdrawal limits side by side." },
+    { href: "/wallets", label: "Wallets", hint: "Where to hold the balance once it is off the exchange." },
+    { href: "/coins", label: "Coins we track", hint: "Which casinos accept each coin, and on which networks." },
+  ],
+  provider: [
+    { href: "/providers", label: "All game studios", hint: "Profiled on RTP disclosure rather than catalogue size." },
+    { href: "/providers/licences", label: "Studio licence map", hint: "Where each studio holds a licence, from its own licence pages." },
+    { href: "/slots", label: "Slot RTP index", hint: "Every title we track and its published return." },
+    { href: "/rtp-watch", label: "RTP Watch", hint: "The operators shipping cut builds of these games." },
+  ],
+  market: [
+    { href: "/sportsbooks?tab=2", label: "All esports titles", hint: "Which books cover each title, from their own betting rules." },
+    { href: "/sportsbooks", label: "Crypto sportsbooks", hint: "Cash-out, bet builder and the payout caps each book states." },
+    { href: "/prediction-markets", label: "Prediction markets", hint: "The casinos running event markets alongside the book." },
+  ],
+};
+
+export function nextStepsFor(type: EntityType) {
+  return NEXT[type];
+}
+
 const CTA: Record<EntityType, (name: string) => string> = {
   casino: (name) => `Visit ${name}`,
   exchange: () => "Open an account",

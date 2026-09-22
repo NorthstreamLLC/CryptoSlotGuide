@@ -6,6 +6,7 @@ import { siteData } from "@/lib/site-data";
 import { logoFor } from "@/lib/logo";
 import { LandingShell } from "@/components/landing/LandingShell";
 import { VipCalculator, type CalcCasino } from "@/components/vip/VipCalculator";
+import { NextSteps } from "@/components/layout/NextSteps";
 
 export const metadata = pageMetadata(
   "Crypto casino VIP calculator: what rank does your wager reach?",
@@ -37,6 +38,14 @@ export default function Page() {
         <p style={{ margin: "18px 0 0", maxWidth: "86ch", fontSize: 12.5, lineHeight: 1.6, color: "#6E7F88" }}>
           Only casinos that publish thresholds in dollars wagered are included; ladders counted in XP or points, or kept private, are listed on each casino&apos;s report instead. Some casinos weight wagers by game, so your real progress can differ.
         </p>
+        <NextSteps
+          steps={[
+            { href: "/bonuses", label: "Every bonus and reward", hint: "Welcome offers, rakeback and cashback with the wagering each carries." },
+            { href: "/races", label: "Races & raffles", hint: "The recurring prize pools your wagering also feeds." },
+            { href: "/crypto-casinos", label: "All crypto casinos", hint: "Filter by payout speed, KYC, wagering and sportsbook." },
+            { href: "/how-we-rate", label: "How we source every fact", hint: "Every rank above comes from the casino's own VIP page." },
+          ]}
+        />
       </LandingShell>
     </>
   );

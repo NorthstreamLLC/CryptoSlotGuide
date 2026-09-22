@@ -20,6 +20,17 @@ export function versusPairs(): [string, string][] {
 
 export const pairSlug = (a: string, b: string) => `${a}-vs-${b}`;
 
+/**
+ * The head-to-head pages a casino appears on, in VERSUS_SLUGS order so the
+ * casinos players compare most come first. Empty for a casino with no pair page.
+ */
+export function rivalPairs(slug: string, limit = 3): { rival: Operator; href: string }[] {
+  return versusPairs()
+    .filter(([a, b]) => a === slug || b === slug)
+    .map(([a, b]) => ({ rival: op(a === slug ? b : a)!, href: `/compare/${pairSlug(a, b)}` }))
+    .slice(0, limit);
+}
+
 export function parsePair(pair: string): [Operator, Operator] | null {
   for (const [a, b] of versusPairs()) if (pairSlug(a, b) === pair) return [op(a)!, op(b)!];
   return null;

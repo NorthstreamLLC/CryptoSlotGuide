@@ -16,6 +16,8 @@ import { Icon, type IconName } from "@/components/ui/Icon";
 import { raceFor, partnerFor, dropFor } from "@/lib/races";
 import { rtpSummary } from "@/lib/rtp-watch-view";
 import { ReportUpdates } from "@/components/casino/ReportUpdates";
+import { NextSteps } from "@/components/layout/NextSteps";
+import { rivalPairs } from "@/lib/versus";
 import type { SpecFact } from "@/lib/types";
 
 /**
@@ -237,6 +239,8 @@ export function CasinoReport({ e }: { e: EntityView }) {
     wdFee && shortAmount(wdFee) === "None" ? { icon: "percent" as const, title: "No withdrawal fee", sub: clause(wdFee.value) } : null,
     o.sports ? { icon: "ball" as const, title: "Sportsbook & esports", sub: sp.titles.length ? `${sp.titles.length} esports titles` : "Sports and esports betting" } : null,
   ].filter(Boolean).slice(0, 4) as { icon: IconName; title: string; sub: string; coins?: string[] }[];
+
+  const rivals = rivalPairs(o.slug);
 
   const nav = [
     ["bonuses", "Bonuses & rewards"],
@@ -530,6 +534,55 @@ export function CasinoReport({ e }: { e: EntityView }) {
             </div>
           </details>
         </section>
+
+        {/* CLOSING OFFER — the reader has finished the report; repeat the offer once. */}
+        {o.signupUrl && (
+          <section style={{ marginTop: 44, padding: "30px 32px", borderRadius: 20, background: `radial-gradient(110% 140% at 100% 0%, ${brand}1f, transparent 60%), #0C1013`, border: `1px solid ${brand}3d` }}>
+            <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 20 }}>
+              <div style={{ minWidth: 0, maxWidth: "58ch" }}>
+                <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: brand, marginBottom: 8 }}>
+                  {o.noDepositBonus ? "Rewards" : "Welcome offer"}
+                </div>
+                <div style={{ fontSize: 24, lineHeight: 1.2, fontWeight: 800, letterSpacing: "-.02em", color: "#fff", marginBottom: 8 }}>{o.bonusShort ?? o.bonus}</div>
+                <p style={{ margin: 0, fontSize: 13.5, lineHeight: 1.6, color: "#8DA0AA" }}>
+                  {wv.kind === "none" ? "No wagering on rewards" : `Wagering: ${wv.label}`}
+                  {o.promoCode ? ` · Code ${o.promoCode}` : ""} · 18+, play responsibly
+                </p>
+              </div>
+              <a href={o.signupUrl} target="_blank" rel="nofollow sponsored noopener" style={{ display: "inline-flex", alignItems: "center", gap: 10, padding: "15px 26px", borderRadius: 11, background: brand, color: "#0A0D0F", fontSize: 15, fontWeight: 800, whiteSpace: "nowrap", boxShadow: `0 10px 30px ${brand}40` }}>
+                Claim offer at {o.name} <span aria-hidden>→</span>
+              </a>
+            </div>
+          </section>
+        )}
+
+        {/* SIDE BY SIDE — the comparisons a reader of this report tends to want next. */}
+        {rivals.length > 0 && (
+          <section style={{ marginTop: 40 }}>
+            <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".1em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 12 }}>Compare {o.name}</div>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))", gap: 12 }}>
+              {rivals.map(({ rival, href }) => (
+                <Link key={href} href={href} className="transition-colors hover:border-white/20 hover:bg-white/[0.03]" style={{ display: "flex", alignItems: "center", gap: 12, padding: "14px 16px", borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
+                  <span style={{ width: 30, height: 30, flex: "none", borderRadius: 9, overflow: "hidden" }}>
+                    <BrandMark slug={rival.slug} mono={rival.mono} tint={tintFor(rival.slug)} radius={9} fontSize={10} />
+                  </span>
+                  <span style={{ minWidth: 0, fontSize: 14.5, fontWeight: 700, color: "#E8EDF0" }}>
+                    {o.name} vs {rival.name}
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <NextSteps
+          steps={[
+            { href: "/crypto-casinos", label: "All crypto casinos", hint: `Filter ${siteData.ops.length} casinos by payout speed, KYC, wagering and sportsbook.` },
+            { href: "/bonuses", label: "Every bonus, side by side", hint: "Welcome offers and ongoing rewards with the wagering each one carries." },
+            ...(raceFor(o.slug) ? [{ href: "/races", label: "Races & raffles", hint: "The recurring prize pools running at each casino, and what they pay." }] : []),
+            { href: "/how-we-rate", label: "How we source every fact", hint: "Why each figure on this page links to the operator's own page." },
+          ]}
+        />
       </div>
     </main>
   );

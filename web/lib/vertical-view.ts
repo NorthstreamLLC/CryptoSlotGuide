@@ -12,7 +12,7 @@
 import { siteData } from "./site-data";
 import { brandFor } from "./casino-facts";
 import { sportsFacts, sportsbookOps, booksForTitle, esportsLabel, maxPayoutShort } from "./sports";
-import { hasRtp, hasVol, maxWinLabel, rtpLabel } from "./slot-facts";
+import { hasVol, maxWinLabel, rtpLabel } from "./slot-facts";
 import {
   lowestTakerFee,
   fill,
@@ -66,6 +66,8 @@ export interface VerticalPage {
   /** Header for the optional fourth fact column; "" hides the column. */
   statLabel: string;
   note: string;
+  /** Sibling pages worth a pill above the table — filters, maps, related indexes. */
+  links?: { label: string; href: string }[];
   tabs?: string[];
   rows: VerticalRow[];
   awardTitle?: string;
@@ -91,19 +93,28 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
         [`${medianRtp(slots).toFixed(2)}%`, "Median RTP"],
         [String(splitBuilds(rtpWatch)), "Titles with split builds"],
       ],
-      cols: ["Provider", "RTP", "Max win"],
-      statLabel: "RTP",
+      cols: ["Provider", "RTP", "Volatility"],
+      statLabel: "Max win",
       note: "A slot is only as good as the build your casino licensed. Where an operator ships a cut version we name it in the slot review rather than in this table.",
+      links: [
+        { label: "Highest RTP", href: "/slots" },
+        { label: "Bonus buy", href: "/slots/bonus-buy" },
+        { label: "Megaways", href: "/slots/megaways" },
+        { label: "Jackpot", href: "/slots/jackpot" },
+        { label: "Cluster pays", href: "/slots/cluster-pays" },
+        { label: "High volatility", href: "/slots/high-volatility" },
+        { label: "RTP Watch", href: "/rtp-watch" },
+      ],
       rows: slots.map((s) => ({
         slug: s.slug,
         name: s.name,
         mono: s.mono,
         tint: s.tint,
-        note: `${hasVol(s) ? `${s.vol} volatility` : "volatility not published"} · ${s.provider}`,
+        note: "",
         m1: s.provider,
         m2: rtpLabel(s),
-        m3: maxWinLabel(s),
-        stat: hasRtp(s) ? s.rtp.toFixed(2) : "—",
+        m3: hasVol(s) ? `${s.vol[0].toUpperCase()}${s.vol.slice(1)}` : "Not published",
+        stat: maxWinLabel(s),
         cta: "Slot profile",
         href: `/slots/${s.slug}`,
       })),
@@ -120,9 +131,14 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
         [String(allVersionsListedStudios(providers)), "List every RTP version"],
         [String(unpublishedRtpStudios(providers)), "Publish no RTP"],
       ],
-      cols: ["RTP disclosure", "Licensing", "Catalogue"],
+      cols: ["RTP disclosure", "Licensing", "Slots we track"],
       statLabel: "",
       note: `A studio that lists every RTP version it licenses lets you check how far below the headline a casino's build could sit. ${allVersionsListedStudios(providers)} of the studios we track do; ${unpublishedRtpStudios(providers)} publish no RTP on their game pages at all.`,
+      links: [
+        { label: "Studio licence map", href: "/providers/licences" },
+        { label: "Slot RTP index", href: "/slots" },
+        { label: "RTP Watch", href: "/rtp-watch" },
+      ],
       rows: [...providers].sort(byName).map((p) => ({
         slug: p.slug,
         name: p.name,
@@ -131,7 +147,10 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
         note: p.note,
         m1: p.rtp,
         m2: p.licences,
-        m3: p.titlesStated ?? "Not stated",
+        m3: (() => {
+          const n = slots.filter((s) => s.provider === p.name).length;
+          return n ? `${n} ${n === 1 ? "slot" : "slots"}` : p.titlesStated ?? "Not stated";
+        })(),
         stat: "—",
         cta: "Studio profile",
         href: `/providers/${p.slug}`,
@@ -214,6 +233,11 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
       ],
       cols: ["Key storage", "Chains", "Swap fee"],
       statLabel: "",
+      links: [
+        { label: "Coins we track", href: "/coins" },
+        { label: "Exchanges", href: "/exchanges" },
+        { label: "No-KYC casinos", href: "/crypto-casinos/no-kyc" },
+      ],
       note: "Keep the playing balance and the holding balance in different wallets. Any operator can freeze an account pending a manual review, and whatever is held there waits with it.",
       rows: [...walletRows].sort(byName).map((w) => ({
         slug: w.slug,
@@ -244,6 +268,11 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
       ],
       cols: ["Entry taker fee", "Fiat rails", "Withdrawal limit"],
       statLabel: "",
+      links: [
+        { label: "Wallets", href: "/wallets" },
+        { label: "Coins we track", href: "/coins" },
+        { label: "Fastest payouts", href: "/fastest-payouts" },
+      ],
       note: "The fee schedule is only part of the cost of an onramp — the spread you cross and the withdrawal fee matter as much. Exchanges don't publish spreads, so compare the live price before moving a bankroll.",
       rows: [...exchangeRows].sort(byName).map((x) => ({
         slug: x.slug,
@@ -273,6 +302,11 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
     ],
     cols: ["Category", "Read time", "Updated"],
     statLabel: "",
+    links: [
+      { label: "How we source information", href: "/how-we-rate" },
+      { label: "Gambling laws", href: "/legal" },
+      { label: "Find my casino", href: "/find-my-casino" },
+    ],
     note: "If a guide contradicts a review, the review is newer. Every guide carries the date of its last full pass at the top.",
     rows: guideRows.map((g) => ({
       slug: g.slug,

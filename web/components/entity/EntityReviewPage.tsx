@@ -3,7 +3,8 @@
 import Link from "next/link";
 import { useState } from "react";
 import type { EntityView } from "@/lib/entity-view";
-import { backLink, ctaLabel, editorialTake } from "@/lib/entity-view";
+import { backLink, ctaLabel, editorialTake, nextStepsFor } from "@/lib/entity-view";
+import { NextSteps } from "@/components/layout/NextSteps";
 import { reviewTierFor, TIER_LABEL, TIER_TINT } from "@/lib/review-tier";
 import { isEditoriallyAudited } from "@/lib/field-tested";
 import { OnChainActivity } from "./OnChainActivity";
@@ -319,6 +320,8 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
             </Link>
           </div>
         </div>
+
+        <NextSteps steps={nextStepsFor(e.type)} />
       </div>
     </main>
   );

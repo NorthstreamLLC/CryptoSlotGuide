@@ -244,7 +244,7 @@ export default function HomePage() {
 
         {/* Vertical strip */}
         <div style={{ position: "relative", maxWidth: 1400, margin: "0 auto", padding: "0 40px 8px" }}>
-          <div style={{ display: "grid", minWidth: 0, gridTemplateColumns: "repeat(auto-fit,minmax(206px,1fr))", gap: 12 }}>
+          <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-6" style={{ minWidth: 0, gap: 12 }}>
             {verticals.map((v) => (
               <Link
                 key={v.title}
@@ -302,6 +302,38 @@ export default function HomePage() {
           </Link>
         </div>
         <CasinoOfferList ops={topOffers} />
+      </section>
+
+      {/* Start here — the tools and maps, which otherwise only live in the menu. */}
+      <section style={{ maxWidth: 1400, margin: "0 auto", padding: "56px 40px 0" }}>
+        <div style={{ marginBottom: 20 }}>
+          <h2 style={{ margin: "0 0 8px", fontSize: 32, letterSpacing: "-.03em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Start here</h2>
+          <p style={{ margin: 0, fontSize: 15, color: "#8DA0AA" }}>Answer the question you actually came with — where you can play, what an offer is worth, and which build of a slot a casino ships.</p>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-4" style={{ gap: 12 }}>
+          {[
+            { href: "/find-my-casino", label: "Find my casino", hint: "Three questions, matched against each casino's own terms." },
+            { href: "/bonuses", label: "Every bonus", hint: "Welcome offers and rewards with the wagering each carries." },
+            { href: "/vip-calculator", label: "VIP calculator", hint: "What rank your wager reaches at each published ladder." },
+            { href: "/rtp-watch", label: "RTP Watch", hint: "Which casinos ship a cut build of the same slot." },
+            { href: "/legal", label: "Gambling laws", hint: "45 countries and all 50 US states, from their regulators." },
+            { href: "/sweepstakes-casinos", label: "US sweepstakes", hint: "The legal US route, with each casino's excluded states." },
+            { href: "/compare", label: "Head to head", hint: "Two casinos, the same rows, the better figure marked." },
+            { href: "/fastest-payouts", label: "Fastest payouts", hint: "Ranked on the withdrawal time each operator states." },
+          ].map((t) => (
+            <Link
+              key={t.href}
+              href={t.href}
+              className="transition-colors hover:border-white/20 hover:bg-white/[0.04]"
+              style={{ display: "flex", flexDirection: "column", gap: 7, padding: "18px 20px", borderRadius: 15, background: "rgba(255,255,255,.025)", border: "1px solid rgba(255,255,255,.08)" }}
+            >
+              <span style={{ fontSize: 16, fontWeight: 800, letterSpacing: "-.018em", color: "#fff" }}>
+                {t.label} <span aria-hidden style={{ color: "#00C2CC" }}>→</span>
+              </span>
+              <span style={{ fontSize: 13, lineHeight: 1.5, color: "#8DA0AA" }}>{t.hint}</span>
+            </Link>
+          ))}
+        </div>
       </section>
 
       {/* Biggest races */}
@@ -390,7 +422,7 @@ export default function HomePage() {
             All {c.slots} slots →
           </Link>
         </div>
-        <SlotsPreviewTable slots={slots} />
+        <SlotsPreviewTable slots={slots.slice(0, 8)} />
       </section>
 
       {/* Providers */}

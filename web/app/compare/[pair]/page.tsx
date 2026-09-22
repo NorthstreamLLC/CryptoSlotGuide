@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { pageMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { NextSteps } from "@/components/layout/NextSteps";
 import { versusPairs, pairSlug, parsePair, versusRows } from "@/lib/versus";
 import { brandFor } from "@/lib/casino-facts";
 import { BrandMark } from "@/components/ui/BrandMark";
@@ -88,6 +89,15 @@ export default async function Page({ params }: { params: Promise<{ pair: string 
             </div>
           </>
         )}
+
+        <NextSteps
+          steps={[
+            { href: `/casinos/${a.slug}`, label: `The full ${a.name} report`, hint: "Bonus terms, payout limits and licence, each linked to its source." },
+            { href: `/casinos/${b.slug}`, label: `The full ${b.name} report`, hint: "Bonus terms, payout limits and licence, each linked to its source." },
+            { href: "/crypto-casinos", label: "All crypto casinos", hint: "Filter by payout speed, KYC, wagering and sportsbook." },
+            { href: "/bonuses", label: "Every bonus, side by side", hint: "Welcome offers and rewards with the wagering each one carries." },
+          ]}
+        />
       </section>
     </main>
   );

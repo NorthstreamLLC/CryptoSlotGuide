@@ -77,6 +77,29 @@ export function RegionGrid({ items }: { items: { href: string; name: string; sta
   );
 }
 
+/**
+ * The "somewhere else" picker at the foot of a jurisdiction page: a reader
+ * who landed on the wrong state or country gets to theirs in one click,
+ * collapsed by default so it never competes with the page itself.
+ */
+export function JumpList({ title, items }: { title: string; items: { label: string; href: string }[] }) {
+  if (items.length === 0) return null;
+  return (
+    <details style={{ marginTop: 30 }}>
+      <summary style={{ cursor: "pointer", padding: "15px 20px", borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)", fontSize: 14.5, fontWeight: 700, color: "#E8EDF0" }}>
+        {title} ({items.length})
+      </summary>
+      <div style={{ display: "flex", flexWrap: "wrap", gap: 7, marginTop: 14 }}>
+        {items.map((i) => (
+          <Link key={i.href} href={i.href} style={{ padding: "7px 12px", borderRadius: 100, background: "#0C1013", border: "1px solid rgba(255,255,255,.08)", fontSize: 12.5, fontWeight: 600, color: "#C6D1D7" }}>
+            {i.label}
+          </Link>
+        ))}
+      </div>
+    </details>
+  );
+}
+
 export function Tabs({ active }: { active: "world" | "europe" | "us" }) {
   const tab = (key: "world" | "europe" | "us", label: string, href: string) => (
     <Link href={href} style={{ padding: "9px 16px", borderRadius: 100, border: `1px solid ${active === key ? "rgba(47,182,122,.55)" : "rgba(255,255,255,.12)"}`, background: active === key ? "rgba(47,182,122,.14)" : "transparent", fontSize: 13.5, fontWeight: 700, color: active === key ? "#7BE0B8" : "#A8B6BE" }}>

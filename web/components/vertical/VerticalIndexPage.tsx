@@ -41,6 +41,23 @@ export function VerticalIndexPage({ kind, tabIdx = 0 }: { kind: VerticalKind; ta
       </section>
 
       <section style={{ maxWidth: 1280, margin: "0 auto", padding: "28px 24px 24px" }}>
+        {vp.links && vp.links.length > 0 && (
+          <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 18 }}>
+            {vp.links.map((l, i) => {
+              const here = i === 0 && l.href === `/${kind}`;
+              return (
+                <Link
+                  key={l.href}
+                  href={l.href}
+                  style={{ padding: "8px 14px", borderRadius: 100, border: `1px solid ${here ? "rgba(0,194,204,.5)" : "rgba(255,255,255,.12)"}`, background: here ? "rgba(0,194,204,.14)" : "rgba(255,255,255,.02)", fontSize: 13, fontWeight: 600, color: here ? "#5FE3E8" : "#A8B6BE" }}
+                >
+                  {l.label}
+                </Link>
+              );
+            })}
+          </div>
+        )}
+
         {vp.tabs && (
           <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 18 }}>
             {vp.tabs.map((t, i) => {
@@ -73,15 +90,18 @@ export function VerticalIndexPage({ kind, tabIdx = 0 }: { kind: VerticalKind; ta
         </div>
       </section>
 
-      <section style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px 80px" }}>
+      <section style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px 48px" }}>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 14 }}>
           <div style={{ padding: "26px 28px", borderRadius: 18, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
             <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 10 }}>Good to know</div>
             <p style={{ margin: 0, fontSize: 15, lineHeight: 1.7, color: "#A8B6BE", textWrap: "pretty" }}>{vp.note}</p>
           </div>
-          <Link href="/how-we-rate" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", gap: 18, padding: "26px 28px", borderRadius: 18, background: "linear-gradient(150deg,#10181B,#0B0F12)", border: "1px solid rgba(0,194,204,.2)" }}>
+          <Link href="/how-we-rate" style={{ display: "flex", flexDirection: "column", gap: 10, padding: "26px 28px", borderRadius: 18, background: "linear-gradient(150deg,#10181B,#0B0F12)", border: "1px solid rgba(0,194,204,.2)" }}>
             <div style={{ fontSize: 18, fontWeight: 800, color: "#fff", letterSpacing: "-.015em" }}>How we source every fact</div>
-            <div style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 13.5, fontWeight: 700, color: "#00C2CC" }}>
+            <p style={{ margin: 0, fontSize: 15, lineHeight: 1.7, color: "#A8B6BE", textWrap: "pretty" }}>
+              Every figure on this page comes from the operator&apos;s, regulator&apos;s or studio&apos;s own page, and links back to it. Nothing is taken from another review site.
+            </p>
+            <div style={{ display: "inline-flex", alignItems: "center", gap: 6, marginTop: "auto", paddingTop: 8, fontSize: 13.5, fontWeight: 700, color: "#00C2CC" }}>
               Our method <Icon name="arrow" size={14} />
             </div>
           </Link>
