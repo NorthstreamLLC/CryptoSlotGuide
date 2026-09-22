@@ -5,6 +5,7 @@ import { fill } from "@/lib/derived";
 import { pageMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { NextSteps } from "@/components/layout/NextSteps";
 
 /**
  * Ported from the `isGuide` block in CryptoSlotGuide.dc.html (search for
@@ -73,6 +74,13 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             </Link>
           ))}
         </div>
+        <NextSteps
+          steps={[
+            { href: "/guides", label: "All guides", hint: "The operational detail behind the reviews, kept current." },
+            { href: "/crypto-casinos", label: "All crypto casinos", hint: "Put this guide to work on the full index." },
+            { href: "/how-we-rate", label: "How we source every fact", hint: "The method behind every figure on the site." },
+          ]}
+        />
       </article>
     </main>
   );

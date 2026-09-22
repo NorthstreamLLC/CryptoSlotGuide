@@ -6,6 +6,7 @@ import { pageMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { BrandMark } from "@/components/ui/BrandMark";
+import { NextSteps } from "@/components/layout/NextSteps";
 
 /**
  * How-to page for one originals game. Edges are each casino's own published
@@ -133,6 +134,13 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             </Link>
           ))}
         </div>
+        <NextSteps
+          steps={[
+            { href: "/house-games", label: "Every house game", hint: "The originals each casino runs, with the edge it publishes." },
+            { href: "/crypto-casinos", label: "Where to play them", hint: "The casinos running their own originals, with terms cited." },
+            { href: "/rtp-watch", label: "RTP Watch", hint: "The slot side: which casinos ship a cut build." },
+          ]}
+        />
       </div>
     </main>
   );

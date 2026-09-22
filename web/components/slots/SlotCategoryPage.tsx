@@ -2,6 +2,7 @@ import Link from "next/link";
 import { maxWinLabel, rtpLabel, rtpSortValue, volLabel } from "@/lib/slot-facts";
 import { siteData, siteCounts } from "@/lib/site-data";
 import type { SlotMechanicTag } from "@/lib/types";
+import { NextSteps } from "@/components/layout/NextSteps";
 
 /**
  * Ported from the `isSlotCat` block in CryptoSlotGuide.dc.html (search
@@ -82,6 +83,13 @@ export function SlotCategoryPage({ tag }: { tag: SlotMechanicTag }) {
             );
           })}
         </div>
+        <NextSteps
+          steps={[
+            { href: "/slots", label: "The full slot RTP index", hint: "Every title we track, with the studio's published return." },
+            { href: "/rtp-watch", label: "RTP Watch", hint: "Which casinos ship a cut build of the same slot." },
+            { href: "/crypto-casinos", label: "Where to play", hint: "The casinos we track, with coins, payouts and offers cited." },
+          ]}
+        />
       </section>
     </main>
   );

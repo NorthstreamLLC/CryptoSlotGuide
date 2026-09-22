@@ -4,6 +4,7 @@ import { getSpecFact } from "@/lib/spec-sheet";
 import { brandFor } from "@/lib/casino-facts";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { Icon } from "@/components/ui/Icon";
+import { NextSteps } from "@/components/layout/NextSteps";
 
 const MONO = "var(--font-jetbrains-mono), monospace";
 
@@ -43,6 +44,13 @@ export function CasinoPredictions() {
           );
         })}
       </div>
+      <NextSteps
+        steps={[
+          { href: "/sportsbooks", label: "Crypto sportsbooks", hint: "Cash-out, bet builder and the payout caps each book states." },
+          { href: "/crypto-casinos", label: "All crypto casinos", hint: "The full index, with each operator's own terms cited." },
+          { href: "/how-we-rate", label: "How we source every fact", hint: "Why each figure links back to the operator's own page." },
+        ]}
+      />
     </section>
   );
 }

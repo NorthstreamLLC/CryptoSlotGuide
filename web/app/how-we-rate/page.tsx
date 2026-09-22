@@ -2,6 +2,7 @@ import { siteData } from "@/lib/site-data";
 import { TIER_LABEL, TIER_DESC, TIER_TINT, type ReviewTier } from "@/lib/review-tier";
 import { isFieldTestedOperator } from "@/lib/field-tested";
 import { pageMetadata } from "@/lib/seo";
+import { NextSteps } from "@/components/layout/NextSteps";
 
 /**
  * A fourth kind of backing, alongside the three ReviewTier values in
@@ -263,6 +264,13 @@ export default function Page() {
             <a href="mailto:corrections@cryptoslotguide.com" style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11.5, letterSpacing: ".05em", color: "#00C2CC" }}>Report an inaccuracy →</a>
           </div>
         </div>
+        <NextSteps
+          steps={[
+            { href: "/crypto-casinos", label: "See the method applied", hint: "Every casino we track, each figure linked to its source." },
+            { href: "/rtp-watch", label: "RTP Watch", hint: "The one thing no public page discloses: the build an operator ships." },
+            { href: "/editorial-standards", label: "Editorial standards", hint: "Who writes this, and what commercial terms do and do not change." },
+          ]}
+        />
       </section>
     </main>
   );
