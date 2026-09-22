@@ -8,6 +8,7 @@ import { brandFor } from "@/lib/casino-facts";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { Icon, type IconName } from "@/components/ui/Icon";
 import { NextSteps } from "@/components/layout/NextSteps";
+import { StickyOffer } from "@/components/casino/StickyOffer";
 
 const MONO = "var(--font-jetbrains-mono), monospace";
 const GREEN = "#57E39A";
@@ -133,6 +134,14 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         <p style={{ margin: "18px 0 0", fontSize: 13, lineHeight: 1.6, color: "#7B8A93" }}>
           Checked {s.asOf ?? "recently"} against {s.domain}&apos;s own pages. Sweepstakes rules and state lists change; the casino&apos;s current rules always apply.
         </p>
+
+        <StickyOffer
+          name={s.name}
+          href={s.signupUrl ?? `https://${s.domain}`}
+          offer={s.offer}
+          note="No purchase necessary"
+          brand={brand}
+        />
 
         <NextSteps
           steps={[

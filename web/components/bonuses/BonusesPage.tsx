@@ -218,7 +218,7 @@ const chipIcon = { color: "#00C2CC", display: "inline-flex" } as const;
 
 function Heading({ id, eyebrow, title, children }: { id: string; eyebrow: string; title: string; children: ReactNode }) {
   return (
-    <div id={id} style={{ scrollMarginTop: 90, marginBottom: 16 }}>
+    <div id={id} style={{ scrollMarginTop: 120, marginBottom: 16 }}>
       <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 8 }}>{eyebrow}</div>
       <h2 style={{ margin: "0 0 8px", fontSize: 30, lineHeight: 1.1, letterSpacing: "-.03em", fontWeight: 800, color: "#fff" }}>{title}</h2>
       <p style={{ margin: 0, maxWidth: "72ch", fontSize: 15, lineHeight: 1.6, color: "#A8B6BE" }}>{children}</p>

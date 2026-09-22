@@ -17,6 +17,7 @@ import { raceFor, partnerFor, dropFor } from "@/lib/races";
 import { rtpSummary } from "@/lib/rtp-watch-view";
 import { ReportUpdates } from "@/components/casino/ReportUpdates";
 import { NextSteps } from "@/components/layout/NextSteps";
+import { StickyOffer } from "@/components/casino/StickyOffer";
 import { rivalPairs } from "@/lib/versus";
 import type { SpecFact } from "@/lib/types";
 
@@ -65,7 +66,7 @@ function Source({ f }: { f: Fact }) {
 
 function Section({ id, eyebrow, title, children }: { id: string; eyebrow: string; title: string; children: ReactNode }) {
   return (
-    <section id={id} style={{ scrollMarginTop: 90, marginBottom: 56 }}>
+    <section id={id} style={{ scrollMarginTop: 156, marginBottom: 56 }}>
       <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".1em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 8 }}>{eyebrow}</div>
       <h2 style={{ margin: "0 0 20px", fontSize: 30, lineHeight: 1.1, letterSpacing: "-.03em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>{title}</h2>
       {children}
@@ -360,7 +361,7 @@ export function CasinoReport({ e }: { e: EntityView }) {
       </section>
 
       {/* Section nav */}
-      <nav style={{ position: "sticky", top: 0, zIndex: 5, background: "rgba(7,9,11,.9)", backdropFilter: "blur(8px)", borderBottom: "1px solid rgba(255,255,255,.06)" }}>
+      <nav style={{ position: "sticky", top: 100, zIndex: 5, background: "rgba(7,9,11,.92)", backdropFilter: "blur(8px)", borderBottom: "1px solid rgba(255,255,255,.06)" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "0 24px", display: "flex", gap: 22, overflowX: "auto" }}>
           {nav.map(([id, label]) => (
             <a key={id} href={`#${id}`} style={{ padding: "14px 0", fontSize: 13, fontWeight: 600, color: "#A8B6BE", whiteSpace: "nowrap" }}>
@@ -524,7 +525,7 @@ export function CasinoReport({ e }: { e: EntityView }) {
         )}
 
         {/* ALL FACTS */}
-        <section id="sources" style={{ scrollMarginTop: 90 }}>
+        <section id="sources" style={{ scrollMarginTop: 156 }}>
           <details>
             <summary style={{ cursor: "pointer", padding: "18px 22px", borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)", fontSize: 15, fontWeight: 700, color: "#E8EDF0" }}>
               Every fact and its source ({sheet?.groups.reduce((n, g) => n + g.facts.length, 0) ?? 0})
@@ -573,6 +574,16 @@ export function CasinoReport({ e }: { e: EntityView }) {
               ))}
             </div>
           </section>
+        )}
+
+        {o.signupUrl && (
+          <StickyOffer
+            name={o.name}
+            href={o.signupUrl}
+            offer={o.bonusShort ?? o.bonus}
+            note={wv.kind === "none" ? "No wagering" : `Wagering ${wv.label}`}
+            brand={brand}
+          />
         )}
 
         <NextSteps

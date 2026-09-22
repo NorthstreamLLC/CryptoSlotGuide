@@ -402,12 +402,19 @@ export function Header({ counts }: { counts: SiteCounts }) {
       >
         <strong style={{ color: "#00C2CC", fontWeight: 700 }}>ADVERTISER DISCLOSURE</strong>
         <span style={{ color: "#4E6469" }}>·</span>
-        <span>
+        {/* On a phone the full sentence took three lines of the first screen;
+            there it shortens to the part that matters and the link. */}
+        <span className="csg-desktop-only">
           We earn commission from some operators listed here. Commission never changes what a review says — read{" "}
           <Link href="/how-we-rate" style={{ color: "#9FD9DD", textDecoration: "underline", textUnderlineOffset: 2 }}>
             how we source information
           </Link>
           .
+        </span>
+        <span className="csg-mobile-only">
+          <Link href="/how-we-rate" style={{ color: "#9FD9DD", textDecoration: "underline", textUnderlineOffset: 2 }}>
+            how we source information
+          </Link>
         </span>
       </div>
     </header>

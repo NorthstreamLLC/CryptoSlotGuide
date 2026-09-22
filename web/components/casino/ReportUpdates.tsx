@@ -13,7 +13,7 @@ export function ReportUpdates({ slug, name }: { slug: string; name: string }) {
   const list = ((changelog as Record<string, Entry[]>)[slug] ?? []).slice(0, 5);
   if (!list.length) return null;
   return (
-    <section id="updates" style={{ scrollMarginTop: 90, marginBottom: 56 }}>
+    <section id="updates" style={{ scrollMarginTop: 156, marginBottom: 56 }}>
       <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".1em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 8 }}>Kept current</div>
       <h2 style={{ margin: "0 0 6px", fontSize: 30, lineHeight: 1.1, letterSpacing: "-.03em", fontWeight: 800, color: "#fff" }}>Recent updates</h2>
       <p style={{ margin: "0 0 16px", fontSize: 14.5, color: "#8DA0AA" }}>The latest changes to the {name} report as its terms and offers were re-checked.</p>
