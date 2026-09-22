@@ -8,6 +8,7 @@ import { logoFor } from "@/lib/logo";
 import { LegalMap } from "@/components/legal/LegalMap";
 import { LegalHero, RegionGrid, Tabs, Disclaimer } from "@/components/legal/LegalUI";
 import { HelpBox } from "@/components/legal/HelpBox";
+import { NextSteps } from "@/components/layout/NextSteps";
 
 export const metadata = pageMetadata(
   "Online casino & sports betting laws by US state: map",
@@ -88,6 +89,14 @@ export default async function Page({ searchParams }: { searchParams: Promise<{ l
         )}
         <HelpBox />
         <Disclaimer />
+        <NextSteps
+          steps={[
+            { href: "/sweepstakes-casinos", label: "US sweepstakes casinos", hint: "The legal route in most states, with each casino's exclusions." },
+            { href: "/legal", label: "Gambling laws worldwide", hint: "The same breakdown for 45 countries outside the US." },
+            { href: "/crypto-casinos", label: "Crypto casinos", hint: "Most restrict US players — each list is cited on its report." },
+            { href: "/how-we-rate", label: "How we source every fact", hint: "Each status links to the regulator or statute behind it." },
+          ]}
+        />
       </section>
     </main>
   );

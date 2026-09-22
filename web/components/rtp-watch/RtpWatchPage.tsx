@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { siteData } from "@/lib/site-data";
 import { getWatchRows, watchStats, getHouseEdgeRows } from "@/lib/rtp-watch-view";
+import { NextSteps } from "@/components/layout/NextSteps";
 
 /**
  * Ported from the `isWatch` block in CryptoSlotGuide.dc.html (search for
@@ -179,6 +180,16 @@ export function RtpWatchPage() {
             <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".05em", color: "#00C2CC" }}>RTP index →</div>
           </Link>
         </div>
+      </section>
+      <section style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px 56px" }}>
+        <NextSteps
+          steps={[
+            { href: "/slots", label: "Slot RTP index", hint: "Every title we track and the studio's published return." },
+            { href: "/providers", label: "Game studios", hint: "Which studios publish every RTP version, and which publish none." },
+            { href: "/crypto-casinos", label: "All crypto casinos", hint: "The full index, with each casino's own RTP statement cited." },
+            { href: "/how-we-rate", label: "How we read a build", hint: "What a reading is, and what it does not prove." },
+          ]}
+        />
       </section>
     </main>
   );

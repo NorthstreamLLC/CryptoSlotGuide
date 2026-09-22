@@ -3,6 +3,7 @@ import { siteData } from "@/lib/site-data";
 import { pageMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { NextSteps } from "@/components/layout/NextSteps";
 
 /**
  * Ported from the `isHouse` block in CryptoSlotGuide.dc.html (search
@@ -96,6 +97,13 @@ export default function Page() {
             <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".05em", color: "#00C2CC" }}>RTP Watch →</div>
           </Link>
         </div>
+        <NextSteps
+          steps={[
+            { href: "/crypto-casinos", label: "Where to play them", hint: "The casinos running their own originals, with terms cited." },
+            { href: "/slots", label: "Slot RTP index", hint: "The other side: studio games and their published return." },
+            { href: "/how-we-rate", label: "How we source every fact", hint: "Every edge here comes from the operator's own game rules." },
+          ]}
+        />
       </section>
     </main>
   );

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getEntityView, backLink } from "@/lib/entity-view";
+import { getEntityView, backLink, nextStepsFor } from "@/lib/entity-view";
+import { NextSteps } from "@/components/layout/NextSteps";
 import { EntityReviewPage } from "@/components/entity/EntityReviewPage";
 import { pageMetadata } from "@/lib/seo";
 import { entityBreadcrumbSchema, faqSchema, breadcrumbSchema } from "@/lib/schema";
@@ -61,6 +62,9 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       </section>
       <div style={{ height: 28 }} />
       <StudioLicences studio={s} />
+      <section style={{ maxWidth: 1180, margin: "0 auto", padding: "0 24px 64px" }}>
+        <NextSteps steps={nextStepsFor("provider")} />
+      </section>
     </main>
   );
 }

@@ -5,6 +5,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { legacyPosts, LEGACY_CATEGORIES, readingMinutes } from "@/lib/legacy";
 import { LandingShell } from "@/components/landing/LandingShell";
 import { PostGrid } from "@/components/legacy/PostGrid";
+import { NextSteps } from "@/components/layout/NextSteps";
 
 export const metadata = pageMetadata(
   "Crypto casino guides",
@@ -31,6 +32,13 @@ export default function Page() {
           ))}
         </div>
         <PostGrid posts={posts} readingMinutes={readingMinutes} />
+        <NextSteps
+          steps={[
+            { href: "/guides", label: "Reference guides", hint: "The operational detail behind the reviews, kept current." },
+            { href: "/crypto-casinos", label: "All crypto casinos", hint: "The index these guides are written against." },
+            { href: "/how-we-rate", label: "How we source every fact", hint: "The method behind every figure on the site." },
+          ]}
+        />
       </LandingShell>
     </>
   );

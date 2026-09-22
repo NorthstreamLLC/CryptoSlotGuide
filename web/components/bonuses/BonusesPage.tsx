@@ -8,6 +8,7 @@ import { Icon, type IconName } from "@/components/ui/Icon";
 import type { Operator } from "@/lib/types";
 import { raceFor, raceSlugs, dropFor } from "@/lib/races";
 import { getSpecFact } from "@/lib/spec-sheet";
+import { NextSteps } from "@/components/layout/NextSteps";
 
 /**
  * Compare casino bonuses, split by how each one works:
@@ -197,6 +198,16 @@ export function BonusesPage() {
             </div>
           </Link>
         </div>
+      </section>
+      <section style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px 56px" }}>
+        <NextSteps
+          steps={[
+            { href: "/vip-calculator", label: "VIP calculator", hint: "What rank your wagering reaches, and what each rank pays." },
+            { href: "/races", label: "Races & raffles", hint: "The recurring prize pools you enter just by playing." },
+            { href: "/crypto-casinos", label: "All crypto casinos", hint: "Filter by payout speed, KYC, wagering and sportsbook." },
+            { href: "/how-we-rate", label: "How we source every fact", hint: "Every term above is quoted from the casino's own bonus rules." },
+          ]}
+        />
       </section>
     </main>
   );

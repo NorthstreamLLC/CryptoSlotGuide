@@ -7,6 +7,7 @@ import { MapHover } from "@/components/legal/MapHover";
 import { LegalMap } from "@/components/legal/LegalMap";
 import { LegalHero, RegionGrid, Tabs, Disclaimer } from "@/components/legal/LegalUI";
 import { HelpBox } from "@/components/legal/HelpBox";
+import { NextSteps } from "@/components/layout/NextSteps";
 
 export const metadata = pageMetadata(
   "Is online gambling legal in your country? World map",
@@ -40,6 +41,14 @@ export default function Page() {
         )}
         <HelpBox />
         <Disclaimer />
+        <NextSteps
+          steps={[
+            { href: "/legal/us", label: "US state by state", hint: "All 50 states and DC, including where sweepstakes are banned." },
+            { href: "/legal/europe", label: "Europe in detail", hint: "The European map at a scale where the smaller markets are clickable." },
+            { href: "/crypto-casinos", label: "Casinos by country", hint: "Which operators accept players where you live, from their own terms." },
+            { href: "/how-we-rate", label: "How we source every fact", hint: "Each status links to the regulator or government page behind it." },
+          ]}
+        />
       </section>
     </main>
   );

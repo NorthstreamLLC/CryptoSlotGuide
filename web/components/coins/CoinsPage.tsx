@@ -7,6 +7,7 @@ import { tintFor } from "@/lib/logo";
 import { payoutView } from "@/lib/payout";
 import { bonusWithWager } from "@/lib/wager";
 import { BrandMark } from "@/components/ui/BrandMark";
+import { NextSteps } from "@/components/layout/NextSteps";
 
 /**
  * Ported from the `isCoins` block in CryptoSlotGuide.dc.html (search for
@@ -145,6 +146,15 @@ export function CoinsPage() {
           </div>
         </section>
       )}
+      <section style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px 56px" }}>
+        <NextSteps
+          steps={[
+            { href: "/wallets", label: "Wallets", hint: "Where the bankroll lives: custody, chains and swap fees." },
+            { href: "/exchanges", label: "Exchanges", hint: "Getting on and off chain, with each venue's fee schedule." },
+            { href: "/crypto-casinos", label: "All crypto casinos", hint: "Which casinos take which coins, from their own help pages." },
+          ]}
+        />
+      </section>
     </main>
   );
 }

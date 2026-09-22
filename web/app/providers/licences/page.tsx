@@ -8,6 +8,7 @@ import { LegalMap } from "@/components/legal/LegalMap";
 import { MapHover, type HoverInfo } from "@/components/legal/MapHover";
 import { LegalHero } from "@/components/legal/LegalUI";
 import { logoFor } from "@/lib/logo";
+import { NextSteps } from "@/components/layout/NextSteps";
 
 export const metadata = pageMetadata(
   "Where game studios are licensed: world map",
@@ -135,6 +136,13 @@ export default async function Page({ searchParams }: { searchParams: Promise<{ s
         <p style={{ margin: "22px 0 0", maxWidth: "80ch", fontSize: 12.5, lineHeight: 1.6, color: "#6E7F88" }}>
           Licences as each studio lists them on its own site. Studios often hold more than they publish (NetEnt, Red Tiger and Big Time Gaming point to their parent Evolution&apos;s list), so a blank country doesn&apos;t always mean no licence.
         </p>
+        <NextSteps
+          steps={[
+            { href: "/providers", label: "Studio profiles", hint: "Profiled on RTP disclosure rather than catalogue size." },
+            { href: "/slots", label: "Slot RTP index", hint: "Every title we track and its published return." },
+            { href: "/legal", label: "Gambling laws", hint: "The regulators behind these licences, country by country." },
+          ]}
+        />
       </section>
     </main>
   );

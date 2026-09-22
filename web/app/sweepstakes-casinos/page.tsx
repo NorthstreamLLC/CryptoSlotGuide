@@ -2,6 +2,7 @@ import Link from "next/link";
 import { pageMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { NextSteps } from "@/components/layout/NextSteps";
 import { sweepsSorted, sweepsFact, shortFact } from "@/lib/sweeps";
 import { brandFor } from "@/lib/casino-facts";
 import { BrandMark } from "@/components/ui/BrandMark";
@@ -117,6 +118,14 @@ export default function Page() {
           ))}
         </div>
 
+        <NextSteps
+          steps={[
+            { href: "/legal/us", label: "Is it legal in your state?", hint: "All 50 states and DC, with each state's sweepstakes position." },
+            { href: "/crypto-casinos", label: "Crypto casinos", hint: "The real-money side: coins, payout times and welcome offers." },
+            { href: "/bonuses", label: "Every bonus", hint: "Welcome offers and rewards with the wagering each one carries." },
+            { href: "/how-we-rate", label: "How we source every fact", hint: "Every figure here comes from the casino's own rules pages." },
+          ]}
+        />
       </section>
     </main>
   );

@@ -19,6 +19,7 @@ import {
 } from "@/lib/casino-index";
 import type { Operator } from "@/lib/types";
 import { payoutView } from "@/lib/payout";
+import { NextSteps } from "@/components/layout/NextSteps";
 
 const btcFaqData = [
   { q: "How many confirmations before I can play?", a: "It depends on the casino and the coin. Operators set their own confirmation requirements and most show them in the cashier, so check there before you send. Bitcoin blocks come roughly every ten minutes, so each extra confirmation adds waiting time." },
@@ -276,6 +277,16 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
           </div>
         </div>
       </div>
+      <section style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px 56px" }}>
+        <NextSteps
+          steps={[
+            { href: "/bonuses", label: "Every bonus, side by side", hint: "Welcome offers and rewards with the wagering each one carries." },
+            { href: "/find-my-casino", label: "Find my casino", hint: "Three questions, matched against each casino's own terms." },
+            { href: "/legal", label: "Is it legal where you live?", hint: "45 countries and all 50 US states, from their own regulators." },
+            { href: "/how-we-rate", label: "How we source every fact", hint: "Why each figure links back to the operator's own page." },
+          ]}
+        />
+      </section>
     </main>
   );
 }

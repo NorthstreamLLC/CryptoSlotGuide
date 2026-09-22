@@ -7,6 +7,7 @@ import { raceFor, raceSlugs } from "@/lib/races";
 import { brandFor, casinoFacts } from "@/lib/casino-facts";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { Icon } from "@/components/ui/Icon";
+import { NextSteps } from "@/components/layout/NextSteps";
 
 export const metadata = pageMetadata(
   "Biggest crypto casino races and raffles",
@@ -95,6 +96,14 @@ export default function Page() {
         <p style={{ margin: "18px 0 0", maxWidth: "80ch", fontSize: 13.5, lineHeight: 1.6, color: "#7B8A93" }}>
           Races are sorted by prize money a month (daily pools x30, weekly x4.3). Most rank players by amount wagered, some by points weighted to each game&apos;s house edge; each casino&apos;s report explains its own rules.
         </p>
+        <NextSteps
+          steps={[
+            { href: "/bonuses", label: "Bonuses & rewards", hint: "Welcome offers, rakeback and cashback with the wagering each carries." },
+            { href: "/vip-calculator", label: "VIP calculator", hint: "What your wagering is worth in rank and rewards at each casino." },
+            { href: "/crypto-casinos", label: "All crypto casinos", hint: "Filter by payout speed, KYC, wagering and sportsbook." },
+            { href: "/how-we-rate", label: "How we source every fact", hint: "Every prize pool above comes from the casino's own page." },
+          ]}
+        />
       </section>
     </main>
   );

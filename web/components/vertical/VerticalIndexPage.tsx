@@ -5,12 +5,47 @@ import type { VerticalKind, VerticalRow } from "@/lib/vertical-view";
 import { getVerticalPage } from "@/lib/vertical-view";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { Icon } from "@/components/ui/Icon";
+import { NextSteps } from "@/components/layout/NextSteps";
 
 /**
  * One list page for /slots, /providers, /sportsbooks, /wallets, /exchanges
  * and /guides: hero, optional tabs, and a clean list with three fact columns.
  */
 const MONO = "var(--font-jetbrains-mono), monospace";
+
+/** Where a reader of each index usually goes next. Written per list, not generated. */
+const INDEX_NEXT: Record<VerticalKind, { href: string; label: string; hint: string }[]> = {
+  slots: [
+    { href: "/rtp-watch", label: "RTP Watch", hint: "Which casinos ship a cut build of the same slot." },
+    { href: "/providers", label: "Game studios", hint: "Which studios publish every RTP version, and which publish none." },
+    { href: "/crypto-casinos", label: "Where to play", hint: "The casinos we track, with coins, payouts and offers cited." },
+  ],
+  providers: [
+    { href: "/providers/licences", label: "Studio licence map", hint: "Where each studio holds a licence, from its own licence pages." },
+    { href: "/slots", label: "Slot RTP index", hint: "Every title we track and its published return." },
+    { href: "/rtp-watch", label: "RTP Watch", hint: "The operators shipping cut builds of these games." },
+  ],
+  sportsbooks: [
+    { href: "/prediction-markets", label: "Prediction markets", hint: "The casinos running event markets alongside the book." },
+    { href: "/esports-casinos", label: "Esports betting", hint: "Casinos that name the esports titles they cover." },
+    { href: "/bonuses", label: "Every bonus", hint: "Sports and casino offers with the wagering each carries." },
+  ],
+  wallets: [
+    { href: "/coins", label: "Coins we track", hint: "Which casinos take each coin, and on which networks." },
+    { href: "/exchanges", label: "Exchanges", hint: "Getting on and off chain, with each venue's fee schedule." },
+    { href: "/crypto-casinos/no-kyc", label: "No-KYC casinos", hint: "Where a wallet is all you need to deposit and withdraw." },
+  ],
+  exchanges: [
+    { href: "/wallets", label: "Wallets", hint: "Where to hold the balance once it is off the exchange." },
+    { href: "/coins", label: "Coins we track", hint: "Which casinos accept each coin, and on which networks." },
+    { href: "/fastest-payouts", label: "Fastest payouts", hint: "Ranked on the withdrawal time each operator states." },
+  ],
+  guides: [
+    { href: "/how-we-rate", label: "How we source every fact", hint: "The method behind every figure on the site." },
+    { href: "/crypto-casinos", label: "All crypto casinos", hint: "Put the guide to work on the full index." },
+    { href: "/find-my-casino", label: "Find my casino", hint: "Three questions, matched against each casino's own terms." },
+  ],
+};
 
 export function VerticalIndexPage({ kind, tabIdx = 0 }: { kind: VerticalKind; tabIdx?: number }) {
   const vp = getVerticalPage(kind, tabIdx);
@@ -106,6 +141,7 @@ export function VerticalIndexPage({ kind, tabIdx = 0 }: { kind: VerticalKind; ta
             </div>
           </Link>
         </div>
+        <NextSteps steps={INDEX_NEXT[kind]} />
       </section>
     </main>
   );

@@ -7,6 +7,7 @@ import { countryBy } from "@/lib/legal";
 import { countryPages, casinosForCountry } from "@/lib/landing";
 import { CasinoOfferList } from "@/components/casino/CasinoOfferList";
 import { LandingShell, LinkCloud } from "@/components/landing/LandingShell";
+import { NextSteps } from "@/components/layout/NextSteps";
 
 export function generateStaticParams() {
   return countryPages().map(({ c }) => ({ country: c.code.toLowerCase() }));
@@ -60,6 +61,13 @@ export default async function Page({ params }: { params: Promise<{ country: stri
           Based on each casino&apos;s own restricted-countries list, not legal advice. Gambling law in {c.name} applies to you as a player; check it before you sign up.
         </p>
         <LinkCloud title="Crypto casinos in other countries" items={others.map((x) => ({ href: `/crypto-casinos/in/${x.c.code.toLowerCase()}`, label: x.c.name }))} />
+        <NextSteps
+          steps={[
+            { href: `/legal/${c.code.toLowerCase()}`, label: `Is it legal in ${c.name}?`, hint: "The regulator, the licensing model and the minimum age." },
+            { href: "/bonuses", label: "Every bonus", hint: "Welcome offers and rewards with the wagering each one carries." },
+            { href: "/find-my-casino", label: "Find my casino", hint: "Three questions, matched against each casino's own terms." },
+          ]}
+        />
       </LandingShell>
     </>
   );

@@ -8,6 +8,7 @@ import { LegalMap } from "@/components/legal/LegalMap";
 import { MapHover } from "@/components/legal/MapHover";
 import { LegalHero, RegionGrid, Tabs, Disclaimer } from "@/components/legal/LegalUI";
 import { HelpBox } from "@/components/legal/HelpBox";
+import { NextSteps } from "@/components/layout/NextSteps";
 
 export const metadata = pageMetadata(
   "Online gambling in Europe: laws and crypto casinos by country",
@@ -73,6 +74,14 @@ export default async function Page({ searchParams }: { searchParams: Promise<{ l
         )}
         <HelpBox />
         <Disclaimer />
+        <NextSteps
+          steps={[
+            { href: "/legal", label: "The world map", hint: "Every country we cover, coloured by what its regulator allows." },
+            { href: "/legal/us", label: "US state by state", hint: "All 50 states and DC, including the sweepstakes position." },
+            { href: "/crypto-casinos", label: "Crypto casinos", hint: "Which operators accept players where you live." },
+            { href: "/how-we-rate", label: "How we source every fact", hint: "Each status links to the regulator page behind it." },
+          ]}
+        />
       </section>
     </main>
   );

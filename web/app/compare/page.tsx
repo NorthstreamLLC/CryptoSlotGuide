@@ -4,6 +4,7 @@ import { breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 import Link from "next/link";
 import { versusPairs, pairSlug } from "@/lib/versus";
+import { NextSteps } from "@/components/layout/NextSteps";
 import { siteData } from "@/lib/site-data";
 
 export const metadata = pageMetadata(
@@ -26,6 +27,13 @@ export default function Page() {
             </Link>
           ))}
         </div>
+        <NextSteps
+          steps={[
+            { href: "/crypto-casinos", label: "All crypto casinos", hint: "The full index, filterable by payout speed, KYC and wagering." },
+            { href: "/bonuses", label: "Every bonus", hint: "Welcome offers and rewards with the wagering each one carries." },
+            { href: "/find-my-casino", label: "Find my casino", hint: "Three questions instead of reading every comparison." },
+          ]}
+        />
       </section>
     </>
   );
