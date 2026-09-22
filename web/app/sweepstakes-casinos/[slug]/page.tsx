@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { pageMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { SWEEPS, sweepsBySlug, sweepsFact, shortFact, type SweepsFact } from "@/lib/sweeps";
+import { SWEEPS, sweepsBySlug, sweepsFact, tileValue, type SweepsFact } from "@/lib/sweeps";
 import { brandFor } from "@/lib/casino-facts";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { Icon, type IconName } from "@/components/ui/Icon";
@@ -77,14 +77,14 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           {F("Welcome offer") && <p style={{ margin: "0 0 24px", maxWidth: "62ch", fontSize: 16, lineHeight: 1.6, color: "#A8B6BE" }}>{F("Welcome offer")!.value}</p>}
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 10, margin: "0 0 28px" }}>
-            {tiles.filter((t) => t.f).map((t) => (
+            {tiles.filter((t) => tileValue(t.f)).map((t) => (
               <div key={t.label} style={{ display: "flex", gap: 12, padding: "14px 16px", borderRadius: 14, background: "rgba(255,255,255,.035)", border: "1px solid rgba(255,255,255,.08)" }}>
                 <span style={{ width: 38, height: 38, flex: "none", borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", background: `${brand}1f`, color: brand }}>
                   <Icon name={t.icon} size={19} />
                 </span>
                 <span style={{ minWidth: 0 }}>
                   <span style={{ display: "block", fontFamily: MONO, fontSize: 9.5, letterSpacing: ".07em", textTransform: "uppercase", color: "#6E7F88" }}>{t.label}</span>
-                  <span style={{ display: "block", fontSize: 15, fontWeight: 800, color: "#fff", lineHeight: 1.3 }}>{shortFact(t.f, 44)}</span>
+                  <span style={{ display: "block", fontSize: 17, fontWeight: 800, color: "#fff", lineHeight: 1.3 }}>{tileValue(t.f)}</span>
                 </span>
               </div>
             ))}
@@ -114,7 +114,18 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             <div key={f!.label} style={{ display: "grid", gridTemplateColumns: "minmax(120px, 170px) 1fr", gap: 14, padding: "13px 0", borderTop: i ? "1px solid rgba(255,255,255,.06)" : undefined }}>
               <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".06em", textTransform: "uppercase", color: "#6E7F88", paddingTop: 2 }}>{f!.label}</div>
               <div style={{ fontSize: 14, lineHeight: 1.6, color: "#C6D1D7" }}>
-                {f!.value} <Source f={f!} />
+                {f!.label === "Restricted states" ? (
+                  <span style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+                    {f!.value.replace(/\.$/, "").split(/,\s*|\s+and\s+/).filter(Boolean).map((st) => (
+                      <span key={st} style={{ padding: "4px 10px", borderRadius: 100, background: "rgba(196,101,58,.12)", border: "1px solid rgba(196,101,58,.3)", fontSize: 12.5, fontWeight: 600, color: "#DA9877" }}>{st}</span>
+                    ))}
+                    <Source f={f!} />
+                  </span>
+                ) : (
+                  <>
+                    {f!.value} <Source f={f!} />
+                  </>
+                )}
               </div>
             </div>
           ))}

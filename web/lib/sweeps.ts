@@ -47,3 +47,45 @@ export function shortFact(f: SweepsFact | null, max = 48): string | null {
   const first = f.value.split(/[.;]\s/)[0];
   return first.length > max ? first.slice(0, max - 1).replace(/\s+\S*$/, "") + "…" : first;
 }
+
+/**
+ * The headline value for a tile: a figure a reader can take in at a glance
+ * ("Every 24 hours", "1–2 business days", "1×"), not the first 44 characters
+ * of a sentence cut mid-word. The full sentence is in the table below it,
+ * so a fact that has no short form is left to the tile's caller to skip.
+ */
+export function tileValue(f: SweepsFact | null): string | null {
+  if (!f) return null;
+  const v = f.value;
+  const L = f.label.toLowerCase();
+
+  if (L.includes("playthrough")) {
+    const x = v.match(/(\d+(?:\.\d+)?)\s*x\b/i);
+    return x ? `${x[1]}×` : /no (?:playthrough|wagering)/i.test(v) ? "None" : null;
+  }
+  if (L.includes("redemption time") || L.includes("payout")) {
+    const d = v.match(/(\d+\s*[–-]\s*\d+|\d+)\s*(business days?|days?|hours?|minutes?)/i);
+    if (!d) return /instant/i.test(v) ? "Instant" : null;
+    const span = d[1].replace(/\s*[–-]\s*/, "–");
+    // "1-2 business days" stays plural: only a bare "1" is singular.
+    const unit = d[2].toLowerCase().replace(/s$/, "");
+    // "Up to 60 days" is a cap, not a typical wait — keep the qualifier.
+    const qual = /\b(up to|within)\s*$/i.exec(v.slice(0, d.index))?.[1].toLowerCase();
+    return `${qual ? qual[0].toUpperCase() + qual.slice(1) + " " : ""}${span} ${unit}${span === "1" ? "" : "s"}`;
+  }
+  if (L.includes("minimum redemption") || L.includes("minimum")) {
+    const a = v.match(/\d[\d,.]*\s?(?:SC\b|Sweeps Coins|Prize Tickets|Coins\b)|\$\s?\d[\d,.]*/i);
+    return a ? a[0].replace(/\s+/g, " ").replace(/Sweeps Coins/i, "SC") : null;
+  }
+  if (L.includes("daily bonus") || L.includes("daily")) {
+    if (/every\s+(\d+)\s*hours?/i.test(v)) return `Every ${v.match(/every\s+(\d+)\s*hours?/i)![1]} hours`;
+    if (/dail(?:y|ies)/i.test(v)) return "Daily";
+    return null;
+  }
+  if (L.includes("minimum age")) {
+    const a = v.match(/\d{2}\+?/);
+    return a ? a[0].replace(/\+?$/, "+") : null;
+  }
+  const first = v.split(/[.;]\s/)[0];
+  return first.length <= 30 ? first : null;
+}
