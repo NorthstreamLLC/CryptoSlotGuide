@@ -42,7 +42,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
       <section style={{ background: "#0B0F12", borderBottom: "1px solid rgba(255,255,255,.07)" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "26px 40px 48px" }}>
           <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#5C6A72", marginBottom: 26 }}>
-            <Link href="/" style={{ color: "#5C6A72" }}>Index</Link> / <Link href={back.href} style={{ color: "#5C6A72" }}>{e.kicker}</Link> /{" "}
+            <Link href="/" style={{ color: "#5C6A72" }}>Home</Link> / <Link href={back.href} style={{ color: "#5C6A72" }}>{e.kicker}</Link> /{" "}
             <span style={{ color: "#A8B6BE" }}>{e.name}</span>
           </div>
 

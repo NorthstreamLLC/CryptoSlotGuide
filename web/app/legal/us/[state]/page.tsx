@@ -49,14 +49,22 @@ export default async function Page({ params }: { params: Promise<{ state: string
             ["Regulator", s.regulator?.name, s.regulator?.url],
             ["Minimum age", s.minAge],
             ["Sweepstakes law", s.sweepstakesDetail],
-            ["Licensed online casinos", s.licensedOnlineCasinos?.join(", "), s.licensedListUrl],
+            ["Licensed online casinos", null, s.licensedListUrl],
           ] as [string, string | undefined, string | undefined][])
-            .filter(([, v]) => v)
+            .filter(([k, v]) => v || (k === "Licensed online casinos" && s.licensedOnlineCasinos?.length))
             .map(([k, v, url], i) => (
               <div key={k} style={{ display: "grid", gridTemplateColumns: "minmax(120px, 190px) 1fr", gap: 14, padding: "13px 0", borderTop: i ? "1px solid rgba(255,255,255,.06)" : undefined }}>
                 <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".06em", textTransform: "uppercase", color: "#6E7F88", paddingTop: 2 }}>{k}</div>
                 <div style={{ fontSize: 14, lineHeight: 1.6, color: "#C6D1D7" }}>
-                  {v} {url && <a href={url} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: MONO, fontSize: 10.5, color: "#5FE3E8" }}>source ↗</a>}
+                  {v}
+                  {k === "Licensed online casinos" && (
+                    <span style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+                      {s.licensedOnlineCasinos!.map((n) => (
+                        <span key={n} style={{ padding: "4px 10px", borderRadius: 100, background: "rgba(255,255,255,.04)", border: "1px solid rgba(255,255,255,.09)", fontSize: 12.5, fontWeight: 600, color: "#C6D1D7" }}>{n}</span>
+                      ))}
+                    </span>
+                  )}
+                  {url && <a href={url} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: MONO, fontSize: 10.5, color: "#5FE3E8" }}> source ↗</a>}
                 </div>
               </div>
             ))}
