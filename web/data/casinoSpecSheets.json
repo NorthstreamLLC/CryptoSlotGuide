@@ -28,7 +28,7 @@
           },
           {
             "label": "Bonus withdrawals",
-            "value": "Its homepage FAQ says bonus funds are withdrawable once wagering requirements are met; no wagering figure found yet",
+            "value": "Its homepage FAQ says bonus funds are withdrawable once wagering requirements are met.",
             "sourcing": "editorial",
             "sourceUrl": "https://1win.com/",
             "asOf": "2026-09-15"
@@ -453,7 +453,7 @@
           },
           {
             "label": "Minimum deposit",
-            "value": "The first eligible deposit over $25 triggers the Welcome Package (help article dated 5 Mar 2025)",
+            "value": "The first eligible deposit over $25 triggers the Welcome Package",
             "sourcing": "editorial",
             "sourceUrl": "https://help.500.casino/en/articles/9239792-how-does-the-new-welcome-package-work",
             "asOf": "2026-09-16"
@@ -521,7 +521,7 @@
           },
           {
             "label": "Esports",
-            "value": "Yes. Its help centre mentions esports betting and uses CS:GO match markets as its example. No full list of titles was found (the sports page is geo-blocked from the research location).",
+            "value": "Yes. Its help centre mentions esports betting and uses CS:GO match markets as its example. No full list of titles was found.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.500.casino/en/articles/5970866-guide-to-matchbetting",
             "asOf": "2026-09-16"
@@ -3498,7 +3498,7 @@
         "facts": [
           {
             "label": "Offer",
-            "value": "No sports bonus: bonus coins from the 100% Deposit Bonus cannot be used on the Sportsbook, Live Casino or Game Show. They can be used only on slots and Cybet Originals. (Page modified 2026-06-19.)",
+            "value": "No sports bonus: bonus coins from the 100% Deposit Bonus cannot be used on the Sportsbook, Live Casino or Game Show. They can be used only on slots and Cybet Originals.",
             "sourcing": "editorial",
             "sourceUrl": "https://guidebook.cybet.com/deposit-bonus/",
             "asOf": "2026-09-17"
@@ -3755,7 +3755,7 @@
         "facts": [
           {
             "label": "Sportsbook",
-            "value": "Yes, per the page metadata for degen.com/sports and a 'Sportsbook Policy' page, both found in the site's own app code. From the US, degen.com shows a free-to-play social casino instead, so the sportsbook could not be viewed.",
+            "value": "Yes, per the page metadata for degen.com/sports and a 'Sportsbook Policy' page, both found in the site's own app code.",
             "sourcing": "editorial",
             "sourceUrl": "https://degen.com/sports",
             "asOf": "2026-09-16"
@@ -3804,7 +3804,7 @@
         "facts": [
           {
             "label": "Offer",
-            "value": "First Deposit Bonus: 100% match up to $1,500. It is not sports-only, but sports wagers can count toward rollover. You must register with an eligible referral code and activate the bonus before depositing. (Article dated July 22, 2026.)",
+            "value": "First Deposit Bonus: 100% match up to $1,500. It is not sports-only, but sports wagers can count toward rollover. You must register with an eligible referral code and activate the bonus before depositing.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.degen.com/en/articles/15558569-unlock-up-to-1-500-on-your-first-deposit",
             "asOf": "2026-09-17"
@@ -3917,7 +3917,7 @@
           },
           {
             "label": "Withdrawal limits",
-            "value": "Crypto withdrawals only. The stated conditions are a verified email address and that funds must be fully wagered at least once before a withdrawal is allowed. Withdrawals are usually processed instantly and should arrive within up to 1 hour. DegenCity publishes no maximum withdrawal amount and no per-day or per-month payout cap on any page of its help centre. Help article dated 7 July 2026.",
+            "value": "Crypto withdrawals only. The stated conditions are a verified email address and that funds must be fully wagered at least once before a withdrawal is allowed. Withdrawals are usually processed instantly and should arrive within up to 1 hour. DegenCity publishes no maximum withdrawal amount and no per-day or per-month payout cap on any page of its help centre.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.degencity.com/en/articles/13868915-how-to-withdraw",
             "asOf": "2026-09-17"
@@ -3964,7 +3964,7 @@
           },
           {
             "label": "Deposit limits",
-            "value": "Crypto-only deposits with per-coin minimums: $5 USD for Bitcoin, Ethereum, USDT (ERC-20) and USDC (ERC-20); $1 USD for Litecoin and Tron (TRC-20); $20 USD for USDT via TRON. DegenCity states minimum deposit amounts may change and points players to the Deposit section for the current figure. No maximum deposit and no per-day or per-month deposit cap is stated anywhere in the help centre. Help article dated 7 July 2026.",
+            "value": "Crypto-only deposits with per-coin minimums: $5 USD for Bitcoin, Ethereum, USDT (ERC-20) and USDC (ERC-20); $1 USD for Litecoin and Tron (TRC-20); $20 USD for USDT via TRON. DegenCity states minimum deposit amounts may change and points players to the Deposit section for the current figure. No maximum deposit and no per-day or per-month deposit cap is stated anywhere in the help centre.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.degencity.com/en/articles/13868262-how-to-deposit-crypto",
             "asOf": "2026-09-17"
@@ -4025,21 +4025,21 @@
           },
           {
             "label": "Rakeback",
-            "value": "Three continuous rakeback streams: Instant Rakeback (a percentage of the house edge on every eligible bet, applied automatically and credited instantly), a Weekly Reward that accumulates through the week, and a Monthly Reward that accumulates over the month. Eligibility starts at the Chiplet rank. Rewards do not expire once generated. Help article dated 7 July 2026. · Recurring claim schedule: weekly rewards release every Sunday at 00:05 UTC and monthly rewards on the 1st of each month at 00:10 UTC. Help article dated 7 July 2026.",
+            "value": "Three continuous rakeback streams: Instant Rakeback (a percentage of the house edge on every eligible bet, applied automatically and credited instantly), a Weekly Reward that accumulates through the week, and a Monthly Reward that accumulates over the month. Eligibility starts at the Chiplet rank. Rewards do not expire once generated. · Recurring claim schedule: weekly rewards release every Sunday at 00:05 UTC and monthly rewards on the 1st of each month at 00:10 UTC.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.degencity.com/en/articles/13870117-what-are-rakeback-rewards-and-how-do-i-claim-them",
             "asOf": "2026-09-17"
           },
           {
             "label": "VIP levels",
-            "value": "Four VIP ranks by XP: Hustler (250,000-700,000 XP) with Instant Rakeback, Weekly Bonus, Monthly Bonus, Rank-Up Bonus, Tier Bonuses and Exclusive VIP Promotions; Card Shark (1,000,000-3,000,000 XP) adding a Bonus Increase and a VIP Host; Pitboss (5,000,000-15,000,000 XP) adding Bespoke Rewards and Exclusive Access; and Ace (22,000,000-100,000,000 XP) adding Event Invitations. VIP status begins automatically at Hustler and a dedicated VIP Host from Card Shark. Help article dated 7 July 2026.",
+            "value": "Four VIP ranks by XP: Hustler (250,000-700,000 XP) with Instant Rakeback, Weekly Bonus, Monthly Bonus, Rank-Up Bonus, Tier Bonuses and Exclusive VIP Promotions; Card Shark (1,000,000-3,000,000 XP) adding a Bonus Increase and a VIP Host; Pitboss (5,000,000-15,000,000 XP) adding Bespoke Rewards and Exclusive Access; and Ace (22,000,000-100,000,000 XP) adding Event Invitations. VIP status begins automatically at Hustler and a dedicated VIP Host from Card Shark.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.degencity.com/en/articles/13885358-how-do-i-become-a-vip",
             "asOf": "2026-09-17"
           },
           {
             "label": "Reload bonuses",
-            "value": "From the Card Shark rank a dedicated VIP Host is assigned who can provide weekly reloads, deposit bonuses, cashback offers and exclusive promotions and challenges. DegenCity publishes no rates or amounts for these; they are at the host's discretion. Help article dated 7 July 2026.",
+            "value": "From the Card Shark rank a dedicated VIP Host is assigned who can provide weekly reloads, deposit bonuses, cashback offers and exclusive promotions and challenges. DegenCity publishes no rates or amounts for these; they are at the host's discretion.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.degencity.com/en/articles/13885419-what-is-a-vip-host",
             "asOf": "2026-09-17"
@@ -4216,7 +4216,7 @@
           },
           {
             "label": "VIP levels",
-            "value": "Six rank tiers of five levels each - Bronze, Silver, Gold, Sapphire, Emerald and Holo, all I-V - earned by XP from wagering across sports and casino. Rank and XP do not decay through inactivity. Perks unlock by rank: Instant Rakeback; Daily Bonus from Bronze I; Weekly Bonus from Silver I; Monthly Bonus from Gold I; Rakeboost (+15% rakeback for 60 minutes, triggered automatically on claiming the daily bonus); a Rank Up Bonus wheel spin paid as flat cash on each rank-up; Free Spins on each rank-up, tied to specific games and the token the rank-up was earned in; VIP Host for top-tier players; Concierge Service for elite players. Article dated June 23, 2026.",
+            "value": "Six rank tiers of five levels each - Bronze, Silver, Gold, Sapphire, Emerald and Holo, all I-V - earned by XP from wagering across sports and casino. Rank and XP do not decay through inactivity. Perks unlock by rank: Instant Rakeback; Daily Bonus from Bronze I; Weekly Bonus from Silver I; Monthly Bonus from Gold I; Rakeboost (+15% rakeback for 60 minutes, triggered automatically on claiming the daily bonus); a Rank Up Bonus wheel spin paid as flat cash on each rank-up; Free Spins on each rank-up, tied to specific games and the token the rank-up was earned in; VIP Host for top-tier players; Concierge Service for elite players.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.dicey.com/en/articles/13729989-understanding-the-rewards-program",
             "asOf": "2026-09-17"
@@ -4230,7 +4230,7 @@
           },
           {
             "label": "Weekly raffle",
-            "value": "Rain is a recurring chat prize draw, and it drops every 30 minutes rather than weekly. Dicey seeds each pool with $25 and the community can add to it, minimum add $0.50; when the timer hits zero 10 winners are drawn at random from that round's joiners and shares credit instantly. Eligibility is rank Bronze I plus a minimum wager requirement, and entries do not carry over between rounds. A related feature, Ripples, triggers automatically whenever a player lands a big win: other eligible players join from chat and Dicey pays the prize in USDC as a percentage of the triggering bet. Rain article dated July 22, 2026.",
+            "value": "Rain is a recurring chat prize draw, and it drops every 30 minutes rather than weekly. Dicey seeds each pool with $25 and the community can add to it, minimum add $0.50; when the timer hits zero 10 winners are drawn at random from that round's joiners and shares credit instantly. Eligibility is rank Bronze I plus a minimum wager requirement, and entries do not carry over between rounds. A related feature, Ripples, triggers automatically whenever a player lands a big win: other eligible players join from chat and Dicey pays the prize in USDC as a percentage of the triggering bet.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.dicey.com/en/articles/15630583-what-is-rain-and-how-does-it-work",
             "asOf": "2026-09-17"
@@ -4825,7 +4825,7 @@
           },
           {
             "label": "Bet builder",
-            "value": "Yes. Duelbits' own Betting Rules and Policies PDF has a Bet Builder section: if any selection is voided, the whole bet is void. The PDF is hosted on Duelbits' Contentful asset CDN (assets.ctfassets.net), not on duelbits.com. Duelbits blog snippets also mention Bet Builder but could not be fetched.",
+            "value": "Yes. Duelbits' own Betting Rules and Policies PDF has a Bet Builder section: if any selection is voided, the whole bet is void. The PDF is hosted on Duelbits' Contentful asset CDN (assets.ctfassets.net), not on duelbits.com.",
             "sourcing": "editorial",
             "sourceUrl": "https://assets.ctfassets.net/im9yudtc78wp/4OboyHmjneSScIQIBDq93x/cb8f79993a1f96d32a462cb00cbb8db7/RULESNEW.pdf",
             "asOf": "2026-09-16"
@@ -4919,7 +4919,7 @@
           },
           {
             "label": "Withdrawal limits",
-            "value": "Dustbit publishes no maximum withdrawal amount and no per-day or per-month payout cap; its Terms state only that minimum and maximum withdrawal amounts appear on the website, that withdrawals go back to the deposit method where possible, and that additional verification may be applied. Dustbit states no KYC verification is required for withdrawals, and that crypto withdrawals are usually processed within 5-10 minutes, with some briefly reviewed. Terms last modified 12 August 2026; help article dated 17 April 2026.",
+            "value": "Dustbit publishes no maximum withdrawal amount and no per-day or per-month payout cap; its Terms state only that minimum and maximum withdrawal amounts appear on the website, that withdrawals go back to the deposit method where possible, and that additional verification may be applied. Dustbit states no KYC verification is required for withdrawals, and that crypto withdrawals are usually processed within 5-10 minutes, with some briefly reviewed. help",
             "sourcing": "editorial",
             "sourceUrl": "https://dustbit.com/legal/terms",
             "asOf": "2026-09-17"
@@ -4954,14 +4954,14 @@
           },
           {
             "label": "Coin list note",
-            "value": "Built from its footer icons and its deposit guide, which names BCH, DASH, XMR and ADA as single-network coins; one further footer icon couldn't be identified. Sending on the wrong network can lose the funds permanently",
+            "value": "Built from its footer icons and its deposit guide, which names BCH, DASH, XMR and ADA as single-network coins; Sending on the wrong network can lose the funds permanently",
             "sourcing": "editorial",
             "sourceUrl": "https://help.dustbit.com/en/collections/19493307-crypto-payments",
             "asOf": "2026-09-16"
           },
           {
             "label": "Deposit limits",
-            "value": "Dustbit publishes no maximum deposit figure: its Terms of Service state only that minimum and maximum deposit and withdrawal amounts are shown on the website itself (the wallet sits behind login). The only published deposit threshold is the $20 minimum qualifying deposit on its deposit-match promotions. Players can set their own daily, monthly or yearly deposit and loss limits under My Account - Responsible Gaming. Deposits are accepted in crypto (BTC, LTC, DOGE, BCH, DASH, XMR, ADA, SOL, TRON, XRP and others) and in fiat via card, Apple Pay, Revolut Pay, Google Pay, Skrill and Neteller. Terms last modified 12 August 2026; FAQ page last modified 12 August 2026.",
+            "value": "Dustbit publishes no maximum deposit figure: its Terms of Service state only that minimum and maximum deposit and withdrawal amounts are shown on the website itself (the wallet sits behind login). The only published deposit threshold is the $20 minimum qualifying deposit on its deposit-match promotions. Players can set their own daily, monthly or yearly deposit and loss limits under My Account - Responsible Gaming. Deposits are accepted in crypto (BTC, LTC, DOGE, BCH, DASH, XMR, ADA, SOL, TRON, XRP and others) and in fiat via card, Apple Pay, Revolut Pay, Google Pay, Skrill and Neteller. FAQ",
             "sourcing": "editorial",
             "sourceUrl": "https://dustbit.com/legal/terms",
             "asOf": "2026-09-17"
@@ -4973,7 +4973,7 @@
         "facts": [
           {
             "label": "Standing offer",
-            "value": "An ongoing \"Community Rewards & Events\" programme totalling $1,500+ every month: a $500 monthly Discord engagement leaderboard, $600+ in monthly giveaways on Dustbit's Kick streams, and $400+ in regular Discord and Telegram giveaways. Presented as recurring monthly with no end date. · A permanently running Challenges programme: each challenge names an eligible slot or Dustbit Original, a target win multiplier and a minimum bet, and the first player to hit it takes a fixed cash prize credited instantly on top of normal winnings. Individual challenges rotate (\"available for a limited time\") but the programme itself runs continuously - 13 active and 4 completed challenges were listed, with prizes from $10.13 to $7,175.35 equivalent. Players can pursue several at once. Page last modified 11 August 2026. · Deposit match offers (50%, 100% and 150% variants each have a live…",
+            "value": "An ongoing \"Community Rewards & Events\" programme totalling $1,500+ every month: a $500 monthly Discord engagement leaderboard, $600+ in monthly giveaways on Dustbit's Kick streams, and $400+ in regular Discord and Telegram giveaways. Presented as recurring monthly with no end date. · A permanently running Challenges programme: each challenge names an eligible slot or Dustbit Original, a target win multiplier and a minimum bet, and the first player to hit it takes a fixed cash prize credited instantly on top of normal winnings. Individual challenges rotate (\"available for a limited time\") but the programme itself runs continuously - 13 active and 4 completed challenges were listed, with prizes from $10.13 to $7,175.35 equivalent. Players can pursue several at once. · Deposit match offers (50%, 100% and 150% variants each have a live…",
             "sourcing": "editorial",
             "sourceUrl": "https://dustbit.com/promotions/community-share",
             "asOf": "2026-09-17"
@@ -5608,7 +5608,7 @@
           },
           {
             "label": "Max payout",
-            "value": "Sources disagree. The general Terms & Conditions cap winnings on any single bet or spin at EUR 300,000 (the 'Maximum Win Limit'); this clause is not specific to sports. A Google snippet of the sportsbook terms quoted a sportsbook cap of EUR 100,000 per single bet, but that clause is not on the sportsbook terms page served on 2026-09-16. The current sportsbook terms only say limits and maximum winnings per bet or market may be changed.",
+            "value": "Sources disagree. The general Terms & Conditions cap winnings on any single bet or spin at EUR 300,000 (the 'Maximum Win Limit'); this clause is not specific to sports. The current sportsbook terms only say limits and maximum winnings per bet or market may be changed.",
             "sourcing": "editorial",
             "sourceUrl": "https://fortunejack.com/faq/terms_and_conditions",
             "asOf": "2026-09-16"
@@ -5696,7 +5696,7 @@
           },
           {
             "label": "Withdrawal limits",
-            "value": "No maximum withdrawal limit and no daily withdrawal limit. The minimum withdrawal is 1.5x the current network transaction fee, updating every 10 seconds with network conditions, and the fee is deducted from the withdrawal amount. Article dated March 16, 2026.",
+            "value": "No maximum withdrawal limit and no daily withdrawal limit. The minimum withdrawal is 1.5x the current network transaction fee, updating every 10 seconds with network conditions, and the fee is deducted from the withdrawal amount.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.gamba.com/en/articles/8271519-minimum-deposit-withdrawal-limits",
             "asOf": "2026-09-17"
@@ -5724,7 +5724,7 @@
           },
           {
             "label": "Deposit limits",
-            "value": "Minimum deposit across all cryptocurrencies is approximately $0.20 USD equivalent, with per-coin minimums including 0.000022 BTC, 0.00033 ETH, 0.03 SOL, 1 USDT, 1 USDC, 1.75 XRP, 13.5 TRX and 26,000,000 SHIB; deposits below a coin's minimum are not credited. Gamba states no maximum deposit - the article's limits summary covers only minimums and says the only absent caps are on withdrawals and daily withdrawals. Article dated March 16, 2026.",
+            "value": "Minimum deposit across all cryptocurrencies is approximately $0.20 USD equivalent, with per-coin minimums including 0.000022 BTC, 0.00033 ETH, 0.03 SOL, 1 USDT, 1 USDC, 1.75 XRP, 13.5 TRX and 26,000,000 SHIB; deposits below a coin's minimum are not credited. Gamba states no maximum deposit - the article's limits summary covers only minimums and says the only absent caps are on withdrawals and daily withdrawals.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.gamba.com/en/articles/8271519-minimum-deposit-withdrawal-limits",
             "asOf": "2026-09-17"
@@ -5736,7 +5736,7 @@
         "facts": [
           {
             "label": "Standing offer",
-            "value": "Daily Free Spin Wheel: hitting the daily wager target for your VIP rank unlocks one free spin per day awarding 10 Plinko balls at a random per-ball value, with winnings credited in USDT automatically and progress resetting daily. Wager targets are $500 for Bronze 1-3 (per-ball values $0.05 to $10.00), $1,000 for Silver 1 to Gold 3 ($0.20 to $20.00) and $2,500 for Platinum 1-3. Gamba also runs an hourly chat rain, free daily promo codes, leaderboard races with configurable payouts, and deposit bonuses whose rollover is calculated on deposit plus bonus amount and weighted by edge contribution. Article dated June 12, 2026.",
+            "value": "Daily Free Spin Wheel: hitting the daily wager target for your VIP rank unlocks one free spin per day awarding 10 Plinko balls at a random per-ball value, with winnings credited in USDT automatically and progress resetting daily. Wager targets are $500 for Bronze 1-3 (per-ball values $0.05 to $10.00), $1,000 for Silver 1 to Gold 3 ($0.20 to $20.00) and $2,500 for Platinum 1-3. Gamba also runs an hourly chat rain, free daily promo codes, leaderboard races with configurable payouts, and deposit bonuses whose rollover is calculated on deposit plus bonus amount and weighted by edge contribution.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.gamba.com/en/articles/14133450-daily-free-spin-wheel",
             "asOf": "2026-09-17"
@@ -5778,7 +5778,7 @@
           },
           {
             "label": "Rakeback",
-            "value": "Rakeback pays back a portion of every bet, win or lose, calculated on total wager against each game's house edge (typically around 3%) rather than on results. It can be claimed at will with a 2-minute cooldown, never expires, and is paid in the currency the bets were made in. The percentage rises with VIP rank up to 10% at the highest levels. Article dated March 16, 2026.",
+            "value": "Rakeback pays back a portion of every bet, win or lose, calculated on total wager against each game's house edge (typically around 3%) rather than on results. It can be claimed at will with a 2-minute cooldown, never expires, and is paid in the currency the bets were made in. The percentage rises with VIP rank up to 10% at the highest levels.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.gamba.com/en/articles/8271547-rakeback-bonus-explained",
             "asOf": "2026-09-17"
@@ -5792,7 +5792,7 @@
           },
           {
             "label": "VIP levels",
-            "value": "VIP ranks are Bronze, Silver, Gold, Platinum, Diamond, Master and Immortal, each with three tiers, gated on XP: Bronze 5,000/10,000/15,000; Silver 20,000/35,000/50,000; Gold 75,000/100,000/150,000; Platinum 200,000/300,000/500,000; Diamond 1,000,000/2,500,000/5,000,000; Master 10,000,000/25,000,000/50,000,000; Immortal 100,000,000/250,000,000/500,000,000. Casino wagering earns 1 XP per $1 and sports 3 XP per $1, and XP can also come from promotions, events and prize codes. Article dated March 16, 2026.",
+            "value": "VIP ranks are Bronze, Silver, Gold, Platinum, Diamond, Master and Immortal, each with three tiers, gated on XP: Bronze 5,000/10,000/15,000; Silver 20,000/35,000/50,000; Gold 75,000/100,000/150,000; Platinum 200,000/300,000/500,000; Diamond 1,000,000/2,500,000/5,000,000; Master 10,000,000/25,000,000/50,000,000; Immortal 100,000,000/250,000,000/500,000,000. Casino wagering earns 1 XP per $1 and sports 3 XP per $1, and XP can also come from promotions, events and prize codes.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.gamba.com/en/articles/8271544-vip-ranking-system-overview",
             "asOf": "2026-09-17"
@@ -6045,7 +6045,7 @@
           },
           {
             "label": "VIP levels",
-            "value": "The Royalty Up level system has 24 levels across 8 tiers, Bronze through Opal; rank-up rewards are not automatic and must be claimed manually. Each tier has its own standing free-spins offer — Ruby 20, Silver 20, Gold 25, Emerald 25, Diamond 25, Sapphire 30, Opal 30. The separate VIP programme is invitation-only and provides one-on-one support, exclusive reload bonuses and promotions built for VIPs, free withdrawals, and an exclusive VIP Telegram channel; tier names, wager thresholds and per-tier rakeback rates are not published. A VIP Transfer Program matches status from another platform after verification and a minimum $5,000 USD deposit. Help article updated 21 January 2026.",
+            "value": "The Royalty Up level system has 24 levels across 8 tiers, Bronze through Opal; rank-up rewards are not automatic and must be claimed manually. Each tier has its own standing free-spins offer — Ruby 20, Silver 20, Gold 25, Emerald 25, Diamond 25, Sapphire 30, Opal 30. The separate VIP programme is invitation-only and provides one-on-one support, exclusive reload bonuses and promotions built for VIPs, free withdrawals, and an exclusive VIP Telegram channel; tier names, wager thresholds and per-tier rakeback rates are not published. A VIP Transfer Program matches status from another platform after verification and a minimum $5,000 USD deposit.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.gamdom.com/en/articles/10290516-gamdom-rewards",
             "asOf": "2026-09-17"
@@ -6539,7 +6539,7 @@
           },
           {
             "label": "Esports",
-            "value": "Yes, the site has an Esports sports-menu link. No game titles were found in the text.",
+            "value": "Yes, the site has an Esports sports-menu link.",
             "sourcing": "editorial",
             "sourceUrl": "https://www.housebets.com/sports/109",
             "asOf": "2026-09-16"
@@ -6851,7 +6851,7 @@
         "facts": [
           {
             "label": "Offer",
-            "value": "No sports bonus: you cannot bet on the Sportsbook with a currency that has an active deposit-bonus rollover. The regular casino offer is 100% up to $1,000 with 35x rollover. (Article dated January 15, 2026.)",
+            "value": "No sports bonus: you cannot bet on the Sportsbook with a currency that has an active deposit-bonus rollover. The regular casino offer is 100% up to $1,000 with 35x rollover.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.jackpot.bet/en/articles/9607235-deposit-bonuses-terms-conditions",
             "asOf": "2026-09-17"
@@ -8409,7 +8409,7 @@
           },
           {
             "label": "Withdrawal limits",
-            "value": "No maximum withdrawal on cryptocurrency; the minimum is per-coin, set by that coin's fee and shown in the cashier before confirming. For bank transfer and card withdrawals the minimum is $20 CAD and the maximum is $10,000 CAD per transaction, applied per transaction so multiple withdrawals can exceed the cap. Razed also permits transactions up to a total of 2,500 EUR without Proof of Identity, Proof of Address and Proof of Payment, and allows amounts above that threshold once verification is complete. Crypto article dated March 11, 2024; fiat article dated September 12, 2025.",
+            "value": "No maximum withdrawal on cryptocurrency; the minimum is per-coin, set by that coin's fee and shown in the cashier before confirming. For bank transfer and card withdrawals the minimum is $20 CAD and the maximum is $10,000 CAD per transaction, applied per transaction so multiple withdrawals can exceed the cap. Razed also permits transactions up to a total of 2,500 EUR without Proof of Identity, Proof of Address and Proof of Payment, and allows amounts above that threshold once verification is complete. fiat",
             "sourcing": "editorial",
             "sourceUrl": "https://help.razed.com/en/articles/8777871-cryptocurrency-withdrawal-limits",
             "asOf": "2026-09-17"
@@ -8617,7 +8617,7 @@
         "facts": [
           {
             "label": "Offer",
-            "value": "$50 Sports Welcome Bonus: a $50 free bet, credited after your first qualifying deposit and wagering (page updated 15 Sep 2026)",
+            "value": "$50 Sports Welcome Bonus: a $50 free bet, credited after your first qualifying deposit and wagering",
             "sourcing": "editorial",
             "sourceUrl": "https://www.razed.com/promotions/",
             "asOf": "2026-09-17"
@@ -8718,7 +8718,7 @@
           },
           {
             "label": "Deposit limits",
-            "value": "For fiat deposits (for example CAD) by credit or debit card and other regional methods, the minimum deposit is $20 CAD and the maximum is $10,000 CAD per transaction, applied per individual transaction so several deposits in succession can exceed the cap. Article dated September 12, 2025. Razed's help centre does not state a maximum cryptocurrency deposit.",
+            "value": "For fiat deposits (for example CAD) by credit or debit card and other regional methods, the minimum deposit is $20 CAD and the maximum is $10,000 CAD per transaction, applied per individual transaction so several deposits in succession can exceed the cap. Razed's help centre does not state a maximum cryptocurrency deposit.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.razed.com/en/articles/11138244-fiat-deposit-limits",
             "asOf": "2026-09-17"
@@ -8784,14 +8784,14 @@
           },
           {
             "label": "Rakeback",
-            "value": "Rollbit pays 5% rakeback on all bets, claimable every 30 minutes. Each Rewards Calendar claim — available at midnight, 8am and 4pm UTC — also grants one hour of +15% Rakeboost. Page dated 13 January 2023.",
+            "value": "Rollbit pays 5% rakeback on all bets, claimable every 30 minutes. Each Rewards Calendar claim — available at midnight, 8am and 4pm UTC — also grants one hour of +15% Rakeboost.",
             "sourcing": "editorial",
             "sourceUrl": "https://blog.rollbit.com/rollbit-rewards-rewards-calendar/",
             "asOf": "2026-09-17"
           },
           {
             "label": "Reload bonuses",
-            "value": "Three recurring bonuses feed the Rewards Calendar: a Daily Bonus claimable once per 24 hours based on wagering and P&L over the previous 72 hours; a Weekly Bonus addable once every 7 days, aimed at weekends; and a Monthly Bonus addable once a month, aimed at the start of the month. Payout is split — 20% credited immediately, the remaining 80% released across the calendar period (7 days for daily, 7–30 days for weekly and monthly). Page dated 13 January 2023.",
+            "value": "Three recurring bonuses feed the Rewards Calendar: a Daily Bonus claimable once per 24 hours based on wagering and P&L over the previous 72 hours; a Weekly Bonus addable once every 7 days, aimed at weekends; and a Monthly Bonus addable once a month, aimed at the start of the month. Payout is split — 20% credited immediately, the remaining 80% released across the calendar period (7 days for daily, 7–30 days for weekly and monthly).",
             "sourcing": "editorial",
             "sourceUrl": "https://blog.rollbit.com/rollbit-rewards-rewards-calendar/",
             "asOf": "2026-09-17"
@@ -8810,7 +8810,7 @@
         "facts": [
           {
             "label": "Sportsbook",
-            "value": "Rollbit runs a sportsbook at rollbit.com/sports (the page blocks fetching; the Rollbit blog links to it).",
+            "value": "Rollbit runs a sportsbook at rollbit.com/sports.",
             "sourcing": "editorial",
             "sourceUrl": "https://blog.rollbit.com/sports-event-of-the-week-esports/",
             "asOf": "2026-09-16"
@@ -8917,7 +8917,7 @@
           },
           {
             "label": "Withdrawal requirements",
-            "value": "New accounts must deposit $10 and wager $10; after that, no limits on withdrawals (help article dated May 2022)",
+            "value": "New accounts must deposit $10 and wager $10; after that, no limits on withdrawals",
             "sourcing": "editorial",
             "sourceUrl": "https://help.rollbit.com/",
             "asOf": "2026-09-15"
@@ -9105,14 +9105,14 @@
           },
           {
             "label": "Rakeback",
-            "value": "Instant Rakeback pays a percentage of the wagered amount, claimable every 30 minutes, and never expires. Rakeboosts temporarily lift the rate: +10% for 24 hours at signup, +10% for 60 minutes on rank up, +10% for 60 minutes on each daily/weekly/monthly claim, +15% for 60 minutes from the Vault Calendar and +20% for 72 hours from an affiliate code. Boosts do not stack — only the highest applies. Page updated 20 July 2026.",
+            "value": "Instant Rakeback pays a percentage of the wagered amount, claimable every 30 minutes, and never expires. Rakeboosts temporarily lift the rate: +10% for 24 hours at signup, +10% for 60 minutes on rank up, +10% for 60 minutes on each daily/weekly/monthly claim, +15% for 60 minutes from the Vault Calendar and +20% for 72 hours from an affiliate code. Boosts do not stack — only the highest applies.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.roobet.com/en/articles/9546773-rewards-explained",
             "asOf": "2026-09-17"
           },
           {
             "label": "Reload bonuses",
-            "value": "Recurring bonus schedule: a Daily Bonus that accumulates up to 72 hours and is claimable every 24 hours at midnight UTC; a Weekly Bonus released every Saturday at 7 PM EST / midnight UTC; a Monthly Bonus released on the 1st of each month at midnight UTC; and the Vault, available three times a day every 8 hours from 12:00 AM UTC with rewards expiring in 24 hours. Level-up bonuses are paid for wagering and levelling up. Page updated 20 July 2026.",
+            "value": "Recurring bonus schedule: a Daily Bonus that accumulates up to 72 hours and is claimable every 24 hours at midnight UTC; a Weekly Bonus released every Saturday at 7 PM EST / midnight UTC; a Monthly Bonus released on the 1st of each month at midnight UTC; and the Vault, available three times a day every 8 hours from 12:00 AM UTC with rewards expiring in 24 hours. Level-up bonuses are paid for wagering and levelling up.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.roobet.com/en/articles/9546773-rewards-explained",
             "asOf": "2026-09-17"
@@ -9625,7 +9625,7 @@
           },
           {
             "label": "Leaderboards",
-            "value": "A $100,000 leaderboard resets every week, running Sunday 07:00 UTC to Sunday 07:00 UTC with a new leaderboard starting each week. Prizes go to the top 1,000 players, although only the top 20 are publicly tracked. Ranking is by total wagered across casino and sports; SHFL Lottery activity does not count. Page updated 12 March 2026.",
+            "value": "A $100,000 leaderboard resets every week, running Sunday 07:00 UTC to Sunday 07:00 UTC with a new leaderboard starting each week. Prizes go to the top 1,000 players, although only the top 20 are publicly tracked. Ranking is by total wagered across casino and sports; SHFL Lottery activity does not count.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.shuffle.com/en/articles/10397850-weekly-100-000-leaderboard-promotion",
             "asOf": "2026-09-17"
@@ -10871,13 +10871,6 @@
             "asOf": "2026-09-16"
           },
           {
-            "label": "Max payout",
-            "value": "The only figure found is in the horse racing rules: payouts on exotic racing bets are capped at USD 100k per account per race. No general sportsbook cap was found, because stake.com/policies/sportsbook blocks fetching.",
-            "sourcing": "editorial",
-            "sourceUrl": "https://stake.com/policies/racing-rules",
-            "asOf": "2026-09-16"
-          },
-          {
             "label": "Esports titles",
             "chips": [
               "Call of Duty",
@@ -10893,6 +10886,13 @@
             ],
             "sourcing": "editorial",
             "sourceUrl": "https://stake.com/sports/esports",
+            "asOf": "2026-09-16"
+          },
+          {
+            "label": "Max payout",
+            "value": "Payouts on exotic horse racing bets are capped at USD 100k per account per race; no general sportsbook cap is published",
+            "sourcing": "editorial",
+            "sourceUrl": "https://stake.com/policies/racing-rules",
             "asOf": "2026-09-16"
           }
         ]
@@ -10980,7 +10980,7 @@
           },
           {
             "label": "Withdrawal limits",
-            "value": "No maximum withdrawal limit. Minimums are per-currency and equal to the withdrawal fee for that currency (for example BTC minimum 0.00002504 with a 0.00001571 fee; USDT on Ethereum minimum 2.5 with a fee of 1). Article dated December 4, 2025.",
+            "value": "No maximum withdrawal limit. Minimums are per-currency and equal to the withdrawal fee for that currency (for example BTC minimum 0.00002504 with a 0.00001571 fee; USDT on Ethereum minimum 2.5 with a fee of 1).",
             "sourcing": "editorial",
             "sourceUrl": "https://intercom.help/thrill/en/articles/10130013-crypto-withdrawal-limits-and-fees",
             "asOf": "2026-09-17"
@@ -11048,21 +11048,21 @@
           },
           {
             "label": "Rakeback",
-            "value": "Rakeback returns a percentage of the house edge on eligible Thrill casino gameplay, paid whether the player wins or loses and calculated from wager size and each game's house edge. It accrues automatically and is awarded through the platform's other bonuses. Instant Rakeback is available from the entry Base level upward. Article dated January 28, 2026.",
+            "value": "Rakeback returns a percentage of the house edge on eligible Thrill casino gameplay, paid whether the player wins or loses and calculated from wager size and each game's house edge. It accrues automatically and is awarded through the platform's other bonuses. Instant Rakeback is available from the entry Base level upward.",
             "sourcing": "editorial",
             "sourceUrl": "https://intercom.help/thrill/en/articles/13545285-what-is-rakeback",
             "asOf": "2026-09-17"
           },
           {
             "label": "Leaderboards",
-            "value": "Recurring $75,000 Weekly Race: a live XP-based leaderboard across casino and sportsbook running Wednesday 2pm UTC to the following Wednesday 2pm UTC, no opt-in, prize pool split among the top 350 finishers (1st $20,000, 2nd $10,000, 3rd $6,000, down to $8 for 301st-350th), paid into the player's USDT wallet. Thrill's own llms.txt additionally lists a \"$10,000 Daily Race\" among active promotions, which the help centre does not document. Weekly race article dated June 26, 2026.",
+            "value": "Recurring $75,000 Weekly Race: a live XP-based leaderboard across casino and sportsbook running Wednesday 2pm UTC to the following Wednesday 2pm UTC, no opt-in, prize pool split among the top 350 finishers (1st $20,000, 2nd $10,000, 3rd $6,000, down to $8 for 301st-350th), paid into the player's USDT wallet. Thrill's own llms.txt additionally lists a \"$10,000 Daily Race\" among active promotions, which the help centre does not document. Weekly race",
             "sourcing": "editorial",
             "sourceUrl": "https://intercom.help/thrill/en/articles/13159968-75-000-weekly-race",
             "asOf": "2026-09-17"
           },
           {
             "label": "VIP levels",
-            "value": "Thrill Rewards Program has 16 XP-based progression levels from Base (0 XP) through Bronze 10,000, Silver 50,000, Gold 100,000, Platinum I-III, Emerald I-III, Diamond I-V, to Obsidian at 1,000,000,000 XP. Sports betting earns 3 XP per $1 wagered above minimum odds of 1.10; casino games earn 0.5 to 1.5 XP per $1 depending on house edge. Instant Rakeback, Weekly and Monthly bonuses are available from Base; Thrill Telegram and Level Up from Bronze; Weekly Increase from Silver; Monthly Increase, Vault X and Level Up Reloads from Gold. Article dated June 26, 2026.",
+            "value": "Thrill Rewards Program has 16 XP-based progression levels from Base (0 XP) through Bronze 10,000, Silver 50,000, Gold 100,000, Platinum I-III, Emerald I-III, Diamond I-V, to Obsidian at 1,000,000,000 XP. Sports betting earns 3 XP per $1 wagered above minimum odds of 1.10; casino games earn 0.5 to 1.5 XP per $1 depending on house edge. Instant Rakeback, Weekly and Monthly bonuses are available from Base; Thrill Telegram and Level Up from Bronze; Weekly Increase from Silver; Monthly Increase, Vault X and Level Up Reloads from Gold.",
             "sourcing": "editorial",
             "sourceUrl": "https://intercom.help/thrill/en/articles/11882893-what-are-the-rewards-levels-and-benefits-at-thrill",
             "asOf": "2026-09-17"
@@ -11109,14 +11109,14 @@
           },
           {
             "label": "Esports",
-            "value": "Yes, according to the sports page title. The sports page is geo-blocked from our location, and no esports titles were found on its own pages.",
+            "value": "Yes, according to the sports page title.",
             "sourcing": "editorial",
             "sourceUrl": "https://thrill.com/es/sports",
             "asOf": "2026-09-16"
           },
           {
             "label": "Cash-out",
-            "value": "Yes. You can settle bets early at the offered rate, but availability isn't guaranteed. There is also a separate 'Early Payout' feature (help article dated May 29, 2025).",
+            "value": "Yes. You can settle bets early at the offered rate, but availability isn't guaranteed. There is also a separate 'Early Payout' feature.",
             "sourcing": "editorial",
             "sourceUrl": "https://intercom.help/thrill/en/articles/11464076-sportsbook-bet-types",
             "asOf": "2026-09-16"
@@ -11571,7 +11571,7 @@
         "facts": [
           {
             "label": "Stated withdrawal time",
-            "value": "Varies by currency and method; some requests may take a few hours (help article dated 2023)",
+            "value": "Varies by currency and method; some requests may take a few hours",
             "sourcing": "editorial",
             "sourceUrl": "https://help.vave.com/withdrawals/how-long-does-it-take-to-withdraw-money/",
             "asOf": "2026-09-15"
@@ -11585,7 +11585,7 @@
           },
           {
             "label": "Minimum withdrawal",
-            "value": "No minimum stated; a help article dated 18 Sep 2023 says there are no withdrawal limits at the moment",
+            "value": "No minimum stated; a help",
             "sourcing": "editorial",
             "sourceUrl": "https://help.vave.com/withdrawals/are-there-withdrawal-limits/",
             "asOf": "2026-09-16"
@@ -11635,7 +11635,7 @@
           },
           {
             "label": "Minimum deposit",
-            "value": "Per coin (help article dated 18 Sep 2023): 0.0014965 BTC or BCH, 42.18 DOGE, 0.0109934 ETH, 0.0347 LTC, 38.82 TRX, 5 USDT on TRC-20, 19.99 USDT on ERC-20, 3 USDT on Solana, 7.8 XRP",
+            "value": "Per coin: 0.0014965 BTC or BCH, 42.18 DOGE, 0.0109934 ETH, 0.0347 LTC, 38.82 TRX, 5 USDT on TRC-20, 19.99 USDT on ERC-20, 3 USDT on Solana, 7.8 XRP",
             "sourcing": "editorial",
             "sourceUrl": "https://help.vave.com/deposits/",
             "asOf": "2026-09-16"
@@ -12501,7 +12501,7 @@
           },
           {
             "label": "Rakeback",
-            "value": "Instant Rakeback returns a portion of every wager and becomes claimable every 7 minutes from the VIP Center; the claimable percentage scales with VIP level and wagering activity. Article dated May 23, 2025.",
+            "value": "Instant Rakeback returns a portion of every wager and becomes claimable every 7 minutes from the VIP Center; the claimable percentage scales with VIP level and wagering activity.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.winna.com/en/articles/10495172-what-is-instant-rakeback-and-how-do-i-claim-it",
             "asOf": "2026-09-17"
@@ -12522,7 +12522,7 @@
           },
           {
             "label": "Reload bonuses",
-            "value": "Reload Bonuses unlock at Platinum VIP level and above, run for 7 consecutive days, are sized on recent betting activity, and must be claimed manually each day - a missed day is permanently lost. Article dated January 5, 2026.",
+            "value": "Reload Bonuses unlock at Platinum VIP level and above, run for 7 consecutive days, are sized on recent betting activity, and must be claimed manually each day - a missed day is permanently lost.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.winna.com/en/articles/13287757-what-are-reload-bonuses-and-how-do-i-claim-them",
             "asOf": "2026-09-17"
@@ -12723,7 +12723,7 @@
         "facts": [
           {
             "label": "Standing offer",
-            "value": "100% first deposit bonus for new accounts, with a maximum bonus of $1,000 USD or crypto equivalent. Wagering is (deposit + bonus) x 35, must be completed within 90 days, maximum stake $10 per bet or spin while a bonus is active, rollover contribution weighted by game edge (wager x edge / 0.04), sports bets excluded. Yeet states there is no maximum win or cashout cap on the first deposit bonus, and the bonus can be cancelled at any time. Article dated February 24, 2026. · YEET Boost is a standing sportsbook offer: winning a multiple bet with 5 or more qualifying selections adds a cash boost to the winnings, paid automatically with no claim, no separate bonus balance and no wagering requirement. The boost is a percentage of winnings and scales with selections - 5% at 5 selections, rising one point per selection to 10% at 10, then 15% at 11 and 20% at 12.",
+            "value": "100% first deposit bonus for new accounts, with a maximum bonus of $1,000 USD or crypto equivalent. Wagering is (deposit + bonus) x 35, must be completed within 90 days, maximum stake $10 per bet or spin while a bonus is active, rollover contribution weighted by game edge (wager x edge / 0.04), sports bets excluded. Yeet states there is no maximum win or cashout cap on the first deposit bonus, and the bonus can be cancelled at any time. · YEET Boost is a standing sportsbook offer: winning a multiple bet with 5 or more qualifying selections adds a cash boost to the winnings, paid automatically with no claim, no separate bonus balance and no wagering requirement. The boost is a percentage of winnings and scales with selections - 5% at 5 selections, rising one point per selection to 10% at 10, then 15% at 11 and 20% at 12.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.yeet.com/en/articles/13464278-deposit-bonus-faqs",
             "asOf": "2026-09-17"
@@ -12765,28 +12765,28 @@
           },
           {
             "label": "Rakeback",
-            "value": "Instant Rakeback returns a percentage of the house edge generated by casino wagers, accrues automatically, is claimable immediately from the Rewards page and never expires. It starts at Bronze VIP level and is 5% for Bronze, Silver, Gold, Platinum, Jade, Diamond, Aether, The Void and Eternal, rising to 10% at Chairman. Sports wagers do not contribute. Article dated June 18, 2026.",
+            "value": "Instant Rakeback returns a percentage of the house edge generated by casino wagers, accrues automatically, is claimable immediately from the Rewards page and never expires. It starts at Bronze VIP level and is 5% for Bronze, Silver, Gold, Platinum, Jade, Diamond, Aether, The Void and Eternal, rising to 10% at Chairman. Sports wagers do not contribute.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.yeet.com/en/articles/14046420-instant-rakeback",
             "asOf": "2026-09-17"
           },
           {
             "label": "Leaderboards",
-            "value": "Recurring $50K Weekly Chairman's Cup, in which the top 25 performers share a $50,000 prize pool. Yeet also runs a general Leaderboard that ranks top-performing players by activity across game types for exclusive rewards. Article dated May 2, 2026.",
+            "value": "Recurring $50K Weekly Chairman's Cup, in which the top 25 performers share a $50,000 prize pool. Yeet also runs a general Leaderboard that ranks top-performing players by activity across game types for exclusive rewards.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.yeet.com/en/articles/12052425-offers-vip-program",
             "asOf": "2026-09-17"
           },
           {
             "label": "VIP levels",
-            "value": "Reward tiers run Copper, Bronze, Silver, Gold, Platinum, Jade, Diamond, Aether, The Void, Eternal, Chairman - the page says ten tiers but lists eleven. A VIP Host is unlocked at Diamond; Chairman is invite-only with access to the founding team. Level-Up Bonuses pay on each level gained and Tier-Up Bonuses on each tier gained, and neither expires. Article dated May 2, 2026.",
+            "value": "Reward tiers run Copper, Bronze, Silver, Gold, Platinum, Jade, Diamond, Aether, The Void, Eternal, Chairman - the page says ten tiers but lists eleven. A VIP Host is unlocked at Diamond; Chairman is invite-only with access to the founding team. Level-Up Bonuses pay on each level gained and Tier-Up Bonuses on each tier gained, and neither expires.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.yeet.com/en/articles/12052425-offers-vip-program",
             "asOf": "2026-09-17"
           },
           {
             "label": "Reload bonuses",
-            "value": "Daily Reload calculated on the previous day's wagering, released daily at 12:30 am GMT and expiring 24 hours later. Weekly Bonus based on the previous week's wagering, released every Thursday at 12:30 am GMT, expiring 7 days after release. Monthly Bonus based on the previous month's wagering, released on the second Thursday of each month at 12:30 am GMT, expiring one month after release. None can be recovered once expired. Article dated May 2, 2026.",
+            "value": "Daily Reload calculated on the previous day's wagering, released daily at 12:30 am GMT and expiring 24 hours later. Weekly Bonus based on the previous week's wagering, released every Thursday at 12:30 am GMT, expiring 7 days after release. Monthly Bonus based on the previous month's wagering, released on the second Thursday of each month at 12:30 am GMT, expiring one month after release. None can be recovered once expired.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.yeet.com/en/articles/12052425-offers-vip-program",
             "asOf": "2026-09-17"

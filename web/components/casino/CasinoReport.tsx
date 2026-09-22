@@ -78,11 +78,17 @@ function Tile({ label, value, f, accent }: { label: string; value: string | null
     <div style={{ display: "flex", flexDirection: "column", gap: 8, padding: "18px 18px 16px", borderRadius: 14, background: "#0E1316", border: "1px solid rgba(255,255,255,.07)", minWidth: 0 }}>
       <div style={{ fontFamily: MONO, fontSize: 10, letterSpacing: ".08em", textTransform: "uppercase", color: "#6E7F88" }}>{label}</div>
       <div style={{ fontSize: 24, fontWeight: 800, letterSpacing: "-.02em", lineHeight: 1.1, color: known ? accent ?? "#fff" : "#4E5A62" }}>{known ? value ?? "See terms" : "Not stated"}</div>
-      {f?.value && <div style={{ fontSize: 12.5, lineHeight: 1.5, color: "#8DA0AA", textWrap: "pretty" }}>{f.value}</div>}
-      {f?.chips && <Chips items={f.chips} />}
-      <div style={{ marginTop: "auto" }}>
-        <Source f={f} />
-      </div>
+      {f?.value && (
+        <div style={{ fontSize: 12.5, lineHeight: 1.5, color: "#8DA0AA", textWrap: "pretty" }}>
+          <More f={f} max={90} />
+        </div>
+      )}
+      {f?.chips && (
+        <>
+          <Chips items={f.chips} />
+          <Source f={f} />
+        </>
+      )}
     </div>
   );
 }
@@ -99,6 +105,41 @@ function Chips({ items, tint = "#B7C4CB" }: { items: string[]; tint?: string }) 
   );
 }
 
+/** The first sentence of a cited fact, trimmed to a readable length. */
+function brief(text: string, max = 130): string {
+  // A leading "Yes." repeats the tile's own "Yes", so drop it when there is more to say.
+  const t = text.replace(/^Yes[.,;]\s+(?=\S)/, "").replace(/^./, (c) => c.toUpperCase());
+  const first = t.split(/(?<=\.)\s+(?=[A-Z])/)[0].replace(/[.;]$/, "");
+  if (first.length <= max) return first;
+  let cut = first.slice(0, max).replace(/[\s,;:–-]+\S*$/, "");
+  // Never end inside an unclosed bracket, e.g. "deducted from your balance (e.g".
+  if ((cut.match(/\(/g) ?? []).length > (cut.match(/\)/g) ?? []).length) cut = cut.slice(0, cut.lastIndexOf("(")).trimEnd();
+  return cut.replace(/[,;:–-]$/, "") + "…";
+}
+
+/** A short summary, with the casino's full wording one tap away when it is longer. */
+function More({ f, max = 130 }: { f: Fact; max?: number }) {
+  if (!f?.value) return null;
+  const short = brief(f.value, max);
+  // Offer "Full terms" only when the summary actually leaves something out.
+  const long = short.endsWith("…") || f.value.trim().split(/(?<=\.)\s+(?=[A-Z])/).length > 1;
+  return (
+    <>
+      <span>{short}</span>
+      {long ? (
+        <details style={{ marginTop: 6 }}>
+          <summary style={{ cursor: "pointer", fontSize: 12, fontWeight: 700, color: "#5FE3E8", listStyle: "none" }}>Full terms</summary>
+          <div style={{ marginTop: 6, fontSize: 13, lineHeight: 1.6, color: "#A8B6BE" }}>
+            {f.value} <Source f={f} />
+          </div>
+        </details>
+      ) : (
+        <> <Source f={f} /></>
+      )}
+    </>
+  );
+}
+
 /** Label/value rows with a source link each. */
 function Rows({ rows }: { rows: { k: string; f: Fact }[] }) {
   const shown = rows.filter((r) => r.f);
@@ -108,8 +149,26 @@ function Rows({ rows }: { rows: { k: string; f: Fact }[] }) {
       {shown.map(({ k, f }) => (
         <div key={k} style={{ display: "grid", gridTemplateColumns: "minmax(110px, 160px) 1fr", gap: 14, padding: "12px 0", borderTop: "1px solid rgba(255,255,255,.06)" }}>
           <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".06em", textTransform: "uppercase", color: "#6E7F88", paddingTop: 2 }}>{k}</div>
+          <div style={{ fontSize: 13.5, lineHeight: 1.55, color: "#C6D1D7" }}>{f!.chips ? <><Chips items={f!.chips} /> <Source f={f} /></> : <More f={f} />}</div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+/** Ongoing rewards as an even grid of cards, one per reward, instead of one long column. */
+function RewardGrid({ items, brand }: { items: { k: string; f: Fact }[]; brand: string }) {
+  if (!items.length) return null;
+  return (
+    <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 12 }}>
+      {items.map(({ k, f }) => (
+        <div key={k} style={{ display: "flex", flexDirection: "column", gap: 8, padding: "18px 18px 16px", borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 15, fontWeight: 800, color: "#fff" }}>
+            <span style={{ width: 8, height: 8, borderRadius: 100, background: brand, flex: "none" }} />
+            {k}
+          </div>
           <div style={{ fontSize: 13.5, lineHeight: 1.55, color: "#C6D1D7" }}>
-            {f!.chips ? <Chips items={f!.chips} /> : f!.value} <Source f={f} />
+            <More f={f} max={150} />
           </div>
         </div>
       ))}
@@ -310,13 +369,15 @@ export function CasinoReport({ e }: { e: EntityView }) {
       <div style={{ maxWidth: 1180, margin: "0 auto", padding: "44px 24px 80px" }}>
         {/* BONUSES & REWARDS */}
         <Section id="bonuses" eyebrow="What you get" title="Bonuses & rewards">
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", gap: 16, alignItems: "start" }}>
-            <Card glow={brand}>
-              <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: brand, marginBottom: 8 }}>{o.noDepositBonus ? "Rewards" : "Welcome offer"}</div>
-              <div style={{ fontSize: 26, fontWeight: 800, letterSpacing: "-.02em", color: "#fff", marginBottom: 6 }}>{o.bonusShort ?? o.bonus}</div>
-              <div style={{ fontSize: 14, color: "#A8B6BE", marginBottom: 14 }}>{offer?.value}</div>
-              <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 6 }}>
-                <span style={{ padding: "6px 11px", borderRadius: 100, background: `${brand}1f`, color: brand, fontFamily: MONO, fontSize: 11.5, fontWeight: 700 }}>
+          <Card glow={brand}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 28 }}>
+              <div>
+                <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: brand, marginBottom: 8 }}>{o.noDepositBonus ? "Rewards" : "Welcome offer"}</div>
+                <div style={{ fontSize: 26, lineHeight: 1.15, fontWeight: 800, letterSpacing: "-.02em", color: "#fff", marginBottom: 10 }}>{o.bonusShort ?? o.bonus}</div>
+                <div style={{ fontSize: 14, lineHeight: 1.6, color: "#A8B6BE", marginBottom: 14 }}>
+                  <More f={offer} max={170} />
+                </div>
+                <span style={{ display: "inline-block", padding: "6px 11px", borderRadius: 100, background: `${brand}1f`, color: brand, fontFamily: MONO, fontSize: 11.5, fontWeight: 700 }}>
                   {wv.kind === "none" ? "No wagering on rewards" : `Wagering: ${wv.label}`}
                 </span>
               </div>
@@ -330,14 +391,14 @@ export function CasinoReport({ e }: { e: EntityView }) {
                   { k: "Min deposit", f: f("Bonus terms", "Minimum deposit") },
                 ]}
               />
-            </Card>
-            {rewards.length > 0 && (
-              <Card>
-                <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 8 }}>Ongoing rewards</div>
-                <Rows rows={rewards} />
-              </Card>
-            )}
-          </div>
+            </div>
+          </Card>
+          {rewards.length > 0 && (
+            <>
+              <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#00C2CC", margin: "26px 0 12px" }}>Ongoing rewards</div>
+              <RewardGrid items={rewards} brand={brand} />
+            </>
+          )}
           {bonuses.length > 0 && (
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 12, marginTop: 16 }}>
               {bonuses.map((b) => (
