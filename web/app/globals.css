@@ -330,3 +330,42 @@ p {
 .legacy-article table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
 .legacy-article th, .legacy-article td { padding: 10px 12px; border-top: 1px solid rgba(255,255,255,.08); text-align: left; }
 .legacy-article th { color: #fff; font-family: var(--font-jetbrains-mono), monospace; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; }
+
+/* Keyboard users could not see where they were: nothing in the sheet styled
+   focus, so the browser default was being overridden by the reset. */
+:focus-visible {
+  outline: 2px solid #00C2CC;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* The first tab stop on every page, visible only once it has focus. */
+.csg-skip {
+  position: absolute;
+  left: 12px;
+  top: -60px;
+  z-index: 100;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: #00C2CC;
+  color: #0A0D0F;
+  font-size: 14px;
+  font-weight: 800;
+  transition: top .15s ease;
+}
+.csg-skip:focus {
+  top: 12px;
+}
+
+/* The home page's drifting background and every rise-in animation are
+   decoration; a reader who asks for less motion gets the page at rest. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -41,8 +41,9 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-page text-text-primary">
         <JsonLd data={[organizationSchema(), websiteSchema()]} />
+        <a href="#main" className="csg-skip">Skip to content</a>
         <Header counts={siteCounts} />
-        <main className="flex-1">{children}</main>
+        <main id="main" className="flex-1">{children}</main>
         <NewsletterBand />
         <Footer />
       </body>
