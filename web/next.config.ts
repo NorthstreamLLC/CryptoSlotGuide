@@ -16,6 +16,9 @@ const nextConfig: NextConfig = {
       { source: "/home", destination: "/", permanent: true },
       { source: "/author/:name", destination: "/blog", permanent: true },
       { source: "/tag/:slug", destination: "/blog", permanent: true },
+      // WordPress's default empty category. It held no posts but the URL is live
+      // on the old site, so it gets a destination rather than a 404 at cutover.
+      { source: "/category/uncategorized", destination: "/blog", permanent: true },
       { source: "/feed", destination: "/blog", permanent: true },
       { source: "/wp-sitemap.xml", destination: "/sitemap.xml", permanent: true },
       { source: "/sitemap_index.xml", destination: "/sitemap.xml", permanent: true },
