@@ -13,9 +13,13 @@
  *   SENDGRID_WELCOME_TEMPLATE_ID  optional — sends a welcome email on sign-up
  *   SENDGRID_FROM                 required with the template above, a verified sender
  *   NEXT_PUBLIC_NEWSLETTER_ON     set to "1" so the form's button goes live
+ *
+ * Where the addresses live: SendGrid, and nowhere else. This site has no
+ * database and keeps no copy — see consentFields() for the consent record
+ * stored beside each contact.
  */
 
-const API = "https://api.sendgrid.com/v3";
+const API = process.env.SENDGRID_API_BASE ?? "https://api.sendgrid.com/v3";
 
 /** Best-effort throttle. Serverless instances don't share this, which is fine — it exists to blunt a loop, not to be a quota. */
 const recent = new Map<string, number[]>();
@@ -73,7 +77,10 @@ export async function POST(request: Request) {
     const res = await fetch(`${API}/marketing/contacts`, {
       method: "PUT",
       headers: { authorization: `Bearer ${key}`, "content-type": "application/json" },
-      body: JSON.stringify({ list_ids: [listId], contacts: [{ email }] }),
+      body: JSON.stringify({
+        list_ids: [listId],
+        contacts: [{ email, custom_fields: await consentFields(key, source) }],
+      }),
     });
 
     if (!res.ok) {
@@ -88,6 +95,51 @@ export async function POST(request: Request) {
     console.error("newsletter: SendGrid request threw", e instanceof Error ? e.message : "unknown");
     return Response.json({ error: "That didn't go through. Try again shortly." }, { status: 502 });
   }
+}
+
+
+/**
+ * Consent, stored beside the contact in SendGrid.
+ *
+ * A gambling list has to be able to show when and where someone opted in, and
+ * the address itself proves nothing. Create two custom fields in SendGrid
+ * (Marketing → Contacts → Custom Fields) and they get filled automatically:
+ *
+ *   signup_source  Text  — the page the form was on ("site", "bonuses", ...)
+ *   signup_date    Date  — when they ticked the box
+ *
+ * Field values go to SendGrid by field ID, not by name, so the ids are looked
+ * up once per process and cached. If the fields don't exist the contact is
+ * still stored — consent metadata is worth having, not worth failing a
+ * sign-up over.
+ */
+let fieldIds: Record<string, string> | null = null;
+
+async function loadFieldIds(key: string): Promise<Record<string, string>> {
+  if (fieldIds) return fieldIds;
+  const out: Record<string, string> = {};
+  try {
+    const res = await fetch(`${API}/marketing/field_definitions`, {
+      headers: { authorization: `Bearer ${key}` },
+    });
+    if (res.ok) {
+      const body = (await res.json()) as { custom_fields?: { id: string; name: string }[] };
+      for (const f of body.custom_fields ?? []) out[f.name.toLowerCase()] = f.id;
+    }
+  } catch {
+    // Leave the map empty; the sign-up proceeds without the metadata.
+  }
+  fieldIds = out;
+  return out;
+}
+
+async function consentFields(key: string, source: string): Promise<Record<string, string> | undefined> {
+  const ids = await loadFieldIds(key);
+  const fields: Record<string, string> = {};
+  if (ids["signup_source"]) fields[ids["signup_source"]] = source;
+  // SendGrid date fields take ISO 8601; the date alone is enough to evidence consent.
+  if (ids["signup_date"]) fields[ids["signup_date"]] = new Date().toISOString().slice(0, 10);
+  return Object.keys(fields).length ? fields : undefined;
 }
 
 /**
