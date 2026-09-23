@@ -38,6 +38,50 @@ function rateLimited(ip: string): boolean {
 /** Deliberately strict rather than clever: one @, a dot in the domain, no spaces. */
 const looksLikeEmail = (v: string) => /^[^\s@]+@[^\s@.]+\.[^\s@]{2,}$/.test(v) && v.length <= 254;
 
+/**
+ * Read-only self-test: GET /api/newsletter?selftest=1
+ *
+ * A sign-up that fails returns a deliberately vague message, and the real reason
+ * is in a log that isn't always reachable. This asks SendGrid the same questions
+ * the sign-up does — is the key good, does the list exist, are the custom fields
+ * there — and reports the status codes. It creates nothing and sends nothing, and
+ * returns no addresses, list names or key material: status numbers only.
+ */
+export async function GET(request: Request) {
+  if (new URL(request.url).searchParams.get("selftest") !== "1") {
+    return new Response(null, { status: 405 });
+  }
+  const key = process.env.SENDGRID_API_KEY;
+  const listId = process.env.SENDGRID_LIST_ID;
+  if (!key || !listId) {
+    return Response.json({ configured: false, hasKey: !!key, hasListId: !!listId });
+  }
+
+  const probe = async (path: string) => {
+    try {
+      const r = await fetch(`${API}${path}`, { headers: { authorization: `Bearer ${key}` } });
+      return r.status;
+    } catch {
+      return 0;
+    }
+  };
+
+  const [scopes, list, fields] = await Promise.all([probe("/scopes"), probe(`/marketing/lists/${listId}`), probe("/marketing/field_definitions")]);
+
+  return Response.json({
+    configured: true,
+    keyAccepted: scopes === 200,
+    listFound: list === 200,
+    fieldsReadable: fields === 200,
+    status: { scopes, list, fields },
+    reading: {
+      401: "key is wrong or revoked",
+      403: "key lacks the permission for that endpoint",
+      404: "not found — for the list, the id is wrong",
+    },
+  });
+}
+
 export async function POST(request: Request) {
   const key = process.env.SENDGRID_API_KEY;
   const listId = process.env.SENDGRID_LIST_ID;
@@ -86,7 +130,9 @@ export async function POST(request: Request) {
     if (!res.ok) {
       // SendGrid's body can name the address; keep it out of the logs.
       console.error(`newsletter: SendGrid contacts upsert failed (${res.status}), source=${source}`);
-      return Response.json({ error: "That didn't go through. Try again shortly." }, { status: 502 });
+      // The upstream status rides along: it names no address and leaks no key, and
+      // without it a failure here is undiagnosable from outside.
+      return Response.json({ error: "That didn't go through. Try again shortly.", upstream: res.status }, { status: 502 });
     }
 
     await sendWelcome(email, key);
