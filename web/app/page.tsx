@@ -89,7 +89,7 @@ export default function HomePage() {
       { label: "Casino + sportsbook", href: "/casino-sportsbooks", filter: "sports" as const },
     ].map((it, i) => {
       const n = ops.filter(filterFns[it.filter]).length;
-      return { n: String(i + 1).padStart(2, "0"), label: it.label, href: it.href, top: `${n} casinos`, topColor: "#5C6A72" };
+      return { n: String(i + 1).padStart(2, "0"), label: it.label, href: it.href, top: `${n} casinos`, topColor: "#83919A" };
     }),
   };
   const sportsHub = {
@@ -101,7 +101,7 @@ export default function HomePage() {
       { label: "Casinos with esports", href: "/esports-casinos", n: ops.filter((o) => o.esports).length },
       { label: "State a payout cap", href: "/sportsbooks", n: ops.filter((o) => sportsFacts(o.slug).maxPayout).length },
       { label: "Offer cash-out", href: "/sportsbooks", n: ops.filter((o) => sportsFacts(o.slug).cashout).length },
-    ].map((it, i) => ({ n: String(i + 1).padStart(2, "0"), label: it.label, href: it.href, top: `${it.n} casinos`, topColor: "#5C6A72" })),
+    ].map((it, i) => ({ n: String(i + 1).padStart(2, "0"), label: it.label, href: it.href, top: `${it.n} casinos`, topColor: "#83919A" })),
   };
   const esportsHub = {
     kicker: "Esports",
@@ -112,7 +112,7 @@ export default function HomePage() {
       label: t.name,
       href: `/betting/${slug(t.name)}`,
       top: `${booksForTitle(t.name).length} books`,
-      topColor: "#5C6A72",
+      topColor: "#83919A",
     })),
   };
   const hubs = [categoryHub, sportsHub, esportsHub];
@@ -197,8 +197,8 @@ export default function HomePage() {
                 marginBottom: 16,
               }}
             >
-              <span style={{ color: "#3D4A52", fontFamily: "var(--font-jetbrains-mono), monospace" }}>⌕</span>
-              <span style={{ flex: 1, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 13, color: "#5C6A72", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+              <span style={{ color: "#77858E", fontFamily: "var(--font-jetbrains-mono), monospace" }}>⌕</span>
+              <span style={{ flex: 1, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 13, color: "#83919A", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
                 casinos, slots, sportsbooks, wallets, coins…
               </span>
               <span style={{ padding: "11px 18px", borderRadius: 8, border: 0, background: "#00C2CC", color: "#04191B", fontSize: 13, fontWeight: 700, whiteSpace: "nowrap" }}>
@@ -227,7 +227,7 @@ export default function HomePage() {
               ))}
             </div>
 
-            <div style={{ display: "flex", gap: 32, flexWrap: "wrap", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, color: "#5C6A72" }}>
+            <div style={{ display: "flex", gap: 32, flexWrap: "wrap", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, color: "#83919A" }}>
               <span><strong style={{ color: "#DCE5E9", fontWeight: 500 }}>{c.casinos}</strong> crypto casinos listed</span>
               <span><strong style={{ color: "#DCE5E9", fontWeight: 500 }}>{c.slots}</strong> published slot RTPs</span>
               <span><strong style={{ color: "#DCE5E9", fontWeight: 500 }}>{c.providers}</strong> game studios profiled</span>
@@ -268,7 +268,7 @@ export default function HomePage() {
                   <span style={{ fontSize: 19, lineHeight: 1 }}>{v.icon}</span>
                   <span style={{ fontSize: 17, fontWeight: 700, letterSpacing: "-.022em", color: "#fff" }}>{v.title}</span>
                 </div>
-                <div style={{ display: "flex", alignItems: "baseline", gap: 8, flexWrap: "wrap", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, letterSpacing: ".05em", color: "#5C6A72" }}>
+                <div style={{ display: "flex", alignItems: "baseline", gap: 8, flexWrap: "wrap", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, letterSpacing: ".05em", color: "#83919A" }}>
                   <span style={{ color: v.tint }}>{v.count}</span>
                   <span>listed</span>
                 </div>
@@ -399,7 +399,7 @@ export default function HomePage() {
                 </div>
               </div>
               <p style={{ margin: "0 0 16px", fontSize: 13, lineHeight: 1.55, color: "#8DA0AA", textWrap: "pretty" }}>{f.line}</p>
-              <div style={{ marginTop: "auto", paddingTop: 14, borderTop: "1px solid rgba(255,255,255,.06)", display: "flex", justifyContent: "space-between", gap: 10, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#4E5A62" }}>
+              <div style={{ marginTop: "auto", paddingTop: 14, borderTop: "1px solid rgba(255,255,255,.06)", display: "flex", justifyContent: "space-between", gap: 10, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#77858E" }}>
                 <span>{f.metric}</span>
                 <span style={{ color: "#00C2CC" }}>{f.cta}</span>
               </div>
@@ -440,7 +440,7 @@ export default function HomePage() {
               </div>
               <div style={{ fontSize: 14.5, fontWeight: 600, color: "#E8EDF0", marginBottom: 5 }}>{p.name}</div>
               <div style={{ fontSize: 12, lineHeight: 1.5, color: "#7B8A93", marginBottom: 14 }}>{p.note}</div>
-              <div style={{ display: "flex", flexDirection: "column", gap: 6, paddingTop: 12, borderTop: "1px solid rgba(255,255,255,.07)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#5C6A72" }}>
+              <div style={{ display: "flex", flexDirection: "column", gap: 6, paddingTop: 12, borderTop: "1px solid rgba(255,255,255,.07)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#83919A" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", gap: 8 }}><span>rtp</span><span style={{ color: "#C3CFD5", textAlign: "right" }}>{p.rtp}</span></div>
                 <div style={{ display: "flex", justifyContent: "space-between", gap: 8 }}><span>catalogue</span><span style={{ color: "#C3CFD5", textAlign: "right" }}>{p.titlesStated ?? "not stated"}</span></div>
                 
@@ -461,7 +461,7 @@ export default function HomePage() {
                 {coin.ticker}
               </span>
               <div style={{ fontSize: 14, fontWeight: 600, color: "#E8EDF0", marginBottom: 4 }}>{coin.name} casinos</div>
-              <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#5C6A72" }}>{coin.count} operators</div>
+              <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#83919A" }}>{coin.count} operators</div>
             </Link>
           ))}
         </div>
@@ -478,7 +478,7 @@ export default function HomePage() {
               <div style={{ display: "flex", flexDirection: "column", gap: 1, background: "rgba(255,255,255,.06)", borderRadius: 9, overflow: "hidden" }}>
                 {h.items.map((it) => (
                   <Link key={it.label} href={it.href} className="hover:!bg-[#141A1E] hover:!text-white" style={{ display: "flex", alignItems: "center", gap: 10, padding: "11px 14px", background: "#0F1417", fontSize: 13, color: "#C3CFD5" }}>
-                    <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#4E5A62", width: 14 }}>{it.n}</span>
+                    <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#77858E", width: 14 }}>{it.n}</span>
                     <span style={{ flex: 1 }}>{it.label}</span>
                     <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: it.topColor, whiteSpace: "nowrap" }}>{it.top}</span>
                   </Link>

@@ -63,7 +63,7 @@ export function MapHover({ info, children }: { info: Record<string, HoverInfo>; 
           </div>
           {it.casinosTitle && (
             <div style={{ marginTop: 11, paddingTop: 10, borderTop: "1px solid rgba(255,255,255,.08)" }}>
-              <div style={{ fontFamily: MONO, fontSize: 9.5, letterSpacing: ".07em", textTransform: "uppercase", color: "#6E7F88", marginBottom: 7 }}>{it.casinosTitle}</div>
+              <div style={{ fontFamily: MONO, fontSize: 9.5, letterSpacing: ".07em", textTransform: "uppercase", color: "#8E9CA5", marginBottom: 7 }}>{it.casinosTitle}</div>
               {it.casinos && it.casinos.length > 0 ? (
                 <div style={{ display: "flex", flexWrap: "wrap", gap: 5 }}>
                   {it.casinos.slice(0, 12).map((c) => (

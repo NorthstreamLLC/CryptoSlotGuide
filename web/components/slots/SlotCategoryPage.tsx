@@ -31,7 +31,7 @@ export function SlotCategoryPage({ tag }: { tag: SlotMechanicTag }) {
                   style={{ display: "flex", alignItems: "center", gap: 8, padding: "9px 15px", borderRadius: 100, border: `1px solid ${active ? "rgba(0,194,204,.5)" : "rgba(255,255,255,.12)"}`, background: active ? "rgba(0,194,204,.12)" : "rgba(255,255,255,.02)", fontSize: 13, fontWeight: 600, color: active ? "#5FE3E8" : "#A8B6BE" }}
                 >
                   {c.label}
-                  <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#5C6A72" }}>{count}</span>
+                  <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#83919A" }}>{count}</span>
                 </Link>
               );
             })}
@@ -43,7 +43,7 @@ export function SlotCategoryPage({ tag }: { tag: SlotMechanicTag }) {
 
       <section style={{ maxWidth: 1400, margin: "0 auto", padding: "36px 40px 80px" }}>
         <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 24, marginBottom: 16 }}>
-          <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".06em", textTransform: "uppercase", color: "#5C6A72" }}>
+          <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".06em", textTransform: "uppercase", color: "#83919A" }}>
             {rows.length} titles · sorted by published RTP
           </div>
           <Link href="/slots" style={{ fontSize: 14, fontWeight: 600, color: "#00C2CC" }}>All {siteCounts.slots} slots →</Link>
@@ -75,7 +75,7 @@ export function SlotCategoryPage({ tag }: { tag: SlotMechanicTag }) {
                     </span>
                   ))}
                 </div>
-                <div style={{ marginTop: "auto", display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 10, paddingTop: 13, borderTop: "1px solid rgba(255,255,255,.07)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#5C6A72" }}>
+                <div style={{ marginTop: "auto", display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 10, paddingTop: 13, borderTop: "1px solid rgba(255,255,255,.07)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#83919A" }}>
                   <span>{volLabel(s)} · {maxWinLabel(s)}</span>
                   <span style={{ color: "#9AAAB3" }}>{s.rtpVersions ? `${s.rtpVersions.split("/").length} RTP versions` : "studio-published"}</span>
                 </div>

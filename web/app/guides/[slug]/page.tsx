@@ -34,8 +34,8 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
     <main>
       <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Guides", path: "/guides" }, { name: g.title, path: `/guides/${slug}` }])} />
       <article style={{ maxWidth: 820, margin: "0 auto", padding: "52px 40px 40px" }}>
-        <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#5C6A72", marginBottom: 26 }}>
-          <Link href="/" style={{ color: "#5C6A72" }}>Index</Link> / <Link href="/guides" style={{ color: "#5C6A72" }}>Guides</Link> / <span style={{ color: "#A8B6BE" }}>{g.category}</span>
+        <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#83919A", marginBottom: 26 }}>
+          <Link href="/" style={{ color: "#83919A" }}>Index</Link> / <Link href="/guides" style={{ color: "#83919A" }}>Guides</Link> / <span style={{ color: "#A8B6BE" }}>{g.category}</span>
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 22 }}>
           <span style={{ width: 32, height: 32, flex: "none", borderRadius: 8, background: g.tint, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, fontWeight: 700, color: "#0A0D0F" }}>{g.mono}</span>
@@ -43,7 +43,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         </div>
         <h1 style={{ margin: "0 0 18px", fontSize: 44, lineHeight: 1.06, letterSpacing: "-.035em", fontWeight: 800, fontStretch: "114%", color: "#fff", textWrap: "balance" }}>{g.title}</h1>
         <p style={{ margin: "0 0 26px", fontSize: 19, lineHeight: 1.6, color: "#B7C4CB", textWrap: "pretty" }}>{fill(g.standfirst, siteData)}</p>
-        <div style={{ display: "flex", alignItems: "center", gap: 14, padding: "14px 0", borderTop: "1px solid rgba(255,255,255,.07)", borderBottom: "1px solid rgba(255,255,255,.07)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#5C6A72", marginBottom: 32 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 14, padding: "14px 0", borderTop: "1px solid rgba(255,255,255,.07)", borderBottom: "1px solid rgba(255,255,255,.07)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#83919A", marginBottom: 32 }}>
           <span style={{ width: 26, height: 26, flex: "none", borderRadius: "50%", background: "#1B2226", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 9, color: "#8DA0AA" }}>CS</span>
           <span>CryptoSlotGuide editorial desk</span>
         </div>
@@ -69,7 +69,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
           {related.map((r) => (
             <Link key={r.slug} href={`/guides/${r.slug}`} style={{ display: "flex", flexDirection: "column", gap: 10, padding: 20, borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
-              <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".07em", textTransform: "uppercase", color: "#5C6A72" }}>{r.category} · {r.readMins} min</span>
+              <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".07em", textTransform: "uppercase", color: "#83919A" }}>{r.category} · {r.readMins} min</span>
               <span style={{ fontSize: 15, fontWeight: 600, color: "#E8EDF0", lineHeight: 1.35, textWrap: "pretty" }}>{r.title}</span>
             </Link>
           ))}

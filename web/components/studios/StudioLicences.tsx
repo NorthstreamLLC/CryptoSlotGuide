@@ -57,7 +57,7 @@ export function StudioLicences({ studio }: { studio: Studio }) {
             <div style={{ fontSize: 13.5, color: "#C6D1D7" }}>
               {l.regulator}{" "}
               <a href={l.url} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: MONO, fontSize: 10.5, color: "#5FE3E8" }}>source ↗</a>
-              {l.note && <div style={{ fontSize: 12, color: "#6E7F88", marginTop: 2 }}>{l.note}</div>}
+              {l.note && <div style={{ fontSize: 12, color: "#8E9CA5", marginTop: 2 }}>{l.note}</div>}
             </div>
           </div>
         ))}

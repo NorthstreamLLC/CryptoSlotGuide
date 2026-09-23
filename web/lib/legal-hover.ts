@@ -14,7 +14,7 @@ export function countryHoverInfo(codes: (string | null)[]): Record<string, Hover
       code === "US"
         ? [{ label: "Online casinos", value: "varies by state", color: TONE.partial.fill }, { label: "Sports betting", value: "varies by state", color: TONE.partial.fill }]
         : c
-          ? [row("Online casinos", c.onlineCasino), row("Sports betting", c.sportsBetting), ...(c.minAge ? [{ label: "Minimum age", value: c.minAge, color: "#6E7F88" }] : [])]
+          ? [row("Online casinos", c.onlineCasino), row("Sports betting", c.sportsBetting), ...(c.minAge ? [{ label: "Minimum age", value: c.minAge, color: "#8E9CA5" }] : [])]
           : [];
     if (!rows.length && !acc.length) continue;
     info[code] = {

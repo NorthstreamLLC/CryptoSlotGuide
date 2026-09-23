@@ -26,7 +26,7 @@ export function OnChainActivity({ slug }: { slug: string }) {
       <div style={{ display: "grid", gridTemplateColumns: `repeat(${Math.min(entry.sources.length, 3)}, 1fr)`, gap: 1, background: "rgba(255,255,255,.07)", border: "1px solid rgba(255,255,255,.07)", borderRadius: 13, overflow: "hidden" }}>
         {entry.sources.map((s, i) => (
           <div key={`${s.source}-${s.metric}-${i}`} style={{ padding: "20px 22px", background: "#0C1013" }}>
-            <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".07em", textTransform: "uppercase", color: "#5C6A72", marginBottom: 8 }}>
+            <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".07em", textTransform: "uppercase", color: "#83919A", marginBottom: 8 }}>
               {s.metric}
             </div>
             <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 22, fontWeight: 500, color: "#E8EDF0", letterSpacing: "-.02em", marginBottom: 5 }}>

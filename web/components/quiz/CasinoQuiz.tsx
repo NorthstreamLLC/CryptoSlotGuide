@@ -108,7 +108,7 @@ export function CasinoQuiz({ casinos, countries, coins }: { casinos: QuizCasino[
               </div>
             ))}
           </div>
-          <p style={{ margin: "16px 0 0", fontSize: 12, color: "#6E7F88" }}>18+ · T&amp;Cs apply · Some links are affiliate links · Matches come from each casino&apos;s own published terms, not from what they pay us.</p>
+          <p style={{ margin: "16px 0 0", fontSize: 12, color: "#8E9CA5" }}>18+ · T&amp;Cs apply · Some links are affiliate links · Matches come from each casino&apos;s own published terms, not from what they pay us.</p>
         </div>
       )}
     </div>

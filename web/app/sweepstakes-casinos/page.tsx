@@ -26,8 +26,8 @@ export default function Page() {
       <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Sweepstakes casinos", path: "/sweepstakes-casinos" }])} />
       <section style={{ borderBottom: "1px solid rgba(255,255,255,.07)", background: "radial-gradient(80% 120% at 85% 0%, rgba(87,227,154,.10), transparent 55%), radial-gradient(60% 80% at 0% 100%, rgba(0,194,204,.07), transparent 60%), #0A0D10" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "40px 24px 40px" }}>
-          <div style={{ fontFamily: MONO, fontSize: 11, color: "#5C6A72", marginBottom: 22 }}>
-            <Link href="/" style={{ color: "#5C6A72" }}>Home</Link> / <span style={{ color: "#A8B6BE" }}>Sweepstakes casinos</span>
+          <div style={{ fontFamily: MONO, fontSize: 11, color: "#83919A", marginBottom: 22 }}>
+            <Link href="/" style={{ color: "#83919A" }}>Home</Link> / <span style={{ color: "#A8B6BE" }}>Sweepstakes casinos</span>
           </div>
           <div style={{ fontFamily: MONO, fontSize: 11, letterSpacing: ".1em", textTransform: "uppercase", color: "#57E39A", marginBottom: 12 }}>United States</div>
           <h1 style={{ margin: "0 0 14px", fontSize: "clamp(36px, 4.6vw, 54px)", lineHeight: 1.02, letterSpacing: "-.035em", fontWeight: 800, fontStretch: "114%", color: "#fff", textWrap: "balance" }}>
@@ -56,7 +56,7 @@ export default function Page() {
           <p style={{ color: "#8DA0AA" }}>The list is being compiled from each casino&apos;s own rules.</p>
         ) : (
           <div style={{ borderRadius: 20, border: "1px solid rgba(255,255,255,.08)", background: "linear-gradient(180deg,#0E1317,#0A0E11)", overflow: "hidden" }}>
-            <div className={`hidden md:grid ${COLS} items-center gap-4`} style={{ padding: "12px 20px", borderBottom: "1px solid rgba(255,255,255,.07)", fontFamily: MONO, fontSize: 10, letterSpacing: ".08em", textTransform: "uppercase", color: "#6E7F88" }}>
+            <div className={`hidden md:grid ${COLS} items-center gap-4`} style={{ padding: "12px 20px", borderBottom: "1px solid rgba(255,255,255,.07)", fontFamily: MONO, fontSize: 10, letterSpacing: ".08em", textTransform: "uppercase", color: "#8E9CA5" }}>
               <span>Casino</span>
               <span>Welcome offer</span>
               <span>Daily bonus</span>
@@ -70,8 +70,8 @@ export default function Page() {
               const href = `/sweepstakes-casinos/${s.slug}`;
               const cell = (label: string, value: string | null, color = "#fff") => (
                 <div style={{ minWidth: 0 }}>
-                  <div className="md:hidden" style={{ fontFamily: MONO, fontSize: 9, letterSpacing: ".07em", textTransform: "uppercase", color: "#6E7F88", marginBottom: 2 }}>{label}</div>
-                  <div style={{ fontSize: 13.5, lineHeight: 1.35, fontWeight: 700, color: value ? color : "#4E5A62" }}>{value ?? "—"}</div>
+                  <div className="md:hidden" style={{ fontFamily: MONO, fontSize: 9, letterSpacing: ".07em", textTransform: "uppercase", color: "#8E9CA5", marginBottom: 2 }}>{label}</div>
+                  <div style={{ fontSize: 13.5, lineHeight: 1.35, fontWeight: 700, color: value ? color : "#77858E" }}>{value ?? "—"}</div>
                 </div>
               );
               const crypto = sweepsFact(s, "Crypto");
@@ -84,7 +84,7 @@ export default function Page() {
                     </span>
                     <span style={{ minWidth: 0 }}>
                       <span style={{ display: "block", fontSize: 15.5, fontWeight: 800, color: "#fff" }}>{s.name}</span>
-                      <span style={{ display: "block", fontFamily: MONO, fontSize: 10, color: "#6E7F88" }}>{s.domain}</span>
+                      <span style={{ display: "block", fontFamily: MONO, fontSize: 10, color: "#8E9CA5" }}>{s.domain}</span>
                     </span>
                   </Link>
                   <Link href={href} className="col-span-2 md:col-span-1" style={{ fontSize: 14.5, lineHeight: 1.3, fontWeight: 700, color: "#E8EDF0" }}>
@@ -92,7 +92,7 @@ export default function Page() {
                   </Link>
                   {cell("Daily bonus", shortFact(sweepsFact(s, "Daily bonus"), 40))}
                   {cell("Min. redemption", shortFact(sweepsFact(s, "Minimum redemption")))}
-                  {cell("Crypto", crypto ? shortFact(crypto, 30) : "No", crypto ? "#7BE0B8" : "#6E7F88")}
+                  {cell("Crypto", crypto ? shortFact(crypto, 30) : "No", crypto ? "#7BE0B8" : "#8E9CA5")}
                   {cell("Age", age ?? null)}
                   <div className="col-span-2 md:col-span-1">
                     <Link href={href} style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 6, padding: "10px 12px", borderRadius: 10, background: "#57E39A", color: "#0A0D0F", fontSize: 13, fontWeight: 800, whiteSpace: "nowrap" }}>

@@ -47,7 +47,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<{ s
     info[sh.code] = {
       name: sh.name,
       rows: studio
-        ? [{ label: studio.name, value: mine.length ? "Licensed" : "Not licensed", color: mine.length ? "#2FB67A" : "#C4653A" }, ...mine.map((l) => ({ label: l.code.includes("-") ? l.code.split("-")[1] : "Regulator", value: l.regulator, color: "#6E7F88" }))]
+        ? [{ label: studio.name, value: mine.length ? "Licensed" : "Not licensed", color: mine.length ? "#2FB67A" : "#C4653A" }, ...mine.map((l) => ({ label: l.code.includes("-") ? l.code.split("-")[1] : "Regulator", value: l.regulator, color: "#8E9CA5" }))]
         : [{ label: "Studios licensed", value: String(list.length), color: "#2FB67A" }],
       casinosTitle: `Studios licensed here (${list.length})`,
       noLink: true,
@@ -126,14 +126,14 @@ export default async function Page({ searchParams }: { searchParams: Promise<{ s
                 <div style={{ fontFamily: MONO, fontSize: 11, color: "#A8B6BE" }}>{l.name}</div>
                 <div style={{ fontSize: 13.5, color: "#C6D1D7" }}>
                   {l.regulator} <a href={l.url} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: MONO, fontSize: 10.5, color: "#5FE3E8" }}>source ↗</a>
-                  {l.note && <div style={{ fontSize: 12, color: "#6E7F88", marginTop: 2 }}>{l.note}</div>}
+                  {l.note && <div style={{ fontSize: 12, color: "#8E9CA5", marginTop: 2 }}>{l.note}</div>}
                 </div>
               </div>
             ))}
           </div>
         )}
 
-        <p style={{ margin: "22px 0 0", maxWidth: "80ch", fontSize: 12.5, lineHeight: 1.6, color: "#6E7F88" }}>
+        <p style={{ margin: "22px 0 0", maxWidth: "80ch", fontSize: 12.5, lineHeight: 1.6, color: "#8E9CA5" }}>
           Licences as each studio lists them on its own site. Studios often hold more than they publish (NetEnt, Red Tiger and Big Time Gaming point to their parent Evolution&apos;s list), so a blank country doesn&apos;t always mean no licence.
         </p>
         <NextSteps

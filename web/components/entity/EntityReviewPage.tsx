@@ -41,8 +41,8 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
     <main style={{ background: "#07090B", color: "#E8EDF0" }}>
       <section style={{ background: "#0B0F12", borderBottom: "1px solid rgba(255,255,255,.07)" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "26px 40px 48px" }}>
-          <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#5C6A72", marginBottom: 26 }}>
-            <Link href="/" style={{ color: "#5C6A72" }}>Home</Link> / <Link href={back.href} style={{ color: "#5C6A72" }}>{e.kicker}</Link> /{" "}
+          <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#83919A", marginBottom: 26 }}>
+            <Link href="/" style={{ color: "#83919A" }}>Home</Link> / <Link href={back.href} style={{ color: "#83919A" }}>{e.kicker}</Link> /{" "}
             <span style={{ color: "#A8B6BE" }}>{e.name}</span>
           </div>
 
@@ -88,7 +88,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
                 >
                   {TIER_LABEL[tier]}
                 </Link>}
-                <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11.5, color: "#5C6A72" }}>{e.byline}</div>
+                <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11.5, color: "#83919A" }}>{e.byline}</div>
               </div>
             </div>
 
@@ -111,7 +111,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
               <Link href={back.href} style={{ display: "block", textAlign: "center", padding: 13, borderRadius: 9, border: "1px solid rgba(255,255,255,.14)", color: "#DCE5E9", fontSize: 13.5, fontWeight: 600 }}>
                 {back.label}
               </Link>
-              <div style={{ marginTop: 14, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, lineHeight: 1.5, color: "#4E5A62" }}>
+              <div style={{ marginTop: 14, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, lineHeight: 1.5, color: "#77858E" }}>
                 {isCasino
                   ? e.signupUrl && e.affiliate
                     ? "Affiliate link. 18+. T&Cs apply. Play within your limits."
@@ -156,7 +156,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
               // count never leaves a bare gap-colored cell.
               style={{ padding: "20px 22px", background: "#0C1013", gridColumn: i === e.stats.length - 1 ? `span ${statCols - (i % statCols)}` : undefined }}
             >
-              <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".07em", textTransform: "uppercase", color: "#5C6A72", marginBottom: 8 }}>
+              <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".07em", textTransform: "uppercase", color: "#83919A", marginBottom: 8 }}>
                 {m.label}
               </div>
               <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: m.value.length > 16 ? 15 : 22, lineHeight: 1.35, fontWeight: 500, color: "#E8EDF0", letterSpacing: "-.02em", marginBottom: 5 }}>
@@ -234,7 +234,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
         <div style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 13, overflow: "hidden", background: "#0C1013", marginBottom: 38 }}>
           {e.spec.map((row) => (
             <div key={row.k} style={{ display: "grid", gridTemplateColumns: "210px 1fr 150px", borderBottom: "1px solid rgba(255,255,255,.05)" }}>
-              <div style={{ padding: "14px 18px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".05em", textTransform: "uppercase", color: "#5C6A72" }}>{row.k}</div>
+              <div style={{ padding: "14px 18px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".05em", textTransform: "uppercase", color: "#83919A" }}>{row.k}</div>
               <div style={{ padding: "14px 18px", fontSize: 13.5, lineHeight: 1.5, color: "#B7C4CB" }}>{row.v}</div>
               <div style={{ padding: "14px 18px" }}>
                 <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".05em", padding: "3px 7px", borderRadius: 4, background: row.background, color: row.color, whiteSpace: "nowrap" }}>
@@ -252,7 +252,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
             <div style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 13, overflow: "hidden", background: "#0C1013", marginBottom: 38 }}>
               {block.rows.map((row) => (
                 <div key={row.k} style={{ display: "grid", gridTemplateColumns: "210px 1fr 150px", borderBottom: "1px solid rgba(255,255,255,.05)" }}>
-                  <div style={{ padding: "14px 18px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".05em", textTransform: "uppercase", color: "#5C6A72" }}>{row.k}</div>
+                  <div style={{ padding: "14px 18px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".05em", textTransform: "uppercase", color: "#83919A" }}>{row.k}</div>
                   <div style={{ padding: "14px 18px", fontSize: 13.5, lineHeight: 1.5, color: "#B7C4CB" }}>{row.v}</div>
                   <div style={{ padding: "14px 18px" }}>
                     <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".05em", padding: "3px 7px", borderRadius: 4, background: row.background, color: row.color, whiteSpace: "nowrap" }}>{row.label}</span>
@@ -268,7 +268,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
         <div style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 13, overflow: "hidden", background: "#0C1013", marginBottom: 14 }}>
           <div style={{ display: "grid", gridTemplateColumns: "minmax(240px,1.5fr) 130px 150px 130px", background: "#101519", borderBottom: "1px solid rgba(255,255,255,.07)" }}>
             {["Item", ...e.tableCols].map((h) => (
-              <div key={h} style={{ padding: "13px 18px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".07em", textTransform: "uppercase", color: "#5C6A72" }}>
+              <div key={h} style={{ padding: "13px 18px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".07em", textTransform: "uppercase", color: "#83919A" }}>
                 {h}
               </div>
             ))}
@@ -277,7 +277,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
             <div key={r.name} style={{ display: "grid", gridTemplateColumns: "minmax(240px,1.5fr) 130px 150px 130px", borderBottom: "1px solid rgba(255,255,255,.05)" }}>
               <div style={{ padding: "14px 18px", minWidth: 0 }}>
                 <div style={{ fontSize: 13.5, fontWeight: 600, color: "#E8EDF0" }}>{r.name}</div>
-                <div style={{ fontSize: 12, color: "#5C6A72", marginTop: 2 }}>{r.note}</div>
+                <div style={{ fontSize: 12, color: "#83919A", marginTop: 2 }}>{r.note}</div>
               </div>
               <div style={{ padding: "14px 18px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12.5, color: "#B7C4CB" }}>{r.m1}</div>
               <div style={{ padding: "14px 18px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12.5, color: "#B7C4CB" }}>{r.m2}</div>

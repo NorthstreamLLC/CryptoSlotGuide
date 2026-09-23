@@ -58,8 +58,8 @@ export function VerticalIndexPage({ kind, tabIdx = 0 }: { kind: VerticalKind; ta
     <main style={{ background: "#07090B" }}>
       <section style={{ borderBottom: "1px solid rgba(255,255,255,.07)", background: "radial-gradient(80% 120% at 85% 0%, rgba(0,194,204,.09), transparent 55%), radial-gradient(60% 80% at 0% 100%, rgba(155,143,196,.06), transparent 60%), #0A0D10" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "40px 24px 40px" }}>
-          <div style={{ fontFamily: MONO, fontSize: 11, color: "#5C6A72", marginBottom: 22 }}>
-            <Link href="/" style={{ color: "#5C6A72" }}>Home</Link> / <span style={{ color: "#A8B6BE" }}>{vp.kicker}</span>
+          <div style={{ fontFamily: MONO, fontSize: 11, color: "#83919A", marginBottom: 22 }}>
+            <Link href="/" style={{ color: "#83919A" }}>Home</Link> / <span style={{ color: "#A8B6BE" }}>{vp.kicker}</span>
           </div>
           <div style={{ fontFamily: MONO, fontSize: 11, letterSpacing: ".1em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 12 }}>{vp.kicker}</div>
           <h1 style={{ margin: "0 0 14px", fontSize: "clamp(36px, 4.6vw, 54px)", lineHeight: 1.02, letterSpacing: "-.035em", fontWeight: 800, fontStretch: "114%", color: "#fff", textWrap: "balance" }}>{vp.title}</h1>
@@ -111,7 +111,7 @@ export function VerticalIndexPage({ kind, tabIdx = 0 }: { kind: VerticalKind; ta
         )}
 
         <div style={{ borderRadius: 20, border: "1px solid rgba(255,255,255,.08)", background: "linear-gradient(180deg,#0E1317,#0A0E11)", overflow: "hidden" }}>
-          <div className={`hidden md:grid ${cols} items-center gap-4`} style={{ padding: "12px 20px", borderBottom: "1px solid rgba(255,255,255,.07)", fontFamily: MONO, fontSize: 10, letterSpacing: ".08em", textTransform: "uppercase", color: "#6E7F88" }}>
+          <div className={`hidden md:grid ${cols} items-center gap-4`} style={{ padding: "12px 20px", borderBottom: "1px solid rgba(255,255,255,.07)", fontFamily: MONO, fontSize: 10, letterSpacing: ".08em", textTransform: "uppercase", color: "#8E9CA5" }}>
             <span>{vp.kicker}</span>
             <span>{vp.cols[0]}</span>
             <span>{vp.cols[1]}</span>
@@ -150,8 +150,8 @@ export function VerticalIndexPage({ kind, tabIdx = 0 }: { kind: VerticalKind; ta
 function Row({ r, first, cols, labels, hasStat }: { r: VerticalRow; first: boolean; cols: string; labels: string[]; hasStat: boolean }) {
   const cell = (label: string, value: string) => (
     <div style={{ minWidth: 0 }}>
-      <div className="md:hidden" style={{ fontFamily: MONO, fontSize: 9, letterSpacing: ".07em", textTransform: "uppercase", color: "#6E7F88", marginBottom: 2 }}>{label}</div>
-      <div style={{ fontSize: 14, fontWeight: 700, lineHeight: 1.3, color: value === "—" || /^not /i.test(value) ? "#4E5A62" : "#fff", overflowWrap: "anywhere" }}>{value}</div>
+      <div className="md:hidden" style={{ fontFamily: MONO, fontSize: 9, letterSpacing: ".07em", textTransform: "uppercase", color: "#8E9CA5", marginBottom: 2 }}>{label}</div>
+      <div style={{ fontSize: 14, fontWeight: 700, lineHeight: 1.3, color: value === "—" || /^not /i.test(value) ? "#77858E" : "#fff", overflowWrap: "anywhere" }}>{value}</div>
     </div>
   );
   return (

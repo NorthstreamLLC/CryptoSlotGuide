@@ -97,7 +97,7 @@ function FactRow({ fact, first, showCite }: { fact: SpecFact; first: boolean; sh
         borderTop: first ? "none" : "1px solid rgba(255,255,255,.05)",
       }}
     >
-      <div style={{ padding: "13px 20px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".04em", textTransform: "uppercase", color: "#5C6A72" }}>
+      <div style={{ padding: "13px 20px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".04em", textTransform: "uppercase", color: "#83919A" }}>
         {fact.label}
       </div>
       <div style={{ padding: "13px 20px" }}>
@@ -147,7 +147,7 @@ function FactLabel({ fact, showCite }: { fact: SpecFact; showCite: boolean; rtpS
     <div>
       <div style={{ fontSize: 13.5, color: "#B7C4CB" }}>{fact.label}</div>
       {showCite && fact.sourcing !== "site-data" && (
-        <div style={{ fontSize: 9.5, color: "#4E5A62", marginTop: 2 }}>
+        <div style={{ fontSize: 9.5, color: "#77858E", marginTop: 2 }}>
           <a href={fact.sourceUrl} target="_blank" rel="noopener noreferrer nofollow" style={{ color: "#5FE3E8" }}>{citeLabel(fact.sourceUrl)} ↗</a>
         </div>
       )}

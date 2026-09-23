@@ -54,7 +54,7 @@ export default async function Page({ params }: { params: Promise<{ state: string
             .filter(([k, v]) => v || (k === "Licensed online casinos" && s.licensedOnlineCasinos?.length))
             .map(([k, v, url], i) => (
               <div key={k} style={{ display: "grid", gridTemplateColumns: "minmax(120px, 190px) 1fr", gap: 14, padding: "13px 0", borderTop: i ? "1px solid rgba(255,255,255,.06)" : undefined }}>
-                <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".06em", textTransform: "uppercase", color: "#6E7F88", paddingTop: 2 }}>{k}</div>
+                <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".06em", textTransform: "uppercase", color: "#8E9CA5", paddingTop: 2 }}>{k}</div>
                 <div style={{ fontSize: 14, lineHeight: 1.6, color: "#C6D1D7" }}>
                   {v}
                   {k === "Licensed online casinos" && (

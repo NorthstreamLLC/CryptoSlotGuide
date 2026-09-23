@@ -61,8 +61,8 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Sweepstakes casinos", path: "/sweepstakes-casinos" }, { name: s.name, path: `/sweepstakes-casinos/${s.slug}` }])} />
       <section style={{ borderBottom: "1px solid rgba(255,255,255,.07)", background: `radial-gradient(80% 120% at 85% 0%, ${brand}26, transparent 55%), radial-gradient(60% 80% at 0% 100%, rgba(87,227,154,.08), transparent 60%), #0A0D10` }}>
         <div style={{ maxWidth: 1080, margin: "0 auto", padding: "24px 24px 44px" }}>
-          <div style={{ fontFamily: MONO, fontSize: 11, color: "#5C6A72", marginBottom: 28 }}>
-            <Link href="/" style={{ color: "#5C6A72" }}>Home</Link> / <Link href="/sweepstakes-casinos" style={{ color: "#5C6A72" }}>Sweepstakes casinos</Link> / <span style={{ color: "#A8B6BE" }}>{s.name}</span>
+          <div style={{ fontFamily: MONO, fontSize: 11, color: "#83919A", marginBottom: 28 }}>
+            <Link href="/" style={{ color: "#83919A" }}>Home</Link> / <Link href="/sweepstakes-casinos" style={{ color: "#83919A" }}>Sweepstakes casinos</Link> / <span style={{ color: "#A8B6BE" }}>{s.name}</span>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 22 }}>
             <div style={{ width: 44, height: 44, flex: "none" }}>
@@ -70,7 +70,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             </div>
             <div>
               <div style={{ fontSize: 20, fontWeight: 800, letterSpacing: "-.02em", color: "#fff" }}>{s.name}</div>
-              <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".06em", color: "#6E7F88" }}>US SWEEPSTAKES CASINO · {s.domain.toUpperCase()}</div>
+              <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".06em", color: "#8E9CA5" }}>US SWEEPSTAKES CASINO · {s.domain.toUpperCase()}</div>
             </div>
           </div>
           <div style={{ fontFamily: MONO, fontSize: 11, letterSpacing: ".1em", textTransform: "uppercase", color: GREEN, marginBottom: 10 }}>Welcome offer</div>
@@ -84,7 +84,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
                   <Icon name={t.icon} size={19} />
                 </span>
                 <span style={{ minWidth: 0 }}>
-                  <span style={{ display: "block", fontFamily: MONO, fontSize: 9.5, letterSpacing: ".07em", textTransform: "uppercase", color: "#6E7F88" }}>{t.label}</span>
+                  <span style={{ display: "block", fontFamily: MONO, fontSize: 9.5, letterSpacing: ".07em", textTransform: "uppercase", color: "#8E9CA5" }}>{t.label}</span>
                   <span style={{ display: "block", fontSize: 17, fontWeight: 800, color: "#fff", lineHeight: 1.3 }}>{tileValue(t.f)}</span>
                 </span>
               </div>
@@ -101,7 +101,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
               </span>
             )}
           </div>
-          <div style={{ marginTop: 14, fontFamily: MONO, fontSize: 10.5, color: "#5C6A72" }}>
+          <div style={{ marginTop: 14, fontFamily: MONO, fontSize: 10.5, color: "#83919A" }}>
             No purchase necessary · 18+ or 21+ by casino · Void where prohibited{s.affiliate ? " · Affiliate link" : ""} · Facts from {s.domain}
           </div>
         </div>
@@ -113,7 +113,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         <div style={{ padding: "8px 24px", borderRadius: 18, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
           {[...tiles.map((t) => t.f).filter(Boolean), ...rows].map((f, i) => (
             <div key={f!.label} style={{ display: "grid", gridTemplateColumns: "minmax(120px, 170px) 1fr", gap: 14, padding: "13px 0", borderTop: i ? "1px solid rgba(255,255,255,.06)" : undefined }}>
-              <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".06em", textTransform: "uppercase", color: "#6E7F88", paddingTop: 2 }}>{f!.label}</div>
+              <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".06em", textTransform: "uppercase", color: "#8E9CA5", paddingTop: 2 }}>{f!.label}</div>
               <div style={{ fontSize: 14, lineHeight: 1.6, color: "#C6D1D7" }}>
                 {f!.label === "Restricted states" ? (
                   <span style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>

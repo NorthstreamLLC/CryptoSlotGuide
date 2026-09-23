@@ -8,11 +8,11 @@ export function LegalHero({ crumbs, eyebrow, title, children }: { crumbs: { labe
   return (
     <section style={{ borderBottom: "1px solid rgba(255,255,255,.07)", background: "radial-gradient(80% 120% at 85% 0%, rgba(47,182,122,.10), transparent 55%), radial-gradient(60% 80% at 0% 100%, rgba(0,194,204,.07), transparent 60%), #0A0D10" }}>
       <div style={{ maxWidth: 1180, margin: "0 auto", padding: "36px 24px 34px" }}>
-        <div style={{ fontFamily: MONO, fontSize: 11, color: "#5C6A72", marginBottom: 20 }}>
+        <div style={{ fontFamily: MONO, fontSize: 11, color: "#83919A", marginBottom: 20 }}>
           {crumbs.map((c, i) => (
             <span key={i}>
               {i > 0 && " / "}
-              {c.href ? <Link href={c.href} style={{ color: "#5C6A72" }}>{c.label}</Link> : <span style={{ color: "#A8B6BE" }}>{c.label}</span>}
+              {c.href ? <Link href={c.href} style={{ color: "#83919A" }}>{c.label}</Link> : <span style={{ color: "#A8B6BE" }}>{c.label}</span>}
             </span>
           ))}
         </div>
@@ -28,7 +28,7 @@ export function StatusTile({ label, status }: { label: string; status?: string }
   const t = toneOf(status);
   return (
     <div style={{ padding: "16px 18px", borderRadius: 14, background: "#0E1316", border: `1px solid ${TONE[t].fill}55` }}>
-      <div style={{ fontFamily: MONO, fontSize: 10, letterSpacing: ".08em", textTransform: "uppercase", color: "#6E7F88", marginBottom: 6 }}>{label}</div>
+      <div style={{ fontFamily: MONO, fontSize: 10, letterSpacing: ".08em", textTransform: "uppercase", color: "#8E9CA5", marginBottom: 6 }}>{label}</div>
       <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 18, fontWeight: 800, color: "#fff", textTransform: "capitalize" }}>
         <span style={{ width: 10, height: 10, borderRadius: 100, background: TONE[t].fill, flex: "none" }} />
         {status ?? "Not covered"}
@@ -41,7 +41,7 @@ export function Sources({ sources }: { sources: Source[] }) {
   if (!sources?.length) return null;
   return (
     <div style={{ marginTop: 22 }}>
-      <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#6E7F88", marginBottom: 8 }}>Sources</div>
+      <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#8E9CA5", marginBottom: 8 }}>Sources</div>
       <ul style={{ margin: 0, paddingLeft: 18, display: "flex", flexDirection: "column", gap: 4 }}>
         {sources.map((s) => (
           <li key={s.url} style={{ fontSize: 13.5, color: "#A8B6BE" }}>
@@ -55,7 +55,7 @@ export function Sources({ sources }: { sources: Source[] }) {
 
 export function Disclaimer() {
   return (
-    <p style={{ margin: "26px 0 0", maxWidth: "80ch", fontSize: 12.5, lineHeight: 1.6, color: "#6E7F88" }}>
+    <p style={{ margin: "26px 0 0", maxWidth: "80ch", fontSize: 12.5, lineHeight: 1.6, color: "#8E9CA5" }}>
       This is general information taken from regulators&apos; and governments&apos; own published pages, not legal advice. Gambling law changes; check the regulator&apos;s current rules before you play.
     </p>
   );

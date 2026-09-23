@@ -35,7 +35,7 @@ export default function Page() {
         intro={`Enter how much you have wagered and see your rank, what it unlocks and how far the next rank is at ${casinos.length} crypto casinos that publish their VIP ladder in dollars wagered. Every rank and reward comes from the casino's own VIP pages.`}
       >
         <VipCalculator casinos={casinos} />
-        <p style={{ margin: "18px 0 0", maxWidth: "86ch", fontSize: 12.5, lineHeight: 1.6, color: "#6E7F88" }}>
+        <p style={{ margin: "18px 0 0", maxWidth: "86ch", fontSize: 12.5, lineHeight: 1.6, color: "#8E9CA5" }}>
           Only casinos that publish thresholds in dollars wagered are included; ladders counted in XP or points, or kept private, are listed on each casino&apos;s report instead. Some casinos weight wagers by game, so your real progress can differ.
         </p>
         <NextSteps

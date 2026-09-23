@@ -47,14 +47,14 @@ export function CasinoCard({ o, rank }: { o: Operator; rank?: number }) {
           <Link href={href} style={{ display: "block", fontSize: 16.5, fontWeight: 800, letterSpacing: "-.015em", color: "#fff" }}>
             {o.name}
           </Link>
-          <div style={{ fontFamily: MONO, fontSize: 10, letterSpacing: ".06em", color: "#6E7F88", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+          <div style={{ fontFamily: MONO, fontSize: 10, letterSpacing: ".06em", color: "#8E9CA5", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
             {[c.licence, c.kyc].filter(Boolean).join(" · ") || "Crypto casino"}
           </div>
         </div>
         {o.featured ? (
           <span style={{ padding: "4px 9px", borderRadius: 100, background: `${brand}1f`, border: `1px solid ${brand}55`, fontFamily: MONO, fontSize: 9.5, fontWeight: 700, letterSpacing: ".06em", color: brand }}>FEATURED</span>
         ) : rank ? (
-          <span style={{ fontFamily: MONO, fontSize: 11, color: "#4E5A62" }}>{String(rank).padStart(2, "0")}</span>
+          <span style={{ fontFamily: MONO, fontSize: 11, color: "#77858E" }}>{String(rank).padStart(2, "0")}</span>
         ) : null}
       </div>
 
@@ -68,14 +68,14 @@ export function CasinoCard({ o, rank }: { o: Operator; rank?: number }) {
       <div data-keep-grid style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 8 }}>
         {stats.map(([label, value]) => (
           <div key={label} style={{ padding: "10px 10px 9px", borderRadius: 12, background: "rgba(255,255,255,.035)", border: "1px solid rgba(255,255,255,.06)", minWidth: 0 }}>
-            <div style={{ fontFamily: MONO, fontSize: 8.5, letterSpacing: ".07em", textTransform: "uppercase", color: "#6E7F88", marginBottom: 4 }}>{label}</div>
-            <div style={{ fontSize: 13.5, lineHeight: 1.2, fontWeight: 800, color: value ? "#fff" : "#4E5A62", overflowWrap: "anywhere" }}>{value ?? "—"}</div>
+            <div style={{ fontFamily: MONO, fontSize: 8.5, letterSpacing: ".07em", textTransform: "uppercase", color: "#8E9CA5", marginBottom: 4 }}>{label}</div>
+            <div style={{ fontSize: 13.5, lineHeight: 1.2, fontWeight: 800, color: value ? "#fff" : "#77858E", overflowWrap: "anywhere" }}>{value ?? "—"}</div>
           </div>
         ))}
       </div>
 
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10, minHeight: 22 }}>
-        {c.coins.length ? <CoinStack tickers={c.coins} max={7} size={20} /> : <span style={{ fontSize: 12, color: "#4E5A62" }}>Coins not listed</span>}
+        {c.coins.length ? <CoinStack tickers={c.coins} max={7} size={20} /> : <span style={{ fontSize: 12, color: "#77858E" }}>Coins not listed</span>}
         {c.fee === "Free" && (
           <span style={{ display: "inline-flex", alignItems: "center", gap: 5, fontSize: 11.5, fontWeight: 600, color: "#7BE0B8" }}>
             <Icon name="percent" size={13} /> Free withdrawals

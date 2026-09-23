@@ -79,7 +79,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<{ l
           <MapHover info={info}>
           <LegalMap shapes={US_SHAPES} viewBox="0 0 975 610" labels statusOf={(c) => stateBy(c)?.[layer.field]} hrefOf={(c) => (stateBy(c) ? `/legal/us/${c.toLowerCase()}` : null)} />
           </MapHover>
-          <div style={{ marginTop: 8, fontSize: 12.5, color: "#6E7F88" }}>Colours show {layer.label.toLowerCase()} status. Open a state for the full picture: online casinos, sports betting, poker and sweepstakes.</div>
+          <div style={{ marginTop: 8, fontSize: 12.5, color: "#8E9CA5" }}>Colours show {layer.label.toLowerCase()} status. Open a state for the full picture: online casinos, sports betting, poker and sweepstakes.</div>
         </div>
         {states.length > 0 && (
           <>

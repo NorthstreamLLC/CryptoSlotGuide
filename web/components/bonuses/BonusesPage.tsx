@@ -37,7 +37,7 @@ function toWithdraw(o: Operator): { text: string; color: string } {
   const wv = wagerView(o);
   const m = wv.mult;
   if (wv.kind === "none" || m === 0) return { text: "No wagering", color: "#7BE0B8" };
-  if (m === null) return { text: "See terms", color: "#6E7F88" };
+  if (m === null) return { text: "See terms", color: "#8E9CA5" };
   return { text: `${m}×`, color: m <= 20 ? "#7BE0B8" : m <= 40 ? "#E8EDF0" : "#F0A77F" };
 }
 
@@ -120,7 +120,7 @@ export function BonusesPage() {
       </section>
 
       <section style={{ maxWidth: 1280, margin: "0 auto", padding: "28px 24px 80px" }}>
-        <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#6E7F88", marginBottom: 12 }}>Best for</div>
+        <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#8E9CA5", marginBottom: 12 }}>Best for</div>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 12, marginBottom: 44 }}>
           {picks.map((pk) => {
             const brand = brandFor(pk.o.slug);
@@ -229,7 +229,7 @@ function Heading({ id, eyebrow, title, children }: { id: string; eyebrow: string
 function Table({ cols, head, children }: { cols: string; head: string[]; children: ReactNode }) {
   return (
     <div style={{ borderRadius: 20, border: "1px solid rgba(255,255,255,.08)", background: "linear-gradient(180deg,#0E1317,#0A0E11)", overflow: "hidden" }}>
-      <div className={`hidden md:grid ${cols} items-center gap-4`} style={{ padding: "12px 20px", borderBottom: "1px solid rgba(255,255,255,.07)", fontFamily: MONO, fontSize: 10, letterSpacing: ".08em", textTransform: "uppercase", color: "#6E7F88" }}>
+      <div className={`hidden md:grid ${cols} items-center gap-4`} style={{ padding: "12px 20px", borderBottom: "1px solid rgba(255,255,255,.07)", fontFamily: MONO, fontSize: 10, letterSpacing: ".08em", textTransform: "uppercase", color: "#8E9CA5" }}>
         {head.map((h, i) => <span key={i}>{h}</span>)}
       </div>
       {children}
@@ -274,8 +274,8 @@ function Offer({ o }: { o: Operator }) {
 function Cell({ label, value, color = "#fff", small }: { label: string; value: string | null; color?: string; small?: boolean }) {
   return (
     <div style={{ minWidth: 0 }}>
-      <div className="md:hidden" style={{ fontFamily: MONO, fontSize: 9, letterSpacing: ".07em", textTransform: "uppercase", color: "#6E7F88", marginBottom: 2 }}>{label}</div>
-      <div style={{ fontSize: small ? 12.5 : 14, lineHeight: 1.35, fontWeight: small ? 600 : 700, color: value ? color : "#4E5A62" }}>{value ?? "—"}</div>
+      <div className="md:hidden" style={{ fontFamily: MONO, fontSize: 9, letterSpacing: ".07em", textTransform: "uppercase", color: "#8E9CA5", marginBottom: 2 }}>{label}</div>
+      <div style={{ fontSize: small ? 12.5 : 14, lineHeight: 1.35, fontWeight: small ? 600 : 700, color: value ? color : "#77858E" }}>{value ?? "—"}</div>
     </div>
   );
 }

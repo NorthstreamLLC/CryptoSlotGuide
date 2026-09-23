@@ -43,8 +43,8 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Game providers", path: "/providers" }, { name: s.name, path: `/providers/${slug}` }])} />
       <section style={{ borderBottom: "1px solid rgba(255,255,255,.07)", background: "radial-gradient(80% 120% at 85% 0%, rgba(0,194,204,.09), transparent 55%), #0A0D10" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "32px 24px 34px" }}>
-          <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#5C6A72", marginBottom: 20 }}>
-            <Link href="/" style={{ color: "#5C6A72" }}>Home</Link> / <Link href="/providers" style={{ color: "#5C6A72" }}>Game providers</Link> / <span style={{ color: "#A8B6BE" }}>{s.name}</span>
+          <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#83919A", marginBottom: 20 }}>
+            <Link href="/" style={{ color: "#83919A" }}>Home</Link> / <Link href="/providers" style={{ color: "#83919A" }}>Game providers</Link> / <span style={{ color: "#A8B6BE" }}>{s.name}</span>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
             <span style={{ width: 56, height: 56, flex: "none", borderRadius: 14, overflow: "hidden" }}>

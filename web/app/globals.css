@@ -29,8 +29,8 @@
   --color-text-muted: #93a3ac;
   --color-text-muted-2: #8da0aa;
   --color-text-dim: #7b8a93;
-  --color-text-dim-2: #5c6a72;
-  --color-text-dim-3: #4e5a62;
+  --color-text-dim-2: #83919A;
+  --color-text-dim-3: #77858E;
 
   /* Color — borders & rows */
   --color-border: rgba(255, 255, 255, 0.07);
@@ -318,7 +318,7 @@ p {
 .legacy-article a { color: #5FE3E8; text-decoration: underline; text-underline-offset: 3px; }
 .legacy-article ul, .legacy-article ol { padding-left: 1.3em; }
 .legacy-article li + li { margin-top: 0.5em; }
-.legacy-article li::marker { color: #6E7F88; }
+.legacy-article li::marker { color: #8E9CA5; }
 .legacy-article strong { color: #fff; }
 .legacy-article img { max-width: 100%; height: auto; border-radius: 14px; }
 .legacy-article blockquote {

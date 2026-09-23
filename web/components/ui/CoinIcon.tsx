@@ -1,5 +1,11 @@
 /**
  * Coin symbols drawn in each coin's own brand colour (no external assets).
+ *
+ * The glyph is each coin's own logotype on its own brand colour — white on
+ * Bitcoin orange measures 2.3:1, which WCAG exempts as a logotype and which
+ * changing would make the chip wrong rather than more readable. The chip is
+ * aria-hidden with a title, and the coin is named in text wherever the count
+ * matters, so nothing here is the only carrier of information.
  */
 const COINS: Record<string, { bg: string; fg?: string; glyph: string; name: string }> = {
   BTC: { bg: "#F7931A", glyph: "₿", name: "Bitcoin" },

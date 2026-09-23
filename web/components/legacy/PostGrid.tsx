@@ -21,7 +21,7 @@ export function PostGrid({ posts, readingMinutes }: { posts: LegacyItem[]; readi
             </span>
             <span style={{ fontSize: 16, lineHeight: 1.3, fontWeight: 800, color: "#fff" }}>{p.title}</span>
             <span style={{ fontSize: 13, lineHeight: 1.5, color: "#8DA0AA", display: "-webkit-box", WebkitLineClamp: 3, WebkitBoxOrient: "vertical", overflow: "hidden" }}>{p.excerpt}</span>
-            <span style={{ fontFamily: MONO, fontSize: 10, color: "#5C6A72", marginTop: "auto" }}>{p.date}</span>
+            <span style={{ fontFamily: MONO, fontSize: 10, color: "#83919A", marginTop: "auto" }}>{p.date}</span>
           </span>
         </Link>
       ))}

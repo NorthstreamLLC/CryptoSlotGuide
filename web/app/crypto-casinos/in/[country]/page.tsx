@@ -57,7 +57,7 @@ export default async function Page({ params }: { params: Promise<{ country: stri
             <CasinoOfferList ops={partial} />
           </>
         )}
-        <p style={{ margin: "22px 0 0", maxWidth: "86ch", fontSize: 12.5, lineHeight: 1.6, color: "#6E7F88" }}>
+        <p style={{ margin: "22px 0 0", maxWidth: "86ch", fontSize: 12.5, lineHeight: 1.6, color: "#8E9CA5" }}>
           Based on each casino&apos;s own restricted-countries list, not legal advice. Gambling law in {c.name} applies to you as a player; check it before you sign up.
         </p>
         <LinkCloud title="Crypto casinos in other countries" items={others.map((x) => ({ href: `/crypto-casinos/in/${x.c.code.toLowerCase()}`, label: x.c.name }))} />

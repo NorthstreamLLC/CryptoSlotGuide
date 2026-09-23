@@ -40,12 +40,12 @@ export function PredictionMarketsPage({ initialTab = "crypto" }: { initialTab?: 
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 1, background: "rgba(255,255,255,.08)", border: "1px solid rgba(255,255,255,.08)", borderRadius: 13, overflow: "hidden" }}>
               <div style={{ padding: "18px 20px", background: "rgba(12,16,19,.86)" }}>
-                <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 9.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#5C6A72", marginBottom: 8 }}>Crypto-settled</div>
+                <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 9.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#83919A", marginBottom: 8 }}>Crypto-settled</div>
                 <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 21, color: "#fff" }}>{predMarkets.crypto.length}</div>
                 <div style={{ fontSize: 11.5, color: "#7B8A93", marginTop: 3 }}>Venues listed</div>
               </div>
               <div style={{ padding: "18px 20px", background: "rgba(12,16,19,.86)" }}>
-                <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 9.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#5C6A72", marginBottom: 8 }}>Regulated fiat</div>
+                <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 9.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#83919A", marginBottom: 8 }}>Regulated fiat</div>
                 <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 21, color: "#fff" }}>{predMarkets.fiat.length}</div>
                 <div style={{ fontSize: 11.5, color: "#7B8A93", marginTop: 3 }}>Venues listed</div>
               </div>
@@ -77,7 +77,7 @@ export function PredictionMarketsPage({ initialTab = "crypto" }: { initialTab?: 
                   }}
                 >
                   <span style={{ fontSize: 14, fontWeight: 600, letterSpacing: "-.01em" }}>{t.label}</span>
-                  <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".05em", color: "#5C6A72" }}>{t.note}</span>
+                  <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".05em", color: "#83919A" }}>{t.note}</span>
                 </button>
               );
             })}
@@ -89,7 +89,7 @@ export function PredictionMarketsPage({ initialTab = "crypto" }: { initialTab?: 
         <div style={{ border: "1px solid rgba(255,255,255,.08)", borderRadius: 14, overflowX: "auto" }}>
           <div style={{ display: "grid", minWidth: 1020, gridTemplateColumns: "minmax(220px,1.3fr) minmax(150px,1fr) minmax(150px,1fr) 150px 170px 90px", background: "rgba(255,255,255,.03)", borderBottom: "1px solid rgba(255,255,255,.08)" }}>
             {["Venue", "Settlement", "Cost to trade", "Account", "Payout", ""].map((h) => (
-              <div key={h} style={{ padding: "14px 16px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".07em", textTransform: "uppercase", color: "#5C6A72" }}>{h}</div>
+              <div key={h} style={{ padding: "14px 16px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".07em", textTransform: "uppercase", color: "#83919A" }}>{h}</div>
             ))}
           </div>
           {rows.map((m) => (
@@ -113,7 +113,7 @@ export function PredictionMarketsPage({ initialTab = "crypto" }: { initialTab?: 
               <div style={{ minWidth: 1020, padding: "4px 16px 18px", borderBottom: "1px solid rgba(255,255,255,.05)", background: "rgba(255,255,255,.015)" }}>
                 {m.facts.map((f) => (
                   <div key={f.label} style={{ display: "grid", gridTemplateColumns: "150px 1fr", gap: 14, padding: "9px 0", borderBottom: "1px solid rgba(255,255,255,.04)" }}>
-                    <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".05em", textTransform: "uppercase", color: "#5C6A72" }}>{f.label}</div>
+                    <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".05em", textTransform: "uppercase", color: "#83919A" }}>{f.label}</div>
                     <div style={{ fontSize: 13, lineHeight: 1.55, color: "#B7C4CB" }}>
                       {f.text}{" "}
                       <a href={f.url} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#5FE3E8", whiteSpace: "nowrap" }}>{new URL(f.url).hostname.replace(/^www./, "")} ↗</a>

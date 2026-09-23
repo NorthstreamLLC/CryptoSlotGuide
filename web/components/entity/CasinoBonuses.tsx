@@ -43,7 +43,7 @@ function BonusCard({ bonus, name, signupUrl }: { bonus: CasinoBonus; name: strin
     <div style={{ display: "flex", flexDirection: "column", padding: 24, borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
       <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 16 }}>
         <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#00C2CC", flex: "none" }} />
-        <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".07em", textTransform: "uppercase", color: "#5C6A72" }}>
+        <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".07em", textTransform: "uppercase", color: "#83919A" }}>
           {bonus.category}
         </span>
       </div>
@@ -59,7 +59,7 @@ function BonusCard({ bonus, name, signupUrl }: { bonus: CasinoBonus; name: strin
         <div data-keep-grid style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, marginBottom: 20 }}>
           {bonus.stats.map((s) => (
             <div key={s.label} style={{ padding: "12px 14px", background: "#101519", borderRadius: 9 }}>
-              <div style={{ fontSize: 10, letterSpacing: ".06em", textTransform: "uppercase", color: "#5C6A72", marginBottom: 5 }}>{s.label}</div>
+              <div style={{ fontSize: 10, letterSpacing: ".06em", textTransform: "uppercase", color: "#83919A", marginBottom: 5 }}>{s.label}</div>
               <div style={{ fontSize: 14, fontWeight: 500, color: "#E8EDF0" }}>{s.value}</div>
             </div>
           ))}

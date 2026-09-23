@@ -66,6 +66,6 @@ export const TIER_TINT: Record<ReviewTier, string> = {
   "field-tested": "#00C2CC",
   "community-reported": "#9B8FC4",
   editorial: "#C7A45C",
-  pending: "#5C6A72",
-  unchecked: "#5C6A72",
+  pending: "#83919A",
+  unchecked: "#83919A",
 };

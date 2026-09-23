@@ -38,7 +38,7 @@ export function VipCalculator({ casinos }: { casinos: CalcCasino[] }) {
   return (
     <div>
       <div style={{ padding: "22px 24px", borderRadius: 18, background: "#0C1013", border: "1px solid rgba(0,194,204,.25)", marginBottom: 16 }}>
-        <label htmlFor="vip-wager" style={{ display: "block", fontFamily: MONO, fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#6E7F88", marginBottom: 10 }}>
+        <label htmlFor="vip-wager" style={{ display: "block", fontFamily: MONO, fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#8E9CA5", marginBottom: 10 }}>
           Total amount wagered
         </label>
         <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 10 }}>
@@ -76,11 +76,11 @@ export function VipCalculator({ casinos }: { casinos: CalcCasino[] }) {
               <span style={{ fontSize: 15, fontWeight: 800, color: "#fff" }}>{c.name}</span>
             </Link>
             <div>
-              <div style={{ fontSize: 16, fontWeight: 800, color: cur ? "#7BE0B8" : "#6E7F88" }}>{cur ? cur.rank : "Below first rank"}</div>
+              <div style={{ fontSize: 16, fontWeight: 800, color: cur ? "#7BE0B8" : "#8E9CA5" }}>{cur ? cur.rank : "Below first rank"}</div>
               <div style={{ marginTop: 5, height: 5, borderRadius: 10, background: "rgba(255,255,255,.07)", overflow: "hidden" }}>
                 <div style={{ width: `${(pos / of) * 100}%`, height: "100%", background: "#2FB67A" }} />
               </div>
-              <div style={{ fontFamily: MONO, fontSize: 10, color: "#6E7F88", marginTop: 4 }}>rank {pos} of {of}</div>
+              <div style={{ fontFamily: MONO, fontSize: 10, color: "#8E9CA5", marginTop: 4 }}>rank {pos} of {of}</div>
             </div>
             <div style={{ fontSize: 13, lineHeight: 1.5, color: "#A8B6BE" }}>{cur?.rewards ?? `First rank at ${money(c.ranks[0].wager)} wagered.`}</div>
             <div style={{ fontSize: 13, color: "#C6D1D7" }}>

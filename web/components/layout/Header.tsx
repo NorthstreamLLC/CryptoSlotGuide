@@ -126,13 +126,13 @@ export function Header({ counts }: { counts: SiteCounts }) {
               border: "1px solid rgba(255,255,255,.10)",
               borderRadius: 8,
               background: "rgba(255,255,255,.02)",
-              color: "#5C6A72",
+              color: "#83919A",
               fontFamily: "var(--font-jetbrains-mono), monospace",
               fontSize: 11.5,
               whiteSpace: "nowrap",
             }}
           >
-            <span style={{ color: "#3D4A52" }}>⌕</span>
+            <span style={{ color: "#77858E" }}>⌕</span>
             <span>search</span>
           </Link>
           <span
@@ -196,7 +196,7 @@ export function Header({ counts }: { counts: SiteCounts }) {
                   style={{ display: "flex", alignItems: "center", width: "100%", padding: "14px 2px", border: 0, background: "transparent", color: "#E8EDF0", fontSize: 15, fontWeight: 600, textAlign: "left", cursor: "pointer" }}
                 >
                   {tab.label}
-                  <span style={{ marginLeft: "auto", fontSize: 10, color: "#5C6A72", transform: open ? "rotate(180deg)" : undefined }}>▾</span>
+                  <span style={{ marginLeft: "auto", fontSize: 10, color: "#83919A", transform: open ? "rotate(180deg)" : undefined }}>▾</span>
                 </button>
                 {open && (
                   <div style={{ display: "flex", flexDirection: "column", paddingBottom: 10 }}>
@@ -335,7 +335,7 @@ export function Header({ counts }: { counts: SiteCounts }) {
                         fontSize: 9.5,
                         letterSpacing: ".11em",
                         textTransform: "uppercase",
-                        color: "#5C6A72",
+                        color: "#83919A",
                         whiteSpace: "nowrap",
                       }}
                     >

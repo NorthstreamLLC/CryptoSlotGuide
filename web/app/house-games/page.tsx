@@ -44,17 +44,17 @@ export default function Page() {
                 <span style={{ width: 36, height: 36, flex: "none", borderRadius: 9, background: g.tint, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, fontWeight: 700, color: "#0A0D0F" }}>{g.mono}</span>
                 <div>
                   <div style={{ fontSize: 16.5, fontWeight: 700, color: "#fff", letterSpacing: "-.02em" }}>{g.name}</div>
-                  <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#5C6A72", marginTop: 2 }}>{g.speed}</div>
+                  <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#83919A", marginTop: 2 }}>{g.speed}</div>
                 </div>
               </div>
               <p style={{ margin: "0 0 18px", fontSize: 12.5, lineHeight: 1.55, color: "#7B8A93", textWrap: "pretty" }}>{g.note}</p>
               <div style={{ marginTop: "auto", display: "flex", flexDirection: "column", gap: 1, borderRadius: 9, overflow: "hidden" }}>
                 <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 10, padding: "9px 11px", background: "#0F1417" }}>
-                  <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 9.5, letterSpacing: ".06em", textTransform: "uppercase", color: "#5C6A72" }}>Published edges</span>
-                  <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12.5, color: "#5FE3E8" }}>{g.edgeRange} <span style={{ color: "#5C6A72", fontSize: 10.5 }}>· {g.edges.length} casinos</span></span>
+                  <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 9.5, letterSpacing: ".06em", textTransform: "uppercase", color: "#83919A" }}>Published edges</span>
+                  <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12.5, color: "#5FE3E8" }}>{g.edgeRange} <span style={{ color: "#83919A", fontSize: 10.5 }}>· {g.edges.length} casinos</span></span>
                 </div>
                 <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 10, padding: "9px 11px", background: "#0F1417" }}>
-                  <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 9.5, letterSpacing: ".06em", textTransform: "uppercase", color: "#5C6A72" }}>Provably fair</span>
+                  <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 9.5, letterSpacing: ".06em", textTransform: "uppercase", color: "#83919A" }}>Provably fair</span>
                   <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12.5, color: "#E8EDF0" }}>{g.fair}</span>
                 </div>
               </div>

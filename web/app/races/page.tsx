@@ -28,8 +28,8 @@ export default function Page() {
       <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Races", path: "/races" }])} />
       <section style={{ borderBottom: "1px solid rgba(255,255,255,.07)", background: "radial-gradient(80% 120% at 85% 0%, rgba(214,182,92,.12), transparent 55%), radial-gradient(60% 80% at 0% 100%, rgba(0,194,204,.07), transparent 60%), #0A0D10" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "40px 24px 40px" }}>
-          <div style={{ fontFamily: MONO, fontSize: 11, color: "#5C6A72", marginBottom: 22 }}>
-            <Link href="/" style={{ color: "#5C6A72" }}>Home</Link> / <span style={{ color: "#A8B6BE" }}>Races</span>
+          <div style={{ fontFamily: MONO, fontSize: 11, color: "#83919A", marginBottom: 22 }}>
+            <Link href="/" style={{ color: "#83919A" }}>Home</Link> / <span style={{ color: "#A8B6BE" }}>Races</span>
           </div>
           <div style={{ fontFamily: MONO, fontSize: 11, letterSpacing: ".1em", textTransform: "uppercase", color: "#D6B65C", marginBottom: 12 }}>Races & raffles</div>
           <h1 style={{ margin: "0 0 14px", fontSize: "clamp(36px, 4.6vw, 54px)", lineHeight: 1.02, letterSpacing: "-.035em", fontWeight: 800, fontStretch: "114%", color: "#fff", textWrap: "balance" }}>
@@ -54,7 +54,7 @@ export default function Page() {
 
       <section style={{ maxWidth: 1280, margin: "0 auto", padding: "28px 24px 80px" }}>
         <div style={{ borderRadius: 20, border: "1px solid rgba(255,255,255,.08)", background: "linear-gradient(180deg,#0E1317,#0A0E11)", overflow: "hidden" }}>
-          <div className={`hidden md:grid ${COLS} items-center gap-4`} style={{ padding: "12px 20px", borderBottom: "1px solid rgba(255,255,255,.07)", fontFamily: MONO, fontSize: 10, letterSpacing: ".08em", textTransform: "uppercase", color: "#6E7F88" }}>
+          <div className={`hidden md:grid ${COLS} items-center gap-4`} style={{ padding: "12px 20px", borderBottom: "1px solid rgba(255,255,255,.07)", fontFamily: MONO, fontSize: 10, letterSpacing: ".08em", textTransform: "uppercase", color: "#8E9CA5" }}>
             <span>#</span>
             <span>Casino</span>
             <span>Races & raffles</span>
@@ -69,7 +69,7 @@ export default function Page() {
             const href = `/casinos/${slug}`;
             return (
               <div key={slug} className={`grid grid-cols-2 ${COLS} items-center gap-x-4 gap-y-3 transition-colors hover:bg-white/[0.025]`} style={{ padding: "16px 20px", borderTop: i ? "1px solid rgba(255,255,255,.05)" : undefined, background: o.featured ? `linear-gradient(90deg, ${brand}12, transparent 60%)` : undefined }}>
-                <span className="hidden md:block" style={{ fontFamily: MONO, fontSize: 12, color: i < 3 ? "#D6B65C" : "#4E5A62" }}>{String(i + 1).padStart(2, "0")}</span>
+                <span className="hidden md:block" style={{ fontFamily: MONO, fontSize: 12, color: i < 3 ? "#D6B65C" : "#77858E" }}>{String(i + 1).padStart(2, "0")}</span>
                 <Link href={href} className="col-span-2 md:col-span-1" style={{ display: "flex", alignItems: "center", gap: 12, minWidth: 0 }}>
                   <span style={{ width: 36, height: 36, flex: "none", borderRadius: 10, overflow: "hidden" }}>
                     <BrandMark slug={slug} mono={o.mono} tint={brand} radius={10} fontSize={11} />

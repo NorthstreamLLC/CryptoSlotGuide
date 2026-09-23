@@ -87,7 +87,7 @@ export function Footer() {
             <span>CryptoSlot</span>
             <span style={{ color: "#00C2CC" }}>Guide</span>
           </div>
-          <p style={{ margin: "0 0 18px", fontSize: 13, lineHeight: 1.6, color: "#6E7F88", maxWidth: "34ch" }}>
+          <p style={{ margin: "0 0 18px", fontSize: 13, lineHeight: 1.6, color: "#8E9CA5", maxWidth: "34ch" }}>
             Independent crypto gambling and Web3 product reviews. We field-test what we can fund by hand and disclose
             exactly which reviews that covers — see{" "}
             <Link href="/how-we-rate" style={{ color: "#8DA0AA" }}>how we source information</Link>.
@@ -119,7 +119,7 @@ export function Footer() {
                 fontSize: 10.5,
                 letterSpacing: ".08em",
                 textTransform: "uppercase",
-                color: "#4E5A62",
+                color: "#77858E",
                 marginBottom: 14,
               }}
             >
@@ -149,7 +149,7 @@ export function Footer() {
           borderTop: "1px solid rgba(255,255,255,.06)",
         }}
       >
-        <p style={{ margin: "0 0 14px", fontSize: 12, lineHeight: 1.7, color: "#5C6A72", maxWidth: "96ch", textWrap: "pretty" }}>
+        <p style={{ margin: "0 0 14px", fontSize: 12, lineHeight: 1.7, color: "#83919A", maxWidth: "96ch", textWrap: "pretty" }}>
           Gambling involves risk and is not a way to make money. Never stake funds you cannot afford to lose. If
           gambling stops feeling like entertainment, use the deposit limits, cool-off and self-exclusion tools every
           operator on this site is required to offer, or contact BeGambleAware on 0808 8020 133. Availability of the
@@ -164,7 +164,7 @@ export function Footer() {
             flexWrap: "wrap",
             fontFamily: "var(--font-jetbrains-mono), monospace",
             fontSize: 11,
-            color: "#4E5A62",
+            color: "#77858E",
           }}
         >
           <span>© 2026 CryptoSlotGuide.com · Some links are affiliate links.</span>
@@ -175,7 +175,7 @@ export function Footer() {
               { label: "Editorial standards", href: "/editorial-standards" },
               { label: "Contact", href: "/contact" },
             ].map((l) => (
-              <Link key={l.href} href={l.href} className="hover:!text-white" style={{ color: "#4E5A62" }}>
+              <Link key={l.href} href={l.href} className="hover:!text-white" style={{ color: "#77858E" }}>
                 {l.label}
               </Link>
             ))}

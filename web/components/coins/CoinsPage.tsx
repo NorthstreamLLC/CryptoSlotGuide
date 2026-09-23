@@ -57,7 +57,7 @@ export function CoinsPage() {
               Which coins the casinos on our index accept, and how each network confirms and charges for a transfer, from the network's own documentation. Casinos set their own confirmation requirements on top, so check the cashier before you send.
             </p>
           </div>
-          <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#4E5A62", whiteSpace: "nowrap" }}>
+          <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#77858E", whiteSpace: "nowrap" }}>
             {coinDefs.length} coins · {siteCounts.casinos} operators
           </div>
         </div>
@@ -65,7 +65,7 @@ export function CoinsPage() {
         <div role="table" style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 14, overflowX: "auto", background: "#0C1013", boxShadow: "0 12px 40px rgba(0,0,0,.35)" }}>
           <div role="row" style={{ display: "grid", minWidth: 1120, gridTemplateColumns: "minmax(240px,1.2fr) 110px 150px 190px minmax(200px,1fr) 168px", background: "#101519", borderBottom: "1px solid rgba(255,255,255,.07)" }}>
             {["Coin", "Accepted at", "Block time", "Finality", "How fees work", ""].map((h) => (
-              <div key={h} role="columnheader" style={{ padding: "14px 12px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".07em", textTransform: "uppercase", color: "#5C6A72" }}>{h}</div>
+              <div key={h} role="columnheader" style={{ padding: "14px 12px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".07em", textTransform: "uppercase", color: "#83919A" }}>{h}</div>
             ))}
           </div>
           {rows.map((c) => {
@@ -77,12 +77,12 @@ export function CoinsPage() {
                   <span style={{ width: 34, height: 34, flex: "none", borderRadius: "50%", background: c.tint, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 8.5, fontWeight: 700, color: "#0A0D0F" }}>{c.ticker}</span>
                   <div style={{ minWidth: 0 }}>
                     <button type="button" onClick={() => setSel(c.ticker)} style={{ display: "block", fontSize: 14.5, fontWeight: 600, color: "#E8EDF0", textAlign: "left" }}>{c.name}</button>
-                    <div style={{ fontSize: 12, color: "#6E7F88", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", marginTop: 2 }}>{c.note}</div>
+                    <div style={{ fontSize: 12, color: "#8E9CA5", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", marginTop: 2 }}>{c.note}</div>
                   </div>
                 </div>
                 <div role="cell" style={{ padding: "14px 12px" }}>
                   <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 15, fontWeight: 500, color: "#fff" }}>{opsForCoin.length}</div>
-                  <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#5C6A72", marginTop: 2 }}>{pct}% of index</div>
+                  <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#83919A", marginTop: 2 }}>{pct}% of index</div>
                 </div>
                 <div role="cell" style={{ padding: "14px 12px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12.5, color: "#B7C4CB" }}>{c.blockTime}</div>
                 <div role="cell" style={{ padding: "14px 12px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, color: "#B7C4CB" }}>{c.finality}</div>
@@ -119,7 +119,7 @@ export function CoinsPage() {
                   </div>
                   <div style={{ minWidth: 0 }}>
                     <div style={{ fontSize: 14.5, fontWeight: 600, color: "#E8EDF0", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{o.name}</div>
-                    <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#5C6A72", marginTop: 2 }}>{o.licence} licence</div>
+                    <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#83919A", marginTop: 2 }}>{o.licence} licence</div>
                   </div>
                 </div>
                 <div style={{ display: "flex", gap: 7, flexWrap: "wrap", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".04em" }}>
@@ -166,7 +166,7 @@ function CoinFacts({ ticker }: { ticker: string }) {
     <div style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 13, overflow: "hidden", background: "#0C1013", marginBottom: 34 }}>
       {c.facts.map((f) => (
         <div key={f.label} style={{ display: "grid", gridTemplateColumns: "190px 1fr", borderBottom: "1px solid rgba(255,255,255,.05)" }}>
-          <div style={{ padding: "14px 18px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".05em", textTransform: "uppercase", color: "#5C6A72" }}>{f.label}</div>
+          <div style={{ padding: "14px 18px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".05em", textTransform: "uppercase", color: "#83919A" }}>{f.label}</div>
           <div style={{ padding: "14px 18px", fontSize: 13.5, lineHeight: 1.55, color: "#B7C4CB" }}>
             {f.text}{" "}
             <a href={f.url} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#5FE3E8", whiteSpace: "nowrap" }}>

@@ -79,8 +79,8 @@ function Tile({ label, value, f, accent }: { label: string; value: string | null
   const known = !!f;
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 8, padding: "18px 18px 16px", borderRadius: 14, background: "#0E1316", border: "1px solid rgba(255,255,255,.07)", minWidth: 0 }}>
-      <div style={{ fontFamily: MONO, fontSize: 10, letterSpacing: ".08em", textTransform: "uppercase", color: "#6E7F88" }}>{label}</div>
-      <div style={{ fontSize: 24, fontWeight: 800, letterSpacing: "-.02em", lineHeight: 1.1, color: known ? accent ?? "#fff" : "#4E5A62" }}>{known ? value ?? "See terms" : "Not stated"}</div>
+      <div style={{ fontFamily: MONO, fontSize: 10, letterSpacing: ".08em", textTransform: "uppercase", color: "#8E9CA5" }}>{label}</div>
+      <div style={{ fontSize: 24, fontWeight: 800, letterSpacing: "-.02em", lineHeight: 1.1, color: known ? accent ?? "#fff" : "#77858E" }}>{known ? value ?? "See terms" : "Not stated"}</div>
       {f?.value && (
         <div style={{ fontSize: 12.5, lineHeight: 1.5, color: "#8DA0AA", textWrap: "pretty" }}>
           <More f={f} max={90} />
@@ -151,7 +151,7 @@ function Rows({ rows }: { rows: { k: string; f: Fact }[] }) {
     <div style={{ display: "flex", flexDirection: "column" }}>
       {shown.map(({ k, f }) => (
         <div key={k} style={{ display: "grid", gridTemplateColumns: "minmax(110px, 160px) 1fr", gap: 14, padding: "12px 0", borderTop: "1px solid rgba(255,255,255,.06)" }}>
-          <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".06em", textTransform: "uppercase", color: "#6E7F88", paddingTop: 2 }}>{k}</div>
+          <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".06em", textTransform: "uppercase", color: "#8E9CA5", paddingTop: 2 }}>{k}</div>
           <div style={{ fontSize: 13.5, lineHeight: 1.55, color: "#C6D1D7" }}>{f!.chips ? <><Chips items={f!.chips} /> <Source f={f} /></> : <More f={f} />}</div>
         </div>
       ))}
@@ -256,8 +256,8 @@ export function CasinoReport({ e }: { e: EntityView }) {
       {/* HERO */}
       <section style={{ position: "relative", overflow: "hidden", borderBottom: "1px solid rgba(255,255,255,.07)", background: `radial-gradient(80% 120% at 85% 0%, ${brand}26, transparent 55%), radial-gradient(60% 80% at 0% 100%, rgba(0,194,204,.08), transparent 60%), #0A0D10` }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "24px 24px 44px" }}>
-          <div style={{ fontFamily: MONO, fontSize: 11, color: "#5C6A72", marginBottom: 28 }}>
-            <Link href="/" style={{ color: "#5C6A72" }}>Home</Link> / <Link href="/crypto-casinos" style={{ color: "#5C6A72" }}>Crypto casinos</Link> / <span style={{ color: "#A8B6BE" }}>{o.name}</span>
+          <div style={{ fontFamily: MONO, fontSize: 11, color: "#83919A", marginBottom: 28 }}>
+            <Link href="/" style={{ color: "#83919A" }}>Home</Link> / <Link href="/crypto-casinos" style={{ color: "#83919A" }}>Crypto casinos</Link> / <span style={{ color: "#A8B6BE" }}>{o.name}</span>
           </div>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 40, alignItems: "center" }}>
@@ -268,7 +268,7 @@ export function CasinoReport({ e }: { e: EntityView }) {
                 </div>
                 <div>
                   <div style={{ fontSize: 20, fontWeight: 800, letterSpacing: "-.02em", color: "#fff" }}>{o.name}</div>
-                  <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".06em", color: "#6E7F88" }}>
+                  <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".06em", color: "#8E9CA5" }}>
                     {licence ? `${o.licence.toUpperCase()} LICENCE` : "CRYPTO CASINO"}{o.featured ? " · FEATURED" : ""}
                   </div>
                   {partnerFor(o.slug) && (
@@ -323,14 +323,14 @@ export function CasinoReport({ e }: { e: EntityView }) {
                   See the terms
                 </a>
               </div>
-              <div style={{ marginTop: 14, fontFamily: MONO, fontSize: 10.5, color: "#5C6A72" }}>
+              <div style={{ marginTop: 14, fontFamily: MONO, fontSize: 10.5, color: "#83919A" }}>
                 18+ · T&amp;Cs apply{o.affiliate ? " · Affiliate link" : ""} · Facts from {host(offer?.sourceUrl ?? sheet?.groups[0]?.facts[0]?.sourceUrl) || `${o.name}'s own pages`}
               </div>
             </div>
 
             {/* Key numbers */}
             <div style={{ padding: 22, borderRadius: 22, background: "rgba(12,16,19,.85)", border: `1px solid ${brand}33`, boxShadow: "0 30px 80px rgba(0,0,0,.45)", backdropFilter: "blur(6px)" }}>
-              <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".1em", textTransform: "uppercase", color: "#6E7F88", marginBottom: 14 }}>Key numbers</div>
+              <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".1em", textTransform: "uppercase", color: "#8E9CA5", marginBottom: 14 }}>Key numbers</div>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }} data-keep-grid>
                 {[
                   ["Withdrawals", pv.label !== "Not stated" ? pv.label : null, wdTime],
@@ -339,20 +339,20 @@ export function CasinoReport({ e }: { e: EntityView }) {
                   ["Min withdrawal", shortAmount(minWd), minWd],
                 ].map(([label, value, fact]) => (
                   <div key={label as string} style={{ padding: "16px 16px 14px", borderRadius: 14, background: "#0F1519", border: "1px solid rgba(255,255,255,.06)" }}>
-                    <div style={{ fontFamily: MONO, fontSize: 9.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#6E7F88", marginBottom: 6 }}>{label as string}</div>
-                    <div style={{ fontSize: 22, fontWeight: 800, letterSpacing: "-.02em", color: fact ? "#fff" : "#4E5A62" }}>{fact ? (value as string) ?? "See terms" : "Not stated"}</div>
+                    <div style={{ fontFamily: MONO, fontSize: 9.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#8E9CA5", marginBottom: 6 }}>{label as string}</div>
+                    <div style={{ fontSize: 22, fontWeight: 800, letterSpacing: "-.02em", color: fact ? "#fff" : "#77858E" }}>{fact ? (value as string) ?? "See terms" : "Not stated"}</div>
                   </div>
                 ))}
               </div>
               {coinList.length > 0 && (
                 <div style={{ marginTop: 16 }}>
-                  <div style={{ fontFamily: MONO, fontSize: 9.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#6E7F88", marginBottom: 8 }}>{coinList.length} coins</div>
+                  <div style={{ fontFamily: MONO, fontSize: 9.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#8E9CA5", marginBottom: 8 }}>{coinList.length} coins</div>
                   <CoinList tickers={coinList} />
                 </div>
               )}
               <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 16, paddingTop: 14, borderTop: "1px solid rgba(255,255,255,.07)", fontSize: 12.5, color: "#A8B6BE" }}>
                 <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}><Icon name="shield" size={15} color="#8DA0AA" /> {licence ? `${o.licence} licence` : "Licence not stated"}</span>
-                <span style={{ color: "#3A454C" }}>·</span>
+                <span style={{ color: "#77858E" }}>·</span>
                 <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}><Icon name="id" size={15} color="#8DA0AA" /> KYC: {kyc ? ({ none: "not required", tiered: "at a threshold", required: "before withdrawal" } as const)[o.kyc] : "not stated"}</span>
               </div>
             </div>
@@ -408,7 +408,7 @@ export function CasinoReport({ e }: { e: EntityView }) {
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 12, marginTop: 16 }}>
               {bonuses.map((b) => (
                 <div key={b.title} style={{ padding: 20, borderRadius: 16, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
-                  <div style={{ fontFamily: MONO, fontSize: 10, letterSpacing: ".07em", textTransform: "uppercase", color: "#6E7F88", marginBottom: 6 }}>{b.category}</div>
+                  <div style={{ fontFamily: MONO, fontSize: 10, letterSpacing: ".07em", textTransform: "uppercase", color: "#8E9CA5", marginBottom: 6 }}>{b.category}</div>
                   <div style={{ fontSize: 15, fontWeight: 700, color: "#fff", marginBottom: 8 }}>{b.title}</div>
                   <div style={{ fontSize: 28, fontWeight: 800, letterSpacing: "-.02em", color: brand, marginBottom: 6 }}>{b.headline}</div>
                   <div style={{ fontSize: 12.5, lineHeight: 1.5, color: "#8DA0AA", marginBottom: 10 }}>{b.subCopy}</div>

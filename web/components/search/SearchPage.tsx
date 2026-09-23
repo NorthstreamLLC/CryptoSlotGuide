@@ -84,7 +84,7 @@ export function SearchPage({ initialQuery = "" }: { initialQuery?: string }) {
             Search the index
           </h1>
           <div style={{ display: "flex", alignItems: "center", gap: 12, padding: "8px 8px 8px 18px", borderRadius: 11, background: "#0E1215", border: "1px solid rgba(255,255,255,.12)", boxShadow: "0 14px 40px rgba(0,0,0,.4)" }}>
-            <span style={{ color: "#3D4A52", fontFamily: "var(--font-jetbrains-mono), monospace" }}>⌕</span>
+            <span style={{ color: "#77858E", fontFamily: "var(--font-jetbrains-mono), monospace" }}>⌕</span>
             <input
               value={q}
               onChange={(e) => setQ(e.target.value)}
@@ -93,7 +93,7 @@ export function SearchPage({ initialQuery = "" }: { initialQuery?: string }) {
             />
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", marginTop: 16 }}>
-            <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".06em", textTransform: "uppercase", color: "#4E5A62" }}>Try</span>
+            <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".06em", textTransform: "uppercase", color: "#77858E" }}>Try</span>
             {suggestions.map((s) => (
               <button
                 key={s}
@@ -111,7 +111,7 @@ export function SearchPage({ initialQuery = "" }: { initialQuery?: string }) {
       <section style={{ maxWidth: 1080, margin: "0 auto", padding: "36px 40px 84px" }}>
         {groups.length > 0 ? (
           <>
-            <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".06em", textTransform: "uppercase", color: "#5C6A72", marginBottom: 20 }}>
+            <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".06em", textTransform: "uppercase", color: "#83919A", marginBottom: 20 }}>
               {total} result{total === 1 ? "" : "s"} {query && `for "${q}"`}
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: 28 }}>

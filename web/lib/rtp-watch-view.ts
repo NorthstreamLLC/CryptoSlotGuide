@@ -75,7 +75,7 @@ export function getWatchRows(): WatchRow[] {
       bestLabel: rtpLabel(s),
       cut: worst > 0,
       cleanCount: `${cuts.filter((c, i) => readings[i] && c === 0).length}/${checkedCount}`,
-      worstColor: worst ? "#DA9877" : checkedCount ? "#5FE3E8" : "#4E5A62",
+      worstColor: worst ? "#DA9877" : checkedCount ? "#5FE3E8" : "#77858E",
       cells: readings.map((r, i) => ({
         label: r ? r.rtp.toFixed(2) : "—",
         color: r ? (cuts[i] ? "#DA9877" : "#E8EDF0") : "#39454C",

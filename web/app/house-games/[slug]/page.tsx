@@ -37,8 +37,8 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "House games", path: "/house-games" }, { name: h.name, path: `/house-games/${slug}` }])} />
       <section style={{ borderBottom: "1px solid rgba(255,255,255,.07)", background: "#0B0F12" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "26px 40px 44px" }}>
-          <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#5C6A72", marginBottom: 26 }}>
-            <Link href="/" style={{ color: "#5C6A72" }}>Index</Link> / <Link href="/house-games" style={{ color: "#5C6A72" }}>House games</Link> / <span style={{ color: "#A8B6BE" }}>{h.name}</span>
+          <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#83919A", marginBottom: 26 }}>
+            <Link href="/" style={{ color: "#83919A" }}>Index</Link> / <Link href="/house-games" style={{ color: "#83919A" }}>House games</Link> / <span style={{ color: "#A8B6BE" }}>{h.name}</span>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "1.25fr .75fr", gap: 56, alignItems: "start" }}>
             <div>
@@ -52,7 +52,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
               <p style={{ margin: "0 0 24px", maxWidth: "62ch", fontSize: 16.5, lineHeight: 1.65, color: "#93A3AC", textWrap: "pretty" }}>
                 {h.note} Each casino publishes the edge for its own version, and results are verifiable, so what's left to decide is where you play and how you size and stop.
               </p>
-              <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11.5, color: "#5C6A72" }}>Edges as each casino publishes them · {h.edges.length} casinos</div>
+              <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11.5, color: "#83919A" }}>Edges as each casino publishes them · {h.edges.length} casinos</div>
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 1, borderRadius: 14, overflow: "hidden", border: "1px solid rgba(255,255,255,.09)", background: "rgba(255,255,255,.07)" }}>
               <StatTile label="Published edges" value={h.edgeRange} color="#5FE3E8" />
@@ -149,7 +149,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 function StatTile({ label, value, color, small }: { label: string; value: string; color?: string; small?: boolean }) {
   return (
     <div style={{ padding: 20, background: "#12181C" }}>
-      <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".06em", textTransform: "uppercase", color: "#5C6A72", marginBottom: 7 }}>{label}</div>
+      <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".06em", textTransform: "uppercase", color: "#83919A", marginBottom: 7 }}>{label}</div>
       <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: small ? 18 : 24, color: color ?? "#fff" }}>{value}</div>
     </div>
   );

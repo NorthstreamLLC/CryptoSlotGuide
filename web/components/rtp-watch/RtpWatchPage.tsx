@@ -44,7 +44,7 @@ export function RtpWatchPage() {
               {stats.map((s) => (
                 <div key={s.label} style={{ padding: "16px 18px", background: "#0C1013" }}>
                   <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 22, fontWeight: 500, color: "#fff", letterSpacing: "-.02em", marginBottom: 4 }}>{s.value}</div>
-                  <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".06em", textTransform: "uppercase", color: "#5C6A72" }}>{s.label}</div>
+                  <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".06em", textTransform: "uppercase", color: "#83919A" }}>{s.label}</div>
                 </div>
               ))}
             </div>
@@ -68,7 +68,7 @@ export function RtpWatchPage() {
           >
             Cut somewhere
           </button>
-          <span style={{ marginLeft: "auto", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#4E5A62" }}>Filled cells read in-client · orange = reduced build · — = no reading</span>
+          <span style={{ marginLeft: "auto", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#77858E" }}>Filled cells read in-client · orange = reduced build · — = no reading</span>
         </div>
 
         <div role="table" style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 14, overflowX: "auto", background: "#0C1013", boxShadow: "0 12px 40px rgba(0,0,0,.35)" }}>
@@ -94,7 +94,7 @@ export function RtpWatchPage() {
                 <Link href={`/slots/${r.slug}`} className="hover:!text-accent" style={{ display: "block", fontSize: 14, fontWeight: 600, color: "#E8EDF0", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
                   {r.name}
                 </Link>
-                <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#5C6A72", marginTop: 3 }}>
+                <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#83919A", marginTop: 3 }}>
                   {r.provider} · seen {r.seen}
                 </div>
               </div>
@@ -147,21 +147,21 @@ export function RtpWatchPage() {
           })}
           <div role="row" style={{ display: "grid", minWidth: 1180, gridTemplateColumns: `minmax(240px,1.4fr) 96px repeat(${houseCols.length},1fr) 92px`, alignItems: "center", background: "#101519", borderTop: "1px solid rgba(255,255,255,.1)" }}>
             <div role="cell" style={{ padding: "15px 18px", fontSize: 14, fontWeight: 800, color: "#fff" }}>House edge</div>
-            <div role="cell" style={{ padding: "15px 10px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#5C6A72" }}>avg. of these 8 games</div>
+            <div role="cell" style={{ padding: "15px 10px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#83919A" }}>avg. of these 8 games</div>
             {houseCols.map((o, i) => {
               const known = houseRows.map((h) => h.cells[i].edge).filter((x): x is number => x !== null);
               const avg = known.length ? known.reduce((a, b) => a + b, 0) / known.length : null;
               return (
                 <div key={o.slug} role="cell" style={{ padding: "15px 10px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 13.5, fontWeight: 800, color: avg === null ? "#39454C" : avg < 1 ? "#5FE3E8" : avg >= 2 ? "#DA9877" : "#fff" }}>
                   {avg === null ? "—" : `${avg.toFixed(2)}%`}
-                  <div style={{ fontSize: 9.5, fontWeight: 400, color: "#5C6A72", marginTop: 2 }}>{known.length} games</div>
+                  <div style={{ fontSize: 9.5, fontWeight: 400, color: "#83919A", marginTop: 2 }}>{known.length} games</div>
                 </div>
               );
             })}
             <span />
           </div>
         </div>
-        <div style={{ margin: "10px 0 0", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#4E5A62" }}>Teal = best RTP on the board · orange = 97% or lower · — = no published figure found · house edge = simple average of 100% minus RTP across the 8 games above that the casino publishes a figure for, using its best stated figure; not its full catalogue</div>
+        <div style={{ margin: "10px 0 0", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#77858E" }}>Teal = best RTP on the board · orange = 97% or lower · — = no published figure found · house edge = simple average of 100% minus RTP across the 8 games above that the casino publishes a figure for, using its best stated figure; not its full catalogue</div>
 
         <div style={{ display: "grid", gridTemplateColumns: "1.4fr .6fr", gap: 14, marginTop: 24 }}>
           <div style={{ padding: "28px 32px", borderRadius: 14, background: "linear-gradient(150deg,#0E1417,#0A0E10)", border: "1px solid rgba(255,255,255,.07)" }}>
@@ -197,7 +197,7 @@ export function RtpWatchPage() {
 
 function HeadCell({ children, muted = true }: { children: React.ReactNode; muted?: boolean }) {
   return (
-    <div role="columnheader" style={{ padding: "14px 18px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".07em", textTransform: "uppercase", color: muted ? "#5C6A72" : "#8DA0AA" }}>
+    <div role="columnheader" style={{ padding: "14px 18px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".07em", textTransform: "uppercase", color: muted ? "#83919A" : "#8DA0AA" }}>
       {children}
     </div>
   );

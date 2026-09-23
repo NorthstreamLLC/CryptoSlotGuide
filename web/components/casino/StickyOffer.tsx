@@ -43,7 +43,7 @@ export function StickyOffer({ name, href, offer, note, brand }: { name: string; 
     >
       <span style={{ minWidth: 0, flex: 1 }}>
         <span style={{ display: "block", fontSize: 13.5, fontWeight: 800, color: "#fff", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{offer}</span>
-        <span style={{ display: "block", fontFamily: MONO, fontSize: 10, color: "#6E7F88", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+        <span style={{ display: "block", fontFamily: MONO, fontSize: 10, color: "#8E9CA5", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
           {name}
           {note ? ` · ${note}` : ""}
         </span>

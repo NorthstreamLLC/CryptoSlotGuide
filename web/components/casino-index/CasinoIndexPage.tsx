@@ -78,8 +78,8 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
     <main style={{ background: "#07090B", color: "#E8EDF0" }}>
       <section style={{ position: "relative", overflow: "hidden", background: "radial-gradient(120% 100% at 78% 0%, rgba(0,194,204,.09), transparent 58%),#0B0F12", borderBottom: "1px solid rgba(255,255,255,.07)" }}>
         <div style={{ maxWidth: 1400, margin: "0 auto", padding: "26px 40px 72px" }}>
-          <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#5C6A72", marginBottom: 34 }}>
-            <Link href="/" style={{ color: "#5C6A72" }}>Home</Link> / <Link href="/crypto-casinos" style={{ color: "#5C6A72" }}>Casinos</Link> /{" "}
+          <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#83919A", marginBottom: 34 }}>
+            <Link href="/" style={{ color: "#83919A" }}>Home</Link> / <Link href="/crypto-casinos" style={{ color: "#83919A" }}>Casinos</Link> /{" "}
             <span style={{ color: "#A8B6BE" }}>{view.crumb}</span>
           </div>
 
@@ -122,7 +122,7 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
               {btcTop && (
                 <Link href={`/casinos/${btcTop.slug}`} style={{ display: "block", padding: 24, borderRadius: 15, background: "linear-gradient(168deg,#141A1E,#0E1215)", border: "1px solid rgba(255,255,255,.10)", boxShadow: "0 18px 50px rgba(0,0,0,.45)" }}>
                   <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 14, marginBottom: 18 }}>
-                    <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".08em", textTransform: "uppercase", color: "#5C6A72" }}>{btcTopLabel}</span>
+                    <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".08em", textTransform: "uppercase", color: "#83919A" }}>{btcTopLabel}</span>
                     
                   </div>
                   <div style={{ display: "flex", alignItems: "center", gap: 13, marginBottom: 20 }}>
@@ -142,7 +142,7 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
             </div>
           )}
 
-          <div style={{ display: "flex", gap: 32, flexWrap: "wrap", marginTop: 34, paddingTop: 26, borderTop: "1px solid rgba(255,255,255,.07)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, color: "#5C6A72" }}>
+          <div style={{ display: "flex", gap: 32, flexWrap: "wrap", marginTop: 34, paddingTop: 26, borderTop: "1px solid rgba(255,255,255,.07)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, color: "#83919A" }}>
             {stats.map((s) => (
               <span key={s.l}><strong style={{ color: "#DCE5E9", fontWeight: 500 }}>{s.v}</strong> {s.l}</span>
             ))}
@@ -170,7 +170,7 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
                   }}
                 >
                   {btcViews[k].crumb}
-                  <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#5C6A72" }}>{ops.filter(filterFns[k]).length}</span>
+                  <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#83919A" }}>{ops.filter(filterFns[k]).length}</span>
                 </Link>
               );
             })}
@@ -294,7 +294,7 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
 function TopRow({ label, value }: { label: string; value: string }) {
   return (
     <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 12 }}>
-      <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 9.5, letterSpacing: ".07em", textTransform: "uppercase", color: "#4E5A62" }}>{label}</span>
+      <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 9.5, letterSpacing: ".07em", textTransform: "uppercase", color: "#77858E" }}>{label}</span>
       <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12.5, color: "#DCE5E9", textAlign: "right" }}>{value}</span>
     </div>
   );

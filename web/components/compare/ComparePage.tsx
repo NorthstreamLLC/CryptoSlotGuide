@@ -41,7 +41,7 @@ export function ComparePage() {
             Pick up to four operators and we&apos;ll generate the comparison from the same figures every review uses. Winners are marked per row; ties are marked as ties rather than resolved.
           </p>
           <div style={{ display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap", marginBottom: 14 }}>
-            <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".06em", textTransform: "uppercase", color: "#5C6A72" }}>{picked.length} of 4 selected</span>
+            <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".06em", textTransform: "uppercase", color: "#83919A" }}>{picked.length} of 4 selected</span>
             <button
               type="button"
               onClick={() => setPicked(["roobet", "stake"])}
@@ -79,7 +79,7 @@ export function ComparePage() {
           <>
             <div style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 14, overflowX: "auto", background: "#0C1013", boxShadow: "0 12px 40px rgba(0,0,0,.35)" }}>
               <div style={{ display: "flex", minWidth: 760, borderBottom: "1px solid rgba(255,255,255,.07)", background: "#101519" }}>
-                <div style={{ width: 230, flex: "none", padding: "16px 18px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".07em", textTransform: "uppercase", color: "#5C6A72" }}>
+                <div style={{ width: 230, flex: "none", padding: "16px 18px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".07em", textTransform: "uppercase", color: "#83919A" }}>
                   Criterion
                 </div>
                 {cmpOps.map((o) => (
@@ -90,7 +90,7 @@ export function ComparePage() {
                     <Link href={o.hasCustomReview ? "/casinos/roobet" : `/casinos/${o.slug}`} className="hover:!text-accent" style={{ display: "block", fontSize: 14, fontWeight: 700, color: "#fff" }}>
                       {o.name}
                     </Link>
-                    <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#5C6A72", marginTop: 2 }}>{o.licence}</div>
+                    <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#83919A", marginTop: 2 }}>{o.licence}</div>
                   </div>
                 ))}
               </div>
@@ -105,7 +105,7 @@ export function ComparePage() {
                 </div>
               ))}
             </div>
-            <p style={{ margin: "18px 0 0", maxWidth: "88ch", fontSize: 13.5, lineHeight: 1.65, color: "#6E7F88", textWrap: "pretty" }}>
+            <p style={{ margin: "18px 0 0", maxWidth: "88ch", fontSize: 13.5, lineHeight: 1.65, color: "#8E9CA5", textWrap: "pretty" }}>
               Lower is better on withdrawal time, wagering and confirmations; higher is better on coin count. Licence and headline offer are stated without a winner because neither is comparable on a single axis.
             </p>
           </>

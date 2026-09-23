@@ -20,7 +20,7 @@ export function CasinoAccess({ code, name }: { code: string; name: string }) {
         return (
           <div key={g.key}>
             <h2 style={{ margin: "34px 0 6px", fontSize: 24, fontWeight: 800, letterSpacing: "-.02em", color: "#fff" }}>
-              {g.title(name)} <span style={{ fontSize: 16, color: "#6E7F88" }}>({list.length})</span>
+              {g.title(name)} <span style={{ fontSize: 16, color: "#8E9CA5" }}>({list.length})</span>
             </h2>
             <p style={{ margin: "0 0 14px", fontSize: 14, color: "#8DA0AA" }}>{g.sub(name)}</p>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: 8 }}>

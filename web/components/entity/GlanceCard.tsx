@@ -12,13 +12,13 @@ const SOURCE_STYLE: Record<GlanceSource, { label: string; color: string }> = {
   timed: { label: "Field-tested", color: "#00C2CC" },
   "third-party": { label: "Third-party", color: "#9B8FC4" },
   index: { label: "Our index", color: "#8DA0AA" },
-  unchecked: { label: "", color: "#5C6A72" },
+  unchecked: { label: "", color: "#83919A" },
 };
 
 export function GlanceCard({ rows }: { rows: GlanceRow[] }) {
   return (
     <div style={{ marginBottom: 24 }}>
-      <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#5C6A72", marginBottom: 10 }}>
+      <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#83919A", marginBottom: 10 }}>
         At a glance
       </div>
       <dl style={{ margin: 0, display: "flex", flexDirection: "column" }}>

@@ -20,7 +20,7 @@ export function ReportUpdates({ slug, name }: { slug: string; name: string }) {
       <div style={{ padding: "4px 20px", borderRadius: 16, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
         {list.map((e, i) => (
           <div key={i} style={{ display: "grid", gridTemplateColumns: "92px minmax(0,1fr)", gap: 14, padding: "12px 0", borderTop: i ? "1px solid rgba(255,255,255,.06)" : undefined }}>
-            <span style={{ fontFamily: MONO, fontSize: 11, color: "#6E7F88", paddingTop: 2 }}>{e.date}</span>
+            <span style={{ fontFamily: MONO, fontSize: 11, color: "#8E9CA5", paddingTop: 2 }}>{e.date}</span>
             <span style={{ fontSize: 13.5, lineHeight: 1.5, color: "#C6D1D7" }}>
               <strong style={{ color: "#fff" }}>{e.label}</strong> · {brief(e.to)}
             </span>
