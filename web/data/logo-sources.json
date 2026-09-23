@@ -1,5 +1,5 @@
 {
-  "note": "Where each brand mark in public/assets/logos came from. Every file is the brand's own site icon, app icon or press mark, fetched from its own domain — never a logo aggregator or review site. The 12 entries below are the wallets, exchanges and stragglers fetched on 2026-09-22; the 101 casino and studio marks fetched on 2026-09-18 came from each brand's own apple-touch-icon or favicon by the same method, and their exact URLs are re-derivable with `node scripts/fetch-logos.mjs --all`.",
+  "note": "Where each brand mark in public/assets/logos came from. Every file is the brand's own site icon, app icon or press mark, fetched from its own domain — never a logo aggregator or review site. The 12 entries below are the wallets, exchanges and stragglers fetched on 2026-09-22; the 101 casino and studio marks fetched on 2026-09-18 came from each brand's own apple-touch-icon or favicon by the same method, and their exact URLs are re-derivable with `node scripts/fetch-logos.mjs --all`. Marks whose own site publishes nothing larger stay small by necessity — Big Time Gaming (16px), NetEnt, Red Tiger, Evolution, Relax Gaming, Spribe (32px) and Stake (48px) are at their source's ceiling.",
   "logos": {
     "ledger": {
       "url": "https://ledger-wp-website-s3-prd.ledger.com/uploads/2021/11/Ledger_favicon.png",
@@ -62,6 +62,59 @@
       "size": "svg 60x60",
       "fetchedAt": "2026-09-22",
       "note": "The studio's own bolt mark; its site serves only a 32px favicon.ico and a wide wordmark."
+    },
+    "quickspin": {
+      "url": "https://quickspin.com/wp-content/uploads/2021/10/Profile-Picture-2.png",
+      "size": "1000x1000",
+      "fetchedAt": "2026-09-23",
+      "note": "Upgraded from a 16px favicon."
+    },
+    "goated": {
+      "url": "https://www.goated.com/favicon-1024x1024.png",
+      "size": "1024x1024",
+      "fetchedAt": "2026-09-23",
+      "note": "Upgraded from 96px."
+    },
+    "7bit": {
+      "url": "https://7bitcasino.com/icons/ico_512.png",
+      "size": "512x512",
+      "fetchedAt": "2026-09-23",
+      "note": "Upgraded from 48px."
+    },
+    "nolimitcoins": {
+      "url": "https://nolimitcoins.com/nuxt-img/fav-512.png",
+      "size": "512x512",
+      "fetchedAt": "2026-09-23",
+      "note": "Upgraded from 48px."
+    },
+    "sixty6": {
+      "url": "https://sixty6.com/favicon/pwa-512x512.png",
+      "size": "512x512",
+      "fetchedAt": "2026-09-23",
+      "note": "Upgraded from 48px."
+    },
+    "fortune-wins": {
+      "url": "https://fortunewins.com/logo512.png",
+      "size": "512x512",
+      "fetchedAt": "2026-09-23",
+      "note": "Upgraded from 80px."
+    },
+    "modo": {
+      "url": "https://modo.us/logos/modo-logo-512.webp",
+      "size": "512x512",
+      "fetchedAt": "2026-09-23",
+      "note": "Upgraded from 32px; webp."
+    },
+    "realprize": {
+      "url": "https://realprize.com/img/120/icons/RP_App_Icon_256x256.webp",
+      "size": "256x256",
+      "fetchedAt": "2026-09-23",
+      "note": "Upgraded from 48px; webp."
+    },
+    "chumba-casino": {
+      "url": "https://chumbacasino.com/apple-touch-icon.png",
+      "size": "270x270",
+      "fetchedAt": "2026-09-23"
     }
   }
 }

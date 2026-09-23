@@ -8,12 +8,22 @@
  *
  * Run from web/:
  *   node scripts/fetch-logos.mjs            # only slugs with no file yet
- *   node scripts/fetch-logos.mjs --all      # re-fetch everything
+ *   node scripts/fetch-logos.mjs --all      # re-check everything, keeping the better file
+ *   node scripts/fetch-logos.mjs --all --force   # take the site's current icon regardless of size
  *   node scripts/fetch-logos.mjs stake kraken
  *
  * Sites behind a bot wall (Bybit) or serving only a wordmark (Nolimit City,
  * Rabby) are listed in EXACT below, pointing at the one asset on their own
  * site that actually works; everything else is discovered from the page.
+ *
+ * Limitation worth knowing before you trust a run: this uses plain fetch, and a
+ * good number of operator sites answer that with a bot wall — they report NONE
+ * here even though their icon is fine in a real browser. NONE never overwrites
+ * anything, so a throttled run is safe, just unproductive. For those, drive a
+ * headless browser instead: load the page, read <link rel=icon> plus the
+ * manifest icons, measure each with an Image, and take the largest square.
+ * Casinos with no url in ops.json (7bit, goated, degencity, housebets) aren't
+ * reachable from here at all and need their domain added to DOMAINS first.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -21,8 +31,15 @@ import path from "node:path";
 const OUT = path.join("public", "assets", "logos");
 const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36";
 
-/** Slugs whose domain isn't in the data files, or whose own site needs a specific asset. */
+/**
+ * Slugs whose domain isn't in the data files, or whose own site needs naming outright.
+ * The studio entries matter: provider-licences.json stores the licence page a studio's
+ * licences were read from, and for every studio in the Evolution group that page is on
+ * evolution.com — deriving a domain from it would write Evolution's mark under Big Time
+ * Gaming, NetEnt and Red Tiger. Each studio is pinned to its own site instead.
+ */
 const DOMAINS = {
+  // Wallets and exchanges: no URL field in the row data.
   ledger: "www.ledger.com",
   metamask: "metamask.io",
   phantom: "phantom.com",
@@ -31,6 +48,18 @@ const DOMAINS = {
   okx: "www.okx.com",
   coinbase: "www.coinbase.com",
   kucoin: "www.kucoin.com",
+  // Studios, pinned to their own sites rather than a parent's licence page.
+  evolution: "www.evolution.com",
+  "big-time-gaming": "www.bigtimegaming.com",
+  netent: "www.netent.com",
+  "red-tiger": "www.redtiger.com",
+  quickspin: "www.quickspin.com",
+  octoplay: "www.octoplay.com",
+  "relax-gaming": "www.relax-gaming.com",
+  "hacksaw-gaming": "www.hacksawgaming.com",
+  "booming-games": "www.booming-games.com",
+  "print-studios": "printstudios.com",
+  spribe: "spribe.co",
 };
 
 /** Where a site's own icon has to be named outright. Each was checked by hand. */
@@ -62,6 +91,16 @@ function targets() {
   for (const p of read("providers.json")) if (!out.get(p.slug)) out.set(p.slug, null);
   for (const [slug, dom] of Object.entries(DOMAINS)) out.set(slug, dom);
   for (const slug of Object.keys(EXACT)) if (!out.has(slug)) out.set(slug, null);
+
+  // Two slugs on one host means a derived domain is a parent's site, not the brand's own.
+  // Drop the derived ones rather than write one brand's mark under another's slug.
+  const byHost = new Map();
+  for (const [slug, dom] of out) if (dom) byHost.set(dom, [...(byHost.get(dom) ?? []), slug]);
+  for (const [dom, slugs] of byHost) {
+    if (slugs.length < 2) continue;
+    const owner = slugs.find((s) => DOMAINS[s] === dom) ?? null;
+    for (const s of slugs) if (s !== owner) out.set(s, null);
+  }
   return out;
 }
 
@@ -75,22 +114,47 @@ async function get(url, ms = 15000) {
   }
 }
 
-/** <link rel=icon> candidates, biggest and vector first. */
-function candidates(html, base) {
+/**
+ * Icon candidates from a page, largest first. The manifest matters: several sites
+ * ship a 32px favicon in <head> and their real 512px app icon only in the manifest,
+ * which is how the first pass ended up with 16px marks for brands that publish 1000px ones.
+ */
+async function candidates(html, base) {
   const out = [];
-  for (const m of html.matchAll(/<link\b[^>]*>/gi)) {
+  for (const m of html.matchAll(/<link[^>]*>/gi)) {
     const tag = m[0];
     const rel = (tag.match(/rel=["']([^"']+)/i) ?? [])[1] ?? "";
-    if (!/icon/i.test(rel)) continue;
     const href = (tag.match(/href=["']([^"']+)/i) ?? [])[1];
     if (!href) continue;
+    if (/manifest/i.test(rel)) {
+      try {
+        const j = await (await get(new URL(href, base).href)).json();
+        for (const i of j.icons ?? []) {
+          const w = Number(String(i.sizes ?? "").split("x")[0]) || 0;
+          out.push({ url: new URL(i.src, new URL(href, base).href).href, size: w, vector: /\.svg(\?|$)/i.test(i.src) });
+        }
+      } catch {}
+      continue;
+    }
+    if (!/icon/i.test(rel)) continue;
     const size = Number((tag.match(/sizes=["'](\d+)x/i) ?? [])[1]) || (/apple-touch/i.test(rel) ? 180 : 32);
-    const svg = /\.svg(\?|$)/i.test(href);
     try {
-      out.push({ url: new URL(href, base).href, score: (svg ? 300 : size) + (/apple-touch/i.test(rel) ? 40 : 0) });
+      out.push({ url: new URL(href, base).href, size, vector: /\.svg(\?|$)/i.test(href) });
     } catch {}
   }
-  return out.sort((a, b) => b.score - a.score);
+  // A vector beats any raster; otherwise the biggest declared size wins.
+  return out.sort((a, b) => Number(b.vector) - Number(a.vector) || b.size - a.size);
+}
+
+/** Width of a PNG, or Infinity for an SVG — what a file on disk is worth against a candidate. */
+function currentWorth(slug) {
+  const f = fs.readdirSync(OUT).find((x) => x.replace(/\.[a-z]+$/, "") === slug);
+  if (!f) return { worth: 0, file: null };
+  if (f.endsWith(".svg")) return { worth: Infinity, file: f };
+  const b = fs.readFileSync(path.join(OUT, f));
+  if (f.endsWith(".png") && b.subarray(1, 4).toString() === "PNG") return { worth: b.readUInt32BE(16), file: f };
+  // A format this script can't measure (webp, jpg): only a clearly large candidate should replace it.
+  return { worth: 255, file: f };
 }
 
 /** The largest image inside a .ico, when it is stored as a PNG. */
@@ -116,6 +180,10 @@ function write(slug, ext, buf) {
 }
 
 async function one(slug, domain) {
+  const { worth, file } = currentWorth(slug);
+  const keep = (size) => file && !FORCE && size <= worth;
+  const note = (ext) => (file && !file.endsWith("." + ext) ? `  ⚠ extension changed ${file} → ${slug}.${ext}: update LOGOS in lib/logo.ts` : "");
+
   const exact = EXACT[slug];
   if (exact) {
     const r = await get(exact.url);
@@ -123,22 +191,24 @@ async function one(slug, domain) {
     if (exact.ico) {
       const best = fromIco(buf);
       if (!best) return `${slug}: ico had no PNG`;
+      if (keep(best.size)) return `${slug}: kept ${file} (${worth}px ≥ ${best.size}px)`;
       write(slug, "png", best.data);
-      return `${slug}: png ${best.size}px ${exact.url}`;
+      return `${slug}: png ${best.size}px ${exact.url}${note("png")}`;
     }
     const ext = /\.svg/i.test(exact.url) ? "svg" : "png";
+    if (keep(ext === "svg" ? Infinity : 0)) return `${slug}: kept ${file}`;
     write(slug, ext, buf);
-    return `${slug}: ${ext} ${buf.length}B ${exact.url}`;
+    return `${slug}: ${ext} ${buf.length}B ${exact.url}${note(ext)}`;
   }
-  if (!domain) return `${slug}: no domain known`;
+  if (!domain) return `${slug}: no domain known — add it to DOMAINS`;
 
   const base = `https://${domain}/`;
   let list = [];
   try {
     const r = await get(base);
-    list = candidates(await r.text(), r.url || base);
+    list = await candidates(await r.text(), r.url || base);
   } catch {}
-  list.push({ url: base + "apple-touch-icon.png" }, { url: base + "favicon.png" }, { url: base + "favicon.svg" }, { url: base + "favicon.ico" });
+  for (const u of ["apple-touch-icon.png", "favicon.png", "favicon.svg", "favicon.ico"]) list.push({ url: base + u, size: 0, vector: u.endsWith(".svg") });
 
   for (const c of list) {
     try {
@@ -147,23 +217,32 @@ async function one(slug, domain) {
       if (!r.ok || !/^image\//.test(type)) continue;
       const buf = Buffer.from(await r.arrayBuffer());
       if (buf.length < 300) continue;
+
       if (/icon|\.ico/.test(type)) {
         const best = fromIco(buf);
         if (!best || best.size < 64) continue;
+        if (keep(best.size)) return `${slug}: kept ${file} (${worth}px ≥ ${best.size}px)`;
         write(slug, "png", best.data);
-        return `${slug}: png ${best.size}px ${c.url}`;
+        return `${slug}: png ${best.size}px ${c.url}${note("png")}`;
       }
+
       const ext = type.includes("svg") ? "svg" : type.includes("png") ? "png" : type.includes("webp") ? "webp" : type.includes("jpeg") ? "jpg" : null;
       if (!ext) continue;
+      // Measure a PNG rather than trust the declared size; a vector always wins.
+      const real = ext === "svg" ? Infinity : ext === "png" && buf.subarray(1, 4).toString() === "PNG" ? buf.readUInt32BE(16) : c.size || 0;
+      if (keep(real)) return `${slug}: kept ${file} (${worth}px ≥ ${real === Infinity ? "svg" : real + "px"})`;
       write(slug, ext, buf);
-      return `${slug}: ${ext} ${buf.length}B ${c.url}`;
+      return `${slug}: ${ext} ${real === Infinity ? "vector" : real + "px"} ${c.url}${note(ext)}`;
     } catch {}
   }
   return `${slug}: NONE`;
 }
 
+
 const args = process.argv.slice(2);
 const all = args.includes("--all");
+/** Without this, a re-fetch can only ever improve a mark, never replace it with a smaller one. */
+const FORCE = args.includes("--force");
 const only = args.filter((a) => !a.startsWith("--"));
 
 fs.mkdirSync(OUT, { recursive: true });
