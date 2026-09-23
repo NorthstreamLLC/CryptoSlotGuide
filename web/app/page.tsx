@@ -10,6 +10,25 @@ import { BrandMark } from "@/components/ui/BrandMark";
 import { filterFns } from "@/lib/casino-index";
 import { casinoFacts } from "@/lib/casino-facts";
 import { CasinoCard } from "@/components/casino/CasinoCard";
+import { SITE_URL, SITE_NAME } from "@/lib/seo";
+
+/**
+ * The home page is the one page not built through pageMetadata(), so it was
+ * the only page shipping without a canonical — the page most likely to be
+ * reached as www, with a trailing slash, or on the deployment URL.
+ */
+export const metadata = {
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "CryptoSlotGuide — crypto casino, slot and wallet information",
+    description:
+      "Crypto casinos, sportsbooks, wallets and exchanges reviewed against their own terms, with every fact linked to its source.",
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    type: "website" as const,
+  },
+  twitter: { card: "summary" as const },
+};
 import { CasinoOfferList } from "@/components/casino/CasinoOfferList";
 import { raceFor, raceSlugs } from "@/lib/races";
 
