@@ -84,16 +84,24 @@ async function main() {
   console.log("\nSender identity");
   const from = process.env.SENDGRID_FROM;
   const senders = await api("/verified_senders");
-  const verified = senders.status === 200 ? (senders.body.results ?? []).filter((s) => s.verified).map((s) => String(s.from_email).toLowerCase()) : [];
   const domains = await api("/whitelabel/domains");
+  // A key without Sender Authentication read access gets 403 here. Reporting that
+  // as "no verified sender" would send you hunting the wrong problem, so the two
+  // cases are kept apart: unreadable is not the same as absent.
+  const denied = (r) => r.status === 401 || r.status === 403;
+  const unreadable = denied(senders) || denied(domains);
+  const verified = senders.status === 200 ? (senders.body.results ?? []).filter((s) => s.verified).map((s) => String(s.from_email).toLowerCase()) : [];
   const authed = domains.status === 200 && Array.isArray(domains.body) ? domains.body.filter((d) => d.valid).map((d) => String(d.domain).toLowerCase()) : [];
 
   if (verified.length) ok(`verified single senders: ${verified.join(", ")}`);
   if (authed.length) ok(`authenticated domains: ${authed.join(", ")}`);
-  if (!verified.length && !authed.length) warn("no verified sender and no authenticated domain — no mail can be sent yet");
+  if (unreadable) warn("this key cannot read Sender Authentication, so the sender could not be checked here — confirm it in the dashboard, or give the key read access to Sender Authentication");
+  else if (!verified.length && !authed.length) warn("no verified sender and no authenticated domain — no mail can be sent yet");
 
   if (!from) {
     warn("SENDGRID_FROM not set — no welcome email will be sent");
+  } else if (unreadable) {
+    warn(`SENDGRID_FROM ${from} — not checked (see above)`);
   } else {
     const domainOf = from.split("@")[1]?.toLowerCase() ?? "";
     if (verified.includes(from.toLowerCase())) ok(`SENDGRID_FROM ${from} is a verified sender`);
