@@ -83,7 +83,7 @@ export async function GET(request: Request) {
 
   let jobProbe: unknown;
   if (new URL(request.url).searchParams.get("probe") === "1") {
-    jobProbe = await runProbe(key, listId);
+    jobProbe = await runProbe(key, listId, new URL(request.url).searchParams.get("nofields") !== "1");
   }
 
   // When the id is rejected, say what shape it has and whether the account has
@@ -201,9 +201,12 @@ export async function POST(request: Request) {
  * way to see why a contact vanishes after a 202: the PUT reports acceptance,
  * the job reports the outcome.
  */
-async function runProbe(key: string, listId: string) {
+async function runProbe(key: string, listId: string, withFields = true) {
   const email = "selftest@cryptoslotguide.com";
-  const fields = await consentFields(key, "selftest");
+  // &nofields=1 drops the custom fields, which isolates whether they are what
+  // the job is choking on: a Date field rejecting its value fails the whole
+  // contact, and the PUT still answers 202.
+  const fields = withFields ? await consentFields(key, "selftest") : undefined;
   const put = await fetch(`${API}/marketing/contacts`, {
     method: "PUT",
     headers: { authorization: `Bearer ${key}`, "content-type": "application/json" },
@@ -215,9 +218,10 @@ async function runProbe(key: string, listId: string) {
   const jobId = body.job_id;
   if (!jobId) return { sentCustomFields: fields ?? null, accepted, note: "no job_id returned" };
 
-  // The job is usually done in a second or two; give it a few tries.
-  for (let i = 0; i < 6; i++) {
-    await new Promise((s) => setTimeout(s, 1500));
+  // Jobs routinely take longer than a few seconds, and a half-answer is worse
+  // than a slow one, so poll for up to ~45s.
+  for (let i = 0; i < 22; i++) {
+    await new Promise((s) => setTimeout(s, 2000));
     const r = await fetch(`${API}/marketing/contacts/imports/${jobId}`, { headers: { authorization: `Bearer ${key}` } });
     if (!r.ok) return { sentCustomFields: fields ?? null, accepted, jobStatusLookup: r.status };
     const job = (await r.json()) as { status?: string; results?: Record<string, unknown> };
@@ -234,7 +238,7 @@ async function runProbe(key: string, listId: string) {
       return { sentCustomFields: fields ?? null, accepted, job, errorDetail };
     }
   }
-  return { sentCustomFields: fields ?? null, accepted, note: "job still pending after 9s" };
+  return { sentCustomFields: fields ?? null, accepted, jobId, note: "job still pending after 45s" };
 }
 
 /**
