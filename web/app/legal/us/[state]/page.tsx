@@ -7,6 +7,8 @@ import { US_STATES, stateBy, sweepsAvailableIn, toneOf } from "@/lib/legal";
 import { LegalHero, StatusTile, Sources, Disclaimer, JumpList, MONO } from "@/components/legal/LegalUI";
 import { HelpBox } from "@/components/legal/HelpBox";
 import { NextSteps } from "@/components/layout/NextSteps";
+import { StateMarketBlock } from "@/components/legal/StateMarket";
+import { marketFor } from "@/lib/us-market";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { brandFor } from "@/lib/casino-facts";
 
@@ -29,6 +31,7 @@ export default async function Page({ params }: { params: Promise<{ state: string
   const open = sweeps.filter((x) => x.known && !x.excluded);
   const closed = sweeps.filter((x) => x.excluded);
   const sweepsBanned = toneOf(s.sweepstakes) === "banned";
+  const market = marketFor(s.code);
 
   return (
     <main style={{ background: "#07090B" }}>
@@ -69,6 +72,8 @@ export default async function Page({ params }: { params: Promise<{ state: string
               </div>
             ))}
         </div>
+
+        {market && <StateMarketBlock market={market} stateName={s.name} />}
 
         {sweepsBanned && (
           <div style={{ marginTop: 28, padding: "18px 22px", borderRadius: 16, background: "rgba(196,101,58,.08)", border: "1px solid rgba(196,101,58,.35)", fontSize: 15, lineHeight: 1.6, color: "#E8EDF0" }}>

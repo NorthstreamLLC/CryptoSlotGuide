@@ -1,0 +1,2434 @@
+[
+  {
+    "code": "AK",
+    "why": "34th Legislature (2025-2026) is current. Its GAMBLING subject index lists 8 bills; the two below are the only mobile sports wagering ones, both still in first-house Labor & Commerce. No online casino bill exists.",
+    "sportsbooks": null,
+    "casinos": null,
+    "pending": [
+      {
+        "topic": "online sports betting",
+        "bill": "HB 145",
+        "status": "(H) L&C",
+        "lastAction": "2025-03-21",
+        "sourceUrl": "https://www.akleg.gov/basis/Bill/Detail/34?Root=HB145",
+        "note": "Authorises mobile sports wagering and taxes its revenue. Companion to SB 194."
+      },
+      {
+        "topic": "online sports betting",
+        "bill": "SB 194",
+        "status": "(S) L&C",
+        "lastAction": "2025-05-14",
+        "sourceUrl": "https://www.akleg.gov/basis/Bill/Detail/34?Root=SB194",
+        "note": "Identical companion to HB 145."
+      }
+    ]
+  },
+  {
+    "code": "AL",
+    "why": "2026 Regular Session adjourned sine die 2026-04-09; Alabama bills do not carry over between annual sessions.",
+    "sportsbooks": null,
+    "casinos": null,
+    "pending": [
+      {
+        "topic": "online sports betting",
+        "bill": "SB 257",
+        "status": "Pending Committee Action in House of Origin",
+        "lastAction": "2026-02-03",
+        "sourceUrl": "https://alison.legislature.state.al.us/bill-search?tab=1",
+        "note": "Constitutional amendment authorising a state lottery, in-person casino-style games, and sports wagering conducted in person or through the Internet. The online authorisation covers sports wagering, not iGaming. Never moved past first reading. Bill text: https://alison.legislature.state.al.us/files/pdf/SearchableInstruments/2026RS/SB257-int.pdf"
+      }
+    ]
+  },
+  {
+    "code": "AR",
+    "why": "No operator list published by the Arkansas Racing Commission / DFA Casino Gaming Section. The Commission's Casino Gaming FAQ states only that 'There are three active casino licensees in Arkansas. Oaklawn (Hot Springs), Southland (West Memphis) and Saracen (Pine Bluff)' and directs licence verification to an email request to casino.gaming@dfa.arkansas.gov. No consumer-facing mobile sportsbook brands are named anywhere on the regulator's site: the Racing Commission's board minutes are scanned images with no text layer, and the DFA 'Casino Gaming and Sports Wagering' revenue reports (https://www.dfa.arkansas.gov/wp-content/uploads/CasinoGamingFYE2027_August.pdf) report a single statewide monthly total with no operator breakdown.",
+    "sportsbooks": null,
+    "casinos": null,
+    "pending": [
+      {
+        "topic": "online casino",
+        "bill": "HB 1861",
+        "status": "House -- Recommended for study in the Interim by the Committee on JUDICIARY COMMITTEE- HOUSE",
+        "lastAction": "2025-04-07",
+        "sourceUrl": "https://arkleg.state.ar.us/Bills/Detail?id=hb1861&ddBienniumSession=2025%2F2025R",
+        "note": null
+      },
+      {
+        "topic": "online casino",
+        "bill": "SB 524",
+        "status": "Senate -- Sine Die adjournment",
+        "lastAction": "2025-05-05",
+        "sourceUrl": "https://arkleg.state.ar.us/Bills/Detail?id=sb524&ddBienniumSession=2025%2F2025R",
+        "note": null
+      }
+    ]
+  },
+  {
+    "code": "AZ",
+    "why": "Arizona Dept of Gaming 'Approved Online Event Wagering and Fantasy Sports Operators' table. ADG defines an Event Wagering Operator as covering 'online and/or retail event wagering', so the list does not separate mobile-only from retail. Excluded from the list above: Circa Sports (San Juan Southern Paiute), flagged ** = has not launched in Arizona yet; Golden Nugget (Hualapai Tribe) and Sporttrade (Quechan Indian Tribe), both flagged * = ceased business in Arizona. The page's separate Fantasy Sports column and its Limited Event Wagering (retail OTB) table are excluded. The page carries no published as-of date.",
+    "sportsbooks": {
+      "operators": [
+        {
+          "brand": "Bally Bet",
+          "licenseHolder": "Phoenix Mercury"
+        },
+        {
+          "brand": "Bet365",
+          "licenseHolder": "Ak-Chin Indian Community"
+        },
+        {
+          "brand": "BetMGM",
+          "licenseHolder": "Arizona Cardinals"
+        },
+        {
+          "brand": "Caesars",
+          "licenseHolder": "Arizona Diamondbacks"
+        },
+        {
+          "brand": "Desert Diamond Mobile LLC",
+          "licenseHolder": "Tohono O'odham Nation"
+        },
+        {
+          "brand": "DraftKings",
+          "licenseHolder": "TPC Scottsdale"
+        },
+        {
+          "brand": "Fanatics",
+          "licenseHolder": "Tonto Apache Tribe"
+        },
+        {
+          "brand": "FanDuel",
+          "licenseHolder": "Phoenix Suns"
+        },
+        {
+          "brand": "Hard Rock Digital",
+          "licenseHolder": "Navajo Nation"
+        },
+        {
+          "brand": "PENN/The Score Bet",
+          "licenseHolder": "Phoenix Raceway"
+        },
+        {
+          "brand": "Plannatech/betcris",
+          "licenseHolder": "San Carlos Apache Tribe"
+        },
+        {
+          "brand": "RSI/BetRivers",
+          "licenseHolder": "Arizona Rattlers"
+        }
+      ],
+      "sourceUrl": "https://gaming.az.gov/ewfs/approved-operators-retail-locations",
+      "asOf": "2026-09-24",
+      "note": "Arizona Dept of Gaming 'Approved Online Event Wagering and Fantasy Sports Operators' table. ADG defines an Event Wagering Operator as covering 'online and/or retail event wagering', so the list does not separate mobile-only from retail. Excluded from the list above: Circa Sports (San Juan Southern Paiute), flagged ** = has not launched in Arizona yet; Golden Nugget (Hualapai Tribe) and Sporttrade (Quechan Indian Tribe), both flagged * = ceased business in Arizona. The page's separate Fantasy Sports column and its Limited Event Wagering (retail OTB) table are excluded. The page carries no published as-of date."
+    },
+    "casinos": null,
+    "pending": []
+  },
+  {
+    "code": "CA",
+    "why": "no legal online sports betting",
+    "sportsbooks": null,
+    "casinos": null,
+    "pending": []
+  },
+  {
+    "code": "CO",
+    "why": "Colorado Division of Gaming 'Licensed Sports Books and Operators' page, which links to the Division's live workbook at https://docs.google.com/spreadsheets/d/10U_66tIi87Et38MplUEUTS39EvnEghVzP3gZd2tDAXI/edit - the 'ONLINE OPERATORS' tab, headed 'Online Sports Betting Operators Currently Operating in Colorado', is the source of the rows above and its second column is headed 'Casino/Master License'. The workbook's separate 'RETAIL OPERATORS' tab is excluded. Neither the page nor the workbook carries a published as-of date.",
+    "sportsbooks": {
+      "operators": [
+        {
+          "brand": "Bally Bet",
+          "licenseHolder": "Bally's Black Hawk East Casino"
+        },
+        {
+          "brand": "Bet Monarch",
+          "licenseHolder": "Monarch Casino Blackhawk"
+        },
+        {
+          "brand": "Bet365 (Hillside (Colorado) LLC)",
+          "licenseHolder": "Century Casinos"
+        },
+        {
+          "brand": "BETMGM (Roar Digital)",
+          "licenseHolder": "Midnight Rose Hotel and Casino"
+        },
+        {
+          "brand": "BETRIVERS (Rush Street Interactive)",
+          "licenseHolder": "J.P. McGill's Hotel and Casino"
+        },
+        {
+          "brand": "Caesars (William Hill)",
+          "licenseHolder": "Horseshoe Black Hawk Casino"
+        },
+        {
+          "brand": "Circa Sports",
+          "licenseHolder": "Red Dolly Casino"
+        },
+        {
+          "brand": "DraftKings",
+          "licenseHolder": "Bally's Black Hawk North Casino"
+        },
+        {
+          "brand": "theScore Bet (Penn Interactive)",
+          "licenseHolder": "Ameristar Casino Black Hawk"
+        },
+        {
+          "brand": "FanDuel",
+          "licenseHolder": "Bally's Black Hawk West Casino"
+        },
+        {
+          "brand": "Fanatics",
+          "licenseHolder": "Double Eagle Hotel & Casino"
+        },
+        {
+          "brand": "Hard Rock Bet",
+          "licenseHolder": "Colorado Grande Casino"
+        },
+        {
+          "brand": "Sporttrade Colorado, LLC",
+          "licenseHolder": "Easy Street Casino"
+        }
+      ],
+      "sourceUrl": "https://sbg.colorado.gov/licensed-sports-books-and-operators",
+      "asOf": "2026-09-24",
+      "note": "Colorado Division of Gaming 'Licensed Sports Books and Operators' page, which links to the Division's live workbook at https://docs.google.com/spreadsheets/d/10U_66tIi87Et38MplUEUTS39EvnEghVzP3gZd2tDAXI/edit - the 'ONLINE OPERATORS' tab, headed 'Online Sports Betting Operators Currently Operating in Colorado', is the source of the rows above and its second column is headed 'Casino/Master License'. The workbook's separate 'RETAIL OPERATORS' tab is excluded. Neither the page nor the workbook carries a published as-of date."
+    },
+    "casinos": null,
+    "pending": []
+  },
+  {
+    "code": "CT",
+    "why": "Connecticut has only three master wagering licensees, so the operator list is short and stable. The DCP consumer alert of 27 January 2025 names the three authorised online platforms and their affiliations verbatim. DCP's own knowledge-base article 'Legal websites and apps for gaming in CT' (https://portal.ct.gov/gaming/knowledge-base/articles/websites-and-apps) says the same and adds that DraftKings and FanDuel are also authorised for online casino gaming through the Mashantucket Pequot and Mohegan tribes respectively. DCP publishes no standalone licensee register page and its revenue/statistics page does not break results out by operator.",
+    "sportsbooks": {
+      "operators": [
+        {
+          "brand": "DraftKings",
+          "licenseHolder": "Foxwoods Casino (Mashantucket Pequot Tribal Nation)"
+        },
+        {
+          "brand": "FanDuel",
+          "licenseHolder": "Mohegan Sun (Mohegan Tribe)"
+        },
+        {
+          "brand": "Fanatics",
+          "licenseHolder": "Connecticut Lottery Corporation"
+        }
+      ],
+      "sourceUrl": "https://portal.ct.gov/dcp/news-releases-from-the-department-of-consumer-protection/2025-news-releases/sports-wagering-is-only-allowed-at-licensed-establishments-online-platforms",
+      "asOf": "2026-09-24",
+      "note": "Connecticut has only three master wagering licensees, so the operator list is short and stable. The DCP consumer alert of 27 January 2025 names the three authorised online platforms and their affiliations verbatim. DCP's own knowledge-base article 'Legal websites and apps for gaming in CT' (https://portal.ct.gov/gaming/knowledge-base/articles/websites-and-apps) says the same and adds that DraftKings and FanDuel are also authorised for online casino gaming through the Mashantucket Pequot and Mohegan tribes respectively. DCP publishes no standalone licensee register page and its revenue/statistics page does not break results out by operator."
+    },
+    "casinos": {
+      "operators": [
+        {
+          "brand": "DraftKings",
+          "licenseHolder": "Mashantucket Pequot Tribe"
+        },
+        {
+          "brand": "FanDuel",
+          "licenseHolder": "Mohegan Tribe"
+        }
+      ],
+      "sourceUrl": "https://portal.ct.gov/gaming/knowledge-base/articles/websites-and-apps",
+      "asOf": "2026-09-24",
+      "note": "Connecticut Department of Consumer Protection Gaming Division knowledge-base article 'Legal websites and apps for gaming in CT'. DCP states that DraftKings and FanDuel are the operators authorized to offer online casino gaming, DraftKings through its affiliation with the Mashantucket Pequot Tribe and FanDuel through its affiliation with the Mohegan Tribe. Bet Fanatics is licensed via the Connecticut Lottery Corporation for sports wagering only and is therefore excluded here. DCP publishes no standalone downloadable iGaming licensee register; a master wagering license is limited to the Mohegan Tribe, the Mashantucket Pequot Tribe and the Connecticut Lottery Corporation, with online gaming operator licences issued to the businesses contracting with them."
+    },
+    "pending": []
+  },
+  {
+    "code": "DC",
+    "why": "DC Office of Lottery and Gaming 'Sports Wagering Approved Licenses', revision dated 30 April 2026, linked from https://dclottery.com/olg/approved-licenses. The five operators above are every licensee whose row is marked 'District Wide / Online/Mobile APP'. Caesars, FanDuel and BetMGM hold Standard Class A Operator licences (tied to Capital One Arena, Audi Field and Nationals Park respectively) that also cover district-wide online/mobile; DraftKings and Fanatics hold Temporary Class C licences. Excluded: S&S U Street, LLC, a Provisional Class B retail licensee limited to Ward 1, and the document's long list of Supplier licensees. Several operator rows show expiration dates already past but annotated '(Extended)' by OLG, and they remain on the April 2026 approved list.",
+    "sportsbooks": {
+      "operators": [
+        {
+          "brand": "Caesars Sportsbook",
+          "licenseHolder": "American Wagering Inc."
+        },
+        {
+          "brand": "FanDuel",
+          "licenseHolder": "Betfair Interactive US"
+        },
+        {
+          "brand": "BetMGM",
+          "licenseHolder": "BetMGM, LLC"
+        },
+        {
+          "brand": "DraftKings",
+          "licenseHolder": "Crown DC Gaming, LLC"
+        },
+        {
+          "brand": "Fanatics",
+          "licenseHolder": "FBG Enterprises Opco, LLC"
+        }
+      ],
+      "sourceUrl": "https://dclottery.com/sites/default/files/2026-04/OLG-SW-Approved-Sports-Wagering-Licenses-Rev-04.30.26_0.pdf",
+      "asOf": "2026-09-24",
+      "note": "DC Office of Lottery and Gaming 'Sports Wagering Approved Licenses', revision dated 30 April 2026, linked from https://dclottery.com/olg/approved-licenses. The five operators above are every licensee whose row is marked 'District Wide / Online/Mobile APP'. Caesars, FanDuel and BetMGM hold Standard Class A Operator licences (tied to Capital One Arena, Audi Field and Nationals Park respectively) that also cover district-wide online/mobile; DraftKings and Fanatics hold Temporary Class C licences. Excluded: S&S U Street, LLC, a Provisional Class B retail licensee limited to Ward 1, and the document's long list of Supplier licensees. Several operator rows show expiration dates already past but annotated '(Extended)' by OLG, and they remain on the April 2026 approved list."
+    },
+    "casinos": null,
+    "pending": [
+      {
+        "topic": "online casino",
+        "bill": "B26-0656",
+        "status": "Under Council Review; Referred to Committee on Human Services with comments from the Committee of the Whole",
+        "lastAction": "2026-05-04",
+        "sourceUrl": "https://lims.dccouncil.gov/Legislation/B26-0656",
+        "note": null
+      }
+    ]
+  },
+  {
+    "code": "DE",
+    "why": "Delaware Lottery's own iGaming page states: 'Play Online Slots, Table Games and Online Sports from the NEW platforms powered by BetRivers!' and links the three casino-branded platforms directly (delawarepark.betrivers.com, ballycasino.betrivers.com, harrington.betrivers.com). Online sports betting in Delaware runs through the Delaware Lottery, with Rush Street Interactive's BetRivers as the single platform behind all three casino brands, so these are three skins of one platform rather than three competing sportsbooks. The Lottery publishes no separate sportsbook licensee list; its Sports Lottery pages cover retail wagering only.",
+    "sportsbooks": {
+      "operators": [
+        {
+          "brand": "Delaware Park (BetRivers)",
+          "licenseHolder": "Delaware Park"
+        },
+        {
+          "brand": "Bally's Dover (BetRivers)",
+          "licenseHolder": "Bally's Dover"
+        },
+        {
+          "brand": "Harrington (BetRivers)",
+          "licenseHolder": "Harrington Raceway & Casino"
+        }
+      ],
+      "sourceUrl": "https://www.delottery.com/More/iGaming",
+      "asOf": "2026-09-24",
+      "note": "Delaware Lottery's own iGaming page states: 'Play Online Slots, Table Games and Online Sports from the NEW platforms powered by BetRivers!' and links the three casino-branded platforms directly (delawarepark.betrivers.com, ballycasino.betrivers.com, harrington.betrivers.com). Online sports betting in Delaware runs through the Delaware Lottery, with Rush Street Interactive's BetRivers as the single platform behind all three casino brands, so these are three skins of one platform rather than three competing sportsbooks. The Lottery publishes no separate sportsbook licensee list; its Sports Lottery pages cover retail wagering only."
+    },
+    "casinos": {
+      "operators": [
+        {
+          "brand": "Delaware Park (delawarepark.betrivers.com)",
+          "licenseHolder": "Delaware Park"
+        },
+        {
+          "brand": "Bally's Dover (ballycasino.betrivers.com)",
+          "licenseHolder": "Bally's Dover"
+        },
+        {
+          "brand": "Harrington (harrington.betrivers.com)",
+          "licenseHolder": "Harrington"
+        }
+      ],
+      "sourceUrl": "https://www.delottery.com/More/iGaming",
+      "asOf": "2026-09-24",
+      "note": "Delaware Lottery iGaming page. The Lottery publishes three casino-branded online sites - 'DELAWARE PARK', 'BALLY'S DOVER' and 'HARRINGTON' - each linking to a *.betrivers.com domain, under the heading 'Play Online Slots, Table Games and Online Sports from the NEW platforms powered by BetRivers!'. BetRivers (Rush Street Interactive) is the single platform provider for all three; the Lottery names no separate licensed operator entity per site, so licenseHolder carries the casino as published. Delaware iGaming runs through the Delaware Lottery itself rather than an independent gaming regulator, and no separate licensee register is published."
+    },
+    "pending": []
+  },
+  {
+    "code": "FL",
+    "why": "No operator list published by the Florida Gaming Control Commission. Florida does not licence online sportsbooks at all: sports betting runs through the Seminole Tribe's 2021 gaming compact, and the Commission's FAQ says only 'Unless you are placing a wager through sportsbooks operated by or in conjunction with the Seminole Tribe of Florida, you are most likely placing an illegal wager.' The FAQ names no brand, and the Commission's Division of Pari-Mutuel Wagering publishes no sports wagering licensee register.",
+    "sportsbooks": null,
+    "casinos": null,
+    "pending": []
+  },
+  {
+    "code": "GA",
+    "why": "2025-2026 is one biennium and bills carry over, but the 2026 session has adjourned. The enabling constitutional amendment failed on the House floor, which ends that path for this biennium. No online casino bill exists.",
+    "sportsbooks": null,
+    "casinos": null,
+    "pending": [
+      {
+        "topic": "online sports betting",
+        "bill": "HR 450",
+        "status": "House Third Reading Lost",
+        "lastAction": "2026-03-06",
+        "sourceUrl": "https://www.legis.ga.gov/legislation/71020",
+        "note": "Enabling constitutional amendment for HB 686. Voted down 63 yea / 98 nay on House Vote #686; a constitutional amendment needs two thirds."
+      },
+      {
+        "topic": "online sports betting",
+        "bill": "HB 686",
+        "status": "House Committee Favorably Reported By Substitute",
+        "lastAction": "2026-03-06",
+        "sourceUrl": "https://www.legis.ga.gov/legislation/71019",
+        "note": "Georgia Sports Betting Act. Expressly covers online sports betting. Reported out of committee but never got a floor vote; its enabling amendment HR 450 failed the same day."
+      },
+      {
+        "topic": "online sports betting",
+        "bill": "HB 910",
+        "status": "House Second Readers",
+        "lastAction": "2026-01-12",
+        "sourceUrl": "https://www.legis.ga.gov/legislation/71993",
+        "note": "Georgia Lottery Game of Sports Betting Act. Expressly covers online sports betting."
+      },
+      {
+        "topic": "online sports betting",
+        "bill": "SB 208",
+        "status": "Senate Read and Referred",
+        "lastAction": "2025-02-20",
+        "sourceUrl": "https://www.legis.ga.gov/legislation/70497",
+        "note": "Its own text defines \"sports betting\" as online sports betting."
+      },
+      {
+        "topic": "online casino and sports betting",
+        "bill": "SR 131",
+        "status": "Senate Read and Referred",
+        "lastAction": "2025-02-05",
+        "sourceUrl": "https://www.legis.ga.gov/legislation/69932",
+        "note": "Broad constitutional amendment authorising the General Assembly to provide for both sports betting and casino gambling. The online scope would be set by enabling law, not by the amendment itself."
+      }
+    ]
+  },
+  {
+    "code": "HI",
+    "why": "no legal online sports betting",
+    "sportsbooks": null,
+    "casinos": null,
+    "pending": [
+      {
+        "topic": "online sports betting",
+        "bill": "HB 1308",
+        "status": "Received notice of the discharge of all House Conferees (Hse. Com. No. 457).",
+        "lastAction": "2026-04-02",
+        "sourceUrl": "https://www.capitol.hawaii.gov/session/measure_indiv.aspx?billtype=HB&billnumber=1308&year=2026",
+        "note": null
+      },
+      {
+        "topic": "online sports betting",
+        "bill": "HB 2570",
+        "status": "Passed Second Reading as amended in HD 1 and referred to the committee(s) on JHA/CPC.",
+        "lastAction": "2026-02-12",
+        "sourceUrl": "https://www.capitol.hawaii.gov/session/measure_indiv.aspx?billtype=HB&billnumber=2570&year=2026",
+        "note": null
+      },
+      {
+        "topic": "online sports betting",
+        "bill": "SB 3303",
+        "status": "Referred to EDT/HHS, CPN/WAM.",
+        "lastAction": "2026-02-02",
+        "sourceUrl": "https://www.capitol.hawaii.gov/session/measure_indiv.aspx?billtype=SB&billnumber=3303&year=2026",
+        "note": null
+      },
+      {
+        "topic": "online sports betting",
+        "bill": "SB 1569",
+        "status": "Carried over to 2026 Regular Session.",
+        "lastAction": "2025-12-08",
+        "sourceUrl": "https://www.capitol.hawaii.gov/session/measure_indiv.aspx?billtype=SB&billnumber=1569&year=2026",
+        "note": null
+      },
+      {
+        "topic": "online sports betting",
+        "bill": "SB 1572",
+        "status": "Carried over to 2026 Regular Session.",
+        "lastAction": "2025-12-08",
+        "sourceUrl": "https://www.capitol.hawaii.gov/session/measure_indiv.aspx?billtype=SB&billnumber=1572&year=2026",
+        "note": null
+      }
+    ]
+  },
+  {
+    "code": "IA",
+    "why": "The IRGC lists these as 'advance deposit sports wagering operator' licensees - the licence class that, in the Commission's own wording, is how a casino facility offers 'online sports wagering operations' - together with each operator's casino associations. Retail sports wagering vendors are published separately within the individual facility licence pages and are excluded here. The page carries no published as-of date.",
+    "sportsbooks": {
+      "operators": [
+        {
+          "brand": "Caesars Sportsbook",
+          "licenseHolder": "American Wagering Inc. (casino associations: Harrah's Casino, Horseshoe Casino, Isle Casino Hotel Waterloo, Isle of Capri Bettendorf, Prairie Meadows)"
+        },
+        {
+          "brand": "Bally Bet",
+          "licenseHolder": "Bally's Management Group, LLC (casino association: Bally's Marquette)"
+        },
+        {
+          "brand": "FanDuel",
+          "licenseHolder": "Betfair Interactive US LLC (casino association: Diamond Jo Casino)"
+        },
+        {
+          "brand": "BetMGM",
+          "licenseHolder": "BetMGM, LLC (casino association: Diamond Jo Worth)"
+        },
+        {
+          "brand": "Circa Sports",
+          "licenseHolder": "Circa Sports Iowa LLC (casino association: Wild Rose Casino - Jefferson)"
+        },
+        {
+          "brand": "DraftKings",
+          "licenseHolder": "Crown IA Gaming LLC (casino associations: Wild Rose Casino - Clinton, Emmetsburg, Jefferson)"
+        },
+        {
+          "brand": "Q Sportsbook",
+          "licenseHolder": "Dubuque Racing Association, Ltd (casino association: Q Casino)"
+        },
+        {
+          "brand": "Fanatics Sportsbook",
+          "licenseHolder": "FBG Iowa, LLC (casino association: Great River Casino Resort)"
+        },
+        {
+          "brand": "bet365",
+          "licenseHolder": "Hillside (Iowa) LLC (casino association: Bally's Marquette)"
+        },
+        {
+          "brand": "theScore Bet",
+          "licenseHolder": "Penn Sports Interactive, LLC (casino association: Ameristar Casino)"
+        },
+        {
+          "brand": "BetRivers",
+          "licenseHolder": "Rush Street Interactive IA, LLC (casino associations: Wild Rose Casino - Clinton, Wild Rose Casino - Jefferson)"
+        },
+        {
+          "brand": "Hard Rock Sportsbook",
+          "licenseHolder": "SCE Partners, LLC (casino association: Hard Rock Casino)"
+        },
+        {
+          "brand": "Sporttrade",
+          "licenseHolder": "Sporttrade Iowa LLC (casino association: Wild Rose Casino - Clinton)"
+        }
+      ],
+      "sourceUrl": "https://irgc.iowa.gov/licensing-information/sports-wagering",
+      "asOf": "2026-09-24",
+      "note": "The IRGC lists these as 'advance deposit sports wagering operator' licensees - the licence class that, in the Commission's own wording, is how a casino facility offers 'online sports wagering operations' - together with each operator's casino associations. Retail sports wagering vendors are published separately within the individual facility licence pages and are excluded here. The page carries no published as-of date."
+    },
+    "casinos": null,
+    "pending": []
+  },
+  {
+    "code": "ID",
+    "why": "no legal online sports betting",
+    "sportsbooks": null,
+    "casinos": null,
+    "pending": []
+  },
+  {
+    "code": "IL",
+    "why": "IGB states these are 'the only operators authorized by the IGB to conduct sports wagering activities in Illinois.' Only rows carrying an entry in the page's 'Online' column are listed; retail-only rows (Bally Bet Sportsbook in the Quad Cities / The Rock Island Boatworks, Fanatics Sportsbook at Hawthorne Race Course, The Sportsbook at Hollywood Casino Joliet / HC Joliet, Wind Creek Chicago Southland's Sportsbook / Wind Creek IL) are excluded. IGB separately flags Harrah's Metropolis and Harrah's Joliet as 'Not Operational'. The page carries no published as-of date.",
+    "sportsbooks": {
+      "operators": [
+        {
+          "brand": "bet365",
+          "licenseHolder": "Walker's Bluff Casino Resort, LLC"
+        },
+        {
+          "brand": "BetMGM",
+          "licenseHolder": "Par-A-Dice Gaming Corporation"
+        },
+        {
+          "brand": "BetRivers Sportsbook",
+          "licenseHolder": "Midwest Gaming & Entertainment, LLC"
+        },
+        {
+          "brand": "Caesars Sportsbook",
+          "licenseHolder": "Elgin Riverboat Resort"
+        },
+        {
+          "brand": "Circa Sports",
+          "licenseHolder": "FHR-Illinois LLC"
+        },
+        {
+          "brand": "DraftKings",
+          "licenseHolder": "Casino Queen, Inc."
+        },
+        {
+          "brand": "theScore Bet Sportsbook",
+          "licenseHolder": "HC Aurora, LLC"
+        },
+        {
+          "brand": "Fanatics Sportsbook",
+          "licenseHolder": "Alton Casino, LLC"
+        },
+        {
+          "brand": "FanDuel Sportsbook",
+          "licenseHolder": "Fairmount Park, Inc."
+        },
+        {
+          "brand": "Hard Rock Bet Sportsbook",
+          "licenseHolder": "815 Entertainment"
+        }
+      ],
+      "sourceUrl": "https://igb.illinois.gov/sports-wagering/sports-authorized-operating-sportsbooks.html",
+      "asOf": "2026-09-24",
+      "note": "IGB states these are 'the only operators authorized by the IGB to conduct sports wagering activities in Illinois.' Only rows carrying an entry in the page's 'Online' column are listed; retail-only rows (Bally Bet Sportsbook in the Quad Cities / The Rock Island Boatworks, Fanatics Sportsbook at Hawthorne Race Course, The Sportsbook at Hollywood Casino Joliet / HC Joliet, Wind Creek Chicago Southland's Sportsbook / Wind Creek IL) are excluded. IGB separately flags Harrah's Metropolis and Harrah's Joliet as 'Not Operational'. The page carries no published as-of date."
+    },
+    "casinos": null,
+    "pending": [
+      {
+        "topic": "online sports betting",
+        "bill": "SB 3232",
+        "status": "Rule 3-9(a) / Re-referred to Assignments",
+        "lastAction": "2026-05-22",
+        "sourceUrl": "https://www.ilga.gov/Legislation/BillStatus?DocNum=3232&GAID=18&DocTypeID=SB&SessionID=114&GA=104",
+        "note": null
+      },
+      {
+        "topic": "online sports betting",
+        "bill": "HB 5034",
+        "status": "Rule 19(a) / Re-referred to Rules Committee",
+        "lastAction": "2026-03-27",
+        "sourceUrl": "https://www.ilga.gov/Legislation/BillStatus?DocNum=5034&GAID=18&DocTypeID=HB&SessionID=114&GA=104",
+        "note": null
+      },
+      {
+        "topic": "online casino",
+        "bill": "HB 4797",
+        "status": "Rule 19(a) / Re-referred to Rules Committee",
+        "lastAction": "2026-03-27",
+        "sourceUrl": "https://www.ilga.gov/Legislation/BillStatus?DocNum=4797&GAID=18&DocTypeID=HB&SessionID=114&GA=104",
+        "note": null
+      },
+      {
+        "topic": "online casino",
+        "bill": "SB 3723",
+        "status": "Referred to Assignments",
+        "lastAction": "2026-02-05",
+        "sourceUrl": "https://www.ilga.gov/Legislation/BillStatus?DocNum=3723&GAID=18&DocTypeID=SB&SessionID=114&GA=104",
+        "note": null
+      },
+      {
+        "topic": "online casino",
+        "bill": "HB 3080",
+        "status": "Rule 19(a) / Re-referred to Rules Committee",
+        "lastAction": "2025-03-21",
+        "sourceUrl": "https://www.ilga.gov/Legislation/BillStatus?DocNum=3080&GAID=18&DocTypeID=HB&SessionID=114&GA=104",
+        "note": null
+      },
+      {
+        "topic": "online casino",
+        "bill": "SB 1963",
+        "status": "Referred to Assignments",
+        "lastAction": "2025-02-06",
+        "sourceUrl": "https://www.ilga.gov/Legislation/BillStatus?DocNum=1963&GAID=18&DocTypeID=SB&SessionID=114&GA=104",
+        "note": null
+      }
+    ]
+  },
+  {
+    "code": "IN",
+    "why": "From the Indiana Gaming Commission 'Sports Wagering Vendor Licensing' table, current as of 07/27/2026; only rows whose Platform column reads 'Mobile' or 'Retail & Mobile' are included. Each row names the vendor's legal entity and the Certificate of Authority (casino) holder it launched under. Cross-checked against the IGC 'Sportsbook Contacts' list current as of 07/29/2026 (https://www.in.gov/igc/sports-wagering-and-paid-fantasy-sports/swcontacts/), which shows the same eleven brands as Mobile. The IGC's separate Certificate of Authority Holders page lists casinos and their retail sportsbooks only.",
+    "sportsbooks": {
+      "operators": [
+        {
+          "brand": "Bally Bet Sportsbook",
+          "licenseHolder": "Bally's Interactive, LLC (certificate of authority: Bally's Evansville Casino & Hotel)"
+        },
+        {
+          "brand": "bet365",
+          "licenseHolder": "Hillside (Indiana) LLC (certificate of authority: Blue Sky Casino, LLC)"
+        },
+        {
+          "brand": "BetMGM Sportsbook",
+          "licenseHolder": "BetMGM LLC d/b/a Roar Digital (certificate of authority: Belterra Resort Indiana, LLC)"
+        },
+        {
+          "brand": "BetRivers Sportsbook",
+          "licenseHolder": "Rush Street Interactive, LLC (certificate of authority: Blue Sky Casino, LLC)"
+        },
+        {
+          "brand": "Caesars Sportsbook",
+          "licenseHolder": "American Wagering, Inc (certificate of authority: Hoosier Park, LLC)"
+        },
+        {
+          "brand": "DraftKings Sportsbook",
+          "licenseHolder": "Crown IN Gaming, LLC (certificate of authority: Ameristar East Chicago)"
+        },
+        {
+          "brand": "Fanatics Sportsbook",
+          "licenseHolder": "FBG Enterprises Opco, LLC (certificate of authority: Indiana Gaming Company, LLC)"
+        },
+        {
+          "brand": "FanDuel Sportsbook",
+          "licenseHolder": "Betfair Interactive US, LLC (certificate of authority: Blue Chip Casino, LLC)"
+        },
+        {
+          "brand": "Hard Rock Bet",
+          "licenseHolder": "Seminole Hard Rock Digital, LLC (certificate of authority: The Majestic Star Casino, LLC)"
+        },
+        {
+          "brand": "SBK",
+          "licenseHolder": "Smarkets Holdings USA Inc (certificate of authority: Gaming Entertainment (Indiana) LLC)"
+        },
+        {
+          "brand": "theScore Bet",
+          "licenseHolder": "Penn Sports Interactive, LLC (certificate of authority: Indiana Gaming Company, LLC)"
+        }
+      ],
+      "sourceUrl": "https://www.in.gov/igc/sports-wagering-and-paid-fantasy-sports/swvendors/",
+      "asOf": "2026-09-24",
+      "note": "From the Indiana Gaming Commission 'Sports Wagering Vendor Licensing' table, current as of 07/27/2026; only rows whose Platform column reads 'Mobile' or 'Retail & Mobile' are included. Each row names the vendor's legal entity and the Certificate of Authority (casino) holder it launched under. Cross-checked against the IGC 'Sportsbook Contacts' list current as of 07/29/2026 (https://www.in.gov/igc/sports-wagering-and-paid-fantasy-sports/swcontacts/), which shows the same eleven brands as Mobile. The IGC's separate Certificate of Authority Holders page lists casinos and their retail sportsbooks only."
+    },
+    "casinos": null,
+    "pending": []
+  },
+  {
+    "code": "KS",
+    "why": "Neither the Kansas Lottery nor the Kansas Racing and Gaming Commission publishes a standing list of licensed online sportsbooks; in Kansas sports wagering is conducted on the Lottery's behalf by the four lottery gaming facility managers. Operators are therefore taken from the 'Subtotal - Online' block of the Kansas Lottery's own Sports Wagering Revenues report for August 2026 (unaudited), which names each Casino/Provider pair and reports settled wagers for each. Report index: https://kslottery.gov/publications/sports-monthly-detail-breakdown/. The Kansas Lottery's sports betting overview page (https://www.kslottery.gov/sports-betting) names only one book per casino and is not a complete list. Brand spellings follow the Lottery report.",
+    "sportsbooks": {
+      "operators": [
+        {
+          "brand": "DraftKings",
+          "licenseHolder": "Boot Hill Casino"
+        },
+        {
+          "brand": "FanDuel",
+          "licenseHolder": "Kansas Star Casino"
+        },
+        {
+          "brand": "bet365",
+          "licenseHolder": "Kansas Star Casino"
+        },
+        {
+          "brand": "theScore",
+          "licenseHolder": "Hollywood Casino"
+        },
+        {
+          "brand": "BetMGM",
+          "licenseHolder": "Kansas Crossing Casino"
+        },
+        {
+          "brand": "Caesars Sportsbook",
+          "licenseHolder": "Kansas Crossing Casino"
+        },
+        {
+          "brand": "Fanatics",
+          "licenseHolder": "Kansas Crossing Casino"
+        }
+      ],
+      "sourceUrl": "https://kslottery.gov/media/3kmhwh1y/sports-wagering-monthly-detail-2026-08.pdf",
+      "asOf": "2026-09-24",
+      "note": "Neither the Kansas Lottery nor the Kansas Racing and Gaming Commission publishes a standing list of licensed online sportsbooks; in Kansas sports wagering is conducted on the Lottery's behalf by the four lottery gaming facility managers. Operators are therefore taken from the 'Subtotal - Online' block of the Kansas Lottery's own Sports Wagering Revenues report for August 2026 (unaudited), which names each Casino/Provider pair and reports settled wagers for each. Report index: https://kslottery.gov/publications/sports-monthly-detail-breakdown/. The Kansas Lottery's sports betting overview page (https://www.kslottery.gov/sports-betting) names only one book per casino and is not a complete list. Brand spellings follow the Lottery report."
+    },
+    "casinos": null,
+    "pending": []
+  },
+  {
+    "code": "KY",
+    "why": "Taken from the Kentucky Horse Racing and Gaming Corporation's Sports Wagering Licensee Search, 'Service Provider & Partnering Track/Operator' view, which gives a Type of Partnership of 'Mobile' or 'Retail and Mobile' for each brand above. Results are returned by form POST, so the sourceUrl is the search page itself. Cross-checked against the same search filtered to License Type = Service Provider and Status = Active: all eight appear Active with licences issued 8/22/2023 (Fanatics and bet365 likewise) and expiring 12/31/2026. Kambi (Sports Information Services Ltd) is listed with Type of Partnership 'Retail' only, across four tracks, and is excluded. Prime Sports Ky (Out The Gate, Inc., partnered with Churchill Downs Racetrack LLC, licensed 12/10/2024) is an Active service provider but the KHRGC table leaves its Type of Partnership blank, so it is not recorded as online.",
+    "sportsbooks": {
+      "operators": [
+        {
+          "brand": "bet365",
+          "licenseHolder": "Hillside (Kentucky) LLC - partnering track/operator: Sandy's Racing & Gaming (Revolutionary Racing Kentucky LLC)"
+        },
+        {
+          "brand": "BetMGM",
+          "licenseHolder": "BetMGM LLC - partnering track/operator: Sandy's Racing & Gaming (Revolutionary Racing Kentucky LLC)"
+        },
+        {
+          "brand": "Caesars",
+          "licenseHolder": "American Wagering, Inc. - partnering track/operator: The Red Mile (Lexington Trot Breeders Assn LLC)"
+        },
+        {
+          "brand": "Circa Sports Kentucky",
+          "licenseHolder": "Circa Sports Kentucky LLC - partnering track/operator: Cumberland Run / The Mint Gaming Hall Cumberland (ECL Corbin, LLC)"
+        },
+        {
+          "brand": "DraftKings",
+          "licenseHolder": "Crown KY Gaming LLC - partnering track/operator: Cumberland Run / The Mint Gaming Hall Cumberland (ECL Corbin, LLC)"
+        },
+        {
+          "brand": "FanDuel",
+          "licenseHolder": "Betfair Interactive US LLC - partnering track/operator: Newport Racing & Gaming / Turfway Park Racing & Gaming (Turfway Park LLC)"
+        },
+        {
+          "brand": "Fanatics",
+          "licenseHolder": "FBG Enterprises Opco, LLC - partnering track/operator: Oak Grove Racing, Gaming & Hotel (WKY Development LLC)"
+        },
+        {
+          "brand": "theScore Bet",
+          "licenseHolder": "Penn Sports Interactive LLC - partnering track/operator: Ellis Park (Ellis Entertainment LLC)"
+        }
+      ],
+      "sourceUrl": "https://khrc.ky.gov/Search/List_Licensees.aspx",
+      "asOf": "2026-09-24",
+      "note": "Taken from the Kentucky Horse Racing and Gaming Corporation's Sports Wagering Licensee Search, 'Service Provider & Partnering Track/Operator' view, which gives a Type of Partnership of 'Mobile' or 'Retail and Mobile' for each brand above. Results are returned by form POST, so the sourceUrl is the search page itself. Cross-checked against the same search filtered to License Type = Service Provider and Status = Active: all eight appear Active with licences issued 8/22/2023 (Fanatics and bet365 likewise) and expiring 12/31/2026. Kambi (Sports Information Services Ltd) is listed with Type of Partnership 'Retail' only, across four tracks, and is excluded. Prime Sports Ky (Out The Gate, Inc., partnered with Churchill Downs Racetrack LLC, licensed 12/10/2024) is an Active service provider but the KHRGC table leaves its Type of Partnership blank, so it is not recorded as online."
+    },
+    "casinos": null,
+    "pending": []
+  },
+  {
+    "code": "LA",
+    "why": "The Louisiana Gaming Control Board publishes this as 'a list of all licensed wagering platforms in Louisiana', under the heading Sportsbooks, giving each platform's licensed legal entity, d/b/a and licence number. Brands are recorded exactly as the LGCB spells them. The page carries no as-of date and does not name the casino partner each platform operates under; the Louisiana State Police Gaming Enforcement Division's monthly 'Sportsbook - Mobile' revenue reports are statewide aggregates with no per-operator split, so no partner mapping is published anywhere by the regulator. Fantasy sports licensees listed on the same page (DraftKings, FanDuel) are excluded. The LGCB still lists ESPN Bet and Twin Spires as licensed platforms; this record reflects the licence list, not observed market activity.",
+    "sportsbooks": {
+      "operators": [
+        {
+          "brand": "Caesars Sportsbook",
+          "licenseHolder": "American Wagering, Inc. (B016503431)"
+        },
+        {
+          "brand": "Bet MGM",
+          "licenseHolder": "BetMGM, LLC (Roar Digital) (B016503463)"
+        },
+        {
+          "brand": "FanDuel Sportsbook",
+          "licenseHolder": "BetFair Interactive US, LLC (B016503481)"
+        },
+        {
+          "brand": "Twin Spires",
+          "licenseHolder": "Churchill Downs Interactive Gaming, LLC (B016503472)"
+        },
+        {
+          "brand": "Bet365",
+          "licenseHolder": "Hillside (Louisiana) LLC (B016503521)"
+        },
+        {
+          "brand": "ESPN Bet",
+          "licenseHolder": "Penn Sports Interactive, LLC (B016503440)"
+        },
+        {
+          "brand": "DraftKings",
+          "licenseHolder": "DK Crown Holdings, Inc. (B016503468)"
+        },
+        {
+          "brand": "BetRivers Sportsbook",
+          "licenseHolder": "RSI LA, LLC (B016503491)"
+        },
+        {
+          "brand": "Bally's Bet",
+          "licenseHolder": "Bally's Interactive, LLC (B016503497)"
+        },
+        {
+          "brand": "Fanatics Sportsbook",
+          "licenseHolder": "FBG Enterprises Opco, LLC (B016503576)"
+        }
+      ],
+      "sourceUrl": "https://lgcb.dps.louisiana.gov/licensed-platforms/",
+      "asOf": "2026-09-24",
+      "note": "The Louisiana Gaming Control Board publishes this as 'a list of all licensed wagering platforms in Louisiana', under the heading Sportsbooks, giving each platform's licensed legal entity, d/b/a and licence number. Brands are recorded exactly as the LGCB spells them. The page carries no as-of date and does not name the casino partner each platform operates under; the Louisiana State Police Gaming Enforcement Division's monthly 'Sportsbook - Mobile' revenue reports are statewide aggregates with no per-operator split, so no partner mapping is published anywhere by the regulator. Fantasy sports licensees listed on the same page (DraftKings, FanDuel) are excluded. The LGCB still lists ESPN Bet and Twin Spires as licensed platforms; this record reflects the licence list, not observed market activity."
+    },
+    "casinos": null,
+    "pending": [
+      {
+        "topic": "gaming (parish local option)",
+        "bill": "HB 146",
+        "status": "Pending House Administration of Criminal Justice - Considered 4/29/26",
+        "lastAction": "2026-04-29",
+        "sourceUrl": "https://www.legis.la.gov/legis/BillInfo.aspx?s=26rs&b=HB146&sbi=y",
+        "note": "The bill digest says \"gaming\" / \"sports wagering\" generically and never says online or mobile. Louisiana sports wagering is parish local-option and mobile follows parish approval, so this may affect online betting — but that connection is not stated on the legislature page."
+      },
+      {
+        "topic": "gaming (parish local option)",
+        "bill": "HB 72",
+        "status": "Pending House Administration of Criminal Justice",
+        "lastAction": "2026-03-09",
+        "sourceUrl": "https://www.legis.la.gov/legis/BillInfo.aspx?s=26rs&b=HB72&sbi=y",
+        "note": "The bill digest says \"gaming\" / \"sports wagering\" generically and never says online or mobile. Louisiana sports wagering is parish local-option and mobile follows parish approval, so this may affect online betting — but that connection is not stated on the legislature page."
+      }
+    ]
+  },
+  {
+    "code": "MA",
+    "why": "Massachusetts Gaming Commission Category 3 (online/mobile) licensees. The first four are listed by the MGC as 'Category 3 tethered licensees' with the Category 1 casino they are tethered to shown in parentheses; the last three are listed as 'Category 3 untethered licensees', for which the MGC names no separate license holder. The MGC states these operators 'are the only operators licensed by the Massachusetts Gaming Commission (MGC) to accept sports wagers.' The MGC also notes Betr and WynnBet were licensed Feb 2023 to early 2024 and did not renew. 'Penn Sports Interactive' is the MGC's own wording for the Plainridge-tethered Penn licence.",
+    "sportsbooks": {
+      "operators": [
+        {
+          "brand": "BetMGM",
+          "licenseHolder": "MGM Springfield"
+        },
+        {
+          "brand": "Caesars Sportsbook",
+          "licenseHolder": "Encore Boston Harbor"
+        },
+        {
+          "brand": "Fanatics Betting & Gaming",
+          "licenseHolder": "Plainridge Park Casino"
+        },
+        {
+          "brand": "Penn Sports Interactive",
+          "licenseHolder": "Plainridge Park Casino"
+        },
+        {
+          "brand": "Bally Bet",
+          "licenseHolder": null
+        },
+        {
+          "brand": "DraftKings",
+          "licenseHolder": null
+        },
+        {
+          "brand": "FanDuel",
+          "licenseHolder": null
+        }
+      ],
+      "sourceUrl": "https://massgaming.com/about/sports-wagering-in-massachusetts/sports-wagering-licensees/",
+      "asOf": "2026-09-24",
+      "note": "Massachusetts Gaming Commission Category 3 (online/mobile) licensees. The first four are listed by the MGC as 'Category 3 tethered licensees' with the Category 1 casino they are tethered to shown in parentheses; the last three are listed as 'Category 3 untethered licensees', for which the MGC names no separate license holder. The MGC states these operators 'are the only operators licensed by the Massachusetts Gaming Commission (MGC) to accept sports wagers.' The MGC also notes Betr and WynnBet were licensed Feb 2023 to early 2024 and did not renew. 'Penn Sports Interactive' is the MGC's own wording for the Plainridge-tethered Penn licence."
+    },
+    "casinos": null,
+    "pending": [
+      {
+        "topic": "online casino",
+        "bill": "S.235",
+        "status": "Accompanied a study order, see S2996",
+        "lastAction": "2026-03-09",
+        "sourceUrl": "https://malegislature.gov/Bills/194/S235",
+        "note": null
+      },
+      {
+        "topic": "online casino",
+        "bill": "H.4431",
+        "status": "Accompanied a study order, see H5269",
+        "lastAction": "2026-03-23",
+        "sourceUrl": "https://malegislature.gov/Bills/194/H4431",
+        "note": null
+      },
+      {
+        "topic": "online casino",
+        "bill": "H.332",
+        "status": "Accompanied a study order, see H5320",
+        "lastAction": "2026-04-02",
+        "sourceUrl": "https://malegislature.gov/Bills/194/H332",
+        "note": null
+      }
+    ]
+  },
+  {
+    "code": "MD",
+    "why": "Two Maryland Lottery and Gaming (MLGCA) sources were combined. The licensee list PDF (updated 14 Sept 2026, linked from https://www.mdgaming.com/maryland-sports-wagering/) gives class 'M' Mobile Sports Wagering Licensee entity names, launch dates and closure dates. The August 2026 monthly data file (https://www.mdgaming.com/wp-content/uploads/2026/09/August-2026-Sports-Wagering-Data.xlsx, linked from the Aug 2026 revenue release) gives the MOBILE licensees that actually reported handle. Only mobile licensees with non-zero August 2026 handle are listed here. Excluded as closed or dormant: Crab Sports Inc. (closed 7/20/2026), Long Shot's LLC (closed 7/14/24), SBOpco, LLC d/b/a SuperBook (closed 7/19/24), 'Riverboat on the Potomac / Pointsbet (M)' (zero handle), plus BetR MD and WSI US, LLC d/b/a WynnBet (withdrew) and Queen Sportsbook Maryland LLC (surrendered). IMPORTANT: MLGCA labels several mobile sportsbooks by licensee rather than by consumer brand, so 'Bingo World (mobile)', 'Greenmount OTB (mobile)', 'Hollywood Casino (mobile)', 'Live! Casino (mobile)', 'Maryland Stadium Sub (mobile)' and 'Veterans Services' are the regulator's own wording, not the app name. The regulator does separately list Online Sports Wagering Operator (class 'OO') partners on page 3 of the licensee PDF: Bally's Interactive, LLC; BetMGM, LLC d/b/a Roar Digital; RSI MD, LLC (parent Rush Street Interactive); iGaming Cloud Inc. (GiG); Crown MD Online Gaming LLC d/b/a DraftKings; American Wagering, Inc. (parent Caesars Entertainment); Parx Interactive Maryland Inc. (parent Greenwood Racing); BetFred Sports (Maryland), LLC d/b/a BetFred; FBG Enterprises Opco, LLC d/b/a Fanatics Sportsbook; Penn Sports Interactive, LLC (parent PENN Entertainment); Betfair Interactive US LLC d/b/a FanDuel Sportsbook; Queen Sportsbook Maryland LLC; Bet365; SBOpco, LLC d/b/a SuperBook; Bee-Fee LLC; WSI US, LLC d/b/a WynnBet. MLGCA does not publish a single table pairing each live app brand to its mobile licensee, so no brand-to-licensee pairing beyond what the documents state has been inferred.",
+    "sportsbooks": {
+      "operators": [
+        {
+          "brand": "Bally's",
+          "licenseHolder": "Bally's Interactive Maryland, LLC"
+        },
+        {
+          "brand": "BetMGM",
+          "licenseHolder": "BetMGM Maryland Sports LLC"
+        },
+        {
+          "brand": "Bingo World (mobile)",
+          "licenseHolder": "Arundel Amusements, Inc. d/b/a Bingo World"
+        },
+        {
+          "brand": "Caesars",
+          "licenseHolder": "CZR Maryland Mobile Opportunity, LLC (parent: CBAC Borrower, LLC d/b/a Horseshoe Casino Baltimore and Caesars Entertainment, Inc.)"
+        },
+        {
+          "brand": "DraftKings",
+          "licenseHolder": "Crown MD Online Gaming LLC d/b/a DraftKings"
+        },
+        {
+          "brand": "Greenmount OTB (mobile)",
+          "licenseHolder": "Greenmount OTB, LLC"
+        },
+        {
+          "brand": "Hollywood Casino (mobile)",
+          "licenseHolder": "Penn Maryland OSB, LLC d/b/a Hollywood Casino Perryville"
+        },
+        {
+          "brand": "Live! Casino (mobile)",
+          "licenseHolder": "PPE Maryland Mobile, LLC (parent: PPE Casino Resorts Maryland, LLC d/b/a Live! Casino and Hotel)"
+        },
+        {
+          "brand": "Maryland Stadium Sub (mobile)",
+          "licenseHolder": "Maryland Stadium Sub, LLC"
+        },
+        {
+          "brand": "bet365",
+          "licenseHolder": "Riverboat on the Potomac, LLC"
+        },
+        {
+          "brand": "Veterans Services",
+          "licenseHolder": "Veterans Services Corporation d/b/a Vital Services Contractors, Inc."
+        }
+      ],
+      "sourceUrl": "https://www.mdgaming.com/wp-content/uploads/2026/09/Licensees-for-Website_9142026.pdf",
+      "asOf": "2026-09-24",
+      "note": "Two Maryland Lottery and Gaming (MLGCA) sources were combined. The licensee list PDF (updated 14 Sept 2026, linked from https://www.mdgaming.com/maryland-sports-wagering/) gives class 'M' Mobile Sports Wagering Licensee entity names, launch dates and closure dates. The August 2026 monthly data file (https://www.mdgaming.com/wp-content/uploads/2026/09/August-2026-Sports-Wagering-Data.xlsx, linked from the Aug 2026 revenue release) gives the MOBILE licensees that actually reported handle. Only mobile licensees with non-zero August 2026 handle are listed here. Excluded as closed or dormant: Crab Sports Inc. (closed 7/20/2026), Long Shot's LLC (closed 7/14/24), SBOpco, LLC d/b/a SuperBook (closed 7/19/24), 'Riverboat on the Potomac / Pointsbet (M)' (zero handle), plus BetR MD and WSI US, LLC d/b/a WynnBet (withdrew) and Queen Sportsbook Maryland LLC (surrendered). IMPORTANT: MLGCA labels several mobile sportsbooks by licensee rather than by consumer brand, so 'Bingo World (mobile)', 'Greenmount OTB (mobile)', 'Hollywood Casino (mobile)', 'Live! Casino (mobile)', 'Maryland Stadium Sub (mobile)' and 'Veterans Services' are the regulator's own wording, not the app name. The regulator does separately list Online Sports Wagering Operator (class 'OO') partners on page 3 of the licensee PDF: Bally's Interactive, LLC; BetMGM, LLC d/b/a Roar Digital; RSI MD, LLC (parent Rush Street Interactive); iGaming Cloud Inc. (GiG); Crown MD Online Gaming LLC d/b/a DraftKings; American Wagering, Inc. (parent Caesars Entertainment); Parx Interactive Maryland Inc. (parent Greenwood Racing); BetFred Sports (Maryland), LLC d/b/a BetFred; FBG Enterprises Opco, LLC d/b/a Fanatics Sportsbook; Penn Sports Interactive, LLC (parent PENN Entertainment); Betfair Interactive US LLC d/b/a FanDuel Sportsbook; Queen Sportsbook Maryland LLC; Bet365; SBOpco, LLC d/b/a SuperBook; Bee-Fee LLC; WSI US, LLC d/b/a WynnBet. MLGCA does not publish a single table pairing each live app brand to its mobile licensee, so no brand-to-licensee pairing beyond what the documents state has been inferred."
+    },
+    "casinos": null,
+    "pending": [
+      {
+        "topic": "online casino",
+        "bill": "HB 1343",
+        "status": "In the House - Hearing 3/05 at 1:00 p.m.",
+        "lastAction": "2026-02-12",
+        "sourceUrl": "https://mgaleg.maryland.gov/mgawebsite/Legislation/Details/HB1343?ys=2026RS",
+        "note": null
+      },
+      {
+        "topic": "online casino",
+        "bill": "HB 1255",
+        "status": "In the House - Hearing 3/05 at 1:00 p.m.",
+        "lastAction": "2026-02-12",
+        "sourceUrl": "https://mgaleg.maryland.gov/mgawebsite/Legislation/Details/hb1255?ys=2026RS",
+        "note": null
+      },
+      {
+        "topic": "online casino",
+        "bill": "SB 761",
+        "status": "In the Senate - Withdrawn by Sponsor",
+        "lastAction": "2026-03-13",
+        "sourceUrl": "https://mgaleg.maryland.gov/mgawebsite/Legislation/Details/sb0761?ys=2026RS",
+        "note": null
+      },
+      {
+        "topic": "online casino",
+        "bill": "SB 885",
+        "status": "In the Senate - Hearing 3/11 at 1:00 p.m.",
+        "lastAction": "2026-02-11",
+        "sourceUrl": "https://mgaleg.maryland.gov/mgawebsite/Legislation/Details/sb0885?ys=2026RS",
+        "note": null
+      },
+      {
+        "topic": "online casino",
+        "bill": "SB 884",
+        "status": "In the Senate - Withdrawn by Sponsor",
+        "lastAction": "2026-03-13",
+        "sourceUrl": "https://mgaleg.maryland.gov/mgawebsite/Legislation/Details/sb0884?ys=2026RS",
+        "note": null
+      }
+    ]
+  },
+  {
+    "code": "ME",
+    "why": "The Gambling Control Unit's 'Current Sports Wagering Operators' table names only three operators - DraftKings Inc., Caesars Sports Book and Oxford Casino-Hotel & Sports Book - and does not label them mobile or facility. Oxford Casino-Hotel & Sports Book is the casino facility operator and is excluded as retail. Maine's mobile sports wagering licences sit with the Wabanaki tribes: the GCU's Sports Wagering Revenue Distribution page (https://www.maine.gov/dps/gcu/sports-wagering/sports-wagering-revenue) reports monthly revenue under four separate licensees - Passamaquoddy Tribe, Penobscot Maliseet & Micmac Tribes, Oxford Sportsbook and First Tracks Investments (Oddfellahs) - of which the first two are the mobile licences and the last two are retail. The GCU does not publish which sportsbook brand runs under which tribe, and neither operator's MGCU-approved wagering catalog names a tribal licensee, so licenseHolder is left null rather than inferred. Separately, Maine has enacted internet gaming: the GCU runs an I-Gaming programme (https://www.maine.gov/dps/gcu/I-Gaming) whose revenue distribution page lists the same two tribal groups with 2026 monthly revenue still 'TBA'.",
+    "sportsbooks": {
+      "operators": [
+        {
+          "brand": "DraftKings",
+          "licenseHolder": null
+        },
+        {
+          "brand": "Caesars Sports Book",
+          "licenseHolder": null
+        }
+      ],
+      "sourceUrl": "https://www.maine.gov/dps/gcu/sports-wagering",
+      "asOf": "2026-09-24",
+      "note": "The Gambling Control Unit's 'Current Sports Wagering Operators' table names only three operators - DraftKings Inc., Caesars Sports Book and Oxford Casino-Hotel & Sports Book - and does not label them mobile or facility. Oxford Casino-Hotel & Sports Book is the casino facility operator and is excluded as retail. Maine's mobile sports wagering licences sit with the Wabanaki tribes: the GCU's Sports Wagering Revenue Distribution page (https://www.maine.gov/dps/gcu/sports-wagering/sports-wagering-revenue) reports monthly revenue under four separate licensees - Passamaquoddy Tribe, Penobscot Maliseet & Micmac Tribes, Oxford Sportsbook and First Tracks Investments (Oddfellahs) - of which the first two are the mobile licences and the last two are retail. The GCU does not publish which sportsbook brand runs under which tribe, and neither operator's MGCU-approved wagering catalog names a tribal licensee, so licenseHolder is left null rather than inferred. Separately, Maine has enacted internet gaming: the GCU runs an I-Gaming programme (https://www.maine.gov/dps/gcu/I-Gaming) whose revenue distribution page lists the same two tribal groups with 2026 monthly revenue still 'TBA'."
+    },
+    "casinos": null,
+    "pending": []
+  },
+  {
+    "code": "MI",
+    "why": "Michigan Gaming Control Board spreadsheet 'Authorized Online Gaming and Sports Betting Tribes/Casinos and Platform Providers in Michigan', linked from https://www.michigan.gov/mgcb/internet-gaming-and-fantasy-contests/authorized-online-gaming-and-sports-betting-platform-providers-in-michigan. The MGCB structures the list as casino/tribe plus 'Associated Platform Provider', so the platform provider is used as the brand and the licensed casino/tribe as the license holder. Only rows where the MGCB lists 'Internet Sports Betting' among gaming types offered are included. Excluded because the MGCB lists internet casino games (and in some cases poker) only, with no internet sports betting: Kewadin Casinos / Sault Ste. Marie Tribe of Chippewa Indians (Caesars - Horseshoe), Odawa Casinos / Little Traverse Bay Bands of Odawa Indians (The Stars Group/PokerStars), and Ojibwa Casino / Keweenaw Bay Indian Community (Golden Nugget Casino). The MGCB HTML page itself returns HTTP 403 to automated fetches; the spreadsheet it links was downloaded and parsed directly.",
+    "sportsbooks": {
+      "operators": [
+        {
+          "brand": "DraftKings",
+          "licenseHolder": "Bay Mills Resort & Casino (Bay Mills Indian Community)"
+        },
+        {
+          "brand": "NYX Digital Gaming",
+          "licenseHolder": "FireKeepers Casino (Nottawaseppi Huron Band of the Potawatomi)"
+        },
+        {
+          "brand": "Strive Platform Ltd.",
+          "licenseHolder": "Four Winds Casinos (Pokagon Band of Potawatomi Indians)"
+        },
+        {
+          "brand": "ESPN BET",
+          "licenseHolder": "Greektown Casino-Hotel"
+        },
+        {
+          "brand": "BetParx",
+          "licenseHolder": "Gun Lake Casino (Gun Lake Tribe / Match-E-Be-Nash-She-Wish Band of Pottawatomi Indians)"
+        },
+        {
+          "brand": "Sports Illustrated Sportsbook (SI)",
+          "licenseHolder": "Island Resort & Casino (Hannahville Indian Community)"
+        },
+        {
+          "brand": "BetRivers",
+          "licenseHolder": "Little River Casino Resort (Little River Band of Ottawa Indians)"
+        },
+        {
+          "brand": "BetMGM",
+          "licenseHolder": "MGM Grand Detroit"
+        },
+        {
+          "brand": "FanDuel",
+          "licenseHolder": "MotorCity Casino"
+        },
+        {
+          "brand": "Fanatics Sportsbook and Casino",
+          "licenseHolder": "Northern Waters Casino Resort (Lac Vieux Desert Band of Lake Superior Chippewa Indians)"
+        },
+        {
+          "brand": "GAN (Eagle Casino & Sports)",
+          "licenseHolder": "Soaring Eagle Casino & Resort (Saginaw Chippewa Indian Tribe of Michigan)"
+        },
+        {
+          "brand": "Caesars/WSOP",
+          "licenseHolder": "Turtle Creek Casino & Hotel (Grand Traverse Band of Ottawa and Chippewa Indians)"
+        }
+      ],
+      "sourceUrl": "https://www.michigan.gov/mgcb/-/media/Project/Websites/mgcb/Internet-Gaming-and-Fantasy-Contests/Resources/Authorized_Online_Gaming_Sports_Betting_Operators_Providers.xlsx",
+      "asOf": "2026-09-24",
+      "note": "Michigan Gaming Control Board spreadsheet 'Authorized Online Gaming and Sports Betting Tribes/Casinos and Platform Providers in Michigan', linked from https://www.michigan.gov/mgcb/internet-gaming-and-fantasy-contests/authorized-online-gaming-and-sports-betting-platform-providers-in-michigan. The MGCB structures the list as casino/tribe plus 'Associated Platform Provider', so the platform provider is used as the brand and the licensed casino/tribe as the license holder. Only rows where the MGCB lists 'Internet Sports Betting' among gaming types offered are included. Excluded because the MGCB lists internet casino games (and in some cases poker) only, with no internet sports betting: Kewadin Casinos / Sault Ste. Marie Tribe of Chippewa Indians (Caesars - Horseshoe), Odawa Casinos / Little Traverse Bay Bands of Odawa Indians (The Stars Group/PokerStars), and Ojibwa Casino / Keweenaw Bay Indian Community (Golden Nugget Casino). The MGCB HTML page itself returns HTTP 403 to automated fetches; the spreadsheet it links was downloaded and parsed directly."
+    },
+    "casinos": {
+      "operators": [
+        {
+          "brand": "DraftKings (casino.draftkings.com)",
+          "licenseHolder": "Bay Mills Resort & Casino - Bay Mills Indian Community"
+        },
+        {
+          "brand": "FireKeepers Casino (icasino.firekeeperscasino.com) - platform provider NYX Digital Gaming",
+          "licenseHolder": "FireKeepers Casino - Nottawaseppi Huron Band of the Potawatomi"
+        },
+        {
+          "brand": "Four Winds Casino (play.fourwindscasino.com/en/casino) - platform provider Strive Platform Ltd.",
+          "licenseHolder": "Four Winds Casinos - Pokagon Band of Potawatomi Indians"
+        },
+        {
+          "brand": "ESPN BET (espnbet.com/casino) - platform provider Penn Sports Interactive",
+          "licenseHolder": "Greektown Casino-Hotel"
+        },
+        {
+          "brand": "BetParx (playgunlake.com/casino)",
+          "licenseHolder": "Gun Lake Casino - Gun Lake Tribe/Match-E-Be-Nash-She-Wish Band of Pottawatomi Indians"
+        },
+        {
+          "brand": "Sports Illustrated Sportsbook (SI) (casino.sisportsbook.com) - platform provider VHL Michigan, LLC",
+          "licenseHolder": "Island Resort & Casino - Hannahville Indian Community"
+        },
+        {
+          "brand": "Caesars - Horseshoe (horseshoeonlinecasino.com/us/mi/casino)",
+          "licenseHolder": "Kewadin Casinos (Sault Tribe Online Gaming) - Sault Ste. Marie Tribe of Chippewa Indians"
+        },
+        {
+          "brand": "BetRivers (mi.betrivers.com)",
+          "licenseHolder": "Little River Casino Resort - Little River Band of Ottawa Indians"
+        },
+        {
+          "brand": "BetMGM (casino.mi.betmgm.com/en/games)",
+          "licenseHolder": "MGM Grand Detroit"
+        },
+        {
+          "brand": "FanDuel (casino.fanduel.com)",
+          "licenseHolder": "MotorCity Casino"
+        },
+        {
+          "brand": "Fanatics Sportsbook and Casino (sportsbook.fanatics.com)",
+          "licenseHolder": "Northern Waters Casino Resort - Lac Vieux Desert Band of Lake Superior Chippewa Indians"
+        },
+        {
+          "brand": "PokerStars (pokerstarsmi.com) - The Stars Group (TSG)",
+          "licenseHolder": "Odawa Casinos (Odawa Online) - Little Traverse Bay Bands of Odawa Indians"
+        },
+        {
+          "brand": "Golden Nugget Casino (goldennuggetcasino.com)",
+          "licenseHolder": "Ojibwa Casino - Keweenaw Bay Indian Community"
+        },
+        {
+          "brand": "Eagle Casino & Sports (playeagle.com) - platform provider GAN",
+          "licenseHolder": "Soaring Eagle Casino & Resort - Saginaw Chippewa Indian Tribe of Michigan"
+        },
+        {
+          "brand": "Caesars/WSOP (sportsbook.caesars.com/us/mi/bet/casino and caesarspalaceonline.com/us/mi/casino)",
+          "licenseHolder": "Turtle Creek Casino & Hotel - Grand Traverse Band of Ottawa and Chippewa Indians"
+        }
+      ],
+      "sourceUrl": "https://www.michigan.gov/mgcb/-/media/Project/Websites/mgcb/Internet-Gaming-and-Fantasy-Contests/Resources/Authorized_Online_Gaming_Sports_Betting_Operators_Providers.xlsx",
+      "asOf": "2026-09-24",
+      "note": "Michigan Gaming Control Board spreadsheet 'Authorized Online Gaming and Sports Betting Tribes/Casinos and Platform Providers in Michigan', with columns Casino / Tribe / Associated Platform Provider / Gaming Type(s) Offered / Website Address. This is the file published on the MGCB page https://www.michigan.gov/mgcb/internet-gaming-and-fantasy-contests/authorized-online-gaming-and-sports-betting-platform-providers-in-michigan, which returned HTTP 403 to direct fetching; the spreadsheet itself was downloaded and parsed. Only rows whose Gaming Type includes 'Internet Casino Games' are listed above, and the Internet Casino Games URL is the one recorded; 'Internet Sports Betting'-only URLs are excluded. MGCB names the platform provider rather than a separate retail brand, so 'brand' carries the provider/brand as published and 'licenseHolder' carries the Casino and Tribe. Kewadin/Sault Tribe, Odawa and Ojibwa are internet casino (and poker) only, with no internet sports betting listed. File carries no explicit revision date."
+    },
+    "pending": []
+  },
+  {
+    "code": "MN",
+    "why": "No authorized sports betting of any kind, retail or online. The Department of Public Safety Alcohol and Gambling Enforcement Division lists the state's legal gambling as charitable gambling, the Minnesota Lottery, pari-mutuel horse racing, card rooms and tribal Class III casino games, and lists sports betting among the illegal activities it criminally investigates. Tribal Class III gaming runs under 22 tribal-state compacts with 11 Tribal Nations covering 20 casinos; per DPS the Class III games permitted under those compacts are blackjack and video games of chance, and the compacts have no expiration date (https://dps.mn.gov/divisions/age/gambling/tribal-state-gaming-compacts). Any legalisation therefore has to be negotiated around tribal exclusivity, which is the fault line the bills below keep failing on. Bills carry over within the 94th Legislature (2025-2026 biennium). No online casino / iGaming bill exists at all: exact-phrase searches of bill text on revisor.mn.gov for 'online casino', 'internet casino', 'internet gaming', 'interactive gaming' and 'iGaming' return no House or Senate documents. Minnesota does not record a 'died in committee' status, so a bill's status is simply its last recorded action.",
+    "sportsbooks": null,
+    "casinos": null,
+    "pending": [
+      {
+        "topic": "online sports betting",
+        "bill": "SF 757",
+        "status": "Referred to State and Local Government (01/30/2025); last recorded action 'Chief author added'",
+        "lastAction": "2025-03-27",
+        "sourceUrl": "https://www.revisor.mn.gov/bills/94/2025/0/SF/757/",
+        "note": null
+      },
+      {
+        "topic": "online sports betting",
+        "bill": "SF 978",
+        "status": "Referred to State and Local Government (02/03/2025); last recorded action 'Author added'",
+        "lastAction": "2025-02-06",
+        "sourceUrl": "https://www.revisor.mn.gov/bills/94/2025/0/SF/978/",
+        "note": null
+      },
+      {
+        "topic": "online sports betting",
+        "bill": "SF 1124",
+        "status": "Referred to State and Local Government (02/06/2025); last recorded action 'Author added'",
+        "lastAction": "2025-02-13",
+        "sourceUrl": "https://www.revisor.mn.gov/bills/94/2025/0/SF/1124/",
+        "note": null
+      },
+      {
+        "topic": "online sports betting",
+        "bill": "SF 3414",
+        "status": "Motion did not prevail to withdraw from committee and re-refer to the committee on Commerce and Consumer Protection (vote: 15-50)",
+        "lastAction": "2025-04-23",
+        "sourceUrl": "https://www.revisor.mn.gov/bills/94/2025/0/SF/3414/",
+        "note": null
+      },
+      {
+        "topic": "online sports betting",
+        "bill": "SF 4139",
+        "status": "Comm report: Re-referred to Commerce and Consumer Protection; Motion did not prevail to adopt committee report (vote: 22-44)",
+        "lastAction": "2026-03-23",
+        "sourceUrl": "https://www.revisor.mn.gov/bills/94/2026/0/SF/4139/",
+        "note": null
+      },
+      {
+        "topic": "online sports betting",
+        "bill": "HF 1842",
+        "status": "Introduction and first reading, referred to Commerce Finance and Policy",
+        "lastAction": "2025-03-03",
+        "sourceUrl": "https://www.revisor.mn.gov/bills/94/2025/0/HF/1842/",
+        "note": null
+      },
+      {
+        "topic": "online sports betting",
+        "bill": "HF 4204",
+        "status": "Introduction and first reading, referred to Commerce Finance and Policy (03/12/2026); last recorded action 'Author added'",
+        "lastAction": "2026-03-16",
+        "sourceUrl": "https://www.revisor.mn.gov/bills/94/2026/0/HF/4204/",
+        "note": null
+      }
+    ]
+  },
+  {
+    "code": "MO",
+    "why": "Missouri Gaming Commission live report 'Approved Sports Wagering Mobile Licenses', report date 24 September 2026, read from the MGC's own document viewer (the page renders the report through a DevExpress viewer, so the underlying report data was read from the viewer's own getPage response on mgc.dps.mo.gov). All eight entries are mobile licensees. MGC status field: DraftKings, FanDuel Sportsbook, Circa Sports and Caesars Sportsbook are 'Active'; Fanatics Sportsbook, BetMGM, Penn Sports Interactive - Mobile and bet365 are 'Temporary'. licenseHolder is null wherever the MGC report gives only a trade name and no separate legal entity. The MGC publishes separate Retail and Supplier reports which are excluded here.",
+    "sportsbooks": {
+      "operators": [
+        {
+          "brand": "DraftKings",
+          "licenseHolder": null
+        },
+        {
+          "brand": "FanDuel Sportsbook",
+          "licenseHolder": "Betfair Interactive US LLC"
+        },
+        {
+          "brand": "Circa Sports",
+          "licenseHolder": null
+        },
+        {
+          "brand": "Caesars Sportsbook",
+          "licenseHolder": null
+        },
+        {
+          "brand": "Fanatics Sportsbook",
+          "licenseHolder": null
+        },
+        {
+          "brand": "BetMGM",
+          "licenseHolder": null
+        },
+        {
+          "brand": "Penn Sports Interactive - Mobile",
+          "licenseHolder": "Penn Sports Interactive, LLC"
+        },
+        {
+          "brand": "bet365",
+          "licenseHolder": null
+        }
+      ],
+      "sourceUrl": "https://www.mgc.dps.mo.gov/MGCWebSiteReports/SWMobileOperatorReport/SWMobileOperatorReportingService.aspx",
+      "asOf": "2026-09-24",
+      "note": "Missouri Gaming Commission live report 'Approved Sports Wagering Mobile Licenses', report date 24 September 2026, read from the MGC's own document viewer (the page renders the report through a DevExpress viewer, so the underlying report data was read from the viewer's own getPage response on mgc.dps.mo.gov). All eight entries are mobile licensees. MGC status field: DraftKings, FanDuel Sportsbook, Circa Sports and Caesars Sportsbook are 'Active'; Fanatics Sportsbook, BetMGM, Penn Sports Interactive - Mobile and bet365 are 'Temporary'. licenseHolder is null wherever the MGC report gives only a trade name and no separate legal entity. The MGC publishes separate Retail and Supplier reports which are excluded here."
+    },
+    "casinos": null,
+    "pending": []
+  },
+  {
+    "code": "MS",
+    "why": "Sports betting is legal but RETAIL ONLY, on casino premises. The Mississippi Gaming Commission's own FAQ states that most any gambling game can be played on a licensed casino floor including wagering on sporting events, and that sports wagering not conducted in a casino is illegal, with online and mobile sports wagering apps specifically identified as illegal. Mobile sports betting bills are filed in volume every year and die on the same fault line: the House passes a bill, the Senate kills it in committee. That happened in 2025 (HB 1302: '02/03 (H) Passed', then '03/04 (S) Died In Committee', http://billstatus.ls.state.ms.us/2025/pdf/history/HB/HB1302.xml) and twice again in 2026 (HB 1581 and HB 4074, both below). No bill would legalise online casino; the only online-gaming bills move the opposite way, extending the criminal gambling prohibition to any online, interactive or computerized version of a game (SB 2104, '03/03 (H) Died In Committee'). Bills listed below are from the 2026 Regular Session, the most recent.",
+    "sportsbooks": null,
+    "casinos": null,
+    "pending": [
+      {
+        "topic": "online sports betting",
+        "bill": "HB 297",
+        "status": "02/03 (H) Died In Committee",
+        "lastAction": "2026-02-03",
+        "sourceUrl": "http://billstatus.ls.state.ms.us/2026/pdf/history/HB/HB0297.xml",
+        "note": null
+      },
+      {
+        "topic": "online sports betting",
+        "bill": "HB 519",
+        "status": "02/03 (H) Died In Committee",
+        "lastAction": "2026-02-03",
+        "sourceUrl": "http://billstatus.ls.state.ms.us/2026/pdf/history/HB/HB0519.xml",
+        "note": null
+      },
+      {
+        "topic": "online sports betting",
+        "bill": "HB 1527",
+        "status": "02/12 (H) Died On Calendar",
+        "lastAction": "2026-02-12",
+        "sourceUrl": "http://billstatus.ls.state.ms.us/2026/pdf/history/HB/HB1527.xml",
+        "note": null
+      },
+      {
+        "topic": "online sports betting",
+        "bill": "HB 1581",
+        "status": "03/03 (S) Died In Committee (after '02/04 (H) Passed As Amended')",
+        "lastAction": "2026-03-03",
+        "sourceUrl": "http://billstatus.ls.state.ms.us/2026/pdf/history/HB/HB1581.xml",
+        "note": null
+      },
+      {
+        "topic": "online sports betting",
+        "bill": "HB 4074",
+        "status": "03/17 (S) Died In Committee (after '02/25 (H) Passed As Amended')",
+        "lastAction": "2026-03-17",
+        "sourceUrl": "http://billstatus.ls.state.ms.us/2026/pdf/history/HB/HB4074.xml",
+        "note": null
+      },
+      {
+        "topic": "online sports betting",
+        "bill": "SB 2249",
+        "status": "02/03 (S) Died In Committee",
+        "lastAction": "2026-02-03",
+        "sourceUrl": "http://billstatus.ls.state.ms.us/2026/pdf/history/SB/SB2249.xml",
+        "note": null
+      }
+    ]
+  },
+  {
+    "code": "MT",
+    "why": "Montana's only legal sports betting is Sports Bet Montana, run by the Montana Lottery, and the geofencing is written into statute rather than left to regulation. MCA 23-7-104 makes the operation of sports wagering lawful only as it pertains to the state lottery. MCA 23-7-103(11) defines a sports wagering license as authorizing wagering conducted through mobile application or other digital platforms only where it is 'initiated and received or otherwise made exclusively within the physical confines using location-based services of the single approved sports wagering facility', and 23-7-103(10) defines that facility as an approved lottery location licensed as a gambling operator. So the Sports Bet Montana app exists but is geofenced to licensed premises, and is not statewide online sports betting. The legislature is biennial: the 69th Regular Session (2025) is the most recent session with introduced bills, and there is no 2026 session. Montana moved in the RESTRICTIVE direction in 2025: SB 555 revised the definition of internet gambling to include online casinos, brought cryptocurrency into the definition of internet gambling and raised criminal penalties; it was signed by the Governor on 2025-05-13 and had a chapter number assigned 2025-05-16 (https://bills.legmt.gov/#/laws/bill/2/2671). A 2027-session draft request, LC0032 'Generally revise laws relating to sport betting', exists in the legislature's bill system but has no bill number, status or action date, so it is not recorded as a bill.",
+    "sportsbooks": null,
+    "casinos": null,
+    "pending": []
+  },
+  {
+    "code": "NC",
+    "why": "Seven interactive sports wagering operator licensees are listed by the North Carolina State Lottery Commission. The list carries no published 'last updated' date. License number NCO-0006 does not appear on the current list (an eighth licence was issued at one point; it is no longer listed). The Commission publishes no written-designation-agreement partner alongside each licensee. Service provider (NCSP) and supplier (NCS) licensees are listed separately and are excluded here.",
+    "sportsbooks": {
+      "operators": [
+        {
+          "brand": "theScore Bet",
+          "licenseHolder": "Penn Sports Interactive, LLC (NCO-0001)"
+        },
+        {
+          "brand": "DraftKings",
+          "licenseHolder": "Crown NC Gaming, LLC (NCO-0002)"
+        },
+        {
+          "brand": "bet365",
+          "licenseHolder": "Hillside (North Carolina), LLC (NCO-0003)"
+        },
+        {
+          "brand": "Fanatics Sportsbook",
+          "licenseHolder": "FBG Enterprises Opco, LLC (NCO-0004)"
+        },
+        {
+          "brand": "FanDuel Sportsbook",
+          "licenseHolder": "Betfair Interactive US, LLC (NCO-0005)"
+        },
+        {
+          "brand": "BetMGM",
+          "licenseHolder": "BETMGM, LLC (NCO-0007)"
+        },
+        {
+          "brand": "Caesars Sportsbook",
+          "licenseHolder": "Tribal Casino Gaming Enterprise, Eastern Band of Cherokee Indians (NCO-0008)"
+        }
+      ],
+      "sourceUrl": "https://ncgaming.gov/approved-licensees/",
+      "asOf": "2026-09-24",
+      "note": "Seven interactive sports wagering operator licensees are listed by the North Carolina State Lottery Commission. The list carries no published 'last updated' date. License number NCO-0006 does not appear on the current list (an eighth licence was issued at one point; it is no longer listed). The Commission publishes no written-designation-agreement partner alongside each licensee. Service provider (NCSP) and supplier (NCS) licensees are listed separately and are excluded here."
+    },
+    "casinos": null,
+    "pending": []
+  },
+  {
+    "code": "ND",
+    "why": "Tribal casinos only. The ND Attorney General's gaming page states flatly that state law prohibits online gaming in North Dakota, with an exemption only for state-licensed charitable gaming organizations to run online raffles through a licensed North Dakota distributor, and describes the tribal-state gaming compacts as authorizing the state's Native American tribes to conduct gaming at casinos on tribal land, across five Indian casinos. Art. XI, Sec. 25 of the ND Constitution bars the legislative assembly from authorizing any game of chance except the multi-state lottery and charitable gaming, so sports betting of any kind requires a CONSTITUTIONAL AMENDMENT. The legislature is biennial; the 69th Legislative Assembly's regular session was 2025 and there is no 2026 regular session. Two 2026 special sessions were held (January and September 2026) and neither has any gaming, games-of-chance or gambling entry in its official Major Topics Index. IMPORTANT CAVEAT on HCR 3002 below: its engrossed text is a generic enabler reading 'May authorize sports betting on professional and college sports to be conducted in the state and licensed and regulated by the state', with no mention of online, mobile or internet wagering. It would have permitted the legislature to authorize online sports betting but does not itself do so; it is recorded here because it is the only sports-betting measure in the session and its failure is the state's clearest directional signal.",
+    "sportsbooks": null,
+    "casinos": null,
+    "pending": [
+      {
+        "topic": "online sports betting",
+        "bill": "HCR 3002",
+        "status": "Failed in House; 'Second reading, failed to adopt yeas 24 nays 70'",
+        "lastAction": "2025-01-22",
+        "sourceUrl": "https://ndlegis.gov/assembly/69-2025/regular/bill-overview/bo3002.html",
+        "note": null
+      }
+    ]
+  },
+  {
+    "code": "NE",
+    "why": "Sports wagering is legal but RETAIL ONLY. The Nebraska Racing and Gaming Commission's own sports betting page states that wagers must be placed in person at an approved sportsbook window or wagering kiosk within the designated sports-wagering area of a licensed racetrack enclosure, and states explicitly that online and mobile sports wagering are not currently authorized in Nebraska. Mobile wagering requires a CONSTITUTIONAL AMENDMENT, which is why LR 20CA was the lead vehicle. Nebraska is unicameral and bills carry over within the two-year biennium; all three measures below were carried over from 2025 into 2026 and then killed together on 2026-04-17. No online casino / iGaming bill was introduced in the 109th Legislature at all, verified against the full list of 43 measures referred to the General Affairs Committee.",
+    "sportsbooks": null,
+    "casinos": null,
+    "pending": [
+      {
+        "topic": "online sports betting",
+        "bill": "LB 421",
+        "status": "Indefinitely postponed (previously 'Title printed. Carryover bill', 2026-01-07)",
+        "lastAction": "2026-04-17",
+        "sourceUrl": "https://nebraskalegislature.gov/bills/view_bill.php?DocumentID=58876",
+        "note": null
+      },
+      {
+        "topic": "online sports betting",
+        "bill": "LB 438",
+        "status": "Indefinitely postponed (previously 'Title printed. Carryover bill', 2026-01-07)",
+        "lastAction": "2026-04-17",
+        "sourceUrl": "https://nebraskalegislature.gov/bills/view_bill.php?DocumentID=59648",
+        "note": null
+      },
+      {
+        "topic": "online sports betting",
+        "bill": "LR 20CA",
+        "status": "Indefinitely postponed (previously 'Title printed. Carryover resolution', 2026-01-07; 'Passed over' on Select File, 2025-04-23)",
+        "lastAction": "2026-04-17",
+        "sourceUrl": "https://nebraskalegislature.gov/bills/view_bill.php?DocumentID=58877",
+        "note": null
+      }
+    ]
+  },
+  {
+    "code": "NH",
+    "why": "The New Hampshire Lottery Commission does not publish a licensee/operator list for online sports betting. Its own Sports Betting page names exactly one mobile product: 'Download the DraftKings Sportsbook App or visit any New Hampshire Sportsbook location or Sports 603 retailer', and the Mobile App section says 'Place bets from your mobile device with ease using the safe and secure technology of America's top-rated DraftKings Sportsbook App.' No other mobile operator appears on the Lottery's own pages. The Lottery names no separate licensed legal entity, so licenseHolder is null.",
+    "sportsbooks": {
+      "operators": [
+        {
+          "brand": "DraftKings Sportsbook",
+          "licenseHolder": null
+        }
+      ],
+      "sourceUrl": "https://www.nhlottery.com/sports",
+      "asOf": "2026-09-24",
+      "note": "The New Hampshire Lottery Commission does not publish a licensee/operator list for online sports betting. Its own Sports Betting page names exactly one mobile product: 'Download the DraftKings Sportsbook App or visit any New Hampshire Sportsbook location or Sports 603 retailer', and the Mobile App section says 'Place bets from your mobile device with ease using the safe and secure technology of America's top-rated DraftKings Sportsbook App.' No other mobile operator appears on the Lottery's own pages. The Lottery names no separate licensed legal entity, so licenseHolder is null."
+    },
+    "casinos": null,
+    "pending": []
+  },
+  {
+    "code": "NJ",
+    "why": "New Jersey Division of Gaming Enforcement's own sports wagering page, which groups approved online sportsbook sites under the casino or racetrack licensee each is tethered to. The DGE names the casino/racetrack licensee rather than the digital subsidiary, so licenseHolder is the DGE's own wording. The DGE's separate Internet Gaming Sites page (https://www.njoag.gov/about/divisions-and-offices/division-of-gaming-enforcement-home/internet-gaming-sites/) covers online casino and poker sites only and explicitly does not include sports wagering sites, so it was not used here.",
+    "sportsbooks": {
+      "operators": [
+        {
+          "brand": "Sport Trade",
+          "licenseHolder": "Bally's Atlantic City"
+        },
+        {
+          "brand": "Fanatics Sportsbook",
+          "licenseHolder": "Bally's Atlantic City"
+        },
+        {
+          "brand": "Bally Bet",
+          "licenseHolder": "Bally's Atlantic City"
+        },
+        {
+          "brand": "Borgata Online",
+          "licenseHolder": "Borgata Hotel Casino & Spa"
+        },
+        {
+          "brand": "BetMGM",
+          "licenseHolder": "Borgata Hotel Casino & Spa"
+        },
+        {
+          "brand": "BetParx",
+          "licenseHolder": "Caesars Atlantic City"
+        },
+        {
+          "brand": "Caesars Sportsbook",
+          "licenseHolder": "Caesars Atlantic City"
+        },
+        {
+          "brand": "Hard Rock Bet",
+          "licenseHolder": "Hard Rock Hotel Casino"
+        },
+        {
+          "brand": "bet365",
+          "licenseHolder": "Hard Rock Hotel Casino"
+        },
+        {
+          "brand": "DraftKings",
+          "licenseHolder": "Resorts Casino Hotel Atlantic City"
+        },
+        {
+          "brand": "theScore Bet",
+          "licenseHolder": "Resorts Casino Hotel Atlantic City"
+        },
+        {
+          "brand": "FanDuel",
+          "licenseHolder": "Meadowlands Racing & Entertainment"
+        },
+        {
+          "brand": "BetRivers",
+          "licenseHolder": "Monmouth Park"
+        }
+      ],
+      "sourceUrl": "https://www.njoag.gov/about/divisions-and-offices/division-of-gaming-enforcement-home/sports-wagering/",
+      "asOf": "2026-09-24",
+      "note": "New Jersey Division of Gaming Enforcement's own sports wagering page, which groups approved online sportsbook sites under the casino or racetrack licensee each is tethered to. The DGE names the casino/racetrack licensee rather than the digital subsidiary, so licenseHolder is the DGE's own wording. The DGE's separate Internet Gaming Sites page (https://www.njoag.gov/about/divisions-and-offices/division-of-gaming-enforcement-home/internet-gaming-sites/) covers online casino and poker sites only and explicitly does not include sports wagering sites, so it was not used here."
+    },
+    "casinos": {
+      "operators": [
+        {
+          "brand": "play.ballybet.com",
+          "licenseHolder": "Bally's Atlantic City"
+        },
+        {
+          "brand": "casino.fanatics.com",
+          "licenseHolder": "Bally's Atlantic City"
+        },
+        {
+          "brand": "play.monopolycasinous.com/casino",
+          "licenseHolder": "Bally's Atlantic City"
+        },
+        {
+          "brand": "borgataonline.com/en/casino, borgataonline.com/en/poker",
+          "licenseHolder": "Borgata Hotel Casino & Spa"
+        },
+        {
+          "brand": "nj.partycasino.com, nj.partypoker.com",
+          "licenseHolder": "Borgata Hotel Casino & Spa"
+        },
+        {
+          "brand": "nj.betmgm.com/en/casino, nj.betmgm.com/en/poker",
+          "licenseHolder": "Borgata Hotel Casino & Spa"
+        },
+        {
+          "brand": "wheeloffortunecasino.com",
+          "licenseHolder": "Borgata Hotel Casino & Spa"
+        },
+        {
+          "brand": "stardustcasino.com",
+          "licenseHolder": "Borgata Hotel Casino & Spa"
+        },
+        {
+          "brand": "nj.embercasino.com",
+          "licenseHolder": "Caesars Interactive Entertainment New Jersey - Affiliate of Boardwalk Regency LLC"
+        },
+        {
+          "brand": "nj.betinia.com",
+          "licenseHolder": "Caesars Interactive Entertainment New Jersey - Affiliate of Boardwalk Regency LLC"
+        },
+        {
+          "brand": "nj.playvegasclub.com",
+          "licenseHolder": "Caesars Interactive Entertainment New Jersey - Affiliate of Boardwalk Regency LLC"
+        },
+        {
+          "brand": "casino.jackpocket.com",
+          "licenseHolder": "Caesars Interactive Entertainment New Jersey - Affiliate of Harrah's Atlantic City Operating Company, LLC"
+        },
+        {
+          "brand": "nj.betparx.com/casino",
+          "licenseHolder": "Caesars Interactive Entertainment New Jersey - Affiliate of Harrah's Atlantic City Operating Company, LLC"
+        },
+        {
+          "brand": "caesarspalaceonline.com/us/nj/casino, horseshoeonlinecasino.com/us/nj/casino",
+          "licenseHolder": "Caesars Interactive Entertainment New Jersey - Affiliate of Tropicana Atlantic City Corp"
+        },
+        {
+          "brand": "wsop.com",
+          "licenseHolder": "Caesars Interactive Entertainment New Jersey - Affiliate of Tropicana Atlantic City Corp"
+        },
+        {
+          "brand": "tropicanacasino.com",
+          "licenseHolder": "Caesars Interactive Entertainment New Jersey - Affiliate of Tropicana Atlantic City Corp"
+        },
+        {
+          "brand": "casino.fanduel.com/, poker.fanduel.com",
+          "licenseHolder": "Golden Nugget Hotel Casino & Marina"
+        },
+        {
+          "brand": "goldennuggetcasino.com, nj-casino.goldennuggetcasino.com",
+          "licenseHolder": "Golden Nugget Hotel Casino & Marina"
+        },
+        {
+          "brand": "nj.betrivers.com/",
+          "licenseHolder": "Golden Nugget Hotel Casino & Marina"
+        },
+        {
+          "brand": "hardrock.bet",
+          "licenseHolder": "Hard Rock Hotel and Casino"
+        },
+        {
+          "brand": "nj.bet365.com",
+          "licenseHolder": "Hard Rock Hotel and Casino"
+        },
+        {
+          "brand": "betocean.com",
+          "licenseHolder": "Ocean Resort Casino"
+        },
+        {
+          "brand": "nj.playstar.com, Jackiecasino.playstar.com",
+          "licenseHolder": "Ocean Resort Casino"
+        },
+        {
+          "brand": "rwbetnj.com/en/casino",
+          "licenseHolder": "Ocean Resort Casino"
+        },
+        {
+          "brand": "resortscasino.com",
+          "licenseHolder": "Resorts Casino Hotel Atlantic City"
+        },
+        {
+          "brand": "thescore.bet, hollywoodcasino.com",
+          "licenseHolder": "Resorts Casino Hotel Atlantic City"
+        },
+        {
+          "brand": "casino.draftkings.com",
+          "licenseHolder": "Resorts Casino Hotel Atlantic City"
+        },
+        {
+          "brand": "mohegansuncasino.com",
+          "licenseHolder": "Resorts Casino Hotel Atlantic City"
+        },
+        {
+          "brand": "pokerstarsnj.com",
+          "licenseHolder": "Resorts Casino Hotel Atlantic City"
+        }
+      ],
+      "sourceUrl": "https://www.njoag.gov/about/divisions-and-offices/division-of-gaming-enforcement-home/internet-gaming-sites/",
+      "asOf": "2026-09-24",
+      "note": "NJ Division of Gaming Enforcement 'Internet Gaming Sites' page: 'The following Internet gaming sites are approved to conduct continuous 24 hour Internet gaming operations... Any site not included on this list is NOT approved to offer Internet gaming in the State of New Jersey.' DGE publishes site URLs grouped under each Atlantic City casino licensee, NOT consumer brand names, so 'brand' reproduces the published site string verbatim rather than an inferred brand name. DGE maintains a separate Sports Wagering page; every entry above is from the Internet Gaming (casino/poker) list. Page carries no 'last updated' date; approvals are stated to be issued on a rolling basis."
+    },
+    "pending": [
+      {
+        "topic": "online sports betting",
+        "bill": "A2370",
+        "status": "Introduced, Referred to Assembly Tourism, Gaming and the Arts Committee",
+        "lastAction": "2026-01-13",
+        "sourceUrl": "https://www.njleg.state.nj.us/bill-search/2026/A2370",
+        "note": null
+      },
+      {
+        "topic": "online casino",
+        "bill": "S1500",
+        "status": "Introduced in the Senate, Referred to Senate State Government, Wagering, Tourism & Historic Preservation Committee",
+        "lastAction": "2026-01-13",
+        "sourceUrl": "https://www.njleg.state.nj.us/bill-search/2026/S1500",
+        "note": null
+      }
+    ]
+  },
+  {
+    "code": "NM",
+    "why": "New Mexico has NO state authorizing statute for sports betting at all. Sports betting exists purely under Class III tribal gaming compacts, on-site at tribal casinos. The Office of the State Gaming Representative told the Legislature's Indian Affairs Committee on 2025-09-25, in a handout published on nmlegis.gov, that sports betting is limited to on-site wagering only at tribal casinos chosen to open sportsbooks, that New Mexico law has not legalized either retail or online wagering elsewhere, and that only eight casinos currently offer sports betting. The same handout shows the compacts anticipate but do not permit internet gaming: if internet gaming is authorized within the State, the State and the Tribe agree to reopen good faith negotiations to evaluate its impact and consider adjustments to the Compact. This is tribal-compact exclusivity in its purest form, and it means any online expansion is a compact renegotiation rather than a simple bill. Nothing is moving legislatively: the 2026 Regular Session is a 30-day session constitutionally limited under Art. 4, Sec. 5(B) to budget, appropriations and revenue bills, bills drawn pursuant to special messages of the governor, and previously vetoed bills; its full official listing of 812 measures contains not one with gaming, gambling, wagering, betting or casino in the title. The 2025 60-day session had eleven gaming bills, but all concerned Gaming Control Board administration, gaming machine standards, horse racing, racetrack licensing or gaming tax, none online.",
+    "sportsbooks": null,
+    "casinos": null,
+    "pending": []
+  },
+  {
+    "code": "NV",
+    "why": "No operator list published by the Nevada Gaming Control Board / Nevada Gaming Commission for online sports wagering. The only operator list the Board publishes online is 'Nevada Gaming Commission Approved and Licensed Operators of Interactive Gaming', which as of this date names only two interactive gaming (online poker) licensees - Real Gaming (South Point Poker LLC) and WSOP - World Series of Poker (Caesars Interactive Entertainment, Inc.) - and no sports wagering apps. Nevada mobile sportsbooks operate under the race book and sports pool licence of a non-restricted licensee rather than under a separately published online sportsbook licence list; the Board's public pages (gaming.nv.gov home, Location Detail Report, NGCB Approval Status Report, Forms & Applications) contain no roster of licensed mobile sports wagering apps. Nothing has been filled in from memory or secondary sources.",
+    "sportsbooks": null,
+    "casinos": null,
+    "pending": []
+  },
+  {
+    "code": "NY",
+    "why": "New York State Gaming Commission publishes a 'Licensed Operators' list of nine mobile sports wagering operators by consumer brand only; it does not publish the licensed entity name or a casino partner alongside each brand, so licenseHolder is null throughout. The same nine names appear as the per-operator headings on the Commission's weekly/monthly Sports Wagering Financial Reports index at https://www.gaming.ny.gov/state-revenue-reports (theScore Bet's report files are still served under 'wynn-interactive' paths, reflecting the earlier WynnBET brand). Retail-only casino sportsbooks are excluded.",
+    "sportsbooks": {
+      "operators": [
+        {
+          "brand": "Bally Bet",
+          "licenseHolder": null
+        },
+        {
+          "brand": "BetMGM",
+          "licenseHolder": null
+        },
+        {
+          "brand": "Caesars Sportsbook",
+          "licenseHolder": null
+        },
+        {
+          "brand": "DraftKings Sportsbook",
+          "licenseHolder": null
+        },
+        {
+          "brand": "theScore Bet",
+          "licenseHolder": null
+        },
+        {
+          "brand": "Fanatics Sportsbook",
+          "licenseHolder": null
+        },
+        {
+          "brand": "FanDuel Sportsbook",
+          "licenseHolder": null
+        },
+        {
+          "brand": "Resorts World Bet",
+          "licenseHolder": null
+        },
+        {
+          "brand": "Rush Street Interactive",
+          "licenseHolder": null
+        }
+      ],
+      "sourceUrl": "https://www.gaming.ny.gov/sports-wagering",
+      "asOf": "2026-09-24",
+      "note": "New York State Gaming Commission publishes a 'Licensed Operators' list of nine mobile sports wagering operators by consumer brand only; it does not publish the licensed entity name or a casino partner alongside each brand, so licenseHolder is null throughout. The same nine names appear as the per-operator headings on the Commission's weekly/monthly Sports Wagering Financial Reports index at https://www.gaming.ny.gov/state-revenue-reports (theScore Bet's report files are still served under 'wynn-interactive' paths, reflecting the earlier WynnBET brand). Retail-only casino sportsbooks are excluded."
+    },
+    "casinos": null,
+    "pending": [
+      {
+        "topic": "online casino",
+        "bill": "S 2614",
+        "status": "In Senate Committee (Racing, Gaming and Wagering)",
+        "lastAction": "2026-01-07",
+        "sourceUrl": "https://www.nysenate.gov/legislation/bills/2025/S2614",
+        "note": null
+      },
+      {
+        "topic": "online casino",
+        "bill": "A 6027",
+        "status": "In Assembly Committee (Racing and Wagering)",
+        "lastAction": "2026-01-07",
+        "sourceUrl": "https://www.nysenate.gov/legislation/bills/2025/A6027",
+        "note": null
+      }
+    ]
+  },
+  {
+    "code": "OH",
+    "why": "Ohio Casino Control Commission 'Sports Gaming Proprietors and Services Providers' list, Last Updated 9/8/2026. Only Type-A (online/mobile) proprietors with License Status 'Active' AND Currently Operating 'Yes' are included. Active Type-A proprietors not currently operating are excluded: Cavaliers Operating Company LLC, Cincinnati Bengals Inc., Crew SC Stadium Company LLC, FC Cincinnati Holdings LLC, JACK Thistledown Racino LLC, MVGC Subsidiary Inc. (Muirfield Village Golf Club), PNK (Ohio) Inc. (Belterra Park), The Cincinnati Reds LLC (Underdog Sports Wagering, LLC); HOF Village Newco LLC is Inactive and Robert L. Stark Enterprises is Withdrawn. The OCCC list gives trade names in parentheses for most mobile management services providers but not for Penn Sports Interactive, LLC, Bally's Interactive, LLC or Seminole Hard Rock Digital, LLC; the consumer brands for those three (theScore Bet, Bally Bet, Hard Rock Bet) are taken from another regulator's published d/b/a list, the Tennessee Sports Wagering Council at https://www.tn.gov/swac/licensees-registrants.html. Type-B (retail) and Type-C (lottery) proprietors are excluded.",
+    "sportsbooks": {
+      "operators": [
+        {
+          "brand": "betJACK",
+          "licenseHolder": "JACK Cleveland Casino, LLC"
+        },
+        {
+          "brand": "theScore Bet",
+          "licenseHolder": "Central Ohio Gaming Ventures, LLC (Hollywood Casino Columbus) — mobile management services provider: Penn Sports Interactive, LLC"
+        },
+        {
+          "brand": "Bally Bet",
+          "licenseHolder": "Cleveland Browns Football Company, LLC — mobile management services provider: Bally's Interactive, LLC"
+        },
+        {
+          "brand": "bet365",
+          "licenseHolder": "Cleveland Guardians Baseball Company, LLC — mobile management services provider: Hillside Ohio, LLC (bet365)"
+        },
+        {
+          "brand": "Fanatics",
+          "licenseHolder": "COLHOC Limited Partnership (Columbus Blue Jackets) — mobile management services provider: FBG Enterprises Opco, LLC (Fanatics)"
+        },
+        {
+          "brand": "BetRivers",
+          "licenseHolder": "Dayton Real Estate Ventures, LLC (Hollywood Gaming Dayton Raceway) — mobile management services provider: RSI Ohio, LLC (BetRivers)"
+        },
+        {
+          "brand": "Prime Sportsbook",
+          "licenseHolder": "Geneva Sports, LLC (SPIRE Institute) — mobile management services provider: Plannatech (OH) Corporation (Prime Sportsbook)"
+        },
+        {
+          "brand": "Hard Rock Bet",
+          "licenseHolder": "Hard Rock Casino Cincinnati, LLC — mobile management services provider: Seminole Hard Rock Digital, LLC"
+        },
+        {
+          "brand": "Ember",
+          "licenseHolder": "Miami Valley Gaming and Racing, LLC — mobile management services provider: Gamewise, Inc. (Ember)"
+        },
+        {
+          "brand": "BetMGM",
+          "licenseHolder": "Northfield Park Associates, LLC — mobile management services provider: BetMGM, LLC"
+        },
+        {
+          "brand": "Caesars Sportsbook",
+          "licenseHolder": "Scioto Downs, Inc. — mobile management services provider: American Wagering, Inc. (Caesars Sportsbook)"
+        },
+        {
+          "brand": "DraftKings",
+          "licenseHolder": "Toledo Gaming Ventures, LLC (Hollywood Casino Toledo) — mobile management services provider: Crown Ohio Gaming, LLC (DraftKings)"
+        },
+        {
+          "brand": "FanDuel",
+          "licenseHolder": "Youngstown Real Estate Ventures, LLC (Hollywood Gaming at Mahoning Valley) — mobile management services provider: Betfair Interactive US, LLC (FanDuel)"
+        }
+      ],
+      "sourceUrl": "https://dam.assets.ohio.gov/image/upload/v1788965803/casinocontrol.ohio.gov/licensing/sports%20gaming/Sports_Gaming_Proprietor_and_Services_Provider_Applicants_List_9-8-26-2_WCAG.pdf",
+      "asOf": "2026-09-24",
+      "note": "Ohio Casino Control Commission 'Sports Gaming Proprietors and Services Providers' list, Last Updated 9/8/2026. Only Type-A (online/mobile) proprietors with License Status 'Active' AND Currently Operating 'Yes' are included. Active Type-A proprietors not currently operating are excluded: Cavaliers Operating Company LLC, Cincinnati Bengals Inc., Crew SC Stadium Company LLC, FC Cincinnati Holdings LLC, JACK Thistledown Racino LLC, MVGC Subsidiary Inc. (Muirfield Village Golf Club), PNK (Ohio) Inc. (Belterra Park), The Cincinnati Reds LLC (Underdog Sports Wagering, LLC); HOF Village Newco LLC is Inactive and Robert L. Stark Enterprises is Withdrawn. The OCCC list gives trade names in parentheses for most mobile management services providers but not for Penn Sports Interactive, LLC, Bally's Interactive, LLC or Seminole Hard Rock Digital, LLC; the consumer brands for those three (theScore Bet, Bally Bet, Hard Rock Bet) are taken from another regulator's published d/b/a list, the Tennessee Sports Wagering Council at https://www.tn.gov/swac/licensees-registrants.html. Type-B (retail) and Type-C (lottery) proprietors are excluded."
+    },
+    "casinos": null,
+    "pending": [
+      {
+        "topic": "online casino",
+        "bill": "SB 197",
+        "status": "In Senate Committee — Referred to committee, Senate Select Committee on Gaming",
+        "lastAction": "2025-05-14",
+        "sourceUrl": "https://www.legislature.ohio.gov/legislation/136/sb197/status",
+        "note": null
+      },
+      {
+        "topic": "online casino",
+        "bill": "HB 298",
+        "status": "In House Committee — Referred to committee, House Finance Committee",
+        "lastAction": "2025-05-21",
+        "sourceUrl": "https://www.legislature.ohio.gov/legislation/136/hb298/status",
+        "note": null
+      }
+    ]
+  },
+  {
+    "code": "OK",
+    "why": "Casino gaming in Oklahoma is exclusively tribal under the State-Tribal Gaming Act, Title 3A O.S. (Model Tribal Gaming Compact codified at 3A O.S. sec. 281). The State's own published Model Tribal Gaming Compact defines 'covered game' as electronic bonanza-style bingo, electronic amusement games, electronic instant bingo and nonhouse-banked card games, plus games added by amendment of the State-Tribal Gaming Act; the compact text contains zero occurrences of 'sport', 'internet', 'online' or 'mobile'. NO sports betting of any kind, retail or online, is currently authorized in Oklahoma. The legislature runs a two-year biennium (60th Legislature; 2025 = Session 2500, 2026 = Session 2600) and bills carry over. Structurally important: the most active Oklahoma sports-betting vehicle, HB 1047, is a compact supplement adding sports betting as a covered game and is NOT an online bill — every published version (introduced, House committee substitute, HFLR, engrossed, SFLR) contains zero occurrences of internet, online, mobile or web. It failed on the Senate floor 21-27 on 2026-04-22 and its status is 'Motion expired', 2026-04-28 (https://www.oklegislature.gov/BillInfo.aspx?Bill=HB1047&Session=2600). CAVEAT: HB 1047 was amended by a floor substitute on 2026-04-22 whose text Oklahoma has not published, so the scope of that final substitute cannot be confirmed. The two bills below are recorded as online because their text was read and verified to authorize Internet or mobile wagering.",
+    "sportsbooks": null,
+    "casinos": null,
+    "pending": [
+      {
+        "topic": "online sports betting",
+        "bill": "SB 585",
+        "status": "Referred to Rules",
+        "lastAction": "2025-04-07",
+        "sourceUrl": "https://www.oklegislature.gov/BillInfo.aspx?Bill=SB585&Session=2600",
+        "note": null
+      },
+      {
+        "topic": "online sports betting",
+        "bill": "SB 125",
+        "status": "Placed on General Order",
+        "lastAction": "2025-02-25",
+        "sourceUrl": "https://www.oklegislature.gov/BillInfo.aspx?Bill=SB125&Session=2600",
+        "note": null
+      }
+    ]
+  },
+  {
+    "code": "OR",
+    "why": "Oregon online sports betting is run by the Oregon Lottery itself, which is both operator and regulator; the Lottery's own Sports Betting page names DraftKings as its sports betting provider and directs players to the DraftKings app/website. The Oregon Lottery publishes no licensee or operator list for online sports betting — there is only this single state-contracted product — so licenseHolder is null. College wagering is not offered. Tribal casino sportsbooks are outside the Lottery's published product and are excluded.",
+    "sportsbooks": {
+      "operators": [
+        {
+          "brand": "DraftKings",
+          "licenseHolder": null
+        }
+      ],
+      "sourceUrl": "https://www.oregonlottery.org/sports/",
+      "asOf": "2026-09-24",
+      "note": "Oregon online sports betting is run by the Oregon Lottery itself, which is both operator and regulator; the Lottery's own Sports Betting page names DraftKings as its sports betting provider and directs players to the DraftKings app/website. The Oregon Lottery publishes no licensee or operator list for online sports betting — there is only this single state-contracted product — so licenseHolder is null. College wagering is not offered. Tribal casino sportsbooks are outside the Lottery's published product and are excluded."
+    },
+    "casinos": null,
+    "pending": []
+  },
+  {
+    "code": "PA",
+    "why": "Pennsylvania Gaming Control Board 'Licensed Sports Wagering Certificateholders and Authorized Sportsbooks', updated 12/02/2025 — this is the most recent version the PGCB links. Only certificate holders with an authorized online/mobile sportsbook and a stated commencement-of-online date are listed. Certificate holders with retail sports wagering only are excluded: GW Cumberland Op Co (Parx Casino Shippensburg), Mount Airy #1, LLC (online 'not currently offered'), Stadium Casino RE, LLC (Live! Casino Philadelphia) and Stadium Casino Westmoreland RE, LLC (Live! Casino Pittsburgh). ESPN Bet operated under the Hollywood Casino at Penn National certificate until December 1, 2025 and was rebranded to theScore Bet. The PGCB publishes a separate list of Licensed Interactive Gaming Certificate Holders (online casino), updated 4/30/2026, which is not covered here.",
+    "sportsbooks": {
+      "operators": [
+        {
+          "brand": "Caesars Sportsbook",
+          "licenseHolder": "Chester Downs and Marina, LLC d/b/a Harrah's Philadelphia Casino and Racetrack"
+        },
+        {
+          "brand": "Mohegan PA online/mobile sportsbook",
+          "licenseHolder": "Downs Racing, LP d/b/a Mohegan Pennsylvania"
+        },
+        {
+          "brand": "betParx",
+          "licenseHolder": "Greenwood Gaming and Entertainment, Inc. d/b/a Parx Casino"
+        },
+        {
+          "brand": "BetRivers",
+          "licenseHolder": "Holdings Acquisition Co., LP d/b/a Rivers Casino Pittsburgh (operator: Rush Street Interactive PA, LLC)"
+        },
+        {
+          "brand": "theScore Bet",
+          "licenseHolder": "Mountainview Thoroughbred Racing Association, LLC d/b/a Hollywood Casino at Penn National Race Course"
+        },
+        {
+          "brand": "BetMGM",
+          "licenseHolder": "Mountainview Thoroughbred Racing Association, LLC d/b/a Hollywood Casino Morgantown (operator: BetMGM, LLC)"
+        },
+        {
+          "brand": "Fanatics",
+          "licenseHolder": "Mountainview Thoroughbred Racing Association, LLC d/b/a Hollywood Casino York (operator: PointsBet Pennsylvania LLC d/b/a Fanatics)"
+        },
+        {
+          "brand": "bet365",
+          "licenseHolder": "PID, LLC d/b/a Presque Isle Downs Casino (operator: bet365)"
+        },
+        {
+          "brand": "PlaySugarHouse",
+          "licenseHolder": "SugarHouse HSP Gaming, LP d/b/a Rivers Casino Philadelphia (operator: Rush Street Interactive PA, LLC)"
+        },
+        {
+          "brand": "FanDuel",
+          "licenseHolder": "Valley Forge Convention Center Partners, LLC d/b/a Valley Forge Casino Resort (operator: Betfair Interactive US LLC d/b/a FanDuel)"
+        },
+        {
+          "brand": "DraftKings",
+          "licenseHolder": "Washington Trotting Association, LLC d/b/a The Meadows Racetrack and Casino (operator: Crown PA Gaming, Inc. d/b/a DraftKings)"
+        },
+        {
+          "brand": "Wind Creek online/mobile sportsbook",
+          "licenseHolder": "Wind Creek Bethlehem, LLC d/b/a Wind Creek Bethlehem Casino"
+        }
+      ],
+      "sourceUrl": "https://gamingcontrolboard.pa.gov/sites/default/files/2025-12/12.02.25%20Licensed%20Sports%20Wagering%20Certificateholders%20and%20Authorized%20Sportsbooks.pdf",
+      "asOf": "2026-09-24",
+      "note": "Pennsylvania Gaming Control Board 'Licensed Sports Wagering Certificateholders and Authorized Sportsbooks', updated 12/02/2025 — this is the most recent version the PGCB links. Only certificate holders with an authorized online/mobile sportsbook and a stated commencement-of-online date are listed. Certificate holders with retail sports wagering only are excluded: GW Cumberland Op Co (Parx Casino Shippensburg), Mount Airy #1, LLC (online 'not currently offered'), Stadium Casino RE, LLC (Live! Casino Philadelphia) and Stadium Casino Westmoreland RE, LLC (Live! Casino Pittsburgh). ESPN Bet operated under the Hollywood Casino at Penn National certificate until December 1, 2025 and was rebranded to theScore Bet. The PGCB publishes a separate list of Licensed Interactive Gaming Certificate Holders (online casino), updated 4/30/2026, which is not covered here."
+    },
+    "casinos": {
+      "operators": [
+        {
+          "brand": "Bally Casino (pa.ballycasino.com)",
+          "licenseHolder": "Bally's Pennsylvania, LLC"
+        },
+        {
+          "brand": "Monopoly Casino (play.monopolycasinous.com)",
+          "licenseHolder": "Bally's Pennsylvania, LLC"
+        },
+        {
+          "brand": "Tropicana PA (pa.tropicanacasino.com)",
+          "licenseHolder": "Chester Downs and Marina, LLC d/b/a Harrah's Philadelphia Casino and Racetrack"
+        },
+        {
+          "brand": "Caesars Sportsbook and Casino (sportsbook.caesars.com/us/pa/bet/casino)",
+          "licenseHolder": "Chester Downs and Marina, LLC d/b/a Harrah's Philadelphia Casino and Racetrack"
+        },
+        {
+          "brand": "Caesars Palace Online Casino (caesarspalaceonline.com/us/pa/casino)",
+          "licenseHolder": "Chester Downs and Marina, LLC d/b/a Harrah's Philadelphia Casino and Racetrack"
+        },
+        {
+          "brand": "Horseshoe Online Casino (horseshoeonlinecasino.com/us/pa/casino)",
+          "licenseHolder": "Chester Downs and Marina, LLC d/b/a Harrah's Philadelphia Casino and Racetrack"
+        },
+        {
+          "brand": "Mohegan PA Casino (play.moheganpacasino.com)",
+          "licenseHolder": "Downs Racing, LP d/b/a Mohegan Pennsylvania (operator: Mohegan Digital Services LLC)"
+        },
+        {
+          "brand": "Golden Nugget Casino (goldennuggetcasino.com)",
+          "licenseHolder": "Golden Nugget Online Gaming, LLC d/b/a Golden Nugget Casino"
+        },
+        {
+          "brand": "betParx Casino (pa.betparx.com)",
+          "licenseHolder": "Greenwood Gaming and Entertainment, Inc. d/b/a Parx Casino"
+        },
+        {
+          "brand": "PokerStars Casino (pokerstarsmtairycasino.com)",
+          "licenseHolder": "Mount Airy #1, LLC d/b/a Mount Airy Casino Resort (operator: TSG Interactive Services US Limited d/b/a The Stars Group)"
+        },
+        {
+          "brand": "DraftKings Casino (casino.draftkings.com)",
+          "licenseHolder": "Mountainview Thoroughbred Racing Association, LLC d/b/a Hollywood Casino at Penn National Race Course (operator: Crown PA Gaming, Inc. d/b/a DraftKings)"
+        },
+        {
+          "brand": "BetMGM Casino (casino.pa.betmgm.com)",
+          "licenseHolder": "Mountainview Thoroughbred Racing Association, LLC d/b/a Hollywood Casino at Penn National Race Course (operator: BetMGM, LLC)"
+        },
+        {
+          "brand": "Fanatics Casino",
+          "licenseHolder": "Mountainview Thoroughbred Racing Association, LLC d/b/a Hollywood Casino at Penn National Race Course (operator: PointsBet Pennsylvania LLC d/b/a Fanatics)"
+        },
+        {
+          "brand": "theScoreBet (sportsbook.thescore.bet)",
+          "licenseHolder": "Mountainview Thoroughbred Racing Association, LLC d/b/a Hollywood Casino at Penn National Race Course (operator: theScoreBet)"
+        },
+        {
+          "brand": "Hollywood Casino (hollywoodcasino.com)",
+          "licenseHolder": "Mountainview Thoroughbred Racing Association, LLC d/b/a Hollywood Casino at Penn National Race Course (operator: Hollywood Casino)"
+        },
+        {
+          "brand": "bet365 Casino (casino.pa.bet365.com)",
+          "licenseHolder": "PID, LLC d/b/a Presque Isle Downs Casino (operator: bet365)"
+        },
+        {
+          "brand": "PlayLive! (playlive.com)",
+          "licenseHolder": "Stadium Casino RE, LLC d/b/a Live! Casino Philadelphia"
+        },
+        {
+          "brand": "PlaySugarHouse (pa.playsugarhouse.com)",
+          "licenseHolder": "SugarHouse HSP Gaming, LP d/b/a Rivers Casino Philadelphia (operator: Rush Street Interactive PA, LLC)"
+        },
+        {
+          "brand": "BetRivers (pa.betrivers.com)",
+          "licenseHolder": "SugarHouse HSP Gaming, LP d/b/a Rivers Casino Philadelphia (operator: Rush Street Interactive PA, LLC)"
+        },
+        {
+          "brand": "Borgata Online Casino (casino.pa.borgataonline.com)",
+          "licenseHolder": "SugarHouse HSP Gaming, LP d/b/a Rivers Casino Philadelphia (operator: BetMGM, LLC)"
+        },
+        {
+          "brand": "FanDuel Casino (casino.fanduel.com)",
+          "licenseHolder": "Valley Forge Convention Center Partners, LLC d/b/a Valley Forge Casino Resort (operator: Betfair Interactive US LLC d/b/a FanDuel)"
+        },
+        {
+          "brand": "Stardust Casino (pa.stardustcasino.com)",
+          "licenseHolder": "Valley Forge Convention Center Partners, LLC d/b/a Valley Forge Casino Resort (operator: Pala Interactive, LLC)"
+        },
+        {
+          "brand": "Resorts Casino (pa.resortscasino.com)",
+          "licenseHolder": "Valley Forge Convention Center Partners, LLC d/b/a Valley Forge Casino Resort (operator: Pala Interactive, LLC)"
+        },
+        {
+          "brand": "Wind Creek Online Casino (windcreekonline.com)",
+          "licenseHolder": "Wind Creek Bethlehem, LLC d/b/a Wind Creek Bethlehem Casino (operator: Flowplay)"
+        },
+        {
+          "brand": "Imperial Treasures Casino (imperialtreasurescasino.com)",
+          "licenseHolder": "Wind Creek Bethlehem, LLC d/b/a Wind Creek Bethlehem Casino (operator: Flowplay)"
+        }
+      ],
+      "sourceUrl": "https://gamingcontrolboard.pa.gov/sites/default/files/2026-05/4.30.26%20Licensed%20Interactive%20Gaming%20Certificateholders%20and%20Authorized%20Interactive%20Gaming%20websites_.docx",
+      "asOf": "2026-09-24",
+      "note": "PGCB 'Licensed Interactive Gaming Certificate Holders and Operators' document, updated 4/30/2026, linked from https://gamingcontrolboard.pa.gov/licensing/expanded-gaming-information-and-links. It lists each Interactive Gaming Certificateholder, the licensed Interactive Gaming Operator acting on its behalf, the types of interactive gaming authorized and the authorized websites/apps. Included above are only entries authorized for Slots and/or Table Games (i.e. online casino); the WSOP entry under Chester Downs is authorized for Poker only and is excluded, and the document's 'Former Interactive Gaming Sites' section (Spin Palace, Betway, Jackpot City, Unibet, PointsBet, Barstool, ESPNBET, BetAmerica, FoxBet, TwinSpires and the retired Wind Creek platform) is excluded. Cross-checks against PGCB's live brand page https://gamingcontrolboard.pa.gov/interactive-gaming-operators, which lists 24 brands but states no certificate holder; that page additionally lists Bally Bet, which the 4/30/2026 document does not carry as an interactive gaming website."
+    },
+    "pending": [
+      {
+        "topic": "online sports betting",
+        "bill": "HB 1636",
+        "status": "Referred to Gaming Oversight",
+        "lastAction": "2025-06-23",
+        "sourceUrl": "https://www.palegis.us/legislation/bills/2025/hb1636",
+        "note": "Amends Title 4 (Amusements), in sports wagering, further providing for definitions; sponsor's co-sponsorship memo is titled 'Additional Sports Wagering Markets'. Prime sponsor Rep. Ed Neilson."
+      },
+      {
+        "topic": "online event outcome prediction wagering",
+        "bill": "HB 2497",
+        "status": "Referred to Gaming Oversight",
+        "lastAction": "2026-05-08",
+        "sourceUrl": "https://www.palegis.us/legislation/bills/2025/hb2497",
+        "note": "Amends Title 4 (Amusements) to provide for event outcome prediction wagering, imposing duties on the PGCB and the Department of Revenue and a prediction wagering tax. Prime sponsor Rep. Danilo Burgos; short title 'Regulating Prediction Markets and Protecting PA Consumers'. Included as an expansion of regulated online wagering, not strictly iGaming or sportsbook."
+      }
+    ]
+  },
+  {
+    "code": "RI",
+    "why": "Rhode Island sports wagering runs through the Rhode Island Lottery, which publishes no licensee or operator list. The Lottery's site links to exactly one sportsbook product, 'Rhode Island Sportsbook' / 'Bet on Sports in Rhode Island' at sportsbetrhodeisland.com, and names no operating entity, so licenseHolder is null. The Department of Business Regulation's Gaming and Athletics page (https://dbr.ri.gov/gaming-and-athletics) covers pari-mutuel wagering and the two Bally's gaming facilities and publishes no online sportsbook operator list either. Flagged: no regulator-published operator list exists for Rhode Island.",
+    "sportsbooks": {
+      "operators": [
+        {
+          "brand": "Rhode Island Sportsbook",
+          "licenseHolder": null
+        }
+      ],
+      "sourceUrl": "https://www.rilot.com/en-us/sports-betting.html",
+      "asOf": "2026-09-24",
+      "note": "Rhode Island sports wagering runs through the Rhode Island Lottery, which publishes no licensee or operator list. The Lottery's site links to exactly one sportsbook product, 'Rhode Island Sportsbook' / 'Bet on Sports in Rhode Island' at sportsbetrhodeisland.com, and names no operating entity, so licenseHolder is null. The Department of Business Regulation's Gaming and Athletics page (https://dbr.ri.gov/gaming-and-athletics) covers pari-mutuel wagering and the two Bally's gaming facilities and publishes no online sportsbook operator list either. Flagged: no regulator-published operator list exists for Rhode Island."
+    },
+    "casinos": {
+      "operators": [],
+      "sourceUrl": null,
+      "asOf": "2026-09-24",
+      "note": "The Rhode Island Lottery is the regulator and operator of iGaming in Rhode Island and publishes NO list of licensed online casino operators or brands. Its FAQ states only that 'Casino games include Video Lottery Terminals, Table Games, iGaming, and Sports Betting, all of which are available at Bally's Twin River Lincoln and Bally's Tiverton as well as on their respective mobile apps and/or websites', and that iGaming requires players to be 21 or older. The Lottery's 'Video Lottery Terminals and Table Games' page (https://www.rilot.com/en-us/table-games-video-lottery.html) names only the two land-based facilities, Bally's Twin River Lincoln Casino Resort and Bally's Tiverton Casino & Resort, and links only to ballyslincoln.com and ballystiverton.com - no online casino brand or app name is published. The RI Department of Business Regulation Gaming and Athletics section (https://dbr.ri.gov/gaming-and-athletics) covers pari-mutuel wagering, simulcast, boxing and mixed martial arts and publishes no iGaming licensee list. No consumer-facing online casino brand could be sourced from a Rhode Island regulator page, so operators is left empty rather than filled from a review site."
+    },
+    "pending": [
+      {
+        "topic": "online sports betting",
+        "bill": "H 8186",
+        "status": "Committee recommended measure be held for further study (House Finance)",
+        "lastAction": "2026-04-29",
+        "sourceUrl": "https://webserver.rilegislature.gov/BillText26/HouseText26/H8186.pdf",
+        "note": "AN ACT RELATING TO STATE AFFAIRS AND GOVERNMENT -- VIDEO LOTTERY, GAMES, TABLE GAMES AND SPORTS WAGERING. Per the Legislative Council explanation, no later than January 1, 2027 the Division would issue an open invitation for sports-wagering vendor contracts and award no fewer than four and no more than six vendor contracts, breaking the current single-vendor model; also lets vendors control marketing/advertising/promotions and reallocates revenue shares. Sponsors Dawson, Corvese, Slater, Read, O'Brien, Voas; introduced 2026-02-27. Status and last action taken from the General Assembly's Legislative Status Report tool (query: session year 2026, bills 8186,3118), which has no stable per-bill URL."
+      },
+      {
+        "topic": "online sports betting",
+        "bill": "S 3118 Sub A",
+        "status": "Referred to House Finance (passed Senate as Sub A 2026-06-04)",
+        "lastAction": "2026-06-05",
+        "sourceUrl": "https://webserver.rilegislature.gov/BillText/BillText26/SenateText26/S3118A.pdf",
+        "note": "Senate companion to H 8186, same Legislative Council explanation (four to six sports-wagering vendor contracts by January 1, 2027). Sponsors Ciccone, Burke, Famiglietti; introduced 2026-03-13. Senate passed Sub A on 2026-06-04; referred to House Finance 2026-06-05. Status and last action taken from the General Assembly's Legislative Status Report tool, which has no stable per-bill URL."
+      }
+    ]
+  },
+  {
+    "code": "SC",
+    "why": "South Carolina has no casinos and no state-licensed sports betting of any kind. Constitution Article XVII, Section 7 provides that only the State may conduct lotteries, in the manner the General Assembly provides by law, with narrow exceptions only for charitable and fraternal bingo and nonprofit raffles; anything else is a lottery prohibited by that section. The criminal prohibitions sit in SC Code Title 16, Chapter 19 (sec. 16-19-10 setting up lotteries, 16-19-40 unlawful games and betting, 16-19-130 betting, pool selling and bookmaking), which contains no online-specific section. SC runs a two-year session (126th, 2025-2026) and bills carry over. No online casino / iGaming bill exists. Note that the most ACTIVE South Carolina gaming bill is not an online bill at all: H. 4176, the 'I-95 Economic and Education Stimulus Act', creates a SC Gaming Commission and land-based Class III casino licenses in I-95 counties, and was 'Recommitted to Committee on Ways and Means' on 2026-01-28 (https://www.scstatehouse.gov/sess126_2025-2026/bills/4176.htm). H. 3353, a constitutional-amendment joint resolution covering horse racing, sports betting and casino games, likewise contains no online language.",
+    "sportsbooks": null,
+    "casinos": null,
+    "pending": [
+      {
+        "topic": "online sports betting",
+        "bill": "S. 444",
+        "status": "Referred to Committee on Labor, Commerce and Industry (page header: 'Currently residing in the Senate Committee on Labor, Commerce and Industry')",
+        "lastAction": "2025-03-12",
+        "sourceUrl": "https://www.scstatehouse.gov/sess126_2025-2026/bills/444.htm",
+        "note": null
+      },
+      {
+        "topic": "online sports betting",
+        "bill": "H. 3625",
+        "status": "Referred to Committee on Ways and Means (2025-01-14); last recorded entry 'Member(s) request name added as sponsor: Rose'",
+        "lastAction": "2025-02-26",
+        "sourceUrl": "https://www.scstatehouse.gov/sess126_2025-2026/bills/3625.htm",
+        "note": null
+      }
+    ]
+  },
+  {
+    "code": "SD",
+    "why": "Sports betting is legal but confined to Deadwood and tribal casinos, on premises. SD Constitution Article III, Sec. 25 ('Games of chance prohibited--Exceptions') provides that the Legislature may not authorize any game of chance, lottery or gift enterprise under any pretense or for any purpose, subject to listed exceptions, and the relevant exception makes it lawful for the Legislature to authorize roulette, keno, craps, wagering on sporting events, limited card games and slot machines only within the city limits of Deadwood. Tribal casinos operate separately under IGRA. Statewide mobile or online sports betting therefore requires a CONSTITUTIONAL AMENDMENT, which is why the vehicles are Joint Resolutions. South Dakota does NOT carry bills over between annual sessions; SJR 504 below is the 2026 re-run of SJR 507, which was 'Tabled' in Senate Commerce and Energy on 2025-02-13 (https://sdlegislature.gov/Session/Bill/26221). No online casino / iGaming bill exists in 2025 or 2026. Worth separating out so it is not miscounted: HB 1058 (2026), requiring licensure for online pari-mutuel wagering pools for horse and dog races, WAS signed by the Governor on 2026-02-17, but that is pari-mutuel racing, not sports betting or online casino.",
+    "sportsbooks": null,
+    "casinos": null,
+    "pending": [
+      {
+        "topic": "online sports betting",
+        "bill": "SJR 504",
+        "status": "Deferred to the 41st legislative day (House State Affairs, after 'Do Pass' failed 6-7); had passed the Senate 23-10-2 on 2026-02-11",
+        "lastAction": "2026-02-25",
+        "sourceUrl": "https://sdlegislature.gov/Session/Bill/26846",
+        "note": null
+      }
+    ]
+  },
+  {
+    "code": "TN",
+    "why": "Tennessee Sports Wagering Council 'Approved Licensees and Registrants'. Tennessee is online-only — there is no retail sports betting — so all nine licensees are mobile operators. All nine show a current renewal (most recent renewal dates range 2025-10-24 to 2026-09-07). The Council also publishes separate vendor-registrant and fantasy-sports lists, which are excluded.",
+    "sportsbooks": {
+      "operators": [
+        {
+          "brand": "Caesars Sportsbook",
+          "licenseHolder": "American Wagering, Inc."
+        },
+        {
+          "brand": "Bally Bet",
+          "licenseHolder": "Bally's Interactive, LLC"
+        },
+        {
+          "brand": "FanDuel Sportsbook",
+          "licenseHolder": "Betfair Interactive US LLC"
+        },
+        {
+          "brand": "BetMGM",
+          "licenseHolder": "BetMGM, LLC (dba Roar Digital)"
+        },
+        {
+          "brand": "DraftKings",
+          "licenseHolder": "Crown TN Gaming LLC"
+        },
+        {
+          "brand": "Fanatics Sportsbook",
+          "licenseHolder": "FBG Enterprises Opco, LLC"
+        },
+        {
+          "brand": "bet365",
+          "licenseHolder": "Hillside (Tennessee) LLC"
+        },
+        {
+          "brand": "theScore Bet",
+          "licenseHolder": "Penn Sports Interactive, LLC"
+        },
+        {
+          "brand": "Hard Rock Bet",
+          "licenseHolder": "Seminole Hard Rock Digital, LLC"
+        }
+      ],
+      "sourceUrl": "https://www.tn.gov/swac/licensees-registrants.html",
+      "asOf": "2026-09-24",
+      "note": "Tennessee Sports Wagering Council 'Approved Licensees and Registrants'. Tennessee is online-only — there is no retail sports betting — so all nine licensees are mobile operators. All nine show a current renewal (most recent renewal dates range 2025-10-24 to 2026-09-07). The Council also publishes separate vendor-registrant and fantasy-sports lists, which are excluded."
+    },
+    "casinos": null,
+    "pending": []
+  },
+  {
+    "code": "TX",
+    "why": "Expanded gaming in Texas requires a CONSTITUTIONAL AMENDMENT. Texas Constitution Art. III, Sec. 47(a) provides that the Legislature shall pass laws prohibiting lotteries and gift enterprises in this State other than those authorized by Subsections (b), (d), (d-1) and (e) — charitable bingo, charitable raffles, professional-sports-team charitable raffles, financial-institution prize-linked savings and the state lottery. That is why every vehicle is an HJR or SJR, needing two-thirds of each chamber plus voter approval. Texas meets in odd years only: the most recent regular session was the 89th Regular (2025) and there is no 2026 regular session. Two 2025 called sessions were held and the Texas Legislature Online 'Bills By Subject / GAMBLING' report returns 'There are no bills on this subject for this legislative session' for both. IMPORTANT SCOPE CAVEAT: none of the five joint resolutions below specifies the medium — they are medium-neutral grants of authority to the legislature — and no enabling HB or SB implementing sports wagering was filed in 89R (the GAMBLING subject report lists 19 bills, none of them an enabling bill). They are recorded here because they are the only route by which Texas could open, not because they authorize online wagering on their face. On online casino specifically, Texas is moving the other way: SJR 16 expressly EXCLUDES internet gaming from its definition of 'casino gaming', carving out placing, receiving or knowingly transmitting a wager by a means requiring the use of the Internet, except for on-site casino devices that use Internet or networking functionality. No Texas bill proposes online casino / iGaming. TLO records no 'died' or 'left pending' entry for any of these; the committee referral is literally the last action shown.",
+    "sportsbooks": null,
+    "casinos": null,
+    "pending": [
+      {
+        "topic": "online sports betting",
+        "bill": "HJR 134",
+        "status": "H Referred to State Affairs",
+        "lastAction": "2025-03-19",
+        "sourceUrl": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HJR134",
+        "note": null
+      },
+      {
+        "topic": "online sports betting",
+        "bill": "HJR 137",
+        "status": "H Referred to State Affairs",
+        "lastAction": "2025-03-19",
+        "sourceUrl": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HJR137",
+        "note": null
+      },
+      {
+        "topic": "online sports betting",
+        "bill": "SJR 16",
+        "status": "S Referred to State Affairs",
+        "lastAction": "2025-02-03",
+        "sourceUrl": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=SJR16",
+        "note": null
+      },
+      {
+        "topic": "online sports betting",
+        "bill": "SJR 65",
+        "status": "S Referred to State Affairs",
+        "lastAction": "2025-03-10",
+        "sourceUrl": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=SJR65",
+        "note": null
+      },
+      {
+        "topic": "online sports betting",
+        "bill": "SJR 82",
+        "status": "S Referred to State Affairs (2025-03-25); last recorded actions are four 'S Co-author authorized' entries, latest 2025-04-23",
+        "lastAction": "2025-03-25",
+        "sourceUrl": "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=SJR82",
+        "note": null
+      }
+    ]
+  },
+  {
+    "code": "UT",
+    "why": "Utah has a flat CONSTITUTIONAL PROHIBITION. Utah Constitution Article VI, Section 27 ('Games of chance not authorized') reads in full: 'The Legislature shall not authorize any game of chance, lottery or gift enterprise under any pretense or for any purpose.' The criminal gambling provisions formerly at Utah Code 76-10-1101 et seq. were renumbered to Title 76, Chapter 9, Part 14 by Chapter 173, 2025 General Session. Utah Code 76-9-1402 expressly criminalises online gambling — an actor commits participating in gambling if the actor participates in gambling, fringe gambling, or online gambling — with subsection (4) requiring the state to opt out of any future federally authorized online gambling and subsection (5) stating that this section and 76-9-1404 act as this state's prohibition of gambling, fringe gambling, or online gambling in this state. 'Online gambling' is defined at 76-9-1401(14) as gambling by internet or mobile device. Nothing is moving: every bill in the 2025 General Session (959 bills) and the 2026 General Session (1,016 bills) was enumerated from le.utah.gov's own per-bill data and filtered for gambling, wagering, gaming, casino, betting, lottery, horse racing, sweepstakes and fantasy. Two hits across both sessions, neither in scope and one of them restrictive: HB 243 'Gambling Revisions' (2026), which clarifies the definition of gambling and adds 'proposition bet' to what counts as gambling, 'Governor Signed' 2026-03-25; and SB 156 'Pari-mutuel Horse Racing' (2025), which failed 13-14-2 in the Senate on 2025-03-05.",
+    "sportsbooks": null,
+    "casinos": null,
+    "pending": []
+  },
+  {
+    "code": "VA",
+    "why": "Taken verbatim from the 'Approved Permit Holders' block on the Virginia Lottery's Sports Betting page. Virginia defines a 'sports betting permit holder' as a person issued a permit 'to operate a sports betting platform', so every permit holder on this list is an online/mobile operator. The Lottery publishes a consumer brand only for FanDuel and DraftKings; for the other nine it publishes the licensed entity name only, so 'brand' repeats the regulator's wording rather than a brand the regulator did not state. Separately-listed 'Approved Suppliers' (including RSI VA. LLC d/b/a BetRivers, FBG Virginia LLC d/b/a Fanatics, American Wagering d/b/a William Hill Sports Book, SBOPCO LLC d/b/a SuperBook, Kambi, IGT) are platform/service providers, not permit holders, and are excluded. The page shows no as-of date for the permit-holder list.",
+    "sportsbooks": {
+      "operators": [
+        {
+          "brand": "FanDuel",
+          "licenseHolder": "Betfair Interactive US LLC (d/b/a FanDuel) in conjunction with the Washington Commanders"
+        },
+        {
+          "brand": "DraftKings",
+          "licenseHolder": "Crown Virginia Gaming, LLC (Draft Kings)"
+        },
+        {
+          "brand": "BetMGM",
+          "licenseHolder": "BetMGM, LLC"
+        },
+        {
+          "brand": "Rivers Casino Portsmouth",
+          "licenseHolder": "Rivers Portsmouth Gaming, LLC d/b/a Rivers Casino Portsmouth"
+        },
+        {
+          "brand": "Caesars Virginia",
+          "licenseHolder": "Caesars Virginia, LLC"
+        },
+        {
+          "brand": "Bally's Interactive",
+          "licenseHolder": "Bally's Interactive, LLC"
+        },
+        {
+          "brand": "Penn Sports Interactive",
+          "licenseHolder": "Penn Sports Interactive, LLC"
+        },
+        {
+          "brand": "Colonial Downs Group",
+          "licenseHolder": "Colonial Downs Group, LLC"
+        },
+        {
+          "brand": "HR Bristol",
+          "licenseHolder": "HR Bristol, LLC"
+        },
+        {
+          "brand": "Hillside (Virginia)",
+          "licenseHolder": "Hillside (Virginia), LLC"
+        },
+        {
+          "brand": "PlayLive Virginia",
+          "licenseHolder": "PlayLive Virginia LLC"
+        }
+      ],
+      "sourceUrl": "https://www.valottery.com/aboutus/casinosandsportsbetting/sportsbetting",
+      "asOf": "2026-09-24",
+      "note": "Taken verbatim from the 'Approved Permit Holders' block on the Virginia Lottery's Sports Betting page. Virginia defines a 'sports betting permit holder' as a person issued a permit 'to operate a sports betting platform', so every permit holder on this list is an online/mobile operator. The Lottery publishes a consumer brand only for FanDuel and DraftKings; for the other nine it publishes the licensed entity name only, so 'brand' repeats the regulator's wording rather than a brand the regulator did not state. Separately-listed 'Approved Suppliers' (including RSI VA. LLC d/b/a BetRivers, FBG Virginia LLC d/b/a Fanatics, American Wagering d/b/a William Hill Sports Book, SBOPCO LLC d/b/a SuperBook, Kambi, IGT) are platform/service providers, not permit holders, and are excluded. The page shows no as-of date for the permit-holder list."
+    },
+    "casinos": null,
+    "pending": [
+      {
+        "topic": "online casino",
+        "bill": "HB 161",
+        "status": "Failed to Pass from conference",
+        "lastAction": "2026-03-14",
+        "sourceUrl": "https://lis.virginia.gov/bill-details/20261/HB161",
+        "note": null
+      },
+      {
+        "topic": "online casino",
+        "bill": "SB 118",
+        "status": "Failed to Pass from conference",
+        "lastAction": "2026-03-14",
+        "sourceUrl": "https://lis.virginia.gov/bill-details/20261/SB118",
+        "note": null
+      }
+    ]
+  },
+  {
+    "code": "VT",
+    "why": "Vermont runs a limited-operator model: under Act 63 the Department of Liquor and Lottery selects between two and six sports wagering operators by competitive bid and contracts with them directly, so there is no licensee register. The Department publishes no standing operator list. The three operators above come from the Department's own press release announcing the 11 January 2024 mobile launch, which names 'DraftKings, FanDuel, and Fanatics Sportsbook'. The Department names no licensed entity behind each brand. Checked and found no operator names in: the Sports Wagering landing page (https://liquorandlottery.vermont.gov/sports-wagering), the Sports Wagering Reports pages, the monthly Sports Wagering Summary Reports through August 2026 (https://liquorandlottery.vermont.gov/monthly-sports-wagering-reports-2026), the self-exclusion page, and the Department's 2025 Annual Report (https://liquorandlottery.vermont.gov/sites/liqlot/files/documents/2025DLLAnnualReport_05152026_FINAL2.0.pdf).",
+    "sportsbooks": {
+      "operators": [
+        {
+          "brand": "DraftKings",
+          "licenseHolder": null
+        },
+        {
+          "brand": "FanDuel",
+          "licenseHolder": null
+        },
+        {
+          "brand": "Fanatics Sportsbook",
+          "licenseHolder": null
+        }
+      ],
+      "sourceUrl": "https://liquorandlottery.vermont.gov/press-release/mobile-sports-wagering-goes-live-january-11-2024",
+      "asOf": "2026-09-24",
+      "note": "Vermont runs a limited-operator model: under Act 63 the Department of Liquor and Lottery selects between two and six sports wagering operators by competitive bid and contracts with them directly, so there is no licensee register. The Department publishes no standing operator list. The three operators above come from the Department's own press release announcing the 11 January 2024 mobile launch, which names 'DraftKings, FanDuel, and Fanatics Sportsbook'. The Department names no licensed entity behind each brand. Checked and found no operator names in: the Sports Wagering landing page (https://liquorandlottery.vermont.gov/sports-wagering), the Sports Wagering Reports pages, the monthly Sports Wagering Summary Reports through August 2026 (https://liquorandlottery.vermont.gov/monthly-sports-wagering-reports-2026), the self-exclusion page, and the Department's 2025 Annual Report (https://liquorandlottery.vermont.gov/sites/liqlot/files/documents/2025DLLAnnualReport_05152026_FINAL2.0.pdf)."
+    },
+    "casinos": null,
+    "pending": []
+  },
+  {
+    "code": "WA",
+    "why": "Sports betting is legal but TRIBAL ONLY and on-premises, under Class III compacts. RCW 9.46.0364 permits a tribe's compact to be amended to authorize sports wagering 'on Indian lands'. RCW 9.46.0368 authorizes transmission of gambling information over the internet for that wagering only provided the wager may be placed and accepted at a tribe's gaming facility while the customer is physically present on the premises. The Washington State Gambling Commission states that ESHB 2638 authorizes sports wagering on a very limited basis by restricting it to tribal casinos, that the sportsbook must be located within a tribe's gaming facility, and that each gaming operation must use a geofence to ensure patrons can only place mobile sports wagers while physically on the premises. Online gambling outside that authorization is a CLASS C FELONY: RCW 9.46.240 makes knowingly transmitting or receiving gambling information by the internet a class C felony under RCW 9A.20.021. Nothing is moving toward online: all 3,757 bill numbers in the 2025-26 biennium were pulled from the Legislature's own web service and filtered; the complete gambling-related set is 11 bills and none authorizes online or mobile wagering off tribal property, and none concerns online casino. Note that the one enacted 2026 sports-wagering bill reinforces rather than loosens the restriction: SB 6137, 'Concerning the regulated sports wagering industry', was signed by the Governor as Chapter 246, 2026 Laws on 2026-03-30; it permits wagering on collegiate events involving Washington post-secondary institutions at tribal facilities and bars prop bets on those athletes, amending RCW 9.46.0368 while KEEPING the physical-presence requirement (https://app.leg.wa.gov/billsummary?BillNumber=6137&Year=2026&Initiative=False). Its companion HB 2205 was 'Returned to Rules Committee for second reading. House Rules X file.' on 2026-02-19.",
+    "sportsbooks": null,
+    "casinos": null,
+    "pending": []
+  },
+  {
+    "code": "WI",
+    "why": "No operator list published by the Wisconsin Department of Administration, Division of Gaming. Wisconsin sports betting is tribal: 2025 Wisconsin Act 247 (2025 Assembly Bill 601, published 10 April 2026) creates s. 945.01 (1) (h) excluding from the criminal definition of 'bet' an event or sports wager 'made by a person physically located in this state using a mobile or other electronic device if the server or other device used to conduct such event or sports wager is physically located on a federally recognized American Indian tribe's Indian lands' under a pre-1 April 1993 IGRA compact. Wagering is therefore offered by tribes under tribal/state compacts, not under state operator licences, and there is no state licensee list at all. The Division of Gaming's own page describes its role as protecting 'the integrity of Indian and charitable gaming' through licensing, background investigations and enforcement, and its Office of Indian Gaming and Regulatory Compliance regulates tribal casinos; the page does not mention sports wagering. Act 247 source: https://docs.legis.wisconsin.gov/2025/proposals/reg/asm/bill/ab601",
+    "sportsbooks": null,
+    "casinos": null,
+    "pending": []
+  },
+  {
+    "code": "WV",
+    "why": "Source is the West Virginia Lottery's 'Sports Wagering - MSP and Supplier License Dates' PDF, linked from https://business.wvlottery.com/ as the Sports Wagering License List; the document is dated Monday, September 14, 2026. Listed here are the MSP (management services provider) licensees only; the far longer Supplier (SWS) section is excluded. Brand values are the Lottery's own 'DBA Name' column and licenseHolder its 'Applicant' column. Three caveats, all from the document itself: (1) BetMGM's DBA is recorded as 'Roar Digital'; (1b) Hillside's DBA is printed truncated in the PDF as 'bet365/Hillside (West Virginia) Operati'; (2) 'Gamewise, LLC' and 'Kambi' (Sports Information Services Limited) are B2B platform/odds providers holding MSP licences rather than consumer-facing sportsbook brands; (3) the Lottery does not state which MSPs are currently live online, nor which of the five casino sports wagering licensees each MSP operates under, so no casino partner is recorded. All ten MSP licences show annual licence expiry dates in 2026 or 2027.",
+    "sportsbooks": {
+      "operators": [
+        {
+          "brand": "Caesars Sportsbook",
+          "licenseHolder": "American Wagering Inc."
+        },
+        {
+          "brand": "FanDuel Sportsbook",
+          "licenseHolder": "Betfair Interactive US LLC"
+        },
+        {
+          "brand": "Roar Digital",
+          "licenseHolder": "BetMGM, LLC"
+        },
+        {
+          "brand": "DraftKings",
+          "licenseHolder": "Crown WV Gaming, LLC"
+        },
+        {
+          "brand": "Fanatics Sportsbook, Fanatics Casino",
+          "licenseHolder": "FBG Enterprises Opco, LLC"
+        },
+        {
+          "brand": "Gamewise, LLC",
+          "licenseHolder": "Gamewise, LLC"
+        },
+        {
+          "brand": "bet365",
+          "licenseHolder": "Hillside (West Virginia) LLC"
+        },
+        {
+          "brand": "Penn Sports Interactive",
+          "licenseHolder": "Penn Sports Interactive, LLC"
+        },
+        {
+          "brand": "Betrivers",
+          "licenseHolder": "RSI WV, LLC"
+        },
+        {
+          "brand": "Kambi",
+          "licenseHolder": "Sports Information Services Limited"
+        }
+      ],
+      "sourceUrl": "https://assets.ctfassets.net/nm98451qj5dg/7lTFDzTClQRpAauHBroZkL/0a38176bcd3c893f03df9daf05f98049/Sports_Wagering_License_List.pdf",
+      "asOf": "2026-09-24",
+      "note": "Source is the West Virginia Lottery's 'Sports Wagering - MSP and Supplier License Dates' PDF, linked from https://business.wvlottery.com/ as the Sports Wagering License List; the document is dated Monday, September 14, 2026. Listed here are the MSP (management services provider) licensees only; the far longer Supplier (SWS) section is excluded. Brand values are the Lottery's own 'DBA Name' column and licenseHolder its 'Applicant' column. Three caveats, all from the document itself: (1) BetMGM's DBA is recorded as 'Roar Digital'; (1b) Hillside's DBA is printed truncated in the PDF as 'bet365/Hillside (West Virginia) Operati'; (2) 'Gamewise, LLC' and 'Kambi' (Sports Information Services Limited) are B2B platform/odds providers holding MSP licences rather than consumer-facing sportsbook brands; (3) the Lottery does not state which MSPs are currently live online, nor which of the five casino sports wagering licensees each MSP operates under, so no casino partner is recorded. All ten MSP licences show annual licence expiry dates in 2026 or 2027."
+    },
+    "casinos": {
+      "operators": [
+        {
+          "brand": "Caesars Sportsbook (IGP 004)",
+          "licenseHolder": "American Wagering, Inc."
+        },
+        {
+          "brand": "Horseshoe Online Casino (IGP 012)",
+          "licenseHolder": "American Wagering, Inc."
+        },
+        {
+          "brand": "FanDuel Casino (IGP 007)",
+          "licenseHolder": "Betfair Interactive US LLC"
+        },
+        {
+          "brand": "Roar Digital (IGP 002)",
+          "licenseHolder": "BETMGM, LLC"
+        },
+        {
+          "brand": null,
+          "licenseHolder": "Boyd Interactive USA, LLC (IGP 015; no DBA name published)"
+        },
+        {
+          "brand": "DraftKings (IGP 001)",
+          "licenseHolder": "Crown WV Gaming, LLC"
+        },
+        {
+          "brand": "Fanatics Sportsbook, Fanatics Casino (IGP 008)",
+          "licenseHolder": "FBG Enterprises Opco, LLC"
+        },
+        {
+          "brand": "Gamewise, LLC (IGP 011)",
+          "licenseHolder": "Gamewise, LLC"
+        },
+        {
+          "brand": "Golden Nugget Online Gaming, LLC (IGP 006)",
+          "licenseHolder": "Golden Nugget Online Gaming, LLC"
+        },
+        {
+          "brand": "bet365 / Hillside (West Virginia) Operations (IGP 014)",
+          "licenseHolder": "Hillside (West Virginia) LLC"
+        },
+        {
+          "brand": "Penn Sports Interactive (IGP 009)",
+          "licenseHolder": "Penn Sports Interactive, LLC"
+        },
+        {
+          "brand": "BetRivers (IGP 005)",
+          "licenseHolder": "RSI WV, LLC"
+        }
+      ],
+      "sourceUrl": "https://assets.ctfassets.net/nm98451qj5dg/1GTC5md4umN4QIzmHByEbC/d58c9e6eefe07be21a53c9673ef6ca21/i-Gaming_License_List.pdf",
+      "asOf": "2026-09-24",
+      "note": "West Virginia Lottery 'iGaming - MSP and Supplier License Dates' list, report date Monday, September 14, 2026, linked from https://business.wvlottery.com/ as the 'i-Gaming License List'. Above are the twelve entries in the MSP (Management Service Provider) section, which holds the IGP-series iGaming operator licences; the much longer IGS-series Supplier section (Evolution, IGT, Games Global, GeoComply, payment processors, content studios and similar) is excluded as it is not consumer-facing. The list gives only Applicant and DBA Name and does NOT state which of the five WV racetrack/resort casinos each MSP operates under, so licenseHolder carries the licensed applicant entity. The Lottery does not split iGaming from sports wagering within this list, so sportsbook-branded DBAs (e.g. Caesars Sportsbook, Fanatics Sportsbook) appear as published; Boyd Interactive USA, LLC is licensed with no DBA name published."
+    },
+    "pending": []
+  },
+  {
+    "code": "WY",
+    "why": "Taken verbatim from the 'ONLINE SPORTS WAGERING OPERATORS' section of the Wyoming Gaming Commission's Permit Holders page; the separate 'Online Sports Wagering Vendors' section (ALT Sports Data, GeoComply, Genius Sports, PayPal, Xpoint and ~30 others) is excluded. The Commission lists consumer brands only - no licensed entity names - so licenseHolder is null throughout, and the page carries no as-of date. 'Barstool Sportsbook' is still carried on the Commission's list.",
+    "sportsbooks": {
+      "operators": [
+        {
+          "brand": "BetMGM Sportsbook",
+          "licenseHolder": null
+        },
+        {
+          "brand": "DraftKings Sportsbook",
+          "licenseHolder": null
+        },
+        {
+          "brand": "FanDuel Sportsbook",
+          "licenseHolder": null
+        },
+        {
+          "brand": "Fanatics Sportsbook",
+          "licenseHolder": null
+        },
+        {
+          "brand": "Barstool Sportsbook",
+          "licenseHolder": null
+        },
+        {
+          "brand": "Caesars Sportsbook",
+          "licenseHolder": null
+        }
+      ],
+      "sourceUrl": "https://gaming.wyo.gov/OSW/permit-holders",
+      "asOf": "2026-09-24",
+      "note": "Taken verbatim from the 'ONLINE SPORTS WAGERING OPERATORS' section of the Wyoming Gaming Commission's Permit Holders page; the separate 'Online Sports Wagering Vendors' section (ALT Sports Data, GeoComply, Genius Sports, PayPal, Xpoint and ~30 others) is excluded. The Commission lists consumer brands only - no licensed entity names - so licenseHolder is null throughout, and the page carries no as-of date. 'Barstool Sportsbook' is still carried on the Commission's list."
+    },
+    "casinos": null,
+    "pending": []
+  }
+]
