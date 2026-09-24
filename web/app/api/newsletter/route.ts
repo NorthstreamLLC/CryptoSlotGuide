@@ -68,6 +68,24 @@ export async function GET(request: Request) {
 
   const [scopes, list, fields] = await Promise.all([probe("/scopes"), probe(`/marketing/lists/${listId}`), probe("/marketing/field_definitions")]);
 
+  // The sign-up's PUT only ever returns 202 Accepted — SendGrid writes the contact
+  // in a background job, and that job can fail silently (contact allowance reached,
+  // a custom field whose type doesn't match the value). ?probe=1 runs the identical
+  // upsert with a marked test address and polls the job so the reason is visible.
+  // It creates one contact, named so it is obvious and easy to delete.
+  let allowance: unknown;
+  try {
+    const c = await fetch(`${API}/marketing/contacts/count`, { headers: { authorization: `Bearer ${key}` } });
+    if (c.ok) allowance = await c.json();
+  } catch {
+    /* non-fatal */
+  }
+
+  let jobProbe: unknown;
+  if (new URL(request.url).searchParams.get("probe") === "1") {
+    jobProbe = await runProbe(key, listId);
+  }
+
   // When the id is rejected, say what shape it has and whether the account has
   // any lists at all — enough to tell "wrong id" from "no list exists" from
   // "pasted something that isn't an id", without returning ids or names.
@@ -104,6 +122,8 @@ export async function GET(request: Request) {
     listFound: list === 200,
     fieldsReadable: fields === 200,
     status: { scopes, list, fields },
+    ...(allowance ? { allowance } : {}),
+    ...(jobProbe ? { probe: jobProbe } : {}),
     ...(shape ? { listId: shape } : {}),
     reading: {
       401: "key is wrong or revoked",
@@ -174,6 +194,48 @@ export async function POST(request: Request) {
   }
 }
 
+
+/**
+ * Runs the exact upsert a sign-up runs, with a marked test address, then polls
+ * the background job until SendGrid says what happened to it. This is the only
+ * way to see why a contact vanishes after a 202: the PUT reports acceptance,
+ * the job reports the outcome.
+ */
+async function runProbe(key: string, listId: string) {
+  const email = "selftest@cryptoslotguide.com";
+  const fields = await consentFields(key, "selftest");
+  const put = await fetch(`${API}/marketing/contacts`, {
+    method: "PUT",
+    headers: { authorization: `Bearer ${key}`, "content-type": "application/json" },
+    body: JSON.stringify({ list_ids: [listId], contacts: [{ email, custom_fields: fields }] }),
+  });
+  const accepted = put.status;
+  const body = (await put.json().catch(() => ({}))) as { job_id?: string; errors?: unknown };
+  if (!put.ok) return { sentCustomFields: fields ?? null, accepted, rejectedImmediately: body };
+  const jobId = body.job_id;
+  if (!jobId) return { sentCustomFields: fields ?? null, accepted, note: "no job_id returned" };
+
+  // The job is usually done in a second or two; give it a few tries.
+  for (let i = 0; i < 6; i++) {
+    await new Promise((s) => setTimeout(s, 1500));
+    const r = await fetch(`${API}/marketing/contacts/imports/${jobId}`, { headers: { authorization: `Bearer ${key}` } });
+    if (!r.ok) return { sentCustomFields: fields ?? null, accepted, jobStatusLookup: r.status };
+    const job = (await r.json()) as { status?: string; results?: Record<string, unknown> };
+    if (job.status && job.status !== "pending") {
+      let errorDetail: unknown;
+      const url = (job.results as { errors_url?: string } | undefined)?.errors_url;
+      if (url) {
+        try {
+          errorDetail = await (await fetch(url)).text();
+        } catch {
+          /* the url is pre-signed and short-lived; absence is not fatal */
+        }
+      }
+      return { sentCustomFields: fields ?? null, accepted, job, errorDetail };
+    }
+  }
+  return { sentCustomFields: fields ?? null, accepted, note: "job still pending after 9s" };
+}
 
 /**
  * Consent, stored beside the contact in SendGrid.
