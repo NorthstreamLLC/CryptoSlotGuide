@@ -6,6 +6,7 @@ import { COIN_PAGES, coinPage, casinosForCoin } from "@/lib/landing";
 import { CasinoOfferList } from "@/components/casino/CasinoOfferList";
 import { LandingShell, LinkCloud } from "@/components/landing/LandingShell";
 import { NextSteps } from "@/components/layout/NextSteps";
+import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
 
 export function generateStaticParams() {
   return COIN_PAGES.filter((c) => casinosForCoin(c.ticker).length >= 3).map((c) => ({ coin: c.slug }));
@@ -39,6 +40,7 @@ export default async function Page({ params }: { params: Promise<{ coin: string 
       >
         <CasinoOfferList ops={list} />
         <LinkCloud title="Casinos by coin" items={others.map((x) => ({ href: `/crypto-casinos/accepting/${x.slug}`, label: `${x.name} casinos` }))} />
+        <FeaturedPartner context={{ kind: "coin", ticker: c.ticker }} />
         <NextSteps
           steps={[
             { href: "/coins", label: "Coins we track", hint: "Credit times, confirmations and what the network charges." },

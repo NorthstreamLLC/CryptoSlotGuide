@@ -8,6 +8,7 @@ import { payoutView } from "@/lib/payout";
 import { bonusWithWager } from "@/lib/wager";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { NextSteps } from "@/components/layout/NextSteps";
+import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
 
 /**
  * Ported from the `isCoins` block in CryptoSlotGuide.dc.html (search for
@@ -147,6 +148,7 @@ export function CoinsPage() {
         </section>
       )}
       <section style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px 56px" }}>
+        <FeaturedPartner context={{ kind: "general" }} />
         <NextSteps
           steps={[
             { href: "/wallets", label: "Wallets", hint: "Where the bankroll lives: custody, chains and swap fees." },

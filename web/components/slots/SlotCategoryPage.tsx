@@ -3,6 +3,7 @@ import { maxWinLabel, rtpLabel, rtpSortValue, volLabel } from "@/lib/slot-facts"
 import { siteData, siteCounts } from "@/lib/site-data";
 import type { SlotMechanicTag } from "@/lib/types";
 import { NextSteps } from "@/components/layout/NextSteps";
+import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
 
 /**
  * Ported from the `isSlotCat` block in CryptoSlotGuide.dc.html (search
@@ -83,6 +84,7 @@ export function SlotCategoryPage({ tag }: { tag: SlotMechanicTag }) {
             );
           })}
         </div>
+        <FeaturedPartner context={{ kind: "slots" }} />
         <NextSteps
           steps={[
             { href: "/slots", label: "The full slot RTP index", hint: "Every title we track, with the studio's published return." },

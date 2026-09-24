@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { LegacyItem } from "@/lib/legacy";
 import { readingMinutes } from "@/lib/legacy";
+import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
 
 const MONO = "var(--font-jetbrains-mono), monospace";
 
@@ -33,6 +34,8 @@ export function Article({ item, related }: { item: LegacyItem; related: LegacyIt
           <img src={item.image} alt="" style={{ width: "100%", height: "auto", borderRadius: 16, marginBottom: 26 }} />
         )}
         <div className="legacy-article" dangerouslySetInnerHTML={{ __html: item.html }} />
+
+        <FeaturedPartner context={{ kind: "general" }} />
 
         {related.length > 0 && (
           <>
