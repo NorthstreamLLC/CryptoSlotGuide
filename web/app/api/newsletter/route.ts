@@ -37,8 +37,13 @@ function rateLimited(ip: string): boolean {
   return hits.length > MAX_PER_WINDOW;
 }
 
-/** Deliberately strict rather than clever: one @, a dot in the domain, no spaces. */
-const looksLikeEmail = (v: string) => /^[^\s@]+@[^\s@.]+\.[^\s@]{2,}$/.test(v) && v.length <= 254;
+/**
+ * Deliberately strict rather than clever: one @, a dot in the domain, a
+ * two-letter TLD at least, no spaces, and no stray dots at either end or
+ * doubled up. Kept identical to the rule in components/ui/EmailSignup.tsx so
+ * the form never accepts an address this refuses.
+ */
+const looksLikeEmail = (v: string) => v.length <= 254 && /^[^\s@.][^\s@]*@[^\s@.]+(\.[^\s@.]+)*\.[a-z]{2,}$/i.test(v) && !v.includes("..");
 
 /**
  * Read-only self-test: GET /api/newsletter?selftest=1

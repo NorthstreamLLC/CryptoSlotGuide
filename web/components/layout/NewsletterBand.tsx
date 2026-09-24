@@ -8,7 +8,7 @@ export function NewsletterBand() {
         <EmailSignup
           source="site"
           title="For the best casino bonuses, join our newsletter"
-          sub="The best new welcome offers, the biggest races and raffles, and what changed at each casino this week. One email a week, no spam, unsubscribe any time."
+          sub="The best affiliate casino bonuses, the biggest races, raffles, leaderboards and what changed at each casino this week. One email a week, no spam, unsubscribe any time."
         />
       </div>
     </section>
