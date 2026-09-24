@@ -175,7 +175,7 @@ export async function POST(request: Request) {
   // field name is checked; a stale cached page still sending the old "company"
   // key is ignored rather than rejected, so nobody is dropped mid-rollout.
   if (typeof body.csg_hp === "string" && body.csg_hp.trim() !== "") {
-    return Response.json({ ok: true });
+    return Response.json({ ok: true, path: "honeypot" });
   }
 
   const email = typeof body.email === "string" ? body.email.trim().toLowerCase() : "";
@@ -207,8 +207,9 @@ export async function POST(request: Request) {
       return Response.json({ error: "That didn't go through. Try again shortly.", upstream: res.status }, { status: 502 });
     }
 
+    const accepted = (await res.json().catch(() => ({}))) as { job_id?: string };
     await sendWelcome(email, key);
-    return Response.json({ ok: true });
+    return Response.json({ ok: true, path: "sendgrid", upstream: res.status, jobId: accepted.job_id ?? null });
   } catch (e) {
     console.error("newsletter: SendGrid request threw", e instanceof Error ? e.message : "unknown");
     return Response.json({ error: "That didn't go through. Try again shortly." }, { status: 502 });
