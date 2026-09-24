@@ -12,8 +12,11 @@
     "import:onchain": "node scripts/import-onchain-volume.mjs",
     "import:spec": "node scripts/import-spec-sheet.mjs",
     "build:changelog": "node scripts/build-changelog.mjs",
-    "prebuild": "node scripts/build-changelog.mjs && node scripts/check-house-order.mjs",
-    "check:house": "node scripts/check-house-order.mjs"
+    "prebuild": "node scripts/build-changelog.mjs && node scripts/check-house-order.mjs && node scripts/audit-freshness.mjs",
+    "check:house": "node scripts/check-house-order.mjs",
+    "audit:freshness": "node scripts/audit-freshness.mjs",
+    "audit:coverage": "node scripts/audit-partner-coverage.mjs",
+    "audit:geo": "node scripts/audit-partner-geo.mjs"
   },
   "dependencies": {
     "next": "16.3.3",
