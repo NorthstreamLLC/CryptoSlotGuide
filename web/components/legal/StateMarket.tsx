@@ -51,7 +51,7 @@ function Operators({ title, list }: { title: string; list: OperatorList }) {
  * is, and what its legislature is actually doing about it.
  */
 export function StateMarketBlock({ market, stateName }: { market: StateMarket; stateName: string }) {
-  const { why, sportsbooks, casinos, pending } = market;
+  const { why, legalToday, wouldRequire, sources, pendingNote, sportsbooks, casinos, pending } = market;
   if (!why && !sportsbooks && !casinos && !pending.length) return null;
 
   return (
@@ -65,7 +65,35 @@ export function StateMarketBlock({ market, stateName }: { market: StateMarket; s
             {sportsbooks ? "How it works here" : `Why you can't bet online in ${stateName}`}
           </div>
           <p style={{ margin: 0, maxWidth: "80ch", fontSize: 14.5, lineHeight: 1.7, color: "#C6D1D7", textWrap: "pretty" }}>{why}</p>
+
+          {legalToday && (
+            <div style={{ marginTop: 16, paddingTop: 14, borderTop: "1px solid rgba(255,255,255,.07)" }}>
+              <div style={{ fontFamily: MONO, fontSize: 10, letterSpacing: ".07em", textTransform: "uppercase", color: "#8E9CA5", marginBottom: 5 }}>What is legal today</div>
+              <p style={{ margin: 0, maxWidth: "80ch", fontSize: 14, lineHeight: 1.65, color: "#C6D1D7", textWrap: "pretty" }}>{legalToday}</p>
+            </div>
+          )}
+
+          {wouldRequire && (
+            <div style={{ marginTop: 14 }}>
+              <span style={{ fontFamily: MONO, fontSize: 10, letterSpacing: ".07em", textTransform: "uppercase", color: "#8E9CA5" }}>To change it </span>
+              <span style={{ fontSize: 13.5, fontWeight: 700, color: "#E8EDF0" }}>{wouldRequire}</span>
+            </div>
+          )}
+
+          {sources && sources.length > 0 && (
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 7, marginTop: 14, paddingTop: 12, borderTop: "1px solid rgba(255,255,255,.07)" }}>
+              {sources.map((src) => (
+                <a key={src.url} href={src.url} target="_blank" rel="noopener noreferrer nofollow" style={{ padding: "5px 10px", borderRadius: 100, background: "rgba(255,255,255,.03)", border: "1px solid rgba(255,255,255,.08)", fontSize: 12, color: "#9FD9DD" }}>
+                  {src.label} ↗
+                </a>
+              ))}
+            </div>
+          )}
         </div>
+      )}
+
+      {pending.length === 0 && pendingNote && (
+        <p style={{ margin: "16px 0 0", maxWidth: "80ch", fontSize: 13, lineHeight: 1.6, color: "#8E9CA5" }}>{pendingNote}</p>
       )}
 
       {pending.length > 0 && (

@@ -44,6 +44,13 @@ export interface StateMarket {
   code: string;
   /** Why the state is the way it is — the constitutional article, compact or statute behind it. */
   why: string | null;
+  /** What IS legal there, and who regulates it. Present where the deep dive covered a state. */
+  legalToday?: string | null;
+  /** What it would take to change: a constitutional amendment, a compact renegotiation, or a statute. */
+  wouldRequire?: string | null;
+  sources?: { label: string; url: string }[];
+  /** Says "we looked and found none", which a bare empty pending array cannot. */
+  pendingNote?: string | null;
   sportsbooks: OperatorList | null;
   casinos: OperatorList | null;
   pending: Bill[];

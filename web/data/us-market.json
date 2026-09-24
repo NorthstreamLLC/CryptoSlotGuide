@@ -126,10 +126,51 @@
   },
   {
     "code": "CA",
-    "why": "no legal online sports betting",
+    "why": "California's constitution has never authorised sports betting of any kind. Article IV, Section 19 hands out gambling permissions one at a time - a state lottery in subdivision (d), charitable bingo in (c), horse racing in (b), tribal casino compacts in (f) - and sports wagering is simply not on the list, while subdivision (e) says the Legislature \"has no power to authorize, and shall prohibit, casinos of the type currently operating in Nevada and New Jersey.\" Taking or placing a sports bet is a crime under Penal Code 337a, which covers \"pool selling or bookmaking, with or without writing, at any time or place\" and carries up to a year in jail and a $5,000 fine. Voters were given the chance to change this in November 2022 and refused twice: Proposition 26, for in-person tribal sportsbooks, lost 67.0% to 33.0%, and Proposition 27, for online and mobile sports betting, lost 82.3% to 17.7%.",
     "sportsbooks": null,
     "casinos": null,
-    "pending": []
+    "pending": [],
+    "legalToday": "Tribal casinos (66 of them, under compacts with 79 tribes as of the 2022 Legislative Analyst's count), 84 licensed card rooms, the California State Lottery, and pari-mutuel betting on horse racing. Card rooms, tribal gaming and third-party proposition player services are licensed by the California Gambling Control Commission, with the Department of Justice Bureau of Gambling Control handling compliance inspections and approving every card room game before it can be offered. Online casino games are not licensed at all, and since AB 831 took effect (chaptered 11 October 2025) Penal Code 337o makes it \"unlawful for any person or entity to operate, conduct, or offer an online sweepstakes game in this state,\" which shuts the door on sweepstakes-model online casinos.",
+    "wouldRequire": "constitutional amendment",
+    "sources": [
+      {
+        "label": "California Constitution Article IV, Section 19",
+        "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CONS&sectionNum=SEC.%2019.&article=IV"
+      },
+      {
+        "label": "California Penal Code Section 337a (pool selling and bookmaking)",
+        "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=337a."
+      },
+      {
+        "label": "California Penal Code Section 337o (online sweepstakes games), added by AB 831 (2025)",
+        "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PEN&sectionNum=337o."
+      },
+      {
+        "label": "AB 831 bill status - chaptered 10/11/2025, California Legislative Information",
+        "url": "https://leginfo.legislature.ca.gov/faces/billStatusClient.xhtml?bill_id=202520260AB831"
+      },
+      {
+        "label": "Legislative Analyst's analysis of Proposition 27, Official Voter Information Guide 2022 - \"State law currently bans sports betting in California\"; Prop 27 \"changes the California Constitution and state law to allow online sports betting\"",
+        "url": "https://vigarchive.sos.ca.gov/2022/general/propositions/27/analysis.htm"
+      },
+      {
+        "label": "Legislative Analyst's analysis of Proposition 26, Official Voter Information Guide 2022 - what gambling is currently legal in California",
+        "url": "https://vigarchive.sos.ca.gov/2022/general/propositions/26/analysis.htm"
+      },
+      {
+        "label": "California Secretary of State, Statement of the Vote, 8 November 2022 General Election (certified county-by-county ballot measure totals)",
+        "url": "https://www.sos.ca.gov/elections/prior-elections/statewide-election-results/general-election-nov-8-2022/statement-vote"
+      },
+      {
+        "label": "California Gambling Control Commission",
+        "url": "https://www.cgcc.ca.gov/"
+      },
+      {
+        "label": "California Department of Justice, Bureau of Gambling Control",
+        "url": "https://oag.ca.gov/gambling"
+      }
+    ],
+    "pendingNote": "None. A keyword search of the California Legislature's own bill database for the 2025-2026 session ('sports wagering', 'sports betting', 'gambling', 'online gambling') returns no bill and no constitutional amendment (ACA or SCA) that would legalise online sports betting or online casino. Every gambling measure in the session runs the other way or is purely administrative - AB 831 banned online sweepstakes games, AB 2617 ('Protecting Kids from Online Gambling') and AB 2446 (Attorney General investigations into prediction market wagering) tighten the rules, and the rest amend Gambling Control Act fees, cardroom licensing or horse racing satellite wagering."
   },
   {
     "code": "CO",
@@ -377,22 +418,22 @@
   },
   {
     "code": "HI",
-    "why": "no legal online sports betting",
+    "why": "Hawaii has no gambling law to license an online sportsbook under - beyond the criminal code it has no gambling law at all. HRS 712-1220 defines gambling as staking something of value \"upon the outcome of a contest of chance or a future contingent event not under his control or influence,\" which is exactly what a sports bet is, and HRS 712-1223 makes knowingly participating in any gambling activity a misdemeanour. Running a book is treated far more harshly: under HRS 712-1222 even negligently advancing or profiting from gambling activity is a class C felony, and HRS 712-1221 makes bookmaking above five bets totalling more than $500 in any seven-day period a class B felony. The only softening anywhere in the chapter is the \"social gambling\" affirmative defence in HRS 712-1231, and that defence is expressly unavailable when \"the gambling activity is bookmaking.\"",
     "sportsbooks": null,
     "casinos": null,
     "pending": [
       {
         "topic": "online sports betting",
-        "bill": "HB 1308",
-        "status": "Received notice of the discharge of all House Conferees (Hse. Com. No. 457).",
+        "bill": "HB 1308 HD3 SD2",
+        "status": "Died in conference committee. Legislature's own status wording: \"Received notice of the discharge of all House Conferees (Hse. Com. No. 457).\" preceded by \"House Conferee(s) discharged.\" (1 April 2026) and \"Senate Conferee(s) discharged.\" (20 March 2026). The measure's Act field is blank, so it did not become law. Title: RELATING TO SPORTS WAGERING - would have let the Department of Law Enforcement license sports wagering operators and suppliers and would have specified that legal sports wagering and fantasy sports contests \"shall not be considered contests of chance or gambling\".",
         "lastAction": "2026-04-02",
         "sourceUrl": "https://www.capitol.hawaii.gov/session/measure_indiv.aspx?billtype=HB&billnumber=1308&year=2026",
         "note": null
       },
       {
         "topic": "online sports betting",
-        "bill": "HB 2570",
-        "status": "Passed Second Reading as amended in HD 1 and referred to the committee(s) on JHA/CPC.",
+        "bill": "HB 2570 HD1",
+        "status": "Stalled in House committee. Status wording: \"Passed Second Reading as amended in HD 1 and referred to the committee(s) on JHA/CPC\" - on a divided floor vote with 20 representatives voting no. No further action; Act field blank. Companion to SB 3303. Would have put sports wagering licensing under the Department of Business, Economic Development and Tourism. Carried a defective effective date of 7/1/3000.",
         "lastAction": "2026-02-12",
         "sourceUrl": "https://www.capitol.hawaii.gov/session/measure_indiv.aspx?billtype=HB&billnumber=2570&year=2026",
         "note": null
@@ -400,28 +441,73 @@
       {
         "topic": "online sports betting",
         "bill": "SB 3303",
-        "status": "Referred to EDT/HHS, CPN/WAM.",
+        "status": "Never got a hearing. Status wording: \"Referred to EDT/HHS, CPN/WAM.\" after \"Passed First Reading.\" on 30 January 2026. No further action; Act field blank. Companion to HB 2570.",
         "lastAction": "2026-02-02",
         "sourceUrl": "https://www.capitol.hawaii.gov/session/measure_indiv.aspx?billtype=SB&billnumber=3303&year=2026",
         "note": null
       },
       {
         "topic": "online sports betting",
-        "bill": "SB 1569",
-        "status": "Carried over to 2026 Regular Session.",
+        "bill": "SB 1572",
+        "status": "Carried over from 2025 and never acted on in 2026. Status wording: \"Carried over to 2026 Regular Session.\" (8 December 2025); before that, \"Referred to EDT, CPN/WAM.\" (27 January 2025). Would have created a Hawaii State Sports Wagering Commission within DBEDT and specified that sports wagering \"shall not be considered games of chance or gambling\".",
+        "lastAction": "2025-12-08",
+        "sourceUrl": "https://www.capitol.hawaii.gov/session/measure_indiv.aspx?billtype=SB&billnumber=1572&year=2026",
+        "note": null
+      },
+      {
+        "topic": "online sports betting",
+        "bill": "SB 1569 SD1",
+        "status": "Carried over from 2025 and never acted on in 2026. Status wording: \"Carried over to 2026 Regular Session.\" (8 December 2025); before that, \"The committee on WAM deferred the measure.\" (26 February 2025). Companion to HB 1308. Carried a defective effective date of 7/1/2050.",
         "lastAction": "2025-12-08",
         "sourceUrl": "https://www.capitol.hawaii.gov/session/measure_indiv.aspx?billtype=SB&billnumber=1569&year=2026",
         "note": null
       },
       {
-        "topic": "online sports betting",
-        "bill": "SB 1572",
-        "status": "Carried over to 2026 Regular Session.",
+        "topic": "land-based casino gaming (cruise ships)",
+        "bill": "HB 1945",
+        "status": "Deferred in its first committee. Status wording: \"The committee(s) on ECD recommend(s) that the measure be deferred.\" Would have authorised gaming on cruise ships in state waters from 1 August 2027 with a 20% wagering tax.",
+        "lastAction": "2026-02-11",
+        "sourceUrl": "https://www.capitol.hawaii.gov/session/measure_indiv.aspx?billtype=HB&billnumber=1945&year=2026",
+        "note": null
+      },
+      {
+        "topic": "land-based social gaming (poker facility)",
+        "bill": "HB 1466",
+        "status": "Carried over from 2025 and never acted on in 2026. Status wording: \"Carried over to 2026 Regular Session.\" (8 December 2025); before that, \"Referred to ECD, CPC/JHA, FIN, referral sheet 4\" (27 January 2025). Would have licensed a social gaming facility in a tourism district and created a Hawaii social gaming control commission.",
         "lastAction": "2025-12-08",
-        "sourceUrl": "https://www.capitol.hawaii.gov/session/measure_indiv.aspx?billtype=SB&billnumber=1572&year=2026",
+        "sourceUrl": "https://www.capitol.hawaii.gov/session/measure_indiv.aspx?billtype=HB&billnumber=1466&year=2026",
         "note": null
       }
-    ]
+    ],
+    "legalToday": "Nothing commercial. Hawaii's statutes authorise no lottery, no casino, no card room, no race book and no licensed charitable gaming, and there is no state gambling regulator - which is why the 2026 sports wagering bills all had to propose building one from scratch inside the Department of Business, Economic Development and Tourism (SB 3303, HB 2570, SB 1572) or the Department of Law Enforcement (HB 1308). Private games among friends are not affirmatively legal either: HRS 712-1231 gives a defendant an affirmative defence to raise at trial, with the burden of proof on the defendant, not a licence to run a game.",
+    "wouldRequire": "statute",
+    "sources": [
+      {
+        "label": "HRS 712-1220 - definitions, including \"gambling\", \"bookmaking\" and \"contest of chance\"",
+        "url": "https://www.capitol.hawaii.gov/hrscurrent/Vol14_Ch0701-0853/HRS0712/HRS_0712-1220.htm"
+      },
+      {
+        "label": "HRS 712-1221 - promoting gambling in the first degree (class B felony)",
+        "url": "https://www.capitol.hawaii.gov/hrscurrent/Vol14_Ch0701-0853/HRS0712/HRS_0712-1221.htm"
+      },
+      {
+        "label": "HRS 712-1222 - promoting gambling in the second degree (class C felony)",
+        "url": "https://www.capitol.hawaii.gov/hrscurrent/Vol14_Ch0701-0853/HRS0712/HRS_0712-1222.htm"
+      },
+      {
+        "label": "HRS 712-1223 - gambling (misdemeanour)",
+        "url": "https://www.capitol.hawaii.gov/hrscurrent/Vol14_Ch0701-0853/HRS0712/HRS_0712-1223.htm"
+      },
+      {
+        "label": "HRS 712-1231 - social gambling; affirmative defence",
+        "url": "https://www.capitol.hawaii.gov/hrscurrent/Vol14_Ch0701-0853/HRS0712/HRS_0712-1231.htm"
+      },
+      {
+        "label": "HRS 712-1226 - possession of a gambling device",
+        "url": "https://www.capitol.hawaii.gov/hrscurrent/Vol14_Ch0701-0853/HRS0712/HRS_0712-1226.htm"
+      }
+    ],
+    "pendingNote": "Hawaii had more live sports-betting bills in 2026 than any other state on this list, and none of them passed. Every one either died in conference (HB 1308), stalled in committee (HB 2570, SB 3303) or was simply never taken up after being carried over (SB 1572, SB 1569). Two further measures ran the other way: HB 2198 HD2 would amend the definition of \"gambling\" to cover prediction markets, and passed the House before being referred in the Senate on 12 March 2026."
   },
   {
     "code": "IA",
@@ -490,10 +576,55 @@
   },
   {
     "code": "ID",
-    "why": "no legal online sports betting",
+    "why": "Idaho's constitution bans gambling outright rather than merely leaving it unauthorised. Article III, Section 20 says gambling \"is contrary to public policy and is strictly prohibited\" apart from three named exceptions - a state lottery, pari-mutuel betting and charitable bingo and raffles - and subsection (2) adds that none of those exceptions may \"employ any form of casino gambling\" or \"any electronic or electromechanical imitation or simulation of any form of casino gambling.\" Sports betting is not one of the three exceptions, and Idaho Code 18-3801 removes any doubt by defining gambling to include risking money on \"the happening or outcome of an event, including a sporting event.\" Placing a bet is a misdemeanour under Idaho Code 18-3802 and taking bets is separately punished as bookmaking or pool selling under Idaho Code 18-3809.",
     "sportsbooks": null,
     "casinos": null,
-    "pending": []
+    "pending": [],
+    "legalToday": "Three things, exactly as the constitution lists them. The Idaho Lottery (Idaho Code Title 67, Chapter 74) runs the state lottery and also licenses charitable bingo and raffle organisations through its Charitable Gaming programme. Pari-mutuel horse race betting is allowed by Idaho Code 54-2512, which legalises pari-mutuel wagering and declares other betting illegal, and is overseen by the Idaho State Racing Commission, a division of the Idaho State Police. Separately, Idaho Code 67-429B provides that \"Indian tribes are authorized to conduct gaming using tribal video gaming machines pursuant to state-tribal gaming compacts which specifically permit their use,\" and that such a machine \"may be used to conduct gaming only by an Indian tribe.\"",
+    "wouldRequire": "constitutional amendment",
+    "sources": [
+      {
+        "label": "Idaho Constitution Article III, Section 20 - \"Gambling is contrary to public policy and is strictly prohibited except for the following\"",
+        "url": "https://legislature.idaho.gov/statutesrules/idconst/ArtIII/Sect20/"
+      },
+      {
+        "label": "Idaho Code 18-3801 - gambling defined, expressly including \"the happening or outcome of an event, including a sporting event\"",
+        "url": "https://legislature.idaho.gov/statutesrules/idstat/Title18/T18CH38/SECT18-3801/"
+      },
+      {
+        "label": "Idaho Code 18-3802 - gambling prohibited (misdemeanour)",
+        "url": "https://legislature.idaho.gov/statutesrules/idstat/Title18/T18CH38/SECT18-3802/"
+      },
+      {
+        "label": "Idaho Code 18-3809 - bookmaking and pool selling (misdemeanour)",
+        "url": "https://legislature.idaho.gov/statutesrules/idstat/Title18/T18CH38/SECT18-3809/"
+      },
+      {
+        "label": "Idaho Code 67-429B - tribal video gaming machines under state-tribal compacts",
+        "url": "https://legislature.idaho.gov/statutesrules/idstat/Title67/T67CH4/SECT67-429B/"
+      },
+      {
+        "label": "Idaho Code Title 67, Chapter 74 - Idaho State Lottery (including 67-7446 restrictions)",
+        "url": "https://legislature.idaho.gov/statutesrules/idstat/Title67/T67CH74/"
+      },
+      {
+        "label": "Idaho Code Title 54, Chapter 25 - horse racing; 54-2503 creates the Idaho State Racing Commission, 54-2512 pari-mutuel betting, other betting illegal",
+        "url": "https://legislature.idaho.gov/statutesrules/idstat/Title54/T54CH25/"
+      },
+      {
+        "label": "Idaho Lottery - Charitable Gaming licensing",
+        "url": "https://www.idaholottery.com/charitable-gaming"
+      },
+      {
+        "label": "Idaho State Racing Commission, a division of the Idaho State Police",
+        "url": "https://isp.idaho.gov/rc/"
+      },
+      {
+        "label": "Idaho Office of the Attorney General, 23 March 2026 - Attorney General Labrador: \"States like Idaho that choose to ban sports betting would be prevented from enforcing those bans under the CFTC's theory\" and \"Idaho will continue defending our right to regulate gambling as we see fit\"",
+        "url": "https://www.ag.idaho.gov/newsroom/ag-labrador-defends-idahos-authority-to-regulate-sports-betting/"
+      }
+    ],
+    "pendingNote": "None. The Idaho Legislature's own Legislative Topic Index for the 2026 session has no heading for gambling, gaming, wagering, betting, casinos or racing at all - the index runs straight from FUNERALS to GASOLINE. The only gambling-adjacent entries in the whole session sit under LOTTERY, STATE and are housekeeping: H0504 (Ch.6, prohibiting bulk lottery ticket purchases), S1381 (Ch.152) and S1373 (Ch.70) lottery appropriations, S1362 (Ch.330), and HR034 and SR115 approving Idaho State Lottery rules. No bill in the 2026 session would legalise online sports betting or online casino. Idaho's most recent action on sports betting was in the opposite direction: on 23 March 2026 the Attorney General joined a 39-state coalition arguing that federal regulators cannot override state sports betting bans."
   },
   {
     "code": "IL",
