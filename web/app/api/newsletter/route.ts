@@ -44,8 +44,9 @@ const looksLikeEmail = (v: string) => /^[^\s@]+@[^\s@.]+\.[^\s@]{2,}$/.test(v) &
  * A sign-up that fails returns a deliberately vague message, and the real reason
  * is in a log that isn't always reachable. This asks SendGrid the same questions
  * the sign-up does — is the key good, does the list exist, are the custom fields
- * there — and reports the status codes. It creates nothing and sends nothing, and
- * returns no addresses, list names or key material: status numbers only.
+ * readable — and reports the status codes, plus the contact allowance so a full
+ * plan is distinguishable from a broken one. It creates nothing, sends nothing,
+ * and returns no addresses, list names or key material.
  */
 export async function GET(request: Request) {
   if (new URL(request.url).searchParams.get("selftest") !== "1") {
@@ -68,38 +69,13 @@ export async function GET(request: Request) {
 
   const [scopes, list, fields] = await Promise.all([probe("/scopes"), probe(`/marketing/lists/${listId}`), probe("/marketing/field_definitions")]);
 
-  // The sign-up's PUT only ever returns 202 Accepted — SendGrid writes the contact
-  // in a background job, and that job can fail silently (contact allowance reached,
-  // a custom field whose type doesn't match the value). ?probe=1 runs the identical
-  // upsert with a marked test address and polls the job so the reason is visible.
-  // It creates one contact, named so it is obvious and easy to delete.
+  // Contact allowance, so "nothing is landing" can be told from "the plan is full".
   let allowance: unknown;
   try {
     const c = await fetch(`${API}/marketing/contacts/count`, { headers: { authorization: `Bearer ${key}` } });
     if (c.ok) allowance = await c.json();
   } catch {
     /* non-fatal */
-  }
-
-  // Whether a submission made through the real browser form landed. Fixed
-  // address, never one supplied by the caller, so this cannot be used to test
-  // whether some third party is subscribed.
-  let formTest: unknown;
-  if (new URL(request.url).searchParams.get("formtest") === "1") {
-    formTest = await probeExists(key, "formtest@cryptoslotguide.com");
-  }
-
-  const askedExists = new URL(request.url).searchParams.get("exists");
-  let existsCheck: unknown;
-  if (askedExists) {
-    existsCheck = /@cryptoslotguide\.com$/i.test(askedExists)
-      ? await probeExists(key, askedExists.toLowerCase())
-      : { refused: "only addresses on this site's own domain can be looked up" };
-  }
-
-  let jobProbe: unknown;
-  if (new URL(request.url).searchParams.get("probe") === "1") {
-    jobProbe = await runProbe(key, listId, new URL(request.url).searchParams.get("nofields") !== "1");
   }
 
   // When the id is rejected, say what shape it has and whether the account has
@@ -139,9 +115,6 @@ export async function GET(request: Request) {
     fieldsReadable: fields === 200,
     status: { scopes, list, fields },
     ...(allowance ? { allowance } : {}),
-    ...(jobProbe ? { probe: jobProbe } : {}),
-    ...(formTest ? { formTest } : {}),
-    ...(existsCheck ? { existsCheck } : {}),
     ...(shape ? { listId: shape } : {}),
     reading: {
       401: "key is wrong or revoked",
@@ -175,7 +148,7 @@ export async function POST(request: Request) {
   // field name is checked; a stale cached page still sending the old "company"
   // key is ignored rather than rejected, so nobody is dropped mid-rollout.
   if (typeof body.csg_hp === "string" && body.csg_hp.trim() !== "") {
-    return Response.json({ ok: true, path: "honeypot" });
+    return Response.json({ ok: true });
   }
 
   const email = typeof body.email === "string" ? body.email.trim().toLowerCase() : "";
@@ -208,91 +181,14 @@ export async function POST(request: Request) {
       return Response.json({ error: "That didn't go through. Try again shortly.", upstream: res.status }, { status: 502 });
     }
 
-    const accepted = (await res.json().catch(() => ({}))) as { job_id?: string };
     await sendWelcome(email, key);
-    return Response.json({
-      ok: true,
-      path: "sendgrid",
-      upstream: res.status,
-      jobId: accepted.job_id ?? null,
-      sentBody: payload.replace(listId, "<listId>"),
-    });
+    return Response.json({ ok: true });
   } catch (e) {
     console.error("newsletter: SendGrid request threw", e instanceof Error ? e.message : "unknown");
     return Response.json({ error: "That didn't go through. Try again shortly." }, { status: 502 });
   }
 }
 
-
-/**
- * Does this address exist in the account at all? The contact count is cached
- * and the list view lags, so neither settles the question; a search does.
- * Only ever called with the probe's own fixed address, never a visitor's.
- */
-async function probeExists(key: string, email: string) {
-  try {
-    const r = await fetch(`${API}/marketing/contacts/search/emails`, {
-      method: "POST",
-      headers: { authorization: `Bearer ${key}`, "content-type": "application/json" },
-      body: JSON.stringify({ emails: [email] }),
-    });
-    if (r.status === 404) return { found: false, status: 404 };
-    if (!r.ok) return { lookupStatus: r.status };
-    const body = (await r.json()) as { result?: Record<string, { contact?: { id?: string; list_ids?: string[] } }> };
-    const hit = body.result?.[email]?.contact;
-    return { found: !!hit, inLists: hit?.list_ids?.length ?? 0 };
-  } catch {
-    return { lookupStatus: "threw" };
-  }
-}
-
-/**
- * Runs the exact upsert a sign-up runs, with a marked test address, then polls
- * the background job until SendGrid says what happened to it. This is the only
- * way to see why a contact vanishes after a 202: the PUT reports acceptance,
- * the job reports the outcome.
- */
-async function runProbe(key: string, listId: string, withFields = true) {
-  const email = `selftest+${Date.now()}@cryptoslotguide.com`;
-  // &nofields=1 drops the custom fields, which isolates whether they are what
-  // the job is choking on: a Date field rejecting its value fails the whole
-  // contact, and the PUT still answers 202.
-  const fields = withFields ? await consentFields(key, "selftest") : undefined;
-  const payload = JSON.stringify({ list_ids: [listId], contacts: [{ email, custom_fields: fields }] });
-  const put = await fetch(`${API}/marketing/contacts`, {
-    method: "PUT",
-    headers: { authorization: `Bearer ${key}`, "content-type": "application/json" },
-    body: payload,
-  });
-  const sentBody = payload.replace(listId, "<listId>");
-  const accepted = put.status;
-  const body = (await put.json().catch(() => ({}))) as { job_id?: string; errors?: unknown };
-  if (!put.ok) return { sentCustomFields: fields ?? null, accepted, rejectedImmediately: body };
-  const jobId = body.job_id;
-  if (!jobId) return { sentCustomFields: fields ?? null, accepted, note: "no job_id returned" };
-
-  // Jobs routinely take longer than a few seconds, and a half-answer is worse
-  // than a slow one, so poll for up to ~45s.
-  for (let i = 0; i < 22; i++) {
-    await new Promise((s) => setTimeout(s, 2000));
-    const r = await fetch(`${API}/marketing/contacts/imports/${jobId}`, { headers: { authorization: `Bearer ${key}` } });
-    if (!r.ok) return { sentCustomFields: fields ?? null, accepted, jobStatusLookup: r.status };
-    const job = (await r.json()) as { status?: string; results?: Record<string, unknown> };
-    if (job.status && job.status !== "pending") {
-      let errorDetail: unknown;
-      const url = (job.results as { errors_url?: string } | undefined)?.errors_url;
-      if (url) {
-        try {
-          errorDetail = await (await fetch(url)).text();
-        } catch {
-          /* the url is pre-signed and short-lived; absence is not fatal */
-        }
-      }
-      return { sentBody, accepted, job, errorDetail, exists: await probeExists(key, email) };
-    }
-  }
-  return { sentBody, accepted, jobId, note: "job still pending after 45s", exists: await probeExists(key, email) };
-}
 
 /**
  * Consent, stored beside the contact in SendGrid.

@@ -10,18 +10,20 @@ Nothing blocking.
 
 ## Recently closed
 
-- **Newsletter sign-up** (2026-09-24). Two faults: `SENDGRID_LIST_ID` held a
-  value SendGrid did not recognise, and then the contacts appeared not to be
-  landing. The second was a false alarm — `/marketing/contacts/count` is cached
-  and the import job reports `pending` well after the work is done, so neither
-  is a usable signal. A direct search for the address proved contacts were
-  being written all along. Verified end to end: form → route → contact in the
-  list with both consent fields set.
+- **Newsletter sign-up** (2026-09-24). Three faults in a row. `SENDGRID_LIST_ID`
+  held a value SendGrid did not recognise. The honeypot field was named
+  "company", which browsers and password managers autofill, so genuine
+  sign-ups were discarded as bots. And the consent date was sent as
+  `2026-09-24` where a SendGrid date field wants full ISO 8601 — given the
+  short form it answers 202, queues the job, then discards the whole contact
+  with no error visible to the caller and a job status stuck on `pending`.
 
-  Diagnosing this left `GET /api/newsletter?selftest=1` in place — it reports
-  key, list and custom-field status without exposing anything. `&probe=1` adds
-  a real upsert with a marked test address; it creates
-  `selftest@cryptoslotguide.com`, so delete that contact afterwards.
+  What made this take hours: the diagnostic probe reused one fixed address,
+  and removing a contact from a list does not delete it from the account, so
+  the probe kept finding its own leftover contact and reporting success. The
+  test that settled it was an A/B with unique addresses, one upsert with
+  custom fields and one without — without landed in 12s, with never did.
+  Verified end to end afterwards with a real address.
 
 ## Requested, not built
 
