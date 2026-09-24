@@ -48,6 +48,9 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
           href: "/crypto-casinos",
           columns: [
             {
+              // Six links, the length the original menu used. Everything added
+              // since went into the two columns beside it rather than extending
+              // this one — a column of twelve is a list, not a menu.
               title: "Browse casinos by",
               links: [
                 { label: `All ${c.casinos} crypto casinos`, href: "/crypto-casinos" },
@@ -55,13 +58,24 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
                 { label: "Fastest payouts", href: "/fastest-payouts" },
                 { label: "Lowest wagering", href: "/lowest-wagering" },
                 { label: "Biggest races & raffles", href: "/races" },
-                { label: "VIP calculator", href: "/vip-calculator" },
+                { label: "Compare side by side", href: "/compare" },
+              ],
+            },
+            {
+              title: "Find & work out",
+              links: [
                 { label: "Find my casino", href: "/find-my-casino" },
-                { label: "US sweepstakes casinos", href: "/sweepstakes-casinos" },
-                { label: "Gambling laws map", href: "/legal" },
+                { label: "VIP calculator", href: "/vip-calculator" },
                 { label: "Best Bitcoin casinos", href: "/crypto-casinos/accepting/bitcoin" },
                 { label: "Best Solana casinos", href: "/crypto-casinos/accepting/solana" },
-                { label: "Compare side by side", href: "/compare" },
+              ],
+            },
+            {
+              title: "Where you can play",
+              links: [
+                { label: "Gambling laws map", href: "/legal" },
+                { label: "US state by state", href: "/legal/us" },
+                { label: "US sweepstakes casinos", href: "/sweepstakes-casinos" },
               ],
             },
             {

@@ -325,9 +325,12 @@ export function Header({ counts }: { counts: SiteCounts }) {
               </div>
             </div>
 
-            <div style={{ display: "flex", gap: 64, padding: "26px 34px 32px" }}>
+            {/* A 64px gap fitted two columns; sections now run to four, which at
+                that gap squeezed each one to about 150px and broke the labels
+                across lines. Tighter gap, and wrapping rather than crushing. */}
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "22px 40px", padding: "26px 34px 32px" }}>
               {activeSection.columns.map((col, i) => (
-                <div key={col.title + i} style={{ flex: 1, minWidth: 0, maxWidth: 280 }}>
+                <div key={col.title + i} style={{ flex: "1 1 170px", minWidth: 0, maxWidth: 250 }}>
                   <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 12 }}>
                     <span
                       style={{
