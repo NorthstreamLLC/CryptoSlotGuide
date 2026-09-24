@@ -6,11 +6,22 @@ is built and `data/README.md` for the sourcing rules every fact follows.
 
 ## Blocking / in progress
 
-- **Newsletter sign-up returns 502.** Diagnosed 2026-09-23: `SENDGRID_API_KEY`
-  and the custom fields are fine, `SENDGRID_LIST_ID` 404s — it is not a real
-  list id. Fix the value in Vercel, redeploy, then confirm with
-  `GET /api/newsletter?selftest=1` (expects `listFound: true`) and one real
-  sign-up landing in Marketing → Contacts with both consent fields populated.
+Nothing blocking.
+
+## Recently closed
+
+- **Newsletter sign-up** (2026-09-24). Two faults: `SENDGRID_LIST_ID` held a
+  value SendGrid did not recognise, and then the contacts appeared not to be
+  landing. The second was a false alarm — `/marketing/contacts/count` is cached
+  and the import job reports `pending` well after the work is done, so neither
+  is a usable signal. A direct search for the address proved contacts were
+  being written all along. Verified end to end: form → route → contact in the
+  list with both consent fields set.
+
+  Diagnosing this left `GET /api/newsletter?selftest=1` in place — it reports
+  key, list and custom-field status without exposing anything. `&probe=1` adds
+  a real upsert with a marked test address; it creates
+  `selftest@cryptoslotguide.com`, so delete that contact afterwards.
 
 ## Requested, not built
 
