@@ -10,7 +10,9 @@
  * Environment (see .env.example):
  *   SENDGRID_API_KEY              required — a key with Marketing permissions
  *   SENDGRID_LIST_ID              required — the list to add contacts to
- *   SENDGRID_WELCOME_TEMPLATE_ID  optional — sends a welcome email on sign-up
+ *   SENDGRID_WELCOME_TEMPLATE_ID  optional — sends a welcome email on sign-up.
+ *                                 Leave unset if a SendGrid Automation already
+ *                                 welcomes people, or they get two emails.
  *   SENDGRID_FROM                 required with the template above, a verified sender
  *   NEXT_PUBLIC_NEWSLETTER_ON     set to "1" so the form's button goes live
  *
@@ -241,6 +243,9 @@ async function consentFields(key: string, source: string): Promise<Record<string
  * The welcome email, sent from here rather than from a SendGrid Automation so it
  * works on any plan that can send mail. Failing to send must not fail the sign-up —
  * the contact is already on the list by this point.
+ *
+ * Inert unless SENDGRID_WELCOME_TEMPLATE_ID is set. If a SendGrid Automation
+ * handles the welcome, leave that variable unset: both fire on the same sign-up.
  */
 async function sendWelcome(email: string, key: string): Promise<void> {
   const templateId = process.env.SENDGRID_WELCOME_TEMPLATE_ID;
