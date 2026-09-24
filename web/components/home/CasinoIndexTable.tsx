@@ -5,6 +5,7 @@ import Link from "next/link";
 import type { Operator } from "@/lib/types";
 import { payoutView } from "@/lib/payout";
 import { Table, type Column } from "@/components/ui/Table";
+import { inHouseOrder } from "@/lib/house-order";
 
 const columns: Column<Operator>[] = [
   {
@@ -44,8 +45,8 @@ const columns: Column<Operator>[] = [
   },
 ];
 
-/** Rows start in alphabetical order; no default ranking. */
+/** Rows start in house placement order; every column header re-sorts on a cited fact. */
 export function CasinoIndexTable({ operators }: { operators: Operator[] }) {
-  const rows = [...operators].sort((a, b) => a.name.localeCompare(b.name));
+  const rows = inHouseOrder(operators);
   return <Table columns={columns} rows={rows} rowKey={(o) => o.slug} />;
 }

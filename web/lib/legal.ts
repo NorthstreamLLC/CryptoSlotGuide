@@ -7,6 +7,7 @@ import geoUS from "@/data/geo-us.json";
 import { siteData } from "@/lib/site-data";
 import { getSpecFact } from "@/lib/spec-sheet";
 import { SWEEPS, sweepsFact } from "@/lib/sweeps";
+import { inHouseOrder } from "@/lib/house-order";
 
 /**
  * Online gambling law by US state and by country, each status backed by the
@@ -99,10 +100,7 @@ export function casinosRestricting(countryName: string, aliases: string[] = []):
 
 /** Sweepstakes casinos whose own restricted-state list does not name this state. */
 export function sweepsAvailableIn(stateName: string, code: string) {
-  return SWEEPS.filter((s) => s.facts.length)
-    .slice()
-    .sort((a, b) => Number(!!b.featured) - Number(!!a.featured) || Number(!!b.affiliate) - Number(!!a.affiliate) || a.name.localeCompare(b.name))
-    .map((s) => {
+  return inHouseOrder(SWEEPS.filter((s) => s.facts.length)).map((s) => {
     const f = sweepsFact(s, "Restricted states");
     const text = f?.value ?? "";
     const excluded = !!text && (new RegExp(`(?<!West )\\b${stateName}\\b`, "i").test(text) || new RegExp(`\\b${code}\\b`).test(text));

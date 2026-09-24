@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import type { QuizCasino } from "@/lib/quiz";
+import { byHouseOn } from "@/lib/house-order";
 
 const MONO = "var(--font-jetbrains-mono), monospace";
 
@@ -42,7 +43,9 @@ export function CasinoQuiz({ casinos, countries, coins }: { casinos: QuizCasino[
       if (c.featured) score += 0.5;
       return { c, score, why: why.slice(0, 3) };
     });
-    return scored.filter((s) => s.score > 0).sort((a, b) => b.score - a.score || Number(b.c.featured) - Number(a.c.featured)).slice(0, 5);
+    // Fit first, always: the quiz answers decide the order and the house order is
+    // only ever the tie-break between two casinos that scored identically.
+    return scored.filter((s) => s.score > 0).sort((a, b) => b.score - a.score || byHouseOn((r: typeof a) => r.c)(a, b)).slice(0, 5);
   }, [casinos, country, coin, priority, countries]);
 
   return (

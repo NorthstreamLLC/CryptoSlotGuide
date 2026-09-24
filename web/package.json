@@ -12,7 +12,8 @@
     "import:onchain": "node scripts/import-onchain-volume.mjs",
     "import:spec": "node scripts/import-spec-sheet.mjs",
     "build:changelog": "node scripts/build-changelog.mjs",
-    "prebuild": "node scripts/build-changelog.mjs"
+    "prebuild": "node scripts/build-changelog.mjs && node scripts/check-house-order.mjs",
+    "check:house": "node scripts/check-house-order.mjs"
   },
   "dependencies": {
     "next": "16.3.3",

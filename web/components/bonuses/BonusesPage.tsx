@@ -9,6 +9,7 @@ import type { Operator } from "@/lib/types";
 import { raceFor, raceSlugs, dropFor } from "@/lib/races";
 import { getSpecFact } from "@/lib/spec-sheet";
 import { NextSteps } from "@/components/layout/NextSteps";
+import { byHouse } from "@/lib/house-order";
 
 /**
  * Compare casino bonuses, split by how each one works:
@@ -87,7 +88,7 @@ function paidWhen(o: Operator): string | null {
 
 export function BonusesPage() {
   const { ops } = siteData;
-  const welcome = ops.filter(isWelcome).sort((a, b) => Number(!!b.featured) - Number(!!a.featured) || compareWager(a, b));
+  const welcome = ops.filter(isWelcome).sort((a, b) => byHouse(a, b) || compareWager(a, b));
   const rewards = ops.filter((o) => !isWelcome(o)).sort((a, b) => Number(!!b.featured) - Number(!!a.featured) || (raceFor(b.slug)?.monthly ?? 0) - (raceFor(a.slug)?.monthly ?? 0));
 
   const biggest = [...welcome].sort((a, b) => matchPct(b) - matchPct(a))[0];

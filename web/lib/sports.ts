@@ -6,6 +6,7 @@
 import { siteData } from "./site-data";
 import { getSpecFact } from "./spec-sheet";
 import type { Operator } from "./types";
+import { inHouseOrder } from "./house-order";
 
 const G = "Sportsbook";
 
@@ -53,7 +54,7 @@ export function esportsLabel(slug: string): string {
   return s.esports ? "Offered" : "Not found";
 }
 
-export const sportsbookOps = (): Operator[] => siteData.ops.filter((o) => o.sports).sort((a, b) => a.name.localeCompare(b.name));
+export const sportsbookOps = (): Operator[] => inHouseOrder(siteData.ops.filter((o) => o.sports));
 
 /** Casinos whose own pages name this esports title. */
 export function booksForTitle(title: string): Operator[] {
