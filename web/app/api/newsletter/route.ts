@@ -89,6 +89,14 @@ export async function GET(request: Request) {
     formTest = await probeExists(key, "formtest@cryptoslotguide.com");
   }
 
+  const askedExists = new URL(request.url).searchParams.get("exists");
+  let existsCheck: unknown;
+  if (askedExists) {
+    existsCheck = /@cryptoslotguide\.com$/i.test(askedExists)
+      ? await probeExists(key, askedExists.toLowerCase())
+      : { refused: "only addresses on this site's own domain can be looked up" };
+  }
+
   let jobProbe: unknown;
   if (new URL(request.url).searchParams.get("probe") === "1") {
     jobProbe = await runProbe(key, listId, new URL(request.url).searchParams.get("nofields") !== "1");
@@ -133,6 +141,7 @@ export async function GET(request: Request) {
     ...(allowance ? { allowance } : {}),
     ...(jobProbe ? { probe: jobProbe } : {}),
     ...(formTest ? { formTest } : {}),
+    ...(existsCheck ? { existsCheck } : {}),
     ...(shape ? { listId: shape } : {}),
     reading: {
       401: "key is wrong or revoked",
@@ -236,7 +245,7 @@ async function probeExists(key: string, email: string) {
  * the job reports the outcome.
  */
 async function runProbe(key: string, listId: string, withFields = true) {
-  const email = "selftest@cryptoslotguide.com";
+  const email = `selftest+${Date.now()}@cryptoslotguide.com`;
   // &nofields=1 drops the custom fields, which isolates whether they are what
   // the job is choking on: a Date field rejecting its value fails the whole
   // contact, and the PUT still answers 202.
