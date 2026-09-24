@@ -196,6 +196,28 @@ export async function POST(request: Request) {
 
 
 /**
+ * Does this address exist in the account at all? The contact count is cached
+ * and the list view lags, so neither settles the question; a search does.
+ * Only ever called with the probe's own fixed address, never a visitor's.
+ */
+async function probeExists(key: string, email: string) {
+  try {
+    const r = await fetch(`${API}/marketing/contacts/search/emails`, {
+      method: "POST",
+      headers: { authorization: `Bearer ${key}`, "content-type": "application/json" },
+      body: JSON.stringify({ emails: [email] }),
+    });
+    if (r.status === 404) return { found: false, status: 404 };
+    if (!r.ok) return { lookupStatus: r.status };
+    const body = (await r.json()) as { result?: Record<string, { contact?: { id?: string; list_ids?: string[] } }> };
+    const hit = body.result?.[email]?.contact;
+    return { found: !!hit, inLists: hit?.list_ids?.length ?? 0 };
+  } catch {
+    return { lookupStatus: "threw" };
+  }
+}
+
+/**
  * Runs the exact upsert a sign-up runs, with a marked test address, then polls
  * the background job until SendGrid says what happened to it. This is the only
  * way to see why a contact vanishes after a 202: the PUT reports acceptance,
@@ -235,10 +257,10 @@ async function runProbe(key: string, listId: string, withFields = true) {
           /* the url is pre-signed and short-lived; absence is not fatal */
         }
       }
-      return { sentCustomFields: fields ?? null, accepted, job, errorDetail };
+      return { sentCustomFields: fields ?? null, accepted, job, errorDetail, exists: await probeExists(key, email) };
     }
   }
-  return { sentCustomFields: fields ?? null, accepted, jobId, note: "job still pending after 45s" };
+  return { sentCustomFields: fields ?? null, accepted, jobId, note: "job still pending after 45s", exists: await probeExists(key, email) };
 }
 
 /**
