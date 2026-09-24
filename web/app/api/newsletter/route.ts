@@ -190,13 +190,14 @@ export async function POST(request: Request) {
 
   try {
     // PUT upserts: an address that signs up twice is updated, not duplicated or rejected.
+    const payload = JSON.stringify({
+      list_ids: [listId],
+      contacts: [{ email, custom_fields: await consentFields(key, source) }],
+    });
     const res = await fetch(`${API}/marketing/contacts`, {
       method: "PUT",
       headers: { authorization: `Bearer ${key}`, "content-type": "application/json" },
-      body: JSON.stringify({
-        list_ids: [listId],
-        contacts: [{ email, custom_fields: await consentFields(key, source) }],
-      }),
+      body: payload,
     });
 
     if (!res.ok) {
@@ -209,7 +210,13 @@ export async function POST(request: Request) {
 
     const accepted = (await res.json().catch(() => ({}))) as { job_id?: string };
     await sendWelcome(email, key);
-    return Response.json({ ok: true, path: "sendgrid", upstream: res.status, jobId: accepted.job_id ?? null });
+    return Response.json({
+      ok: true,
+      path: "sendgrid",
+      upstream: res.status,
+      jobId: accepted.job_id ?? null,
+      sentBody: payload.replace(listId, "<listId>"),
+    });
   } catch (e) {
     console.error("newsletter: SendGrid request threw", e instanceof Error ? e.message : "unknown");
     return Response.json({ error: "That didn't go through. Try again shortly." }, { status: 502 });
@@ -251,11 +258,13 @@ async function runProbe(key: string, listId: string, withFields = true) {
   // the job is choking on: a Date field rejecting its value fails the whole
   // contact, and the PUT still answers 202.
   const fields = withFields ? await consentFields(key, "selftest") : undefined;
+  const payload = JSON.stringify({ list_ids: [listId], contacts: [{ email, custom_fields: fields }] });
   const put = await fetch(`${API}/marketing/contacts`, {
     method: "PUT",
     headers: { authorization: `Bearer ${key}`, "content-type": "application/json" },
-    body: JSON.stringify({ list_ids: [listId], contacts: [{ email, custom_fields: fields }] }),
+    body: payload,
   });
+  const sentBody = payload.replace(listId, "<listId>");
   const accepted = put.status;
   const body = (await put.json().catch(() => ({}))) as { job_id?: string; errors?: unknown };
   if (!put.ok) return { sentCustomFields: fields ?? null, accepted, rejectedImmediately: body };
@@ -279,10 +288,10 @@ async function runProbe(key: string, listId: string, withFields = true) {
           /* the url is pre-signed and short-lived; absence is not fatal */
         }
       }
-      return { sentCustomFields: fields ?? null, accepted, job, errorDetail, exists: await probeExists(key, email) };
+      return { sentBody, accepted, job, errorDetail, exists: await probeExists(key, email) };
     }
   }
-  return { sentCustomFields: fields ?? null, accepted, jobId, note: "job still pending after 45s", exists: await probeExists(key, email) };
+  return { sentBody, accepted, jobId, note: "job still pending after 45s", exists: await probeExists(key, email) };
 }
 
 /**
