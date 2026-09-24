@@ -5,6 +5,7 @@ import { siteData, siteCounts } from "@/lib/site-data";
 import { allVersionsListedStudios, selfCustodyWallets } from "@/lib/derived";
 import { tintFor } from "@/lib/logo";
 import { CryptoTicker } from "@/components/home/CryptoTicker";
+import { LogoColumns } from "@/components/home/LogoColumns";
 import { SlotsPreviewTable } from "@/components/home/SlotsPreviewTable";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { filterFns } from "@/lib/casino-index";
@@ -165,6 +166,7 @@ export default function HomePage() {
     >
       {/* HERO */}
       <section style={{ position: "relative", overflow: "hidden", borderBottom: "1px solid rgba(255,255,255,.07)", background: "#090C0F" }}>
+        <LogoColumns />
         <div style={{ position: "absolute", inset: "-25% -12% -10% -12%", pointerEvents: "none" }} aria-hidden>
           <span style={{ position: "absolute", top: "2%", left: "4%", width: 440, height: 440, borderRadius: "50%", background: "radial-gradient(circle,rgba(0,194,204,.34),transparent 66%)", animation: "csg-drift 18s ease-in-out infinite" }} />
           <span style={{ position: "absolute", top: "30%", left: "40%", width: 400, height: 400, borderRadius: "50%", background: "radial-gradient(circle,rgba(178,132,255,.26),transparent 66%)", animation: "csg-drift 23s ease-in-out infinite reverse" }} />
