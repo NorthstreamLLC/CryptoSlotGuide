@@ -68,12 +68,43 @@ export async function GET(request: Request) {
 
   const [scopes, list, fields] = await Promise.all([probe("/scopes"), probe(`/marketing/lists/${listId}`), probe("/marketing/field_definitions")]);
 
+  // When the id is rejected, say what shape it has and whether the account has
+  // any lists at all — enough to tell "wrong id" from "no list exists" from
+  // "pasted something that isn't an id", without returning ids or names.
+  let shape: Record<string, unknown> | undefined;
+  if (list !== 200) {
+    const trimmed = listId.trim();
+    let listsInAccount: number | string = "unknown";
+    let idIsOneOfThem: boolean | string = "unknown";
+    try {
+      const r = await fetch(`${API}/marketing/lists?page_size=100`, { headers: { authorization: `Bearer ${key}` } });
+      if (r.ok) {
+        const body = (await r.json()) as { result?: { id: string }[] };
+        const ids = (body.result ?? []).map((l) => l.id);
+        listsInAccount = ids.length;
+        idIsOneOfThem = ids.includes(trimmed);
+      }
+    } catch {
+      /* leave as unknown */
+    }
+    shape = {
+      listsInAccount,
+      idIsOneOfThem,
+      looksLikeUuid: /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(trimmed),
+      length: listId.length,
+      hasSurroundingWhitespace: listId !== trimmed,
+      hasQuotes: /^["']|["']$/.test(listId),
+      looksLikeUrl: /^https?:\/\//i.test(trimmed),
+    };
+  }
+
   return Response.json({
     configured: true,
     keyAccepted: scopes === 200,
     listFound: list === 200,
     fieldsReadable: fields === 200,
     status: { scopes, list, fields },
+    ...(shape ? { listId: shape } : {}),
     reading: {
       401: "key is wrong or revoked",
       403: "key lacks the permission for that endpoint",
