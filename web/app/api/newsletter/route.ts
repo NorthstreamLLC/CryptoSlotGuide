@@ -333,8 +333,11 @@ async function consentFields(key: string, source: string): Promise<Record<string
   const ids = await loadFieldIds(key);
   const fields: Record<string, string> = {};
   if (ids["signup_source"]) fields[ids["signup_source"]] = source;
-  // SendGrid date fields take ISO 8601; the date alone is enough to evidence consent.
-  if (ids["signup_date"]) fields[ids["signup_date"]] = new Date().toISOString().slice(0, 10);
+  // A date field wants full ISO 8601 with a time and a zone. Sending the date
+  // alone ("2026-09-24") made SendGrid accept the job with a 202 and then
+  // discard the contact without ever reporting an error — the whole contact is
+  // lost over one malformed field, silently, so this format matters.
+  if (ids["signup_date"]) fields[ids["signup_date"]] = new Date().toISOString();
   return Object.keys(fields).length ? fields : undefined;
 }
 
