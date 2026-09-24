@@ -145,15 +145,18 @@ export async function POST(request: Request) {
     return Response.json({ error: "Too many attempts. Try again in a minute." }, { status: 429 });
   }
 
-  let body: { email?: unknown; source?: unknown; consent?: unknown; company?: unknown };
+  let body: { email?: unknown; source?: unknown; consent?: unknown; csg_hp?: unknown };
   try {
     body = await request.json();
   } catch {
     return Response.json({ error: "Bad request." }, { status: 400 });
   }
 
-  // Honeypot: a real person never fills a field they cannot see.
-  if (typeof body.company === "string" && body.company.trim() !== "") {
+  // Honeypot: a real person never fills a field they cannot see — but a browser
+  // will, if the field is named something autofill recognises. Only the current
+  // field name is checked; a stale cached page still sending the old "company"
+  // key is ignored rather than rejected, so nobody is dropped mid-rollout.
+  if (typeof body.csg_hp === "string" && body.csg_hp.trim() !== "") {
     return Response.json({ ok: true });
   }
 

@@ -28,7 +28,7 @@ export function EmailSignup({ source, title = "Get the weekly bonus & races dige
       const res = await fetch("/api/newsletter", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ email, source, consent: agree, company }),
+        body: JSON.stringify({ email, source, consent: agree, csg_hp: company }),
       });
       const data = (await res.json().catch(() => ({}))) as { error?: string };
       if (res.ok) {
@@ -52,13 +52,22 @@ export function EmailSignup({ source, title = "Get the weekly bonus & races dige
         <div style={{ fontSize: 15, fontWeight: 700, color: "#7BE0B8" }}>You&apos;re on the list — the next digest will land in your inbox.</div>
       ) : (
         <form onSubmit={submit} style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-          {/* Honeypot: hidden from people, irresistible to bots. */}
+          {/*
+            Honeypot: hidden from people, irresistible to bots. The name matters —
+            this was called "company", which is a standard autofill token, so
+            browsers and password managers filled it for real visitors and every
+            genuine sign-up was silently discarded as a bot. The name now matches
+            no autofill heuristic, and the two data- attributes tell 1Password and
+            LastPass to leave it alone, since both ignore autocomplete="off".
+          */}
           <input
             type="text"
-            name="company"
+            name="csg_hp"
             tabIndex={-1}
             autoComplete="off"
             aria-hidden="true"
+            data-lpignore="true"
+            data-form-type="other"
             value={company}
             onChange={(e) => setCompany(e.target.value)}
             style={{ position: "absolute", left: -9999, width: 1, height: 1, opacity: 0 }}
