@@ -80,3 +80,13 @@ guessed at:
   already turns the fact history into the "Recent updates" block on each report.
 - **Tidy unused animations.** `csg-up`, `csg-down` and `csg-live` are defined in
   `app/globals.css` but referenced by no component.
+
+## Known and accepted
+
+- **Small territories are not drawn on the world map.** It is built from
+  Natural Earth 110m, which omits `AW` Aruba, `BQ` the BES islands, `CW`
+  Curaçao, `GI` Gibraltar, `MF` Saint Martin, `MT` Malta and `SX` Sint
+  Maarten. They are stored correctly and appear in each casino's restricted
+  list on its report; they just never get coloured. Rebuilding at 50m would
+  pick them up — the Europe map already uses 50m, so the pipeline exists —
+  but this is a deliberate call to leave it (2026-09-24), not an oversight.
