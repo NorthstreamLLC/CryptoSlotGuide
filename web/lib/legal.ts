@@ -99,7 +99,10 @@ export function casinosRestricting(countryName: string, aliases: string[] = []):
 
 /** Sweepstakes casinos whose own restricted-state list does not name this state. */
 export function sweepsAvailableIn(stateName: string, code: string) {
-  return SWEEPS.filter((s) => s.facts.length).map((s) => {
+  return SWEEPS.filter((s) => s.facts.length)
+    .slice()
+    .sort((a, b) => Number(!!b.featured) - Number(!!a.featured) || Number(!!b.affiliate) - Number(!!a.affiliate) || a.name.localeCompare(b.name))
+    .map((s) => {
     const f = sweepsFact(s, "Restricted states");
     const text = f?.value ?? "";
     const excluded = !!text && (new RegExp(`(?<!West )\\b${stateName}\\b`, "i").test(text) || new RegExp(`\\b${code}\\b`).test(text));

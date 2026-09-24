@@ -1,6 +1,10 @@
 import { COUNTRIES, TONE, toneOf, casinosByAccess } from "@/lib/legal";
+import { sweepsSorted } from "@/lib/sweeps";
 import { logoFor } from "@/lib/logo";
 import type { HoverInfo } from "@/components/legal/MapHover";
+
+/** How many sweepstakes casinos we hold data for — the US route, quoted on the world map. */
+const SWEEPS_COUNT = sweepsSorted().length;
 
 const row = (label: string, v?: string) => ({ label, value: v ?? "Not covered", color: TONE[toneOf(v)].fill });
 
@@ -25,12 +29,21 @@ export function countryHoverInfo(shapes: ({ code: string | null; name?: string }
             // long list of casinos under no heading and the colour reads as a ban.
             [{ label: "Gambling law", value: "not covered yet", color: TONE.none.fill }];
     if (!rows.length && !acc.length) continue;
+    // Every crypto casino we track restricts the US, so the card said "(0) none
+    // accept players from here" and stopped — which reads as "nothing is
+    // available" when the US route is sweepstakes casinos, and there are 28 of
+    // them. Point at the state map instead of leaving a dead end.
+    const isUS = code === "US";
     info[code] = {
-      name: c?.name ?? (code === "US" ? "United States" : names.get(code) ?? code),
+      name: c?.name ?? (isUS ? "United States" : names.get(code) ?? code),
       rows,
-      casinosTitle: `Casinos accepting players here, per their own terms (${acc.length})`,
+      casinosTitle: isUS
+        ? `Sweepstakes casinos are the US route (${SWEEPS_COUNT}) — availability varies by state`
+        : `Casinos accepting players here, per their own terms (${acc.length})`,
       casinos: acc.map((o) => ({ name: o.except.length ? `${o.name} (not ${o.except.join(", ")})` : o.name, logo: logoFor(o.slug) })),
-      casinosNote: "None of our listed casinos accept players from here",
+      casinosNote: isUS
+        ? "Crypto casinos restrict the US. Open the state map for what each state allows."
+        : "None of our listed casinos accept players from here",
     };
   }
   return info;
