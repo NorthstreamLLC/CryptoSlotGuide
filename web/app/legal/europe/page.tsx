@@ -33,7 +33,7 @@ const SHADES = [
 export default async function Page({ searchParams }: { searchParams: Promise<{ layer?: string }> }) {
   const { layer: lk } = await searchParams;
   const layer = LAYERS.find((l) => l.key === lk) ?? LAYERS[0];
-  const info = countryHoverInfo(EUROPE_SHAPES.map((s) => s.code));
+  const info = countryHoverInfo(EUROPE_SHAPES);
   const covered = EUROPE_SHAPES.map((s) => (s.code ? countryBy(s.code) : null)).filter(Boolean).sort((a, b) => a!.name.localeCompare(b!.name));
   const count = (code: string) => casinosByAccess(code).accepts.length;
 

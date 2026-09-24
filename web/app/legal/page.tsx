@@ -17,7 +17,7 @@ export const metadata = pageMetadata(
 
 export default function Page() {
   const covered = [...COUNTRIES].sort((a, b) => a.name.localeCompare(b.name));
-  const info = countryHoverInfo(WORLD_SHAPES.map((x) => x.code));
+  const info = countryHoverInfo(WORLD_SHAPES);
   return (
     <main style={{ background: "#07090B" }}>
       <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Gambling laws", path: "/legal" }])} />
