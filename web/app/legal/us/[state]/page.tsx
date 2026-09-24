@@ -52,7 +52,11 @@ export default async function Page({ params }: { params: Promise<{ state: string
             ["Regulator", s.regulator?.name, s.regulator?.url],
             ["Minimum age", s.minAge],
             ["Sweepstakes law", s.sweepstakesDetail],
-            ["Licensed online casinos", null, s.licensedListUrl],
+            // Suppressed when us-market.json carries the same list: that version
+            // names the licence holder behind each brand and the date it was
+            // read, and two near-identical lists with different counts reads as
+            // a bug rather than as thoroughness.
+            ...(market?.casinos?.operators.length ? [] : [["Licensed online casinos", undefined, s.licensedListUrl] as [string, string | undefined, string | undefined]]),
           ] as [string, string | undefined, string | undefined][])
             .filter(([k, v]) => v || (k === "Licensed online casinos" && s.licensedOnlineCasinos?.length))
             .map(([k, v, url], i) => (
@@ -60,7 +64,7 @@ export default async function Page({ params }: { params: Promise<{ state: string
                 <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".06em", textTransform: "uppercase", color: "#8E9CA5", paddingTop: 2 }}>{k}</div>
                 <div style={{ fontSize: 14, lineHeight: 1.6, color: "#C6D1D7" }}>
                   {v}
-                  {k === "Licensed online casinos" && (
+                  {k === "Licensed online casinos" && !market?.casinos?.operators.length && (
                     <span style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
                       {s.licensedOnlineCasinos!.map((n) => (
                         <span key={n} style={{ padding: "4px 10px", borderRadius: 100, background: "rgba(255,255,255,.04)", border: "1px solid rgba(255,255,255,.09)", fontSize: 12.5, fontWeight: 600, color: "#C6D1D7" }}>{n}</span>
