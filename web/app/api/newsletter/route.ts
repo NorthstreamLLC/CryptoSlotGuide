@@ -81,6 +81,14 @@ export async function GET(request: Request) {
     /* non-fatal */
   }
 
+  // Whether a submission made through the real browser form landed. Fixed
+  // address, never one supplied by the caller, so this cannot be used to test
+  // whether some third party is subscribed.
+  let formTest: unknown;
+  if (new URL(request.url).searchParams.get("formtest") === "1") {
+    formTest = await probeExists(key, "formtest@cryptoslotguide.com");
+  }
+
   let jobProbe: unknown;
   if (new URL(request.url).searchParams.get("probe") === "1") {
     jobProbe = await runProbe(key, listId, new URL(request.url).searchParams.get("nofields") !== "1");
@@ -124,6 +132,7 @@ export async function GET(request: Request) {
     status: { scopes, list, fields },
     ...(allowance ? { allowance } : {}),
     ...(jobProbe ? { probe: jobProbe } : {}),
+    ...(formTest ? { formTest } : {}),
     ...(shape ? { listId: shape } : {}),
     reading: {
       401: "key is wrong or revoked",
