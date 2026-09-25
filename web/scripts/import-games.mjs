@@ -112,6 +112,37 @@ const key = (s) => String(s ?? "").toLowerCase().replace(/[\s_\-.'’]/g, "");
  */
 const titleKey = (s) => String(s ?? "").toLowerCase().replace(/[^a-z0-9]/g, "");
 
+/**
+ * Whether a demo URL is served by the STUDIO rather than by an operator lobby.
+ *
+ * Only a studio-hosted demo is worth keeping. An operator's copy is that
+ * operator's deployment, it disappears when they drop the game, and it is not
+ * evidence about the title itself. A studio-hosted one is a link a reader can
+ * use and a domain that belongs to whoever made the game.
+ *
+ * Note what this is NOT: it is not a citation for the RTP. The figure still
+ * comes from the export. It proves the game exists and whose it is, which is
+ * why it is stored as demoUrl and never described as the source of a number.
+ */
+const OPERATOR_HOST = /roobet|razed|stake|shuffle|rainbet|gamdom|bc\.?game|duelbits|500\.?casino|betfury|rollbit/i;
+
+function studioDemo(url, studio) {
+  if (!url || !/^https?:/.test(url)) return null;
+  let host;
+  try {
+    host = new URL(url).hostname.replace(/^www\./, "");
+  } catch {
+    return null;
+  }
+  if (OPERATOR_HOST.test(host)) return null;
+  const a = String(studio ?? "").toLowerCase().replace(/[^a-z]/g, "");
+  const b = host.toLowerCase().replace(/[^a-z]/g, "");
+  if (!a || a.length < 4) return null;
+  // The studio's name has to appear in its own hostname, either way round, so
+  // a third-party aggregator's domain never counts as the studio's.
+  return b.includes(a.slice(0, 7)) || a.includes(host.split(".")[0].replace(/[^a-z]/g, "")) ? { url, host } : null;
+}
+
 // The site's own house-game taxonomy, so the classifier below agrees with the
 // section these titles actually belong in rather than inventing a second list.
 const HOUSE_SLUGS = new Set(read("houseGames.json").map((g) => key(g.slug ?? g.name)));
@@ -278,6 +309,7 @@ function main() {
   const iReleased = col("releasedat", "released", "releasedate");
   const iImage = col("imageurl", "image");
   const iDeleted = col("isdeleted", "deleted");
+  const iDemoUrl = col("playdemourl", "demourl", "demo");
   // Present-but-rejected columns, counted so the report can say what was dropped.
   const rejected = { observedRtp: 0, hotCold: 0, templatedCopy: 0, constantRating: 0, implausibleRtp: 0, notASlot: 0, notSlotShaped: 0, excludedStudio: 0 };
   const excluded = [];
@@ -450,6 +482,9 @@ function main() {
        */
       upcoming: iReleased !== -1 && /^\d{4}-\d{2}-\d{2}/.test(r[iReleased] ?? "") ? r[iReleased].slice(0, 10) > AS_OF : false,
       image: iImage !== -1 && /^https?:/.test(r[iImage] ?? "") ? r[iImage].trim() : null,
+      /** A demo hosted by the studio itself, where the export has one. */
+      demoUrl: iDemoUrl === -1 ? null : studioDemo((r[iDemoUrl] ?? "").trim(), aliased)?.url ?? null,
+      demoHost: iDemoUrl === -1 ? null : studioDemo((r[iDemoUrl] ?? "").trim(), aliased)?.host ?? null,
     };
 
     if (MODE === "catalogue") {
@@ -532,7 +567,7 @@ function main() {
     // The median only means anything across one kind of game.
     const slotRtp = games.filter((g) => g.kind === "slot" && g.rtp !== null).map((g) => g.rtp).sort((a, b) => a - b);
     if (slotRtp.length) console.log(`  slot RTP median  ${slotRtp[Math.floor(slotRtp.length / 2)].toFixed(2)}%  (n=${slotRtp.length})`);
-    for (const k of ["rtp", "volatility", "reels", "paylines", "maxWinMultiplier", "released", "image"]) {
+    for (const k of ["rtp", "volatility", "reels", "paylines", "maxWinMultiplier", "released", "image", "demoUrl"]) {
       console.log(`  ${k.padEnd(18)} ${String(field(k)).padStart(4)} / ${games.length}`);
     }
     reportUnknowns();

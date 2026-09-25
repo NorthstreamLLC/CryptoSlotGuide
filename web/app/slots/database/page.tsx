@@ -24,6 +24,7 @@ function href(cur: SlotQuery, patch: Partial<SlotQuery>): string {
   if (next.vol) p.set("vol", next.vol);
   if (next.rtp) p.set("rtp", next.rtp);
   if (next.versions) p.set("versions", next.versions);
+  if (next.demo) p.set("demo", next.demo);
   if (next.sort) p.set("sort", next.sort);
   // Changing a filter always returns to page 1; keeping the old page number
   // would land the reader on an empty page of a smaller result set.
@@ -54,13 +55,14 @@ export default async function Page({ searchParams }: { searchParams: Promise<Rec
     vol: sp.vol,
     rtp: sp.rtp,
     versions: sp.versions,
+    demo: sp.demo,
     sort: sp.sort,
     page: sp.page ? Number(sp.page) : 1,
   };
   const res = querySlots(q);
   const studios = studioFacets();
   const vols = volatilityFacets();
-  const filtered = !!(q.q || q.studio || q.vol || q.rtp || q.versions);
+  const filtered = !!(q.q || q.studio || q.vol || q.rtp || q.versions || q.demo);
 
   return (
     <main style={{ background: "#07090B", color: "#E8EDF0" }}>
@@ -102,6 +104,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<Rec
           {q.vol && <input type="hidden" name="vol" value={q.vol} />}
           {q.rtp && <input type="hidden" name="rtp" value={q.rtp} />}
           {q.versions && <input type="hidden" name="versions" value={q.versions} />}
+          {q.demo && <input type="hidden" name="demo" value={q.demo} />}
           {q.sort && <input type="hidden" name="sort" value={q.sort} />}
           <button type="submit" style={{ padding: "11px 20px", borderRadius: 10, border: 0, background: "#00C2CC", color: "#04191B", fontSize: 14, fontWeight: 700, cursor: "pointer" }}>
             Search
@@ -115,6 +118,9 @@ export default async function Page({ searchParams }: { searchParams: Promise<Rec
           <Link href={href(q, { rtp: "low", page: 1 })} style={chip(q.rtp === "low")}>Under 94%</Link>
           <Link href={href(q, { versions: q.versions === "1" ? undefined : "1", page: 1 })} style={chip(q.versions === "1")}>
             Multiple RTP versions ({t.multiVersion.toLocaleString()})
+          </Link>
+          <Link href={href(q, { demo: q.demo === "1" ? undefined : "1", page: 1 })} style={chip(q.demo === "1")}>
+            Playable demo ({t.withDemo.toLocaleString()})
           </Link>
           <span style={{ width: 12 }} />
           {vols.map((v) => (
@@ -162,6 +168,19 @@ export default async function Page({ searchParams }: { searchParams: Promise<Rec
               <span style={{ fontSize: 14.5, fontWeight: 700, color: "#E8EDF0", overflowWrap: "anywhere" }}>
                 {g.name}
                 {g.upcoming && <span style={{ marginLeft: 8, fontFamily: MONO, fontSize: 9, color: "#C7A45C" }}>NOT OUT YET</span>}
+                {/* The studio's own demo. rel="nofollow" because it is a
+                    reference, not an endorsement, and no commission rides on it. */}
+                {g.demoUrl && (
+                  <a
+                    href={g.demoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    className="hover:!text-accent"
+                    style={{ display: "block", fontFamily: MONO, fontSize: 10, color: "#5FE3E8", marginTop: 2 }}
+                  >
+                    demo at {g.demoHost} ↗
+                  </a>
+                )}
               </span>
               <span style={{ fontSize: 13, color: "#8DA0AA", overflowWrap: "anywhere" }}>
                 {g.providerSlug ? <Link href={`/providers/${g.providerSlug}`} className="hover:!text-accent" style={{ color: "#9FD9DD" }}>{g.provider}</Link> : g.provider ?? "—"}

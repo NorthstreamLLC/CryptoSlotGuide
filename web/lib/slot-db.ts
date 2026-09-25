@@ -29,6 +29,13 @@ export interface CatalogueGame {
   maxWinMultiplier: number | null;
   released: string | null;
   image: string | null;
+  /**
+   * A demo hosted by the studio itself. Not a citation for the RTP — that
+   * figure comes from the catalogue import — but it is the studio's own domain,
+   * so it proves the title is theirs and gives the reader somewhere real to go.
+   */
+  demoUrl?: string | null;
+  demoHost?: string | null;
   upcoming: boolean;
   studioStatus: string | null;
   studioConfirmed: boolean;
@@ -55,6 +62,8 @@ export interface SlotQuery {
   rtp?: string;
   /** Only titles with more than one published RTP configuration. */
   versions?: string;
+  /** Only titles with a demo hosted on the studio's own domain. */
+  demo?: string;
   sort?: string;
   page?: number;
 }
@@ -91,6 +100,7 @@ export function querySlots(query: SlotQuery) {
   if (query.vol) rows = rows.filter((g) => g.volatility === query.vol);
   if (query.rtp && RTP_BANDS[query.rtp]) rows = rows.filter((g) => g.rtp !== null && RTP_BANDS[query.rtp!](g.rtp));
   if (query.versions === "1") rows = rows.filter((g) => (g.rtpVariants?.length ?? 0) > 1);
+  if (query.demo === "1") rows = rows.filter((g) => !!g.demoUrl);
 
   // A null sorts last on every key, so an unknown figure never leads a column
   // that is supposed to be ranked by it.
@@ -140,6 +150,7 @@ export function catalogueTotals() {
   return {
     slots: SLOTS.length,
     multiVersion: SLOTS.filter((g) => (g.rtpVariants?.length ?? 0) > 1).length,
+    withDemo: SLOTS.filter((g) => !!g.demoUrl).length,
     withRtp: withRtp.length,
     studios: new Set(SLOTS.map((g) => g.provider).filter(Boolean)).size,
     median: median(withRtp.map((g) => g.rtp as number)),
