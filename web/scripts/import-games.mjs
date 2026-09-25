@@ -91,6 +91,11 @@ const STUDIO_ALIASES = {
 };
 const key = (s) => String(s ?? "").toLowerCase().replace(/[\s_\-.]/g, "");
 
+// The site's own house-game taxonomy, so the classifier below agrees with the
+// section these titles actually belong in rather than inventing a second list.
+const HOUSE_SLUGS = new Set(read("houseGames.json").map((g) => key(g.slug ?? g.name)));
+
+
 /** Minimal RFC-4180 reader — exports routinely have quoted commas and newlines in prose fields. */
 function parseCsv(text) {
   const rows = [];
@@ -140,10 +145,43 @@ function splitStudio(name) {
 }
 
 /**
+ * A "slots" export is rarely only slots. This one carries 15 table and house
+ * games — Roulette, Baccarat, Video Poker, Mines, Crash, Plinko, Limbo and so
+ * on — and only Blackjack tripped the 99% shape guard. Listing Roulette as a
+ * slot would be wrong on the page and would drag the RTP median with it, so
+ * every row is classified instead of assumed.
+ *
+ * House games match the site's own taxonomy by EXACT name: plenty of real slots
+ * have "dice" or "wheel" in the title, so a substring test here would reclassify
+ * them. Table games do use a substring, because "Speed Blackjack Pro" is a
+ * blackjack variant and should be caught.
+ */
+const TABLE_RE = /\b(blackjack|roulette|baccarat|video poker|poker|sic ?bo|craps|dragon tiger|andar bahar|teen patti|bingo|pontoon|hold ?'?em|three card|caribbean stud|red dog)\b/i;
+
+function classify(name) {
+  if (HOUSE_SLUGS.has(key(name))) return "house";
+  if (TABLE_RE.test(name)) return "table";
+  return "slot";
+}
+
+/**
  * Fields a real export carries that must not be published as they stand. Each
  * says WHY, because "dropped 338 values" with no reason is how a rule gets
  * quietly reverted later.
  */
+/**
+ * Suppliers whose products are not slots, with the regulator evidence. Betby is
+ * a sportsbook platform: its MGA licence (Earlybird Limited, MGA/B2B/780/2020)
+ * is Type 2, fixed-odds betting only, with no Type 1 RNG-casino authorisation,
+ * which a slot supplier would need. Its "SlotBets" product wraps live sports
+ * and esports markets in slot-machine styling, which is how six wrestling
+ * events ended up in a slots export at 99.3% "RTP".
+ */
+const NON_SLOT_SUPPLIERS = {
+  betby: "Betby is a sportsbook platform (MGA/B2B/780/2020, Type 2 betting only — no Type 1 RNG casino licence). Its SlotBets product is a betting market styled as a slot.",
+  betbysportsbook: "Betby is a sportsbook platform (MGA/B2B/780/2020, Type 2 betting only — no Type 1 RNG casino licence). Its SlotBets product is a betting market styled as a slot.",
+};
+
 const REJECT = {
   observedRtp:
     "rtpDaily/rtpWeekly are observed return over a short window, not RTP — values above 100% (up to 1763%) prove it. Publishing them as RTP would be false.",
@@ -153,6 +191,9 @@ const REJECT = {
     "description/descriptionShort are templated marketing prose with affiliate links inline, not a sourced fact about the game.",
   constantRating: "rating is the same value on every row, so it distinguishes nothing.",
   implausibleRtp: "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export).",
+  notASlot: "supplier does not make slots — see NON_SLOT_SUPPLIERS for the licence evidence.",
+  notSlotShaped:
+    "no reels, no paylines and a return at or above 99% — that is a betting margin, not a slot RTP. Usually a sports or event market that arrived in a slots export.",
 };
 
 function main() {
@@ -187,7 +228,8 @@ function main() {
   const iImage = col("imageurl", "image");
   const iDeleted = col("isdeleted", "deleted");
   // Present-but-rejected columns, counted so the report can say what was dropped.
-  const rejected = { observedRtp: 0, hotCold: 0, templatedCopy: 0, constantRating: 0, implausibleRtp: 0 };
+  const rejected = { observedRtp: 0, hotCold: 0, templatedCopy: 0, constantRating: 0, implausibleRtp: 0, notASlot: 0, notSlotShaped: 0 };
+  const excluded = [];
   const iDaily = col("rtpdaily");
   const iWeekly = col("rtpweekly");
   const iState = col("rtpstate");
@@ -237,6 +279,7 @@ function main() {
     rows++;
 
     if (iDaily !== -1 && (r[iDaily] ?? "").trim()) rejected.observedRtp++;
+    /* eslint-disable-next-line no-unused-expressions */
     if (iWeekly !== -1 && (r[iWeekly] ?? "").trim()) rejected.observedRtp++;
     if (iState !== -1 && /hot|cold/i.test(r[iState] ?? "")) rejected.hotCold++;
     if (iDesc !== -1 && (r[iDesc] ?? "").trim()) rejected.templatedCopy++;
@@ -244,6 +287,25 @@ function main() {
 
     const studioRaw = iProvider === -1 ? "" : (r[iProvider] ?? "").trim();
     const { base, integration } = splitStudio(studioRaw);
+
+    // Not a slot: by supplier, on licence evidence.
+    const nonSlot = NON_SLOT_SUPPLIERS[key(base)] ?? NON_SLOT_SUPPLIERS[key(studioRaw)];
+    if (nonSlot) {
+      rejected.notASlot++;
+      excluded.push({ name, studio: studioRaw, why: nonSlot });
+      continue;
+    }
+
+    // Not a slot: by shape, for suppliers we have no ruling on. A slot has
+    // reels or paylines and does not return 99%+.
+    const rtpProbe = Number(String(r[iRtp] ?? "").replace("%", "").trim());
+    const noReels = iReels === -1 || !parseInt(r[iReels] ?? "", 10);
+    const noLines = iLines === -1 || !parseInt(r[iLines] ?? "", 10);
+    if (Number.isFinite(rtpProbe) && rtpProbe >= 99 && noReels && noLines) {
+      rejected.notSlotShaped++;
+      excluded.push({ name, studio: studioRaw, why: REJECT.notSlotShaped });
+      continue;
+    }
     const aliased = STUDIO_ALIASES[key(base)] ?? base;
     // An integration suffix means authorship is unconfirmed, so the label is
     // recorded but never resolved to a studio page.
@@ -263,8 +325,11 @@ function main() {
     if (rtpRaw !== null && rtp === null) rejected.implausibleRtp++;
     if (iRtp !== -1 && rtp === null) review.push({ name, studio: aliased, rtpBase: r[iRtp], why: REJECT.implausibleRtp });
 
+    const kind = classify(name);
     const game = {
       name,
+      /** slot | table | house — so nothing lists Roulette among the slots. */
+      kind,
       slug: iSlug !== -1 && (r[iSlug] ?? "").trim() ? r[iSlug].trim() : null,
       provider: prov?.name ?? aliased ?? null,
       // Null whenever authorship is unconfirmed, so nothing can link a game to
@@ -328,7 +393,12 @@ function main() {
     const games = [...catalogue.values()].sort((a, b) => a.name.localeCompare(b.name));
     const studios = new Set(games.map((g) => g.providerSlug ?? g.provider).filter(Boolean));
     const field = (k) => games.filter((g) => g[k] !== null).length;
+    const kinds = games.reduce((m, g) => ({ ...m, [g.kind]: (m[g.kind] ?? 0) + 1 }), {});
     console.log(`IMPORTED  ${games.length} games · ${studios.size} studios`);
+    console.log(`  kinds            ${Object.entries(kinds).map(([k, n]) => `${n} ${k}`).join(" · ")}`);
+    // The median only means anything across one kind of game.
+    const slotRtp = games.filter((g) => g.kind === "slot" && g.rtp !== null).map((g) => g.rtp).sort((a, b) => a - b);
+    if (slotRtp.length) console.log(`  slot RTP median  ${slotRtp[Math.floor(slotRtp.length / 2)].toFixed(2)}%  (n=${slotRtp.length})`);
     for (const k of ["rtp", "volatility", "reels", "paylines", "maxWinMultiplier", "released", "image"]) {
       console.log(`  ${k.padEnd(18)} ${String(field(k)).padStart(4)} / ${games.length}`);
     }

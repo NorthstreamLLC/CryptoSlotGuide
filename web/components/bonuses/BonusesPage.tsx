@@ -42,11 +42,21 @@ function toWithdraw(o: Operator): { text: string; color: string } {
   return { text: `${m}×`, color: m <= 20 ? "#7BE0B8" : m <= 40 ? "#E8EDF0" : "#F0A77F" };
 }
 
-/** What the multiplier applies to: the bonus, the deposit, or both. */
+/**
+ * What the multiplier applies to: the bonus, the deposit, or both.
+ *
+ * Tests for each term rather than anchoring on the first word. The previous
+ * `/^deposit\b/` would classify "deposit + bonus" as deposit-only, which is
+ * wrong — and it only ever produced the right answer because the escape in it
+ * had been mangled into a literal backspace, so it never matched anything and
+ * every value fell through to the `includes` branch below it.
+ */
 function basisOf(o: Operator): "bonus" | "deposit" | "both" {
   const b = (o.wagerBasis ?? "").toLowerCase();
-  if (/^deposit/.test(b)) return "deposit";
-  if (b.includes("deposit")) return "both";
+  const onDeposit = /\bdeposit/.test(b);
+  const onBonus = /\bbonus/.test(b);
+  if (onDeposit && onBonus) return "both";
+  if (onDeposit) return "deposit";
   return "bonus";
 }
 
