@@ -13,7 +13,19 @@ export type WagerView =
   | { kind: "none" | "note" | "unknown"; mult: null; label: string };
 
 export function wagerView(o: Operator): WagerView {
-  if (o.noDepositBonus) return { kind: "none", mult: null, label: "No deposit bonus" };
+  if (o.noDepositBonus) {
+    // An operator with no deposit BONUS can still require a playthrough on the
+    // deposit itself, usually as an anti-money-laundering rule. Roobet's own
+    // terms: "No multiplier stated for rakeback; deposits must be wagered 100%
+    // before withdrawal." Returning "No wagering" there hid a condition the
+    // player actually hits, so a cited multiplier that names deposits is shown
+    // with what it applies to.
+    const f = getSpecFact(o.slug, "Bonus terms", "Wagering");
+    if (f?.value && typeof o.wager === "number" && o.wager > 0 && /deposit/i.test(f.value)) {
+      return { kind: "cited", mult: o.wager, label: `${o.wager}× on deposits` };
+    }
+    return { kind: "none", mult: null, label: "No deposit bonus" };
+  }
   if (o.wagerNote) return { kind: "note", mult: null, label: o.wagerNote };
   if (getSpecFact(o.slug, "Bonus terms", "Wagering")) return { kind: "cited", mult: o.wager, label: o.wager === 0 ? "No wagering" : `${o.wager}×${o.wagerBasis ? ` ${o.wagerBasis}` : ""}` };
   return { kind: "unknown", mult: null, label: "Not stated" };

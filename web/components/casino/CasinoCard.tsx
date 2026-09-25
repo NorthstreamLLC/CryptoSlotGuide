@@ -5,6 +5,7 @@ import { BrandMark } from "@/components/ui/BrandMark";
 import { CoinStack } from "@/components/ui/CoinIcon";
 import { Icon } from "@/components/ui/Icon";
 import { raceFor, partnerFor, dropFor } from "@/lib/races";
+import { OfferCta } from "@/components/ui/OfferCta";
 
 const MONO = "var(--font-jetbrains-mono), monospace";
 
@@ -106,9 +107,9 @@ export function CasinoCard({ o, rank }: { o: Operator; rank?: number }) {
         </div>
       )}
 
-      <Link href={href} style={{ marginTop: "auto", display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 8, padding: "12px 14px", borderRadius: 11, background: o.featured ? brand : "#00C2CC", color: "#0A0D0F", fontSize: 14, fontWeight: 800 }}>
-        View offer <Icon name="arrow" size={15} />
-      </Link>
+      <div style={{ marginTop: "auto", display: "flex" }}>
+        <OfferCta o={o} />
+      </div>
     </article>
   );
 }

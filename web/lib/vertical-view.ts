@@ -42,6 +42,13 @@ export interface VerticalRow {
   stat: string;
   cta: string;
   href: string;
+  /**
+   * Set only where the row is an operator we hold a real affiliate link for.
+   * The table's button then goes to the operator rather than to our own review,
+   * which is what the label promises. Absent everywhere else, so slots, wallets
+   * and exchanges keep their internal link.
+   */
+  signupUrl?: string;
 }
 
 export interface VerticalAward {
@@ -214,8 +221,9 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
           m2: yes(s.cashout),
           m3: yes(s.betBuilder),
           stat: maxPayoutShort(o.slug).replace("Not found", "—"),
-          cta: "View offer",
+          cta: o.affiliate && o.signupUrl ? `Visit ${o.name}` : "Read review",
           href: `/casinos/${o.slug}`,
+          signupUrl: o.affiliate && o.signupUrl ? o.signupUrl : undefined,
         };
       }),
     };

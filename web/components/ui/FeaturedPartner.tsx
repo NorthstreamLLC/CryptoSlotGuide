@@ -5,6 +5,9 @@ import { getSpecFact } from "@/lib/spec-sheet";
 import { accessIn } from "@/lib/legal";
 import { brandFor } from "@/lib/casino-facts";
 import coinsBy from "@/data/coinsBy.json";
+import { payoutView } from "@/lib/payout";
+import { wagerView } from "@/lib/wager";
+import type { Operator } from "@/lib/types";
 
 const MONO = "var(--font-jetbrains-mono), monospace";
 
@@ -71,23 +74,26 @@ function pitchFor(slug: string, ctx: PartnerContext): string | null {
 }
 
 /**
- * The fallback line: withdrawal speed and the bonus condition that actually
- * decides whether an offer is worth taking. True on every page, so it is what
- * runs wherever there is no subject-specific fact to lead with.
+ * The fallback line: withdrawal speed and whether a bonus carries wagering.
  *
- * Two facts, each clamped to its own leading clause and joined with a visible
- * separator. Concatenating the raw cited values runs them together into one
- * unreadable sentence — these are full spec-sheet entries written to be read in
- * a table, not strung end to end.
+ * Built from payoutView and wagerView — the same helpers every table on the
+ * site uses — rather than by clamping the raw spec-sheet sentence. Clamping
+ * produced fragments that had lost their subject: "Sent instantly on request"
+ * never says what is sent, and "No multiplier stated for rakeback" reads as a
+ * complaint rather than the good news it is. These are full spec entries
+ * written to be read in a table, under a heading that supplied the noun.
  */
-function defaultPitch(slug: string): string | null {
-  const parts = [
-    getSpecFact(slug, "Payouts & fees", "Stated withdrawal time")?.value,
-    getSpecFact(slug, "Bonus terms", "Wagering")?.value,
-  ]
-    .filter((v): v is string => !!v)
-    .map((v) => clause(v, 72));
-  return parts.length ? parts.join(" · ") : null;
+function defaultPitch(o: Operator): string | null {
+  const pv = payoutView(o);
+  const wv = wagerView(o);
+  const parts: string[] = [];
+  if (pv.kind !== "none") parts.push(`${pv.label} withdrawals`);
+  // wagerView already words this correctly, including the case where a deposit
+  // playthrough applies despite there being no deposit bonus.
+  if (wv.kind !== "unknown") parts.push(wv.label.toLowerCase());
+  if (!parts.length) return null;
+  const line = parts.join(" · ");
+  return line.charAt(0).toUpperCase() + line.slice(1);
 }
 
 /** The leading clause of a cited fact — the profile carries the rest verbatim. */
@@ -122,7 +128,7 @@ export function FeaturedPartner({
   if (state) return null;
   if (country && accessIn(o.slug, country) === "restricted") return null;
 
-  const raw = pitchFor(o.slug, context) ?? defaultPitch(o.slug);
+  const raw = pitchFor(o.slug, context) ?? defaultPitch(o);
   if (!raw) return null;
   const pitch = firstSentence(raw);
 

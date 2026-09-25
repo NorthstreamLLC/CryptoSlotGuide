@@ -111,10 +111,27 @@ function Row({ o, pos }: { o: Operator; pos: number }) {
 
       <div className="col-span-3 md:col-span-1">{c.coins.length ? <CoinStack tickers={c.coins} max={5} size={22} /> : <span style={{ fontSize: 12, color: "#77858E" }}>—</span>}</div>
 
+      {/* A button labelled "View offer" that opened our own review was both a
+          wasted step and not what it said. Where a real affiliate link exists
+          the offer button goes to the operator; where it does not, the button
+          says what it actually does. The casino name and the offer cell above
+          both still link to the profile either way. */}
       <div className="col-span-3 md:col-span-1" style={{ display: "flex", gap: 8 }}>
-        <Link href={href} style={{ flex: 1, display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 6, padding: "10px 12px", borderRadius: 10, background: o.featured ? brand : "#00C2CC", color: "#0A0D0F", fontSize: 13, fontWeight: 800, whiteSpace: "nowrap" }}>
-          View offer <Icon name="arrow" size={14} />
-        </Link>
+        {o.affiliate && o.signupUrl ? (
+          <a
+            href={o.signupUrl}
+            target="_blank"
+            rel="noopener sponsored nofollow"
+            className="transition-transform hover:-translate-y-px"
+            style={{ flex: 1, display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 6, padding: "10px 12px", borderRadius: 10, background: o.featured ? brand : "#00C2CC", color: "#0A0D0F", fontSize: 13, fontWeight: 800, whiteSpace: "nowrap" }}
+          >
+            Visit {o.name} <Icon name="arrow" size={14} />
+          </a>
+        ) : (
+          <Link href={href} className="transition-colors hover:!border-white/25" style={{ flex: 1, display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 6, padding: "10px 12px", borderRadius: 10, border: "1px solid rgba(255,255,255,.16)", color: "#DCE5E9", fontSize: 13, fontWeight: 700, whiteSpace: "nowrap" }}>
+            Read review <Icon name="arrow" size={14} />
+          </Link>
+        )}
       </div>
     </div>
   );

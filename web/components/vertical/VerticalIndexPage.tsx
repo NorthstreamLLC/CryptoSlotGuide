@@ -172,9 +172,15 @@ function Row({ r, first, cols, labels, hasStat }: { r: VerticalRow; first: boole
       {cell(labels[2], r.m3)}
       {hasStat && cell(labels[3], r.stat)}
       <div className="col-span-2 md:col-span-1">
-        <Link href={r.href} style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 6, padding: "10px 12px", borderRadius: 10, background: "#00C2CC", color: "#0A0D0F", fontSize: 13, fontWeight: 800, whiteSpace: "nowrap" }}>
-          {r.cta} <Icon name="arrow" size={14} />
-        </Link>
+        {r.signupUrl ? (
+          <a href={r.signupUrl} target="_blank" rel="noopener sponsored nofollow" className="transition-transform hover:-translate-y-px" style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 6, padding: "10px 12px", borderRadius: 10, background: "#FFC531", color: "#141007", fontSize: 13, fontWeight: 800, whiteSpace: "nowrap" }}>
+            {r.cta} <Icon name="arrow" size={14} />
+          </a>
+        ) : (
+          <Link href={r.href} className="transition-colors hover:!border-white/25" style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 6, padding: "10px 12px", borderRadius: 10, border: "1px solid rgba(255,255,255,.16)", color: "#DCE5E9", fontSize: 13, fontWeight: 700, whiteSpace: "nowrap" }}>
+            {r.cta} <Icon name="arrow" size={14} />
+          </Link>
+        )}
       </div>
     </div>
   );

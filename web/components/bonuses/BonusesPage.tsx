@@ -11,6 +11,7 @@ import { getSpecFact } from "@/lib/spec-sheet";
 import { NextSteps } from "@/components/layout/NextSteps";
 import { byHouse } from "@/lib/house-order";
 import { isWelcomeOffer } from "@/lib/casino-bonuses";
+import { OfferCta } from "@/components/ui/OfferCta";
 
 /**
  * Compare casino bonuses, split by how each one works:
@@ -259,10 +260,8 @@ function Row({ o, i, cols, tag, children }: { o: Operator; i: number; cols: stri
         </span>
       </Link>
       {children}
-      <div className="col-span-2 md:col-span-1">
-        <Link href={href} style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 6, padding: "10px 12px", borderRadius: 10, background: o.featured ? brand : "#00C2CC", color: "#0A0D0F", fontSize: 13, fontWeight: 800, whiteSpace: "nowrap" }}>
-          View offer <Icon name="arrow" size={14} />
-        </Link>
+      <div className="col-span-2 md:col-span-1" style={{ display: "flex" }}>
+        <OfferCta o={o} size="sm" />
       </div>
     </div>
   );
