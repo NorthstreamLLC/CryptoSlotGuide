@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useState } from "react";
 import { buildNavTabs, type NavTab } from "@/lib/nav";
 import type { SiteCounts } from "@/lib/derived";
+import { BrandMark } from "@/components/ui/BrandMark";
+import { tintFor } from "@/lib/logo";
 
 /**
  * Ported from the `<header>` block in CryptoSlotGuide.dc.html (search that
@@ -364,6 +366,11 @@ export function Header({ counts }: { counts: SiteCounts }) {
                           color: "#C3CFD5",
                         }}
                       >
+                        {link.brand && (
+                          <span style={{ width: 20, height: 20, flex: "none", borderRadius: 6, overflow: "hidden" }}>
+                            <BrandMark slug={link.brand} mono={link.label.slice(0, 2).toUpperCase()} tint={tintFor(link.brand)} radius={6} fontSize={8} />
+                          </span>
+                        )}
                         {link.label}
                         {link.dot && (
                           <span

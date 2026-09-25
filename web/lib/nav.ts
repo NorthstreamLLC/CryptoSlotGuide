@@ -14,6 +14,12 @@ export interface NavLink {
   label: string;
   href: string;
   dot?: string;
+  /**
+   * Brand slug, where the link points at a named operator. The menu then shows
+   * its mark instead of a bare line of text — in a column of five casino names
+   * the logo is what a reader actually recognises.
+   */
+  brand?: string;
 }
 
 export interface NavSection {
@@ -80,9 +86,10 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
             },
             {
               title: "Casino profiles",
-              links: ["BC.Game", "Rollbit", "Roobet", "Shuffle", "Stake"].map((name) => ({
+              links: ["Roobet", "Stake", "Shuffle", "BC.Game", "Rollbit"].map((name) => ({
                 label: name,
                 href: `/casinos/${slug(name)}`,
+                brand: slug(name),
               })),
             },
           ],
