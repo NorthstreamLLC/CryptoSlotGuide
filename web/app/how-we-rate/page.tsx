@@ -261,7 +261,7 @@ export default function Page() {
             <p style={{ margin: "0 0 12px", fontSize: 14.5, lineHeight: 1.7, color: "#93A3AC", textWrap: "pretty" }}>
               If a figure here is wrong, we want to know. Reader reports go to the front of the queue. When we correct a figure, the page says what changed and where the new figure came from rather than making a silent edit.
             </p>
-            <a href="mailto:corrections@cryptoslotguide.com" style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11.5, letterSpacing: ".05em", color: "#00C2CC" }}>Report an inaccuracy →</a>
+            <a href="mailto:hello@cryptoslotguide.com" style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11.5, letterSpacing: ".05em", color: "#00C2CC" }}>Report an inaccuracy →</a>
           </div>
         </div>
         <NextSteps

@@ -93,7 +93,7 @@ export default function Page() {
 
         <div style={{ marginTop: 44, padding: "24px 28px", borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
           <p style={{ margin: 0, fontSize: 14, lineHeight: 1.65, color: "#8DA0AA" }}>
-            Spotted something wrong, or a conflict we haven&apos;t disclosed? <a href="mailto:editorial@cryptoslotguide.com" style={{ color: "#00C2CC" }}>editorial@cryptoslotguide.com</a>
+            Spotted something wrong, or a conflict we haven&apos;t disclosed? <a href="mailto:hello@cryptoslotguide.com" style={{ color: "#00C2CC" }}>hello@cryptoslotguide.com</a>
           </p>
         </div>
       </section>

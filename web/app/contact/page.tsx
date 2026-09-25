@@ -15,7 +15,7 @@ const CHANNELS: { title: string; desc: string; email: string }[] = [
   {
     title: "Report an inaccuracy",
     desc: "A figure that's out of date, a term that's changed, or something that doesn't match what you saw at an operator. Include the page URL and what you found — reproducible reports get an immediate re-check.",
-    email: "corrections@cryptoslotguide.com",
+    email: "hello@cryptoslotguide.com",
   },
   {
     title: "General questions",
@@ -25,17 +25,17 @@ const CHANNELS: { title: string; desc: string; email: string }[] = [
   {
     title: "Advertising & partnerships",
     desc: "Affiliate program inquiries and partnership proposals. Note that commercial relationships never affect scoring — see Editorial Standards.",
-    email: "partnerships@cryptoslotguide.com",
+    email: "hello@cryptoslotguide.com",
   },
   {
     title: "Press",
     desc: "Media inquiries and interview requests.",
-    email: "press@cryptoslotguide.com",
+    email: "hello@cryptoslotguide.com",
   },
   {
     title: "Privacy requests",
     desc: "Data access, correction, or deletion requests under applicable privacy law.",
-    email: "privacy@cryptoslotguide.com",
+    email: "hello@cryptoslotguide.com",
   },
 ];
 
