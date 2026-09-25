@@ -102,7 +102,7 @@ export function FeaturedPartner({
   context = { kind: "general" },
   country,
   state,
-  heading = "Featured",
+  heading = "Casino we recommend",
 }: {
   context?: PartnerContext;
   /** ISO code of the country this page is about, if it is about one. */
@@ -143,7 +143,11 @@ export function FeaturedPartner({
     >
       <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 12 }}>
         <span style={{ fontFamily: MONO, fontSize: 10, letterSpacing: ".1em", textTransform: "uppercase", color: "#C7A45C" }}>{heading}</span>
-        <span style={{ fontFamily: MONO, fontSize: 10, letterSpacing: ".04em", color: "#7C8A93" }}>· advertiser</span>
+        {/* The commercial relationship stays visible at the point of the
+            recommendation, not only in the header strip. "Partner" rather than
+            "advertiser": it is plainer English and it is the more accurate
+            word for what the relationship actually is. */}
+        <span style={{ fontFamily: MONO, fontSize: 10, letterSpacing: ".04em", color: "#7C8A93" }}>· partner</span>
       </div>
 
       <div style={{ display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
