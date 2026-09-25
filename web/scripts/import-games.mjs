@@ -95,6 +95,27 @@ const key = (s) => String(s ?? "").toLowerCase().replace(/[\s_\-.]/g, "");
 // section these titles actually belong in rather than inventing a second list.
 const HOUSE_SLUGS = new Set(read("houseGames.json").map((g) => key(g.slug ?? g.name)));
 
+/**
+ * What we found when we checked each studio against its own site and the MGA
+ * and Curacao registers. Carried onto every game so a page can say how much is
+ * actually known about who made it, instead of printing a name from a
+ * spreadsheet as though it were established.
+ */
+const VERIFIED = new Map(read("studio-verification.json").studios.map((v) => [key(v.exportName), v]));
+
+/**
+ * Studios we already hold regulator data for in provider-licences.json, each
+ * gathered from the regulator's own register. Checking here first means the
+ * established names do not come back as "unchecked" merely because they were
+ * verified in an earlier pass rather than this one.
+ */
+const LICENCE_BACKED = new Map(
+  LICENSED.filter((p) => (p.licences ?? []).length > 0).map((p) => [
+    key(p.name),
+    { status: "licensed", note: null, licence: `${p.licences.length} licence(s) on file`, licenceUrl: p.sourceUrl ?? null },
+  ])
+);
+
 
 /** Minimal RFC-4180 reader — exports routinely have quoted commas and newlines in prose fields. */
 function parseCsv(text) {
@@ -289,6 +310,15 @@ function main() {
     const { base, integration } = splitStudio(studioRaw);
 
     // Not a slot: by supplier, on licence evidence.
+    // `aliased` is resolved further down, so the canonical spelling is looked
+    // up here rather than referenced before it exists.
+    const canonical = STUDIO_ALIASES[key(base)] ?? base;
+    const verdict = VERIFIED.get(key(base)) ?? VERIFIED.get(key(studioRaw)) ?? LICENCE_BACKED.get(key(canonical)) ?? LICENCE_BACKED.get(key(base));
+    if (verdict?.status === "not-a-slot-studio") {
+      rejected.notASlot++;
+      excluded.push({ name, studio: studioRaw, why: verdict.note });
+      continue;
+    }
     const nonSlot = NON_SLOT_SUPPLIERS[key(base)] ?? NON_SLOT_SUPPLIERS[key(studioRaw)];
     if (nonSlot) {
       rejected.notASlot++;
@@ -336,6 +366,19 @@ function main() {
       // a studio page on the strength of a delivery label.
       providerSlug: integration ? null : prov?.slug ?? null,
       studioConfirmed: !integration,
+      /**
+       * From data/studio-verification.json, or from licence data already on
+       * file. Forced to "unconfirmed" whenever the export only gave us a
+       * delivery label: a game routed through Hacksaw's platform must not
+       * inherit Hacksaw's licence, because Hacksaw may not have made it.
+       */
+      studioStatus: integration ? "unconfirmed" : verdict?.status ?? null,
+      /** Where the credit probably belongs when the named studio only distributes. */
+      studioCaveat: integration
+        ? `Delivered via ${aliased} ${integration}. That names the platform, not the developer, so the studio is unconfirmed.`
+        : verdict && verdict.status !== "licensed"
+          ? verdict.note
+          : null,
       integration: integration ? `${aliased} ${integration}` : null,
       rtp,
       volatility: iVol !== -1 && (r[iVol] ?? "").trim() ? r[iVol].trim().toLowerCase() : null,
@@ -396,6 +439,8 @@ function main() {
     const kinds = games.reduce((m, g) => ({ ...m, [g.kind]: (m[g.kind] ?? 0) + 1 }), {});
     console.log(`IMPORTED  ${games.length} games · ${studios.size} studios`);
     console.log(`  kinds            ${Object.entries(kinds).map(([k, n]) => `${n} ${k}`).join(" · ")}`);
+    const byStatus = games.reduce((m, g) => ({ ...m, [g.studioStatus ?? "unchecked"]: (m[g.studioStatus ?? "unchecked"] ?? 0) + 1 }), {});
+    console.log(`  studio status    ${Object.entries(byStatus).sort((a, b) => b[1] - a[1]).map(([k, n]) => `${n} ${k}`).join(" · ")}`);
     // The median only means anything across one kind of game.
     const slotRtp = games.filter((g) => g.kind === "slot" && g.rtp !== null).map((g) => g.rtp).sort((a, b) => a - b);
     if (slotRtp.length) console.log(`  slot RTP median  ${slotRtp[Math.floor(slotRtp.length / 2)].toFixed(2)}%  (n=${slotRtp.length})`);
