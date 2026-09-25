@@ -1,43 +1,37 @@
 #!/usr/bin/env node
 /**
- * Game-availability CSV import — which games each casino actually carries.
+ * Game CSV import, in two modes, plus a quarantine for fields that cannot be
+ * published as they stand.
  *
- * This is the dataset the site has never had, and it is the one that unlocks
- * the honest version of several claims. Right now a provider page cannot say
- * "Roobet lists Pragmatic Play" because nothing on file knows whether that is
- * true. With this imported, that line comes from data instead of from
- * confidence.
+ *   CATALOGUE mode (no casino column)
+ *     "This game exists, from this studio, with these mechanics."
+ *     Writes data/gameCatalogue.json. Says NOTHING about who carries it.
+ *
+ *   AVAILABILITY mode (a casino column is present)
+ *     "This casino's lobby lists this game."
+ *     Writes data/casinoGames.json, one entry per casino.
+ *
+ * The mode is read off the header rather than chosen by a flag, so a catalogue
+ * export can never become availability data by accident. That accident is the
+ * expensive one: it would let a provider page claim an operator carries a
+ * studio's games on the strength of a spreadsheet that never named the operator.
+ *
+ * ABSENCE IS NOT A NEGATIVE
+ * A casino's list is what we know it HAS. A missing game means "not seen", not
+ * "not offered" — lobby exports are partial, regional and change hourly. Every
+ * casino entry is `complete: false` unless --complete says the export really was
+ * the whole lobby, and only a true there may support a negative claim anywhere.
+ *
+ * QUARANTINE
+ * Real exports carry fields that are wrong to publish rather than merely
+ * missing. Those are dropped by default, counted, and the reason printed, so
+ * the decision is visible instead of silent. See REJECT below.
  *
  * Usage:
- *   npm run import:games -- path/to/games.csv
- *   npm run import:games -- path/to/games.csv --dry-run
- *   npm run import:games -- path/to/games.csv --as-of 2026-09-24
- *
- * CSV columns — header row required, any order, extra columns ignored. The
- * header matching is deliberately loose (case, spaces, underscores and hyphens
- * all ignored) because this file is coming out of somebody else's export and
- * asking for an exact header is how an import turns into an afternoon.
- *
- *   casino    (required)  slug or display name — "roobet", "Roobet", "BC.Game"
- *   game      (required)  the game title as the casino lists it
- *   provider  (optional)  studio name; strongly recommended, it is what makes
- *                         provider pages work
- *   rtp       (optional)  the RTP the CASINO shows, if it shows one. Casinos
- *                         often run a lower RTP version than the studio's
- *                         headline, so this is stored separately from the
- *                         studio figure in slots.json and never merged into it.
- *
- * What it does:
- *  1. Resolves every casino against data/ops.json and every provider against
- *     data/providers.json. Unmatched names are REPORTED, not silently dropped —
- *     a typo that quietly loses 400 rows is the failure mode here.
- *  2. Writes data/casinoGames.json, one entry per casino.
- *  3. Diffs against the previous import and prints what appeared and what
- *     vanished, which is the new-game tracking. The diff is written to
- *     data/casinoGames.changes.json so a scheduled run can report it.
- *
- * It does NOT invent a source. Availability is a claim about a casino's lobby,
- * so each entry records where the list came from and when.
+ *   npm run import:games -- games.csv --dry-run
+ *   npm run import:games -- games.csv --source "Roobet lobby" --as-of 2026-09-24
+ *   npm run import:games -- games.csv --complete        # the export IS the full lobby
+ *   npm run import:games -- games.csv --keep-rejected   # write them to a review file
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -45,34 +39,59 @@ import { fileURLToPath } from "node:url";
 
 const web = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DATA = path.join(web, "data");
-const OUT = path.join(DATA, "casinoGames.json");
+const OUT_AVAIL = path.join(DATA, "casinoGames.json");
+const OUT_CATALOGUE = path.join(DATA, "gameCatalogue.json");
+const OUT_REVIEW = path.join(DATA, "gameCatalogue.review.json");
 const CHANGES = path.join(DATA, "casinoGames.changes.json");
 
 const argv = process.argv.slice(2);
 const file = argv.find((a) => !a.startsWith("--"));
 const DRY = argv.includes("--dry-run");
-const asOfArg = argv[argv.indexOf("--as-of") + 1];
-const AS_OF = argv.includes("--as-of") && asOfArg ? asOfArg : new Date().toISOString().slice(0, 10);
-const sourceArg = argv[argv.indexOf("--source") + 1];
-const SOURCE = argv.includes("--source") && sourceArg ? sourceArg : "operator lobby export";
+const COMPLETE = argv.includes("--complete");
+const KEEP = argv.includes("--keep-rejected");
+const after = (flag, fallback) => (argv.includes(flag) && argv[argv.indexOf(flag) + 1] ? argv[argv.indexOf(flag) + 1] : fallback);
+const AS_OF = after("--as-of", new Date().toISOString().slice(0, 10));
+const SOURCE = after("--source", null);
 
 if (!file) {
-  console.error("usage: npm run import:games -- path/to/games.csv [--dry-run] [--as-of YYYY-MM-DD] [--source \"…\"]");
+  console.error('usage: npm run import:games -- games.csv [--dry-run] [--source "…"] [--as-of YYYY-MM-DD] [--complete] [--keep-rejected]');
   process.exit(1);
 }
 
 const read = (p) => JSON.parse(fs.readFileSync(path.join(DATA, p), "utf8"));
 const OPS = read("ops.json");
 const PROVIDERS = read("providers.json");
-
-/** Loose key so "Casino Name", "casino_name" and "casino-name" all match. */
-const key = (s) => String(s ?? "").toLowerCase().replace(/[\s_\-.]/g, "");
+// Studios we hold licence data for but have no profile page for yet. Matching
+// against both means a name resolves to its canonical spelling even when the
+// site cannot link to it, which keeps "Netent" and "NetEnt" from becoming two
+// studios the moment a profile page is added.
+const LICENSED = read("provider-licences.json");
 
 /**
- * A minimal RFC-4180 reader. Written out rather than pulled in because the
- * other import-*.mjs scripts have no dependencies and a games export is exactly
- * the kind of file that arrives with quoted commas in a title.
+ * Short forms an export uses for a studio we already know under a fuller name.
+ * Without this, "Hacksaw" and "Hacksaw Gaming" are two different studios and
+ * the 183 games behind the short form never reach the provider page.
  */
+const STUDIO_ALIASES = {
+  hacksaw: "Hacksaw Gaming",
+  netent: "NetEnt",
+  "playngo": "Play'n GO",
+  "playngo!": "Play'n GO",
+  bigtimegaming: "Big Time Gaming",
+  btg: "Big Time Gaming",
+  nolimit: "Nolimit City",
+  redtiger: "Red Tiger",
+  relax: "Relax Gaming",
+  push: "Push Gaming",
+  pragmatic: "Pragmatic Play",
+  print: "Print Studios",
+  elk: "ELK Studios",
+  "gamesglobal": "Microgaming / Games Global",
+  microgaming: "Microgaming / Games Global",
+};
+const key = (s) => String(s ?? "").toLowerCase().replace(/[\s_\-.]/g, "");
+
+/** Minimal RFC-4180 reader — exports routinely have quoted commas and newlines in prose fields. */
 function parseCsv(text) {
   const rows = [];
   let row = [];
@@ -97,145 +116,278 @@ function parseCsv(text) {
   return rows.filter((r) => r.some((v) => v.trim() !== ""));
 }
 
-const raw = parseCsv(fs.readFileSync(file, "utf8"));
-if (raw.length < 2) {
-  console.error("csv has no data rows");
-  process.exit(1);
-}
+/**
+ * The same studio arriving under several integration names. An export that
+ * distinguishes "Hacksaw (Neutron)" from "Hacksaw (Neutron - F)" is describing
+ * its own plumbing, not three different studios, and importing them as-is
+ * produces three provider pages for one company.
+ */
+const normaliseStudio = (name) =>
+  String(name ?? "")
+    .replace(/\s*\((?:neutron(?:\s*-\s*f)?|f|fun|demo|social)\)\s*$/i, "")
+    .replace(/\s+/g, " ")
+    .trim();
 
-const header = raw[0].map(key);
-const col = (...names) => {
-  for (const n of names) {
-    const i = header.indexOf(key(n));
-    if (i !== -1) return i;
-  }
-  return -1;
+/**
+ * Fields a real export carries that must not be published as they stand. Each
+ * says WHY, because "dropped 338 values" with no reason is how a rule gets
+ * quietly reverted later.
+ */
+const REJECT = {
+  observedRtp:
+    "rtpDaily/rtpWeekly are observed return over a short window, not RTP — values above 100% (up to 1763%) prove it. Publishing them as RTP would be false.",
+  hotCold:
+    'rtpState HOT/COLD tells a reader a game is "due". That is the gambler\'s fallacy, it is untrue of an independent RNG, and it is the opposite of what this site is for.',
+  templatedCopy:
+    "description/descriptionShort are templated marketing prose with affiliate links inline, not a sourced fact about the game.",
+  constantRating: "rating is the same value on every row, so it distinguishes nothing.",
+  implausibleRtp: "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export).",
 };
 
-// Generous alias lists on purpose. The first test CSV used "Casino Name" and
-// the import refused it outright — an export's header is whatever the exporting
-// tool felt like, and a hard failure on a header is a pointless round trip.
-const iCasino = col("casino", "casinoname", "casinoslug", "operator", "operatorname", "operatorslug", "site", "sitename", "brand", "brandname");
-const iGame = col("game", "gamename", "gametitle", "title", "name", "slot", "slotname");
-const iProvider = col("provider", "providername", "studio", "studioname", "vendor", "supplier", "gameprovider", "developer");
-const iRtp = col("rtp", "rtppercent", "rtp%", "returntoplayer", "payout");
-
-if (iCasino === -1 || iGame === -1) {
-  console.error(`csv needs a casino column and a game column. Found headers: ${raw[0].join(", ")}`);
-  process.exit(1);
-}
-
-// Resolve by slug first, then by display name, then by a loose key.
-const opBy = new Map();
-for (const o of OPS) {
-  opBy.set(key(o.slug), o);
-  opBy.set(key(o.name), o);
-}
-const provBy = new Map();
-for (const p of PROVIDERS) {
-  provBy.set(key(p.slug), p);
-  provBy.set(key(p.name), p);
-}
-
-const byCasino = new Map();
-const unknownCasinos = new Map();
-const unknownProviders = new Map();
-let rows = 0;
-let dupes = 0;
-
-for (const r of raw.slice(1)) {
-  const casinoRaw = (r[iCasino] ?? "").trim();
-  const gameRaw = (r[iGame] ?? "").trim();
-  if (!casinoRaw || !gameRaw) continue;
-  rows++;
-
-  const op = opBy.get(key(casinoRaw));
-  if (!op) {
-    unknownCasinos.set(casinoRaw, (unknownCasinos.get(casinoRaw) ?? 0) + 1);
-    continue;
+function main() {
+  const raw = parseCsv(fs.readFileSync(file, "utf8"));
+  if (raw.length < 2) {
+    console.error("csv has no data rows");
+    process.exit(1);
   }
 
-  const provRaw = iProvider === -1 ? "" : (r[iProvider] ?? "").trim();
-  const prov = provRaw ? provBy.get(key(provRaw)) : null;
-  if (provRaw && !prov) unknownProviders.set(provRaw, (unknownProviders.get(provRaw) ?? 0) + 1);
+  const header = raw[0].map(key);
+  const col = (...names) => {
+    for (const n of names) {
+      const i = header.indexOf(key(n));
+      if (i !== -1) return i;
+    }
+    return -1;
+  };
 
-  const rtpRaw = iRtp === -1 ? "" : (r[iRtp] ?? "").trim();
-  const rtp = rtpRaw ? Number(String(rtpRaw).replace("%", "")) : null;
+  const iCasino = col("casino", "casinoname", "casinoslug", "operator", "operatorname", "operatorslug", "site", "sitename", "brand", "brandname", "availableat");
+  const iGame = col("game", "gamename", "gametitle", "title", "name", "slot", "slotname");
+  const iSlug = col("slug", "gameslug");
+  const iProvider = col("provider.name", "provider", "providername", "studio", "studioname", "vendor", "supplier", "gameprovider", "developer");
+  const iRtp = col("rtpbase", "rtp", "rtppercent", "returntoplayer");
+  const iVol = col("volantility", "volatility", "variance");
+  const iReels = col("reels");
+  const iRows = col("rows");
+  const iLines = col("paylines", "lines");
+  const iMaxWin = col("maxwinmultiplier", "maxwin");
+  const iMinBet = col("minbet");
+  const iMaxBet = col("maxbet");
+  const iReleased = col("releasedat", "released", "releasedate");
+  const iImage = col("imageurl", "image");
+  const iDeleted = col("isdeleted", "deleted");
+  // Present-but-rejected columns, counted so the report can say what was dropped.
+  const rejected = { observedRtp: 0, hotCold: 0, templatedCopy: 0, constantRating: 0, implausibleRtp: 0 };
+  const iDaily = col("rtpdaily");
+  const iWeekly = col("rtpweekly");
+  const iState = col("rtpstate");
+  const iDesc = col("description");
+  const iRating = col("rating");
 
-  const entry = byCasino.get(op.slug) ?? { slug: op.slug, games: new Map() };
-  const gk = key(gameRaw);
-  if (entry.games.has(gk)) dupes++;
-  entry.games.set(gk, {
-    name: gameRaw,
-    // The studio's canonical name where we know it, the CSV's spelling where we
-    // don't — so an unrecognised studio still shows rather than disappearing.
-    provider: prov?.name ?? provRaw ?? null,
-    providerSlug: prov?.slug ?? null,
-    rtp: Number.isFinite(rtp) ? rtp : null,
-  });
-  byCasino.set(op.slug, entry);
-}
-
-const out = [...byCasino.values()]
-  .map((e) => ({
-    slug: e.slug,
-    count: e.games.size,
-    asOf: AS_OF,
-    source: SOURCE,
-    games: [...e.games.values()].sort((a, b) => a.name.localeCompare(b.name)),
-  }))
-  .sort((a, b) => a.slug.localeCompare(b.slug));
-
-// ---- diff against the last import: this is the new-game tracking ----
-const prev = fs.existsSync(OUT) ? read("casinoGames.json") : [];
-const prevBy = new Map(prev.map((e) => [e.slug, new Set(e.games.map((g) => key(g.name)))]));
-const changes = [];
-for (const e of out) {
-  const before = prevBy.get(e.slug);
-  if (!before) {
-    changes.push({ slug: e.slug, firstImport: true, added: e.games.length, removed: 0, addedGames: [], removedGames: [] });
-    continue;
+  if (iGame === -1) {
+    console.error(`csv needs a game/name column. Found headers: ${raw[0].join(", ")}`);
+    process.exit(1);
   }
-  const now = new Set(e.games.map((g) => key(g.name)));
-  const added = e.games.filter((g) => !before.has(key(g.name))).map((g) => g.name);
-  const removed = [...before].filter((k) => !now.has(k));
-  if (added.length || removed.length) {
-    changes.push({ slug: e.slug, firstImport: false, added: added.length, removed: removed.length, addedGames: added.slice(0, 50), removedGames: removed.slice(0, 50) });
+
+  const MODE = iCasino === -1 ? "catalogue" : "availability";
+
+  const opBy = new Map();
+  for (const o of OPS) { opBy.set(key(o.slug), o); opBy.set(key(o.name), o); }
+  // Profile pages win over licence-only entries, so a studio that has a page
+  // links to it; both are registered so either spelling resolves.
+  const provBy = new Map();
+  for (const p of LICENSED) { provBy.set(key(p.slug), { slug: null, name: p.name }); provBy.set(key(p.name), { slug: null, name: p.name }); }
+  for (const p of PROVIDERS) { provBy.set(key(p.slug), p); provBy.set(key(p.name), p); }
+
+  const unknownCasinos = new Map();
+  const unmappedStudios = new Map();
+  const mergedStudios = new Map();
+  const byCasino = new Map();
+  const catalogue = new Map();
+  const review = [];
+  let rows = 0;
+  let dupes = 0;
+  let skippedDeleted = 0;
+  let blankCasino = 0;
+
+  const num = (v) => {
+    const n = Number(String(v ?? "").replace("%", "").trim());
+    return Number.isFinite(n) && n !== 0 ? n : null;
+  };
+  const int = (v) => {
+    const n = parseInt(String(v ?? "").trim(), 10);
+    return Number.isFinite(n) && n > 0 ? n : null;
+  };
+
+  for (const r of raw.slice(1)) {
+    const name = (r[iGame] ?? "").trim();
+    if (!name) continue;
+    if (iDeleted !== -1 && /true/i.test(r[iDeleted] ?? "")) { skippedDeleted++; continue; }
+    rows++;
+
+    if (iDaily !== -1 && (r[iDaily] ?? "").trim()) rejected.observedRtp++;
+    if (iWeekly !== -1 && (r[iWeekly] ?? "").trim()) rejected.observedRtp++;
+    if (iState !== -1 && /hot|cold/i.test(r[iState] ?? "")) rejected.hotCold++;
+    if (iDesc !== -1 && (r[iDesc] ?? "").trim()) rejected.templatedCopy++;
+    if (iRating !== -1 && (r[iRating] ?? "").trim()) rejected.constantRating++;
+
+    const studioRaw = iProvider === -1 ? "" : (r[iProvider] ?? "").trim();
+    const studio = normaliseStudio(studioRaw);
+    if (studioRaw && studio !== studioRaw) {
+      const set = mergedStudios.get(studio) ?? new Set();
+      set.add(studioRaw);
+      mergedStudios.set(studio, set);
+    }
+    const aliased = STUDIO_ALIASES[key(studio)] ?? studio;
+    const prov = aliased ? provBy.get(key(aliased)) : null;
+    if (aliased && !prov) unmappedStudios.set(aliased, (unmappedStudios.get(aliased) ?? 0) + 1);
+
+    // Only a figure that could actually be a slot RTP.
+    const rtpRaw = iRtp === -1 ? null : num(r[iRtp]);
+    const rtp = rtpRaw !== null && rtpRaw >= 80 && rtpRaw <= 100 ? rtpRaw : null;
+    if (rtpRaw !== null && rtp === null) rejected.implausibleRtp++;
+    if (iRtp !== -1 && rtp === null) review.push({ name, studio, rtpBase: r[iRtp], why: REJECT.implausibleRtp });
+
+    const game = {
+      name,
+      slug: iSlug !== -1 && (r[iSlug] ?? "").trim() ? r[iSlug].trim() : null,
+      provider: prov?.name ?? aliased ?? null,
+      providerSlug: prov?.slug ?? null,
+      rtp,
+      volatility: iVol !== -1 && (r[iVol] ?? "").trim() ? r[iVol].trim().toLowerCase() : null,
+      reels: iReels === -1 ? null : int(r[iReels]),
+      rows: iRows === -1 ? null : int(r[iRows]),
+      paylines: iLines === -1 ? null : int(r[iLines]),
+      maxWinMultiplier: iMaxWin === -1 ? null : int(r[iMaxWin]),
+      minBet: iMinBet === -1 ? null : num(r[iMinBet]),
+      maxBet: iMaxBet === -1 ? null : num(r[iMaxBet]),
+      released: iReleased !== -1 && /^\d{4}-\d{2}-\d{2}/.test(r[iReleased] ?? "") ? r[iReleased].slice(0, 10) : null,
+      image: iImage !== -1 && /^https?:/.test(r[iImage] ?? "") ? r[iImage].trim() : null,
+    };
+
+    if (MODE === "catalogue") {
+      const gk = key(name) + "|" + key(game.provider ?? "");
+      if (catalogue.has(gk)) dupes++;
+      catalogue.set(gk, game);
+      continue;
+    }
+
+    const casinoRaw = (r[iCasino] ?? "").trim();
+    if (!casinoRaw) {
+      // A blank cell is not an availability claim about anybody.
+      blankCasino++;
+      catalogue.set(key(name) + "|" + key(game.provider ?? ""), game);
+      continue;
+    }
+    const op = opBy.get(key(casinoRaw));
+    if (!op) { unknownCasinos.set(casinoRaw, (unknownCasinos.get(casinoRaw) ?? 0) + 1); continue; }
+    const entry = byCasino.get(op.slug) ?? { slug: op.slug, games: new Map() };
+    if (entry.games.has(key(name))) dupes++;
+    entry.games.set(key(name), game);
+    byCasino.set(op.slug, entry);
+  }
+
+  // ---------- report ----------
+  console.log(`mode: ${MODE.toUpperCase()}${MODE === "catalogue" ? "  — no casino column, so this says nothing about who carries these games" : ""}`);
+  console.log(`${rows} rows${dupes ? `, ${dupes} duplicate(s) collapsed` : ""}${skippedDeleted ? `, ${skippedDeleted} marked deleted and skipped` : ""}\n`);
+
+  const dropped = Object.entries(rejected).filter(([, n]) => n > 0);
+  if (dropped.length) {
+    console.log("NOT IMPORTED — present in the CSV, wrong to publish as-is");
+    for (const [k, n] of dropped) console.log(`  ${String(n).padStart(5)} × ${k}\n        ${REJECT[k]}`);
+    console.log();
+  }
+
+  if (mergedStudios.size) {
+    console.log("STUDIOS MERGED — integration variants folded into one studio");
+    for (const [base, vars] of mergedStudios) console.log(`  ${base}  ←  ${[...vars].join(", ")}`);
+    console.log();
+  }
+
+  if (MODE === "catalogue") {
+    const games = [...catalogue.values()].sort((a, b) => a.name.localeCompare(b.name));
+    const studios = new Set(games.map((g) => g.providerSlug ?? g.provider).filter(Boolean));
+    const field = (k) => games.filter((g) => g[k] !== null).length;
+    console.log(`IMPORTED  ${games.length} games · ${studios.size} studios`);
+    for (const k of ["rtp", "volatility", "reels", "paylines", "maxWinMultiplier", "released", "image"]) {
+      console.log(`  ${k.padEnd(18)} ${String(field(k)).padStart(4)} / ${games.length}`);
+    }
+    reportUnknowns();
+    console.log(`\nThis cannot support "casino X carries game Y". For that, re-export with a`);
+    console.log(`casino column, or import one lobby at a time with --source naming it.`);
+    if (!DRY) {
+      fs.writeFileSync(OUT_CATALOGUE, JSON.stringify({ asOf: AS_OF, source: SOURCE ?? "game catalogue export", games }, null, 2) + "\n");
+      if (KEEP && review.length) fs.writeFileSync(OUT_REVIEW, JSON.stringify(review, null, 2) + "\n");
+      console.log(`\nwrote data/gameCatalogue.json (${games.length} games)${KEEP && review.length ? ` and gameCatalogue.review.json (${review.length})` : ""}`);
+    }
+    return finish();
+  }
+
+  // ---------- availability ----------
+  const out = [...byCasino.values()]
+    .map((e) => ({
+      slug: e.slug,
+      count: e.games.size,
+      asOf: AS_OF,
+      source: SOURCE ?? "operator lobby export",
+      complete: COMPLETE,
+      games: [...e.games.values()].sort((a, b) => a.name.localeCompare(b.name)),
+    }))
+    .sort((a, b) => a.slug.localeCompare(b.slug));
+
+  const prev = fs.existsSync(OUT_AVAIL) ? read("casinoGames.json") : [];
+  const prevBy = new Map(prev.map((e) => [e.slug, new Set(e.games.map((g) => key(g.name)))]));
+  const changes = [];
+  for (const e of out) {
+    const before = prevBy.get(e.slug);
+    if (!before) { changes.push({ slug: e.slug, firstImport: true, added: e.games.length, removed: 0, addedGames: [], removedGames: [] }); continue; }
+    const now = new Set(e.games.map((g) => key(g.name)));
+    const added = e.games.filter((g) => !before.has(key(g.name))).map((g) => g.name);
+    const removed = [...before].filter((k) => !now.has(k));
+    if (added.length || removed.length) changes.push({ slug: e.slug, firstImport: false, added: added.length, removed: removed.length, addedGames: added.slice(0, 50), removedGames: removed.slice(0, 50) });
+  }
+
+  console.log(`IMPORTED  ${out.length} casinos · ${out.reduce((n, e) => n + e.count, 0)} availability entries · complete=${COMPLETE}`);
+  if (blankCasino) console.log(`${blankCasino} row(s) had no casino — sent to the catalogue, not attributed to anyone`);
+  for (const e of out.slice(0, 12)) {
+    const studios = new Set(e.games.map((g) => g.providerSlug ?? g.provider).filter(Boolean));
+    console.log(`  ${e.slug.padEnd(16)} ${String(e.count).padStart(5)} games · ${studios.size} studios`);
+  }
+  if (out.length > 12) console.log(`  … ${out.length - 12} more`);
+
+  reportUnknowns();
+
+  if (changes.length) {
+    console.log(`\nCHANGES SINCE LAST IMPORT`);
+    for (const c of changes.slice(0, 20)) {
+      if (c.firstImport) console.log(`  ${c.slug.padEnd(16)} first import, ${c.added} games`);
+      else console.log(`  ${c.slug.padEnd(16)} +${c.added} / −${c.removed}${c.addedGames.length ? `   new: ${c.addedGames.slice(0, 5).join(", ")}${c.addedGames.length > 5 ? " …" : ""}` : ""}`);
+    }
+    if (!COMPLETE) console.log(`\n  note: complete=false, so "−" means the game left this export, not the lobby.`);
+  }
+  if (!COMPLETE) console.log(`\nAll casinos recorded complete:false — a missing game means "not seen", not "not offered".`);
+
+  if (!DRY) {
+    fs.writeFileSync(OUT_AVAIL, JSON.stringify(out, null, 2) + "\n");
+    fs.writeFileSync(CHANGES, JSON.stringify({ importedAt: AS_OF, complete: COMPLETE, changes }, null, 2) + "\n");
+    if (catalogue.size) fs.writeFileSync(OUT_CATALOGUE, JSON.stringify({ asOf: AS_OF, source: SOURCE ?? "game catalogue export", games: [...catalogue.values()].sort((a, b) => a.name.localeCompare(b.name)) }, null, 2) + "\n");
+    console.log(`\nwrote data/casinoGames.json (${out.length} casinos) and data/casinoGames.changes.json`);
+  }
+  return finish();
+
+  function reportUnknowns() {
+    if (unknownCasinos.size) {
+      console.log(`\nUNMATCHED CASINOS (${unknownCasinos.size}) — rows skipped`);
+      for (const [n, c] of [...unknownCasinos.entries()].sort((a, b) => b[1] - a[1]).slice(0, 20)) console.log(`  ${String(c).padStart(6)}  ${n}`);
+    }
+    if (unmappedStudios.size) {
+      console.log(`\nSTUDIOS NOT YET PROFILED (${unmappedStudios.size}) — kept as text; they will not link to a provider page`);
+      for (const [n, c] of [...unmappedStudios.entries()].sort((a, b) => b[1] - a[1]).slice(0, 25)) console.log(`  ${String(c).padStart(6)}  ${n}`);
+    }
+  }
+
+  function finish() {
+    if (DRY) console.log(`\n--dry-run: nothing written`);
   }
 }
 
-// ---- report ----
-console.log(`${rows} data rows → ${out.length} casinos, ${out.reduce((n, e) => n + e.count, 0)} game entries${dupes ? `, ${dupes} duplicate rows collapsed` : ""}`);
-console.log(`asOf ${AS_OF} · source "${SOURCE}"\n`);
-
-for (const e of out.slice(0, 12)) {
-  const studios = new Set(e.games.map((g) => g.providerSlug ?? g.provider).filter(Boolean));
-  console.log(`  ${e.slug.padEnd(16)} ${String(e.count).padStart(5)} games · ${studios.size} studios`);
-}
-if (out.length > 12) console.log(`  … ${out.length - 12} more casinos`);
-
-if (unknownCasinos.size) {
-  console.log(`\nUNMATCHED CASINOS (${unknownCasinos.size}) — these rows were skipped; add the operator or fix the name`);
-  for (const [n, c] of [...unknownCasinos.entries()].sort((a, b) => b[1] - a[1]).slice(0, 20)) console.log(`  ${String(c).padStart(6)}  ${n}`);
-}
-if (unknownProviders.size) {
-  console.log(`\nUNMATCHED PROVIDERS (${unknownProviders.size}) — kept as free text, but they will not link to a provider page`);
-  for (const [n, c] of [...unknownProviders.entries()].sort((a, b) => b[1] - a[1]).slice(0, 20)) console.log(`  ${String(c).padStart(6)}  ${n}`);
-}
-
-if (changes.length) {
-  console.log(`\nCHANGES SINCE LAST IMPORT`);
-  for (const c of changes.slice(0, 20)) {
-    if (c.firstImport) console.log(`  ${c.slug.padEnd(16)} first import, ${c.added} games`);
-    else console.log(`  ${c.slug.padEnd(16)} +${c.added} / −${c.removed}${c.addedGames.length ? `   new: ${c.addedGames.slice(0, 5).join(", ")}${c.addedGames.length > 5 ? " …" : ""}` : ""}`);
-  }
-}
-
-if (DRY) {
-  console.log(`\n--dry-run: nothing written`);
-  process.exit(0);
-}
-
-fs.writeFileSync(OUT, JSON.stringify(out, null, 2) + "\n");
-fs.writeFileSync(CHANGES, JSON.stringify({ importedAt: AS_OF, changes }, null, 2) + "\n");
-console.log(`\nwrote data/casinoGames.json (${out.length} casinos) and data/casinoGames.changes.json`);
+main();
