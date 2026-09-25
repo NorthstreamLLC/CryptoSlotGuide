@@ -105,6 +105,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
               links: [
                 { label: "RTP Watch · live board", href: "/rtp-watch", dot: "#DA9877" },
                 { label: `All ${c.slots} slot reviews`, href: "/slots" },
+                { label: "Slot database · every game we hold", href: "/slots/database" },
                 { label: "How casino RTP versions work", href: "/guides/how-casino-rtp-versions-work" },
                 { label: "How we source information", href: "/how-we-rate" },
               ],

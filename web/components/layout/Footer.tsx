@@ -26,6 +26,9 @@ const footerCols = [
     title: "Slots & games",
     links: [
       { l: "Highest RTP slots", href: "/slots" },
+      // Server-rendered, unlike the mega-menu panel, so this is the crawlable
+      // route to the database from every page.
+      { l: "Slot database", href: "/slots/database" },
       { l: "Bonus buy slots", href: "/slots/bonus-buy" },
       { l: "Megaways slots", href: "/slots/megaways" },
       { l: "Jackpot slots", href: "/slots/jackpot" },

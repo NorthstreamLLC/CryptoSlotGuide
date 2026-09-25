@@ -30,6 +30,7 @@ const STATIC_ROUTES = [
   "/casino-sportsbooks",
   "/esports-casinos",
   "/slots",
+  "/slots/database",
   "/slots/bonus-buy",
   "/slots/megaways",
   "/slots/jackpot",

@@ -105,6 +105,7 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
       note: "A slot is only as good as the build your casino licensed. Where an operator ships a cut version we name it in the slot review rather than in this table.",
       links: [
         { label: "Highest RTP", href: "/slots" },
+        { label: "Full database", href: "/slots/database" },
         { label: "Bonus buy", href: "/slots/bonus-buy" },
         { label: "Megaways", href: "/slots/megaways" },
         { label: "Jackpot", href: "/slots/jackpot" },
