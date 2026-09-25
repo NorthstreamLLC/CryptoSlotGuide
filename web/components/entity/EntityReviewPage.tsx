@@ -13,6 +13,7 @@ import { CasinoBonuses } from "./CasinoBonuses";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { GlanceCard } from "./GlanceCard";
 import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
+import { ReportIssue } from "@/components/ui/ReportIssue";
 
 /**
  * Ported from the `isEntity` block in CryptoSlotGuide.dc.html — the
@@ -323,6 +324,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
         </div>
 
         {!isCasino && <FeaturedPartner context={e.type === "slot" ? { kind: "slots" } : e.type === "market" ? { kind: "sports" } : { kind: "wallet" }} />}
+        <ReportIssue subject={e.name} />
         <NextSteps steps={nextStepsFor(e.type)} />
       </div>
     </main>

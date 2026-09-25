@@ -20,6 +20,7 @@ import {
 import type { Operator } from "@/lib/types";
 import { payoutView } from "@/lib/payout";
 import { NextSteps } from "@/components/layout/NextSteps";
+import { CoinIcon } from "@/components/ui/CoinIcon";
 
 const btcFaqData = [
   { q: "How many confirmations before I can play?", a: "It depends on the casino and the coin. Operators set their own confirmation requirements and most show them in the cashier, so check there before you send. Bitcoin blocks come roughly every ten minutes, so each extra confirmation adds waiting time." },
@@ -91,8 +92,8 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
                 <div style={{ display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap", marginBottom: 24 }}>
                   <div style={{ display: "flex", alignItems: "center" }}>
                     {(coinsBy["roobet"] ?? []).map((t) => (
-                      <span key={t} style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 34, height: 34, marginRight: -9, flex: "none", borderRadius: "50%", background: coinDefs.find((c) => c.ticker === t)?.tint, border: "2px solid #090C0F", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 8.5, fontWeight: 700, color: "#0A0D0F" }}>
-                        {t}
+                      <span key={t} style={{ marginRight: -9, borderRadius: "50%", boxShadow: "0 0 0 2px #090C0F", display: "inline-flex" }}>
+                        <CoinIcon ticker={String(t)} size={34} />
                       </span>
                     ))}
                   </div>

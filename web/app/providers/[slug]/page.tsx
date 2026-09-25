@@ -11,6 +11,7 @@ import { StudioLicences } from "@/components/studios/StudioLicences";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { tintFor } from "@/lib/logo";
 import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
+import { ReportIssue } from "@/components/ui/ReportIssue";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -65,6 +66,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       <StudioLicences studio={s} />
       <section style={{ maxWidth: 1180, margin: "0 auto", padding: "0 24px 64px" }}>
         <FeaturedPartner context={{ kind: "slots" }} />
+        <ReportIssue subject={s.name} />
         <NextSteps steps={nextStepsFor("provider")} />
       </section>
     </main>

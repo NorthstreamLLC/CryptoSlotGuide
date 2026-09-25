@@ -21,6 +21,7 @@ import { StickyOffer } from "@/components/casino/StickyOffer";
 import { rivalPairs } from "@/lib/versus";
 import type { SpecFact } from "@/lib/types";
 import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
+import { ReportIssue } from "@/components/ui/ReportIssue";
 
 /**
  * The casino player report: what a player compares (offer, rewards, money
@@ -590,6 +591,7 @@ export function CasinoReport({ e }: { e: EntityView }) {
         {/* Not on the featured operator's own profile, which would be a page
             advertising itself. */}
         {!o.featured && <FeaturedPartner context={{ kind: "general" }} heading="Also featured" />}
+        <ReportIssue subject={o.name} />
         <NextSteps
           steps={[
             { href: "/crypto-casinos", label: "All crypto casinos", hint: `Filter ${siteData.ops.length} casinos by payout speed, KYC, wagering and sportsbook.` },

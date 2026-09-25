@@ -34,6 +34,7 @@ import { CasinoOfferList } from "@/components/casino/CasinoOfferList";
 import { raceFor, raceSlugs } from "@/lib/races";
 import { TopPicks } from "@/components/home/TopPicks";
 import { topPicks } from "@/lib/top-picks";
+import { CoinIcon } from "@/components/ui/CoinIcon";
 
 /**
  * Ported from the HOME section of CryptoSlotGuide.dc.html (hero through
@@ -482,8 +483,10 @@ export default function HomePage() {
         <div style={{ display: "grid", minWidth: 0, gridTemplateColumns: "repeat(auto-fit,minmax(178px,1fr))", gap: 12 }}>
           {coinTiles.map((coin) => (
             <Link key={coin.ticker} href="/coins" className="hover:!border-accent hover:!bg-[#111619]" style={{ display: "block", padding: 20, borderRadius: 13, background: "rgba(14,18,21,.72)", border: "1px solid rgba(255,255,255,.06)" }}>
-              <span style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 34, height: 34, borderRadius: "50%", background: coin.tint, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, fontWeight: 700, color: "#0A0D0F", marginBottom: 14 }}>
-                {coin.ticker}
+              {/* The coin's own mark, not its ticker set in type — CoinIcon
+                  carries the brand assets and falls back to the glyph. */}
+              <span style={{ display: "block", marginBottom: 14 }}>
+                <CoinIcon ticker={coin.ticker} size={34} />
               </span>
               <div style={{ fontSize: 14, fontWeight: 600, color: "#E8EDF0", marginBottom: 4 }}>{coin.name} casinos</div>
               <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#83919A" }}>{coin.count} operators</div>

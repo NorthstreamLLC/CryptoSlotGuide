@@ -9,6 +9,7 @@ import { bonusWithWager } from "@/lib/wager";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { NextSteps } from "@/components/layout/NextSteps";
 import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
+import { CoinIcon } from "@/components/ui/CoinIcon";
 
 /**
  * Ported from the `isCoins` block in CryptoSlotGuide.dc.html (search for
@@ -75,7 +76,7 @@ export function CoinsPage() {
             return (
               <div key={c.ticker} role="row" style={{ display: "grid", minWidth: 1120, gridTemplateColumns: "minmax(240px,1.2fr) 110px 150px 190px minmax(200px,1fr) 168px", alignItems: "center", borderBottom: "1px solid rgba(255,255,255,.05)" }}>
                 <div role="cell" style={{ padding: "14px 18px", display: "flex", alignItems: "center", gap: 13, minWidth: 0 }}>
-                  <span style={{ width: 34, height: 34, flex: "none", borderRadius: "50%", background: c.tint, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 8.5, fontWeight: 700, color: "#0A0D0F" }}>{c.ticker}</span>
+                  <CoinIcon ticker={c.ticker} size={34} />
                   <div style={{ minWidth: 0 }}>
                     <button type="button" onClick={() => setSel(c.ticker)} style={{ display: "block", fontSize: 14.5, fontWeight: 600, color: "#E8EDF0", textAlign: "left" }}>{c.name}</button>
                     <div style={{ fontSize: 12, color: "#8E9CA5", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", marginTop: 2 }}>{c.note}</div>
