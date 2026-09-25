@@ -121,5 +121,13 @@
       "size": "180x180",
       "fetchedAt": "2026-09-25"
     }
-  }
+  },
+  "coins": {
+    "doge": {
+      "url": "https://dogecoin.com/apple-touch-icon.png",
+      "size": "180x180",
+      "fetchedAt": "2026-09-25"
+    }
+  },
+  "coinsNote": "Coin marks in public/assets/coins, each from the project's own site. XRP has no entry: the only mark fetchable was Ripple's, and Ripple is a company rather than the asset, so the chip falls back to the XRP glyph instead."
 }

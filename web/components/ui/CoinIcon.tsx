@@ -34,8 +34,39 @@ export function coinName(t: string) {
   return COINS[t.toUpperCase()]?.name ?? t;
 }
 
+/**
+ * Real brand marks where we hold a usable one, each fetched from the coin's own
+ * project rather than an icon pack. The assets are not all the same KIND, which
+ * is what the flags handle:
+ *
+ *   bleed — the file is already a finished icon with its own circle (Bitcoin's
+ *           orange disc), so it fills the chip and no background shows.
+ *   mono  — the file is a black silhouette, so it is inverted to white and sits
+ *           on the coin's brand colour, which is the canonical coin chip.
+ *   neither — a full-colour mark on transparency, centred on the brand colour.
+ *
+ * A ticker with no entry falls through to the glyph below. XRP is deliberately
+ * absent: the only mark we could fetch was Ripple's, and Ripple is a company,
+ * not the asset — using it here would be the exact conflation this site exists
+ * to avoid.
+ */
+const ASSETS: Record<string, { file: string; mono?: boolean; bleed?: boolean }> = {
+  BTC: { file: "btc.png", bleed: true },
+  ETH: { file: "eth.svg" },
+  SOL: { file: "sol.png" },
+  USDT: { file: "usdt.svg", mono: true },
+  LTC: { file: "ltc.svg", mono: true },
+  // doge.svg was an inverted mask — a black field with the dog knocked out —
+  // so inverting it to white filled the whole disc. Replaced with Dogecoin's
+  // own app icon, which already carries its gold circle.
+  DOGE: { file: "doge.png", bleed: true },
+  TRX: { file: "trx.svg", mono: true },
+};
+
 export function CoinIcon({ ticker, size = 22 }: { ticker: string; size?: number }) {
-  const c = COINS[ticker.toUpperCase()] ?? { bg: "#3A454C", glyph: ticker.slice(0, 1), name: ticker };
+  const t = ticker.toUpperCase();
+  const c = COINS[t] ?? { bg: "#3A454C", glyph: ticker.slice(0, 1), name: ticker };
+  const art = ASSETS[t];
   return (
     <span
       aria-hidden
@@ -45,18 +76,34 @@ export function CoinIcon({ ticker, size = 22 }: { ticker: string; size?: number 
         height: size,
         flex: "none",
         borderRadius: "50%",
-        background: c.bg,
+        background: art?.bleed ? "transparent" : c.bg,
         color: c.fg ?? "#fff",
         display: "inline-flex",
         alignItems: "center",
         justifyContent: "center",
+        overflow: "hidden",
         fontSize: size * 0.56,
         fontWeight: 800,
         lineHeight: 1,
-        boxShadow: "inset 0 0 0 1px rgba(255,255,255,.18)",
+        boxShadow: art?.bleed ? undefined : "inset 0 0 0 1px rgba(255,255,255,.18)",
       }}
     >
-      {c.glyph}
+      {art ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={`/assets/coins/${art.file}`}
+          alt=""
+          width={art.bleed ? size : Math.round(size * 0.6)}
+          height={art.bleed ? size : Math.round(size * 0.6)}
+          style={{
+            display: "block",
+            // Black silhouettes become white so they read on the brand colour.
+            filter: art.mono ? "brightness(0) invert(1)" : undefined,
+          }}
+        />
+      ) : (
+        c.glyph
+      )}
     </span>
   );
 }
