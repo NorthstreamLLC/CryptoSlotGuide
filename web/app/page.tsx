@@ -35,6 +35,8 @@ import { raceFor, raceSlugs } from "@/lib/races";
 import { TopPicks } from "@/components/home/TopPicks";
 import { topPicks } from "@/lib/top-picks";
 import { CoinIcon } from "@/components/ui/CoinIcon";
+import { COUNTRIES } from "@/lib/legal";
+import { LazyLegalMap } from "@/components/home/LazyLegalMap";
 
 /**
  * Ported from the HOME section of CryptoSlotGuide.dc.html (hero through
@@ -93,6 +95,7 @@ export default function HomePage() {
   const featured = buildFeatured();
   const featuredOp = ops.find((o) => o.featured);
   const picks = topPicks();
+  const countryCount = COUNTRIES.length;
   // Featured placements first, then the fastest stated withdrawals among casinos with a cited offer.
   const topOffers = [...ops]
     .filter((o) => o.featured || (o.payoutStatedMaxMins !== undefined && !!casinoFacts(o).offer && !!casinoFacts(o).wagering && casinoFacts(o).wagering !== "See terms" && !/^advertised/i.test(casinoFacts(o).headline)))
@@ -473,6 +476,36 @@ export default function HomePage() {
               </div>
             </Link>
           ))}
+        </div>
+      </section>
+
+      {/* Where you can play. The map is the site's most distinctive tool and
+          was buried two clicks deep; it earns its place on the homepage by
+          answering the first question a reader actually has. */}
+      <section style={{ maxWidth: 1400, margin: "0 auto", padding: "58px 40px 0" }}>
+        <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 16, flexWrap: "wrap", marginBottom: 8 }}>
+          <h2 style={{ margin: 0, fontSize: 26, letterSpacing: "-.025em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Where you can play</h2>
+          <Link href="/legal" className="hover:!text-accent" style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11.5, letterSpacing: ".05em", color: "#00C2CC" }}>
+            Open the full map →
+          </Link>
+        </div>
+        <p style={{ margin: "0 0 20px", maxWidth: "70ch", fontSize: 15, lineHeight: 1.6, color: "#8DA0AA" }}>
+          Online casino law in {countryCount} countries and every US state, each status taken from the regulator&apos;s or government&apos;s own pages. Hover a country, or
+          click through for who licenses it, the minimum age and what the legislature is doing about it.
+        </p>
+        <div style={{ padding: 18, borderRadius: 20, background: "#0B0F12", border: "1px solid rgba(255,255,255,.07)" }}>
+          <LazyLegalMap />
+        </div>
+        <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginTop: 14 }}>
+          <Link href="/legal/us" className="hover:!border-accent" style={{ padding: "9px 14px", borderRadius: 100, border: "1px solid rgba(255,255,255,.14)", fontSize: 13, color: "#C6D1D7" }}>
+            US state by state →
+          </Link>
+          <Link href="/legal/europe" className="hover:!border-accent" style={{ padding: "9px 14px", borderRadius: 100, border: "1px solid rgba(255,255,255,.14)", fontSize: 13, color: "#C6D1D7" }}>
+            Europe →
+          </Link>
+          <Link href="/sweepstakes-casinos" className="hover:!border-accent" style={{ padding: "9px 14px", borderRadius: 100, border: "1px solid rgba(255,255,255,.14)", fontSize: 13, color: "#C6D1D7" }}>
+            US sweepstakes casinos →
+          </Link>
         </div>
       </section>
 
