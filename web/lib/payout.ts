@@ -24,8 +24,15 @@ export interface PayoutView {
 }
 
 export function payoutView(o: Operator): PayoutView {
-  if (isFieldTestedOperator(o.slug)) {
-    return { kind: "timed", label: o.payoutLabel, mins: o.payout, caption: "timed by us" };
+  // Field-testing an operator and holding a stopwatch figure for it are two
+  // different things. The protocol covers a funded account, the terms, the
+  // paytables and support; a published median only exists once someone records
+  // one in payoutObserved. Keying "timed by us" off the field-tested flag alone
+  // meant marking an operator tested silently republished ops.json's
+  // payoutLabel — the design prototype's invented times ("6m 24s", "7m 30s") —
+  // as our own measurement.
+  if (isFieldTestedOperator(o.slug) && o.payoutObserved) {
+    return { kind: "timed", label: o.payoutObserved, mins: o.payoutObservedMins ?? null, caption: "timed by us" };
   }
   if (o.payoutStated) {
     return { kind: "stated", label: o.payoutStated, mins: o.payoutStatedMaxMins ?? null, caption: "stated" };

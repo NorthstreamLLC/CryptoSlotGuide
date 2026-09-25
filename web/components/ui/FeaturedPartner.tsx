@@ -25,8 +25,12 @@ const MONO = "var(--font-jetbrains-mono), monospace";
  *    is no casino-to-studio mapping on file, so a slots or provider page gets
  *    the withdrawal and bonus facts under a "somewhere to play" framing, never
  *    "carries this studio's games".
- * 3. DISCLOSURE. It is labelled and carries the affiliate note. This is a paid
- *    placement and reads as one.
+ * 3. DISCLOSURE. Carried by the site-wide advertiser strip that renders above
+ *    every page this unit appears on, and by rel="sponsored" on the outbound
+ *    link. Both verified present on slot, provider, wallet and guide pages. If
+ *    that strip is ever removed from a template, the commercial relationship
+ *    stops being declared anywhere on these pages and this unit has to carry
+ *    its own label again.
  *
  * It is deliberately one quiet row rather than a second hero: the point is to
  * be present everywhere, not loud anywhere.
@@ -143,11 +147,6 @@ export function FeaturedPartner({
     >
       <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 12 }}>
         <span style={{ fontFamily: MONO, fontSize: 10, letterSpacing: ".1em", textTransform: "uppercase", color: "#C7A45C" }}>{heading}</span>
-        {/* The commercial relationship stays visible at the point of the
-            recommendation, not only in the header strip. "Partner" rather than
-            "advertiser": it is plainer English and it is the more accurate
-            word for what the relationship actually is. */}
-        <span style={{ fontFamily: MONO, fontSize: 10, letterSpacing: ".04em", color: "#7C8A93" }}>· partner</span>
       </div>
 
       <div style={{ display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>

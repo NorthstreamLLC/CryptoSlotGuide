@@ -64,6 +64,7 @@ function operatorPick(slug: string, category: string, cta: string): Pick | null 
 function predictionPick(name: string): Pick | null {
   const all = [...(predMarkets as Record<string, unknown[]>).crypto, ...(predMarkets as Record<string, unknown[]>).fiat] as {
     name: string;
+    site: string;
     settle: string;
     fee: string;
     kyc: string;
@@ -93,9 +94,31 @@ function predictionPick(name: string): Pick | null {
     ],
     notes: [
       { icon: "coins", text: m.payout },
-      // The US restriction is the single most useful thing to know about it,
-      // so it rides on the card rather than waiting for the profile page.
-      ...(m.note ? [{ icon: "shield" as const, text: m.note }] : []),
+      // A US restriction is the single most useful thing to know here, but it
+      // belongs on the card as directions rather than as a warning: we track
+      // the US sibling, so say where to go instead of only what is closed.
+      ...(m.note
+        ? [
+            {
+              icon: "shield" as const,
+              // Names the sibling's actual domain, taken from its own record
+              // rather than guessed — polymarket.us, not us.polymarket.com,
+              // which does not resolve.
+              text: (() => {
+                const sib = all.find((v) => v.name === `${m.name} US`);
+                if (!/not available in the us/i.test(m.note ?? "") || !sib) return m.note ?? "";
+                const host = (() => {
+                  try {
+                    return new URL(sib.site).hostname.replace(/^www\./, "");
+                  } catch {
+                    return sib.name;
+                  }
+                })();
+                return `${host} available for the US market`;
+              })(),
+            },
+          ]
+        : []),
     ],
     href: "/prediction-markets",
     cta: "Compare markets",

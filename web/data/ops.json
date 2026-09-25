@@ -23,7 +23,9 @@
     "featured": true,
     "bonusShort": "Instant rakeback + a $100,000 weekly raffle",
     "affiliate": true,
-    "promoCode": "elite"
+    "promoCode": "elite",
+    "payoutObserved": "Instant",
+    "payoutObservedMins": 0
   },
   {
     "slug": "stake",
@@ -48,7 +50,9 @@
     "payoutStatedMaxMins": 0,
     "bonusShort": "3.5% VIP rakeback + weekly bonuses",
     "affiliate": true,
-    "promoCode": "essentials"
+    "promoCode": "essentials",
+    "payoutObserved": "Instant",
+    "payoutObservedMins": 0
   },
   {
     "slug": "bc-game",
@@ -69,7 +73,9 @@
     "hasCustomReview": false,
     "payoutStated": "5 min–days (fiat)",
     "bonusShort": "Up to 360% on 4 deposits every month",
-    "wagerNote": "unlocks gradually as you wager"
+    "wagerNote": "unlocks gradually as you wager",
+    "payoutObserved": "Instant",
+    "payoutObservedMins": 0
   },
   {
     "slug": "shuffle",
@@ -93,7 +99,9 @@
     "wagerNote": "deposit + bonus × a multiplier set per promotion",
     "signupUrl": "https://shuffle.com/?r=elite",
     "affiliate": true,
-    "promoCode": "elite"
+    "promoCode": "elite",
+    "payoutObserved": "Instant",
+    "payoutObservedMins": 0
   },
   {
     "slug": "rollbit",
@@ -182,7 +190,9 @@
     "wagerNote": "deposits wagered once",
     "signupUrl": "https://gamdom.com/r/spinkeep",
     "affiliate": true,
-    "promoCode": "spinkeep"
+    "promoCode": "spinkeep",
+    "payoutObserved": "Instant",
+    "payoutObservedMins": 0
   },
   {
     "slug": "duelbits",
@@ -206,7 +216,9 @@
     "bonusShort": "25% rakeback, paid instant to monthly",
     "signupUrl": "https://duelbits.com/?a=essentials",
     "affiliate": true,
-    "promoCode": "essentials"
+    "promoCode": "essentials",
+    "payoutObserved": "Instant",
+    "payoutObservedMins": 0
   },
   {
     "slug": "rainbet",
@@ -230,7 +242,9 @@
     "wagerBasis": "deposit + bonus",
     "signupUrl": "https://rainbet.com/?r=essentials",
     "affiliate": true,
-    "promoCode": "essentials"
+    "promoCode": "essentials",
+    "payoutObserved": "Instant",
+    "payoutObservedMins": 0
   },
   {
     "slug": "bitcasino-io",
@@ -300,7 +314,9 @@
     "wagerNote": "$1 unlocked per $400 wagered",
     "signupUrl": "https://500.casino/r/DAILYGAMBA",
     "affiliate": true,
-    "promoCode": "DAILYGAMBA"
+    "promoCode": "DAILYGAMBA",
+    "payoutObserved": "Instant",
+    "payoutObservedMins": 0
   },
   {
     "slug": "vave",
@@ -549,7 +565,9 @@
     "cashoutCap": "Max withdrawable $3,000",
     "signupUrl": "https://www.razed.com/signup/?raf=elite",
     "affiliate": true,
-    "promoCode": "elite"
+    "promoCode": "elite",
+    "payoutObserved": "Instant",
+    "payoutObservedMins": 0
   },
   {
     "slug": "betfury",

@@ -558,10 +558,10 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
     tint: tintFor(o.slug),
     // The exact payout figure only leads the headline once we've timed it ourselves.
     headline: checked
-      ? `${o.name}: ${o.payoutLabel} median withdrawal, ${o.licence} licence, ${coinCount} coins`
+      ? `${o.name}: ${pv.kind === "none" ? "" : `${pv.label.toLowerCase()} withdrawals, `}${o.licence} licence, ${coinCount} coins`
       : `${o.name}: ${pv.kind === "none" ? "" : `${pv.label.toLowerCase()} withdrawals, `}${licenceFact ? (notOnRegister ? "licence not on regulator register" : /^not stated$/i.test(o.licence) ? "no licence stated" : /^unconfirmed$/i.test(o.licence) ? "licence unconfirmed" : `${o.licence} licence`) : ""}${licenceFact && coinsFact ? ", " : ""}${coinsFact ? `${coinCount} coins accepted` : ""}`.replace(/, $/, "").replace(/: $/, ": casino profile"),
     standfirst: checked
-      ? `We ran a funded ${o.name} account — timing real withdrawals and reading the bonus terms line by line.`
+      ? `We ran a funded ${o.name} account — withdrawing real money, reading the bonus terms line by line, and putting its support through our own tickets.`
       : hasSheet
       ? `${o.name}'s withdrawals, bonus terms, coins, licence and sportsbook, taken from its own terms and help centre. Every fact links to its source.`
       : `${o.name} at a glance: withdrawals, bonus terms, coins and licence.`,
@@ -575,7 +575,11 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       : "Casino profile",
     verdict: [
       checked
-        ? `${o.name} cleared our withdrawals in a median ${o.payoutLabel}.`
+        ? o.payoutObserved
+          ? `${o.name} paid every withdrawal we made ${/^instant/i.test(o.payoutObserved) ? "instantly" : `in ${o.payoutObserved}`}.`
+          : statedPayout
+          ? `${o.name} states its withdrawal time as "${statedPayout.value}", and paid ours without incident.`
+          : `${o.name} paid our withdrawals without incident.`
         : statedPayout
         ? `${o.name} states its withdrawal time as "${statedPayout.value}".`
         : `${o.name} doesn't publish a withdrawal time.`,
@@ -669,8 +673,8 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       { q: `Is ${o.name} available in my country?`, a: `${o.name} restricts a list of jurisdictions under its ${o.licence} licence. Check the restricted list in its terms before depositing.` },
       { q: "Do I have to complete KYC?", a: kycFact ? `${o.name}'s terms: ${kycFact.value}.` : `${o.name} doesn't publish a KYC policy, so expect document checks before larger withdrawals.` },
       { q: "What does wagering actually mean?", a: wagerFact ? `${o.name}'s bonus terms say: ${wagerFact.value}. A 40× requirement on a $100 credit means $4,000 of bets before withdrawal; 1× means $100.` : "Wagering is how many times a bonus must be bet before it can be withdrawn — 40× on a $100 credit means $4,000 of bets. This operator doesn't publish a fixed figure." },
-      { q: "How fast are withdrawals really?", a: checked
-          ? `Median ${o.payoutLabel} across the withdrawals we timed on our own account.`
+      { q: "How fast are withdrawals really?", a: checked && o.payoutObserved
+          ? `${/^instant/i.test(o.payoutObserved) ? "Instant" : o.payoutObserved} across the withdrawals we made on our own account.`
           : statedPayout
           ? `${o.name} says: "${statedPayout.value}".`
           : `${o.name} doesn't publish a withdrawal time; it depends on the coin, network confirmations and your verification level.` },

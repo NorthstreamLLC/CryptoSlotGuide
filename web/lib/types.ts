@@ -73,6 +73,15 @@ export interface Operator {
    * text when this is absent instead of claiming a link that isn't one.
    */
   signupUrl?: string;
+  /**
+   * A withdrawal time WE measured, on our own funded account. Absent unless
+   * someone actually recorded one — the operator's own stated time is used
+   * until then, and ops.json's `payoutLabel` is prototype filler that must
+   * never be displayed. See lib/payout.ts.
+   */
+  payoutObserved?: string;
+  /** Minutes for the above, for sorting. 0 for an instant payout. */
+  payoutObservedMins?: number;
   /** True once signupUrl is a real affiliate-tracking link; only then is "Affiliate link" shown. */
   affiliate?: boolean;
   /** Referral code carried by the affiliate link, shown so players can also enter it at sign-up. */
