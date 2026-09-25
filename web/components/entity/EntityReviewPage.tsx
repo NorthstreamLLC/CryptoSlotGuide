@@ -103,10 +103,17 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
                   rel="nofollow sponsored noopener"
                   style={{ display: "block", textAlign: "center", padding: 14, borderRadius: 9, background: "#00C2CC", color: "#04191B", fontSize: 14, fontWeight: 700, marginBottom: 9 }}
                 >
-                  {ctaLabel(e.type, e.name)}
+                  {e.playAtName ? `Play it at ${e.playAtName}` : ctaLabel(e.type, e.name)}
                 </a>
+              ) : e.ctaHref ? (
+                <Link
+                  href={e.ctaHref}
+                  style={{ display: "block", textAlign: "center", padding: 14, borderRadius: 9, background: "#00C2CC", color: "#04191B", fontSize: 14, fontWeight: 700, marginBottom: 9 }}
+                >
+                  {e.playAtName ? `Play it at ${e.playAtName}` : ctaLabel(e.type, e.name)}
+                </Link>
               ) : (
-                <span style={{ display: "block", textAlign: "center", padding: 14, borderRadius: 9, background: "#00C2CC", color: "#04191B", fontSize: 14, fontWeight: 700, marginBottom: 9 }}>
+                <span style={{ display: "block", textAlign: "center", padding: 14, borderRadius: 9, background: "rgba(255,255,255,.07)", color: "#8DA0AA", fontSize: 14, fontWeight: 700, marginBottom: 9 }}>
                   {ctaLabel(e.type, e.name)}
                 </span>
               )}

@@ -85,6 +85,14 @@ export interface EntityView {
   faqs: { q: string; a: string }[];
   /** Where the sidebar CTA points — only set for casinos with a real Operator.signupUrl on file. Absent means the CTA renders as plain, non-link text rather than a fabricated affiliate link. */
   signupUrl?: string;
+  /**
+   * Where the primary CTA points when there is no affiliate link to send the
+   * reader to. Without it a slot's "Where to play it" button rendered as a
+   * plain <span> — a dead element styled exactly like a button.
+   */
+  ctaHref?: string;
+  /** The casino that carries this title, where its own record names one. */
+  playAtName?: string;
   /** signupUrl is a real affiliate link (drives the disclosure wording). */
   affiliate?: boolean;
   /**
@@ -289,9 +297,17 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
     ].filter(Boolean) as string[];
     const describe = `${s.name} is ${hasVol(s) ? `a ${s.vol}-volatility` : "a"} ${s.provider} title${hasMaxWin(s) ? ` with a ${s.maxWin} max win` : ""}${hasRtp(s) ? ` and a published return of ${rtpTxt}` : ""}.`;
     const versionsNote = s.rtpVersions ? ` ${s.provider} publishes ${s.rtpVersions.split("/").length} configurations: ${s.rtpVersions}%.` : "";
+    // slots.json records which casino carries each title. Sending the reader
+    // to that operator is the whole point of the button; a generic list was
+    // making them start the search again.
+    const playAt = s.bestAt ? siteData.ops.find((o) => o.name.toLowerCase() === s.bestAt.toLowerCase()) : undefined;
     return {
       type,
       kicker: "Slot profile",
+      signupUrl: playAt?.affiliate && playAt.signupUrl ? playAt.signupUrl : undefined,
+      affiliate: !!(playAt?.affiliate && playAt.signupUrl),
+      ctaHref: playAt ? `/casinos/${playAt.slug}` : undefined,
+      playAtName: playAt?.name,
       name: s.name,
       slug: s.slug,
       mono: s.mono,
@@ -746,7 +762,7 @@ const CTA: Record<EntityType, (name: string) => string> = {
   casino: (name) => `Visit ${name}`,
   exchange: () => "Open an account",
   wallet: (name) => `Get ${name}`,
-  slot: () => "Where to play it",
+  slot: () => "Where to play it",   // overridden per-entity below when the casino is known
   provider: () => "See every title",
   market: () => "Compare the books",
 };
