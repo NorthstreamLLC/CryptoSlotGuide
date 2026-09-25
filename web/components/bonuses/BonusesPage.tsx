@@ -10,6 +10,7 @@ import { raceFor, raceSlugs, dropFor } from "@/lib/races";
 import { getSpecFact } from "@/lib/spec-sheet";
 import { NextSteps } from "@/components/layout/NextSteps";
 import { byHouse } from "@/lib/house-order";
+import { isWelcomeOffer } from "@/lib/casino-bonuses";
 
 /**
  * Compare casino bonuses, split by how each one works:
@@ -20,13 +21,6 @@ import { byHouse } from "@/lib/house-order";
 const MONO = "var(--font-jetbrains-mono), monospace";
 const WELCOME_COLS = "md:grid-cols-[minmax(170px,1fr)_minmax(240px,1.6fr)_120px_130px_96px_100px_130px]";
 const REWARD_COLS = "md:grid-cols-[minmax(170px,1fr)_minmax(220px,1.5fr)_150px_150px_minmax(150px,1fr)_130px]";
-
-/** Welcome bonus if the headline is a deposit match, free spins or a first-deposit package; otherwise an earn-as-you-play reward. */
-function isWelcome(o: Operator): boolean {
-  if (o.noDepositBonus) return false;
-  const b = o.bonusShort ?? o.bonus;
-  return /\d+%\s*(sports\s*)?(bonus|match|welcome|first|on|up to)|free spins|\d\s*deposits|first deposit|deposit bonus/i.test(b) && !/^(instant )?rakeback|^up to \d+% cash/i.test(b);
-}
 
 /** The largest match percentage in an offer headline, e.g. 360 from "Up to 360% on 4 deposits". */
 function matchPct(o: Operator): number {
@@ -98,8 +92,8 @@ function paidWhen(o: Operator): string | null {
 
 export function BonusesPage() {
   const { ops } = siteData;
-  const welcome = ops.filter(isWelcome).sort((a, b) => byHouse(a, b) || compareWager(a, b));
-  const rewards = ops.filter((o) => !isWelcome(o)).sort((a, b) => Number(!!b.featured) - Number(!!a.featured) || (raceFor(b.slug)?.monthly ?? 0) - (raceFor(a.slug)?.monthly ?? 0));
+  const welcome = ops.filter(isWelcomeOffer).sort((a, b) => byHouse(a, b) || compareWager(a, b));
+  const rewards = ops.filter((o) => !isWelcomeOffer(o)).sort((a, b) => Number(!!b.featured) - Number(!!a.featured) || (raceFor(b.slug)?.monthly ?? 0) - (raceFor(a.slug)?.monthly ?? 0));
 
   const biggest = [...welcome].sort((a, b) => matchPct(b) - matchPct(a))[0];
   const lowest = welcome.filter((o) => (wagerView(o).mult ?? 0) > 0).sort((a, b) => (wagerView(a).mult ?? 0) - (wagerView(b).mult ?? 0))[0];

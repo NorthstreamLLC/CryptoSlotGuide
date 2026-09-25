@@ -5,6 +5,7 @@ import { BrandMark } from "@/components/ui/BrandMark";
 import { CoinStack } from "@/components/ui/CoinIcon";
 import { Icon } from "@/components/ui/Icon";
 import { raceFor, dropFor } from "@/lib/races";
+import { isWelcomeOffer, offerKind } from "@/lib/casino-bonuses";
 
 const MONO = "var(--font-jetbrains-mono), monospace";
 const COLS = "md:grid-cols-[36px_minmax(180px,1.1fr)_minmax(220px,1.6fr)_96px_96px_96px_150px_140px]";
@@ -16,7 +17,9 @@ export function CasinoOfferList({ ops }: { ops: Operator[] }) {
       <div className={`hidden md:grid ${COLS} items-center gap-4`} style={{ padding: "12px 20px", borderBottom: "1px solid rgba(255,255,255,.07)", fontFamily: MONO, fontSize: 10, letterSpacing: ".08em", textTransform: "uppercase", color: "#8E9CA5" }}>
         <span>#</span>
         <span>Casino</span>
-        <span>Welcome offer</span>
+        {/* Not "Welcome offer": this list mixes deposit bonuses with rakeback,
+            cashback and races, and each row says which it is. */}
+        <span>Offer</span>
         <span>Withdrawals</span>
         <span>Min deposit</span>
         <span>Wagering</span>
@@ -61,7 +64,28 @@ function Row({ o, pos }: { o: Operator; pos: number }) {
       </Link>
 
       <Link href={href} className="col-span-3 md:col-span-1" style={{ fontSize: 15, lineHeight: 1.3, fontWeight: 700, color: "#E8EDF0", minWidth: 0 }}>
-        {c.headline}
+        <span style={{ display: "flex", alignItems: "baseline", gap: 8, flexWrap: "wrap" }}>
+          <span>{c.headline}</span>
+          {/* Says which kind of offer this row actually is, so a rakeback deal
+              is never read as a welcome bonus with a wagering requirement. */}
+          <span
+            style={{
+              flex: "none",
+              padding: "2px 7px",
+              borderRadius: 100,
+              background: isWelcomeOffer(o) ? "rgba(0,194,204,.12)" : "rgba(255,255,255,.06)",
+              fontFamily: MONO,
+              fontSize: 8.5,
+              fontWeight: 700,
+              letterSpacing: ".06em",
+              textTransform: "uppercase",
+              color: isWelcomeOffer(o) ? "#5FE3E8" : "#93A3AC",
+              whiteSpace: "nowrap",
+            }}
+          >
+            {offerKind(o)}
+          </span>
+        </span>
         <span style={{ display: "flex", flexWrap: "wrap", gap: "2px 12px", marginTop: 4 }}>
           {raceFor(o.slug) && (
             <span style={{ display: "inline-flex", alignItems: "center", gap: 5, fontSize: 11.5, fontWeight: 600, color: "#D6B65C" }}>

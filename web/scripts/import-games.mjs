@@ -205,7 +205,7 @@ const NON_SLOT_SUPPLIERS = {
 
 const REJECT = {
   observedRtp:
-    "rtpDaily/rtpWeekly are observed return over a short window, not RTP — values above 100% (up to 1763%) prove it. Publishing them as RTP would be false.",
+    "rtpDaily/rtpWeekly are not active, per the data owner, and are not RTP in any case — values reached 1763%. rtpBase IS the provider's published figure and is the one imported.",
   hotCold:
     'rtpState HOT/COLD tells a reader a game is "due". That is the gambler\'s fallacy, it is untrue of an independent RNG, and it is the opposite of what this site is for.',
   templatedCopy:

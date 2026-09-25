@@ -5232,5 +5232,10 @@
       "upcoming": false,
       "image": "https://api.slotessentials.com/public/files/slots/99a3fcd3-c7db-4ec7-b029-4b05bbd4834f.webp"
     }
-  ]
+  ],
+  "provenance": {
+    "rtp": "rtpBase, confirmed by the data owner as the provider's own published figure. Imported as the studio's RTP.",
+    "notImported": "rtpDaily and rtpWeekly were also in the export and are NOT used: the owner confirms they are not active, and their values reached 1763%, which cannot be an RTP. rtpState HOT/COLD is not used either.",
+    "assetHostsCaveat": "assetHosts below records where the export's IMAGE and DEMO links point, which is mostly an operator CDN. That is about artwork hosting only and says nothing about where the RTP figures came from — an earlier reading of this file inferred RTP provenance from it, which was wrong."
+  }
 }
