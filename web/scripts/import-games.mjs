@@ -212,6 +212,7 @@ const REJECT = {
     "description/descriptionShort are templated marketing prose with affiliate links inline, not a sourced fact about the game.",
   constantRating: "rating is the same value on every row, so it distinguishes nothing.",
   implausibleRtp: "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export).",
+  excludedStudio: "studio checked and excluded — see data/studio-verification.json for the finding.",
   notASlot: "supplier does not make slots — see NON_SLOT_SUPPLIERS for the licence evidence.",
   notSlotShaped:
     "no reels, no paylines and a return at or above 99% — that is a betting margin, not a slot RTP. Usually a sports or event market that arrived in a slots export.",
@@ -249,7 +250,7 @@ function main() {
   const iImage = col("imageurl", "image");
   const iDeleted = col("isdeleted", "deleted");
   // Present-but-rejected columns, counted so the report can say what was dropped.
-  const rejected = { observedRtp: 0, hotCold: 0, templatedCopy: 0, constantRating: 0, implausibleRtp: 0, notASlot: 0, notSlotShaped: 0 };
+  const rejected = { observedRtp: 0, hotCold: 0, templatedCopy: 0, constantRating: 0, implausibleRtp: 0, notASlot: 0, notSlotShaped: 0, excludedStudio: 0 };
   const excluded = [];
   const iDaily = col("rtpdaily");
   const iWeekly = col("rtpweekly");
@@ -314,6 +315,14 @@ function main() {
     // up here rather than referenced before it exists.
     const canonical = STUDIO_ALIASES[key(base)] ?? base;
     const verdict = VERIFIED.get(key(base)) ?? VERIFIED.get(key(studioRaw)) ?? LICENCE_BACKED.get(key(canonical)) ?? LICENCE_BACKED.get(key(base));
+    // Studios we checked and decided not to publish. The reason lives in
+    // studio-verification.json so this stays a recorded decision rather than a
+    // silent gap someone re-imports later.
+    if (verdict?.exclude) {
+      rejected.excludedStudio++;
+      excluded.push({ name, studio: studioRaw, why: verdict.note });
+      continue;
+    }
     if (verdict?.status === "not-a-slot-studio") {
       rejected.notASlot++;
       excluded.push({ name, studio: studioRaw, why: verdict.note });
