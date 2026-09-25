@@ -88,8 +88,21 @@ const STUDIO_ALIASES = {
   elk: "ELK Studios",
   "gamesglobal": "Microgaming / Games Global",
   microgaming: "Microgaming / Games Global",
+  // Casing-only variants in the export. key() already matches these for
+  // lookup, but the stored display name kept whichever spelling arrived first,
+  // so the catalogue showed "Pgsoft" and "PGSoft" as two studios.
+  pgsoft: "PG Soft",
+  isoftbet: "iSoftBet",
+  playngo2: "Play'n GO",
+  // "Play'n Go" and "Play'n GO" are the same studio; the alias fixes the
+  // display spelling so the catalogue does not list it twice.
+  playngo: "Play'n GO",
 };
-const key = (s) => String(s ?? "").toLowerCase().replace(/[\s_\-.]/g, "");
+// Apostrophes are stripped too: without that, key("Play'n Go") is "play'ngo"
+// and never matches an alias written as "playngo", so the studio stayed split
+// across two spellings in the catalogue. Both curly and straight forms, since
+// exports mix them.
+const key = (s) => String(s ?? "").toLowerCase().replace(/[\s_\-.'’]/g, "");
 
 // The site's own house-game taxonomy, so the classifier below agrees with the
 // section these titles actually belong in rather than inventing a second list.
@@ -160,9 +173,16 @@ function parseCsv(text) {
  */
 function splitStudio(name) {
   const raw = String(name ?? "").replace(/\s+/g, " ").trim();
-  const m = raw.match(/^(.*?)\s*\((neutron(?:\s*-\s*f)?|f|fun|demo|social)\)$/i);
-  if (!m) return { base: raw, integration: null };
-  return { base: m[1].trim(), integration: m[2].trim() };
+  const paren = raw.match(/^(.*?)\s*\((neutron(?:\s*-\s*f)?|alea|f|fun|demo|social)\)$/i);
+  if (paren) return { base: paren[1].trim(), integration: paren[2].trim() };
+  // A bare trailing digit or single capital is the same thing without the
+  // brackets: "Play'n Go 2", "Yggdrasil Z", "Endorphina 1" are second feeds of
+  // a studio already in the export, not separate studios. Treated as an
+  // integration for the same reason as Neutron — the label describes delivery,
+  // so authorship stays unconfirmed rather than being silently merged.
+  const bare = raw.match(/^(.+?)\s+(\d{1,2}|[A-Z])$/);
+  if (bare && bare[1].length > 3) return { base: bare[1].trim(), integration: bare[2] };
+  return { base: raw, integration: null };
 }
 
 /**
