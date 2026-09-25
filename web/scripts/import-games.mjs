@@ -117,16 +117,27 @@ function parseCsv(text) {
 }
 
 /**
- * The same studio arriving under several integration names. An export that
- * distinguishes "Hacksaw (Neutron)" from "Hacksaw (Neutron - F)" is describing
- * its own plumbing, not three different studios, and importing them as-is
- * produces three provider pages for one company.
+ * Splits a provider label into the studio name and the integration it arrived
+ * through: "Hacksaw (Neutron)" -> { base: "Hacksaw", integration: "Neutron" }.
+ *
+ * DO NOT treat the base as authorship. A suffix like this names the platform
+ * that DELIVERS the game, and Hacksaw's OpenRGS hosts third-party studios, so
+ * the bucket is a mix of Hacksaw's own titles and other people's. Spot-checking
+ * three titles in the "Hacksaw (Neutron)" set found two genuinely Hacksaw and
+ * one ("Lucky Multifruit: Crystal Dust") by Trusty Gaming. Folding the whole
+ * bucket into "Hacksaw Gaming" would therefore have published a false
+ * attribution on an unknown subset of 192 games.
+ *
+ * So an integration suffix marks the studio UNCONFIRMED: the base name is kept
+ * as a lead, the game never links to a studio page, and the games are listed
+ * for per-title resolution against each studio's own site.
  */
-const normaliseStudio = (name) =>
-  String(name ?? "")
-    .replace(/\s*\((?:neutron(?:\s*-\s*f)?|f|fun|demo|social)\)\s*$/i, "")
-    .replace(/\s+/g, " ")
-    .trim();
+function splitStudio(name) {
+  const raw = String(name ?? "").replace(/\s+/g, " ").trim();
+  const m = raw.match(/^(.*?)\s*\((neutron(?:\s*-\s*f)?|f|fun|demo|social)\)$/i);
+  if (!m) return { base: raw, integration: null };
+  return { base: m[1].trim(), integration: m[2].trim() };
+}
 
 /**
  * Fields a real export carries that must not be published as they stand. Each
@@ -208,6 +219,7 @@ function main() {
   let dupes = 0;
   let skippedDeleted = 0;
   let blankCasino = 0;
+  let unconfirmedStudio = 0;
 
   const num = (v) => {
     const n = Number(String(v ?? "").replace("%", "").trim());
@@ -231,27 +243,35 @@ function main() {
     if (iRating !== -1 && (r[iRating] ?? "").trim()) rejected.constantRating++;
 
     const studioRaw = iProvider === -1 ? "" : (r[iProvider] ?? "").trim();
-    const studio = normaliseStudio(studioRaw);
-    if (studioRaw && studio !== studioRaw) {
-      const set = mergedStudios.get(studio) ?? new Set();
+    const { base, integration } = splitStudio(studioRaw);
+    const aliased = STUDIO_ALIASES[key(base)] ?? base;
+    // An integration suffix means authorship is unconfirmed, so the label is
+    // recorded but never resolved to a studio page.
+    const prov = !integration && aliased ? provBy.get(key(aliased)) : null;
+    if (integration) {
+      const set = mergedStudios.get(aliased) ?? new Set();
       set.add(studioRaw);
-      mergedStudios.set(studio, set);
+      mergedStudios.set(aliased, set);
+      unconfirmedStudio++;
+    } else if (aliased && !prov) {
+      unmappedStudios.set(aliased, (unmappedStudios.get(aliased) ?? 0) + 1);
     }
-    const aliased = STUDIO_ALIASES[key(studio)] ?? studio;
-    const prov = aliased ? provBy.get(key(aliased)) : null;
-    if (aliased && !prov) unmappedStudios.set(aliased, (unmappedStudios.get(aliased) ?? 0) + 1);
 
     // Only a figure that could actually be a slot RTP.
     const rtpRaw = iRtp === -1 ? null : num(r[iRtp]);
     const rtp = rtpRaw !== null && rtpRaw >= 80 && rtpRaw <= 100 ? rtpRaw : null;
     if (rtpRaw !== null && rtp === null) rejected.implausibleRtp++;
-    if (iRtp !== -1 && rtp === null) review.push({ name, studio, rtpBase: r[iRtp], why: REJECT.implausibleRtp });
+    if (iRtp !== -1 && rtp === null) review.push({ name, studio: aliased, rtpBase: r[iRtp], why: REJECT.implausibleRtp });
 
     const game = {
       name,
       slug: iSlug !== -1 && (r[iSlug] ?? "").trim() ? r[iSlug].trim() : null,
       provider: prov?.name ?? aliased ?? null,
-      providerSlug: prov?.slug ?? null,
+      // Null whenever authorship is unconfirmed, so nothing can link a game to
+      // a studio page on the strength of a delivery label.
+      providerSlug: integration ? null : prov?.slug ?? null,
+      studioConfirmed: !integration,
+      integration: integration ? `${aliased} ${integration}` : null,
       rtp,
       volatility: iVol !== -1 && (r[iVol] ?? "").trim() ? r[iVol].trim().toLowerCase() : null,
       reels: iReels === -1 ? null : int(r[iReels]),
@@ -298,7 +318,8 @@ function main() {
   }
 
   if (mergedStudios.size) {
-    console.log("STUDIOS MERGED — integration variants folded into one studio");
+    console.log(`STUDIO UNCONFIRMED (${unconfirmedStudio} games) — the label names the platform that DELIVERS`);
+    console.log("the game, not who made it, so these do not link to a studio page:");
     for (const [base, vars] of mergedStudios) console.log(`  ${base}  ←  ${[...vars].join(", ")}`);
     console.log();
   }
