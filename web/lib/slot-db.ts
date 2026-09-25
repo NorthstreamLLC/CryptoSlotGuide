@@ -17,6 +17,12 @@ export interface CatalogueGame {
   provider: string | null;
   providerSlug: string | null;
   rtp: number | null;
+  /**
+   * Every published RTP configuration we hold for this title, highest first,
+   * present only where a studio licences more than one. This is the figure the
+   * lobby does not show you, and the reason the database is worth having.
+   */
+  rtpVariants?: number[];
   volatility: string | null;
   reels: number | null;
   paylines: number | null;
@@ -47,6 +53,8 @@ export interface SlotQuery {
   vol?: string;
   /** "high" = 96%+, "mid" = 94–96, "low" = under 94. */
   rtp?: string;
+  /** Only titles with more than one published RTP configuration. */
+  versions?: string;
   sort?: string;
   page?: number;
 }
@@ -82,6 +90,7 @@ export function querySlots(query: SlotQuery) {
   if (query.studio) rows = rows.filter((g) => g.provider === query.studio);
   if (query.vol) rows = rows.filter((g) => g.volatility === query.vol);
   if (query.rtp && RTP_BANDS[query.rtp]) rows = rows.filter((g) => g.rtp !== null && RTP_BANDS[query.rtp!](g.rtp));
+  if (query.versions === "1") rows = rows.filter((g) => (g.rtpVariants?.length ?? 0) > 1);
 
   // A null sorts last on every key, so an unknown figure never leads a column
   // that is supposed to be ranked by it.
@@ -130,6 +139,7 @@ export function catalogueTotals() {
   const withRtp = SLOTS.filter((g) => g.rtp !== null);
   return {
     slots: SLOTS.length,
+    multiVersion: SLOTS.filter((g) => (g.rtpVariants?.length ?? 0) > 1).length,
     withRtp: withRtp.length,
     studios: new Set(SLOTS.map((g) => g.provider).filter(Boolean)).size,
     median: median(withRtp.map((g) => g.rtp as number)),

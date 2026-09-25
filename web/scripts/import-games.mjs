@@ -104,6 +104,14 @@ const STUDIO_ALIASES = {
 // exports mix them.
 const key = (s) => String(s ?? "").toLowerCase().replace(/[\s_\-.'’]/g, "");
 
+/**
+ * A looser key for deciding two rows are the SAME GAME. key() leaves colons,
+ * en-dashes and brackets alone, so "12 Coins Grand Gold Edition - Score The
+ * Jackpot" and "12 Coins Grand Gold Edition Score The Jackpot" survived as two
+ * rows of the same title. 102 titles were duplicated that way.
+ */
+const titleKey = (s) => String(s ?? "").toLowerCase().replace(/[^a-z0-9]/g, "");
+
 // The site's own house-game taxonomy, so the classifier below agrees with the
 // section these titles actually belong in rather than inventing a second list.
 const HOUSE_SLUGS = new Set(read("houseGames.json").map((g) => key(g.slug ?? g.name)));
@@ -231,7 +239,8 @@ const REJECT = {
   templatedCopy:
     "description/descriptionShort are templated marketing prose with affiliate links inline, not a sourced fact about the game.",
   constantRating: "rating is the same value on every row, so it distinguishes nothing.",
-  implausibleRtp: "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export).",
+  implausibleRtp:
+    "rtpBase outside 80-100 is not a slot RTP (0 usually means 'unknown' in this export), and exactly 99.3 is the export's placeholder: 53 games carry it across 16 unrelated studios, and it is the same figure every Betby sportsbook row had. Treated as unknown rather than published as a 99.3% slot.",
   excludedStudio: "studio checked and excluded — see data/studio-verification.json for the finding.",
   notASlot: "supplier does not make slots — see NON_SLOT_SUPPLIERS for the licence evidence.",
   notSlotShaped:
@@ -389,7 +398,9 @@ function main() {
 
     // Only a figure that could actually be a slot RTP.
     const rtpRaw = iRtp === -1 ? null : num(r[iRtp]);
-    const rtp = rtpRaw !== null && rtpRaw >= 80 && rtpRaw <= 100 ? rtpRaw : null;
+    // 99.3 exactly is the export's sentinel, not a return — see REJECT above.
+    const SENTINEL_RTP = 99.3;
+    const rtp = rtpRaw !== null && rtpRaw >= 80 && rtpRaw <= 100 && rtpRaw !== SENTINEL_RTP ? rtpRaw : null;
     if (rtpRaw !== null && rtp === null) rejected.implausibleRtp++;
     if (iRtp !== -1 && rtp === null) review.push({ name, studio: aliased, rtpBase: r[iRtp], why: REJECT.implausibleRtp });
 
@@ -442,8 +453,34 @@ function main() {
     };
 
     if (MODE === "catalogue") {
-      const gk = key(name) + "|" + key(game.provider ?? "");
-      if (catalogue.has(gk)) dupes++;
+      const gk = titleKey(name) + "|" + titleKey(game.provider ?? "");
+      const prev = catalogue.get(gk);
+      if (prev) {
+        dupes++;
+        // Same game, second row. Studios like Wazdan licence several RTP
+        // configurations of one title, so a differing figure is the variance
+        // this site exists to surface, not noise — it is kept on the surviving
+        // row rather than thrown away with the duplicate.
+        const seen = new Set([...(prev.rtpVariants ?? []), prev.rtp, game.rtp].filter((v) => v !== null));
+        const merged = {
+          ...prev,
+          // Prefer the row that actually knows things.
+          ...Object.fromEntries(Object.entries(game).filter(([k, v]) => v !== null && prev[k] === null)),
+          rtp: Math.max(...[...seen]),
+          rtpVariants: seen.size > 1 ? [...seen].sort((a, b) => b - a) : undefined,
+          studioConfirmed: prev.studioConfirmed || game.studioConfirmed,
+        };
+        // A confirmed studio outranks an integration label on the merged row.
+        if (game.studioConfirmed && !prev.studioConfirmed) {
+          merged.provider = game.provider;
+          merged.providerSlug = game.providerSlug;
+          merged.studioStatus = game.studioStatus;
+          merged.studioCaveat = game.studioCaveat;
+          merged.integration = null;
+        }
+        catalogue.set(gk, merged);
+        continue;
+      }
       catalogue.set(gk, game);
       continue;
     }

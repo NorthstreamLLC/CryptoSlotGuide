@@ -23,6 +23,7 @@ function href(cur: SlotQuery, patch: Partial<SlotQuery>): string {
   if (next.studio) p.set("studio", next.studio);
   if (next.vol) p.set("vol", next.vol);
   if (next.rtp) p.set("rtp", next.rtp);
+  if (next.versions) p.set("versions", next.versions);
   if (next.sort) p.set("sort", next.sort);
   // Changing a filter always returns to page 1; keeping the old page number
   // would land the reader on an empty page of a smaller result set.
@@ -52,13 +53,14 @@ export default async function Page({ searchParams }: { searchParams: Promise<Rec
     studio: sp.studio,
     vol: sp.vol,
     rtp: sp.rtp,
+    versions: sp.versions,
     sort: sp.sort,
     page: sp.page ? Number(sp.page) : 1,
   };
   const res = querySlots(q);
   const studios = studioFacets();
   const vols = volatilityFacets();
-  const filtered = !!(q.q || q.studio || q.vol || q.rtp);
+  const filtered = !!(q.q || q.studio || q.vol || q.rtp || q.versions);
 
   return (
     <main style={{ background: "#07090B", color: "#E8EDF0" }}>
@@ -99,6 +101,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<Rec
           {q.studio && <input type="hidden" name="studio" value={q.studio} />}
           {q.vol && <input type="hidden" name="vol" value={q.vol} />}
           {q.rtp && <input type="hidden" name="rtp" value={q.rtp} />}
+          {q.versions && <input type="hidden" name="versions" value={q.versions} />}
           {q.sort && <input type="hidden" name="sort" value={q.sort} />}
           <button type="submit" style={{ padding: "11px 20px", borderRadius: 10, border: 0, background: "#00C2CC", color: "#04191B", fontSize: 14, fontWeight: 700, cursor: "pointer" }}>
             Search
@@ -110,6 +113,9 @@ export default async function Page({ searchParams }: { searchParams: Promise<Rec
           <Link href={href(q, { rtp: "high", page: 1 })} style={chip(q.rtp === "high")}>96%+</Link>
           <Link href={href(q, { rtp: "mid", page: 1 })} style={chip(q.rtp === "mid")}>94–96%</Link>
           <Link href={href(q, { rtp: "low", page: 1 })} style={chip(q.rtp === "low")}>Under 94%</Link>
+          <Link href={href(q, { versions: q.versions === "1" ? undefined : "1", page: 1 })} style={chip(q.versions === "1")}>
+            Multiple RTP versions ({t.multiVersion.toLocaleString()})
+          </Link>
           <span style={{ width: 12 }} />
           {vols.map((v) => (
             <Link key={v.name} href={href(q, { vol: q.vol === v.name ? undefined : v.name, page: 1 })} style={chip(q.vol === v.name)}>
@@ -162,6 +168,13 @@ export default async function Page({ searchParams }: { searchParams: Promise<Rec
               </span>
               <span style={{ fontFamily: MONO, fontSize: 13.5, fontWeight: 700, color: g.rtp === null ? "#77858E" : g.rtp >= 96 ? "#7BE0B8" : "#E8EDF0" }}>
                 {g.rtp === null ? "—" : `${g.rtp.toFixed(2)}%`}
+                {/* The spread is the point: an operator may ship any of these
+                    and the lobby will not say which. */}
+                {g.rtpVariants && g.rtpVariants.length > 1 && (
+                  <span style={{ display: "block", fontSize: 10, fontWeight: 400, color: "#C7A45C", whiteSpace: "nowrap" }}>
+                    down to {Math.min(...g.rtpVariants).toFixed(2)}%
+                  </span>
+                )}
               </span>
               <span style={{ fontSize: 13, color: "#A9B8C0" }}>{g.volatility ?? "—"}</span>
               <span style={{ fontFamily: MONO, fontSize: 12.5, color: "#A9B8C0" }}>{g.maxWinMultiplier ? `${g.maxWinMultiplier.toLocaleString()}x` : "—"}</span>
