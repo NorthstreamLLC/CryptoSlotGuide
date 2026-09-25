@@ -1,0 +1,135 @@
+# Weekly: is anything we publish out of date, and has any source moved?
+#
+# Runs in the cloud on a schedule so it does not depend on anyone's laptop being
+# open. Nothing here edits a published fact — the job reports what to re-read
+# and commits only the source-watch baseline. Auto-rewriting a claim from a
+# scraped diff would eventually publish a navigation change as a bonus change.
+name: freshness
+
+on:
+  schedule:
+    # Mondays 07:00 UTC, so the report is waiting at the start of the week.
+    - cron: "0 7 * * 1"
+  workflow_dispatch:
+    inputs:
+      email:
+        description: "Send the report by email"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+jobs:
+  data:
+    name: data checks
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci
+
+      # Placement order still points at slugs that exist.
+      - name: house order
+        run: npm run check:house
+
+      # Stale asOf dates, and values that were only true the day they were
+      # written. Non-fatal here: the point of the weekly run is the report, and
+      # a hard failure would stop the source watch below from ever running.
+      - name: freshness
+        id: freshness
+        continue-on-error: true
+        run: npm run audit:freshness | tee "$RUNNER_TEMP/freshness.txt"
+
+      # Which source pages moved since last week.
+      - name: source watch
+        id: watch
+        continue-on-error: true
+        env:
+          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+          SENDGRID_FROM: ${{ secrets.SENDGRID_FROM }}
+          FRESHNESS_EMAIL_TO: ${{ secrets.FRESHNESS_EMAIL_TO }}
+        run: |
+          FLAGS="--update"
+          if [ "${{ github.event_name }}" = "schedule" ] || [ "${{ inputs.email }}" = "true" ]; then
+            FLAGS="$FLAGS --email"
+          fi
+          node scripts/watch-sources.mjs $FLAGS | tee "$RUNNER_TEMP/watch.txt"
+
+      # Readable in the Actions run itself, so the report survives even if the
+      # email never arrives.
+      - name: summary
+        if: always()
+        run: |
+          {
+            echo '## Freshness'
+            echo '```'
+            cat "$RUNNER_TEMP/freshness.txt" 2>/dev/null || echo '(did not run)'
+            echo '```'
+            echo '## Source watch'
+            echo '```'
+            cat "$RUNNER_TEMP/watch.txt" 2>/dev/null || echo '(did not run)'
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      # The baseline is the only thing this job is allowed to write. [skip ci]
+      # keeps a data-only change from triggering a pointless production deploy.
+      - name: commit baseline
+        if: always()
+        run: |
+          cd "$GITHUB_WORKSPACE"
+          if git diff --quiet -- web/data/source-baseline.json; then
+            echo "baseline unchanged"; exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add web/data/source-baseline.json
+          git commit -m "Source watch baseline $(date -u +%Y-%m-%d) [skip ci]"
+          git push
+
+      - name: fail if a source moved
+        if: steps.watch.outcome == 'failure' || steps.freshness.outcome == 'failure'
+        run: |
+          echo "Something needs a human — see the summary above."
+          exit 1
+
+  site:
+    name: site checks
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci
+      - run: npm run build
+      # Plain curl loop rather than npx wait-on: one less package to fetch on
+      # every run, and the failure message is clearer when the server dies.
+      - name: start
+        run: |
+          npm start &
+          for i in $(seq 1 60); do
+            curl -sf http://127.0.0.1:3000/ >/dev/null && echo "up after ${i}s" && exit 0
+            sleep 1
+          done
+          echo "server did not come up"; exit 1
+
+      # The one that actually matters: the featured placement must never appear
+      # on a page scoped to a territory the operator's own terms block.
+      - name: featured placement geo gate
+        run: node scripts/audit-partner-geo.mjs http://127.0.0.1:3000
+
+      - name: featured placement coverage
+        run: node scripts/audit-partner-coverage.mjs http://127.0.0.1:3000

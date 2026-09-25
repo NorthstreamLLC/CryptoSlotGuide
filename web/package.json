@@ -16,7 +16,9 @@
     "check:house": "node scripts/check-house-order.mjs",
     "audit:freshness": "node scripts/audit-freshness.mjs",
     "audit:coverage": "node scripts/audit-partner-coverage.mjs",
-    "audit:geo": "node scripts/audit-partner-geo.mjs"
+    "audit:geo": "node scripts/audit-partner-geo.mjs",
+    "import:games": "node scripts/import-games.mjs",
+    "watch:sources": "node scripts/watch-sources.mjs"
   },
   "dependencies": {
     "next": "16.3.3",

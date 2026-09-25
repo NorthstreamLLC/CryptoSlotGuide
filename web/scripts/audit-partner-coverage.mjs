@@ -1,9 +1,16 @@
 /**
- * How many pages a visitor can land on without ever meeting Roobet.
- * Crawls the dev server from the sitemap and classifies each page by whether
- * it links to the Roobet profile, names Roobet in the body, or neither.
+ * How many pages a visitor can land on without ever meeting the featured
+ * operator. Crawls every published URL from the sitemap and classifies each
+ * page by whether it carries the featured placement or links to the profile.
+ *
+ * Reported, never enforced: the gaps are mostly deliberate (see
+ * audit-partner-geo.mjs — the placement is suppressed on territories the
+ * operator blocks), so a threshold here would fail the build for doing the
+ * right thing.
+ *
+ * Usage: node scripts/audit-partner-coverage.mjs [baseUrl]
  */
-const BASE = "http://localhost:3001";
+const BASE = (process.argv[2] ?? "http://localhost:3001").replace(/\/$/, "");
 
 const sm = await (await fetch(`${BASE}/sitemap.xml`)).text();
 const urls = [...sm.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1].replace(/^https?:\/\/[^/]+/, BASE));
