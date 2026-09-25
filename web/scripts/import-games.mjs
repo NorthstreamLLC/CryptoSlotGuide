@@ -273,6 +273,15 @@ function main() {
   for (const p of LICENSED) { provBy.set(key(p.slug), { slug: null, name: p.name }); provBy.set(key(p.name), { slug: null, name: p.name }); }
   for (const p of PROVIDERS) { provBy.set(key(p.slug), p); provBy.set(key(p.name), p); }
 
+  // Where the export's own asset links point. Recorded with the data because it
+  // is the only durable evidence of where the rows really came from: a source
+  // string is an assertion, this is a measurement.
+  const assetHosts = { image: new Map(), demo: new Map() };
+  const iDemo = col("playdemourl", "demourl", "demo");
+  const noteHost = (bucket, url) => {
+    try { const h = new URL(url).hostname.replace(/^www\./, ""); bucket.set(h, (bucket.get(h) ?? 0) + 1); } catch { /* not a url */ }
+  };
+
   const unknownCasinos = new Map();
   const unmappedStudios = new Map();
   const mergedStudios = new Map();
@@ -364,6 +373,9 @@ function main() {
     if (rtpRaw !== null && rtp === null) rejected.implausibleRtp++;
     if (iRtp !== -1 && rtp === null) review.push({ name, studio: aliased, rtpBase: r[iRtp], why: REJECT.implausibleRtp });
 
+    if (iImage !== -1) noteHost(assetHosts.image, r[iImage]);
+    if (iDemo !== -1) noteHost(assetHosts.demo, r[iDemo]);
+
     const kind = classify(name);
     const game = {
       name,
@@ -398,6 +410,14 @@ function main() {
       minBet: iMinBet === -1 ? null : num(r[iMinBet]),
       maxBet: iMaxBet === -1 ? null : num(r[iMaxBet]),
       released: iReleased !== -1 && /^\d{4}-\d{2}-\d{2}/.test(r[iReleased] ?? "") ? r[iReleased].slice(0, 10) : null,
+      /**
+       * Dated after the import, so not out yet. The export lists upcoming
+       * titles alongside live ones with no flag distinguishing them — 43 of
+       * 237 here, running two months ahead — and a player cannot play any of
+       * them. Kept, because they are real and coming, but nothing may present
+       * one as available.
+       */
+      upcoming: iReleased !== -1 && /^\d{4}-\d{2}-\d{2}/.test(r[iReleased] ?? "") ? r[iReleased].slice(0, 10) > AS_OF : false,
       image: iImage !== -1 && /^https?:/.test(r[iImage] ?? "") ? r[iImage].trim() : null,
     };
 
@@ -450,6 +470,8 @@ function main() {
     console.log(`  kinds            ${Object.entries(kinds).map(([k, n]) => `${n} ${k}`).join(" · ")}`);
     const byStatus = games.reduce((m, g) => ({ ...m, [g.studioStatus ?? "unchecked"]: (m[g.studioStatus ?? "unchecked"] ?? 0) + 1 }), {});
     console.log(`  studio status    ${Object.entries(byStatus).sort((a, b) => b[1] - a[1]).map(([k, n]) => `${n} ${k}`).join(" · ")}`);
+    const soon = games.filter((g) => g.upcoming);
+    if (soon.length) console.log(`  not out yet      ${soon.length} dated after ${AS_OF}, latest ${soon.map((g) => g.released).sort().pop()} — flagged upcoming, never present these as playable`);
     // The median only means anything across one kind of game.
     const slotRtp = games.filter((g) => g.kind === "slot" && g.rtp !== null).map((g) => g.rtp).sort((a, b) => a - b);
     if (slotRtp.length) console.log(`  slot RTP median  ${slotRtp[Math.floor(slotRtp.length / 2)].toFixed(2)}%  (n=${slotRtp.length})`);
@@ -460,8 +482,8 @@ function main() {
     console.log(`\nThis cannot support "casino X carries game Y". For that, re-export with a`);
     console.log(`casino column, or import one lobby at a time with --source naming it.`);
     if (!DRY) {
-      fs.writeFileSync(OUT_CATALOGUE, JSON.stringify({ asOf: AS_OF, source: SOURCE ?? "game catalogue export", games }, null, 2) + "\n");
-      if (KEEP && review.length) fs.writeFileSync(OUT_REVIEW, JSON.stringify(review, null, 2) + "\n");
+      fs.writeFileSync(OUT_CATALOGUE, JSON.stringify({ asOf: AS_OF, source: SOURCE ?? "game catalogue export", assetHosts: topHosts(), games }, null, 2) + "\n");
+      if (KEEP && (review.length || excluded.length)) fs.writeFileSync(OUT_REVIEW, JSON.stringify({ rtpOutOfRange: review, notImported: excluded }, null, 2) + "\n");
       console.log(`\nwrote data/gameCatalogue.json (${games.length} games)${KEEP && review.length ? ` and gameCatalogue.review.json (${review.length})` : ""}`);
     }
     return finish();
@@ -518,6 +540,20 @@ function main() {
     console.log(`\nwrote data/casinoGames.json (${out.length} casinos) and data/casinoGames.changes.json`);
   }
   return finish();
+
+  /**
+   * The hosts the export's own image and demo links point at, commonest first.
+   *
+   * Stored with the data because it is the only durable evidence of where the
+   * rows really came from — a `source` string is an assertion, this is a
+   * measurement. If these are an operator's CDN rather than the studios', the
+   * RTPs are that operator's configured versions and must be labelled as such
+   * before anything publishes them as a studio's published figure.
+   */
+  function topHosts() {
+    const top = (m) => Object.fromEntries([...m.entries()].sort((a, b) => b[1] - a[1]).slice(0, 8));
+    return { image: top(assetHosts.image), demo: top(assetHosts.demo) };
+  }
 
   function reportUnknowns() {
     if (unknownCasinos.size) {
