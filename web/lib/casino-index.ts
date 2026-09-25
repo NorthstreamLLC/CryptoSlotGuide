@@ -9,6 +9,7 @@
 import { wagerView, compareWager } from "./wager";
 import type { Operator } from "./types";
 import { comparePayout, payoutView } from "./payout";
+import { byHouse } from "./house-order";
 
 export type BtcFilterKey = "all" | "nokyc" | "fast" | "lowwager" | "sports" | "esports";
 
@@ -66,8 +67,13 @@ export const filterFns: Record<BtcFilterKey, (o: Operator) => boolean> = {
   lowwager: (o) => { const w = wagerView(o); return w.kind === "none" || (w.mult !== null && w.mult <= 1); },
 };
 
-/** No score sort — the site doesn't score casinos. Sorts are on cited facts or name. */
-export type SortKey = "payout" | "wager" | "name";
+/**
+ * No score sort — the site doesn't score casinos. Sorts are on cited facts, on
+ * name, or on "featured", which is the house placement order from
+ * lib/house-order.ts and is disclosed as commercial rather than dressed up as a
+ * ranking. The two fact sorts are what a reader uses to overrule it.
+ */
+export type SortKey = "featured" | "payout" | "wager" | "name";
 export type SortDir = "asc" | "desc";
 
 export function sortOps(list: Operator[], key: SortKey, dir: SortDir): Operator[] {
@@ -76,6 +82,7 @@ export function sortOps(list: Operator[], key: SortKey, dir: SortDir): Operator[
   if (key === "wager") out.sort((a, b) => (d === 1 ? compareWager(a, b) : compareWager(b, a)));
   else if (key === "payout") out.sort((a, b) => (d === 1 ? comparePayout(a, b) : comparePayout(b, a)));
   else if (key === "name") out.sort((a, b) => a.name.localeCompare(b.name) * d);
+  else out.sort((a, b) => byHouse(a, b) * d);
   return out;
 }
 

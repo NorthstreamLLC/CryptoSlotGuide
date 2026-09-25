@@ -1,0 +1,795 @@
+{
+  "note": "Where each file in public/assets/games came from. Only art served from our own api.slotessentials.com is published here. Art found on an operator's CDN is the studio's copyright under that operator's licence, not ours to republish, so it is held out of the repo and listed under `heldPendingRights` for replacement from the studio's own press or affiliate kit.",
+  "fetched": "2026-09-25",
+  "art": {
+    "3-piggies-of-bank": {
+      "file": "3-piggies-of-bank.webp",
+      "bytes": 36508,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/e7375415-e79c-49b5-b7a1-fe77bfa3ebbe.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Yggdrasil",
+      "fetched": "2026-09-25"
+    },
+    "3-pots-of-venice": {
+      "file": "3-pots-of-venice.webp",
+      "bytes": 1750,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/37bd6cfd-f93b-458e-9356-723a2e85663b.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Betsoft",
+      "fetched": "2026-09-25"
+    },
+    "3-adventures-of-alice-hold-and-win": {
+      "file": "3-adventures-of-alice-hold-and-win.webp",
+      "bytes": 21972,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/1703bc9a-264a-4ec8-b645-ac477676c89f.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Hacksaw Gaming",
+      "fetched": "2026-09-25"
+    },
+    "aviamasters-2-halloween": {
+      "file": "aviamasters-2-halloween.webp",
+      "bytes": 1750,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/aac9dbe5-532e-4b96-ac47-5e3dc479022b.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "BGaming",
+      "fetched": "2026-09-25"
+    },
+    "beasts-of-fire-inferno": {
+      "file": "beasts-of-fire-inferno.webp",
+      "bytes": 1750,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/772e534a-d71a-400d-9b9d-706ec783d99c.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-09-25"
+    },
+    "birds-in-the-city": {
+      "file": "birds-in-the-city.webp",
+      "bytes": 1750,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/8f000dc4-5f84-4597-aef9-f88b4fa5cff8.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Betsoft",
+      "fetched": "2026-09-25"
+    },
+    "big-bass-halloween-splash-1000": {
+      "file": "big-bass-halloween-splash-1000.webp",
+      "bytes": 66706,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/3b352539-663c-4d92-805f-31879bcbd123.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-09-25"
+    },
+    "bonsai-banzai": {
+      "file": "bonsai-banzai.webp",
+      "bytes": 30582,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/7ec8acc4-1223-4aae-898e-df019f187492.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Massive Studios",
+      "fetched": "2026-09-25"
+    },
+    "buffaloads": {
+      "file": "buffaloads.webp",
+      "bytes": 32194,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/e30176b7-0207-44a6-a357-5a3ca67801f2.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Massive Studios",
+      "fetched": "2026-09-25"
+    },
+    "cartel-king": {
+      "file": "cartel-king.webp",
+      "bytes": 18304,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/67fd7983-0e26-401f-996b-426e162b6334.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Xposed Studios",
+      "fetched": "2026-09-25"
+    },
+    "chests-of-cai-shen-infinity": {
+      "file": "chests-of-cai-shen-infinity.webp",
+      "bytes": 1750,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/2a9afbca-c362-431a-a001-1293b0fdff96.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-09-25"
+    },
+    "chicken-halloween": {
+      "file": "chicken-halloween.webp",
+      "bytes": 1750,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/54b947ca-25d2-4668-881b-bfbe9811e312.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "BGaming",
+      "fetched": "2026-09-25"
+    },
+    "cheaetah-wildd": {
+      "file": "cheaetah-wildd.webp",
+      "bytes": 43584,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/450808a8-8273-469b-a36e-495f626df15a.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-09-25"
+    },
+    "coasters": {
+      "file": "coasters.webp",
+      "bytes": 17200,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/75813646-d981-442d-a060-c379cf315d84.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Butter Slots",
+      "fetched": "2026-09-25"
+    },
+    "coffee-dealer": {
+      "file": "coffee-dealer.webp",
+      "bytes": 28126,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/df526669-f730-4e33-a830-e133ab836ade.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Hacksaw Gaming",
+      "fetched": "2026-09-25"
+    },
+    "cocks-and-robbers": {
+      "file": "cocks-and-robbers.webp",
+      "bytes": 59124,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/4e5dbb7b-1866-431f-9039-042c55fade4d.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Red Tiger",
+      "fetched": "2026-09-25"
+    },
+    "crew-chaos": {
+      "file": "crew-chaos.webp",
+      "bytes": 13376,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/be65ebca-9ca3-4fa6-b9a5-44872b84223e.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Xposed Studios",
+      "fetched": "2026-09-25"
+    },
+    "cursed-pages": {
+      "file": "cursed-pages.webp",
+      "bytes": 6636,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/369102a4-d8b4-49c3-9396-ea707d8f2aab.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Xposed Studios",
+      "fetched": "2026-09-25"
+    },
+    "deep-sea-frenzy": {
+      "file": "deep-sea-frenzy.webp",
+      "bytes": 94642,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/631c9d24-6637-49e8-b558-c9a17535a4cf.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-09-25"
+    },
+    "demon-beats": {
+      "file": "demon-beats.webp",
+      "bytes": 1750,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/5e0d2350-5848-4241-889c-405cbd828469.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "NetEnt",
+      "fetched": "2026-09-25"
+    },
+    "divine-queen-power-of-sun": {
+      "file": "divine-queen-power-of-sun.webp",
+      "bytes": 1750,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/1d1015bb-f6d4-4929-aa19-333118e9af5b.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "BGaming",
+      "fetched": "2026-09-25"
+    },
+    "demonic-dolls": {
+      "file": "demonic-dolls.webp",
+      "bytes": 24436,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/614cfe0e-accf-4279-8ec9-bba9f8afd8b5.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Hacksaw Gaming",
+      "fetched": "2026-09-25"
+    },
+    "dracs-stacks": {
+      "file": "dracs-stacks.webp",
+      "bytes": 36182,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/95e393e7-bf3a-48cb-a55c-1838ade83c4b.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Massive Studios",
+      "fetched": "2026-09-25"
+    },
+    "epic-sixsixsix": {
+      "file": "epic-sixsixsix.webp",
+      "bytes": 34652,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/6632d81f-45c6-4871-8344-26d13a3d68fa.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Hacksaw Gaming",
+      "fetched": "2026-09-25"
+    },
+    "dynamo-express": {
+      "file": "dynamo-express.webp",
+      "bytes": 135076,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/44e17f31-ca13-4cea-8431-aecec8e69632.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-25"
+    },
+    "forever-split-megaways": {
+      "file": "forever-split-megaways.webp",
+      "bytes": 86242,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/9f215348-7226-4021-8a50-84c56a506728.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-09-25"
+    },
+    "ghost-booster-go-guaranteed": {
+      "file": "ghost-booster-go-guaranteed.webp",
+      "bytes": 43576,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/6daea393-d1fa-4f21-900a-d376efabfe8a.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-09-25"
+    },
+    "hot-rocks": {
+      "file": "hot-rocks.webp",
+      "bytes": 32656,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/f96cebb7-1542-4e46-8255-f6617a3f26af.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Massive Studios",
+      "fetched": "2026-09-25"
+    },
+    "hot-rocket-mega-potz": {
+      "file": "hot-rocket-mega-potz.webp",
+      "bytes": 1750,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/855112cc-18b2-4e17-bee8-6e80cbcbae0a.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "BGaming",
+      "fetched": "2026-09-25"
+    },
+    "hyde-and-seek": {
+      "file": "hyde-and-seek.webp",
+      "bytes": 32132,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/9e629092-95a5-461d-849e-a024092b0328.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Massive Studios",
+      "fetched": "2026-09-25"
+    },
+    "junkyard-kings-2": {
+      "file": "junkyard-kings-2.webp",
+      "bytes": 42980,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/6d48ec23-ced0-4864-876a-4d79d514cb87.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Hacksaw Gaming",
+      "fetched": "2026-09-25"
+    },
+    "le-vampire": {
+      "file": "le-vampire.webp",
+      "bytes": 28296,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/57fe4f0e-634b-46b1-a340-bf294b3978a5.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Hacksaw Gaming",
+      "fetched": "2026-09-25"
+    },
+    "lucky-multifruit-crystal-dust": {
+      "file": "lucky-multifruit-crystal-dust.webp",
+      "bytes": 18988,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/62ac8eab-9ab7-4e0e-8064-5b97f9e400ce.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Hacksaw Gaming",
+      "fetched": "2026-09-25"
+    },
+    "mac-cheese": {
+      "file": "mac-cheese.webp",
+      "bytes": 41892,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/a92377f5-6bdc-4527-87c1-226faf639c2f.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Massive Studios",
+      "fetched": "2026-09-25"
+    },
+    "lucky-stamps": {
+      "file": "lucky-stamps.webp",
+      "bytes": 153696,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/b4902c50-f616-495c-9b20-d77ad63f2347.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Endorphina",
+      "fetched": "2026-09-25"
+    },
+    "mech-strike": {
+      "file": "mech-strike.webp",
+      "bytes": 14000,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/a4fa1782-0809-4cf4-b04f-1e6cf68a1e6e.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Mog Labs",
+      "fetched": "2026-09-25"
+    },
+    "mystic-wilds": {
+      "file": "mystic-wilds.webp",
+      "bytes": 12618,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/73e97163-85d7-483f-8474-14481ae33e46.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Void Studios",
+      "fetched": "2026-09-25"
+    },
+    "noche-de-almas": {
+      "file": "noche-de-almas.webp",
+      "bytes": 1750,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/bcd4b1c5-a79a-4eaf-afb9-3ad1e828f4e5.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "BGaming",
+      "fetched": "2026-09-25"
+    },
+    "nunchucks": {
+      "file": "nunchucks.webp",
+      "bytes": 1750,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/c607d24e-c505-454b-9ccb-3b086b86d029.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "NetEnt",
+      "fetched": "2026-09-25"
+    },
+    "phoenix-inferno": {
+      "file": "phoenix-inferno.webp",
+      "bytes": 1750,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/9b7fd331-56cc-42ad-949b-ea99360d28fa.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Betsoft",
+      "fetched": "2026-09-25"
+    },
+    "peep-the-pope-gigablox": {
+      "file": "peep-the-pope-gigablox.webp",
+      "bytes": 62118,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/c7119362-844a-45dc-b4b2-1285305fb5d9.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Yggdrasil",
+      "fetched": "2026-09-25"
+    },
+    "pelican-payday": {
+      "file": "pelican-payday.webp",
+      "bytes": 125430,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/5bf35bb8-9647-4de3-9026-fd3d6efceab4.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-09-25"
+    },
+    "power-puff": {
+      "file": "power-puff.webp",
+      "bytes": 58520,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/31515db5-825b-4284-8ffa-6c91af0ed311.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Red Tiger",
+      "fetched": "2026-09-25"
+    },
+    "rat-royale": {
+      "file": "rat-royale.webp",
+      "bytes": 1750,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/6d970cc2-7265-49af-b79c-e921ef3c4009.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-09-25"
+    },
+    "red-and-hot-chilli": {
+      "file": "red-and-hot-chilli.webp",
+      "bytes": 1750,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/e82f6d46-668b-452b-9933-a8110966ccd5.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "BGaming",
+      "fetched": "2026-09-25"
+    },
+    "redtail-robber-cash-vault-heist": {
+      "file": "redtail-robber-cash-vault-heist.webp",
+      "bytes": 1750,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/4e05d406-35a8-45bc-b541-221fd669619f.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-09-25"
+    },
+    "roosters-revenge": {
+      "file": "roosters-revenge.webp",
+      "bytes": 30896,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/54bb5245-ad87-4e98-a3fb-f60df47653d2.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Massive Studios",
+      "fetched": "2026-09-25"
+    },
+    "spider-circus-hold-and-win": {
+      "file": "spider-circus-hold-and-win.webp",
+      "bytes": 1750,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/33fceb68-8002-4444-a84b-bcab9fed0e74.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "BGaming",
+      "fetched": "2026-09-25"
+    },
+    "spooky-kabuki": {
+      "file": "spooky-kabuki.webp",
+      "bytes": 29902,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/35cf73e5-1906-46b5-9afe-9993f99f9112.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Yggdrasil",
+      "fetched": "2026-09-25"
+    },
+    "speed-blackjack-pro": {
+      "file": "speed-blackjack-pro.webp",
+      "bytes": 1750,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/07e25c4f-53dc-47e5-8daa-3b9db82354a5.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "BGaming",
+      "fetched": "2026-09-25"
+    },
+    "sugar-hell": {
+      "file": "sugar-hell.webp",
+      "bytes": 20536,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/d9a24448-abbe-4d9e-9517-712e531fca14.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Just Slots",
+      "fetched": "2026-09-25"
+    },
+    "steve-larry-and-gogo": {
+      "file": "steve-larry-and-gogo.webp",
+      "bytes": 45400,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/f2336773-2441-42de-9a7e-7724df0df062.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Red Tiger",
+      "fetched": "2026-09-25"
+    },
+    "super-mega-monsters": {
+      "file": "super-mega-monsters.webp",
+      "bytes": 43902,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/c005d819-00b6-4bf8-9027-e7815d1b9524.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Massive Studios",
+      "fetched": "2026-09-25"
+    },
+    "sweet-loot": {
+      "file": "sweet-loot.webp",
+      "bytes": 69474,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/0c110550-cf23-4281-9e22-f312760d174f.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-09-25"
+    },
+    "sweet-bonanza-pop": {
+      "file": "sweet-bonanza-pop.webp",
+      "bytes": 52180,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/5d427d1a-dbae-4d76-a8f1-489c38da0b9d.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-09-25"
+    },
+    "the-man": {
+      "file": "the-man.webp",
+      "bytes": 8484,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/7dcbcd90-6211-4c22-950b-ab45b30b77e3.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Xposed Studios",
+      "fetched": "2026-09-25"
+    },
+    "the-jade-path-hold-and-win": {
+      "file": "the-jade-path-hold-and-win.webp",
+      "bytes": 36932,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/3eb706f9-204c-47ee-977c-3b1faa8b534d.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Hacksaw Gaming",
+      "fetched": "2026-09-25"
+    },
+    "timber-trail-treasures": {
+      "file": "timber-trail-treasures.webp",
+      "bytes": 38192,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/90adb66c-e479-4fca-bb0d-b861b2e6d592.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Yggdrasil",
+      "fetched": "2026-09-25"
+    },
+    "the-ringmasters-whopping-wins": {
+      "file": "the-ringmasters-whopping-wins.webp",
+      "bytes": 46680,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/15d720d6-f785-41ef-9f3f-f154dd54a5d6.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Massive Studios",
+      "fetched": "2026-09-25"
+    },
+    "tower-run-treasure-steps": {
+      "file": "tower-run-treasure-steps.webp",
+      "bytes": 54882,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/037affa1-3ee1-409b-adef-8fb830ee5049.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-09-25"
+    },
+    "turbo-gold-deluxe-gigablox": {
+      "file": "turbo-gold-deluxe-gigablox.webp",
+      "bytes": 68610,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/d37e2992-b6c4-4f47-b8c0-b0b60d2540a6.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Yggdrasil",
+      "fetched": "2026-09-25"
+    },
+    "wicked-grin": {
+      "file": "wicked-grin.webp",
+      "bytes": 17134,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/96173b79-99bd-4b7e-81d0-20764d58cb29.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Hacksaw Gaming",
+      "fetched": "2026-09-25"
+    },
+    "witchcraft-riches": {
+      "file": "witchcraft-riches.webp",
+      "bytes": 1750,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/2c77a3df-2e91-460e-bdc5-8dcc8b6e7c1e.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "BGaming",
+      "fetched": "2026-09-25"
+    },
+    "wonders-of-aztec": {
+      "file": "wonders-of-aztec.webp",
+      "bytes": 48744,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/1d221ecd-2bc3-4bdf-b403-5b84dda3c908.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-09-25"
+    },
+    "wrappin-more-gold": {
+      "file": "wrappin-more-gold.webp",
+      "bytes": 45012,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/2e50e938-d1d8-48f6-ae19-20e97c88f05d.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-09-25"
+    },
+    "zombie-rabbit-invasion": {
+      "file": "zombie-rabbit-invasion.webp",
+      "bytes": 25930,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/99a3fcd3-c7db-4ec7-b029-4b05bbd4834f.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Massive Studios",
+      "fetched": "2026-09-25"
+    }
+  },
+  "heldPendingRights": {
+    "why": "Fetched successfully but not published: the source is an operator CDN, so a working URL is not permission. Replace each with the studio's own press-kit asset, then re-add.",
+    "holdingDir": "C:\\Users\\north\\AppData\\Local\\Temp\\csg-operator-art",
+    "count": 47,
+    "games": {
+      "3-arcane-cauldrons": {
+        "provider": "Hacksaw Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/hacksaw-gaming/3-arcane-cauldrons.jpg"
+      },
+      "alchemist-wonders": {
+        "provider": "Hacksaw Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/alchemist-wonders.jpg"
+      },
+      "avalanche": {
+        "provider": "Hacksaw Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/hacksaw-gaming/avalanche.jpg"
+      },
+      "astro-rumble": {
+        "provider": "Hacksaw Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/astro-rumble.jpg"
+      },
+      "baccarat": {
+        "provider": "Hacksaw Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/vertexst8/hcw/hcw-baccarat.jpg"
+      },
+      "banana-farm": {
+        "provider": "Hacksaw Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/banana-farm.jpg"
+      },
+      "bash-bros": {
+        "provider": "Hacksaw Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/bash-bros.jpg"
+      },
+      "blonko": {
+        "provider": "Hacksaw Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/blonko.jpg"
+      },
+      "book-of-whispers": {
+        "provider": "Hacksaw Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/book-of-whispers.jpg"
+      },
+      "booze-bash": {
+        "provider": "Hacksaw Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/booze-bash.jpg"
+      },
+      "bullets-and-bounty": {
+        "provider": "Hacksaw Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/bullets-and-bounty.jpg"
+      },
+      "bullride-loot": {
+        "provider": "Hacksaw Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/bullride-loot.jpg"
+      },
+      "charm-of-the-dragon": {
+        "provider": "Hacksaw Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/charm-of-the-dragon.jpg"
+      },
+      "club-cabana": {
+        "provider": "Hacksaw Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/club-cabana.jpg"
+      },
+      "crowned-corners": {
+        "provider": "Hacksaw Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/hacksaw-gaming/crowned-corners.jpg"
+      },
+      "culinary-clash": {
+        "provider": "Hacksaw Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/culinary-clash.jpg"
+      },
+      "dragon-pots-megaways": {
+        "provider": "Pragmatic Play",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/pragmatic-play/dragon-pots-megaways.jpg"
+      },
+      "epic-bullets-and-bounty": {
+        "provider": "Hacksaw Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/hacksaw-gaming/epic-bullets-and-bounty.jpg"
+      },
+      "eternal-nile": {
+        "provider": "Hacksaw Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/eternal-nile.jpg"
+      },
+      "evil-dozen": {
+        "provider": "Hacksaw Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/evil-dozen.jpg"
+      },
+      "eye-of-the-panda": {
+        "provider": "Hacksaw Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/eye-of-the-panda.jpg"
+      },
+      "fireborn": {
+        "provider": "Hacksaw Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/fireborn.jpg"
+      },
+      "forbidden-fury": {
+        "provider": "Hacksaw Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/forbidden-fury.jpg"
+      },
+      "godly-gains": {
+        "provider": "Hacksaw Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/godly-gains.jpg"
+      },
+      "fury-and-fortune": {
+        "provider": "Hacksaw Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/fury-and-fortune.jpg"
+      },
+      "grunt-gold": {
+        "provider": "Hacksaw Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/grunt-gold.jpg"
+      },
+      "halls-of-odin": {
+        "provider": "Hacksaw Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/halls-of-odin.jpg"
+      },
+      "idol-pop-fever": {
+        "provider": "Pragmatic Play",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/pragmatic-play/idol-pop-fever.jpg"
+      },
+      "home-of-thor": {
+        "provider": "Hacksaw Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/home-of-thor.jpg"
+      },
+      "inca-queen": {
+        "provider": "Pragmatic Play",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/pragmatic/inca-queen.jpg"
+      },
+      "merlins-alchemy": {
+        "provider": "Hacksaw Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/merlins-alchemy.jpg"
+      },
+      "mirage-city": {
+        "provider": "Hacksaw Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/mirage-city.jpg"
+      },
+      "neon-frames": {
+        "provider": "Hacksaw Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/neon-frames.jpg"
+      },
+      "monopoly-megapots": {
+        "provider": "Big Time Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/big-time-gaming/monopoly-megapots.jpg"
+      },
+      "paper-biker": {
+        "provider": "Hacksaw Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/paper-biker.jpg"
+      },
+      "orb-of-destiny": {
+        "provider": "Hacksaw Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/orb-of-destiny.jpg"
+      },
+      "power-pops": {
+        "provider": "Hacksaw Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/power-pops.jpg"
+      },
+      "power-of-ten": {
+        "provider": "Hacksaw Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/hacksaw-gaming/power-of-ten.jpg"
+      },
+      "sixsixsix": {
+        "provider": "Hacksaw Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/sixsixsix.jpg"
+      },
+      "snow-party": {
+        "provider": "Pragmatic Play",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/pragmatic-play/snow-party.jpg"
+      },
+      "street-knockout": {
+        "provider": "Hacksaw Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/street-knockout.jpg"
+      },
+      "stormborn": {
+        "provider": "Hacksaw Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/stormborn.jpg"
+      },
+      "sugar-park": {
+        "provider": "Hacksaw Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/sugar-park.jpg"
+      },
+      "the-count": {
+        "provider": "Hacksaw Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/the-count.jpg"
+      },
+      "through-the-fire": {
+        "provider": "Hacksaw Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/through-the-fire.jpg"
+      },
+      "totem-poles": {
+        "provider": "Hacksaw Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/totem-poles.jpg"
+      },
+      "twisted-lab": {
+        "provider": "Hacksaw Gaming",
+        "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/twisted-lab.jpg"
+      }
+    }
+  }
+}

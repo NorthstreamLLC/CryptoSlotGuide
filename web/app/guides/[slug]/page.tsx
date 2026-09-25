@@ -6,6 +6,7 @@ import { pageMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { NextSteps } from "@/components/layout/NextSteps";
+import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
 
 /**
  * Ported from the `isGuide` block in CryptoSlotGuide.dc.html (search for
@@ -74,6 +75,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             </Link>
           ))}
         </div>
+        <FeaturedPartner context={{ kind: "general" }} />
         <NextSteps
           steps={[
             { href: "/guides", label: "All guides", hint: "The operational detail behind the reviews, kept current." },

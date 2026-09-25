@@ -30,9 +30,11 @@ const btcFaqData = [
 
 export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
   const { ops, coinsBy, coinDefs } = siteData;
-  // The fastest-payouts view is about speed, so it opens sorted by stated withdrawal time.
-  // Speed and wagering views open on that fact; everything else is alphabetical — there's no score to rank by.
-  const [sortKey, setSortKey] = useState<SortKey>(filter === "fast" ? "payout" : filter === "lowwager" ? "wager" : "name");
+  // Speed and wagering views are about one fact, so they open sorted on it and
+  // the first row genuinely is the fastest or the lowest. Everything else opens
+  // in house placement order, which is a commercial order and not a ranking —
+  // hence no "top of the list" callout below unless the sort is a fact sort.
+  const [sortKey, setSortKey] = useState<SortKey>(filter === "fast" ? "payout" : filter === "lowwager" ? "wager" : "featured");
   const [sortDir, setSortDir] = useState<SortDir>("asc");
   const [coinSel, setCoinSel] = useState<string>("all");
   const [showAll, setShowAll] = useState(false);
@@ -188,7 +190,7 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
             </p>
           </div>
           <div style={{ display: "flex", gap: 7 }}>
-            {(["name", "payout", "wager"] as SortKey[]).map((k) => (
+            {(["featured", "name", "payout", "wager"] as SortKey[]).map((k) => (
               <button
                 key={k}
                 type="button"
@@ -196,7 +198,7 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
                 className="hover:!border-accent hover:!text-accent"
                 style={{ padding: "9px 13px", borderRadius: 7, border: "1px solid rgba(255,255,255,.14)", background: "rgba(12,16,19,.66)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".04em", textTransform: "uppercase", color: "#93A3AC", whiteSpace: "nowrap" }}
               >
-                {k === "name" ? "A–Z" : k === "payout" ? "Withdrawal" : "Wagering"} {arrow(k)}
+                {k === "featured" ? "Featured" : k === "name" ? "A–Z" : k === "payout" ? "Withdrawal" : "Wagering"} {arrow(k)}
               </button>
             ))}
           </div>

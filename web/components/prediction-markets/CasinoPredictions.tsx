@@ -5,6 +5,7 @@ import { brandFor } from "@/lib/casino-facts";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { Icon } from "@/components/ui/Icon";
 import { NextSteps } from "@/components/layout/NextSteps";
+import { byHouseOn } from "@/lib/house-order";
 
 const MONO = "var(--font-jetbrains-mono), monospace";
 
@@ -13,7 +14,7 @@ export function CasinoPredictions() {
   const rows = siteData.ops
     .map((o) => ({ o, f: getSpecFact(o.slug, "Sportsbook", "Prediction markets") }))
     .filter((r) => r.f?.value)
-    .sort((a, b) => Number(!!b.o.featured) - Number(!!a.o.featured) || a.o.name.localeCompare(b.o.name));
+    .sort(byHouseOn((r) => r.o));
   if (!rows.length) return null;
 
   return (

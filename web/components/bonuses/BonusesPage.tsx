@@ -9,6 +9,8 @@ import type { Operator } from "@/lib/types";
 import { raceFor, raceSlugs, dropFor } from "@/lib/races";
 import { getSpecFact } from "@/lib/spec-sheet";
 import { NextSteps } from "@/components/layout/NextSteps";
+import { byHouse } from "@/lib/house-order";
+import { isWelcomeOffer } from "@/lib/casino-bonuses";
 
 /**
  * Compare casino bonuses, split by how each one works:
@@ -19,13 +21,6 @@ import { NextSteps } from "@/components/layout/NextSteps";
 const MONO = "var(--font-jetbrains-mono), monospace";
 const WELCOME_COLS = "md:grid-cols-[minmax(170px,1fr)_minmax(240px,1.6fr)_120px_130px_96px_100px_130px]";
 const REWARD_COLS = "md:grid-cols-[minmax(170px,1fr)_minmax(220px,1.5fr)_150px_150px_minmax(150px,1fr)_130px]";
-
-/** Welcome bonus if the headline is a deposit match, free spins or a first-deposit package; otherwise an earn-as-you-play reward. */
-function isWelcome(o: Operator): boolean {
-  if (o.noDepositBonus) return false;
-  const b = o.bonusShort ?? o.bonus;
-  return /\d+%\s*(sports\s*)?(bonus|match|welcome|first|on|up to)|free spins|\d\s*deposits|first deposit|deposit bonus/i.test(b) && !/^(instant )?rakeback|^up to \d+% cash/i.test(b);
-}
 
 /** The largest match percentage in an offer headline, e.g. 360 from "Up to 360% on 4 deposits". */
 function matchPct(o: Operator): number {
@@ -41,11 +36,21 @@ function toWithdraw(o: Operator): { text: string; color: string } {
   return { text: `${m}×`, color: m <= 20 ? "#7BE0B8" : m <= 40 ? "#E8EDF0" : "#F0A77F" };
 }
 
-/** What the multiplier applies to: the bonus, the deposit, or both. */
+/**
+ * What the multiplier applies to: the bonus, the deposit, or both.
+ *
+ * Tests for each term rather than anchoring on the first word. The previous
+ * `/^deposit\b/` would classify "deposit + bonus" as deposit-only, which is
+ * wrong — and it only ever produced the right answer because the escape in it
+ * had been mangled into a literal backspace, so it never matched anything and
+ * every value fell through to the `includes` branch below it.
+ */
 function basisOf(o: Operator): "bonus" | "deposit" | "both" {
   const b = (o.wagerBasis ?? "").toLowerCase();
-  if (/^deposit/.test(b)) return "deposit";
-  if (b.includes("deposit")) return "both";
+  const onDeposit = /\bdeposit/.test(b);
+  const onBonus = /\bbonus/.test(b);
+  if (onDeposit && onBonus) return "both";
+  if (onDeposit) return "deposit";
   return "bonus";
 }
 
@@ -87,8 +92,8 @@ function paidWhen(o: Operator): string | null {
 
 export function BonusesPage() {
   const { ops } = siteData;
-  const welcome = ops.filter(isWelcome).sort((a, b) => Number(!!b.featured) - Number(!!a.featured) || compareWager(a, b));
-  const rewards = ops.filter((o) => !isWelcome(o)).sort((a, b) => Number(!!b.featured) - Number(!!a.featured) || (raceFor(b.slug)?.monthly ?? 0) - (raceFor(a.slug)?.monthly ?? 0));
+  const welcome = ops.filter(isWelcomeOffer).sort((a, b) => byHouse(a, b) || compareWager(a, b));
+  const rewards = ops.filter((o) => !isWelcomeOffer(o)).sort((a, b) => Number(!!b.featured) - Number(!!a.featured) || (raceFor(b.slug)?.monthly ?? 0) - (raceFor(a.slug)?.monthly ?? 0));
 
   const biggest = [...welcome].sort((a, b) => matchPct(b) - matchPct(a))[0];
   const lowest = welcome.filter((o) => (wagerView(o).mult ?? 0) > 0).sort((a, b) => (wagerView(a).mult ?? 0) - (wagerView(b).mult ?? 0))[0];

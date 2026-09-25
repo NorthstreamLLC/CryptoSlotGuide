@@ -1,0 +1,2835 @@
+{
+  "checked": "2026-09-25",
+  "sources": {
+    "https://bc.game/promotions/weekly-raffle": {
+      "hash": "05fed2be04bb84d1",
+      "length": 3033,
+      "seen": "2026-09-24"
+    },
+    "https://bc.game/promotions": {
+      "hash": "1901cda0249d4300",
+      "length": 3049,
+      "seen": "2026-09-24"
+    },
+    "https://jackpot.bet/": {
+      "hash": "3a81bf61043246a1",
+      "length": 1536,
+      "seen": "2026-09-24"
+    },
+    "https://help.degen.com/en/articles/12570521-rakeback": {
+      "hash": "d92355955cccb34f",
+      "length": 1998,
+      "seen": "2026-09-24"
+    },
+    "https://help.toshi.bet/en/articles/10017165-deposit-bonus-how-does-it-work": {
+      "hash": "6d11af6489d504bc",
+      "length": 1186,
+      "seen": "2026-09-24"
+    },
+    "https://dustbit.com/promotions": {
+      "hash": "45b5ff48bff39d3b",
+      "length": 1724,
+      "seen": "2026-09-24"
+    },
+    "https://help.degencity.com/en/articles/13870117-what-are-rakeback-rewards-and-how-do-i-claim-them": {
+      "hash": "5fd3265e6160cf1c",
+      "length": 3493,
+      "seen": "2026-09-24"
+    },
+    "https://www.cga.cw/en/133i348441001": {
+      "hash": "d4e206a16546ff55",
+      "length": 962,
+      "seen": "2026-09-24"
+    },
+    "https://help.500.casino/en/articles/5925218-can-i-withdraw-my-balance-in-real-money": {
+      "hash": "f1eecd6cd4cd256d",
+      "length": 1173,
+      "seen": "2026-09-24"
+    },
+    "https://help.500.casino/en/articles/5925240-what-are-the-requirements-for-withdraw": {
+      "hash": "2df57cf2f2442386",
+      "length": 1402,
+      "seen": "2026-09-24"
+    },
+    "https://help.500.casino/en/articles/5971747-do-i-have-to-pay-an-additional-fee-when-withdrawing-cryptocurrency": {
+      "hash": "c649746929005e56",
+      "length": 1413,
+      "seen": "2026-09-24"
+    },
+    "https://help.500.casino/en/articles/5925242-what-is-the-minimum-deposit-value": {
+      "hash": "7c7725f2c0d7d58d",
+      "length": 1451,
+      "seen": "2026-09-24"
+    },
+    "https://help.500.casino/en/articles/5925550-what-kind-of-rewards-does-500-casino-offer": {
+      "hash": "122a79800da7616e",
+      "length": 3857,
+      "seen": "2026-09-24"
+    },
+    "https://help.500.casino/en/articles/9239792-how-does-the-new-welcome-package-work": {
+      "hash": "1b87ed4f6196086a",
+      "length": 6613,
+      "seen": "2026-09-24"
+    },
+    "https://help.500.casino/en/articles/5971517-what-are-royales-and-how-do-they-work": {
+      "hash": "d05a1007999bec79",
+      "length": 1480,
+      "seen": "2026-09-24"
+    },
+    "https://help.500.casino/en/articles/9356888-what-are-daily-cases-and-how-can-i-claim-them": {
+      "hash": "4ee28c155a41b186",
+      "length": 2118,
+      "seen": "2026-09-24"
+    },
+    "https://help.500.casino/en/articles/5925173-how-does-the-affiliate-referrals-system-work": {
+      "hash": "a641f3d2c9623fbe",
+      "length": 3701,
+      "seen": "2026-09-24"
+    },
+    "https://help.500.casino/en/articles/5970868-how-does-matchbetting-work": {
+      "hash": "9c72fc7bd8f31d6a",
+      "length": 2970,
+      "seen": "2026-09-24"
+    },
+    "https://help.500.casino/en/articles/5970866-guide-to-matchbetting": {
+      "hash": "d2256a8f69cdd0ed",
+      "length": 3171,
+      "seen": "2026-09-24"
+    },
+    "https://7bitcasino.com/faq": {
+      "hash": "6c82121860fdecac",
+      "length": 12018,
+      "seen": "2026-09-24"
+    },
+    "https://500.casino/static/terms/terms-of-service.pdf": {
+      "hash": "d202c88b4b4a3602",
+      "length": 103931,
+      "seen": "2026-09-24"
+    },
+    "https://7bitcasino.com/bonuses": {
+      "hash": "67674ffcd62de025",
+      "length": 9224,
+      "seen": "2026-09-24"
+    },
+    "https://7bitcasino.com/terms-and-conditions": {
+      "hash": "c8521dba1dd32e4c",
+      "length": 39648,
+      "seen": "2026-09-24"
+    },
+    "https://7bitcasino.com/payments": {
+      "hash": "ad06ba94051b4cca",
+      "length": 1042,
+      "seen": "2026-09-24"
+    },
+    "https://7bitcasino.com/": {
+      "hash": "a0810f1d07041e17",
+      "length": 3887,
+      "seen": "2026-09-24"
+    },
+    "https://7bitcasino.com/vip": {
+      "hash": "d530e737e7e481b0",
+      "length": 8282,
+      "seen": "2026-09-24"
+    },
+    "https://7bitcasino.com/bonus-terms": {
+      "hash": "be542718c6836088",
+      "length": 21464,
+      "seen": "2026-09-24"
+    },
+    "https://7bitcasino.com/tournaments": {
+      "hash": "d55a9c1fc8d086c6",
+      "length": 1017,
+      "seen": "2026-09-24"
+    },
+    "https://help.bc.support/en/articles/7846669-how-to-deposit-and-withdraw-fiat-currency": {
+      "hash": "9e34b6284f636353",
+      "length": 2469,
+      "seen": "2026-09-24"
+    },
+    "https://bc.game/": {
+      "hash": "1901cda0249d4300",
+      "length": 3049,
+      "seen": "2026-09-24"
+    },
+    "https://betting.bc.game/guidebook/bc-game-sport-withdrawal/": {
+      "hash": "cc73c433698bb4c3",
+      "length": 20721,
+      "seen": "2026-09-24"
+    },
+    "https://help.bc.support/en/articles/8755805-fiat-withdrawal-fee-update": {
+      "hash": "d97aa315cde669c1",
+      "length": 2709,
+      "seen": "2026-09-24"
+    },
+    "https://help.bc.support/en/articles/15839846-monthly-4-deposit-bonus": {
+      "hash": "e77dcaec8058c56a",
+      "length": 3515,
+      "seen": "2026-09-24"
+    },
+    "https://help.bc.support/en/articles/8911028-withdrawal-restrictions-after-password-changes": {
+      "hash": "1fb59c4910f1180e",
+      "length": 3426,
+      "seen": "2026-09-24"
+    },
+    "https://help.bc.support/en/articles/10702437-a-guide-to-your-wallet-features": {
+      "hash": "92f825702a6a32e6",
+      "length": 2758,
+      "seen": "2026-09-24"
+    },
+    "https://help.bc.support/en/articles/14151207-vip-level-system": {
+      "hash": "10109666ba9b299f",
+      "length": 2602,
+      "seen": "2026-09-24"
+    },
+    "https://help.bc.support/en/articles/14483950-new-bonus-system-full-guide-overview": {
+      "hash": "988c4f3fed763aaf",
+      "length": 2721,
+      "seen": "2026-09-24"
+    },
+    "https://help.bc.support/en/articles/14468629-new-bonus-system-faq": {
+      "hash": "64581102b935ff90",
+      "length": 4747,
+      "seen": "2026-09-24"
+    },
+    "https://help.bc.support/en/articles/14468373-lossback-bonus": {
+      "hash": "26c0666c51745f22",
+      "length": 2249,
+      "seen": "2026-09-24"
+    },
+    "https://help.bc.support/en/articles/7831135-the-ultimate-collection-of-all-the-bonuses": {
+      "hash": "8b7bebca1eec6b32",
+      "length": 4171,
+      "seen": "2026-09-24"
+    },
+    "https://blog.bc.game/what-does-rakeback-mean-bc-game-a-players-guide/": {
+      "hash": "4a506564e8921038",
+      "length": 10432,
+      "seen": "2026-09-24"
+    },
+    "https://bc.game/sports": {
+      "hash": "6b8d14ff9f3bafcb",
+      "length": 3034,
+      "seen": "2026-09-24"
+    },
+    "https://help.bc.support/en/articles/8278975-weekly-raffle": {
+      "hash": "a1ddc8da45bdc1fd",
+      "length": 3402,
+      "seen": "2026-09-24"
+    },
+    "https://help.bc.support/en/articles/14480749-quest": {
+      "hash": "939fc108ed4cf903",
+      "length": 2365,
+      "seen": "2026-09-24"
+    },
+    "https://betting.bc.game/guidebook/how-to-bet-on-cs2-bc-game/": {
+      "hash": "da8de616e36ce9f1",
+      "length": 19820,
+      "seen": "2026-09-24"
+    },
+    "https://help.bc.support/en/articles/7831138-lottery": {
+      "hash": "e0c6829d7241f8f8",
+      "length": 4274,
+      "seen": "2026-09-24"
+    },
+    "https://help.bc.support/en/articles/7831323-referral-system-my-casino": {
+      "hash": "dd6711b8a8fcecf8",
+      "length": 2847,
+      "seen": "2026-09-24"
+    },
+    "https://help.bc.support/en/articles/11114036-guide-to-kyc-verification": {
+      "hash": "a50fcb46a4b9e4c9",
+      "length": 5660,
+      "seen": "2026-09-24"
+    },
+    "https://bc.game/predictions": {
+      "hash": "1901cda0249d4300",
+      "length": 3049,
+      "seen": "2026-09-24"
+    },
+    "https://bc.game/licenses": {
+      "hash": "68affa3867dec29c",
+      "length": 3037,
+      "seen": "2026-09-24"
+    },
+    "https://bc.game/help/terms-sports": {
+      "hash": "c6bc7b7921226553",
+      "length": 3040,
+      "seen": "2026-09-24"
+    },
+    "https://bc.game/sponsorship": {
+      "hash": "970ea8680aa4c8c0",
+      "length": 3045,
+      "seen": "2026-09-24"
+    },
+    "https://betfury.com/": {
+      "hash": "89e541512a85987c",
+      "length": 17341,
+      "seen": "2026-09-24"
+    },
+    "https://bf1.io/news/deposit-withdrawal-betfury": {
+      "hash": "256b906276427c5e",
+      "length": 7494,
+      "seen": "2026-09-24"
+    },
+    "https://docs.betfury.com/betfury/terms-of-services/terms-and-conditions.md": {
+      "hash": "f3e58de2f1eaec4f",
+      "length": 70293,
+      "seen": "2026-09-24"
+    },
+    "https://docs.betfury.com/betfury/bonus-system/rakeback.md": {
+      "hash": "899d0c064ef3467d",
+      "length": 1821,
+      "seen": "2026-09-24"
+    },
+    "https://docs.betfury.com/betfury/bonus-system/deposit-bonuses-and-free-spins.md": {
+      "hash": "281690b2ea03d5c5",
+      "length": 1852,
+      "seen": "2026-09-24"
+    },
+    "https://betfury.com/promo/welcome-pack-bonus": {
+      "hash": "de659c8c5e4d9862",
+      "length": 5733,
+      "seen": "2026-09-24"
+    },
+    "https://docs.betfury.com/betfury/bonus-system/cashback.md": {
+      "hash": "cfd95522a7c030d6",
+      "length": 2109,
+      "seen": "2026-09-24"
+    },
+    "https://docs.betfury.com/betfury/battles-and-tournaments/fight-and-share-up-to-usd100-000.md": {
+      "hash": "3a46f02368be4fff",
+      "length": 3260,
+      "seen": "2026-09-24"
+    },
+    "https://docs.betfury.com/betfury/betfury-vip-club/super-vip-club.md": {
+      "hash": "12172546b107b9d7",
+      "length": 1159,
+      "seen": "2026-09-24"
+    },
+    "https://docs.betfury.com/betfury/bonus-system/weekly-bonus.md": {
+      "hash": "2116247cb5ec13ee",
+      "length": 1669,
+      "seen": "2026-09-24"
+    },
+    "https://bf1.io/rank-system": {
+      "hash": "5bf9106336ae2bde",
+      "length": 9034,
+      "seen": "2026-09-24"
+    },
+    "https://betfury.com/sports/predictions": {
+      "hash": "3a24f3224e344bed",
+      "length": 9604,
+      "seen": "2026-09-24"
+    },
+    "https://bf1.io/promo/sports-bonuses": {
+      "hash": "468180017cd2dbab",
+      "length": 4016,
+      "seen": "2026-09-24"
+    },
+    "https://bf1.io/esports": {
+      "hash": "057ac61491c5fa4a",
+      "length": 22413,
+      "seen": "2026-09-24"
+    },
+    "https://www.bitstarz.com/terms": {
+      "hash": "7679d1cdabfd9362",
+      "length": 42771,
+      "seen": "2026-09-24"
+    },
+    "https://bitstarz.com/terms": {
+      "hash": "7679d1cdabfd9362",
+      "length": 42771,
+      "seen": "2026-09-24"
+    },
+    "https://www.bitstarz.com/promotions": {
+      "hash": "f5838f6372ff874c",
+      "length": 4936,
+      "seen": "2026-09-24"
+    },
+    "https://bitstarz.com/bonus-terms-and-conditions": {
+      "hash": "7c49a703968ee548",
+      "length": 15141,
+      "seen": "2026-09-24"
+    },
+    "https://www.bitstarz.com/bonus-terms-and-conditions": {
+      "hash": "7c49a703968ee548",
+      "length": 15141,
+      "seen": "2026-09-24"
+    },
+    "https://intercom.help/playlink/en/articles/14536391-before-you-withdraw": {
+      "hash": "f9294c56970e07af",
+      "length": 2110,
+      "seen": "2026-09-24"
+    },
+    "https://intercom.help/playlink/en/articles/14536822-withdrawal-timeframe": {
+      "hash": "73fcd2b7f00e4a09",
+      "length": 2357,
+      "seen": "2026-09-24"
+    },
+    "https://www.bitstarz.com/tournaments/slotwars": {
+      "hash": "34821b6a38fa40d7",
+      "length": 919,
+      "seen": "2026-09-24"
+    },
+    "https://www.bitstarz.com/promotions/bonuz-mania": {
+      "hash": "a4e51dddfca8ac90",
+      "length": 10718,
+      "seen": "2026-09-24"
+    },
+    "https://intercom.help/playlink/en/articles/15363485-120-first-deposit-bonus-usdt-only-up-to-1-000": {
+      "hash": "7086b4eeec8df849",
+      "length": 5998,
+      "seen": "2026-09-24"
+    },
+    "https://intercom.help/playlink/en/articles/14537028-before-you-deposit": {
+      "hash": "524075dc09e34035",
+      "length": 2403,
+      "seen": "2026-09-24"
+    },
+    "https://intercom.help/playlink/en/articles/14741700-weekly-reload-bonus": {
+      "hash": "bf3891a5f18fb802",
+      "length": 2127,
+      "seen": "2026-09-24"
+    },
+    "https://intercom.help/playlink/en/articles/11183306-why-is-cash-out-is-not-available-for-my-bet": {
+      "hash": "51c39b1dae979572",
+      "length": 1446,
+      "seen": "2026-09-24"
+    },
+    "https://intercom.help/playlink/en/articles/15450694-referral-program-benefits": {
+      "hash": "357129ef20666021",
+      "length": 3069,
+      "seen": "2026-09-24"
+    },
+    "https://intercom.help/playlink/en/collections/12727939-sportsbook": {
+      "hash": "e307fcd7830df40b",
+      "length": 843,
+      "seen": "2026-09-24"
+    },
+    "https://intercom.help/playlink/en/articles/14628469-bet-builder-same-game-multi-bets-at-bluff": {
+      "hash": "97051c5b31093a3f",
+      "length": 3669,
+      "seen": "2026-09-24"
+    },
+    "https://intercom.help/playlink/en/articles/14626107-weekly-free-bet-promotion": {
+      "hash": "763394a4de06c90c",
+      "length": 2102,
+      "seen": "2026-09-24"
+    },
+    "https://www.cloudbet.com/en/help/terms": {
+      "hash": "4f9b4e79bc8a45b2",
+      "length": 72752,
+      "seen": "2026-09-24"
+    },
+    "https://www.cloudbet.com/en/support/articles/103214-how-long-will-my-withdrawal-take": {
+      "hash": "a6e96e9ea1fdfd59",
+      "length": 2589,
+      "seen": "2026-09-24"
+    },
+    "https://www.cloudbet.com/en/promotions": {
+      "hash": "d8123e3e330e570a",
+      "length": 2243,
+      "seen": "2026-09-24"
+    },
+    "https://www.cloudbet.com/en/crypto-transaction-fees": {
+      "hash": "f61ac7b3c1226bfc",
+      "length": 4183,
+      "seen": "2026-09-24"
+    },
+    "https://www.cloudbet.com/en/promotions/general/welcome-package": {
+      "hash": "0cc8c69a5218b0cd",
+      "length": 4495,
+      "seen": "2026-09-24"
+    },
+    "https://www.cloudbet.com/en/support/articles/103244-what-currencies-are-accepted-on-cloudbet": {
+      "hash": "9d335057c8a14473",
+      "length": 4103,
+      "seen": "2026-09-24"
+    },
+    "https://www.cloudbet.com/en/support/articles/103199-what-is-my-maximum-daily-withdrawal-limit-on-cloudbet": {
+      "hash": "34adfe83c66dca4d",
+      "length": 3265,
+      "seen": "2026-09-24"
+    },
+    "https://www.cloudbet.com/en/support/articles/103248-what-is-the-maximum-deposit-amount": {
+      "hash": "c5a42378275a9b3d",
+      "length": 2882,
+      "seen": "2026-09-24"
+    },
+    "https://www.cloudbet.com/en/sports": {
+      "hash": "e0130925801a6d78",
+      "length": 13114,
+      "seen": "2026-09-24"
+    },
+    "https://www.cloudbet.com/en/lp/vip-club": {
+      "hash": "324301bace606274",
+      "length": 9058,
+      "seen": "2026-09-24"
+    },
+    "https://www.cloudbet.com/en/esports": {
+      "hash": "cd2d1ee4e1828898",
+      "length": 11889,
+      "seen": "2026-09-24"
+    },
+    "https://www.cloudbet.com/en/support/articles/502444-does-cloudbet-offer-a-vip-transfer-program": {
+      "hash": "2bcdea1a5761c1f5",
+      "length": 4910,
+      "seen": "2026-09-24"
+    },
+    "https://www.cloudbet.com/en/support/articles/163526-loyalty-tiers-and-benefits": {
+      "hash": "01d902e2d6a6cb73",
+      "length": 5547,
+      "seen": "2026-09-24"
+    },
+    "https://www.cloudbet.com/en/support/articles/103138-how-to-share-your-referral-link-and-track-your-referrals": {
+      "hash": "3065cb9d846d0da3",
+      "length": 4463,
+      "seen": "2026-09-24"
+    },
+    "https://www.cloudbet.com/en/lp/partnerships": {
+      "hash": "dcd7dbc11ac5e252",
+      "length": 4333,
+      "seen": "2026-09-24"
+    },
+    "https://www.cloudbet.com/en/lp/no-limits": {
+      "hash": "6763188daf5b21c6",
+      "length": 4851,
+      "seen": "2026-09-24"
+    },
+    "https://www.cloudbet.com/en/support/articles/103253-how-do-i-claim-my-welcome-package": {
+      "hash": "6ebfd368aee3df5d",
+      "length": 3012,
+      "seen": "2026-09-24"
+    },
+    "https://www.cloudbet.com/en/support/articles/372750-how-to-place-a-same-game-parlay-with-bet-builder": {
+      "hash": "4f75ff22f20e374d",
+      "length": 5044,
+      "seen": "2026-09-24"
+    },
+    "https://www.cloudbet.com/en/support/articles/103137-how-to-cash-out-a-bet": {
+      "hash": "9abeacb8e0a2ad97",
+      "length": 3919,
+      "seen": "2026-09-24"
+    },
+    "https://guidebook.cybet.com/about-cybet/": {
+      "hash": "765d60d859a6ed83",
+      "length": 3236,
+      "seen": "2026-09-24"
+    },
+    "https://guidebook.cybet.com/withdrawal/": {
+      "hash": "44b97b158ec77c96",
+      "length": 3190,
+      "seen": "2026-09-24"
+    },
+    "https://guidebook.cybet.com/kyc/": {
+      "hash": "807721d8bd8fbe07",
+      "length": 3996,
+      "seen": "2026-09-24"
+    },
+    "https://guidebook.cybet.com/rakeback-bonus/": {
+      "hash": "56bad1eb6d50d082",
+      "length": 4607,
+      "seen": "2026-09-24"
+    },
+    "https://guidebook.cybet.com/bonuses/": {
+      "hash": "c6242c3548f5b2fa",
+      "length": 9869,
+      "seen": "2026-09-24"
+    },
+    "https://guidebook.cybet.com/payment/": {
+      "hash": "5cf2dd1147a1f9f1",
+      "length": 5251,
+      "seen": "2026-09-24"
+    },
+    "https://guidebook.cybet.com/vip/": {
+      "hash": "819af2c705a4932c",
+      "length": 5219,
+      "seen": "2026-09-24"
+    },
+    "https://help.degen.com/en/articles/12573437-how-long-do-withdrawals-take": {
+      "hash": "37e7d04c9efe8462",
+      "length": 1901,
+      "seen": "2026-09-24"
+    },
+    "https://guidebook.cybet.com/deposit-bonus/": {
+      "hash": "c43855ded5d2e77a",
+      "length": 5271,
+      "seen": "2026-09-24"
+    },
+    "https://guidebook.cybet.com/referral-bonus/": {
+      "hash": "043792bb7a587d53",
+      "length": 5934,
+      "seen": "2026-09-24"
+    },
+    "https://guidebook.cybet.com/solana-casino/": {
+      "hash": "deb98ae33e421a39",
+      "length": 13968,
+      "seen": "2026-09-24"
+    },
+    "https://s3.ap-south-1.amazonaws.com/cybet.com/BettingRules": {
+      "hash": "32d072d2a1dfb452",
+      "length": 1211417,
+      "seen": "2026-09-24"
+    },
+    "https://help.degen.com/en/articles/15558569-unlock-up-to-1-500-on-your-first-deposit": {
+      "hash": "3f798a10cc8409c8",
+      "length": 6989,
+      "seen": "2026-09-24"
+    },
+    "https://help.degen.com/en/articles/12570453-weekly-bonus": {
+      "hash": "219684903af6bfaa",
+      "length": 1415,
+      "seen": "2026-09-24"
+    },
+    "https://help.degen.com/en/articles/12570409-reloads": {
+      "hash": "c403e7ab3ae1eff1",
+      "length": 1438,
+      "seen": "2026-09-24"
+    },
+    "https://api.degen.com/v1/bonus/vip-tiers": {
+      "hash": "bac1e63dc693237c",
+      "length": 15865,
+      "seen": "2026-09-24"
+    },
+    "https://help.degencity.com/en/articles/13868515-how-to-deposit-via-bank-transfer-or-card": {
+      "hash": "043fae52c3175792",
+      "length": 2633,
+      "seen": "2026-09-24"
+    },
+    "https://help.degencity.com/en/articles/13885358-how-do-i-become-a-vip": {
+      "hash": "ac53e9f82c7193e9",
+      "length": 2924,
+      "seen": "2026-09-24"
+    },
+    "https://help.degencity.com/en/collections/18702125-deposits-and-withdrawals": {
+      "hash": "159bd9cc98b44a25",
+      "length": 1558,
+      "seen": "2026-09-24"
+    },
+    "https://help.degencity.com/en/articles/13868915-how-to-withdraw": {
+      "hash": "f899370556a89e21",
+      "length": 2781,
+      "seen": "2026-09-24"
+    },
+    "https://help.degencity.com/en/articles/13868262-how-to-deposit-crypto": {
+      "hash": "e0ed6915c758dc7b",
+      "length": 3043,
+      "seen": "2026-09-24"
+    },
+    "https://help.degencity.com/en/articles/13885383-is-vip-transfer-supported": {
+      "hash": "b56feda6f604b6f5",
+      "length": 2489,
+      "seen": "2026-09-24"
+    },
+    "https://help.degencity.com/en/articles/13885419-what-is-a-vip-host": {
+      "hash": "4936570aeafb49c3",
+      "length": 2145,
+      "seen": "2026-09-24"
+    },
+    "https://help.degencity.com/en/articles/13869866-how-to-verify-my-identity": {
+      "hash": "6d465637279cea46",
+      "length": 2575,
+      "seen": "2026-09-24"
+    },
+    "https://help.dicey.com/en/articles/12611654-supported-currencies-and-tokens": {
+      "hash": "c3b8f9d0b990ca4b",
+      "length": 2822,
+      "seen": "2026-09-24"
+    },
+    "https://help.dicey.com/en/articles/12611645-how-to-deposit-and-withdraw": {
+      "hash": "084381d4621406b4",
+      "length": 2623,
+      "seen": "2026-09-24"
+    },
+    "https://help.dicey.com/en/articles/16182871-how-does-the-sports-welcome-bonus-work": {
+      "hash": "b71cccf07b627aa0",
+      "length": 9960,
+      "seen": "2026-09-24"
+    },
+    "https://help.dicey.com/en/articles/12611571-creating-a-dicey-account": {
+      "hash": "6ca3e586676f918f",
+      "length": 4316,
+      "seen": "2026-09-24"
+    },
+    "https://help.dicey.com/en/articles/12612925-how-rakeback-works": {
+      "hash": "b6ff76555b99184e",
+      "length": 3323,
+      "seen": "2026-09-24"
+    },
+    "https://help.dicey.com/en/articles/13729989-understanding-the-rewards-program": {
+      "hash": "df160e82b1b11040",
+      "length": 5354,
+      "seen": "2026-09-24"
+    },
+    "https://help.dicey.com/en/articles/15630583-what-is-rain-and-how-does-it-work": {
+      "hash": "c2b9229dac75bbb7",
+      "length": 3661,
+      "seen": "2026-09-24"
+    },
+    "https://help.dicey.com/en/articles/13740658-how-vip-transfer-works-and-what-it-means-for-you": {
+      "hash": "ccd95c6492e1c7b3",
+      "length": 2925,
+      "seen": "2026-09-24"
+    },
+    "https://help.dicey.com/en/articles/15220417-same-game-parlays-at-dicey": {
+      "hash": "92150d7eac326cbb",
+      "length": 5912,
+      "seen": "2026-09-24"
+    },
+    "https://help.dicey.com/en/articles/15892292-how-to-cashout-your-sports-bet": {
+      "hash": "703caa69ad27f1d8",
+      "length": 3244,
+      "seen": "2026-09-24"
+    },
+    "https://duel.com/llms.txt": {
+      "hash": "20cad79d5c72570d",
+      "length": 4709,
+      "seen": "2026-09-24"
+    },
+    "https://assets.ctfassets.net/im9yudtc78wp/4OboyHmjneSScIQIBDq93x/cb8f79993a1f96d32a462cb00cbb8db7/RULESNEW.pdf": {
+      "hash": "d676124bf5d2f052",
+      "length": 261736,
+      "seen": "2026-09-24"
+    },
+    "https://dustbit.com/promotions/community-share": {
+      "hash": "53cf4adae4b9fc9c",
+      "length": 1911,
+      "seen": "2026-09-24"
+    },
+    "https://dustbit.com/legal/terms": {
+      "hash": "95f0279709e8d012",
+      "length": 7129,
+      "seen": "2026-09-24"
+    },
+    "https://dustbit.com/": {
+      "hash": "c6b8b2fc6e79a3cf",
+      "length": 3448,
+      "seen": "2026-09-24"
+    },
+    "https://flush.com/faq/withdrawals/": {
+      "hash": "6f59fde28ee455f5",
+      "length": 2873,
+      "seen": "2026-09-24"
+    },
+    "https://help.dustbit.com/en/articles/14668073-what-is-vip-transfer": {
+      "hash": "54a76b2b6ea08879",
+      "length": 1062,
+      "seen": "2026-09-24"
+    },
+    "https://dustbit.com/faqs": {
+      "hash": "cea2073e5558b771",
+      "length": 10551,
+      "seen": "2026-09-24"
+    },
+    "https://dustbit.com/vip-program": {
+      "hash": "5c678d550b46b218",
+      "length": 5325,
+      "seen": "2026-09-24"
+    },
+    "https://dustbit.com/legal/sportsbook-rules": {
+      "hash": "82f1b17d045633bf",
+      "length": 400234,
+      "seen": "2026-09-24"
+    },
+    "https://flush.com/": {
+      "hash": "f9cb211cb57ef89d",
+      "length": 7321,
+      "seen": "2026-09-24"
+    },
+    "https://flush.com/promotion-page/": {
+      "hash": "2409129294c4fbc9",
+      "length": 3324,
+      "seen": "2026-09-24"
+    },
+    "https://flush.com/faq/deposits/": {
+      "hash": "b389c176be5884fa",
+      "length": 3482,
+      "seen": "2026-09-24"
+    },
+    "https://flush.com/faq/bonuses/": {
+      "hash": "75882e34bcc33a2a",
+      "length": 6037,
+      "seen": "2026-09-24"
+    },
+    "https://flush.com/vip/": {
+      "hash": "737b54dc3291e244",
+      "length": 17059,
+      "seen": "2026-09-24"
+    },
+    "https://flush.com/sports/": {
+      "hash": "99f6662f6b8e74e0",
+      "length": 5184,
+      "seen": "2026-09-24"
+    },
+    "https://flush.com/special-bets/": {
+      "hash": "19890527152d0384",
+      "length": 7057,
+      "seen": "2026-09-24"
+    },
+    "https://flush.com/terms-sports/": {
+      "hash": "5a36c8d9b45ed20a",
+      "length": 161549,
+      "seen": "2026-09-24"
+    },
+    "https://flush.com/faq/": {
+      "hash": "0811c60614a8288c",
+      "length": 5214,
+      "seen": "2026-09-24"
+    },
+    "https://flush.com/faq/games-sports/": {
+      "hash": "4193ff028d90c8c1",
+      "length": 3704,
+      "seen": "2026-09-24"
+    },
+    "https://help.gamba.com/en/articles/8271522-how-to-make-a-withdrawal": {
+      "hash": "db085743a8789072",
+      "length": 1707,
+      "seen": "2026-09-24"
+    },
+    "https://help.gamba.com/en/articles/8271506-how-to-make-a-deposit": {
+      "hash": "447b33bf0c46f865",
+      "length": 2167,
+      "seen": "2026-09-24"
+    },
+    "https://help.gamba.com/en/articles/14075964-deposit-bonuses-on-gamba": {
+      "hash": "901cdb06880dbdc5",
+      "length": 1318,
+      "seen": "2026-09-24"
+    },
+    "https://help.gamba.com/en/articles/14133450-daily-free-spin-wheel": {
+      "hash": "f0dc18b139af305e",
+      "length": 2216,
+      "seen": "2026-09-24"
+    },
+    "https://help.gamba.com/en/articles/8271519-minimum-deposit-withdrawal-limits": {
+      "hash": "09d4f6b7805c980a",
+      "length": 2049,
+      "seen": "2026-09-24"
+    },
+    "https://help.gamba.com/en/articles/8271546-rank-up-bonus-system-explained": {
+      "hash": "09d76196fb666afa",
+      "length": 3154,
+      "seen": "2026-09-24"
+    },
+    "https://help.gamba.com/en/articles/8271547-rakeback-bonus-explained": {
+      "hash": "9cd34ee76a3c573c",
+      "length": 1929,
+      "seen": "2026-09-24"
+    },
+    "https://help.gamba.com/en/articles/8271549-rejuice-bonus-explained": {
+      "hash": "0305c7bd35bbd851",
+      "length": 2330,
+      "seen": "2026-09-24"
+    },
+    "https://help.gamba.com/en/articles/8271544-vip-ranking-system-overview": {
+      "hash": "8ac3b558769ffbc6",
+      "length": 1772,
+      "seen": "2026-09-24"
+    },
+    "https://help.gamba.com/en/articles/8271541-weekly-progressive-lottery": {
+      "hash": "da0eb98e50a47e76",
+      "length": 3737,
+      "seen": "2026-09-24"
+    },
+    "https://help.gamba.com/en/articles/8271552-unlocking-a-vip-host": {
+      "hash": "2b00b6e70fdcc8e9",
+      "length": 1811,
+      "seen": "2026-09-24"
+    },
+    "https://help.gamba.com/en/articles/14884430-sports-betting-limits": {
+      "hash": "ab654314c68b8183",
+      "length": 1832,
+      "seen": "2026-09-24"
+    },
+    "https://help.gamba.com/en/articles/8271639-why-can-t-i-cash-out-my-sports-bet": {
+      "hash": "dbff95daa32a6e10",
+      "length": 2357,
+      "seen": "2026-09-24"
+    },
+    "https://help.gamba.com/en/articles/8271581-how-is-commission-earned": {
+      "hash": "cb962db376ae980d",
+      "length": 2231,
+      "seen": "2026-09-24"
+    },
+    "https://help.gamba.com/en/articles/14277353-kyc-verification-on-gamba": {
+      "hash": "e0594701d19b2a34",
+      "length": 2145,
+      "seen": "2026-09-24"
+    },
+    "https://help.gamdom.com/en/articles/8981140-deposit-methods": {
+      "hash": "d806652b4918b3e7",
+      "length": 2823,
+      "seen": "2026-09-24"
+    },
+    "https://help.gamdom.com/en/articles/7998196-cryptocurrency-transaction-fees": {
+      "hash": "5580081a9c5f0f4e",
+      "length": 2140,
+      "seen": "2026-09-24"
+    },
+    "https://help.gamdom.com/en/articles/9734074-how-to-withdraw": {
+      "hash": "45b3200eba862afe",
+      "length": 4729,
+      "seen": "2026-09-24"
+    },
+    "https://help.gamdom.com/en/articles/13239748-getting-started-at-gamdom": {
+      "hash": "4c260d452fbb3ff5",
+      "length": 2267,
+      "seen": "2026-09-24"
+    },
+    "https://help.gamdom.com/en/articles/9595436-what-is-rakeback-how-it-works-and-how-to-get-it": {
+      "hash": "6af243bf5c4c1af6",
+      "length": 2535,
+      "seen": "2026-09-24"
+    },
+    "https://help.gamdom.com/en/articles/16108950-deposit-bonus-guide": {
+      "hash": "57fc6c4fa0c76bba",
+      "length": 11291,
+      "seen": "2026-09-24"
+    },
+    "https://help.gamdom.com/en/articles/8818767-how-to-deposit": {
+      "hash": "246abd40230155e1",
+      "length": 5386,
+      "seen": "2026-09-24"
+    },
+    "https://help.gamdom.com/en/articles/13256297-frequently-asked-questions": {
+      "hash": "2957405d58a46f31",
+      "length": 6671,
+      "seen": "2026-09-24"
+    },
+    "https://help.gamdom.com/en/articles/9721638-what-is-king-of-the-hill-and-how-does-it-work": {
+      "hash": "b68b6aae8f5cd9a3",
+      "length": 2852,
+      "seen": "2026-09-24"
+    },
+    "https://help.gamdom.com/en/articles/10290516-gamdom-rewards": {
+      "hash": "54cfcb3878af3486",
+      "length": 4567,
+      "seen": "2026-09-24"
+    },
+    "https://help.gamdom.com/en/articles/9717630-affiliate-program-everything-you-need-to-know": {
+      "hash": "0fe67082b9b01acf",
+      "length": 3735,
+      "seen": "2026-09-24"
+    },
+    "https://help.gamdom.com/en/articles/13238563-sports-betting-how-to-bet-key-details-features": {
+      "hash": "a24ea23383b51f01",
+      "length": 7244,
+      "seen": "2026-09-24"
+    },
+    "https://help.gamdom.com/en/articles/13250444-how-and-when-to-verify-your-account": {
+      "hash": "a18c729408a60a14",
+      "length": 6254,
+      "seen": "2026-09-24"
+    },
+    "https://help.gamdom.com/en/articles/8511042-is-gamdom-a-legit-casino": {
+      "hash": "31d542daf24f649c",
+      "length": 1868,
+      "seen": "2026-09-24"
+    },
+    "https://www.goated.com/llms-full.txt": {
+      "hash": "58eb0ea82b7db06b",
+      "length": 18215,
+      "seen": "2026-09-24"
+    },
+    "https://www.goated.com/weekly-race": {
+      "hash": "3d67075cb2df4531",
+      "length": 1050,
+      "seen": "2026-09-24"
+    },
+    "https://www.goated.com/help/article/9788115-goated-level-up-bonus": {
+      "hash": "f71aeeac880f8088",
+      "length": 2557,
+      "seen": "2026-09-24"
+    },
+    "https://www.goated.com/help/article/9378854-deposits-and-withdrawals-on-goated": {
+      "hash": "7f68b2da2ef16ab5",
+      "length": 4192,
+      "seen": "2026-09-24"
+    },
+    "https://www.goated.com/": {
+      "hash": "005aaafdb6fb353c",
+      "length": 1935,
+      "seen": "2026-09-24"
+    },
+    "https://www.goated.com/policies/sports": {
+      "hash": "bc8f45a6494fb6c5",
+      "length": 189655,
+      "seen": "2026-09-24"
+    },
+    "https://www.goated.com/help/article/9671083-vip-transfer": {
+      "hash": "6eb60889679af476",
+      "length": 2556,
+      "seen": "2026-09-24"
+    },
+    "https://www.goated.com/help/article/9379067-affiliate-program": {
+      "hash": "99f44271df11c44f",
+      "length": 1886,
+      "seen": "2026-09-24"
+    },
+    "https://www.goated.com/help/article/16192691-what-is-weekly-reloads": {
+      "hash": "50601748a9d2fcf7",
+      "length": 3292,
+      "seen": "2026-09-24"
+    },
+    "https://www.goated.com/sports": {
+      "hash": "abb3a3275a520948",
+      "length": 1071,
+      "seen": "2026-09-24"
+    },
+    "https://help.housebets.com/en/articles/822158-find-and-claim-instant-rakeback": {
+      "hash": "d90d6ec63e1bfdf1",
+      "length": 2166,
+      "seen": "2026-09-24"
+    },
+    "https://help.housebets.com/en/articles/822146-what-are-the-deposit-and-withdrawal-minimums-and-fees": {
+      "hash": "dd2042477e9db776",
+      "length": 2189,
+      "seen": "2026-09-24"
+    },
+    "https://help.housebets.com/en/articles/819710-how-long-do-withdrawals-take": {
+      "hash": "419d6a15c90409f3",
+      "length": 2744,
+      "seen": "2026-09-24"
+    },
+    "https://help.housebets.com/en/articles/822145-which-currencies-and-networks-can-i-use": {
+      "hash": "ac8fa5ad1fa0e622",
+      "length": 2760,
+      "seen": "2026-09-24"
+    },
+    "https://help.housebets.com/en/articles/822162-do-bonuses-have-wagering-requirements-or-an-expiry": {
+      "hash": "3909c784297da5ca",
+      "length": 2342,
+      "seen": "2026-09-24"
+    },
+    "https://help.housebets.com/en/articles/819716-how-do-weekly-and-monthly-leaderboards-work": {
+      "hash": "7f965119c4f53a7e",
+      "length": 2332,
+      "seen": "2026-09-24"
+    },
+    "https://help.housebets.com/en/articles/819711-when-do-i-get-my-rewards": {
+      "hash": "f2285a459ef9d164",
+      "length": 3721,
+      "seen": "2026-09-24"
+    },
+    "https://help.housebets.com/en/articles/819736-can-housebets-match-my-vip-status-from-another-casino": {
+      "hash": "c04dc0d21d92daa9",
+      "length": 2531,
+      "seen": "2026-09-24"
+    },
+    "https://help.housebets.com/en/articles/822198-how-does-the-housebets-affiliate-program-work": {
+      "hash": "cdd68a6affff524c",
+      "length": 2482,
+      "seen": "2026-09-24"
+    },
+    "https://help.housebets.com/en/articles/822179-does-housebets-offer-sports-bonuses": {
+      "hash": "4b1c60f727a4e80e",
+      "length": 2381,
+      "seen": "2026-09-24"
+    },
+    "https://help.housebets.com/en/articles/819721-check-your-verification-status": {
+      "hash": "67bc100e0eb76a1f",
+      "length": 1887,
+      "seen": "2026-09-24"
+    },
+    "https://jackpot.bet/trust?tab=tos": {
+      "hash": "99de8e629e381c96",
+      "length": 990,
+      "seen": "2026-09-24"
+    },
+    "https://jackpot.bet/loyalty": {
+      "hash": "859cf887b4bb5385",
+      "length": 1811,
+      "seen": "2026-09-24"
+    },
+    "https://help.jackpot.bet/en/articles/8487624-vip-transfer-program-up-to-25-000-bonus": {
+      "hash": "5117b01ddab575a7",
+      "length": 2279,
+      "seen": "2026-09-24"
+    },
+    "https://help.jackpot.bet/en/articles/9607163-weekly-monthly-bonuses": {
+      "hash": "bf5ec28cb0aa7e3c",
+      "length": 947,
+      "seen": "2026-09-24"
+    },
+    "https://help.jackpot.bet/en/articles/8511648-withdrawals-fees-limits": {
+      "hash": "c3ba12a141c394e5",
+      "length": 3266,
+      "seen": "2026-09-24"
+    },
+    "https://help.jackpot.bet/en/articles/9607235-deposit-bonuses-terms-conditions": {
+      "hash": "931f6ca1b9b4dcea",
+      "length": 4229,
+      "seen": "2026-09-24"
+    },
+    "https://jackpot.bet/blog/jackpot-weekly-competitions-52": {
+      "hash": "a0148ffeb091ba74",
+      "length": 3413,
+      "seen": "2026-09-24"
+    },
+    "https://jackpot.bet/sportsbook": {
+      "hash": "e823fc734c6d3001",
+      "length": 1099,
+      "seen": "2026-09-24"
+    },
+    "https://jackpot.bet/assets/legal/sport-settlement-rules.pdf": {
+      "hash": "cfc420ac3506f8c8",
+      "length": 1451234,
+      "seen": "2026-09-24"
+    },
+    "https://help.jackpot.bet/en/articles/9039026-jackpot-affiliate-program": {
+      "hash": "a84ef81bcf113c0f",
+      "length": 1440,
+      "seen": "2026-09-24"
+    },
+    "https://help.jackpot.bet/en/articles/8439891-jackpot-loyalty-program-overview": {
+      "hash": "5acbdde5a5dc0434",
+      "length": 2805,
+      "seen": "2026-09-24"
+    },
+    "https://verification.anjouangamingboard.org/validate?domain=jackpot.bet&seal_id=0aa147cac96fea2bdcc26d68ba54d939e96bfe0de2fde863945c4334c3f46e334b91cb2e3cf15b45b7ff49bb94748259&stamp=e561d596bdee644d17216071bcf9b0b2": {
+      "hash": "44ac927896f01844",
+      "length": 3029,
+      "seen": "2026-09-24"
+    },
+    "https://jackpot.bet/trust?tab=sport-tos": {
+      "hash": "99de8e629e381c96",
+      "length": 990,
+      "seen": "2026-09-24"
+    },
+    "https://www.kraken.com/features/fee-schedule": {
+      "hash": "c760a480c0429b48",
+      "length": 27048,
+      "seen": "2026-09-24"
+    },
+    "https://support.kraken.com/articles/360001395743-verification-levels-explained": {
+      "hash": "92e39bdb00026633",
+      "length": 6246,
+      "seen": "2026-09-24"
+    },
+    "https://support.kraken.com/articles/360000423043-cash-withdrawal-options-fees-minimums-and-processing-times-": {
+      "hash": "06f46216562612f6",
+      "length": 11271,
+      "seen": "2026-09-24"
+    },
+    "https://support.kraken.com/articles/360000767986-cryptocurrency-withdrawal-fees-and-minimums": {
+      "hash": "a4cb2e0b93441d8e",
+      "length": 4174,
+      "seen": "2026-09-24"
+    },
+    "https://support.kraken.com/articles/360001449826-deposit-and-withdrawal-limits-by-verification-level": {
+      "hash": "ad2d514efc84260f",
+      "length": 6274,
+      "seen": "2026-09-24"
+    },
+    "https://jackpot.bet/trust?tab=aml": {
+      "hash": "99de8e629e381c96",
+      "length": 990,
+      "seen": "2026-09-24"
+    },
+    "https://support.kraken.com/articles/where-is-kraken-licensed-or-regulated": {
+      "hash": "890cb67e705aafa8",
+      "length": 16095,
+      "seen": "2026-09-24"
+    },
+    "https://www.kraken.com/proof-of-reserves": {
+      "hash": "10eb91d78516b363",
+      "length": 19631,
+      "seen": "2026-09-24"
+    },
+    "https://www.kucoin.com/blog/en-kucoin-secures-landmark-micar-license-expanding-regulated-digital-asset-services-across-europe": {
+      "hash": "8376643e6ae97586",
+      "length": 7897,
+      "seen": "2026-09-24"
+    },
+    "https://www.kucoin.com/support/4414853291033": {
+      "hash": "c71c16659212141b",
+      "length": 7526,
+      "seen": "2026-09-24"
+    },
+    "https://www.kucoin.com/support/360015102254": {
+      "hash": "75b51368c2d61889",
+      "length": 12953,
+      "seen": "2026-09-24"
+    },
+    "https://www.ledger.com/academy/security/the-secure-element-whistanding-security-attacks": {
+      "hash": "369a97de36cb5341",
+      "length": 16590,
+      "seen": "2026-09-24"
+    },
+    "https://www.ledger.com/academy/basic-basics/ledgers-ecosystem/why-is-ledger-nano-so-secure": {
+      "hash": "ee1634c62253a2a9",
+      "length": 21566,
+      "seen": "2026-09-24"
+    },
+    "https://www.ledger.com/academy/topics/ledgersolutions/is-ledger-open-source": {
+      "hash": "f59f1af666f3979c",
+      "length": 13168,
+      "seen": "2026-09-24"
+    },
+    "https://www.kucoin.com/proof-of-reserves": {
+      "hash": "52ca602374cfa02d",
+      "length": 3351,
+      "seen": "2026-09-24"
+    },
+    "https://www.ledger.com/ledger-live": {
+      "hash": "5e56b163e7b0071b",
+      "length": 17523,
+      "seen": "2026-09-24"
+    },
+    "https://shop.ledger.com/pages/clear-signing": {
+      "hash": "2e2a9dcba1e64252",
+      "length": 18937,
+      "seen": "2026-09-24"
+    },
+    "https://help.mbitcasino.io/en/articles/4383567-are-there-any-fees-for-deposits-and-withdrawals": {
+      "hash": "8fac4403c4a0fa58",
+      "length": 1343,
+      "seen": "2026-09-24"
+    },
+    "https://help.mbitcasino.io/en/articles/4421708-how-long-does-a-withdrawal-take-to-be-approved": {
+      "hash": "71e4a9b6951d11b4",
+      "length": 1372,
+      "seen": "2026-09-24"
+    },
+    "https://www.mbitcasino.io/promotions/crypto-welcome-bonus": {
+      "hash": "aa140197acc672ff",
+      "length": 3081,
+      "seen": "2026-09-24"
+    },
+    "https://www.mbitcasino.io/payment-methods": {
+      "hash": "d24ef83ed5fc3921",
+      "length": 2096,
+      "seen": "2026-09-24"
+    },
+    "https://www.mbitcasino.io/terms/player-terms": {
+      "hash": "2a2fb58976201d17",
+      "length": 50014,
+      "seen": "2026-09-24"
+    },
+    "https://help.mbitcasino.io/en/articles/4383566-what-are-the-minimum-and-maximum-deposit-amounts": {
+      "hash": "a2f4da51e3da97b3",
+      "length": 1467,
+      "seen": "2026-09-24"
+    },
+    "https://www.mbitcasino.io/promotions/double-the-coins": {
+      "hash": "522cd9856b769cff",
+      "length": 1916,
+      "seen": "2026-09-24"
+    },
+    "https://www.mbitcasino.io/terms/bonus-terms": {
+      "hash": "37591b6f875a0405",
+      "length": 20482,
+      "seen": "2026-09-24"
+    },
+    "https://help.mbitcasino.io/en/articles/9760513-what-is-the-weekly-deposit-match": {
+      "hash": "7c322986472f184a",
+      "length": 821,
+      "seen": "2026-09-24"
+    },
+    "https://www.mbitcasino.io/promotions/first-deposit-bonus": {
+      "hash": "1fa12f32c1274b19",
+      "length": 1880,
+      "seen": "2026-09-24"
+    },
+    "https://www.mbitcasino.io/casino-rewards-program": {
+      "hash": "a06878700ecafc54",
+      "length": 18164,
+      "seen": "2026-09-24"
+    },
+    "https://help.mbitcasino.io/en/articles/9760524-what-is-the-daily-moneyback": {
+      "hash": "57956737fded0941",
+      "length": 1126,
+      "seen": "2026-09-24"
+    },
+    "https://help.mbitcasino.io/en/articles/8423842-refer-a-friend": {
+      "hash": "d5a4b40f2dbabe2c",
+      "length": 2399,
+      "seen": "2026-09-24"
+    },
+    "https://www.mbitcasino.io/": {
+      "hash": "4e112be7931eca51",
+      "length": 19625,
+      "seen": "2026-09-24"
+    },
+    "https://metamask.io/faqs": {
+      "hash": "b9ffce2335a1114e",
+      "length": 18883,
+      "seen": "2026-09-24"
+    },
+    "https://support.metamask.io/start/user-guide-secret-recovery-phrase-password-and-private-keys/": {
+      "hash": "25804fae0bb3d475",
+      "length": 7441,
+      "seen": "2026-09-24"
+    },
+    "https://support.metamask.io/configure/wallet/security-alerts/": {
+      "hash": "87809c5018074e82",
+      "length": 9920,
+      "seen": "2026-09-24"
+    },
+    "https://github.com/MetaMask/metamask-extension": {
+      "hash": "4b0240a538d0fec7",
+      "length": 27665,
+      "seen": "2026-09-24"
+    },
+    "https://metamask.io/security/metamask-security-program": {
+      "hash": "3800102e51eb72c5",
+      "length": 8864,
+      "seen": "2026-09-24"
+    },
+    "https://metawin.com/hub/guides/deposit-play-btc-metawin/": {
+      "hash": "1ea2ce891f8cf5bb",
+      "length": 15441,
+      "seen": "2026-09-24"
+    },
+    "https://support.metamask.io/trade/swap/user-guide-swaps/": {
+      "hash": "4971b10637f71dc3",
+      "length": 7039,
+      "seen": "2026-09-24"
+    },
+    "https://support.metamask.io/configure/networks/how-to-add-a-custom-network-rpc/": {
+      "hash": "c5f5dfc70a47b978",
+      "length": 6190,
+      "seen": "2026-09-24"
+    },
+    "https://help.metawin.com/en/articles/9453722-deposit-limits-using-web3": {
+      "hash": "06f5a82a3f025489",
+      "length": 3692,
+      "seen": "2026-09-24"
+    },
+    "https://help.metawin.com/en/articles/13827349-prize-funds": {
+      "hash": "56f00708411aa3b8",
+      "length": 4123,
+      "seen": "2026-09-24"
+    },
+    "https://help.metawin.com/en/articles/9455021-metamax-rewards": {
+      "hash": "bf7bc8d0f52c8baa",
+      "length": 7010,
+      "seen": "2026-09-24"
+    },
+    "https://metawin.com/hub/sports/": {
+      "hash": "729fc5640d0d7f94",
+      "length": 20387,
+      "seen": "2026-09-24"
+    },
+    "https://help.metawin.com/en/articles/9455035-vip-transfer": {
+      "hash": "f537c2cf904d4168",
+      "length": 2557,
+      "seen": "2026-09-24"
+    },
+    "https://help.metawin.com/en/articles/13848305-are-there-any-bonuses-available-outside-of-metamax-rewards-and-onsite-promotions-on-metawin": {
+      "hash": "35acdfe3bf5754ab",
+      "length": 4134,
+      "seen": "2026-09-24"
+    },
+    "https://metawin.com/hub/sports/american-football/super-bowl/": {
+      "hash": "972840dec2f04008",
+      "length": 16612,
+      "seen": "2026-09-24"
+    },
+    "https://www.okx.com/en-us/learn/our-mica-license": {
+      "hash": "32e235de459e1b81",
+      "length": 11892,
+      "seen": "2026-09-24"
+    },
+    "https://www.okx.com/en-us/help/why-cant-i-withdraw": {
+      "hash": "df9a349330b219be",
+      "length": 14519,
+      "seen": "2026-09-24"
+    },
+    "https://www.okx.com/en-us/proof-of-reserves": {
+      "hash": "cf1d38064e652fae",
+      "length": 13687,
+      "seen": "2026-09-24"
+    },
+    "https://www.okx.com/en-us/fees/withdrawal-info": {
+      "hash": "33878118c629e572",
+      "length": 3587,
+      "seen": "2026-09-24"
+    },
+    "https://www.okx.com/en-us/fees": {
+      "hash": "d57be198c6db3cee",
+      "length": 3605,
+      "seen": "2026-09-24"
+    },
+    "https://www.okx.com/en-us/help/introducing-usd-deposits-and-withdrawals": {
+      "hash": "7033263dc0d58942",
+      "length": 7933,
+      "seen": "2026-09-24"
+    },
+    "https://phantom.com/security": {
+      "hash": "25a9251d31b4de73",
+      "length": 1442,
+      "seen": "2026-09-24"
+    },
+    "https://phantom.com/learn/blog/security-at-phantom": {
+      "hash": "6daa2d61ecc2ba0d",
+      "length": 12300,
+      "seen": "2026-09-24"
+    },
+    "https://github.com/phantom/audit-reports": {
+      "hash": "b976781d9542ab1f",
+      "length": 3148,
+      "seen": "2026-09-24"
+    },
+    "https://help.phantom.com/articles/can-i-manually-add-a-network-to-phantom-46595961428627": {
+      "hash": "12fdf701f2e9708b",
+      "length": 1903,
+      "seen": "2026-09-24"
+    },
+    "https://help.phantom.com/articles/5985106844435": {
+      "hash": "c7bfedf036cdfc36",
+      "length": 12412,
+      "seen": "2026-09-24"
+    },
+    "https://help.phantom.com/articles/create-a-new-phantom-wallet-8071074929043": {
+      "hash": "671fc60737b1460c",
+      "length": 3026,
+      "seen": "2026-09-24"
+    },
+    "https://qzino.tech/docs/Qzino_Terms_and_Conditions.pdf": {
+      "hash": "05e61d3e87bf48c8",
+      "length": 143209,
+      "seen": "2026-09-24"
+    },
+    "https://qzino.ai/llms.txt": {
+      "hash": "90c4c43775d60ecd",
+      "length": 1470,
+      "seen": "2026-09-24"
+    },
+    "https://support.rabby.io/en/articles/14150618-how-secure-is-rabby-wallet": {
+      "hash": "19ddf4eb57444920",
+      "length": 3522,
+      "seen": "2026-09-24"
+    },
+    "https://qzino.tech/docs/Bonus_Balance_Terms_and_Conditions_04.09.26.pdf": {
+      "hash": "a4a7b60d89e8999b",
+      "length": 108469,
+      "seen": "2026-09-24"
+    },
+    "https://qzino.tech/docs/Qzino_Sports_Betting_Rules.pdf": {
+      "hash": "a8e5eb42e7e387cf",
+      "length": 468576,
+      "seen": "2026-09-24"
+    },
+    "https://support.rabby.io/en/articles/14124199-understanding-rabby-s-transaction-simulation": {
+      "hash": "8d1c05a637adc2e0",
+      "length": 3548,
+      "seen": "2026-09-24"
+    },
+    "https://support.rabby.io/en/articles/14120079-what-is-rabby-wallet": {
+      "hash": "20b7b71b13b8ad6b",
+      "length": 1645,
+      "seen": "2026-09-24"
+    },
+    "https://support.rabby.io/en/articles/14120234-getting-started-with-rabby-extension": {
+      "hash": "bb200946616eba26",
+      "length": 3153,
+      "seen": "2026-09-24"
+    },
+    "https://github.com/RabbyHub/Rabby": {
+      "hash": "a2594bf98bcc1bfd",
+      "length": 8686,
+      "seen": "2026-09-24"
+    },
+    "https://support.rabby.io/en/articles/14134156-how-to-use-rabby-swap": {
+      "hash": "74e96526aaaf38f5",
+      "length": 4417,
+      "seen": "2026-09-24"
+    },
+    "https://github.com/RabbyHub/Rabby/tree/develop/audits": {
+      "hash": "b2fc4d49f33ac20f",
+      "length": 2874,
+      "seen": "2026-09-24"
+    },
+    "https://help.rainbet.com/en/articles/15253793-calendar-rewards": {
+      "hash": "293046969c2197a8",
+      "length": 3528,
+      "seen": "2026-09-24"
+    },
+    "https://help.rainbet.com/en/articles/15265421-vip-program": {
+      "hash": "65f22b4fbd03a948",
+      "length": 2450,
+      "seen": "2026-09-24"
+    },
+    "https://help.rainbet.com/en/articles/9171035-rewards-overview": {
+      "hash": "607bf74786578ef7",
+      "length": 3812,
+      "seen": "2026-09-24"
+    },
+    "https://verification.anjouangamingboard.org/validate?domain=rainbet.com&seal_id=bb1e239badc7447877a76594d7ae6858a8f9822770ab5f171f95c6004550f72a3b73a0497133eaab2c6af36e3fd68090&stamp=e561d596bdee644d17216071bcf9b0b2": {
+      "hash": "a1128568922b6cdc",
+      "length": 3036,
+      "seen": "2026-09-24"
+    },
+    "https://help.razed.com/en/articles/8777871-cryptocurrency-withdrawal-limits": {
+      "hash": "20baf88d51a6548b",
+      "length": 1348,
+      "seen": "2026-09-24"
+    },
+    "https://help.razed.com/en/articles/9086615-why-is-cash-out-not-available": {
+      "hash": "ee270308bc99da39",
+      "length": 1739,
+      "seen": "2026-09-24"
+    },
+    "https://help.razed.com/en/articles/9079076-razed-com-vip-program-overview": {
+      "hash": "a41ae87427975246",
+      "length": 3251,
+      "seen": "2026-09-24"
+    },
+    "https://help.razed.com/en/articles/11138244-fiat-deposit-limits": {
+      "hash": "e95ff057052abdcf",
+      "length": 1609,
+      "seen": "2026-09-24"
+    },
+    "https://blog.rollbit.com/rollbit-rewards-rewards-calendar/": {
+      "hash": "034f3ca2f02f94d4",
+      "length": 6856,
+      "seen": "2026-09-24"
+    },
+    "https://blog.rollbit.com/sports-event-of-the-week-esports/": {
+      "hash": "a78f812f709d6145",
+      "length": 3902,
+      "seen": "2026-09-24"
+    },
+    "https://blog.rollbit.com/soccer-2-up-early-payout-2/": {
+      "hash": "359c364b0b0e7553",
+      "length": 2090,
+      "seen": "2026-09-24"
+    },
+    "https://help.roobet.com/en/articles/4797515-does-roobet-charge-withdrawal-fees": {
+      "hash": "6b3b19337ad2d139",
+      "length": 1073,
+      "seen": "2026-09-24"
+    },
+    "https://help.roobet.com/en/articles/4733940-i-have-not-received-my-withdrawal": {
+      "hash": "4629bed2560d9ea3",
+      "length": 1800,
+      "seen": "2026-09-24"
+    },
+    "https://help.roobet.com/en/articles/6042657-withdrawing-using-a-credit-card": {
+      "hash": "2f26fb97db76986d",
+      "length": 1027,
+      "seen": "2026-09-24"
+    },
+    "https://help.roobet.com/en/articles/6391927-how-to-deposit-using-a-credit-card": {
+      "hash": "28da06d03b0402b6",
+      "length": 3268,
+      "seen": "2026-09-24"
+    },
+    "https://help.roobet.com/en/articles/13239839-wagering-requirements": {
+      "hash": "d1fa39a56f914083",
+      "length": 1196,
+      "seen": "2026-09-24"
+    },
+    "https://help.roobet.com/en/articles/5017835-referrals-explained": {
+      "hash": "d0a71a5c8bcd5318",
+      "length": 2129,
+      "seen": "2026-09-24"
+    },
+    "https://help.roobet.com/en/articles/9546773-rewards-explained": {
+      "hash": "59428fb7a1691b74",
+      "length": 3329,
+      "seen": "2026-09-24"
+    },
+    "https://help.roobet.com/en/articles/16056273-prediction-markets": {
+      "hash": "6222136c75fe482a",
+      "length": 3567,
+      "seen": "2026-09-24"
+    },
+    "https://help.shock.com/en/articles/10070289-how-to-withdraw-tokens-from-your-wallet": {
+      "hash": "d362fad68673fad2",
+      "length": 1047,
+      "seen": "2026-09-24"
+    },
+    "https://help.shock.com/en/articles/10396330-supported-cryptocurrency-networks": {
+      "hash": "4124c5625a494d0b",
+      "length": 2944,
+      "seen": "2026-09-24"
+    },
+    "https://help.shock.com/en/articles/10070298-ranks-rewards-and-bonuses": {
+      "hash": "83f9d85521835676",
+      "length": 3105,
+      "seen": "2026-09-24"
+    },
+    "https://help.shock.com/en/articles/10070304-how-to-refer-friends-and-earn-rewards": {
+      "hash": "f91ed43dcd38d7ea",
+      "length": 1528,
+      "seen": "2026-09-24"
+    },
+    "https://shuffle.com/info/terms": {
+      "hash": "af9132470f66d520",
+      "length": 55941,
+      "seen": "2026-09-24"
+    },
+    "https://shuffle.com/": {
+      "hash": "64fb989eef98589e",
+      "length": 30118,
+      "seen": "2026-09-24"
+    },
+    "https://help.shuffle.com/en/articles/10020506-what-is-rakeback": {
+      "hash": "8427ddba1dea7de5",
+      "length": 1330,
+      "seen": "2026-09-24"
+    },
+    "https://help.shuffle.com/en/articles/6966242-assets-supported-for-deposits-and-withdrawals": {
+      "hash": "3b90e75d7be337cc",
+      "length": 1511,
+      "seen": "2026-09-24"
+    },
+    "https://help.shuffle.com/en/articles/16879186-how-to-deposit-and-withdraw-in-canadian-dollars": {
+      "hash": "53855b6752e5c955",
+      "length": 4165,
+      "seen": "2026-09-24"
+    },
+    "https://shuffle.com/blog/payment-methods": {
+      "hash": "ba4ef373aa06092f",
+      "length": 13303,
+      "seen": "2026-09-24"
+    },
+    "https://shuffle.com/vip-program": {
+      "hash": "9a153ba2ac666f74",
+      "length": 6103,
+      "seen": "2026-09-24"
+    },
+    "https://help.shuffle.com/en/articles/10020491-what-is-the-shuffle-reload-bonus": {
+      "hash": "2422218edad80a7c",
+      "length": 1912,
+      "seen": "2026-09-24"
+    },
+    "https://help.shuffle.com/en/articles/8528228-shuffle-level-up-bonus": {
+      "hash": "09fe88f0ab180d82",
+      "length": 3888,
+      "seen": "2026-09-24"
+    },
+    "https://help.shuffle.com/en/articles/10397850-weekly-100-000-leaderboard-promotion": {
+      "hash": "f4701cb65543ca11",
+      "length": 1797,
+      "seen": "2026-09-24"
+    },
+    "https://shuffle.com/promotions": {
+      "hash": "f5d7778b3a073d3c",
+      "length": 2537,
+      "seen": "2026-09-24"
+    },
+    "https://help.shuffle.com/en/articles/10024769-how-to-participate-in-the-shfl-lottery": {
+      "hash": "24054dca23ee4ceb",
+      "length": 1674,
+      "seen": "2026-09-24"
+    },
+    "https://help.shuffle.com/en/articles/8117078-challenges-terms-conditions": {
+      "hash": "a93427aac7adaec6",
+      "length": 3201,
+      "seen": "2026-09-24"
+    },
+    "https://help.shuffle.com/en/articles/6969004-shuffle-affiliate-program": {
+      "hash": "2d44ac417906ae6b",
+      "length": 2081,
+      "seen": "2026-09-24"
+    },
+    "https://shuffle.com/sports/esports": {
+      "hash": "7b27760985d4ed58",
+      "length": 6247,
+      "seen": "2026-09-24"
+    },
+    "https://shuffle.com/sports?section=all": {
+      "hash": "d1804b7fdf7c2975",
+      "length": 24876,
+      "seen": "2026-09-24"
+    },
+    "https://shuffle.com/info/deposit-bonus-tcs": {
+      "hash": "c5e236534c455593",
+      "length": 14895,
+      "seen": "2026-09-24"
+    },
+    "https://shuffle.com/info/sports": {
+      "hash": "5845a7e2cb79ae4c",
+      "length": 118817,
+      "seen": "2026-09-24"
+    },
+    "https://docs.solcasino.io/rules-and-conditions/terms-and-condition.md": {
+      "hash": "a719d7ec937af663",
+      "length": 40632,
+      "seen": "2026-09-24"
+    },
+    "https://docs.solcasino.io/faq/withdrawal-issues.md": {
+      "hash": "e34f9895bf00132a",
+      "length": 1436,
+      "seen": "2026-09-24"
+    },
+    "https://shuffle.com/info/license": {
+      "hash": "d1b150efd810acef",
+      "length": 1271,
+      "seen": "2026-09-24"
+    },
+    "https://docs.solcasino.io/promotions-and-collaborations/promotions/usd25k-weekly-race-leaderboard.md": {
+      "hash": "a98fdb3fc6cf8e62",
+      "length": 2519,
+      "seen": "2026-09-24"
+    },
+    "https://docs.solcasino.io/calendar-bonuses-and-rewards/360-deposit-bonus.md": {
+      "hash": "e8192cb7eb93406b",
+      "length": 2205,
+      "seen": "2026-09-24"
+    },
+    "https://docs.solcasino.io/promotions-and-collaborations/promotions/usd10k-weekly-raffle.md": {
+      "hash": "0694aed556dc16ef",
+      "length": 2673,
+      "seen": "2026-09-24"
+    },
+    "https://docs.solcasino.io/calendar-bonuses-and-rewards/daily-weekly-monthly-bonuses.md": {
+      "hash": "4cc705a6fe4a0de3",
+      "length": 1858,
+      "seen": "2026-09-24"
+    },
+    "https://docs.solcasino.io/calendar-bonuses-and-rewards/levels.md": {
+      "hash": "bca5fd7dfab6c105",
+      "length": 3161,
+      "seen": "2026-09-24"
+    },
+    "https://spartans.com/help-center/general-terms-and-conditions": {
+      "hash": "01f97f4c0830820b",
+      "length": 10354,
+      "seen": "2026-09-24"
+    },
+    "https://spartans.com/promotions/623905ba-a18a-4b0d-ba50-5a3e3b72135f": {
+      "hash": "fc2a226d8a82b177",
+      "length": 1169,
+      "seen": "2026-09-24"
+    },
+    "https://spartans.com/": {
+      "hash": "b17b58367e8eb2b2",
+      "length": 8409,
+      "seen": "2026-09-24"
+    },
+    "https://spartans.com/how-cashrake-works": {
+      "hash": "d1f8a5ef85f5a570",
+      "length": 1542,
+      "seen": "2026-09-24"
+    },
+    "https://spartans.com/vip-program": {
+      "hash": "03f96a7a6496bc53",
+      "length": 3708,
+      "seen": "2026-09-24"
+    },
+    "https://spartans.com/conor-benn": {
+      "hash": "2a906d3bf0f7603e",
+      "length": 2107,
+      "seen": "2026-09-24"
+    },
+    "https://spartans.com/help-center/about-us": {
+      "hash": "dd24d9febd7015f9",
+      "length": 4459,
+      "seen": "2026-09-24"
+    },
+    "https://spartans.com/help-center/kyc-policy": {
+      "hash": "9a047a771829a6ba",
+      "length": 6170,
+      "seen": "2026-09-24"
+    },
+    "https://spartans.com/help-center/sportsbook-rules-odds88": {
+      "hash": "ff2807e1444fa6cb",
+      "length": 429168,
+      "seen": "2026-09-24"
+    },
+    "https://help.stake.com/en/articles/7980945-crypto-deposit-limits": {
+      "hash": "650a5cc6f678a436",
+      "length": 1325,
+      "seen": "2026-09-24"
+    },
+    "https://help.stake.com/en/articles/4793601-crypto-what-are-the-withdrawal-limits": {
+      "hash": "dac629ea1e311383",
+      "length": 2516,
+      "seen": "2026-09-24"
+    },
+    "https://help.stake.com/en/articles/16183581-what-is-the-monthly-subscription-bonus": {
+      "hash": "81b72eb128ad71e3",
+      "length": 2670,
+      "seen": "2026-09-24"
+    },
+    "https://help.stake.com/en/articles/9946687-do-i-have-to-wager-my-weekly-bonus": {
+      "hash": "a9f6ba62000f8978",
+      "length": 1304,
+      "seen": "2026-09-24"
+    },
+    "https://help.stake.com/en/articles/4821738-what-is-rakeback": {
+      "hash": "7dbbcdc368f4ef84",
+      "length": 2992,
+      "seen": "2026-09-24"
+    },
+    "https://help.stake.com/en/articles/9968893-what-are-the-stake-vip-levels-benefits": {
+      "hash": "92f12fa7bdc4a6a5",
+      "length": 2697,
+      "seen": "2026-09-24"
+    },
+    "https://help.stake.com/en/articles/7992896-what-is-a-reload": {
+      "hash": "658df55cfea5552c",
+      "length": 3170,
+      "seen": "2026-09-24"
+    },
+    "https://help.stake.com/en/articles/9949694-what-is-a-same-game-multi": {
+      "hash": "aa6941c9a4a9ec7b",
+      "length": 1428,
+      "seen": "2026-09-24"
+    },
+    "https://help.stake.com/en/articles/9995651-how-to-get-an-affiliate-commission-with-stake": {
+      "hash": "c4b80c7cbe1d7c5c",
+      "length": 2155,
+      "seen": "2026-09-24"
+    },
+    "https://help.stake.com/en/articles/4872560-why-is-cashout-not-available-for-my-bet": {
+      "hash": "af5e4e620c5ce431",
+      "length": 2194,
+      "seen": "2026-09-24"
+    },
+    "https://help.stake.com/en/articles/5886574-proof-of-identity-acceptable-documentation": {
+      "hash": "b2ea035c4b20aafd",
+      "length": 2219,
+      "seen": "2026-09-24"
+    },
+    "https://intercom.help/thrill/en/articles/10130013-crypto-withdrawal-limits-and-fees": {
+      "hash": "8526d1c318c5802f",
+      "length": 1824,
+      "seen": "2026-09-24"
+    },
+    "https://intercom.help/thrill/en/articles/10078699-about-thrill": {
+      "hash": "8eba3d7c25937197",
+      "length": 2808,
+      "seen": "2026-09-24"
+    },
+    "https://intercom.help/thrill/en/articles/10110969-crypto-how-to-make-a-deposit-faqs": {
+      "hash": "e7cc3904071023ce",
+      "length": 3839,
+      "seen": "2026-09-24"
+    },
+    "https://intercom.help/thrill/en/articles/10353861-supported-cryptocurrencies": {
+      "hash": "ff881e8373c01c76",
+      "length": 1645,
+      "seen": "2026-09-24"
+    },
+    "https://intercom.help/thrill/en/articles/13159968-75-000-weekly-race": {
+      "hash": "2dd023e5a42c2a95",
+      "length": 1574,
+      "seen": "2026-09-24"
+    },
+    "https://intercom.help/thrill/en/articles/13544510-where-is-the-weekly-bonus-posted-and-how-do-i-claim-it": {
+      "hash": "67f930c18a8508f1",
+      "length": 1472,
+      "seen": "2026-09-24"
+    },
+    "https://intercom.help/thrill/en/articles/13545285-what-is-rakeback": {
+      "hash": "0d002dc1ab76ec47",
+      "length": 1364,
+      "seen": "2026-09-24"
+    },
+    "https://intercom.help/thrill/en/articles/11882893-what-are-the-rewards-levels-and-benefits-at-thrill": {
+      "hash": "9eb71866ce249f63",
+      "length": 2304,
+      "seen": "2026-09-24"
+    },
+    "https://intercom.help/thrill/en/articles/12305579-vip-transfer-program": {
+      "hash": "cdcd8910d8556c00",
+      "length": 2173,
+      "seen": "2026-09-24"
+    },
+    "https://intercom.help/thrill/en/articles/10587465-sportsbook-general-rules": {
+      "hash": "2a4be00c48a70b47",
+      "length": 2974,
+      "seen": "2026-09-24"
+    },
+    "https://intercom.help/thrill/en/articles/11882961-what-are-the-level-up-bonuses": {
+      "hash": "fd27aafa38071b4d",
+      "length": 1444,
+      "seen": "2026-09-24"
+    },
+    "https://intercom.help/thrill/en/articles/11464076-sportsbook-bet-types": {
+      "hash": "59e54288c459ccb8",
+      "length": 2091,
+      "seen": "2026-09-24"
+    },
+    "https://intercom.help/thrill/en/articles/11736577-refer-a-friend-and-earn-as-they-play": {
+      "hash": "7d41add5c22dde46",
+      "length": 3653,
+      "seen": "2026-09-24"
+    },
+    "https://thrill.com/": {
+      "hash": "a8863e616b43976a",
+      "length": 1637,
+      "seen": "2026-09-24"
+    },
+    "https://help.toshi.bet/en/articles/9986153-crypto-deposit-assistance": {
+      "hash": "28dda860dabd7ed2",
+      "length": 2733,
+      "seen": "2026-09-24"
+    },
+    "https://trustwallet.com/blog/security/how-trust-wallet-security-scanner-works": {
+      "hash": "088a3fdc4330ce89",
+      "length": 5411,
+      "seen": "2026-09-24"
+    },
+    "https://trustwallet.com/": {
+      "hash": "32047310a36feec5",
+      "length": 4823,
+      "seen": "2026-09-24"
+    },
+    "https://trustwallet.com/blog/security/complete-overview-of-trust-wallet-security": {
+      "hash": "76af4c6bb9cfbf50",
+      "length": 12820,
+      "seen": "2026-09-24"
+    },
+    "https://github.com/trustwallet/wallet-core": {
+      "hash": "f68c5da930b9d6fd",
+      "length": 8013,
+      "seen": "2026-09-24"
+    },
+    "https://help.vave.com/deposits/what-fees-do-i-pay-when-making-a-deposit/": {
+      "hash": "7afd1a281c63f83b",
+      "length": 819,
+      "seen": "2026-09-24"
+    },
+    "https://help.vave.com/withdrawals/": {
+      "hash": "ca99924307e8c589",
+      "length": 2808,
+      "seen": "2026-09-24"
+    },
+    "https://help.vave.com/deposits/": {
+      "hash": "6ce94e2127b92e74",
+      "length": 4733,
+      "seen": "2026-09-24"
+    },
+    "https://blog.vave.com/betting/vave-casino-sports-betting-options-odds-tips/": {
+      "hash": "b842fdada49e2c21",
+      "length": 15273,
+      "seen": "2026-09-24"
+    },
+    "https://help.vave.com/platform/do-i-need-to-send-you-any-of-my-documents/": {
+      "hash": "8109d5cc4e6c920c",
+      "length": 944,
+      "seen": "2026-09-24"
+    },
+    "https://wager.com/policy/term-and-conditions/": {
+      "hash": "2315a14bd8cb8016",
+      "length": 44812,
+      "seen": "2026-09-24"
+    },
+    "https://blog.vave.com/casino/what-are-live-dealer-games/": {
+      "hash": "ec56df9e3464eee3",
+      "length": 15792,
+      "seen": "2026-09-24"
+    },
+    "https://blog.vave.com/our-news/judd-trump-is-vaves-first-global-ambassador/": {
+      "hash": "6f901726f479ea4a",
+      "length": 3343,
+      "seen": "2026-09-24"
+    },
+    "https://wager.com/policy/aml-policy/": {
+      "hash": "ab40d8368d148fce",
+      "length": 8486,
+      "seen": "2026-09-24"
+    },
+    "https://wager.com/policy/bonus-terms-and-conditions/": {
+      "hash": "ae6193bbadab2a91",
+      "length": 9193,
+      "seen": "2026-09-24"
+    },
+    "https://wager.com/policy/terms/": {
+      "hash": "1aa80c307e60e236",
+      "length": 44813,
+      "seen": "2026-09-24"
+    },
+    "https://wager.com/promotions/vip-transfer/": {
+      "hash": "1ddfe91411feec6f",
+      "length": 2043,
+      "seen": "2026-09-24"
+    },
+    "https://whale.io/terms-and-conditions": {
+      "hash": "3fcf6a34eeb3eea0",
+      "length": 83244,
+      "seen": "2026-09-24"
+    },
+    "https://wager.com/promotions/refer-a-friend/": {
+      "hash": "05479e81a6e627f8",
+      "length": 3676,
+      "seen": "2026-09-24"
+    },
+    "https://wager.com/policy/privacy-policy/": {
+      "hash": "40b71024d4fca876",
+      "length": 7062,
+      "seen": "2026-09-24"
+    },
+    "https://help.winna.com/en/articles/10430796-making-a-withdrawal-on-winna": {
+      "hash": "ea707018da963a72",
+      "length": 2852,
+      "seen": "2026-09-24"
+    },
+    "https://help.winna.com/en/articles/15960277-deposit-via-wallet-or-exchange": {
+      "hash": "ed656a52d9c77a99",
+      "length": 2591,
+      "seen": "2026-09-24"
+    },
+    "https://help.winna.com/en/articles/10335429-acceptable-coins-for-deposits-and-withdrawals": {
+      "hash": "86d1926e98adfe08",
+      "length": 1377,
+      "seen": "2026-09-24"
+    },
+    "https://help.winna.com/en/collections/11549842-rewards-bonuses": {
+      "hash": "73a8551eaf19bdc0",
+      "length": 990,
+      "seen": "2026-09-24"
+    },
+    "https://help.winna.com/en/articles/10431169-the-winna-vip-program": {
+      "hash": "d8f14aeb49eaa0c5",
+      "length": 4149,
+      "seen": "2026-09-24"
+    },
+    "https://help.winna.com/en/articles/10495172-what-is-instant-rakeback-and-how-do-i-claim-it": {
+      "hash": "1f95331f0c2ab663",
+      "length": 2091,
+      "seen": "2026-09-24"
+    },
+    "https://help.winna.com/en/articles/10436117-the-winna-affiliate-program": {
+      "hash": "041aefeebaa79084",
+      "length": 3124,
+      "seen": "2026-09-24"
+    },
+    "https://help.winna.com/en/articles/13287757-what-are-reload-bonuses-and-how-do-i-claim-them": {
+      "hash": "adb5eb3f832a0861",
+      "length": 2357,
+      "seen": "2026-09-24"
+    },
+    "https://help.winna.com/en/articles/10436059-winna-casino-vip-transfer-overview": {
+      "hash": "2a20c946b82df247",
+      "length": 1816,
+      "seen": "2026-09-24"
+    },
+    "https://help.winna.com/en/articles/15054381-how-to-use-challenges": {
+      "hash": "8f45176e0ce74081",
+      "length": 4323,
+      "seen": "2026-09-24"
+    },
+    "https://thetgc.ca/license-holders/": {
+      "hash": "64d8ed7df75691ef",
+      "length": 7121,
+      "seen": "2026-09-24"
+    },
+    "https://help.yeet.com/en/articles/13464278-deposit-bonus-faqs": {
+      "hash": "5c8ae6e13fa775e0",
+      "length": 7339,
+      "seen": "2026-09-24"
+    },
+    "https://help.yeet.com/en/articles/12052341-deposits-withdrawals": {
+      "hash": "b5f65f5e729d45fc",
+      "length": 5153,
+      "seen": "2026-09-24"
+    },
+    "https://help.yeet.com/en/articles/12052425-offers-vip-program": {
+      "hash": "556720afa7ac87d0",
+      "length": 4264,
+      "seen": "2026-09-24"
+    },
+    "https://help.yeet.com/en/articles/14046420-instant-rakeback": {
+      "hash": "c3675a2e8c828d98",
+      "length": 2437,
+      "seen": "2026-09-24"
+    },
+    "https://help.yeet.com/en/articles/12052326-affiliate-program": {
+      "hash": "00a9651b1a893d7f",
+      "length": 4125,
+      "seen": "2026-09-24"
+    },
+    "https://help.yeet.com/en/articles/12052482-other": {
+      "hash": "e38bfb8ce5b2def4",
+      "length": 1935,
+      "seen": "2026-09-24"
+    },
+    "https://help.yeet.com/en/articles/14837668-yeet-vip-tier-match-bonus-terms-and-conditions": {
+      "hash": "2b025cb3a74a1d56",
+      "length": 5751,
+      "seen": "2026-09-24"
+    },
+    "https://help.yeet.com/en/articles/16973186-yeet-boost": {
+      "hash": "938a127da6034f6a",
+      "length": 5037,
+      "seen": "2026-09-24"
+    },
+    "https://help.yeet.com/en/articles/15692217-complaints-policy": {
+      "hash": "eba665082af820c8",
+      "length": 4539,
+      "seen": "2026-09-24"
+    },
+    "https://help.yeet.com/en/articles/12052402-license-regulation": {
+      "hash": "7baf149b9f52d6e9",
+      "length": 2677,
+      "seen": "2026-09-24"
+    },
+    "https://www.fairgambling.com/500casino": {
+      "hash": "bd900428f6f176df",
+      "length": 23901,
+      "seen": "2026-09-24"
+    },
+    "https://www.fairgambling.com/1win": {
+      "hash": "451ebba7d9918f3b",
+      "length": 26718,
+      "seen": "2026-09-24"
+    },
+    "https://www.fairgambling.com/acebet": {
+      "hash": "68181c2548693565",
+      "length": 20263,
+      "seen": "2026-09-24"
+    },
+    "https://www.fairgambling.com/betfury": {
+      "hash": "85a861495b12a583",
+      "length": 21190,
+      "seen": "2026-09-24"
+    },
+    "https://www.fairgambling.com/cloudbet": {
+      "hash": "df3b1061352501ea",
+      "length": 20269,
+      "seen": "2026-09-24"
+    },
+    "https://www.fairgambling.com/cybet": {
+      "hash": "422ea534a764eac4",
+      "length": 21648,
+      "seen": "2026-09-24"
+    },
+    "https://www.fairgambling.com/coincasino": {
+      "hash": "6c8cd3f1f730ade6",
+      "length": 15035,
+      "seen": "2026-09-24"
+    },
+    "https://www.fairgambling.com/degen": {
+      "hash": "b8cd9ad2b7ee7275",
+      "length": 18899,
+      "seen": "2026-09-24"
+    },
+    "https://www.fairgambling.com/bcgame": {
+      "hash": "d49f01d86cc5baea",
+      "length": 28884,
+      "seen": "2026-09-24"
+    },
+    "https://www.fairgambling.com/degencity": {
+      "hash": "cec2300d57f18e3d",
+      "length": 8054,
+      "seen": "2026-09-25"
+    },
+    "https://www.fairgambling.com/dicey": {
+      "hash": "7e0edc2bf3de8b7f",
+      "length": 19587,
+      "seen": "2026-09-25"
+    },
+    "https://www.fairgambling.com/duel": {
+      "hash": "3306b81733e47138",
+      "length": 21627,
+      "seen": "2026-09-25"
+    },
+    "https://www.fairgambling.com/flush": {
+      "hash": "b130f9ada881e2d5",
+      "length": 18446,
+      "seen": "2026-09-25"
+    },
+    "https://www.fairgambling.com/duelbits": {
+      "hash": "731c66f71de644e1",
+      "length": 22837,
+      "seen": "2026-09-25"
+    },
+    "https://www.fairgambling.com/dustbit": {
+      "hash": "42ca22604902f814",
+      "length": 5100,
+      "seen": "2026-09-25"
+    },
+    "https://www.fairgambling.com/gamba": {
+      "hash": "4837ae9842a37478",
+      "length": 20341,
+      "seen": "2026-09-25"
+    },
+    "https://www.fairgambling.com/housebets": {
+      "hash": "8289587996aa0bf0",
+      "length": 20178,
+      "seen": "2026-09-25"
+    },
+    "https://www.fairgambling.com/metawin": {
+      "hash": "2275fcb05630a4dc",
+      "length": 23644,
+      "seen": "2026-09-25"
+    },
+    "https://www.fairgambling.com/goated": {
+      "hash": "11f535f163c0d0fe",
+      "length": 17934,
+      "seen": "2026-09-25"
+    },
+    "https://www.fairgambling.com/jackpotbet": {
+      "hash": "0e9fbadd9afc69d2",
+      "length": 16619,
+      "seen": "2026-09-25"
+    },
+    "https://www.fairgambling.com/gamdom": {
+      "hash": "51f23243708657aa",
+      "length": 24388,
+      "seen": "2026-09-25"
+    },
+    "https://www.fairgambling.com/rainbet": {
+      "hash": "1529a8b5fecd42af",
+      "length": 23636,
+      "seen": "2026-09-25"
+    },
+    "https://www.fairgambling.com/shock": {
+      "hash": "404c0cc8c550a6c6",
+      "length": 21013,
+      "seen": "2026-09-25"
+    },
+    "https://www.fairgambling.com/roobet": {
+      "hash": "8194f80382de4ac3",
+      "length": 30669,
+      "seen": "2026-09-25"
+    },
+    "https://www.fairgambling.com/qzino": {
+      "hash": "07b753b4dcd41876",
+      "length": 21416,
+      "seen": "2026-09-25"
+    },
+    "https://www.fairgambling.com/shuffle": {
+      "hash": "d49b8f7fdb50d731",
+      "length": 23952,
+      "seen": "2026-09-25"
+    },
+    "https://www.fairgambling.com/razed": {
+      "hash": "5ebb23d311fd6081",
+      "length": 20338,
+      "seen": "2026-09-25"
+    },
+    "https://www.fairgambling.com/solcasino": {
+      "hash": "45d0a9924bbb4852",
+      "length": 23578,
+      "seen": "2026-09-25"
+    },
+    "https://www.fairgambling.com/toshibet": {
+      "hash": "89727eeddb6c326f",
+      "length": 19435,
+      "seen": "2026-09-25"
+    },
+    "https://www.fairgambling.com/winna": {
+      "hash": "dc584105cd3b3009",
+      "length": 21414,
+      "seen": "2026-09-25"
+    },
+    "https://www.fairgambling.com/thrill": {
+      "hash": "a9c6481325e72374",
+      "length": 21846,
+      "seen": "2026-09-25"
+    },
+    "https://www.fairgambling.com/stake": {
+      "hash": "1706e66842963ae9",
+      "length": 23245,
+      "seen": "2026-09-25"
+    },
+    "https://www.fairgambling.com/whaleio": {
+      "hash": "96d683e5afcd7ec7",
+      "length": 24696,
+      "seen": "2026-09-25"
+    },
+    "https://www.fairgambling.com/yeet": {
+      "hash": "37dc5972ab5e07b0",
+      "length": 31879,
+      "seen": "2026-09-25"
+    },
+    "https://www.pushgaming.com/responsible-gaming/licences-certifications/": {
+      "hash": "1bd44a9065e27ce4",
+      "length": 3416,
+      "seen": "2026-09-25"
+    },
+    "https://www.pragmaticplay.com/en/about-us/": {
+      "hash": "3d840b40e406e87e",
+      "length": 3961,
+      "seen": "2026-09-25"
+    },
+    "https://www.hacksawgroup.com/en/about/licenses/": {
+      "hash": "9b7b1c9eb6047445",
+      "length": 2892,
+      "seen": "2026-09-25"
+    },
+    "https://www.relax-gaming.com/terms/license-info": {
+      "hash": "6d7c1d4f77da0023",
+      "length": 2846,
+      "seen": "2026-09-25"
+    },
+    "https://www.evolution.com/about/licences": {
+      "hash": "744789e5237d402c",
+      "length": 9267,
+      "seen": "2026-09-25"
+    },
+    "https://www.playtech.com/about-us/": {
+      "hash": "cde30e46badf678b",
+      "length": 5446,
+      "seen": "2026-09-25"
+    },
+    "https://bgaming.com/about": {
+      "hash": "10f20075fd827b1f",
+      "length": 8925,
+      "seen": "2026-09-25"
+    },
+    "https://www.playngo.com/licences-certification": {
+      "hash": "5b1bdea29a05f60d",
+      "length": 6646,
+      "seen": "2026-09-25"
+    },
+    "https://quickspin.com/home-2/about-us/": {
+      "hash": "1c182b0baefa0901",
+      "length": 3688,
+      "seen": "2026-09-25"
+    },
+    "https://www.thunderkick.com/about/": {
+      "hash": "4dd409a9ae69c893",
+      "length": 2877,
+      "seen": "2026-09-25"
+    },
+    "https://yggdrasilgaming.com/about-us#section-11": {
+      "hash": "95a63a18747503e5",
+      "length": 7694,
+      "seen": "2026-09-25"
+    },
+    "https://www.elk-studios.com/about/": {
+      "hash": "3bb10c9357c8c324",
+      "length": 2243,
+      "seen": "2026-09-25"
+    },
+    "https://www.igt.com/explore-igt/about-igt/compliance": {
+      "hash": "eeb267ce042e94d1",
+      "length": 7571,
+      "seen": "2026-09-25"
+    },
+    "https://igaming.lnw.com/licensing-information/": {
+      "hash": "90049288dd4c3b13",
+      "length": 1669,
+      "seen": "2026-09-25"
+    },
+    "https://blueprintgaming.com/": {
+      "hash": "badf29e592ff8b13",
+      "length": 2842,
+      "seen": "2026-09-25"
+    },
+    "https://wazdan.com/our-story": {
+      "hash": "f68d12ea114561fb",
+      "length": 12215,
+      "seen": "2026-09-25"
+    },
+    "https://avatarux.com/": {
+      "hash": "cf88f6b3b9d29808",
+      "length": 6283,
+      "seen": "2026-09-25"
+    },
+    "https://www.octoplay.com/": {
+      "hash": "3a39abe0b57c763e",
+      "length": 10049,
+      "seen": "2026-09-25"
+    },
+    "https://endorphina.com/": {
+      "hash": "925027980c83810d",
+      "length": 9497,
+      "seen": "2026-09-25"
+    },
+    "https://www.pushgaming.com/games/": {
+      "hash": "3cf410977a52ba8d",
+      "length": 10007,
+      "seen": "2026-09-25"
+    },
+    "https://www.booming-games.com/": {
+      "hash": "17e200589aa70400",
+      "length": 42156,
+      "seen": "2026-09-25"
+    },
+    "https://www.hacksawgaming.com/": {
+      "hash": "6feea4d160f51c18",
+      "length": 5406,
+      "seen": "2026-09-25"
+    },
+    "https://nolimitcity.com/": {
+      "hash": "24efe198dcc45986",
+      "length": 3078,
+      "seen": "2026-09-25"
+    },
+    "https://www.printstudios.com/": {
+      "hash": "8aa2590cb033dab6",
+      "length": 3686,
+      "seen": "2026-09-25"
+    },
+    "https://www.pragmaticplay.com/en/": {
+      "hash": "68ac9e2a9c851a91",
+      "length": 6177,
+      "seen": "2026-09-25"
+    },
+    "https://nolimitcity.com/games/mental/": {
+      "hash": "7616ba33eb092dfb",
+      "length": 10314,
+      "seen": "2026-09-25"
+    },
+    "https://www.pushgaming.com/games/razor-shark.html": {
+      "hash": "cd89fabeabfb5901",
+      "length": 2786,
+      "seen": "2026-09-25"
+    },
+    "https://www.hacksawgaming.com/games/wanted-dead-or-a-wild": {
+      "hash": "ba53f21d8543cdf0",
+      "length": 4759,
+      "seen": "2026-09-25"
+    },
+    "https://www.pragmaticplay.com/en/games/sweet-bonanza-slot/": {
+      "hash": "8e27ebeae0b2e1dd",
+      "length": 1746,
+      "seen": "2026-09-25"
+    },
+    "https://www.relax-gaming.com/products/casino/moneytrain4": {
+      "hash": "806ff004ad7d49e6",
+      "length": 2103,
+      "seen": "2026-09-25"
+    },
+    "https://nolimitcity.com/games/fire-in-the-hole-2/": {
+      "hash": "a5a26d08657e34cd",
+      "length": 12534,
+      "seen": "2026-09-25"
+    },
+    "https://nolimitcity.com/games/san-quentin/": {
+      "hash": "c69d23e3bbb413c5",
+      "length": 10188,
+      "seen": "2026-09-25"
+    },
+    "https://www.hacksawgaming.com/games/le-bandit": {
+      "hash": "c22d6e56d28a173a",
+      "length": 6153,
+      "seen": "2026-09-25"
+    },
+    "https://www.pragmaticplay.com/en/games/gates-of-olympus/": {
+      "hash": "e7b4fab243547f1b",
+      "length": 1883,
+      "seen": "2026-09-25"
+    },
+    "https://www.bigtimegaming.com/games/bonanza": {
+      "hash": "c72aa03e54867474",
+      "length": 3377,
+      "seen": "2026-09-25"
+    },
+    "https://www.pragmaticplay.com/en/games/big-bass-bonanza/": {
+      "hash": "08e3781ae48f050a",
+      "length": 1788,
+      "seen": "2026-09-25"
+    },
+    "https://redtiger.com/games/gonzos-quest-megaways": {
+      "hash": "cb0c04486f1e9755",
+      "length": 3911,
+      "seen": "2026-09-25"
+    },
+    "https://www.pushgaming.com/games/jammin-jars.html": {
+      "hash": "62ef20c3b847bd86",
+      "length": 2640,
+      "seen": "2026-09-25"
+    },
+    "https://www.pragmaticplay.com/en/games/gates-of-olympus-1000/": {
+      "hash": "1e572a01dcf49738",
+      "length": 2421,
+      "seen": "2026-09-25"
+    },
+    "https://netent.com/games/divine-fortune": {
+      "hash": "f3912ead09b78589",
+      "length": 3676,
+      "seen": "2026-09-25"
+    },
+    "https://www.pragmaticplay.com/en/games/sweet-bonanza-1000/": {
+      "hash": "c3bf7f6a943f77cd",
+      "length": 1886,
+      "seen": "2026-09-25"
+    },
+    "https://www.playngo.com/games/reactoonz": {
+      "hash": "af4cb239fa37e1c0",
+      "length": 4310,
+      "seen": "2026-09-25"
+    },
+    "https://www.pragmaticplay.com/en/games/sugar-rush-1000/": {
+      "hash": "21b40deb6c7898c1",
+      "length": 2347,
+      "seen": "2026-09-25"
+    },
+    "https://www.nolimitcity.com/games/duck-hunters-2": {
+      "hash": "34b804a010abfbea",
+      "length": 10436,
+      "seen": "2026-09-25"
+    },
+    "https://www.nolimitcity.com/games/outsourced": {
+      "hash": "3741799dad9c5b0a",
+      "length": 11018,
+      "seen": "2026-09-25"
+    },
+    "https://alison.legislature.state.al.us/bill-search?tab=1": {
+      "hash": "d16de67313ea0f59",
+      "length": 2063,
+      "seen": "2026-09-25"
+    },
+    "https://www.akleg.gov/basis/Bill/Detail/34?Root=SB194": {
+      "hash": "a8f561b64e987706",
+      "length": 5126,
+      "seen": "2026-09-25"
+    },
+    "https://arkleg.state.ar.us/Bills/Detail?id=hb1861&ddBienniumSession=2025%2F2025R": {
+      "hash": "07eaf1b86d05ed5e",
+      "length": 5573,
+      "seen": "2026-09-25"
+    },
+    "https://www.akleg.gov/basis/Bill/Detail/34?Root=HB145": {
+      "hash": "2ae3fe87e221e48e",
+      "length": 5899,
+      "seen": "2026-09-25"
+    },
+    "https://sbg.colorado.gov/licensed-sports-books-and-operators": {
+      "hash": "fe473206c53a7dda",
+      "length": 1453,
+      "seen": "2026-09-25"
+    },
+    "https://arkleg.state.ar.us/Bills/Detail?id=sb524&ddBienniumSession=2025%2F2025R": {
+      "hash": "7c8489288d73e443",
+      "length": 4697,
+      "seen": "2026-09-25"
+    },
+    "https://dclottery.com/sites/default/files/2026-04/OLG-SW-Approved-Sports-Wagering-Licenses-Rev-04.30.26_0.pdf": {
+      "hash": "ba038699768a174d",
+      "length": 94609,
+      "seen": "2026-09-25"
+    },
+    "https://portal.ct.gov/dcp/news-releases-from-the-department-of-consumer-protection/2025-news-releases/sports-wagering-is-only-allowed-at-licensed-establishments-online-platforms": {
+      "hash": "2cb9883a38544eec",
+      "length": 3342,
+      "seen": "2026-09-25"
+    },
+    "https://portal.ct.gov/gaming/knowledge-base/articles/websites-and-apps": {
+      "hash": "c066584b71ab1126",
+      "length": 1797,
+      "seen": "2026-09-25"
+    },
+    "https://www.delottery.com/More/iGaming": {
+      "hash": "9e92ee3df484d803",
+      "length": 3320,
+      "seen": "2026-09-25"
+    },
+    "https://igb.illinois.gov/sports-wagering/sports-authorized-operating-sportsbooks.html": {
+      "hash": "23f1be73fde2cfa6",
+      "length": 4021,
+      "seen": "2026-09-25"
+    },
+    "https://www.ilga.gov/Legislation/BillStatus?DocNum=5034&GAID=18&DocTypeID=HB&SessionID=114&GA=104": {
+      "hash": "b3677dd8fd25c8e1",
+      "length": 4651,
+      "seen": "2026-09-25"
+    },
+    "https://www.ilga.gov/Legislation/BillStatus?DocNum=3232&GAID=18&DocTypeID=SB&SessionID=114&GA=104": {
+      "hash": "6374d29c0061e75c",
+      "length": 5010,
+      "seen": "2026-09-25"
+    },
+    "https://irgc.iowa.gov/licensing-information/sports-wagering": {
+      "hash": "539bf89a32eb0e1a",
+      "length": 5113,
+      "seen": "2026-09-25"
+    },
+    "https://www.ilga.gov/Legislation/BillStatus?DocNum=3723&GAID=18&DocTypeID=SB&SessionID=114&GA=104": {
+      "hash": "f6e63cd0996c5167",
+      "length": 5062,
+      "seen": "2026-09-25"
+    },
+    "https://www.ilga.gov/Legislation/BillStatus?DocNum=4797&GAID=18&DocTypeID=HB&SessionID=114&GA=104": {
+      "hash": "43c6d0b6ca6790ca",
+      "length": 5196,
+      "seen": "2026-09-25"
+    },
+    "https://www.in.gov/igc/sports-wagering-and-paid-fantasy-sports/swvendors/": {
+      "hash": "065ba4511538bc5a",
+      "length": 4582,
+      "seen": "2026-09-25"
+    },
+    "https://www.ilga.gov/Legislation/BillStatus?DocNum=1963&GAID=18&DocTypeID=SB&SessionID=114&GA=104": {
+      "hash": "305450c1c93b585c",
+      "length": 5260,
+      "seen": "2026-09-25"
+    },
+    "https://www.ilga.gov/Legislation/BillStatus?DocNum=3080&GAID=18&DocTypeID=HB&SessionID=114&GA=104": {
+      "hash": "be472d6281d2920b",
+      "length": 5198,
+      "seen": "2026-09-25"
+    },
+    "https://kslottery.gov/media/3kmhwh1y/sports-wagering-monthly-detail-2026-08.pdf": {
+      "hash": "36eeb05b23dd577b",
+      "length": 165824,
+      "seen": "2026-09-25"
+    },
+    "https://lgcb.dps.louisiana.gov/licensed-platforms/": {
+      "hash": "d44a643392620c8b",
+      "length": 2295,
+      "seen": "2026-09-25"
+    },
+    "https://www.legis.la.gov/legis/BillInfo.aspx?s=26rs&b=HB72&sbi=y": {
+      "hash": "e41fdec4cb87d3ba",
+      "length": 1149,
+      "seen": "2026-09-25"
+    },
+    "https://massgaming.com/about/sports-wagering-in-massachusetts/sports-wagering-licensees/": {
+      "hash": "147ffa4d7847c813",
+      "length": 6658,
+      "seen": "2026-09-25"
+    },
+    "https://www.legis.la.gov/legis/BillInfo.aspx?s=26rs&b=HB146&sbi=y": {
+      "hash": "f8bfd7e1a2836038",
+      "length": 1260,
+      "seen": "2026-09-25"
+    },
+    "https://malegislature.gov/Bills/194/S235": {
+      "hash": "15374183b2869632",
+      "length": 6048,
+      "seen": "2026-09-25"
+    },
+    "https://www.mdgaming.com/wp-content/uploads/2026/09/Licensees-for-Website_9142026.pdf": {
+      "hash": "de4cd94369f675c4",
+      "length": 64188,
+      "seen": "2026-09-25"
+    },
+    "https://mgaleg.maryland.gov/mgawebsite/Legislation/Details/sb0761?ys=2026RS": {
+      "hash": "04d0937279d2c879",
+      "length": 6160,
+      "seen": "2026-09-25"
+    },
+    "https://mgaleg.maryland.gov/mgawebsite/Legislation/Details/hb1255?ys=2026RS": {
+      "hash": "a65d7a2185c00268",
+      "length": 5874,
+      "seen": "2026-09-25"
+    },
+    "https://mgaleg.maryland.gov/mgawebsite/Legislation/Details/HB1343?ys=2026RS": {
+      "hash": "950daf7e191342b7",
+      "length": 7503,
+      "seen": "2026-09-25"
+    },
+    "https://malegislature.gov/Bills/194/H332": {
+      "hash": "a6965d41a86aa077",
+      "length": 6050,
+      "seen": "2026-09-25"
+    },
+    "https://malegislature.gov/Bills/194/H4431": {
+      "hash": "56c06b43fcbcf756",
+      "length": 6202,
+      "seen": "2026-09-25"
+    },
+    "https://mgaleg.maryland.gov/mgawebsite/Legislation/Details/sb0884?ys=2026RS": {
+      "hash": "b7ff809bf9cb7a54",
+      "length": 7474,
+      "seen": "2026-09-25"
+    },
+    "https://www.maine.gov/dps/gcu/sports-wagering": {
+      "hash": "7ae82666fec5c409",
+      "length": 3838,
+      "seen": "2026-09-25"
+    },
+    "https://mgaleg.maryland.gov/mgawebsite/Legislation/Details/sb0885?ys=2026RS": {
+      "hash": "93ff43dde66256cb",
+      "length": 7648,
+      "seen": "2026-09-25"
+    },
+    "http://billstatus.ls.state.ms.us/2026/pdf/history/HB/HB0297.xml": {
+      "hash": "7f0629e1d2097dce",
+      "length": 1981,
+      "seen": "2026-09-25"
+    },
+    "http://billstatus.ls.state.ms.us/2026/pdf/history/HB/HB1581.xml": {
+      "hash": "c72fe53ec27dc4ca",
+      "length": 6056,
+      "seen": "2026-09-25"
+    },
+    "http://billstatus.ls.state.ms.us/2026/pdf/history/HB/HB1527.xml": {
+      "hash": "3f68081829644d93",
+      "length": 4864,
+      "seen": "2026-09-25"
+    },
+    "http://billstatus.ls.state.ms.us/2026/pdf/history/HB/HB0519.xml": {
+      "hash": "1ac8cd2bdd2758f9",
+      "length": 1983,
+      "seen": "2026-09-25"
+    },
+    "http://billstatus.ls.state.ms.us/2026/pdf/history/SB/SB2249.xml": {
+      "hash": "42daa56a36df7e5f",
+      "length": 4814,
+      "seen": "2026-09-25"
+    },
+    "http://billstatus.ls.state.ms.us/2026/pdf/history/HB/HB4074.xml": {
+      "hash": "7f07830031460273",
+      "length": 6315,
+      "seen": "2026-09-25"
+    },
+    "https://ncgaming.gov/approved-licensees/": {
+      "hash": "b9e55603b7859b0c",
+      "length": 3097,
+      "seen": "2026-09-25"
+    },
+    "https://nebraskalegislature.gov/bills/view_bill.php?DocumentID=59648": {
+      "hash": "138f88e4015fe6e6",
+      "length": 3281,
+      "seen": "2026-09-25"
+    },
+    "https://nebraskalegislature.gov/bills/view_bill.php?DocumentID=58877": {
+      "hash": "78ab2e3a0250c07d",
+      "length": 4715,
+      "seen": "2026-09-25"
+    },
+    "https://ndlegis.gov/assembly/69-2025/regular/bill-overview/bo3002.html": {
+      "hash": "983ed4687198c89a",
+      "length": 6544,
+      "seen": "2026-09-25"
+    },
+    "https://nebraskalegislature.gov/bills/view_bill.php?DocumentID=58876": {
+      "hash": "20f9038ca6b7424b",
+      "length": 3369,
+      "seen": "2026-09-25"
+    },
+    "https://www.nhlottery.com/sports": {
+      "hash": "d363ad250b618ca3",
+      "length": 1457,
+      "seen": "2026-09-25"
+    },
+    "https://www.njleg.state.nj.us/bill-search/2026/A2370": {
+      "hash": "472a756ecc8bd4bf",
+      "length": 2120,
+      "seen": "2026-09-25"
+    },
+    "https://www.njleg.state.nj.us/bill-search/2026/S1500": {
+      "hash": "472a756ecc8bd4bf",
+      "length": 2120,
+      "seen": "2026-09-25"
+    },
+    "https://www.gaming.ny.gov/sports-wagering": {
+      "hash": "6fc349e052b94ccb",
+      "length": 4717,
+      "seen": "2026-09-25"
+    },
+    "https://www.njoag.gov/about/divisions-and-offices/division-of-gaming-enforcement-home/internet-gaming-sites/": {
+      "hash": "44dae7e6a4e3faac",
+      "length": 5516,
+      "seen": "2026-09-25"
+    },
+    "https://www.njoag.gov/about/divisions-and-offices/division-of-gaming-enforcement-home/sports-wagering/": {
+      "hash": "00ef60ede568f2fa",
+      "length": 5762,
+      "seen": "2026-09-25"
+    },
+    "https://dam.assets.ohio.gov/image/upload/v1788965803/casinocontrol.ohio.gov/licensing/sports%20gaming/Sports_Gaming_Proprietor_and_Services_Provider_Applicants_List_9-8-26-2_WCAG.pdf": {
+      "hash": "2a95278a36b81dd3",
+      "length": 413446,
+      "seen": "2026-09-25"
+    },
+    "https://www.oklegislature.gov/BillInfo.aspx?Bill=SB125&Session=2600": {
+      "hash": "77527063619e889d",
+      "length": 3937,
+      "seen": "2026-09-25"
+    },
+    "https://www.oklegislature.gov/BillInfo.aspx?Bill=SB585&Session=2600": {
+      "hash": "300cdc115f53ff95",
+      "length": 4836,
+      "seen": "2026-09-25"
+    },
+    "https://gamingcontrolboard.pa.gov/sites/default/files/2026-05/4.30.26%20Licensed%20Interactive%20Gaming%20Certificateholders%20and%20Authorized%20Interactive%20Gaming%20websites_.docx": {
+      "hash": "d85d012903d853c7",
+      "length": 17628,
+      "seen": "2026-09-25"
+    },
+    "https://www.palegis.us/legislation/bills/2025/hb1636": {
+      "hash": "4975522a3d1b6823",
+      "length": 3787,
+      "seen": "2026-09-25"
+    },
+    "https://www.palegis.us/legislation/bills/2025/hb2497": {
+      "hash": "4a353acae78f576c",
+      "length": 4818,
+      "seen": "2026-09-25"
+    },
+    "https://gamingcontrolboard.pa.gov/sites/default/files/2025-12/12.02.25%20Licensed%20Sports%20Wagering%20Certificateholders%20and%20Authorized%20Sportsbooks.pdf": {
+      "hash": "c5a307e184be7e70",
+      "length": 80782,
+      "seen": "2026-09-25"
+    },
+    "https://www.oregonlottery.org/sports/": {
+      "hash": "d0101631cd275e19",
+      "length": 3915,
+      "seen": "2026-09-25"
+    },
+    "https://www.rilot.com/en-us/sports-betting.html": {
+      "hash": "2712380962bfe0e1",
+      "length": 7222,
+      "seen": "2026-09-25"
+    },
+    "https://www.scstatehouse.gov/sess126_2025-2026/bills/444.htm": {
+      "hash": "202d0a27607d182d",
+      "length": 64407,
+      "seen": "2026-09-25"
+    },
+    "https://www.scstatehouse.gov/sess126_2025-2026/bills/3625.htm": {
+      "hash": "57668a7f89104b41",
+      "length": 64859,
+      "seen": "2026-09-25"
+    },
+    "https://webserver.rilegislature.gov/BillText/BillText26/SenateText26/S3118A.pdf": {
+      "hash": "11bc70868aca26f7",
+      "length": 77801,
+      "seen": "2026-09-25"
+    },
+    "https://webserver.rilegislature.gov/BillText26/HouseText26/H8186.pdf": {
+      "hash": "0891b52b9aab9ae1",
+      "length": 72616,
+      "seen": "2026-09-25"
+    },
+    "https://www.tn.gov/swac/licensees-registrants.html": {
+      "hash": "f64ca0d3e76e2f03",
+      "length": 9868,
+      "seen": "2026-09-25"
+    },
+    "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=SJR16": {
+      "hash": "584b88652d8fe316",
+      "length": 4141,
+      "seen": "2026-09-25"
+    },
+    "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HJR137": {
+      "hash": "3b49d6e51b485e99",
+      "length": 3855,
+      "seen": "2026-09-25"
+    },
+    "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=SJR65": {
+      "hash": "ccefaef8eb59e6ed",
+      "length": 3573,
+      "seen": "2026-09-25"
+    },
+    "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=HJR134": {
+      "hash": "baa4669763c81ef8",
+      "length": 3535,
+      "seen": "2026-09-25"
+    },
+    "https://capitol.texas.gov/BillLookup/History.aspx?LegSess=89R&Bill=SJR82": {
+      "hash": "0bcb7da77946c150",
+      "length": 4322,
+      "seen": "2026-09-25"
+    },
+    "https://www.valottery.com/aboutus/casinosandsportsbetting/sportsbetting": {
+      "hash": "bb75b804811c99bd",
+      "length": 44897,
+      "seen": "2026-09-25"
+    },
+    "https://assets.ctfassets.net/nm98451qj5dg/7lTFDzTClQRpAauHBroZkL/0a38176bcd3c893f03df9daf05f98049/Sports_Wagering_License_List.pdf": {
+      "hash": "4d681a71a962e6c2",
+      "length": 102421,
+      "seen": "2026-09-25"
+    },
+    "https://assets.ctfassets.net/nm98451qj5dg/1GTC5md4umN4QIzmHByEbC/d58c9e6eefe07be21a53c9673ef6ca21/i-Gaming_License_List.pdf": {
+      "hash": "c8294743b51f1d4e",
+      "length": 102888,
+      "seen": "2026-09-25"
+    },
+    "https://gaming.wyo.gov/OSW/permit-holders": {
+      "hash": "08ba9fc2f1eb7da8",
+      "length": 3041,
+      "seen": "2026-09-25"
+    },
+    "https://liquorandlottery.vermont.gov/press-release/mobile-sports-wagering-goes-live-january-11-2024": {
+      "hash": "9732ee5bb8ecc453",
+      "length": 3199,
+      "seen": "2026-09-25"
+    }
+  }
+}

@@ -121,7 +121,7 @@ async function get(url, ms = 15000) {
  */
 async function candidates(html, base) {
   const out = [];
-  for (const m of html.matchAll(/<link[^>]*>/gi)) {
+  for (const m of html.matchAll(/<link\b[^>]*>/gi)) {
     const tag = m[0];
     const rel = (tag.match(/rel=["']([^"']+)/i) ?? [])[1] ?? "";
     const href = (tag.match(/href=["']([^"']+)/i) ?? [])[1];

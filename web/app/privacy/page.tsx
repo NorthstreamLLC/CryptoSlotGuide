@@ -101,7 +101,7 @@ export default function Page() {
 
         <div style={{ marginTop: 44, padding: "24px 28px", borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
           <p style={{ margin: 0, fontSize: 14, lineHeight: 1.65, color: "#8DA0AA" }}>
-            Questions about this policy or a data request? <a href="mailto:privacy@cryptoslotguide.com" style={{ color: "#00C2CC" }}>privacy@cryptoslotguide.com</a>
+            Questions about this policy or a data request? <a href="mailto:hello@cryptoslotguide.com" style={{ color: "#00C2CC" }}>hello@cryptoslotguide.com</a>
           </p>
         </div>
       </section>

@@ -57,17 +57,23 @@ export function LogoColumns() {
   return (
     <div
       aria-hidden
+      // Desktop only: the hero stacks to one column on phones, so the columns
+      // would sit directly behind the headline instead of beside it.
+      className="csg-desktop-only"
       style={{
         position: "absolute",
         inset: 0,
         overflow: "hidden",
         pointerEvents: "none",
         // Sits behind the hero copy and the featured offer, and fades out toward
-        // the headline so it never competes with anything being read.
+        // the headline so it never competes with anything being read. The
+        // bottom stop clears well before 100% because this section runs on past
+        // the offer card into the category links — without it the tiles show
+        // through behind them.
         opacity: 0.55,
-        maskImage: "linear-gradient(90deg, transparent 0%, transparent 38%, #000 68%), linear-gradient(180deg, transparent 0%, #000 18%, #000 78%, transparent 100%)",
+        maskImage: "linear-gradient(90deg, transparent 0%, transparent 38%, #000 68%), linear-gradient(180deg, transparent 0%, #000 18%, #000 54%, transparent 80%)",
         maskComposite: "intersect",
-        WebkitMaskImage: "linear-gradient(90deg, transparent 0%, transparent 38%, #000 68%), linear-gradient(180deg, transparent 0%, #000 18%, #000 78%, transparent 100%)",
+        WebkitMaskImage: "linear-gradient(90deg, transparent 0%, transparent 38%, #000 68%), linear-gradient(180deg, transparent 0%, #000 18%, #000 54%, transparent 80%)",
         WebkitMaskComposite: "source-in",
       }}
     >

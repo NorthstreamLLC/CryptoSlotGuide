@@ -1,4 +1,5 @@
 import sweeps from "@/data/sweeps.json";
+import { inHouseOrder } from "./house-order";
 
 /**
  * US sweepstakes (social) casinos: play with Gold Coins for fun and Sweeps
@@ -32,11 +33,9 @@ export const sweepsBySlug = (slug: string) => SWEEPS.find((s) => s.slug === slug
 
 export const sweepsFact = (s: SweepsCasino, label: string) => s.facts.find((f) => f.label === label) ?? null;
 
-/** Casinos in display order: featured first, then those with an affiliate link, then A-Z. */
+/** Casinos in the site-wide house placement order (see lib/house-order.ts). */
 export function sweepsSorted(): SweepsCasino[] {
-  return [...SWEEPS]
-    .filter((s) => s.facts.length > 0)
-    .sort((a, b) => Number(!!b.featured) - Number(!!a.featured) || Number(!!b.affiliate) - Number(!!a.affiliate) || a.name.localeCompare(b.name));
+  return inHouseOrder(SWEEPS.filter((s) => s.facts.length > 0));
 }
 
 /** A short cell value from a longer fact: the first dollar or SC amount, else the first clause. */

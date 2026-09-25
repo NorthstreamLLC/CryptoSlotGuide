@@ -59,7 +59,10 @@ export default function Page() {
             <span>Casino</span>
             <span>Races & raffles</span>
             <span>Type</span>
-            <span>Welcome offer</span>
+            {/* The cell below renders each casino's headline offer, which on a
+                races page is usually rakeback or a race rather than a deposit
+                bonus — so it must not be labelled a welcome offer. */}
+            <span>Offer</span>
             <span />
           </div>
           {slugs.map((slug, i) => {

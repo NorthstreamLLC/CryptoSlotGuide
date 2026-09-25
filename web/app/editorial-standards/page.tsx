@@ -19,7 +19,8 @@ const SECTIONS: { title: string; body: string[] }[] = [
     title: "Independence from advertisers",
     body: [
       "We earn commission through affiliate links, disclosed on every page where it applies. No operator is shown a review before publication, and commission rates are kept away from the people who write reviews. If an operator we work with has poor terms or a bad record, that's what gets published.",
-      "Some operators get a featured placement, such as a spotlight on the homepage or at the top of a casino list, and that placement can reflect a commercial partnership. Featured placements are always labelled \"Featured\", show the same cited facts as the operator's profile, and never change what the profile says. Everything else on the site is listed by facts or alphabetically.",
+      "Some operators get a featured placement, such as a spotlight on the homepage or a position near the top of a casino list, and that placement can reflect a commercial partnership. Featured placements show the same cited facts as the operator's profile and never change what the profile says.",
+      "Where a list has no fact to sort on, it opens in our featured order, which is commercial. That order decides position on the page and nothing else: it is never described as a ranking, never called \"best\", and no score, payout time, wagering figure or verdict anywhere on the site is derived from it. Any list that ranks by something measured — withdrawal speed, wagering, bonus size, or your answers in the casino quiz — sorts by that measurement instead, and the sort controls above each table let you re-sort on a cited fact or A–Z at any time. An operator that doesn't qualify for a list is never placed in it: the no-KYC list, for instance, excludes our featured operators because they verify.",
     ],
   },
   {
@@ -92,7 +93,7 @@ export default function Page() {
 
         <div style={{ marginTop: 44, padding: "24px 28px", borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
           <p style={{ margin: 0, fontSize: 14, lineHeight: 1.65, color: "#8DA0AA" }}>
-            Spotted something wrong, or a conflict we haven&apos;t disclosed? <a href="mailto:editorial@cryptoslotguide.com" style={{ color: "#00C2CC" }}>editorial@cryptoslotguide.com</a>
+            Spotted something wrong, or a conflict we haven&apos;t disclosed? <a href="mailto:hello@cryptoslotguide.com" style={{ color: "#00C2CC" }}>hello@cryptoslotguide.com</a>
           </p>
         </div>
       </section>

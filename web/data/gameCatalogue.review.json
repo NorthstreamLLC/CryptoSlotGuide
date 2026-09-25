@@ -1,0 +1,752 @@
+{
+  "rtpOutOfRange": [
+    {
+      "name": "Nunchucks",
+      "studio": "NetEnt",
+      "rtpBase": "0",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Demon Beats",
+      "studio": "NetEnt",
+      "rtpBase": "0",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Speed Blackjack Pro",
+      "studio": "BGaming",
+      "rtpBase": "0",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Hot Rocket Mega Potz",
+      "studio": "BGaming",
+      "rtpBase": "0",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Noche de Almas",
+      "studio": "BGaming",
+      "rtpBase": "0",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Spider Circus Hold and Win",
+      "studio": "BGaming",
+      "rtpBase": "0",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Aviamasters 2 Halloween",
+      "studio": "BGaming",
+      "rtpBase": "0",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Chicken Halloween",
+      "studio": "BGaming",
+      "rtpBase": "0",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Red and Hot Chilli",
+      "studio": "BGaming",
+      "rtpBase": "0",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Witchcraft Riches",
+      "studio": "BGaming",
+      "rtpBase": "0",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Divine Queen: Power of Sun",
+      "studio": "BGaming",
+      "rtpBase": "0",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Phoenix Inferno",
+      "studio": "Betsoft",
+      "rtpBase": "0",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Birds in the City",
+      "studio": "Betsoft",
+      "rtpBase": "0",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "3 Pots of Venice",
+      "studio": "Betsoft",
+      "rtpBase": "0",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Rat Royale",
+      "studio": "Pragmatic Play",
+      "rtpBase": "0",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Scary Spooky Scratchy",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "55.61",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Snow Scratcher",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "52.66",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Tiger Scratch",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "50.29",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Summer Scratch",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "70.1",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Balloons",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "50.18",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Crazy Donuts",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "53.62",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Rat Riches",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "52.66",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Shave the Sheep",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "53.77",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Eggstra Cash",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "52.66",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "The Perfect Scratch",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "70.1",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Football Scratch",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "65.27",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Love is all you need",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "61",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Cash Pool",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "55.61",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Lucky Numbers x20",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "69.14",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Double Salary 1 Year",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "60.2",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Cash Scratch",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "50.29",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Koi Cash",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "71.76",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Gold Coins",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "61",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Frogs Scratch",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "65.27",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Break the ICE",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "66.53",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Scratch'em",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "55.61",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Cut the GRASS",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "75",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Shave the BEARD",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "75.32",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "It's Bananas",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "64.73",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Lucky Numbers x16",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "68.89",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Diamond Rush",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "59.21",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Dream Car Urban",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "68.17",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Lucky Numbers x12",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "68.38",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Lucky Numbers x8",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "64.4",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Cash Vault II",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "65.2",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Cash Vault I",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "65.45",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Lucky Shot",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "64.9",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Ruby Rush",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "59.21",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Gold Rush",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "58.67",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Dream Car Speed",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "66.07",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Dream Car SUV",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "65.95",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Prince Treasure",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "55.03",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Scratchy",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "55.17",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Queen Treasure",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "56.7",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "King Treasure",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "53.11",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Scratchy Big",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "59",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Scratchy Mini",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "50.38",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Bronze scratch",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "68.1",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Silver Scratch",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "70.1",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Gold Scratch",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "73.41",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    },
+    {
+      "name": "Platinum Scratch",
+      "studio": "Hacksaw Gaming",
+      "rtpBase": "76.67",
+      "why": "rtpBase outside 80–100 is not a slot RTP (0 usually means 'unknown' in this export)."
+    }
+  ],
+  "notImported": [
+    {
+      "name": "Cross The Lake",
+      "studio": "Unoriginals",
+      "why": "No studio of this name could be found anywhere, official or otherwise. It is NOT a Hacksaw OpenRGS partner — Hacksaw's own releases name those studios and this is not among them. The likely intended studio is 'The Originals', named on juiceplay.com as Juice Play's in-house house-and-instant-games studio, 22 titles at launch, most at 97.7% RTP; that profile matches the rows credited here, which are house and table games (Crash, Plinko, Mines, Hi-Lo, Keno, Limbo, Wheel, Roulette, Baccarat, Video Poker). Treat the name as unconfirmed until the operator states it."
+    },
+    {
+      "name": "Win Blaster Christmas Edition",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Sunny Sevens",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "The Book Beyond",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Take 5 Christmas Edition",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Take 5 RHFP",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Win Shooter",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Sevens Fire",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Shoguns Secret",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Royal Seven XXL RHFP",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Royal Seven XXL",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Royal Seven Ultra",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Royal Seven",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Ramses Book ROAR",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Ramses Book RHFP",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Royal Seven Flaming Link",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Royal Seven GONI",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Stacks Of Jacks",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Ramses Book",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Pharaos Riches",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Mighty Dragon",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Magic Stone",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Land of Heroes GONI",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Mayan Fire",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Phantoms Mirror",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Maaax Diamonds Christmas Edition",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Ramses Book Christmas Edition",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Maaax Diamonds Deluxe",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "La Dolce Vita 2",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Fruit Mania Flaming Link",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Fruit Love",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Explodiac RHFP",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Glamorous Times",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Forever Diamonds",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Football Super Spins",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Fancy Fruits ROAR",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Fancy Fruits GONI",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Fancy Fruits Flaming Link",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Duck Shooter",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Dragon of the Princess",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Back to the Fruits",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Beer Party",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Crystal Ball Multi Symbols",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Divine Fire",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Crystal Ball Flaming Link",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Books and Pearls",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Book of Elements",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Black Beauty",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Crystal Ball RHFP",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "20 Ember Wilds",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "20 Flaring Fruits",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "40 Finest XXL",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Ancient Magic",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Ancient Riches RHFP",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "5 Ember Wilds",
+      "studio": "BulBul",
+      "why": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry."
+    },
+    {
+      "name": "Backlash",
+      "studio": "Betby Sportsbook",
+      "why": "Type 2 only, with no Type 1 RNG-casino authorisation, which a slot supplier would need. Its SlotBets product wraps live sports and esports markets in slot styling, which is how six wrestling and esports events reached a slots export at 99.3% 'RTP'. Excluded from slot data on this evidence."
+    },
+    {
+      "name": "B | Gladiator Championship Cup 1",
+      "studio": "Betby Sportsbook",
+      "why": "Type 2 only, with no Type 1 RNG-casino authorisation, which a slot supplier would need. Its SlotBets product wraps live sports and esports markets in slot styling, which is how six wrestling and esports events reached a slots export at 99.3% 'RTP'. Excluded from slot data on this evidence."
+    },
+    {
+      "name": "B | Warcraft Survival Battle 2026 - Season 3",
+      "studio": "Betby Sportsbook",
+      "why": "Type 2 only, with no Type 1 RNG-casino authorisation, which a slot supplier would need. Its SlotBets product wraps live sports and esports markets in slot styling, which is how six wrestling and esports events reached a slots export at 99.3% 'RTP'. Excluded from slot data on this evidence."
+    },
+    {
+      "name": "Trader",
+      "studio": "Unoriginals (F)",
+      "why": "No studio of this name could be found anywhere, official or otherwise. It is NOT a Hacksaw OpenRGS partner — Hacksaw's own releases name those studios and this is not among them. The likely intended studio is 'The Originals', named on juiceplay.com as Juice Play's in-house house-and-instant-games studio, 22 titles at launch, most at 97.7% RTP; that profile matches the rows credited here, which are house and table games (Crash, Plinko, Mines, Hi-Lo, Keno, Limbo, Wheel, Roulette, Baccarat, Video Poker). Treat the name as unconfirmed until the operator states it."
+    },
+    {
+      "name": "Slider",
+      "studio": "Unoriginals (F)",
+      "why": "No studio of this name could be found anywhere, official or otherwise. It is NOT a Hacksaw OpenRGS partner — Hacksaw's own releases name those studios and this is not among them. The likely intended studio is 'The Originals', named on juiceplay.com as Juice Play's in-house house-and-instant-games studio, 22 titles at launch, most at 97.7% RTP; that profile matches the rows credited here, which are house and table games (Crash, Plinko, Mines, Hi-Lo, Keno, Limbo, Wheel, Roulette, Baccarat, Video Poker). Treat the name as unconfirmed until the operator states it."
+    },
+    {
+      "name": "Roulette",
+      "studio": "Unoriginals (F)",
+      "why": "No studio of this name could be found anywhere, official or otherwise. It is NOT a Hacksaw OpenRGS partner — Hacksaw's own releases name those studios and this is not among them. The likely intended studio is 'The Originals', named on juiceplay.com as Juice Play's in-house house-and-instant-games studio, 22 titles at launch, most at 97.7% RTP; that profile matches the rows credited here, which are house and table games (Crash, Plinko, Mines, Hi-Lo, Keno, Limbo, Wheel, Roulette, Baccarat, Video Poker). Treat the name as unconfirmed until the operator states it."
+    },
+    {
+      "name": "Cross The Road",
+      "studio": "Unoriginals (F)",
+      "why": "No studio of this name could be found anywhere, official or otherwise. It is NOT a Hacksaw OpenRGS partner — Hacksaw's own releases name those studios and this is not among them. The likely intended studio is 'The Originals', named on juiceplay.com as Juice Play's in-house house-and-instant-games studio, 22 titles at launch, most at 97.7% RTP; that profile matches the rows credited here, which are house and table games (Crash, Plinko, Mines, Hi-Lo, Keno, Limbo, Wheel, Roulette, Baccarat, Video Poker). Treat the name as unconfirmed until the operator states it."
+    },
+    {
+      "name": "Baccarat",
+      "studio": "Unoriginals (F)",
+      "why": "No studio of this name could be found anywhere, official or otherwise. It is NOT a Hacksaw OpenRGS partner — Hacksaw's own releases name those studios and this is not among them. The likely intended studio is 'The Originals', named on juiceplay.com as Juice Play's in-house house-and-instant-games studio, 22 titles at launch, most at 97.7% RTP; that profile matches the rows credited here, which are house and table games (Crash, Plinko, Mines, Hi-Lo, Keno, Limbo, Wheel, Roulette, Baccarat, Video Poker). Treat the name as unconfirmed until the operator states it."
+    },
+    {
+      "name": "Crash",
+      "studio": "Unoriginals (F)",
+      "why": "No studio of this name could be found anywhere, official or otherwise. It is NOT a Hacksaw OpenRGS partner — Hacksaw's own releases name those studios and this is not among them. The likely intended studio is 'The Originals', named on juiceplay.com as Juice Play's in-house house-and-instant-games studio, 22 titles at launch, most at 97.7% RTP; that profile matches the rows credited here, which are house and table games (Crash, Plinko, Mines, Hi-Lo, Keno, Limbo, Wheel, Roulette, Baccarat, Video Poker). Treat the name as unconfirmed until the operator states it."
+    },
+    {
+      "name": "Blackjack",
+      "studio": "Unoriginals (F)",
+      "why": "No studio of this name could be found anywhere, official or otherwise. It is NOT a Hacksaw OpenRGS partner — Hacksaw's own releases name those studios and this is not among them. The likely intended studio is 'The Originals', named on juiceplay.com as Juice Play's in-house house-and-instant-games studio, 22 titles at launch, most at 97.7% RTP; that profile matches the rows credited here, which are house and table games (Crash, Plinko, Mines, Hi-Lo, Keno, Limbo, Wheel, Roulette, Baccarat, Video Poker). Treat the name as unconfirmed until the operator states it."
+    },
+    {
+      "name": "Diamonds",
+      "studio": "Unoriginals (F)",
+      "why": "No studio of this name could be found anywhere, official or otherwise. It is NOT a Hacksaw OpenRGS partner — Hacksaw's own releases name those studios and this is not among them. The likely intended studio is 'The Originals', named on juiceplay.com as Juice Play's in-house house-and-instant-games studio, 22 titles at launch, most at 97.7% RTP; that profile matches the rows credited here, which are house and table games (Crash, Plinko, Mines, Hi-Lo, Keno, Limbo, Wheel, Roulette, Baccarat, Video Poker). Treat the name as unconfirmed until the operator states it."
+    },
+    {
+      "name": "Hi-Lo",
+      "studio": "Unoriginals (F)",
+      "why": "No studio of this name could be found anywhere, official or otherwise. It is NOT a Hacksaw OpenRGS partner — Hacksaw's own releases name those studios and this is not among them. The likely intended studio is 'The Originals', named on juiceplay.com as Juice Play's in-house house-and-instant-games studio, 22 titles at launch, most at 97.7% RTP; that profile matches the rows credited here, which are house and table games (Crash, Plinko, Mines, Hi-Lo, Keno, Limbo, Wheel, Roulette, Baccarat, Video Poker). Treat the name as unconfirmed until the operator states it."
+    },
+    {
+      "name": "Video Poker",
+      "studio": "Unoriginals (F)",
+      "why": "No studio of this name could be found anywhere, official or otherwise. It is NOT a Hacksaw OpenRGS partner — Hacksaw's own releases name those studios and this is not among them. The likely intended studio is 'The Originals', named on juiceplay.com as Juice Play's in-house house-and-instant-games studio, 22 titles at launch, most at 97.7% RTP; that profile matches the rows credited here, which are house and table games (Crash, Plinko, Mines, Hi-Lo, Keno, Limbo, Wheel, Roulette, Baccarat, Video Poker). Treat the name as unconfirmed until the operator states it."
+    },
+    {
+      "name": "Plinko",
+      "studio": "Unoriginals (F)",
+      "why": "No studio of this name could be found anywhere, official or otherwise. It is NOT a Hacksaw OpenRGS partner — Hacksaw's own releases name those studios and this is not among them. The likely intended studio is 'The Originals', named on juiceplay.com as Juice Play's in-house house-and-instant-games studio, 22 titles at launch, most at 97.7% RTP; that profile matches the rows credited here, which are house and table games (Crash, Plinko, Mines, Hi-Lo, Keno, Limbo, Wheel, Roulette, Baccarat, Video Poker). Treat the name as unconfirmed until the operator states it."
+    },
+    {
+      "name": "Wheel",
+      "studio": "Unoriginals (F)",
+      "why": "No studio of this name could be found anywhere, official or otherwise. It is NOT a Hacksaw OpenRGS partner — Hacksaw's own releases name those studios and this is not among them. The likely intended studio is 'The Originals', named on juiceplay.com as Juice Play's in-house house-and-instant-games studio, 22 titles at launch, most at 97.7% RTP; that profile matches the rows credited here, which are house and table games (Crash, Plinko, Mines, Hi-Lo, Keno, Limbo, Wheel, Roulette, Baccarat, Video Poker). Treat the name as unconfirmed until the operator states it."
+    },
+    {
+      "name": "Keno",
+      "studio": "Unoriginals (F)",
+      "why": "No studio of this name could be found anywhere, official or otherwise. It is NOT a Hacksaw OpenRGS partner — Hacksaw's own releases name those studios and this is not among them. The likely intended studio is 'The Originals', named on juiceplay.com as Juice Play's in-house house-and-instant-games studio, 22 titles at launch, most at 97.7% RTP; that profile matches the rows credited here, which are house and table games (Crash, Plinko, Mines, Hi-Lo, Keno, Limbo, Wheel, Roulette, Baccarat, Video Poker). Treat the name as unconfirmed until the operator states it."
+    },
+    {
+      "name": "Limbo",
+      "studio": "Unoriginals (F)",
+      "why": "No studio of this name could be found anywhere, official or otherwise. It is NOT a Hacksaw OpenRGS partner — Hacksaw's own releases name those studios and this is not among them. The likely intended studio is 'The Originals', named on juiceplay.com as Juice Play's in-house house-and-instant-games studio, 22 titles at launch, most at 97.7% RTP; that profile matches the rows credited here, which are house and table games (Crash, Plinko, Mines, Hi-Lo, Keno, Limbo, Wheel, Roulette, Baccarat, Video Poker). Treat the name as unconfirmed until the operator states it."
+    },
+    {
+      "name": "Coinflip",
+      "studio": "Unoriginals (F)",
+      "why": "No studio of this name could be found anywhere, official or otherwise. It is NOT a Hacksaw OpenRGS partner — Hacksaw's own releases name those studios and this is not among them. The likely intended studio is 'The Originals', named on juiceplay.com as Juice Play's in-house house-and-instant-games studio, 22 titles at launch, most at 97.7% RTP; that profile matches the rows credited here, which are house and table games (Crash, Plinko, Mines, Hi-Lo, Keno, Limbo, Wheel, Roulette, Baccarat, Video Poker). Treat the name as unconfirmed until the operator states it."
+    },
+    {
+      "name": "WWE: SummerSlam 2026",
+      "studio": "Betby Sportsbook",
+      "why": "Type 2 only, with no Type 1 RNG-casino authorisation, which a slot supplier would need. Its SlotBets product wraps live sports and esports markets in slot styling, which is how six wrestling and esports events reached a slots export at 99.3% 'RTP'. Excluded from slot data on this evidence."
+    },
+    {
+      "name": "TNA: Rebellion",
+      "studio": "Betby Sportsbook",
+      "why": "Type 2 only, with no Type 1 RNG-casino authorisation, which a slot supplier would need. Its SlotBets product wraps live sports and esports markets in slot styling, which is how six wrestling and esports events reached a slots export at 99.3% 'RTP'. Excluded from slot data on this evidence."
+    },
+    {
+      "name": "GCW: Josh Barnett's Bloodsport XV",
+      "studio": "Betby Sportsbook",
+      "why": "Type 2 only, with no Type 1 RNG-casino authorisation, which a slot supplier would need. Its SlotBets product wraps live sports and esports markets in slot styling, which is how six wrestling and esports events reached a slots export at 99.3% 'RTP'. Excluded from slot data on this evidence."
+    }
+  ]
+}

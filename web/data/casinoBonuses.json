@@ -6,15 +6,15 @@
         "title": "Monthly Deposit Bonus",
         "category": "Deposit bonus · new users",
         "headline": "500%",
-        "subCopy": "Cumulative across 4 deposits, unlocked as you wager. Currently at its 220% first tier.",
+        "subCopy": "Cumulative across 4 deposits, unlocked as you wager. Starts at a 220% first tier.",
         "stats": [
           {
             "label": "First tier",
             "value": "220%"
           },
           {
-            "label": "Cycle resets",
-            "value": "16d 07h"
+            "label": "Cycle",
+            "value": "Resets monthly"
           }
         ],
         "asOf": "2026-09-14",

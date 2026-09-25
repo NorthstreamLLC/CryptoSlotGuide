@@ -7,6 +7,7 @@ import { breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { NextSteps } from "@/components/layout/NextSteps";
+import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
 
 /**
  * How-to page for one originals game. Edges are each casino's own published
@@ -134,6 +135,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             </Link>
           ))}
         </div>
+        <FeaturedPartner context={{ kind: "house" }} />
         <NextSteps
           steps={[
             { href: "/house-games", label: "Every house game", hint: "The originals each casino runs, with the edge it publishes." },

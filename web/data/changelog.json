@@ -145,6 +145,13 @@
  ],
  "gamdom": [
   {
+   "date": "2026-09-22",
+   "group": "Bonus terms",
+   "label": "VIP levels",
+   "from": "The Royalty Up level system has 24 levels across 8 tiers, Bronze through Opal; rank-up rewards are not automatic and must be claimed manually. Each tier has its own standing free-spins offer — Ruby 20, Silver 20, Gold 25, Emerald 25, Diamon",
+   "to": "The Royalty Up level system has 24 levels across 8 tiers, Bronze through Opal; rank-up rewards are not automatic and must be claimed manually. Each tier has its own standing free-spins offer — Ruby 20, Silver 20, Gold 25, Emerald 25, Diamon"
+  },
+  {
    "date": "2026-09-17",
    "group": "Bonus terms",
    "label": "Standing offer",
@@ -181,6 +188,27 @@
   }
  ],
  "vave": [
+  {
+   "date": "2026-09-22",
+   "group": "Coins & deposit limits",
+   "label": "Minimum deposit",
+   "from": "Per coin (help article dated 18 Sep 2023): 0.0014965 BTC or BCH, 42.18 DOGE, 0.0109934 ETH, 0.0347 LTC, 38.82 TRX, 5 USDT on TRC-20, 19.99 USDT on ERC-20, 3 USDT on Solana, 7.8 XRP",
+   "to": "Per coin: 0.0014965 BTC or BCH, 42.18 DOGE, 0.0109934 ETH, 0.0347 LTC, 38.82 TRX, 5 USDT on TRC-20, 19.99 USDT on ERC-20, 3 USDT on Solana, 7.8 XRP"
+  },
+  {
+   "date": "2026-09-22",
+   "group": "Payouts & fees",
+   "label": "Minimum withdrawal",
+   "from": "No minimum stated; a help article dated 18 Sep 2023 says there are no withdrawal limits at the moment",
+   "to": "No minimum stated; a help"
+  },
+  {
+   "date": "2026-09-22",
+   "group": "Payouts & fees",
+   "label": "Stated withdrawal time",
+   "from": "Varies by currency and method; some requests may take a few hours (help article dated 2023)",
+   "to": "Varies by currency and method; some requests may take a few hours"
+  },
   {
    "date": "2026-09-17",
    "group": "Bonus terms",
@@ -261,6 +289,20 @@
  ],
  "roobet": [
   {
+   "date": "2026-09-22",
+   "group": "Bonus terms",
+   "label": "Reload bonuses",
+   "from": "Recurring bonus schedule: a Daily Bonus that accumulates up to 72 hours and is claimable every 24 hours at midnight UTC; a Weekly Bonus released every Saturday at 7 PM EST / midnight UTC; a Monthly Bonus released on the 1st of each month at",
+   "to": "Recurring bonus schedule: a Daily Bonus that accumulates up to 72 hours and is claimable every 24 hours at midnight UTC; a Weekly Bonus released every Saturday at 7 PM EST / midnight UTC; a Monthly Bonus released on the 1st of each month at"
+  },
+  {
+   "date": "2026-09-22",
+   "group": "Bonus terms",
+   "label": "Rakeback",
+   "from": "Instant Rakeback pays a percentage of the wagered amount, claimable every 30 minutes, and never expires. Rakeboosts temporarily lift the rate: +10% for 24 hours at signup, +10% for 60 minutes on rank up, +10% for 60 minutes on each daily/we",
+   "to": "Instant Rakeback pays a percentage of the wagered amount, claimable every 30 minutes, and never expires. Rakeboosts temporarily lift the rate: +10% for 24 hours at signup, +10% for 60 minutes on rank up, +10% for 60 minutes on each daily/we"
+  },
+  {
    "date": "2026-09-18",
    "group": "Sportsbook",
    "label": "Prediction markets",
@@ -290,6 +332,13 @@
   }
  ],
  "shuffle": [
+  {
+   "date": "2026-09-22",
+   "group": "Bonus terms",
+   "label": "Leaderboards",
+   "from": "A $100,000 leaderboard resets every week, running Sunday 07:00 UTC to Sunday 07:00 UTC with a new leaderboard starting each week. Prizes go to the top 1,000 players, although only the top 20 are publicly tracked. Ranking is by total wagered",
+   "to": "A $100,000 leaderboard resets every week, running Sunday 07:00 UTC to Sunday 07:00 UTC with a new leaderboard starting each week. Prizes go to the top 1,000 players, although only the top 20 are publicly tracked. Ranking is by total wagered"
+  },
   {
    "date": "2026-09-18",
    "group": "Bonus terms",
@@ -446,6 +495,20 @@
  ],
  "winna": [
   {
+   "date": "2026-09-22",
+   "group": "Bonus terms",
+   "label": "Reload bonuses",
+   "from": "Reload Bonuses unlock at Platinum VIP level and above, run for 7 consecutive days, are sized on recent betting activity, and must be claimed manually each day - a missed day is permanently lost. Article dated January 5, 2026.",
+   "to": "Reload Bonuses unlock at Platinum VIP level and above, run for 7 consecutive days, are sized on recent betting activity, and must be claimed manually each day - a missed day is permanently lost."
+  },
+  {
+   "date": "2026-09-22",
+   "group": "Bonus terms",
+   "label": "Rakeback",
+   "from": "Instant Rakeback returns a portion of every wager and becomes claimable every 7 minutes from the VIP Center; the claimable percentage scales with VIP level and wagering activity. Article dated May 23, 2025.",
+   "to": "Instant Rakeback returns a portion of every wager and becomes claimable every 7 minutes from the VIP Center; the claimable percentage scales with VIP level and wagering activity."
+  },
+  {
    "date": "2026-09-17",
    "group": "Offer",
    "label": "Headline offer",
@@ -542,6 +605,13 @@
   }
  ],
  "500-casino": [
+  {
+   "date": "2026-09-22",
+   "group": "Bonus terms",
+   "label": "Minimum deposit",
+   "from": "The first eligible deposit over $25 triggers the Welcome Package (help article dated 5 Mar 2025)",
+   "to": "The first eligible deposit over $25 triggers the Welcome Package"
+  },
   {
    "date": "2026-09-17",
    "group": "Bonus terms",
@@ -644,6 +714,41 @@
   }
  ],
  "yeet": [
+  {
+   "date": "2026-09-22",
+   "group": "Bonus terms",
+   "label": "Reload bonuses",
+   "from": "Daily Reload calculated on the previous day's wagering, released daily at 12:30 am GMT and expiring 24 hours later. Weekly Bonus based on the previous week's wagering, released every Thursday at 12:30 am GMT, expiring 7 days after release. ",
+   "to": "Daily Reload calculated on the previous day's wagering, released daily at 12:30 am GMT and expiring 24 hours later. Weekly Bonus based on the previous week's wagering, released every Thursday at 12:30 am GMT, expiring 7 days after release. "
+  },
+  {
+   "date": "2026-09-22",
+   "group": "Bonus terms",
+   "label": "VIP levels",
+   "from": "Reward tiers run Copper, Bronze, Silver, Gold, Platinum, Jade, Diamond, Aether, The Void, Eternal, Chairman - the page says ten tiers but lists eleven. A VIP Host is unlocked at Diamond; Chairman is invite-only with access to the founding t",
+   "to": "Reward tiers run Copper, Bronze, Silver, Gold, Platinum, Jade, Diamond, Aether, The Void, Eternal, Chairman - the page says ten tiers but lists eleven. A VIP Host is unlocked at Diamond; Chairman is invite-only with access to the founding t"
+  },
+  {
+   "date": "2026-09-22",
+   "group": "Bonus terms",
+   "label": "Leaderboards",
+   "from": "Recurring $50K Weekly Chairman's Cup, in which the top 25 performers share a $50,000 prize pool. Yeet also runs a general Leaderboard that ranks top-performing players by activity across game types for exclusive rewards. Article dated May 2",
+   "to": "Recurring $50K Weekly Chairman's Cup, in which the top 25 performers share a $50,000 prize pool. Yeet also runs a general Leaderboard that ranks top-performing players by activity across game types for exclusive rewards."
+  },
+  {
+   "date": "2026-09-22",
+   "group": "Bonus terms",
+   "label": "Rakeback",
+   "from": "Instant Rakeback returns a percentage of the house edge generated by casino wagers, accrues automatically, is claimable immediately from the Rewards page and never expires. It starts at Bronze VIP level and is 5% for Bronze, Silver, Gold, P",
+   "to": "Instant Rakeback returns a percentage of the house edge generated by casino wagers, accrues automatically, is claimable immediately from the Rewards page and never expires. It starts at Bronze VIP level and is 5% for Bronze, Silver, Gold, P"
+  },
+  {
+   "date": "2026-09-22",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "100% first deposit bonus for new accounts, with a maximum bonus of $1,000 USD or crypto equivalent. Wagering is (deposit + bonus) x 35, must be completed within 90 days, maximum stake $10 per bet or spin while a bonus is active, rollover co",
+   "to": "100% first deposit bonus for new accounts, with a maximum bonus of $1,000 USD or crypto equivalent. Wagering is (deposit + bonus) x 35, must be completed within 90 days, maximum stake $10 per bet or spin while a bonus is active, rollover co"
+  },
   {
    "date": "2026-09-17",
    "group": "Bonus terms",
@@ -783,6 +888,13 @@
   }
  ],
  "acebet": [
+  {
+   "date": "2026-09-19",
+   "group": "Bonus terms",
+   "label": "Rakeback",
+   "from": "Rakeback returns a share of your wagers and the rate rises the more you play. The current rate and claim frequency are only shown on the signed-in Rewards tab, so no public figure is published. That tab also holds reload bonuses and challen",
+   "to": "Rakeback returns a share of the house edge on your wagers that rises with rank, from 5% at Bronze I to 25% at Apex (about 0.77 points per rank). It is paid across instant (claimable every 30 minutes), daily, weekly and monthly pots, and fro"
+  },
   {
    "date": "2026-09-17",
    "group": "Bonus terms",
@@ -992,6 +1104,20 @@
  ],
  "dicey": [
   {
+   "date": "2026-09-22",
+   "group": "Bonus terms",
+   "label": "Weekly raffle",
+   "from": "Rain is a recurring chat prize draw, and it drops every 30 minutes rather than weekly. Dicey seeds each pool with $25 and the community can add to it, minimum add $0.50; when the timer hits zero 10 winners are drawn at random from that roun",
+   "to": "Rain is a recurring chat prize draw, and it drops every 30 minutes rather than weekly. Dicey seeds each pool with $25 and the community can add to it, minimum add $0.50; when the timer hits zero 10 winners are drawn at random from that roun"
+  },
+  {
+   "date": "2026-09-22",
+   "group": "Bonus terms",
+   "label": "VIP levels",
+   "from": "Six rank tiers of five levels each - Bronze, Silver, Gold, Sapphire, Emerald and Holo, all I-V - earned by XP from wagering across sports and casino. Rank and XP do not decay through inactivity. Perks unlock by rank: Instant Rakeback; Daily",
+   "to": "Six rank tiers of five levels each - Bronze, Silver, Gold, Sapphire, Emerald and Holo, all I-V - earned by XP from wagering across sports and casino. Rank and XP do not decay through inactivity. Perks unlock by rank: Instant Rakeback; Daily"
+  },
+  {
    "date": "2026-09-17",
    "group": "Offer",
    "label": "Headline offer",
@@ -1104,6 +1230,27 @@
   }
  ],
  "dustbit": [
+  {
+   "date": "2026-09-22",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "An ongoing \"Community Rewards & Events\" programme totalling $1,500+ every month: a $500 monthly Discord engagement leaderboard, $600+ in monthly giveaways on Dustbit's Kick streams, and $400+ in regular Discord and Telegram giveaways. Prese",
+   "to": "An ongoing \"Community Rewards & Events\" programme totalling $1,500+ every month: a $500 monthly Discord engagement leaderboard, $600+ in monthly giveaways on Dustbit's Kick streams, and $400+ in regular Discord and Telegram giveaways. Prese"
+  },
+  {
+   "date": "2026-09-22",
+   "group": "Payouts & fees",
+   "label": "Withdrawal limits",
+   "from": "Dustbit publishes no maximum withdrawal amount and no per-day or per-month payout cap; its Terms state only that minimum and maximum withdrawal amounts appear on the website, that withdrawals go back to the deposit method where possible, an",
+   "to": "Dustbit publishes no maximum withdrawal amount and no per-day or per-month payout cap; its Terms state only that minimum and maximum withdrawal amounts appear on the website, that withdrawals go back to the deposit method where possible, an"
+  },
+  {
+   "date": "2026-09-19",
+   "group": "Bonus terms",
+   "label": "VIP transfer",
+   "from": "Request it through support with verification details; the team reviews it and lets you know when it's done",
+   "to": "Players with VIP status at another casino can ask support to transfer it. You provide a screenshot of your VIP level and account stats there, the wallet address you used for deposits and withdrawals, and the betslip link for a $0.01 bet on "
+  },
   {
    "date": "2026-09-17",
    "group": "Bonus terms",
@@ -1255,6 +1402,34 @@
  ],
  "gamba": [
   {
+   "date": "2026-09-22",
+   "group": "Bonus terms",
+   "label": "VIP levels",
+   "from": "VIP ranks are Bronze, Silver, Gold, Platinum, Diamond, Master and Immortal, each with three tiers, gated on XP: Bronze 5,000/10,000/15,000; Silver 20,000/35,000/50,000; Gold 75,000/100,000/150,000; Platinum 200,000/300,000/500,000; Diamond ",
+   "to": "VIP ranks are Bronze, Silver, Gold, Platinum, Diamond, Master and Immortal, each with three tiers, gated on XP: Bronze 5,000/10,000/15,000; Silver 20,000/35,000/50,000; Gold 75,000/100,000/150,000; Platinum 200,000/300,000/500,000; Diamond "
+  },
+  {
+   "date": "2026-09-22",
+   "group": "Bonus terms",
+   "label": "Rakeback",
+   "from": "Rakeback pays back a portion of every bet, win or lose, calculated on total wager against each game's house edge (typically around 3%) rather than on results. It can be claimed at will with a 2-minute cooldown, never expires, and is paid in",
+   "to": "Rakeback pays back a portion of every bet, win or lose, calculated on total wager against each game's house edge (typically around 3%) rather than on results. It can be claimed at will with a 2-minute cooldown, never expires, and is paid in"
+  },
+  {
+   "date": "2026-09-22",
+   "group": "Bonus terms",
+   "label": "Standing offer",
+   "from": "Daily Free Spin Wheel: hitting the daily wager target for your VIP rank unlocks one free spin per day awarding 10 Plinko balls at a random per-ball value, with winnings credited in USDT automatically and progress resetting daily. Wager targ",
+   "to": "Daily Free Spin Wheel: hitting the daily wager target for your VIP rank unlocks one free spin per day awarding 10 Plinko balls at a random per-ball value, with winnings credited in USDT automatically and progress resetting daily. Wager targ"
+  },
+  {
+   "date": "2026-09-22",
+   "group": "Payouts & fees",
+   "label": "Withdrawal limits",
+   "from": "No maximum withdrawal limit and no daily withdrawal limit. The minimum withdrawal is 1.5x the current network transaction fee, updating every 10 seconds with network conditions, and the fee is deducted from the withdrawal amount. Article da",
+   "to": "No maximum withdrawal limit and no daily withdrawal limit. The minimum withdrawal is 1.5x the current network transaction fee, updating every 10 seconds with network conditions, and the fee is deducted from the withdrawal amount."
+  },
+  {
    "date": "2026-09-17",
    "group": "Bonus terms",
    "label": "Standing offer",
@@ -1284,6 +1459,13 @@
   }
  ],
  "razed": [
+  {
+   "date": "2026-09-22",
+   "group": "Payouts & fees",
+   "label": "Withdrawal limits",
+   "from": "No maximum withdrawal on cryptocurrency; the minimum is per-coin, set by that coin's fee and shown in the cashier before confirming. For bank transfer and card withdrawals the minimum is $20 CAD and the maximum is $10,000 CAD per transactio",
+   "to": "No maximum withdrawal on cryptocurrency; the minimum is per-coin, set by that coin's fee and shown in the cashier before confirming. For bank transfer and card withdrawals the minimum is $20 CAD and the maximum is $10,000 CAD per transactio"
+  },
   {
    "date": "2026-09-16",
    "group": "Bonus terms",
@@ -1321,6 +1503,20 @@
   }
  ],
  "rollbit": [
+  {
+   "date": "2026-09-22",
+   "group": "Bonus terms",
+   "label": "Reload bonuses",
+   "from": "Three recurring bonuses feed the Rewards Calendar: a Daily Bonus claimable once per 24 hours based on wagering and P&L over the previous 72 hours; a Weekly Bonus addable once every 7 days, aimed at weekends; and a Monthly Bonus addable once",
+   "to": "Three recurring bonuses feed the Rewards Calendar: a Daily Bonus claimable once per 24 hours based on wagering and P&L over the previous 72 hours; a Weekly Bonus addable once every 7 days, aimed at weekends; and a Monthly Bonus addable once"
+  },
+  {
+   "date": "2026-09-22",
+   "group": "Bonus terms",
+   "label": "Rakeback",
+   "from": "Rollbit pays 5% rakeback on all bets, claimable every 30 minutes. Each Rewards Calendar claim — available at midnight, 8am and 4pm UTC — also grants one hour of +15% Rakeboost. Page dated 13 January 2023.",
+   "to": "Rollbit pays 5% rakeback on all bets, claimable every 30 minutes. Each Rewards Calendar claim — available at midnight, 8am and 4pm UTC — also grants one hour of +15% Rakeboost."
+  },
   {
    "date": "2026-09-18",
    "group": "Bonus terms",
@@ -1418,6 +1614,13 @@
   }
  ],
  "jackpotbet": [
+  {
+   "date": "2026-09-19",
+   "group": "Bonus terms",
+   "label": "VIP transfer",
+   "from": "Matches a VIP rank held at another casino, with instant access to its Gold loyalty rank in that offer",
+   "to": "VIPs from other casinos get 30 days to hit a wager target set at 10% of their wager elsewhere; hitting it matches their rank and pays a cash bonus as a reload: $100,000 elsewhere needs $10,000 for Gold and $105, $250,000 needs $25,000 for P"
+  },
   {
    "date": "2026-09-17",
    "group": "Bonus terms",
@@ -1611,6 +1814,34 @@
  ],
  "degencity": [
   {
+   "date": "2026-09-22",
+   "group": "Bonus terms",
+   "label": "Reload bonuses",
+   "from": "From the Card Shark rank a dedicated VIP Host is assigned who can provide weekly reloads, deposit bonuses, cashback offers and exclusive promotions and challenges. DegenCity publishes no rates or amounts for these; they are at the host's di",
+   "to": "From the Card Shark rank a dedicated VIP Host is assigned who can provide weekly reloads, deposit bonuses, cashback offers and exclusive promotions and challenges. DegenCity publishes no rates or amounts for these; they are at the host's di"
+  },
+  {
+   "date": "2026-09-22",
+   "group": "Bonus terms",
+   "label": "VIP levels",
+   "from": "Four VIP ranks by XP: Hustler (250,000-700,000 XP) with Instant Rakeback, Weekly Bonus, Monthly Bonus, Rank-Up Bonus, Tier Bonuses and Exclusive VIP Promotions; Card Shark (1,000,000-3,000,000 XP) adding a Bonus Increase and a VIP Host; Pit",
+   "to": "Four VIP ranks by XP: Hustler (250,000-700,000 XP) with Instant Rakeback, Weekly Bonus, Monthly Bonus, Rank-Up Bonus, Tier Bonuses and Exclusive VIP Promotions; Card Shark (1,000,000-3,000,000 XP) adding a Bonus Increase and a VIP Host; Pit"
+  },
+  {
+   "date": "2026-09-22",
+   "group": "Bonus terms",
+   "label": "Rakeback",
+   "from": "Three continuous rakeback streams: Instant Rakeback (a percentage of the house edge on every eligible bet, applied automatically and credited instantly), a Weekly Reward that accumulates through the week, and a Monthly Reward that accumulat",
+   "to": "Three continuous rakeback streams: Instant Rakeback (a percentage of the house edge on every eligible bet, applied automatically and credited instantly), a Weekly Reward that accumulates through the week, and a Monthly Reward that accumulat"
+  },
+  {
+   "date": "2026-09-22",
+   "group": "Payouts & fees",
+   "label": "Withdrawal limits",
+   "from": "Crypto withdrawals only. The stated conditions are a verified email address and that funds must be fully wagered at least once before a withdrawal is allowed. Withdrawals are usually processed instantly and should arrive within up to 1 hour",
+   "to": "Crypto withdrawals only. The stated conditions are a verified email address and that funds must be fully wagered at least once before a withdrawal is allowed. Withdrawals are usually processed instantly and should arrive within up to 1 hour"
+  },
+  {
    "date": "2026-09-16",
    "group": "Offer",
    "label": "Headline offer",
@@ -1672,6 +1903,34 @@
   }
  ],
  "thrill": [
+  {
+   "date": "2026-09-22",
+   "group": "Bonus terms",
+   "label": "VIP levels",
+   "from": "Thrill Rewards Program has 16 XP-based progression levels from Base (0 XP) through Bronze 10,000, Silver 50,000, Gold 100,000, Platinum I-III, Emerald I-III, Diamond I-V, to Obsidian at 1,000,000,000 XP. Sports betting earns 3 XP per $1 wag",
+   "to": "Thrill Rewards Program has 16 XP-based progression levels from Base (0 XP) through Bronze 10,000, Silver 50,000, Gold 100,000, Platinum I-III, Emerald I-III, Diamond I-V, to Obsidian at 1,000,000,000 XP. Sports betting earns 3 XP per $1 wag"
+  },
+  {
+   "date": "2026-09-22",
+   "group": "Bonus terms",
+   "label": "Leaderboards",
+   "from": "Recurring $75,000 Weekly Race: a live XP-based leaderboard across casino and sportsbook running Wednesday 2pm UTC to the following Wednesday 2pm UTC, no opt-in, prize pool split among the top 350 finishers (1st $20,000, 2nd $10,000, 3rd $6,",
+   "to": "Recurring $75,000 Weekly Race: a live XP-based leaderboard across casino and sportsbook running Wednesday 2pm UTC to the following Wednesday 2pm UTC, no opt-in, prize pool split among the top 350 finishers (1st $20,000, 2nd $10,000, 3rd $6,"
+  },
+  {
+   "date": "2026-09-22",
+   "group": "Bonus terms",
+   "label": "Rakeback",
+   "from": "Rakeback returns a percentage of the house edge on eligible Thrill casino gameplay, paid whether the player wins or loses and calculated from wager size and each game's house edge. It accrues automatically and is awarded through the platfor",
+   "to": "Rakeback returns a percentage of the house edge on eligible Thrill casino gameplay, paid whether the player wins or loses and calculated from wager size and each game's house edge. It accrues automatically and is awarded through the platfor"
+  },
+  {
+   "date": "2026-09-22",
+   "group": "Payouts & fees",
+   "label": "Withdrawal limits",
+   "from": "No maximum withdrawal limit. Minimums are per-currency and equal to the withdrawal fee for that currency (for example BTC minimum 0.00002504 with a 0.00001571 fee; USDT on Ethereum minimum 2.5 with a fee of 1). Article dated December 4, 202",
+   "to": "No maximum withdrawal limit. Minimums are per-currency and equal to the withdrawal fee for that currency (for example BTC minimum 0.00002504 with a 0.00001571 fee; USDT on Ethereum minimum 2.5 with a fee of 1)."
+  },
   {
    "date": "2026-09-17",
    "group": "Offer",

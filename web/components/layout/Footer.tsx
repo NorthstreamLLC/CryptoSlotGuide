@@ -109,6 +109,21 @@ export function Footer() {
               </span>
             ))}
           </div>
+
+          {/* The address itself, not just a link to a page carrying it — someone
+              with a correction should not have to navigate to find out where to
+              send it. Every route on /contact reaches this one inbox. */}
+          <div style={{ marginTop: 22, paddingTop: 18, borderTop: "1px solid rgba(255,255,255,.07)" }}>
+            <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#77858E", marginBottom: 8 }}>
+              Contact
+            </div>
+            <p style={{ margin: "0 0 8px", fontSize: 13, lineHeight: 1.6, color: "#8E9CA5", maxWidth: "34ch", textWrap: "pretty" }}>
+              Questions, corrections, partnerships and press all reach one inbox.
+            </p>
+            <a href="mailto:hello@cryptoslotguide.com" className="hover:!text-accent" style={{ fontSize: 13.5, fontWeight: 700, color: "#5FE3E8", overflowWrap: "anywhere" }}>
+              hello@cryptoslotguide.com
+            </a>
+          </div>
         </div>
 
         {footerCols.map((col) => (

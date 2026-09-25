@@ -6,6 +6,7 @@ import { getVerticalPage } from "@/lib/vertical-view";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { Icon } from "@/components/ui/Icon";
 import { NextSteps } from "@/components/layout/NextSteps";
+import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
 
 /**
  * One list page for /slots, /providers, /sportsbooks, /wallets, /exchanges
@@ -141,6 +142,7 @@ export function VerticalIndexPage({ kind, tabIdx = 0 }: { kind: VerticalKind; ta
             </div>
           </Link>
         </div>
+        <FeaturedPartner context={kind === "providers" || kind === "slots" ? { kind: "slots" } : kind === "sportsbooks" ? { kind: "sports" } : kind === "guides" ? { kind: "general" } : { kind: "wallet" }} />
         <NextSteps steps={INDEX_NEXT[kind]} />
       </section>
     </main>

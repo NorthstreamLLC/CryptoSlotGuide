@@ -1,0 +1,139 @@
+{
+  "checked": "2026-09-25",
+  "method": "Each studio was checked against its own website and, where a legal entity name was published, against the MGA licensee register and the Curacao Gaming Authority online-gaming register. Review, affiliate and aggregator sites were not accepted as evidence. Where a studio could only be found on those, the status is 'unverified' and that is itself the finding.",
+  "landscapeNote": "Stake's Engine platform lets any creator sign up, choose a provider name and logo, and publish games that go live on Stake, with 1,100+ creators as of September 2026. That is why one-game 'studios' with weeks-old domains now appear as named providers on crypto casinos. It is context for reading the statuses below, not a finding about any particular studio.",
+  "statuses": {
+    "licensed": "Own site, named legal entity, and a confirmed entry in a regulator's own register.",
+    "real-unlicensed": "Own site confirms the studio exists and makes games, but no regulator entry could be found for it or its stated parent.",
+    "distributor": "Sells or distributes games it does not appear to develop. The credit belongs to the originating studio.",
+    "not-a-slot-studio": "Real company, but its products are not slots. Its licence class proves it.",
+    "unverified": "No own website and no regulator entry. Findable only on affiliate and aggregator sites, which this project does not cite.",
+    "not-found": "No evidence the studio exists under this name at all.",
+    "excludedNote": "An `exclude: true` studio is kept in this file as a record of why it was checked and rejected, but none of its games are imported. Removing the entry instead would lose the reason and invite a future re-import."
+  },
+  "studios": [
+    {
+      "exportName": "Just Slots",
+      "status": "licensed",
+      "ownSite": "https://www.just-slots.com/",
+      "entity": "Just Slots Operations Limited",
+      "companyNumber": "Malta C106852",
+      "licence": "MGA/B2B/1107/2025 — B2B Critical Supply, Type 1 Gaming Services (RNG casino)",
+      "licenceUrl": "https://authorisation.mga.org.mt/verification.aspx?lang=EN&company=9f374c5d-4083-4868-a6a8-5d4b8aaf1f9e&details=1",
+      "parent": null,
+      "note": "Sugar Hell is shown on the studio's own homepage, so that attribution is confirmed. The only studio in this set holding a Type 1 licence in its own name."
+    },
+    {
+      "exportName": "Betby Sportsbook",
+      "status": "not-a-slot-studio",
+      "ownSite": "https://betby.com/",
+      "entity": "Earlybird Limited",
+      "companyNumber": "Malta C 94530",
+      "licence": "MGA/B2B/780/2020 — B2B Critical Supply, Type 2 Gaming Services (fixed-odds betting, including live betting)",
+      "licenceUrl": "https://authorisation.mga.org.mt/verification.aspx?lang=EN&company=80707197-0717-485c-8feb-c4235587a4da&details=1",
+      "parent": null,
+      "note": "Type 2 only, with no Type 1 RNG-casino authorisation, which a slot supplier would need. Its SlotBets product wraps live sports and esports markets in slot styling, which is how six wrestling and esports events reached a slots export at 99.3% 'RTP'. Excluded from slot data on this evidence.",
+      "exclude": true
+    },
+    {
+      "exportName": "BulBul",
+      "status": "distributor",
+      "ownSite": "https://www.bulbulgames.com",
+      "entity": null,
+      "companyNumber": null,
+      "licence": null,
+      "licenceUrl": null,
+      "parent": null,
+      "note": "Calls itself a 'Premium slot game distributor' in its own footer, and its About page says it distributes games rather than develops them. Its catalogue is GAMOMAT's — Books & Bulls Deluxe, Ramses Book, Crystal Ball, Roman Legion, Maaax Diamonds — and its own HTML hotlinks artwork from clientarea.gamomat.com. So games credited to BulBul most likely originate with GAMOMAT and the credit should follow the developer. Its Imprint and Privacy Policy links both 404, and the domain was registered 2026-04-20. No MGA or Curacao entry.",
+      "exclude": true
+    },
+    {
+      "exportName": "Unoriginals",
+      "status": "not-found",
+      "ownSite": null,
+      "entity": null,
+      "companyNumber": null,
+      "licence": null,
+      "licenceUrl": null,
+      "parent": null,
+      "note": "No studio of this name could be found anywhere, official or otherwise. It is NOT a Hacksaw OpenRGS partner — Hacksaw's own releases name those studios and this is not among them. The likely intended studio is 'The Originals', named on juiceplay.com as Juice Play's in-house house-and-instant-games studio, 22 titles at launch, most at 97.7% RTP; that profile matches the rows credited here, which are house and table games (Crash, Plinko, Mines, Hi-Lo, Keno, Limbo, Wheel, Roulette, Baccarat, Video Poker). Treat the name as unconfirmed until the operator states it.",
+      "exclude": true
+    },
+    {
+      "exportName": "Massive Studios",
+      "status": "real-unlicensed",
+      "ownSite": "https://www.massivestudios.io",
+      "entity": null,
+      "companyNumber": null,
+      "licence": null,
+      "licenceUrl": null,
+      "parent": "Juice Play Pty Ltd (Melbourne, Australia)",
+      "note": "Own site is a placeholder — logo, an email address, and nav links that go nowhere. Existence and titles (Drac's Stacks, the Rooster series, Magic Stacks, Ham Busters) are confirmed from the parent's own site, juiceplay.com, which names Massive as one of five studios spun out of Easygo and publicly launched as Juice on 2026-09-09. Stake-exclusive until then, with Roobet named as the first external operator. Juice's own licences page names no regulator, states 'Regulated markets: In progress', cites only GLI lab certification, and is marked 'Template pending legal review'. The MGA's 'Massive Gaming Malta Limited' is a different company.",
+      "enginePublisher": "no",
+      "engineNote": "Does not fit the self-published pattern. Parent Juice Play Pty Ltd is a five-studio group spun out of Easygo with 125+ games and a named founder, which is a different tier from an Engine creator even though it is also unlicensed."
+    },
+    {
+      "exportName": "Xposed Studios",
+      "status": "unverified",
+      "ownSite": null,
+      "entity": null,
+      "companyNumber": null,
+      "licence": null,
+      "licenceUrl": null,
+      "parent": null,
+      "note": "No official website found across 13 plausible domains, and no MGA or Curacao entry. xposed.tv belongs to the streamer Xposed (Cody Burnett) and is a Roobet affiliate and rewards site with no games-supplier section. Everything findable about the studio's games sits on affiliate and review sites only, which this project does not cite. Naming and context suggest a streamer-branded studio, which could not be confirmed from any acceptable source.",
+      "enginePublisher": "consistent",
+      "engineNote": "No site and no register entry at all, which is consistent with a self-published creator but confirms nothing."
+    },
+    {
+      "exportName": "Void Studios",
+      "status": "real-unlicensed",
+      "ownSite": "https://voidstudios.io",
+      "entity": null,
+      "companyNumber": null,
+      "licence": null,
+      "licenceUrl": null,
+      "parent": null,
+      "note": "Real branded site describing 'an independent game studio', listing one game: Mystic Wilds, 96.00% RTP, 50,000x max win, with links to its Roobet and Stake provider pages. Domain registered 2026-09-08, about two weeks old, and the site shipped unfinished — its contact address is the placeholder hello@voidstudios.example. No entity, parent or licence stated anywhere. A different, unrelated Mystic Wilds exists from Ela Games; do not conflate them.",
+      "enginePublisher": "consistent",
+      "engineNote": "Site is a shell with one game and a placeholder contact address, linking to its Stake and Roobet provider pages. It does not mention Engine, so this is unconfirmed."
+    },
+    {
+      "exportName": "Mog Labs",
+      "status": "real-unlicensed",
+      "ownSite": "https://moglabs.gg/",
+      "entity": null,
+      "companyNumber": null,
+      "licence": null,
+      "licenceUrl": null,
+      "parent": null,
+      "note": "Own site describes an independent slot studio publishing 'exclusively on Stake Engine', listing Mech Strike (96.5% RTP, 25,000x) and Vex's Lab (15,000x) — both still marked 'coming soon' on 2026-09-25, although the export dates Mech Strike to 2026-09-17. As an Engine publisher it operates under the platform's licence, not its own. No regulator entry, company number or address anywhere on its site. moglabs.com is MOG Laboratories, an unrelated Australian scientific-laser firm.",
+      "enginePublisher": "confirmed",
+      "engineNote": "Its own site: \"Independent slot studio crafting bold, high-impact games exclusively on Stake Engine.\""
+    },
+    {
+      "exportName": "Butter Slots",
+      "status": "real-unlicensed",
+      "ownSite": "https://butterslots.com/",
+      "entity": null,
+      "companyNumber": null,
+      "licence": null,
+      "licenceUrl": null,
+      "parent": null,
+      "note": "Own site lists three live titles — Viking Roosh 1000 (96.7% RTP, 50,000x), Coasters and Tommy Guns — and states distribution through Stake and Roobet, which corroborates the Coasters row. Zero corporate disclosure: no entity, company number, address, parent or regulator, and the footer reads only '© 2026 Butter Slots'. Also runs a player 'equity' giveaway inviting top wagerers to apply for ownership stakes, with no disclosed company behind it.",
+      "enginePublisher": "consistent",
+      "engineNote": "Its own site says only \"distributed on Stake and Roobet\" and names no entity, licence or address. It does not mention Engine, and Engine publishes no creator directory, so this is unconfirmed."
+    }
+  ],
+  "enginePlatform": {
+    "what": "Stake's Engine lets an individual create a named 'provider' and publish games that go live on Stake. Its own site: \"Launching a game used to require a large, trusted studio or an extensive industry network. It no longer does.\" and \"Sign in with Google, GitHub or Discord, name your provider and you are in.\" A creator picks the provider name, URL slug and logo, takes 10% of GGR or a guaranteed 7.5%, and every approved game goes live on Stake \"usually within hours of approval\". The site states 1,000+ creators.",
+    "sourceUrl": "https://stake-engine.com/",
+    "checked": "2026-09-25",
+    "whyItMatters": "A provider name on a crypto casino is not evidence of a licensed studio behind it. Engine games are hosted under the platform's own approval and infrastructure, so the creator needs no licence of its own, and the name beside a game may be one person's chosen label. This is the single most useful thing to tell a reader looking at an unfamiliar studio name, and it is why studioStatus is carried onto every game.",
+    "levels": {
+      "confirmed": "The studio's own site states it publishes on Engine.",
+      "consistent": "Fits the pattern — a thin or absent site, no entity, no licence, distribution limited to Stake and/or Roobet — but the studio does not say so and Engine publishes no creator directory, so it is not confirmed.",
+      "no": "Does not fit the pattern; a corporate studio group with its own history and catalogue."
+    }
+  }
+}

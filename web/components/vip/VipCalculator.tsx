@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import { byHouseOn } from "@/lib/house-order";
 
 export interface CalcCasino {
   slug: string;
@@ -31,7 +32,7 @@ export function VipCalculator({ casinos }: { casinos: CalcCasino[] }) {
           const next = c.ranks[idx + 1] ?? null;
           return { c, cur, next, pos: idx + 1, of: c.ranks.length, toNext: next ? next.wager - wager : 0 };
         })
-        .sort((a, b) => Number(b.c.featured) - Number(a.c.featured) || a.c.name.localeCompare(b.c.name)),
+        .sort(byHouseOn((r) => r.c)),
     [casinos, wager]
   );
 
