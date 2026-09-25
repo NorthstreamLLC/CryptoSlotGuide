@@ -115,6 +115,11 @@
       "url": "https://chumbacasino.com/apple-touch-icon.png",
       "size": "270x270",
       "fetchedAt": "2026-09-23"
+    },
+    "polymarket": {
+      "url": "https://polymarket.com/icons/apple-touch-icon.png",
+      "size": "180x180",
+      "fetchedAt": "2026-09-25"
     }
   }
 }

@@ -32,6 +32,8 @@ export const metadata = {
 };
 import { CasinoOfferList } from "@/components/casino/CasinoOfferList";
 import { raceFor, raceSlugs } from "@/lib/races";
+import { TopPicks } from "@/components/home/TopPicks";
+import { topPicks } from "@/lib/top-picks";
 
 /**
  * Ported from the HOME section of CryptoSlotGuide.dc.html (hero through
@@ -89,6 +91,7 @@ export default function HomePage() {
   const c = siteCounts;
   const featured = buildFeatured();
   const featuredOp = ops.find((o) => o.featured);
+  const picks = topPicks();
   // Featured placements first, then the fastest stated withdrawals among casinos with a cited offer.
   const topOffers = [...ops]
     .filter((o) => o.featured || (o.payoutStatedMaxMins !== undefined && !!casinoFacts(o).offer && !!casinoFacts(o).wagering && casinoFacts(o).wagering !== "See terms" && !/^advertised/i.test(casinoFacts(o).headline)))
@@ -255,10 +258,11 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Featured offer */}
-          {featuredOp && (
+          {/* Featured pick, rotating one per vertical. The casino is first on
+              load, so the card a first visit sees is unchanged. */}
+          {picks.length > 0 && (
             <div style={{ alignSelf: "center", width: "100%", maxWidth: 460, justifySelf: "end", animation: "csg-rise .5s ease both" }}>
-              <CasinoCard o={featuredOp} />
+              <TopPicks picks={picks} />
             </div>
           )}
         </div>
