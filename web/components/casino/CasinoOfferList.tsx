@@ -8,7 +8,10 @@ import { raceFor, dropFor } from "@/lib/races";
 import { isWelcomeOffer, offerKind } from "@/lib/casino-bonuses";
 
 const MONO = "var(--font-jetbrains-mono), monospace";
-const COLS = "md:grid-cols-[36px_minmax(180px,1.1fr)_minmax(220px,1.6fr)_96px_96px_96px_150px_140px]";
+// Wagering gets 140px rather than 96px: the useful values are phrases, not
+// numbers — "40x deposit + bonus", "$1 unlocked per $400 wagered" — and at
+// 96px every one of them wrapped to three lines or fell back to "See terms".
+const COLS = "md:grid-cols-[36px_minmax(170px,1fr)_minmax(210px,1.5fr)_96px_100px_140px_140px_150px]";
 
 /** Clean ranked list of casino offers: one row per casino, key numbers in columns. */
 export function CasinoOfferList({ ops }: { ops: Operator[] }) {
@@ -22,7 +25,7 @@ export function CasinoOfferList({ ops }: { ops: Operator[] }) {
         <span>Offer</span>
         <span>Withdrawals</span>
         <span>Min deposit</span>
-        <span>Wagering</span>
+        <span>KYC</span>
         <span>Coins</span>
         <span />
       </div>
@@ -107,7 +110,13 @@ function Row({ o, pos }: { o: Operator; pos: number }) {
 
       {cell("Withdrawals", c.withdrawals)}
       {cell("Min deposit", c.minDeposit)}
-      {cell(c.wageringLabel, c.wagering)}
+      {/* KYC, not wagering. A wagering column assumes a welcome bonus, and the
+          casinos at the top of this list run rakeback — the column read "None"
+          or "See terms" on most rows and earned nothing. Whether an operator
+          asks for documents is a top decision for a crypto player, we hold it
+          for all 46, and it appears nowhere else in the table. Wagering still
+          leads /bonuses, which is the page about bonuses. */}
+      {cell("KYC", c.kyc)}
 
       <div className="col-span-3 md:col-span-1">{c.coins.length ? <CoinStack tickers={c.coins} max={5} size={22} /> : <span style={{ fontSize: 12, color: "#77858E" }}>—</span>}</div>
 

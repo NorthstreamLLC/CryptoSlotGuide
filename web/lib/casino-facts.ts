@@ -47,9 +47,14 @@ function wagerHeading(wv: ReturnType<typeof wagerView>, o: Operator): string {
 function wagerLabel(wv: ReturnType<typeof wagerView>, heading: string): string | null {
   if (wv.kind === "unknown") return null;
   if (heading === "Welcome bonus" && wv.kind === "none") return "None";
-  if (wv.kind === "cited" && wv.mult === 0) return "No wagering";
+  // One spelling. The column was showing "No wagering" on one row and "None"
+  // on the next for the same thing, which reads like two different facts.
+  if (wv.kind === "cited" && wv.mult === 0) return "None";
   const label = wv.label;
-  if (label.length <= 26) return label.charAt(0).toUpperCase() + label.slice(1);
+  // 32 rather than 26: at the narrower limit BC.Game's "unlocks gradually as
+  // you wager" and 500 Casino's "$1 unlocked per $400 wagered" both fell back
+  // to "See terms", which is worse than either and which we did not need to say.
+  if (label.length <= 32) return label.charAt(0).toUpperCase() + label.slice(1);
   return "See terms";
 }
 

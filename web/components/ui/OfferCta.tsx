@@ -22,29 +22,55 @@ export function OfferCta({ o, size = "md" }: { o: Operator; size?: "sm" | "md" }
   const outbound = !!(o.affiliate && o.signupUrl);
 
   if (outbound) {
+    // The offer button and a way to read the review first. Someone who is not
+    // ready to click through to an operator should not have to hunt for the
+    // profile — the casino name links there too, but a named button is the
+    // thing people look for, and burying it costs the reader more than it
+    // gains the click.
     return (
-      <a
-        href={o.signupUrl}
-        target="_blank"
-        rel="noopener sponsored nofollow"
-        className="transition-transform hover:-translate-y-px"
-        style={{
-          flex: 1,
-          display: "inline-flex",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: 6,
-          padding: pad,
-          borderRadius: 10,
-          background: "#FFC531",
-          color: "#141007",
-          fontSize: font,
-          fontWeight: 800,
-          whiteSpace: "nowrap",
-        }}
-      >
-        Visit {o.name} <Icon name="arrow" size={size === "sm" ? 14 : 15} />
-      </a>
+      <span style={{ display: "flex", gap: 6, flex: 1, minWidth: 0 }}>
+        <a
+          href={o.signupUrl}
+          target="_blank"
+          rel="noopener sponsored nofollow"
+          className="transition-transform hover:-translate-y-px"
+          style={{
+            flex: "1 1 auto",
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: 6,
+            padding: pad,
+            borderRadius: 10,
+            background: "#FFC531",
+            color: "#141007",
+            fontSize: font,
+            fontWeight: 800,
+            whiteSpace: "nowrap",
+          }}
+        >
+          Visit {o.name} <Icon name="arrow" size={size === "sm" ? 14 : 15} />
+        </a>
+        <Link
+          href={`/casinos/${o.slug}`}
+          className="transition-colors hover:!border-white/25 hover:!text-white"
+          style={{
+            flex: "0 0 auto",
+            display: "inline-flex",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: size === "sm" ? "10px 10px" : "13px 12px",
+            borderRadius: 10,
+            border: "1px solid rgba(255,255,255,.16)",
+            color: "#9FB0B9",
+            fontSize: size === "sm" ? 12 : 13,
+            fontWeight: 600,
+            whiteSpace: "nowrap",
+          }}
+        >
+          Review
+        </Link>
+      </span>
     );
   }
 
