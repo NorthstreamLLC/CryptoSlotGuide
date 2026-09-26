@@ -25,6 +25,19 @@ export function shortAmount(f: Fact): string | null {
   return null;
 }
 
+/**
+ * A tile-sized version of wagerView's label. Keeps the qualifier wherever it
+ * fits, because the qualifier is the meaning; sends only the genuinely long
+ * ones to "See terms", where the profile carries the operator's full wording.
+ */
+function wagerLabel(wv: ReturnType<typeof wagerView>): string | null {
+  if (wv.kind === "unknown") return null;
+  if (wv.kind === "cited" && wv.mult === 0) return "No wagering";
+  const label = wv.label;
+  if (label.length <= 26) return label.charAt(0).toUpperCase() + label.slice(1);
+  return "See terms";
+}
+
 export function casinoFacts(o: Operator) {
   const f = (g: string, l: string) => getSpecFact(o.slug, g, l);
   const pv = payoutView(o);
@@ -43,7 +56,13 @@ export function casinoFacts(o: Operator) {
     fee: wdFee ? (fee === "None" ? "Free" : fee ?? "Network fee") : null,
     minDeposit: minDep ? (shortAmount(minDep) === "None" ? "No minimum" : shortAmount(minDep) ?? "See terms") : null,
     minWithdrawal: minWd ? (shortAmount(minWd) === "None" ? "No minimum" : shortAmount(minWd) ?? "See terms") : null,
-    wagering: wv.kind === "none" ? "No wagering" : wv.kind === "cited" ? (wv.mult === 0 ? "No wagering" : `${wv.mult}×`) : wv.kind === "note" ? "See terms" : null,
+    // wagerView's own wording, not a rebuild of it. Reconstructing the label
+    // as `${mult}×` dropped what the multiplier applies to, which is the half
+    // that matters: "40×" and "40× deposit + bonus" are double each other, and
+    // an operator with no bonus at all was reading "No wagering" — the
+    // opposite of "No deposit bonus". Only the genuinely long notes fall back,
+    // since a tile cannot hold 48 characters.
+    wagering: wagerLabel(wv),
     kyc: f("Compliance", "KYC policy") ? ({ none: "No KYC", tiered: "KYC at threshold", required: "KYC required" } as const)[o.kyc] : null,
     licence: f("Compliance", "Licence") ? licenceLabel(o.licence) : null,
     expiry: shortDuration(f("Bonus terms", "Expiry")),
