@@ -107,7 +107,7 @@ function Row({ o, pos }: { o: Operator; pos: number }) {
 
       {cell("Withdrawals", c.withdrawals)}
       {cell("Min deposit", c.minDeposit)}
-      {cell("Wagering", c.wagering)}
+      {cell(c.wageringLabel, c.wagering)}
 
       <div className="col-span-3 md:col-span-1">{c.coins.length ? <CoinStack tickers={c.coins} max={5} size={22} /> : <span style={{ fontSize: 12, color: "#77858E" }}>—</span>}</div>
 

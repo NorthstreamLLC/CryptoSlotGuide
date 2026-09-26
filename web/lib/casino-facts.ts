@@ -26,12 +26,27 @@ export function shortAmount(f: Fact): string | null {
 }
 
 /**
+ * What the wagering figure on a card actually refers to.
+ *
+ * "Wagering" reads as bonus wagering — the multiple you clear before a bonus
+ * can be withdrawn. For an operator with no deposit bonus that heading is
+ * wrong: Roobet's 1x is an anti-money-laundering playthrough on the deposit
+ * itself, which is why a card showing "WAGERING 1x" invited the question
+ * "1x of what?". The number was right and the heading was not.
+ */
+function wagerHeading(wv: ReturnType<typeof wagerView>, o: Operator): string {
+  if (wv.kind === "none") return "Welcome bonus";
+  return "Wagering";
+}
+
+/**
  * A tile-sized version of wagerView's label. Keeps the qualifier wherever it
  * fits, because the qualifier is the meaning; sends only the genuinely long
  * ones to "See terms", where the profile carries the operator's full wording.
  */
-function wagerLabel(wv: ReturnType<typeof wagerView>): string | null {
+function wagerLabel(wv: ReturnType<typeof wagerView>, heading: string): string | null {
   if (wv.kind === "unknown") return null;
+  if (heading === "Welcome bonus" && wv.kind === "none") return "None";
   if (wv.kind === "cited" && wv.mult === 0) return "No wagering";
   const label = wv.label;
   if (label.length <= 26) return label.charAt(0).toUpperCase() + label.slice(1);
@@ -62,7 +77,9 @@ export function casinoFacts(o: Operator) {
     // an operator with no bonus at all was reading "No wagering" — the
     // opposite of "No deposit bonus". Only the genuinely long notes fall back,
     // since a tile cannot hold 48 characters.
-    wagering: wagerLabel(wv),
+    wagering: wagerLabel(wv, wagerHeading(wv, o)),
+    /** Heading for the figure above — see wagerHeading. */
+    wageringLabel: wagerHeading(wv, o),
     kyc: f("Compliance", "KYC policy") ? ({ none: "No KYC", tiered: "KYC at threshold", required: "KYC required" } as const)[o.kyc] : null,
     licence: f("Compliance", "Licence") ? licenceLabel(o.licence) : null,
     expiry: shortDuration(f("Bonus terms", "Expiry")),

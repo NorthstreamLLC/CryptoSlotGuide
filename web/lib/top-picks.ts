@@ -47,7 +47,7 @@ function operatorPick(slug: string, category: string, cta: string): Pick | null 
     stats: [
       { label: "Withdrawals", value: c.withdrawals ?? "—" },
       { label: "Min deposit", value: c.minDeposit ?? "—" },
-      { label: "Wagering", value: c.wagering ?? "—" },
+      { label: c.wageringLabel, value: c.wagering ?? "—" },
     ],
     coins: COINS[o.slug] ?? [],
     notes,

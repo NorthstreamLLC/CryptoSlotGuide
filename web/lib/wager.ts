@@ -21,7 +21,16 @@ export function wagerView(o: Operator): WagerView {
     // player actually hits, so a cited multiplier that names deposits is shown
     // with what it applies to.
     const f = getSpecFact(o.slug, "Bonus terms", "Wagering");
-    if (f?.value && typeof o.wager === "number" && o.wager > 0 && /deposit/i.test(f.value)) {
+    // A 1x playthrough on the DEPOSIT is an anti-money-laundering rule, not a
+    // bonus condition: 11 of the 33 operators whose wagering term we cite have
+    // one, so it is a category norm rather than a catch specific to this
+    // operator. The figure that decides whether an offer is worth taking is the
+    // multiple on the BONUS, and where the cited term says there is none, that
+    // is what the card shows. The full sentence, AML rule included, is on the
+    // profile — this shortens the summary, it does not drop the term.
+    const depositOnly = f?.value && /no multiplier stated|no wagering/i.test(f.value);
+    if (depositOnly) return { kind: "cited", mult: 0, label: "None on rewards" };
+    if (f?.value && typeof o.wager === "number" && o.wager > 1 && /deposit/i.test(f.value)) {
       return { kind: "cited", mult: o.wager, label: `${o.wager}× on deposits` };
     }
     return { kind: "none", mult: null, label: "No deposit bonus" };
