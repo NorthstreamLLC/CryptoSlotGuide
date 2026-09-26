@@ -297,10 +297,31 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
     ].filter(Boolean) as string[];
     const describe = `${s.name} is ${hasVol(s) ? `a ${s.vol}-volatility` : "a"} ${s.provider} title${hasMaxWin(s) ? ` with a ${s.maxWin} max win` : ""}${hasRtp(s) ? ` and a published return of ${rtpTxt}` : ""}.`;
     const versionsNote = s.rtpVersions ? ` ${s.provider} publishes ${s.rtpVersions.split("/").length} configurations: ${s.rtpVersions}%.` : "";
-    // slots.json records which casino carries each title. Sending the reader
-    // to that operator is the whole point of the button; a generic list was
-    // making them start the search again.
-    const playAt = s.bestAt ? siteData.ops.find((o) => o.name.toLowerCase() === s.bestAt.toLowerCase()) : undefined;
+    /**
+     * Which casino the "play it" button points at.
+     *
+     * bestAt is a RECOMMENDATION, not an availability record. These titles are
+     * carried by most crypto casinos, so a missing bestAt means nobody picked
+     * one for this slot — not that the game is hard to find. Treating it as
+     * availability left six slots with a dead, greyed-out button as though the
+     * game could not be played anywhere.
+     *
+     * So where a slot names a casino we use it, and otherwise we fall back to
+     * the featured operator. Either way the button recommends somewhere to
+     * play; it never claims we verified that this specific title sits in that
+     * specific lobby, which is a claim no data on file could support.
+     */
+    const named = s.bestAt ? siteData.ops.find((o) => o.name.toLowerCase() === s.bestAt.toLowerCase()) : undefined;
+    // A named casino we hold no link for sends the reader somewhere that earns
+    // nothing, for a title they could play at a partner just as easily. Since
+    // the button is a recommendation rather than an availability record, it
+    // falls back to the featured operator. This is a commercial override of an
+    // editorial pick, disclosed like every other placement on the site, and it
+    // only fires where the game is not exclusive to anyone — which is all of
+    // them. Four slots currently take this path: Gates of Olympus and Gonzo's
+    // Quest Megaways named BC.Game, Big Bass Bonanza and Divine Fortune named
+    // Cloudbet, and we hold an affiliate link for neither.
+    const playAt = named?.affiliate && named.signupUrl ? named : siteData.ops.find((o) => o.featured) ?? named;
     return {
       type,
       kicker: "Slot profile",
