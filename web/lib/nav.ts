@@ -10,6 +10,25 @@ import { siteData } from "./site-data";
 
 const slotCatLabels = siteData.slotCatDefs.map((d) => ({ tag: d.tag, label: d.label }));
 
+/**
+ * The slots the menu features, chosen by how much the page can actually tell
+ * you rather than by hand.
+ *
+ * A title where the studio publishes every RTP configuration it licences is
+ * worth far more than one carrying a single headline figure: Reactoonz runs
+ * 96.51 down to 84.51, a twelve-point spread the lobby never shows. Those pages
+ * are the ones no competitor can write, so they are the ones worth linking.
+ * Ranked on documented versions first, then whether we know where to play it.
+ */
+const featuredSlots = [...siteData.slots]
+  .sort(
+    (a, b) =>
+      (b.rtpVersions ? 3 : 0) - (a.rtpVersions ? 3 : 0) ||
+      (b.bestAt ? 1 : 0) - (a.bestAt ? 1 : 0) ||
+      a.name.localeCompare(b.name)
+  )
+  .slice(0, 5);
+
 export interface NavLink {
   label: string;
   href: string;
@@ -104,7 +123,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
               title: "RTP tools",
               links: [
                 { label: "RTP Watch · live board", href: "/rtp-watch", dot: "#DA9877" },
-                { label: `All ${c.slots} slot reviews`, href: "/slots" },
+                { label: "Slot reviews", href: "/slots" },
                 { label: "Slot database · every game we hold", href: "/slots/database" },
                 { label: "How casino RTP versions work", href: "/guides/how-casino-rtp-versions-work" },
                 { label: "How we source information", href: "/how-we-rate" },
@@ -118,10 +137,10 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
               })),
             },
             {
-              title: "Slot profiles",
-              links: ["Money Train 4", "Sweet Bonanza", "Razor Shark", "Gates of Olympus"].map((name) => ({
-                label: name,
-                href: `/slots/${slug(name)}`,
+              title: "Slots worth reading",
+              links: featuredSlots.map((s) => ({
+                label: s.name,
+                href: `/slots/${s.slug}`,
               })),
             },
           ],
