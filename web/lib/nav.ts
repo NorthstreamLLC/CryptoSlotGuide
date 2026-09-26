@@ -11,23 +11,34 @@ import { siteData } from "./site-data";
 const slotCatLabels = siteData.slotCatDefs.map((d) => ({ tag: d.tag, label: d.label }));
 
 /**
- * The slots the menu features, chosen by how much the page can actually tell
- * you rather than by hand.
+ * The slots the menu features.
  *
- * A title where the studio publishes every RTP configuration it licences is
- * worth far more than one carrying a single headline figure: Reactoonz runs
- * 96.51 down to 84.51, a twelve-point spread the lobby never shows. Those pages
- * are the ones no competitor can write, so they are the ones worth linking.
- * Ranked on documented versions first, then whether we know where to play it.
+ * Ranking purely on how well-documented a page is put Reactoonz first — Play'n
+ * GO publishes five RTP configurations for it — but it is a 2017 title nobody
+ * is searching for, and a menu is a shop window rather than a completeness
+ * exercise. So the picks are editorial, by slug, and the data ranking below is
+ * only the fallback for anything not named here.
+ *
+ * Swap a name and the menu changes; a slug that no longer exists is skipped
+ * rather than rendering a dead link.
  */
-const featuredSlots = [...siteData.slots]
-  .sort(
-    (a, b) =>
-      (b.rtpVersions ? 3 : 0) - (a.rtpVersions ? 3 : 0) ||
-      (b.bestAt ? 1 : 0) - (a.bestAt ? 1 : 0) ||
-      a.name.localeCompare(b.name)
-  )
-  .slice(0, 5);
+const MENU_SLOTS = ["le-bandit", "wanted-dead-or-a-wild", "fire-in-the-hole-2", "razor-shark", "sugar-rush-1000"];
+
+const featuredSlots = (() => {
+  const picked = MENU_SLOTS.map((sl) => siteData.slots.find((s) => s.slug === sl)).filter((s): s is NonNullable<typeof s> => !!s);
+  if (picked.length >= 5) return picked.slice(0, 5);
+  // Top up from the data ranking: most documented RTP versions first, then
+  // whether we know which casino carries it.
+  const rest = [...siteData.slots]
+    .filter((s) => !picked.some((p) => p.slug === s.slug))
+    .sort(
+      (a, b) =>
+        (b.rtpVersions ? 3 : 0) - (a.rtpVersions ? 3 : 0) ||
+        (b.bestAt ? 1 : 0) - (a.bestAt ? 1 : 0) ||
+        a.name.localeCompare(b.name)
+    );
+  return [...picked, ...rest].slice(0, 5);
+})();
 
 export interface NavLink {
   label: string;
