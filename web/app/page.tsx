@@ -37,6 +37,7 @@ import { topPicks } from "@/lib/top-picks";
 import { CoinIcon } from "@/components/ui/CoinIcon";
 import { COUNTRIES } from "@/lib/legal";
 import { LazyLegalMap } from "@/components/home/LazyLegalMap";
+import { inHouseOrder } from "@/lib/house-order";
 
 /**
  * Ported from the HOME section of CryptoSlotGuide.dc.html (hero through
@@ -97,10 +98,20 @@ export default function HomePage() {
   const picks = topPicks();
   const countryCount = COUNTRIES.length;
   // Featured placements first, then the fastest stated withdrawals among casinos with a cited offer.
-  const topOffers = [...ops]
-    .filter((o) => o.featured || (o.payoutStatedMaxMins !== undefined && !!casinoFacts(o).offer && !!casinoFacts(o).wagering && casinoFacts(o).wagering !== "See terms" && !/^advertised/i.test(casinoFacts(o).headline)))
-    .sort((a, b) => Number(!!b.featured) - Number(!!a.featured) || (a.payoutStatedMaxMins ?? 9e9) - (b.payoutStatedMaxMins ?? 9e9) || a.name.localeCompare(b.name))
-    .slice(0, 10);
+  /**
+   * The homepage offer list, in the site-wide house order.
+   *
+   * This had its own sort — featured, then stated payout speed, then A-Z — so
+   * the most-seen list on the site ignored the placement order every other list
+   * follows. Stake came seventh, and Shuffle, Rainbet, Gamdom, BC.Game,
+   * Duelbits and 500 Casino were absent entirely: the filter dropped any
+   * casino whose wagering reads "See terms", which is most of them.
+   *
+   * The filter now only asks that a row has something to show, so a casino is
+   * never excluded from the homepage for publishing its terms as prose rather
+   * than a number.
+   */
+  const topOffers = inHouseOrder(ops.filter((o) => !!casinoFacts(o).offer && !/^advertised/i.test(casinoFacts(o).headline))).slice(0, 10);
 
   // Highest studio-published RTP — a factual sort, not a rating.
   const topSlot = [...slots].sort((a, b) => rtpSortValue(b) - rtpSortValue(a))[0];
