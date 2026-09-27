@@ -20,8 +20,20 @@ import { OfferCta } from "@/components/ui/OfferCta";
  * then paid out. Terms come from each casino's own bonus pages.
  */
 const MONO = "var(--font-jetbrains-mono), monospace";
-const WELCOME_COLS = "md:grid-cols-[minmax(170px,1fr)_minmax(240px,1.6fr)_120px_130px_96px_100px_130px]";
-const REWARD_COLS = "md:grid-cols-[minmax(170px,1fr)_minmax(220px,1.5fr)_150px_150px_minmax(150px,1fr)_130px]";
+/**
+ * The last track is the CTA, and it was 130px — enough for the old button that
+ * said "View offer", nowhere near enough for "Visit 500 Casino →" plus the
+ * Review link beside it. The table clips its own overflow, so the button was
+ * being cut off mid-word at the right edge rather than wrapping.
+ *
+ * 236px fits the longest affiliate label we have ("Visit 500 Casino", 10
+ * characters) with both buttons; the middle tracks give back the room.
+ */
+/* Written out in full, not composed: Tailwind scans source for complete class
+ * strings, so a track list built from a template literal generates no CSS at
+ * all and the grid silently falls back to equal columns. Both end in 236px. */
+const WELCOME_COLS = "md:grid-cols-[minmax(150px,1fr)_minmax(210px,1.4fr)_96px_120px_84px_104px_236px]";
+const REWARD_COLS = "md:grid-cols-[minmax(150px,1fr)_minmax(200px,1.4fr)_132px_132px_minmax(130px,1fr)_236px]";
 
 /** The largest match percentage in an offer headline, e.g. 360 from "Up to 360% on 4 deposits". */
 function matchPct(o: Operator): number {
@@ -232,13 +244,27 @@ function Heading({ id, eyebrow, title, children }: { id: string; eyebrow: string
   );
 }
 
+/**
+ * Seven columns need about 1130px. The card clips its own overflow to keep the
+ * rounded corners, so between the md breakpoint and that width the last column
+ * — the CTA — was simply cut off at the card's edge, mid-word.
+ *
+ * The grid gets its own horizontal scroller at md and up, with a min-width it
+ * cannot be squeezed below. A wide table scrolls inside its own container; the
+ * page body never scrolls sideways. Below md the layout is already stacked, so
+ * neither the scroller nor the min-width applies there.
+ */
 function Table({ cols, head, children }: { cols: string; head: string[]; children: ReactNode }) {
   return (
     <div style={{ borderRadius: 20, border: "1px solid rgba(255,255,255,.08)", background: "linear-gradient(180deg,#0E1317,#0A0E11)", overflow: "hidden" }}>
-      <div className={`hidden md:grid ${cols} items-center gap-4`} style={{ padding: "12px 20px", borderBottom: "1px solid rgba(255,255,255,.07)", fontFamily: MONO, fontSize: 10, letterSpacing: ".08em", textTransform: "uppercase", color: "#8E9CA5" }}>
-        {head.map((h, i) => <span key={i}>{h}</span>)}
+      <div className="md:overflow-x-auto">
+        <div className="md:min-w-[1130px]">
+          <div className={`hidden md:grid ${cols} items-center gap-4`} style={{ padding: "12px 20px", borderBottom: "1px solid rgba(255,255,255,.07)", fontFamily: MONO, fontSize: 10, letterSpacing: ".08em", textTransform: "uppercase", color: "#8E9CA5" }}>
+            {head.map((h, i) => <span key={i}>{h}</span>)}
+          </div>
+          {children}
+        </div>
       </div>
-      {children}
     </div>
   );
 }
