@@ -4,7 +4,7 @@ import { breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { NextSteps } from "@/components/layout/NextSteps";
 import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
-import { querySlots, studioFacets, volatilityFacets, catalogueTotals, catalogueAsOf, PER_PAGE, type SlotQuery } from "@/lib/slot-db";
+import { querySlots, studioFacets, volatilityFacets, catalogueTotals, catalogueAsOf, PER_PAGE, type SlotQuery, releaseDate } from "@/lib/slot-db";
 
 const MONO = "var(--font-jetbrains-mono), monospace";
 const t = catalogueTotals();
@@ -197,7 +197,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<Rec
               </span>
               <span style={{ fontSize: 13, color: "#A9B8C0" }}>{g.volatility ?? "—"}</span>
               <span style={{ fontFamily: MONO, fontSize: 12.5, color: "#A9B8C0" }}>{g.maxWinMultiplier ? `${g.maxWinMultiplier.toLocaleString()}x` : "—"}</span>
-              <span style={{ fontFamily: MONO, fontSize: 12, color: "#8E9CA5" }}>{g.released ?? "—"}</span>
+              <span style={{ fontFamily: MONO, fontSize: 12, color: "#8E9CA5" }}>{releaseDate(g) ?? "—"}</span>
             </div>
           ))}
           {res.rows.length === 0 && (

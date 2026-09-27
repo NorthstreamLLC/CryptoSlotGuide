@@ -52,6 +52,39 @@ const DB = catalogue as unknown as Catalogue;
 /** Slots only. Table and house games live in their own sections of the site. */
 const SLOTS: CatalogueGame[] = DB.games.filter((g) => g.kind === "slot");
 
+/**
+ * Dates the feed stamps on a whole batch rather than on a game.
+ *
+ * The source column is called `releasedAt`, but its values do not behave like
+ * release dates: 2,589 titles share 2025-01-01, another 513 share 2026-04-02,
+ * and twelve dates between them account for about 4,100 of the 8,783 slots.
+ * Studios do not ship five hundred games in a day — those are import or
+ * record-created stamps that arrived under a release-date heading.
+ *
+ * The rest looks real: 1,744 dates cover 3,432 games at five or fewer each,
+ * which is what a genuine release calendar looks like across many studios. So
+ * the batch stamps are suppressed and the plausible dates kept, instead of
+ * throwing away half the catalogue's dates or publishing all of them.
+ *
+ * The threshold is deliberately tight. Ten titles industry-wide on one day is
+ * already generous; anything above it is a batch.
+ */
+const BATCH_DATE_THRESHOLD = 10;
+const BATCH_DATES: Set<string> = (() => {
+  const n = new Map<string, number>();
+  for (const g of SLOTS) if (g.released) n.set(g.released, (n.get(g.released) ?? 0) + 1);
+  return new Set([...n.entries()].filter(([, c]) => c > BATCH_DATE_THRESHOLD).map(([d]) => d));
+})();
+
+/**
+ * The release date, or null where the feed gave us a batch stamp. Everything
+ * that shows or sorts on a date goes through this — a date we cannot stand
+ * behind is worse than no date.
+ */
+export function releaseDate(g: CatalogueGame): string | null {
+  return g.released && !BATCH_DATES.has(g.released) ? g.released : null;
+}
+
 export const catalogueAsOf = DB.asOf;
 
 export interface SlotQuery {
@@ -114,7 +147,7 @@ export function querySlots(query: SlotQuery) {
       sorted.sort((a, b) => last(b.maxWinMultiplier) - last(a.maxWinMultiplier) || a.name.localeCompare(b.name));
       break;
     case "new":
-      sorted.sort((a, b) => (b.released ?? "").localeCompare(a.released ?? "") || a.name.localeCompare(b.name));
+      sorted.sort((a, b) => (releaseDate(b) ?? "").localeCompare(releaseDate(a) ?? "") || a.name.localeCompare(b.name));
       break;
     case "name":
       sorted.sort((a, b) => a.name.localeCompare(b.name));

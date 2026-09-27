@@ -306,6 +306,10 @@ function main() {
   const iMaxWin = col("maxwinmultiplier", "maxwin");
   const iMinBet = col("minbet");
   const iMaxBet = col("maxbet");
+  // Stored verbatim, but NOT trusted as a release date downstream. The feed
+  // stamps whole batches under this heading — 2,589 titles share 2025-01-01 —
+  // so lib/slot-db.ts filters the batch dates out before anything renders or
+  // sorts on one. Keep importing the raw value; do not "fix" it here.
   const iReleased = col("releasedat", "released", "releasedate");
   const iImage = col("imageurl", "image");
   const iDeleted = col("isdeleted", "deleted");
