@@ -23,7 +23,7 @@ export function CasinoCard({ o, rank }: { o: Operator; rank?: number }) {
   const stats: [string, string | null][] = [
     ["Withdrawals", c.withdrawals],
     ["Min deposit", c.minDeposit],
-    [c.wageringLabel, c.wagering],
+    ["Withdrawal fee", c.fee],
   ];
   return (
     <article

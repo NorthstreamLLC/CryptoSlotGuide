@@ -47,7 +47,13 @@ function operatorPick(slug: string, category: string, cta: string): Pick | null 
     stats: [
       { label: "Withdrawals", value: c.withdrawals ?? "—" },
       { label: "Min deposit", value: c.minDeposit ?? "—" },
-      { label: c.wageringLabel, value: c.wagering ?? "—" },
+      // Withdrawal fee, not wagering. A wagering figure assumes a welcome
+      // bonus, and the operators that lead this card run rakeback — the tile
+      // read "None" and told a reader nothing. The fee completes the money
+      // in, money out story the other two tiles start, we hold it for 44 of
+      // 46 operators, and it appears nowhere else on the card. Wagering still
+      // leads /bonuses and every profile carries the operator's full term.
+      { label: "Withdrawal fee", value: c.fee ?? "—" },
     ],
     coins: COINS[o.slug] ?? [],
     notes,
