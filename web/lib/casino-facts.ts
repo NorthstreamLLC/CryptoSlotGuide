@@ -173,3 +173,38 @@ export function maxWithdrawal(slug: string): string | null {
 export function maxDeposit(slug: string): string | null {
   return MAX_LIMITS[slug]?.[1] ?? null;
 }
+
+/**
+ * The max-deposit tile, with the SCOPE in the label rather than buried in the
+ * value.
+ *
+ * "MAX DEPOSIT — $5,000" on a crypto casino reads as a cap on the account. On
+ * Roobet it is the card rail: the cited page is the credit-card deposit guide,
+ * and it says nothing about a ceiling on crypto. Same for Razed's CAD figure
+ * and Rainbet's, which is a limit on the deposit that qualifies for the bonus.
+ *
+ * So the label carries the scope and the value carries the number, instead of
+ * a headline number that is true of one payment method standing in for all of
+ * them. Where a figure really is account-wide the label stays "Max deposit".
+ */
+const DEPOSIT_SCOPE: [RegExp, string][] = [
+  [/\bper card deposit\b|\bon cards?\b/i, "Max card deposit"],
+  [/\bbonus deposit\b/i, "Max qualifying deposit"],
+  [/\bper deposit\b/i, "Max per deposit"],
+];
+
+export function maxDepositTile(slug: string): { label: string; value: string | null } {
+  const raw = maxDeposit(slug);
+  if (!raw) return { label: "Max deposit", value: null };
+  for (const [re, label] of DEPOSIT_SCOPE) {
+    if (!re.test(raw)) continue;
+    // Strip the scope out of the value — it is in the label now — and keep
+    // whatever qualifier is left (a currency, "on the").
+    const value = raw
+      .replace(/\s*(per card deposit|per deposit|on the bonus deposit|on cards?)\s*/i, " ")
+      .replace(/\s{2,}/g, " ")
+      .trim();
+    return { label, value: value || raw };
+  }
+  return { label: "Max deposit", value: raw };
+}

@@ -82,7 +82,7 @@ export interface EntityView {
   tableNote: string;
   pros: string[];
   cons: string[];
-  faqs: { q: string; a: string }[];
+  faqs: { q: string; a: string; href?: string; hrefLabel?: string }[];
   /** Where the sidebar CTA points — only set for casinos with a real Operator.signupUrl on file. Absent means the CTA renders as plain, non-link text rather than a fabricated affiliate link. */
   signupUrl?: string;
   /**
@@ -707,7 +707,15 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       ...(!licenceFact ? ["No licence details published"] : /no gaming licence/i.test(licenceFact.value ?? "") ? ["No gaming licence stated on its own site"] : /no licence number/i.test(licenceFact.value ?? "") ? ["No licence number shown on its own site"] : []),
     ],
     faqs: [
-      { q: `Is ${o.name} available in my country?`, a: `${o.name} restricts a list of jurisdictions under its ${o.licence} licence. Check the restricted list in its terms before depositing.` },
+      {
+        q: `Is ${o.name} available in my country?`,
+        a: `${o.name} restricts a list of jurisdictions under its ${o.licence} licence, and separately, your own country decides whether you may play at all. Check both: the restricted list in its terms, and the law where you live.`,
+        // The question the reader is actually asking is answerable on this
+        // site — we hold the legal position for 174 countries and every US
+        // state — and the answer was sending them off to read terms instead.
+        href: "/legal",
+        hrefLabel: "See where online casinos are legal",
+      },
       { q: "Do I have to complete KYC?", a: kycFact ? `${o.name}'s terms: ${kycFact.value}.` : `${o.name} doesn't publish a KYC policy, so expect document checks before larger withdrawals.` },
       { q: "What does wagering actually mean?", a: wagerFact ? `${o.name}'s bonus terms say: ${wagerFact.value}. A 40× requirement on a $100 credit means $4,000 of bets before withdrawal; 1× means $100.` : "Wagering is how many times a bonus must be bet before it can be withdrawn — 40× on a $100 credit means $4,000 of bets. This operator doesn't publish a fixed figure." },
       { q: "How fast are withdrawals really?", a: checked && o.payoutObserved

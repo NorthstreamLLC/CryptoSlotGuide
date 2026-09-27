@@ -1,5 +1,6 @@
 import { siteData } from "./site-data";
 import { casinoFacts, brandFor } from "./casino-facts";
+import { wagerView } from "./wager";
 import { raceFor, dropFor, partnerFor } from "./races";
 import type { Pick } from "@/components/home/TopPicks";
 import coinsBy from "@/data/coinsBy.json";
@@ -25,14 +26,28 @@ function operatorPick(slug: string, category: string, cta: string): Pick | null 
   const o = siteData.ops.find((x) => x.slug === slug);
   if (!o) return null;
   const c = casinoFacts(o);
+  /**
+   * Three lines, strongest first. This is a card whose job is the click, so
+   * the order is what a reader weighs, not what happens to be in the data:
+   *
+   *  1. Who vouches for them. A shirt deal with a Premier League club is the
+   *     hardest trust signal an operator can buy, and it was sitting third.
+   *  2. No wagering, where the operator's own terms say so. Dropped when the
+   *     wagering COLUMN went, which was right for a table full of "None" and
+   *     wrong for the one card where it is the selling point.
+   *  3. Whatever else is concretely good — free withdrawals, recurring drops.
+   *
+   * The race is not here: it is a tile now, and saying it twice spends a line.
+   */
   const notes: Pick["notes"] = [];
   const race = raceFor(o.slug);
   const drop = dropFor(o.slug);
   const partner = partnerFor(o.slug);
-  // Promoted to a tile above; repeating it here spent a line saying it twice.
-  if (drop) notes.push({ icon: "clock", text: drop });
+  const wv = wagerView(o);
   if (partner) notes.push({ icon: "handshake", text: `Official partner of ${partner}` });
+  if (wv.kind === "cited" && wv.mult === 0) notes.push({ icon: "shield", text: "No wagering on rewards" });
   if (notes.length < 3 && c.fee === "Free") notes.push({ icon: "percent", text: "Free withdrawals" });
+  if (notes.length < 3 && drop) notes.push({ icon: "clock", text: drop });
   if (notes.length < 3 && c.minWithdrawal && c.minWithdrawal !== "See terms") notes.push({ icon: "coins", text: `${c.minWithdrawal} minimum withdrawal` });
 
   return {

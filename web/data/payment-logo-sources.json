@@ -1,0 +1,87 @@
+{
+  "mastercard": {
+    "url": "https://www.mastercard.com/etc.clientlibs/marts/clientlibs/clientlib-site/resources/icons/mastercard-favicon.svg",
+    "fetched": "2026-09-27",
+    "file": "mastercard.svg"
+  },
+  "skrill": {
+    "url": "https://www.skrill.com/typo3conf/ext/sitepackage/Resources/Public/images/icons/android-chrome-512x512.png",
+    "fetched": "2026-09-27",
+    "file": "skrill.png"
+  },
+  "neteller": {
+    "url": "https://www.neteller.com/typo3conf/ext/theme/Resources/Public/images/icons/favicon/apple-touch-icon.png",
+    "fetched": "2026-09-27",
+    "file": "neteller.png"
+  },
+  "paysafecard": {
+    "url": "https://www.paysafecard.com/typo3conf/ext/theme/Resources/Public/images/icons/favicon.svg",
+    "fetched": "2026-09-27",
+    "file": "paysafecard.svg"
+  },
+  "astropay": {
+    "url": "https://cdn.prod.website-files.com/65ef241dc05b3b7d9f05e09a/675857c70e66d24419e17167_App%20Icon%40webclip.png",
+    "fetched": "2026-09-27",
+    "file": "astropay.png"
+  },
+  "interac": {
+    "url": "https://www.interac.ca/wp-content/uploads/2023/01/cropped-Interac_Two-Colour_RGB-favicon512x512.png",
+    "fetched": "2026-09-27",
+    "file": "interac.png"
+  },
+  "moonpay": {
+    "url": "https://www.moonpay.com/icon-512.png",
+    "fetched": "2026-09-27",
+    "file": "moonpay.png"
+  },
+  "changelly": {
+    "url": "https://changelly.com/web-assets/favicons/favicon.svg?v=5",
+    "fetched": "2026-09-27",
+    "file": "changelly.svg"
+  },
+  "visa": {
+    "url": "https://www.visa.com/vcom-assets/content/dam/visa/favicon.ico",
+    "fetched": "2026-09-27",
+    "file": "visa.ico"
+  },
+  "apple-pay": {
+    "url": "https://www.apple.com/favicon.ico",
+    "fetched": "2026-09-27",
+    "file": "apple-pay.ico"
+  },
+  "google-pay": {
+    "url": "https://www.google.com/favicon.ico",
+    "fetched": "2026-09-27",
+    "file": "google-pay.ico"
+  },
+  "pix": {
+    "url": "https://www.bcb.gov.br/favicon.ico",
+    "fetched": "2026-09-27",
+    "file": "pix.ico"
+  },
+  "upi": {
+    "url": "https://www.npci.org.in/favicons.ico",
+    "fetched": "2026-09-27",
+    "file": "upi.ico"
+  },
+  "webpay": {
+    "url": "https://www.webpay.cl/favicon.ico",
+    "fetched": "2026-09-27",
+    "file": "webpay.ico"
+  },
+  "papara": {
+    "url": "https://cdn.papara.com/web/customerrors/favicon.ico",
+    "fetched": "2026-09-27",
+    "file": "papara.ico"
+  },
+  "banxa": {
+    "url": "https://banxa.com/wp-content/uploads/2026/09/cropped-favicon-192x192.jpg",
+    "fetched": "2026-09-27",
+    "file": "banxa.jpg"
+  },
+  "rapid-transfer": {
+    "url": "https://www.paysafe.com/typo3conf/ext/theme/Resources/Public/Template/Main/src/resources/assets/images/icons/apple-touch-icon-57x57.png",
+    "fetched": "2026-09-27",
+    "file": "rapid-transfer.png"
+  }
+}

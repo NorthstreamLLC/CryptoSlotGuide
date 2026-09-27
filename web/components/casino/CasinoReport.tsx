@@ -11,7 +11,7 @@ import { tintFor } from "@/lib/logo";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { CasinoSpecSheet } from "@/components/entity/CasinoSpecSheet";
 import { CoinList, CoinStack } from "@/components/ui/CoinIcon";
-import { maxWithdrawal, maxDeposit } from "@/lib/casino-facts";
+import { maxWithdrawal, maxDepositTile } from "@/lib/casino-facts";
 import { Icon, type IconName } from "@/components/ui/Icon";
 import { raceFor, partnerFor, dropFor } from "@/lib/races";
 import { rtpSummary } from "@/lib/rtp-watch-view";
@@ -22,6 +22,7 @@ import { rivalPairs } from "@/lib/versus";
 import type { SpecFact } from "@/lib/types";
 import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
 import { ReportIssue } from "@/components/ui/ReportIssue";
+import { PaymentPartners } from "@/components/ui/PaymentPartners";
 
 /**
  * The casino player report: what a player compares (offer, rewards, money
@@ -429,7 +430,7 @@ export function CasinoReport({ e }: { e: EntityView }) {
             <Tile label="Min withdrawal" value={shortAmount(minWd)} f={minWd} />
             <Tile label="Max withdrawal" value={maxWithdrawal(o.slug)} f={maxWd} />
             <Tile label="Min deposit" value={shortAmount(minDep)} f={minDep} />
-            <Tile label="Max deposit" value={maxDeposit(o.slug)} f={maxDep} />
+            <Tile label={maxDepositTile(o.slug).label} value={maxDepositTile(o.slug).value} f={maxDep} />
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", gap: 16, marginTop: 16 }}>
             <Card>
@@ -442,10 +443,16 @@ export function CasinoReport({ e }: { e: EntityView }) {
               </div>
             </Card>
             {payRows.some((r) => r.f) && <Card>
-              <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 4 }}>Payment details</div>
+              <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 4 }}>Payment</div>
+              {/* The marks first: whether your rail is there is the question
+                  this card exists to answer, and it was buried in a sentence.
+                  The operator's own wording stays below with its source. */}
+              <div style={{ margin: "12px 0 4px" }}>
+                <PaymentPartners value={f("Coins & deposit limits", "Card and bank")?.value ?? null} />
+              </div>
               <Rows
                 rows={[
-                  { k: "Card & bank", f: f("Coins & deposit limits", "Card and bank") },
+                  { k: "Payment partners", f: f("Coins & deposit limits", "Card and bank") },
                   { k: "Networks", f: f("Coins & deposit limits", "Networks") },
                   { k: "Deposit rules", f: f("Coins & deposit limits", "Deposit rules") },
                   { k: "Withdrawal rules", f: f("Payouts & fees", "Withdrawal rules") ?? f("Payouts & fees", "Withdrawal conditions") },
@@ -520,6 +527,11 @@ export function CasinoReport({ e }: { e: EntityView }) {
                 <details key={q.q} style={{ padding: "16px 20px", borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
                   <summary style={{ cursor: "pointer", fontSize: 15, fontWeight: 700, color: "#E8EDF0" }}>{q.q}</summary>
                   <p style={{ margin: "10px 0 0", fontSize: 14, lineHeight: 1.65, color: "#A8B6BE" }}>{q.a}</p>
+                  {q.href && (
+                    <Link href={q.href} style={{ display: "inline-block", marginTop: 8, fontSize: 13.5, fontWeight: 600, color: "#5FE3E8" }}>
+                      {q.hrefLabel ?? "Read more"} &rarr;
+                    </Link>
+                  )}
                 </details>
               ))}
             </div>
