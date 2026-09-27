@@ -76,6 +76,55 @@ export function faqSchema(faqs: { q: string; a: string }[]) {
   };
 }
 
+/**
+ * A ranked list, as the page already shows it.
+ *
+ * This is the type that was missing, and it is the one that matters most
+ * here: nearly every page on this site is a ranked list of something, and
+ * "best crypto casino" style queries are the traffic we are after. ItemList
+ * tells Google the page IS the list rather than an article that happens to
+ * mention some casinos.
+ *
+ * The order must be the order the reader sees. Passing a differently sorted
+ * array would be a mismatch between structured data and visible content,
+ * which is the one thing Google penalises outright — so callers pass the
+ * same array they render, never a re-sorted copy.
+ */
+export function itemListSchema(name: string, items: { name: string; path: string }[]) {
+  if (items.length === 0) return null;
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name,
+    numberOfItems: items.length,
+    itemListElement: items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.name,
+      // An absolute URL passes through: some lists (prediction-market venues,
+      // exchanges) are of external sites, and pointing every entry at our own
+      // origin would describe a list of pages that do not exist.
+      url: /^https?:\/\//.test(item.path) ? item.path : `${SITE_URL}${item.path}`,
+    })),
+  };
+}
+
+/**
+ * A page that exists to hold a collection, for the index pages where the list
+ * is the whole point. Paired with itemListSchema rather than replacing it:
+ * CollectionPage describes the page, ItemList describes what is on it.
+ */
+export function collectionPageSchema(name: string, description: string, path: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name,
+    description,
+    url: `${SITE_URL}${path}`,
+    isPartOf: { "@type": "WebSite", name: SITE_NAME, url: SITE_URL },
+  };
+}
+
 /** Article markup for the guides carried over from the WordPress site. */
 export function articleSchema(headline: string, description: string, path: string, published: string, modified: string) {
   return {

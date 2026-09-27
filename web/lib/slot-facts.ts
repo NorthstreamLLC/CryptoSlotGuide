@@ -5,6 +5,7 @@
  * shows as "Not published" instead of a number from a slot database.
  */
 import type { Slot } from "./types";
+import { siteData } from "./site-data";
 
 export const hasRtp = (s: Slot) => !s.unpublished?.includes("rtp");
 export const hasVol = (s: Slot) => !s.unpublished?.includes("vol");
@@ -16,3 +17,15 @@ export const maxWinLabel = (s: Slot) => (hasMaxWin(s) ? s.maxWin : "Not publishe
 
 /** Sort key for "highest RTP first" — unpublished RTP sorts last. */
 export const rtpSortValue = (s: Slot) => (hasRtp(s) ? s.rtp : -1);
+
+/**
+ * The slots carrying a mechanic tag, highest RTP first — the order the
+ * category page renders. Shared with that page's ItemList schema so the two
+ * cannot drift.
+ */
+export function slotsByMechanic(tag: string) {
+  const { slots, slotTags } = siteData;
+  return slots
+    .filter((s) => (slotTags[s.slug] ?? []).includes(tag as never))
+    .sort((a, b) => rtpSortValue(b) - rtpSortValue(a));
+}

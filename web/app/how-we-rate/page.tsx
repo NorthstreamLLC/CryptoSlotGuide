@@ -3,6 +3,8 @@ import { TIER_LABEL, TIER_DESC, TIER_TINT, type ReviewTier } from "@/lib/review-
 import { isFieldTestedOperator } from "@/lib/field-tested";
 import { pageMetadata } from "@/lib/seo";
 import { NextSteps } from "@/components/layout/NextSteps";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { breadcrumbSchema } from "@/lib/schema";
 
 /**
  * A fourth kind of backing, alongside the three ReviewTier values in
@@ -55,6 +57,8 @@ export default function Page() {
   ];
 
   return (
+    <>
+      <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "How we rate", path: "/how-we-rate" }])} />
     <main>
       <section style={{ borderBottom: "1px solid rgba(255,255,255,.07)", background: "radial-gradient(100% 100% at 50% 0%, rgba(0,194,204,.09), transparent 60%), #090C0F" }}>
         <div style={{ maxWidth: 1000, margin: "0 auto", padding: "56px 40px 44px", textAlign: "center" }}>
@@ -273,5 +277,6 @@ export default function Page() {
         />
       </section>
     </main>
+  </>
   );
 }

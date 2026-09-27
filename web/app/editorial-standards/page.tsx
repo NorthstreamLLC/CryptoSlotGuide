@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { pageMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { breadcrumbSchema } from "@/lib/schema";
 
 /**
  * Editorial integrity policy — distinct from /how-we-rate, which covers
@@ -59,6 +61,8 @@ const SECTIONS: { title: string; body: string[] }[] = [
 
 export default function Page() {
   return (
+    <>
+      <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Editorial standards", path: "/editorial-standards" }])} />
     <main>
       <section style={{ borderBottom: "1px solid rgba(255,255,255,.07)", background: "radial-gradient(100% 100% at 50% 0%, rgba(0,194,204,.09), transparent 60%), #090C0F" }}>
         <div style={{ maxWidth: 900, margin: "0 auto", padding: "56px 40px 44px" }}>
@@ -98,5 +102,6 @@ export default function Page() {
         </div>
       </section>
     </main>
+  </>
   );
 }

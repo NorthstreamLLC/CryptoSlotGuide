@@ -60,8 +60,15 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
   // Only highlight the first row when the list is sorted on a fact that makes "first" mean something.
   const btcTop = spotlight || (filter !== "fast" && filter !== "lowwager") ? null : sorted[0];
   const btcTopLabel = filter === "fast" ? "Fastest stated withdrawal" : "Lowest wagering";
-  const tableAll = spotlight ? sorted : sorted.slice(1);
-  const posOffset = spotlight ? 0 : 1;
+  // Drop row 0 from the table only when something above it actually renders
+  // row 0. Keying this off `spotlight` instead dropped a casino outright on
+  // /crypto-casinos/no-kyc: Roobet is not a no-KYC operator, so there is no
+  // spotlight, and the filter is not fast or lowwager, so there is no "top of
+  // this list" card either — yet the table still skipped the first row.
+  // Rainbet, an affiliate partner, was on the page's own count of 12 and
+  // visible nowhere on it.
+  const tableAll = btcTop ? sorted.slice(1) : sorted;
+  const posOffset = btcTop ? 1 : 0;
   const rows = showAll ? tableAll : tableAll.slice(0, 20);
 
   const coinFilters = [{ t: "all", label: "All coins" }, ...coinDefs.map((c) => ({ t: c.ticker, label: c.ticker }))].map((c) => ({

@@ -12,6 +12,8 @@ import { filterFns } from "@/lib/casino-index";
 import { casinoFacts } from "@/lib/casino-facts";
 import { CasinoCard } from "@/components/casino/CasinoCard";
 import { SITE_URL, SITE_NAME } from "@/lib/seo";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { itemListSchema } from "@/lib/schema";
 
 /**
  * The home page is the one page not built through pageMetadata(), so it was
@@ -175,6 +177,19 @@ export default function HomePage() {
   ];
 
   return (
+    <>
+      {/* Organization and WebSite are sitewide in layout.tsx. What the home
+          page adds is the list it actually leads with — the same operators,
+          in the same order, that CasinoOfferList renders below. No breadcrumb:
+          this is the root. */}
+      <JsonLd
+        data={[
+          itemListSchema(
+            "Crypto casinos we recommend",
+            topOffers.map((o) => ({ name: o.name, path: `/casinos/${o.slug}` }))
+          ),
+        ]}
+      />
     <main
       style={{
         backgroundColor: "#07090B",
@@ -624,6 +639,7 @@ export default function HomePage() {
         </div>
       </section>
     </main>
+  </>
   );
 }
 

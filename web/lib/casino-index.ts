@@ -10,6 +10,7 @@ import { wagerView, compareWager } from "./wager";
 import type { Operator } from "./types";
 import { comparePayout, payoutView } from "./payout";
 import { byHouse } from "./house-order";
+import { siteData } from "./site-data";
 
 export type BtcFilterKey = "all" | "nokyc" | "fast" | "lowwager" | "sports" | "esports";
 
@@ -103,4 +104,27 @@ export function btcStats(list: Operator[]): { v: string; l: string }[] {
     { v: String(list.filter((o) => o.sports).length), l: "run a sportsbook" },
     { v: String(list.filter((o) => wagerView(o).kind === "cited").length), l: "state a bonus wagering figure" },
   ];
+}
+
+/**
+ * The sort a filter opens on. Shared so the page's initial state and the
+ * ItemList schema describing that page cannot drift apart — structured data
+ * that disagrees with the visible order is the one mismatch Google acts on.
+ */
+export function defaultSortKey(filter: BtcFilterKey): SortKey {
+  return filter === "fast" ? "payout" : filter === "lowwager" ? "wager" : "featured";
+}
+
+/**
+ * The list in the order the page first renders it: the spotlight or "top of
+ * this list" card, then the table. Server-side, for schema — the live page
+ * re-sorts on click, but structured data describes the default view.
+ */
+export function defaultIndexList(filter: BtcFilterKey): Operator[] {
+  const ops = siteData.ops;
+  const fn = filterFns[filter];
+  const featured = ops.find((o) => o.featured);
+  const spotlight = !!featured && fn(featured);
+  const sorted = sortOps(ops.filter((o) => fn(o) && !(spotlight && o.featured)), defaultSortKey(filter), "asc");
+  return spotlight && featured ? [featured, ...sorted] : sorted;
 }
