@@ -100,8 +100,12 @@ export function StateMarketBlock({ market, stateName }: { market: StateMarket; s
         <div style={{ marginTop: 22 }}>
           <h2 style={{ margin: "0 0 6px", fontSize: 20, fontWeight: 800, letterSpacing: "-.02em", color: "#fff" }}>What the legislature is doing</h2>
           <p style={{ margin: "0 0 12px", maxWidth: "80ch", fontSize: 13.5, color: "#8E9CA5" }}>
-            Bills that would legalise or expand online gambling in {stateName}, with the status each legislature publishes. A bill that died still tells you
-            something about the direction of travel.
+            {/* Not "legalise or expand": Hawaii's HB 2198 would pull prediction
+                markets INTO the definition of gambling, and this list now
+                carries bills that run both ways. Saying they all loosen the
+                law would misdescribe them. */}
+            Bills that would change what is legal online in {stateName} — loosening or tightening — with the status each legislature publishes. A bill that
+            died still tells you something about the direction of travel.
           </p>
           <div style={{ padding: "4px 20px", borderRadius: 16, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
             {pending.map((b, i) => {

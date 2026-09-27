@@ -477,6 +477,14 @@
         "lastAction": "2025-12-08",
         "sourceUrl": "https://www.capitol.hawaii.gov/session/measure_indiv.aspx?billtype=HB&billnumber=1466&year=2026",
         "note": null
+      },
+      {
+        "topic": "prediction markets (would classify as gambling)",
+        "bill": "HB 2198 HD2",
+        "status": "Passed House Third Reading unanimously; in Senate, referred to CPN/EDT and JDC/WAM",
+        "lastAction": "2026-03-12",
+        "sourceUrl": "https://www.capitol.hawaii.gov/session/measure_indiv.aspx?billtype=HB&billnumber=2198&year=2026",
+        "note": "Runs the opposite way to Iowa's and Pennsylvania's. Title 'RELATING TO PREDICTION MARKETS'; amends the Hawaii Penal Code definition of gambling to INCLUDE predictive markets speculating on securities, commodities or similar products tied to catastrophe, contests, death, legislation, national security, people, politics and sports. A prohibition, not an authorisation. Carries a defective effective date of 7/1/3000."
       }
     ],
     "legalToday": "Nothing commercial. Hawaii's statutes authorise no lottery, no casino, no card room, no race book and no licensed charitable gaming, and there is no state gambling regulator - which is why the 2026 sports wagering bills all had to propose building one from scratch inside the Department of Business, Economic Development and Tourism (SB 3303, HB 2570, SB 1572) or the Department of Law Enforcement (HB 1308). Private games among friends are not affirmatively legal either: HRS 712-1231 gives a defendant an affirmative defence to raise at trial, with the burden of proof on the defendant, not a licence to run a game.",
@@ -572,7 +580,16 @@
       "note": "The IRGC lists these as 'advance deposit sports wagering operator' licensees - the licence class that, in the Commission's own wording, is how a casino facility offers 'online sports wagering operations' - together with each operator's casino associations. Retail sports wagering vendors are published separately within the individual facility licence pages and are excluded here. The page carries no published as-of date."
     },
     "casinos": null,
-    "pending": []
+    "pending": [
+      {
+        "topic": "prediction markets (event-driven contracts)",
+        "bill": "SF 2470",
+        "status": "Passed Senate 45-1; in House Ways and Means, subcommittee recommends passage",
+        "lastAction": "2026-04-27",
+        "sourceUrl": "https://www.legis.iowa.gov/legislation/billTracking/billHistory?billName=SF2470&ga=91",
+        "note": "Formerly SF 2085, renumbered on committee report 12 March 2026. Would require a permit to trade event-driven contracts on dedicated contract markets in Iowa and impose a tax on adjusted revenues or amounts traded, with fees and income-tax adjustments. A permitting and taxation measure rather than an iGaming or sportsbook bill: it assumes the contracts are traded and sets terms for doing so in the state."
+      }
+    ]
   },
   {
     "code": "ID",
