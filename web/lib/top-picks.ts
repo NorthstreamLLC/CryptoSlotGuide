@@ -29,10 +29,11 @@ function operatorPick(slug: string, category: string, cta: string): Pick | null 
   const race = raceFor(o.slug);
   const drop = dropFor(o.slug);
   const partner = partnerFor(o.slug);
-  if (race) notes.push({ icon: "trophy", text: race.label });
+  // Promoted to a tile above; repeating it here spent a line saying it twice.
   if (drop) notes.push({ icon: "clock", text: drop });
   if (partner) notes.push({ icon: "handshake", text: `Official partner of ${partner}` });
   if (notes.length < 3 && c.fee === "Free") notes.push({ icon: "percent", text: "Free withdrawals" });
+  if (notes.length < 3 && c.minWithdrawal && c.minWithdrawal !== "See terms") notes.push({ icon: "coins", text: `${c.minWithdrawal} minimum withdrawal` });
 
   return {
     slug: o.slug,
@@ -47,13 +48,20 @@ function operatorPick(slug: string, category: string, cta: string): Pick | null 
     stats: [
       { label: "Withdrawals", value: c.withdrawals ?? "—" },
       { label: "Min deposit", value: c.minDeposit ?? "—" },
-      // Withdrawal fee, not wagering. A wagering figure assumes a welcome
-      // bonus, and the operators that lead this card run rakeback — the tile
-      // read "None" and told a reader nothing. The fee completes the money
-      // in, money out story the other two tiles start, we hold it for 44 of
-      // 46 operators, and it appears nowhere else on the card. Wagering still
-      // leads /bonuses and every profile carries the operator's full term.
-      { label: "Withdrawal fee", value: c.fee ?? "—" },
+      /**
+       * The prize pool, where there is one — the biggest number the card can
+       * honestly show. It was already on the card as a small note under the
+       * tiles; promoting it costs nothing and a $100K raffle deserves more
+       * than a footnote.
+       *
+       * The LABEL is used, not races.ts's `monthly`. That figure is our own
+       * arithmetic — weekly x4.3 — documented there as an estimate for
+       * sorting. "$3.5M a month" would sell harder and would be a number no
+       * operator published.
+       *
+       * The 11 operators with no race fall back to the withdrawal fee.
+       */
+      race ? { label: "Prize pool", value: race.label } : { label: "Withdrawal fee", value: c.fee ?? "—" },
     ],
     coins: COINS[o.slug] ?? [],
     notes,
