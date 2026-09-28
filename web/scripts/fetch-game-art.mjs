@@ -28,6 +28,7 @@
  *   node scripts/fetch-game-art.mjs                 # fetch what is missing
  *   node scripts/fetch-game-art.mjs --only slotessentials.com
  *   node scripts/fetch-game-art.mjs --force         # re-fetch everything
+ *   node scripts/fetch-game-art.mjs --pages --only slotessentials.com
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -42,6 +43,14 @@ const argv = process.argv.slice(2);
 const DRY = argv.includes("--dry-run");
 const FORCE = argv.includes("--force");
 const ONLY = argv.includes("--only") ? argv[argv.indexOf("--only") + 1] : null;
+/**
+ * --pages restricts the run to titles that actually get a page of their own:
+ * a studio demo plus more than one published RTP, the same bar lib/slot-page.ts
+ * applies. Without it, --only slotessentials.com matches thousands of games and
+ * pulls a quarter of a gigabyte of art for pages that do not exist.
+ */
+const PAGES_ONLY = argv.includes("--pages");
+const qualifies = (g) => g.kind === "slot" && g.slug && g.demoUrl && (g.rtpVariants?.length ?? 0) > 1;
 
 const catalogue = JSON.parse(fs.readFileSync(path.join(DATA, "gameCatalogue.json"), "utf8"));
 
@@ -52,7 +61,9 @@ const fileFor = (g) => (g.slug ?? g.name.toLowerCase().replace(/[^a-z0-9]+/g, "-
 
 const existing = fs.existsSync(SOURCES) ? JSON.parse(fs.readFileSync(SOURCES, "utf8")) : { note: "", fetched: null, art: {} };
 
-const targets = catalogue.games.filter((g) => g.image && (!ONLY || g.image.includes(ONLY)));
+const targets = catalogue.games.filter(
+  (g) => g.image && (!ONLY || g.image.includes(ONLY)) && (!PAGES_ONLY || qualifies(g))
+);
 if (!fs.existsSync(OUT) && !DRY) fs.mkdirSync(OUT, { recursive: true });
 
 const art = { ...existing.art };
