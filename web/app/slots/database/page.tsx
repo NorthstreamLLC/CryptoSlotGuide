@@ -5,6 +5,8 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { NextSteps } from "@/components/layout/NextSteps";
 import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
 import { querySlots, studioFacets, volatilityFacets, catalogueTotals, catalogueAsOf, PER_PAGE, type SlotQuery, releaseDate } from "@/lib/slot-db";
+import { cataloguePageSlugs } from "@/lib/slot-page";
+import { siteData } from "@/lib/site-data";
 
 const MONO = "var(--font-jetbrains-mono), monospace";
 const t = catalogueTotals();
@@ -46,6 +48,15 @@ const chip = (active: boolean) => ({
   color: active ? "#5FE3E8" : "#8E9CA5",
   whiteSpace: "nowrap" as const,
 });
+
+/**
+ * Slugs with a page of their own: the hand-written reviews plus the catalogue
+ * titles that clear lib/slot-page.ts's bar. Built once per render rather than
+ * per row — 60 rows a page, and two array scans each would be 120 scans of an
+ * 8,783-row catalogue.
+ */
+const PAGE_SLUGS = new Set<string>([...siteData.slots.map((s) => s.slug), ...cataloguePageSlugs()]);
+const hasPage = (slug: string | null): slug is string => !!slug && PAGE_SLUGS.has(slug);
 
 export default async function Page({ searchParams }: { searchParams: Promise<Record<string, string | undefined>> }) {
   const sp = await searchParams;
@@ -166,7 +177,18 @@ export default async function Page({ searchParams }: { searchParams: Promise<Rec
               style={{ gap: 14, padding: "12px 18px", borderTop: i ? "1px solid rgba(255,255,255,.05)" : undefined, alignItems: "center" }}
             >
               <span style={{ fontSize: 14.5, fontWeight: 700, color: "#E8EDF0", overflowWrap: "anywhere" }}>
-                {g.name}
+                {/* Link the name wherever a page exists for it. Without this
+                    the 410 catalogue pages are orphans — in the sitemap, linked
+                    from nowhere — and the table that lists them is the obvious
+                    place to reach them from. Titles with no page stay plain
+                    text rather than becoming a row of 404s. */}
+                {hasPage(g.slug) ? (
+                  <Link href={`/slots/${g.slug}`} className="hover:!text-accent" style={{ color: "#E8EDF0" }}>
+                    {g.name}
+                  </Link>
+                ) : (
+                  g.name
+                )}
                 {g.upcoming && <span style={{ marginLeft: 8, fontFamily: MONO, fontSize: 9, color: "#C7A45C" }}>NOT OUT YET</span>}
                 {/* The studio's own demo. rel="nofollow" because it is a
                     reference, not an endorsement, and no commission rides on it. */}
