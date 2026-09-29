@@ -7,6 +7,7 @@
  */
 import type { SiteCounts } from "./derived";
 import { siteData } from "./site-data";
+import { topSlotEntries } from "./slot-page";
 
 const slotCatLabels = siteData.slotCatDefs.map((d) => ({ tag: d.tag, label: d.label }));
 
@@ -22,23 +23,15 @@ const slotCatLabels = siteData.slotCatDefs.map((d) => ({ tag: d.tag, label: d.la
  * Swap a name and the menu changes; a slug that no longer exists is skipped
  * rather than rendering a dead link.
  */
-const MENU_SLOTS = ["le-bandit", "wanted-dead-or-a-wild", "fire-in-the-hole-2", "razor-shark", "sugar-rush-1000"];
-
-const featuredSlots = (() => {
-  const picked = MENU_SLOTS.map((sl) => siteData.slots.find((s) => s.slug === sl)).filter((s): s is NonNullable<typeof s> => !!s);
-  if (picked.length >= 5) return picked.slice(0, 5);
-  // Top up from the data ranking: most documented RTP versions first, then
-  // whether we know which casino carries it.
-  const rest = [...siteData.slots]
-    .filter((s) => !picked.some((p) => p.slug === s.slug))
-    .sort(
-      (a, b) =>
-        (b.rtpVersions ? 3 : 0) - (a.rtpVersions ? 3 : 0) ||
-        (b.bestAt ? 1 : 0) - (a.bestAt ? 1 : 0) ||
-        a.name.localeCompare(b.name)
-    );
-  return [...picked, ...rest].slice(0, 5);
-})();
+/**
+ * The menu's slot column is the editorial top list, first five, in its order.
+ *
+ * It used to be a hardcoded five plus a fallback that sorted the review set on
+ * how much RTP data we held — a factual sort standing in for a recommendation,
+ * which is how a 2017 game ended up being pitched. lib/top-slots.ts is the one
+ * place that list lives now.
+ */
+const featuredSlots = topSlotEntries().slice(0, 5);
 
 export interface NavLink {
   label: string;
@@ -148,11 +141,8 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
               })),
             },
             {
-              title: "Slots worth reading",
-              links: featuredSlots.map((s) => ({
-                label: s.name,
-                href: `/slots/${s.slug}`,
-              })),
+              title: "Our top slots",
+              links: featuredSlots.map((s) => ({ label: s.name, href: s.href })),
             },
           ],
         },

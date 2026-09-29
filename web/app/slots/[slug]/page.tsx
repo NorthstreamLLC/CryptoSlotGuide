@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { getEntityView, backLink } from "@/lib/entity-view";
 import { EntityReviewPage } from "@/components/entity/EntityReviewPage";
 import { SlotDataPage } from "@/components/slots/SlotDataPage";
-import { cataloguePage, cataloguePageSlugs, rtpVersions, rtpSpread, publishableArt } from "@/lib/slot-page";
+import { cataloguePage, cataloguePageSlugs, rtpVersions, rtpSpread, singleRtp, publishableArt } from "@/lib/slot-page";
 import { pageMetadata, SITE_URL } from "@/lib/seo";
 import { breadcrumbSchema, entityBreadcrumbSchema, faqSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -27,11 +27,15 @@ function catalogueMeta(slug: string) {
   if (!g) return null;
   const v = rtpVersions(g);
   const spread = rtpSpread(g);
-  return pageMetadata(
-    `${g.name} RTP: ${v.join("% and ")}%`,
-    `${g.provider} licenses ${g.name} at ${v.length} returns${spread ? `, ${spread} percentage points apart` : ""}. The configurations, the specs and which build your casino ships.`,
-    `/slots/${slug}`
-  );
+  const only = singleRtp(g);
+  // A title with one published return gets a title that says so, rather than
+  // "RTP: %" from joining an empty list.
+  const title = v.length > 1 ? `${g.name} RTP: ${v.join("% and ")}%` : only !== null ? `${g.name} RTP: ${only}%` : `${g.name} RTP and specs`;
+  const desc =
+    v.length > 1
+      ? `${g.provider} licenses ${g.name} at ${v.length} returns${spread ? `, ${spread} percentage points apart` : ""}. The configurations, the specs and which build your casino ships.`
+      : `${g.provider} publishes ${only !== null ? `${only}% ` : ""}for ${g.name}. The return, the specs and where to play it.`;
+  return pageMetadata(title, desc, `/slots/${slug}`);
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
@@ -58,6 +62,8 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   if (!g) notFound();
 
   const versions = rtpVersions(g);
+  const only = singleRtp(g);
+  const rtpList = versions.length ? versions : only !== null ? [only] : [];
   const art = publishableArt(g);
   return (
     <>
@@ -80,9 +86,9 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             // The published returns, as the page shows them. No rating and no
             // review: we have not played this title, and marking one up would
             // be the overclaim the whole spec-sheet approach exists to avoid.
-            additionalProperty: versions.map((v, i) => ({
+            additionalProperty: rtpList.map((v, i) => ({
               "@type": "PropertyValue",
-              name: i === 0 ? "Return to player (best published)" : `Return to player (version ${i + 1})`,
+              name: rtpList.length === 1 ? "Return to player" : i === 0 ? "Return to player (best published)" : `Return to player (version ${i + 1})`,
               value: `${v}%`,
             })),
           },

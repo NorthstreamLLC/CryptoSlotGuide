@@ -1,0 +1,19 @@
+{
+  "note": "RTP configurations read off a studio's OWN game page, overriding or supplying what the catalogue import holds. The import is a third-party feed; a studio publishing its own numbers beats it. Each entry records the page the figures came from and the date read. Keep this file out of the importer's way: gameCatalogue.json is regenerated from the CSV and would lose anything written into it.",
+  "overrides": {
+    "retro-sweets": {
+      "versions": [96.49, 94.42],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/retro-sweets.html",
+      "read": "2026-09-28",
+      "reason": "The catalogue import carried no RTP at all for this title. Push Gaming publishes two on their own game page, under a heading that reads 'RTP's may vary per casino. The RTP of the game can be found in the user panel and on the game loading screen.'"
+    },
+    "big-bamboo": {
+      "versions": [96.13, 94.13],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/big-bamboo.html",
+      "read": "2026-09-28",
+      "reason": "The catalogue import carried a single 95.11%, which matches NEITHER figure Push Gaming publishes. It may be a third licensed build or a bad row; either way the studio's own page is the better source, and it gives two. The import value is not carried through — a number we cannot trace to the studio is not one to publish next to ones we can."
+    }
+  }
+}

@@ -50,7 +50,18 @@ const ONLY = argv.includes("--only") ? argv[argv.indexOf("--only") + 1] : null;
  * pulls a quarter of a gigabyte of art for pages that do not exist.
  */
 const PAGES_ONLY = argv.includes("--pages");
-const qualifies = (g) => g.kind === "slot" && g.slug && g.demoUrl && (g.rtpVariants?.length ?? 0) > 1;
+/**
+ * Mirrors lib/slot-page.ts: the automatic bar, plus the editorial picks, which
+ * get a page regardless and so need art like any other. TOP_SLOTS is read out
+ * of the TS module rather than copied, so the two cannot drift.
+ */
+const TOP_SLOTS = (() => {
+  const src = fs.readFileSync(path.join(web, "lib", "top-slots.ts"), "utf8");
+  const block = src.match(/export const TOP_SLOTS: string\[\] = \[([\s\S]*?)\];/);
+  return new Set(block ? [...block[1].matchAll(/"([^"]+)"/g)].map((m) => m[1]) : []);
+})();
+const qualifies = (g) =>
+  g.kind === "slot" && g.slug && ((g.demoUrl && (g.rtpVariants?.length ?? 0) > 1) || TOP_SLOTS.has(g.slug));
 
 const catalogue = JSON.parse(fs.readFileSync(path.join(DATA, "gameCatalogue.json"), "utf8"));
 
@@ -61,9 +72,36 @@ const fileFor = (g) => (g.slug ?? g.name.toLowerCase().replace(/[^a-z0-9]+/g, "-
 
 const existing = fs.existsSync(SOURCES) ? JSON.parse(fs.readFileSync(SOURCES, "utf8")) : { note: "", fetched: null, art: {} };
 
-const targets = catalogue.games.filter(
-  (g) => g.image && (!ONLY || g.image.includes(ONLY)) && (!PAGES_ONLY || qualifies(g))
+/**
+ * Hosts whose art is ours to republish. Everything else is the studio's
+ * copyright under some operator's licence, and a working URL is not
+ * permission.
+ *
+ * This is a hard filter, not a convention. The rule used to live only in the
+ * file header and in remembering to pass --only slotessentials.com; the first
+ * run that forgot the flag pulled 16 files off an operator CDN straight into
+ * the repo. --allow-host exists for the day a studio's own press kit is the
+ * source, and names the host explicitly.
+ */
+const OURS = new Set(["api.slotessentials.com", ...(argv.includes("--allow-host") ? [argv[argv.indexOf("--allow-host") + 1]] : [])]);
+const publishable = (g) => {
+  try {
+    return OURS.has(new URL(g.image).hostname);
+  } catch {
+    return false;
+  }
+};
+
+const skippedForRights = catalogue.games.filter(
+  (g) => g.image && !publishable(g) && (!PAGES_ONLY || qualifies(g))
 );
+const targets = catalogue.games.filter(
+  (g) => g.image && publishable(g) && (!ONLY || g.image.includes(ONLY)) && (!PAGES_ONLY || qualifies(g))
+);
+if (skippedForRights.length) {
+  const hosts = [...new Set(skippedForRights.map((g) => new URL(g.image).hostname))];
+  console.log(`  ${skippedForRights.length} held for rights (${hosts.join(", ")}) — not ours to republish`);
+}
 if (!fs.existsSync(OUT) && !DRY) fs.mkdirSync(OUT, { recursive: true });
 
 const art = { ...existing.art };
@@ -114,9 +152,19 @@ fs.writeFileSync(
   SOURCES,
   JSON.stringify(
     {
-      note: "Where each file in public/assets/games came from. Game art is the studio's copyright; a copy on an operator's CDN is that operator's licensed use, not permission for ours. Entries whose sourceHost is an operator domain are the ones to replace with the studio's own press or affiliate kit.",
+      note: "Where each file in public/assets/games came from. Everything under `art` is served from a host we may republish from; the fetcher refuses anything else. `heldPendingRights` is what it refused and why — titles whose only art sits on an operator's CDN, to be replaced from the studio's own press or affiliate kit.",
       fetched: new Date().toISOString().slice(0, 10),
       art,
+      // Written every run, so the list of what we could not take stays
+      // accurate instead of going stale the first time someone reruns this.
+      heldPendingRights: Object.fromEntries(
+        skippedForRights
+          .map((g) => [
+            fileFor(g),
+            { sourceUrl: g.image, sourceHost: new URL(g.image).hostname, provider: g.provider, name: g.name },
+          ])
+          .sort((a, b) => String(a[0]).localeCompare(String(b[0])))
+      ),
     },
     null,
     2

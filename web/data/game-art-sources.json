@@ -1,6 +1,6 @@
 {
-  "note": "Where each file in public/assets/games came from. Game art is the studio's copyright; a copy on an operator's CDN is that operator's licensed use, not permission for ours. Entries whose sourceHost is an operator domain are the ones to replace with the studio's own press or affiliate kit.",
-  "fetched": "2026-09-28",
+  "note": "Where each file in public/assets/games came from. Everything under `art` is served from a host we may republish from; the fetcher refuses anything else. `heldPendingRights` is what it refused and why — titles whose only art sits on an operator's CDN, to be replaced from the studio's own press or affiliate kit.",
+  "fetched": "2026-09-29",
   "art": {
     "3-piggies-of-bank": {
       "file": "3-piggies-of-bank.webp",
@@ -4132,6 +4132,218 @@
       "sourceHost": "api.slotessentials.com",
       "provider": "Pragmatic Play",
       "fetched": "2026-09-28"
+    },
+    "big-bass-bonanza-1000": {
+      "file": "big-bass-bonanza-1000.webp",
+      "bytes": 79198,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/1bb996f8-f202-4e5c-a1ec-851e1e0a33c6.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-09-29"
+    },
+    "big-bamboo": {
+      "file": "big-bamboo.webp",
+      "bytes": 203178,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/c20f8e0e-78fa-4622-9b68-b155fa5fc218.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-29"
+    },
+    "dork-unit": {
+      "file": "dork-unit.webp",
+      "bytes": 39424,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/87faffe7-b711-4b14-a4f2-3979058dbe91.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Hacksaw Gaming",
+      "fetched": "2026-09-29"
+    },
+    "duel-at-dawn": {
+      "file": "duel-at-dawn.webp",
+      "bytes": 53698,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/461a2f99-ea12-4065-8478-acf36b4c6d53.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Hacksaw Gaming",
+      "fetched": "2026-09-29"
+    },
+    "duck-hunters-2": {
+      "file": "duck-hunters-2.webp",
+      "bytes": 290234,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/d68e33e4-cbce-4a39-933c-2aaa41aa56a6.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Nolimit City",
+      "fetched": "2026-09-29"
+    },
+    "gates-of-olympus-2500": {
+      "file": "gates-of-olympus-2500.webp",
+      "bytes": 70228,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/4469c7ae-74a4-46f6-98a9-4b666db8bd84.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-09-29"
+    },
+    "le-bandit": {
+      "file": "le-bandit.webp",
+      "bytes": 297708,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/5e1a6c87-7dc3-4f7e-893c-56c6401af59a.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Hacksaw Gaming",
+      "fetched": "2026-09-29"
+    },
+    "outsourced": {
+      "file": "outsourced.webp",
+      "bytes": 76450,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/89d0082e-0803-4652-b27c-d5ad6ae1b1c1.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Nolimit City",
+      "fetched": "2026-09-29"
+    },
+    "retro-sweets": {
+      "file": "retro-sweets.webp",
+      "bytes": 192818,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/f09c8268-23ed-4618-8cde-1036b0b20d7a.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-29"
+    },
+    "sugar-rush-1000": {
+      "file": "sugar-rush-1000.webp",
+      "bytes": 266468,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/2b75d14c-adb2-491d-b1a1-38f890aa2000.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-09-29"
+    },
+    "sweet-bonanza-1000": {
+      "file": "sweet-bonanza-1000.webp",
+      "bytes": 589540,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/6a2152ac-f4e0-4fce-9276-e5bb1adde88d.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-09-29"
+    },
+    "wanted-dead-or-a-wild": {
+      "file": "wanted-dead-or-a-wild.webp",
+      "bytes": 392742,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/ff13aef5-a571-45b8-9af4-fc8d1de892a9.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Hacksaw Gaming",
+      "fetched": "2026-09-29"
+    }
+  },
+  "heldPendingRights": {
+    "888-gold": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/pragmatic/888-gold.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Pragmatic Play",
+      "name": "888 Gold"
+    },
+    "bigger-barn-house-bonanza": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/pragmatic-play/bigger-barn-house-bonanza.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Pragmatic Play",
+      "name": "Bigger Barn House Bonanza"
+    },
+    "book-of-fallen": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/pragmatic/book-of-fallen.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Pragmatic Play",
+      "name": "Book of Fallen"
+    },
+    "bounty-hunter": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/pragmatic-play/bounty-hunter.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Pragmatic Play",
+      "name": "Bounty Hunter"
+    },
+    "captain-kraken-megaways": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/pragmatic-play/captain-kraken-megaways.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Pragmatic Play",
+      "name": "Captain Kraken Megaways"
+    },
+    "chilli-heat-spicy-spins": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/pragmatic-play/chilli-heat-spicy-spins.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Pragmatic Play",
+      "name": "Chilli Heat Spicy Spins"
+    },
+    "crypto-crown-10": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/hub88/avatarux/avx-cryptocrown10.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "AvatarUX",
+      "name": "Crypto Crown 10"
+    },
+    "lobster-house": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/pragmatic-play/lobster-house.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Pragmatic Play",
+      "name": "Lobster House"
+    },
+    "lucky-panda": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/pragmatic-play/lucky-panda.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Pragmatic Play",
+      "name": "Lucky Panda"
+    },
+    "mahjong-wins-super-scatter": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Pragmatic/mahjong-wins-super-scatter.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Pragmatic Play",
+      "name": "Mahjong Wins Super Scatter"
+    },
+    "mr-null-s-wicked-wares": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/neutron/pragmatic-play/mr-nulls-wicked-wares.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Pragmatic Play",
+      "name": "Mr. Null's Wicked Wares"
+    },
+    "olympus-wins": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/pragmatic-play/olympus-wins.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Pragmatic Play",
+      "name": "Olympus Wins"
+    },
+    "pig-farm": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/pragmatic-play/pig-farm.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Pragmatic Play",
+      "name": "Pig Farm"
+    },
+    "rolling-in-treasures": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/pragmatic-play/rolling-in-treasures.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Pragmatic Play",
+      "name": "Rolling in Treasures"
+    },
+    "tales-of-egypt": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/pragmatic/tales-of-egypt.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Pragmatic Play",
+      "name": "Tales of Egypt"
+    },
+    "temujin-treasures": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/pragmatic/temujin-treasures.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Pragmatic Play",
+      "name": "Temujin Treasures"
+    },
+    "wild-wildebeest-wins": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Pragmatic-Play/wild-wildebeest-wins.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Pragmatic Play",
+      "name": "Wild Wildebeest Wins"
     }
   }
 }

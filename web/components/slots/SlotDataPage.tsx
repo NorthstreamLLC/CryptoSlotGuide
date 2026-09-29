@@ -2,7 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
 import { NextSteps } from "@/components/layout/NextSteps";
-import { publishableArt, rtpSpread, rtpVersions, slotSpecs, type CatalogueSlotPage } from "@/lib/slot-page";
+import { publishableArt, rtpSpread, rtpVersions, singleRtp, rtpSource, slotSpecs, type CatalogueSlotPage } from "@/lib/slot-page";
+import { isTopSlot } from "@/lib/top-slots";
 
 /**
  * A catalogue slot's page: the RTP configurations a studio publishes for one
@@ -29,9 +30,12 @@ function Spec({ k, v }: { k: string; v: string }) {
 export function SlotDataPage({ g }: { g: CatalogueSlotPage }) {
   const versions = rtpVersions(g);
   const spread = rtpSpread(g);
+  const only = singleRtp(g);
   const art = publishableArt(g);
   const specs = slotSpecs(g);
   const studio = g.provider ?? "the studio";
+  const src = rtpSource(g);
+  const pick = isTopSlot(g.slug ?? "");
 
   return (
     <main style={{ background: "#07090B", color: "#E8EDF0" }}>
@@ -67,13 +71,27 @@ export function SlotDataPage({ g }: { g: CatalogueSlotPage }) {
               />
             )}
             <div style={{ flex: "1 1 340px", minWidth: 0 }}>
+              {pick && (
+                <div style={{ display: "inline-block", marginBottom: 10, padding: "4px 10px", borderRadius: 100, background: "rgba(255,197,49,.12)", border: "1px solid rgba(255,197,49,.3)", fontFamily: MONO, fontSize: 10, letterSpacing: ".07em", textTransform: "uppercase", color: "#FFC531" }}>
+                  One of our top slots
+                </div>
+              )}
               <h1 style={{ margin: "0 0 12px", fontSize: 40, lineHeight: 1.05, letterSpacing: "-.035em", fontWeight: 800, color: "#fff", textWrap: "balance" }}>
                 {g.name} RTP
               </h1>
               <p style={{ margin: 0, maxWidth: "62ch", fontSize: 16, lineHeight: 1.6, color: "#A8B6BE" }}>
-                {studio} licenses {g.name} at {versions.length} different returns
-                {spread ? <> — {versions[0]}% down to {versions[versions.length - 1]}%, a spread of {spread} percentage points</> : null}. Which one you
-                play is set by the casino, not by you, and the lobby does not show it.
+                {versions.length > 1 ? (
+                  <>
+                    {studio} licenses {g.name} at {versions.length} different returns — {versions[0]}% down to{" "}
+                    {versions[versions.length - 1]}%, a spread of {spread} percentage points. Which one you play is set by the casino, not by you, and
+                    the lobby does not show it.
+                  </>
+                ) : (
+                  <>
+                    {studio} publishes a single return of {only}% for {g.name}. Studios that licence more than one build do not always say so, so check
+                    the figure in the game&rsquo;s own info panel before you judge it by this one.
+                  </>
+                )}
               </p>
             </div>
           </div>
@@ -81,12 +99,24 @@ export function SlotDataPage({ g }: { g: CatalogueSlotPage }) {
       </section>
 
       <section style={{ maxWidth: 1100, margin: "0 auto", padding: "40px 40px 0" }}>
-        <h2 style={{ margin: "0 0 4px", fontSize: 22, fontWeight: 800, letterSpacing: "-.02em", color: "#fff" }}>Published configurations</h2>
+        <h2 style={{ margin: "0 0 4px", fontSize: 22, fontWeight: 800, letterSpacing: "-.02em", color: "#fff" }}>
+          {versions.length > 1 ? "Published configurations" : "Published return"}
+        </h2>
         <p style={{ margin: "0 0 18px", maxWidth: "70ch", fontSize: 14, lineHeight: 1.6, color: "#8DA0AA" }}>
-          Every return {studio} publishes for this title, highest first.
+          {versions.length > 1 ? <>Every return {studio} publishes for this title, highest first.</> : <>What {studio} publishes for this title.</>}
+          {src && (
+            <>
+              {" "}
+              Read from{" "}
+              <a href={src.sourceUrl} target="_blank" rel="noopener noreferrer nofollow" style={{ color: "#5FE3E8" }}>
+                {src.studio}&rsquo;s own game page
+              </a>
+              , which beats the catalogue feed.
+            </>
+          )}
         </p>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))", gap: 12 }}>
-          {versions.map((v, i) => (
+          {(versions.length ? versions : only !== null ? [only] : []).map((v, i) => (
             <div
               key={v}
               style={{
@@ -103,11 +133,13 @@ export function SlotDataPage({ g }: { g: CatalogueSlotPage }) {
             </div>
           ))}
         </div>
+        {versions.length > 1 && (
         <p style={{ margin: "14px 0 0", maxWidth: "70ch", fontSize: 13.5, lineHeight: 1.6, color: "#8DA0AA" }}>
           On a {versions[0]}% build the house keeps {(100 - versions[0]).toFixed(2)}% of turnover. On the{" "}
           {versions[versions.length - 1]}% build it keeps {(100 - versions[versions.length - 1]).toFixed(2)}% — {spread ? `${(((100 - versions[versions.length - 1]) / (100 - versions[0]) - 1) * 100).toFixed(0)}% more` : "more"} out of
           the same stake. <Link href="/rtp-watch" style={{ color: "#5FE3E8" }}>RTP Watch</Link> records which build each casino ships.
         </p>
+        )}
       </section>
 
       {specs.length > 0 && (

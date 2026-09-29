@@ -3,6 +3,8 @@ import { siteData } from "./site-data";
 import type { CatalogueGame } from "./slot-db";
 import { releaseDate } from "./slot-db";
 import artSources from "@/data/game-art-sources.json";
+import rtpOverrides from "@/data/slot-rtp-overrides.json";
+import { isTopSlot, TOP_SLOTS } from "./top-slots";
 
 /**
  * The slots that earn a page of their own out of the catalogue.
@@ -47,9 +49,23 @@ export interface CatalogueSlotPage extends CatalogueGame {
 
 const DB = catalogue as unknown as Catalogue;
 const ART = (artSources as { art: Record<string, { file?: string }> }).art;
+const OVERRIDES = (rtpOverrides as { overrides: Record<string, { versions: number[]; studio: string; sourceUrl: string }> }).overrides;
 
+/**
+ * A title earns a page two ways.
+ *
+ * The bar above — a studio demo plus more than one published RTP — is the
+ * automatic one, and it is what keeps this at 410 pages instead of 8,783.
+ *
+ * An editorial pick also earns one. Those are chosen by hand, one at a time,
+ * and a "top slots" list that links a third of itself nowhere is worse than
+ * no list. They are not held to the multi-RTP bar because the bar exists to
+ * stop bulk publishing, and thirteen hand-picked titles are not bulk.
+ */
 const QUALIFIES = (g: CatalogueGame) =>
-  g.kind === "slot" && !!g.slug && !!g.demoUrl && (g.rtpVariants?.length ?? 0) > 1;
+  g.kind === "slot" &&
+  !!g.slug &&
+  ((!!g.demoUrl && (rtpVersionsFor(g).length > 1)) || isTopSlot(g.slug));
 
 /** Slugs already owned by a hand-written review — those pages win. */
 const REVIEWED = new Set(siteData.slots.map((s) => s.slug));
@@ -89,9 +105,29 @@ export function publishableArt(g: CatalogueSlotPage): string | null {
   return rec?.file ? `/assets/games/${rec.file}` : null;
 }
 
-/** Published RTP configurations, best first, deduplicated. */
-export function rtpVersions(g: CatalogueSlotPage): number[] {
+/**
+ * Published RTP configurations, best first.
+ *
+ * A studio's own game page beats the catalogue import outright. The import is
+ * a third-party feed; where a studio publishes its own numbers we take those
+ * and drop the feed's, rather than showing both and implying we can tell
+ * which is right. data/slot-rtp-overrides.json records each override's source
+ * page and why it was taken.
+ */
+function rtpVersionsFor(g: CatalogueGame): number[] {
+  const o = g.slug ? OVERRIDES[g.slug] : undefined;
+  if (o?.versions?.length) return [...new Set(o.versions)].sort((a, b) => b - a);
   return [...new Set(g.rtpVariants ?? [])].sort((a, b) => b - a);
+}
+
+export function rtpVersions(g: CatalogueSlotPage): number[] {
+  return rtpVersionsFor(g);
+}
+
+/** Where an overridden figure came from, for the citation on the page. */
+export function rtpSource(g: CatalogueSlotPage): { studio: string; sourceUrl: string } | null {
+  const o = g.slug ? OVERRIDES[g.slug] : undefined;
+  return o ? { studio: o.studio, sourceUrl: o.sourceUrl } : null;
 }
 
 /**
@@ -102,6 +138,13 @@ export function rtpVersions(g: CatalogueSlotPage): number[] {
 export function rtpSpread(g: CatalogueSlotPage): number | null {
   const v = rtpVersions(g);
   return v.length > 1 ? Math.round((v[0] - v[v.length - 1]) * 100) / 100 : null;
+}
+
+/** The single published return, where that is all a studio licenses. */
+export function singleRtp(g: CatalogueSlotPage): number | null {
+  const v = rtpVersions(g);
+  if (v.length === 1) return v[0];
+  return v.length === 0 && typeof g.rtp === "number" ? g.rtp : null;
 }
 
 /** Specs worth a row, skipping anything the catalogue does not hold. */
@@ -118,4 +161,25 @@ export function slotSpecs(g: CatalogueSlotPage): { k: string; v: string }[] {
   const rel = releaseDate(g);
   if (rel) out.push({ k: "Released", v: rel });
   return out;
+}
+
+/**
+ * The editorial picks as links, resolved across both page kinds.
+ *
+ * Six are hand-written reviews and seven are catalogue pages; a reader does
+ * not care which, they are all /slots/<slug>. Resolving in one place keeps
+ * the menu and the index from having to know the difference, and a pick that
+ * loses its page shows up as a gap here rather than a 404 on three surfaces.
+ *
+ * This lives here rather than in top-slots.ts because slot-page already
+ * imports top-slots. Putting it the other way round makes a cycle, and a bad
+ * one: slot-page calls isTopSlot while building PAGES at module-init time, so
+ * whichever module loaded second would read the other's consts in TDZ.
+ */
+export function topSlotEntries(): { slug: string; name: string; href: string }[] {
+  const reviews = new Map(siteData.slots.map((s) => [s.slug, s.name]));
+  return TOP_SLOTS.map((slug) => {
+    const name = reviews.get(slug) ?? PAGES.get(slug)?.name;
+    return name ? { slug, name, href: `/slots/${slug}` } : null;
+  }).filter((x): x is { slug: string; name: string; href: string } => !!x);
 }
