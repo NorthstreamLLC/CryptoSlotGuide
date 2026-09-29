@@ -30,7 +30,7 @@ export default function Page() {
         <Tabs active="world" />
         <div style={{ padding: 18, borderRadius: 20, background: "#0B0F12", border: "1px solid rgba(255,255,255,.07)" }}>
           <MapHover info={info}>
-          <LegalMap shapes={WORLD_SHAPES} viewBox="0 0 960 470" statusOf={(c) => (c === "US" ? "varies by state" : countryBy(c)?.onlineCasino)} hrefOf={(c) => (c === "US" ? "/legal/us" : countryBy(c) ? `/legal/${c.toLowerCase()}` : null)} />
+          <LegalMap shapes={WORLD_SHAPES} viewBox="0 0 960 470" statusOf={(c) => (c === "US" ? "varies by state" : countryBy(c)?.onlineCasino)} hrefOf={(c) => (c === "US" ? "/legal/us" : c === "CA" ? "/legal/canada" : countryBy(c) ? `/legal/${c.toLowerCase()}` : null)} />
           </MapHover>
         </div>
         {covered.length > 0 && (
@@ -44,6 +44,7 @@ export default function Page() {
         <NextSteps
           steps={[
             { href: "/legal/us", label: "US state by state", hint: "All 50 states and DC, including where sweepstakes are banned." },
+            { href: "/legal/canada", label: "Canada by province", hint: "Thirteen provinces, thirteen answers — and who refuses which." },
             { href: "/legal/europe", label: "Europe in detail", hint: "The European map at a scale where the smaller markets are clickable." },
             { href: "/crypto-casinos", label: "Casinos by country", hint: "Which operators accept players where you live, from their own terms." },
             { href: "/how-we-rate", label: "How we source every fact", hint: "Each status links to the regulator or government page behind it." },

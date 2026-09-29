@@ -105,6 +105,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
               links: [
                 { label: "Gambling laws map", href: "/legal" },
                 { label: "US state by state", href: "/legal/us" },
+                { label: "Canada by province", href: "/legal/canada" },
                 { label: "US sweepstakes casinos", href: "/sweepstakes-casinos" },
               ],
             },

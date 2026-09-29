@@ -19,7 +19,9 @@ export function WorldMapClient() {
         shapes={WORLD_SHAPES}
         viewBox="0 0 960 470"
         statusOf={(c) => (c === "US" ? "varies by state" : countryBy(c)?.onlineCasino)}
-        hrefOf={(c) => (c === "US" ? "/legal/us" : countryBy(c) ? `/legal/${c.toLowerCase()}` : null)}
+        // US and Canada both break down further, so they get their own maps
+        // rather than a single national answer that would be wrong for both.
+        hrefOf={(c) => (c === "US" ? "/legal/us" : c === "CA" ? "/legal/canada" : countryBy(c) ? `/legal/${c.toLowerCase()}` : null)}
       />
     </MapHover>
   );
