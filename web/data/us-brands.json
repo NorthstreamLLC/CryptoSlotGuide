@@ -1,0 +1,270 @@
+{
+  "note": "Consumer betting brands in the US, matched to state regulator listings by DOMAIN first and brand name second. Domain first because the listings are not written the same way twice: Connecticut lists plain names ('DraftKings'), Michigan and Pennsylvania list 'Brand (domain)', and New Jersey lists bare domains with no brand name at all ('nj.betmgm.com/en/casino'). Name matching alone silently returns zero for every New Jersey casino. The brand list itself is built by hand, not by fuzzy matching: regulators name whatever the licence was issued to, which is sometimes the consumer brand, sometimes the corporate entity behind it (Roar Digital for BetMGM, Hillside for bet365, Rush Street Interactive for BetRivers), and sometimes the venue holding the skin. Merging on a shared word would fold Bally Bet into Bally's Dover, a BetRivers skin. Anything unmatched is left off the brand pages and stays on its state page, where it is already sourced. B2B suppliers (Kambi, NYX, GAN, Strive) are deliberately absent: they are not books a reader can sign up to. Counts are 'named by N state regulators', not 'operating in N states' — the lists are what each regulator publishes and some lag a rebrand.",
+  "brands": [
+    {
+      "slug": "draftkings",
+      "name": "DraftKings",
+      "site": "https://sportsbook.draftkings.com",
+      "aliases": [
+        "DraftKings",
+        "DraftKings Sportsbook",
+        "DraftKings Casino",
+        "DraftKings (casino.draftkings.com)"
+      ],
+      "domains": [
+        "draftkings.com"
+      ]
+    },
+    {
+      "slug": "fanduel",
+      "name": "FanDuel",
+      "site": "https://sportsbook.fanduel.com",
+      "aliases": [
+        "FanDuel",
+        "FanDuel Sportsbook",
+        "FanDuel Casino",
+        "FanDuel Casino & Poker",
+        "FanDuel (casino.fanduel.com)"
+      ],
+      "domains": [
+        "fanduel.com"
+      ]
+    },
+    {
+      "slug": "betmgm",
+      "name": "BetMGM",
+      "site": "https://sports.betmgm.com",
+      "aliases": [
+        "BetMGM",
+        "BetMGM Sportsbook",
+        "BETMGM (Roar Digital)",
+        "Bet MGM",
+        "Roar Digital",
+        "BetMGM Casino & Poker",
+        "BetMGM (casino.mi.betmgm.com/en/casino)",
+        "Borgata Online"
+      ],
+      "domains": [
+        "betmgm.com",
+        "borgataonline.com",
+        "partycasino.com",
+        "partypoker.com"
+      ]
+    },
+    {
+      "slug": "caesars",
+      "name": "Caesars",
+      "site": "https://sportsbook.caesars.com",
+      "aliases": [
+        "Caesars",
+        "Caesars Sportsbook",
+        "Caesars Sports Book",
+        "Caesars (William Hill)",
+        "Caesars Virginia",
+        "Caesars/WSOP",
+        "Caesars Palace Online Casino",
+        "Caesars - Horseshoe (horseshoe.com)",
+        "Horseshoe Online Casino"
+      ],
+      "domains": [
+        "caesars.com",
+        "caesarspalaceonline.com",
+        "horseshoeonlinecasino.com",
+        "wsop.com"
+      ]
+    },
+    {
+      "slug": "bet365",
+      "name": "bet365",
+      "site": "https://www.bet365.com",
+      "aliases": [
+        "bet365",
+        "Bet365",
+        "Bet365 (Hillside (Colorado) LLC)",
+        "Hillside (Virginia)"
+      ],
+      "domains": [
+        "bet365.com"
+      ]
+    },
+    {
+      "slug": "fanatics",
+      "name": "Fanatics",
+      "site": "https://sportsbook.fanatics.com",
+      "aliases": [
+        "Fanatics",
+        "Fanatics Sportsbook",
+        "Fanatics Betting & Gaming",
+        "Fanatics Sportsbook and Casino",
+        "Fanatics Sportsbook, Fanatics Casino"
+      ],
+      "domains": [
+        "fanatics.com"
+      ]
+    },
+    {
+      "slug": "betrivers",
+      "name": "BetRivers",
+      "site": "https://www.betrivers.com",
+      "aliases": [
+        "BetRivers",
+        "Betrivers",
+        "BetRivers Sportsbook",
+        "BETRIVERS (Rush Street Interactive)",
+        "Rush Street Interactive",
+        "RSI/BetRivers",
+        "BetRivers (mi.betrivers.com)",
+        "PlaySugarHouse"
+      ],
+      "domains": [
+        "betrivers.com",
+        "playsugarhouse.com"
+      ]
+    },
+    {
+      "slug": "espn-bet",
+      "name": "ESPN BET",
+      "site": "https://espnbet.com",
+      "aliases": [
+        "ESPN BET",
+        "ESPN Bet",
+        "ESPN BET (espnbet.com/casino)"
+      ],
+      "caveat": "Penn Entertainment's US consumer brand, which replaced theScore Bet. Several regulator lists have not been updated and still record theScore Bet, so the count here is what the regulators publish, not necessarily what is live.",
+      "domains": [
+        "espnbet.com"
+      ]
+    },
+    {
+      "slug": "hard-rock-bet",
+      "name": "Hard Rock Bet",
+      "site": "https://www.hardrock.bet",
+      "aliases": [
+        "Hard Rock Bet",
+        "Hard Rock Bet Sportsbook",
+        "Hard Rock Sportsbook",
+        "Hard Rock Digital"
+      ],
+      "domains": [
+        "hardrock.bet"
+      ]
+    },
+    {
+      "slug": "bally-bet",
+      "name": "Bally Bet",
+      "site": "https://play.ballybet.com",
+      "aliases": [
+        "Bally Bet",
+        "Bally Bet Sportsbook",
+        "Bally's Bet",
+        "Bally's Interactive",
+        "Bally Bet Casino"
+      ],
+      "domains": [
+        "ballybet.com",
+        "ballycasino.com"
+      ]
+    },
+    {
+      "slug": "thescore-bet",
+      "name": "theScore Bet",
+      "site": "https://www.thescore.bet",
+      "aliases": [
+        "theScore Bet",
+        "theScore",
+        "theScore Bet Sportsbook",
+        "theScore Bet (Penn Interactive)",
+        "PENN/The Score Bet"
+      ],
+      "caveat": "Penn Entertainment runs both theScore Bet and ESPN BET. State regulator lists still carry both names, and entries naming only the licence holder ('Penn Sports Interactive') do not say which brand is live there, so they are not counted under either.",
+      "domains": [
+        "thescore.bet"
+      ]
+    },
+    {
+      "slug": "circa-sports",
+      "name": "Circa Sports",
+      "site": "https://www.circasports.com",
+      "aliases": [
+        "Circa Sports",
+        "Circa Sports Kentucky"
+      ],
+      "domains": [
+        "circasports.com"
+      ]
+    },
+    {
+      "slug": "betparx",
+      "name": "betPARX",
+      "site": "https://www.betparx.com",
+      "aliases": [
+        "betPARX",
+        "BetParx",
+        "betParx",
+        "BetParx (playgunlake.com/casino)"
+      ],
+      "domains": [
+        "betparx.com"
+      ]
+    },
+    {
+      "slug": "golden-nugget",
+      "name": "Golden Nugget",
+      "site": "https://www.goldennuggetcasino.com",
+      "aliases": [
+        "Golden Nugget Casino",
+        "Golden Nugget Casino (goldennuggetcasino.com)"
+      ],
+      "domains": [
+        "goldennuggetcasino.com"
+      ]
+    },
+    {
+      "slug": "resorts-world-bet",
+      "name": "Resorts World Bet",
+      "site": "https://www.resortsworldbet.com",
+      "aliases": [
+        "Resorts World Bet"
+      ],
+      "domains": [
+        "rwbetnj.com",
+        "resortsworldbet.com"
+      ]
+    },
+    {
+      "slug": "betjack",
+      "name": "betJACK",
+      "site": "https://www.betjack.com",
+      "aliases": [
+        "betJACK"
+      ],
+      "domains": [
+        "betjack.com"
+      ]
+    },
+    {
+      "slug": "sporttrade",
+      "name": "Sporttrade",
+      "site": "https://sporttrade.com",
+      "aliases": [
+        "Sporttrade",
+        "Sport Trade",
+        "Sporttrade Colorado, LLC"
+      ],
+      "domains": [
+        "sporttrade.com"
+      ]
+    },
+    {
+      "slug": "prime-sportsbook",
+      "name": "Prime Sportsbook",
+      "site": "https://primesportsbook.com",
+      "aliases": [
+        "Prime Sportsbook"
+      ],
+      "domains": [
+        "primesportsbook.com"
+      ]
+    }
+  ]
+}

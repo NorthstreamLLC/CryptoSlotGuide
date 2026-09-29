@@ -8,6 +8,7 @@ import { versusPairs, pairSlug } from "@/lib/versus";
 import { countryPages, COIN_PAGES, casinosForCoin } from "@/lib/landing";
 import { LEGACY_ITEMS, LEGACY_CATEGORIES } from "@/lib/legacy";
 import { cataloguePageSlugs } from "@/lib/slot-page";
+import { rankedBrands } from "@/lib/us-brands";
 
 /**
  * Not part of the original prototype — it's a design mockup with one
@@ -71,6 +72,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // The catalogue titles that earn their own page — see lib/slot-page.ts for
     // the bar. Separate from `slots`, which is the hand-written reviews.
     ...cataloguePageSlugs().map((sl) => slugPath("/slots", sl)),
+    // US-regulated brands — only those a regulator actually lists, matching
+    // the route's own generateStaticParams.
+    ...rankedBrands().map(({ brand }) => slugPath("/us-casinos", brand.slug)),
     ...[...new Set([...providers.map((p) => p.slug), ...STUDIOS.map((st) => st.slug)])].map((sl) => slugPath("/providers", sl)),
     ...walletRows.map((w) => slugPath("/wallets", w.slug)),
     ...exchangeRows.map((x) => slugPath("/exchanges", x.slug)),

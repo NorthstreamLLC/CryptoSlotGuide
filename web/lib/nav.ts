@@ -8,6 +8,7 @@
 import type { SiteCounts } from "./derived";
 import { siteData } from "./site-data";
 import { topSlotEntries } from "./slot-page";
+import { rankedBrands } from "./us-brands";
 
 const slotCatLabels = siteData.slotCatDefs.map((d) => ({ tag: d.tag, label: d.label }));
 
@@ -114,6 +115,31 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
                 href: `/casinos/${slug(name)}`,
                 brand: slug(name),
               })),
+            },
+          ],
+        },
+        {
+          mono: "🇺🇸",
+          label: "US regulated",
+          tint: "#7BE0B8",
+          href: "/us-casinos",
+          columns: [
+            {
+              title: "Browse",
+              links: [
+                { label: "All US-regulated brands", href: "/us-casinos" },
+                { label: "State-by-state law", href: "/legal/us" },
+                { label: "US sweepstakes casinos", href: "/sweepstakes-casinos" },
+              ],
+            },
+            {
+              // The four brands with the widest licensed footprint, by state
+              // count, not by anything commercial — we hold no deal with any
+              // of them.
+              title: "Biggest footprints",
+              links: rankedBrands()
+                .slice(0, 5)
+                .map(({ brand }) => ({ label: brand.name, href: `/us-casinos/${brand.slug}` })),
             },
           ],
         },
