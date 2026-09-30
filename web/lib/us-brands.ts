@@ -1,6 +1,7 @@
 import brandsData from "@/data/us-brands.json";
 import usMarket from "@/data/us-market.json";
 import legalUs from "@/data/legal-us.json";
+import operatorClaims from "@/data/us-operator-claims.json";
 
 /**
  * US-regulated betting brands, and which state regulators list them.
@@ -176,4 +177,28 @@ export function statesWithoutList(kind: "sportsbook" | "casino"): { code: string
     STATES.filter((s) => (kind === "sportsbook" ? s.sportsbooks : s.casinos)?.operators?.length).map((s) => s.code)
   );
   return LEGAL.filter((l) => l[field] === want && !held.has(l.code)).map((l) => ({ code: l.code, name: l.name }));
+}
+
+/**
+ * States the operator's own site claims, for the places no regulator lists
+ * anyone. Deliberately a separate call from statesFor(): a regulator list is
+ * a public record and an operator's availability map is a page that operator
+ * controls, so the two are shown apart and labelled, not summed into one
+ * number.
+ */
+export interface OperatorClaim {
+  code: string;
+  sourceUrl: string;
+  read: string;
+  quote: string;
+}
+const CLAIMS = (operatorClaims as {
+  brands: Record<string, { sportsbook?: OperatorClaim[]; casino?: OperatorClaim[] }>;
+}).brands;
+
+export function operatorClaimsFor(slug: string, kind: "sportsbook" | "casino"): OperatorClaim[] {
+  const rows = CLAIMS[slug]?.[kind] ?? [];
+  // Never duplicate a state a regulator already names — the record wins.
+  const known = new Set(countsFor(slug)[kind]);
+  return rows.filter((r) => !known.has(r.code)).sort((a, b) => a.code.localeCompare(b.code));
 }

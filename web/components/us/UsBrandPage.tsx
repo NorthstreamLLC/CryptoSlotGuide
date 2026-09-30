@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { NextSteps } from "@/components/layout/NextSteps";
-import { statesFor, statesWithoutList, type UsBrand } from "@/lib/us-brands";
+import { statesFor, statesWithoutList, operatorClaimsFor, type UsBrand } from "@/lib/us-brands";
 import { US_STATES } from "@/lib/legal";
 
 /**
@@ -30,6 +30,10 @@ export function UsBrandPage({ brand }: { brand: UsBrand }) {
   const rows = statesFor(brand.slug);
   const sports = rows.filter((r) => r.kind === "sportsbook");
   const casino = rows.filter((r) => r.kind === "casino");
+  const claimed = [
+    ...operatorClaimsFor(brand.slug, "sportsbook").map((c) => ({ ...c, kind: "sports betting" })),
+    ...operatorClaimsFor(brand.slug, "casino").map((c) => ({ ...c, kind: "online casino" })),
+  ];
 
   return (
     <main style={{ background: "#07090B", color: "#E8EDF0" }}>
@@ -117,7 +121,34 @@ export function UsBrandPage({ brand }: { brand: UsBrand }) {
         )}
       </section>
 
-      <section style={{ maxWidth: 1100, margin: "0 auto", padding: "0 40px 80px" }}>
+      {claimed.length > 0 && (
+        <section style={{ maxWidth: 1100, margin: "0 auto", padding: "8px 40px 0" }}>
+          <h2 style={{ margin: "0 0 6px", fontSize: 22, fontWeight: 800, letterSpacing: "-.02em", color: "#fff" }}>
+            Claimed by {brand.name}, not on a regulator list
+          </h2>
+          <p style={{ margin: "0 0 14px", maxWidth: "70ch", fontSize: 13.5, lineHeight: 1.6, color: "#8DA0AA" }}>
+            Shown apart from the rows above because it is a different kind of claim. Those come from a regulator&rsquo;s public record; these come from a
+            page {brand.name} writes and controls — used here only for states that permit the product and publish no list of who runs it, where the
+            regulator record cannot answer at all.
+          </p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 12 }}>
+            {claimed.map((c) => (
+              <div key={`${c.kind}-${c.code}`} style={{ padding: "14px 16px", borderRadius: 14, background: "#0E1316", border: "1px dashed rgba(199,164,92,.35)" }}>
+                <div style={{ display: "flex", justifyContent: "space-between", gap: 10, marginBottom: 8 }}>
+                  <span style={{ fontSize: 15.5, fontWeight: 800, color: "#fff" }}>{stateName(c.code)}</span>
+                  <span style={{ fontFamily: MONO, fontSize: 10.5, color: "#C7A45C" }}>{c.kind}</span>
+                </div>
+                <p style={{ margin: "0 0 8px", fontSize: 13, lineHeight: 1.5, color: "#A8B6BE" }}>&ldquo;{c.quote}&rdquo;</p>
+                <a href={c.sourceUrl} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: MONO, fontSize: 10.5, color: "#5FE3E8" }}>
+                  {brand.name}&rsquo;s own page · read {c.read} ↗
+                </a>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      <section style={{ maxWidth: 1100, margin: "0 auto", padding: "36px 40px 80px" }}>
         <NextSteps
           steps={[
             { label: "Every US-regulated brand", href: "/us-casinos", hint: "Who is licensed where, across sports betting and online casino." },

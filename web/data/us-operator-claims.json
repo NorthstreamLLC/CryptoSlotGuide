@@ -1,0 +1,25 @@
+{
+  "note": "Where an operator's OWN site says it is live, for places no regulator publishes a list. Four states permit online sports betting and name nobody — Arkansas, Florida, Nevada, Wisconsin — and Rhode Island does the same for online casino, so the regulator-derived counts under-report there by construction. This file fills those holes from the operator's own availability map or location picker, which is the same sourcing standard the rest of the site uses.\n\nKept separate from the regulator data rather than merged into it, because the two are not the same kind of claim. A regulator list is a public record; an operator's map is a marketing page that the operator controls. The pages show them as separate groups and say which is which.\n\nProvenance caveat worth keeping in view: these were read from the operator's live page, but NOT by fetching it — the browser tool blocks gambling operator domains, so they came via screenshots supplied by the site owner on the date recorded. `quote` holds the wording shown, so a later check has something exact to compare against. Anything not explicitly quoted from a tooltip or picker row is not recorded here; reading a choropleth by eye is not a source.",
+  "brands": {
+    "draftkings": {
+      "sportsbook": [
+        {
+          "code": "AR",
+          "sourceUrl": "https://sportsbook.draftkings.com/sportsbook",
+          "read": "2026-09-30",
+          "quote": "Mobile and online betting are legal in Arkansas. Download DraftKings Sportsbook today."
+        }
+      ]
+    },
+    "betmgm": {
+      "sportsbook": [
+        {
+          "code": "NV",
+          "sourceUrl": "https://www.betmgm.com",
+          "read": "2026-09-30",
+          "quote": "Nevada listed under Sports in BetMGM's own \"Where are you playing from? Select from available locations\" picker."
+        }
+      ]
+    }
+  }
+}
