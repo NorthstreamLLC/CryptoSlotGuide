@@ -92,6 +92,16 @@ export default async function Page({ params }: { params: Promise<{ country: stri
                 {c.regulator.name}
               </a>
               . The operators on this site mostly hold offshore licences and do not serve {c.name} — the regulator publishes the ones that do.
+              {country === "gb" && (
+                <>
+                  {" "}
+                  We check six of them against that register on{" "}
+                  <Link href="/uk-casinos" style={{ color: "#7BE0B8" }}>
+                    our UK-licensed casinos page
+                  </Link>
+                  .
+                </>
+              )}
             </p>
           </div>
         )}

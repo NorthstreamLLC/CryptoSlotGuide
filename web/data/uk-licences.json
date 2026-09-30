@@ -1,0 +1,123 @@
+{
+  "note": "UK operator licences, read from the Gambling Commission's public register by scripts/fetch-uk-licences.mjs. Matched by DOMAIN, never by brand name: the register lists the licence holder, which is often not the brand — Casumo's is held by Recro Limited. The operators' own .com sites state their international licences (Gibraltar for Casumo, Malta for LeoVegas and Betway), so they cannot be used to establish a UK licence. Each entry keeps the register's own detail-page URL, which is the citation.",
+  "source": "https://www.gamblingcommission.gov.uk/public-register",
+  "read": "2026-09-30",
+  "brands": {
+    "leovegas": {
+      "name": "LeoVegas",
+      "licences": [
+        {
+          "entity": "LeoVegas Gaming PLC",
+          "accountNumber": "39198",
+          "detailUrl": "https://www.gamblingcommission.gov.uk/public-register/business/detail/39198",
+          "domains": [
+            "leovegas.co.uk",
+            "leovegas.com",
+            "www.leovegas.com"
+          ]
+        }
+      ]
+    },
+    "casumo": {
+      "name": "Casumo",
+      "licences": [
+        {
+          "entity": "Casumo Services Limited",
+          "accountNumber": "39265",
+          "detailUrl": "https://www.gamblingcommission.gov.uk/public-register/business/detail/39265",
+          "domains": [
+            "casumo.com"
+          ]
+        },
+        {
+          "entity": "Recro Limited",
+          "accountNumber": "61549",
+          "detailUrl": "https://www.gamblingcommission.gov.uk/public-register/business/detail/61549",
+          "domains": [
+            "casumo.com"
+          ]
+        }
+      ]
+    },
+    "888casino": {
+      "name": "888casino",
+      "licences": [
+        {
+          "entity": "888 UK Limited",
+          "accountNumber": "39028",
+          "detailUrl": "https://www.gamblingcommission.gov.uk/public-register/business/detail/39028",
+          "domains": [
+            "888.co.uk",
+            "888.com",
+            "888.info",
+            "888casino.com",
+            "888poker.co.uk",
+            "888poker.com",
+            "888poker.net",
+            "888pokercam.com",
+            "888pokeruk.com",
+            "888responsible.com",
+            "888sport.com",
+            "888vipcasinoclub.com",
+            "casino-www.888poker.com",
+            "casino-www.888sport.com",
+            "magic888casino.com",
+            "www.888poker-promotions.com"
+          ]
+        }
+      ]
+    },
+    "bet365": {
+      "name": "bet365 Casino",
+      "licences": [
+        {
+          "entity": "Hillside (UK Gaming) ENC",
+          "accountNumber": "55149",
+          "detailUrl": "https://www.gamblingcommission.gov.uk/public-register/business/detail/55149",
+          "domains": [
+            "bet365.com"
+          ]
+        },
+        {
+          "entity": "Hillside (UK Sports) ENC",
+          "accountNumber": "55148",
+          "detailUrl": "https://www.gamblingcommission.gov.uk/public-register/business/detail/55148",
+          "domains": [
+            "bet365.com"
+          ]
+        }
+      ]
+    },
+    "playojo": {
+      "name": "PlayOJO",
+      "licences": [
+        {
+          "entity": "Skill On Net Limited",
+          "accountNumber": "39326",
+          "detailUrl": "https://www.gamblingcommission.gov.uk/public-register/business/detail/39326",
+          "domains": [
+            "www.playojo.co.uk",
+            "www.playojo.com"
+          ]
+        }
+      ]
+    },
+    "betway": {
+      "name": "Betway Casino",
+      "licences": [
+        {
+          "entity": "Betway Limited",
+          "accountNumber": "39372",
+          "detailUrl": "https://www.gamblingcommission.gov.uk/public-register/business/detail/39372",
+          "domains": [
+            "betway.com",
+            "casino.betway.com",
+            "inplay.betway.com",
+            "sports.betway.com",
+            "vegas.betway.com"
+          ]
+        }
+      ]
+    }
+  }
+}
