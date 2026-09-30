@@ -1,5 +1,6 @@
 import brandsData from "@/data/us-brands.json";
 import usMarket from "@/data/us-market.json";
+import legalUs from "@/data/legal-us.json";
 
 /**
  * US-regulated betting brands, and which state regulators list them.
@@ -143,4 +144,36 @@ export function unmatchedListings(): { listing: string; code: string; kind: stri
     }
   }
   return out;
+}
+
+/**
+ * States where the product is legal but no regulator publishes an operator
+ * list, so no brand can be shown there however widely it operates.
+ *
+ * This is not a hole in our reading — it is a hole in what exists to read.
+ * Nevada licenses mobile sports betting through its casino licensees but the
+ * Gaming Control Board publishes no list of who runs it; Florida does not
+ * licence online sportsbooks at all, because betting runs through the
+ * Seminole compact; Arkansas and Wisconsin are tribal. Every brand's sports
+ * count is therefore a floor, not a total, and the pages say so rather than
+ * letting a number read as complete.
+ *
+ * Online casino has no such gap: all seven states that permit it publish a
+ * list, so those counts are whole.
+ */
+interface LegalRow {
+  code: string;
+  name: string;
+  sportsBetting?: string | null;
+  onlineCasino?: string | null;
+}
+const LEGAL = legalUs as unknown as LegalRow[];
+
+export function statesWithoutList(kind: "sportsbook" | "casino"): { code: string; name: string }[] {
+  const field = kind === "sportsbook" ? "sportsBetting" : "onlineCasino";
+  const want = kind === "sportsbook" ? "online" : "legal";
+  const held = new Set(
+    STATES.filter((s) => (kind === "sportsbook" ? s.sportsbooks : s.casinos)?.operators?.length).map((s) => s.code)
+  );
+  return LEGAL.filter((l) => l[field] === want && !held.has(l.code)).map((l) => ({ code: l.code, name: l.name }));
 }

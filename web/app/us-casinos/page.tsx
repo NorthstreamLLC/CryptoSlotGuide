@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { rankedBrands, unmatchedListings } from "@/lib/us-brands";
+import { rankedBrands, unmatchedListings, statesWithoutList } from "@/lib/us-brands";
 import { pageMetadata } from "@/lib/seo";
 import { breadcrumbSchema, collectionPageSchema, itemListSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -77,6 +77,11 @@ export default function Page() {
             brand page says so where it applies. {unmatched.length} further listings are venue names, licence-holding companies or B2B platform suppliers
             rather than brands you can sign up to; they stay on their{" "}
             <Link href="/legal/us" style={{ color: "#5FE3E8" }}>state pages</Link> rather than being guessed into a brand here.
+          </p>
+          <p style={{ margin: "10px 0 0", maxWidth: "76ch", fontSize: 13, lineHeight: 1.6, color: "#77858E" }}>
+            Five states are missing from every count above, because no list exists to read:{" "}
+            {[...statesWithoutList("sportsbook"), ...statesWithoutList("casino")].map((s) => s.name).join(", ")}. Each permits the product but publishes no
+            licensed-operator list — in Rhode Island the lottery is the regulator and the operator. Treat every number here as a floor.
           </p>
         </section>
 

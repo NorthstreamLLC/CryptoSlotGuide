@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { NextSteps } from "@/components/layout/NextSteps";
-import { statesFor, type UsBrand } from "@/lib/us-brands";
+import { statesFor, statesWithoutList, type UsBrand } from "@/lib/us-brands";
 import { US_STATES } from "@/lib/legal";
 
 /**
@@ -56,6 +56,17 @@ export function UsBrandPage({ brand }: { brand: UsBrand }) {
               </>
             )}
             Every row below is the regulator&rsquo;s own published list, linked.
+          </p>
+          {/* A count that looks complete but is not. Some states permit the
+              product and publish nobody, so no brand can appear there however
+              widely it operates — the number is a floor, and saying so is the
+              difference between a fact and a misleading one. */}
+          <p style={{ margin: "12px 0 0", maxWidth: "64ch", fontSize: 13.5, lineHeight: 1.6, color: "#8DA0AA" }}>
+            These are floors, not totals.{" "}
+            {statesWithoutList("sportsbook").map((s) => s.name).join(", ")} allow online sports betting but publish no operator list — Nevada licenses it
+            through its casino licensees and names none of them, Florida runs betting through the Seminole compact rather than licensing books.{" "}
+            {statesWithoutList("casino").map((s) => s.name).join(", ")} permits online casino with the lottery as both regulator and operator, and
+            publishes no list either. A brand can be live in any of them and still not appear above.
           </p>
           {brand.caveat && (
             <p style={{ margin: "14px 0 0", maxWidth: "64ch", padding: "12px 14px", borderRadius: 12, background: "rgba(199,164,92,.08)", border: "1px solid rgba(199,164,92,.25)", fontSize: 13.5, lineHeight: 1.55, color: "#D8C79B" }}>
