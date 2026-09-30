@@ -62,10 +62,19 @@ const OVERRIDES = (rtpOverrides as { overrides: Record<string, { versions: numbe
  * no list. They are not held to the multi-RTP bar because the bar exists to
  * stop bulk publishing, and thirteen hand-picked titles are not bulk.
  */
+/**
+ * A studio demo OR a studio source page satisfies the same requirement. The
+ * demo was never the point in itself — it was there to prove the title is
+ * the studio's and to give the reader somewhere real to go. A page on the
+ * studio's own site, which is where the RTP figures were read from, does
+ * both and cites better. 45 Push Gaming titles have one and no demo.
+ */
+const hasStudioPage = (g: CatalogueGame) => !!(g.slug && OVERRIDES[g.slug]?.sourceUrl);
+
 const QUALIFIES = (g: CatalogueGame) =>
   g.kind === "slot" &&
   !!g.slug &&
-  ((!!g.demoUrl && (rtpVersionsFor(g).length > 1)) || isTopSlot(g.slug));
+  (((!!g.demoUrl || hasStudioPage(g)) && rtpVersionsFor(g).length > 1) || isTopSlot(g.slug));
 
 /** Slugs already owned by a hand-written review — those pages win. */
 const REVIEWED = new Set(siteData.slots.map((s) => s.slug));

@@ -2,18 +2,494 @@
   "note": "RTP configurations read off a studio's OWN game page, overriding or supplying what the catalogue import holds. The import is a third-party feed; a studio publishing its own numbers beats it. Each entry records the page the figures came from and the date read. Keep this file out of the importer's way: gameCatalogue.json is regenerated from the CSV and would lose anything written into it.",
   "overrides": {
     "retro-sweets": {
-      "versions": [96.49, 94.42],
+      "versions": [
+        96.49,
+        94.42
+      ],
       "studio": "Push Gaming",
       "sourceUrl": "https://www.pushgaming.com/games/retro-sweets.html",
-      "read": "2026-09-28",
-      "reason": "The catalogue import carried no RTP at all for this title. Push Gaming publishes two on their own game page, under a heading that reads 'RTP's may vary per casino. The RTP of the game can be found in the user panel and on the game loading screen.'"
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
     },
     "big-bamboo": {
-      "versions": [96.13, 94.13],
+      "versions": [
+        96.13,
+        94.13
+      ],
       "studio": "Push Gaming",
       "sourceUrl": "https://www.pushgaming.com/games/big-bamboo.html",
-      "read": "2026-09-28",
-      "reason": "The catalogue import carried a single 95.11%, which matches NEITHER figure Push Gaming publishes. It may be a third licensed build or a bad row; either way the studio's own page is the better source, and it gives two. The import value is not carried through — a number we cannot trace to the studio is not one to publish next to ones we can."
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "10-pharaohs": {
+      "versions": [
+        96.26,
+        94.47
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/10-pharaohs.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "10-swords": {
+      "versions": [
+        96.41,
+        94.41
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/10-swords.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "10-santas-reindeers": {
+      "versions": [
+        96.26,
+        94.47
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/10-santas-reindeers.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "10-flaming-bisons": {
+      "versions": [
+        96.26,
+        94.47
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/10-flaming-bisons.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "3-liberty-eagles": {
+      "versions": [
+        96.23,
+        94.25
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/3-liberty-eagles.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "3-magic-pots": {
+      "versions": [
+        96.23,
+        94.25
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/3-magic-pots.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "big-bamboo-2": {
+      "versions": [
+        96.36,
+        94.47
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/big-bamboo-2.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "big-bam-book": {
+      "versions": [
+        96.31,
+        94.42
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/big-bam-book.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "big-bite-push-ways": {
+      "versions": [
+        96.27,
+        94.37
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/big-bite-push-ways.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "bison-battle": {
+      "versions": [
+        96.4,
+        94.18
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/bison-battle.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "candy-blast": {
+      "versions": [
+        96.34,
+        94.3
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/candy-blast.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "boss-bear": {
+      "versions": [
+        96.47,
+        94.35
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/boss-bear.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "dj-fox": {
+      "versions": [
+        96.28,
+        94.31
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/dj-fox.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "dragon-hopper": {
+      "versions": [
+        96.33,
+        94.39
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/dragon-hopper.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "fang-city": {
+      "versions": [
+        96.33,
+        94.37
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/fang-city.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "fat-banker": {
+      "versions": [
+        96.43,
+        94.45
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/fat-banker.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "fat-drac": {
+      "versions": [
+        96.57,
+        94.05
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/fat-drac.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "fish-n-nudge": {
+      "versions": [
+        96.4,
+        94.38
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/fish-n-nudge.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "fire-hopper": {
+      "versions": [
+        96.3,
+        94.5
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/fire-hopper.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "giga-jar": {
+      "versions": [
+        96.48,
+        94.45
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/giga-jar.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "generous-jack": {
+      "versions": [
+        96.23,
+        94.36
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/generous-jack.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "goat-getter": {
+      "versions": [
+        96.4,
+        94.39
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/goat-getter.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "happy-bamboo": {
+      "versions": [
+        96.31,
+        94.23
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/happy-bamboo.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "iron-phoenix": {
+      "versions": [
+        96.24,
+        94.01
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/iron-phoenix.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "jammin-jars": {
+      "versions": [
+        96.83,
+        94.25
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/jammin-jars.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "jaguar-drop": {
+      "versions": [
+        96.31,
+        94.39
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/jaguar-drop.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "jammin-jars-2": {
+      "versions": [
+        96.4,
+        94.4
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/jammin-jars-2.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "mad-blast": {
+      "versions": [
+        96.34,
+        94.3
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/mad-blast.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "masked-mayhem": {
+      "versions": [
+        96.29,
+        94.31
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/masked-mayhem.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "mad-cars": {
+      "versions": [
+        96.39,
+        94.44
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/mad-cars.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "mystery-museum": {
+      "versions": [
+        96.58,
+        94.01
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/mystery-museum.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "olympus-unleashed": {
+      "versions": [
+        96.32,
+        94.36
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/olympus-unleashed.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "power-vault": {
+      "versions": [
+        96.41,
+        94.38
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/power-vault.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "razor-shark": {
+      "versions": [
+        96.7,
+        94.06
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/razor-shark.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "razor-returns": {
+      "versions": [
+        96.55,
+        94.49
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/razor-returns.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "razor-ways": {
+      "versions": [
+        96.36,
+        94.32
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/razor-ways.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "regal-knights": {
+      "versions": [
+        96.22,
+        94.25
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/regal-knights.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "razor-shark-jackpots": {
+      "versions": [
+        96.38,
+        94.3
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/razor-shark-jackpots.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "red-hot-multipliers": {
+      "versions": [
+        96.22,
+        94.23
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/red-hot-multipliers.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "retroverse": {
+      "versions": [
+        96.24,
+        94.37
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/retroverse.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "retro-tapes": {
+      "versions": [
+        96.47,
+        94.46
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/retro-tapes.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "santa-hopper": {
+      "versions": [
+        96.35,
+        94.35
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/santa-hopper.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "tarot-treasures": {
+      "versions": [
+        96.39,
+        94.33
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/tarot-treasures.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "vegas-vault": {
+      "versions": [
+        96.36,
+        94.33
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/vegas-vault.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "tricky-treats": {
+      "versions": [
+        96.32,
+        94.38
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/tricky-treats.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "viva-lock-vegas": {
+      "versions": [
+        96.35,
+        94.32
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/viva-lock-vegas.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "wild-swarm-3-chocolate-eggs": {
+      "versions": [
+        96.48,
+        94.33
+      ],
+      "studio": "Push Gaming",
+      "sourceUrl": "https://www.pushgaming.com/games/wild-swarm-3-chocolate-eggs.html",
+      "read": "2026-09-30",
+      "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
     }
   }
 }

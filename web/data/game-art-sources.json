@@ -1,6 +1,6 @@
 {
   "note": "Where each file in public/assets/games came from. Everything under `art` is served from a host we may republish from; the fetcher refuses anything else. `heldPendingRights` is what it refused and why — titles whose only art sits on an operator's CDN, to be replaced from the studio's own press or affiliate kit.",
-  "fetched": "2026-09-29",
+  "fetched": "2026-09-30",
   "art": {
     "3-piggies-of-bank": {
       "file": "3-piggies-of-bank.webp",
@@ -4240,6 +4240,429 @@
       "sourceHost": "api.slotessentials.com",
       "provider": "Hacksaw Gaming",
       "fetched": "2026-09-29"
+    },
+    "10-flaming-bisons": {
+      "file": "10-flaming-bisons.webp",
+      "bytes": 169486,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/49fc1bce-5ef5-44d6-ba0e-b9b28aeaa71f.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "10-santas-reindeers": {
+      "file": "10-santas-reindeers.webp",
+      "bytes": 213160,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/15cb46c3-bc29-43db-9d02-6afe7f800f89.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "10-swords": {
+      "file": "10-swords.webp",
+      "bytes": 198058,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/f819eb36-14be-49fd-8ae2-65ed672f56f0.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "10-pharaohs": {
+      "file": "10-pharaohs.webp",
+      "bytes": 199078,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/ea9c3ba1-0744-4dca-a8cf-2d143b4f5bb6.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "3-liberty-eagles": {
+      "file": "3-liberty-eagles.webp",
+      "bytes": 1750,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/76b5aeae-037a-417a-b05a-608f78aa5dc5.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "3-magic-pots": {
+      "file": "3-magic-pots.webp",
+      "bytes": 135010,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/135ea292-579f-483c-bf55-b31d0e020dbe.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "big-bam-book": {
+      "file": "big-bam-book.webp",
+      "bytes": 173780,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/471c9c78-f565-425a-a077-9386daddc8c9.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "big-bamboo-2": {
+      "file": "big-bamboo-2.webp",
+      "bytes": 34786,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/5bb3578f-db6c-4a58-913a-8a1750936578.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "big-bite-push-ways": {
+      "file": "big-bite-push-ways.webp",
+      "bytes": 164160,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/2e30fa4a-e635-453b-95f7-6e933fb60110.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "bison-battle": {
+      "file": "bison-battle.webp",
+      "bytes": 201024,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/4c9e63e6-dfd7-40db-9ba0-bd55e139468f.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "boss-bear": {
+      "file": "boss-bear.webp",
+      "bytes": 237742,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/36416a3d-91ce-4155-885f-4edcdbc3c939.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "candy-blast": {
+      "file": "candy-blast.webp",
+      "bytes": 194692,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/f39071e6-54dc-49c5-a691-48e03f3f3c1a.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "dj-fox": {
+      "file": "dj-fox.webp",
+      "bytes": 197376,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/fdcd175a-097b-4a64-ab61-f87073f80a49.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "dragon-hopper": {
+      "file": "dragon-hopper.webp",
+      "bytes": 170020,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/6867b95c-22c2-48ff-9472-20d016e0c8ff.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "fat-banker": {
+      "file": "fat-banker.webp",
+      "bytes": 154358,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/2d1c156a-a9b3-4e47-9af4-e5e20a91e33d.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "fang-city": {
+      "file": "fang-city.webp",
+      "bytes": 192296,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/0abd3539-dd4c-499b-adda-aeba7d2050c3.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "fat-drac": {
+      "file": "fat-drac.webp",
+      "bytes": 121354,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/e1e771a7-4ecb-48a9-82f3-c31770c53ef0.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "fire-hopper": {
+      "file": "fire-hopper.webp",
+      "bytes": 131312,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/fd5f23b6-ffa6-43a0-9770-e1326e0ec0ca.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "fish-n-nudge": {
+      "file": "fish-n-nudge.webp",
+      "bytes": 165390,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/e4133240-ccd7-4a8b-a257-3ea658f1841a.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "giga-jar": {
+      "file": "giga-jar.webp",
+      "bytes": 162048,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/cdb81b60-4bca-4f13-924e-422974e28729.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "generous-jack": {
+      "file": "generous-jack.webp",
+      "bytes": 176700,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/1fa22985-c677-4afe-b0d9-140096ae733a.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "goat-getter": {
+      "file": "goat-getter.webp",
+      "bytes": 127698,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/6ae97283-cd2c-4a50-b5ff-fb79a6c092eb.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "happy-bamboo": {
+      "file": "happy-bamboo.webp",
+      "bytes": 27774,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/3d8872d4-586e-4bbc-9b1d-6da992f91285.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "iron-phoenix": {
+      "file": "iron-phoenix.webp",
+      "bytes": 194602,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/32829935-c288-490b-a8d6-480081cd9e82.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "jammin-jars": {
+      "file": "jammin-jars.webp",
+      "bytes": 67942,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/d8ffccb2-70b9-4c09-938e-cb8f0197eaf6.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "jaguar-drop": {
+      "file": "jaguar-drop.webp",
+      "bytes": 196260,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/958122af-2d1e-4852-a9c3-258da010cff8.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "jammin-jars-2": {
+      "file": "jammin-jars-2.webp",
+      "bytes": 94424,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/bc759aca-f0c5-4e94-b135-40d58e510391.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "mad-blast": {
+      "file": "mad-blast.webp",
+      "bytes": 132414,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/341ff23b-df60-42e4-b905-5887e6342083.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "masked-mayhem": {
+      "file": "masked-mayhem.webp",
+      "bytes": 244488,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/9f592480-2dbb-4d2d-81f9-301fb55d5aef.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "mad-cars": {
+      "file": "mad-cars.webp",
+      "bytes": 210544,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/41a3e4ad-766d-45d4-a943-536423d9f4c2.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "mystery-museum": {
+      "file": "mystery-museum.webp",
+      "bytes": 77632,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/6b5a8843-4c32-463e-9fb0-d11af6787225.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "olympus-unleashed": {
+      "file": "olympus-unleashed.webp",
+      "bytes": 202186,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/60183fd2-f957-43db-a7bf-a2aa198c56f0.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "power-vault": {
+      "file": "power-vault.webp",
+      "bytes": 215642,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/e71da00a-eb32-436d-96a2-d44546ede4ac.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "razor-returns": {
+      "file": "razor-returns.webp",
+      "bytes": 221430,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/484c6f57-530a-4984-a7ac-ccb393e862c9.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "razor-shark-jackpots": {
+      "file": "razor-shark-jackpots.webp",
+      "bytes": 33632,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/0aeb7321-0388-4521-91cc-dbb1f4dacc9b.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "razor-shark": {
+      "file": "razor-shark.webp",
+      "bytes": 73070,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/b581e573-32f3-4146-9875-68d47042f7bd.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "razor-ways": {
+      "file": "razor-ways.webp",
+      "bytes": 204660,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/9bffec1c-1474-4b78-b95c-cbbb4a0df7be.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "red-hot-multipliers": {
+      "file": "red-hot-multipliers.webp",
+      "bytes": 118536,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/6ed4e442-0816-4a48-9b2b-985ab60da9ce.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "regal-knights": {
+      "file": "regal-knights.webp",
+      "bytes": 233648,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/38f8329e-e123-41fb-b16b-3d2c65226c57.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "retro-tapes": {
+      "file": "retro-tapes.webp",
+      "bytes": 212366,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/ccf38102-dc0f-443b-87fd-ba97c21c5f5a.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "retroverse": {
+      "file": "retroverse.webp",
+      "bytes": 188492,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/4adb15e5-4bc0-49db-b8bf-d63daec2f6aa.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "santa-hopper": {
+      "file": "santa-hopper.webp",
+      "bytes": 159728,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/dff64351-c9ca-45a4-a082-4e57634c784c.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "tarot-treasures": {
+      "file": "tarot-treasures.webp",
+      "bytes": 129566,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/d76c37e7-a31a-429d-9b13-fa9eca9e4011.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "tricky-treats": {
+      "file": "tricky-treats.webp",
+      "bytes": 188516,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/08828cdf-f237-4112-9432-9d7d0c8831e0.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "viva-lock-vegas": {
+      "file": "viva-lock-vegas.webp",
+      "bytes": 90106,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/ce6b7a22-539b-459f-8a3d-72d4a70a630e.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "vegas-vault": {
+      "file": "vegas-vault.webp",
+      "bytes": 63006,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/34fb2c4e-3b62-470a-a360-3aca7226d99e.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
+    },
+    "wild-swarm-3-chocolate-eggs": {
+      "file": "wild-swarm-3-chocolate-eggs.webp",
+      "bytes": 197546,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/ed4e98b1-978e-4e61-86eb-5e9658305e7b.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Push Gaming",
+      "fetched": "2026-09-30"
     }
   },
   "heldPendingRights": {

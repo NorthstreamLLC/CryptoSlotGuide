@@ -60,8 +60,21 @@ const TOP_SLOTS = (() => {
   const block = src.match(/export const TOP_SLOTS: string\[\] = \[([\s\S]*?)\];/);
   return new Set(block ? [...block[1].matchAll(/"([^"]+)"/g)].map((m) => m[1]) : []);
 })();
+/**
+ * Mirrors lib/slot-page.ts. A studio source page counts the same as a studio
+ * demo: both prove the title is the studio's and give the reader somewhere
+ * real, and the overrides file is where the studio-read RTPs live.
+ */
+const OVERRIDES = (() => {
+  const f = path.join(DATA, "slot-rtp-overrides.json");
+  if (!fs.existsSync(f)) return {};
+  return JSON.parse(fs.readFileSync(f, "utf8")).overrides ?? {};
+})();
+const versionCount = (g) => (OVERRIDES[g.slug]?.versions ?? g.rtpVariants ?? []).length;
 const qualifies = (g) =>
-  g.kind === "slot" && g.slug && ((g.demoUrl && (g.rtpVariants?.length ?? 0) > 1) || TOP_SLOTS.has(g.slug));
+  g.kind === "slot" &&
+  g.slug &&
+  (((g.demoUrl || OVERRIDES[g.slug]?.sourceUrl) && versionCount(g) > 1) || TOP_SLOTS.has(g.slug));
 
 const catalogue = JSON.parse(fs.readFileSync(path.join(DATA, "gameCatalogue.json"), "utf8"));
 
