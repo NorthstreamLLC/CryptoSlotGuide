@@ -79,6 +79,22 @@ export default async function Page({ params }: { params: Promise<{ country: stri
           ...(c.regulator?.name ? [`Regulator: ${c.regulator.name}`] : []),
         ]}
       >
+        {/* Where almost everything we track refuses this country, the useful
+            next step is not another of our pages — it is the national
+            regulator, who publishes who IS licensed there. Saying so costs a
+            click and is the honest answer; the alternative is a page that
+            tells a reader they are shut out and stops. */}
+        {mostlyShut && c.onlineCasino === "licensed market" && c.regulator?.url && (
+          <div style={{ margin: "0 0 18px", padding: "14px 16px", borderRadius: 14, background: "rgba(47,182,122,.06)", border: "1px solid rgba(47,182,122,.24)" }}>
+            <p style={{ margin: 0, fontSize: 14.5, lineHeight: 1.6, color: "#DCE5E9" }}>
+              Online casinos are legal in {c.name} and licensed by the{" "}
+              <a href={c.regulator.url} target="_blank" rel="noopener noreferrer nofollow" style={{ color: "#7BE0B8" }}>
+                {c.regulator.name}
+              </a>
+              . The operators on this site mostly hold offshore licences and do not serve {c.name} — the regulator publishes the ones that do.
+            </p>
+          </div>
+        )}
         <CasinoOfferList ops={accepts} />
         {Object.keys(except).length > 0 && (
           <p style={{ margin: "12px 0 0", fontSize: 13.5, color: "#8DA0AA" }}>
