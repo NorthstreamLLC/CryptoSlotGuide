@@ -43,6 +43,13 @@ export interface GeoAvailability {
     sweepstakes: number | null;
     regulatedBrands: number | null;
   };
+  /**
+   * The state's own sweepstakes position, verbatim from legal-us.json. A
+   * count of zero is ambiguous — it could mean banned, or that we hold
+   * nothing — and on the sweepstakes page itself that difference is the
+   * whole answer.
+   */
+  sweepsStatus: string | null;
 }
 
 const COUNTRY_NAME = new Map(COUNTRIES.map((c) => [c.code, c.name]));
@@ -137,5 +144,7 @@ export function availabilityFor(countryRaw: string, regionRaw?: string | null): 
     },
     regionBlocked,
     alternatives: { sweepstakes, regulatedBrands },
+    sweepsStatus:
+      country === "US" && region ? US_STATES.find((s) => s.code === region)?.sweepstakes ?? null : null,
   };
 }

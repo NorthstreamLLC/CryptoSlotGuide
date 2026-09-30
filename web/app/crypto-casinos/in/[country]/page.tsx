@@ -18,8 +18,19 @@ export async function generateMetadata({ params }: { params: Promise<{ country: 
   const { country } = await params;
   const c = countryBy(country);
   if (!c) return {};
-  const n = casinosForCountry(c.code).accepts.length;
-  return pageMetadata(`Best crypto casinos in ${c.name} (${n} that accept ${c.name} players)`, `${n} crypto casinos whose own terms accept players from ${c.name}, compared on bonuses, withdrawal speed and wagering, plus what ${c.name}'s gambling law says.`, `/crypto-casinos/in/${country}`);
+  const { accepts, restricted, total } = casinosForCountry(c.code);
+  const n = accepts.length;
+  // Where most operators refuse the country, the title and description say so
+  // — "1 that accept United Kingdom players" is both bad grammar and the
+  // least useful sentence we could put in a search result for that query.
+  const shut = restricted > n;
+  const title = shut
+    ? `Crypto casinos in ${c.name}: ${restricted} of ${total} refuse players`
+    : `Best crypto casinos in ${c.name} (${n} that accept ${c.name} players)`;
+  const desc = shut
+    ? `${restricted} of the ${total} crypto casinos we track name ${c.name} on their own restricted list. ${n === 1 ? "One accepts" : `${n} accept`} players from ${c.name} — which, on what terms, and what ${c.name}'s gambling law says.`
+    : `${n} crypto casinos whose own terms accept players from ${c.name}, compared on bonuses, withdrawal speed and wagering, plus what ${c.name}'s gambling law says.`;
+  return pageMetadata(title, desc, `/crypto-casinos/in/${country}`);
 }
 
 export default async function Page({ params }: { params: Promise<{ country: string }> }) {
@@ -27,7 +38,12 @@ export default async function Page({ params }: { params: Promise<{ country: stri
   const c = countryBy(country);
   const page = countryPages().find((x) => x.c.code.toLowerCase() === country);
   if (!c || !page) notFound();
-  const { accepts, partial, except } = casinosForCountry(c.code);
+  const { accepts, partial, restricted, total, except } = casinosForCountry(c.code);
+  // Where most operators turn this country away, that is the story, and
+  // burying it under "3 casinos accept you" would waste the page. The
+  // United Kingdom is the extreme: one of 46 accepts, 39 refuse by name.
+  const mostlyShut = restricted > accepts.length;
+  const one = accepts.length === 1;
   const others = countryPages().filter((x) => x.c.code !== c.code).sort((a, b) => a.c.name.localeCompare(b.c.name));
 
   return (
@@ -39,11 +55,29 @@ export default async function Page({ params }: { params: Promise<{ country: stri
         title={`Best crypto casinos in ${c.name}`}
         intro={
           <>
-            {accepts.length} crypto casinos whose own terms accept players from {c.name}, compared on bonuses, withdrawal speed and wagering. Online casinos in {c.name}: <strong style={{ color: "#fff" }}>{c.onlineCasino}</strong>.{" "}
+            {mostlyShut ? (
+              <>
+                <strong style={{ color: "#fff" }}>
+                  {restricted} of the {total} crypto casinos we track name {c.name} on their own restricted list.
+                </strong>{" "}
+                {one ? "One accepts" : `${accepts.length} accept`} players from {c.name} — {one ? "it is" : "they are"} below, with the terms{" "}
+                {one ? "it is" : "they are"} offering. Online casinos in {c.name}: <strong style={{ color: "#fff" }}>{c.onlineCasino}</strong>.{" "}
+              </>
+            ) : (
+              <>
+                {accepts.length} crypto casinos whose own terms accept players from {c.name}, compared on bonuses, withdrawal speed and wagering. Online
+                casinos in {c.name}: <strong style={{ color: "#fff" }}>{c.onlineCasino}</strong>.{" "}
+              </>
+            )}
             <Link href={`/legal/${country}`} style={{ color: "#5FE3E8" }}>What {c.name}&apos;s gambling law says →</Link>
           </>
         }
-        chips={[`${accepts.length} accept ${c.name} players`, ...(c.minAge ? [`Minimum age ${c.minAge}`] : []), ...(c.regulator?.name ? [`Regulator: ${c.regulator.name}`] : [])]}
+        chips={[
+          `${accepts.length} accept ${c.name} player${accepts.length === 1 ? "" : "s"}`,
+          ...(restricted > 0 ? [`${restricted} refuse`] : []),
+          ...(c.minAge ? [`Minimum age ${c.minAge}`] : []),
+          ...(c.regulator?.name ? [`Regulator: ${c.regulator.name}`] : []),
+        ]}
       >
         <CasinoOfferList ops={accepts} />
         {Object.keys(except).length > 0 && (
