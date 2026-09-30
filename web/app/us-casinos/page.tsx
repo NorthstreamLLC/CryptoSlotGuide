@@ -4,6 +4,7 @@ import { pageMetadata } from "@/lib/seo";
 import { breadcrumbSchema, collectionPageSchema, itemListSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { NextSteps } from "@/components/layout/NextSteps";
+import { GeoNotice } from "@/components/geo/GeoNotice";
 
 const MONO = "var(--font-jetbrains-mono), monospace";
 const TITLE = "US-regulated casinos and sportsbooks";
@@ -41,6 +42,10 @@ export default function Page() {
               take you if you are physically in a state that allows it.
             </p>
           </div>
+        </section>
+
+        <section style={{ maxWidth: 1200, margin: "0 auto", padding: "34px 40px 0" }}>
+          <GeoNotice context="regulated" />
         </section>
 
         <section style={{ maxWidth: 1200, margin: "0 auto", padding: "34px 40px 0" }}>

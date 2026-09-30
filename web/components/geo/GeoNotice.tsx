@@ -31,12 +31,22 @@ interface Geo {
   casinos?: { total: number; accepts: number; restricted: number; unknown: number };
   regionBlocked?: { slug: string; name: string }[];
   alternatives?: { sweepstakes: number | null; regulatedBrands: number | null };
+  /** The state's own sweepstakes position: "allowed", "banned", or absent. */
+  sweepsStatus?: string | null;
 }
 
 const DISMISS_KEY = "csg-geo-dismissed";
 const MONO = "var(--font-jetbrains-mono), monospace";
 
-export function GeoNotice() {
+/**
+ * Which page this sits on, so the band answers that page's question rather
+ * than repeating the crypto one everywhere. A sweepstakes reader wants to
+ * know whether their state allows sweeps, not how many crypto casinos
+ * refuse them.
+ */
+export type GeoContext = "crypto" | "sweeps" | "regulated";
+
+export function GeoNotice({ context = "crypto" }: { context?: GeoContext } = {}) {
   const [geo, setGeo] = useState<Geo | null>(null);
   const [hidden, setHidden] = useState(true);
 
@@ -65,6 +75,7 @@ export function GeoNotice() {
   if (hidden || !geo?.detected || !geo.casinos) return null;
 
   const { accepts, total, restricted, unknown } = geo.casinos;
+  void restricted;
   const where = geo.regionName ?? geo.countryName ?? geo.country;
   const blocked = geo.regionBlocked ?? [];
   const alt = geo.alternatives;
@@ -94,6 +105,40 @@ export function GeoNotice() {
         <div style={{ fontFamily: MONO, fontSize: 10, letterSpacing: ".08em", textTransform: "uppercase", color: "#5FE3E8", marginBottom: 6 }}>
           You appear to be in {where}
         </div>
+        {context === "sweeps" ? (
+          <p style={{ margin: 0, fontSize: 14.5, lineHeight: 1.55, color: "#DCE5E9" }}>
+            {geo.sweepsStatus === "banned" ? (
+              <>
+                Sweepstakes casinos are <strong style={{ color: "#E0A98C" }}>banned in {where}</strong>. The list below is still here to read; none of it is
+                open to you.
+              </>
+            ) : alt?.sweepstakes ? (
+              <>
+                <strong style={{ color: "#fff" }}>{alt.sweepstakes}</strong> sweepstakes casinos, and {where} allows the model
+                {accepts === 0 ? <> — which matters here, because none of the {total} crypto casinos accept {where}</> : null}.
+              </>
+            ) : (
+              <>Sweepstakes are a US model. We hold no position for {where}, so treat the list as reference rather than as available to you.</>
+            )}
+          </p>
+        ) : context === "regulated" ? (
+          <p style={{ margin: 0, fontSize: 14.5, lineHeight: 1.55, color: "#DCE5E9" }}>
+            {alt?.regulatedBrands ? (
+              <>
+                <strong style={{ color: "#fff" }}>{alt.regulatedBrands}</strong> of the brands below are named by {geo.regionName ?? "your state"}
+                &rsquo;s own regulator
+                {accepts === 0 ? <>, where none of the {total} crypto casinos accept you</> : null}.
+              </>
+            ) : geo.region ? (
+              <>
+                No regulator list names any of these brands in {geo.regionName ?? geo.region} — either the state licenses nobody, or it licenses without
+                publishing who.
+              </>
+            ) : (
+              <>These are US-licensed operators. You appear to be outside the US, so none of them will take you.</>
+            )}
+          </p>
+        ) : (
         <p style={{ margin: 0, fontSize: 14.5, lineHeight: 1.55, color: "#DCE5E9" }}>
           {accepts === 0 ? (
             <>
@@ -111,14 +156,15 @@ export function GeoNotice() {
           )}
           {unknown > 0 && <span style={{ color: "#8DA0AA" }}> {unknown} publish no list we can treat as complete.</span>}
         </p>
+        )}
 
-        {blocked.length > 0 && (
+        {context === "crypto" && blocked.length > 0 && (
           <p style={{ margin: "8px 0 0", fontSize: 13.5, lineHeight: 1.55, color: "#E0A98C" }}>
             {blocked.length} take the country but name {geo.regionName} specifically: {blocked.map((b) => b.name).join(", ")}.
           </p>
         )}
 
-        {(alt?.sweepstakes || alt?.regulatedBrands) && (
+        {context === "crypto" && (alt?.sweepstakes || alt?.regulatedBrands) && (
           <p style={{ margin: "8px 0 0", fontSize: 13.5, lineHeight: 1.55, color: "#A8B6BE" }}>
             Open to you instead:{" "}
             {alt.sweepstakes ? (

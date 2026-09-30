@@ -79,7 +79,10 @@ export const siteData = {
   guideBodies: guideBodies as GuideBodies,
   houseGames: houseGames as HouseGame[],
   houseCasinoWide: houseCasinoWide as { casino: string; text: string; url: string }[],
-  fiatCasinos: fiatCasinos as FiatCasino[],
+  // .casinos, not the file: the object around it carries a DO-NOT-PUBLISH
+  // notice, because every value in these rows predates the sourcing rule and
+  // has no source URL. Loaded so the count is available; not rendered.
+  fiatCasinos: (fiatCasinos as { casinos: FiatCasino[] }).casinos,
   predMarkets: predMarkets as PredictionMarkets,
   tickerFacts: tickerFacts as TickerFact[],
   coinDefs: coinDefs as CoinDef[],

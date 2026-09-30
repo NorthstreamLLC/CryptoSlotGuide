@@ -3,6 +3,7 @@ import { pageMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { NextSteps } from "@/components/layout/NextSteps";
+import { GeoNotice } from "@/components/geo/GeoNotice";
 import { sweepsSorted, sweepsFact, shortFact } from "@/lib/sweeps";
 import { brandFor } from "@/lib/casino-facts";
 import { BrandMark } from "@/components/ui/BrandMark";
@@ -36,6 +37,12 @@ export default function Page() {
           <p style={{ margin: "0 0 26px", maxWidth: "64ch", fontSize: 16.5, lineHeight: 1.6, color: "#A8B6BE" }}>
             Sweepstakes casinos are legal in most US states. You play with Gold Coins for fun and Sweeps Coins that can be redeemed for real prizes, and no purchase is ever needed to play. Here are {list.length} of them side by side, with every figure taken from each casino&apos;s own sweepstakes rules.
           </p>
+          {/* Sweepstakes legality is per state, and this page's whole premise
+              — "legal in most US states" — is false for the reader in one of
+              the sixteen that ban them. */}
+          <div style={{ maxWidth: "72ch", marginBottom: 20 }}>
+            <GeoNotice context="sweeps" />
+          </div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
             {[
               ["gift", `${list.length} sweepstakes casinos`],
