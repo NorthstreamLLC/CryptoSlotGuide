@@ -128,17 +128,19 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
             {
               title: "Browse",
               links: [
-                { label: "All US-regulated brands", href: "/us-casinos" },
+                { label: "US-regulated casinos", href: "/us-casinos" },
+                { label: "US-regulated sportsbooks", href: "/us-sportsbooks" },
                 { label: "State-by-state law", href: "/legal/us" },
                 { label: "US sweepstakes casinos", href: "/sweepstakes-casinos" },
               ],
             },
             {
-              // The four brands with the widest licensed footprint, by state
-              // count, not by anything commercial — we hold no deal with any
-              // of them.
+              // Widest sportsbook footprint, by state count, not by anything
+              // commercial — we hold no deal with any of them. Sportsbook
+              // rather than casino because the spread is far wider there:
+              // 27 states against 5.
               title: "Biggest footprints",
-              links: rankedBrands()
+              links: rankedBrands("sportsbook")
                 .slice(0, 5)
                 .map(({ brand }) => ({ label: brand.name, href: `/us-casinos/${brand.slug}` })),
             },

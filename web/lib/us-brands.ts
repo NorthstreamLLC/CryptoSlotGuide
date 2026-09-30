@@ -119,15 +119,22 @@ export function countsFor(slug: string): BrandCounts {
   };
 }
 
-/** Brands with at least one state, widest reach first — the index order. */
-export function rankedBrands(): { brand: UsBrand; counts: BrandCounts }[] {
+/**
+ * Brands with at least one state, widest reach first.
+ *
+ * `kind` ranks on one product and drops brands that do not offer it, because
+ * a combined ranking answers neither question. Golden Nugget runs casino in
+ * three states and no sportsbook anywhere, and a combined sort buried it
+ * fourteenth on a page about casinos; BetRivers leads the casino ranking on
+ * five states — including Delaware, where nobody else does — and sits eighth
+ * on the combined one. Someone looking for an online casino does not care
+ * how many states will take their parlay.
+ */
+export function rankedBrands(kind?: "sportsbook" | "casino"): { brand: UsBrand; counts: BrandCounts }[] {
+  const size = (c: BrandCounts) => (kind ? c[kind].length : c.sportsbook.length + c.casino.length);
   return US_BRANDS.map((brand) => ({ brand, counts: countsFor(brand.slug) }))
-    .filter(({ counts }) => counts.sportsbook.length + counts.casino.length > 0)
-    .sort(
-      (a, b) =>
-        b.counts.sportsbook.length + b.counts.casino.length - (a.counts.sportsbook.length + a.counts.casino.length) ||
-        a.brand.name.localeCompare(b.brand.name)
-    );
+    .filter(({ counts }) => size(counts) > 0)
+    .sort((a, b) => size(b.counts) - size(a.counts) || a.brand.name.localeCompare(b.brand.name));
 }
 
 /** Listings we could not attribute — kept visible so the gap is not silent. */
