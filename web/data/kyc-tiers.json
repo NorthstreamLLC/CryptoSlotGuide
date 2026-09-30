@@ -1,0 +1,62 @@
+{
+  "note": "How each operator's own stated KYC policy behaves, assigned by hand. A rule-based pass over the policy wording was tried first and filed Gamdom, Gamba, Dustbit and Degencity as 'required' when all four say plainly that KYC is not required — the pattern for 'required' matched before the pattern for 'no KYC'. Labelling an operator's compliance policy wrongly is not a near-miss, so every row here was read. The policy text and its source URL stay in casinoSpecSheets.json; this only says which shape it is.",
+  "tiers": {
+    "never": "States outright that it will not ask, at any amount.",
+    "discretionary": "No routine check. Documents may be requested — for a withdrawal, on suspicion, or at the operator's discretion — and most reserve that right explicitly.",
+    "threshold": "Verification at a trigger the operator publishes: a cumulative amount, a single withdrawal size, or a deadline after the first deposit.",
+    "required": "Verification is a step you complete to play or to withdraw, not a contingency.",
+    "conflicting": "The operator's own sources disagree with each other. Recorded as its own answer rather than resolved by picking the friendlier one."
+  },
+  "operators": {
+    "toshibet": { "tier": "never", "why": "Help centre says it will never KYC you, whatever the amount — the only unconditional claim of the 46." },
+
+    "cloudbet": { "tier": "threshold", "why": "Cumulative deposits reaching USD $2,200." },
+    "fortunejack": { "tier": "threshold", "why": "Total deposits reaching $10,000, or suspicious activity." },
+    "winna": { "tier": "threshold", "why": "Within 30 days of first deposit, before first withdrawal, or at EUR 2,000 wagered." },
+    "mbit": { "tier": "threshold", "why": "Extra checks above 1 BTC." },
+    "bitcasino-io": { "tier": "threshold", "why": "Additional KYC on withdrawals over €2,500." },
+    "sportsbet-io": { "tier": "threshold", "why": "Additional KYC on withdrawals over €2,500." },
+
+    "bc-game": { "tier": "required", "why": "Basic KYC is a photo ID plus a five-angle selfie; advanced KYC adds proof of address." },
+    "shuffle": { "tier": "required", "why": "A threshold exists but is not published, and an ID check comes before the first withdrawal regardless." },
+    "rollbit": { "tier": "required", "why": "Up to five verification levels with ID and camera check." },
+    "bitstarz": { "tier": "required", "why": "Documents required to receive payments." },
+    "7bit": { "tier": "required", "why": "Withdrawals unlock only after ID, address and payment proof." },
+    "goated": { "tier": "required", "why": "Level 1 — name, date of birth, address — needed to bet and withdraw." },
+    "yeet": { "tier": "required", "why": "Level 1 KYC required to deposit, before any play." },
+    "razed": { "tier": "required", "why": "Calls itself a No-KYC casino, but its own AML policy requests ID documents at withdrawal. The label is marketing; the policy is the policy." },
+    "metawin": { "tier": "required", "why": "Identification at onboarding and ongoing." },
+    "jackpotbet": { "tier": "required", "why": "ID, proof of address and a selfie holding the ID, on any deposit and on withdrawal." },
+    "spartans": { "tier": "required", "why": "ID verification before the first withdrawal." },
+    "coincasino": { "tier": "required", "why": "Level 1 account details before fiat deposits; ID, proof of address, selfie or call before betting or withdrawing." },
+
+    "wager-com": { "tier": "conflicting", "why": "Its AML policy puts ID and proof of address at registration; other pages do not. Recorded as conflicting rather than resolved." },
+    "1win": { "tier": "conflicting", "why": "Its crypto guide says no mandatory KYC on withdrawals; its terms are stricter. Both are its own pages." },
+
+    "roobet": { "tier": "discretionary", "why": "Documents may be requested at any time; withdrawals refused until verified." },
+    "stake": { "tier": "discretionary", "why": "Compliance team may request any documentation at any time." },
+    "gamdom": { "tier": "discretionary", "why": "Not required to deposit, play or withdraw unless specifically requested." },
+    "duelbits": { "tier": "discretionary", "why": "May request documents; access restricted until complete." },
+    "rainbet": { "tier": "discretionary", "why": "Crypto play and withdrawals need no KYC; requested on suspicious activity." },
+    "500-casino": { "tier": "discretionary", "why": "May request any documentation, to be provided within 7 days." },
+    "vave": { "tier": "discretionary", "why": "Generally no documents; ID or selfie if issues arise." },
+    "betplay": { "tier": "discretionary", "why": "No verification requirement in its terms; it collects email and usage data only." },
+    "thrill": { "tier": "discretionary", "why": "No KYC to register; verification may come later." },
+    "duel": { "tier": "discretionary", "why": "Reserves the right to request KYC before a withdrawal, and disclaims liability for funds locked meanwhile." },
+    "betfury": { "tier": "discretionary", "why": "May request documentation at any time." },
+    "gamba": { "tier": "discretionary", "why": "No KYC required to play; four verification levels are optional." },
+    "solcasino": { "tier": "discretionary", "why": "Checks run through Sumsub; a selfie with ID may be required." },
+    "whale-io": { "tier": "discretionary", "why": "May require KYC for any withdrawal or reward redemption." },
+    "acebet": { "tier": "discretionary", "why": "May require KYC/AML documents at its discretion." },
+    "degen": { "tier": "discretionary", "why": "Registration collects name, date of birth and address, but documents are reserved rather than routine." },
+    "qzino": { "tier": "discretionary", "why": "May require photo ID and proof of address." },
+    "shock": { "tier": "discretionary", "why": "Account details required to transact; ID checks at its discretion." },
+    "cybet": { "tier": "discretionary", "why": "Risk-based; full KYC only when needed for security or compliance." },
+    "housebets": { "tier": "discretionary", "why": "Not a standard step; most players are never asked." },
+    "dicey": { "tier": "discretionary", "why": "May require verification and photo ID, including before withdrawals." },
+    "flush": { "tier": "discretionary", "why": "Not required for standard play; requested in specific cases." },
+    "degencity": { "tier": "discretionary", "why": "Deposit, play and withdraw without KYC; a verified email address is needed to withdraw." },
+    "dustbit": { "tier": "discretionary", "why": "No KYC to play or withdraw; may request ID or source of funds." },
+    "bluff": { "tier": "discretionary", "why": "Usually not needed to withdraw — but required if you opt into a bonus." }
+  }
+}

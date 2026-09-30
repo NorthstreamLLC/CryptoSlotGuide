@@ -1,5 +1,15 @@
 [
   {
+    "slug": "what-is-kyc",
+    "title": "What KYC actually means at a crypto casino",
+    "mono": "KY",
+    "tint": "#C7A45C",
+    "standfirst": "All {casinos} say something about verification. Only one says it never asks.",
+    "category": "Accounts",
+    "readMins": 6,
+    "updated": "30 Sep"
+  },
+  {
     "slug": "how-casino-rtp-versions-work",
     "title": "How casino RTP versions work",
     "mono": "RT",

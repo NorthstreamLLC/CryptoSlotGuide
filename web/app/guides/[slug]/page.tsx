@@ -7,6 +7,7 @@ import { breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { NextSteps } from "@/components/layout/NextSteps";
 import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
+import { KycTiersTable } from "@/components/guides/KycTiersTable";
 
 /**
  * Ported from the `isGuide` block in CryptoSlotGuide.dc.html (search for
@@ -30,6 +31,10 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   if (!g || !body) notFound();
 
   const related = guideRows.filter((r) => r.slug !== g.slug).slice(0, 4);
+  // A guide may render a dataset under its prose. Named rather than inferred,
+  // so a guide only gets a table when it was written to have one.
+  const DATA_BLOCKS: Record<string, () => React.ReactNode> = { "kyc-tiers": () => <KycTiersTable /> };
+  const dataBlock = body.data ? DATA_BLOCKS[body.data] : undefined;
 
   return (
     <main>
@@ -66,6 +71,9 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             <p key={p.slice(0, 40)} style={{ margin: 0, fontSize: 17, lineHeight: 1.75, color: "#B0BEC5", textWrap: "pretty" }}>{fill(p, siteData)}</p>
           ))}
         </div>
+
+        {/* The dataset the prose is arguing from, where a guide names one. */}
+        {dataBlock?.()}
 
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
           {related.map((r) => (

@@ -8,6 +8,7 @@ import { fill } from "@/lib/derived";
 import { tintFor } from "@/lib/logo";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { CasinoCard } from "@/components/casino/CasinoCard";
+import { GeoNotice } from "@/components/geo/GeoNotice";
 import {
   btcStats,
   btcViews,
@@ -211,6 +212,11 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
             ))}
           </div>
         </div>
+
+        {/* Added after render from /api/geo, so the HTML above and below is
+            the same for every visitor and every crawler. It marks what will
+            take you; it never removes a row. */}
+        <GeoNotice />
 
         <div style={{ display: "flex", gap: 7, flexWrap: "wrap", marginBottom: 16 }}>
           {coinFilters.map((c) => {

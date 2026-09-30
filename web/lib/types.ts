@@ -287,6 +287,13 @@ export interface GuideRow {
 export interface GuideBody {
   key: string[];
   body: string[];
+  /**
+   * Names a dataset the guide renders in full, below the prose. A guide that
+   * asserts "12 of 46 make verification a step" should show which 12, with
+   * each operator's own wording and source — otherwise the reader has to take
+   * it on trust, which is the thing this site exists not to ask.
+   */
+  data?: string;
 }
 /** Keyed by guide slug. */
 export type GuideBodies = Record<string, GuideBody>;

@@ -13,6 +13,7 @@ import type {
   Slot,
   WalletOrExchangeRow,
 } from "./types";
+import { kycCounts } from "./kyc";
 
 /**
  * "Every published figure is derived — keep it that way." Per README:
@@ -159,6 +160,9 @@ export function fill(
     coins: data.coinDefs.length,
     slots: data.slots.length,
     studios: data.providers.length,
+    // KYC shape counts, so a guide can say "12 of 46" without a writer
+    // having to remember to update it when a policy is re-read.
+    ...kycCounts(),
   };
   return template.replace(/\{(\w+)\}/g, (match, key) => (key in tokens ? String(tokens[key]) : match));
 }

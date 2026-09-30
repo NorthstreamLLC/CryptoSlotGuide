@@ -94,5 +94,20 @@
       "To compare books fairly, take the same markets across football, basketball, tennis and esports, at the same time of day, and look at the median rather than one price. Books quote tighter on marquee events and wider on everything else, so a single-market comparison is misleading.",
       "A book a point tighter costs you less over a season than any promotion returns. It is the least visible and most important number on a sportsbook."
     ]
+  },
+  "what-is-kyc": {
+    "key": [
+      "KYC is the document check that stands between you and your money",
+      "Only one of {casinos} operators says it will never run one",
+      "The tier an operator sits in is set by its own terms, not its marketing"
+    ],
+    "body": [
+      "KYC — know your customer — is the point where a casino stops treating you as an anonymous balance and asks who you are. Usually a government ID, often a selfie, sometimes a utility bill. It exists because the licence requires it: an operator that cannot show it checked is an operator that can lose the licence.",
+      "For a crypto casino the interesting question is not whether KYC exists. It is when it fires. You can deposit, play and win without ever being asked, and then be asked at the moment you try to take the money out — which is the worst time to discover your name does not match your ID.",
+      "We read the stated policy at all {casinos} casinos we track and sorted them by what the policy actually does. {required} make verification a step you complete before you can play or withdraw. {threshold} publish a trigger — a cumulative deposit figure, a withdrawal size, a deadline after your first deposit — so you can see it coming. {discretionary} run no routine check but reserve the right to ask, usually at withdrawal or on anything that looks unusual. {conflicting} contradict themselves across their own pages. And {never} says it will never ask at all.",
+      "The tier is not the same as the marketing. Razed calls itself a No-KYC crypto casino; its own AML policy requests ID documents when you withdraw. Bluff usually asks for nothing — unless you opt into a bonus, which makes verification a condition. Degencity lets you deposit, play and withdraw without documents but still wants a verified email address before it pays. Read the second sentence of any no-KYC claim; that is where the conditions live.",
+      "What this means in practice: decide before you deposit, not after. If you will not hand over a passport, an operator in the required tier is not for you whatever its bonus looks like — you will hit the wall at cash-out. If you are fine with verification, do it early and on a quiet day rather than at the moment you are trying to withdraw a win. And if an operator's pages disagree with each other, assume the stricter one applies, because that is the one its compliance team works from."
+    ],
+    "data": "kyc-tiers"
   }
 }
