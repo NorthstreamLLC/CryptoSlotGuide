@@ -490,6 +490,1981 @@
       "sourceUrl": "https://www.pushgaming.com/games/wild-swarm-3-chocolate-eggs.html",
       "read": "2026-09-30",
       "reason": "Push Gaming publishes 2 returns for this title on its own game page. The catalogue import carried one figure and no spread."
+    },
+    "stickem": {
+      "versions": [
+        96.1
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at one return. Hacksaw publishes no RTP on its public game pages."
+    },
+    "omnom": {
+      "versions": [
+        96.28
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at one return. Hacksaw publishes no RTP on its public game pages."
+    },
+    "cubes": {
+      "versions": [
+        96.35
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at one return. Hacksaw publishes no RTP on its public game pages."
+    },
+    "cash-compass": {
+      "versions": [
+        96.42
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at one return. Hacksaw publishes no RTP on its public game pages."
+    },
+    "the-respinners": {
+      "versions": [
+        96.4
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at one return. Hacksaw publishes no RTP on its public game pages."
+    },
+    "chaos-crew": {
+      "versions": [
+        96.3
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at one return. Hacksaw publishes no RTP on its public game pages."
+    },
+    "mystery-motel": {
+      "versions": [
+        96.3
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at one return. Hacksaw publishes no RTP on its public game pages."
+    },
+    "let-it-snow": {
+      "versions": [
+        96.42
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at one return. Hacksaw publishes no RTP on its public game pages."
+    },
+    "cubes-2": {
+      "versions": [
+        96.33
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at one return. Hacksaw publishes no RTP on its public game pages."
+    },
+    "aztec-twist": {
+      "versions": [
+        96.3
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at one return. Hacksaw publishes no RTP on its public game pages."
+    },
+    "frutz": {
+      "versions": [
+        96.4
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at one return. Hacksaw publishes no RTP on its public game pages."
+    },
+    "xpander": {
+      "versions": [
+        96.25,
+        92.25,
+        88.18
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 3 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "toshi-video-club": {
+      "versions": [
+        96.17,
+        94.2,
+        92.25,
+        88.29
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "rocket-reels": {
+      "versions": [
+        96.3,
+        94.15,
+        92.43,
+        88.49
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "wanted-dead-or-a-wild": {
+      "versions": [
+        96.38,
+        94.55,
+        92.33,
+        88.42
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "cash-quest": {
+      "versions": [
+        96.32,
+        94.36,
+        92.31,
+        88.28
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "tasty-treats": {
+      "versions": [
+        96.21,
+        94.23,
+        92.4,
+        88.1
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "joker-bombs": {
+      "versions": [
+        96.48,
+        94.11,
+        92.36,
+        88.14
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "king-carrot": {
+      "versions": [
+        96.3,
+        94.51,
+        92.28,
+        88.28
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "harvest-wilds": {
+      "versions": [
+        96.35,
+        94.31,
+        92.29,
+        88.7
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "the-bowery-boys": {
+      "versions": [
+        96.41,
+        94.3,
+        92.19,
+        88.45
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "double-rainbow": {
+      "versions": [
+        96.38,
+        94.53,
+        92.45,
+        88.38
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "warrior-ways": {
+      "versions": [
+        96.33,
+        94.42,
+        92.3,
+        88.39
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "gladiator-legends": {
+      "versions": [
+        96.31,
+        94.44,
+        92.66,
+        88.19
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "hand-of-anubis": {
+      "versions": [
+        96.24,
+        94.32,
+        92.28,
+        88.41
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "itero": {
+      "versions": [
+        96.18,
+        94.24,
+        92.32,
+        88.33
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "outlaws-inc": {
+      "versions": [
+        96.23,
+        94.17,
+        92.32,
+        88.47
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "born-wild": {
+      "versions": [
+        96.2,
+        94.25,
+        92.14,
+        88.38
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "dork-unit": {
+      "versions": [
+        96.24,
+        94.38,
+        92.38,
+        88.37
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "fruit-duel": {
+      "versions": [
+        96.3,
+        94.48,
+        92.37,
+        88.2
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "time-spinners": {
+      "versions": [
+        96.19,
+        94.19,
+        92.41,
+        88.4
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "forest-fortune": {
+      "versions": [
+        96.31,
+        94.37,
+        92.35,
+        88.29
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "alpha-eagle": {
+      "versions": [
+        96.26,
+        94.31,
+        92.25,
+        88.2
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "undead-fortune": {
+      "versions": [
+        96.29,
+        94.4,
+        92.28,
+        88.55
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "pug-life": {
+      "versions": [
+        96.33,
+        94.32,
+        92.27,
+        88.4
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "book-of-time": {
+      "versions": [
+        96.13,
+        94.34,
+        92.33,
+        88.25
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "rotten": {
+      "versions": [
+        96.27,
+        94.13,
+        92.23,
+        88.03
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "rip-city": {
+      "versions": [
+        96.22,
+        94.27,
+        92.32,
+        88.02
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "bloodthirst": {
+      "versions": [
+        96.19,
+        94.23,
+        92.32,
+        88.36
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "magic-piggy": {
+      "versions": [
+        96.19,
+        94.47,
+        92.32,
+        88.24
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "keep-em-cool": {
+      "versions": [
+        96.19,
+        94.07,
+        92.44,
+        88.37
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "stormforged": {
+      "versions": [
+        96.41,
+        94.28,
+        92.35,
+        88.46
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "fear-the-dark": {
+      "versions": [
+        96.25,
+        94.33,
+        92.36,
+        88.25
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "cursed-seas": {
+      "versions": [
+        96.22,
+        94.24,
+        92.21,
+        88.38
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "mayan-stackways": {
+      "versions": [
+        96.23,
+        94.29,
+        92.41,
+        88.38
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "temple-of-torment": {
+      "versions": [
+        96.2,
+        94.09,
+        92.19,
+        88.24
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "mighty-masks": {
+      "versions": [
+        96.3,
+        94.2,
+        92.26,
+        88.38
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "beast-below": {
+      "versions": [
+        96.29,
+        94.27,
+        92.25,
+        88.28
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "vending-machine": {
+      "versions": [
+        96.28,
+        94.26,
+        92.32,
+        88.28
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "dropem": {
+      "versions": [
+        96.21,
+        94.19,
+        92.26,
+        88.1
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "ronin-stackways": {
+      "versions": [
+        96.35,
+        94.33,
+        92.24,
+        88.23
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "le-bandit": {
+      "versions": [
+        96.34,
+        94.23,
+        92.17,
+        88.36
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "densho": {
+      "versions": [
+        96.4,
+        94.38,
+        92.33,
+        88.34
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "chaos-crew-2": {
+      "versions": [
+        96.27,
+        94.22,
+        92.41,
+        88.28
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "benny-the-beer": {
+      "versions": [
+        96.17,
+        94.17,
+        92.28,
+        88.26
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "eye-of-the-panda": {
+      "versions": [
+        96.26,
+        94.21,
+        92.25,
+        88.31
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "immortal-desire": {
+      "versions": [
+        96.24,
+        94.12,
+        92.27,
+        88.25
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "xmas-drop": {
+      "versions": [
+        96.22,
+        94.27,
+        92.32,
+        88.02
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "dark-summoning": {
+      "versions": [
+        96.36,
+        94.34,
+        92.22,
+        88.28
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "feel-the-beat": {
+      "versions": [
+        96.2,
+        94.28,
+        92.26,
+        88.34
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "fist-of-destruction": {
+      "versions": [
+        96.3,
+        94.3,
+        92.38,
+        88.27
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "dawn-of-kings": {
+      "versions": [
+        96.24,
+        94.25,
+        92.21,
+        88.07
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "bouncy-bombs": {
+      "versions": [
+        96.22,
+        94.37,
+        92.16,
+        88.3
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "cash-crew": {
+      "versions": [
+        96.26,
+        94.23,
+        92.17,
+        88.29
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "orb-of-destiny": {
+      "versions": [
+        96.27,
+        94.29,
+        92.31,
+        88.29
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "divine-drop": {
+      "versions": [
+        96.25,
+        94.34,
+        92.34,
+        88.29
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "jelly-slice": {
+      "versions": [
+        96.24,
+        94.32,
+        92.3,
+        88.28
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "slayers-inc": {
+      "versions": [
+        96.28,
+        94.36,
+        92.4,
+        88.22
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "cursed-crypt": {
+      "versions": [
+        96.22,
+        94.29,
+        92.3,
+        88.38
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "ze-zeus": {
+      "versions": [
+        96.34,
+        94.23,
+        92.17,
+        88.36
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "twisted-lab": {
+      "versions": [
+        96.3,
+        94.2,
+        92.18,
+        88.23
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "tai-the-toad": {
+      "versions": [
+        96.3,
+        94.35,
+        92.32,
+        88.22
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "donny-dough": {
+      "versions": [
+        96.26,
+        94.4,
+        92.35,
+        88.33
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "octo-attack": {
+      "versions": [
+        96.27,
+        94.26,
+        92.3,
+        88.28
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "evil-eyes": {
+      "versions": [
+        96.24,
+        94.21,
+        92.32,
+        88.36
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "cloud-princess": {
+      "versions": [
+        96.24,
+        94.21,
+        92.26,
+        88.29
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "get-the-cheese": {
+      "versions": [
+        96.31,
+        94.2,
+        92.29,
+        88.25
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "rise-of-ymir": {
+      "versions": [
+        96.31,
+        94.24,
+        92.25,
+        88.23
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "wings-of-horus": {
+      "versions": [
+        96.33,
+        94.27,
+        92.25,
+        88.19
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "duel-at-dawn": {
+      "versions": [
+        96.3,
+        94.27,
+        92.28,
+        88.37
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "snow-slingers": {
+      "versions": [
+        96.29,
+        94.32,
+        92.32,
+        88.27
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "shaolin-master": {
+      "versions": [
+        96.31,
+        94.24,
+        92.31,
+        88.25
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "fire-my-laser": {
+      "versions": [
+        96.31,
+        94.16,
+        92.23,
+        88.27
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "klowns": {
+      "versions": [
+        96.26,
+        94.31,
+        92.31,
+        88.3
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "le-viking": {
+      "versions": [
+        96.32,
+        94.31,
+        92.28,
+        88.27
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "phoenix-duelreels": {
+      "versions": [
+        96.27,
+        94.32,
+        92.26,
+        88.26
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "marlin-masters": {
+      "versions": [
+        96.24,
+        94.39,
+        92.35,
+        88.35
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "frkn-bananas": {
+      "versions": [
+        96.31,
+        94.29,
+        92.27,
+        88.25
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "hounds-of-hell": {
+      "versions": [
+        96.27,
+        94.16,
+        92.26,
+        88.14
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "strength-of-hercules": {
+      "versions": [
+        96.31,
+        94.3,
+        92.26,
+        88.31
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "dorks-of-the-deep": {
+      "versions": [
+        96.2,
+        94.22,
+        92.21,
+        88.19
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "life-and-death": {
+      "versions": [
+        96.36,
+        94.26,
+        92.33,
+        88.24
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "wishbringer": {
+      "versions": [
+        96.33,
+        94.22,
+        92.27,
+        88.21
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "fighter-pit": {
+      "versions": [
+        96.3,
+        94.3,
+        92.38,
+        88.27
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "reign-of-rome": {
+      "versions": [
+        96.27,
+        94.22,
+        92.33,
+        88.27
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "rad-maxx": {
+      "versions": [
+        96.32,
+        94.42,
+        92.4,
+        88.33
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "danny-dollar": {
+      "versions": [
+        96.21,
+        94.38,
+        92.16,
+        88.29
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "pray-for-three": {
+      "versions": [
+        96.33,
+        94.25,
+        92.27,
+        88.35
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "spinman": {
+      "versions": [
+        96.23,
+        94.3,
+        92.34,
+        88.35
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "ultimate-slot-of-america": {
+      "versions": [
+        96.37,
+        94.34,
+        92.29,
+        88.26
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "booze-bash": {
+      "versions": [
+        96.31,
+        94.29,
+        92.31,
+        88.28
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "le-king": {
+      "versions": [
+        96.14,
+        94.18,
+        92.25,
+        88.25
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "eye-of-medusa": {
+      "versions": [
+        96.2,
+        94.24,
+        92.33,
+        88.32
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "the-luxe": {
+      "versions": [
+        96.34,
+        94.31,
+        92.27,
+        88.28
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "aiko-and-the-wind-spirit": {
+      "versions": [
+        96.29,
+        94.31,
+        92.36,
+        88.25
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "rainbow-princess": {
+      "versions": [
+        96.36,
+        94.35,
+        92.3,
+        86.38
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "marlin-masters-the-big-haul": {
+      "versions": [
+        96.28,
+        94.29,
+        92.28,
+        88.31
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "bullets-and-bounty": {
+      "versions": [
+        96.27,
+        94.14,
+        92.18,
+        86.11
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "miami-mayhem": {
+      "versions": [
+        96.35,
+        94.34,
+        92.17,
+        86.23
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "tiger-legends": {
+      "versions": [
+        96.3,
+        94.24,
+        92.23,
+        86.13
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "le-zeus": {
+      "versions": [
+        96.26,
+        94.18,
+        92.37,
+        86.27
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "stormborn": {
+      "versions": [
+        96.27,
+        94.21,
+        92.28,
+        86.23
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "chaos-crew-3": {
+      "versions": [
+        96.18,
+        94.17,
+        92.27,
+        86.19
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "bash-bros": {
+      "versions": [
+        96.26,
+        94.25,
+        92.41,
+        86.13
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "the-count": {
+      "versions": [
+        96.36,
+        94.28,
+        92.34,
+        86.19
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "sun-princess": {
+      "versions": [
+        96.3,
+        94.26,
+        92.36,
+        86.25
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "le-cowboy": {
+      "versions": [
+        96.28,
+        94.31,
+        92.3,
+        86.33
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "spear-of-athena": {
+      "versions": [
+        96.2,
+        94.34,
+        92.3,
+        86.44
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "le-santa": {
+      "versions": [
+        96.14,
+        94.18,
+        92.25,
+        88.25
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "army-of-ares": {
+      "versions": [
+        96.26,
+        94.34,
+        92.28,
+        86.22
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "jaws-of-justice": {
+      "versions": [
+        96.2,
+        94.27,
+        92.32,
+        86.36
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "donny-and-danny": {
+      "versions": [
+        96.29,
+        94.35,
+        92.26,
+        86.27
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "toshi-ways-club": {
+      "versions": [
+        96.09,
+        94.37,
+        92.46,
+        86.15
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "smoking-dragon": {
+      "versions": [
+        96.3,
+        94.28,
+        92.35,
+        86.25
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "circle-of-life": {
+      "versions": [
+        96.33,
+        94.19,
+        92.33,
+        86.17
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "deal-with-death": {
+      "versions": [
+        96.25,
+        94.3,
+        92.24,
+        86.22
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "pray-for-six": {
+      "versions": [
+        96.35,
+        94.29,
+        92.27,
+        86.21
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "le-fisherman": {
+      "versions": [
+        96.33,
+        94.33,
+        92.34,
+        86.25
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "zeus-ze-zecond": {
+      "versions": [
+        96.26,
+        94.18,
+        92.37,
+        86.27
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "superstar-sevens": {
+      "versions": [
+        96.37,
+        94.27,
+        92.38,
+        86.21
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "hot-ross": {
+      "versions": [
+        96.32,
+        94.23,
+        92.23,
+        86.16
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "dark-spiral": {
+      "versions": [
+        96.22,
+        94.22,
+        92.32,
+        86.24
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "eternal-duel": {
+      "versions": [
+        96.42,
+        94.24,
+        92.39,
+        86.31
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "dusk-princess": {
+      "versions": [
+        96.21,
+        94.42,
+        92.3,
+        86.1
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "le-bunny": {
+      "versions": [
+        96.14,
+        94.18,
+        92.25,
+        88.25
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "epic-bullets-and-bounty": {
+      "versions": [
+        96.24,
+        94.28,
+        92.25
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 3 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "munchy-milo": {
+      "versions": [
+        96.3,
+        94.26,
+        92.36,
+        86.25
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "power-of-ten": {
+      "versions": [
+        96.23,
+        94.35,
+        92.19,
+        86.2
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "marlin-masters-atlantis": {
+      "versions": [
+        96.27,
+        94.26,
+        92.27,
+        86.23
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "dynasty-of-death": {
+      "versions": [
+        96.27,
+        94.29,
+        92.37,
+        86.28
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "le-digger": {
+      "versions": [
+        96.26,
+        94.29,
+        92.32,
+        86.21
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "magic-piggy-og": {
+      "versions": [
+        96.2,
+        94.18
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 2 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "sand-and-ashes": {
+      "versions": [
+        96.27,
+        94.21,
+        92.3,
+        86.19
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "red-rascal": {
+      "versions": [
+        96.34,
+        94.29,
+        92.26,
+        86.35
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "3-cursed-chests-hold-and-win": {
+      "versions": [
+        96.3,
+        94.37,
+        92.3,
+        86.29
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "rise-of-fortuna": {
+      "versions": [
+        96.28,
+        94.38,
+        92.28,
+        86.33
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "le-hooligan": {
+      "versions": [
+        96.34,
+        94.23,
+        92.17
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 3 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "great-game-rockies": {
+      "versions": [
+        96.33,
+        94.33,
+        92.29,
+        86.25
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "dandy-diamonds": {
+      "versions": [
+        96.33,
+        94.26,
+        92.26,
+        86.32
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "nitro-nights": {
+      "versions": [
+        96.31,
+        94.34,
+        92.22,
+        86.26
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "death-becomes-you": {
+      "versions": [
+        96.34,
+        94.36,
+        92.23,
+        86.28
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "aliens-among-us": {
+      "versions": [
+        96.36,
+        94.26,
+        92.33,
+        88.24
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "grug-make-fire": {
+      "versions": [
+        96.19,
+        94.28,
+        92.27,
+        86.22
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "le-prechaun": {
+      "versions": [
+        96.28,
+        94.29,
+        92.28,
+        86.31
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "supreme-zeus": {
+      "versions": [
+        96.39,
+        94.3,
+        92.31,
+        86.32
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "max-win-machine": {
+      "versions": [
+        96.22,
+        94.28,
+        92.2
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 3 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "cash-crooks": {
+      "versions": [
+        96.22,
+        94.23,
+        92.11,
+        86.28
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "epic-ze-zeus": {
+      "versions": [
+        96.22,
+        94.16,
+        92.35
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 3 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "arizona-james-and-the-lost-relics": {
+      "versions": [
+        96.28,
+        94.31,
+        92.3,
+        86.33
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "minted-mike": {
+      "versions": [
+        96.31,
+        94.29,
+        92.27,
+        86.28
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "great-game-serengeti": {
+      "versions": [
+        96.29,
+        94.21,
+        92.3,
+        86.24
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "dr-zappo": {
+      "versions": [
+        96.31,
+        94.36,
+        92.31,
+        86.22
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "le-vampire": {
+      "versions": [
+        96.36,
+        94.3,
+        92.31,
+        86.27
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "demonic-dolls": {
+      "versions": [
+        96.26,
+        94.19,
+        92.24,
+        86.21
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "epic-sixsixsix": {
+      "versions": [
+        96.27,
+        94.26,
+        92.23
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 3 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "the-jade-path-hold-and-win": {
+      "versions": [
+        96.19,
+        94.24,
+        92.28,
+        86.28
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "wicked-grin": {
+      "versions": [
+        96.27,
+        94.32,
+        92.28,
+        86.28
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "coffee-dealer": {
+      "versions": [
+        96.29,
+        94.38,
+        92.25,
+        86.33
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
     }
   }
 }

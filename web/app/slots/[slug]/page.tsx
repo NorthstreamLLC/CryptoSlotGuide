@@ -30,7 +30,17 @@ function catalogueMeta(slug: string) {
   const only = singleRtp(g);
   // A title with one published return gets a title that says so, rather than
   // "RTP: %" from joining an empty list.
-  const title = v.length > 1 ? `${g.name} RTP: ${v.join("% and ")}%` : only !== null ? `${g.name} RTP: ${only}%` : `${g.name} RTP and specs`;
+  // "96.32% and 94.23% and 92.23% and 86.16%" is what joining on "and" gives
+  // once a studio ships four builds, which Hacksaw usually does. Two reads
+  // naturally; more than two wants the range.
+  const title =
+    v.length > 2
+      ? `${g.name} RTP: ${v[0]}% down to ${v[v.length - 1]}%`
+      : v.length === 2
+        ? `${g.name} RTP: ${v[0]}% and ${v[1]}%`
+        : only !== null
+          ? `${g.name} RTP: ${only}%`
+          : `${g.name} RTP and specs`;
   const desc =
     v.length > 1
       ? `${g.provider} licenses ${g.name} at ${v.length} returns${spread ? `, ${spread} percentage points apart` : ""}. The configurations, the specs and which build your casino ships.`
