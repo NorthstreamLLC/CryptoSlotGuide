@@ -28,6 +28,7 @@
  *   node scripts/import-studio-sheets.mjs --pragmatic "<path.csv>" --playngo "<path.csv>"
  */
 import fs from "node:fs";
+import { titleMatcher } from "./lib/match-title.mjs";
 import path from "node:path";
 
 const argv = process.argv.slice(2);
@@ -106,6 +107,10 @@ const pct = (raw) => {
 
 const catalogue = JSON.parse(fs.readFileSync(path.join("data", "gameCatalogue.json"), "utf8")).games;
 const bySlug = new Map(catalogue.filter((g) => g.slug).map((g) => [g.slug, g]));
+// Name-key matching within the studio — see scripts/lib/match-title.mjs for
+// why slug equality lost 147 of these titles to apostrophes and en-dashes.
+const matcher = titleMatcher(catalogue);
+const resolve = (name, studio) => matcher.match(name, studio) ?? bySlug.get(slugify(name)) ?? null;
 const existingRtp = fs.existsSync(RTP_OUT) ? JSON.parse(fs.readFileSync(RTP_OUT, "utf8")) : { note: "", overrides: {} };
 const overrides = { ...existingRtp.overrides };
 const existingMeta = fs.existsSync(META_OUT) ? JSON.parse(fs.readFileSync(META_OUT, "utf8")) : { games: {} };
@@ -181,7 +186,10 @@ function record(slug, name, { versions, released, jurisdictions, volatility, dem
 
 const pragFile = argOf("--pragmatic");
 if (pragFile && fs.existsSync(pragFile)) {
-  const rows = parseCsv(fs.readFileSync(pragFile, "utf8"));
+  // The export is Windows-1252, not UTF-8: read as UTF-8, every typographic
+  // apostrophe and en-dash in a title became U+FFFD and the title matched
+  // nothing. 54 of Pragmatic's 85 unmatched titles were exactly this.
+  const rows = parseCsv(new TextDecoder("windows-1252").decode(fs.readFileSync(pragFile)));
   for (const r of rows) {
     const name = r["Name"];
     if (!name) continue;
@@ -203,7 +211,7 @@ if (pragFile && fs.existsSync(pragFile)) {
      * wrong has not earned trust in its second number either.
      */
     const rtp = pct(r["RTP"]);
-    const known = bySlug.get(slugify(name));
+    const known = resolve(name, "Pragmatic Play");
     const feed = known?.rtpVariants?.length ? known.rtpVariants : known?.rtp != null ? [known.rtp] : [];
     let versions = [];
     if (rtp !== null) {
@@ -213,7 +221,7 @@ if (pragFile && fs.existsSync(pragFile)) {
     // the feed's lower build is kept alongside it.
     const versionsFrom = rtp !== null && versions.length === 1 ? "studio" : "mixed";
     record(
-      slugify(name),
+      known?.slug ?? slugify(name),
       name,
       { versions, versionsFrom, released: isoDate(r["Release Date"]), demoUrl: demoUrl || undefined },
       "Pragmatic Play",
@@ -254,7 +262,7 @@ if (pgFile && fs.existsSync(pgFile)) {
     const defaultBand = /^\d{2}$/.test(r["Default rtp% config"]?.trim() ?? "") ? r["Default rtp% config"].trim() : undefined;
     const jurisdictions = Object.fromEntries(jurCols.map((c) => [c, r[c]]).filter(([, v]) => v));
     record(
-      slugify(name),
+      resolve(name, "Play'n GO")?.slug ?? slugify(name),
       name,
       {
         versions,

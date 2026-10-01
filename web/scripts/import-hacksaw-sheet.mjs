@@ -28,6 +28,7 @@
  *   node scripts/import-hacksaw-sheet.mjs "<path to .xlsx>"
  */
 import fs from "node:fs";
+import { titleMatcher } from "./lib/match-title.mjs";
 import path from "node:path";
 import zlib from "node:zlib";
 
@@ -149,7 +150,10 @@ function volatilityOf(raw) {
 const titles = new Map();
 for (const r of data) {
   const name = r.B.trim();
-  const base = SUFFIX.test(name) ? name.replace(SUFFIX, "").trim() : name;
+  // Two rows carry a trailing studio tag ("3 Arcane Cauldrons - HG") or a bare
+  // dash ("Croco Clover -"); neither is part of the title.
+  const untagged = name.replace(/ - HG$| -$/, "").trim();
+  const base = SUFFIX.test(untagged) ? untagged.replace(SUFFIX, "").trim() : untagged;
   const rtp = pct(r.M);
   if (!titles.has(base)) titles.set(base, { base, rtps: [], jur: null, volatility: volatilityOf(r.U) });
   const t = titles.get(base);
@@ -162,6 +166,9 @@ for (const r of data) {
 
 const catalogue = JSON.parse(fs.readFileSync(path.join("data", "gameCatalogue.json"), "utf8")).games;
 const bySlug = new Map(catalogue.filter((g) => g.slug).map((g) => [g.slug, g]));
+// Name-key matching within the studio: the sheet writes "Hold &amp; Win" and
+// the catalogue closes spaces ("2Wild2Die"), and neither is a different game.
+const matcher = titleMatcher(catalogue);
 
 const existing = fs.existsSync(RTP_OUT) ? JSON.parse(fs.readFileSync(RTP_OUT, "utf8")) : { note: "", overrides: {} };
 const overrides = { ...existing.overrides };
@@ -176,16 +183,18 @@ let withVolatility = 0;
 
 let matched = 0;
 let unmatched = 0;
+const unmatchedNames = [];
 let multi = 0;
 const conflicts = [];
 
 for (const t of titles.values()) {
-  const slug = slugify(t.base);
-  const game = bySlug.get(slug);
+  const game = matcher.match(t.base, "Hacksaw Gaming") ?? bySlug.get(slugify(t.base));
   if (!game) {
     unmatched++;
+    unmatchedNames.push(t.base);
     continue;
   }
+  const slug = game.slug;
   matched++;
   const versions = [...new Set(t.rtps)].sort((a, b) => b - a);
   if (versions.length > 1) multi++;
@@ -221,6 +230,7 @@ for (const t of titles.values()) {
 
 console.log(`  ${data.length} rows → ${titles.size} titles`);
 console.log(`  matched to our catalogue: ${matched} (${multi} with more than one return) · unmatched: ${unmatched}`);
+if (unmatchedNames.length) console.log(`  unmatched: ${unmatchedNames.sort().join(" · ")}`);
 if (conflicts.length) {
   console.log(`\n  feed figure not among the sheet's returns (${conflicts.length}):`);
   for (const c of conflicts.slice(0, 10)) console.log(`     ${c.name.slice(0, 28).padEnd(28)} feed ${c.feed}  vs sheet ${c.sheet.join(" / ")}`);

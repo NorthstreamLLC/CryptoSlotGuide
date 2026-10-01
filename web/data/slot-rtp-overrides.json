@@ -2715,13 +2715,14 @@
     },
     "argonauts": {
       "versions": [
-        96.47
+        96.47,
+        94.52
       ],
-      "versionsFrom": "studio",
+      "versionsFrom": "mixed",
       "studio": "Pragmatic Play",
       "sourceUrl": "https://www.pragmaticplay.com/en/slots/",
       "read": "2026-10-01",
-      "reason": "Pragmatic Play's own published game data (Pragmatic Play Generated Slot Demo Links (67)(Demo Links).csv). One published return."
+      "reason": "Pragmatic Play's own published game data (Pragmatic Play Generated Slot Demo Links (67)(Demo Links).csv). This title ships at 2 returns."
     },
     "big-bass-amazon-xtreme": {
       "versions": [
@@ -3465,13 +3466,14 @@
     },
     "money-mouse": {
       "versions": [
-        96
+        96,
+        93.99
       ],
-      "versionsFrom": "studio",
+      "versionsFrom": "mixed",
       "studio": "Pragmatic Play",
       "sourceUrl": "https://www.pragmaticplay.com/en/slots/",
       "read": "2026-10-01",
-      "reason": "Pragmatic Play's own published game data (Pragmatic Play Generated Slot Demo Links (67)(Demo Links).csv). One published return."
+      "reason": "Pragmatic Play's own published game data (Pragmatic Play Generated Slot Demo Links (67)(Demo Links).csv). This title ships at 2 returns."
     },
     "panda-s-fortune": {
       "versions": [
@@ -14552,6 +14554,972 @@
       "sourceUrl": "https://www.pragmaticplay.com/en/slots/",
       "read": "2026-10-01",
       "reason": "Pragmatic Play's own published game data (Pragmatic Play Generated Slot Demo Links (67)(Demo Links).csv). This title ships at 2 returns."
+    },
+    "miamimultiplier": {
+      "versionsFrom": "studio",
+      "versions": [
+        96.3
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at one return. Hacksaw publishes no RTP on its public game pages."
+    },
+    "stack-em": {
+      "versionsFrom": "studio",
+      "versions": [
+        96.2,
+        94.25,
+        92.2,
+        88.25
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "hop-n-pop": {
+      "versionsFrom": "studio",
+      "versions": [
+        96.2
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at one return. Hacksaw publishes no RTP on its public game pages."
+    },
+    "buffalo-stack-n-sync": {
+      "versionsFrom": "studio",
+      "versions": [
+        96.36,
+        94.38,
+        92.37,
+        88.46
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "breakbones": {
+      "versionsFrom": "studio",
+      "versions": [
+        96.22,
+        94.12,
+        92.21,
+        88.39
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "gronk-s-gems": {
+      "versionsFrom": "studio",
+      "versions": [
+        96.24,
+        94.42,
+        92.2,
+        88.3
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "frank-s-farm": {
+      "versionsFrom": "studio",
+      "versions": [
+        96.31,
+        94.36,
+        92.35,
+        88.25
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "2wild2die": {
+      "versionsFrom": "studio",
+      "versions": [
+        96.25,
+        94.15,
+        92.14,
+        88.25
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "rusty-curly": {
+      "versionsFrom": "studio",
+      "versions": [
+        96.29,
+        94.31,
+        92.25,
+        88.31
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "keep-em": {
+      "versionsFrom": "studio",
+      "versions": [
+        96.27,
+        94.25,
+        92.27,
+        88.29
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "dragon-s-domain": {
+      "versionsFrom": "studio",
+      "versions": [
+        96.31,
+        94.25,
+        92.2,
+        88.29
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "fred-s-foodtruck": {
+      "versionsFrom": "studio",
+      "versions": [
+        96.33,
+        94.15,
+        92.27,
+        88.37
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "invictus-1": {
+      "versionsFrom": "studio",
+      "versions": [
+        96.24,
+        94.34,
+        92.46,
+        88.27
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "the-wildwood-curse-1": {
+      "versionsFrom": "studio",
+      "versions": [
+        96.3,
+        94.3,
+        92.27,
+        86.26
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "steamrunners-1": {
+      "versionsFrom": "studio",
+      "versions": [
+        96.32,
+        94.3,
+        92.24,
+        86.26
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "tres-piatas-hold-win": {
+      "versionsFrom": "studio",
+      "versions": [
+        96.26,
+        94.3,
+        92.32,
+        86.29
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "le-bandit-hold-win": {
+      "versionsFrom": "studio",
+      "versions": [
+        96.27,
+        94.29,
+        92.23,
+        86.28
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "fist-of-destruction-mega-multipler": {
+      "versionsFrom": "studio",
+      "versions": [
+        96.23,
+        94.29,
+        92.28,
+        86.28
+      ],
+      "studio": "Hacksaw Gaming",
+      "sourceUrl": "https://www.hacksawgaming.com/",
+      "read": "2026-10-01",
+      "reason": "Hacksaw Gaming's own Client Game Data Sheet (International, 2026-09-30), which lists one row per build. This title ships at 4 returns. Hacksaw publishes no RTP on its public game pages."
+    },
+    "big-bass-hold-spinner": {
+      "versions": [
+        96.07
+      ],
+      "versionsFrom": "studio",
+      "studio": "Pragmatic Play",
+      "sourceUrl": "https://www.pragmaticplay.com/en/slots/",
+      "read": "2026-10-01",
+      "reason": "Pragmatic Play's own published game data (Pragmatic Play Generated Slot Demo Links (67)(Demo Links).csv). One published return."
+    },
+    "bigger-bass-blizzard---christmas-catch": {
+      "versions": [
+        96.08,
+        94.07
+      ],
+      "versionsFrom": "mixed",
+      "studio": "Pragmatic Play",
+      "sourceUrl": "https://www.pragmaticplay.com/en/slots/",
+      "read": "2026-10-01",
+      "reason": "Pragmatic Play's own published game data (Pragmatic Play Generated Slot Demo Links (67)(Demo Links).csv). This title ships at 2 returns."
+    },
+    "blade-&-fangs": {
+      "versions": [
+        96.05
+      ],
+      "versionsFrom": "studio",
+      "studio": "Pragmatic Play",
+      "sourceUrl": "https://www.pragmaticplay.com/en/slots/",
+      "read": "2026-10-01",
+      "reason": "Pragmatic Play's own published game data (Pragmatic Play Generated Slot Demo Links (67)(Demo Links).csv). One published return."
+    },
+    "caishens-cash": {
+      "versions": [
+        96.5
+      ],
+      "versionsFrom": "studio",
+      "studio": "Pragmatic Play",
+      "sourceUrl": "https://www.pragmaticplay.com/en/slots/",
+      "read": "2026-10-01",
+      "reason": "Pragmatic Play's own published game data (Pragmatic Play Generated Slot Demo Links (67)(Demo Links).csv). One published return."
+    },
+    "caishen's-gold": {
+      "versions": [
+        95.5
+      ],
+      "versionsFrom": "studio",
+      "studio": "Pragmatic Play",
+      "sourceUrl": "https://www.pragmaticplay.com/en/slots/",
+      "read": "2026-10-01",
+      "reason": "Pragmatic Play's own published game data (Pragmatic Play Generated Slot Demo Links (67)(Demo Links).csv). One published return."
+    },
+    "duel-of-night-day": {
+      "versions": [
+        96.47
+      ],
+      "versionsFrom": "studio",
+      "studio": "Pragmatic Play",
+      "sourceUrl": "https://www.pragmaticplay.com/en/slots/",
+      "read": "2026-10-01",
+      "reason": "Pragmatic Play's own published game data (Pragmatic Play Generated Slot Demo Links (67)(Demo Links).csv). One published return."
+    },
+    "dwarf-dragon": {
+      "versions": [
+        96.59
+      ],
+      "versionsFrom": "studio",
+      "studio": "Pragmatic Play",
+      "sourceUrl": "https://www.pragmaticplay.com/en/slots/",
+      "read": "2026-10-01",
+      "reason": "Pragmatic Play's own published game data (Pragmatic Play Generated Slot Demo Links (67)(Demo Links).csv). One published return."
+    },
+    "escape-the-pyramid-fire-ice": {
+      "versions": [
+        96.5
+      ],
+      "versionsFrom": "studio",
+      "studio": "Pragmatic Play",
+      "sourceUrl": "https://www.pragmaticplay.com/en/slots/",
+      "read": "2026-10-01",
+      "reason": "Pragmatic Play's own published game data (Pragmatic Play Generated Slot Demo Links (67)(Demo Links).csv). One published return."
+    },
+    "eternal-empress---freeze-time": {
+      "versions": [
+        96.5,
+        94.5
+      ],
+      "versionsFrom": "mixed",
+      "studio": "Pragmatic Play",
+      "sourceUrl": "https://www.pragmaticplay.com/en/slots/",
+      "read": "2026-10-01",
+      "reason": "Pragmatic Play's own published game data (Pragmatic Play Generated Slot Demo Links (67)(Demo Links).csv). This title ships at 2 returns."
+    },
+    "fortune-of-olympus-1": {
+      "versions": [
+        96.55
+      ],
+      "versionsFrom": "studio",
+      "studio": "Pragmatic Play",
+      "sourceUrl": "https://www.pragmaticplay.com/en/slots/",
+      "read": "2026-10-01",
+      "reason": "Pragmatic Play's own published game data (Pragmatic Play Generated Slot Demo Links (67)(Demo Links).csv). One published return."
+    },
+    "genies-gem-bonanza": {
+      "versions": [
+        96.5
+      ],
+      "versionsFrom": "studio",
+      "studio": "Pragmatic Play",
+      "sourceUrl": "https://www.pragmaticplay.com/en/slots/",
+      "read": "2026-10-01",
+      "reason": "Pragmatic Play's own published game data (Pragmatic Play Generated Slot Demo Links (67)(Demo Links).csv). One published return."
+    },
+    "good-luck-&-good-fortune": {
+      "versions": [
+        96.05,
+        94.03
+      ],
+      "versionsFrom": "mixed",
+      "studio": "Pragmatic Play",
+      "sourceUrl": "https://www.pragmaticplay.com/en/slots/",
+      "read": "2026-10-01",
+      "reason": "Pragmatic Play's own published game data (Pragmatic Play Generated Slot Demo Links (67)(Demo Links).csv). This title ships at 2 returns."
+    },
+    "john-hunter-and-galileo's-secrets": {
+      "versions": [
+        96.5,
+        94.5
+      ],
+      "versionsFrom": "mixed",
+      "studio": "Pragmatic Play",
+      "sourceUrl": "https://www.pragmaticplay.com/en/slots/",
+      "read": "2026-10-01",
+      "reason": "Pragmatic Play's own published game data (Pragmatic Play Generated Slot Demo Links (67)(Demo Links).csv). This title ships at 2 returns."
+    },
+    "jokers-jewels-hold-spin": {
+      "versions": [
+        96.52
+      ],
+      "versionsFrom": "studio",
+      "studio": "Pragmatic Play",
+      "sourceUrl": "https://www.pragmaticplay.com/en/slots/",
+      "read": "2026-10-01",
+      "reason": "Pragmatic Play's own published game data (Pragmatic Play Generated Slot Demo Links (67)(Demo Links).csv). One published return."
+    },
+    "lucky's-wild-pub": {
+      "versions": [
+        96.5
+      ],
+      "versionsFrom": "studio",
+      "studio": "Pragmatic Play",
+      "sourceUrl": "https://www.pragmaticplay.com/en/slots/",
+      "read": "2026-10-01",
+      "reason": "Pragmatic Play's own published game data (Pragmatic Play Generated Slot Demo Links (67)(Demo Links).csv). One published return."
+    },
+    "lucky's-wild-pub-2": {
+      "versions": [
+        96.5
+      ],
+      "versionsFrom": "studio",
+      "studio": "Pragmatic Play",
+      "sourceUrl": "https://www.pragmaticplay.com/en/slots/",
+      "read": "2026-10-01",
+      "reason": "Pragmatic Play's own published game data (Pragmatic Play Generated Slot Demo Links (67)(Demo Links).csv). One published return."
+    },
+    "mermaids-treasure-trove": {
+      "versions": [
+        96.54
+      ],
+      "versionsFrom": "studio",
+      "studio": "Pragmatic Play",
+      "sourceUrl": "https://www.pragmaticplay.com/en/slots/",
+      "read": "2026-10-01",
+      "reason": "Pragmatic Play's own published game data (Pragmatic Play Generated Slot Demo Links (67)(Demo Links).csv). One published return."
+    },
+    "mummy's-jewels": {
+      "versions": [
+        96.5,
+        94.5
+      ],
+      "versionsFrom": "mixed",
+      "studio": "Pragmatic Play",
+      "sourceUrl": "https://www.pragmaticplay.com/en/slots/",
+      "read": "2026-10-01",
+      "reason": "Pragmatic Play's own published game data (Pragmatic Play Generated Slot Demo Links (67)(Demo Links).csv). This title ships at 2 returns."
+    },
+    "mummy's-jewels-100": {
+      "versions": [
+        96.5
+      ],
+      "versionsFrom": "studio",
+      "studio": "Pragmatic Play",
+      "sourceUrl": "https://www.pragmaticplay.com/en/slots/",
+      "read": "2026-10-01",
+      "reason": "Pragmatic Play's own published game data (Pragmatic Play Generated Slot Demo Links (67)(Demo Links).csv). One published return."
+    },
+    "pandas-fortune-2": {
+      "versions": [
+        96.51
+      ],
+      "versionsFrom": "studio",
+      "studio": "Pragmatic Play",
+      "sourceUrl": "https://www.pragmaticplay.com/en/slots/",
+      "read": "2026-10-01",
+      "reason": "Pragmatic Play's own published game data (Pragmatic Play Generated Slot Demo Links (67)(Demo Links).csv). One published return."
+    },
+    "santas-slay": {
+      "versions": [
+        96.53
+      ],
+      "versionsFrom": "studio",
+      "studio": "Pragmatic Play",
+      "sourceUrl": "https://www.pragmaticplay.com/en/slots/",
+      "read": "2026-10-01",
+      "reason": "Pragmatic Play's own published game data (Pragmatic Play Generated Slot Demo Links (67)(Demo Links).csv). One published return."
+    },
+    "spellmaster": {
+      "versions": [
+        96.5,
+        94.5
+      ],
+      "versionsFrom": "mixed",
+      "studio": "Pragmatic Play",
+      "sourceUrl": "https://www.pragmaticplay.com/en/slots/",
+      "read": "2026-10-01",
+      "reason": "Pragmatic Play's own published game data (Pragmatic Play Generated Slot Demo Links (67)(Demo Links).csv). This title ships at 2 returns."
+    },
+    "the-dog-house---royal-hunt": {
+      "versions": [
+        96.53
+      ],
+      "versionsFrom": "studio",
+      "studio": "Pragmatic Play",
+      "sourceUrl": "https://www.pragmaticplay.com/en/slots/",
+      "read": "2026-10-01",
+      "reason": "Pragmatic Play's own published game data (Pragmatic Play Generated Slot Demo Links (67)(Demo Links).csv). One published return."
+    },
+    "tuts-treasure-tower": {
+      "versions": [
+        96.51
+      ],
+      "versionsFrom": "studio",
+      "studio": "Pragmatic Play",
+      "sourceUrl": "https://www.pragmaticplay.com/en/slots/",
+      "read": "2026-10-01",
+      "reason": "Pragmatic Play's own published game data (Pragmatic Play Generated Slot Demo Links (67)(Demo Links).csv). One published return."
+    },
+    "wild-hop-drop": {
+      "versions": [
+        96.46
+      ],
+      "versionsFrom": "studio",
+      "studio": "Pragmatic Play",
+      "sourceUrl": "https://www.pragmaticplay.com/en/slots/",
+      "read": "2026-10-01",
+      "reason": "Pragmatic Play's own published game data (Pragmatic Play Generated Slot Demo Links (67)(Demo Links).csv). One published return."
+    },
+    "uni-goat": {
+      "versions": [
+        96.2,
+        94.2,
+        91.2,
+        87.2,
+        84.2
+      ],
+      "versionsFrom": "studio",
+      "studio": "Play'n GO",
+      "sourceUrl": "https://www.playngo.com/games",
+      "read": "2026-10-01",
+      "reason": "Play'n GO's own published game data (playngo_released_2026-10-01.csv). This title ships at 5 returns."
+    },
+    "buildin-evenmore-bucks": {
+      "versions": [
+        96.2,
+        94.2,
+        91.2,
+        87.2,
+        84.2
+      ],
+      "versionsFrom": "studio",
+      "studio": "Play'n GO",
+      "sourceUrl": "https://www.playngo.com/games",
+      "read": "2026-10-01",
+      "reason": "Play'n GO's own published game data (playngo_released_2026-10-01.csv). This title ships at 5 returns."
+    },
+    "granny-s-wild": {
+      "versions": [
+        96.2,
+        94.2,
+        91.2,
+        87.2,
+        84.2
+      ],
+      "versionsFrom": "studio",
+      "studio": "Play'n GO",
+      "sourceUrl": "https://www.playngo.com/games",
+      "read": "2026-10-01",
+      "reason": "Play'n GO's own published game data (playngo_released_2026-10-01.csv). This title ships at 5 returns."
+    },
+    "3-blades-blessings": {
+      "versions": [
+        96.2,
+        94.2,
+        91.2,
+        87.2,
+        84.2
+      ],
+      "versionsFrom": "studio",
+      "studio": "Play'n GO",
+      "sourceUrl": "https://www.playngo.com/games",
+      "read": "2026-10-01",
+      "reason": "Play'n GO's own published game data (playngo_released_2026-10-01.csv). This title ships at 5 returns."
+    },
+    "fangs-fire": {
+      "versions": [
+        96.36,
+        94.34,
+        91.32,
+        87.24,
+        84.29
+      ],
+      "versionsFrom": "studio",
+      "studio": "Play'n GO",
+      "sourceUrl": "https://www.playngo.com/games",
+      "read": "2026-10-01",
+      "reason": "Play'n GO's own published game data (playngo_released_2026-10-01.csv). This title ships at 5 returns."
+    },
+    "bao-shi-1": {
+      "versions": [
+        96.2,
+        94.2,
+        91.2,
+        87.2,
+        84.2
+      ],
+      "versionsFrom": "studio",
+      "studio": "Play'n GO",
+      "sourceUrl": "https://www.playngo.com/games",
+      "read": "2026-10-01",
+      "reason": "Play'n GO's own published game data (playngo_released_2026-10-01.csv). This title ships at 5 returns."
+    },
+    "leprechaun-s-diamond-dig": {
+      "versions": [
+        96.2,
+        94.2,
+        91.2,
+        87.2,
+        84.2
+      ],
+      "versionsFrom": "studio",
+      "studio": "Play'n GO",
+      "sourceUrl": "https://www.playngo.com/games",
+      "read": "2026-10-01",
+      "reason": "Play'n GO's own published game data (playngo_released_2026-10-01.csv). This title ships at 5 returns."
+    },
+    "dragonfate-s-favor": {
+      "versions": [
+        96.2,
+        94.2,
+        91.2,
+        87.2,
+        84.2
+      ],
+      "versionsFrom": "studio",
+      "studio": "Play'n GO",
+      "sourceUrl": "https://www.playngo.com/games",
+      "read": "2026-10-01",
+      "reason": "Play'n GO's own published game data (playngo_released_2026-10-01.csv). This title ships at 5 returns."
+    },
+    "crabby-s-gold": {
+      "versions": [
+        96.25,
+        94.25,
+        91.25,
+        87.25,
+        84.25
+      ],
+      "versionsFrom": "studio",
+      "studio": "Play'n GO",
+      "sourceUrl": "https://www.playngo.com/games",
+      "read": "2026-10-01",
+      "reason": "Play'n GO's own published game data (playngo_released_2026-10-01.csv). This title ships at 5 returns."
+    },
+    "loot-labyrinths": {
+      "versions": [
+        96.39,
+        94.39,
+        91.4,
+        87.4,
+        84.39
+      ],
+      "versionsFrom": "studio",
+      "studio": "Play'n GO",
+      "sourceUrl": "https://www.playngo.com/games",
+      "read": "2026-10-01",
+      "reason": "Play'n GO's own published game data (playngo_released_2026-10-01.csv). This title ships at 5 returns."
+    },
+    "medusa-s-madness": {
+      "versions": [
+        96.59,
+        94.52,
+        91.59,
+        87.52,
+        84.5
+      ],
+      "versionsFrom": "studio",
+      "studio": "Play'n GO",
+      "sourceUrl": "https://www.playngo.com/games",
+      "read": "2026-10-01",
+      "reason": "Play'n GO's own published game data (playngo_released_2026-10-01.csv). This title ships at 5 returns."
+    },
+    "sobek-s-godly-spins": {
+      "versions": [
+        96.2,
+        94.2,
+        91.2,
+        87.2,
+        84.2
+      ],
+      "versionsFrom": "studio",
+      "studio": "Play'n GO",
+      "sourceUrl": "https://www.playngo.com/games",
+      "read": "2026-10-01",
+      "reason": "Play'n GO's own published game data (playngo_released_2026-10-01.csv). This title ships at 5 returns."
+    },
+    "king-s-mask-eclipse-of-gods": {
+      "versions": [
+        96.29,
+        94.28,
+        91.28,
+        87.28,
+        84.28
+      ],
+      "versionsFrom": "studio",
+      "studio": "Play'n GO",
+      "sourceUrl": "https://www.playngo.com/games",
+      "read": "2026-10-01",
+      "reason": "Play'n GO's own published game data (playngo_released_2026-10-01.csv). This title ships at 5 returns."
+    },
+    "tales-of-mithrune-syn-s-fortune": {
+      "versions": [
+        96.21,
+        94.21,
+        91.2,
+        87.21,
+        84.2
+      ],
+      "versionsFrom": "studio",
+      "studio": "Play'n GO",
+      "sourceUrl": "https://www.playngo.com/games",
+      "read": "2026-10-01",
+      "reason": "Play'n GO's own published game data (playngo_released_2026-10-01.csv). This title ships at 5 returns."
+    },
+    "sparky-shortz-hidden-joules": {
+      "versions": [
+        96.2,
+        94.2,
+        91.2,
+        87.2,
+        84.2
+      ],
+      "versionsFrom": "studio",
+      "studio": "Play'n GO",
+      "sourceUrl": "https://www.playngo.com/games",
+      "read": "2026-10-01",
+      "reason": "Play'n GO's own published game data (playngo_released_2026-10-01.csv). This title ships at 5 returns."
+    },
+    "gerard-s-gambit": {
+      "versions": [
+        96.2,
+        94.2,
+        91.2,
+        87.2,
+        84.2
+      ],
+      "versionsFrom": "studio",
+      "studio": "Play'n GO",
+      "sourceUrl": "https://www.playngo.com/games",
+      "read": "2026-10-01",
+      "reason": "Play'n GO's own published game data (playngo_released_2026-10-01.csv). This title ships at 5 returns."
+    },
+    "ronin-s-honour": {
+      "versions": [
+        96.22,
+        94.2,
+        91.2,
+        87.2,
+        84.2
+      ],
+      "versionsFrom": "studio",
+      "studio": "Play'n GO",
+      "sourceUrl": "https://www.playngo.com/games",
+      "read": "2026-10-01",
+      "reason": "Play'n GO's own published game data (playngo_released_2026-10-01.csv). This title ships at 5 returns."
+    },
+    "pandora-s-box-of-evil": {
+      "versions": [
+        96.2,
+        94.2,
+        91.2,
+        87.2,
+        84.2
+      ],
+      "versionsFrom": "studio",
+      "studio": "Play'n GO",
+      "sourceUrl": "https://www.playngo.com/games",
+      "read": "2026-10-01",
+      "reason": "Play'n GO's own published game data (playngo_released_2026-10-01.csv). This title ships at 5 returns."
+    },
+    "naughty-nick-s-book": {
+      "versions": [
+        96.28,
+        94.28,
+        91.28,
+        87.26,
+        84.25
+      ],
+      "versionsFrom": "studio",
+      "studio": "Play'n GO",
+      "sourceUrl": "https://www.playngo.com/games",
+      "read": "2026-10-01",
+      "reason": "Play'n GO's own published game data (playngo_released_2026-10-01.csv). This title ships at 5 returns."
+    },
+    "leprechaun-s-vault": {
+      "versions": [
+        96.2,
+        94.2,
+        91.2,
+        87.2,
+        84.2
+      ],
+      "versionsFrom": "studio",
+      "studio": "Play'n GO",
+      "sourceUrl": "https://www.playngo.com/games",
+      "read": "2026-10-01",
+      "reason": "Play'n GO's own published game data (playngo_released_2026-10-01.csv). This title ships at 5 returns."
+    },
+    "merlin-s-grimoire": {
+      "versions": [
+        96.2,
+        94.2,
+        91.2,
+        87.2,
+        84.2
+      ],
+      "versionsFrom": "studio",
+      "studio": "Play'n GO",
+      "sourceUrl": "https://www.playngo.com/games",
+      "read": "2026-10-01",
+      "reason": "Play'n GO's own published game data (playngo_released_2026-10-01.csv). This title ships at 5 returns."
+    },
+    "king-s-mask": {
+      "versions": [
+        96.28,
+        94.29,
+        91.29,
+        87.29,
+        84.28
+      ],
+      "versionsFrom": "studio",
+      "studio": "Play'n GO",
+      "sourceUrl": "https://www.playngo.com/games",
+      "read": "2026-10-01",
+      "reason": "Play'n GO's own published game data (playngo_released_2026-10-01.csv). This title ships at 5 returns."
+    },
+    "tales-of-asgard-freya-s-wedding": {
+      "versions": [
+        96.4,
+        94.4,
+        91.4,
+        87.4,
+        84.4
+      ],
+      "versionsFrom": "studio",
+      "studio": "Play'n GO",
+      "sourceUrl": "https://www.playngo.com/games",
+      "read": "2026-10-01",
+      "reason": "Play'n GO's own published game data (playngo_released_2026-10-01.csv). This title ships at 5 returns."
+    },
+    "captain-xeno-s-earth-adventure": {
+      "versions": [
+        96.2,
+        94.2,
+        91.2,
+        87.2,
+        84.2
+      ],
+      "versionsFrom": "studio",
+      "studio": "Play'n GO",
+      "sourceUrl": "https://www.playngo.com/games",
+      "read": "2026-10-01",
+      "reason": "Play'n GO's own published game data (playngo_released_2026-10-01.csv). This title ships at 5 returns."
+    },
+    "tales-of-asgard-loki-s-fortune": {
+      "versions": [
+        96.2,
+        94.2,
+        91.2,
+        87.2,
+        84.2
+      ],
+      "versionsFrom": "studio",
+      "studio": "Play'n GO",
+      "sourceUrl": "https://www.playngo.com/games",
+      "read": "2026-10-01",
+      "reason": "Play'n GO's own published game data (playngo_released_2026-10-01.csv). This title ships at 5 returns."
+    },
+    "sparky-shortz": {
+      "versions": [
+        96.28,
+        94.24,
+        91.24,
+        87.28,
+        84.28
+      ],
+      "versionsFrom": "studio",
+      "studio": "Play'n GO",
+      "sourceUrl": "https://www.playngo.com/games",
+      "read": "2026-10-01",
+      "reason": "Play'n GO's own published game data (playngo_released_2026-10-01.csv). This title ships at 5 returns."
+    },
+    "pack-cash": {
+      "versions": [
+        96.2,
+        94.2,
+        91.2,
+        87.2,
+        84.2
+      ],
+      "versionsFrom": "studio",
+      "studio": "Play'n GO",
+      "sourceUrl": "https://www.playngo.com/games",
+      "read": "2026-10-01",
+      "reason": "Play'n GO's own published game data (playngo_released_2026-10-01.csv). This title ships at 5 returns."
+    },
+    "that-s-rich": {
+      "versions": [
+        96.27,
+        94.3,
+        91.29,
+        87.26,
+        84.25
+      ],
+      "versionsFrom": "studio",
+      "studio": "Play'n GO",
+      "sourceUrl": "https://www.playngo.com/games",
+      "read": "2026-10-01",
+      "reason": "Play'n GO's own published game data (playngo_released_2026-10-01.csv). This title ships at 5 returns."
+    },
+    "big-win-777-1": {
+      "versions": [
+        96.5,
+        94.5,
+        91.5,
+        87.5,
+        84.5
+      ],
+      "versionsFrom": "studio",
+      "studio": "Play'n GO",
+      "sourceUrl": "https://www.playngo.com/games",
+      "read": "2026-10-01",
+      "reason": "Play'n GO's own published game data (playngo_released_2026-10-01.csv). This title ships at 5 returns."
+    },
+    "3-hand-casino-hold-em": {
+      "versions": [
+        97.84
+      ],
+      "versionsFrom": "studio",
+      "studio": "Play'n GO",
+      "sourceUrl": "https://www.playngo.com/games",
+      "read": "2026-10-01",
+      "reason": "Play'n GO's own published game data (playngo_released_2026-10-01.csv). One published return."
+    },
+    "hugo-s-adventure": {
+      "versions": [
+        96.56,
+        94.5,
+        91.5,
+        87.57,
+        84.57
+      ],
+      "versionsFrom": "studio",
+      "studio": "Play'n GO",
+      "sourceUrl": "https://www.playngo.com/games",
+      "read": "2026-10-01",
+      "reason": "Play'n GO's own published game data (playngo_released_2026-10-01.csv). This title ships at 5 returns."
+    },
+    "queen-s-day-tilt": {
+      "versions": [
+        96.36,
+        94.3,
+        91.39,
+        87.39,
+        84.24
+      ],
+      "versionsFrom": "studio",
+      "studio": "Play'n GO",
+      "sourceUrl": "https://www.playngo.com/games",
+      "read": "2026-10-01",
+      "reason": "Play'n GO's own published game data (playngo_released_2026-10-01.csv). This title ships at 5 returns."
+    },
+    "baker-s-treat": {
+      "versions": [
+        96.03,
+        94.03,
+        91.19,
+        87.12,
+        84.21
+      ],
+      "versionsFrom": "studio",
+      "studio": "Play'n GO",
+      "sourceUrl": "https://www.playngo.com/games",
+      "read": "2026-10-01",
+      "reason": "Play'n GO's own published game data (playngo_released_2026-10-01.csv). This title ships at 5 returns."
+    },
+    "mermaid-s-diamond": {
+      "versions": [
+        96.5,
+        94.45,
+        91.47,
+        87.49,
+        84.48
+      ],
+      "versionsFrom": "studio",
+      "studio": "Play'n GO",
+      "sourceUrl": "https://www.playngo.com/games",
+      "read": "2026-10-01",
+      "reason": "Play'n GO's own published game data (playngo_released_2026-10-01.csv). This title ships at 5 returns."
+    },
+    "casino-hold-em-1": {
+      "versions": [
+        97.84
+      ],
+      "versionsFrom": "studio",
+      "studio": "Play'n GO",
+      "sourceUrl": "https://www.playngo.com/games",
+      "read": "2026-10-01",
+      "reason": "Play'n GO's own published game data (playngo_released_2026-10-01.csv). One published return."
     }
   }
 }
