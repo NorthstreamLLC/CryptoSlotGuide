@@ -60,6 +60,24 @@ const DOMAINS = {
   "booming-games": "www.booming-games.com",
   "print-studios": "printstudios.com",
   spribe: "spribe.co",
+  // US-regulated brands: the registry stores several domains per brand (Caesars
+  // owns caesarspalaceonline.com, wsop.com ...); the first is the brand's own.
+  draftkings: "draftkings.com",
+  caesars: "caesars.com",
+  fanduel: "fanduel.com",
+  betmgm: "betmgm.com",
+  fanatics: "fanatics.com",
+  bet365: "bet365.com",
+  // Prediction markets: predMarkets.json carries a site URL, not a slug, so the
+  // slug here is what the menu uses for the mark.
+  limitless: "limitless.exchange",
+  overtime: "www.overtimemarkets.xyz",
+  myriad: "myriad.markets",
+  kalshi: "kalshi.com",
+  "polymarket-us": "polymarket.us",
+  robinhood: "robinhood.com",
+  forecastex: "forecastex.com",
+  predictit: "www.predictit.org",
 };
 
 /** Where a site's own icon has to be named outright. Each was checked by hand. */

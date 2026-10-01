@@ -120,6 +120,46 @@
       "url": "https://polymarket.com/icons/apple-touch-icon.png",
       "size": "180x180",
       "fetchedAt": "2026-09-25"
+    },
+    "draftkings": {
+      "url": "https://sportsbook.draftkings.com/static/Sportsbook_sideRail_icon_2.png",
+      "size": "200x200",
+      "fetchedAt": "2026-10-01"
+    },
+    "fanduel": {
+      "url": "https://fanduel.com/apple-touch-icon.png",
+      "size": "152x152",
+      "fetchedAt": "2026-10-01"
+    },
+    "betmgm": {
+      "url": "https://scmedia.nj.betmgm.com/$-$/5ff5107775984e9fbad8eec0b9efb25e.png",
+      "size": "32x32",
+      "fetchedAt": "2026-10-01"
+    },
+    "limitless": {
+      "url": "https://limitless.exchange/favicon.svg",
+      "size": "vector",
+      "fetchedAt": "2026-10-01"
+    },
+    "overtime": {
+      "url": "https://www.overtimemarkets.xyz/favicon.ico",
+      "size": "256x256",
+      "fetchedAt": "2026-10-01"
+    },
+    "myriad": {
+      "url": "https://myriad.markets/favicon-light.svg",
+      "size": "vector",
+      "fetchedAt": "2026-10-01"
+    },
+    "polymarket-us": {
+      "url": "https://polymarket.us/icons/android-chrome-384x384.png",
+      "size": "384x384",
+      "fetchedAt": "2026-10-01"
+    },
+    "robinhood": {
+      "url": "https://robinhood.com/us/en/rh_favicon_60.png?v=2024",
+      "size": "60x60",
+      "fetchedAt": "2026-10-01"
     }
   },
   "coins": {

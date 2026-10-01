@@ -125,6 +125,25 @@ const slugify = (s) =>
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "");
 
+
+/**
+ * Hacksaw rates volatility on its own 1-to-5 scale, column "Volatility (x/5)".
+ * The sheet holds "3/5", "4/5", "5/5", "2/5", bare "3"/"4" on a few rows, and
+ * "45051" on 38 rows — an Excel date serial (2023-05-05) that a cell typed as
+ * "5/5" became when the column was formatted as a date. Returned as "n/5" so the
+ * page shows the studio's own rating rather than the feed's low/medium/high,
+ * which calls 270 of these titles "medium".
+ */
+function volatilityOf(raw) {
+  if (raw == null || raw === "") return null;
+  const v = String(raw).trim();
+  const m = v.match(/^([1-5])\s*\/\s*5$/);
+  if (m) return `${m[1]}/5`;
+  if (/^[1-5]$/.test(v)) return `${v}/5`;
+  if (v === "45051") return "5/5";
+  return null;
+}
+
 /* ---- group the build rows back into titles ---- */
 
 const titles = new Map();
@@ -132,7 +151,7 @@ for (const r of data) {
   const name = r.B.trim();
   const base = SUFFIX.test(name) ? name.replace(SUFFIX, "").trim() : name;
   const rtp = pct(r.M);
-  if (!titles.has(base)) titles.set(base, { base, rtps: [], jur: null, volatility: r.U ?? null });
+  if (!titles.has(base)) titles.set(base, { base, rtps: [], jur: null, volatility: volatilityOf(r.U) });
   const t = titles.get(base);
   if (rtp !== null) t.rtps.push(rtp);
   // Jurisdictions are the same across a title's builds; keep the first row's.
@@ -147,6 +166,13 @@ const bySlug = new Map(catalogue.filter((g) => g.slug).map((g) => [g.slug, g]));
 const existing = fs.existsSync(RTP_OUT) ? JSON.parse(fs.readFileSync(RTP_OUT, "utf8")) : { note: "", overrides: {} };
 const overrides = { ...existing.overrides };
 const jurisdictions = {};
+// Volatility goes into the same per-title meta the other studio sheets feed,
+// so lib/slot-db.ts volatilityOf() picks it up by slug + studio. Merged, not
+// replaced: Pragmatic's and Play'n GO's rows live in the same file.
+const META_OUT = path.join("data", "studio-sheet-meta.json");
+const existingMeta = fs.existsSync(META_OUT) ? JSON.parse(fs.readFileSync(META_OUT, "utf8")) : { note: "", games: {} };
+const sheetMeta = { ...existingMeta.games };
+let withVolatility = 0;
 
 let matched = 0;
 let unmatched = 0;
@@ -181,6 +207,16 @@ for (const t of titles.values()) {
     };
   }
   if (t.jur) jurisdictions[slug] = { name: t.base, approvals: t.jur };
+  if (t.volatility) {
+    sheetMeta[slug] = {
+      ...(sheetMeta[slug] ?? {}),
+      name: t.base,
+      studio: "Hacksaw Gaming",
+      sheet: path.basename(FILE),
+      volatility: t.volatility,
+    };
+    withVolatility++;
+  }
 }
 
 console.log(`  ${data.length} rows → ${titles.size} titles`);
@@ -209,5 +245,6 @@ if (DRY) {
       2
     ) + "\n"
   );
-  console.log(`\n  wrote ${RTP_OUT} (${Object.keys(overrides).length} overrides) and ${JUR_OUT} (${Object.keys(jurisdictions).length} games)`);
+  fs.writeFileSync(META_OUT, JSON.stringify({ ...existingMeta, games: sheetMeta }, null, 2) + "\n");
+  console.log(`\n  wrote ${RTP_OUT} (${Object.keys(overrides).length} overrides), ${JUR_OUT} (${Object.keys(jurisdictions).length} games) and ${META_OUT} (${withVolatility} Hacksaw volatility ratings)`);
 }

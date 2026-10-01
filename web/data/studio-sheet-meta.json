@@ -24485,6 +24485,1032 @@
       "gid": "jollyroger",
       "maxMultiplier": "928",
       "defaultBand": "94"
+    },
+    "stickem": {
+      "name": "Stick'em",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "omnom": {
+      "name": "OmNom",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "cubes": {
+      "name": "Cubes",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "cash-compass": {
+      "name": "Cash Compass",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "the-respinners": {
+      "name": "The Respinners",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "chaos-crew": {
+      "name": "Chaos Crew",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "5/5"
+    },
+    "mystery-motel": {
+      "name": "Mystery Motel",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "let-it-snow": {
+      "name": "Let It Snow",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "cubes-2": {
+      "name": "Cubes 2",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "5/5"
+    },
+    "aztec-twist": {
+      "name": "Aztec Twist",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "frutz": {
+      "name": "Frutz",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "xpander": {
+      "name": "Xpander",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "5/5"
+    },
+    "toshi-video-club": {
+      "name": "Toshi Video Club",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "rocket-reels": {
+      "name": "Rocket Reels",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "wanted-dead-or-a-wild": {
+      "name": "Wanted Dead or a Wild",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "5/5"
+    },
+    "cash-quest": {
+      "name": "Cash Quest",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "tasty-treats": {
+      "name": "Tasty Treats",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "5/5"
+    },
+    "joker-bombs": {
+      "name": "Joker Bombs",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "king-carrot": {
+      "name": "King Carrot",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "harvest-wilds": {
+      "name": "Harvest Wilds",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "the-bowery-boys": {
+      "name": "The Bowery Boys",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "5/5"
+    },
+    "double-rainbow": {
+      "name": "Double Rainbow",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "warrior-ways": {
+      "name": "Warrior Ways",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "gladiator-legends": {
+      "name": "Gladiator Legends",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "5/5"
+    },
+    "hand-of-anubis": {
+      "name": "Hand of Anubis",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "5/5"
+    },
+    "itero": {
+      "name": "ITERO",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "5/5"
+    },
+    "outlaws-inc": {
+      "name": "Outlaws Inc.",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "born-wild": {
+      "name": "Born Wild",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "2/5"
+    },
+    "dork-unit": {
+      "name": "Dork Unit",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "fruit-duel": {
+      "name": "Fruit Duel",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "time-spinners": {
+      "name": "Time Spinners",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "forest-fortune": {
+      "name": "Forest Fortune",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "alpha-eagle": {
+      "name": "Alpha Eagle",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "undead-fortune": {
+      "name": "Undead Fortune",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "pug-life": {
+      "name": "Pug Life",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "book-of-time": {
+      "name": "Book of Time",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "rotten": {
+      "name": "Rotten",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "5/5"
+    },
+    "rip-city": {
+      "name": "RIP City",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "bloodthirst": {
+      "name": "Bloodthirst",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "magic-piggy": {
+      "name": "Magic Piggy",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "keep-em-cool": {
+      "name": "Keep 'em Cool",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "stormforged": {
+      "name": "Stormforged",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "fear-the-dark": {
+      "name": "Fear the Dark",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "cursed-seas": {
+      "name": "Cursed Seas",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "mayan-stackways": {
+      "name": "Mayan Stackways",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "temple-of-torment": {
+      "name": "Temple of Torment",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "mighty-masks": {
+      "name": "Mighty Masks",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "beast-below": {
+      "name": "Beast Below",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "vending-machine": {
+      "name": "Vending Machine",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "dropem": {
+      "name": "Drop'em",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "ronin-stackways": {
+      "name": "Ronin Stackways",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "2/5"
+    },
+    "le-bandit": {
+      "name": "Le Bandit",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "densho": {
+      "name": "Densho",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "chaos-crew-2": {
+      "name": "Chaos Crew 2",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "5/5"
+    },
+    "benny-the-beer": {
+      "name": "Benny The Beer",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "eye-of-the-panda": {
+      "name": "Eye of the Panda",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "immortal-desire": {
+      "name": "Immortal Desire",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "xmas-drop": {
+      "name": "Xmas Drop",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "dark-summoning": {
+      "name": "Dark Summoning",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "feel-the-beat": {
+      "name": "Feel The Beat",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "fist-of-destruction": {
+      "name": "Fist Of Destruction",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "dawn-of-kings": {
+      "name": "Dawn of Kings",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "bouncy-bombs": {
+      "name": "Bouncy Bombs",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "cash-crew": {
+      "name": "Cash Crew",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "orb-of-destiny": {
+      "name": "Orb of Destiny",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "divine-drop": {
+      "name": "Divine Drop",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "jelly-slice": {
+      "name": "Jelly Slice",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "slayers-inc": {
+      "name": "Slayers Inc",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "5/5"
+    },
+    "cursed-crypt": {
+      "name": "Cursed Crypt",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "ze-zeus": {
+      "name": "Ze Zeus",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "twisted-lab": {
+      "name": "Twisted Lab",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "tai-the-toad": {
+      "name": "Tai the Toad",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "sixsixsix": {
+      "name": "SixSixSix",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "5/5"
+    },
+    "donny-dough": {
+      "name": "Donny Dough",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "octo-attack": {
+      "name": "Octo Attack",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "evil-eyes": {
+      "name": "Evil Eyes",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "le-pharaoh": {
+      "name": "Le Pharaoh",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "cloud-princess": {
+      "name": "Cloud Princess",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "get-the-cheese": {
+      "name": "Get the CHEESE",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "rise-of-ymir": {
+      "name": "Rise of Ymir",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "wings-of-horus": {
+      "name": "Wings of Horus",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "duel-at-dawn": {
+      "name": "Duel at Dawn",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "snow-slingers": {
+      "name": "Snow Slingers",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "shaolin-master": {
+      "name": "Shaolin Master",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "donut-division": {
+      "name": "Donut Division",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "fire-my-laser": {
+      "name": "Fire my Laser",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "klowns": {
+      "name": "Klowns",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "le-viking": {
+      "name": "Le Viking",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "phoenix-duelreels": {
+      "name": "Phoenix DuelReels",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "marlin-masters": {
+      "name": "Marlin Masters",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "frkn-bananas": {
+      "name": "FRKN Bananas",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "hounds-of-hell": {
+      "name": "Hounds of Hell",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "strength-of-hercules": {
+      "name": "Strength of Hercules",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "dorks-of-the-deep": {
+      "name": "Dorks of the Deep",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "life-and-death": {
+      "name": "Life and Death",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "wishbringer": {
+      "name": "Wishbringer",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "fighter-pit": {
+      "name": "Fighter Pit",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "reign-of-rome": {
+      "name": "Reign of Rome",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "rad-maxx": {
+      "name": "Rad Maxx",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "danny-dollar": {
+      "name": "Danny Dollar",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "pray-for-three": {
+      "name": "Pray for Three",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "spinman": {
+      "name": "Spinman",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "2/5"
+    },
+    "ultimate-slot-of-america": {
+      "name": "Ultimate Slot of America",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "booze-bash": {
+      "name": "Booze Bash",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "le-king": {
+      "name": "Le King",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "eye-of-medusa": {
+      "name": "Eye of Medusa",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "the-luxe": {
+      "name": "The Luxe",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "2/5"
+    },
+    "aiko-and-the-wind-spirit": {
+      "name": "Aiko and the Wind Spirit",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "rainbow-princess": {
+      "name": "Rainbow Princess",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "marlin-masters-the-big-haul": {
+      "name": "Marlin Masters: The Big Haul",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "bullets-and-bounty": {
+      "name": "Bullets and Bounty",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "2/5"
+    },
+    "miami-mayhem": {
+      "name": "Miami Mayhem",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "tiger-legends": {
+      "name": "Tiger Legends",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "le-zeus": {
+      "name": "Le Zeus",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "stormborn": {
+      "name": "Stormborn",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "chaos-crew-3": {
+      "name": "Chaos Crew 3",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "5/5"
+    },
+    "bash-bros": {
+      "name": "Bash Bros",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "2/5"
+    },
+    "the-count": {
+      "name": "The Count",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "sun-princess": {
+      "name": "Sun Princess",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "le-cowboy": {
+      "name": "Le Cowboy",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "spear-of-athena": {
+      "name": "Spear of Athena",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "le-santa": {
+      "name": "Le Santa",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "army-of-ares": {
+      "name": "Army of Ares",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "jaws-of-justice": {
+      "name": "Jaws of Justice",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "donny-and-danny": {
+      "name": "Donny and Danny",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "toshi-ways-club": {
+      "name": "Toshi Ways Club",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "smoking-dragon": {
+      "name": "Smoking Dragon",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "2/5"
+    },
+    "circle-of-life": {
+      "name": "Circle of Life",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "5/5"
+    },
+    "deal-with-death": {
+      "name": "Deal With Death",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "pray-for-six": {
+      "name": "Pray for Six",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "le-fisherman": {
+      "name": "Le Fisherman",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "zeus-ze-zecond": {
+      "name": "Zeus Ze Zecond",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "superstar-sevens": {
+      "name": "Superstar Sevens",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "hot-ross": {
+      "name": "Hot Ross",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "5/5"
+    },
+    "dark-spiral": {
+      "name": "Dark Spiral",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "eternal-duel": {
+      "name": "Eternal Duel",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "dusk-princess": {
+      "name": "Dusk Princess",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "le-bunny": {
+      "name": "Le Bunny",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "epic-bullets-and-bounty": {
+      "name": "Epic Bullets and Bounty",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "5/5"
+    },
+    "munchy-milo": {
+      "name": "Munchy Milo",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "power-of-ten": {
+      "name": "Power of Ten",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "5/5"
+    },
+    "marlin-masters-atlantis": {
+      "name": "Marlin Masters: Atlantis",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "dynasty-of-death": {
+      "name": "Dynasty of Death",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "le-digger": {
+      "name": "Le Digger",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "magic-piggy-og": {
+      "name": "Magic Piggy OG",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "2/5"
+    },
+    "sand-and-ashes": {
+      "name": "Sand and Ashes",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "red-rascal": {
+      "name": "Red Rascal",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "3-cursed-chests-hold-and-win": {
+      "name": "3 Cursed Chests: Hold & Win",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "rise-of-fortuna": {
+      "name": "Rise of Fortuna",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "le-hooligan": {
+      "name": "Le Hooligan",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "great-game-rockies": {
+      "name": "Great Game Rockies",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "dandy-diamonds": {
+      "name": "Dandy Diamonds",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "nitro-nights": {
+      "name": "Nitro Nights",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "death-becomes-you": {
+      "name": "Death Becomes You",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "aliens-among-us": {
+      "name": "Aliens Among Us",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "grug-make-fire": {
+      "name": "Grug Make Fire",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "le-prechaun": {
+      "name": "Le Prechaun",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "supreme-zeus": {
+      "name": "Supreme Zeus",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
+    },
+    "max-win-machine": {
+      "name": "Max Win Machine",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "5/5"
+    },
+    "cash-crooks": {
+      "name": "Cash Crooks",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "epic-ze-zeus": {
+      "name": "Epic Ze Zeus",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "5/5"
+    },
+    "arizona-james-and-the-lost-relics": {
+      "name": "Arizona James and the Lost Relics",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "minted-mike": {
+      "name": "Minted Mike",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "great-game-serengeti": {
+      "name": "Great Game Serengeti",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "dr-zappo": {
+      "name": "Dr Zappo",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "le-vampire": {
+      "name": "Le Vampire",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "demonic-dolls": {
+      "name": "Demonic Dolls",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "epic-sixsixsix": {
+      "name": "Epic SixSixSix",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "5/5"
+    },
+    "the-jade-path-hold-and-win": {
+      "name": "The Jade Path Hold & Win",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "wicked-grin": {
+      "name": "Wicked Grin",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "3/5"
+    },
+    "coffee-dealer": {
+      "name": "Coffee Dealer",
+      "studio": "Hacksaw Gaming",
+      "sheet": "Client Game Data Sheet - International - 2026-09-30.xlsx",
+      "volatility": "4/5"
     }
   }
 }
