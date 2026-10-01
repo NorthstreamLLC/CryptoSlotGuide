@@ -34,12 +34,25 @@ export function countryHoverInfo(shapes: ({ code: string | null; name?: string }
     // available" when the US route is sweepstakes casinos, and there are 28 of
     // them. Point at the state map instead of leaving a dead end.
     const isUS = code === "US";
+    /**
+     * Nine countries ban online casinos and are still accepted by most
+     * operators — India by 30 of them, South Korea by 29, Japan by 28. Both
+     * facts are true and sourced, and putting them next to each other
+     * unexplained reads as "illegal, but here are thirty places to play".
+     *
+     * An operator not blocking you is not permission. It means its terms do
+     * not name your country; the law that applies to you is the line above.
+     * India's own Act additionally bars banks from processing the payments.
+     */
+    const banned = !!c && /not legal|banned|prohibit/i.test(c.onlineCasino ?? "");
     info[code] = {
       name: c?.name ?? (isUS ? "United States" : names.get(code) ?? code),
       rows,
       casinosTitle: isUS
         ? `Sweepstakes casinos are the US route (${SWEEPS_COUNT}) — availability varies by state`
-        : `Casinos accepting players here, per their own terms (${acc.length})`,
+        : banned
+          ? `${acc.length} do not block ${c?.name ?? code} in their terms — which is not the same as it being legal for you`
+          : `Casinos accepting players here, per their own terms (${acc.length})`,
       casinos: acc.map((o) => ({ name: o.except.length ? `${o.name} (not ${o.except.join(", ")})` : o.name, logo: logoFor(o.slug) })),
       casinosNote: isUS
         ? "Crypto casinos restrict the US. Open the state map for what each state allows."

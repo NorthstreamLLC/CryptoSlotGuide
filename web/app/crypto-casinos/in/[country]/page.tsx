@@ -24,10 +24,19 @@ export async function generateMetadata({ params }: { params: Promise<{ country: 
   // — "1 that accept United Kingdom players" is both bad grammar and the
   // least useful sentence we could put in a search result for that query.
   const shut = restricted > n;
-  const title = shut
+  // "Best crypto casinos in India" is the wrong headline for a country whose
+  // own Act bans them and bars banks from processing the payments. The page
+  // still exists — the question gets asked, and the honest answer is worth
+  // ranking for — but it leads with the law rather than a recommendation.
+  const outlawed = /not legal|banned|prohibit/i.test(c.onlineCasino ?? "");
+  const title = outlawed
+    ? `Crypto casinos and ${c.name}: online casinos are not legal here`
+    : shut
     ? `Crypto casinos in ${c.name}: ${restricted} of ${total} refuse players`
     : `Best crypto casinos in ${c.name} (${n} that accept ${c.name} players)`;
-  const desc = shut
+  const desc = outlawed
+    ? `Online casinos are not legal in ${c.name}. ${n} of the ${total} crypto casinos we track do not name ${c.name} on their restricted lists, which is not the same as it being lawful for you. What the law says, and who the regulator is.`
+    : shut
     ? `${restricted} of the ${total} crypto casinos we track name ${c.name} on their own restricted list. ${n === 1 ? "One accepts" : `${n} accept`} players from ${c.name} — which, on what terms, and what ${c.name}'s gambling law says.`
     : `${n} crypto casinos whose own terms accept players from ${c.name}, compared on bonuses, withdrawal speed and wagering, plus what ${c.name}'s gambling law says.`;
   return pageMetadata(title, desc, `/crypto-casinos/in/${country}`);
@@ -43,6 +52,12 @@ export default async function Page({ params }: { params: Promise<{ country: stri
   // burying it under "3 casinos accept you" would waste the page. The
   // United Kingdom is the extreme: one of 46 accepts, 39 refuse by name.
   const mostlyShut = restricted > accepts.length;
+  // Nine countries ban online casinos and are still accepted by most
+  // operators. An operator not blocking you is not permission — its terms
+  // simply do not name your country, and the law that applies to you is a
+  // separate thing. Said plainly rather than left for the reader to infer
+  // from a page that lists thirty places to play.
+  const banned = /not legal|banned|prohibit/i.test(c.onlineCasino ?? "");
   const one = accepts.length === 1;
   const others = countryPages().filter((x) => x.c.code !== c.code).sort((a, b) => a.c.name.localeCompare(b.c.name));
 
@@ -84,6 +99,19 @@ export default async function Page({ params }: { params: Promise<{ country: stri
             regulator, who publishes who IS licensed there. Saying so costs a
             click and is the honest answer; the alternative is a page that
             tells a reader they are shut out and stops. */}
+        {banned && accepts.length > 0 && (
+          <div style={{ margin: "0 0 18px", padding: "14px 16px", borderRadius: 14, background: "rgba(196,101,58,.08)", border: "1px solid rgba(196,101,58,.3)" }}>
+            <p style={{ margin: 0, fontSize: 14.5, lineHeight: 1.6, color: "#E8DCD6" }}>
+              <strong style={{ color: "#fff" }}>Online casinos are not legal in {c.name}.</strong> The {accepts.length} below do not name {c.name} on
+              their restricted lists, which means their terms will not turn you away — it does not mean playing is lawful where you are, and it is not
+              advice to. The law is{" "}
+              <Link href={`/legal/${country}`} style={{ color: "#E0A98C" }}>
+                on the law page
+              </Link>
+              {c.regulator?.name ? <>, enforced by the {c.regulator.name}</> : null}.
+            </p>
+          </div>
+        )}
         {mostlyShut && c.onlineCasino === "licensed market" && c.regulator?.url && (
           <div style={{ margin: "0 0 18px", padding: "14px 16px", borderRadius: 14, background: "rgba(47,182,122,.06)", border: "1px solid rgba(47,182,122,.24)" }}>
             <p style={{ margin: 0, fontSize: 14.5, lineHeight: 1.6, color: "#DCE5E9" }}>
