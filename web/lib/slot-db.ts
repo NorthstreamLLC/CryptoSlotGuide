@@ -49,7 +49,7 @@ interface Catalogue {
 }
 
 const DB = catalogue as unknown as Catalogue;
-const SHEET_META = (sheetMeta as { games: Record<string, { released?: string }> }).games;
+const SHEET_META = (sheetMeta as { games: Record<string, { released?: string; volatility?: string; studio?: string }> }).games;
 
 /** Slots only. Table and house games live in their own sections of the site. */
 const SLOTS: CatalogueGame[] = DB.games.filter((g) => g.kind === "slot");
@@ -90,6 +90,30 @@ export function releaseDate(g: CatalogueGame): string | null {
   const sheet = g.slug ? SHEET_META[g.slug]?.released : undefined;
   if (sheet) return sheet;
   return g.released && !BATCH_DATES.has(g.released) ? g.released : null;
+}
+
+/**
+ * The volatility rating, preferring the studio's own.
+ *
+ * The catalogue feed only ever says low, medium or high, and says "medium" for
+ * 5,644 of 8,721 slots — including 270 Hacksaw titles whose own data sheet
+ * calls them very high. Where a studio publishes its own rating we use that,
+ * which is the same rule release dates already follow.
+ *
+ * The studio's label is lower-cased so it sits beside the feed's values, but
+ * not otherwise mapped: "very high" stays "very high" rather than being
+ * flattened into the feed's three buckets.
+ */
+export function volatilityOf(g: CatalogueGame): string | null {
+  const sheet = g.slug ? SHEET_META[g.slug] : undefined;
+  // The sheet is keyed by slug, so only trust it when it is the same studio's
+  // row — ten catalogue slugs are shared between two studios.
+  const sameStudio =
+    !!sheet?.studio &&
+    sheet.studio.toLowerCase().replace(/[^a-z0-9]/g, "") === (g.provider ?? "").toLowerCase().replace(/[^a-z0-9]/g, "");
+  const own = sameStudio ? sheet?.volatility : undefined;
+  if (own && own.toLowerCase() !== "n/a") return own.toLowerCase();
+  return g.volatility;
 }
 
 export const catalogueAsOf = DB.asOf;

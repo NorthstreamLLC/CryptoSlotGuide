@@ -77,5 +77,192 @@
     "licences": "24 jurisdictions listed, including Great Britain, Malta, Gibraltar, Sweden, Denmark, Ontario, Alberta, Québec, Michigan, New Jersey, Pennsylvania and West Virginia",
     "titlesStated": "Over 350 premium games",
     "sourceUrl": "https://www.playngo.com/"
+  },
+  {
+    "slug": "quickspin",
+    "name": "Quickspin",
+    "mono": "QS",
+    "tint": "#7BB8E0",
+    "note": "States the versions outright in each game write-up: Cash Truck 3 Turbo \"will arrive fully-loaded with 4 RTP versions, namely: 96%, 92%, 94% and 87%\", and Epic Fish is \"made available in 4 RTP versions: 96%, 94%, 92% and 85%\".",
+    "rtpPolicy": "multiple",
+    "rtp": "Every RTP version listed",
+    "licences": "Malta and Great Britain",
+    "sourceUrl": "https://quickspin.com/slots/cash-truck-3-turbo/"
+  },
+  {
+    "slug": "yggdrasil",
+    "name": "Yggdrasil",
+    "mono": "YG",
+    "tint": "#9D8FE0",
+    "note": "Footnotes the full set under the headline figure — Raptor 2 reads 97% with \"RTP 97%,96%,94%,90.5%\" below it — and its games index filters by RTP band, from 86% up to 97%.",
+    "rtpPolicy": "multiple",
+    "rtp": "Every RTP version listed",
+    "licences": "8 jurisdictions: Malta, Great Britain, Gibraltar, Romania, Isle of Man, Greece, Belgium and Buenos Aires City",
+    "sourceUrl": "https://yggdrasilgaming.com/games/raptor-2"
+  },
+  {
+    "slug": "blueprint-gaming",
+    "name": "Blueprint Gaming",
+    "mono": "BP",
+    "tint": "#E0C27B",
+    "note": "Goes further than any other studio here: it names the build as well as the figure. Eye of Horus is listed as BP_EyeofHorus90 at 90.25%, BP_EyeOfHorus92 at 92.04%, BP_EyeofHorus93 at 93%, BP_EyeofHorus94 at 94% and BP_EyeofHorus at 96.31% — so a build identifier in a lobby can be matched to a return.",
+    "rtpPolicy": "multiple",
+    "rtp": "Every RTP version listed",
+    "licences": "Great Britain, Malta, Gibraltar and Alderney",
+    "sourceUrl": "https://blueprintgaming.com/games/eye-of-horus"
+  },
+  {
+    "slug": "avatarux",
+    "name": "AvatarUX",
+    "mono": "AUX",
+    "tint": "#E07BB8",
+    "note": "Lists three configurations per title on the game page — Tempting Treats at 96.16%, 94.06% and 90.94% — and describes its games as shipping with \"three configurable RTP profiles\".",
+    "rtpPolicy": "multiple",
+    "rtp": "Every RTP version listed",
+    "licences": "Sweden, Romania and Malta",
+    "sourceUrl": "https://avatarux.com/games/tempting-treats/"
+  },
+  {
+    "slug": "thunderkick",
+    "name": "Thunderkick",
+    "mono": "TK",
+    "tint": "#7BE0D6",
+    "note": "Publishes a single return in the game-details block — Hot Potato Battleground reads \"RTP 94.23\" — alongside volatility and max exposure. Whether lower builds are licensed is not stated.",
+    "rtpPolicy": "single",
+    "rtp": "One RTP per game page",
+    "licences": "Great Britain, Denmark and Ontario",
+    "sourceUrl": "https://www.thunderkick.com/games/hot-potato-battleground/"
+  },
+  {
+    "slug": "wazdan",
+    "name": "Wazdan",
+    "mono": "WZ",
+    "tint": "#E08F7B",
+    "note": "One figure per game page, in a Game Info block — Mighty Wild: Gorilla reads \"RTP: 96.2 %\" with max win, volatility and release date beside it. No second configuration is mentioned.",
+    "rtpPolicy": "single",
+    "rtp": "One RTP per game page",
+    "licences": "6 jurisdictions: Malta, Great Britain, Romania, Greece, New Jersey and Ontario",
+    "sourceUrl": "https://wazdan.com/games/mighty-wild-gorilla"
+  },
+  {
+    "slug": "endorphina",
+    "name": "Endorphina",
+    "mono": "EN",
+    "tint": "#8FE07B",
+    "note": "A single return under Game Details — Lucky Stamps and Bazaar Monkey both read \"RTP: 96.08%\" — and the games index filters on a min/max RTP range, which only works because there is one figure per title.",
+    "rtpPolicy": "single",
+    "rtp": "One RTP per game page",
+    "licences": "9 jurisdictions: Malta, Romania, Denmark, Sweden, Ontario, Greece, Peru, Alberta and Anjouan",
+    "sourceUrl": "https://endorphina.com/games/lucky-stamps"
+  },
+  {
+    "slug": "bgaming",
+    "name": "BGaming",
+    "mono": "BG",
+    "tint": "#7B9FE0",
+    "note": "Shows one return on each game card in its own catalogue, next to a volatility rating, and headlines the figure where it is unusual — Plinko is sold on 99% RTP. Lower builds are not listed.",
+    "rtpPolicy": "single",
+    "rtp": "One RTP per game page",
+    "licences": "Malta",
+    "sourceUrl": "https://bgaming.com/games"
+  },
+  {
+    "slug": "netent",
+    "name": "NetEnt",
+    "mono": "NE",
+    "tint": "#6E8C9E",
+    "note": "Keeps its own site at netent.com despite the Evolution acquisition, and each game page carries one return in a stats block beside release date, hit frequency and max payout — Divine Fortune at 96.59%, with a hit frequency of 20.00%. Whether lower builds are licensed is not stated.",
+    "rtpPolicy": "single",
+    "rtp": "One RTP per game page",
+    "licences": "Malta",
+    "sourceUrl": "https://netent.com/games/divine-fortune"
+  },
+  {
+    "slug": "red-tiger",
+    "name": "Red Tiger",
+    "mono": "RT",
+    "tint": "#C96E6E",
+    "note": "Publishes on its own site at redtiger.com in the same stats block its sister studio NetEnt uses: Gonzo's Quest Megaways at 95.77%, hit frequency 26.25%, max payout 20,972x. One figure per title, with no second configuration named.",
+    "rtpPolicy": "single",
+    "rtp": "One RTP per game page",
+    "licences": "Malta",
+    "sourceUrl": "https://redtiger.com/games/gonzos-quest-megaways"
+  },
+  {
+    "slug": "big-time-gaming",
+    "name": "Big Time Gaming",
+    "mono": "BTG",
+    "tint": "#9E8C6E",
+    "note": "The studio that invented Megaways publishes a single figure under GAME STATS — Bonanza at 96.00%, across 117,649 ways. Lower builds of Megaways titles are common in the wild, and nothing on the page says which ones Big Time Gaming licenses.",
+    "rtpPolicy": "single",
+    "rtp": "One RTP per game page",
+    "licences": "Sweden",
+    "sourceUrl": "https://www.bigtimegaming.com/games/bonanza"
+  },
+  {
+    "slug": "elk-studios",
+    "name": "ELK Studios",
+    "mono": "ELK",
+    "tint": "#7BC9A0",
+    "note": "Its game pages are detailed — features, grid, max win, X-iter buy-in multiples — and carry no RTP at all. The game data goes into a downloadable product sheet instead of onto the page, so the figure is not where a player would look for it.",
+    "rtpPolicy": "unpublished",
+    "rtp": "RTP not published",
+    "licences": "Great Britain, Malta, Romania, Ontario and Greece",
+    "sourceUrl": "https://www.elk-studios.com/games/bamboo-pandits/"
+  },
+  {
+    "slug": "3-oaks-gaming",
+    "name": "3 Oaks Gaming",
+    "mono": "3OG",
+    "tint": "#C9A06E",
+    "note": "Game pages run to features, jackpot multiples and two dozen languages without stating a return anywhere. 3 Oaks describes itself as a distributor of content from other studios, which may be why — but it leaves the return unpublished either way.",
+    "rtpPolicy": "unpublished",
+    "rtp": "RTP not published",
+    "licences": "Great Britain, Isle of Man, Romania, Malta, Peru and Greece",
+    "sourceUrl": "https://3oaks.com/game/4_dragon_pearls"
+  },
+  {
+    "slug": "octoplay",
+    "name": "Octoplay",
+    "mono": "OP",
+    "tint": "#6EC9C9",
+    "note": "Publishes everything except the figure that matters: its game pages carry hit rate, volatility, grid size and max win in a spec block, and no RTP.",
+    "rtpPolicy": "unpublished",
+    "rtp": "RTP not published",
+    "licences": "13 jurisdictions: Malta, Romania, Greece, Great Britain, Sweden, Ontario, Denmark, Alberta, Michigan, Connecticut, Pennsylvania, Delaware and West Virginia",
+    "sourceUrl": "https://www.octoplay.com/games/break-the-vegas-piggy"
+  },
+  {
+    "slug": "games-global",
+    "name": "Microgaming / Games Global",
+    "mono": "GG",
+    "tint": "#8C8C9E",
+    "note": "There is no public game catalogue on gamesglobal.com at all — the site is corporate, and the only outward link from its footer is to its UK Gambling Commission register entry. Nothing about any individual title, let alone its return, is published there.",
+    "rtpPolicy": "unpublished",
+    "rtp": "RTP not published",
+    "licences": "18 jurisdictions: Great Britain, Malta, Alderney, Gibraltar, Sweden, Denmark, Belgium, Greece, Romania, Spain, Ontario, Buenos Aires City, Peru, Connecticut, Michigan, New Jersey, Pennsylvania and West Virginia",
+    "sourceUrl": "https://www.gamesglobal.com/Company/Licenses"
+  },
+  {
+    "slug": "playtech",
+    "name": "Playtech",
+    "mono": "PT",
+    "tint": "#6E9EC9",
+    "note": "A B2B site organised by product line rather than by game. There is no public catalogue of individual slots on playtech.com, so no title's return is published on the studio's own pages.",
+    "rtpPolicy": "unpublished",
+    "rtp": "RTP not published",
+    "licences": "Great Britain and Malta",
+    "sourceUrl": "https://www.playtech.com/products/casino/"
+  },
+  {
+    "slug": "evolution",
+    "name": "Evolution",
+    "mono": "EV",
+    "tint": "#6E9E8C",
+    "note": "The widest licence footprint of any supplier here — 32 jurisdictions, including five Canadian provinces and six US states. Its own brand pages carry no return for any title, which for a live-casino supplier is the norm: the house edge of a roulette or blackjack table follows from its rules rather than from a configuration a studio picks. Its slot studios keep their own sites, and publish there.",
+    "rtpPolicy": "unpublished",
+    "rtp": "RTP not published",
+    "licences": "32 jurisdictions, including Great Britain, Malta, Sweden, Denmark, Ontario, Quebec, British Columbia, Alberta, Michigan, New Jersey, Pennsylvania and West Virginia",
+    "sourceUrl": "https://www.evolution.com/about/licences"
   }
 ]

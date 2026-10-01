@@ -17,7 +17,7 @@ import { wagerView, bonusWithWager } from "./wager";
 import { hasMaxWin, hasVol, maxWinLabel, rtpLabel, hasRtp, rtpSortValue, volLabel } from "./slot-facts";
 import { isFieldTestedOperator, isEditoriallyAudited } from "./field-tested";
 import { tintFor } from "./logo";
-import { studioCatalogue } from "./slot-page";
+import { studioCatalogue, studioTopTitles } from "./slot-page";
 import { getCasinoSpecSheet, getSpecFact } from "./spec-sheet";
 import { sportsFacts, booksForTitle, esportsLabel, maxPayoutShort } from "./sports";
 import type { Flag } from "./types";
@@ -434,6 +434,8 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
      * and 420 titles whose every licensed configuration we hold.
      */
     const cat = studioCatalogue(p.name);
+    const shown = cat.titles || titles.length;
+    const fromCatalogue = studioTopTitles(p.name);
     const topMaxWin = titles.filter(hasMaxWin)[0]?.maxWin;
     const volCounts = titles.filter(hasVol).reduce<Record<string, number>>((acc, s) => ({ ...acc, [s.vol]: (acc[s.vol] ?? 0) + 1 }), {});
     const modalVol = Object.entries(volCounts).sort((a, b) => b[1] - a[1])[0]?.[0];
@@ -452,7 +454,13 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       slug: p.slug,
       mono: p.mono,
       tint: p.tint,
-      headline: `${p.name}: ${p.rtp.toLowerCase()}, ${cat.titles || titles.length} title${(cat.titles || titles.length) === 1 ? "" : "s"} on our index`,
+      // Evolution and Octoplay have no slots in the catalogue — one supplies
+      // live casino, the other is new — so the count is dropped rather than
+      // published as "0 titles on our index", which reads as a failure to
+      // find them rather than as what it is.
+      headline: shown
+        ? `${p.name}: ${p.rtp.toLowerCase()}, ${shown} title${shown === 1 ? "" : "s"} on our index`
+        : `${p.name}: ${p.rtp.toLowerCase()}`,
       standfirst: `${p.note} Figures come from ${p.name}'s own site.`,
       tags: [policy === "multiple" ? "EVERY RTP VERSION LISTED" : policy === "unpublished" ? "RTP NOT PUBLISHED" : policy === "bonus-buy" ? "BASE + BONUS-BUY RTP" : "ONE RTP PER GAME PAGE", "STUDIO'S OWN SITE", ...(readAny ? ["BUILDS READ IN-CLIENT"] : [])],
       byline: `${p.name}'s own site`,
@@ -461,7 +469,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
         { label: "RTP disclosure", value: p.rtp, source: "cited" },
         { label: "Licensing", value: p.licences, source: "cited" },
         { label: "Catalogue", value: p.titlesStated ?? "Not stated", source: p.titlesStated ? "cited" : "unchecked" },
-        { label: "Titles on our index", value: String(cat.titles || titles.length), source: "index" },
+        ...(shown ? [{ label: "Titles on our index", value: String(shown), source: "index" as const }] : []),
         ...(cat.withVersions
           ? [{ label: "Every build published", value: `${cat.withVersions} titles`, source: "cited" as const }]
           : []),
@@ -484,15 +492,29 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       chipsEmpty: "Not catalogued for this studio yet.",
       specTitle: "RTP policy",
       specSource: p.sourceUrl,
-      specSub: `What ${p.name} publishes on its own site.`,
+      // The note IS the evidence — what the studio's own page actually says,
+      // quoted from the page specSource links to. It was only reaching the
+      // meta description, because the hero renders the computed verdict and
+      // the standfirst is metadata only. This is the one place on the page
+      // where it belongs.
+      specSub: `${p.note} Read from ${p.name}'s own site on 1 October 2026.`,
       spec: [
         cited("Configurations", p.rtp),
         cited("Licensing", p.licences),
       ],
       tableTitle: "Titles we track from this studio",
-      tableSub: `Published RTP, volatility and max win from ${p.name}'s own game pages.${cat.pages ? ` A further ${cat.pages} of its titles have a page in the slot catalogue.` : ""}`,
+      tableSub: titles.length
+        ? `Published RTP, volatility and max win from ${p.name}'s own game pages.${cat.pages ? ` A further ${cat.pages} of its titles have a page in the slot catalogue.` : ""}`
+        : fromCatalogue.sourced
+          ? `Read from ${p.name}'s own published figures. Widest spread between builds first, because that gap is the thing the lobby will not tell you.`
+          : `From the catalogue import, not from ${p.name} — we hold no figure read off this studio's own pages yet, so every return below is a third-party one and labelled as such.`,
       tableCols: ["RTP", "Volatility", "Max win"],
-      tableRows: [...titles].sort((a, b) => rtpSortValue(b) - rtpSortValue(a)).map((s) => ({ name: s.name, note: s.rtpVersions ? `${s.rtpVersions.split("/").length} published RTP versions` : `${s.provider} game page`, m1: rtpLabel(s), m2: hasVol(s) ? s.vol : "Not published", m3: maxWinLabel(s) })),
+      // The reviews first, then the catalogue. The component hides the table
+      // when it has no rows, so a studio with 400 catalogue titles and no
+      // hand-written review used to show nothing here at all.
+      tableRows: titles.length
+        ? [...titles].sort((a, b) => rtpSortValue(b) - rtpSortValue(a)).map((s) => ({ name: s.name, note: s.rtpVersions ? `${s.rtpVersions.split("/").length} published RTP versions` : `${s.provider} game page`, m1: rtpLabel(s), m2: hasVol(s) ? s.vol : "Not published", m3: maxWinLabel(s) }))
+        : fromCatalogue.rows,
       tableEmpty: "None of this studio's titles are on our slot index yet.",
       tableNote: "Where a casino ships a reduced configuration of one of these titles we name it in that casino's review rather than here, because the studio is not the party that chose it.",
       pros: [

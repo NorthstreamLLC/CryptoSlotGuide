@@ -1,7 +1,7 @@
 import catalogue from "@/data/gameCatalogue.json";
 import { siteData } from "./site-data";
 import type { CatalogueGame } from "./slot-db";
-import { releaseDate } from "./slot-db";
+import { releaseDate, volatilityOf } from "./slot-db";
 import artSources from "@/data/game-art-sources.json";
 import rtpOverrides from "@/data/slot-rtp-overrides.json";
 import { isTopSlot, TOP_SLOTS } from "./top-slots";
@@ -55,6 +55,28 @@ const OVERRIDES = (
   }
 ).overrides;
 
+/** Studio names are compared on their letters: the catalogue and the studio
+ *  sheets disagree on the apostrophe in "Play'n GO". */
+const studioKey = (s: string | null | undefined) => (s ?? "").toLowerCase().replace(/[^a-z0-9]/g, "");
+
+/**
+ * The override for this title — only if it was read from THIS title's studio.
+ *
+ * Overrides are keyed by slug, and ten catalogue slugs are used by two
+ * different studios. Three of them carry an override, so looking up by slug
+ * alone published Pragmatic's figures on Endorphina's Argonauts, Hacksaw's
+ * Gold Rush and Spade Gaming's Money Mouse — another studio's RTP under the
+ * wrong studio's name, cited to the wrong studio's page.
+ *
+ * Where the studios disagree there is no override, so the title falls back to
+ * the catalogue feed rather than to someone else's number.
+ */
+function overrideOf(g: CatalogueGame) {
+  const o = g.slug ? OVERRIDES[g.slug] : undefined;
+  if (!o) return undefined;
+  return studioKey(o.studio) === studioKey(g.provider) ? o : undefined;
+}
+
 /**
  * A title earns a page two ways.
  *
@@ -73,7 +95,7 @@ const OVERRIDES = (
  * studio's own site, which is where the RTP figures were read from, does
  * both and cites better. 45 Push Gaming titles have one and no demo.
  */
-const hasStudioPage = (g: CatalogueGame) => !!(g.slug && OVERRIDES[g.slug]?.sourceUrl);
+const hasStudioPage = (g: CatalogueGame) => !!overrideOf(g)?.sourceUrl;
 
 const QUALIFIES = (g: CatalogueGame) =>
   g.kind === "slot" &&
@@ -83,11 +105,32 @@ const QUALIFIES = (g: CatalogueGame) =>
 /** Slugs already owned by a hand-written review — those pages win. */
 const REVIEWED = new Set(siteData.slots.map((s) => s.slug));
 
-const PAGES: Map<string, CatalogueSlotPage> = new Map(
-  DB.games
-    .filter((g) => QUALIFIES(g) && !REVIEWED.has(g.slug as string))
-    .map((g) => [g.slug as string, g as CatalogueSlotPage])
-);
+/**
+ * Qualifying titles by slug, minus any slug two different titles claim.
+ *
+ * Ten catalogue slugs are used by two studios — Argonauts is both a Pragmatic
+ * and an Endorphina title, Gold Rush both Pragmatic and Hacksaw. Building the
+ * map straight from the list let the later title silently replace the earlier
+ * one, so /slots/<slug> would show one studio's figures under the other's
+ * name with no sign anything had been dropped.
+ *
+ * None are ambiguous today. This keeps it that way: where two qualifying
+ * titles want the same slug, neither gets the page, because the page can only
+ * be one of them and we cannot tell the reader which.
+ */
+const PAGES: Map<string, CatalogueSlotPage> = (() => {
+  const claims = new Map<string, CatalogueSlotPage[]>();
+  for (const g of DB.games) {
+    if (!QUALIFIES(g) || REVIEWED.has(g.slug as string)) continue;
+    const slug = g.slug as string;
+    const held = claims.get(slug);
+    if (held) held.push(g as CatalogueSlotPage);
+    else claims.set(slug, [g as CatalogueSlotPage]);
+  }
+  const out = new Map<string, CatalogueSlotPage>();
+  for (const [slug, games] of claims) if (games.length === 1) out.set(slug, games[0]);
+  return out;
+})();
 
 export const cataloguePageSlugs = (): string[] => [...PAGES.keys()];
 export const cataloguePage = (slug: string): CatalogueSlotPage | undefined => PAGES.get(slug);
@@ -128,7 +171,7 @@ export function publishableArt(g: CatalogueSlotPage): string | null {
  * page and why it was taken.
  */
 function rtpVersionsFor(g: CatalogueGame): number[] {
-  const o = g.slug ? OVERRIDES[g.slug] : undefined;
+  const o = overrideOf(g);
   if (o?.versions?.length) return [...new Set(o.versions)].sort((a, b) => b - a);
   return [...new Set(g.rtpVariants ?? [])].sort((a, b) => b - a);
 }
@@ -139,7 +182,7 @@ export function rtpVersions(g: CatalogueSlotPage): number[] {
 
 /** Where an overridden figure came from, for the citation on the page. */
 export function rtpSource(g: CatalogueSlotPage): { studio: string; sourceUrl: string } | null {
-  const o = g.slug ? OVERRIDES[g.slug] : undefined;
+  const o = overrideOf(g);
   return o ? { studio: o.studio, sourceUrl: o.sourceUrl } : null;
 }
 
@@ -233,7 +276,7 @@ export function studioCatalogue(studioName: string): {
   let withVersions = 0;
   let mixedVersions = 0;
   for (const g of mine) {
-    const o = g.slug ? OVERRIDES[g.slug] : undefined;
+    const o = overrideOf(g);
     if (!o?.versions?.length) continue;
     sourced++;
     const v = [...new Set(o.versions)].sort((a, b) => b - a);
@@ -255,4 +298,82 @@ export function studioCatalogue(studioName: string): {
     topRtp,
     widestSpread,
   };
+}
+
+/**
+ * A studio's strongest catalogue titles, as table rows.
+ *
+ * The provider table drew only on the 21 hand-written reviews, so seventeen of
+ * the twenty-four studio pages rendered no title table at all while the
+ * catalogue held hundreds of their slots — 418 for Games Global, 381 for Red
+ * Tiger. The component hides the table when there are no rows, so the absence
+ * was silent.
+ *
+ * Ordered by what the page is for: titles whose every licensed configuration
+ * we hold come first, widest spread at the top, because that gap is the thing
+ * a reader cannot get from the lobby. Titles with a single figure follow by
+ * RTP. Nothing without a sourced figure is listed at all.
+ */
+export function studioTopTitles(
+  studioName: string,
+  limit = 24
+): { rows: { name: string; note: string; m1: string; m2: string; m3: string }[]; sourced: boolean } {
+  const key = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, "");
+  const want = key(studioName);
+  const mine = (catalogue as { games: CatalogueGame[] }).games.filter(
+    (g) => g.kind === "slot" && key(g.provider ?? "") === want
+  );
+
+  const row = (g: CatalogueGame, v: number[], from: "studio" | "feed") => {
+    const spread = v.length > 1 ? Math.round((v[0] - v[v.length - 1]) * 100) / 100 : 0;
+    return {
+      name: g.name,
+      note:
+        from === "feed"
+          ? "Catalogue figure, not read from the studio"
+          : spread
+            ? `${v.length} published builds, ${spread}pp apart`
+            : "One published return",
+      m1: spread ? `${v[0]}% – ${v[v.length - 1]}%` : `${v[0]}%`,
+      m2: volatilityOf(g) ?? "Not published",
+      m3: g.maxWinMultiplier ? `${g.maxWinMultiplier.toLocaleString()}x` : "Not published",
+      spread,
+      top: v[0],
+    };
+  };
+
+  const sourced = mine
+    .map((g) => {
+      const o = overrideOf(g);
+      return o?.versions?.length ? row(g, [...new Set(o.versions)].sort((a, b) => b - a), "studio") : null;
+    })
+    .filter((r): r is NonNullable<typeof r> => !!r);
+
+  /**
+   * Nine studios have hundreds of catalogue titles and not one sourced
+   * override — Red Tiger has 381, Games Global 418 — so the table rendered
+   * empty and the component hides an empty table, making the gap invisible.
+   *
+   * The feed's figures fill it instead, each row saying plainly that it is a
+   * catalogue figure rather than one read from the studio. A labelled
+   * third-party number is honest; a blank section that implies we hold
+   * nothing is not.
+   */
+  const pool = sourced.length
+    ? sourced
+    : mine
+        .map((g) => {
+          const v = [...new Set(g.rtpVariants?.length ? g.rtpVariants : g.rtp != null ? [g.rtp] : [])].sort(
+            (a, b) => b - a
+          );
+          return v.length ? row(g, v, "feed") : null;
+        })
+        .filter((r): r is NonNullable<typeof r> => !!r);
+
+  const rows = [...pool]
+    .sort((a, b) => b.spread - a.spread || b.top - a.top || a.name.localeCompare(b.name))
+    .slice(0, limit)
+    .map(({ name, note, m1, m2, m3 }) => ({ name, note, m1, m2, m3 }));
+
+  return { rows, sourced: sourced.length > 0 };
 }
