@@ -1,4 +1,5 @@
 import catalogue from "@/data/gameCatalogue.json";
+import sheetMeta from "@/data/studio-sheet-meta.json";
 
 /**
  * Query layer over the imported slot catalogue.
@@ -48,6 +49,7 @@ interface Catalogue {
 }
 
 const DB = catalogue as unknown as Catalogue;
+const SHEET_META = (sheetMeta as { games: Record<string, { released?: string }> }).games;
 
 /** Slots only. Table and house games live in their own sections of the site. */
 const SLOTS: CatalogueGame[] = DB.games.filter((g) => g.kind === "slot");
@@ -82,6 +84,11 @@ const BATCH_DATES: Set<string> = (() => {
  * behind is worse than no date.
  */
 export function releaseDate(g: CatalogueGame): string | null {
+  // A studio's own sheet beats the feed outright. Pragmatic and Play'n GO
+  // supply real calendars — 978 titles — where the feed had stamped an
+  // import batch, so this is the difference between a date and a guess.
+  const sheet = g.slug ? SHEET_META[g.slug]?.released : undefined;
+  if (sheet) return sheet;
   return g.released && !BATCH_DATES.has(g.released) ? g.released : null;
 }
 

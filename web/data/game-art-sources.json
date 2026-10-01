@@ -5563,14 +5563,3266 @@
       "sourceHost": "api.slotessentials.com",
       "provider": "Hacksaw Gaming",
       "fetched": "2026-10-01"
+    },
+    "1001-mystery-genie-fortunes": {
+      "file": "1001-mystery-genie-fortunes.webp",
+      "bytes": 52832,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/bd2bac75-1b5d-4d04-a112-442d9dbd9042.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "nsync-pop": {
+      "file": "nsync-pop.webp",
+      "bytes": 37930,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/a10bc71e-e045-4390-aced-cb66e148ba38.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "15-crystal-roses-a-tale-of-love": {
+      "file": "15-crystal-roses-a-tale-of-love.webp",
+      "bytes": 44706,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/b3a86a7b-1255-4cbd-b02f-df265a554ae6.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "13th-trial-hercules-abyssways": {
+      "file": "13th-trial-hercules-abyssways.webp",
+      "bytes": 397280,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/ac21a309-62a4-4d05-bc70-064eb64e03bb.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "3-clown-monty-ii": {
+      "file": "3-clown-monty-ii.webp",
+      "bytes": 34020,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/1476cd7f-c605-4611-b8e0-fda95554a034.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "3-clown-monty": {
+      "file": "3-clown-monty.webp",
+      "bytes": 40164,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/f7713f34-34ee-4fc1-8254-e868854fafb5.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "agent-destiny": {
+      "file": "agent-destiny.webp",
+      "bytes": 23896,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/71f54f27-a74a-4041-b356-ac9305a4b803.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "alice-cooper-and-the-tome-of-madness": {
+      "file": "alice-cooper-and-the-tome-of-madness.webp",
+      "bytes": 20414,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/0dfae3ca-cb46-42d8-ad2f-f26e71fa049d.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "animal-madness": {
+      "file": "animal-madness.webp",
+      "bytes": 30590,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/ae47af56-fb46-413e-afd2-8453edcd1b5e.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "ankh-of-anubis": {
+      "file": "ankh-of-anubis.webp",
+      "bytes": 32590,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/58f8dd4f-4af6-41db-a3ae-61dcb8db7a21.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "ankh-of-anubis-awakening": {
+      "file": "ankh-of-anubis-awakening.webp",
+      "bytes": 37134,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/1653c05b-4885-4fb3-873d-ad3b941d32de.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "annihilator": {
+      "file": "annihilator.webp",
+      "bytes": 20144,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/5c3b8541-53f9-4ee8-999a-70031411cfea.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "athena-ascending": {
+      "file": "athena-ascending.webp",
+      "bytes": 31020,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/aa84c6f2-674f-42b3-9faa-bd19bf14d17e.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "banana-rush": {
+      "file": "banana-rush.webp",
+      "bytes": 31570,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/c0fbc631-5f3d-4eb5-b0a4-ecbeeecb003a.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "banquet-of-dead": {
+      "file": "banquet-of-dead.webp",
+      "bytes": 48232,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/0a33df86-8bf7-440e-a8f4-1a1564652b07.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "barn-busters": {
+      "file": "barn-busters.webp",
+      "bytes": 32838,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/ebbc6970-751f-4809-b7ab-614c81f3e126.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "beasts-of-fire": {
+      "file": "beasts-of-fire.webp",
+      "bytes": 31398,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/1ea9c6f1-2d70-4498-a78c-92a9103d2590.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "baron-lord-of-saturday": {
+      "file": "baron-lord-of-saturday.webp",
+      "bytes": 48026,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/b82e0698-059c-452e-870f-3dba8e2c215c.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "beasts-of-fire-maximum": {
+      "file": "beasts-of-fire-maximum.webp",
+      "bytes": 31398,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/9c806041-e5de-48ab-a767-a305050221a8.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "big-win-cat-pawsperity": {
+      "file": "big-win-cat-pawsperity.webp",
+      "bytes": 36782,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/7f8d45f8-05de-453d-be34-96b2839dbdcd.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "blazin-bullfrog": {
+      "file": "blazin-bullfrog.webp",
+      "bytes": 31184,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/b87fb959-13bb-45c1-84b6-137aa3f2c1fd.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "black-mamba": {
+      "file": "black-mamba.webp",
+      "bytes": 26612,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/36b3c371-56ea-4a9a-a0fc-3a748d9941f1.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "boat-bonanza-christmas": {
+      "file": "boat-bonanza-christmas.webp",
+      "bytes": 42636,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/a6ea05cb-b43e-4d5b-8620-80c018b008c4.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "boat-bonanza": {
+      "file": "boat-bonanza.webp",
+      "bytes": 169464,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/5eec5c80-e821-4445-bc3b-f2942baf68a7.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "blinged": {
+      "file": "blinged.webp",
+      "bytes": 21090,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/92677455-15f8-4ccb-95be-b903cf7c34ff.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "book-of-dead-go-collect": {
+      "file": "book-of-dead-go-collect.webp",
+      "bytes": 36310,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/d98a80bb-66e5-4e58-b39d-63d34e915586.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "boat-bonanza-colossal-catch": {
+      "file": "boat-bonanza-colossal-catch.webp",
+      "bytes": 46370,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/75eca225-a969-4bc8-9778-e2bebae00176.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "boat-bonanza-down-under": {
+      "file": "boat-bonanza-down-under.webp",
+      "bytes": 165298,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/bf679e71-f8ab-40d3-a475-de08678bea52.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "boat-bonanza-croconile": {
+      "file": "boat-bonanza-croconile.webp",
+      "bytes": 50402,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/f8685e86-deef-42d2-8c9b-a7b951e3deac.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "bubblin-riches": {
+      "file": "bubblin-riches.webp",
+      "bytes": 361596,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/9fe931e4-1409-4f02-914e-67673fcf1db2.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "bull-in-a-china-shop": {
+      "file": "bull-in-a-china-shop.webp",
+      "bytes": 30984,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/d049539f-041a-4684-b645-668951d2bc13.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "buildin-bucks": {
+      "file": "buildin-bucks.webp",
+      "bytes": 43650,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/ac2b9fe0-1502-4afd-a54f-ca18b3c745d8.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "bull-in-a-rodeo": {
+      "file": "bull-in-a-rodeo.webp",
+      "bytes": 29866,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/744766cd-8133-4afd-9a41-4c29599e50ac.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "buildin-more-bucks": {
+      "file": "buildin-more-bucks.webp",
+      "bytes": 42382,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/0572c78d-0ba1-4990-9b5d-08216e2a9f3b.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "candy-island-princess": {
+      "file": "candy-island-princess.webp",
+      "bytes": 51532,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/ca14ecca-4532-45fb-b6f4-c6ff99e4313c.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "bullion-xpress": {
+      "file": "bullion-xpress.webp",
+      "bytes": 381554,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/9cd5667b-d651-4a9f-a389-b8216b199b5b.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "captain-glum-pirate-hunter": {
+      "file": "captain-glum-pirate-hunter.webp",
+      "bytes": 41696,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/c78d212e-9b2b-4aa9-85e4-d5fda14f9af6.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "canine-carnage": {
+      "file": "canine-carnage.webp",
+      "bytes": 46700,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/5be01607-895c-401d-84d9-9813ba8e794f.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "cash-of-command": {
+      "file": "cash-of-command.webp",
+      "bytes": 37330,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/acf164b4-8e6c-4afa-afee-69056b2daf51.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "cash-pump": {
+      "file": "cash-pump.webp",
+      "bytes": 36716,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/20ac704e-8e77-449a-a45c-3376e52f8d8d.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "cat-wilde-and-the-incan-quest": {
+      "file": "cat-wilde-and-the-incan-quest.webp",
+      "bytes": 45826,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/96985995-9bf7-4d27-8afd-3287a873a477.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "cat-wilde-and-the-doom-of-dead": {
+      "file": "cat-wilde-and-the-doom-of-dead.webp",
+      "bytes": 32460,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/b4c689b6-4a31-4667-8a54-f40673afd4b0.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "cash-a-cabana": {
+      "file": "cash-a-cabana.webp",
+      "bytes": 249008,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/64856364-1e76-474e-8271-3304d7776b95.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "cashin-joker": {
+      "file": "cashin-joker.webp",
+      "bytes": 361898,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/afcf7a9b-5f88-4a08-b777-dee0e0c6ea9b.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "cat-wilde-and-the-lost-chapter": {
+      "file": "cat-wilde-and-the-lost-chapter.webp",
+      "bytes": 33888,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/952b8354-cb09-4d3c-8ae0-a7183e2626db.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "cat-wilde-and-the-pyramids-of-dead": {
+      "file": "cat-wilde-and-the-pyramids-of-dead.webp",
+      "bytes": 23752,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/1fd49d22-ca1f-45af-8686-a9acf1a3b298.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "cat-wilde-in-the-eclipse-of-the-sun-god": {
+      "file": "cat-wilde-in-the-eclipse-of-the-sun-god.webp",
+      "bytes": 44514,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/035f1d8c-392e-4583-8376-ad33061df681.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "chambers-of-ancients": {
+      "file": "chambers-of-ancients.webp",
+      "bytes": 49026,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/6b1524c1-f476-41c1-a4aa-d60f11730185.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "champions-of-mithrune": {
+      "file": "champions-of-mithrune.webp",
+      "bytes": 28482,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/014647d1-eb1d-4b79-8003-5c7662d6675c.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "charlie-chance": {
+      "file": "charlie-chance.webp",
+      "bytes": 34334,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/aae29fc2-b700-4f78-b25b-8804e350b695.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "charlie-chance-and-the-curse-of-cleopatra": {
+      "file": "charlie-chance-and-the-curse-of-cleopatra.webp",
+      "bytes": 309900,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/254d2520-a533-4578-b16c-dd91fa87761d.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "charlie-chance-in-hell-to-pay": {
+      "file": "charlie-chance-in-hell-to-pay.webp",
+      "bytes": 30392,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/b65813ac-870d-4d81-bc67-b8252f6a1e8b.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "chunky-carlos-money-mania": {
+      "file": "chunky-carlos-money-mania.webp",
+      "bytes": 9682,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/517db25e-8091-46a2-81ac-f427f92c6a1a.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "chronos-joker": {
+      "file": "chronos-joker.webp",
+      "bytes": 31142,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/bb26bffe-1d68-4b74-8ea9-7b79ef3e4489.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "clash-of-camelot": {
+      "file": "clash-of-camelot.webp",
+      "bytes": 32780,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/3c0ab152-5abc-450f-ae1f-009a4f6015e3.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "city-of-sound": {
+      "file": "city-of-sound.webp",
+      "bytes": 37740,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/d8808754-099b-40ee-8ecd-419e0d2d1a10.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "colt-lightning": {
+      "file": "colt-lightning.webp",
+      "bytes": 31704,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/20f0b734-cce2-40e6-b59a-176b0df07ff0.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "coils-of-cash": {
+      "file": "coils-of-cash.webp",
+      "bytes": 28674,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/e89ad089-aa67-47b9-b038-8a28a4572b37.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "colt-lightning-inferno": {
+      "file": "colt-lightning-inferno.webp",
+      "bytes": 7804,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/40880f1d-1dc6-4ceb-af29-de0215ec4098.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "count-jokula": {
+      "file": "count-jokula.webp",
+      "bytes": 50482,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/b4a6b7e6-e8d7-4f69-9887-4cbbebef72eb.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "colt-lightning-firestorm": {
+      "file": "colt-lightning-firestorm.webp",
+      "bytes": 31704,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/cf17f2ad-3fe0-4809-b107-8874c3947d3b.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "coywolf-cash": {
+      "file": "coywolf-cash.webp",
+      "bytes": 45948,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/b5855e64-752f-49da-9e7e-6f39524bc275.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "crabbys-gold-ii": {
+      "file": "crabbys-gold-ii.webp",
+      "bytes": 210290,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/0d3d4c03-34fb-4509-81cf-9e6739d49f38.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "cursed-moon-power-collection": {
+      "file": "cursed-moon-power-collection.webp",
+      "bytes": 62410,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/6f731948-5975-4348-ad03-4c3676a748e2.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "crystal-hall": {
+      "file": "crystal-hall.webp",
+      "bytes": 39854,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/2adf140e-33dc-4b13-a35c-a754b4177b17.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "dansband-p-turn": {
+      "file": "dansband-p-turn.webp",
+      "bytes": 152542,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/ddd4783b-6abe-48d2-8790-704065137870.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "dawn-of-egypt": {
+      "file": "dawn-of-egypt.webp",
+      "bytes": 36558,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/d06e5142-40ce-4a7a-aeb9-529e529d75bd.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "def-leppard-hysteria": {
+      "file": "def-leppard-hysteria.webp",
+      "bytes": 22714,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/eb334c4a-1ffd-4493-8e37-fc85cc60691d.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "demon": {
+      "file": "demon.webp",
+      "bytes": 42810,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/88ee3169-4251-4a57-82ee-f26250aec53b.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "derby-wheel": {
+      "file": "derby-wheel.webp",
+      "bytes": 45854,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/c513f15e-cf5c-4c8c-a981-bdbb7afec95e.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "diamond-vortex": {
+      "file": "diamond-vortex.webp",
+      "bytes": 14656,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/70568bf1-3531-4eca-bc81-fac2d9124603.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "diamonds-of-the-realm": {
+      "file": "diamonds-of-the-realm.webp",
+      "bytes": 38484,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/530071aa-c7a3-465a-8192-774f1238cd5a.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "dio-killing-the-dragon": {
+      "file": "dio-killing-the-dragon.webp",
+      "bytes": 41590,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/87be3391-96f6-4241-ba4d-a05e73a2851e.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "divine-showdown": {
+      "file": "divine-showdown.webp",
+      "bytes": 49820,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/02fede0e-8da7-45d3-a671-7fdfaab09c85.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "disco-diamonds": {
+      "file": "disco-diamonds.webp",
+      "bytes": 41186,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/7e977b7f-2d57-49b2-8834-5aafb749c8da.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "divina-commedia-i-nove-cerchi": {
+      "file": "divina-commedia-i-nove-cerchi.webp",
+      "bytes": 413806,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/d033489b-ffff-48d6-a074-3605d6782987.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "doom-of-egypt": {
+      "file": "doom-of-egypt.webp",
+      "bytes": 37972,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/2770c606-1938-437e-a524-8a964b4687e7.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "dr-toonz": {
+      "file": "dr-toonz.webp",
+      "bytes": 39332,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/34e0b077-1900-4add-ad8b-8c92a872f6ac.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "easter-eggspedition": {
+      "file": "easter-eggspedition.webp",
+      "bytes": 39684,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/56bd42f9-dad4-4a99-810b-972c9c1979f6.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "energoonz": {
+      "file": "energoonz.webp",
+      "bytes": 24118,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/2de6749e-875f-4e01-8767-51e2a7f93100.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "eye-of-atum": {
+      "file": "eye-of-atum.webp",
+      "bytes": 149200,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/3e6fd482-7a84-4184-8f03-6a937a8db02b.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "fat-frankies": {
+      "file": "fat-frankies.webp",
+      "bytes": 39792,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/dd6d0965-45c8-48f8-b370-f79c20e3b18f.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "fate-of-dead-blitzways": {
+      "file": "fate-of-dead-blitzways.webp",
+      "bytes": 323342,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/d90d6161-810c-477e-bc0b-dca2a7729529.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "fates-fortune": {
+      "file": "fates-fortune.webp",
+      "bytes": 24462,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/c6b0ff3c-b922-497c-9dca-6e092445bfd3.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "feline-fury": {
+      "file": "feline-fury.webp",
+      "bytes": 39636,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/9fb89b74-1481-4b7b-b701-efc8edbb1aa2.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "fire-joker-100": {
+      "file": "fire-joker-100.webp",
+      "bytes": 39848,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/e4fd779e-1868-4377-93de-fd3177bd686f.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "fire-joker-blitz": {
+      "file": "fire-joker-blitz.webp",
+      "bytes": 380810,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/e837b1bc-6186-4b55-a186-5332b6bee0e7.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "fire-joker-freeze": {
+      "file": "fire-joker-freeze.webp",
+      "bytes": 41414,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/3529606f-d27e-415e-95a7-8ad099292444.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "fire-toad": {
+      "file": "fire-toad.webp",
+      "bytes": 32724,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/f85404b2-def5-4e43-879e-df14ef6ab0d8.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "firefly-frenzy": {
+      "file": "firefly-frenzy.webp",
+      "bytes": 36666,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/8358da85-d94a-4dc4-8240-df9bdb4d53f0.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "fire-toad-2": {
+      "file": "fire-toad-2.webp",
+      "bytes": 355294,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/c38ffa2c-3a3b-4c26-b829-01cd9e70330b.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "forge-of-fortunes": {
+      "file": "forge-of-fortunes.webp",
+      "bytes": 25314,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/74d8cf51-fd9d-427e-a3e5-4ed4b5e99463.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "forge-of-gems": {
+      "file": "forge-of-gems.webp",
+      "bytes": 28104,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/d8ef6292-f00d-46d2-af03-9d7680955605.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "fortunes-of-ali-baba": {
+      "file": "fortunes-of-ali-baba.webp",
+      "bytes": 27372,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/3af0f971-3b64-4d55-a585-0a2fb9094373.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "fox-mayhem": {
+      "file": "fox-mayhem.webp",
+      "bytes": 24800,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/d02f7f37-6be4-4843-b88b-27ad664456de.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "frozen-gems": {
+      "file": "frozen-gems.webp",
+      "bytes": 34970,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/ec9b4b15-2479-4284-9be4-2fc4da83b3fa.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "free-reelin-joker-1000": {
+      "file": "free-reelin-joker-1000.webp",
+      "bytes": 38754,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/4ff51e0b-3976-45f4-93dc-b66929ef786a.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "gargantoonz": {
+      "file": "gargantoonz.webp",
+      "bytes": 54020,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/8698e0cd-ff23-42f5-885e-223634341a6f.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "fulong-88": {
+      "file": "fulong-88.webp",
+      "bytes": 45144,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/d0c9219d-c988-4a28-b4ee-05f39e534f04.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "game-of-gladiators": {
+      "file": "game-of-gladiators.webp",
+      "bytes": 45988,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/56a49856-7d38-4158-b1a0-4cf2049ea227.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "game-of-gladiators-uprising": {
+      "file": "game-of-gladiators-uprising.webp",
+      "bytes": 45988,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/40ab6926-9775-41ac-a61b-2d7afd332c38.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "gates-of-troy": {
+      "file": "gates-of-troy.webp",
+      "bytes": 32666,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/4186274f-eec5-4ec8-91aa-83863f4f7006.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "gemix-100": {
+      "file": "gemix-100.webp",
+      "bytes": 45062,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/8c02ff9f-37e2-47cf-b63f-af92336ef9fa.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "ghost-of-dead": {
+      "file": "ghost-of-dead.webp",
+      "bytes": 28380,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/83c55982-247c-4189-9499-ef1f683bb8b9.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "gigantoonz": {
+      "file": "gigantoonz.webp",
+      "bytes": 26916,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/3c6bef06-2945-4f72-b962-4930a088b1fe.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "gnawn-gold": {
+      "file": "gnawn-gold.webp",
+      "bytes": 196278,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/e9e12795-f5a6-45ee-9097-44b05b13ca46.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "gold-volcano": {
+      "file": "gold-volcano.webp",
+      "bytes": 22658,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/b46a82eb-ccfc-44f1-a4af-82eabda59db5.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "gold-of-fortune-god": {
+      "file": "gold-of-fortune-god.webp",
+      "bytes": 43124,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/f298bf2e-a0ef-44af-a0d7-03050a93869e.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "grannys-wild": {
+      "file": "grannys-wild.webp",
+      "bytes": 14234,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/efa02a28-3f60-465b-a2eb-f65170dacdf0.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "BGaming",
+      "fetched": "2026-10-01"
+    },
+    "golden-osiris": {
+      "file": "golden-osiris.webp",
+      "bytes": 29826,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/4827b18a-c8ba-42af-8d44-ec4109c0bcf3.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "golden-ticket-2": {
+      "file": "golden-ticket-2.webp",
+      "bytes": 40070,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/6281a1fd-5f12-420f-ae6d-416924841529.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "hammerfall": {
+      "file": "hammerfall.webp",
+      "bytes": 33212,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/b628ed6e-aedd-4ef5-8fae-456555d55465.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "highway-legends": {
+      "file": "highway-legends.webp",
+      "bytes": 36318,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/85c86ad4-1c92-4833-b8ea-bf949f3ac934.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "helloween": {
+      "file": "helloween.webp",
+      "bytes": 31264,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/5fdad238-6cd2-43eb-be9b-addc72f5cafe.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "holiday-spirits": {
+      "file": "holiday-spirits.webp",
+      "bytes": 35336,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/0e8d2ee8-bd2e-498b-9b5a-d6ad79510bce.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "holy-moo-extreme-power": {
+      "file": "holy-moo-extreme-power.webp",
+      "bytes": 143466,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/f1c5e962-b72f-465f-8f83-040a15dd1667.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "honey-rush": {
+      "file": "honey-rush.webp",
+      "bytes": 28492,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/f1ab5942-e0c1-4b54-9d52-4e8c9395d2f6.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "honey-rush-black-and-yellow": {
+      "file": "honey-rush-black-and-yellow.webp",
+      "bytes": 46668,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/6eab8981-ec26-45c2-91e0-6bc055c4accb.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "honey-rush-100": {
+      "file": "honey-rush-100.webp",
+      "bytes": 41264,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/7d9f74cd-7f8a-4c3b-8d59-a62cc80c8c63.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "hooligan-hustle": {
+      "file": "hooligan-hustle.webp",
+      "bytes": 43850,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/24d1af52-3d33-48ba-b6e2-d0c0724ef450.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "hope-unleashed-fortune-rises": {
+      "file": "hope-unleashed-fortune-rises.webp",
+      "bytes": 44566,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/81dde8eb-ed2d-4328-a84d-d2167920e84d.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "hot-dog-heist": {
+      "file": "hot-dog-heist.webp",
+      "bytes": 32976,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/e27483f5-1df0-413f-96d3-08f17c07e489.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "hugo-legacy": {
+      "file": "hugo-legacy.webp",
+      "bytes": 42056,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/42fd79d8-f6f2-4615-8ce8-7a307913349e.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "hotel-yeti-way": {
+      "file": "hotel-yeti-way.webp",
+      "bytes": 36752,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/f19615eb-f622-409d-a55a-80ddae3a7e41.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "idol-of-fortune": {
+      "file": "idol-of-fortune.webp",
+      "bytes": 42196,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/9ff4e8c4-87c0-4453-95c8-bb2a24bc9b0e.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "infernal-trinity-go-guaranteed": {
+      "file": "infernal-trinity-go-guaranteed.webp",
+      "bytes": 61382,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/f6effa2b-ecc0-4c29-b090-79a560827d46.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "ice-joker": {
+      "file": "ice-joker.webp",
+      "bytes": 31498,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/2d56cbf8-7e41-4b7b-bffd-13871df16404.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "immortails-of-egypt": {
+      "file": "immortails-of-egypt.webp",
+      "bytes": 35570,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/15818a42-1b86-48b5-94b3-041eda67d40d.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "invading-vegas-las-christmas": {
+      "file": "invading-vegas-las-christmas.webp",
+      "bytes": 42376,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/5a873ac1-9d52-47c0-817f-315a8bce48b0.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "invading-vegas-revenge-on-mars": {
+      "file": "invading-vegas-revenge-on-mars.webp",
+      "bytes": 42710,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/fc66196b-89b8-48ec-98f9-19d807b58323.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "inferno-joker": {
+      "file": "inferno-joker.webp",
+      "bytes": 39250,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/e6175cdd-d90e-48ab-92df-83bb683a3124.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "invading-vegas": {
+      "file": "invading-vegas.webp",
+      "bytes": 190110,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/9bd59b70-b1ae-41ff-ab33-bb0b3fc2a7a7.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "jolly-roger-2": {
+      "file": "jolly-roger-2.webp",
+      "bytes": 30110,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/bcc1c583-c504-471d-8782-18e330619685.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "joker-flip": {
+      "file": "joker-flip.webp",
+      "bytes": 42274,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/afb8050c-f7f7-4908-8f29-40a5e70e2b3e.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "journey-to-paris": {
+      "file": "journey-to-paris.webp",
+      "bytes": 41336,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/c79096fc-9758-4cc9-85a8-6d01fe2fe196.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "jolly-roger-wild-kraken": {
+      "file": "jolly-roger-wild-kraken.webp",
+      "bytes": 31806,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/677c8358-aa8c-42e6-8660-e710bc96335c.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "king-of-sweets": {
+      "file": "king-of-sweets.webp",
+      "bytes": 50214,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/623fed60-a3b4-4392-956e-bb174ffc9a79.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "kingdom-below": {
+      "file": "kingdom-below.webp",
+      "bytes": 51176,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/8186e270-954c-492d-8323-f5bc36f46841.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "lab-of-madness-its-a-wild": {
+      "file": "lab-of-madness-its-a-wild.webp",
+      "bytes": 396936,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/67546b54-b279-4308-bba3-34ccd33d7476.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "lady-of-fortune-remastered": {
+      "file": "lady-of-fortune-remastered.webp",
+      "bytes": 33878,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/1553f716-5df2-4acf-852a-76bbfc5340d4.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "lady-of-fortune-destiny-spins": {
+      "file": "lady-of-fortune-destiny-spins.webp",
+      "bytes": 266390,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/797dedd2-ef8e-4005-a8db-63f26b8b69b4.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "lawn-n-disorder": {
+      "file": "lawn-n-disorder.webp",
+      "bytes": 40730,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/b36ba862-b018-4ace-b293-837d9d95c5a0.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "lawn-n-complete-disorder": {
+      "file": "lawn-n-complete-disorder.webp",
+      "bytes": 52488,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/8ed29ab3-cc18-4445-a429-854e72aa305e.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "legacy-of-dead": {
+      "file": "legacy-of-dead.webp",
+      "bytes": 45404,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/a6a205d5-13a8-42bb-9256-38a949626fbe.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "legacy-of-gems-blitzways": {
+      "file": "legacy-of-gems-blitzways.webp",
+      "bytes": 52328,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/bfe97479-8a5e-4f05-bb59-a072117be403.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "legacy-of-egypt": {
+      "file": "legacy-of-egypt.webp",
+      "bytes": 29530,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/ea75e383-229f-47d0-8998-08cebd947167.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "legacy-of-dynasties": {
+      "file": "legacy-of-dynasties.webp",
+      "bytes": 57230,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/0bc57675-89b7-492e-a315-9a410577ce1c.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "legacy-of-undead-dragon-abyssways": {
+      "file": "legacy-of-undead-dragon-abyssways.webp",
+      "bytes": 38246,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/b6ba9b5c-d9a2-48c7-9774-d5da1c01a92b.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "legion-gold": {
+      "file": "legion-gold.webp",
+      "bytes": 31046,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/ff5ecfde-872b-4f0c-aa51-28d0bd68556c.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "legacy-of-inca": {
+      "file": "legacy-of-inca.webp",
+      "bytes": 53840,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/06153a62-3e44-45a3-932e-638479a67c44.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "legend-of-the-ice-dragon": {
+      "file": "legend-of-the-ice-dragon.webp",
+      "bytes": 201814,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/e921c18b-0d8e-44b0-9114-5e7dc3ccaa65.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "legion-gold-and-the-sphinx-of-dead": {
+      "file": "legion-gold-and-the-sphinx-of-dead.webp",
+      "bytes": 48058,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/9bc18090-8060-408c-af52-0e19af1320fe.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "legion-gold-and-the-throne-of-dead": {
+      "file": "legion-gold-and-the-throne-of-dead.webp",
+      "bytes": 239938,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/14caca0f-2157-4062-bfc9-649d8f9a7e72.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "legion-gold-victory": {
+      "file": "legion-gold-victory.webp",
+      "bytes": 49968,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/e3b49ee5-82dc-4b37-a1a0-8aceba2797fa.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "legion-gold-reckoning": {
+      "file": "legion-gold-reckoning.webp",
+      "bytes": 42032,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/90be2c4c-165d-438a-938f-2f647afc3ec4.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "leprechaun-goes-wild": {
+      "file": "leprechaun-goes-wild.webp",
+      "bytes": 80352,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/c656392d-7fb0-4d1b-a84f-e0b643190fc3.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "legion-gold-unleashed": {
+      "file": "legion-gold-unleashed.webp",
+      "bytes": 46034,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/78b8c95f-92a5-4752-ad84-93c9d1fda737.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "lord-merlin-and-the-lady-of-the-lake": {
+      "file": "lord-merlin-and-the-lady-of-the-lake.webp",
+      "bytes": 35792,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/654ad1b8-6321-42a2-9fef-3a3ef3cb99ed.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "love-is-in-the-fair": {
+      "file": "love-is-in-the-fair.webp",
+      "bytes": 40008,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/3f8a20fd-fb2d-4b2d-9175-d96731e156ab.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "lion-saga-odyssey": {
+      "file": "lion-saga-odyssey.webp",
+      "bytes": 38600,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/97eab57d-57f6-4a63-9b9f-05e2c9742a8e.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "lordi-reel-monsters": {
+      "file": "lordi-reel-monsters.webp",
+      "bytes": 34382,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/cbc6cc13-8eaf-487e-b69a-58ad191a1a74.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "love-joker": {
+      "file": "love-joker.webp",
+      "bytes": 34290,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/685d0e25-521b-49b7-81d4-3cf6cbcd7c5a.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "luchamigos": {
+      "file": "luchamigos.webp",
+      "bytes": 42200,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/6ed7570e-e12b-48fb-8f71-880ee3c53d1d.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "madame-ink": {
+      "file": "madame-ink.webp",
+      "bytes": 20894,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/1fcc74db-462e-4beb-ae4d-6b63e390959f.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "mafia-gold": {
+      "file": "mafia-gold.webp",
+      "bytes": 28534,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/241c621e-286a-478f-9395-6fbd6a1e721f.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "manta-mayhem": {
+      "file": "manta-mayhem.webp",
+      "bytes": 21848,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/8ea92c9e-f9bc-498b-bec5-e802bdabb66b.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "mega-don": {
+      "file": "mega-don.webp",
+      "bytes": 24264,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/daf5332f-4bfe-4e7b-b6cf-43a6b4f7448d.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "merlin-and-the-ice-queen-morgana": {
+      "file": "merlin-and-the-ice-queen-morgana.webp",
+      "bytes": 39484,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/6dc03373-ee16-418b-b57e-be62f02e88e5.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "mega-don-triple-threat": {
+      "file": "mega-don-triple-threat.webp",
+      "bytes": 27578,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/a0d86f3f-2407-42f3-82a0-599603f8441c.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "mega-don-feeding-frenzy": {
+      "file": "mega-don-feeding-frenzy.webp",
+      "bytes": 32818,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/8880bc5e-48e6-4b3b-9ab3-665b3c15fe5c.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "merlin-journey-of-flame": {
+      "file": "merlin-journey-of-flame.webp",
+      "bytes": 31546,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/b7eb28cd-c5d9-474e-a8bd-2346be45368a.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "merlin-realm-of-charm": {
+      "file": "merlin-realm-of-charm.webp",
+      "bytes": 45642,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/a0014eff-9c28-49b8-941d-8e39fa82be4f.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "midnight-gold": {
+      "file": "midnight-gold.webp",
+      "bytes": 36740,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/003db788-69d9-48bd-ac9c-8a655b2f0195.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "mirror-joker": {
+      "file": "mirror-joker.webp",
+      "bytes": 34296,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/8165b1b4-6278-4bdc-84d0-bd4f084b7879.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "miner-donkey-trouble": {
+      "file": "miner-donkey-trouble.webp",
+      "bytes": 60958,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/d74d8b16-bf83-4879-b8cc-1e30a03dd441.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "mission-cash": {
+      "file": "mission-cash.webp",
+      "bytes": 44848,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/f3383883-1d32-4137-ba74-730e5590232f.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "monkey-battle-for-the-scrolls": {
+      "file": "monkey-battle-for-the-scrolls.webp",
+      "bytes": 47550,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/48f1d071-4996-4afe-902e-d2d57352621e.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "moon-princess-origins": {
+      "file": "moon-princess-origins.webp",
+      "bytes": 45770,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/e9d4d169-a926-4454-9afd-e070c90e400b.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "moon-princess-100": {
+      "file": "moon-princess-100.webp",
+      "bytes": 56114,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/00b449e6-a3d2-40ae-a3f3-227b00878284.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "moon-princess-power-of-love": {
+      "file": "moon-princess-power-of-love.webp",
+      "bytes": 35978,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/85bdf424-a926-4f5f-a3a2-5bc740552c3b.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "moon-princess": {
+      "file": "moon-princess.webp",
+      "bytes": 48728,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/4a2028bf-a5ba-40e4-9441-39f4ce79e0bc.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "mount-m": {
+      "file": "mount-m.webp",
+      "bytes": 41014,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/1cf3c357-eb56-4e19-adf2-85e5d5ac8031.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "moon-princess-stargazing": {
+      "file": "moon-princess-stargazing.webp",
+      "bytes": 39020,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/12197ec3-f11c-4e7f-9e38-7a329676bdac.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "m-tley-cr-e": {
+      "file": "m-tley-cr-e.webp",
+      "bytes": 45740,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/a4baad7e-c95c-4a27-93c2-c648e2a86911.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "moon-princess-christmas-kingdom": {
+      "file": "moon-princess-christmas-kingdom.webp",
+      "bytes": 37280,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/a13eeee1-2539-44f6-a25f-2e5e1f7fc185.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "moon-princess-trinity": {
+      "file": "moon-princess-trinity.webp",
+      "bytes": 178790,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/9f47f691-456d-433e-b765-c4c11b8d435d.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "muerto-en-mictl-n": {
+      "file": "muerto-en-mictl-n.webp",
+      "bytes": 227704,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/23a42318-027e-4713-8f0d-940d6bf46aa3.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "mystery-genie-fortunes-of-the-lamp": {
+      "file": "mystery-genie-fortunes-of-the-lamp.webp",
+      "bytes": 50356,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/1fa9fc3e-97d0-4eb9-8c7a-ce4a1cc6684f.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "mystery-egg-surprise": {
+      "file": "mystery-egg-surprise.webp",
+      "bytes": 42586,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/a45268d6-2f94-4036-a127-080d8b079d68.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "nugget-n-nonsense": {
+      "file": "nugget-n-nonsense.webp",
+      "bytes": 7868,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/8c336f23-56d8-4889-bb58-1d702f14bbea.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "new-year-riches": {
+      "file": "new-year-riches.webp",
+      "bytes": 40062,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/c5cb16e4-4f32-4bc6-8208-57de7ba022e3.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "oasis-of-dead": {
+      "file": "oasis-of-dead.webp",
+      "bytes": 43396,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/29669b58-e01a-4e1a-a02b-ad0d54f4a6ef.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "odin-protector-of-realms": {
+      "file": "odin-protector-of-realms.webp",
+      "bytes": 31596,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/5339e0a0-8011-4e61-8bcd-a428eab84956.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "octopus-treasure": {
+      "file": "octopus-treasure.webp",
+      "bytes": 42532,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/7f338667-5b7b-4792-9d7e-0ed756b5794c.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "pandastic-adventure": {
+      "file": "pandastic-adventure.webp",
+      "bytes": 31504,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/a598f45b-ed18-473c-980a-b562064cce18.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "piggy-bank-farm": {
+      "file": "piggy-bank-farm.webp",
+      "bytes": 43010,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/5ac9eccd-1e8c-48ef-aecc-3360ab8de1b3.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "piggy-blitz": {
+      "file": "piggy-blitz.webp",
+      "bytes": 39708,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/651bcfa6-2201-4ef4-9987-f7195ba9fb79.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "piranha-pays": {
+      "file": "piranha-pays.webp",
+      "bytes": 35904,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/c39ed0b5-9331-4694-8f40-0f4771a51431.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "piggy-heist": {
+      "file": "piggy-heist.webp",
+      "bytes": 28610,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/393304b9-93eb-4d52-a03c-fd4ab6b6798e.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "piggy-blitz-disco-gold": {
+      "file": "piggy-blitz-disco-gold.webp",
+      "bytes": 47076,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/c3223561-a8d4-4c66-91eb-2f6f5e0f808c.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "pilgrim-of-dead": {
+      "file": "pilgrim-of-dead.webp",
+      "bytes": 31300,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/f1a2ffff-c099-4efc-a257-cc4f55df37bc.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "piggy-blitz-casino-gold": {
+      "file": "piggy-blitz-casino-gold.webp",
+      "bytes": 44966,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/1b41f474-7ab9-4dfb-8afd-25026e15c9e4.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "playn-go-mole-digger": {
+      "file": "playn-go-mole-digger.webp",
+      "bytes": 31762,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/99e68cb0-4678-4a56-be41-d152860458e7.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "potion-of-madness": {
+      "file": "potion-of-madness.webp",
+      "bytes": 50434,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/dc3d1756-d6c1-4306-bf33-feff96d2924a.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "puebla-parade": {
+      "file": "puebla-parade.webp",
+      "bytes": 32804,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/5f45937d-658e-4426-a501-4174658a233c.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "prism-of-gems": {
+      "file": "prism-of-gems.webp",
+      "bytes": 39464,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/c3b6e5da-94e8-4e1e-a329-d733358348b5.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "primal-rampage": {
+      "file": "primal-rampage.webp",
+      "bytes": 165994,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/ceef6adb-0aaf-4b93-b5d3-3eb9536c9ebf.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "ras-reckoning": {
+      "file": "ras-reckoning.webp",
+      "bytes": 43662,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/e03e3b59-9f1c-4f9a-a9c9-cb35fac37a2f.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "rabbit-hole-riches": {
+      "file": "rabbit-hole-riches.webp",
+      "bytes": 31250,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/7647951d-0071-447b-b544-13d0a3323d39.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "rabbit-hole-riches-court-of-hearts": {
+      "file": "rabbit-hole-riches-court-of-hearts.webp",
+      "bytes": 45348,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/dbdb0261-7d26-4e5c-b59d-c01eea8767ee.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "raging-rex-3": {
+      "file": "raging-rex-3.webp",
+      "bytes": 47040,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/614b1b5c-446d-4588-99bd-f31bd6f20c94.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "raging-rex": {
+      "file": "raging-rex.webp",
+      "bytes": 48464,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/8479a65e-84c5-4a04-89fa-9307e403f8d0.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "raging-rex-2": {
+      "file": "raging-rex-2.webp",
+      "bytes": 119794,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/ae813971-a884-46f4-a983-139402ccc25a.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "rally-4-riches": {
+      "file": "rally-4-riches.webp",
+      "bytes": 41546,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/75b9c5d0-2db4-4888-8550-c78a60eddb86.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "rascal-riches": {
+      "file": "rascal-riches.webp",
+      "bytes": 36014,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/479569e3-c739-4684-9911-29eac7d3de7f.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "rainforest-magic": {
+      "file": "rainforest-magic.webp",
+      "bytes": 42106,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/f0236dab-3a34-48a7-9173-17c8cecd33ac.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "reactoonz-2": {
+      "file": "reactoonz-2.webp",
+      "bytes": 35448,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/3afb810b-1b1b-40e5-87bc-eb6963a9532c.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "reactoonz": {
+      "file": "reactoonz.webp",
+      "bytes": 29714,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/fed10172-8f3f-489a-81e7-45e520d880db.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "reactoonz-blitzways": {
+      "file": "reactoonz-blitzways.webp",
+      "bytes": 44552,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/9499d74f-8385-48f8-a6cb-701550b7de0c.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "reactoonz-100": {
+      "file": "reactoonz-100.webp",
+      "bytes": 421866,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/b6f3c8a9-b480-4105-a1bf-3f2318551259.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "rich-wilde-and-the-pearls-of-vishnu": {
+      "file": "rich-wilde-and-the-pearls-of-vishnu.webp",
+      "bytes": 37250,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/d4d6ea07-6792-43c1-929f-fd13779411c4.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "rich-wilde-and-the-shield-of-athena": {
+      "file": "rich-wilde-and-the-shield-of-athena.webp",
+      "bytes": 49708,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/9b10b812-e608-43e9-89eb-c36371292765.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "return-of-the-green-knight": {
+      "file": "return-of-the-green-knight.webp",
+      "bytes": 48296,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/7f27f80e-8b80-4c17-9984-8803ec7b661d.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "rich-wilde-and-the-tome-of-dead": {
+      "file": "rich-wilde-and-the-tome-of-dead.webp",
+      "bytes": 35484,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/61611519-54a2-4b20-9862-3e17ca59016f.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "rich-wilde-and-the-tome-of-insanity": {
+      "file": "rich-wilde-and-the-tome-of-insanity.webp",
+      "bytes": 194286,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/6b07d732-e2fe-4bfc-b247-3b497c25cb4d.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "rich-wilde-and-the-tome-of-madness": {
+      "file": "rich-wilde-and-the-tome-of-madness.webp",
+      "bytes": 5520,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/c0d5aeb2-c93d-4fa2-8301-4bba380cb070.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "rich-wilde-and-the-wandering-city": {
+      "file": "rich-wilde-and-the-wandering-city.webp",
+      "bytes": 38932,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/2c52fac7-e49a-452c-bd2c-8c33bf945d4d.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "riches-of-robin": {
+      "file": "riches-of-robin.webp",
+      "bytes": 40274,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/86be6ca4-d936-414c-9958-e0ab163d6a5f.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "ring-of-odin": {
+      "file": "ring-of-odin.webp",
+      "bytes": 36252,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/99b8873c-87ac-4ba0-8915-9a32cb0eeb53.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "riddle-reels-a-case-of-riches": {
+      "file": "riddle-reels-a-case-of-riches.webp",
+      "bytes": 25512,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/0d7ae796-ee20-4e10-8af1-6f50a58f8988.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "rise-of-athena": {
+      "file": "rise-of-athena.webp",
+      "bytes": 38798,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/168e44a0-7fdc-4642-b5f5-06b090ca0a3e.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "rise-of-dead": {
+      "file": "rise-of-dead.webp",
+      "bytes": 30094,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/4f1a688e-dd30-40fa-b01f-3d3126fa27b8.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "rings-of-prosperity": {
+      "file": "rings-of-prosperity.webp",
+      "bytes": 49288,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/0d66de22-f891-4905-aab5-7a6e4f0be726.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "rise-of-merlin": {
+      "file": "rise-of-merlin.webp",
+      "bytes": 35238,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/b1a613c0-94a2-4e94-b783-9649d30ea528.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "rise-of-olympus": {
+      "file": "rise-of-olympus.webp",
+      "bytes": 210638,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/978db591-420c-41c0-bec7-212f3a77ff2d.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "rise-of-olympus-100": {
+      "file": "rise-of-olympus-100.webp",
+      "bytes": 211492,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/d6a26695-d353-4071-8b03-e5d558cae19f.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "rise-of-gods-reckoning": {
+      "file": "rise-of-gods-reckoning.webp",
+      "bytes": 27850,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/bb7a57bd-c2b1-4ee2-b582-3005f1002424.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "rise-of-olympus-1000": {
+      "file": "rise-of-olympus-1000.webp",
+      "bytes": 41124,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/9a017f82-d5f0-4cd2-8198-7eee4a9cb12b.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "rise-of-olympus-extreme": {
+      "file": "rise-of-olympus-extreme.webp",
+      "bytes": 378476,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/7cc0071a-ad55-423b-9c29-af49cfa881d8.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "rocco-gallo": {
+      "file": "rocco-gallo.webp",
+      "bytes": 33726,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/81d614ba-bc2a-4997-9cc1-40e47bf61475.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "rise-of-olympus-origins": {
+      "file": "rise-of-olympus-origins.webp",
+      "bytes": 42978,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/171b65f6-5ce9-4c42-805e-b8bf57312dbb.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "rotiki": {
+      "file": "rotiki.webp",
+      "bytes": 31500,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/274e66e6-0849-48e3-9e53-9d2b7ff7f54c.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "ruff-heist": {
+      "file": "ruff-heist.webp",
+      "bytes": 41598,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/68e29a2d-6d8b-4378-a0fb-8836a2a0d599.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "rosy-orbit-treasure-turn": {
+      "file": "rosy-orbit-treasure-turn.webp",
+      "bytes": 401428,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/4af66b35-6c63-448c-b524-a691a6fc5106.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "sails-of-riches": {
+      "file": "sails-of-riches.webp",
+      "bytes": 40612,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/5684ffa6-165b-45b7-8548-b5913a6ee54f.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "safari-of-wealth": {
+      "file": "safari-of-wealth.webp",
+      "bytes": 35712,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/8f678635-1156-46dd-b2af-bff66f782ad0.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "saxon": {
+      "file": "saxon.webp",
+      "bytes": 25370,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/958a307f-915e-407b-80fd-465ac8d75c1e.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "scales-of-dead": {
+      "file": "scales-of-dead.webp",
+      "bytes": 23530,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/61252007-44c5-4302-9751-1072d21f4ee8.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "scroll-of-dead": {
+      "file": "scroll-of-dead.webp",
+      "bytes": 37938,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/bc73e83d-d8e5-497e-a31c-c00c495e0e53.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "scroll-of-seth": {
+      "file": "scroll-of-seth.webp",
+      "bytes": 35108,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/436e85d7-759e-4db9-a764-2bfd6d0c1f86.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "scourge-of-rome": {
+      "file": "scourge-of-rome.webp",
+      "bytes": 45994,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/fb65749e-0cb1-4460-88b3-d74a9fb7cb89.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "secret-of-dead": {
+      "file": "secret-of-dead.webp",
+      "bytes": 27728,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/e386303d-5ec1-4427-aa48-566ccd7eecd6.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "sherwood-gold": {
+      "file": "sherwood-gold.webp",
+      "bytes": 61342,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/1d43e762-cffc-4abc-afae-abe88e55269a.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "shark-feast": {
+      "file": "shark-feast.webp",
+      "bytes": 179578,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/75e5c4e6-aa81-47e5-b41e-fba1ba8a905a.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "shamrock-miner": {
+      "file": "shamrock-miner.webp",
+      "bytes": 171796,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/25137970-0a78-4d64-a079-db3390fab9ce.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "slashimi": {
+      "file": "slashimi.webp",
+      "bytes": 33304,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/a78dbde5-1b5e-4570-96a5-2eb16acd97e2.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "sisters-of-the-sun": {
+      "file": "sisters-of-the-sun.webp",
+      "bytes": 29454,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/de0117b3-4bc3-43c5-823b-ca744bc03fa8.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "spark-of-genius": {
+      "file": "spark-of-genius.webp",
+      "bytes": 31584,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/5140c61e-ae31-4133-bb8e-4c2857578044.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "spice-spice-baby": {
+      "file": "spice-spice-baby.webp",
+      "bytes": 13648,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/c26961a8-aa1d-4bd6-99c1-e08c43841efc.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "spinnin-records-raving-reels": {
+      "file": "spinnin-records-raving-reels.webp",
+      "bytes": 438126,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/9426242c-7828-4033-abf8-9ac54b8b587a.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "spinnin-records-into-the-beat": {
+      "file": "spinnin-records-into-the-beat.webp",
+      "bytes": 45524,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/99dd55fb-cdc2-462a-8e46-ab6451e3e5d6.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "stadium-of-riches": {
+      "file": "stadium-of-riches.webp",
+      "bytes": 31212,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/051f9daf-7e9b-4aa0-9830-d657b75855a5.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "stepping-diamonds": {
+      "file": "stepping-diamonds.webp",
+      "bytes": 27452,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/3aad3d45-edbb-4158-8006-5ed7287d6a6a.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "static-nightmare-abyssways": {
+      "file": "static-nightmare-abyssways.webp",
+      "bytes": 405268,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/96d58b18-2989-46f4-9d06-6d2e153d6715.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "sticky-joker": {
+      "file": "sticky-joker.webp",
+      "bytes": 26502,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/5ca4a673-0820-4dda-a878-fdda424ce704.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "stompin-gold": {
+      "file": "stompin-gold.webp",
+      "bytes": 130062,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/ae4071c4-9648-44a3-810d-b5c61da3f042.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "super-flip-deluxe": {
+      "file": "super-flip-deluxe.webp",
+      "bytes": 7397820,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/e499563c-3652-4bc8-bde0-40ecc667be1a.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "sweet-alchemy": {
+      "file": "sweet-alchemy.webp",
+      "bytes": 29096,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/8beb96f0-ac19-43db-80a9-64ab44b91114.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "sweet-alchemy-100": {
+      "file": "sweet-alchemy-100.webp",
+      "bytes": 37352,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/f084efc5-efd3-4465-9ff0-4928f20407b6.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "sweet-alchemy-2": {
+      "file": "sweet-alchemy-2.webp",
+      "bytes": 36610,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/7c611821-079a-4478-9610-2d6c6399f4e6.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "tale-of-kyubiko": {
+      "file": "tale-of-kyubiko.webp",
+      "bytes": 40302,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/8dcf9160-eae8-4501-ba61-73d6bf41326d.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "temple-of-prosperity": {
+      "file": "temple-of-prosperity.webp",
+      "bytes": 33288,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/520f5a11-b1fd-47e0-b0b2-fd09cf679149.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "ternion": {
+      "file": "ternion.webp",
+      "bytes": 35006,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/6bfa1e1d-0526-4aa4-ab29-f5e7f94c91c4.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "temple-of-tollan": {
+      "file": "temple-of-tollan.webp",
+      "bytes": 35746,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/be68d08f-96d3-4bf3-b697-b58f531abbca.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "testament": {
+      "file": "testament.webp",
+      "bytes": 28398,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/be820b8b-b3a4-407e-9e98-27fa0856436a.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "the-faces-of-freya": {
+      "file": "the-faces-of-freya.webp",
+      "bytes": 53484,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/d27e10d4-bd02-4b2e-b55b-648954b97ef8.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "the-green-knight": {
+      "file": "the-green-knight.webp",
+      "bytes": 51836,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/a5108bc4-2643-4373-a9e9-91d16c7d2d23.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "the-green-knight-oath-of-thorns": {
+      "file": "the-green-knight-oath-of-thorns.webp",
+      "bytes": 98808,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/0244776d-a846-4249-96de-4470e514e25a.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "the-sword-and-the-grail": {
+      "file": "the-sword-and-the-grail.webp",
+      "bytes": 56154,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/05b64df7-68d1-4b37-b76b-88cd6fa65ab9.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "the-last-sundown": {
+      "file": "the-last-sundown.webp",
+      "bytes": 41594,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/3f8829e7-65c0-4f5b-b794-84d8383b16d9.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "the-paying-piano-club": {
+      "file": "the-paying-piano-club.webp",
+      "bytes": 31488,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/0ba3156f-9f10-47da-8582-4a1b8b653b6b.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "three-pots-of-the-genie": {
+      "file": "three-pots-of-the-genie.webp",
+      "bytes": 1750,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/01cbf30f-f3c9-4c8d-a02f-a18539e23fea.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "the-sword-and-the-grail-excalibur": {
+      "file": "the-sword-and-the-grail-excalibur.webp",
+      "bytes": 38862,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/9a9aa179-b284-4c77-808d-f3c1fa21efda.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "thunder-screech": {
+      "file": "thunder-screech.webp",
+      "bytes": 40250,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/7a57a760-0d4a-4e41-b8a5-fff080ece737.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "tomb-of-gold-reimagined": {
+      "file": "tomb-of-gold-reimagined.webp",
+      "bytes": 58662,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/34112df5-5e65-41f5-86e6-11216d73cd87.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "tomb-of-gold-ii": {
+      "file": "tomb-of-gold-ii.webp",
+      "bytes": 56302,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/5865f0a0-c7ad-46eb-af33-cbc679eec60a.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "tomb-of-gold": {
+      "file": "tomb-of-gold.webp",
+      "bytes": 45224,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/2cddbc73-d322-4296-a0dc-958fb101949b.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "track-n-gold": {
+      "file": "track-n-gold.webp",
+      "bytes": 22052,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/23ca1380-1fa0-4548-a417-3d96d718b590.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "tower-quest-legacy": {
+      "file": "tower-quest-legacy.webp",
+      "bytes": 36588,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/e78d51d6-7815-4278-b65e-54ea7a4436d4.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "treasures-of-kongar": {
+      "file": "treasures-of-kongar.webp",
+      "bytes": 36436,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/74ba5081-c4e3-4daa-b522-63df19848ab4.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "treats-of-terror": {
+      "file": "treats-of-terror.webp",
+      "bytes": 40674,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/4d5af77c-ed19-42f7-888e-11093e06c399.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "triple-launch-fortune-wild": {
+      "file": "triple-launch-fortune-wild.webp",
+      "bytes": 50366,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/04129019-e410-4116-9b17-34e82be4fca6.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "trinity-impact": {
+      "file": "trinity-impact.webp",
+      "bytes": 43588,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/ecfbf605-ec31-4e9e-bb69-7dbf5ce1d078.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "triple-beasts-of-fortune": {
+      "file": "triple-beasts-of-fortune.webp",
+      "bytes": 51940,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/4c5f4dbd-30a7-4801-864b-49379587f4eb.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "twisted-sister": {
+      "file": "twisted-sister.webp",
+      "bytes": 22322,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/d658c539-e4f5-4e60-8ee3-49f1cfb6c192.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "troll-hunters-2": {
+      "file": "troll-hunters-2.webp",
+      "bytes": 45292,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/2fc0b680-c2e2-423d-b469-0139b3ccf877.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "valhalluck": {
+      "file": "valhalluck.webp",
+      "bytes": 29216,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/15d67c41-02aa-42d5-b44f-0bc20763c833.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "undefeated-xerxes": {
+      "file": "undefeated-xerxes.webp",
+      "bytes": 51234,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/4dc0f704-8d7d-4654-80e6-59be73b4722e.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "usa-flip": {
+      "file": "usa-flip.webp",
+      "bytes": 119114,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/d586f937-26f4-4408-8338-b0618956e56d.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "viking-runecraft-100": {
+      "file": "viking-runecraft-100.webp",
+      "bytes": 39792,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/82f54261-2983-41e2-aa76-327420e72b90.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "viper-city-heist": {
+      "file": "viper-city-heist.webp",
+      "bytes": 49064,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/20ad07ba-c2c8-43d3-a6a0-41be6b3ac66b.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "viking-runecraft-1000": {
+      "file": "viking-runecraft-1000.webp",
+      "bytes": 17494,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/4469a1f4-b427-46a9-a8ed-ea66cfcb306a.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "viking-runecraft-apocalypse": {
+      "file": "viking-runecraft-apocalypse.webp",
+      "bytes": 38096,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/5dd04d32-02a1-4ec5-b82d-8c20e5bcf8d1.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "wheel-of-mictlan": {
+      "file": "wheel-of-mictlan.webp",
+      "bytes": 48152,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/45e5bf95-ffb1-41a8-92a8-f9c5aabb6332.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "whispering-winds": {
+      "file": "whispering-winds.webp",
+      "bytes": 42344,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/fb1f0f53-f0fb-4da3-88c1-d0a13058e3a9.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "wild-bandolier": {
+      "file": "wild-bandolier.webp",
+      "bytes": 38134,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/3eba523e-35db-4fc0-b600-35104b32b5b2.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "wild-blood-2": {
+      "file": "wild-blood-2.webp",
+      "bytes": 20460,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/bfa81d0e-c2de-43cd-a065-38ffb04e3fc7.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "wild-frames": {
+      "file": "wild-frames.webp",
+      "bytes": 37408,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/9706fd1a-23de-43f5-b3e7-2358c2721c58.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "wild-north": {
+      "file": "wild-north.webp",
+      "bytes": 73078,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/7821a372-234d-4f81-a95a-1ad32c2ede7e.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "wild-falls-2": {
+      "file": "wild-falls-2.webp",
+      "bytes": 41238,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/f58150f7-9855-45a7-806c-b8f35c310a7c.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "wild-north-radiant-skies-go-collect": {
+      "file": "wild-north-radiant-skies-go-collect.webp",
+      "bytes": 57968,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/35eedfcc-c09f-4aa7-bb7c-571feeaac5e1.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "wild-rails": {
+      "file": "wild-rails.webp",
+      "bytes": 50124,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/213248fe-283b-4d71-87ec-abee375c0c42.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "wild-survivor": {
+      "file": "wild-survivor.webp",
+      "bytes": 42054,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/0277b9fd-7bde-4d23-9e61-34242039676c.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "wild-trigger": {
+      "file": "wild-trigger.webp",
+      "bytes": 35496,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/782d7296-e440-4aec-8582-fac552e6408e.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "wildest-gambit": {
+      "file": "wildest-gambit.webp",
+      "bytes": 45642,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/707a92ae-2dd0-4b89-8588-ebd4cecaf926.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "win-a-beest": {
+      "file": "win-a-beest.webp",
+      "bytes": 26726,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/d3e7bca1-fca9-47b1-85dd-d7ed576c05af.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "wildhound-derby": {
+      "file": "wildhound-derby.webp",
+      "bytes": 20064,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/e63d1457-36e4-43bf-9a69-3d7d25dae644.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "xmas-magic": {
+      "file": "xmas-magic.webp",
+      "bytes": 37290,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/02e2738e-750e-4df2-8e50-62832b66554d.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "wrappin-gold": {
+      "file": "wrappin-gold.webp",
+      "bytes": 45176,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/364f5ea3-cc72-4cc2-9e6d-9aa312eb92ff.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-01"
+    },
+    "3-buzzing-wilds": {
+      "file": "3-buzzing-wilds.webp",
+      "bytes": 69112,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/294b4b46-0244-48f7-a40e-3cff7913a761.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-01"
+    },
+    "5-frozen-charms-megaways": {
+      "file": "5-frozen-charms-megaways.webp",
+      "bytes": 66304,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/386a2537-f113-4041-a68f-59063ba19550.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-01"
+    },
+    "8-golden-dragon-challenge": {
+      "file": "8-golden-dragon-challenge.webp",
+      "bytes": 69600,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/1809357d-8274-4bfc-a0b6-6c0bcb4515d1.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-01"
+    },
+    "bee-keeper": {
+      "file": "bee-keeper.webp",
+      "bytes": 430086,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/0f63fef8-31f8-4fe1-a839-bc28b27cc98c.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-01"
+    },
+    "beware-the-deep-megaways": {
+      "file": "beware-the-deep-megaways.webp",
+      "bytes": 61380,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/574cb9d1-ae41-4569-994a-ab5c71ebd865.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-01"
+    },
+    "book-of-tut-megaways": {
+      "file": "book-of-tut-megaways.webp",
+      "bytes": 29324,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/14e7f0b6-7505-47a0-be86-6335263a8a1a.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-01"
+    },
+    "cash-box": {
+      "file": "cash-box.webp",
+      "bytes": 55304,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/31205c9e-232b-4081-a2bc-cd45b8c643a3.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-01"
+    },
+    "chase-for-glory": {
+      "file": "chase-for-glory.webp",
+      "bytes": 113112,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/23e1e948-2142-4743-9f10-bc319f7adcde.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-01"
+    },
+    "cyclops-smash": {
+      "file": "cyclops-smash.webp",
+      "bytes": 40512,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/660fbcc5-ea28-475b-9284-169426885966.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-01"
+    },
+    "diamond-cascade": {
+      "file": "diamond-cascade.webp",
+      "bytes": 65238,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/f3b265cf-26b9-47bb-9578-ed0806b0b142.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-01"
+    },
+    "ding-dong-christmas-bells": {
+      "file": "ding-dong-christmas-bells.webp",
+      "bytes": 66256,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/0e512f13-48b2-45d4-9fbe-29ad290b0aa0.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-01"
+    },
+    "forge-of-olympus": {
+      "file": "forge-of-olympus.webp",
+      "bytes": 53474,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/54acfc97-c9da-4f03-b635-62e6c5bef7e5.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-01"
+    },
+    "fortunes-of-aztec": {
+      "file": "fortunes-of-aztec.webp",
+      "bytes": 49244,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/483fae26-bef2-4d05-9c5e-335bff05e289.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-01"
+    },
+    "frozen-tropics": {
+      "file": "frozen-tropics.webp",
+      "bytes": 51562,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/c90d406f-686a-49b2-b76e-498f2d3edfa4.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-01"
+    },
+    "gears-of-horus": {
+      "file": "gears-of-horus.webp",
+      "bytes": 84270,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/65ea0a0b-4224-4831-818a-dc5bbefba243.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-01"
+    },
+    "gold-oasis": {
+      "file": "gold-oasis.webp",
+      "bytes": 49644,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/14385f48-cc40-4bc9-b1e8-644d563b0fe4.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-01"
+    },
+    "gravity-bonanza": {
+      "file": "gravity-bonanza.webp",
+      "bytes": 37968,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/91dfed58-c64b-4c3e-adc5-560ff0d4b917.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-01"
+    },
+    "heist-for-the-golden-nuggets": {
+      "file": "heist-for-the-golden-nuggets.webp",
+      "bytes": 59878,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/17cbd42b-c5fb-4237-be03-c54cf717c7df.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-01"
+    },
+    "hellvis-wild": {
+      "file": "hellvis-wild.webp",
+      "bytes": 52958,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/99a67b65-f8db-4a57-90fe-53d3fdbf7c27.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-01"
+    },
+    "mighty-munching-melons": {
+      "file": "mighty-munching-melons.webp",
+      "bytes": 84308,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/e1299ffa-2c96-4258-a1bf-1b0a9c1fb66b.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-01"
+    },
+    "mustang-trail": {
+      "file": "mustang-trail.webp",
+      "bytes": 51538,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/b986b45e-ab3a-4da0-9f9a-862d006cc1eb.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-01"
+    },
+    "nile-fortune": {
+      "file": "nile-fortune.webp",
+      "bytes": 48014,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/ab067540-55e1-41a8-aed8-0583df047bea.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-01"
+    },
+    "peak-power": {
+      "file": "peak-power.webp",
+      "bytes": 60256,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/37b1b402-37be-45aa-afe9-0e85626491f1.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-01"
+    },
+    "piggy-bankers": {
+      "file": "piggy-bankers.webp",
+      "bytes": 73760,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/3cddebd2-5f75-4c61-a49c-2129abaf15f9.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-01"
+    },
+    "pot-of-fortune": {
+      "file": "pot-of-fortune.webp",
+      "bytes": 52064,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/030279f6-62ef-47db-9daa-4fda0daba893.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-01"
+    },
+    "power-of-merlin-megaways": {
+      "file": "power-of-merlin-megaways.webp",
+      "bytes": 64810,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/6cf2950f-a27c-452a-986f-7b23227bb169.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-01"
+    },
+    "pub-kings": {
+      "file": "pub-kings.webp",
+      "bytes": 66848,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/c340b4d9-d5a5-4630-b238-4df066d69175.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-01"
+    },
+    "rainbow-reels": {
+      "file": "rainbow-reels.webp",
+      "bytes": 65488,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/054907ff-3f3b-4a11-9dde-6585dd3b5f4c.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-01"
+    },
+    "red-hot-luck": {
+      "file": "red-hot-luck.webp",
+      "bytes": 46836,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/98b64296-16fc-4cde-b991-6f6453007974.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-01"
+    },
+    "rocket-blast-megaways": {
+      "file": "rocket-blast-megaways.webp",
+      "bytes": 59330,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/54e06436-5406-4be8-a7d1-0931031c8426.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-01"
+    },
+    "spellbinding-mystery": {
+      "file": "spellbinding-mystery.webp",
+      "bytes": 48518,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/0fe766b6-bf14-4790-9e86-2165399d2190.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-01"
+    },
+    "starlight-princess-1000": {
+      "file": "starlight-princess-1000.webp",
+      "bytes": 51664,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/df3e0d60-d865-405f-bcc2-8c8de37251a5.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-01"
+    },
+    "strawberry-cocktail": {
+      "file": "strawberry-cocktail.webp",
+      "bytes": 41992,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/84d2b778-dee5-4e4b-b487-e4c84b4097cc.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-01"
+    },
+    "the-money-men-megaways": {
+      "file": "the-money-men-megaways.webp",
+      "bytes": 87528,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/47468000-5a45-4eda-80a0-873b51d59b04.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-01"
+    },
+    "timber-stacks": {
+      "file": "timber-stacks.webp",
+      "bytes": 53234,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/ffda9248-1c85-4a13-a1b2-bd541cd300df.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-01"
+    },
+    "trees-of-treasure": {
+      "file": "trees-of-treasure.webp",
+      "bytes": 77632,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/06a4c946-e033-437e-a106-66a2a9a7e1d4.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-01"
+    },
+    "twilight-princess": {
+      "file": "twilight-princess.webp",
+      "bytes": 35738,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/0bfdfca5-bb4c-42c9-8659-e14f21e199f4.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-01"
+    },
+    "viking-forge": {
+      "file": "viking-forge.webp",
+      "bytes": 43480,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/9da98b7a-e1b3-4039-8b32-3a7d8dbcb2d9.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-01"
+    },
+    "year-of-the-dragon-king": {
+      "file": "year-of-the-dragon-king.webp",
+      "bytes": 86736,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/71a50051-d922-4782-bb82-7e8169a24782.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-01"
     }
   },
   "heldPendingRights": {
+    "24k-dragon": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/24k-dragon.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "24k Dragon"
+    },
+    "5x-magic": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/5x-magic.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "5x Magic"
+    },
+    "7-sins": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/7-sins.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "7 Sins"
+    },
     "888-gold": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/pragmatic/888-gold.jpg",
       "sourceHost": "cdn-cms.razed.com",
       "provider": "Pragmatic Play",
       "name": "888 Gold"
+    },
+    "ace-of-spades": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/ace-of-spades.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Ace of Spades"
+    },
+    "agent-of-hearts": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/agent-of-hearts.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Agent of Hearts"
     },
     "aiko-and-the-wind-spirit": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/aiko-and-the-wind-spirit.jpg",
@@ -5584,11 +8836,41 @@
       "provider": "Hacksaw Gaming",
       "name": "Alpha Eagle"
     },
+    "aztec-idols": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/aztec-idols.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Aztec Idols"
+    },
+    "aztec-warrior-princess": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/aztec-warrior-princess.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Aztec Warrior Princess"
+    },
+    "banana-rock": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/banana-rock.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Banana Rock"
+    },
     "bash-bros": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/bash-bros.jpg",
       "sourceHost": "cdn-cms.razed.com",
       "provider": "Hacksaw Gaming",
       "name": "Bash Bros"
+    },
+    "battle-royal": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/battle-royal.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Battle Royal"
+    },
+    "big-win-cat": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/big-win-cat.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Big Win Cat"
     },
     "bigger-barn-house-bonanza": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/pragmatic-play/bigger-barn-house-bonanza.jpg",
@@ -5620,6 +8902,12 @@
       "provider": "Pragmatic Play",
       "name": "Bounty Hunter"
     },
+    "bugs-party": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/bugs-party.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Bugs Party"
+    },
     "bullets-and-bounty": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/bullets-and-bounty.jpg",
       "sourceHost": "cdn-cms.razed.com",
@@ -5632,17 +8920,65 @@
       "provider": "Pragmatic Play",
       "name": "Captain Kraken Megaways"
     },
+    "cash-vandal": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/cash-vandal.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Cash Vandal"
+    },
+    "cats-and-cash": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/cats-and-cash.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Cats and Cash"
+    },
     "chilli-heat-spicy-spins": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/pragmatic-play/chilli-heat-spicy-spins.jpg",
       "sourceHost": "cdn-cms.razed.com",
       "provider": "Pragmatic Play",
       "name": "Chilli Heat Spicy Spins"
     },
+    "chinese-new-year": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/chinese-new-year.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Chinese New Year"
+    },
+    "cloud-quest": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/cloud-quest.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Cloud Quest"
+    },
+    "contact": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/contact.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Contact"
+    },
+    "cops-n-robbers": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/cops-n-robber.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Cops'n'Robbers"
+    },
+    "crazy-cows": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/crazy-cows.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Crazy Cows"
+    },
     "crypto-crown-10": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/hub88/avatarux/avx-cryptocrown10.jpg",
       "sourceHost": "cdn-cms.razed.com",
       "provider": "AvatarUX",
       "name": "Crypto Crown 10"
+    },
+    "crystal-sun": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/crystal-sun.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Crystal Sun"
     },
     "cursed-seas": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/cursed-seas.jpg",
@@ -5656,11 +8992,29 @@
       "provider": "Hacksaw Gaming",
       "name": "Dawn of Kings"
     },
+    "deuces-wild-mh": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/vertexst8/png/png-deuces-wild-mh.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Deuces Wild MH"
+    },
     "double-rainbow": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/double-rainbow.jpg",
       "sourceHost": "cdn-cms.razed.com",
       "provider": "Hacksaw Gaming",
       "name": "Double Rainbow"
+    },
+    "dragon-maiden": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/dragon-maiden.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Dragon Maiden"
+    },
+    "dragon-ship": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/dragon-ship.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Dragon Ship"
     },
     "dynasty-of-death": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/neutron/hacksaw/dynasty-of-death.jpg",
@@ -5668,11 +9022,35 @@
       "provider": "Hacksaw Gaming",
       "name": "Dynasty of Death"
     },
+    "easter-eggs": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/easter-eggs.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Easter Eggs"
+    },
+    "enchanted-crystals": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/enchanted-crystals.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Enchanted Crystals"
+    },
+    "enchanted-meadow": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/enchanted-meadow.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Enchanted Meadow"
+    },
     "epic-bullets-and-bounty": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/epic-bullets-and-bounty.jpg",
       "sourceHost": "cdn-cms.razed.com",
       "provider": "Hacksaw Gaming",
       "name": "Epic Bullets and Bounty"
+    },
+    "eye-of-the-kraken": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/eye-of-the-kraken.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Eye of the Kraken"
     },
     "eye-of-the-panda": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/eye-of-the-panda.jpg",
@@ -5686,11 +9064,23 @@
       "provider": "Hacksaw Gaming",
       "name": "Feel the Beat"
     },
+    "fire-joker": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/fire-joker.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Fire Joker"
+    },
     "fire-my-laser": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/neutron/hacksaw-neutron-f/fire-my-laser.jpg",
       "sourceHost": "cdn-cms.razed.com",
       "provider": "Hacksaw Gaming",
       "name": "Fire my Laser"
+    },
+    "flying-pigs": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/flying-pigs.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Flying Pigs"
     },
     "forest-fortune": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/forest-fortune.jpg",
@@ -5698,11 +9088,41 @@
       "provider": "Hacksaw Gaming",
       "name": "Forest Fortune"
     },
+    "fortune-teller": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/fortune-teller.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Fortune Teller"
+    },
+    "free-reelin-joker": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/free-reelin-joker.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Free Reelin' Joker"
+    },
     "fruit-duel": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/fruit-duel.jpg",
       "sourceHost": "cdn-cms.razed.com",
       "provider": "Hacksaw Gaming",
       "name": "Fruit Duel"
+    },
+    "fu-er-dai": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/fu-er-dai.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "FU ER DAI"
+    },
+    "gemix": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/gemix.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Gemix"
+    },
+    "gemix-2": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/gemix-2.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Gemix 2"
     },
     "get-the-cheese": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/neutron/hacksaw-neutron-f/get-the-cheese.jpg",
@@ -5710,11 +9130,101 @@
       "provider": "Hacksaw Gaming",
       "name": "Get the CHEESE"
     },
+    "gold-king": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/gold-king.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Gold King"
+    },
+    "gold-trophy-2": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/gold-trophy-2.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Gold Trophy 2"
+    },
+    "golden-caravan": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/golden-caravan.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Golden Caravan"
+    },
+    "golden-colts": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/golden-colts.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Golden Colts"
+    },
+    "golden-legend": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/golden-legend.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Golden Legend"
+    },
+    "golden-ticket": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/golden-ticket.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Golden Ticket"
+    },
+    "grim-muerto": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/grim-muerto.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Grim Muerto"
+    },
+    "happy-halloween": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/happy-halloween.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Happy Halloween"
+    },
+    "holiday-season": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/holiday-season.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Holiday Season"
+    },
     "hounds-of-hell": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/neutron/hacksaw-neutron-f/hounds-of-hell.jpg",
       "sourceHost": "cdn-cms.razed.com",
       "provider": "Hacksaw Gaming",
       "name": "Hounds of Hell"
+    },
+    "house-of-doom": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/house-of-doom.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "House of Doom"
+    },
+    "house-of-doom-2-the-crypt": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/house-of-doom-2-the-crypt.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "House of Doom 2: The Crypt"
+    },
+    "hugo": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/hugo.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Hugo"
+    },
+    "hugo-2": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/hugo-2.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Hugo 2"
+    },
+    "hugo-carts": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/hugo-carts.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Hugo Carts"
+    },
+    "hugo-goal": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/hugo-goal.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Hugo Goal"
     },
     "immortal-desire": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/immortal-desire.jpg",
@@ -5722,11 +9232,47 @@
       "provider": "Hacksaw Gaming",
       "name": "Immortal Desire"
     },
+    "imperial-opera": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/imperial-opera.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Imperial Opera"
+    },
+    "inferno-star": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/inferno-star.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Inferno Star"
+    },
+    "irish-gold": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/irish-gold.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Irish Gold"
+    },
+    "iron-girl": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/iron-girl.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Iron Girl"
+    },
     "itero": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/itero.jpg",
       "sourceHost": "cdn-cms.razed.com",
       "provider": "Hacksaw Gaming",
       "name": "Itero"
+    },
+    "jacks-or-better-mh": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/vertexst8/png/png-jacks-or-better-mh.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Jacks or Better MH"
+    },
+    "jade-magician": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/jade-magician.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Jade Magician"
     },
     "jelly-slice": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/jelly-slice.jpg",
@@ -5734,11 +9280,23 @@
       "provider": "Hacksaw Gaming",
       "name": "Jelly Slice"
     },
+    "jewel-box": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/jewel-box.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Jewel Box"
+    },
     "joker-bombs": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/joker-bombs.jpg",
       "sourceHost": "cdn-cms.razed.com",
       "provider": "Hacksaw Gaming",
       "name": "Joker Bombs"
+    },
+    "jolly-roger": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/jolly-roger.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Jolly Roger"
     },
     "king-carrot": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/king-carrot.jpg",
@@ -5752,17 +9310,41 @@
       "provider": "Hacksaw Gaming",
       "name": "Klowns"
     },
+    "lady-of-fortune": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/lady-of-fortune.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Lady of Fortune"
+    },
+    "leprechaun-goes-egypt": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/leprechaun-goes-egypt.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Leprechaun goes Egypt"
+    },
     "lobster-house": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/pragmatic-play/lobster-house.jpg",
       "sourceHost": "cdn-cms.razed.com",
       "provider": "Pragmatic Play",
       "name": "Lobster House"
     },
+    "lucky-diamonds": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/lucky-diamonds.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Lucky Diamonds"
+    },
     "lucky-panda": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/pragmatic-play/lucky-panda.jpg",
       "sourceHost": "cdn-cms.razed.com",
       "provider": "Pragmatic Play",
       "name": "Lucky Panda"
+    },
+    "mahjong-88": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/mahjong-88.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Mahjong 88"
     },
     "mahjong-wins-super-scatter": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Pragmatic/mahjong-wins-super-scatter.jpg",
@@ -5782,6 +9364,18 @@
       "provider": "Hacksaw Gaming",
       "name": "Marlin Masters Atlantis"
     },
+    "matsuri": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/matsuri.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Matsuri"
+    },
+    "merry-xmas": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/merry-xmas.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Merry Xmas"
+    },
     "mighty-masks": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/mighty-masks.jpg",
       "sourceHost": "cdn-cms.razed.com",
@@ -5794,11 +9388,41 @@
       "provider": "Pragmatic Play",
       "name": "Mr. Null's Wicked Wares"
     },
+    "multifruit-81": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/multifruit-81.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "MULTIFRUIT 81"
+    },
     "munchy-milo": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/neutron/hacksaw-neutron-f/munchy-milo.jpg",
       "sourceHost": "cdn-cms.razed.com",
       "provider": "Hacksaw Gaming",
       "name": "Munchy Milo"
+    },
+    "mystery-joker": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/mystery-joker.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Mystery Joker"
+    },
+    "mystery-joker-6000": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/mystery-joker-6000.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Mystery Joker 6000"
+    },
+    "myth": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/myth.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Myth"
+    },
+    "ninja-fruits": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/ninja-fruits.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Ninja Fruits"
     },
     "olympus-wins": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/pragmatic-play/olympus-wins.jpg",
@@ -5818,11 +9442,53 @@
       "provider": "Hacksaw Gaming",
       "name": "Outlaws Inc"
     },
+    "pearl-lagoon": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/pearl-lagoon.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Pearl Lagoon"
+    },
+    "pearls-of-india": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/pearls-of-india.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Pearls of India"
+    },
+    "perfect-gems": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/perfect-gems.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Perfect Gems"
+    },
+    "phoenix-reborn": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/phoenix-reborn.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Phoenix Reborn"
+    },
+    "photo-safari": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/photo-safari.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Photo Safari"
+    },
     "pig-farm": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/pragmatic-play/pig-farm.jpg",
       "sourceHost": "cdn-cms.razed.com",
       "provider": "Pragmatic Play",
       "name": "Pig Farm"
+    },
+    "pimped": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/pimped.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Pimped"
+    },
+    "planet-fortune": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/planet-fortune.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Planet Fortune"
     },
     "power-of-ten": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/neutron/hacksaw-neutron-f/power-of-ten.jpg",
@@ -5830,11 +9496,47 @@
       "provider": "Hacksaw Gaming",
       "name": "Power of Ten"
     },
+    "prissy-princess": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/prissy-princess.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Prissy Princess"
+    },
+    "prosperity-palace": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/prosperity-palace.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Prosperity Palace"
+    },
     "pug-life": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/pug-life.jpg",
       "sourceHost": "cdn-cms.razed.com",
       "provider": "Hacksaw Gaming",
       "name": "Pug Life"
+    },
+    "rage-to-riches": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/rage-to-riches.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Rage to Riches"
+    },
+    "rich-wilde-and-the-amulet-of-dead": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/rich-wilde-and-the-amulet-of-dead.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Rich Wilde and the Amulet of Dead"
+    },
+    "riches-of-ra": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/riches-of-ra.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Riches of RA"
+    },
+    "rise-of-orpheus": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/rise-of-orpheus.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Rise of Orpheus"
     },
     "rise-of-ymir": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/neutron/hacksaw-neutron-f/rise-of-ymir.jpg",
@@ -5854,11 +9556,65 @@
       "provider": "Pragmatic Play",
       "name": "Rolling in Treasures"
     },
+    "royal-masquerade": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/royal-masquerade.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Royal Masquerade"
+    },
+    "sabaton": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/sabaton.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Sabaton"
+    },
+    "sails-of-gold": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/sails-of-gold.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Sails of Gold"
+    },
+    "samba-carnival": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/samba-carnival.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Samba Carnival"
+    },
+    "sea-hunter": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/sea-hunter.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Sea Hunter"
+    },
+    "sizzling-spins": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/sizzling-spins.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Sizzling Spins"
+    },
     "snow-slingers": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/neutron/hacksaw-neutron-f/snow-slingers.jpg",
       "sourceHost": "cdn-cms.razed.com",
       "provider": "Hacksaw Gaming",
       "name": "Snow Slingers"
+    },
+    "space-race": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/space-race.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Space Race"
+    },
+    "spin-party": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/spin-party.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Spin Party"
+    },
+    "star-joker": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/star-joker.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Star Joker"
     },
     "stormborn": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/stormborn.jpg",
@@ -5866,17 +9622,41 @@
       "provider": "Hacksaw Gaming",
       "name": "Stormborn"
     },
+    "street-magic": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/street-magic.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Street Magic"
+    },
     "strength-of-hercules": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/neutron/hacksaw-neutron-f/strength-of-hercules.jpg",
       "sourceHost": "cdn-cms.razed.com",
       "provider": "Hacksaw Gaming",
       "name": "Strength of Hercules"
     },
+    "super-flip": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/super-flip.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Super Flip"
+    },
+    "super-wheel": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/super-wheel.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Super Wheel"
+    },
     "superstar-sevens": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/superstar-sevens.jpg",
       "sourceHost": "cdn-cms.razed.com",
       "provider": "Hacksaw Gaming",
       "name": "Superstar Sevens"
+    },
+    "sweet-27": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/sweet-27.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Sweet 27"
     },
     "tales-of-egypt": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/pragmatic/tales-of-egypt.jpg",
@@ -5889,6 +9669,12 @@
       "sourceHost": "cdn-cms.razed.com",
       "provider": "Pragmatic Play",
       "name": "Temujin Treasures"
+    },
+    "the-big-dawgs": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/pragmatic-play/the-big-dawgs.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Pragmatic Play",
+      "name": "The Big Dawgs"
     },
     "the-bowery-boys": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/the-bowery-boys.jpg",
@@ -5908,11 +9694,41 @@
       "provider": "Hacksaw Gaming",
       "name": "The Luxe"
     },
+    "the-shimmering-woods": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/vertexst8/png/png-the-shimmering-woods.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "The Shimmering Woods"
+    },
+    "the-wild-class": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/the-wild-class.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "The Wild Class"
+    },
     "time-spinners": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/time-spinners.jpg",
       "sourceHost": "cdn-cms.razed.com",
       "provider": "Hacksaw Gaming",
       "name": "Time Spinners"
+    },
+    "tower-quest": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/tower-quest.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Tower Quest"
+    },
+    "treats-of-terror-ii": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/treats-of-terror-ii.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Treats of Terror II"
+    },
+    "troll-hunters": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/troll-hunters.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Troll Hunters"
     },
     "twisted-lab": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/twisted-lab.jpg",
@@ -5920,11 +9736,35 @@
       "provider": "Hacksaw Gaming",
       "name": "Twisted Lab"
     },
+    "viking-runecraft": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/viking-runecraft.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Viking Runecraft"
+    },
     "warrior-ways": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/warrior-ways.jpg",
       "sourceHost": "cdn-cms.razed.com",
       "provider": "Hacksaw Gaming",
       "name": "Warrior Ways"
+    },
+    "wild-blood": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/wild-blood.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Wild Blood"
+    },
+    "wild-falls": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/wild-falls.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Wild Falls"
+    },
+    "wild-melon": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/wild-melon.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Wild Melon"
     },
     "wild-wildebeest-wins": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Pragmatic-Play/wild-wildebeest-wins.jpg",
@@ -5937,6 +9777,18 @@
       "sourceHost": "cdn-cms.razed.com",
       "provider": "Hacksaw Gaming",
       "name": "Wishbringer"
+    },
+    "wizard-of-gems": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/wizard-of-gems.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Wizard of Gems"
+    },
+    "xmas-joker": {
+      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/xmas-joker.jpg",
+      "sourceHost": "cdn-cms.razed.com",
+      "provider": "Play'n GO",
+      "name": "Xmas Joker"
     },
     "xpander": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Hacksaw-Gaming/xpander.jpg",
