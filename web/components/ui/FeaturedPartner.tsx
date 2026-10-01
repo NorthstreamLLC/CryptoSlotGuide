@@ -2,7 +2,7 @@ import Link from "next/link";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { siteData } from "@/lib/site-data";
 import { getSpecFact } from "@/lib/spec-sheet";
-import { accessIn } from "@/lib/legal";
+import { accessIn, countryBy } from "@/lib/legal";
 import { brandFor } from "@/lib/casino-facts";
 import coinsBy from "@/data/coinsBy.json";
 import { payoutView } from "@/lib/payout";
@@ -127,6 +127,14 @@ export function FeaturedPartner({
   // Rule 1, before anything else is computed.
   if (state) return null;
   if (country && accessIn(o.slug, country) === "restricted") return null;
+  /**
+   * And where the country itself bans online casinos, whatever the operator's
+   * own terms say. The gate above only asked whether the operator would take
+   * you, which is a different question: Roobet does not restrict India, so a
+   * "Visit Roobet" button was sitting on a page that opens by saying online
+   * casinos are not legal in India. Nine countries are in that position.
+   */
+  if (country && /not legal|banned|prohibit/i.test(countryBy(country)?.onlineCasino ?? "")) return null;
 
   const raw = pitchFor(o.slug, context) ?? defaultPitch(o);
   if (!raw) return null;

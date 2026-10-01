@@ -67,10 +67,15 @@ export default async function Page({ params }: { params: Promise<{ country: stri
       <LandingShell
         crumbs={[{ label: "Home", href: "/" }, { label: "Crypto casinos", href: "/crypto-casinos" }, { label: c.name }]}
         eyebrow={`Crypto casinos · ${c.name}`}
-        title={`Best crypto casinos in ${c.name}`}
+        title={banned ? `Online casinos and ${c.name}: what the law says` : `Best crypto casinos in ${c.name}`}
         intro={
           <>
-            {mostlyShut ? (
+            {banned ? (
+              <>
+                <strong style={{ color: "#fff" }}>Online casinos are not legal in {c.name}.</strong> {restricted > 0 ? `${restricted} of the ${total} operators we track name ${c.name} on their own restricted lists; the rest simply do not mention it. ` : ""}
+                Neither fact makes playing lawful where you are, so this page sets out the law rather than listing places to play.{" "}
+              </>
+            ) : mostlyShut ? (
               <>
                 <strong style={{ color: "#fff" }}>
                   {restricted} of the {total} crypto casinos we track name {c.name} on their own restricted list.
@@ -87,7 +92,11 @@ export default async function Page({ params }: { params: Promise<{ country: stri
             <Link href={`/legal/${country}`} style={{ color: "#5FE3E8" }}>What {c.name}&apos;s gambling law says →</Link>
           </>
         }
-        chips={[
+        chips={banned ? [
+          "Online casinos not legal here",
+          ...(c.regulator?.name ? [`Regulator: ${c.regulator.name}`] : []),
+          ...(c.minAge ? [`Minimum age ${c.minAge}`] : []),
+        ] : [
           `${accepts.length} accept ${c.name} player${accepts.length === 1 ? "" : "s"}`,
           ...(restricted > 0 ? [`${restricted} refuse`] : []),
           ...(c.minAge ? [`Minimum age ${c.minAge}`] : []),
@@ -99,12 +108,12 @@ export default async function Page({ params }: { params: Promise<{ country: stri
             regulator, who publishes who IS licensed there. Saying so costs a
             click and is the honest answer; the alternative is a page that
             tells a reader they are shut out and stops. */}
-        {banned && accepts.length > 0 && (
+        {banned && (
           <div style={{ margin: "0 0 18px", padding: "14px 16px", borderRadius: 14, background: "rgba(196,101,58,.08)", border: "1px solid rgba(196,101,58,.3)" }}>
             <p style={{ margin: 0, fontSize: 14.5, lineHeight: 1.6, color: "#E8DCD6" }}>
-              <strong style={{ color: "#fff" }}>Online casinos are not legal in {c.name}.</strong> The {accepts.length} below do not name {c.name} on
-              their restricted lists, which means their terms will not turn you away — it does not mean playing is lawful where you are, and it is not
-              advice to. The law is{" "}
+              <strong style={{ color: "#fff" }}>We do not list operators for {c.name}.</strong> Some of the casinos we track would accept a sign-up from
+              here, because their terms do not name {c.name} — but online casinos are not legal in {c.name}, and putting a list of them in front of you
+              with sign-up links would be promoting something the law here prohibits. The law is{" "}
               <Link href={`/legal/${country}`} style={{ color: "#E0A98C" }}>
                 on the law page
               </Link>
@@ -133,13 +142,13 @@ export default async function Page({ params }: { params: Promise<{ country: stri
             </p>
           </div>
         )}
-        <CasinoOfferList ops={accepts} />
-        {Object.keys(except).length > 0 && (
+        {!banned && <CasinoOfferList ops={accepts} />}
+        {!banned && Object.keys(except).length > 0 && (
           <p style={{ margin: "12px 0 0", fontSize: 13.5, color: "#8DA0AA" }}>
             Regional exceptions: {Object.entries(except).map(([slug, regions]) => `${accepts.find((o) => o.slug === slug)?.name} excludes ${regions.join(", ")}`).join("; ")}.
           </p>
         )}
-        {partial.length > 0 && (
+        {!banned && partial.length > 0 && (
           <>
             <h2 style={{ margin: "36px 0 6px", fontSize: 22, fontWeight: 800, letterSpacing: "-.02em", color: "#fff" }}>Also not restricting {c.name}, but check their terms</h2>
             <p style={{ margin: "0 0 14px", fontSize: 14, color: "#8DA0AA" }}>These casinos don&apos;t name {c.name}, but say their restricted list isn&apos;t complete.</p>
