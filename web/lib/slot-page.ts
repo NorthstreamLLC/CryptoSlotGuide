@@ -49,7 +49,11 @@ export interface CatalogueSlotPage extends CatalogueGame {
 
 const DB = catalogue as unknown as Catalogue;
 const ART = (artSources as { art: Record<string, { file?: string }> }).art;
-const OVERRIDES = (rtpOverrides as { overrides: Record<string, { versions: number[]; studio: string; sourceUrl: string }> }).overrides;
+const OVERRIDES = (
+  rtpOverrides as {
+    overrides: Record<string, { versions: number[]; studio: string; sourceUrl: string; versionsFrom?: "studio" | "mixed" }>;
+  }
+).overrides;
 
 /**
  * A title earns a page two ways.
@@ -191,4 +195,64 @@ export function topSlotEntries(): { slug: string; name: string; href: string }[]
     const name = reviews.get(slug) ?? PAGES.get(slug)?.name;
     return name ? { slug, name, href: `/slots/${slug}` } : null;
   }).filter((x): x is { slug: string; name: string; href: string } => !!x);
+}
+
+/**
+ * What the catalogue holds for one studio.
+ *
+ * The provider pages were counting titles off siteData.slots — the 21
+ * hand-written reviews — which gave Play'n GO "1 title" and Pragmatic "5"
+ * while the catalogue held 488 and 688. Worse, it undercounted the thing
+ * those pages exist to show: how many of a studio's titles we can state
+ * every licensed RTP configuration for, from the studio's own figures.
+ *
+ * `withVersions` counts only titles where the studio published the whole set
+ * of returns. Pragmatic's second build comes from the catalogue feed, not
+ * from Pragmatic, so its 417 two-figure titles are `mixedVersions` instead —
+ * calling them builds the studio publishes would be the overclaim this
+ * sourcing work exists to prevent.
+ */
+export function studioCatalogue(studioName: string): {
+  titles: number;
+  sourced: number;
+  withVersions: number;
+  mixedVersions: number;
+  pages: number;
+  topRtp: number | null;
+  widestSpread: number | null;
+} {
+  // The slot index and the catalogue feed disagree on the apostrophe in
+  // "Play'n GO", so match on the letters rather than the character.
+  const key = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, "");
+  const want = key(studioName);
+  const mine = (catalogue as { games: CatalogueGame[] }).games.filter((g) => key(g.provider ?? "") === want);
+
+  let topRtp: number | null = null;
+  let widestSpread: number | null = null;
+  let sourced = 0;
+  let withVersions = 0;
+  let mixedVersions = 0;
+  for (const g of mine) {
+    const o = g.slug ? OVERRIDES[g.slug] : undefined;
+    if (!o?.versions?.length) continue;
+    sourced++;
+    const v = [...new Set(o.versions)].sort((a, b) => b - a);
+    if (v.length > 1) {
+      if (o.versionsFrom === "mixed") mixedVersions++;
+      else withVersions++;
+      const spread = Math.round((v[0] - v[v.length - 1]) * 100) / 100;
+      if (widestSpread === null || spread > widestSpread) widestSpread = spread;
+    }
+    if (topRtp === null || v[0] > topRtp) topRtp = v[0];
+  }
+
+  return {
+    titles: mine.length,
+    sourced,
+    withVersions,
+    mixedVersions,
+    pages: mine.filter((g) => g.slug && PAGES.has(g.slug)).length,
+    topRtp,
+    widestSpread,
+  };
 }

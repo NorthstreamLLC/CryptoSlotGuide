@@ -168,6 +168,8 @@ for (const t of titles.values()) {
   }
   if (versions.length) {
     overrides[slug] = {
+      // Every figure is the studio's own; nothing here comes from the catalogue feed.
+      versionsFrom: "studio",
       versions,
       studio: "Hacksaw Gaming",
       sourceUrl: "https://www.hacksawgaming.com/",

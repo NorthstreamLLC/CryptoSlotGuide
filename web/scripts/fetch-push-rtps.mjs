@@ -101,6 +101,8 @@ for (let i = 0; i < slots.length; i += 4) {
       // can be running.
       if (typeof g.rtp === "number" && !rtps.includes(g.rtp)) changed.push({ name: g.name, feed: g.rtp, push: rtps });
       overrides[g.slug] = {
+        // Every figure is the studio's own; nothing here comes from the catalogue feed.
+        versionsFrom: "studio",
         versions: rtps,
         studio: "Push Gaming",
         sourceUrl: url,

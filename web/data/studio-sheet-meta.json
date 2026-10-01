@@ -3893,7 +3893,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "ghostbooster",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "piggy-heist-bingo": {
       "name": "Piggy Heist Bingo",
@@ -3938,7 +3941,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "GNC"
-      }
+      },
+      "gid": "piggyheistbingo",
+      "maxMultiplier": "4250",
+      "defaultBand": "97"
     },
     "three-pots-of-the-genie": {
       "name": "Three Pots of the Genie",
@@ -3982,7 +3988,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "threepotsofthegenie",
+      "maxMultiplier": "10000",
+      "defaultBand": "94"
     },
     "chunky-carlos-money-mania": {
       "name": "Chunky Carlo's Money Mania",
@@ -4027,7 +4036,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "SFA"
-      }
+      },
+      "gid": "chunkycarlosmoneymania",
+      "maxMultiplier": "25000",
+      "defaultBand": "96"
     },
     "lawn-n-complete-disorder": {
       "name": "Lawn n' Complete Disorder",
@@ -4072,7 +4084,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "lawnncompletedisorder",
+      "maxMultiplier": "19500",
+      "defaultBand": "96"
     },
     "triple-beasts-of-fortune": {
       "name": "Triple Beasts of Fortune",
@@ -4117,7 +4132,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "triplebeastsoffortune",
+      "maxMultiplier": "30000",
+      "defaultBand": "96"
     },
     "infernal-trinity-go-guaranteed": {
       "name": "Infernal Trinity GO Guaranteed",
@@ -4162,7 +4180,9 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "infernaltrinity",
+      "maxMultiplier": "6000"
     },
     "viking-runecraft-1000": {
       "name": "Viking Runecraft 1000",
@@ -4207,7 +4227,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "RFA"
-      }
+      },
+      "gid": "vikingrunecraft1000",
+      "maxMultiplier": "60000",
+      "defaultBand": "96"
     },
     "cursed-moon-power-collection": {
       "name": "Cursed Moon Power Collection",
@@ -4252,7 +4275,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "cursedmoon",
+      "maxMultiplier": "15000",
+      "defaultBand": "96"
     },
     "holy-moo-extreme-power": {
       "name": "Holy Moo! Extreme Power",
@@ -4297,7 +4323,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "holymooep",
+      "maxMultiplier": "4000",
+      "defaultBand": "96"
     },
     "stompin-gold": {
       "name": "Stompin’ Gold",
@@ -4342,7 +4371,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "stompingold",
+      "maxMultiplier": "50000",
+      "defaultBand": "96"
     },
     "reactoonz-blitzways": {
       "name": "Reactoonz Blitzways",
@@ -4387,7 +4419,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "reactoonzblitzways",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "fates-fortune": {
       "name": "Fate's Fortune",
@@ -4432,7 +4467,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "fatesfortune",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "legion-gold-and-the-throne-of-dead": {
       "name": "Legion Gold and the Throne of Dead",
@@ -4477,7 +4515,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "throneofdead",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "crabbys-gold-ii": {
       "name": "Crabby's Gold II",
@@ -4522,7 +4563,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "crabbysgold2",
+      "maxMultiplier": "30000",
+      "defaultBand": "96"
     },
     "triple-launch-fortune-wild": {
       "name": "Triple Launch Fortune Wild",
@@ -4567,7 +4611,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "triplelaunchfortunewild",
+      "maxMultiplier": "8000",
+      "defaultBand": "96"
     },
     "gnawn-gold": {
       "name": "Gnaw'n Gold",
@@ -4612,7 +4659,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "gnawngold",
+      "maxMultiplier": "40000",
+      "defaultBand": "96"
     },
     "shark-feast": {
       "name": "Shark Feast",
@@ -4657,7 +4707,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "sharkfeast",
+      "maxMultiplier": "40000",
+      "defaultBand": "96"
     },
     "primal-rampage": {
       "name": "Primal Rampage",
@@ -4702,7 +4755,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "primalrampage",
+      "maxMultiplier": "2500",
+      "defaultBand": "96"
     },
     "track-n-gold": {
       "name": "Track n' Gold",
@@ -4747,7 +4803,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "RFA"
-      }
+      },
+      "gid": "trackngold",
+      "maxMultiplier": "5500",
+      "defaultBand": "96"
     },
     "grannys-wild": {
       "name": "Granny's Wild",
@@ -4792,7 +4851,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "RFA"
-      }
+      },
+      "gid": "grannyswild",
+      "maxMultiplier": "2800",
+      "defaultBand": "96"
     },
     "treats-of-terror-ii": {
       "name": "Treats of Terror II",
@@ -4837,7 +4899,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "treatsofterrorii",
+      "maxMultiplier": "15000",
+      "defaultBand": "96"
     },
     "manta-mayhem": {
       "name": "Manta Mayhem",
@@ -4882,7 +4947,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "mantamayhem",
+      "maxMultiplier": "9000",
+      "defaultBand": "96"
     },
     "colt-lightning-inferno": {
       "name": "Colt Lightning Inferno",
@@ -4927,7 +4995,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "coltlightninginferno",
+      "maxMultiplier": "50000",
+      "defaultBand": "96"
     },
     "rise-of-olympus-bingo": {
       "name": "Rise of Olympus Bingo",
@@ -4972,7 +5043,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "GNC"
-      }
+      },
+      "gid": "riseofolympusbingo",
+      "maxMultiplier": "4250",
+      "defaultBand": "97"
     },
     "wrappin-gold": {
       "name": "Wrappin' Gold",
@@ -5017,7 +5091,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "wrappingold",
+      "maxMultiplier": "1525",
+      "defaultBand": "96"
     },
     "spice-spice-baby": {
       "name": "Spice Spice Baby!",
@@ -5062,7 +5139,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "spicespicebaby",
+      "maxMultiplier": "6000",
+      "defaultBand": "96"
     },
     "legion-gold-reckoning": {
       "name": "Legion Gold Reckoning",
@@ -5107,7 +5187,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "legiongoldreckoning",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "nugget-n-nonsense": {
       "name": "Nugget n’ Nonsense",
@@ -5152,7 +5235,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "nuggetnnonsense",
+      "maxMultiplier": "50000",
+      "defaultBand": "96"
     },
     "valhalluck": {
       "name": "ValhalLuck",
@@ -5196,7 +5282,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "RFA"
-      }
+      },
+      "gid": "valhalluck",
+      "maxMultiplier": "3000",
+      "defaultBand": "96"
     },
     "honey-rush-black-and-yellow": {
       "name": "Honey Rush Black and Yellow",
@@ -5241,7 +5330,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "honeyrushblackandyellow",
+      "maxMultiplier": "20000",
+      "defaultBand": "96"
     },
     "tomb-of-gold-reimagined": {
       "name": "Tomb of Gold Reimagined",
@@ -5286,7 +5378,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "tombofgoldreimagined",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "hope-unleashed-fortune-rises": {
       "name": "Hope Unleashed Fortune Rises",
@@ -5331,7 +5426,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "hopeunleashed",
+      "maxMultiplier": "1234",
+      "defaultBand": "96"
     },
     "wheel-of-mictlan": {
       "name": "Wheel of Mictlan",
@@ -5376,7 +5474,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "wheelofmictlan",
+      "maxMultiplier": "40000",
+      "defaultBand": "96"
     },
     "wild-north-radiant-skies-go-collect": {
       "name": "Wild North Radiant Skies GO Collect",
@@ -5421,7 +5522,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "wildnorthradiantskies",
+      "maxMultiplier": "2000",
+      "defaultBand": "96"
     },
     "mega-don-triple-threat": {
       "name": "Mega Don Triple Threat",
@@ -5466,7 +5570,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "megadontriplethreat",
+      "maxMultiplier": "25000",
+      "defaultBand": "96"
     },
     "book-of-dead-go-collect": {
       "name": "Book of Dead GO Collect",
@@ -5511,7 +5618,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "bookofdeadgc",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "sails-of-riches": {
       "name": "Sails of Riches",
@@ -5556,7 +5666,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "RFA"
-      }
+      },
+      "gid": "sailsofriches",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "rise-of-olympus-1000": {
       "name": "Rise of Olympus 1000",
@@ -5601,7 +5714,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "riseofolympus1000",
+      "maxMultiplier": "60000",
+      "defaultBand": "96"
     },
     "piggy-blitz-casino-gold": {
       "name": "Piggy Blitz Casino Gold",
@@ -5646,7 +5762,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "piggyblitzcasinogold",
+      "maxMultiplier": "8000",
+      "defaultBand": "96"
     },
     "barn-busters": {
       "name": "Barn Busters",
@@ -5691,7 +5810,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "barnbusters",
+      "maxMultiplier": "7500",
+      "defaultBand": "96"
     },
     "legacy-of-undead-dragon-abyssways": {
       "name": "Legacy of Undead Dragon ABYSSWAYS",
@@ -5736,7 +5858,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "legacyofundeaddragon",
+      "maxMultiplier": "20000",
+      "defaultBand": "96"
     },
     "playn-go-mole-digger": {
       "name": "Play'n GO Mole Digger",
@@ -5781,7 +5906,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "moledigger",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "tome-of-madness-bingo": {
       "name": "Tome of Madness Bingo",
@@ -5826,7 +5954,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "GNC"
-      }
+      },
+      "gid": "tomeofmadnessbingo",
+      "maxMultiplier": "4250",
+      "defaultBand": "97"
     },
     "piggy-heist": {
       "name": "Piggy Heist",
@@ -5871,7 +6002,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "piggyheist",
+      "maxMultiplier": "70000",
+      "defaultBand": "96"
     },
     "buildin-more-bucks": {
       "name": "Buildin' More Bucks",
@@ -5916,7 +6050,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "buildinmorebucks",
+      "maxMultiplier": "7500",
+      "defaultBand": "96"
     },
     "ras-reckoning": {
       "name": "Ra's Reckoning",
@@ -5961,7 +6098,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "rasreckoning",
+      "maxMultiplier": "50000",
+      "defaultBand": "96"
     },
     "banana-rush": {
       "name": "Banana Rush",
@@ -6006,7 +6146,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "RFA"
-      }
+      },
+      "gid": "bananarush",
+      "maxMultiplier": "3000",
+      "defaultBand": "96"
     },
     "stadium-of-riches": {
       "name": "Stadium of Riches",
@@ -6051,7 +6194,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "stadiumofriches",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "rings-of-prosperity": {
       "name": "Rings of Prosperity",
@@ -6096,7 +6242,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "ringsofprosperity",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "lawn-n-disorder": {
       "name": "Lawn n' Disorder",
@@ -6141,7 +6290,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "lawnndisorder",
+      "maxMultiplier": "50000",
+      "defaultBand": "96"
     },
     "static-nightmare-abyssways": {
       "name": "Static Nightmare ABYSSWAYS",
@@ -6186,7 +6338,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "RFA"
-      }
+      },
+      "gid": "staticnightmare",
+      "maxMultiplier": "30000",
+      "defaultBand": "96"
     },
     "divina-commedia-i-nove-cerchi": {
       "name": "Divina Commedia I Nove Cerchi",
@@ -6231,7 +6386,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "RFA"
-      }
+      },
+      "gid": "divinacommedia",
+      "maxMultiplier": "3000",
+      "defaultBand": "96"
     },
     "reactoonz-100": {
       "name": "Reactoonz 100",
@@ -6276,7 +6434,10 @@
         "UAE": "Yes",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "reactoonz100",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "bubblin-riches": {
       "name": "Bubblin' Riches",
@@ -6321,7 +6482,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "bubblinriches",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "fate-of-dead-blitzways": {
       "name": "Fate of Dead Blitzways",
@@ -6366,7 +6530,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "RFA"
-      }
+      },
+      "gid": "fateofdeadblitzways",
+      "maxMultiplier": "20000",
+      "defaultBand": "96"
     },
     "bullion-xpress": {
       "name": "Bullion Xpress",
@@ -6411,7 +6578,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "RFA"
-      }
+      },
+      "gid": "bullionxpress",
+      "maxMultiplier": "6000",
+      "defaultBand": "96"
     },
     "lab-of-madness-its-a-wild": {
       "name": "Lab of Madness It's A-Wild!",
@@ -6456,7 +6626,10 @@
         "UAE": "Yes",
         "UK": "Yes",
         "West Virginia": "RFA"
-      }
+      },
+      "gid": "labofmadness",
+      "maxMultiplier": "8000",
+      "defaultBand": "96"
     },
     "rosy-orbit-treasure-turn": {
       "name": "Rosy Orbit Treasure Turn",
@@ -6501,7 +6674,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "RFA"
-      }
+      },
+      "gid": "rosyorbit",
+      "maxMultiplier": "6000",
+      "defaultBand": "96"
     },
     "rise-of-olympus-extreme": {
       "name": "Rise of Olympus Extreme",
@@ -6546,7 +6722,10 @@
         "UAE": "Yes",
         "UK": "Yes",
         "West Virginia": "RFA"
-      }
+      },
+      "gid": "riseofolympusextreme",
+      "maxMultiplier": "50000",
+      "defaultBand": "96"
     },
     "fire-toad-2": {
       "name": "Fire Toad 2",
@@ -6591,7 +6770,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "RFA"
-      }
+      },
+      "gid": "firetoad2",
+      "maxMultiplier": "5300",
+      "defaultBand": "96"
     },
     "fire-joker-blitz": {
       "name": "Fire Joker Blitz",
@@ -6636,7 +6818,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "RFA"
-      }
+      },
+      "gid": "firejokerblitz",
+      "maxMultiplier": "6000",
+      "defaultBand": "96"
     },
     "spinnin-records-raving-reels": {
       "name": "Spinnin' Records: Raving Reels",
@@ -6681,7 +6866,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "ravingreels",
+      "maxMultiplier": "3000",
+      "defaultBand": "96"
     },
     "13th-trial-hercules-abyssways": {
       "name": "13th Trial Hercules Abyssways",
@@ -6726,7 +6914,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "RFA"
-      }
+      },
+      "gid": "herculesabyssways",
+      "maxMultiplier": "60000",
+      "defaultBand": "96"
     },
     "lady-of-fortune-destiny-spins": {
       "name": "Lady of Fortune Destiny Spins",
@@ -6771,7 +6962,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "RFA"
-      }
+      },
+      "gid": "lofdestinyspins",
+      "maxMultiplier": "1950",
+      "defaultBand": "96"
     },
     "super-flip-deluxe": {
       "name": "Super Flip Deluxe",
@@ -6816,7 +7010,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "superflipdeluxe",
+      "maxMultiplier": "1200",
+      "defaultBand": "96"
     },
     "the-green-knight-oath-of-thorns": {
       "name": "The Green Knight Oath of Thorns",
@@ -6861,7 +7058,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "oathofthorns",
+      "maxMultiplier": "14000",
+      "defaultBand": "96"
     },
     "cashin-joker": {
       "name": "Cashin' Joker",
@@ -6906,7 +7106,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "cashinjoker",
+      "maxMultiplier": "10888",
+      "defaultBand": "96"
     },
     "rise-of-orpheus": {
       "name": "Rise of Orpheus",
@@ -6951,7 +7154,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "RFA"
-      }
+      },
+      "gid": "riseoforpheus",
+      "maxMultiplier": "3000",
+      "defaultBand": "96"
     },
     "moon-princess-stargazing": {
       "name": "Moon Princess Stargazing",
@@ -6996,7 +7202,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "moonprincessstargazing",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "tomb-of-gold-ii": {
       "name": "Tomb of Gold II",
@@ -7041,7 +7250,10 @@
         "UAE": "Yes",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "tombofgold2",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "big-win-cat-pawsperity": {
       "name": "Big Win Cat Pawsperity",
@@ -7086,7 +7298,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "bigwincatpawsperity",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "viper-city-heist": {
       "name": "Viper City Heist",
@@ -7131,7 +7346,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "vipercityheist",
+      "maxMultiplier": "15000",
+      "defaultBand": "96"
     },
     "king-of-sweets": {
       "name": "King of Sweets",
@@ -7176,7 +7394,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "kingofsweets",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "city-of-sound": {
       "name": "City of Sound",
@@ -7221,7 +7442,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "cityofsound",
+      "maxMultiplier": "4000",
+      "defaultBand": "96"
     },
     "fire-joker-100": {
       "name": "Fire Joker 100",
@@ -7266,7 +7490,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "firejoker100",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "treats-of-terror": {
       "name": "Treats of Terror",
@@ -7311,7 +7538,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "treatsofterror",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "boat-bonanza-croconile": {
       "name": "Boat Bonanza CrocoNile!",
@@ -7356,7 +7586,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "bonanzacroconile",
+      "maxMultiplier": "6000",
+      "defaultBand": "96"
     },
     "rich-wilde-and-the-tome-of-dead": {
       "name": "Rich Wilde and the Tome of Dead",
@@ -7401,7 +7634,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "tomeofdead",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "moon-princess-origins": {
       "name": "Moon Princess Origins",
@@ -7446,7 +7682,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "moonprincessorigins",
+      "maxMultiplier": "20000",
+      "defaultBand": "96"
     },
     "1001-mystery-genie-fortunes": {
       "name": "1001 Mystery Genie Fortunes",
@@ -7491,7 +7730,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "RFA"
-      }
+      },
+      "gid": "geniefortunes",
+      "maxMultiplier": "1234",
+      "defaultBand": "96"
     },
     "spinnin-records-into-the-beat": {
       "name": "Spinnin' Records Into the Beat",
@@ -7536,7 +7778,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "spinninrecordsintothebeat",
+      "maxMultiplier": "4000",
+      "defaultBand": "96"
     },
     "mystery-egg-surprise": {
       "name": "Mystery Egg Surprise",
@@ -7581,7 +7826,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "mysteryeggsurprise",
+      "maxMultiplier": "6480",
+      "defaultBand": "96"
     },
     "trinity-impact": {
       "name": "Trinity Impact",
@@ -7626,7 +7874,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "trinityimpact",
+      "maxMultiplier": "1600",
+      "defaultBand": "96"
     },
     "legion-gold-victory": {
       "name": "Legion Gold Victory!",
@@ -7671,7 +7922,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "legiongoldvictory",
+      "maxMultiplier": "4000",
+      "defaultBand": "96"
     },
     "crystal-hall": {
       "name": "Crystal Hall",
@@ -7716,7 +7970,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "crystalhall",
+      "maxMultiplier": "50000",
+      "defaultBand": "96"
     },
     "invading-vegas-revenge-on-mars": {
       "name": "Invading Vegas Revenge on Mars",
@@ -7761,7 +8018,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "RFA"
-      }
+      },
+      "gid": "revengeonmars",
+      "maxMultiplier": "2500",
+      "defaultBand": "96"
     },
     "potion-of-madness": {
       "name": "Potion of Madness",
@@ -7806,7 +8066,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "RFA"
-      }
+      },
+      "gid": "potionofmadness",
+      "maxMultiplier": "6000",
+      "defaultBand": "96"
     },
     "legacy-of-gems-blitzways": {
       "name": "Legacy of Gems Blitzways",
@@ -7851,7 +8114,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "RFA"
-      }
+      },
+      "gid": "legacyofgemsblitzways",
+      "maxMultiplier": "20000",
+      "defaultBand": "96"
     },
     "tower-quest-legacy": {
       "name": "Tower Quest Legacy",
@@ -7896,7 +8162,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "towerquestlegacy",
+      "maxMultiplier": "1500",
+      "defaultBand": "96"
     },
     "treasures-of-kongar": {
       "name": "Treasures of Kongar",
@@ -7941,7 +8210,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "treasuresofkongar",
+      "maxMultiplier": "15000",
+      "defaultBand": "96"
     },
     "midnight-gold": {
       "name": "Midnight Gold",
@@ -7986,7 +8258,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "midnightgold",
+      "maxMultiplier": "20000",
+      "defaultBand": "96"
     },
     "jolly-roger-wild-kraken": {
       "name": "Jolly Roger Wild Kraken",
@@ -8031,7 +8306,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "jollyrogerwildkraken",
+      "maxMultiplier": "20000",
+      "defaultBand": "96"
     },
     "hot-dog-heist": {
       "name": "Hot Dog Heist",
@@ -8076,7 +8354,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "hotdogheist",
+      "maxMultiplier": "2500",
+      "defaultBand": "96"
     },
     "lion-saga-odyssey": {
       "name": "Lion Saga Odyssey",
@@ -8121,7 +8402,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "RFA"
-      }
+      },
+      "gid": "lionsagaodyssey",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "wildest-gambit": {
       "name": "Wildest Gambit",
@@ -8166,7 +8450,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "wildestgambit",
+      "maxMultiplier": "20000",
+      "defaultBand": "96"
     },
     "boat-bonanza-christmas": {
       "name": "Boat Bonanza Christmas",
@@ -8211,7 +8498,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "xmasboatbonanza",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "rich-wilde-and-the-pearls-of-vishnu": {
       "name": "Rich Wilde and the Pearls of Vishnu",
@@ -8256,7 +8546,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "pearlsofvishnu",
+      "maxMultiplier": "2000",
+      "defaultBand": "96"
     },
     "piggy-blitz-disco-gold": {
       "name": "Piggy Blitz Disco Gold",
@@ -8301,7 +8594,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "discogold",
+      "maxMultiplier": "6000",
+      "defaultBand": "96"
     },
     "legion-gold-and-the-sphinx-of-dead": {
       "name": "Legion Gold and the Sphinx of Dead",
@@ -8346,7 +8642,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "sphinxofdead",
+      "maxMultiplier": "3000",
+      "defaultBand": "96"
     },
     "beasts-of-fire-maximum": {
       "name": "Beasts of Fire Maximum",
@@ -8391,7 +8690,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "beastsoffiremaximum",
+      "maxMultiplier": "50000",
+      "defaultBand": "96"
     },
     "baron-lord-of-saturday": {
       "name": "Baron: Lord of Saturday",
@@ -8436,7 +8738,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "baronlordofsaturday",
+      "maxMultiplier": "3500",
+      "defaultBand": "96"
     },
     "stepping-diamonds": {
       "name": "Stepping Diamonds",
@@ -8481,7 +8786,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "steppingdiamonds",
+      "maxMultiplier": "4000",
+      "defaultBand": "96"
     },
     "lady-of-fortune-remastered": {
       "name": "Lady of Fortune Remastered",
@@ -8526,7 +8834,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "ladyoffortunerm",
+      "maxMultiplier": "1523.33",
+      "defaultBand": "96"
     },
     "kingdom-below": {
       "name": "Kingdom Below",
@@ -8571,7 +8882,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "kingdombelow",
+      "maxMultiplier": "6000",
+      "defaultBand": "96"
     },
     "buildin-bucks": {
       "name": "Buildin' Bucks",
@@ -8616,7 +8930,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "buildinbucks",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "mirror-joker": {
       "name": "Mirror Joker",
@@ -8661,7 +8978,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "mirrorjoker",
+      "maxMultiplier": "880",
+      "defaultBand": "96"
     },
     "gemix-100": {
       "name": "Gemix 100",
@@ -8706,7 +9026,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "gemix100",
+      "maxMultiplier": "25000",
+      "defaultBand": "96"
     },
     "ankh-of-anubis-awakening": {
       "name": "Ankh of Anubis Awakening",
@@ -8751,7 +9074,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "ankhofanubisawakening",
+      "maxMultiplier": "15000",
+      "defaultBand": "96"
     },
     "scourge-of-rome": {
       "name": "Scourge of Rome",
@@ -8796,7 +9122,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "scourgeofrome",
+      "maxMultiplier": "40000",
+      "defaultBand": "96"
     },
     "joker-flip": {
       "name": "Joker Flip",
@@ -8841,7 +9170,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "jokerflip",
+      "maxMultiplier": "2500",
+      "defaultBand": "96"
     },
     "mafia-gold": {
       "name": "Mafia Gold",
@@ -8886,7 +9218,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "mafiagold",
+      "maxMultiplier": "6000",
+      "defaultBand": "96"
     },
     "rise-of-olympus-origins": {
       "name": "Rise of Olympus Origins",
@@ -8931,7 +9266,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "riseofolympusorigins",
+      "maxMultiplier": "20000",
+      "defaultBand": "96"
     },
     "whispering-winds": {
       "name": "Whispering Winds",
@@ -8976,7 +9314,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "whisperingwinds",
+      "maxMultiplier": "2000",
+      "defaultBand": "96"
     },
     "dansband-p-turn": {
       "name": "Dansband På Turné",
@@ -9021,7 +9362,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "RFA"
-      }
+      },
+      "gid": "dansband",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "oasis-of-dead": {
       "name": "Oasis of Dead",
@@ -9066,7 +9410,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "oasisofdead",
+      "maxMultiplier": "7000",
+      "defaultBand": "96"
     },
     "journey-to-paris": {
       "name": "Journey to Paris",
@@ -9110,7 +9457,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "journeytoparis",
+      "maxMultiplier": "18566.15",
+      "defaultBand": "96"
     },
     "temple-of-tollan": {
       "name": "Temple of Tollan",
@@ -9155,7 +9505,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "templeoftollan",
+      "maxMultiplier": "15000",
+      "defaultBand": "96"
     },
     "merlin-realm-of-charm": {
       "name": "Merlin Realm of Charm",
@@ -9200,7 +9553,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "merlinrealmofcharm",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "gold-of-fortune-god": {
       "name": "Gold of Fortune God",
@@ -9245,7 +9601,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "goldoffortunegod",
+      "maxMultiplier": "6000",
+      "defaultBand": "96"
     },
     "rich-wilde-and-the-tome-of-insanity": {
       "name": "Rich Wilde and the Tome of Insanity",
@@ -9290,7 +9649,10 @@
         "UAE": "Yes",
         "UK": "Yes",
         "West Virginia": "GNC"
-      }
+      },
+      "gid": "tomeofinsanity",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "colt-lightning-firestorm": {
       "name": "Colt Lightning Firestorm",
@@ -9335,7 +9697,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "coltlightningfirestorm",
+      "maxMultiplier": "50000",
+      "defaultBand": "96"
     },
     "spark-of-genius": {
       "name": "Spark of Genius",
@@ -9380,7 +9745,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "sparkofgenius",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "wild-survivor": {
       "name": "Wild Survivor",
@@ -9425,7 +9793,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "wildsurvivor",
+      "maxMultiplier": "3000",
+      "defaultBand": "96"
     },
     "fulong-88": {
       "name": "Fulong 88",
@@ -9470,7 +9841,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "fulong88",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "the-sword-and-the-grail-excalibur": {
       "name": "The Sword and the Grail Excalibur",
@@ -9515,7 +9889,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "excalibur",
+      "maxMultiplier": "25000",
+      "defaultBand": "96"
     },
     "boat-bonanza-down-under": {
       "name": "Boat Bonanza Down Under",
@@ -9560,7 +9937,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "bonanzadownunder",
+      "maxMultiplier": "6000",
+      "defaultBand": "96"
     },
     "tomb-of-gold": {
       "name": "Tomb of Gold",
@@ -9605,7 +9985,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "tombofgold",
+      "maxMultiplier": "7000",
+      "defaultBand": "96"
     },
     "mystery-genie-fortunes-of-the-lamp": {
       "name": "Mystery Genie  Fortunes of the Lamp",
@@ -9650,7 +10033,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "RFA"
-      }
+      },
+      "gid": "mysterygenie",
+      "maxMultiplier": "6000",
+      "defaultBand": "96"
     },
     "easter-eggspedition": {
       "name": "Easter Eggspedition",
@@ -9695,7 +10081,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "RFA"
-      }
+      },
+      "gid": "eastereggspedition",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "piranha-pays": {
       "name": "Piranha Pays",
@@ -9740,7 +10129,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "piranhapays",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "chambers-of-ancients": {
       "name": "Chambers of Ancients",
@@ -9785,7 +10177,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "chambersofancients",
+      "maxMultiplier": "20000",
+      "defaultBand": "96"
     },
     "banquet-of-dead": {
       "name": "Banquet of Dead",
@@ -9830,7 +10225,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "banquetofdead",
+      "maxMultiplier": "7000",
+      "defaultBand": "96"
     },
     "legion-gold-unleashed": {
       "name": "Legion Gold Unleashed",
@@ -9875,7 +10273,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "legiongoldunleashed",
+      "maxMultiplier": "3000",
+      "defaultBand": "96"
     },
     "undefeated-xerxes": {
       "name": "Undefeated Xerxes",
@@ -9920,7 +10321,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "undefeatedxerxes",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "cat-wilde-and-the-incan-quest": {
       "name": "Cat Wilde and the Incan Quest",
@@ -9965,7 +10369,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "incanquest",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "love-is-in-the-fair": {
       "name": "Love is in the Fair",
@@ -10010,7 +10417,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "loveisinthefair",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "moon-princess-power-of-love": {
       "name": "Moon Princess Power of Love",
@@ -10055,7 +10465,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "poweroflove",
+      "maxMultiplier": "15000",
+      "defaultBand": "96"
     },
     "3-clown-monty-ii": {
       "name": "3 Clown Monty II",
@@ -10100,7 +10513,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "threeclownmonty2",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "pandastic-adventure": {
       "name": "Pandastic Adventure",
@@ -10145,7 +10561,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "pandasticadventure",
+      "maxMultiplier": "6500",
+      "defaultBand": "96"
     },
     "viking-runecraft-100": {
       "name": "Viking Runecraft 100",
@@ -10190,7 +10609,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "vikingrunecraft100",
+      "maxMultiplier": "15000",
+      "defaultBand": "96"
     },
     "mega-don-feeding-frenzy": {
       "name": "Mega Don: Feeding Frenzy",
@@ -10235,7 +10657,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "GNC"
-      }
+      },
+      "gid": "megadonfeedingfrenzy",
+      "maxMultiplier": "20000",
+      "defaultBand": "96"
     },
     "gargantoonz": {
       "name": "Gargantoonz",
@@ -10280,7 +10705,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "gargantoonz",
+      "maxMultiplier": "7000",
+      "defaultBand": "96"
     },
     "invading-vegas-las-christmas": {
       "name": "Invading Vegas: Las Christmas",
@@ -10325,7 +10753,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "laschristmas",
+      "maxMultiplier": "2500",
+      "defaultBand": "96"
     },
     "legacy-of-dynasties": {
       "name": "Legacy of Dynasties",
@@ -10370,7 +10801,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "legacyofdynasties",
+      "maxMultiplier": "2300",
+      "defaultBand": "96"
     },
     "sherwood-gold": {
       "name": "Sherwood Gold",
@@ -10415,7 +10849,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "sherwoodgold",
+      "maxMultiplier": "6500",
+      "defaultBand": "96"
     },
     "monkey-battle-for-the-scrolls": {
       "name": "Monkey: Battle for the Scrolls",
@@ -10460,7 +10897,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "monkeyscrolls",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "ruff-heist": {
       "name": "Ruff Heist",
@@ -10505,7 +10945,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "ruffheist",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "raging-rex-3": {
       "name": "Raging Rex 3",
@@ -10550,7 +10993,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "ragingrex3",
+      "maxMultiplier": "30000",
+      "defaultBand": "96"
     },
     "return-of-the-green-knight": {
       "name": "Return of The Green Knight",
@@ -10595,7 +11041,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "returnofthegreenknight",
+      "maxMultiplier": "40000",
+      "defaultBand": "96"
     },
     "piggy-blitz": {
       "name": "Piggy Blitz",
@@ -10640,7 +11089,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "piggyblitz",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "temple-of-prosperity": {
       "name": "Temple of Prosperity",
@@ -10685,7 +11137,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "templeofprosperity",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "scales-of-dead": {
       "name": "Scales of Dead",
@@ -10730,7 +11185,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "scalesofdead",
+      "maxMultiplier": "20000",
+      "defaultBand": "96"
     },
     "boat-bonanza-colossal-catch": {
       "name": "Boat Bonanza Colossal Catch",
@@ -10775,7 +11233,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "colossalcatch",
+      "maxMultiplier": "3000",
+      "defaultBand": "96"
     },
     "honey-rush-100": {
       "name": "Honey Rush 100",
@@ -10820,7 +11281,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "honeyrush100",
+      "maxMultiplier": "50000",
+      "defaultBand": "96"
     },
     "hugo-legacy": {
       "name": "Hugo Legacy",
@@ -10865,7 +11329,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "hugolegacy",
+      "maxMultiplier": "3000",
+      "defaultBand": "96"
     },
     "sweet-alchemy-100": {
       "name": "Sweet Alchemy 100",
@@ -10910,7 +11377,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "sweetalchemy100",
+      "maxMultiplier": "15000",
+      "defaultBand": "96"
     },
     "scroll-of-seth": {
       "name": "Scroll of Seth",
@@ -10955,7 +11425,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "scrollofseth",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "merlin-journey-of-flame": {
       "name": "Merlin: Journey of Flame",
@@ -11000,7 +11473,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "journeyofflame",
+      "maxMultiplier": "7500",
+      "defaultBand": "96"
     },
     "fox-mayhem": {
       "name": "Fox Mayhem",
@@ -11045,7 +11521,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "foxmayhem",
+      "maxMultiplier": "4000",
+      "defaultBand": "96"
     },
     "rascal-riches": {
       "name": "Rascal Riches",
@@ -11090,7 +11569,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "rascalriches",
+      "maxMultiplier": "9000",
+      "defaultBand": "96"
     },
     "sweet-alchemy-2": {
       "name": "Sweet Alchemy 2",
@@ -11135,7 +11617,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "sweetalchemy2",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "ternion": {
       "name": "Ternion",
@@ -11180,7 +11665,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "ternion",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "viking-runecraft-apocalypse": {
       "name": "Viking Runecraft: Apocalypse",
@@ -11225,7 +11713,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "vikingapocalypse",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "free-reelin-joker-1000": {
       "name": "Free Reelin' Joker 1000",
@@ -11270,7 +11761,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "freereelinjoker1000",
+      "maxMultiplier": "210",
+      "defaultBand": "96"
     },
     "highway-legends": {
       "name": "Highway Legends",
@@ -11315,7 +11809,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "highwaylegends",
+      "maxMultiplier": "1250",
+      "defaultBand": "96"
     },
     "luchamigos": {
       "name": "Luchamigos",
@@ -11360,7 +11857,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "luchamigos",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "captain-glum-pirate-hunter": {
       "name": "Captain Glum: Pirate Hunter",
@@ -11405,7 +11905,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "piratehunter",
+      "maxMultiplier": "9000",
+      "defaultBand": "96"
     },
     "slashimi": {
       "name": "Slashimi",
@@ -11450,7 +11953,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "slashimi",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "wild-bandolier": {
       "name": "Wild Bandolier",
@@ -11495,7 +12001,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "wildbandolier",
+      "maxMultiplier": "2000",
+      "defaultBand": "96"
     },
     "moon-princess-trinity": {
       "name": "Moon Princess Trinity",
@@ -11540,7 +12049,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "moonprincesstrinity",
+      "maxMultiplier": "4000",
+      "defaultBand": "96"
     },
     "colt-lightning": {
       "name": "Colt Lightning",
@@ -11585,7 +12097,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "coltlightning",
+      "maxMultiplier": "25000",
+      "defaultBand": "96"
     },
     "legion-gold": {
       "name": "Legion Gold",
@@ -11630,7 +12145,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "legiongold",
+      "maxMultiplier": "2000",
+      "defaultBand": "96"
     },
     "legacy-of-inca": {
       "name": "Legacy of Inca",
@@ -11675,7 +12193,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "legacyofinca",
+      "maxMultiplier": "6500",
+      "defaultBand": "96"
     },
     "game-of-gladiators-uprising": {
       "name": "Game of Gladiators: Uprising",
@@ -11720,7 +12241,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "goguprising",
+      "maxMultiplier": "6000",
+      "defaultBand": "96"
     },
     "pilgrim-of-dead": {
       "name": "Pilgrim of Dead",
@@ -11765,7 +12289,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "pilgrimofdead",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "invading-vegas": {
       "name": "Invading Vegas",
@@ -11810,7 +12337,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "invadingvegas",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "cash-a-cabana": {
       "name": "Cash-a-Cabana",
@@ -11855,7 +12385,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "cashacabana",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "shamrock-miner": {
       "name": "Shamrock Miner",
@@ -11900,7 +12433,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "shamrockminer",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "m-tley-cr-e": {
       "name": "Mötley Crüe",
@@ -11945,7 +12481,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "motleycrue",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "wild-falls-2": {
       "name": "Wild Falls 2",
@@ -11990,7 +12529,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "wildfalls2",
+      "maxMultiplier": "15000",
+      "defaultBand": "96"
     },
     "athena-ascending": {
       "name": "Athena Ascending",
@@ -12035,7 +12577,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "athenaascending",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "clash-of-camelot": {
       "name": "Clash of Camelot",
@@ -12080,7 +12625,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "clashofcamelot",
+      "maxMultiplier": "35000",
+      "defaultBand": "96"
     },
     "usa-flip": {
       "name": "USA Flip",
@@ -12125,7 +12673,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "usaflip",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "rise-of-olympus-100": {
       "name": "Rise of Olympus 100",
@@ -12170,7 +12721,10 @@
         "UAE": "Yes",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "riseofolympus100",
+      "maxMultiplier": "15000",
+      "defaultBand": "96"
     },
     "canine-carnage": {
       "name": "Canine Carnage",
@@ -12215,7 +12769,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "caninecarnage",
+      "maxMultiplier": "3000",
+      "defaultBand": "96"
     },
     "count-jokula": {
       "name": "Count Jokula",
@@ -12260,7 +12817,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "countjokula",
+      "maxMultiplier": "1500",
+      "defaultBand": "96"
     },
     "boat-bonanza": {
       "name": "Boat Bonanza",
@@ -12305,7 +12865,10 @@
         "UAE": "Yes",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "boatbonanza",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "dio-killing-the-dragon": {
       "name": "Dio Killing the Dragon",
@@ -12350,7 +12913,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "dio",
+      "maxMultiplier": "15000",
+      "defaultBand": "96"
     },
     "immortails-of-egypt": {
       "name": "ImmorTails of Egypt",
@@ -12395,7 +12961,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "immortails",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "gates-of-troy": {
       "name": "Gates of Troy",
@@ -12440,7 +13009,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "gatesoftroy",
+      "maxMultiplier": "3000",
+      "defaultBand": "96"
     },
     "mount-m": {
       "name": "Mount M",
@@ -12485,7 +13057,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "mountm",
+      "maxMultiplier": "13000",
+      "defaultBand": "96"
     },
     "champions-of-mithrune": {
       "name": "Champions of Mithrune",
@@ -12530,7 +13105,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "championsofmithrune",
+      "maxMultiplier": "7500",
+      "defaultBand": "96"
     },
     "bull-in-a-rodeo": {
       "name": "Bull in a Rodeo",
@@ -12575,7 +13153,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "bullinarodeo",
+      "maxMultiplier": "2000",
+      "defaultBand": "96"
     },
     "forge-of-fortunes": {
       "name": "Forge of Fortunes",
@@ -12620,7 +13201,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "forgeoffortunes",
+      "maxMultiplier": "2500",
+      "defaultBand": "96"
     },
     "mega-don": {
       "name": "Mega Don",
@@ -12665,7 +13249,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "megadon",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "cash-of-command": {
       "name": "Cash of Command",
@@ -12710,7 +13297,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "cashofcommand",
+      "maxMultiplier": "5336",
+      "defaultBand": "96"
     },
     "rotiki": {
       "name": "Rotiki",
@@ -12755,7 +13345,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "rotiki",
+      "maxMultiplier": "1000",
+      "defaultBand": "96"
     },
     "nsync-pop": {
       "name": "*NSYNC Pop",
@@ -12800,7 +13393,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "nsyncpop",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "cat-wilde-and-the-pyramids-of-dead": {
       "name": "Cat Wilde and the Pyramids of Dead",
@@ -12845,7 +13441,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "pyramidsofdead",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "rocco-gallo": {
       "name": "Rocco Gallo",
@@ -12890,7 +13489,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "roccogallo",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "derby-wheel": {
       "name": "Derby Wheel",
@@ -12935,7 +13537,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "derbywheel",
+      "maxMultiplier": "2240",
+      "defaultBand": "96"
     },
     "wild-trigger": {
       "name": "Wild Trigger",
@@ -12980,7 +13585,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "wildtrigger",
+      "maxMultiplier": "2000",
+      "defaultBand": "96"
     },
     "animal-madness": {
       "name": "Animal Madness",
@@ -13025,7 +13633,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "animalmadness",
+      "maxMultiplier": "2250",
+      "defaultBand": "96"
     },
     "idol-of-fortune": {
       "name": "Idol of Fortune",
@@ -13070,7 +13681,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "idoloffortune",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "rise-of-gods-reckoning": {
       "name": "Rise of Gods: Reckoning",
@@ -13115,7 +13729,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "riseofgodsreckoning",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "lordi-reel-monsters": {
       "name": "Lordi Reel Monsters",
@@ -13160,7 +13777,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "lordi",
+      "maxMultiplier": "4000",
+      "defaultBand": "96"
     },
     "puebla-parade": {
       "name": "Puebla Parade",
@@ -13205,7 +13825,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "pueblaparade",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "forge-of-gems": {
       "name": "Forge of Gems",
@@ -13250,7 +13873,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "forgeofgems",
+      "maxMultiplier": "20000",
+      "defaultBand": "96"
     },
     "moon-princess-100": {
       "name": "Moon Princess 100",
@@ -13295,7 +13921,10 @@
         "UAE": "Yes",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "moonprincess100",
+      "maxMultiplier": "15000",
+      "defaultBand": "96"
     },
     "def-leppard-hysteria": {
       "name": "Def Leppard: Hysteria",
@@ -13340,7 +13969,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "defleppard",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "eye-of-atum": {
       "name": "Eye of Atum",
@@ -13385,7 +14017,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "eyeofatum",
+      "maxMultiplier": "2000",
+      "defaultBand": "96"
     },
     "raging-rex-2": {
       "name": "Raging Rex 2",
@@ -13430,7 +14065,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "ragingrex2",
+      "maxMultiplier": "30000",
+      "defaultBand": "96"
     },
     "fat-frankies": {
       "name": "Fat Frankies",
@@ -13475,7 +14113,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "fatfrankies",
+      "maxMultiplier": "6000",
+      "defaultBand": "96"
     },
     "safari-of-wealth": {
       "name": "Safari of Wealth",
@@ -13520,7 +14161,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "safariofwealth",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "secret-of-dead": {
       "name": "Secret of Dead",
@@ -13565,7 +14209,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "secretofdead",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "cat-wilde-and-the-lost-chapter": {
       "name": "Cat Wilde and the Lost Chapter",
@@ -13610,7 +14257,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "lostchapter",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "gigantoonz": {
       "name": "Gigantoonz",
@@ -13655,7 +14305,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "gigantoonz",
+      "maxMultiplier": "4000",
+      "defaultBand": "96"
     },
     "love-joker": {
       "name": "Love Joker",
@@ -13700,7 +14353,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "lovejoker",
+      "maxMultiplier": "1008",
+      "defaultBand": "96"
     },
     "15-crystal-roses-a-tale-of-love": {
       "name": "15 Crystal Roses: A Tale of Love",
@@ -13745,7 +14401,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "crystalroses",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "tale-of-kyubiko": {
       "name": "Tale of Kyubiko",
@@ -13790,7 +14449,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "taleofkyubiko",
+      "maxMultiplier": "2250",
+      "defaultBand": "96"
     },
     "beasts-of-fire": {
       "name": "Beasts of Fire",
@@ -13835,7 +14497,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "beastsoffire",
+      "maxMultiplier": "25000",
+      "defaultBand": "96"
     },
     "hooligan-hustle": {
       "name": "Hooligan Hustle",
@@ -13880,7 +14545,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "hooliganhustle",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "moon-princess-christmas-kingdom": {
       "name": "Moon Princess: Christmas Kingdom",
@@ -13925,7 +14593,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "christmaskingdom",
+      "maxMultiplier": "15000",
+      "defaultBand": "96"
     },
     "merlin-and-the-ice-queen-morgana": {
       "name": "Merlin and the Ice Queen Morgana",
@@ -13970,7 +14641,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "icequeenmorgana",
+      "maxMultiplier": "20000",
+      "defaultBand": "96"
     },
     "rich-wilde-and-the-wandering-city": {
       "name": "Rich Wilde and the Wandering City",
@@ -14015,7 +14689,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "wanderingcity",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "the-last-sundown": {
       "name": "The Last Sundown",
@@ -14060,7 +14737,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "thelastsundown",
+      "maxMultiplier": "18000",
+      "defaultBand": "96"
     },
     "legend-of-the-ice-dragon": {
       "name": "Legend of the Ice Dragon",
@@ -14105,7 +14785,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "legendoftheicedragon",
+      "maxMultiplier": "6000",
+      "defaultBand": "96"
     },
     "muerto-en-mictl-n": {
       "name": "Muerto en Mictlán",
@@ -14150,7 +14833,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "muertoenmictlan",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "alice-cooper-and-the-tome-of-madness": {
       "name": "Alice Cooper and the Tome of Madness",
@@ -14195,7 +14881,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "alicecooper",
+      "maxMultiplier": "3000",
+      "defaultBand": "96"
     },
     "charlie-chance-and-the-curse-of-cleopatra": {
       "name": "Charlie Chance and the Curse of Cleopatra",
@@ -14240,7 +14929,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "curseofcleopatra",
+      "maxMultiplier": "5500",
+      "defaultBand": "96"
     },
     "the-wild-class": {
       "name": "The Wild Class",
@@ -14285,7 +14977,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "thewildclass",
+      "maxMultiplier": "6666",
+      "defaultBand": "96"
     },
     "ghost-of-dead": {
       "name": "Ghost of Dead",
@@ -14330,7 +15025,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "ghostofdead",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "dr-toonz": {
       "name": "Dr. Toonz",
@@ -14375,7 +15073,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "drtoonz",
+      "maxMultiplier": "22000",
+      "defaultBand": "96"
     },
     "sisters-of-the-sun": {
       "name": "Sisters of the Sun",
@@ -14420,7 +15121,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "sistersofthesun",
+      "maxMultiplier": "15000",
+      "defaultBand": "96"
     },
     "hugo-carts": {
       "name": "Hugo Carts",
@@ -14465,7 +15169,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "hugocarts",
+      "maxMultiplier": "25000",
+      "defaultBand": "96"
     },
     "agent-of-hearts": {
       "name": "Agent of Hearts",
@@ -14510,7 +15217,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "agentofhearts",
+      "maxMultiplier": "5262.5",
+      "defaultBand": "96"
     },
     "diamonds-of-the-realm": {
       "name": "Diamonds of the Realm",
@@ -14555,7 +15265,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "diamondsoftherealm",
+      "maxMultiplier": "20000",
+      "defaultBand": "96"
     },
     "odin-protector-of-realms": {
       "name": "Odin Protector of Realms",
@@ -14600,7 +15313,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "odinprotectorofrealms",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "hotel-yeti-way": {
       "name": "Hotel Yeti-Way",
@@ -14645,7 +15361,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "hotelyetiway",
+      "maxMultiplier": "30000",
+      "defaultBand": "96"
     },
     "gemix-2": {
       "name": "Gemix 2",
@@ -14690,7 +15409,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "gemix2",
+      "maxMultiplier": "7500",
+      "defaultBand": "96"
     },
     "blazin-bullfrog": {
       "name": "Blazin' Bullfrog",
@@ -14735,7 +15457,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "blazinbullfrog",
+      "maxMultiplier": "1215",
+      "defaultBand": "96"
     },
     "free-reelin-joker": {
       "name": "Free Reelin' Joker",
@@ -14780,7 +15505,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "freereelinjoker",
+      "maxMultiplier": "1000",
+      "defaultBand": "96"
     },
     "charlie-chance": {
       "name": "Charlie Chance",
@@ -14825,7 +15553,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "charliechance",
+      "maxMultiplier": "20000",
+      "defaultBand": "96"
     },
     "candy-island-princess": {
       "name": "Candy Island Princess",
@@ -14870,7 +15601,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "candyislandprincess",
+      "maxMultiplier": "2200",
+      "defaultBand": "96"
     },
     "prism-of-gems": {
       "name": "Prism of Gems",
@@ -14915,7 +15649,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "prismofgems",
+      "maxMultiplier": "30000",
+      "defaultBand": "96"
     },
     "scroll-of-dead": {
       "name": "Scroll of Dead",
@@ -14960,7 +15697,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "scrollofdead",
+      "maxMultiplier": "7500",
+      "defaultBand": "96"
     },
     "3-clown-monty": {
       "name": "3 Clown Monty",
@@ -15005,7 +15745,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "threeclownmonty",
+      "maxMultiplier": "20000",
+      "defaultBand": "96"
     },
     "hammerfall": {
       "name": "HammerFall",
@@ -15050,7 +15793,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "hammerfall",
+      "maxMultiplier": "30000",
+      "defaultBand": "96"
     },
     "rabbit-hole-riches-court-of-hearts": {
       "name": "Rabbit Hole Riches - Court of Hearts",
@@ -15095,7 +15841,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "courtofhearts",
+      "maxMultiplier": "8500",
+      "defaultBand": "96"
     },
     "fire-joker-freeze": {
       "name": "Fire Joker Freeze",
@@ -15140,7 +15889,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "firejokerfreeze",
+      "maxMultiplier": "1000",
+      "defaultBand": "96"
     },
     "fire-toad": {
       "name": "Fire Toad",
@@ -15185,7 +15937,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "firetoad",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "rich-wilde-and-the-amulet-of-dead": {
       "name": "Rich Wilde and the Amulet of Dead",
@@ -15230,7 +15985,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "amuletofdead",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "the-shimmering-woods": {
       "name": "The Shimmering Woods",
@@ -15275,7 +16033,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "theshimmeringwoods",
+      "maxMultiplier": "25000",
+      "defaultBand": "96"
     },
     "house-of-doom-2-the-crypt": {
       "name": "House of Doom 2: The Crypt",
@@ -15320,7 +16081,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "thecrypt",
+      "maxMultiplier": "6000",
+      "defaultBand": "96"
     },
     "the-green-knight": {
       "name": "The Green Knight",
@@ -15365,7 +16129,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "thegreenknight",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "the-faces-of-freya": {
       "name": "The Faces of Freya",
@@ -15410,7 +16177,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "thefacesoffreya",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "the-paying-piano-club": {
       "name": "The Paying Piano Club",
@@ -15455,7 +16225,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "thepayingpianoclub",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "thunder-screech": {
       "name": "Thunder Screech",
@@ -15500,7 +16273,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "thunderscreech",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "cat-wilde-in-the-eclipse-of-the-sun-god": {
       "name": "Cat Wilde in the Eclipse of the Sun God",
@@ -15545,7 +16321,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "catwildeeclipse",
+      "maxMultiplier": "5500",
+      "defaultBand": "96"
     },
     "lord-merlin-and-the-lady-of-the-lake": {
       "name": "Lord Merlin and The Lady of The Lake",
@@ -15590,7 +16369,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "ladyofthelake",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "bull-in-a-china-shop": {
       "name": "Bull in a China Shop",
@@ -15635,7 +16417,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "bullinachinashop",
+      "maxMultiplier": "5800",
+      "defaultBand": "96"
     },
     "miner-donkey-trouble": {
       "name": "Miner Donkey Trouble",
@@ -15680,7 +16465,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "minerdonkeytrouble",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "coils-of-cash": {
       "name": "Coils of Cash",
@@ -15725,7 +16513,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "coilsofcash",
+      "maxMultiplier": "30000",
+      "defaultBand": "96"
     },
     "piggy-bank-farm": {
       "name": "Piggy Bank Farm",
@@ -15770,7 +16561,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "piggybankfarm",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "golden-osiris": {
       "name": "Golden Osiris",
@@ -15815,7 +16609,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "goldenosiris",
+      "maxMultiplier": "12000",
+      "defaultBand": "96"
     },
     "frozen-gems": {
       "name": "Frozen Gems",
@@ -15860,7 +16657,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "frozengems",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "ice-joker": {
       "name": "Ice Joker",
@@ -15905,7 +16705,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "icejoker",
+      "maxMultiplier": "3000",
+      "defaultBand": "96"
     },
     "new-year-riches": {
       "name": "New Year Riches",
@@ -15950,7 +16753,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "newyearriches",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "24k-dragon": {
       "name": "24k Dragon",
@@ -15995,7 +16801,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "twentyfourkdragon",
+      "maxMultiplier": "24000",
+      "defaultBand": "96"
     },
     "rise-of-athena": {
       "name": "Rise of Athena",
@@ -16040,7 +16849,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "riseofathena",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "viking-runecraft-bingo": {
       "name": "Viking Runecraft Bingo",
@@ -16085,7 +16897,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "vikingrunecraftbingo",
+      "maxMultiplier": "2075",
+      "defaultBand": "96"
     },
     "holiday-spirits": {
       "name": "Holiday Spirits",
@@ -16130,7 +16945,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "holidayspirits",
+      "maxMultiplier": "1600",
+      "defaultBand": "96"
     },
     "disco-diamonds": {
       "name": "Disco Diamonds",
@@ -16175,7 +16993,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "discodiamonds",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "madame-ink": {
       "name": "Madame Ink",
@@ -16220,7 +17041,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "madameink",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "helloween": {
       "name": "Helloween",
@@ -16265,7 +17089,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "helloween",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "rabbit-hole-riches": {
       "name": "Rabbit Hole Riches",
@@ -16310,7 +17137,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "rabbitholeriches",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "reactoonz-2": {
       "name": "Reactoonz 2",
@@ -16355,7 +17185,10 @@
         "UAE": "Yes",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "reactoonztwo",
+      "maxMultiplier": "5083",
+      "defaultBand": "96"
     },
     "feline-fury": {
       "name": "Feline Fury",
@@ -16400,7 +17233,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "felinefury",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "octopus-treasure": {
       "name": "Octopus Treasure",
@@ -16445,7 +17281,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "octopustreasure",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "golden-ticket-2": {
       "name": "Golden Ticket 2",
@@ -16490,7 +17329,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "goldenticket2",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "jolly-roger-2": {
       "name": "Jolly Roger 2",
@@ -16535,7 +17377,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "jollyroger2",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "diamond-vortex": {
       "name": "Diamond Vortex",
@@ -16580,7 +17425,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "diamondvortex",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "saxon": {
       "name": "Saxon",
@@ -16625,7 +17473,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "saxon",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "blinged": {
       "name": "Blinged",
@@ -16670,7 +17521,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "blinged",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "riddle-reels-a-case-of-riches": {
       "name": "Riddle Reels: A Case of Riches",
@@ -16715,7 +17569,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "riddlereels",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "win-a-beest": {
       "name": "Win-A-Beest",
@@ -16760,7 +17617,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "winabeest",
+      "maxMultiplier": "10240",
+      "defaultBand": "96"
     },
     "gold-volcano": {
       "name": "Gold Volcano",
@@ -16805,7 +17665,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "goldvolcano",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "cat-wilde-and-the-doom-of-dead": {
       "name": "Cat Wilde and the Doom of Dead",
@@ -16850,7 +17713,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "doomofdead",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "troll-hunters-2": {
       "name": "Troll Hunters 2",
@@ -16895,7 +17761,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "trollhunters2",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "rainforest-magic-bingo": {
       "name": "Rainforest Magic Bingo",
@@ -16940,7 +17809,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "rainforestmagicbingo",
+      "maxMultiplier": "4250",
+      "defaultBand": "96"
     },
     "rally-4-riches": {
       "name": "Rally 4 Riches",
@@ -16985,7 +17857,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "rally4riches",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "sweet-alchemy-bingo": {
       "name": "Sweet Alchemy Bingo",
@@ -17030,7 +17905,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "sweetalchemybingo",
+      "maxMultiplier": "20187.5",
+      "defaultBand": "96"
     },
     "twisted-sister": {
       "name": "Twisted Sister",
@@ -17075,7 +17953,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "twistedsister",
+      "maxMultiplier": "4500",
+      "defaultBand": "96"
     },
     "rich-wilde-and-the-shield-of-athena": {
       "name": "Rich Wilde and the Shield of Athena",
@@ -17120,7 +18001,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "shieldofathena",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "charlie-chance-in-hell-to-pay": {
       "name": "Charlie Chance in Hell to Pay",
@@ -17165,7 +18049,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "charliechancehelltopay",
+      "maxMultiplier": "6666",
+      "defaultBand": "96"
     },
     "agent-destiny": {
       "name": "Agent Destiny",
@@ -17210,7 +18097,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "agentdestiny",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "annihilator": {
       "name": "Annihilator",
@@ -17255,7 +18145,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "annihilator",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "ring-of-odin": {
       "name": "Ring of Odin",
@@ -17300,7 +18193,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "ringofodin",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "sticky-joker": {
       "name": "Sticky Joker",
@@ -17345,7 +18241,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "stickyjoker",
+      "maxMultiplier": "1650",
+      "defaultBand": "96"
     },
     "riches-of-robin": {
       "name": "Riches of Robin",
@@ -17390,7 +18289,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "richesofrobin",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "testament": {
       "name": "Testament",
@@ -17435,7 +18337,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "testament",
+      "maxMultiplier": "20000",
+      "defaultBand": "96"
     },
     "fortunes-of-ali-baba": {
       "name": "Fortunes of Ali Baba",
@@ -17480,7 +18385,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "fortunesofalibaba",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "dawn-of-egypt": {
       "name": "Dawn of Egypt",
@@ -17525,7 +18433,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "dawnofegypt",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "leprechaun-goes-wild": {
       "name": "Leprechaun Goes Wild",
@@ -17570,7 +18481,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "leprechaungoeswild",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "coywolf-cash": {
       "name": "Coywolf Cash",
@@ -17615,7 +18529,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "coywolfcash",
+      "maxMultiplier": "4000",
+      "defaultBand": "96"
     },
     "wild-blood-2": {
       "name": "Wild Blood 2",
@@ -17660,7 +18577,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "wildblood2",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "wildhound-derby": {
       "name": "Wildhound Derby",
@@ -17705,7 +18625,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "wildhoundderby",
+      "maxMultiplier": "15000",
+      "defaultBand": "96"
     },
     "legacy-of-dead": {
       "name": "Legacy of Dead",
@@ -17750,7 +18673,10 @@
         "UAE": "Yes",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "legacyofdead",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "wild-frames": {
       "name": "Wild Frames",
@@ -17795,7 +18721,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "wildframes",
+      "maxMultiplier": "7000",
+      "defaultBand": "96"
     },
     "divine-showdown": {
       "name": "Divine Showdown",
@@ -17840,7 +18769,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "divineshowdown",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "ankh-of-anubis": {
       "name": "Ankh of Anubis",
@@ -17885,7 +18817,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "ankhofanubis",
+      "maxMultiplier": "15000",
+      "defaultBand": "96"
     },
     "chronos-joker": {
       "name": "Chronos Joker",
@@ -17930,7 +18865,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "chronosjoker",
+      "maxMultiplier": "1600",
+      "defaultBand": "96"
     },
     "xmas-magic": {
       "name": "Xmas Magic",
@@ -17975,7 +18913,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "xmasmagic",
+      "maxMultiplier": "20000",
+      "defaultBand": "96"
     },
     "black-mamba": {
       "name": "Black Mamba",
@@ -18020,7 +18961,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "blackmamba",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "doom-of-egypt": {
       "name": "Doom of Egypt",
@@ -18065,7 +19009,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "doomofegypt",
+      "maxMultiplier": "500",
+      "defaultBand": "96"
     },
     "honey-rush": {
       "name": "Honey Rush",
@@ -18110,7 +19057,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "honeyrush",
+      "maxMultiplier": "9000",
+      "defaultBand": "96"
     },
     "cash-pump": {
       "name": "Cash Pump",
@@ -18155,7 +19105,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "cashpump",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "rainforest-magic": {
       "name": "Rainforest Magic",
@@ -18200,7 +19153,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "rainforestmagic",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "demon": {
       "name": "Demon",
@@ -18245,7 +19201,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "demon",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "mission-cash": {
       "name": "Mission Cash",
@@ -18290,7 +19249,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "missioncash",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "inferno-joker": {
       "name": "Inferno Joker",
@@ -18335,7 +19297,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "infernojoker",
+      "maxMultiplier": "2500",
+      "defaultBand": "96"
     },
     "rise-of-dead": {
       "name": "Rise of Dead",
@@ -18380,7 +19345,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "riseofdead",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "the-sword-and-the-grail": {
       "name": "The Sword and The Grail",
@@ -18425,7 +19393,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "theswordandthegrail",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "firefly-frenzy": {
       "name": "Firefly Frenzy",
@@ -18470,7 +19441,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "fireflyfrenzy",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "wild-rails": {
       "name": "Wild Rails",
@@ -18515,7 +19489,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "wildrails",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "rich-wilde-and-the-tome-of-madness": {
       "name": "Rich Wilde and the Tome of Madness",
@@ -18560,7 +19537,10 @@
         "UAE": "Yes",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "tomeofmadness",
+      "maxMultiplier": "2000",
+      "defaultBand": "96"
     },
     "rise-of-merlin": {
       "name": "Rise of Merlin",
@@ -18605,7 +19585,10 @@
         "UAE": "Yes",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "riseofmerlin",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "game-of-gladiators": {
       "name": "Game of Gladiators",
@@ -18650,7 +19633,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "gameofgladiators",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "perfect-gems": {
       "name": "Perfect Gems",
@@ -18695,7 +19681,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "perfectgems",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "inferno-star": {
       "name": "Inferno Star",
@@ -18740,7 +19729,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "infernostar",
+      "maxMultiplier": "2500",
+      "defaultBand": "96"
     },
     "sabaton": {
       "name": "Sabaton",
@@ -18785,7 +19777,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "sabaton",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "mahjong-88": {
       "name": "Mahjong 88",
@@ -18830,7 +19825,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "RFA"
-      }
+      },
+      "gid": "mahjong88",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "crystal-sun": {
       "name": "Crystal Sun",
@@ -18875,7 +19873,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "crystalsun",
+      "maxMultiplier": "4000",
+      "defaultBand": "96"
     },
     "phoenix-reborn": {
       "name": "Phoenix Reborn",
@@ -18920,7 +19921,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "phoenixreborn",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "contact": {
       "name": "Contact",
@@ -18965,7 +19969,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "contact",
+      "maxMultiplier": "1517.5",
+      "defaultBand": "96"
     },
     "cash-vandal": {
       "name": "Cash Vandal",
@@ -19010,7 +20017,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "cashvandal",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "golden-colts": {
       "name": "Golden Colts",
@@ -19055,7 +20065,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "goldencolts",
+      "maxMultiplier": "2500",
+      "defaultBand": "96"
     },
     "wild-falls": {
       "name": "Wild Falls",
@@ -19100,7 +20113,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "wildfalls",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "raging-rex": {
       "name": "Raging Rex",
@@ -19145,7 +20161,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "GNC"
-      }
+      },
+      "gid": "ragingrex",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "star-joker": {
       "name": "Star Joker",
@@ -19190,7 +20209,10 @@
         "UAE": "Yes",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "starjoker",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "battle-royal": {
       "name": "Battle Royal",
@@ -19235,7 +20257,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "battleroyal",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "banana-rock": {
       "name": "Banana Rock",
@@ -19280,7 +20305,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "bananarock",
+      "maxMultiplier": "2500",
+      "defaultBand": "96"
     },
     "dragon-maiden": {
       "name": "Dragon Maiden",
@@ -19325,7 +20353,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "dragonmaiden",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "iron-girl": {
       "name": "Iron Girl",
@@ -19370,7 +20401,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "irongirl",
+      "maxMultiplier": "1071.25",
+      "defaultBand": "96"
     },
     "street-magic": {
       "name": "Street Magic",
@@ -19415,7 +20449,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "streetmagic",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "rise-of-olympus": {
       "name": "Rise of Olympus",
@@ -19460,7 +20497,10 @@
         "UAE": "Yes",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "riseofolympus",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "sizzling-spins": {
       "name": "Sizzling Spins",
@@ -19505,7 +20545,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "sizzlingspins",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "cats-and-cash": {
       "name": "Cats and Cash",
@@ -19550,7 +20593,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "catsandcash",
+      "maxMultiplier": "5769.33",
+      "defaultBand": "96"
     },
     "hugo-goal": {
       "name": "Hugo Goal",
@@ -19595,7 +20641,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "hugogoal",
+      "maxMultiplier": "800",
+      "defaultBand": "96"
     },
     "cops-n-robbers": {
       "name": "Cops ’n’ Robbers",
@@ -19640,7 +20689,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "GNC"
-      }
+      },
+      "gid": "copsnrobbers",
+      "maxMultiplier": "29166.66",
+      "defaultBand": "96"
     },
     "legacy-of-egypt": {
       "name": "Legacy of Egypt",
@@ -19685,7 +20737,10 @@
         "UAE": "Yes",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "legacyofegypt",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "sweet-alchemy": {
       "name": "Sweet Alchemy",
@@ -19730,7 +20785,10 @@
         "UAE": "Yes",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "sweetalchemy",
+      "maxMultiplier": "3000",
+      "defaultBand": "96"
     },
     "house-of-doom": {
       "name": "House of Doom",
@@ -19775,7 +20833,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "houseofdoom",
+      "maxMultiplier": "2500",
+      "defaultBand": "96"
     },
     "imperial-opera": {
       "name": "Imperial Opera",
@@ -19820,7 +20881,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "imperialopera",
+      "maxMultiplier": "2500",
+      "defaultBand": "96"
     },
     "gold-king": {
       "name": "Gold King",
@@ -19865,7 +20929,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "goldking",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "planet-fortune": {
       "name": "Planet Fortune",
@@ -19910,7 +20977,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "planetfortune",
+      "maxMultiplier": "2500",
+      "defaultBand": "96"
     },
     "mystery-joker-6000": {
       "name": "Mystery Joker 6000",
@@ -19955,7 +21025,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "mysteryjoker6000",
+      "maxMultiplier": "2397.5",
+      "defaultBand": "96"
     },
     "sea-hunter": {
       "name": "Sea Hunter",
@@ -20000,7 +21073,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "seahunter",
+      "maxMultiplier": "920",
+      "defaultBand": "96"
     },
     "hugo-2": {
       "name": "Hugo 2",
@@ -20045,7 +21121,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "hugotwo",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "big-win-cat": {
       "name": "Big Win Cat",
@@ -20090,7 +21169,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "bigwincat",
+      "maxMultiplier": "800",
+      "defaultBand": "96"
     },
     "fu-er-dai": {
       "name": "FU ER DAI",
@@ -20135,7 +21217,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "fuerdai",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "reactoonz": {
       "name": "Reactoonz",
@@ -20180,7 +21265,10 @@
         "UAE": "Yes",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "reactoonz",
+      "maxMultiplier": "4570.3",
+      "defaultBand": "96"
     },
     "prosperity-palace": {
       "name": "Prosperity Palace",
@@ -20225,7 +21313,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "prosperitypalace",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "moon-princess": {
       "name": "Moon Princess",
@@ -20270,7 +21361,10 @@
         "UAE": "Yes",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "moonprincess",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "sweet-27": {
       "name": "Sweet 27",
@@ -20315,7 +21409,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "sweet27",
+      "maxMultiplier": "645",
+      "defaultBand": "96"
     },
     "multifruit-81": {
       "name": "Multifruit 81",
@@ -20360,7 +21457,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "multifruit81",
+      "maxMultiplier": "2520",
+      "defaultBand": "96"
     },
     "aztec-warrior-princess": {
       "name": "Aztec Warrior Princess",
@@ -20405,7 +21505,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "aztecwarriorprincess",
+      "maxMultiplier": "53287.5",
+      "defaultBand": "96"
     },
     "viking-runecraft": {
       "name": "Viking Runecraft",
@@ -20450,7 +21553,10 @@
         "UAE": "Yes",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "vikingrunecraft",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "matsuri": {
       "name": "Matsuri",
@@ -20495,7 +21601,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "matsuri",
+      "maxMultiplier": "3000",
+      "defaultBand": "96"
     },
     "prissy-princess": {
       "name": "Prissy Princess",
@@ -20540,7 +21649,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "prissyprincess",
+      "maxMultiplier": "1250",
+      "defaultBand": "96"
     },
     "jade-magician": {
       "name": "Jade Magician",
@@ -20585,7 +21697,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "jademagician",
+      "maxMultiplier": "15000",
+      "defaultBand": "96"
     },
     "7-sins": {
       "name": "7 Sins",
@@ -20630,7 +21745,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "sevensins",
+      "maxMultiplier": "1580",
+      "defaultBand": "96"
     },
     "holiday-season": {
       "name": "Holiday Season",
@@ -20675,7 +21793,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "holidayseason",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "super-wheel": {
       "name": "Super Wheel",
@@ -20720,7 +21841,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "superwheel",
+      "maxMultiplier": "48",
+      "defaultBand": "96"
     },
     "bugs-party": {
       "name": "Bugs Party",
@@ -20765,7 +21889,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "bugsparty",
+      "maxMultiplier": "4620",
+      "defaultBand": "94"
     },
     "flying-pigs": {
       "name": "Flying Pigs",
@@ -20810,7 +21937,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "flyingpigs",
+      "maxMultiplier": "1681.25",
+      "defaultBand": "94"
     },
     "hugo": {
       "name": "Hugo",
@@ -20855,7 +21985,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "hugo",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "grim-muerto": {
       "name": "Grim Muerto",
@@ -20900,7 +22033,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "grimmuerto",
+      "maxMultiplier": "2500",
+      "defaultBand": "96"
     },
     "fire-joker": {
       "name": "Fire Joker",
@@ -20945,7 +22081,10 @@
         "UAE": "Yes",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "firejoker",
+      "maxMultiplier": "800",
+      "defaultBand": "96"
     },
     "golden-caravan": {
       "name": "Golden Caravan",
@@ -20990,7 +22129,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "goldencaravan",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "sails-of-gold": {
       "name": "Sails of Gold",
@@ -21035,7 +22177,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "sailsofgold",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "cloud-quest": {
       "name": "Cloud Quest",
@@ -21080,7 +22225,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "cloudquest",
+      "maxMultiplier": "2500",
+      "defaultBand": "96"
     },
     "samba-carnival": {
       "name": "Samba Carnival",
@@ -21125,7 +22273,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "sambacarnival",
+      "maxMultiplier": "1756.2",
+      "defaultBand": "96"
     },
     "wizard-of-gems": {
       "name": "Wizard of Gems",
@@ -21170,7 +22321,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "wizardofgems",
+      "maxMultiplier": "9712.6",
+      "defaultBand": "96"
     },
     "xmas-joker": {
       "name": "Xmas Joker",
@@ -21215,7 +22369,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "christmasjoker",
+      "maxMultiplier": "6480",
+      "defaultBand": "96"
     },
     "happy-halloween": {
       "name": "Happy Halloween",
@@ -21260,7 +22417,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "happyhalloween",
+      "maxMultiplier": "20000",
+      "defaultBand": "96"
     },
     "eye-of-the-kraken": {
       "name": "Eye of the Kraken",
@@ -21305,7 +22465,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "eyeofthekraken",
+      "maxMultiplier": "2106.6",
+      "defaultBand": "96"
     },
     "wild-north": {
       "name": "Wild North",
@@ -21350,7 +22513,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "wildnorth",
+      "maxMultiplier": "2500",
+      "defaultBand": "96"
     },
     "spin-party": {
       "name": "Spin Party",
@@ -21395,7 +22561,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "spinparty",
+      "maxMultiplier": "25000",
+      "defaultBand": "96"
     },
     "royal-masquerade": {
       "name": "Royal Masquerade",
@@ -21440,7 +22609,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "masquerade",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "super-flip": {
       "name": "Super Flip",
@@ -21485,7 +22657,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "superflip",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "golden-legend": {
       "name": "Golden Legend",
@@ -21530,7 +22705,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "goldenlegend",
+      "maxMultiplier": "20000",
+      "defaultBand": "96"
     },
     "tower-quest": {
       "name": "Tower Quest",
@@ -21575,7 +22753,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "towerquest",
+      "maxMultiplier": "5000",
+      "defaultBand": "96"
     },
     "easter-eggs": {
       "name": "Easter Eggs",
@@ -21620,7 +22801,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "eastereggs",
+      "maxMultiplier": "500",
+      "defaultBand": "96"
     },
     "pimped": {
       "name": "Pimped",
@@ -21665,7 +22849,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "pimped",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "gemix": {
       "name": "Gemix",
@@ -21710,7 +22897,10 @@
         "UAE": "Yes",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "gemix",
+      "maxMultiplier": "4557.3",
+      "defaultBand": "96"
     },
     "merry-xmas": {
       "name": "Merry Xmas",
@@ -21755,7 +22945,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "merryxmas",
+      "maxMultiplier": "8781",
+      "defaultBand": "96"
     },
     "golden-ticket": {
       "name": "Golden Ticket",
@@ -21800,7 +22993,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "goldenticket",
+      "maxMultiplier": "18566.15",
+      "defaultBand": "96"
     },
     "crazy-cows": {
       "name": "Crazy Cows",
@@ -21845,7 +23041,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "crazycows",
+      "maxMultiplier": "100000",
+      "defaultBand": "96"
     },
     "pearls-of-india": {
       "name": "Pearls of India",
@@ -21890,7 +23089,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "pearlsofindia",
+      "maxMultiplier": "10000",
+      "defaultBand": "96"
     },
     "mystery-joker": {
       "name": "Mystery Joker",
@@ -21935,7 +23137,10 @@
         "UAE": "Yes",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "mysteryjoker",
+      "maxMultiplier": "6480",
+      "defaultBand": "96"
     },
     "enchanted-crystals": {
       "name": "Enchanted Crystals",
@@ -21980,7 +23185,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "enchantedcrystals",
+      "maxMultiplier": "68308",
+      "defaultBand": "96"
     },
     "chinese-new-year": {
       "name": "Chinese New Year",
@@ -22025,7 +23233,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "chinesenewyear",
+      "maxMultiplier": "113626.67",
+      "defaultBand": "96"
     },
     "lady-of-fortune": {
       "name": "Lady of Fortune",
@@ -22070,7 +23281,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "ladyoffortune",
+      "maxMultiplier": "8781",
+      "defaultBand": "96"
     },
     "deuces-wild-mh": {
       "name": "Deuces Wild MH",
@@ -22115,7 +23329,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "deuceswild",
+      "maxMultiplier": "0",
+      "defaultBand": "91"
     },
     "jacks-or-better-mh": {
       "name": "Jacks or Better MH",
@@ -22160,7 +23377,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "jacksorbetter",
+      "maxMultiplier": "0",
+      "defaultBand": "91"
     },
     "gold-trophy-2": {
       "name": "Gold Trophy 2",
@@ -22205,7 +23425,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "goldtrophy2",
+      "maxMultiplier": "336660",
+      "defaultBand": "96"
     },
     "energoonz": {
       "name": "Energoonz",
@@ -22250,7 +23473,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "Yes"
-      }
+      },
+      "gid": "energoonz",
+      "maxMultiplier": "18566.15",
+      "defaultBand": "96"
     },
     "rage-to-riches": {
       "name": "Rage to Riches",
@@ -22295,7 +23521,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "ragetoriches",
+      "maxMultiplier": "146739.75",
+      "defaultBand": "96"
     },
     "riches-of-ra": {
       "name": "Riches of RA",
@@ -22340,7 +23569,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "richesofra",
+      "maxMultiplier": "8032",
+      "defaultBand": "94"
     },
     "troll-hunters": {
       "name": "Troll Hunters",
@@ -22385,7 +23617,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "trollhunters",
+      "maxMultiplier": "18566.15",
+      "defaultBand": "96"
     },
     "ninja-fruits": {
       "name": "Ninja Fruits",
@@ -22430,7 +23665,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "ninjafruits",
+      "maxMultiplier": "113626.67",
+      "defaultBand": "96"
     },
     "leprechaun-goes-egypt": {
       "name": "Leprechaun goes Egypt",
@@ -22475,7 +23713,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "leprechaungoesegypt",
+      "maxMultiplier": "500",
+      "defaultBand": "96"
     },
     "wild-blood": {
       "name": "Wild Blood",
@@ -22520,7 +23761,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "wildblood",
+      "maxMultiplier": "100000",
+      "defaultBand": "96"
     },
     "irish-gold": {
       "name": "Irish Gold",
@@ -22565,7 +23809,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "irishgold",
+      "maxMultiplier": "5250",
+      "defaultBand": "96"
     },
     "5x-magic": {
       "name": "5x Magic",
@@ -22610,7 +23857,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "5xmagic",
+      "maxMultiplier": "5250",
+      "defaultBand": "96"
     },
     "ace-of-spades": {
       "name": "Ace of Spades",
@@ -22655,7 +23905,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "aceofspades",
+      "maxMultiplier": "833.33",
+      "defaultBand": "96"
     },
     "lucky-diamonds": {
       "name": "Lucky Diamonds",
@@ -22700,7 +23953,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "luckydiamonds",
+      "maxMultiplier": "833.33",
+      "defaultBand": "96"
     },
     "wild-melon": {
       "name": "Wild Melon",
@@ -22745,7 +24001,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "wildmelon",
+      "maxMultiplier": "3333.33",
+      "defaultBand": "94"
     },
     "myth": {
       "name": "Myth",
@@ -22790,7 +24049,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "myth",
+      "maxMultiplier": "336660",
+      "defaultBand": "96"
     },
     "jewel-box": {
       "name": "Jewel Box",
@@ -22835,7 +24097,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "jewelbox",
+      "maxMultiplier": "8781",
+      "defaultBand": "96"
     },
     "fortune-teller": {
       "name": "Fortune Teller",
@@ -22880,7 +24145,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "fortuneteller",
+      "maxMultiplier": "10657.5",
+      "defaultBand": "94"
     },
     "space-race": {
       "name": "Space Race",
@@ -22925,7 +24193,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "spacerace",
+      "maxMultiplier": "53287.5",
+      "defaultBand": "94"
     },
     "photo-safari": {
       "name": "Photo Safari",
@@ -22970,7 +24241,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "photosafari",
+      "maxMultiplier": "53287.5",
+      "defaultBand": "94"
     },
     "dragon-ship": {
       "name": "Dragon Ship",
@@ -23015,7 +24289,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "dragonship",
+      "maxMultiplier": "40160",
+      "defaultBand": "94"
     },
     "pearl-lagoon": {
       "name": "Pearl Lagoon",
@@ -23060,7 +24337,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "pearllagoon",
+      "maxMultiplier": "336660",
+      "defaultBand": "96"
     },
     "enchanted-meadow": {
       "name": "Enchanted Meadow",
@@ -23105,7 +24385,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "enchantedmeadow",
+      "maxMultiplier": "100000",
+      "defaultBand": "96"
     },
     "aztec-idols": {
       "name": "Aztec Idols",
@@ -23150,7 +24433,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "aztecidols",
+      "maxMultiplier": "22725.33",
+      "defaultBand": "96"
     },
     "jolly-roger": {
       "name": "Jolly Roger",
@@ -23195,7 +24481,10 @@
         "UAE": "No",
         "UK": "Yes",
         "West Virginia": "No"
-      }
+      },
+      "gid": "jollyroger",
+      "maxMultiplier": "928",
+      "defaultBand": "94"
     }
   }
 }

@@ -17,6 +17,7 @@ import { wagerView, bonusWithWager } from "./wager";
 import { hasMaxWin, hasVol, maxWinLabel, rtpLabel, hasRtp, rtpSortValue, volLabel } from "./slot-facts";
 import { isFieldTestedOperator, isEditoriallyAudited } from "./field-tested";
 import { tintFor } from "./logo";
+import { studioCatalogue } from "./slot-page";
 import { getCasinoSpecSheet, getSpecFact } from "./spec-sheet";
 import { sportsFacts, booksForTitle, esportsLabel, maxPayoutShort } from "./sports";
 import type { Flag } from "./types";
@@ -426,6 +427,13 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
     // The prototype's title counts, casino counts and "RTP range" had no
     // source and are gone.
     const titles = slots.filter((s) => s.provider === p.name);
+    /**
+     * The hand-written reviews are a handful per studio; the catalogue is the
+     * real measure of what we can say about one. Counting off `titles` alone
+     * published "Play'n GO: 1 title on our index" over 488 catalogue entries
+     * and 420 titles whose every licensed configuration we hold.
+     */
+    const cat = studioCatalogue(p.name);
     const topMaxWin = titles.filter(hasMaxWin)[0]?.maxWin;
     const volCounts = titles.filter(hasVol).reduce<Record<string, number>>((acc, s) => ({ ...acc, [s.vol]: (acc[s.vol] ?? 0) + 1 }), {});
     const modalVol = Object.entries(volCounts).sort((a, b) => b[1] - a[1])[0]?.[0];
@@ -444,7 +452,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       slug: p.slug,
       mono: p.mono,
       tint: p.tint,
-      headline: `${p.name}: ${p.rtp.toLowerCase()}, ${titles.length} title${titles.length === 1 ? "" : "s"} on our index`,
+      headline: `${p.name}: ${p.rtp.toLowerCase()}, ${cat.titles || titles.length} title${(cat.titles || titles.length) === 1 ? "" : "s"} on our index`,
       standfirst: `${p.note} Figures come from ${p.name}'s own site.`,
       tags: [policy === "multiple" ? "EVERY RTP VERSION LISTED" : policy === "unpublished" ? "RTP NOT PUBLISHED" : policy === "bonus-buy" ? "BASE + BONUS-BUY RTP" : "ONE RTP PER GAME PAGE", "STUDIO'S OWN SITE", ...(readAny ? ["BUILDS READ IN-CLIENT"] : [])],
       byline: `${p.name}'s own site`,
@@ -453,12 +461,21 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
         { label: "RTP disclosure", value: p.rtp, source: "cited" },
         { label: "Licensing", value: p.licences, source: "cited" },
         { label: "Catalogue", value: p.titlesStated ?? "Not stated", source: p.titlesStated ? "cited" : "unchecked" },
-        { label: "Titles on our index", value: String(titles.length), source: "index" },
+        { label: "Titles on our index", value: String(cat.titles || titles.length), source: "index" },
+        ...(cat.withVersions
+          ? [{ label: "Every build published", value: `${cat.withVersions} titles`, source: "cited" as const }]
+          : []),
       ],
       stats: [
         { label: "RTP disclosure", value: p.rtp, note: "On its own game pages" },
         { label: "Licensing", value: p.licences, note: "As stated on its site" },
         { label: "Catalogue", value: p.titlesStated ?? "Not stated", note: p.titlesStated ? "Its own figure" : "No count on its site" },
+        ...(cat.withVersions
+          ? [{ label: "Builds we can name", value: String(cat.withVersions), note: `Titles where ${p.name} publishes every licensed configuration` }]
+          : []),
+        ...(cat.widestSpread
+          ? [{ label: "Widest spread", value: `${cat.widestSpread}pp`, note: "Between the best and worst build of a single title" }]
+          : []),
         ...(topMaxWin ? [{ label: "Highest max win", value: topMaxWin, note: "Published cap, titles on our index" }] : []),
         ...(modalVol ? [{ label: "Typical volatility", value: modalVol, note: "Most common across titles on our index" }] : []),
       ],
@@ -473,7 +490,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
         cited("Licensing", p.licences),
       ],
       tableTitle: "Titles we track from this studio",
-      tableSub: `Published RTP, volatility and max win from ${p.name}'s own game pages.`,
+      tableSub: `Published RTP, volatility and max win from ${p.name}'s own game pages.${cat.pages ? ` A further ${cat.pages} of its titles have a page in the slot catalogue.` : ""}`,
       tableCols: ["RTP", "Volatility", "Max win"],
       tableRows: [...titles].sort((a, b) => rtpSortValue(b) - rtpSortValue(a)).map((s) => ({ name: s.name, note: s.rtpVersions ? `${s.rtpVersions.split("/").length} published RTP versions` : `${s.provider} game page`, m1: rtpLabel(s), m2: hasVol(s) ? s.vol : "Not published", m3: maxWinLabel(s) })),
       tableEmpty: "None of this studio's titles are on our slot index yet.",

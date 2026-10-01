@@ -65,5 +65,17 @@
     "licences": "Licensed or certified in over 30 jurisdictions (its claim)",
     "titlesStated": "Over 500 games",
     "sourceUrl": "https://www.pragmaticplay.com/en/"
+  },
+  {
+    "slug": "play-n-go",
+    "name": "Play’n GO",
+    "mono": "PnG",
+    "tint": "#C9A227",
+    "note": "Publishes five RTP configurations for most titles — a 96, 94, 91, 87 and 84 band — in the game data on its own site, alongside which band ships by default and whether the title is approved in each jurisdiction it is licensed in.",
+    "rtpPolicy": "multiple",
+    "rtp": "Every RTP version listed",
+    "licences": "24 jurisdictions listed, including Great Britain, Malta, Gibraltar, Sweden, Denmark, Ontario, Alberta, Québec, Michigan, New Jersey, Pennsylvania and West Virginia",
+    "titlesStated": "Over 350 premium games",
+    "sourceUrl": "https://www.playngo.com/"
   }
 ]

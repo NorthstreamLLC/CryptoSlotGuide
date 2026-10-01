@@ -111,15 +111,31 @@ const overrides = { ...existingRtp.overrides };
 const existingMeta = fs.existsSync(META_OUT) ? JSON.parse(fs.readFileSync(META_OUT, "utf8")) : { games: {} };
 const meta = { ...existingMeta.games };
 
-const report = { matched: 0, unmatched: 0, dates: 0, multi: 0, conflicts: [] };
+const report = { matched: 0, unmatched: 0, dates: 0, multi: 0, cleared: 0, conflicts: [] };
 
-function record(slug, name, { versions, released, jurisdictions, volatility, demoUrl }, studio, sourceUrl, sheet) {
+function record(slug, name, { versions, released, jurisdictions, volatility, demoUrl, gid, maxMultiplier, defaultBand, versionsFrom }, studio, sourceUrl, sheet) {
   const game = bySlug.get(slug);
   if (!game) {
     report.unmatched++;
     return;
   }
   report.matched++;
+
+  if (!versions?.length) {
+    /**
+     * The sheet covers this title but publishes no usable return — the bingo
+     * titles carry "0" in every band. If a previous run of this script wrote
+     * an override for it, that figure is stale and has to go, or a number the
+     * studio no longer publishes survives every re-import.
+     *
+     * Only this studio's own sheet-written overrides are cleared; anything
+     * read from an operator's client or a studio game page stays.
+     */
+    if (overrides[slug]?.studio === studio && overrides[slug]?.reason?.includes(sheet)) {
+      delete overrides[slug];
+      report.cleared++;
+    }
+  }
 
   if (versions?.length) {
     if (versions.length > 1) report.multi++;
@@ -128,10 +144,21 @@ function record(slug, name, { versions, released, jurisdictions, volatility, dem
     }
     overrides[slug] = {
       versions,
+      /**
+       * Whether the studio published this whole set of returns, or whether
+       * the catalogue feed supplied some of it.
+       *
+       * It decides what a page may claim. Play'n GO lists every band itself,
+       * so its sets are "studio". Pragmatic publishes one figure per title
+       * and the second build below it comes from the feed — calling that
+       * "every build the studio publishes" would be an overclaim, so it is
+       * "mixed" and counted separately.
+       */
+      versionsFrom: versionsFrom ?? (versions.length > 1 ? "mixed" : "studio"),
       studio,
       sourceUrl,
       read: new Date().toISOString().slice(0, 10),
-      reason: `${studio}'s own game sheet (${sheet}). ${versions.length > 1 ? `This title ships at ${versions.length} returns.` : "One published return."}`,
+      reason: `${studio}'s own published game data (${sheet}). ${versions.length > 1 ? `This title ships at ${versions.length} returns.` : "One published return."}`,
     };
   }
   if (released) report.dates++;
@@ -143,6 +170,9 @@ function record(slug, name, { versions, released, jurisdictions, volatility, dem
     ...(released ? { released } : {}),
     ...(volatility ? { volatility } : {}),
     ...(demoUrl ? { demoUrl } : {}),
+    ...(gid ? { gid } : {}),
+    ...(defaultBand ? { defaultBand } : {}),
+    ...(maxMultiplier ? { maxMultiplier } : {}),
     ...(jurisdictions ? { jurisdictions } : {}),
   };
 }
@@ -179,10 +209,13 @@ if (pragFile && fs.existsSync(pragFile)) {
     if (rtp !== null) {
       versions = feed.includes(rtp) ? [...new Set([rtp, ...feed])].sort((a, b) => b - a) : [rtp];
     } else if (feed.length) versions = [...feed].sort((a, b) => b - a);
+    // Studio-only when the set is the sheet's figure alone; mixed the moment
+    // the feed's lower build is kept alongside it.
+    const versionsFrom = rtp !== null && versions.length === 1 ? "studio" : "mixed";
     record(
       slugify(name),
       name,
-      { versions, released: isoDate(r["Release Date"]), demoUrl: demoUrl || undefined },
+      { versions, versionsFrom, released: isoDate(r["Release Date"]), demoUrl: demoUrl || undefined },
       "Pragmatic Play",
       "https://www.pragmaticplay.com/en/slots/",
       path.basename(pragFile)
@@ -206,13 +239,42 @@ if (pgFile && fs.existsSync(pgFile)) {
   for (const r of rows) {
     const name = r["Game name"];
     if (!name) continue;
-    const versions = [...new Set([pct(r["Default rtp% config"]), ...cfgCols.map((c) => pct(r[c]))].filter((v) => v !== null))].sort((a, b) => b - a);
+    /**
+     * "Default rtp% config" is a BAND LABEL, not a return. It reads "96" on
+     * 474 of the 491 rows, and on all 491 it is NOT one of the figures in the
+     * NN% config columns — Play'n GO's own site keeps the two apart as
+     * `defaultRtpConfiguration` ("96") and `defaultRtp` ("96.51").
+     *
+     * Feeding it through pct() minted a 96.00% build on every Play'n GO
+     * title: a return the studio does not ship, sitting under the real
+     * 96.51%. Only the NN% config columns are returns. The label is kept
+     * separately, as the band the studio ships by default.
+     */
+    const versions = [...new Set(cfgCols.map((c) => pct(r[c])).filter((v) => v !== null))].sort((a, b) => b - a);
+    const defaultBand = /^\d{2}$/.test(r["Default rtp% config"]?.trim() ?? "") ? r["Default rtp% config"].trim() : undefined;
     const jurisdictions = Object.fromEntries(jurCols.map((c) => [c, r[c]]).filter(([, v]) => v));
     record(
       slugify(name),
       name,
-      { versions, released: isoDate(r["Release date"]), jurisdictions, volatility: r["Volatility rating"] || undefined },
+      {
+        versions,
+        // Every figure here is a column of Play'n GO's own game data.
+        versionsFrom: "studio",
+        released: isoDate(r["Release date"]),
+        jurisdictions,
+        volatility: r["Volatility rating"] || undefined,
+        gid: r["GID"] || undefined,
+        defaultBand,
+        maxMultiplier: r["Max multiplier"] || undefined,
+      },
       "Play'n GO",
+      // The ALL GAMES index on Play'n GO's own site, which is where this data
+      // is published: their game pages carry the same fields this sheet has
+      // columns for (rtp84/87/91/94/96, the jurisdiction flags, max
+      // multiplier). Checked against 23 of those pages — 46 RTP figures, all
+      // identical to the sheet. Per-game URLs are NOT recorded: the page slug
+      // is the game's name, not the GID, and it does not resolve for every
+      // title, so a stored per-game link would 404 on some.
       "https://www.playngo.com/games",
       path.basename(pgFile)
     );
@@ -220,7 +282,7 @@ if (pgFile && fs.existsSync(pgFile)) {
   console.log(`  Play'n GO: ${rows.length} rows (${cfgCols.length} RTP config columns, ${jurCols.length} jurisdictions)`);
 }
 
-console.log(`\n  matched ${report.matched} · unmatched ${report.unmatched} · with >1 return ${report.multi} · real release dates ${report.dates}`);
+console.log(`\n  matched ${report.matched} · unmatched ${report.unmatched} · with >1 return ${report.multi} · real release dates ${report.dates} · stale overrides cleared ${report.cleared}`);
 if (report.conflicts.length) {
   console.log(`\n  feed figure not among the sheet's returns (${report.conflicts.length} of ${report.matched}):`);
   for (const c of report.conflicts.slice(0, 10)) console.log(`     ${c.name.slice(0, 30).padEnd(30)} feed ${c.feed}  vs sheet ${c.sheet.join(" / ")}`);
