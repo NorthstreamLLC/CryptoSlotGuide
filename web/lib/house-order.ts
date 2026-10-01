@@ -26,6 +26,13 @@ const TIERS: string[][] = [
   // to be here or the order silently applies to only half the site.
   ["stake", "stake-us", "shuffle", "shuffle-us"],
   ["rainbet", "gamdom", "bc-game", "duelbits", "razed", "500-casino"],
+  // Prediction-market venues (data/predMarkets.json). They never share a list
+  // with a casino, so sitting below the casino tiers costs them nothing; what
+  // matters is the order within each tab. This is the order the records were
+  // entered in, kept as the starting placement until deals decide otherwise —
+  // reorder here and both the page and its ItemList follow.
+  ["polymarket", "limitless", "overtime", "myriad"],
+  ["kalshi", "polymarket-us", "robinhood", "forecastex", "predictit"],
 ];
 
 /**

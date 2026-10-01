@@ -1,6 +1,7 @@
 {
   "crypto": [
     {
+      "slug": "polymarket",
       "name": "Polymarket",
       "site": "https://polymarket.com",
       "settle": "pUSD (USDC-backed) · Polygon",
@@ -48,6 +49,7 @@
       ]
     },
     {
+      "slug": "limitless",
       "name": "Limitless",
       "site": "https://limitless.exchange",
       "settle": "USDC · Base",
@@ -95,6 +97,7 @@
       ]
     },
     {
+      "slug": "overtime",
       "name": "Overtime",
       "site": "https://www.overtimemarkets.xyz",
       "settle": "USDC, USDT or ETH · Optimism, Arbitrum, Base",
@@ -142,6 +145,7 @@
       ]
     },
     {
+      "slug": "myriad",
       "name": "Myriad",
       "site": "https://myriad.markets",
       "settle": "USD1 · BNB Smart Chain",
@@ -186,6 +190,7 @@
   ],
   "fiat": [
     {
+      "slug": "kalshi",
       "name": "Kalshi",
       "site": "https://kalshi.com",
       "settle": "USD",
@@ -233,6 +238,7 @@
       ]
     },
     {
+      "slug": "polymarket-us",
       "name": "Polymarket US",
       "site": "https://polymarket.us",
       "settle": "USD",
@@ -285,6 +291,7 @@
       ]
     },
     {
+      "slug": "robinhood",
       "name": "Robinhood Prediction Markets",
       "site": "https://robinhood.com/us/en/prediction-markets/",
       "settle": "USD",
@@ -342,6 +349,7 @@
       ]
     },
     {
+      "slug": "forecastex",
       "name": "ForecastEx",
       "site": "https://forecastex.com",
       "settle": "USD",
@@ -394,6 +402,7 @@
       ]
     },
     {
+      "slug": "predictit",
       "name": "PredictIt",
       "site": "https://www.predictit.org",
       "settle": "USD",

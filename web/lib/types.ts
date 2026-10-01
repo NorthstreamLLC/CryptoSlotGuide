@@ -174,7 +174,18 @@ export interface LiveGame {
 }
 
 export interface PredictionMarket {
+  /** Matches the mark in lib/logo.ts and the placement slug in lib/house-order.ts. */
+  slug: string;
   name: string;
+  /**
+   * Our tracked link, where a deal exists. The row's button goes here and is
+   * marked sponsored; without one it goes to `site` as a plain outbound link.
+   * Same two flags the casinos carry, so the house order treats venues the
+   * same way.
+   */
+  signupUrl?: string;
+  affiliate?: boolean;
+  featured?: boolean;
   /** Settlement asset/chain description, e.g. "USDC · Polygon" — not an enum. */
   settle: string;
   fee: string;

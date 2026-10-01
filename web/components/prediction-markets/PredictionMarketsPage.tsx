@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { siteData } from "@/lib/site-data";
+import { venuesInOrder, venueCta } from "@/lib/prediction-markets";
+import { BrandMark } from "@/components/ui/BrandMark";
 
 /**
  * Ported from the `isPredict` block in CryptoSlotGuide.dc.html (search
@@ -19,8 +21,9 @@ export function PredictionMarketsPage({ initialTab = "crypto" }: { initialTab?: 
   const { predMarkets } = siteData;
   const [tab, setTab] = useState<"crypto" | "fiat">(initialTab);
   const [open, setOpen] = useState<string | null>(null);
-  // Listed A–Z; venues are not ranked. Every figure is from the venue's own pages (see facts).
-  const rows = [...predMarkets[tab]].sort((a, b) => a.name.localeCompare(b.name));
+  // Placement order, shared with the page's ItemList — see lib/prediction-markets.ts.
+  // Every figure is from the venue's own pages (see facts).
+  const rows = venuesInOrder(tab);
 
   return (
     <main>
@@ -87,23 +90,46 @@ export function PredictionMarketsPage({ initialTab = "crypto" }: { initialTab?: 
 
       <section style={{ maxWidth: 1400, margin: "0 auto", padding: "36px 40px 80px" }}>
         <div style={{ border: "1px solid rgba(255,255,255,.08)", borderRadius: 14, overflowX: "auto" }}>
-          <div style={{ display: "grid", minWidth: 1020, gridTemplateColumns: "minmax(220px,1.3fr) minmax(150px,1fr) minmax(150px,1fr) 150px 170px 90px", background: "rgba(255,255,255,.03)", borderBottom: "1px solid rgba(255,255,255,.08)" }}>
-            {["Venue", "Settlement", "Cost to trade", "Account", "Payout", ""].map((h) => (
+          <div style={{ display: "grid", minWidth: 1020, gridTemplateColumns: "44px minmax(220px,1.3fr) minmax(150px,1fr) minmax(150px,1fr) 150px 170px 150px", background: "rgba(255,255,255,.03)", borderBottom: "1px solid rgba(255,255,255,.08)" }}>
+            {["#", "Venue", "Settlement", "Cost to trade", "Account", "Payout", ""].map((h) => (
               <div key={h} style={{ padding: "14px 16px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".07em", textTransform: "uppercase", color: "#83919A" }}>{h}</div>
             ))}
           </div>
-          {rows.map((m) => (
+          {rows.map((m, i) => (
             <div key={m.name}>
-            <div style={{ display: "grid", minWidth: 1020, gridTemplateColumns: "minmax(220px,1.3fr) minmax(150px,1fr) minmax(150px,1fr) 150px 170px 90px", alignItems: "center", borderBottom: "1px solid rgba(255,255,255,.05)" }}>
-              <div style={{ padding: "14px 16px" }}>
-                <div style={{ fontSize: 14.5, fontWeight: 700, letterSpacing: "-.015em", color: "#fff" }}>{m.name}</div>
-                <div style={{ fontSize: 12, lineHeight: 1.5, color: "#7B8A93", marginTop: 4, maxWidth: "52ch" }}>{m.note}</div>
+            <div style={{ display: "grid", minWidth: 1020, gridTemplateColumns: "44px minmax(220px,1.3fr) minmax(150px,1fr) minmax(150px,1fr) 150px 170px 150px", alignItems: "center", borderBottom: "1px solid rgba(255,255,255,.05)" }}>
+              <div style={{ padding: "14px 0 14px 16px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, color: "#83919A" }}>{i + 1}</div>
+              <div style={{ padding: "14px 16px", display: "flex", alignItems: "center", gap: 12 }}>
+                <span style={{ width: 34, height: 34, flex: "none", borderRadius: 9, overflow: "hidden" }}>
+                  <BrandMark slug={m.slug} mono={m.name.slice(0, 2).toUpperCase()} tint={m.tint} radius={9} fontSize={11} />
+                </span>
+                <div style={{ minWidth: 0 }}>
+                  <div style={{ fontSize: 14.5, fontWeight: 700, letterSpacing: "-.015em", color: "#fff" }}>{m.name}</div>
+                  <div style={{ fontSize: 12, lineHeight: 1.5, color: "#7B8A93", marginTop: 4, maxWidth: "52ch" }}>{m.note}</div>
+                </div>
               </div>
               <div style={{ padding: "14px 16px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, color: m.tint }}>{m.settle}</div>
               <div style={{ padding: "14px 16px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, color: "#DCE5E9" }}>{m.fee}</div>
               <div style={{ padding: "14px 16px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, color: "#8DA0AA" }}>{m.kyc}</div>
               <div style={{ padding: "14px 16px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, color: "#8DA0AA" }}>{m.payout}</div>
-              <div style={{ padding: "14px 16px" }}>
+              <div style={{ padding: "14px 16px", display: "flex", gap: 6, alignItems: "center" }}>
+                {(() => {
+                  // Tracked link where a deal exists, marked sponsored; the
+                  // venue's own site otherwise. The button never pretends to
+                  // be an offer — a prediction market has none to open.
+                  const cta = venueCta(m);
+                  return (
+                    <a
+                      href={cta.href}
+                      target="_blank"
+                      rel={cta.sponsored ? "noopener sponsored nofollow" : "noopener noreferrer nofollow"}
+                      className="transition-transform hover:-translate-y-px"
+                      style={{ padding: "7px 11px", borderRadius: 7, background: cta.sponsored ? "#FFC531" : "rgba(0,194,204,.12)", border: cta.sponsored ? "none" : "1px solid rgba(0,194,204,.35)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, fontWeight: 700, color: cta.sponsored ? "#0E1316" : "#5FE3E8", whiteSpace: "nowrap" }}
+                    >
+                      Visit ↗
+                    </a>
+                  );
+                })()}
                 <button type="button" onClick={() => setOpen(open === m.name ? null : m.name)} aria-expanded={open === m.name} style={{ padding: "7px 10px", borderRadius: 7, border: "1px solid rgba(255,255,255,.14)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#A8B6BE", whiteSpace: "nowrap" }}>
                   {open === m.name ? "Hide" : "Sources"}
                 </button>

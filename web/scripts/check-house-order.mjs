@@ -13,7 +13,8 @@ import { fileURLToPath } from "node:url";
 const web = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const read = (p) => JSON.parse(fs.readFileSync(path.join(web, p), "utf8"));
 
-const known = new Set([...read("data/ops.json"), ...read("data/sweeps.json")].map((o) => o.slug));
+const pred = read("data/predMarkets.json");
+const known = new Set([...read("data/ops.json"), ...read("data/sweeps.json"), ...pred.crypto, ...pred.fiat].map((o) => o.slug));
 
 // Pulled out of the source rather than imported, so this runs as plain node
 // without a TypeScript step in the way.
@@ -29,7 +30,7 @@ const missing = slugs.filter((s) => !known.has(s));
 const dupes = slugs.filter((s, i) => slugs.indexOf(s) !== i);
 
 if (missing.length || dupes.length) {
-  if (missing.length) console.error(`check:house — not in ops.json or sweeps.json: ${missing.join(", ")}`);
+  if (missing.length) console.error(`check:house — not in ops.json, sweeps.json or predMarkets.json: ${missing.join(", ")}`);
   if (dupes.length) console.error(`check:house — listed twice: ${[...new Set(dupes)].join(", ")}`);
   process.exit(1);
 }
