@@ -1,5 +1,25 @@
 [
   {
+    "slug": "how-to-deposit-crypto",
+    "title": "How to deposit crypto without losing it",
+    "mono": "DP",
+    "tint": "#FFC531",
+    "standfirst": "The network you pick matters more than the coin. Pick wrong and the money is gone.",
+    "category": "Crypto",
+    "readMins": 7,
+    "updated": "1 Oct"
+  },
+  {
+    "slug": "how-to-sign-up",
+    "title": "How to sign up at a crypto casino",
+    "mono": "SU",
+    "tint": "#5FE3E8",
+    "standfirst": "Four decisions made in the first two minutes, three of which you cannot undo.",
+    "category": "Accounts",
+    "readMins": 6,
+    "updated": "1 Oct"
+  },
+  {
     "slug": "how-to-complete-kyc",
     "title": "How to complete KYC without losing your balance",
     "mono": "KV",

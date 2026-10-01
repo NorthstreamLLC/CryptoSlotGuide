@@ -14,6 +14,7 @@ import type {
   WalletOrExchangeRow,
 } from "./types";
 import { kycCounts } from "./kyc";
+import { depositCounts } from "./deposit-facts";
 
 /**
  * "Every published figure is derived — keep it that way." Per README:
@@ -163,6 +164,7 @@ export function fill(
     // KYC shape counts, so a guide can say "12 of 46" without a writer
     // having to remember to update it when a policy is re-read.
     ...kycCounts(),
+    ...depositCounts(),
   };
   return template.replace(/\{(\w+)\}/g, (match, key) => (key in tokens ? String(tokens[key]) : match));
 }

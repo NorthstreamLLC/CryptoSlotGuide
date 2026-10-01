@@ -126,5 +126,35 @@
       "**If it stalls.** Most delays are a document that was readable to you and not to a reviewer: a glare, a cropped edge, an address that no longer matches. Resubmit a cleaner copy before assuming anything is wrong. If a check is taking longer than the operator's own stated time, ask support through the account and keep the thread. And read the bonus terms before you opt in rather than after — Bluff needs no verification to withdraw unless you took a bonus, at which point it does."
     ],
     "data": "kyc-tiers"
+  },
+  "how-to-sign-up": {
+    "key": [
+      "Check you are allowed to play before you create anything",
+      "Use the details that are on your ID — mismatches surface at cash-out",
+      "The bonus decision is made at your first deposit and is usually final"
+    ],
+    "body": [
+      "Signing up takes about two minutes and sets four things you will live with. Most people get three of them wrong by doing it quickly, and only find out weeks later when a withdrawal stalls.",
+      "**Is it legal where you are?** Not whether the casino will take you — those are different questions and they disagree often. Nine of the countries we cover ban online casinos while most operators' terms do not mention them at all, so a sign-up page that lets you through is not permission. Check the law first on our legal map, then check the operator's own restricted list on its page here. If either says no, stop: a balance built where you were never allowed to play is a balance that will not be paid out.",
+      "**Email or wallet?** Most of the {casinos} casinos we track open an account on an email address and a password. A few are wallet-first — Goated starts at an email or a connected wallet, MetaWin runs on one. Wallet sign-up is faster and gives the operator less about you up front, but it moves the burden: lose the wallet and you lose the account, and there is no password reset for a key you no longer have.",
+      "**Enter the details that are on your documents.** Legal name as spelled on the ID, real date of birth, the address on a recent bill. This is the step that quietly decides how your first withdrawal goes, because {required} of the {casinos} make verification a condition of playing or withdrawing and the rest reserve the right to ask. Every mismatch between the account and the document is a manual review, and reviews land at the worst moment. One account, in your own name — an operator will not pay a balance to a name that is not on the account.",
+      "**Decide about the bonus before you deposit, not after.** Opting in is usually irreversible for that deposit, and it changes the account's rules rather than just adding money: wagering has to clear before anything can leave, and at some operators it pulls in obligations that were not there before. Bluff needs no verification to withdraw at all — unless you took a bonus, at which point it does. Read the wagering multiplier and what counts toward it first; our bonuses page has every one we hold, each from the operator's own terms.",
+      "**Then verify, while nothing is at stake.** You do not have to wait to be asked. Doing it on a quiet day with good light and a clean copy of your ID costs ten minutes; doing it mid-withdrawal costs however long the queue is, at the one moment you care. The KYC guide covers what each operator asks for and which publish the figure that triggers a check."
+    ]
+  },
+  "how-to-deposit-crypto": {
+    "key": [
+      "The network matters more than the coin — the wrong one loses the funds",
+      "All {casinos} take BTC, ETH and USDT; the long tail is where support thins out",
+      "Send a small test first, every time, to a new address"
+    ],
+    "body": [
+      "A crypto deposit is one irreversible instruction. There is no chargeback, no support ticket that reverses it, and no bank to call. Almost everything that goes wrong goes wrong in the thirty seconds before you press send.",
+      "**The coin is the easy part.** All {casinos} casinos we track credit Bitcoin, Ethereum and USDT. After that it thins: 42 take Litecoin, 40 Solana, 38 Tron, 34 Dogecoin and 34 XRP. If you hold something further out, check the operator's own coin list before you move anything, because an unsupported coin sent to a deposit address is not a deposit — it is a loss.",
+      "**The network is the hard part, and it is where money actually disappears.** USDT is not one thing. The same stablecoin runs on Ethereum as ERC-20, on Tron as TRC-20, on BNB Smart Chain, on Polygon, on Solana. Sportsbet.io's own page lists four chains for USDT and five for USDC. Pick the network on the casino's deposit screen first, then pick the matching one in your wallet — never the other way round. Sending TRC-20 USDT to an ERC-20 address is the single most common way to lose a deposit, and it is unrecoverable.",
+      "**Copy the address, then check it.** Always copy and paste, never retype. Then read the first four and last four characters against the screen before sending, because clipboard-hijacking malware exists precisely for this moment. Deposit addresses can rotate between visits, so use the one shown now rather than one you saved.",
+      "**Send a small test to any address you have not used before.** The smallest amount the operator will credit, confirmed arrived, then the real amount. It costs one extra network fee and it is the only way to find out you had the network wrong while it still costs almost nothing. Minimums are low enough that this is cheap: Shuffle credits from $0.01, and {noMinimum} operators including Roobet, Stake and Duelbits state no crypto minimum at all. Rollbit sets its by coin — $5 for stablecoins, 0.0001 BTC, 0.002 ETH.",
+      "**Then wait for confirmations.** The casino credits after a set number of blocks, not instantly, and that number is theirs to choose. Minutes on a fast chain, longer on Bitcoin when it is busy. A deposit that has not appeared is almost always still confirming — check the transaction on a block explorer with the hash your wallet gave you before contacting anyone. Who pays the network fee, and how to cut it, is its own guide."
+    ]
   }
 }
