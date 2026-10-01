@@ -4,6 +4,7 @@ import { NextSteps } from "@/components/layout/NextSteps";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { pageMetadata } from "@/lib/seo";
 import { breadcrumbSchema, collectionPageSchema, itemListSchema } from "@/lib/schema";
+import { approvedCount } from "@/lib/game-jurisdictions";
 import {
   CA_FEDERAL,
   CA_PROVINCES,
@@ -122,6 +123,38 @@ export default function Page() {
             The other {counts.length - blocked.length} provinces and territories are named by none of the casinos we track. That means their terms do not
             single the province out — not that any given operator is registered there.
           </p>
+        </section>
+
+        {/* Game-level approval, which the operator data cannot reach. A casino
+            can be live in Ontario while a given slot is not licensed there. */}
+        <section style={{ maxWidth: 1200, margin: "0 auto", padding: "34px 40px 0" }}>
+          <h2 style={{ margin: "0 0 6px", fontSize: 26, fontWeight: 800, letterSpacing: "-.025em", color: "#fff" }}>Which games are approved</h2>
+          <p style={{ margin: "0 0 16px", maxWidth: "72ch", fontSize: 14.5, lineHeight: 1.6, color: "#8DA0AA" }}>
+            A licensed province approves the game as well as the operator, so a casino being live in your province does not mean every slot in its lobby
+            is. Counts are from Hacksaw Gaming&rsquo;s and Play&rsquo;n GO&rsquo;s own game sheets — the only two studios that publish this, and between
+            them the only game-level answer anywhere on this site.
+          </p>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 12 }}>
+            {([["CA-ON", "Ontario"], ["CA-QC", "Québec"], ["CA-AB", "Alberta"]] as const).map(([key, label]) => {
+              const c = approvedCount(key);
+              if (!c.of) return null;
+              const pctApproved = Math.round((c.approved / c.of) * 100);
+              return (
+                <div key={key} style={{ padding: "16px 18px", borderRadius: 14, background: "#0E1316", border: "1px solid rgba(255,255,255,.07)" }}>
+                  <div style={{ fontFamily: MONO, fontSize: 10, letterSpacing: ".08em", textTransform: "uppercase", color: "#8E9CA5", marginBottom: 6 }}>
+                    {label}
+                  </div>
+                  <div style={{ fontSize: 28, fontWeight: 800, letterSpacing: "-.03em", color: pctApproved > 50 ? "#7BE0B8" : "#C7A45C" }}>
+                    {c.approved}
+                    <span style={{ fontSize: 15, fontWeight: 600, color: "#8DA0AA" }}> of {c.of}</span>
+                  </div>
+                  <p style={{ margin: "6px 0 0", fontSize: 12.5, lineHeight: 1.5, color: "#8DA0AA" }}>
+                    {pctApproved}% of the games whose studio states a position for {label}.
+                  </p>
+                </div>
+              );
+            })}
+          </div>
         </section>
 
         <section style={{ maxWidth: 1200, margin: "0 auto", padding: "34px 40px 0" }}>

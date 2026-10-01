@@ -4,6 +4,7 @@ import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
 import { NextSteps } from "@/components/layout/NextSteps";
 import { publishableArt, rtpSpread, rtpVersions, singleRtp, rtpSource, slotSpecs, type CatalogueSlotPage } from "@/lib/slot-page";
 import { isTopSlot } from "@/lib/top-slots";
+import { approvalsFor } from "@/lib/game-jurisdictions";
 
 /**
  * A catalogue slot's page: the RTP configurations a studio publishes for one
@@ -35,6 +36,7 @@ export function SlotDataPage({ g }: { g: CatalogueSlotPage }) {
   const specs = slotSpecs(g);
   const studio = g.provider ?? "the studio";
   const src = rtpSource(g);
+  const approvals = approvalsFor(g.slug ?? "");
   const pick = isTopSlot(g.slug ?? "");
 
   return (
@@ -172,6 +174,38 @@ export function SlotDataPage({ g }: { g: CatalogueSlotPage }) {
               Open demo ↗
             </a>
           </div>
+        </section>
+      )}
+
+      {approvals && (
+        <section style={{ maxWidth: 1100, margin: "0 auto", padding: "36px 40px 0" }}>
+          <h2 style={{ margin: "0 0 6px", fontSize: 22, fontWeight: 800, letterSpacing: "-.02em", color: "#fff" }}>Where this game is approved</h2>
+          <p style={{ margin: "0 0 16px", maxWidth: "70ch", fontSize: 13.5, lineHeight: 1.6, color: "#8DA0AA" }}>
+            From {approvals.studio}&rsquo;s own game sheet. A regulated market licenses the game as well as the casino, so an operator can be live in a
+            province while a particular slot is not.
+          </p>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 7 }}>
+            {approvals.rows.map((r) => {
+              const tint =
+                r.state === "approved" ? { bg: "rgba(47,182,122,.1)", br: "rgba(47,182,122,.3)", fg: "#7BE0B8" }
+                : r.state === "not-approved" ? { bg: "rgba(255,255,255,.03)", br: "rgba(255,255,255,.08)", fg: "#6E7A82" }
+                : { bg: "rgba(199,164,92,.08)", br: "rgba(199,164,92,.26)", fg: "#C7A45C" };
+              return (
+                <span
+                  key={r.key}
+                  title={r.state === "unstated" ? `The sheet says "${r.raw}", which we do not translate into a yes or a no` : undefined}
+                  style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "5px 10px", borderRadius: 100, background: tint.bg, border: `1px solid ${tint.br}`, fontSize: 12.5, color: tint.fg }}
+                >
+                  {r.name}
+                  {r.state === "unstated" && <span style={{ fontFamily: MONO, fontSize: 10 }}>{r.raw}</span>}
+                </span>
+              );
+            })}
+          </div>
+          <p style={{ margin: "12px 0 0", maxWidth: "70ch", fontSize: 12.5, lineHeight: 1.55, color: "#77858E" }}>
+            Green is a plain &ldquo;Yes&rdquo; on the sheet. Grey is a plain &ldquo;No&rdquo;. Amber is anything else the studio wrote — codes like GNC or
+            RFA that we do not translate into a yes or a no, because we do not know what they mean.
+          </p>
         </section>
       )}
 
