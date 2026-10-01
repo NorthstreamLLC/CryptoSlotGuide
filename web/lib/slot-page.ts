@@ -5,6 +5,7 @@ import { releaseDate, volatilityOf } from "./slot-db";
 import artSources from "@/data/game-art-sources.json";
 import rtpOverrides from "@/data/slot-rtp-overrides.json";
 import { isTopSlot, TOP_SLOTS } from "./top-slots";
+import { slotEssentialsLink, slotEssentialsLabel } from "./slotessentials";
 
 /**
  * The slots that earn a page of their own out of the catalogue.
@@ -441,4 +442,69 @@ export function topSlotRows(): {
 export function slotArtBySlug(slug: string): string | null {
   const a = ART[slug];
   return a?.file ? `/assets/games/${a.file}` : null;
+}
+
+/**
+ * Every slot of one studio as table rows, each linked somewhere real.
+ *
+ * studioTopTitles() capped the provider table at 24. The decision for the
+ * ~7,600 titles this site does not review is to list them anyway — stats
+ * from the catalogue, labelled — and send the reader to SlotEssentials for
+ * the page we do not have. So the cap goes: a studio page lists everything
+ * we hold for that studio, in one place a crawler can reach.
+ *
+ * Links, in order of preference: our own page where the title has one, then
+ * SlotEssentials where its sitemap lists the title, else no link — never a
+ * URL built from a slug. The label says which kind of page it is.
+ *
+ * Order: titles whose every build we hold come first, widest spread at the
+ * top; then by name, so the long tail is at least scannable.
+ */
+export function studioAllTitles(studioName: string): {
+  rows: { slug: string | null; name: string; note: string; m1: string; m2: string; m3: string; href?: string; hrefLabel?: string }[];
+  sourced: boolean;
+} {
+  const key = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, "");
+  const want = key(studioName);
+  const mine = (catalogue as { games: CatalogueGame[] }).games.filter(
+    (g) => g.kind === "slot" && key(g.provider ?? "") === want
+  );
+  let anySourced = false;
+  const rows = mine.map((g) => {
+    const o = overrideOf(g);
+    const v = o?.versions?.length
+      ? [...new Set(o.versions)].sort((a, b) => b - a)
+      : [...new Set(g.rtpVariants?.length ? g.rtpVariants : g.rtp != null ? [g.rtp] : [])].sort((a, b) => b - a);
+    const sourced = !!o?.versions?.length;
+    if (sourced) anySourced = true;
+    const spread = v.length > 1 ? Math.round((v[0] - v[v.length - 1]) * 100) / 100 : 0;
+    const ours = g.slug && PAGES.has(g.slug) ? `/slots/${g.slug}` : null;
+    const se = slotEssentialsLink(g.slug);
+    return {
+      slug: g.slug,
+      name: g.name,
+      note: sourced
+        ? spread
+          ? `${v.length} published builds, ${spread}pp apart`
+          : "One published return"
+        : v.length
+          ? "Catalogue figure, not read from the studio"
+          : "No return in the catalogue",
+      m1: v.length ? (spread ? `${v[0]}% – ${v[v.length - 1]}%` : `${v[0]}%`) : "Not published",
+      m2: volatilityOf(g) ?? "Not published",
+      m3: g.maxWinMultiplier ? `${g.maxWinMultiplier.toLocaleString()}x` : "Not published",
+      href: ours ?? se ?? undefined,
+      hrefLabel: ours ? "Our page" : se ? slotEssentialsLabel(g.provider) : undefined,
+      sourced,
+      spread,
+    };
+  });
+  rows.sort(
+    (a, b) =>
+      Number(b.sourced) - Number(a.sourced) || b.spread - a.spread || a.name.localeCompare(b.name)
+  );
+  return {
+    rows: rows.map(({ slug, name, note, m1, m2, m3, href, hrefLabel }) => ({ slug, name, note, m1, m2, m3, href, hrefLabel })),
+    sourced: anySourced,
+  };
 }

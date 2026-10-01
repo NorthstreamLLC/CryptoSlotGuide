@@ -17,7 +17,7 @@ import { wagerView, bonusWithWager } from "./wager";
 import { hasMaxWin, hasVol, maxWinLabel, rtpLabel, hasRtp, rtpSortValue, volLabel } from "./slot-facts";
 import { isFieldTestedOperator, isEditoriallyAudited } from "./field-tested";
 import { tintFor } from "./logo";
-import { studioCatalogue, studioTopTitles } from "./slot-page";
+import { studioCatalogue, studioAllTitles } from "./slot-page";
 import { getCasinoSpecSheet, getSpecFact } from "./spec-sheet";
 import { sportsFacts, booksForTitle, esportsLabel, maxPayoutShort } from "./sports";
 import type { Flag } from "./types";
@@ -46,6 +46,10 @@ export interface TableRow {
   m1: string;
   m2: string;
   m3: string;
+  /** Where the row's name goes. Internal paths render as a Link; absolute URLs open in a new tab. */
+  href?: string;
+  /** Shown after the name as a small link label, e.g. "Full review". */
+  hrefLabel?: string;
 }
 
 export interface EntityView {
@@ -435,7 +439,35 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
      */
     const cat = studioCatalogue(p.name);
     const shown = cat.titles || titles.length;
-    const fromCatalogue = studioTopTitles(p.name);
+    const fromCatalogue = studioAllTitles(p.name);
+    /**
+     * Hand-written reviews first, linked to our review page, then every other
+     * title we hold for the studio — one list, no cap. Before this, a studio
+     * with a review showed only the review: Red Tiger's page said "Every 381
+     * titles" over a single row.
+     */
+    // Dedupe on slug AND on name: a review's slug can differ from the
+    // catalogue's for the same title ("gonzo-s-quest-megaways" vs
+    // "gonzos-quest-megaways"), and the title must not appear twice.
+    const nameKey = (n: string) => n.toLowerCase().replace(/[^a-z0-9]/g, "");
+    const reviewedSlugs = new Set(titles.map((s) => s.slug));
+    const reviewedNames = new Set(titles.map((s) => nameKey(s.name)));
+    const allRows: TableRow[] = [
+      ...[...titles]
+        .sort((a, b) => rtpSortValue(b) - rtpSortValue(a))
+        .map((s) => ({
+          name: s.name,
+          note: s.rtpVersions ? `${s.rtpVersions.split("/").length} published RTP versions` : `${s.provider} game page`,
+          m1: rtpLabel(s),
+          m2: hasVol(s) ? s.vol : "Not published",
+          m3: maxWinLabel(s),
+          href: `/slots/${s.slug}`,
+          hrefLabel: "Our review",
+        })),
+      ...fromCatalogue.rows
+        .filter((r) => !(r.slug && reviewedSlugs.has(r.slug)) && !reviewedNames.has(nameKey(r.name)))
+        .map(({ slug: _slug, ...r }) => r),
+    ];
     const topMaxWin = titles.filter(hasMaxWin)[0]?.maxWin;
     const volCounts = titles.filter(hasVol).reduce<Record<string, number>>((acc, s) => ({ ...acc, [s.vol]: (acc[s.vol] ?? 0) + 1 }), {});
     const modalVol = Object.entries(volCounts).sort((a, b) => b[1] - a[1])[0]?.[0];
@@ -502,19 +534,15 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
         cited("Configurations", p.rtp),
         cited("Licensing", p.licences),
       ],
-      tableTitle: "Titles we track from this studio",
-      tableSub: titles.length
-        ? `Published RTP, volatility and max win from ${p.name}'s own game pages.${cat.pages ? ` A further ${cat.pages} of its titles have a page in the slot catalogue.` : ""}`
-        : fromCatalogue.sourced
-          ? `Read from ${p.name}'s own published figures. Widest spread between builds first, because that gap is the thing the lobby will not tell you.`
-          : `From the catalogue import, not from ${p.name} — we hold no figure read off this studio's own pages yet, so every return below is a third-party one and labelled as such.`,
+      tableTitle: allRows.length > 1 ? `All ${allRows.length.toLocaleString()} ${p.name} titles we hold` : "Titles we track from this studio",
+      tableSub: titles.length || fromCatalogue.sourced
+          ? `Read from ${p.name}'s own published figures where we hold them, widest spread between builds first, because that gap is the thing the lobby will not tell you. Titles we review link to our page; the rest link to SlotEssentials, our sister site, which has a page for nearly every one.`
+          : `From the catalogue import, not from ${p.name} — we hold no figure read off this studio's own pages yet, so every return below is a third-party one and labelled as such. Each title links to its page on SlotEssentials, our sister site.`,
       tableCols: ["RTP", "Volatility", "Max win"],
       // The reviews first, then the catalogue. The component hides the table
       // when it has no rows, so a studio with 400 catalogue titles and no
       // hand-written review used to show nothing here at all.
-      tableRows: titles.length
-        ? [...titles].sort((a, b) => rtpSortValue(b) - rtpSortValue(a)).map((s) => ({ name: s.name, note: s.rtpVersions ? `${s.rtpVersions.split("/").length} published RTP versions` : `${s.provider} game page`, m1: rtpLabel(s), m2: hasVol(s) ? s.vol : "Not published", m3: maxWinLabel(s) }))
-        : fromCatalogue.rows,
+      tableRows: allRows,
       tableEmpty: "None of this studio's titles are on our slot index yet.",
       tableNote: "Where a casino ships a reduced configuration of one of these titles we name it in that casino's review rather than here, because the studio is not the party that chose it.",
       pros: [

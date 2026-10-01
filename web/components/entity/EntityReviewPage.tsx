@@ -285,7 +285,23 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
           {e.tableRows.map((r) => (
             <div key={r.name} style={{ display: "grid", gridTemplateColumns: "minmax(240px,1.5fr) 130px 150px 130px", borderBottom: "1px solid rgba(255,255,255,.05)" }}>
               <div style={{ padding: "14px 18px", minWidth: 0 }}>
-                <div style={{ fontSize: 13.5, fontWeight: 600, color: "#E8EDF0" }}>{r.name}</div>
+                <div style={{ fontSize: 13.5, fontWeight: 600, color: "#E8EDF0", display: "flex", alignItems: "baseline", gap: 8, flexWrap: "wrap" }}>
+                  {r.href ? (
+                    /^https?:\/\//.test(r.href) ? (
+                      // Our sister site: an ordinary editorial link, followed.
+                      <a href={r.href} target="_blank" rel="noopener" style={{ color: "#E8EDF0" }}>{r.name}</a>
+                    ) : (
+                      <Link href={r.href} style={{ color: "#E8EDF0" }}>{r.name}</Link>
+                    )
+                  ) : (
+                    r.name
+                  )}
+                  {r.href && r.hrefLabel && (
+                    <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".05em", color: "#5FE3E8", whiteSpace: "nowrap" }}>
+                      {r.hrefLabel}{/^https?:\/\//.test(r.href) ? " \u2197" : " \u2192"}
+                    </span>
+                  )}
+                </div>
                 <div style={{ fontSize: 12, color: "#83919A", marginTop: 2 }}>{r.note}</div>
               </div>
               <div style={{ padding: "14px 18px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12.5, color: "#B7C4CB" }}>{r.m1}</div>
