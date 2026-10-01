@@ -466,7 +466,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
         })),
       ...fromCatalogue.rows
         .filter((r) => !(r.slug && reviewedSlugs.has(r.slug)) && !reviewedNames.has(nameKey(r.name)))
-        .map(({ slug: _slug, ...r }) => r),
+        .map(({ name, note, m1, m2, m3, href, hrefLabel }) => ({ name, note, m1, m2, m3, href, hrefLabel })),
     ];
     const topMaxWin = titles.filter(hasMaxWin)[0]?.maxWin;
     const volCounts = titles.filter(hasVol).reduce<Record<string, number>>((acc, s) => ({ ...acc, [s.vol]: (acc[s.vol] ?? 0) + 1 }), {});
@@ -536,7 +536,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       ],
       tableTitle: allRows.length > 1 ? `All ${allRows.length.toLocaleString()} ${p.name} titles we hold` : "Titles we track from this studio",
       tableSub: titles.length || fromCatalogue.sourced
-          ? `Read from ${p.name}'s own published figures where we hold them, widest spread between builds first, because that gap is the thing the lobby will not tell you. Titles we review link to our page; the rest link to SlotEssentials, our sister site, which has a page for nearly every one.`
+          ? `Read from ${p.name}'s own published figures where we hold them${cat.widestSpread ? ", widest spread between builds first, because that gap is the thing the lobby will not tell you" : ""}. Titles we review link to our page; the rest link to SlotEssentials, our sister site, which has a page for nearly every one.`
           : `From the catalogue import, not from ${p.name} — we hold no figure read off this studio's own pages yet, so every return below is a third-party one and labelled as such. Each title links to its page on SlotEssentials, our sister site.`,
       tableCols: ["RTP", "Volatility", "Max win"],
       // The reviews first, then the catalogue. The component hides the table

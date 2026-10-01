@@ -98,10 +98,23 @@ function overrideOf(g: CatalogueGame) {
  */
 const hasStudioPage = (g: CatalogueGame) => !!overrideOf(g)?.sourceUrl;
 
+/**
+ * A figure read off the studio's own page qualifies on its own, one build or
+ * several. The multi-build bar above was built to stop bulk pages on FEED
+ * numbers; a return cited to the studio's page, with the studio's volatility,
+ * max win and release date beside it, is not the thing it guards against.
+ * Wazdan and Red Tiger publish one return per title and 579 of theirs were
+ * being held back by a rule aimed at a third-party import.
+ */
+const studioSourced = (g: CatalogueGame) => {
+  const o = overrideOf(g);
+  return !!o && o.versionsFrom === "studio" && (o.versions?.length ?? 0) > 0;
+};
+
 const QUALIFIES = (g: CatalogueGame) =>
   g.kind === "slot" &&
   !!g.slug &&
-  (((!!g.demoUrl || hasStudioPage(g)) && rtpVersionsFor(g).length > 1) || isTopSlot(g.slug));
+  (studioSourced(g) || ((!!g.demoUrl || hasStudioPage(g)) && rtpVersionsFor(g).length > 1) || isTopSlot(g.slug));
 
 /** Slugs already owned by a hand-written review — those pages win. */
 const REVIEWED = new Set(siteData.slots.map((s) => s.slug));
