@@ -377,3 +377,55 @@ export function studioTopTitles(
 
   return { rows, sourced: sourced.length > 0 };
 }
+
+/**
+ * The editorial picks as index rows, in the order they were given.
+ *
+ * /slots listed the 21 hand-written reviews and knew nothing about the picks,
+ * so the one ranked opinion on the site appeared in the menu and nowhere on
+ * the page the menu points at. Six picks are reviews and seven are catalogue
+ * pages; this resolves both so the index can lead with the list.
+ *
+ * Figures come from whichever record owns the title — a review's own fields,
+ * or the catalogue's sourced configurations — never re-derived.
+ */
+export function topSlotRows(): {
+  slug: string;
+  rank: number;
+  name: string;
+  provider: string;
+  rtp: string;
+  volatility: string;
+  maxWin: string;
+}[] {
+  const reviews = new Map(siteData.slots.map((s) => [s.slug, s]));
+  return TOP_SLOTS.map((slug, i) => {
+    const r = reviews.get(slug);
+    if (r) {
+      return {
+        slug,
+        rank: i + 1,
+        name: r.name,
+        provider: r.provider,
+        rtp: typeof r.rtp === "number" ? `${r.rtp}%` : "Not published",
+        volatility: r.vol ? `${r.vol[0].toUpperCase()}${r.vol.slice(1)}` : "Not published",
+        maxWin: r.maxWin ?? "Not published",
+      };
+    }
+    const g = PAGES.get(slug);
+    if (!g) return null;
+    const v = rtpVersions(g);
+    return {
+      slug,
+      rank: i + 1,
+      name: g.name,
+      provider: g.provider ?? "Not stated",
+      rtp: v.length > 1 ? `${v[0]}% – ${v[v.length - 1]}%` : v.length === 1 ? `${v[0]}%` : g.rtp != null ? `${g.rtp}%` : "Not published",
+      volatility: (() => {
+        const vol = volatilityOf(g);
+        return vol ? `${vol[0].toUpperCase()}${vol.slice(1)}` : "Not published";
+      })(),
+      maxWin: g.maxWinMultiplier ? `${g.maxWinMultiplier.toLocaleString()}x` : "Not published",
+    };
+  }).filter((r): r is NonNullable<typeof r> => !!r);
+}

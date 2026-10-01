@@ -8682,6 +8682,14 @@
             "sourcing": "editorial",
             "sourceUrl": "https://www.razed.com/promotions/vip-transfer/",
             "asOf": "2026-09-15"
+          },
+          {
+            "label": "Partners",
+            "value": "Razed sponsors Heroic, the esports organisation, and runs a dedicated Heroic page under its promotions section.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://www.razed.com/promotions/heroic/",
+            "asOf": "2026-10-01",
+            "note": "Page read by the site owner on 2026-10-01; razed.com serves a Cloudflare challenge to automated readers, so this row was not machine-verified."
           }
         ]
       },

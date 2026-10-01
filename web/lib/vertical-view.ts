@@ -10,6 +10,10 @@
  * 2894-2900) are all exchanges now present in exchangeRows.json.
  */
 import { siteData } from "./site-data";
+import { topSlotRows } from "./slot-page";
+import { tintFor } from "./logo";
+import { catalogueTotals } from "./slot-db";
+import { TOP_SLOTS } from "./top-slots";
 import { brandFor } from "./casino-facts";
 import { sportsFacts, sportsbookOps, booksForTitle, esportsLabel, maxPayoutShort } from "./sports";
 import { hasVol, maxWinLabel, rtpLabel } from "./slot-facts";
@@ -17,11 +21,9 @@ import {
   lowestTakerFee,
   fill,
   medianReadMins,
-  medianRtp,
   unpublishedRtpStudios,
   selfCustodyWallets,
   allVersionsListedStudios,
-  splitBuilds,
 } from "./derived";
 
 /** Neutral display order — no list on these pages is ranked. */
@@ -83,26 +85,29 @@ export interface VerticalPage {
 }
 
 export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
-  const { slots, providers, walletRows, exchangeRows, guideRows, ops, esportsTitles, rtpWatch } = siteData;
+  const { slots, providers, walletRows, exchangeRows, guideRows, ops, esportsTitles } = siteData;
   const toSlug = (n: string) => n.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
 
   if (kind === "slots") {
-    // rtpWatch only ever holds real readings (empty until the first real
-    // import via scripts/import-rtp-readings.mjs — see data/README.md),
-    // and splitBuilds() itself excludes stale ones, so this stat is
-    // honest without any extra filtering here.
     return {
       kicker: "Slots",
       title: "Slot RTP index",
       sub: "Every RTP below is the studio's published return. Once we field-test a title's build in a specific operator's account, the slot's own review names the operator that cut it — see how we source information for what's checked so far.",
+      /**
+       * Counted off what exists, not off this page's row list, which used to
+       * say "21 slots tracked" while the catalogue held 8,721 and the page
+       * itself showed 28 rows. The multi-build figure is the one that earns
+       * the site its place: 911 titles whose studio licenses more than one
+       * return, which is what the lobby never tells you.
+       */
       stats: [
-        [String(slots.length), "Slots tracked"],
-        [`${medianRtp(slots).toFixed(2)}%`, "Median RTP"],
-        [String(splitBuilds(rtpWatch)), "Titles with split builds"],
+        [String(TOP_SLOTS.length), "Our picks"],
+        [catalogueTotals().slots.toLocaleString(), "Slots in the database"],
+        [catalogueTotals().multiVersion.toLocaleString(), "Titles with more than one build"],
       ],
       cols: ["Provider", "RTP", "Volatility"],
       statLabel: "Max win",
-      note: "A slot is only as good as the build your casino licensed. Where an operator ships a cut version we name it in the slot review rather than in this table.",
+      note: "The first thirteen are our picks, in our order — an editorial call, not a sort on RTP. Everything below them is the rest of the review set. A slot is only as good as the build your casino licensed, and where an operator ships a cut version we name it in the slot review rather than in this table.",
       links: [
         { label: "Highest RTP", href: "/slots" },
         { label: "Full database", href: "/slots/database" },
@@ -113,19 +118,63 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
         { label: "High volatility", href: "/slots/high-volatility" },
         { label: "RTP Watch", href: "/rtp-watch" },
       ],
-      rows: slots.map((s) => ({
-        slug: s.slug,
-        name: s.name,
-        mono: s.mono,
-        tint: s.tint,
-        note: "",
-        m1: s.provider,
-        m2: rtpLabel(s),
-        m3: hasVol(s) ? `${s.vol[0].toUpperCase()}${s.vol.slice(1)}` : "Not published",
-        stat: maxWinLabel(s),
-        cta: "Slot profile",
-        href: `/slots/${s.slug}`,
-      })),
+      /**
+       * The thirteen editorial picks lead, in the order they were given,
+       * then every other review.
+       *
+       * This page used to list the 21 hand-written reviews and know nothing
+       * about the picks — so the site's one ranked opinion appeared in the
+       * menu and nowhere on the page the menu points at. Seven of the picks
+       * are catalogue pages rather than reviews, which is why the rows are
+       * resolved through topSlotRows() instead of filtered out of `slots`.
+       *
+       * Nothing re-sorts the picks. The order is the editorial call.
+       */
+      rows: (() => {
+        const picks = topSlotRows();
+        const picked = new Set(picks.map((p) => p.slug));
+        const mono = (name: string) =>
+          name
+            .split(/\s+/)
+            .filter((w) => /^[A-Za-z0-9]/.test(w))
+            .slice(0, 3)
+            .map((w) => w[0].toUpperCase())
+            .join("") || name.slice(0, 2).toUpperCase();
+        const reviewed = new Map(slots.map((s) => [s.slug, s]));
+        return [
+          ...picks.map((p) => {
+            const r = reviewed.get(p.slug);
+            return {
+              slug: p.slug,
+              name: p.name,
+              mono: r?.mono ?? mono(p.name),
+              tint: r?.tint ?? tintFor(p.slug),
+              note: `Our #${p.rank} pick`,
+              m1: p.provider,
+              m2: p.rtp,
+              m3: p.volatility,
+              stat: p.maxWin,
+              cta: "Slot profile",
+              href: `/slots/${p.slug}`,
+            };
+          }),
+          ...slots
+            .filter((s) => !picked.has(s.slug))
+            .map((s) => ({
+              slug: s.slug,
+              name: s.name,
+              mono: s.mono,
+              tint: s.tint,
+              note: "",
+              m1: s.provider,
+              m2: rtpLabel(s),
+              m3: hasVol(s) ? `${s.vol[0].toUpperCase()}${s.vol.slice(1)}` : "Not published",
+              stat: maxWinLabel(s),
+              cta: "Slot profile",
+              href: `/slots/${s.slug}`,
+            })),
+        ];
+      })(),
     };
   }
 
