@@ -374,11 +374,18 @@ export function Header({ counts }: { counts: SiteCounts }) {
                           color: "#C3CFD5",
                         }}
                       >
-                        {link.brand && (
+                        {link.image ? (
+                          // A game tile rather than a brand mark: 4:3 like the
+                          // art, so a 20px square would crop the title off it.
+                          <span style={{ width: 28, height: 21, flex: "none", borderRadius: 4, overflow: "hidden", background: "#0E1316" }}>
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img src={link.image} alt="" width={28} height={21} loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                          </span>
+                        ) : link.brand ? (
                           <span style={{ width: 20, height: 20, flex: "none", borderRadius: 6, overflow: "hidden" }}>
                             <BrandMark slug={link.brand} mono={link.label.slice(0, 2).toUpperCase()} tint={tintFor(link.brand)} radius={6} fontSize={8} />
                           </span>
-                        )}
+                        ) : null}
                         {link.label}
                         {link.dot && (
                           <span

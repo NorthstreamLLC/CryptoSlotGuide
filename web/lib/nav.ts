@@ -7,7 +7,8 @@
  */
 import type { SiteCounts } from "./derived";
 import { siteData } from "./site-data";
-import { topSlotEntries } from "./slot-page";
+import { topSlotEntries, slotArtBySlug } from "./slot-page";
+import { sweepsSorted } from "./sweeps";
 import { rankedBrands } from "./us-brands";
 
 const slotCatLabels = siteData.slotCatDefs.map((d) => ({ tag: d.tag, label: d.label }));
@@ -44,6 +45,12 @@ export interface NavLink {
    * the logo is what a reader actually recognises.
    */
   brand?: string;
+  /**
+   * Art for the link, where the thing linked is a game rather than a brand.
+   * A slot has no mark; it has a tile, and the tile is what a reader
+   * recognises in a column of five names.
+   */
+  image?: string;
 }
 
 export interface NavSection {
@@ -143,7 +150,31 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
               title: "Biggest footprints",
               links: rankedBrands("sportsbook")
                 .slice(0, 5)
-                .map(({ brand }) => ({ label: brand.name, href: `/us-casinos/${brand.slug}` })),
+                .map(({ brand }) => ({ label: brand.name, href: `/us-casinos/${brand.slug}`, brand: brand.slug })),
+            },
+          ],
+        },
+        {
+          mono: "🎟️",
+          label: "Sweepstakes",
+          tint: "#C9A227",
+          href: "/sweepstakes-casinos",
+          columns: [
+            {
+              title: "Browse",
+              links: [
+                { label: `All ${sweepsSorted().length} sweepstakes casinos`, href: "/sweepstakes-casinos" },
+                { label: "US state by state", href: "/legal/us" },
+                { label: "US-regulated casinos", href: "/us-casinos" },
+              ],
+            },
+            {
+              // The same house order the index uses, so the menu and the page
+              // never disagree about who comes first.
+              title: "Top sweepstakes",
+              links: sweepsSorted()
+                .slice(0, 5)
+                .map((s) => ({ label: s.name, href: `/sweepstakes-casinos/${s.slug}`, brand: s.slug })),
             },
           ],
         },
@@ -172,7 +203,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
             },
             {
               title: "Our top slots",
-              links: featuredSlots.map((s) => ({ label: s.name, href: s.href })),
+              links: featuredSlots.map((s) => ({ label: s.name, href: s.href, image: slotArtBySlug(s.slug) ?? undefined })),
             },
           ],
         },
@@ -194,7 +225,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
             {
               title: "Studio profiles",
               links: ["Hacksaw Gaming", "Nolimit City", "Pragmatic Play", "Push Gaming", "Relax Gaming"].map(
-                (name) => ({ label: name, href: `/providers/${slug(name)}` })
+                (name) => ({ label: name, href: `/providers/${slug(name)}`, brand: slug(name) })
               ),
             },
           ],
@@ -286,6 +317,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
               links: ["BC.Game", "Cloudbet", "Roobet", "Stake"].map((name) => ({
                 label: name,
                 href: `/casinos/${slug(name)}`,
+                brand: slug(name),
               })),
             },
           ],
@@ -328,6 +360,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
               links: ["Polymarket", "Limitless", "Overtime", "Myriad"].map((name) => ({
                 label: name,
                 href: "/prediction-markets",
+                brand: slug(name),
               })),
             },
             {
@@ -349,7 +382,11 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
             {
               title: "Venues",
               links: ["Kalshi", "Polymarket US", "Robinhood Prediction Markets", "ForecastEx", "PredictIt"].map(
-                (name) => ({ label: name, href: "/prediction-markets?tab=fiat" })
+                (name) => ({
+                  label: name,
+                  href: "/prediction-markets?tab=fiat",
+                  brand: name.startsWith("Robinhood") ? "robinhood" : slug(name),
+                })
               ),
             },
             {
@@ -400,7 +437,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
           columns: [
             {
               title: "Wallet profiles",
-              links: siteData.walletRows.slice(0, 5).map((w) => ({ label: w.name, href: `/wallets/${w.slug}` })),
+              links: siteData.walletRows.slice(0, 5).map((w) => ({ label: w.name, href: `/wallets/${w.slug}`, brand: w.slug })),
             },
             {
               title: "Read first",
@@ -420,7 +457,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
           columns: [
             {
               title: "Exchange profiles",
-              links: siteData.exchangeRows.slice(0, 5).map((x) => ({ label: x.name, href: `/exchanges/${x.slug}` })),
+              links: siteData.exchangeRows.slice(0, 5).map((x) => ({ label: x.name, href: `/exchanges/${x.slug}`, brand: x.slug })),
             },
             {
               title: "Getting on chain",

@@ -429,3 +429,16 @@ export function topSlotRows(): {
     };
   }).filter((r): r is NonNullable<typeof r> => !!r);
 }
+
+/**
+ * Art by slug alone, for surfaces that hold a slug and nothing else — the
+ * menu's "Our top slots" column. Same rights rule as publishableArt(): only a
+ * file we fetched from our own api.slotessentials.com is ours to serve, so
+ * this reads the same ART map and returns null for anything else. Six of the
+ * thirteen picks are hand-written reviews rather than catalogue pages, which
+ * is why this cannot go through cataloguePage().
+ */
+export function slotArtBySlug(slug: string): string | null {
+  const a = ART[slug];
+  return a?.file ? `/assets/games/${a.file}` : null;
+}
