@@ -1,5 +1,5 @@
 {
-  "note": "Canada's provinces and territories. The federal frame is Criminal Code s.207, which lets each province conduct and manage gambling in its own territory — so there is no national online casino law and the answer genuinely differs by province. `model` and its sources are what we can cite today. `provincialOperator` and `regulator` are recorded only where sourced; a province with nulls means we have not yet read its own body's page, not that it has none. Operator-level availability is NOT here: it comes from each casino's own terms via data/restricted.json, so a province's page shows who says they will not serve it.",
+  "note": "Canada's provinces and territories. The federal frame is Criminal Code s.207, which lets each province conduct and manage gambling in its own territory — so there is no national online casino law and the answer genuinely differs by province. `model` and its sources are what we can cite today. `provincialOperator` and `regulator` are recorded only where sourced; a province with nulls means we have not yet read its own body's page, not that it has none. Operator-level availability is NOT here: it comes from each casino's own terms via data/restricted.json, so a province's page shows who says they will not serve it. Sourced provinces were read from the named body's own site on 2026-10-01; the rest still show only the model that follows from the Criminal Code.",
   "federal": {
     "summary": "The Criminal Code prohibits gambling except where a provincial government conducts and manages it. Every province therefore runs, or licenses, its own online gambling — and what is legal for you depends on the province you are in, not on Canada.",
     "sources": [
@@ -15,29 +15,147 @@
       "name": "Ontario",
       "model": "licensed private market",
       "summary": "The only province that has run an open licensed market for years. Private operators register with the AGCO and sign an operating agreement with iGaming Ontario before they may offer games to Ontarians.",
-      "regulator": { "name": "Alcohol and Gaming Commission of Ontario (AGCO), with iGaming Ontario", "url": "https://igamingontario.ca/en/operator/operators" },
-      "provincialOperator": { "name": "OLG (PlayOLG)", "url": "https://www.playolg.ca" },
+      "regulator": {
+        "name": "Alcohol and Gaming Commission of Ontario (AGCO), with iGaming Ontario",
+        "url": "https://igamingontario.ca/en/operator/operators"
+      },
+      "provincialOperator": {
+        "name": "OLG (PlayOLG)",
+        "url": "https://www.playolg.ca"
+      },
       "sourced": true
     },
     {
       "code": "AB",
       "name": "Alberta",
       "model": "licensed private market",
-      "summary": "Opened a registered iGaming market on 13 July 2026, making it the second province to license private operators alongside its own site.",
-      "regulator": { "name": "Alberta Gaming, Liquor and Cannabis (AGLC)", "url": null },
-      "provincialOperator": { "name": "Play Alberta", "url": null },
+      "summary": "Alberta Gaming, Liquor and Cannabis runs Play Alberta and, since the market opened in 2026, maintains a public register of iGaming operators and suppliers alongside it.",
+      "regulator": {
+        "name": "Alberta Gaming, Liquor and Cannabis (AGLC)",
+        "url": "https://aglc.ca/gaming"
+      },
+      "provincialOperator": {
+        "name": "Play Alberta",
+        "url": "https://playalberta.ca"
+      },
+      "sourced": true
+    },
+    {
+      "code": "BC",
+      "name": "British Columbia",
+      "model": "provincial monopoly",
+      "summary": "British Columbia Lottery Corporation runs the only legal online casino in the province. PlayNow states on its own site that it is the official gaming site for BC residents, operated by BCLC.",
+      "regulator": {
+        "name": "British Columbia Lottery Corporation (BCLC)",
+        "url": "https://www.playnow.com"
+      },
+      "provincialOperator": {
+        "name": "PlayNow",
+        "url": "https://www.playnow.com"
+      },
+      "sourced": true
+    },
+    {
+      "code": "QC",
+      "name": "Québec",
+      "model": "provincial monopoly",
+      "summary": "Loto-Québec runs the province's only legal online casino through its own portal, which carries its online games directly.",
+      "regulator": {
+        "name": "Loto-Québec",
+        "url": "https://portail.lotoquebec.com/en/home"
+      },
+      "provincialOperator": {
+        "name": "Loto-Québec online",
+        "url": "https://portail.lotoquebec.com/en/home"
+      },
+      "sourced": true
+    },
+    {
+      "code": "MB",
+      "name": "Manitoba",
+      "model": "provincial monopoly",
+      "summary": "Manitoba Liquor & Lotteries runs the province's gambling, and lists PlayNow among its own operations alongside the Casinos of Winnipeg.",
+      "regulator": {
+        "name": "Manitoba Liquor & Lotteries",
+        "url": "https://www.mbll.ca"
+      },
+      "provincialOperator": {
+        "name": "PlayNow Manitoba",
+        "url": "https://www.playnow.com"
+      },
+      "sourced": true
+    },
+    {
+      "code": "SK",
+      "name": "Saskatchewan",
+      "model": "provincial monopoly",
+      "summary": null,
+      "regulator": null,
+      "provincialOperator": null,
       "sourced": false
     },
-    { "code": "BC", "name": "British Columbia", "model": "provincial monopoly", "summary": null, "regulator": null, "provincialOperator": null, "sourced": false },
-    { "code": "QC", "name": "Québec", "model": "provincial monopoly", "summary": null, "regulator": null, "provincialOperator": null, "sourced": false },
-    { "code": "MB", "name": "Manitoba", "model": "provincial monopoly", "summary": null, "regulator": null, "provincialOperator": null, "sourced": false },
-    { "code": "SK", "name": "Saskatchewan", "model": "provincial monopoly", "summary": null, "regulator": null, "provincialOperator": null, "sourced": false },
-    { "code": "NS", "name": "Nova Scotia", "model": "provincial monopoly", "summary": null, "regulator": null, "provincialOperator": null, "sourced": false },
-    { "code": "NB", "name": "New Brunswick", "model": "provincial monopoly", "summary": null, "regulator": null, "provincialOperator": null, "sourced": false },
-    { "code": "PE", "name": "Prince Edward Island", "model": "provincial monopoly", "summary": null, "regulator": null, "provincialOperator": null, "sourced": false },
-    { "code": "NL", "name": "Newfoundland and Labrador", "model": "provincial monopoly", "summary": null, "regulator": null, "provincialOperator": null, "sourced": false },
-    { "code": "YT", "name": "Yukon", "model": "no provincial online casino", "summary": null, "regulator": null, "provincialOperator": null, "sourced": false },
-    { "code": "NT", "name": "Northwest Territories", "model": "no provincial online casino", "summary": null, "regulator": null, "provincialOperator": null, "sourced": false },
-    { "code": "NU", "name": "Nunavut", "model": "no provincial online casino", "summary": null, "regulator": null, "provincialOperator": null, "sourced": false }
+    {
+      "code": "NS",
+      "name": "Nova Scotia",
+      "model": "provincial monopoly",
+      "summary": null,
+      "regulator": null,
+      "provincialOperator": null,
+      "sourced": false
+    },
+    {
+      "code": "NB",
+      "name": "New Brunswick",
+      "model": "provincial monopoly",
+      "summary": null,
+      "regulator": null,
+      "provincialOperator": null,
+      "sourced": false
+    },
+    {
+      "code": "PE",
+      "name": "Prince Edward Island",
+      "model": "provincial monopoly",
+      "summary": null,
+      "regulator": null,
+      "provincialOperator": null,
+      "sourced": false
+    },
+    {
+      "code": "NL",
+      "name": "Newfoundland and Labrador",
+      "model": "provincial monopoly",
+      "summary": null,
+      "regulator": null,
+      "provincialOperator": null,
+      "sourced": false
+    },
+    {
+      "code": "YT",
+      "name": "Yukon",
+      "model": "no provincial online casino",
+      "summary": null,
+      "regulator": null,
+      "provincialOperator": null,
+      "sourced": false
+    },
+    {
+      "code": "NT",
+      "name": "Northwest Territories",
+      "model": "no provincial online casino",
+      "summary": null,
+      "regulator": null,
+      "provincialOperator": null,
+      "sourced": false
+    },
+    {
+      "code": "NU",
+      "name": "Nunavut",
+      "model": "no provincial online casino",
+      "summary": null,
+      "regulator": null,
+      "provincialOperator": null,
+      "sourced": false
+    }
   ]
 }
