@@ -15,6 +15,30 @@ import { KycTiersTable } from "@/components/guides/KycTiersTable";
  * fill() so a claim like "{fee} of {casinos} operators" can't drift out
  * of step with the live data.
  */
+/**
+ * **Bold** in guide copy. The bodies are plain strings rendered straight into
+ * a <p>, so a how-to written with bold lead-ins shipped its asterisks — 33 of
+ * them on the KYC guide. A step-by-step genuinely reads better with the step
+ * itself picked out, so the markers are honoured rather than stripped.
+ *
+ * Deliberately the one marker and nothing else: a guide body is our own copy,
+ * not user input, and a full markdown parser here would be a dependency and a
+ * sanitising problem in exchange for syntax nobody has asked for.
+ */
+function emphasise(text: string) {
+  const parts = text.split("**");
+  if (parts.length < 3) return text;
+  return parts.map((part, i) =>
+    i % 2 ? (
+      <strong key={i} style={{ color: "#E8EDF0", fontWeight: 700 }}>
+        {part}
+      </strong>
+    ) : (
+      part
+    )
+  );
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const { guideRows } = siteData;
@@ -68,7 +92,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 
         <div style={{ display: "flex", flexDirection: "column", gap: 22, marginBottom: 38 }}>
           {body.body.map((p) => (
-            <p key={p.slice(0, 40)} style={{ margin: 0, fontSize: 17, lineHeight: 1.75, color: "#B0BEC5", textWrap: "pretty" }}>{fill(p, siteData)}</p>
+            <p key={p.slice(0, 40)} style={{ margin: 0, fontSize: 17, lineHeight: 1.75, color: "#B0BEC5", textWrap: "pretty" }}>{emphasise(fill(p, siteData))}</p>
           ))}
         </div>
 

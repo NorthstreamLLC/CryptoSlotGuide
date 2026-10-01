@@ -109,5 +109,22 @@
       "What this means in practice: decide before you deposit, not after. If you will not hand over a passport, an operator in the required tier is not for you whatever its bonus looks like — you will hit the wall at cash-out. If you are fine with verification, do it early and on a quiet day rather than at the moment you are trying to withdraw a win. And if an operator's pages disagree with each other, assume the stricter one applies, because that is the one its compliance team works from."
     ],
     "data": "kyc-tiers"
+  },
+  "how-to-complete-kyc": {
+    "key": [
+      "Check whether you are eligible before you deposit, not after",
+      "Verify on a quiet day — the worst time to start is mid-withdrawal",
+      "{threshold} operators publish the exact figure that triggers a check"
+    ],
+    "body": [
+      "Verification is the step where a casino stops treating you as a balance and asks who you are. It is also where money gets stuck, almost always for the same reason: the account was opened in a hurry, the details did not match the documents, and nobody found out until a withdrawal was already in flight.",
+      "**Start with eligibility, before you deposit anything.** Two separate things have to be true. Your country has to allow you to play — that is the law where you are, and it is not the operator's decision. And the operator has to accept your country, which is in its own terms. They disagree more often than you would think: nine countries we cover ban online casinos while most operators' terms do not mention them at all. Our legal map has the first answer and each casino page has the second. Getting this wrong is the one mistake that cannot be fixed later, because a balance built in a place you were never allowed to play is a balance you will not be paid.",
+      "**Register with the details that are on your documents.** Legal name as spelled on the ID, date of birth, address as it appears on a recent bill or statement. Not a nickname, not an old address, not a middle name you usually drop. Every mismatch is a manual review, and manual reviews happen at the slowest possible moment. One account per person, in your own name — paying a balance to someone whose name is not on the account is the thing compliance teams are built to stop.",
+      "**Then verify, and do it early.** Of the {casinos} casinos we track, {required} make verification a step you complete before you can play or withdraw, and {threshold} publish the figure that triggers it — Cloudbet at $2,200 of cumulative deposits, FortuneJack at $10,000, Winna within 30 days of your first deposit or €2,000 wagered, mBit above 1 BTC. Another {discretionary} run no routine check and reserve the right to ask anyway, usually at the moment you withdraw. Only one says it never will. So the question is not whether you can avoid it; it is whether you do it on a quiet Tuesday or during a cash-out.",
+      "**What to have ready.** A government photo ID, usually both sides. A selfie, sometimes holding the document — seven operators ask for one and one wants it from five angles. Proof of address dated within the last three months, which thirteen ask for: a utility bill or bank statement, not a screenshot of an app. Where larger sums are involved you may be asked for source of funds, which means showing where the money came from rather than just who you are. Photograph documents flat, in daylight, with all four corners in frame and nothing cropped — most rejections are a corner out of shot, not a problem with the document.",
+      "**Submit through the account itself, never anywhere else.** Open verification from inside your own logged-in session. No legitimate operator asks for identity documents over live chat, email, Telegram, Discord or a link someone sends you, and anyone who does is not the casino. Some route the check through a third-party provider — Duel uses Checkin.com, Solcasino uses Sumsub — which is normal, but you should still arrive there from inside your account rather than from a link.",
+      "**If it stalls.** Most delays are a document that was readable to you and not to a reviewer: a glare, a cropped edge, an address that no longer matches. Resubmit a cleaner copy before assuming anything is wrong. If a check is taking longer than the operator's own stated time, ask support through the account and keep the thread. And read the bonus terms before you opt in rather than after — Bluff needs no verification to withdraw unless you took a bonus, at which point it does."
+    ],
+    "data": "kyc-tiers"
   }
 }
