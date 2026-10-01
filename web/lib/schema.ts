@@ -16,14 +16,12 @@
 import { SITE_URL, SITE_NAME } from "./seo";
 
 export function organizationSchema() {
-  // No `logo` field: the site header is a text wordmark, not an image —
-  // there's no real logo file to point at yet. Add one here once a real
-  // site logo image exists in public/assets.
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: SITE_NAME,
     url: SITE_URL,
+    logo: `${SITE_URL}/assets/logo.svg`,
   };
 }
 

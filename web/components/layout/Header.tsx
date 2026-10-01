@@ -52,10 +52,11 @@ export function Header({ counts }: { counts: SiteCounts }) {
       >
         <Link
           href="/"
+          aria-label="CryptoSlotGuide home"
           style={{
             display: "flex",
-            alignItems: "baseline",
-            gap: 1,
+            alignItems: "center",
+            gap: 9,
             color: "#fff",
             fontWeight: 800,
             fontSize: 17,
@@ -64,8 +65,15 @@ export function Header({ counts }: { counts: SiteCounts }) {
             whiteSpace: "nowrap",
           }}
         >
-          <span>CryptoSlot</span>
-          <span style={{ color: "#00C2CC" }}>Guide</span>
+          {/* Decorative: the wordmark beside it already names the site, so a
+              second accessible name here would make screen readers say it
+              twice. The link carries the label. */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/assets/logo.svg" alt="" width={26} height={26} style={{ display: "block", flex: "none" }} />
+          <span style={{ display: "flex", alignItems: "baseline", gap: 1 }}>
+            <span>CryptoSlot</span>
+            <span style={{ color: "#00C2CC" }}>Guide</span>
+          </span>
         </Link>
 
         <nav

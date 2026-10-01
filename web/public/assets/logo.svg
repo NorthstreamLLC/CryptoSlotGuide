@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="CryptoSlotGuide">
+  <!--
+    Three reels and a payline.
+
+    The three bars read as slot reels stopped at different positions, and
+    equally as a bar chart — which is the honest description of this site, a
+    gambling site whose substance is data. The gold line through them is the
+    payline, and it is the "guide": the line drawn across the reels is the
+    thing we actually do.
+
+    Sober on purpose. The palette is the site's own teal rather than casino
+    neon, gold appears once and only on the line, and the whole mark is
+    geometry with no gradient or glow, so it survives being 16px in a tab.
+  -->
+  <rect x="2" y="2" width="60" height="60" rx="15" fill="#0E1316"/>
+  <rect x="2.75" y="2.75" width="58.5" height="58.5" rx="14.25" fill="none" stroke="#00C2CC" stroke-opacity=".38" stroke-width="1.5"/>
+
+  <!-- Reels: different heights, as three columns stopped out of step. -->
+  <g>
+    <rect x="15" y="22" width="9" height="26" rx="4.5" fill="#00C2CC"/>
+    <rect x="27.5" y="14" width="9" height="34" rx="4.5" fill="#5FE3E8"/>
+    <rect x="40" y="27" width="9" height="21" rx="4.5" fill="#00C2CC" fill-opacity=".85"/>
+  </g>
+
+  <!-- The payline. Crosses all three, overhanging slightly so it reads as a
+       line drawn across them rather than a fourth bar. -->
+  <rect x="10" y="33" width="44" height="4" rx="2" fill="#FFC531"/>
+</svg>
