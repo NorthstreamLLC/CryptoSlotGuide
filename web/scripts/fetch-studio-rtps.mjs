@@ -228,9 +228,14 @@ const ADAPTERS = {
     parse(html) {
       const title = decode((html.match(/<title>(.*?)<\/title>/s) ?? [])[1]).replace(/\s*[–-]\s*Spinomenal$/i, "");
       const flat = decode(html.replace(/<script[\s\S]*?<\/script>/gi, " ").replace(/<[^>]+>/g, " "));
-      const rtp = pct((flat.match(/\bRTP\s+([\d.]+)\s*%/i) ?? [])[1] ?? "");
+      // Spinomenal lists every build on one line — "RTP 88.85% | 91.55% |
+      // 93.61%| 95.42%" — lowest first. Reading only the first figure
+      // recorded the lowest build as the one published return on 335 titles,
+      // so take the whole run of percentages after the label.
+      const run = (flat.match(/\bRTP\s+((?:[\d.,]+\s*%\s*\|?\s*)+)/i) ?? [])[1] ?? "";
+      const versions = [...new Set([...run.matchAll(/([\d.,]+)\s*%/g)].map((m) => pct(m[1])).filter((v) => v !== null))].sort((a, b) => b - a);
       const released = (flat.match(/Release date\s+(\d{4}-\d{2}-\d{2})/i) ?? [])[1] ?? null;
-      return { name: title, versions: rtp !== null ? [rtp] : [], volatility: null, released, maxMultiplier: null };
+      return { name: title, versions, volatility: null, released, maxMultiplier: null };
     },
   },
 };
