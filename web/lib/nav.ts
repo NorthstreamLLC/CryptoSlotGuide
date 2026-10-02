@@ -14,6 +14,7 @@ import { raceSlugs } from "./races";
 import { countryPages } from "./landing";
 import { TOP_STUDIOS } from "./top-studios";
 import { US_STATES, toneOf } from "./legal";
+import { flagOf } from "./flags";
 import { rankedBrands } from "./us-brands";
 
 const slotCatLabels = siteData.slotCatDefs.map((d) => ({ tag: d.tag, label: d.label }));
@@ -158,7 +159,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
                 .filter(({ c }) => !/not legal|banned|prohibit/i.test(c.onlineCasino ?? ""))
                 .sort((a, b) => b.accepts.length - a.accepts.length || a.c.name.localeCompare(b.c.name))
                 .slice(0, 6)
-                .map(({ c, accepts }) => ({ label: `${c.name} · ${accepts.length}`, href: `/crypto-casinos/in/${c.code.toLowerCase()}` })),
+                .map(({ c, accepts }) => ({ label: `${flagOf(c.code)} ${c.name} · ${accepts.length}`, href: `/crypto-casinos/in/${c.code.toLowerCase()}` })),
             },
           ],
         },

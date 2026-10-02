@@ -6,6 +6,7 @@ import { countryHoverInfo } from "@/lib/legal-hover";
 import { MapHover } from "@/components/legal/MapHover";
 import { LegalMap } from "@/components/legal/LegalMap";
 import { LegalHero, RegionGrid, Tabs, Disclaimer } from "@/components/legal/LegalUI";
+import { flagOf } from "@/lib/flags";
 import { HelpBox } from "@/components/legal/HelpBox";
 import { NextSteps } from "@/components/layout/NextSteps";
 
@@ -36,7 +37,7 @@ export default function Page() {
         {covered.length > 0 && (
           <>
             <h2 style={{ margin: "36px 0 14px", fontSize: 24, fontWeight: 800, letterSpacing: "-.02em", color: "#fff" }}>All countries covered</h2>
-            <RegionGrid items={covered.map((c) => ({ href: `/legal/${c.code.toLowerCase()}`, name: c.name, status: c.onlineCasino }))} />
+            <RegionGrid items={covered.map((c) => ({ href: `/legal/${c.code.toLowerCase()}`, name: c.name, status: c.onlineCasino, flag: flagOf(c.code) }))} />
           </>
         )}
         <HelpBox />
