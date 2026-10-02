@@ -209,3 +209,42 @@ export function operatorClaimsFor(slug: string, kind: "sportsbook" | "casino"): 
   const known = new Set(countsFor(slug)[kind]);
   return rows.filter((r) => !known.has(r.code)).sort((a, b) => a.code.localeCompare(b.code));
 }
+
+export interface StateOperatorRow {
+  /** The regulator's own listing text, verbatim. */
+  listing: string;
+  licenseHolder: string | null;
+  /** The brand it resolves to, or null where the registry has no entry — listed by name, never dropped. */
+  brand: UsBrand | null;
+  sourceUrl: string | null;
+  asOf: string | null;
+}
+
+/**
+ * Everything the state's regulator lists for one kind, resolved to brands
+ * where the registry knows the domain or name — the inverse of statesFor().
+ *
+ * Order is the brand's footprint across states (countsFor), biggest first,
+ * because nothing commercial is in play here: no US brand has a deal with
+ * us, so the only order we can stand behind is the measured one. Listings
+ * the registry cannot resolve follow, alphabetically, still carrying the
+ * regulator's citation — a brand we have not registered is still licensed.
+ */
+export function operatorsInState(code: string, kind: "sportsbook" | "casino"): StateOperatorRow[] {
+  const st = STATES.find((x) => x.code === code.toUpperCase());
+  const blk = st?.[kind === "casino" ? "casinos" : "sportsbooks"];
+  if (!blk?.operators?.length) return [];
+  const seen = new Set<string>();
+  const rows: StateOperatorRow[] = [];
+  for (const op of blk.operators) {
+    const listing = (op.brand ?? "").trim();
+    if (!listing) continue;
+    const slug = match(listing);
+    const key = slug ?? listing.toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    rows.push({ listing, licenseHolder: op.licenseHolder ?? null, brand: slug ? (BY_SLUG.get(slug) ?? null) : null, sourceUrl: blk.sourceUrl ?? null, asOf: blk.asOf ?? null });
+  }
+  const footprint = (r: StateOperatorRow) => (r.brand ? countsFor(r.brand.slug)[kind === "casino" ? "casino" : "sportsbook"].length : -1);
+  return rows.sort((a, b) => footprint(b) - footprint(a) || (a.brand?.name ?? a.listing).localeCompare(b.brand?.name ?? b.listing));
+}

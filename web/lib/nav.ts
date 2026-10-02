@@ -13,6 +13,7 @@ import { inHouseOrder } from "./house-order";
 import { raceSlugs } from "./races";
 import { countryPages } from "./landing";
 import { TOP_STUDIOS } from "./top-studios";
+import { US_STATES, toneOf } from "./legal";
 import { rankedBrands } from "./us-brands";
 
 const slotCatLabels = siteData.slotCatDefs.map((d) => ({ tag: d.tag, label: d.label }));
@@ -172,6 +173,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
               links: [
                 { label: "US-regulated casinos", href: "/us-casinos" },
                 { label: "US-regulated sportsbooks", href: "/us-sportsbooks" },
+                { label: "Casinos by state", href: "/us-casinos#by-state" },
                 { label: "State-by-state law", href: "/legal/us" },
                 { label: "US sweepstakes casinos", href: "/sweepstakes-casinos" },
               ],
@@ -181,6 +183,12 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
               // commercial — we hold no deal with any of them. Sportsbook
               // rather than casino because the spread is far wider there:
               // 27 states against 5.
+              // The states where a licensed online casino is live, from each
+              // state's own law page.
+              title: "Live states",
+              links: US_STATES.filter((st) => toneOf(st.onlineCasino) === "legal").map((st) => ({ label: st.name, href: `/us-casinos/in/${st.code.toLowerCase()}` })),
+            },
+            {
               title: "Biggest footprints",
               links: rankedBrands("sportsbook")
                 .slice(0, 5)

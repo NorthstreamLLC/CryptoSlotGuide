@@ -89,6 +89,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...LEGACY_ITEMS.map((i) => slugPath("", i.slug)),
     ...LEGACY_CATEGORIES.map((c) => slugPath("/category", c.slug)),
     ...countryPages().map(({ c }) => slugPath("/crypto-casinos/in", c.code.toLowerCase())),
+    ...US_STATES.map((st) => slugPath("/us-casinos/in", st.code.toLowerCase())),
     ...COIN_PAGES.filter((c) => casinosForCoin(c.ticker).length >= 3).map((c) => slugPath("/crypto-casinos/accepting", c.slug)),
     ...versusPairs().map(([a, b]) => slugPath("/compare", pairSlug(a, b))),
     ...sweepsSorted().map((w) => slugPath("/sweepstakes-casinos", w.slug)),

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { rankedBrands, unmatchedListings, statesWithoutList } from "@/lib/us-brands";
 import { NextSteps } from "@/components/layout/NextSteps";
+import { LinkCloud } from "@/components/landing/LandingShell";
+import { US_STATES, toneOf } from "@/lib/legal";
 import { GeoNotice } from "@/components/geo/GeoNotice";
 
 const MONO = "var(--font-jetbrains-mono), monospace";
@@ -112,6 +114,14 @@ export function UsIndexPage({ copy }: { copy: UsIndexCopy }) {
       </section>
 
       <section style={{ maxWidth: 1200, margin: "0 auto", padding: "0 40px 80px" }}>
+        <div id="by-state">
+          <LinkCloud
+            title="Online casinos by state"
+            items={[...US_STATES]
+              .sort((a, b) => Number(toneOf(b.onlineCasino) === "legal") - Number(toneOf(a.onlineCasino) === "legal") || a.name.localeCompare(b.name))
+              .map((st) => ({ href: `/us-casinos/in/${st.code.toLowerCase()}`, label: toneOf(st.onlineCasino) === "legal" ? `${st.name} · live` : st.name }))}
+          />
+        </div>
         <NextSteps
           steps={[
             copy.sibling,
