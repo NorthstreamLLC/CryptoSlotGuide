@@ -17,6 +17,21 @@ const MONO = "var(--font-jetbrains-mono), monospace";
 const PRESETS = [1000, 10000, 50000, 250000, 1000000];
 const money = (n: number) => (n >= 1e9 ? `$${n / 1e9}B` : n >= 1e6 ? `$${+(n / 1e6).toFixed(1)}M` : n >= 1e3 ? `$${+(n / 1e3).toFixed(1)}K` : `$${n}`);
 
+/**
+ * The cash a rank's reward text states, or null where it states none.
+ *
+ * 220 of the 875 rank entries across the 40 ladders name a dollar figure —
+ * "Level-up bonus of about $0.90", "$100 at Gold 1" — and 12 casinos do it
+ * for every rank. Those are summed; a perk with no figure (a VIP host, a
+ * birthday bonus, "level-up bonus" with no amount) counts as nothing rather
+ * than as a guess, and a ladder that names no amounts shows "Not stated".
+ */
+const cashIn = (rewards: string): number | null => {
+  const m = rewards.match(/\$\s?([\d,]+(?:\.\d+)?)/);
+  return m ? Number(m[1].replace(/,/g, "")) : null;
+};
+const cash = (n: number) => (n >= 1e6 ? `$${+(n / 1e6).toFixed(2)}M` : n >= 1e3 ? `$${n.toLocaleString(undefined, { maximumFractionDigits: 0 })}` : `$${+n.toFixed(2)}`);
+
 /** Enter a total wager; see the rank it reaches at every casino, and how far the next rank is. */
 export function VipCalculator({ casinos }: { casinos: CalcCasino[] }) {
   const [wager, setWager] = useState(50000);
@@ -30,7 +45,13 @@ export function VipCalculator({ casinos }: { casinos: CalcCasino[] }) {
           });
           const cur = idx >= 0 ? c.ranks[idx] : null;
           const next = c.ranks[idx + 1] ?? null;
-          return { c, cur, next, pos: idx + 1, of: c.ranks.length, toNext: next ? next.wager - wager : 0 };
+          // Rank-up cash reached so far: every rank at or below the wager
+          // whose reward names a figure. `stated` says whether the ladder
+          // names any at all, so a zero can be told from a silence.
+          const stated = c.ranks.some((r) => cashIn(r.rewards) !== null);
+          const cashSoFar = c.ranks.filter((r) => wager >= r.wager).reduce((sum, r) => sum + (cashIn(r.rewards) ?? 0), 0);
+          const nextCash = next ? cashIn(next.rewards) : null;
+          return { c, cur, next, pos: idx + 1, of: c.ranks.length, toNext: next ? next.wager - wager : 0, stated, cashSoFar, nextCash };
         })
         .sort(byHouseOn((r) => r.c)),
     [casinos, wager]
@@ -65,8 +86,8 @@ export function VipCalculator({ casinos }: { casinos: CalcCasino[] }) {
       </div>
 
       <div style={{ borderRadius: 18, border: "1px solid rgba(255,255,255,.08)", background: "#0C1013", overflow: "hidden" }}>
-        {rows.map(({ c, cur, next, pos, of, toNext }, i) => (
-          <div key={c.slug} className="grid grid-cols-1 md:grid-cols-[minmax(170px,1fr)_minmax(150px,.9fr)_minmax(240px,1.6fr)_minmax(150px,.9fr)]" style={{ gap: 14, padding: "15px 18px", borderTop: i ? "1px solid rgba(255,255,255,.05)" : undefined, alignItems: "center" }}>
+        {rows.map(({ c, cur, next, pos, of, toNext, stated, cashSoFar, nextCash }, i) => (
+          <div key={c.slug} className="grid grid-cols-1 md:grid-cols-[minmax(170px,1fr)_minmax(150px,.9fr)_minmax(220px,1.5fr)_minmax(130px,.8fr)_minmax(150px,.9fr)]" style={{ gap: 14, padding: "15px 18px", borderTop: i ? "1px solid rgba(255,255,255,.05)" : undefined, alignItems: "center" }}>
             <Link href={`/casinos/${c.slug}`} style={{ display: "flex", alignItems: "center", gap: 10 }}>
               {c.logo ? (
                 // eslint-disable-next-line @next/next/no-img-element
@@ -84,10 +105,16 @@ export function VipCalculator({ casinos }: { casinos: CalcCasino[] }) {
               <div style={{ fontFamily: MONO, fontSize: 10, color: "#8E9CA5", marginTop: 4 }}>rank {pos} of {of}</div>
             </div>
             <div style={{ fontSize: 13, lineHeight: 1.5, color: "#A8B6BE" }}>{cur?.rewards ?? `First rank at ${money(c.ranks[0].wager)} wagered.`}</div>
+            <div>
+              <div style={{ fontFamily: MONO, fontSize: 9.5, letterSpacing: ".07em", textTransform: "uppercase", color: "#8E9CA5", marginBottom: 3 }}>Rank-up cash so far</div>
+              <div style={{ fontSize: 16, fontWeight: 800, color: stated ? "#FFC531" : "#6F7D86" }}>{stated ? cash(cashSoFar) : "Not stated"}</div>
+              {stated && cashSoFar === 0 && <div style={{ fontFamily: MONO, fontSize: 10, color: "#8E9CA5", marginTop: 2 }}>first cash rank ahead</div>}
+            </div>
             <div style={{ fontSize: 13, color: "#C6D1D7" }}>
               {next ? (
                 <>
                   <strong style={{ color: "#fff" }}>{next.rank}</strong> in {money(toNext)} more
+                  {nextCash !== null && <span style={{ color: "#FFC531" }}> · {cash(nextCash)}</span>}
                 </>
               ) : (
                 <span style={{ color: "#D6B65C", fontWeight: 700 }}>Top published rank</span>
@@ -99,6 +126,10 @@ export function VipCalculator({ casinos }: { casinos: CalcCasino[] }) {
           </div>
         ))}
       </div>
+      <p style={{ margin: "12px 0 0", fontSize: 12.5, lineHeight: 1.6, color: "#77858E", maxWidth: "84ch" }}>
+        Rank-up cash is the sum of the level-up bonuses the casino states in dollars for every rank at or below your wager, from its own VIP page.
+        Perks with no figure — rakeback rates, reloads, a VIP host — are not counted, and a ladder that names no amounts reads “Not stated” rather than zero.
+      </p>
     </div>
   );
 }
