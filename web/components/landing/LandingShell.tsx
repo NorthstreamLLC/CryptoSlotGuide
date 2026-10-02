@@ -7,7 +7,7 @@ const MONO = "var(--font-jetbrains-mono), monospace";
 export function LandingShell({ crumbs, eyebrow, title, intro, chips, children }: { crumbs: { label: string; href?: string }[]; eyebrow: string; title: string; intro: ReactNode; chips?: string[]; children: ReactNode }) {
   return (
     <main style={{ background: "#07090B" }}>
-      <section style={{ borderBottom: "1px solid rgba(255,255,255,.07)", background: "radial-gradient(80% 120% at 85% 0%, rgba(0,194,204,.10), transparent 55%), radial-gradient(60% 80% at 0% 100%, rgba(214,182,92,.07), transparent 60%), #0A0D10" }}>
+      <section data-reveal style={{ borderBottom: "1px solid rgba(255,255,255,.07)", background: "radial-gradient(80% 120% at 85% 0%, rgba(0,194,204,.10), transparent 55%), radial-gradient(60% 80% at 0% 100%, rgba(214,182,92,.07), transparent 60%), #0A0D10" }}>
         <div style={{ maxWidth: 1400, margin: "0 auto", padding: "36px 24px 36px" }}>
           <div style={{ fontFamily: MONO, fontSize: 11, color: "#83919A", marginBottom: 20 }}>
             {crumbs.map((c, i) => (

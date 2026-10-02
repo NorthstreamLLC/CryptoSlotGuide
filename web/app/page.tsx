@@ -346,7 +346,7 @@ export default function HomePage() {
       </section>
 
       {/* Top offers */}
-      <section style={{ maxWidth: 1400, margin: "0 auto", padding: "68px 40px 0" }}>
+      <section data-reveal style={{ maxWidth: 1400, margin: "0 auto", padding: "68px 40px 0" }}>
         <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 32, flexWrap: "wrap", marginBottom: 22 }}>
           <div>
             <h2 style={{ margin: "0 0 8px", fontSize: 32, letterSpacing: "-.03em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Top casino offers</h2>
@@ -360,7 +360,7 @@ export default function HomePage() {
       </section>
 
       {/* Biggest races */}
-      <section style={{ maxWidth: 1400, margin: "0 auto", padding: "56px 40px 0" }}>
+      <section data-reveal style={{ maxWidth: 1400, margin: "0 auto", padding: "56px 40px 0" }}>
         <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 32, flexWrap: "wrap", marginBottom: 18 }}>
           <div>
             <h2 style={{ margin: "0 0 8px", fontSize: 32, letterSpacing: "-.03em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Biggest races & raffles</h2>
@@ -390,7 +390,7 @@ export default function HomePage() {
       </section>
 
       {/* Featured reviews */}
-      <section style={{ maxWidth: 1400, margin: "0 auto", padding: "68px 40px 0" }}>
+      <section data-reveal style={{ maxWidth: 1400, margin: "0 auto", padding: "68px 40px 0" }}>
         <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 32, flexWrap: "wrap", marginBottom: 22 }}>
           <div>
             <h2 style={{ margin: "0 0 8px", fontSize: 32, letterSpacing: "-.03em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>
@@ -437,7 +437,7 @@ export default function HomePage() {
           sending a reader who had just seen ten offers off to a calculator
           instead of to the prize pools and the reviews that follow. Tools are
           worth having on the page; they are not worth interrupting that. */}
-      <section style={{ maxWidth: 1400, margin: "0 auto", padding: "56px 40px 0" }}>
+      <section data-reveal style={{ maxWidth: 1400, margin: "0 auto", padding: "56px 40px 0" }}>
         <div style={{ marginBottom: 20 }}>
           <h2 style={{ margin: "0 0 8px", fontSize: 32, letterSpacing: "-.03em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Start here</h2>
           <p style={{ margin: 0, fontSize: 15, color: "#8DA0AA" }}>Answer the question you actually came with — where you can play, what an offer is worth, and which build of a slot a casino ships.</p>
@@ -469,7 +469,7 @@ export default function HomePage() {
       </section>
 
       {/* Slots */}
-      <section style={{ maxWidth: 1400, margin: "0 auto", padding: "58px 40px 0" }}>
+      <section data-reveal style={{ maxWidth: 1400, margin: "0 auto", padding: "58px 40px 0" }}>
         <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 32, flexWrap: "wrap", marginBottom: 22 }}>
           <div>
             <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 12 }}>Slots</div>
@@ -486,7 +486,7 @@ export default function HomePage() {
       </section>
 
       {/* Providers */}
-      <section style={{ maxWidth: 1400, margin: "0 auto", padding: "58px 40px 0" }}>
+      <section data-reveal style={{ maxWidth: 1400, margin: "0 auto", padding: "58px 40px 0" }}>
         <div style={{ marginBottom: 20 }}>
           <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 12 }}>Providers</div>
           <h2 style={{ margin: "0 0 9px", fontSize: 32, letterSpacing: "-.03em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Who actually makes the games</h2>
@@ -513,7 +513,7 @@ export default function HomePage() {
       {/* Where you can play. The map is the site's most distinctive tool and
           was buried two clicks deep; it earns its place on the homepage by
           answering the first question a reader actually has. */}
-      <section style={{ maxWidth: 1400, margin: "0 auto", padding: "58px 40px 0" }}>
+      <section data-reveal style={{ maxWidth: 1400, margin: "0 auto", padding: "58px 40px 0" }}>
         <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 16, flexWrap: "wrap", marginBottom: 8 }}>
           <h2 style={{ margin: 0, fontSize: 26, letterSpacing: "-.025em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Where you can play</h2>
           <Link href="/legal" className="hover:!text-accent" style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11.5, letterSpacing: ".05em", color: "#00C2CC" }}>
@@ -541,7 +541,7 @@ export default function HomePage() {
       </section>
 
       {/* By coin */}
-      <section style={{ maxWidth: 1400, margin: "0 auto", padding: "58px 40px 0" }}>
+      <section data-reveal style={{ maxWidth: 1400, margin: "0 auto", padding: "58px 40px 0" }}>
         <h2 style={{ margin: "0 0 8px", fontSize: 26, letterSpacing: "-.025em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Casinos by coin</h2>
         <p style={{ margin: "0 0 20px", fontSize: 15, color: "#8DA0AA" }}>Deposit rails differ per chain. These pages compare confirmation counts, minimums, and who pays the network fee.</p>
         <div style={{ display: "grid", minWidth: 0, gridTemplateColumns: "repeat(auto-fit,minmax(178px,1fr))", gap: 12 }}>
@@ -560,7 +560,7 @@ export default function HomePage() {
       </section>
 
       {/* Category / sports / esports hubs */}
-      <section style={{ maxWidth: 1400, margin: "0 auto", padding: "56px 40px 0" }}>
+      <section data-reveal style={{ maxWidth: 1400, margin: "0 auto", padding: "56px 40px 0" }}>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))", gap: 14 }}>
           {hubs.map((h) => (
             <div key={h.kicker} style={{ padding: 26, borderRadius: 14, background: "rgba(12,16,19,.66)", border: "1px solid rgba(255,255,255,.06)" }}>
@@ -582,7 +582,7 @@ export default function HomePage() {
       </section>
 
       {/* Wallets & exchanges */}
-      <section style={{ maxWidth: 1400, margin: "0 auto", padding: "56px 40px 0" }}>
+      <section data-reveal style={{ maxWidth: 1400, margin: "0 auto", padding: "56px 40px 0" }}>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(340px,1fr))", gap: 14 }}>
           {toolLists.map((t) => (
             <div key={t.kicker} style={{ padding: 26, borderRadius: 14, background: "rgba(12,16,19,.66)", border: "1px solid rgba(255,255,255,.06)" }}>
@@ -618,7 +618,7 @@ export default function HomePage() {
       </section>
 
       {/* Methodology teaser */}
-      <section style={{ maxWidth: 1400, margin: "0 auto", padding: "60px 40px 80px" }}>
+      <section data-reveal style={{ maxWidth: 1400, margin: "0 auto", padding: "60px 40px 80px" }}>
         <div style={{ padding: 44, borderRadius: 16, background: "linear-gradient(150deg,#0E1417,#0A0E10)", border: "1px solid rgba(255,255,255,.07)" }}>
           <div style={{ display: "grid", gridTemplateColumns: "minmax(260px,.85fr) minmax(300px,1.15fr)", gap: 56, alignItems: "start" }}>
             <div>

@@ -157,7 +157,7 @@ function Row({ r, first, cols, labels, hasStat }: { r: VerticalRow; first: boole
     </div>
   );
   return (
-    <div className={`grid grid-cols-2 ${cols} items-center gap-x-4 gap-y-3 transition-colors hover:bg-white/[0.025]`} style={{ padding: "16px 20px", borderTop: first ? undefined : "1px solid rgba(255,255,255,.05)" }}>
+    <div data-reveal className={`grid grid-cols-2 ${cols} items-center gap-x-4 gap-y-3 transition-colors hover:bg-white/[0.025]`} style={{ padding: "16px 20px", borderTop: first ? undefined : "1px solid rgba(255,255,255,.05)" }}>
       <Link href={r.href} className="col-span-2 md:col-span-1" style={{ display: "flex", alignItems: "center", gap: 12, minWidth: 0 }}>
         {r.image ? (
           // A game tile, 4:3 like the art, so the title is not cropped off it.

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { RevealObserver } from "@/components/motion/RevealObserver";
 import { Archivo, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
@@ -43,6 +44,7 @@ export default function RootLayout({
         <JsonLd data={[organizationSchema(), websiteSchema()]} />
         <a href="#main" className="csg-skip">Skip to content</a>
         <Header counts={siteCounts} />
+        <RevealObserver />
         <main id="main" className="flex-1">{children}</main>
         <NewsletterBand />
         <Footer />

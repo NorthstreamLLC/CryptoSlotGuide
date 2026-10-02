@@ -40,7 +40,7 @@ export default function Page() {
       <section style={{ maxWidth: 1400, margin: "0 auto", padding: "32px 40px 0" }}>
         <div style={{ display: "grid", minWidth: 0, gridTemplateColumns: "repeat(auto-fit,minmax(232px,1fr))", gap: 12 }}>
           {houseGames.map((g) => (
-            <Link key={g.slug} href={`/house-games/${g.slug}`} style={{ display: "flex", flexDirection: "column", padding: 22, borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.06)" }}>
+            <Link key={g.slug} href={`/house-games/${g.slug}`} data-reveal className="csg-lift" style={{ display: "flex", flexDirection: "column", padding: 22, borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.06)" }}>
               <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
                 <HouseIcon slug={g.slug} mono={g.mono} tint={g.tint} size={44} radius={11} />
                 <div>

@@ -27,6 +27,8 @@ export function CasinoCard({ o, rank }: { o: Operator; rank?: number }) {
   ];
   return (
     <article
+      data-reveal
+      className="csg-lift"
       style={{
         position: "relative",
         display: "flex",

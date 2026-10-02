@@ -210,7 +210,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
           )}
         </div>}
 
-        <div id="verdict" style={{ scrollMarginTop: 110, display: "grid", gridTemplateColumns: e.cons.length && e.pros.length ? "1fr 1fr" : "1fr", gap: 14, marginBottom: 38 }}>
+        <div id="verdict" data-reveal style={{ scrollMarginTop: 110, display: "grid", gridTemplateColumns: e.cons.length && e.pros.length ? "1fr 1fr" : "1fr", gap: 14, marginBottom: 38 }}>
           {e.pros.length > 0 && (
           <div style={{ padding: 24, borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
             <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 14 }}>
@@ -295,7 +295,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
             ))}
           </div>
           {e.tableRows.map((r) => (
-            <div key={r.name} style={{ display: "grid", gridTemplateColumns: "minmax(240px,1.5fr) 130px 150px 130px", borderBottom: "1px solid rgba(255,255,255,.05)" }}>
+            <div key={r.name} data-reveal style={{ display: "grid", gridTemplateColumns: "minmax(240px,1.5fr) 130px 150px 130px", borderBottom: "1px solid rgba(255,255,255,.05)" }}>
               <div style={{ padding: "14px 18px", minWidth: 0 }}>
                 <div style={{ fontSize: 13.5, fontWeight: 600, color: "#E8EDF0", display: "flex", alignItems: "baseline", gap: 8, flexWrap: "wrap" }}>
                   {r.href ? (
@@ -325,7 +325,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
         )}
         {e.tableRows.length > 0 && <p style={{ margin: "0 0 38px", fontSize: 13.5, lineHeight: 1.6, color: "#7B8A93", maxWidth: "84ch", textWrap: "pretty" }}>{e.tableNote}</p>}
 
-        <div id="faq" style={{ scrollMarginTop: 110, display: "grid", gridTemplateColumns: "1fr 300px", gap: 14 }}>
+        <div id="faq" data-reveal style={{ scrollMarginTop: 110, display: "grid", gridTemplateColumns: "1fr 300px", gap: 14 }}>
           <div style={{ padding: 28, borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
             <h3 style={{ margin: "0 0 16px", fontSize: 20, letterSpacing: "-.02em", fontWeight: 700, color: "#E8EDF0" }}>Questions readers ask</h3>
             <div style={{ display: "flex", flexDirection: "column" }}>
@@ -369,7 +369,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
 function SectionHeading({ title, sub, maxWidth, id }: { title: string; sub: string; maxWidth?: string; id?: string }) {
   return (
     <>
-      <h2 id={id} style={{ scrollMarginTop: 110, margin: "0 0 8px", fontSize: 28, letterSpacing: "-.028em", fontWeight: 800, fontStretch: "112%", color: "#E8EDF0" }}>{title}</h2>
+      <h2 id={id} data-reveal="left" style={{ scrollMarginTop: 110, margin: "0 0 8px", fontSize: 28, letterSpacing: "-.028em", fontWeight: 800, fontStretch: "112%", color: "#E8EDF0" }}>{title}</h2>
       <p style={{ margin: "0 0 20px", fontSize: 15, color: "#8DA0AA", maxWidth, textWrap: "pretty" }}>{sub}</p>
     </>
   );

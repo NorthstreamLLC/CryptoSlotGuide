@@ -61,6 +61,8 @@ export function SlotCategoryPage({ tag }: { tag: SlotMechanicTag }) {
               <Link
                 key={s.slug}
                 href={`/slots/${s.slug}`}
+                data-reveal
+                className="csg-lift"
                 style={{ position: "relative", display: "flex", flexDirection: "column", padding: 20, borderRadius: 14, background: "rgba(12,16,19,.7)", border: "1px solid rgba(255,255,255,.07)", overflow: "hidden" }}
               >
                 <span style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: `linear-gradient(90deg,${s.tint},transparent)` }} />
@@ -102,7 +104,7 @@ export function SlotCategoryPage({ tag }: { tag: SlotMechanicTag }) {
                 const v = rtpVersions(g);
                 const art = publishableArt(g);
                 return (
-                  <Link key={g.slug} href={`/slots/${g.slug}`} style={{ display: "flex", alignItems: "center", gap: 12, padding: "12px 14px", borderRadius: 12, background: "rgba(12,16,19,.7)", border: "1px solid rgba(255,255,255,.07)" }}>
+                  <Link key={g.slug} href={`/slots/${g.slug}`} data-reveal className="csg-lift" style={{ display: "flex", alignItems: "center", gap: 12, padding: "12px 14px", borderRadius: 12, background: "rgba(12,16,19,.7)", border: "1px solid rgba(255,255,255,.07)" }}>
                     <span style={{ width: 52, height: 39, flex: "none", borderRadius: 8, overflow: "hidden", background: "#0E1316" }}>
                       {art ? (
                         // eslint-disable-next-line @next/next/no-img-element
