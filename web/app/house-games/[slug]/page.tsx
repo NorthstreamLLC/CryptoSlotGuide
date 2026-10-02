@@ -8,6 +8,9 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { NextSteps } from "@/components/layout/NextSteps";
 import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
+import { HouseIcon } from "@/components/house/HouseIcon";
+import { OfferCta } from "@/components/ui/OfferCta";
+import { inHouseOrder } from "@/lib/house-order";
 
 /**
  * How-to page for one originals game. Edges are each casino's own published
@@ -29,6 +32,12 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const { houseGames, ops } = siteData;
   const h = houseGames.find((g) => g.slug === slug);
   if (!h) notFound();
+  // One card per casino that publishes an edge for this game, house order,
+  // carrying the first edge figure it states.
+  const whereToPlay = inHouseOrder(siteData.ops.filter((o) => h.edges.some((e) => e.casino === o.slug))).map((o) => ({
+    o,
+    edge: h.edges.find((e) => e.casino === o.slug)?.value ?? "",
+  }));
 
   const nameOf = (s: string) => ops.find((o) => o.slug === s)?.name ?? s;
   const others = houseGames.filter((g) => g.slug !== h.slug).slice(0, 4);
@@ -44,14 +53,14 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           <div style={{ display: "grid", gridTemplateColumns: "1.25fr .75fr", gap: 56, alignItems: "start" }}>
             <div>
               <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 22 }}>
-                <span style={{ width: 38, height: 38, flex: "none", borderRadius: 9, background: h.tint, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, fontWeight: 700, color: "#0A0D0F" }}>{h.mono}</span>
+                <HouseIcon slug={h.slug} mono={h.mono} tint={h.tint} size={44} radius={11} />
                 <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".09em", textTransform: "uppercase", color: "#00C2CC" }}>How to play</span>
               </div>
               <h1 style={{ margin: "0 0 16px", fontSize: 44, lineHeight: 1.06, letterSpacing: "-.035em", fontWeight: 800, fontStretch: "114%", color: "#fff" }}>
                 {h.name}: the rules, the edge, and what you actually decide
               </h1>
               <p style={{ margin: "0 0 24px", maxWidth: "62ch", fontSize: 16.5, lineHeight: 1.65, color: "#93A3AC", textWrap: "pretty" }}>
-                {h.note} Each casino publishes the edge for its own version, and results are verifiable, so what's left to decide is where you play and how you size and stop.
+                {h.note} Each casino publishes the edge for its own version, and results are verifiable, so what&apos;s left to decide is where you play and how you size and stop.
               </p>
               <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11.5, color: "#83919A" }}>Edges as each casino publishes them · {h.edges.length} casinos</div>
             </div>
@@ -99,6 +108,30 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           </div>
         </div>
 
+        {/* The casinos that publish an edge for this game, in house order,
+            each with the button that goes to the operator where we hold a
+            link. The edge table below is the evidence; this is the answer. */}
+        <h2 style={{ margin: "0 0 8px", fontSize: 28, letterSpacing: "-.028em", fontWeight: 800, fontStretch: "112%", color: "#E8EDF0" }}>Where to play {h.name}</h2>
+        <p style={{ margin: "0 0 20px", maxWidth: "80ch", fontSize: 15, lineHeight: 1.6, color: "#8DA0AA" }}>
+          Every casino here publishes its own edge for {h.name} — the figure is beside the name, from the page cited in the table below.
+        </p>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: 12, marginBottom: 38 }}>
+          {whereToPlay.map(({ o, edge }) => (
+            <div key={o.slug} style={{ display: "flex", flexDirection: "column", gap: 12, padding: 16, borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
+              <Link href={`/casinos/${o.slug}`} style={{ display: "flex", alignItems: "center", gap: 12, minWidth: 0 }}>
+                <span style={{ width: 36, height: 36, flex: "none", borderRadius: 10, overflow: "hidden" }}>
+                  <BrandMark slug={o.slug} mono={o.mono} tint={tintFor(o.slug)} radius={10} fontSize={11} />
+                </span>
+                <span style={{ minWidth: 0 }}>
+                  <span style={{ display: "block", fontSize: 15, fontWeight: 800, color: "#fff" }}>{o.name}</span>
+                  <span style={{ display: "block", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#5FE3E8", marginTop: 2 }}>{edge}</span>
+                </span>
+              </Link>
+              <OfferCta o={o} size="sm" />
+            </div>
+          ))}
+        </div>
+
         <h2 style={{ margin: "0 0 8px", fontSize: 28, letterSpacing: "-.028em", fontWeight: 800, fontStretch: "112%", color: "#E8EDF0" }}>House edge by casino</h2>
         <p style={{ margin: "0 0 20px", maxWidth: "80ch", fontSize: 15, lineHeight: 1.6, color: "#8DA0AA" }}>What each casino publishes for its own {h.name}, with the page it comes from. Where a casino&apos;s pages disagree, both figures are shown. We haven&apos;t checked these inside the games ourselves.</p>
         <div style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 13, overflow: "hidden", background: "#0C1013", marginBottom: 38 }}>
@@ -129,7 +162,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         <div style={{ display: "grid", minWidth: 0, gridTemplateColumns: "repeat(auto-fit,minmax(232px,1fr))", gap: 12 }}>
           {others.map((g) => (
             <Link key={g.slug} href={`/house-games/${g.slug}`} style={{ display: "flex", alignItems: "center", gap: 12, padding: 18, borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
-              <span style={{ width: 30, height: 30, flex: "none", borderRadius: 8, background: g.tint, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 9.5, fontWeight: 700, color: "#0A0D0F" }}>{g.mono}</span>
+              <HouseIcon slug={g.slug} mono={g.mono} tint={g.tint} size={30} radius={8} />
               <span style={{ fontSize: 14.5, fontWeight: 600, color: "#E8EDF0" }}>{g.name}</span>
               <span style={{ marginLeft: "auto", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11.5, color: "#5FE3E8" }}>{g.edgeRange}</span>
             </Link>

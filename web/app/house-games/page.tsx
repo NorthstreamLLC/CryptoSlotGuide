@@ -4,6 +4,7 @@ import { pageMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { NextSteps } from "@/components/layout/NextSteps";
+import { HouseIcon } from "@/components/house/HouseIcon";
 
 /**
  * Ported from the `isHouse` block in CryptoSlotGuide.dc.html (search
@@ -41,7 +42,7 @@ export default function Page() {
           {houseGames.map((g) => (
             <Link key={g.slug} href={`/house-games/${g.slug}`} style={{ display: "flex", flexDirection: "column", padding: 22, borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.06)" }}>
               <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
-                <span style={{ width: 36, height: 36, flex: "none", borderRadius: 9, background: g.tint, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, fontWeight: 700, color: "#0A0D0F" }}>{g.mono}</span>
+                <HouseIcon slug={g.slug} mono={g.mono} tint={g.tint} size={44} radius={11} />
                 <div>
                   <div style={{ fontSize: 16.5, fontWeight: 700, color: "#fff", letterSpacing: "-.02em" }}>{g.name}</div>
                   <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#83919A", marginTop: 2 }}>{g.speed}</div>
@@ -92,9 +93,9 @@ export default function Page() {
               It does not mean the game is beatable. A house edge is still a house edge whether or not you can prove the roll was clean. Verification protects you from manipulation, not from the maths.
             </p>
           </div>
-          <Link href="/rtp-watch" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", gap: 20, padding: "28px 32px", borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
+          <Link href="/slots" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", gap: 20, padding: "28px 32px", borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
             <div style={{ fontSize: 16, fontWeight: 700, color: "#fff", letterSpacing: "-.015em" }}>Slots are the opposite story</div>
-            <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".05em", color: "#00C2CC" }}>RTP Watch →</div>
+            <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".05em", color: "#00C2CC" }}>Slot RTP index →</div>
           </Link>
         </div>
         <NextSteps
