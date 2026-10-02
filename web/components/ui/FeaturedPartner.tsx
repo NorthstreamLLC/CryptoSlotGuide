@@ -65,8 +65,25 @@ function pitchFor(slug: string, ctx: PartnerContext): string | null {
     case "esports":
       return spec("Sportsbook", "Esports titles") ?? spec("Sportsbook", "Esports");
     case "slots":
-    case "house":
-    case "wallet":
+      // The bonus term that decides whether slot play counts: game
+      // contribution first, else the standing offer itself.
+      return spec("Bonus terms", "Game contribution") ?? spec("Bonus terms", "Standing offer");
+    case "house": {
+      // What this casino publishes for its own originals — the edge figures
+      // on data/houseGames.json, each read from the casino's own page.
+      const own = siteData.houseGames
+        .map((g) => ({ name: g.name, edge: g.edges.find((e) => e.casino === slug)?.value }))
+        .filter((x): x is { name: string; edge: string } => !!x.edge)
+        .slice(0, 3);
+      if (!own.length) return null;
+      return `Publishes its own edge for ${own.map((x) => `${x.name} (${x.edge})`).join(", ")}.`;
+    }
+    case "wallet": {
+      const n = (COINS[slug] ?? []).length;
+      if (!n) return null;
+      const o = siteData.ops.find((x) => x.slug === slug);
+      return `Takes ${n} coins for deposits and withdrawals${o?.ln ? ", including Bitcoin over Lightning" : ""}.`;
+    }
     case "general":
     default:
       return null;

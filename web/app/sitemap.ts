@@ -42,6 +42,7 @@ const STATIC_ROUTES = [
   "/slots/jackpot",
   "/slots/cluster-pays",
   "/slots/high-volatility",
+  "/slots/hold-and-win",
   "/providers",
   "/providers/licences",
   "/legal/europe",
