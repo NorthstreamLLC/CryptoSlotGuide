@@ -10,14 +10,14 @@
  * 2894-2900) are all exchanges now present in exchangeRows.json.
  */
 import { siteData } from "./site-data";
-import { topSlotRows, slotArtBySlug } from "./slot-page";
+import { topSlotRows, slotArtBySlug, catalogueFallback } from "./slot-page";
 import { topStudioRank } from "./top-studios";
 import { tintFor } from "./logo";
 import { catalogueTotals } from "./slot-db";
 import { TOP_SLOTS } from "./top-slots";
 import { brandFor } from "./casino-facts";
 import { sportsFacts, sportsbookOps, sportsbookOrder, sportsOffers, sportsPromoLine, booksForTitle, esportsLabel, maxPayoutShort, type SportsOffer } from "./sports";
-import { hasVol, maxWinLabel, rtpLabel } from "./slot-facts";
+import { hasVol, hasRtp, hasMaxWin, maxWinLabel, rtpLabel } from "./slot-facts";
 import {
   lowestTakerFee,
   fill,
@@ -165,20 +165,26 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
           }),
           ...slots
             .filter((s) => !picked.has(s.slug))
-            .map((s) => ({
-              slug: s.slug,
-              name: s.name,
-              mono: s.mono,
-              tint: s.tint,
-              note: "",
-              image: slotArtBySlug(s.slug) ?? undefined,
-              m1: s.provider,
-              m2: rtpLabel(s),
-              m3: hasVol(s) ? `${s.vol[0].toUpperCase()}${s.vol.slice(1)}` : "Not published",
-              stat: maxWinLabel(s),
-              cta: "Slot profile",
-              href: `/slots/${s.slug}`,
-            })),
+            .map((s) => {
+              // What a review leaves unpublished, the catalogue fills — the
+              // same figures the database page prints for the title.
+              const fb = catalogueFallback(s.slug, s.provider);
+              const vol = hasVol(s) ? s.vol : fb.vol;
+              return {
+                slug: s.slug,
+                name: s.name,
+                mono: s.mono,
+                tint: s.tint,
+                note: "",
+                image: slotArtBySlug(s.slug) ?? undefined,
+                m1: s.provider,
+                m2: hasRtp(s) ? rtpLabel(s) : fb.rtp ?? "Not published",
+                m3: vol ? `${vol[0].toUpperCase()}${vol.slice(1)}` : "Not published",
+                stat: hasMaxWin(s) ? maxWinLabel(s) : fb.maxWin ?? "Not published",
+                cta: "Slot profile",
+                href: `/slots/${s.slug}`,
+              };
+            }),
         ];
       })(),
     };

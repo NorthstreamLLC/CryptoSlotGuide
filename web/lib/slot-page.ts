@@ -419,14 +419,17 @@ export function topSlotRows(): {
   return TOP_SLOTS.map((slug, i) => {
     const r = reviews.get(slug);
     if (r) {
+      const un = (k: "rtp" | "vol" | "maxWin") => !!r.unpublished?.includes(k);
+      const fb = catalogueFallback(slug, r.provider);
+      const vol = un("vol") ? fb.vol : r.vol;
       return {
         slug,
         rank: i + 1,
         name: r.name,
         provider: r.provider,
-        rtp: typeof r.rtp === "number" ? `${r.rtp}%` : "Not published",
-        volatility: r.vol ? `${r.vol[0].toUpperCase()}${r.vol.slice(1)}` : "Not published",
-        maxWin: r.maxWin ?? "Not published",
+        rtp: !un("rtp") && typeof r.rtp === "number" ? `${r.rtp}%` : fb.rtp ?? "Not published",
+        volatility: vol ? `${vol[0].toUpperCase()}${vol.slice(1)}` : "Not published",
+        maxWin: (un("maxWin") ? fb.maxWin : r.maxWin) ?? "Not published",
       };
     }
     const g = PAGES.get(slug);
@@ -486,11 +489,14 @@ export function slotArtBySlug(slug: string): string | null {
  * prints for the same title is wrong both ways, so the review's gaps fall
  * back to this — matched on studio, because ten slugs are shared.
  */
-export function catalogueFallback(slug: string, studio: string): { vol: string | null; maxWin: string | null } {
+export function catalogueFallback(slug: string, studio: string): { rtp: string | null; vol: string | null; maxWin: string | null } {
   const key = (x: string) => x.toLowerCase().replace(/[^a-z0-9]/g, "");
   const g = DB.games.find((x) => x.slug === slug && key(x.provider ?? "") === key(studio));
-  if (!g) return { vol: null, maxWin: null };
+  if (!g) return { rtp: null, vol: null, maxWin: null };
+  const v = rtpVersionsFor(g);
+  const rtp = v.length > 1 ? `${v[0]}% – ${v[v.length - 1]}%` : v.length === 1 ? `${v[0]}%` : g.rtp != null ? `${g.rtp}%` : null;
   return {
+    rtp,
     vol: volatilityOf(g),
     maxWin: g.maxWinMultiplier ? `${g.maxWinMultiplier.toLocaleString("en-GB")}x` : null,
   };
