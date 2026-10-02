@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { SectionNav } from "./SectionNav";
 import type { EntityView } from "@/lib/entity-view";
 import { backLink, ctaLabel, editorialTake, nextStepsFor } from "@/lib/entity-view";
 import { NextSteps } from "@/components/layout/NextSteps";
@@ -134,6 +135,16 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
         </div>
       </section>
 
+      <SectionNav
+        items={[
+          { id: "key-figures", label: tier === "field-tested" ? "What we measured" : "Key figures" },
+          ...(e.pros.length || e.cons.length ? [{ id: "verdict", label: "Holds up / falls short" }] : []),
+          ...(e.spec.length ? [{ id: "terms", label: e.specTitle }] : []),
+          ...(e.tableRows.length ? [{ id: "titles", label: e.tableTitle.length > 28 ? e.tableTitle.slice(0, 26).trim() + "…" : e.tableTitle }] : []),
+          ...(e.faqs.length ? [{ id: "faq", label: "Questions" }] : []),
+        ]}
+      />
+
       <div style={{ maxWidth: 1180, margin: "0 auto", padding: "56px 40px 80px" }}>
         {/* When a hand-written take exists, it's now the hero lead above —
             this box shows the separate computed verdict so nothing repeats.
@@ -149,6 +160,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
         )}
 
         <SectionHeading
+          id="key-figures"
           title={tier === "field-tested" ? "What we measured" : "Key figures"}
           sub={
             e.measuredSub ??
@@ -198,7 +210,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
           )}
         </div>}
 
-        <div style={{ display: "grid", gridTemplateColumns: e.cons.length && e.pros.length ? "1fr 1fr" : "1fr", gap: 14, marginBottom: 38 }}>
+        <div id="verdict" style={{ scrollMarginTop: 110, display: "grid", gridTemplateColumns: e.cons.length && e.pros.length ? "1fr 1fr" : "1fr", gap: 14, marginBottom: 38 }}>
           {e.pros.length > 0 && (
           <div style={{ padding: 24, borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
             <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 14 }}>
@@ -231,7 +243,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
           )}
         </div>
 
-        {e.spec.length > 0 && <SectionHeading title={e.specTitle} sub={e.specSub} maxWidth="80ch" />}
+        {e.spec.length > 0 && <SectionHeading id="terms" title={e.specTitle} sub={e.specSub} maxWidth="80ch" />}
         {e.spec.length > 0 && e.specSource && (
           <div style={{ margin: "-6px 0 14px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11 }}>
             <a href={e.specSource} target="_blank" rel="noopener noreferrer nofollow" style={{ color: "#5FE3E8" }}>
@@ -272,7 +284,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
           </div>
         ))}
 
-        {e.tableRows.length > 0 && <SectionHeading title={e.tableTitle} sub={e.tableSub} maxWidth="80ch" />}
+        {e.tableRows.length > 0 && <SectionHeading id="titles" title={e.tableTitle} sub={e.tableSub} maxWidth="80ch" />}
         {e.tableRows.length > 0 && (
         <div style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 13, overflow: "hidden", background: "#0C1013", marginBottom: 14 }}>
           <div style={{ display: "grid", gridTemplateColumns: "minmax(240px,1.5fr) 130px 150px 130px", background: "#101519", borderBottom: "1px solid rgba(255,255,255,.07)" }}>
@@ -313,7 +325,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
         )}
         {e.tableRows.length > 0 && <p style={{ margin: "0 0 38px", fontSize: 13.5, lineHeight: 1.6, color: "#7B8A93", maxWidth: "84ch", textWrap: "pretty" }}>{e.tableNote}</p>}
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 300px", gap: 14 }}>
+        <div id="faq" style={{ scrollMarginTop: 110, display: "grid", gridTemplateColumns: "1fr 300px", gap: 14 }}>
           <div style={{ padding: 28, borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
             <h3 style={{ margin: "0 0 16px", fontSize: 20, letterSpacing: "-.02em", fontWeight: 700, color: "#E8EDF0" }}>Questions readers ask</h3>
             <div style={{ display: "flex", flexDirection: "column" }}>
@@ -354,10 +366,10 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
   );
 }
 
-function SectionHeading({ title, sub, maxWidth }: { title: string; sub: string; maxWidth?: string }) {
+function SectionHeading({ title, sub, maxWidth, id }: { title: string; sub: string; maxWidth?: string; id?: string }) {
   return (
     <>
-      <h2 style={{ margin: "0 0 8px", fontSize: 28, letterSpacing: "-.028em", fontWeight: 800, fontStretch: "112%", color: "#E8EDF0" }}>{title}</h2>
+      <h2 id={id} style={{ scrollMarginTop: 110, margin: "0 0 8px", fontSize: 28, letterSpacing: "-.028em", fontWeight: 800, fontStretch: "112%", color: "#E8EDF0" }}>{title}</h2>
       <p style={{ margin: "0 0 20px", fontSize: 15, color: "#8DA0AA", maxWidth, textWrap: "pretty" }}>{sub}</p>
     </>
   );

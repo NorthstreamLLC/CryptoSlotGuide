@@ -1,6 +1,7 @@
 "use client";
 
 import { wagerView, bonusWithWager } from "@/lib/wager";
+import { BrowseNav } from "./BrowseNav";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { siteData } from "@/lib/site-data";
@@ -188,6 +189,8 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
           </div>
         </div>
       </section>
+
+      <BrowseNav />
 
       <div style={{ maxWidth: 1180, margin: "0 auto", padding: "44px 40px 80px" }}>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 20, marginBottom: 16, flexWrap: "wrap" }}>
