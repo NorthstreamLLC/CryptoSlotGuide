@@ -16,7 +16,7 @@ import { tintFor } from "./logo";
 import { catalogueTotals } from "./slot-db";
 import { TOP_SLOTS } from "./top-slots";
 import { brandFor } from "./casino-facts";
-import { sportsFacts, sportsbookOps, sportsbookOrder, sportsOffers, booksForTitle, esportsLabel, maxPayoutShort, type SportsOffer } from "./sports";
+import { sportsFacts, sportsbookOps, sportsbookOrder, sportsOffers, sportsPromoLine, booksForTitle, esportsLabel, maxPayoutShort, type SportsOffer } from "./sports";
 import { hasVol, maxWinLabel, rtpLabel } from "./slot-facts";
 import {
   lowestTakerFee,
@@ -275,7 +275,7 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
           name: o.name,
           mono: o.mono,
           tint: brandFor(o.slug),
-          note: [offerNote, provider ? `Powered by ${provider}` : ""].filter(Boolean).join(" · "),
+          note: [offerNote, sportsPromoLine(o.slug), provider ? `Powered by ${provider}` : ""].filter(Boolean).join(" · "),
           m1: esportsLabel(o.slug).replace("Not found", "—"),
           m2: yes(s.cashout),
           m3: yes(s.betBuilder),

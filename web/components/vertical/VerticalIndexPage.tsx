@@ -151,7 +151,9 @@ export function VerticalIndexPage({ kind, tabIdx = 0 }: { kind: VerticalKind; ta
                     <div style={{ display: "flex", flexDirection: "column", gap: 4, fontSize: 12.5, lineHeight: 1.5, color: "#A8B6BE" }}>
                       {o.wagering && <div><span style={{ color: "#8E9CA5" }}>Wagering · </span>{o.wagering}</div>}
                       {o.minOdds && <div><span style={{ color: "#8E9CA5" }}>Minimum odds · </span>{o.minOdds}</div>}
+                      {o.sportsRace && <div style={{ color: "#DCE5E9" }}><span style={{ color: "#8E9CA5" }}>Sports race · </span>{o.sportsRace}</div>}
                       {o.race && <div><span style={{ color: "#8E9CA5" }}>Races · </span>{o.race}</div>}
+                      {o.promos && <div><span style={{ color: "#8E9CA5" }}>Also · </span>{o.promos}</div>}
                     </div>
                     <div style={{ display: "flex", alignItems: "center", gap: 10, marginTop: "auto", paddingTop: 6, flexWrap: "wrap" }}>
                       {o.signupUrl ? (

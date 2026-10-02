@@ -31,7 +31,7 @@ const RACES: Record<string, Race> = {
   goated: { label: "$25K weekly + $2.5K daily races", monthly: 182_000, kind: "race" },
   dicey: { label: "$35K weekly race", monthly: 150_000, kind: "race" },
   solcasino: { label: "$25K weekly race + $10K raffle", monthly: 150_000, kind: "race" },
-  razed: { label: "$100K monthly + $10K weekly races", monthly: 143_000, kind: "race" },
+  razed: { label: "$100K monthly + $10K weekly + $10K sports races", monthly: 153_000, kind: "race" },
   shock: { label: "$50K monthly + $10K weekly races", monthly: 123_000, kind: "race" },
   rollbit: { label: "$25K daily race + $25K weekly sports race", monthly: 857_000, kind: "race" },
   degen: { label: "$25K weekly race", monthly: 107_000, kind: "race" },

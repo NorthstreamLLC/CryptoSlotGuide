@@ -96,6 +96,10 @@ export interface SportsOffer {
   minOdds: string | null;
   /** The casino's standing race or leaderboard, from lib/races.ts. */
   race: string | null;
+  /** A race that only sports bets enter, where the book runs one. */
+  sportsRace: string | null;
+  /** Standing sports features beyond the welcome offer — early payout, combo boosts, free-bet contests. */
+  promos: string | null;
   sourceUrl: string | null;
   href: string;
   signupUrl?: string;
@@ -119,9 +123,32 @@ export function sportsOffers(): SportsOffer[] {
       wagering: wagering ? firstClause(String(wagering)) : null,
       minOdds: minOdds ? String(minOdds) : null,
       race: raceFor(slug)?.label ?? null,
+      sportsRace: (() => {
+        const v = getSpecFact(slug, "Sports bonus terms", "Sports race")?.value;
+        return v ? firstClause(String(v)) : null;
+      })(),
+      promos: (() => {
+        const v = getSpecFact(slug, "Sports bonus terms", "Other sports promotions")?.value;
+        return v ? firstClause(String(v)) : null;
+      })(),
       sourceUrl: offer.sourceUrl ?? null,
       href: `/casinos/${slug}`,
       signupUrl: o.affiliate && o.signupUrl ? o.signupUrl : undefined,
     };
   }).filter((x): x is SportsOffer => !!x);
+}
+
+/**
+ * One line of a book's standing sports promotions, for the table row: the
+ * sports race if it runs one, then the other sports features its spec sheet
+ * records (early payout, combo boosts, free-bet contests). Books with only
+ * a rotating-promotion note get nothing here; the row already says so.
+ */
+export function sportsPromoLine(slug: string): string | null {
+  const parts: string[] = [];
+  const race = getSpecFact(slug, "Sports bonus terms", "Sports race")?.value;
+  if (race) parts.push(firstClause(String(race)).replace(/:.*$/, ""));
+  const other = getSpecFact(slug, "Sports bonus terms", "Other sports promotions")?.value;
+  if (other) parts.push(firstClause(String(other)).replace(/:.*$/, ""));
+  return parts.length ? parts.join(" · ") : null;
 }
