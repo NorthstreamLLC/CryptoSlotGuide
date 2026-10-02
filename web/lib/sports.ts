@@ -8,6 +8,7 @@ import { getSpecFact } from "./spec-sheet";
 import type { Operator } from "./types";
 import { inHouseOrder } from "./house-order";
 import { raceFor } from "./races";
+import { getCasinoBonuses } from "./casino-bonuses";
 
 const G = "Sportsbook";
 
@@ -146,9 +147,33 @@ export function sportsOffers(): SportsOffer[] {
  */
 export function sportsPromoLine(slug: string): string | null {
   const parts: string[] = [];
+  const add = (v: string | null | undefined) => {
+    const t = (v ?? "").trim();
+    if (t && !parts.some((p) => p.toLowerCase() === t.toLowerCase())) parts.push(t);
+  };
+  // The feature's name and what it does, cut before its conditions; a comma
+  // inside a figure ("$10,000") is not a clause break.
+  const tidy = (v: string) => firstClause(v).replace(/:.*$/, "").split(/,(?!\d)|\s(?:once|when|if|while)\s/)[0].trim();
   const race = getSpecFact(slug, "Sports bonus terms", "Sports race")?.value;
-  if (race) parts.push(firstClause(String(race)).replace(/:.*$/, ""));
+  if (race) add(tidy(String(race)));
   const other = getSpecFact(slug, "Sports bonus terms", "Other sports promotions")?.value;
-  if (other) parts.push(firstClause(String(other)).replace(/:.*$/, ""));
-  return parts.length ? parts.join(" · ") : null;
+  if (other) add(tidy(String(other)));
+  // Standing features a sheet records inside the Offer fact after the
+  // "rotating promotions" note — Rainbet's Early Payout, BC.Game's
+  // Comboboost — rather than under their own label. The second sentence
+  // carries them; the boilerplate "regularly runs and replaces" does not.
+  const offer = String(getSpecFact(slug, "Sports bonus terms", "Offer")?.value ?? "");
+  if (/^(rotating|no )/i.test(offer)) {
+    const tail = offer.replace(/^[^.:]*[.:]\s*/, "");
+    // The feature's name and what it does, cut before the conditions.
+    const feature = tidy(tail.replace(/^(it runs a standing|plus a standing|plus)\s+/i, ""));
+    if (feature && !/regularly runs|rather than one fixed|lists only|promotions page|^rotating|^no /i.test(feature) && feature.length < 120) add(feature);
+  }
+  // Sports promotions recorded on the bonuses sheet (Dustbit's Predict &
+  // Win, Betfury's Weekly Sport Bonus), by title; the welcome offer itself
+  // is already the row's headline.
+  for (const b of getCasinoBonuses(slug)) {
+    if (/sport/i.test(`${b.category} ${b.title}`) && !/new players|new users|welcome/i.test(`${b.category} ${b.title}`)) add(b.title);
+  }
+  return parts.length ? parts.slice(0, 3).join(" · ") : null;
 }
