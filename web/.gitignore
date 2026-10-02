@@ -40,3 +40,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# fetch caches (scripts/fetch-*.mjs)
+.cache/
