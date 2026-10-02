@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useState } from "react";
 import { siteData } from "@/lib/site-data";
 import { getCompareRows } from "@/lib/compare-view";
+import { inHouseOrder } from "@/lib/house-order";
+import { defaultIndexList } from "@/lib/casino-index";
 import { tintFor } from "@/lib/logo";
 import { BrandMark } from "@/components/ui/BrandMark";
 
@@ -42,6 +44,27 @@ export function ComparePage() {
           </p>
           <div style={{ display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap", marginBottom: 14 }}>
             <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".06em", textTransform: "uppercase", color: "#83919A" }}>{picked.length} of 4 selected</span>
+            {/* Presets: our picks in house order, and the three measured
+                cuts the index pages use, four each. The reader can still
+                toggle any chip after. */}
+            {(
+              [
+                ["Our top 4", inHouseOrder(ops).slice(0, 4)],
+                ["No-KYC", defaultIndexList("nokyc").slice(0, 4)],
+                ["Fastest payouts", defaultIndexList("fast").slice(0, 4)],
+                ["Easiest bonuses", defaultIndexList("lowwager").slice(0, 4)],
+              ] as const
+            ).map(([label, list]) => (
+              <button
+                key={label}
+                type="button"
+                onClick={() => setPicked(list.map((o) => o.slug))}
+                className="hover:!border-white/30 hover:!text-white"
+                style={{ padding: "6px 12px", borderRadius: 6, border: "1px solid rgba(0,194,204,.35)", background: "rgba(0,194,204,.08)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#5FE3E8", cursor: "pointer" }}
+              >
+                {label}
+              </button>
+            ))}
             <button
               type="button"
               onClick={() => setPicked(["roobet", "stake"])}
@@ -52,7 +75,7 @@ export function ComparePage() {
             </button>
           </div>
           <div style={{ display: "flex", gap: 7, flexWrap: "wrap" }}>
-            {ops.map((o) => {
+            {inHouseOrder(ops).map((o) => {
               const on = picked.includes(o.slug);
               return (
                 <button
