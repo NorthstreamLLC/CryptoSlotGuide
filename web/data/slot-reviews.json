@@ -1,0 +1,296 @@
+{
+  "note": "Long-form reviews for the editorial picks (lib/top-slots.ts). The score is ours and the page says so; the byline is the site's games desk, never an invented name. Every figure in a review is the one the slot page already shows from the studio's own data; where a studio publishes a feature description on its own game page, that page is cited as featureSource and the mechanics are described from it. Where no studio page exists (Dork Unit is no longer on Hacksaw's public catalogue; Pragmatic publishes no readable game pages) the review stays with the figures and the studio's own demo.",
+  "byline": "CryptoSlotGuide games desk",
+  "reviews": {
+    "wanted-dead-or-a-wild": {
+      "score": 9.4,
+      "read": "2026-10-02",
+      "featureSource": "https://www.hacksawgaming.com/games/wanted-dead-or-a-wild",
+      "verdict": "The slot that made Hacksaw's name, and still the sharpest expression of its DuelReels idea: a 5×5 grid where expanding wild reels fight for a multiplier, three bonus games that each change the rules, and a 12,500× ceiling that the maths actually reaches.",
+      "sections": [
+        {
+          "title": "Why it is on the list",
+          "body": "Four years after release it is still the game Hacksaw players pick first, and the reason is the design rather than the theme. Wanted Dead or a Wild is a 5-reel, 5-row, 15-line slot whose whole engine is the DuelReel: a VS symbol expands into a wild reel when that would complete a win, two outlaws duel on it, and the survivor's multiplier is applied to every win crossing the reel. Two DuelReels in the same win add their multipliers together before they multiply the line. That one rule gives the base game real top-end potential, which most slots reserve for a bonus."
+        },
+        {
+          "title": "How it plays",
+          "body": "Three bonus games, from Hacksaw's own feature notes. The Great Train Robbery makes every wild that lands sticky, so the screen fills over the round and the same wilds pay again and again. Duel at Dawn is the DuelReel mechanic given a whole round to itself. Dead Man's Hand is the volatile one, and the one players buy. The base game is a grind between those rounds — Hacksaw rates the volatility 5 out of 5 on its own scale, the top of it — so this is a title you fund for the bonus, not for the base game."
+        },
+        {
+          "title": "The maths",
+          "body": "Hacksaw licenses four returns for this title: 96.38%, 94.55%, 92.33% and 88.42%. That is an eight-point spread between the best and worst build, and the lobby does not tell you which one you are on — the paytable inside the game does. Max win is 12,500× the bet. Our reading of Roobet's build found the 96.38% version loaded, which is why the review names it as the place to play it."
+        },
+        {
+          "title": "Who it is for",
+          "body": "Players who want a base game that can pay and are happy to sit through a dry stretch to see it. If you want a steadier ride on the same engine, Duel at Dawn, further down this list, is the same mechanic at 4 of 5 volatility."
+        }
+      ]
+    },
+    "gates-of-olympus-2500": {
+      "score": 9.0,
+      "read": "2026-10-02",
+      "verdict": "Pragmatic's flagship tumble slot in its most aggressive published form: a 6×5 pay-anywhere grid, a 25,000× ceiling, and a return of 96.52% on the build the studio ships.",
+      "sections": [
+        {
+          "title": "Why it is on the list",
+          "body": "Gates of Olympus is the most-played slot in the crypto casino lobbies we track, and the 2500 edition is the version with the highest ceiling Pragmatic has published for it. The format is pay-anywhere: eight or more matching symbols anywhere on the 6-reel, 5-row grid pay, then vanish, and new symbols tumble into the space. The multiplier orbs that land during a tumble sequence are summed and applied to the total at the end of it, which is where the big screens come from."
+        },
+        {
+          "title": "How it plays",
+          "body": "Fast. Tumbles chain, orbs stack, and the free spins round keeps the accumulated multiplier for the whole round, which is the point of entering it. Released on 28 September 2026, it is the newest title on this list, and the studio's own demo lets you see the tumble pace before you stake anything."
+        },
+        {
+          "title": "The maths",
+          "body": "One published return on this build: 96.52%. Pragmatic publishes a single figure per title, and its game pages do not say whether lower configurations are licensed, so the paytable in the game is the only confirmation of the build you are on. Volatility is rated high, and the max win is 25,000× the bet — the figure the 2500 in the name refers to."
+        },
+        {
+          "title": "Who it is for",
+          "body": "Anyone who wants the biggest published ceiling on the most familiar engine in the room. If 25,000× is more variance than you want, 5 Lions Megaways further down the list is the same studio at a 5,000× cap and medium volatility."
+        }
+      ]
+    },
+    "big-bass-bonanza-1000": {
+      "score": 8.8,
+      "read": "2026-10-02",
+      "verdict": "The fishing slot everyone has played, scaled up: ten lines, a 20,000× ceiling, and the collect-the-money bonus that made the series the most imitated format of the decade.",
+      "sections": [
+        {
+          "title": "Why it is on the list",
+          "body": "Big Bass is a series rather than a slot, and the 1000 edition is the one its regulars moved to. The structure is the series' own: a 5-reel, 3-row, 10-line base game whose job is to reach the free spins, and a bonus round in which money symbols land with values and the fisherman wild collects every one of them when he appears. Fill the collection meter and the round upgrades, with more spins and a bigger multiplier on everything collected."
+        },
+        {
+          "title": "How it plays",
+          "body": "Simple by design. The base game is a waiting room; the bonus is the game. The 1000 edition keeps that shape and raises the ceiling to 20,000× the bet. Released 24 April 2025, with the studio's own demo available."
+        },
+        {
+          "title": "The maths",
+          "body": "A single published return of 96.51%, from Pragmatic's own game data. Volatility is rated high. Pragmatic does not publish whether lower builds exist for this title, so check the paytable in the game before you play."
+        },
+        {
+          "title": "Who it is for",
+          "body": "Players who want a bonus round they can read at a glance and a format they already understand. It is the least complicated title on this list, which is a compliment."
+        }
+      ]
+    },
+    "dork-unit": {
+      "score": 8.6,
+      "read": "2026-10-02",
+      "verdict": "The oddest game Hacksaw has made and one of its best: a 5×4 grid, 16 lines, a 10,000× ceiling and a 3-of-5 volatility rating that makes it the most playable title the studio ships.",
+      "sections": [
+        {
+          "title": "Why it is on the list",
+          "body": "Dork Unit is on the list because people keep playing it. It is a 5-reel, 4-row, 16-line slot from 2022 that has outlasted most of what Hacksaw released around it, and its volatility rating — 3 out of 5 on the studio's own scale — is the reason: it is the Hacksaw game you can play for an evening. The studio no longer carries it on its public catalogue, so this review stays with the figures from Hacksaw's own game data rather than describing features we cannot cite."
+        },
+        {
+          "title": "The maths",
+          "body": "Hacksaw licenses four returns: 96.24%, 94.38%, 92.38% and 88.37%. The spread between the best and worst build is nearly eight points, and which one a casino loads is visible only in the game's own paytable. Max win is 10,000× the bet. Released 25 July 2022."
+        },
+        {
+          "title": "Who it is for",
+          "body": "Players who like Hacksaw's art and bonus design but not the 5-of-5 volatility of its headline titles. Pair it with Le Bandit, the other mid-volatility Hacksaw title on this list."
+        }
+      ]
+    },
+    "retro-sweets": {
+      "score": 8.9,
+      "read": "2026-10-02",
+      "featureSource": "https://www.pushgaming.com/games/retro-sweets.html",
+      "verdict": "Push Gaming's cluster-pays candy slot, built around wild symbols whose multipliers grow every time they take part in a win — a 6×9 grid, a 10,000× ceiling, and two published builds a point apart.",
+      "sections": [
+        {
+          "title": "Why it is on the list",
+          "body": "Retro Sweets is a cluster game: five or more matching candies touching form a Cluster Link and pay. What makes it Push's rather than anyone else's is the Wild Candy symbol, described on the studio's own page. It substitutes for everything except the special symbols, three or more trigger the free spins, and every Wild Candy carries its own multiplier that starts at 1× and rises by one each time the symbol takes part in a cluster win. Wilds that stay in play get more valuable the longer they stay."
+        },
+        {
+          "title": "How it plays",
+          "body": "Two more symbols shape the game, per Push's page. The Wild Multiplier symbol carries 1×, 2×, 3× or 5× and hands its value to every Wild Candy in view before turning into an Instant Prize. Instant Prizes are bet multipliers from 1× to 1,000× that pay when five or more cluster, and an Instant Prize Multiplier symbol multiplies every one in view by its value. It is a game of accumulation: the screen gets richer as a sequence goes on."
+        },
+        {
+          "title": "The maths",
+          "body": "Push publishes two returns for Retro Sweets on its own game page: 96.49% and 94.42%. The studio says plainly that RTPs may vary per casino and that the figure is in the game's user panel and loading screen — which is where to check it. Volatility is high; max win is 10,000× the bet. Released 2 May 2024."
+        },
+        {
+          "title": "Who it is for",
+          "body": "Cluster-pays players who want the multipliers to build rather than drop in at random. If you want the same studio at a far bigger ceiling, Big Bamboo, below, goes to 50,000×."
+        }
+      ]
+    },
+    "sweet-bonanza-1000": {
+      "score": 8.7,
+      "read": "2026-10-02",
+      "verdict": "The tumble slot that defined the format, in its 1000 edition: a 6×5 pay-anywhere grid, multiplier bombs in the bonus, a 25,000× ceiling and a single published return of 96.53%.",
+      "sections": [
+        {
+          "title": "Why it is on the list",
+          "body": "Sweet Bonanza was the game that took pay-anywhere tumbles mainstream, and the 1000 edition is the version with a 25,000× ceiling. Eight or more matching symbols anywhere on the 6-reel, 5-row grid pay and tumble away; in the free spins, multiplier bombs land and are summed and applied to the round's total. Everything the format does, this title did first."
+        },
+        {
+          "title": "The maths",
+          "body": "A single published return of 96.53% on the build Pragmatic ships; the studio does not say whether lower builds are licensed, so the in-game paytable is the check. Volatility is rated high. Released 3 June 2024, with the studio's own demo available."
+        },
+        {
+          "title": "Who it is for",
+          "body": "Players who want the tumble format without the mythology. It plays identically to Gates of Olympus 2500, above, and the choice between them is taste."
+        }
+      ]
+    },
+    "le-bandit": {
+      "score": 9.1,
+      "read": "2026-10-02",
+      "featureSource": "https://www.hacksawgaming.com/games/le-bandit",
+      "verdict": "Hacksaw's coin-collecting cascade slot and its most complete mid-volatility design: super cascades, golden squares that fill with coin values, and a 10,000× ceiling at 3-of-5 volatility.",
+      "sections": [
+        {
+          "title": "Why it is on the list",
+          "body": "Le Bandit is the Hacksaw game for people who found Wanted Dead or a Wild too brutal. Wins cascade — every contributing symbol, plus every matching symbol visible on the reels, vanishes and new symbols tumble in, and the process repeats as long as wins keep forming. Each position that formed part of a win is marked with a Golden Square once its symbol clears, and that is where the game lives."
+        },
+        {
+          "title": "How it plays",
+          "body": "From Hacksaw's own feature notes: when a Rainbow lands on the same spin, every Golden Square activates and receives a coin value — bronze from 0.2× to 4×, silver from 5× to 20×, gold up to 500× — or one of two special symbols. Four-Leaf Clovers then multiply the cells next to them by 2× to 10×, and Pots of Gold collect. A screen full of golden squares with a rainbow on the reels is the moment the game is built around."
+        },
+        {
+          "title": "The maths",
+          "body": "Four licensed returns: 96.34%, 94.23%, 92.17% and 88.36%, with the build you are on visible only in the game's paytable. Hacksaw rates the volatility 3 out of 5. Max win is 10,000× the bet. Released 23 August 2023. Our reading of Roobet's build found the 96.34% version."
+        },
+        {
+          "title": "Who it is for",
+          "body": "The best entry point to Hacksaw: enough happening on every spin to hold attention, without the long silences of the studio's 5-of-5 titles."
+        }
+      ]
+    },
+    "5-lions-megaways": {
+      "score": 8.3,
+      "read": "2026-10-02",
+      "verdict": "The steadiest title on this list: Pragmatic's Asian-themed Megaways slot at medium volatility, up to 200,704 ways on a 6-reel, 7-row grid, and a 5,000× ceiling.",
+      "sections": [
+        {
+          "title": "Why it is on the list",
+          "body": "Every other title here is rated high or very high. 5 Lions Megaways is on the list because a reader who wants the Megaways format — reel heights that change every spin, up to 200,704 ways to win — without the variance of the big-ceiling games needs somewhere to go, and this is the best-published example of it from a studio whose figures we hold. Released 24 June 2021."
+        },
+        {
+          "title": "The maths",
+          "body": "A single published return of 96.50%, from Pragmatic's own game data; whether lower builds are licensed is not stated, so the paytable in the game is the check. Volatility is rated medium. Max win is 5,000× the bet — a fifth of the ceiling on the 1000-series titles above it, which is the trade."
+        },
+        {
+          "title": "Who it is for",
+          "body": "Session players. If the bonus-hunting titles on this list drain a balance before the feature arrives, this one is built to last an evening."
+        }
+      ]
+    },
+    "big-bamboo": {
+      "score": 9.2,
+      "read": "2026-10-02",
+      "featureSource": "https://www.pushgaming.com/games/big-bamboo.html",
+      "verdict": "The biggest ceiling on this list — 50,000× — on a Push Gaming slot built around gambling your free spins for better ones: a 5×6 grid, 50 lines, and two published builds.",
+      "sections": [
+        {
+          "title": "Why it is on the list",
+          "body": "Big Bamboo's claim is its ceiling: 50,000× the bet, four times anything else on this list from a studio that publishes its spread. The engine, from Push's own page, is a gamble. A Gamble Scatter symbol lands on reels 2, 3 and 4 and spins through results in place; in the free spins you can gamble the spins you were awarded for a better free spins option, on a wheel whose segments can convert low symbols into Mystery Stacks, Golden Bamboo or more spins."
+        },
+        {
+          "title": "How it plays",
+          "body": "Mystery Stacks land in the base game and the bonus and reveal wilds, paying symbols or the Golden Bamboo symbol. Golden Bamboo gives a respin with instant prizes up to 5,000×, multipliers up to 10×, scatters, gamble scatters or collectors in play. It is a layered design — each feature feeds the next — and the 50,000× ceiling is what sits at the end of the chain."
+        },
+        {
+          "title": "The maths",
+          "body": "Push publishes two returns for Big Bamboo: 96.13% and 94.13%, two points apart. The catalogue feed had carried a single 95.11% for this title — a figure the studio does not publish at all — which is the reason this site reads studio pages instead of trusting a feed. Volatility is high. Released 3 March 2022."
+        },
+        {
+          "title": "Who it is for",
+          "body": "The player chasing a screen. Expect the base game to be quiet; the design puts everything into the bonus and the gamble on it."
+        }
+      ]
+    },
+    "duck-hunters-2": {
+      "score": 9.0,
+      "read": "2026-10-02",
+      "featureSource": "https://www.nolimitcity.com/games/duck-hunters-2",
+      "verdict": "Nolimit City's scatter-pays sequel, where every removed symbol leaves a doubling multiplier behind: a 5×6 grid, position multipliers up to 16,384×, and a 40,000× ceiling.",
+      "sections": [
+        {
+          "title": "Why it is on the list",
+          "body": "Scatter pays — eight or more of a kind anywhere on the grid — with Nolimit's twist, from the studio's own feature notes: every winning symbol is removed, a ×2 multiplier is placed on each position it left, and if a position that already holds a multiplier wins again on the next drop its value doubles. Random multipliers are also seeded on positions at the start of each spin. A position multiplier can reach ×16,384, which is why a long cascade on this grid is genuinely tense."
+        },
+        {
+          "title": "How it plays",
+          "body": "xWays symbols transform into a regular symbol and raise the position multiplier by 2, 4 or 8; Infectious xWays spreads the revealed symbol to every matching symbol on the grid. A Bomb symbol fires when no wins remain. It is Nolimit at its most mechanical — the features are rules, not animations — and the sequel's additions widen the ways to bet rather than change the core. Released 10 September 2026."
+        },
+        {
+          "title": "The maths",
+          "body": "Nolimit publishes one return per game page: 96.00% for Duck Hunters 2, with no statement on lower builds. Max win is 40,000× the bet; the studio's own page lists a feature buy-in and a bet range of €0.20 to €100. Volatility is high — the position-multiplier design guarantees it."
+        },
+        {
+          "title": "Who it is for",
+          "body": "Players who want the cascade itself to be the feature. The multipliers live on the grid, not in a bonus round, so every spin can escalate."
+        }
+      ]
+    },
+    "sugar-rush-1000": {
+      "score": 8.8,
+      "read": "2026-10-02",
+      "verdict": "Pragmatic's cluster-pays answer to its own tumble games: a 7×7 grid where winning positions leave multiplier spots behind, and a 25,000× ceiling at a published 96.53%.",
+      "sections": [
+        {
+          "title": "Why it is on the list",
+          "body": "Sugar Rush is the cluster game in Pragmatic's catalogue, and the 1000 edition is the version with the 25,000× ceiling. Clusters of five or more matching symbols pay and are removed; the positions they leave behind carry multiplier spots that build as the tumble continues, and in the free spins those spots persist for the whole round. It is the same escalation idea as Nolimit's position multipliers, in a friendlier dress."
+        },
+        {
+          "title": "The maths",
+          "body": "A single published return of 96.53% on the build Pragmatic ships, with no statement on lower configurations; the in-game paytable is the check. Volatility is rated high. Max win is 25,000× the bet. Released 18 March 2024, with the studio's own demo available."
+        },
+        {
+          "title": "Who it is for",
+          "body": "Cluster players who want the Pragmatic pace. Against Retro Sweets, above, this one builds its multipliers on the grid rather than on the wilds."
+        }
+      ]
+    },
+    "outsourced": {
+      "score": 8.9,
+      "read": "2026-10-02",
+      "featureSource": "https://www.nolimitcity.com/games/outsourced",
+      "verdict": "Nolimit City's compact factory-floor slot: a 4×4 grid with 256 base ways, multipliers that grow on empty positions through every cascade, and sticky multipliers carried into the bonus — a 5,000× ceiling at 96.08%.",
+      "sections": [
+        {
+          "title": "Why it is on the list",
+          "body": "Outsourced is the smallest grid on this list and the most concentrated design. From Nolimit's own page: every win triggers Print Spins — winning symbols are paid and removed, and the multipliers on the positions they leave rise for the next cascade, for as long as new wins form. xWays symbols reveal several instances of a low or mid symbol to widen the ways; the xNudge Wild always nudges to full visibility and raises its multiplier with each step."
+        },
+        {
+          "title": "How it plays",
+          "body": "Three scatters open Sweatshop Spins — three spins that carry over and keep the multipliers accumulated in the base game. Four scatters open Sweatiershop Spins, five spins on the same sticky-multiplier rules. The grit is the point: a satirical theme on a mechanical engine. Released 5 August 2024."
+        },
+        {
+          "title": "The maths",
+          "body": "One published return on Nolimit's game page: 96.08%, with no statement on lower builds. Max win is 5,000× the bet — modest for Nolimit, and the reason it plays more often than the studio's 40,000× titles. The page lists a feature buy-in and a bet range of €0.20 to €280."
+        },
+        {
+          "title": "Who it is for",
+          "body": "The Nolimit player who wants the mechanics without the extreme ceiling. If the ceiling is what you came for, Duck Hunters 2, above, has eight times this one."
+        }
+      ]
+    },
+    "duel-at-dawn": {
+      "score": 9.2,
+      "read": "2026-10-02",
+      "featureSource": "https://www.hacksawgaming.com/games/duel-at-dawn",
+      "verdict": "The DuelReels engine from Wanted Dead or a Wild, rebuilt as its own game at a notch less volatility: 5×5, 19 lines, multipliers to 200× on a reel, an Outlaw that shoots wilds onto the grid, and a 15,000× ceiling.",
+      "sections": [
+        {
+          "title": "Why it is on the list",
+          "body": "If Wanted Dead or a Wild introduced DuelReels, Duel at Dawn is the version with the mechanic fully written out. From Hacksaw's own notes: a VS symbol expands into a wild DuelReel if that would complete a win, two duelists — the Outlaw and the Sheriff — each carry a multiplier, and the survivor's multiplier applies to every win through the reel. The listed values run 2× through 10×, then 15×, 20×, 25×, 50×, 75×, 100× and 200×. Two DuelReels in one win add their multipliers before applying them. Only one VS symbol can land per reel."
+        },
+        {
+          "title": "How it plays",
+          "body": "The Outlaw feature is the addition: an Outlaw symbol expands into a full wild reel and shows a revolver with one to six bullets, and that is the number of wild symbols the Outlaw shoots onto the grid. It makes the base game busier than its predecessor's, and Hacksaw rates the volatility 4 of 5 rather than 5 — the same engine with a shorter wait between events."
+        },
+        {
+          "title": "The maths",
+          "body": "Four licensed returns: 96.30%, 94.27%, 92.28% and 88.37%. Max win is 15,000× the bet, above Wanted's 12,500×. The build a casino loads is visible only in the game's own paytable, and the eight-point spread between best and worst makes checking worth the ten seconds."
+        },
+        {
+          "title": "Who it is for",
+          "body": "Players who liked the idea of Wanted Dead or a Wild more than the experience of it. This is the one to play."
+        }
+      ]
+    }
+  }
+}

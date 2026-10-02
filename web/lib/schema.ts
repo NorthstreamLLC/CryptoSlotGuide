@@ -136,3 +136,29 @@ export function articleSchema(headline: string, description: string, path: strin
     publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
   };
 }
+
+/**
+ * Review markup for the long-form slot reviews. The author is the site, as an
+ * Organization, because that is who wrote it; the rating is the score the
+ * page shows, on the same ten-point scale, and nothing else.
+ */
+export function reviewSchema(opts: { name: string; path: string; studio: string | null; score: number; body: string; date: string; image?: string | null }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Review",
+    itemReviewed: {
+      "@type": "Game",
+      name: opts.name,
+      url: `${SITE_URL}${opts.path}`,
+      gameItem: { "@type": "Thing", name: "Video slot" },
+      ...(opts.image ? { image: `${SITE_URL}${opts.image}` } : {}),
+      ...(opts.studio ? { author: { "@type": "Organization", name: opts.studio } } : {}),
+    },
+    author: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
+    publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
+    reviewRating: { "@type": "Rating", ratingValue: opts.score, bestRating: 10, worstRating: 1 },
+    reviewBody: opts.body,
+    datePublished: opts.date,
+    url: `${SITE_URL}${opts.path}#review`,
+  };
+}

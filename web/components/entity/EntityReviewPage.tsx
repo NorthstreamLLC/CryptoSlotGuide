@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import type React from "react";
 import { SectionNav } from "./SectionNav";
 import type { EntityView } from "@/lib/entity-view";
 import { backLink, ctaLabel, editorialTake, nextStepsFor } from "@/lib/entity-view";
@@ -22,7 +23,7 @@ import { ReportIssue } from "@/components/ui/ReportIssue";
  * `<sc-if value="{{ isEntity }}"`). One template, six entity types (five
  * wired so far: casino/slot/wallet/exchange/provider — see lib/entity-view.ts).
  */
-export function EntityReviewPage({ e }: { e: EntityView }) {
+export function EntityReviewPage({ e, review }: { e: EntityView; review?: React.ReactNode }) {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const back = backLink(e.type);
   const take = editorialTake(e.type, e.slug);
@@ -142,6 +143,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
           ...(e.spec.length ? [{ id: "terms", label: e.specTitle }] : []),
           ...(e.tableRows.length ? [{ id: "titles", label: e.tableTitle.length > 28 ? e.tableTitle.slice(0, 26).trim() + "…" : e.tableTitle }] : []),
           ...(e.faqs.length ? [{ id: "faq", label: "Questions" }] : []),
+          ...(review ? [{ id: "review", label: "Our review" }] : []),
         ]}
       />
 
@@ -358,6 +360,7 @@ export function EntityReviewPage({ e }: { e: EntityView }) {
           </div>
         </div>
 
+        {review}
         {!isCasino && <FeaturedPartner context={e.type === "slot" ? { kind: "slots" } : e.type === "market" ? { kind: "sports" } : { kind: "wallet" }} />}
         <ReportIssue subject={e.name} />
         <NextSteps steps={nextStepsFor(e.type)} />

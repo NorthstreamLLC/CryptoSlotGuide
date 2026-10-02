@@ -2,9 +2,11 @@ import { notFound } from "next/navigation";
 import { getEntityView, backLink } from "@/lib/entity-view";
 import { EntityReviewPage } from "@/components/entity/EntityReviewPage";
 import { SlotDataPage } from "@/components/slots/SlotDataPage";
-import { cataloguePage, cataloguePageSlugs, rtpVersions, rtpSpread, singleRtp, publishableArt } from "@/lib/slot-page";
+import { cataloguePage, cataloguePageSlugs, rtpVersions, rtpSpread, singleRtp, publishableArt, slotReviewFacts } from "@/lib/slot-page";
+import { slotReview } from "@/lib/slot-reviews";
+import { SlotReview } from "@/components/slots/SlotReview";
 import { pageMetadata, SITE_URL } from "@/lib/seo";
-import { breadcrumbSchema, entityBreadcrumbSchema, faqSchema } from "@/lib/schema";
+import { breadcrumbSchema, entityBreadcrumbSchema, faqSchema, reviewSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 
 /**
@@ -55,15 +57,31 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return catalogueMeta(slug) ?? {};
 }
 
+/**
+ * The thirteen picks carry a long-form review under the sheet, on either page
+ * kind. Resolved once here so both branches render the same block and the
+ * same Review markup.
+ */
+function reviewFor(slug: string) {
+  const rv = slotReview(slug);
+  const facts = rv ? slotReviewFacts(slug) : null;
+  if (!rv || !facts) return { node: null, schema: null };
+  return {
+    node: <SlotReview slug={slug} review={rv} facts={facts} />,
+    schema: reviewSchema({ name: facts.name, path: `/slots/${slug}`, studio: facts.studio, score: rv.score, body: rv.verdict, date: rv.read, image: facts.art }),
+  };
+}
+
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+  const review = reviewFor(slug);
 
   const view = getEntityView("slot", slug);
   if (view) {
     return (
       <>
-        <JsonLd data={[entityBreadcrumbSchema(view.kicker, backLink("slot").href, view.name, `/slots/${slug}`), faqSchema(view.faqs)]} />
-        <EntityReviewPage e={view} />
+        <JsonLd data={[entityBreadcrumbSchema(view.kicker, backLink("slot").href, view.name, `/slots/${slug}`), faqSchema(view.faqs), ...(review.schema ? [review.schema] : [])]} />
+        <EntityReviewPage e={view} review={review.node} />
       </>
     );
   }
@@ -93,18 +111,19 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             // Absolute: publishableArt returns a site-relative path.
             ...(art ? { image: `${SITE_URL}${art}` } : {}),
             ...(g.provider ? { author: { "@type": "Organization", name: g.provider } } : {}),
-            // The published returns, as the page shows them. No rating and no
-            // review: we have not played this title, and marking one up would
-            // be the overclaim the whole spec-sheet approach exists to avoid.
+            // The published returns, as the page shows them. No rating on the
+            // Game itself: the thirteen picks carry a separate Review node with
+            // the score the page shows, and every other title has none.
             additionalProperty: rtpList.map((v, i) => ({
               "@type": "PropertyValue",
               name: rtpList.length === 1 ? "Return to player" : i === 0 ? "Return to player (best published)" : `Return to player (version ${i + 1})`,
               value: `${v}%`,
             })),
           },
+          ...(review.schema ? [review.schema] : []),
         ]}
       />
-      <SlotDataPage g={g} />
+      <SlotDataPage g={g} review={review.node} />
     </>
   );
 }

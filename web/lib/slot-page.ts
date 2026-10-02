@@ -558,3 +558,78 @@ export function catalogueByMechanic(tag: string, exclude: Set<string> = new Set(
     .filter((g) => !exclude.has(g.slug as string) && match(g))
     .sort((a, b) => (rtpVersions(b)[0] ?? b.rtp ?? 0) - (rtpVersions(a)[0] ?? a.rtp ?? 0) || a.name.localeCompare(b.name));
 }
+
+/**
+ * Everything the long-form review's stat strip shows for one pick, resolved
+ * across both page kinds.
+ *
+ * A review record (slots.json) owns the RTP, volatility and max win it was
+ * written against; the catalogue adds layout, lines, bet range and release
+ * date where it holds the same title. A catalogue page owns all of it. The
+ * strip never re-derives a figure — it is the same number the page above it
+ * already prints, lined up in one place under the score.
+ */
+export interface SlotReviewFacts {
+  name: string;
+  studio: string | null;
+  studioSlug: string | null;
+  stats: { k: string; v: string }[];
+  art: string | null;
+  demoUrl: string | null;
+  demoHost: string | null;
+  /** The studio page the figures were read from. */
+  sourceUrl: string | null;
+  seLink: string | null;
+  seLabel: string;
+}
+
+const cap = (v: string) => v[0].toUpperCase() + v.slice(1).replace(/-/g, " ");
+
+export function slotReviewFacts(slug: string): SlotReviewFacts | null {
+  const r = siteData.slots.find((x) => x.slug === slug);
+  const page = PAGES.get(slug);
+  const cat: CatalogueSlotPage | CatalogueGame | undefined = page ?? DB.games.find((g) => g.slug === slug);
+  if (!r && !cat) return null;
+
+  const stats: { k: string; v: string }[] = [];
+  if (r) {
+    const vs = r.rtpVersions ? r.rtpVersions.split("/").map((x) => x.trim()).filter(Boolean) : [];
+    if (vs.length > 1) stats.push({ k: `${vs.length} published returns`, v: vs.map((x) => `${x}%`).join(" · ") });
+    else if (!r.unpublished?.includes("rtp")) stats.push({ k: "RTP", v: `${r.rtp}%` });
+    if (!r.unpublished?.includes("vol")) stats.push({ k: "Volatility", v: cap(r.vol) });
+    if (!r.unpublished?.includes("maxWin")) stats.push({ k: "Max win", v: r.maxWin.replace(/x$/i, "×") });
+  } else if (page) {
+    const vs = rtpVersions(page);
+    const only = singleRtp(page);
+    if (vs.length > 1) stats.push({ k: `${vs.length} published returns`, v: vs.map((x) => `${x}%`).join(" · ") });
+    else if (only !== null) stats.push({ k: "RTP", v: `${only}%` });
+    const vol = volatilityOf(page);
+    if (vol) stats.push({ k: "Volatility", v: cap(vol) });
+    if (page.maxWinMultiplier) stats.push({ k: "Max win", v: `${page.maxWinMultiplier.toLocaleString("en-GB")}×` });
+  }
+  if (cat) {
+    const rows = (cat as CatalogueSlotPage).rows;
+    const layout = cat.reels && rows ? `${cat.reels}×${rows}` : cat.reels ? `${cat.reels} reels` : null;
+    if (layout) stats.push({ k: "Layout", v: layout });
+    if (cat.paylines) stats.push({ k: "Ways to win", v: cat.paylines.toLocaleString("en-GB") });
+    const minBet = (cat as CatalogueSlotPage).minBet;
+    const maxBet = (cat as CatalogueSlotPage).maxBet;
+    if (minBet != null && maxBet != null) stats.push({ k: "Bet range", v: `${minBet} – ${maxBet}` });
+    const rel = releaseDate(cat);
+    if (rel) stats.push({ k: "Released", v: new Date(`${rel}T00:00:00Z`).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }) });
+  }
+
+  const studio = r?.provider ?? cat?.provider ?? null;
+  return {
+    name: r?.name ?? cat?.name ?? slug,
+    studio,
+    studioSlug: cat?.providerSlug ?? null,
+    stats,
+    art: slotArtBySlug(slug),
+    demoUrl: cat?.demoUrl ?? null,
+    demoHost: cat?.demoHost ?? null,
+    sourceUrl: r?.sourceUrl ?? (page ? rtpSource(page)?.sourceUrl ?? null : null),
+    seLink: slotEssentialsLink(slug),
+    seLabel: slotEssentialsLabel(studio),
+  };
+}

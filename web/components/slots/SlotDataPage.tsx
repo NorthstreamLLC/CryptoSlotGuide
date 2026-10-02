@@ -1,3 +1,4 @@
+import type React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
@@ -28,7 +29,7 @@ function Spec({ k, v }: { k: string; v: string }) {
   );
 }
 
-export function SlotDataPage({ g }: { g: CatalogueSlotPage }) {
+export function SlotDataPage({ g, review }: { g: CatalogueSlotPage; review?: React.ReactNode }) {
   const versions = rtpVersions(g);
   const spread = rtpSpread(g);
   const only = singleRtp(g);
@@ -208,6 +209,8 @@ export function SlotDataPage({ g }: { g: CatalogueSlotPage }) {
           </p>
         </section>
       )}
+
+      {review}
 
       <section style={{ maxWidth: 1100, margin: "0 auto", padding: "36px 40px 0" }}>
         <FeaturedPartner context={{ kind: "general" }} heading="Casino we recommend" />
