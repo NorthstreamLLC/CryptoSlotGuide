@@ -21,6 +21,8 @@ import {
 } from "@/lib/casino-index";
 import type { Operator } from "@/lib/types";
 import { payoutView } from "@/lib/payout";
+import { raceFor } from "@/lib/races";
+import { casinoFacts } from "@/lib/casino-facts";
 import { NextSteps } from "@/components/layout/NextSteps";
 import { CoinIcon } from "@/components/ui/CoinIcon";
 
@@ -69,6 +71,11 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
   // this list" card either — yet the table still skipped the first row.
   // Rainbet, an affiliate partner, was on the page's own count of 12 and
   // visible nowhere on it.
+  // The plain index opens with five picks in house order — partners first,
+  // which the kicker says — so the page has a spine before the full grid.
+  // Only on the unfiltered page: a fact-sorted view already leads with its
+  // own "top of this list" card, and a filtered one is the ranking.
+  const picks = filter === "all" && coinSel === "all" ? sortOps(filtered, "featured", "asc").slice(0, 5) : [];
   const tableAll = btcTop ? sorted.slice(1) : sorted;
   const posOffset = btcTop ? 1 : 0;
   const rows = showAll ? tableAll : tableAll.slice(0, 20);
@@ -160,42 +167,87 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
             ))}
           </div>
 
-          <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginTop: 24 }}>
-            {(["all", "nokyc", "fast", "lowwager", "sports", "esports"] as BtcFilterKey[]).map((k) => {
-              const active = k === filter;
-              const href = k === "all" ? "/crypto-casinos" : k === "nokyc" ? "/crypto-casinos/no-kyc" : k === "fast" ? "/fastest-payouts" : k === "lowwager" ? "/lowest-wagering" : k === "sports" ? "/casino-sportsbooks" : "/esports-casinos";
-              return (
-                <Link
-                  key={k}
-                  href={href}
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 8,
-                    padding: "9px 15px",
-                    borderRadius: 100,
-                    border: `1px solid ${active ? "rgba(0,194,204,.5)" : "rgba(255,255,255,.12)"}`,
-                    background: active ? "rgba(0,194,204,.12)" : "rgba(255,255,255,.03)",
-                    fontSize: 13,
-                    fontWeight: 600,
-                    color: active ? "#5FE3E8" : "#A8B6BE",
-                  }}
-                >
-                  {btcViews[k].crumb}
-                  <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#83919A" }}>{ops.filter(filterFns[k]).length}</span>
-                </Link>
-              );
-            })}
-          </div>
         </div>
       </section>
 
       <BrowseNav />
 
       <div style={{ maxWidth: 1180, margin: "0 auto", padding: "44px 40px 80px" }}>
+        {picks.length > 0 && (
+          <section id="top-picks" aria-labelledby="top-picks-h" style={{ marginBottom: 44, scrollMarginTop: 110 }}>
+            <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 20, marginBottom: 14, flexWrap: "wrap" }}>
+              <div>
+                <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 6 }}>Our picks · partners first</div>
+                <h2 id="top-picks-h" style={{ margin: 0, fontSize: 24, letterSpacing: "-.025em", fontWeight: 800, fontStretch: "112%", color: "#E8EDF0" }}>Where to start</h2>
+              </div>
+              <Link href="/compare" style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#5FE3E8" }}>Compare them side by side →</Link>
+            </div>
+            <div style={{ display: "grid", gap: 8 }}>
+              {picks.map((o, i) => {
+                const race = raceFor(o.slug)?.label;
+                // The same headline the card below shows, so the strip and the
+                // grid never disagree about what a casino is offering.
+                const facts = casinoFacts(o);
+                return (
+                  <div
+                    key={o.slug}
+                    data-reveal
+                    // Four columns on a phone (rank, mark, name + offer, button);
+                    // the withdrawal and race columns join on wider screens.
+                    className="csg-lift grid grid-cols-[28px_40px_minmax(0,1fr)_auto] md:grid-cols-[34px_44px_minmax(160px,1.2fr)_minmax(150px,1.4fr)_minmax(90px,.7fr)_minmax(130px,1fr)_auto]"
+                    style={{
+                      ["--reveal-delay" as string]: `${i * 50}ms`,
+                      alignItems: "center",
+                      gap: 16,
+                      padding: "14px 18px",
+                      borderRadius: 14,
+                      background: i === 0 ? "radial-gradient(120% 140% at 0% 0%, rgba(0,194,204,.10), transparent 55%), #0E1317" : "#0E1317",
+                      border: `1px solid ${i === 0 ? "rgba(0,194,204,.32)" : "rgba(255,255,255,.08)"}`,
+                    }}
+                  >
+                    <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 18, fontWeight: 700, color: i === 0 ? "#5FE3E8" : "#8E9CA5", fontVariantNumeric: "tabular-nums" }}>{i + 1}</span>
+                    <div style={{ width: 44, height: 44 }}>
+                      <BrandMark slug={o.slug} mono={o.mono} tint={tintFor(o.slug)} radius={10} fontSize={12} />
+                    </div>
+                    <div style={{ minWidth: 0 }}>
+                      <Link href={`/casinos/${o.slug}`} style={{ fontSize: 16, fontWeight: 800, color: "#fff", letterSpacing: "-.015em" }}>{o.name}</Link>
+                      <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#83919A", marginTop: 2 }}>
+                        {o.licence} · {({ none: "No KYC", tiered: "KYC at threshold", required: "KYC required" } as const)[o.kyc]}
+                      </div>
+                    </div>
+                    <div className="col-span-2 md:col-span-1" style={{ minWidth: 0 }}>
+                      <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 9.5, letterSpacing: ".07em", textTransform: "uppercase", color: "#77858E" }}>{o.noDepositBonus ? "Rewards" : "Welcome offer"}</div>
+                      <div style={{ fontSize: 13.5, fontWeight: 600, color: "#DCE5E9", lineHeight: 1.35, overflowWrap: "anywhere" }}>{facts.headline}</div>
+                    </div>
+                    <div className="hidden md:block">
+                      <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 9.5, letterSpacing: ".07em", textTransform: "uppercase", color: "#77858E" }}>Withdrawals</div>
+                      <div style={{ fontSize: 13.5, fontWeight: 600, color: "#DCE5E9" }}>{payoutView(o).label}</div>
+                    </div>
+                    <div className="hidden md:block" style={{ minWidth: 0 }}>
+                      <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 9.5, letterSpacing: ".07em", textTransform: "uppercase", color: "#77858E" }}>Races</div>
+                      <div style={{ fontSize: 13.5, fontWeight: 600, color: "#DCE5E9", lineHeight: 1.35 }}>{race ?? "—"}</div>
+                    </div>
+                    {o.affiliate && o.signupUrl ? (
+                      <a href={o.signupUrl} target="_blank" rel="noopener noreferrer sponsored" style={{ padding: "10px 16px", borderRadius: 9, background: "#00C2CC", color: "#04191B", fontSize: 13.5, fontWeight: 800, whiteSpace: "nowrap" }}>
+                        Visit {o.name}
+                      </a>
+                    ) : (
+                      <Link href={`/casinos/${o.slug}`} style={{ padding: "10px 16px", borderRadius: 9, border: "1px solid rgba(255,255,255,.14)", color: "#E8EDF0", fontSize: 13.5, fontWeight: 700, whiteSpace: "nowrap" }}>
+                        Review
+                      </Link>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </section>
+        )}
+
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 20, marginBottom: 16, flexWrap: "wrap" }}>
           <div>
-            <h2 style={{ margin: "0 0 6px", fontSize: 24, letterSpacing: "-.025em", fontWeight: 800, fontStretch: "112%", color: "#E8EDF0" }}>The rest of the field</h2>
+            <h2 id="all-casinos" style={{ margin: "0 0 6px", scrollMarginTop: 110, fontSize: 24, letterSpacing: "-.025em", fontWeight: 800, fontStretch: "112%", color: "#E8EDF0" }}>
+              {filter === "all" ? `Every crypto casino we track (${filtered.length + (spotlight ? 1 : 0)})` : `${view.crumb} (${filtered.length + (spotlight ? 1 : 0)})`}
+            </h2>
             <p style={{ margin: 0, fontSize: 13.5, color: "#93A3AC" }}>
               {view.note}
               {coinSel === "all" ? "every coin we track" : coinSel}.

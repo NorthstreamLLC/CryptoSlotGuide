@@ -3,6 +3,8 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { siteData } from "@/lib/site-data";
+import { filterFns, type BtcFilterKey } from "@/lib/casino-index";
 
 /**
  * The casino section's own menu, stuck under the site header on every
@@ -15,13 +17,13 @@ import { useEffect, useState } from "react";
  * Route links, not anchors: each cut is its own page with its own
  * ItemList, so switching keeps the structured data honest.
  */
-const ITEMS: { href: string; label: string }[] = [
-  { href: "/crypto-casinos", label: "All casinos" },
-  { href: "/crypto-casinos/no-kyc", label: "No-KYC" },
-  { href: "/fastest-payouts", label: "Fastest payouts" },
-  { href: "/lowest-wagering", label: "Easiest bonuses" },
-  { href: "/casino-sportsbooks", label: "With a sportsbook" },
-  { href: "/esports-casinos", label: "Esports" },
+const ITEMS: { href: string; label: string; cut?: BtcFilterKey }[] = [
+  { href: "/crypto-casinos", label: "All casinos", cut: "all" },
+  { href: "/crypto-casinos/no-kyc", label: "No-KYC", cut: "nokyc" },
+  { href: "/fastest-payouts", label: "Fastest payouts", cut: "fast" },
+  { href: "/lowest-wagering", label: "Easiest bonuses", cut: "lowwager" },
+  { href: "/casino-sportsbooks", label: "With a sportsbook", cut: "sports" },
+  { href: "/esports-casinos", label: "Esports", cut: "esports" },
   { href: "/crypto-casinos/accepting/bitcoin", label: "By coin" },
   { href: "/legal", label: "By country" },
   { href: "/compare", label: "Compare" },
@@ -69,6 +71,7 @@ export function BrowseNav() {
               }}
             >
               {i.label}
+              {i.cut && <span style={{ marginLeft: 6, opacity: 0.55 }}>{siteData.ops.filter(filterFns[i.cut]).length}</span>}
             </Link>
           );
         })}
