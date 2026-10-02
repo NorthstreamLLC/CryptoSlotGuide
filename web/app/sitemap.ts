@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { catalogueStudios } from "@/lib/studio-pages";
 import { siteData } from "@/lib/site-data";
 import { SITE_URL } from "@/lib/seo";
 import { sweepsSorted } from "@/lib/sweeps";
@@ -80,7 +81,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // US-regulated brands — only those a regulator actually lists, matching
     // the route's own generateStaticParams.
     ...rankedBrands().map(({ brand }) => slugPath("/us-casinos", brand.slug)),
-    ...[...new Set([...providers.map((p) => p.slug), ...STUDIOS.map((st) => st.slug)])].map((sl) => slugPath("/providers", sl)),
+    ...[...new Set([...providers.map((p) => p.slug), ...STUDIOS.map((st) => st.slug), ...catalogueStudios().map((c) => c.slug)])].map((sl) => slugPath("/providers", sl)),
     ...walletRows.map((w) => slugPath("/wallets", w.slug)),
     ...exchangeRows.map((x) => slugPath("/exchanges", x.slug)),
     ...esportsTitles.map((t) => slugPath("/betting", slug(t.name))),

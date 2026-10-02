@@ -672,3 +672,62 @@ export function slotReviewFacts(slug: string): SlotReviewFacts | null {
     seLabel: slotEssentialsLabel(studio),
   };
 }
+
+/**
+ * What the catalogue says about one studio as a whole, for the profile page
+ * of a studio we have not written up. Counts only — nothing here is a claim
+ * about the studio beyond what its own titles in the catalogue carry.
+ */
+export function studioStats(studioName: string): {
+  titles: number;
+  withRtp: number;
+  multiVersion: number;
+  medianRtp: number | null;
+  topRtp: { name: string; slug: string | null; rtp: number } | null;
+  topMaxWin: { name: string; slug: string | null; x: number } | null;
+  volatility: { label: string; n: number }[];
+  demos: number;
+  firstRelease: string | null;
+  lastRelease: string | null;
+} {
+  const key = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, "");
+  const want = key(studioName);
+  const mine = DB.games.filter((g) => g.kind === "slot" && key(g.provider ?? "") === want);
+  const rtps: number[] = [];
+  let multiVersion = 0;
+  let topRtp: { name: string; slug: string | null; rtp: number } | null = null;
+  let topMaxWin: { name: string; slug: string | null; x: number } | null = null;
+  const vol = new Map<string, number>();
+  const dates: string[] = [];
+  let demos = 0;
+  for (const g of mine) {
+    const v = rtpVersionsFor(g);
+    const best = v[0] ?? g.rtp ?? null;
+    if (best != null) {
+      rtps.push(best);
+      if (!topRtp || best > topRtp.rtp) topRtp = { name: g.name, slug: g.slug, rtp: best };
+    }
+    if (v.length > 1) multiVersion++;
+    if (g.maxWinMultiplier && (!topMaxWin || g.maxWinMultiplier > topMaxWin.x)) topMaxWin = { name: g.name, slug: g.slug, x: g.maxWinMultiplier };
+    const vo = volatilityOf(g);
+    if (vo) vol.set(vo, (vol.get(vo) ?? 0) + 1);
+    const d = releaseDate(g);
+    if (d) dates.push(d);
+    if (g.demoUrl) demos++;
+  }
+  rtps.sort((a, b) => a - b);
+  dates.sort();
+  const median = rtps.length ? (rtps.length % 2 ? rtps[(rtps.length - 1) / 2] : (rtps[rtps.length / 2 - 1] + rtps[rtps.length / 2]) / 2) : null;
+  return {
+    titles: mine.length,
+    withRtp: rtps.length,
+    multiVersion,
+    medianRtp: median != null ? Math.round(median * 100) / 100 : null,
+    topRtp,
+    topMaxWin,
+    volatility: [...vol.entries()].map(([label, n]) => ({ label, n })).sort((a, b) => b.n - a.n).slice(0, 4),
+    demos,
+    firstRelease: dates[0] ?? null,
+    lastRelease: dates[dates.length - 1] ?? null,
+  };
+}

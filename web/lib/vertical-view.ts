@@ -10,7 +10,8 @@
  * 2894-2900) are all exchanges now present in exchangeRows.json.
  */
 import { siteData } from "./site-data";
-import { topSlotRows, slotArtBySlug, catalogueFallback } from "./slot-page";
+import { topSlotRows, slotArtBySlug, catalogueFallback, studioCatalogue } from "./slot-page";
+import { slotEssentialsStudio } from "./slotessentials";
 import { topStudioRank } from "./top-studios";
 import { tintFor } from "./logo";
 import { catalogueTotals } from "./slot-db";
@@ -54,6 +55,8 @@ export interface VerticalRow {
   signupUrl?: string;
   /** Art for the row where the thing listed is a game, not a brand: the slot's tile instead of a mark. */
   image?: string;
+  /** A second, off-site link shown under the name — the studio's SlotEssentials profile. */
+  extLink?: { href: string; label: string };
 }
 
 export interface VerticalAward {
@@ -217,12 +220,15 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
         note: p.note,
         m1: p.rtp,
         m2: p.licences,
+        // The catalogue count, not the hand-written reviews: "3 slots" over
+        // Pragmatic Play's 681 read as a studio we barely cover.
         m3: (() => {
-          const n = slots.filter((s) => s.provider === p.name).length;
-          return n ? `${n} ${n === 1 ? "slot" : "slots"}` : p.titlesStated ?? "Not stated";
+          const n = studioCatalogue(p.name).titles || slots.filter((s) => s.provider === p.name).length;
+          return n ? `${n.toLocaleString("en-GB")} ${n === 1 ? "slot" : "slots"}` : p.titlesStated ?? "Not stated";
         })(),
         stat: "—",
         cta: "Studio profile",
+        ...(slotEssentialsStudio(p.name) ? { extLink: { href: slotEssentialsStudio(p.name) as string, label: "Profile on SlotEssentials" } } : {}),
         href: `/providers/${p.slug}`,
       })),
     };

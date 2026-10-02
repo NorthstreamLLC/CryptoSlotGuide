@@ -18,6 +18,7 @@ import { hasMaxWin, hasVol, maxWinLabel, rtpLabel, hasRtp, rtpSortValue, volLabe
 import { isFieldTestedOperator, isEditoriallyAudited } from "./field-tested";
 import { tintFor } from "./logo";
 import { studioCatalogue, studioAllTitles, catalogueFallback, slotArtBySlug } from "./slot-page";
+import { slotEssentialsStudio, slotEssentialsLink, slotEssentialsLabel } from "./slotessentials";
 import { getCasinoSpecSheet, getSpecFact } from "./spec-sheet";
 import { sportsFacts, booksForTitle, esportsLabel, maxPayoutShort } from "./sports";
 import type { Flag } from "./types";
@@ -100,6 +101,8 @@ export interface EntityView {
   ctaHref?: string;
   /** The casino that carries this title, where its own record names one. */
   playAtName?: string;
+  /** The same subject on SlotEssentials, the sister site: a studio profile or a slot page. */
+  sister?: { href: string; label: string };
   /** signupUrl is a real affiliate link (drives the disclosure wording). */
   affiliate?: boolean;
   /**
@@ -487,11 +490,13 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       unpublished: `${p.name}'s game pages don't publish an RTP at all, so the only place to find a title's return is the paytable inside the game — and that's the figure worth checking before you play.`,
       "bonus-buy": `${p.name} lists a base RTP and a separate bonus-buy RTP per game. Whether lower configurations exist isn't stated, so check the paytable in-game.`,
     };
+    const seStudio = slotEssentialsStudio(p.name);
     return {
       type,
       kicker: "Studio profile",
       name: p.name,
       slug: p.slug,
+      ...(seStudio ? { sister: { href: seStudio, label: `${p.name} on SlotEssentials` } } : {}),
       mono: p.mono,
       tint: p.tint,
       // Evolution and Octoplay have no slots in the catalogue — one supplies

@@ -1,5 +1,6 @@
 "use client";
 
+import type React from "react";
 import Link from "next/link";
 import type { VerticalKind, VerticalRow } from "@/lib/vertical-view";
 import { getVerticalPage } from "@/lib/vertical-view";
@@ -48,7 +49,7 @@ const INDEX_NEXT: Record<VerticalKind, { href: string; label: string; hint: stri
   ],
 };
 
-export function VerticalIndexPage({ kind, tabIdx = 0 }: { kind: VerticalKind; tabIdx?: number }) {
+export function VerticalIndexPage({ kind, tabIdx = 0, after }: { kind: VerticalKind; tabIdx?: number; after?: React.ReactNode }) {
   const vp = getVerticalPage(kind, tabIdx);
   const hasStat = vp.statLabel !== "";
   const cols = hasStat
@@ -194,6 +195,8 @@ export function VerticalIndexPage({ kind, tabIdx = 0 }: { kind: VerticalKind; ta
         </div>
       </section>
 
+      {after}
+
       <section style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px 48px" }}>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 14 }}>
           <div style={{ padding: "26px 28px", borderRadius: 18, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
@@ -226,7 +229,8 @@ function Row({ r, first, cols, labels, hasStat }: { r: VerticalRow; first: boole
   );
   return (
     <div data-reveal className={`grid grid-cols-2 ${cols} items-center gap-x-4 gap-y-3 transition-colors hover:bg-white/[0.025]`} style={{ padding: "16px 20px", borderTop: first ? undefined : "1px solid rgba(255,255,255,.05)" }}>
-      <Link href={r.href} className="col-span-2 md:col-span-1" style={{ display: "flex", alignItems: "center", gap: 12, minWidth: 0 }}>
+      <div className="col-span-2 md:col-span-1" style={{ minWidth: 0 }}>
+      <Link href={r.href} style={{ display: "flex", alignItems: "center", gap: 12, minWidth: 0 }}>
         {r.image ? (
           // A game tile, 4:3 like the art, so the title is not cropped off it.
           <span style={{ width: 52, height: 39, flex: "none", borderRadius: 8, overflow: "hidden", background: "#0E1316" }}>
@@ -243,6 +247,13 @@ function Row({ r, first, cols, labels, hasStat }: { r: VerticalRow; first: boole
           {r.note && <span style={{ display: "block", fontSize: 12.5, lineHeight: 1.4, color: "#8DA0AA", marginTop: 2 }}>{r.note}</span>}
         </span>
       </Link>
+      {r.extLink && (
+        // Outside the row's own link: an anchor cannot sit inside another.
+        <a href={r.extLink.href} target="_blank" rel="noopener" className="hover:!text-accent" style={{ display: "inline-block", marginTop: 6, marginLeft: 48, fontFamily: MONO, fontSize: 10.5, letterSpacing: ".04em", color: "#5FE3E8" }}>
+          {r.extLink.label} ↗
+        </a>
+      )}
+      </div>
       {cell(labels[0], r.m1)}
       {cell(labels[1], r.m2)}
       {cell(labels[2], r.m3)}

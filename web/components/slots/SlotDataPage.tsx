@@ -6,6 +6,8 @@ import { NextSteps } from "@/components/layout/NextSteps";
 import { publishableArt, rtpSpread, rtpVersions, singleRtp, rtpSource, slotSpecs, type CatalogueSlotPage } from "@/lib/slot-page";
 import { isTopSlot } from "@/lib/top-slots";
 import { approvalsFor } from "@/lib/game-jurisdictions";
+import { slotEssentialsLink, slotEssentialsLabel, slotEssentialsStudio } from "@/lib/slotessentials";
+import { studioHref } from "@/lib/studio-pages";
 
 /**
  * A catalogue slot's page: the RTP configurations a studio publishes for one
@@ -47,10 +49,15 @@ export function SlotDataPage({ g, review }: { g: CatalogueSlotPage; review?: Rea
           <nav style={{ fontFamily: MONO, fontSize: 11, color: "#83919A", marginBottom: 22 }}>
             <Link href="/slots" style={{ color: "#83919A" }}>Slots</Link>
             <span style={{ margin: "0 8px" }}>/</span>
-            {g.providerSlug ? (
-              <Link href={`/providers/${g.providerSlug}`} style={{ color: "#83919A" }}>{studio}</Link>
+            {studioHref(g.provider) ? (
+              <Link href={studioHref(g.provider) as string} style={{ color: "#83919A" }}>{studio}</Link>
             ) : (
               <span>{studio}</span>
+            )}
+            {slotEssentialsStudio(g.provider) && (
+              <a href={slotEssentialsStudio(g.provider) as string} target="_blank" rel="noopener" style={{ marginLeft: 12, color: "#5FE3E8" }}>
+                {studio} on SlotEssentials ↗
+              </a>
             )}
           </nav>
 

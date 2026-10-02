@@ -12,13 +12,23 @@ import { BrandMark } from "@/components/ui/BrandMark";
 import { tintFor } from "@/lib/logo";
 import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
 import { ReportIssue } from "@/components/ui/ReportIssue";
+import { catalogueOnlyStudio } from "@/lib/studio-pages";
+import { CatalogueStudioPage } from "@/components/studios/CatalogueStudioPage";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const view = getEntityView("provider", slug);
   if (view) return pageMetadata(view.headline, view.standfirst, `/providers/${slug}`);
   const s = studioBy(slug);
-  if (!s) return {};
+  if (!s) {
+    const cs = catalogueOnlyStudio(slug);
+    if (!cs) return {};
+    return pageMetadata(
+      `${cs.name} slots: RTP, volatility and max win`,
+      `All ${cs.titles.toLocaleString("en-GB")} ${cs.name} slots in our database, with the return, volatility and max win of each, and where to read more.`,
+      `/providers/${slug}`
+    );
+  }
   const n = new Set(s.licences.map((l) => countryOf(l.code))).size;
   return pageMetadata(`${s.name}: licences in ${n} countries`, `Where ${s.name} is licensed: every country, US state and province it lists, with the regulator and licence number, from ${s.name}'s own site.`, `/providers/${slug}`);
 }
@@ -27,7 +37,18 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const { slug } = await params;
   const view = getEntityView("provider", slug);
   const studio = studioBy(slug);
-  if (!view && !studio) notFound();
+  if (!view && !studio) {
+    // Every other studio in the slot catalogue gets a page built from the
+    // catalogue alone (components/studios/CatalogueStudioPage.tsx).
+    const cs = catalogueOnlyStudio(slug);
+    if (!cs) notFound();
+    return (
+      <>
+        <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Game providers", path: "/providers" }, { name: cs.name, path: `/providers/${slug}` }])} />
+        <CatalogueStudioPage studio={cs} />
+      </>
+    );
+  }
 
   if (view) {
     return (

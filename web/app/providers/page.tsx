@@ -3,6 +3,7 @@ import { getVerticalPage } from "@/lib/vertical-view";
 import { pageMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { AllStudios } from "@/components/studios/AllStudios";
 
 const vp = getVerticalPage("providers");
 export const metadata = pageMetadata(vp.title, vp.sub, "/providers");
@@ -11,7 +12,7 @@ export default function Page() {
   return (
     <>
       <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: vp.title, path: "/providers" }])} />
-      <VerticalIndexPage kind="providers" />
+      <VerticalIndexPage kind="providers" after={<AllStudios />} />
     </>
   );
 }

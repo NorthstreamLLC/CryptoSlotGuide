@@ -6,7 +6,8 @@ import { NextSteps } from "@/components/layout/NextSteps";
 import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
 import { querySlots, studioFacets, volatilityFacets, catalogueTotals, catalogueAsOf, PER_PAGE, type SlotQuery, releaseDate } from "@/lib/slot-db";
 import { cataloguePageSlugs, slotArtBySlug } from "@/lib/slot-page";
-import { slotEssentialsLink, slotEssentialsLabel } from "@/lib/slotessentials";
+import { slotEssentialsLink, slotEssentialsLabel, slotEssentialsStudio } from "@/lib/slotessentials";
+import { studioHref } from "@/lib/studio-pages";
 import { siteData } from "@/lib/site-data";
 
 const MONO = "var(--font-jetbrains-mono), monospace";
@@ -167,6 +168,20 @@ export default async function Page({ searchParams }: { searchParams: Promise<Rec
           </div>
         </div>
 
+        {q.studio && slotEssentialsStudio(q.studio) && (
+          <a
+            href={slotEssentialsStudio(q.studio) as string}
+            target="_blank"
+            rel="noopener"
+            style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, flexWrap: "wrap", marginBottom: 12, padding: "14px 18px", borderRadius: 12, border: "1px solid rgba(0,194,204,.28)", background: "rgba(0,194,204,.06)" }}
+          >
+            <span style={{ fontSize: 14, color: "#DCE5E9" }}>
+              <strong style={{ color: "#fff" }}>{q.studio}</strong> has a full studio profile on SlotEssentials, our sister site — every title, tracker tools and record wins.
+            </span>
+            <span style={{ fontFamily: MONO, fontSize: 11.5, color: "#5FE3E8", whiteSpace: "nowrap" }}>Open the profile ↗</span>
+          </a>
+        )}
+
         <div style={{ borderRadius: 16, border: "1px solid rgba(255,255,255,.08)", overflow: "hidden", background: "#0B0F12" }}>
           <div className="hidden md:grid" style={{ gridTemplateColumns: "minmax(220px,2fr) minmax(120px,1fr) 90px 100px 100px 100px minmax(120px,.9fr)", gap: 14, padding: "11px 18px", borderBottom: "1px solid rgba(255,255,255,.07)", fontFamily: MONO, fontSize: 10, letterSpacing: ".08em", textTransform: "uppercase", color: "#8E9CA5" }}>
             <span>Slot</span><span>Studio</span><span>RTP</span><span>Volatility</span><span>Max win</span><span>Released</span><span>Full review</span>
@@ -214,7 +229,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<Rec
                 </span>
               </span>
               <span style={{ fontSize: 13, color: "#8DA0AA", overflowWrap: "anywhere" }}>
-                {g.providerSlug ? <Link href={`/providers/${g.providerSlug}`} className="hover:!text-accent" style={{ color: "#9FD9DD" }}>{g.provider}</Link> : g.provider ?? "—"}
+                {studioHref(g.provider) ? <Link href={studioHref(g.provider) as string} className="hover:!text-accent" style={{ color: "#9FD9DD" }}>{g.provider}</Link> : g.provider ?? "—"}
               </span>
               <span style={{ fontFamily: MONO, fontSize: 13.5, fontWeight: 700, color: g.rtp === null ? "#77858E" : g.rtp >= 96 ? "#7BE0B8" : "#E8EDF0" }}>
                 {g.rtp === null ? "—" : `${g.rtp.toFixed(2)}%`}

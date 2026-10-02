@@ -122,6 +122,13 @@ export function EntityReviewPage({ e, review }: { e: EntityView; review?: React.
               <Link href={back.href} style={{ display: "block", textAlign: "center", padding: 13, borderRadius: 9, border: "1px solid rgba(255,255,255,.14)", color: "#DCE5E9", fontSize: 13.5, fontWeight: 600 }}>
                 {back.label}
               </Link>
+              {e.sister && (
+                // The sister site's page on the same subject: an ordinary
+                // editorial link, followed.
+                <a href={e.sister.href} target="_blank" rel="noopener" style={{ display: "block", textAlign: "center", marginTop: 9, padding: 13, borderRadius: 9, border: "1px solid rgba(0,194,204,.3)", background: "rgba(0,194,204,.06)", color: "#5FE3E8", fontSize: 13.5, fontWeight: 600 }}>
+                  {e.sister.label} ↗
+                </a>
+              )}
               <div style={{ marginTop: 14, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, lineHeight: 1.5, color: "#77858E" }}>
                 {isCasino
                   ? e.signupUrl && e.affiliate

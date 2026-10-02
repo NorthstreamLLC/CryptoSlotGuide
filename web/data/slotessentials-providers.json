@@ -1,0 +1,247 @@
+{
+  "note": "SlotEssentials studio profiles, read from slotessentials.com/sitemap.xml by scripts/fetch-se-providers.mjs. Each name is the one the profile's own <title> gives. Matched to our studio names in lib/slotessentials.ts; never construct a URL from a name — SlotEssentials' slugs are its own.",
+  "sitemap": "https://slotessentials.com/sitemap.xml",
+  "read": "2026-10-02",
+  "providers": [
+    {
+      "name": "3 Oaks Gaming",
+      "url": "https://slotessentials.com/providers/3-oaks-gaming-"
+    },
+    {
+      "name": "7Rings Gaming",
+      "url": "https://slotessentials.com/providers/7rings-gaming"
+    },
+    {
+      "name": "Amigo Gaming",
+      "url": "https://slotessentials.com/providers/amigo-gaming"
+    },
+    {
+      "name": "Apparat Gaming",
+      "url": "https://slotessentials.com/providers/apparat-gaming"
+    },
+    {
+      "name": "Atomic Slot Lab",
+      "url": "https://slotessentials.com/providers/atomic-slot-lab"
+    },
+    {
+      "name": "AvatarUX",
+      "url": "https://slotessentials.com/providers/avatarux"
+    },
+    {
+      "name": "Betsoft",
+      "url": "https://slotessentials.com/providers/betsoft"
+    },
+    {
+      "name": "BGaming",
+      "url": "https://slotessentials.com/providers/bgaming"
+    },
+    {
+      "name": "Big Daddy Gaming",
+      "url": "https://slotessentials.com/providers/big-daddy-gaming"
+    },
+    {
+      "name": "Big Time Gaming",
+      "url": "https://slotessentials.com/providers/big-time-gaming"
+    },
+    {
+      "name": "Blueprint Gaming",
+      "url": "https://slotessentials.com/providers/blueprint-gaming"
+    },
+    {
+      "name": "Bone Croo",
+      "url": "https://slotessentials.com/providers/bone-croo"
+    },
+    {
+      "name": "Booming Gaming",
+      "url": "https://slotessentials.com/providers/booming-gaming"
+    },
+    {
+      "name": "BulBul",
+      "url": "https://slotessentials.com/providers/bulbul"
+    },
+    {
+      "name": "Degen Studios",
+      "url": "https://slotessentials.com/providers/degen-studios"
+    },
+    {
+      "name": "Ela Games",
+      "url": "https://slotessentials.com/providers/ela-games"
+    },
+    {
+      "name": "ELK Studios",
+      "url": "https://slotessentials.com/providers/elk-studios"
+    },
+    {
+      "name": "Endorphina",
+      "url": "https://slotessentials.com/providers/endorphina"
+    },
+    {
+      "name": "Evolution Gaming",
+      "url": "https://slotessentials.com/providers/evolution-gaming-"
+    },
+    {
+      "name": "Fantasma Games",
+      "url": "https://slotessentials.com/providers/fantasma-games"
+    },
+    {
+      "name": "Fantasma Games (Alea)",
+      "url": "https://slotessentials.com/providers/fantasma-games-alea-"
+    },
+    {
+      "name": "Gamomat",
+      "url": "https://slotessentials.com/providers/gamomat"
+    },
+    {
+      "name": "Habanero",
+      "url": "https://slotessentials.com/providers/habanero"
+    },
+    {
+      "name": "Hacksaw Gaming",
+      "url": "https://slotessentials.com/providers/hacksaw"
+    },
+    {
+      "name": "Happy Duck",
+      "url": "https://slotessentials.com/providers/happy-duck"
+    },
+    {
+      "name": "Indigo Magic",
+      "url": "https://slotessentials.com/providers/indigo-magic"
+    },
+    {
+      "name": "iSoftBet",
+      "url": "https://slotessentials.com/providers/isoftbet"
+    },
+    {
+      "name": "Just Slots",
+      "url": "https://slotessentials.com/providers/just-slots"
+    },
+    {
+      "name": "Kalamba Games",
+      "url": "https://slotessentials.com/providers/kalamba-games"
+    },
+    {
+      "name": "Live 88",
+      "url": "https://slotessentials.com/providers/live-88"
+    },
+    {
+      "name": "Microgaming",
+      "url": "https://slotessentials.com/providers/microgaming"
+    },
+    {
+      "name": "Mirror Image Gaming",
+      "url": "https://slotessentials.com/providers/mirror-image-gaming"
+    },
+    {
+      "name": "Netent",
+      "url": "https://slotessentials.com/providers/netent"
+    },
+    {
+      "name": "Nolimit City",
+      "url": "https://slotessentials.com/providers/nolimit-city"
+    },
+    {
+      "name": "Novomatic",
+      "url": "https://slotessentials.com/providers/novomatic"
+    },
+    {
+      "name": "OneTouch",
+      "url": "https://slotessentials.com/providers/onetouch"
+    },
+    {
+      "name": "Penguin King",
+      "url": "https://slotessentials.com/providers/penguin-king"
+    },
+    {
+      "name": "Peter & Sons",
+      "url": "https://slotessentials.com/providers/peter-sons-"
+    },
+    {
+      "name": "PGSoft",
+      "url": "https://slotessentials.com/providers/pgsoft"
+    },
+    {
+      "name": "Play'n Go",
+      "url": "https://slotessentials.com/providers/play-n-go"
+    },
+    {
+      "name": "Playson",
+      "url": "https://slotessentials.com/providers/playson"
+    },
+    {
+      "name": "Popiplay",
+      "url": "https://slotessentials.com/providers/popiplay"
+    },
+    {
+      "name": "Pragmatic Play",
+      "url": "https://slotessentials.com/providers/pragmatic"
+    },
+    {
+      "name": "Print Studios",
+      "url": "https://slotessentials.com/providers/print-studios-"
+    },
+    {
+      "name": "Push Gaming",
+      "url": "https://slotessentials.com/providers/push-gaming"
+    },
+    {
+      "name": "Quickspin (Alea)",
+      "url": "https://slotessentials.com/providers/quickspin-alea-"
+    },
+    {
+      "name": "Red Tiger",
+      "url": "https://slotessentials.com/providers/red-tiger"
+    },
+    {
+      "name": "Relax Gaming",
+      "url": "https://slotessentials.com/providers/relax-gaming"
+    },
+    {
+      "name": "Shady Lady",
+      "url": "https://slotessentials.com/providers/shady-lady"
+    },
+    {
+      "name": "Slotmill",
+      "url": "https://slotessentials.com/providers/slotmill"
+    },
+    {
+      "name": "Sneaky Slots",
+      "url": "https://slotessentials.com/providers/sneaky-slots"
+    },
+    {
+      "name": "Spade Gaming",
+      "url": "https://slotessentials.com/providers/spade-gaming"
+    },
+    {
+      "name": "Spinomenal",
+      "url": "https://slotessentials.com/providers/spinomenal-"
+    },
+    {
+      "name": "Thunderkick",
+      "url": "https://slotessentials.com/providers/thunderkick-hub88-"
+    },
+    {
+      "name": "Toka City",
+      "url": "https://slotessentials.com/providers/toka-city"
+    },
+    {
+      "name": "Toka City Slots",
+      "url": "https://slotessentials.com/providers/toka-city-slots"
+    },
+    {
+      "name": "Truelab",
+      "url": "https://slotessentials.com/providers/truelab"
+    },
+    {
+      "name": "Wazdan",
+      "url": "https://slotessentials.com/providers/wazdan"
+    },
+    {
+      "name": "Wicked Games",
+      "url": "https://slotessentials.com/providers/wicked-games"
+    },
+    {
+      "name": "Yggdrasil",
+      "url": "https://slotessentials.com/providers/yggdrasil"
+    }
+  ]
+}
