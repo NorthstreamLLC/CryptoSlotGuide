@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { maxWinLabel, rtpLabel, rtpSortValue, volLabel } from "@/lib/slot-facts";
 import { siteData, siteCounts } from "@/lib/site-data";
+import { catalogueByMechanic, rtpVersions, publishableArt } from "@/lib/slot-page";
+import { volatilityOf } from "@/lib/slot-db";
 import type { SlotMechanicTag } from "@/lib/types";
 import { NextSteps } from "@/components/layout/NextSteps";
 import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
@@ -16,6 +18,9 @@ export function SlotCategoryPage({ tag }: { tag: SlotMechanicTag }) {
   const rows = slots
     .filter((s) => (slotTags[s.slug] ?? []).includes(tag))
     .sort((a, b) => rtpSortValue(b) - rtpSortValue(a));
+  // Everything else in the catalogue that carries this mechanic and has a
+  // page — see catalogueByMechanic for which signal each tag uses.
+  const more = catalogueByMechanic(tag, new Set(rows.map((s) => s.slug)));
 
   return (
     <main>
@@ -45,7 +50,7 @@ export function SlotCategoryPage({ tag }: { tag: SlotMechanicTag }) {
       <section style={{ maxWidth: 1400, margin: "0 auto", padding: "36px 40px 80px" }}>
         <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 24, marginBottom: 16 }}>
           <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".06em", textTransform: "uppercase", color: "#83919A" }}>
-            {rows.length} titles · sorted by published RTP
+            {rows.length + more.length} titles · sorted by published RTP
           </div>
           <Link href="/slots" style={{ fontSize: 14, fontWeight: 600, color: "#00C2CC" }}>All {siteCounts.slots} slots →</Link>
         </div>
@@ -84,11 +89,44 @@ export function SlotCategoryPage({ tag }: { tag: SlotMechanicTag }) {
             );
           })}
         </div>
+        {more.length > 0 && (
+          <>
+            <h2 style={{ margin: "40px 0 6px", fontSize: 24, letterSpacing: "-.025em", fontWeight: 800, color: "#E8EDF0" }}>
+              {more.length.toLocaleString()} more {cat.label.toLowerCase()} titles with a page
+            </h2>
+            <p style={{ margin: "0 0 16px", maxWidth: "80ch", fontSize: 14.5, lineHeight: 1.6, color: "#8DA0AA" }}>
+              From the catalogue, each with the studio&apos;s published return and a page of its own. Highest headline return first.
+            </p>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 10 }}>
+              {more.map((g) => {
+                const v = rtpVersions(g);
+                const art = publishableArt(g);
+                return (
+                  <Link key={g.slug} href={`/slots/${g.slug}`} style={{ display: "flex", alignItems: "center", gap: 12, padding: "12px 14px", borderRadius: 12, background: "rgba(12,16,19,.7)", border: "1px solid rgba(255,255,255,.07)" }}>
+                    <span style={{ width: 52, height: 39, flex: "none", borderRadius: 8, overflow: "hidden", background: "#0E1316" }}>
+                      {art ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img src={art} alt="" width={52} height={39} loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                      ) : null}
+                    </span>
+                    <span style={{ minWidth: 0, flex: 1 }}>
+                      <span style={{ display: "block", fontSize: 14, fontWeight: 700, color: "#fff", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{g.name}</span>
+                      <span style={{ display: "block", fontSize: 12, color: "#7B8A93", marginTop: 2 }}>{g.provider}{volatilityOf(g) ? ` · ${volatilityOf(g)}` : ""}</span>
+                    </span>
+                    <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 13, color: v.length > 1 ? "#FFC531" : "#fff", whiteSpace: "nowrap" }}>
+                      {v.length > 1 ? `${v[0]}% – ${v[v.length - 1]}%` : v.length ? `${v[0]}%` : g.rtp != null ? `${g.rtp}%` : "—"}
+                    </span>
+                  </Link>
+                );
+              })}
+            </div>
+          </>
+        )}
         <FeaturedPartner context={{ kind: "slots" }} />
         <NextSteps
           steps={[
             { href: "/slots", label: "The full slot RTP index", hint: "Every title we track, with the studio's published return." },
-            { href: "/rtp-watch", label: "RTP Watch", hint: "Which casinos ship a cut build of the same slot." },
+            { href: "/slots/database", label: "Slot database", hint: "Every game we hold, filterable by studio, RTP and volatility." },
             { href: "/crypto-casinos", label: "Where to play", hint: "The casinos we track, with coins, payouts and offers cited." },
           ]}
         />

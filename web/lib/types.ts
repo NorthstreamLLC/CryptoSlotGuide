@@ -127,7 +127,8 @@ export type SlotMechanicTag =
   | "megaways"
   | "jackpot"
   | "cluster-pays"
-  | "high-volatility";
+  | "high-volatility"
+  | "hold-and-win";
 
 export type SlotTags = Record<string, SlotMechanicTag[]>;
 

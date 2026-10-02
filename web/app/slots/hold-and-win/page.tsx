@@ -6,8 +6,8 @@ import { pageMetadata } from "@/lib/seo";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { breadcrumbSchema, collectionPageSchema, itemListSchema } from "@/lib/schema";
 
-const TAG = "cluster-pays" as const;
-const PATH = "/slots/cluster-pays";
+const TAG = "hold-and-win" as const;
+const PATH = "/slots/megaways";
 const cat = siteData.slotCatDefs.find((d) => d.tag === TAG)!;
 const TITLE = `${cat.label} slots`;
 

@@ -521,3 +521,40 @@ export function studioAllTitles(studioName: string): {
     sourced: anySourced,
   };
 }
+
+/**
+ * Catalogue titles for a mechanic page, from signals the catalogue actually
+ * holds. The mechanic pages drew only on the 21 hand-written reviews — 7 to
+ * 15 titles each — while the catalogue holds 237 Megaways titles, 347 Hold &
+ * Win titles and 2,938 rated high-volatility by their studio or the feed.
+ *
+ * Only titles with a page of their own are listed, so every card links
+ * somewhere real. The signals, and their limits:
+ *
+ *   megaways       the name carries the trademark — reliable
+ *   hold-and-win   "Hold & Win", "Hold and Win", "Hold & Spin", "Hold & Hit"
+ *                  in the name — reliable, it is how studios label the format
+ *   jackpot        "Jackpot" in the name — the studio's own word for it
+ *   high-volatility the studio's own rating where we hold it (Play'n GO,
+ *                  Hacksaw 4/5 and 5/5), else the feed's "high"
+ *   cluster-pays   "Cluster" in the name only; Play'n GO's grid titles would
+ *                  need the game type imported from their sheet first
+ *   bonus-buy      no signal in the catalogue — reviews only
+ *
+ * Sorted by headline return, like the review cards above them.
+ */
+const MECHANIC_MATCH: Record<string, (g: CatalogueGame) => boolean> = {
+  megaways: (g) => /megaways/i.test(g.name),
+  "hold-and-win": (g) => /hold\s*(&|and)\s*(win|spin|hit)/i.test(g.name),
+  jackpot: (g) => /jackpot/i.test(g.name),
+  "high-volatility": (g) => /^(high|very high|super high|extreme|4\/5|5\/5)$/i.test(volatilityOf(g) ?? ""),
+  "cluster-pays": (g) => /cluster/i.test(g.name),
+};
+
+export function catalogueByMechanic(tag: string, exclude: Set<string> = new Set()): CatalogueSlotPage[] {
+  const match = MECHANIC_MATCH[tag];
+  if (!match) return [];
+  return [...PAGES.values()]
+    .filter((g) => !exclude.has(g.slug as string) && match(g))
+    .sort((a, b) => (rtpVersions(b)[0] ?? b.rtp ?? 0) - (rtpVersions(a)[0] ?? a.rtp ?? 0) || a.name.localeCompare(b.name));
+}

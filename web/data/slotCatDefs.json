@@ -1,7 +1,32 @@
 [
-  {"tag": "bonus-buy", "label": "Bonus buy", "standfirst": "Paying to skip the base game changes the maths: a feature buy costs a multiple of your stake, and some studios publish a separate RTP for the bought round. Check the game page for both figures."},
-  {"tag": "megaways", "label": "Megaways", "standfirst": "Reel heights change every spin, up to 117,649 ways to win. High hit frequency, thin individual wins, and licensed to many studios, so the games differ more than the name suggests."},
-  {"tag": "jackpot", "label": "Jackpot", "standfirst": "Progressive pools are funded out of the base return, which is why jackpot slots tend to publish lower RTPs. You are paying for the tail."},
-  {"tag": "cluster-pays", "label": "Cluster pays", "standfirst": "Wins pay on groups of adjacent symbols rather than lines, with tumbling refills. Longer sessions, more small wins, the same house edge."},
-  {"tag": "high-volatility", "label": "High volatility", "standfirst": "Long dry spells and rare large hits. The RTP is identical to a low-variance game over infinite spins — your bankroll is not infinite."}
+  {
+    "tag": "bonus-buy",
+    "label": "Bonus buy",
+    "standfirst": "Paying to skip the base game changes the maths: a feature buy costs a multiple of your stake, and some studios publish a separate RTP for the bought round. Check the game page for both figures."
+  },
+  {
+    "tag": "megaways",
+    "label": "Megaways",
+    "standfirst": "Reel heights change every spin, up to 117,649 ways to win. High hit frequency, thin individual wins, and licensed to many studios, so the games differ more than the name suggests."
+  },
+  {
+    "tag": "jackpot",
+    "label": "Jackpot",
+    "standfirst": "Progressive pools are funded out of the base return, which is why jackpot slots tend to publish lower RTPs. You are paying for the tail."
+  },
+  {
+    "tag": "cluster-pays",
+    "label": "Cluster pays",
+    "standfirst": "Wins pay on groups of adjacent symbols rather than lines, with tumbling refills. Longer sessions, more small wins, the same house edge."
+  },
+  {
+    "tag": "high-volatility",
+    "label": "High volatility",
+    "standfirst": "Long dry spells and rare large hits. The RTP is identical to a low-variance game over infinite spins — your bankroll is not infinite."
+  },
+  {
+    "tag": "hold-and-win",
+    "label": "Hold & Win",
+    "standfirst": "Land enough coin symbols and the reels lock for a respin round where only more coins land, each carrying a cash value or a jackpot. The feature is where the max win lives, and the base game is mostly the wait for it — so the volatility rating matters more here than the headline RTP."
+  }
 ]
