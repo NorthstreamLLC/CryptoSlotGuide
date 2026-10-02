@@ -168,7 +168,7 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
             .map((s) => {
               // What a review leaves unpublished, the catalogue fills — the
               // same figures the database page prints for the title.
-              const fb = catalogueFallback(s.slug, s.provider);
+              const fb = catalogueFallback(s.slug, s.provider, s.name);
               const vol = hasVol(s) ? s.vol : fb.vol;
               return {
                 slug: s.slug,

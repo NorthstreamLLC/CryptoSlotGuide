@@ -420,7 +420,7 @@ export function topSlotRows(): {
     const r = reviews.get(slug);
     if (r) {
       const un = (k: "rtp" | "vol" | "maxWin") => !!r.unpublished?.includes(k);
-      const fb = catalogueFallback(slug, r.provider);
+      const fb = catalogueFallback(slug, r.provider, r.name);
       const vol = un("vol") ? fb.vol : r.vol;
       return {
         slug,
@@ -489,9 +489,15 @@ export function slotArtBySlug(slug: string): string | null {
  * prints for the same title is wrong both ways, so the review's gaps fall
  * back to this — matched on studio, because ten slugs are shared.
  */
-export function catalogueFallback(slug: string, studio: string): { rtp: string | null; vol: string | null; maxWin: string | null } {
+export function catalogueFallback(slug: string, studio: string, name?: string): { rtp: string | null; vol: string | null; maxWin: string | null } {
   const key = (x: string) => x.toLowerCase().replace(/[^a-z0-9]/g, "");
-  const g = DB.games.find((x) => x.slug === slug && key(x.provider ?? "") === key(studio));
+  // By slug, else by name: a review's slug can differ from the feed's
+  // (gonzo-s-quest-megaways vs gonzos-quest-megaways).
+  let same = DB.games.filter((x) => x.slug === slug);
+  if (!same.length && name) same = DB.games.filter((x) => x.kind === "slot" && key(x.name) === key(name));
+  // The studio's own row first; else the slug alone, when it is not shared —
+  // Big Bass Bonanza is Reel Kingdom's to us and Pragmatic Play's in the feed.
+  const g = same.find((x) => key(x.provider ?? "") === key(studio)) ?? (same.length === 1 ? same[0] : undefined);
   if (!g) return { rtp: null, vol: null, maxWin: null };
   const v = rtpVersionsFor(g);
   const rtp = v.length > 1 ? `${v[0]}% – ${v[v.length - 1]}%` : v.length === 1 ? `${v[0]}%` : g.rtp != null ? `${g.rtp}%` : null;
@@ -626,7 +632,7 @@ export function slotReviewFacts(slug: string): SlotReviewFacts | null {
     const vs = r.rtpVersions ? r.rtpVersions.split("/").map((x) => x.trim()).filter(Boolean) : [];
     if (vs.length > 1) stats.push({ k: `${vs.length} published returns`, v: vs.map((x) => `${x}%`).join(" · ") });
     else if (!r.unpublished?.includes("rtp")) stats.push({ k: "RTP", v: `${r.rtp}%` });
-    const fb = catalogueFallback(slug, r.provider);
+    const fb = catalogueFallback(slug, r.provider, r.name);
     const vol = r.unpublished?.includes("vol") ? fb.vol : r.vol;
     const maxWin = r.unpublished?.includes("maxWin") ? fb.maxWin : r.maxWin;
     if (vol) stats.push({ k: "Volatility", v: cap(vol) });

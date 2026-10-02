@@ -460,7 +460,7 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
         .map((s) => {
           // A review's "Not published" gives way to the catalogue's figure for
           // the same title, which the database page already prints.
-          const fb = catalogueFallback(s.slug, s.provider);
+          const fb = catalogueFallback(s.slug, s.provider, s.name);
           return {
             name: s.name,
             note: s.rtpVersions ? `${s.rtpVersions.split("/").length} published RTP versions` : `${s.provider} game page`,
