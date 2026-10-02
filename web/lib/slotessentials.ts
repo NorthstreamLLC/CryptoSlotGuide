@@ -32,5 +32,5 @@ export function slotEssentialsLink(slug: string | null | undefined): string | nu
  */
 export function slotEssentialsLabel(studio: string | null | undefined): string {
   const k = (studio ?? "").toLowerCase().replace(/[^a-z0-9]/g, "");
-  return FULL.has(k) ? "Full review" : "See on SlotEssentials";
+  return FULL.has(k) ? "Full review on SlotEssentials" : "See on SlotEssentials";
 }
