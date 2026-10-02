@@ -108,6 +108,10 @@ function targets() {
   for (const s of read("sweeps.json")) out.set(s.slug, s.domain);
   for (const st of read("provider-licences.json")) out.set(st.slug, host(st.sourceUrl));
   for (const p of read("providers.json")) if (!out.get(p.slug)) out.set(p.slug, null);
+  // US-regulated brands: the registry's own site, which for most is the
+  // sportsbook host. DOMAINS below overrides where the casino site is the
+  // one that gives up a mark (Caesars).
+  for (const b of read("us-brands.json").brands) if (!out.get(b.slug)) out.set(b.slug, host(b.site));
   for (const [slug, dom] of Object.entries(DOMAINS)) out.set(slug, dom);
   for (const slug of Object.keys(EXACT)) if (!out.has(slug)) out.set(slug, null);
 

@@ -13,7 +13,10 @@ import { inHouseOrder } from "./house-order";
 import { raceSlugs } from "./races";
 import { countryPages } from "./landing";
 import { TOP_STUDIOS } from "./top-studios";
-import { US_STATES, toneOf } from "./legal";
+import { US_STATES, EUROPE_SHAPES, toneOf } from "./legal";
+
+/** The countries the Europe map draws, for the Europe column. */
+const EUROPE_CODES = new Set(EUROPE_SHAPES.map((sh) => sh.code).filter((c): c is string => !!c));
 import { flagOf } from "./flags";
 import { rankedBrands } from "./us-brands";
 
@@ -73,7 +76,7 @@ export interface NavColumn {
 }
 
 export interface NavTab {
-  key: "gambling" | "sports" | "predict" | "crypto";
+  key: "gambling" | "where" | "sports" | "predict" | "crypto";
   label: string;
   sections: NavSection[];
 }
@@ -127,97 +130,6 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
                 .map((slug) => siteData.ops.find((o) => o.slug === slug))
                 .filter((o): o is NonNullable<typeof o> => !!o)
                 .map((o) => ({ label: o.name, href: `/races#${o.slug}`, brand: o.slug })),
-            },
-          ],
-        },
-        {
-          mono: "🌍",
-          label: "Where you can play",
-          tint: "#7BE0B8",
-          href: "/legal",
-          columns: [
-            {
-              title: "Maps",
-              links: [
-                { label: "Gambling laws, every country", href: "/legal" },
-                { label: "US state by state", href: "/legal/us" },
-                { label: "Canada by province", href: "/legal/canada" },
-                { label: "Europe", href: "/legal/europe" },
-                { label: "UK-licensed casinos", href: "/uk-casinos" },
-              ],
-            },
-            {
-              // Countries where the most of our casinos say, in their own
-              // terms, that they will take you. Counted, not chosen — except
-              // that a country whose law bans online casinos is left out,
-              // whatever the operators' terms omit: India scored 30 here while
-              // its own page shows the law and no list, and a menu that sells
-              // what the page refuses is the contradiction that page exists
-              // to prevent.
-              title: "Most casinos accept",
-              links: [...countryPages()]
-                .filter(({ c }) => !/not legal|banned|prohibit/i.test(c.onlineCasino ?? ""))
-                .sort((a, b) => b.accepts.length - a.accepts.length || a.c.name.localeCompare(b.c.name))
-                .slice(0, 6)
-                .map(({ c, accepts }) => ({ label: `${flagOf(c.code)} ${c.name} · ${accepts.length}`, href: `/crypto-casinos/in/${c.code.toLowerCase()}` })),
-            },
-          ],
-        },
-        {
-          mono: "🇺🇸",
-          label: "US regulated",
-          tint: "#7BE0B8",
-          href: "/us-casinos",
-          columns: [
-            {
-              title: "Browse",
-              links: [
-                { label: "US-regulated casinos", href: "/us-casinos" },
-                { label: "US-regulated sportsbooks", href: "/us-sportsbooks" },
-                { label: "Casinos by state", href: "/us-casinos#by-state" },
-                { label: "State-by-state law", href: "/legal/us" },
-                { label: "US sweepstakes casinos", href: "/sweepstakes-casinos" },
-              ],
-            },
-            {
-              // Widest sportsbook footprint, by state count, not by anything
-              // commercial — we hold no deal with any of them. Sportsbook
-              // rather than casino because the spread is far wider there:
-              // 27 states against 5.
-              // The states where a licensed online casino is live, from each
-              // state's own law page.
-              title: "Live states",
-              links: US_STATES.filter((st) => toneOf(st.onlineCasino) === "legal").map((st) => ({ label: st.name, href: `/us-casinos/in/${st.code.toLowerCase()}` })),
-            },
-            {
-              title: "Biggest footprints",
-              links: rankedBrands("sportsbook")
-                .slice(0, 5)
-                .map(({ brand }) => ({ label: brand.name, href: `/us-casinos/${brand.slug}`, brand: brand.slug })),
-            },
-          ],
-        },
-        {
-          mono: "🎟️",
-          label: "Sweepstakes",
-          tint: "#C9A227",
-          href: "/sweepstakes-casinos",
-          columns: [
-            {
-              title: "Browse",
-              links: [
-                { label: `All ${sweepsSorted().length} sweepstakes casinos`, href: "/sweepstakes-casinos" },
-                { label: "US state by state", href: "/legal/us" },
-                { label: "US-regulated casinos", href: "/us-casinos" },
-              ],
-            },
-            {
-              // The same house order the index uses, so the menu and the page
-              // never disagree about who comes first.
-              title: "Top sweepstakes",
-              links: sweepsSorted()
-                .slice(0, 5)
-                .map((s) => ({ label: s.name, href: `/sweepstakes-casinos/${s.slug}`, brand: s.slug })),
             },
           ],
         },
@@ -331,6 +243,151 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
             {
               title: "More guides",
               links: siteData.guideRows.slice(4, 8).map((g) => ({ label: g.title, href: `/guides/${g.slug}` })),
+            },
+          ],
+        },
+      ],
+    },
+    {
+      // Everything about where a reader can actually play, in one tab: the
+      // maps, then each market the site covers. "US regulated" and "US
+      // sweepstakes" were sections of the Gambling tab, and the regulated and
+      // sweeps lists are two answers to the same question — which is where
+      // you are — so they sit together here, with Canada, Europe and the UK.
+      key: "where",
+      label: "Where you can play",
+      sections: [
+        {
+          mono: "🌍",
+          label: "World map",
+          tint: "#7BE0B8",
+          href: "/legal",
+          columns: [
+            {
+              title: "Maps",
+              links: [
+                { label: "Gambling laws, every country", href: "/legal" },
+                { label: "US state by state", href: "/legal/us" },
+                { label: "Canada by province", href: "/legal/canada" },
+                { label: "Europe", href: "/legal/europe" },
+                { label: "UK-licensed casinos", href: "/uk-casinos" },
+              ],
+            },
+            {
+              // Countries where the most of our casinos say, in their own
+              // terms, that they will take you. Counted, not chosen — except
+              // that a country whose law bans online casinos is left out,
+              // whatever the operators' terms omit: India scored 30 here while
+              // its own page shows the law and no list, and a menu that sells
+              // what the page refuses is the contradiction that page exists
+              // to prevent.
+              title: "Most casinos accept",
+              links: [...countryPages()]
+                .filter(({ c }) => !/not legal|banned|prohibit/i.test(c.onlineCasino ?? ""))
+                .sort((a, b) => b.accepts.length - a.accepts.length || a.c.name.localeCompare(b.c.name))
+                .slice(0, 6)
+                .map(({ c, accepts }) => ({ label: `${flagOf(c.code)} ${c.name} · ${accepts.length}`, href: `/crypto-casinos/in/${c.code.toLowerCase()}` })),
+            },
+          ],
+        },
+        {
+          mono: "🇺🇸",
+          label: "US regulated",
+          tint: "#7BE0B8",
+          href: "/us-casinos",
+          columns: [
+            {
+              title: "Browse",
+              links: [
+                { label: "US-regulated casinos", href: "/us-casinos" },
+                { label: "US-regulated sportsbooks", href: "/us-sportsbooks" },
+                { label: "Casinos by state", href: "/us-casinos#by-state" },
+                { label: "State-by-state law", href: "/legal/us" },
+                { label: "US sweepstakes casinos", href: "/sweepstakes-casinos" },
+              ],
+            },
+            {
+              // Widest sportsbook footprint, by state count, not by anything
+              // commercial — we hold no deal with any of them. Sportsbook
+              // rather than casino because the spread is far wider there:
+              // 27 states against 5.
+              // The states where a licensed online casino is live, from each
+              // state's own law page.
+              title: "Live states",
+              links: US_STATES.filter((st) => toneOf(st.onlineCasino) === "legal").map((st) => ({ label: st.name, href: `/us-casinos/in/${st.code.toLowerCase()}` })),
+            },
+            {
+              title: "Biggest footprints",
+              links: rankedBrands("sportsbook")
+                .slice(0, 5)
+                .map(({ brand }) => ({ label: brand.name, href: `/us-casinos/${brand.slug}`, brand: brand.slug })),
+            },
+          ],
+        },
+        {
+          mono: "🎟️",
+          label: "US sweepstakes",
+          tint: "#C9A227",
+          href: "/sweepstakes-casinos",
+          columns: [
+            {
+              title: "Browse",
+              links: [
+                { label: `All ${sweepsSorted().length} sweepstakes casinos`, href: "/sweepstakes-casinos" },
+                { label: "US state by state", href: "/legal/us" },
+                { label: "US-regulated casinos", href: "/us-casinos" },
+              ],
+            },
+            {
+              // The same house order the index uses, so the menu and the page
+              // never disagree about who comes first.
+              title: "Top sweepstakes",
+              links: sweepsSorted()
+                .slice(0, 5)
+                .map((s) => ({ label: s.name, href: `/sweepstakes-casinos/${s.slug}`, brand: s.slug })),
+            },
+          ],
+        },
+        {
+          mono: "🇨🇦",
+          label: "Canada",
+          tint: "#E07B7B",
+          href: "/legal/canada",
+          columns: [
+            {
+              title: "Browse",
+              links: [
+                { label: "Canada by province", href: "/legal/canada" },
+                { label: "Crypto casinos accepting Canada", href: "/crypto-casinos/in/ca" },
+                { label: "Canadian gambling law", href: "/legal/ca" },
+              ],
+            },
+          ],
+        },
+        {
+          mono: "🇪🇺",
+          label: "Europe",
+          tint: "#7BB8E0",
+          href: "/legal/europe",
+          columns: [
+            {
+              title: "Browse",
+              links: [
+                { label: "Europe, country by country", href: "/legal/europe" },
+                { label: "UK-licensed casinos", href: "/uk-casinos" },
+                { label: "UK gambling law", href: "/legal/gb" },
+              ],
+            },
+            {
+              // European countries where the most of our casinos say they
+              // will take you — the same count as the world column, limited
+              // to the continent, with the law-banned ones left out.
+              title: "Most casinos accept",
+              links: [...countryPages()]
+                .filter(({ c }) => EUROPE_CODES.has(c.code) && !/not legal|banned|prohibit/i.test(c.onlineCasino ?? ""))
+                .sort((a, b) => b.accepts.length - a.accepts.length || a.c.name.localeCompare(b.c.name))
+                .slice(0, 6)
+                .map(({ c, accepts }) => ({ label: `${flagOf(c.code)} ${c.name} · ${accepts.length}`, href: `/crypto-casinos/in/${c.code.toLowerCase()}` })),
             },
           ],
         },
