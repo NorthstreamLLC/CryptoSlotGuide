@@ -110,7 +110,15 @@ const key = (s) => String(s ?? "").toLowerCase().replace(/[\s_\-.'’]/g, "");
  * Jackpot" and "12 Coins Grand Gold Edition Score The Jackpot" survived as two
  * rows of the same title. 102 titles were duplicated that way.
  */
-const titleKey = (s) => String(s ?? "").toLowerCase().replace(/[^a-z0-9]/g, "");
+// Accents are folded before the strip, not stripped with it: "Mictlán" used
+// to become "mictln" and "Spiñata" "spiata", so both survived beside their
+// unaccented spellings as second rows of the same game.
+const titleKey = (s) =>
+  String(s ?? "")
+    .normalize("NFKD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]/g, "");
 
 /**
  * Whether a demo URL is served by the STUDIO rather than by an operator lobby.
