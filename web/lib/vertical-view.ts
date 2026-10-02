@@ -10,7 +10,8 @@
  * 2894-2900) are all exchanges now present in exchangeRows.json.
  */
 import { siteData } from "./site-data";
-import { topSlotRows } from "./slot-page";
+import { topSlotRows, slotArtBySlug } from "./slot-page";
+import { topStudioRank } from "./top-studios";
 import { tintFor } from "./logo";
 import { catalogueTotals } from "./slot-db";
 import { TOP_SLOTS } from "./top-slots";
@@ -51,6 +52,8 @@ export interface VerticalRow {
    * and exchanges keep their internal link.
    */
   signupUrl?: string;
+  /** Art for the row where the thing listed is a game, not a brand: the slot's tile instead of a mark. */
+  image?: string;
 }
 
 export interface VerticalAward {
@@ -116,7 +119,6 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
         { label: "Jackpot", href: "/slots/jackpot" },
         { label: "Cluster pays", href: "/slots/cluster-pays" },
         { label: "High volatility", href: "/slots/high-volatility" },
-        { label: "RTP Watch", href: "/rtp-watch" },
       ],
       /**
        * The thirteen editorial picks lead, in the order they were given,
@@ -150,6 +152,7 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
               mono: r?.mono ?? mono(p.name),
               tint: r?.tint ?? tintFor(p.slug),
               note: `Our #${p.rank} pick`,
+              image: slotArtBySlug(p.slug) ?? undefined,
               m1: p.provider,
               m2: p.rtp,
               m3: p.volatility,
@@ -166,6 +169,7 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
               mono: s.mono,
               tint: s.tint,
               note: "",
+              image: slotArtBySlug(s.slug) ?? undefined,
               m1: s.provider,
               m2: rtpLabel(s),
               m3: hasVol(s) ? `${s.vol[0].toUpperCase()}${s.vol.slice(1)}` : "Not published",
@@ -196,7 +200,8 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
         { label: "Slot RTP index", href: "/slots" },
         { label: "RTP Watch", href: "/rtp-watch" },
       ],
-      rows: [...providers].sort(byName).map((p) => ({
+      // The five studios readers actually play lead (lib/top-studios.ts); the rest A–Z.
+      rows: [...providers].sort((a, b) => topStudioRank(a.slug) - topStudioRank(b.slug) || byName(a, b)).map((p) => ({
         slug: p.slug,
         name: p.name,
         mono: p.mono,

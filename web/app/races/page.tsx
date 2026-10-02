@@ -71,7 +71,7 @@ export default function Page() {
             const brand = brandFor(slug);
             const href = `/casinos/${slug}`;
             return (
-              <div key={slug} className={`grid grid-cols-2 ${COLS} items-center gap-x-4 gap-y-3 transition-colors hover:bg-white/[0.025]`} style={{ padding: "16px 20px", borderTop: i ? "1px solid rgba(255,255,255,.05)" : undefined, background: o.featured ? `linear-gradient(90deg, ${brand}12, transparent 60%)` : undefined }}>
+              <div key={slug} id={slug} className={`grid grid-cols-2 ${COLS} items-center gap-x-4 gap-y-3 transition-colors hover:bg-white/[0.025]`} style={{ padding: "16px 20px", borderTop: i ? "1px solid rgba(255,255,255,.05)" : undefined, background: o.featured ? `linear-gradient(90deg, ${brand}12, transparent 60%)` : undefined }}>
                 <span className="hidden md:block" style={{ fontFamily: MONO, fontSize: 12, color: i < 3 ? "#D6B65C" : "#77858E" }}>{String(i + 1).padStart(2, "0")}</span>
                 <Link href={href} className="col-span-2 md:col-span-1" style={{ display: "flex", alignItems: "center", gap: 12, minWidth: 0 }}>
                   <span style={{ width: 36, height: 36, flex: "none", borderRadius: 10, overflow: "hidden" }}>

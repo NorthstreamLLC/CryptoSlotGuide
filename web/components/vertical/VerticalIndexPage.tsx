@@ -159,9 +159,17 @@ function Row({ r, first, cols, labels, hasStat }: { r: VerticalRow; first: boole
   return (
     <div className={`grid grid-cols-2 ${cols} items-center gap-x-4 gap-y-3 transition-colors hover:bg-white/[0.025]`} style={{ padding: "16px 20px", borderTop: first ? undefined : "1px solid rgba(255,255,255,.05)" }}>
       <Link href={r.href} className="col-span-2 md:col-span-1" style={{ display: "flex", alignItems: "center", gap: 12, minWidth: 0 }}>
-        <span style={{ width: 36, height: 36, flex: "none", borderRadius: 10, overflow: "hidden" }}>
-          <BrandMark slug={r.slug} mono={r.mono} tint={r.tint} radius={10} fontSize={11} />
-        </span>
+        {r.image ? (
+          // A game tile, 4:3 like the art, so the title is not cropped off it.
+          <span style={{ width: 52, height: 39, flex: "none", borderRadius: 8, overflow: "hidden", background: "#0E1316" }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={r.image} alt="" width={52} height={39} loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+          </span>
+        ) : (
+          <span style={{ width: 36, height: 36, flex: "none", borderRadius: 10, overflow: "hidden" }}>
+            <BrandMark slug={r.slug} mono={r.mono} tint={r.tint} radius={10} fontSize={11} />
+          </span>
+        )}
         <span style={{ minWidth: 0 }}>
           <span style={{ display: "block", fontSize: 15.5, fontWeight: 800, color: "#fff" }}>{r.name}</span>
           {r.note && <span style={{ display: "block", fontSize: 12.5, lineHeight: 1.4, color: "#8DA0AA", marginTop: 2 }}>{r.note}</span>}

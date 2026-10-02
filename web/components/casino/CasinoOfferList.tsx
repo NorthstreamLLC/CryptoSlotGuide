@@ -49,6 +49,7 @@ function Row({ o, pos }: { o: Operator; pos: number }) {
   return (
     <div
       className={`grid grid-cols-3 ${COLS} items-center gap-x-4 gap-y-3 transition-colors hover:bg-white/[0.025]`}
+      id={o.slug}
       style={{ padding: "16px 20px", borderTop: pos > 1 ? "1px solid rgba(255,255,255,.05)" : undefined, background: o.featured ? `linear-gradient(90deg, ${brand}12, transparent 60%)` : undefined }}
     >
       <span className="hidden md:block" style={{ fontFamily: MONO, fontSize: 12, color: o.featured ? brand : "#77858E" }}>{String(pos).padStart(2, "0")}</span>

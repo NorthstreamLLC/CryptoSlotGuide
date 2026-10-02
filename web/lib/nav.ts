@@ -9,6 +9,10 @@ import type { SiteCounts } from "./derived";
 import { siteData } from "./site-data";
 import { topSlotEntries, slotArtBySlug } from "./slot-page";
 import { sweepsSorted } from "./sweeps";
+import { inHouseOrder } from "./house-order";
+import { raceSlugs } from "./races";
+import { countryPages } from "./landing";
+import { TOP_STUDIOS } from "./top-studios";
 import { rankedBrands } from "./us-brands";
 
 const slotCatLabels = siteData.slotCatDefs.map((d) => ({ tag: d.tag, label: d.label }));
@@ -85,45 +89,75 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
           href: "/crypto-casinos",
           columns: [
             {
-              // Six links, the length the original menu used. Everything added
-              // since went into the two columns beside it rather than extending
-              // this one — a column of twelve is a list, not a menu.
-              title: "Browse casinos by",
+              title: "Browse",
               links: [
                 { label: `All ${c.casinos} crypto casinos`, href: "/crypto-casinos" },
                 { label: "No-KYC casinos", href: "/crypto-casinos/no-kyc" },
                 { label: "Fastest payouts", href: "/fastest-payouts" },
-                { label: "Lowest wagering", href: "/lowest-wagering" },
-                { label: "Biggest races & raffles", href: "/races" },
+                { label: "Easiest bonuses to cash out", href: "/lowest-wagering" },
                 { label: "Compare side by side", href: "/compare" },
-              ],
-            },
-            {
-              title: "Find & work out",
-              links: [
                 { label: "Find my casino", href: "/find-my-casino" },
                 { label: "VIP calculator", href: "/vip-calculator" },
-                { label: "Best Bitcoin casinos", href: "/crypto-casinos/accepting/bitcoin" },
-                { label: "Best Solana casinos", href: "/crypto-casinos/accepting/solana" },
               ],
             },
             {
-              title: "Where you can play",
+              // Three columns of marks: the casinos, in house order, which is
+              // the order every list on the site falls back to and the
+              // disclosure strip covers. A column of five names is text; a
+              // column of five marks is what a reader recognises.
+              title: "Top casino profiles",
+              links: inHouseOrder(siteData.ops)
+                .slice(0, 5)
+                .map((o) => ({ label: o.name, href: `/casinos/${o.slug}`, brand: o.slug })),
+            },
+            {
+              title: "Best casino bonuses",
+              links: inHouseOrder(siteData.ops)
+                .slice(0, 5)
+                .map((o) => ({ label: o.name, href: `/bonuses#${o.slug}`, brand: o.slug })),
+            },
+            {
+              // Same order the races page uses: prize money a month, from each
+              // casino's own promotions pages.
+              title: "Biggest races",
+              links: raceSlugs()
+                .slice(0, 5)
+                .map((slug) => siteData.ops.find((o) => o.slug === slug))
+                .filter((o): o is NonNullable<typeof o> => !!o)
+                .map((o) => ({ label: o.name, href: `/races#${o.slug}`, brand: o.slug })),
+            },
+          ],
+        },
+        {
+          mono: "🌍",
+          label: "Where you can play",
+          tint: "#7BE0B8",
+          href: "/legal",
+          columns: [
+            {
+              title: "Maps",
               links: [
-                { label: "Gambling laws map", href: "/legal" },
+                { label: "Gambling laws, every country", href: "/legal" },
                 { label: "US state by state", href: "/legal/us" },
                 { label: "Canada by province", href: "/legal/canada" },
-                { label: "US sweepstakes casinos", href: "/sweepstakes-casinos" },
+                { label: "Europe", href: "/legal/europe" },
                 { label: "UK-licensed casinos", href: "/uk-casinos" },
               ],
             },
             {
-              title: "Casino profiles",
-              links: ["Roobet", "Stake", "Shuffle", "BC.Game", "Rollbit"].map((name) => ({
-                label: name,
-                href: `/casinos/${slug(name)}`,
-                brand: slug(name),
-              })),
+              // Countries where the most of our casinos say, in their own
+              // terms, that they will take you. Counted, not chosen — except
+              // that a country whose law bans online casinos is left out,
+              // whatever the operators' terms omit: India scored 30 here while
+              // its own page shows the law and no list, and a menu that sells
+              // what the page refuses is the contradiction that page exists
+              // to prevent.
+              title: "Most casinos accept",
+              links: [...countryPages()]
+                .filter(({ c }) => !/not legal|banned|prohibit/i.test(c.onlineCasino ?? ""))
+                .sort((a, b) => b.accepts.length - a.accepts.length || a.c.name.localeCompare(b.c.name))
+                .slice(0, 6)
+                .map(({ c, accepts }) => ({ label: `${c.name} · ${accepts.length}`, href: `/crypto-casinos/in/${c.code.toLowerCase()}` })),
             },
           ],
         },
@@ -185,14 +219,17 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
           href: "/slots",
           columns: [
             {
-              title: "RTP tools",
+              title: "Slots",
               links: [
-                { label: "RTP Watch · live board", href: "/rtp-watch", dot: "#DA9877" },
-                { label: "Slot reviews", href: "/slots" },
+                { label: "Our top slots", href: "/slots" },
                 { label: "Slot database · every game we hold", href: "/slots/database" },
+                { label: "Slots by studio", href: "/providers" },
                 { label: "How casino RTP versions work", href: "/guides/how-casino-rtp-versions-work" },
-                { label: "How we source information", href: "/how-we-rate" },
               ],
+            },
+            {
+              title: "Our top slots",
+              links: featuredSlots.map((s) => ({ label: s.name, href: s.href, image: slotArtBySlug(s.slug) ?? undefined })),
             },
             {
               title: "By mechanic",
@@ -200,10 +237,6 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
                 label: `${label} slots`,
                 href: `/slots/${tag}`,
               })),
-            },
-            {
-              title: "Our top slots",
-              links: featuredSlots.map((s) => ({ label: s.name, href: s.href, image: slotArtBySlug(s.slug) ?? undefined })),
             },
           ],
         },
@@ -224,9 +257,9 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
             },
             {
               title: "Studio profiles",
-              links: ["Hacksaw Gaming", "Nolimit City", "Pragmatic Play", "Push Gaming", "Relax Gaming"].map(
-                (name) => ({ label: name, href: `/providers/${slug(name)}`, brand: slug(name) })
-              ),
+              links: TOP_STUDIOS.map((s) => siteData.providers.find((p) => p.slug === s))
+                .filter((p): p is NonNullable<typeof p> => !!p)
+                .map((p) => ({ label: p.name, href: `/providers/${p.slug}`, brand: p.slug })),
             },
           ],
         },
@@ -486,7 +519,6 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
             {
               title: "Tools",
               links: [
-                { label: "RTP Watch · live board", href: "/rtp-watch", dot: "#DA9877" },
                 { label: "Prediction markets", href: "/prediction-markets" },
                 { label: "Compare operators", href: "/compare" },
                 { label: "How we source information", href: "/how-we-rate" },

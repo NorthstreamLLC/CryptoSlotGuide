@@ -273,7 +273,14 @@ function Row({ o, i, cols, tag, children }: { o: Operator; i: number; cols: stri
   const brand = brandFor(o.slug);
   const href = `/casinos/${o.slug}`;
   return (
-    <div className={`grid grid-cols-2 ${cols} items-center gap-x-4 gap-y-3 transition-colors hover:bg-white/[0.025]`} style={{ padding: "16px 20px", borderTop: i ? "1px solid rgba(255,255,255,.05)" : undefined, background: o.featured ? `linear-gradient(90deg, ${brand}12, transparent 60%)` : undefined }}>
+    <div
+      // The welcome list carries the anchor the menu's "Best casino bonuses"
+      // links to; the rewards list below repeats every casino, and two
+      // elements with one id would land the reader on whichever came first.
+      id={tag === "Welcome bonus" ? o.slug : undefined}
+      className={`grid grid-cols-2 ${cols} items-center gap-x-4 gap-y-3 transition-colors hover:bg-white/[0.025]`}
+      style={{ padding: "16px 20px", borderTop: i ? "1px solid rgba(255,255,255,.05)" : undefined, background: o.featured ? `linear-gradient(90deg, ${brand}12, transparent 60%)` : undefined }}
+    >
       <Link href={href} className="col-span-2 md:col-span-1" style={{ display: "flex", alignItems: "center", gap: 12, minWidth: 0 }}>
         <span style={{ width: 36, height: 36, flex: "none", borderRadius: 10, overflow: "hidden" }}>
           <BrandMark slug={o.slug} mono={o.mono} tint={brand} radius={10} fontSize={11} />

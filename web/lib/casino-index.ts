@@ -37,11 +37,11 @@ export const btcViews: Record<BtcFilterKey, { crumb: string; kicker: string; h1:
     note: "Operators stating 15 minutes or less that credit ",
   },
   lowwager: {
-    crumb: "Lowest wagering",
-    kicker: "operators at 1× wagering",
-    h1: "Crypto casinos with 1× bonus wagering",
-    p: "Wagering is the only bonus term that decides whether an offer is worth taking. These operators clear at 1× turnover — the bonus is effectively cash — instead of the 35× to 45× that makes a headline number meaningless.",
-    note: "1× wagering operators that credit ",
+    crumb: "Easiest bonuses to cash out",
+    kicker: "welcome bonuses you can actually withdraw",
+    h1: "Welcome bonuses you can actually cash out",
+    p: "A 100% match is only worth what you can withdraw. Most welcome bonuses lock the money behind 35× to 45× turnover — deposit $50, get $50, wager $4,000 before a cent leaves. These operators clear at 1× or attach no wagering at all, so the bonus is money, not a headline. Each multiple is read from the operator's own terms.",
+    note: "No-wagering and 1× welcome bonuses that credit ",
   },
   sports: {
     crumb: "Casino + sportsbook",
