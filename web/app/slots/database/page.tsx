@@ -5,7 +5,8 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { NextSteps } from "@/components/layout/NextSteps";
 import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
 import { querySlots, studioFacets, volatilityFacets, catalogueTotals, catalogueAsOf, PER_PAGE, type SlotQuery, releaseDate } from "@/lib/slot-db";
-import { cataloguePageSlugs } from "@/lib/slot-page";
+import { cataloguePageSlugs, slotArtBySlug } from "@/lib/slot-page";
+import { slotEssentialsLink, slotEssentialsLabel } from "@/lib/slotessentials";
 import { siteData } from "@/lib/site-data";
 
 const MONO = "var(--font-jetbrains-mono), monospace";
@@ -167,16 +168,23 @@ export default async function Page({ searchParams }: { searchParams: Promise<Rec
         </div>
 
         <div style={{ borderRadius: 16, border: "1px solid rgba(255,255,255,.08)", overflow: "hidden", background: "#0B0F12" }}>
-          <div className="hidden md:grid" style={{ gridTemplateColumns: "minmax(200px,2fr) minmax(130px,1fr) 90px 110px 110px 110px", gap: 14, padding: "11px 18px", borderBottom: "1px solid rgba(255,255,255,.07)", fontFamily: MONO, fontSize: 10, letterSpacing: ".08em", textTransform: "uppercase", color: "#8E9CA5" }}>
-            <span>Slot</span><span>Studio</span><span>RTP</span><span>Volatility</span><span>Max win</span><span>Released</span>
+          <div className="hidden md:grid" style={{ gridTemplateColumns: "minmax(220px,2fr) minmax(120px,1fr) 90px 100px 100px 100px minmax(120px,.9fr)", gap: 14, padding: "11px 18px", borderBottom: "1px solid rgba(255,255,255,.07)", fontFamily: MONO, fontSize: 10, letterSpacing: ".08em", textTransform: "uppercase", color: "#8E9CA5" }}>
+            <span>Slot</span><span>Studio</span><span>RTP</span><span>Volatility</span><span>Max win</span><span>Released</span><span>Full review</span>
           </div>
           {res.rows.map((g, i) => (
             <div
               key={`${g.slug ?? g.name}-${i}`}
-              className="grid grid-cols-2 md:grid-cols-[minmax(200px,2fr)_minmax(130px,1fr)_90px_110px_110px_110px]"
+              className="grid grid-cols-2 md:grid-cols-[minmax(220px,2fr)_minmax(120px,1fr)_90px_100px_100px_100px_minmax(120px,.9fr)]"
               style={{ gap: 14, padding: "12px 18px", borderTop: i ? "1px solid rgba(255,255,255,.05)" : undefined, alignItems: "center" }}
             >
-              <span style={{ fontSize: 14.5, fontWeight: 700, color: "#E8EDF0", overflowWrap: "anywhere" }}>
+              <span style={{ fontSize: 14.5, fontWeight: 700, color: "#E8EDF0", overflowWrap: "anywhere", display: "flex", alignItems: "center", gap: 10 }}>
+                {/* The tile, where we hold art we may serve; the catalogue's
+                    own image URLs are not ours to hotlink. */}
+                {g.slug && slotArtBySlug(g.slug) && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={slotArtBySlug(g.slug) as string} alt="" width={48} height={29} loading="lazy" style={{ width: 48, height: 29, objectFit: "cover", borderRadius: 6, border: "1px solid rgba(255,255,255,.08)", flex: "0 0 auto" }} />
+                )}
+                <span style={{ minWidth: 0 }}>
                 {/* Link the name wherever a page exists for it. Without this
                     the 410 catalogue pages are orphans — in the sitemap, linked
                     from nowhere — and the table that lists them is the obvious
@@ -203,6 +211,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<Rec
                     demo at {g.demoHost} ↗
                   </a>
                 )}
+                </span>
               </span>
               <span style={{ fontSize: 13, color: "#8DA0AA", overflowWrap: "anywhere" }}>
                 {g.providerSlug ? <Link href={`/providers/${g.providerSlug}`} className="hover:!text-accent" style={{ color: "#9FD9DD" }}>{g.provider}</Link> : g.provider ?? "—"}
@@ -220,6 +229,18 @@ export default async function Page({ searchParams }: { searchParams: Promise<Rec
               <span style={{ fontSize: 13, color: "#A9B8C0" }}>{g.volatility ?? "—"}</span>
               <span style={{ fontFamily: MONO, fontSize: 12.5, color: "#A9B8C0" }}>{g.maxWinMultiplier ? `${g.maxWinMultiplier.toLocaleString()}x` : "—"}</span>
               <span style={{ fontFamily: MONO, fontSize: 12, color: "#8E9CA5" }}>{releaseDate(g) ?? "—"}</span>
+              {/* Our sister site has a page for nearly every title here; an
+                  ordinary editorial link, followed. The label says whether it
+                  is one of the studios SlotEssentials reviews in full. */}
+              <span style={{ fontFamily: MONO, fontSize: 11 }}>
+                {slotEssentialsLink(g.slug) ? (
+                  <a href={slotEssentialsLink(g.slug) as string} target="_blank" rel="noopener" className="hover:!text-accent" style={{ color: "#9FD9DD", whiteSpace: "nowrap" }}>
+                    {slotEssentialsLabel(g.provider)} ↗
+                  </a>
+                ) : (
+                  <span style={{ color: "#5E6B73" }}>—</span>
+                )}
+              </span>
             </div>
           ))}
           {res.rows.length === 0 && (

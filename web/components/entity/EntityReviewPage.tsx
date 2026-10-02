@@ -288,8 +288,8 @@ export function EntityReviewPage({ e, review }: { e: EntityView; review?: React.
 
         {e.tableRows.length > 0 && <SectionHeading id="titles" title={e.tableTitle} sub={e.tableSub} maxWidth="80ch" />}
         {e.tableRows.length > 0 && (
-        <div style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 13, overflow: "hidden", background: "#0C1013", marginBottom: 14 }}>
-          <div style={{ display: "grid", gridTemplateColumns: "minmax(240px,1.5fr) 130px 150px 130px", background: "#101519", borderBottom: "1px solid rgba(255,255,255,.07)" }}>
+        <div style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 13, overflowX: "auto", background: "#0C1013", marginBottom: 14 }}>
+          <div style={{ display: "grid", gridTemplateColumns: "minmax(240px,1.5fr) 130px 150px 130px", minWidth: 650, background: "#101519", borderBottom: "1px solid rgba(255,255,255,.07)" }}>
             {["Item", ...e.tableCols].map((h) => (
               <div key={h} style={{ padding: "13px 18px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".07em", textTransform: "uppercase", color: "#83919A" }}>
                 {h}
@@ -297,8 +297,13 @@ export function EntityReviewPage({ e, review }: { e: EntityView; review?: React.
             ))}
           </div>
           {e.tableRows.map((r) => (
-            <div key={r.name} data-reveal style={{ display: "grid", gridTemplateColumns: "minmax(240px,1.5fr) 130px 150px 130px", borderBottom: "1px solid rgba(255,255,255,.05)" }}>
-              <div style={{ padding: "14px 18px", minWidth: 0 }}>
+            <div key={r.name} data-reveal style={{ display: "grid", gridTemplateColumns: "minmax(240px,1.5fr) 130px 150px 130px", minWidth: 650, borderBottom: "1px solid rgba(255,255,255,.05)" }}>
+              <div style={{ padding: "12px 18px", minWidth: 0, display: "flex", alignItems: "center", gap: 12 }}>
+                {r.image && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={r.image} alt="" width={52} height={31} loading="lazy" style={{ width: 52, height: 31, objectFit: "cover", borderRadius: 6, border: "1px solid rgba(255,255,255,.08)", flex: "0 0 auto" }} />
+                )}
+                <div style={{ minWidth: 0 }}>
                 <div style={{ fontSize: 13.5, fontWeight: 600, color: "#E8EDF0", display: "flex", alignItems: "baseline", gap: 8, flexWrap: "wrap" }}>
                   {r.href ? (
                     /^https?:\/\//.test(r.href) ? (
@@ -317,6 +322,7 @@ export function EntityReviewPage({ e, review }: { e: EntityView; review?: React.
                   )}
                 </div>
                 <div style={{ fontSize: 12, color: "#83919A", marginTop: 2 }}>{r.note}</div>
+                </div>
               </div>
               <div style={{ padding: "14px 18px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12.5, color: "#B7C4CB" }}>{r.m1}</div>
               <div style={{ padding: "14px 18px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12.5, color: "#B7C4CB" }}>{r.m2}</div>

@@ -17,7 +17,7 @@ import { wagerView, bonusWithWager } from "./wager";
 import { hasMaxWin, hasVol, maxWinLabel, rtpLabel, hasRtp, rtpSortValue, volLabel } from "./slot-facts";
 import { isFieldTestedOperator, isEditoriallyAudited } from "./field-tested";
 import { tintFor } from "./logo";
-import { studioCatalogue, studioAllTitles } from "./slot-page";
+import { studioCatalogue, studioAllTitles, catalogueFallback, slotArtBySlug } from "./slot-page";
 import { getCasinoSpecSheet, getSpecFact } from "./spec-sheet";
 import { sportsFacts, booksForTitle, esportsLabel, maxPayoutShort } from "./sports";
 import type { Flag } from "./types";
@@ -50,6 +50,8 @@ export interface TableRow {
   href?: string;
   /** Shown after the name as a small link label, e.g. "Full review". */
   hrefLabel?: string;
+  /** The game's tile, where we hold art we may serve (see publishableArt). */
+  image?: string;
 }
 
 export interface EntityView {
@@ -455,18 +457,24 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
     const allRows: TableRow[] = [
       ...[...titles]
         .sort((a, b) => rtpSortValue(b) - rtpSortValue(a))
-        .map((s) => ({
-          name: s.name,
-          note: s.rtpVersions ? `${s.rtpVersions.split("/").length} published RTP versions` : `${s.provider} game page`,
-          m1: rtpLabel(s),
-          m2: hasVol(s) ? s.vol : "Not published",
-          m3: maxWinLabel(s),
-          href: `/slots/${s.slug}`,
-          hrefLabel: "Our review",
-        })),
+        .map((s) => {
+          // A review's "Not published" gives way to the catalogue's figure for
+          // the same title, which the database page already prints.
+          const fb = catalogueFallback(s.slug, s.provider);
+          return {
+            name: s.name,
+            note: s.rtpVersions ? `${s.rtpVersions.split("/").length} published RTP versions` : `${s.provider} game page`,
+            m1: rtpLabel(s),
+            m2: hasVol(s) ? s.vol : fb.vol ?? "Not published",
+            m3: hasMaxWin(s) ? maxWinLabel(s) : fb.maxWin ?? "Not published",
+            href: `/slots/${s.slug}`,
+            hrefLabel: "Our review",
+            image: slotArtBySlug(s.slug) ?? undefined,
+          };
+        }),
       ...fromCatalogue.rows
         .filter((r) => !(r.slug && reviewedSlugs.has(r.slug)) && !reviewedNames.has(nameKey(r.name)))
-        .map(({ name, note, m1, m2, m3, href, hrefLabel }) => ({ name, note, m1, m2, m3, href, hrefLabel })),
+        .map(({ name, note, m1, m2, m3, href, hrefLabel, image }) => ({ name, note, m1, m2, m3, href, hrefLabel, image })),
     ];
     const topMaxWin = titles.filter(hasMaxWin)[0]?.maxWin;
     const volCounts = titles.filter(hasVol).reduce<Record<string, number>>((acc, s) => ({ ...acc, [s.vol]: (acc[s.vol] ?? 0) + 1 }), {});

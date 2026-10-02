@@ -6,6 +6,7 @@ import artSources from "@/data/game-art-sources.json";
 import rtpOverrides from "@/data/slot-rtp-overrides.json";
 import { isTopSlot, TOP_SLOTS } from "./top-slots";
 import { slotEssentialsLink, slotEssentialsLabel } from "./slotessentials";
+import { artProxyPath } from "./art-proxy";
 
 /**
  * The slots that earn a page of their own out of the catalogue.
@@ -172,7 +173,9 @@ export const cataloguePageCount = PAGES.size;
  */
 export function publishableArt(g: CatalogueSlotPage): string | null {
   const rec = g.slug ? ART[g.slug] : undefined;
-  return rec?.file ? `/assets/games/${rec.file}` : null;
+  // A local copy first; else the sister-site tile through /api/art, which
+  // lib/art-proxy.ts limits to the host we may republish from.
+  return rec?.file ? `/assets/games/${rec.file}` : artProxyPath(g.slug);
 }
 
 /**
@@ -454,7 +457,7 @@ export function topSlotRows(): {
  */
 export function slotArtBySlug(slug: string): string | null {
   const a = ART[slug];
-  return a?.file ? `/assets/games/${a.file}` : null;
+  return a?.file ? `/assets/games/${a.file}` : artProxyPath(slug);
 }
 
 /**
@@ -473,8 +476,28 @@ export function slotArtBySlug(slug: string): string | null {
  * Order: titles whose every build we hold come first, widest spread at the
  * top; then by name, so the long tail is at least scannable.
  */
+/**
+ * What the catalogue holds for a reviewed title, for the gaps a review leaves.
+ *
+ * A review written before a studio's sheet was on file says "Not published"
+ * for volatility and max win; the catalogue now carries the studio's own
+ * rating where we hold the sheet (volatilityOf) and the feed's figure where
+ * we do not. Showing "Not published" next to a figure the database page
+ * prints for the same title is wrong both ways, so the review's gaps fall
+ * back to this — matched on studio, because ten slugs are shared.
+ */
+export function catalogueFallback(slug: string, studio: string): { vol: string | null; maxWin: string | null } {
+  const key = (x: string) => x.toLowerCase().replace(/[^a-z0-9]/g, "");
+  const g = DB.games.find((x) => x.slug === slug && key(x.provider ?? "") === key(studio));
+  if (!g) return { vol: null, maxWin: null };
+  return {
+    vol: volatilityOf(g),
+    maxWin: g.maxWinMultiplier ? `${g.maxWinMultiplier.toLocaleString("en-GB")}x` : null,
+  };
+}
+
 export function studioAllTitles(studioName: string): {
-  rows: { slug: string | null; name: string; note: string; m1: string; m2: string; m3: string; href?: string; hrefLabel?: string }[];
+  rows: { slug: string | null; name: string; note: string; m1: string; m2: string; m3: string; href?: string; hrefLabel?: string; image?: string }[];
   sourced: boolean;
 } {
   const key = (s: string) => s.toLowerCase().replace(/[^a-z0-9]/g, "");
@@ -508,6 +531,7 @@ export function studioAllTitles(studioName: string): {
       m3: g.maxWinMultiplier ? `${g.maxWinMultiplier.toLocaleString()}x` : "Not published",
       href: ours ?? se ?? undefined,
       hrefLabel: ours ? "Our page" : se ? slotEssentialsLabel(g.provider) : undefined,
+      image: g.slug ? slotArtBySlug(g.slug) ?? undefined : undefined,
       sourced,
       spread,
     };
@@ -517,7 +541,7 @@ export function studioAllTitles(studioName: string): {
       Number(b.sourced) - Number(a.sourced) || b.spread - a.spread || a.name.localeCompare(b.name)
   );
   return {
-    rows: rows.map(({ slug, name, note, m1, m2, m3, href, hrefLabel }) => ({ slug, name, note, m1, m2, m3, href, hrefLabel })),
+    rows: rows.map(({ slug, name, note, m1, m2, m3, href, hrefLabel, image }) => ({ slug, name, note, m1, m2, m3, href, hrefLabel, image })),
     sourced: anySourced,
   };
 }
@@ -596,8 +620,11 @@ export function slotReviewFacts(slug: string): SlotReviewFacts | null {
     const vs = r.rtpVersions ? r.rtpVersions.split("/").map((x) => x.trim()).filter(Boolean) : [];
     if (vs.length > 1) stats.push({ k: `${vs.length} published returns`, v: vs.map((x) => `${x}%`).join(" · ") });
     else if (!r.unpublished?.includes("rtp")) stats.push({ k: "RTP", v: `${r.rtp}%` });
-    if (!r.unpublished?.includes("vol")) stats.push({ k: "Volatility", v: cap(r.vol) });
-    if (!r.unpublished?.includes("maxWin")) stats.push({ k: "Max win", v: r.maxWin.replace(/x$/i, "×") });
+    const fb = catalogueFallback(slug, r.provider);
+    const vol = r.unpublished?.includes("vol") ? fb.vol : r.vol;
+    const maxWin = r.unpublished?.includes("maxWin") ? fb.maxWin : r.maxWin;
+    if (vol) stats.push({ k: "Volatility", v: cap(vol) });
+    if (maxWin) stats.push({ k: "Max win", v: maxWin.replace(/x$/i, "×") });
   } else if (page) {
     const vs = rtpVersions(page);
     const only = singleRtp(page);
