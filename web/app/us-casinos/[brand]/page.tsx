@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { US_BRANDS, usBrand, countsFor } from "@/lib/us-brands";
 import { UsBrandPage } from "@/components/us/UsBrandPage";
+import { brandFactsFor } from "@/lib/us-brand-facts";
 import { pageMetadata, SITE_URL } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -23,9 +24,12 @@ export async function generateMetadata({ params }: { params: Promise<{ brand: st
     c.sportsbook.length ? `${c.sportsbook.length} states for sports betting` : null,
     c.casino.length ? `${c.casino.length} for online casino` : null,
   ].filter(Boolean);
+  const facts = brandFactsFor(brand);
   return pageMetadata(
-    `Where ${b.name} is licensed in the US`,
-    `State regulators list ${b.name} in ${parts.join(" and ")}. Every state linked to the regulator's own published list.`,
+    facts ? `${b.name} online casino: offer, states, how to sign up` : `Where ${b.name} is licensed in the US`,
+    facts
+      ? `${b.name}'s new-player offer, who can play and how to sign up, from its own pages, plus the ${parts.join(" and ")} whose regulators list it.`
+      : `State regulators list ${b.name} in ${parts.join(" and ")}. Every state linked to the regulator's own published list.`,
     `/us-casinos/${brand}`
   );
 }

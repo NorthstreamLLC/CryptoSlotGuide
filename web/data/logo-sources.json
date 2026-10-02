@@ -160,6 +160,11 @@
       "url": "https://robinhood.com/us/en/rh_favicon_60.png?v=2024",
       "size": "60x60",
       "fetchedAt": "2026-10-01"
+    },
+    "caesars": {
+      "url": "https://www.caesarspalaceonline.com/astro-favicons/cpo-favicon-32x32.png",
+      "size": "32x32",
+      "fetchedAt": "2026-10-01"
     }
   },
   "coins": {

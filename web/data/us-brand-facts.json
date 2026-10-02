@@ -1,0 +1,178 @@
+{
+  "note": "Per-brand facts for the US-regulated profiles, each read off the brand's OWN pages on the date given — never a review site. Same group/fact shape as casinoSpecSheets.json: label, value in the brand's own words or figures, the page it came from. A brand with no entry here still gets its profile from the regulators' lists; this file adds what the regulators do not say — the offer, who can play, how to sign up, the library.",
+  "brands": {
+    "hard-rock-bet": {
+      "read": "2026-10-01",
+      "offer": "500 bonus spins on Cash Eruption plus up to $1,000 back in casino bonus credits for new players, at 1× wagering",
+      "groups": [
+        {
+          "title": "The offer",
+          "facts": [
+            {
+              "label": "New-player offer",
+              "value": "500 Bonus Spins on Cash Eruption plus up to $1,000 back in Casino Bonus credits.",
+              "sourceUrl": "https://www.hardrock.bet/casino/"
+            },
+            {
+              "label": "Wagering",
+              "value": "1× wagering on bonuses: every casino bonus requires a single playthrough before winnings can be withdrawn.",
+              "sourceUrl": "https://www.hardrock.bet/casino/"
+            },
+            {
+              "label": "Rewards",
+              "value": "Unity by Hard Rock: rewards earned online and at Hard Rock locations across the country.",
+              "sourceUrl": "https://www.hardrock.bet/casino/"
+            }
+          ]
+        },
+        {
+          "title": "Who can play",
+          "facts": [
+            {
+              "label": "States",
+              "value": "New Jersey and Michigan. Licensed by the New Jersey Division of Gaming Enforcement and the Michigan Gaming Control Board.",
+              "sourceUrl": "https://www.hardrock.bet/casino/"
+            },
+            {
+              "label": "Age and location",
+              "value": "21 or older and physically located inside an eligible state when logging in; geolocation checks this every time the app opens. Outside an eligible state the account stays intact and real-money play is paused.",
+              "sourceUrl": "https://www.hardrock.bet/casino/"
+            }
+          ]
+        },
+        {
+          "title": "How to sign up",
+          "facts": [
+            {
+              "label": "Steps",
+              "value": "Download the app (iOS and Android) or use a link on the page; tap Sign Up; enter name, address, date of birth and the last four digits of your Social Security number for identity verification; create a username and password; confirm the account once verification clears.",
+              "sourceUrl": "https://www.hardrock.bet/casino/"
+            }
+          ]
+        },
+        {
+          "title": "The library",
+          "facts": [
+            {
+              "label": "Games",
+              "value": "Over 4,300 real-money games: slots, table games, live dealer, video poker, jackpots, crash and arcade-style games.",
+              "sourceUrl": "https://www.hardrock.bet/casino/"
+            },
+            {
+              "label": "Exclusive jackpots",
+              "value": "Four opt-in progressive jackpots available only on Hard Rock Bet; the page cites a $2,097,043 jackpot won on July 4, 2026 as the largest in its history.",
+              "sourceUrl": "https://www.hardrock.bet/casino/"
+            }
+          ]
+        }
+      ]
+    },
+    "caesars": {
+      "read": "2026-10-01",
+      "offer": "$10 no-deposit casino bonus at 1× plus a 100% deposit match up to $1,000 at 15× and 2,500 Bonus Reward Credits for new players in Michigan, New Jersey and West Virginia",
+      "groups": [
+        {
+          "title": "The offer",
+          "facts": [
+            {
+              "label": "New-player offer",
+              "value": "$10 No Deposit Casino Bonus on select slot games (1×) + 100% Deposit Match up to $1,000 on select slot games (15×) + 2,500 Bonus Reward Credits. Offered by American Wagering, Inc.",
+              "sourceUrl": "https://www.caesarspalaceonline.com/promo-details"
+            },
+            {
+              "label": "Wagering",
+              "value": "1× on the $10 no-deposit bonus; 15× on the deposit match.",
+              "sourceUrl": "https://www.caesarspalaceonline.com/promo-details"
+            },
+            {
+              "label": "One offer per player",
+              "value": "Opening an account with this promotion's code ends eligibility for any other new-player offer across Caesars Sportsbook and Casino or Horseshoe Online Casino in any location.",
+              "sourceUrl": "https://www.caesarspalaceonline.com/promo-details"
+            },
+            {
+              "label": "Rewards",
+              "value": "Caesars Rewards: Reward Credits and Tier Credits earned on play, redeemable for hotel stays, dining and entertainment, with tier status perks.",
+              "sourceUrl": "https://www.caesarspalaceonline.com/"
+            }
+          ]
+        },
+        {
+          "title": "Who can play",
+          "facts": [
+            {
+              "label": "States",
+              "value": "The site's state picker lists Michigan, New Jersey, Pennsylvania and West Virginia, plus Ontario and Alberta in Canada. The new-player offer applies in Michigan, New Jersey and West Virginia, and requires being physically present in one of them when wagering.",
+              "sourceUrl": "https://www.caesarspalaceonline.com/promo-details"
+            },
+            {
+              "label": "Age",
+              "value": "21+ only.",
+              "sourceUrl": "https://www.caesarspalaceonline.com/"
+            }
+          ]
+        },
+        {
+          "title": "The library",
+          "facts": [
+            {
+              "label": "Games",
+              "value": "Thousands of real-money slot games, classic three-reel to video slots with bonus rounds, free spins and jackpots, plus live games.",
+              "sourceUrl": "https://www.caesarspalaceonline.com/"
+            }
+          ]
+        }
+      ]
+    },
+    "fanduel": {
+      "read": "2026-10-01",
+      "offer": "500 bonus spins on Love Island: Unlocked plus $50 in casino bonus for new players, at 1× playthrough, after a first deposit of $5 or more",
+      "groups": [
+        {
+          "title": "The offer",
+          "facts": [
+            {
+              "label": "New-player offer",
+              "value": "500 Bonus Spins to play on Love Island: Unlocked, plus $50 in Casino Bonus. Join Casino and make a first deposit of $5 or more.",
+              "sourceUrl": "https://www.fanduel.com/casino-search-welcome-offer"
+            },
+            {
+              "label": "Wagering",
+              "value": "1× play through: FanDuel states it does not make you wager the casino bonus over and over to withdraw.",
+              "sourceUrl": "https://www.fanduel.com/casino-search-welcome-offer"
+            },
+            {
+              "label": "Rewards",
+              "value": "Casino Rewards Club: 2 points per $1 wagered on roulette, craps and other casino games, 1 point per $1 on blackjack and baccarat; points unlock a level for the following month; a Bonus Back on net weekly losses and a birthday bonus for anyone with $1 or more in real-money casino wagers in the last 180 days.",
+              "sourceUrl": "https://www.fanduel.com/casino-101/getting-started"
+            }
+          ]
+        },
+        {
+          "title": "Who can play",
+          "facts": [
+            {
+              "label": "States",
+              "value": "Michigan, New Jersey, Pennsylvania and West Virginia — the offer page's state buttons and its footer: 21+ and present in MI, NJ, PA or WV.",
+              "sourceUrl": "https://www.fanduel.com/casino-search-welcome-offer"
+            },
+            {
+              "label": "Age",
+              "value": "Must be 21+ and present in the state.",
+              "sourceUrl": "https://www.fanduel.com/online-casino-pa"
+            }
+          ]
+        },
+        {
+          "title": "The library",
+          "facts": [
+            {
+              "label": "Games",
+              "value": "Slots, blackjack, baccarat, poker, roulette and craps, plus live dealer; the Pennsylvania page describes real-money table games from blackjack to baccarat to poker.",
+              "sourceUrl": "https://www.fanduel.com/online-casino-pa"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -34,6 +34,7 @@ const LOGOS: Record<string, string> = {
   "bluff": "/assets/logos/bluff.png",
   "booming-games": "/assets/logos/booming-games.png",
   "bybit": "/assets/logos/bybit.png",
+  "caesars": "/assets/logos/caesars.png",
   "chumba-casino": "/assets/logos/chumba-casino.png",
   "cloudbet": "/assets/logos/cloudbet.png",
   "coinbase": "/assets/logos/coinbase.png",

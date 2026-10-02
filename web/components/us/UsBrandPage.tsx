@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { NextSteps } from "@/components/layout/NextSteps";
 import { statesFor, statesWithoutList, operatorClaimsFor, type UsBrand } from "@/lib/us-brands";
+import { brandFactsFor } from "@/lib/us-brand-facts";
 import { US_STATES } from "@/lib/legal";
 
 /**
@@ -28,6 +29,7 @@ function Count({ n, label, tint }: { n: number; label: string; tint: string }) {
 
 export function UsBrandPage({ brand }: { brand: UsBrand }) {
   const rows = statesFor(brand.slug);
+  const facts = brandFactsFor(brand.slug);
   const sports = rows.filter((r) => r.kind === "sportsbook");
   const casino = rows.filter((r) => r.kind === "casino");
   const claimed = [
@@ -45,7 +47,7 @@ export function UsBrandPage({ brand }: { brand: UsBrand }) {
             <span>{brand.name}</span>
           </nav>
           <h1 style={{ margin: "0 0 12px", fontSize: 40, lineHeight: 1.05, letterSpacing: "-.035em", fontWeight: 800, color: "#fff", textWrap: "balance" }}>
-            Where {brand.name} is licensed
+            {facts ? `${brand.name} online casino: the offer, who can play, where it is licensed` : `Where ${brand.name} is licensed`}
           </h1>
           <p style={{ margin: 0, maxWidth: "64ch", fontSize: 16, lineHeight: 1.6, color: "#A8B6BE" }}>
             {sports.length > 0 && (
@@ -61,6 +63,12 @@ export function UsBrandPage({ brand }: { brand: UsBrand }) {
             )}
             Every row below is the regulator&rsquo;s own published list, linked.
           </p>
+          {facts && (
+            <p style={{ margin: "14px 0 0", maxWidth: "64ch", fontSize: 15.5, lineHeight: 1.6, color: "#FFC531" }}>
+              <span style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#C7A45C", display: "block", marginBottom: 4 }}>New-player offer, from its own page</span>
+              {facts.offer}.
+            </p>
+          )}
           {/* A count that looks complete but is not. Some states permit the
               product and publish nobody, so no brand can appear there however
               widely it operates — the number is a floor, and saying so is the
@@ -85,6 +93,30 @@ export function UsBrandPage({ brand }: { brand: UsBrand }) {
           <Count n={sports.length} label="Sports betting states" tint="#5FE3E8" />
           <Count n={casino.length} label="Online casino states" tint="#7BE0B8" />
         </div>
+
+        {facts && (
+          <div style={{ marginBottom: 34 }}>
+            {facts.groups.map((g) => (
+              <div key={g.title} style={{ marginBottom: 22 }}>
+                <h2 style={{ margin: "0 0 10px", fontSize: 22, fontWeight: 800, letterSpacing: "-.02em", color: "#fff" }}>{g.title}</h2>
+                <div style={{ borderRadius: 13, border: "1px solid rgba(255,255,255,.08)", background: "#0C1013", overflow: "hidden" }}>
+                  {g.facts.map((f, i) => (
+                    <div key={f.label} className="grid grid-cols-1 md:grid-cols-[180px_1fr]" style={{ gap: 10, padding: "12px 16px", borderTop: i ? "1px solid rgba(255,255,255,.05)" : undefined }}>
+                      <span style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".06em", textTransform: "uppercase", color: "#8E9CA5", paddingTop: 3 }}>{f.label}</span>
+                      <span style={{ fontSize: 14, lineHeight: 1.6, color: "#C6D1D7" }}>
+                        {f.value}{" "}
+                        <a href={f.sourceUrl} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: MONO, fontSize: 10.5, color: "#5FE3E8", whiteSpace: "nowrap" }}>
+                          {new URL(f.sourceUrl).hostname.replace(/^www\./, "")} ↗
+                        </a>
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+            <p style={{ margin: 0, fontFamily: MONO, fontSize: 10.5, color: "#77858E" }}>Read from {brand.name}&rsquo;s own pages on {facts.read}. Where the regulator and the brand disagree, the regulator&rsquo;s list below is the one we rank on.</p>
+          </div>
+        )}
 
         {([["Sports betting", sports], ["Online casino", casino]] as const).map(([title, list]) =>
           list.length === 0 ? null : (

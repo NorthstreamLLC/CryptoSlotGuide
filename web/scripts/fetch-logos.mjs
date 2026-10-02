@@ -63,7 +63,8 @@ const DOMAINS = {
   // US-regulated brands: the registry stores several domains per brand (Caesars
   // owns caesarspalaceonline.com, wsop.com ...); the first is the brand's own.
   draftkings: "draftkings.com",
-  caesars: "caesars.com",
+  // caesars.com would not give up a mark; the casino brand site does.
+  caesars: "www.caesarspalaceonline.com",
   fanduel: "fanduel.com",
   betmgm: "betmgm.com",
   fanatics: "fanatics.com",
