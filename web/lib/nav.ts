@@ -13,7 +13,8 @@ import { inHouseOrder } from "./house-order";
 import { raceSlugs } from "./races";
 import { countryPages } from "./landing";
 import { TOP_STUDIOS } from "./top-studios";
-import { US_STATES, EUROPE_SHAPES, toneOf } from "./legal";
+import { US_STATES, EUROPE_SHAPES, COUNTRIES, toneOf } from "./legal";
+import { marketsWithLists } from "./world-market";
 
 /** The countries the Europe map draws, for the Europe column. */
 const EUROPE_CODES = new Set(EUROPE_SHAPES.map((sh) => sh.code).filter((c): c is string => !!c));
@@ -388,6 +389,19 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
                 .sort((a, b) => b.accepts.length - a.accepts.length || a.c.name.localeCompare(b.c.name))
                 .slice(0, 6)
                 .map(({ c, accepts }) => ({ label: `${c.name} · ${accepts.length}`, image: flagSrc(c.code) ?? undefined, href: `/crypto-casinos/in/${c.code.toLowerCase()}` })),
+            },
+            {
+              // The regulated side: countries whose regulator's register we
+              // read, with the number of licensed brands on it. Links go to
+              // the licensed lists on the country's law page.
+              title: "Licensed markets",
+              links: marketsWithLists()
+                .filter((m) => EUROPE_CODES.has(m.code) && m.brands > 0)
+                .map((m) => ({ m, c: COUNTRIES.find((x) => x.code === m.code) }))
+                .filter((x): x is { m: ReturnType<typeof marketsWithLists>[number]; c: NonNullable<typeof x.c> } => !!x.c)
+                .sort((a, b) => b.m.brands - a.m.brands)
+                .slice(0, 7)
+                .map(({ m, c }) => ({ label: `${c.name} · ${m.brands}`, image: flagSrc(c.code) ?? undefined, href: `/legal/${c.code.toLowerCase()}#licensed-casinos` })),
             },
           ],
         },

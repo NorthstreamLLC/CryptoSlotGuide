@@ -5,6 +5,8 @@ import { breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { COUNTRIES, countryBy } from "@/lib/legal";
 import { CasinoAccess } from "@/components/legal/CasinoAccess";
+import { CountryMarketBlock } from "@/components/legal/CountryMarket";
+import { worldMarket, unreadableRegister } from "@/lib/world-market";
 import { countryPages } from "@/lib/landing";
 import { LegalHero, StatusTile, Sources, Disclaimer, JumpList, MONO } from "@/components/legal/LegalUI";
 import { HelpBox } from "@/components/legal/HelpBox";
@@ -57,6 +59,7 @@ export default async function Page({ params }: { params: Promise<{ code: string 
         </div>
 
         <CasinoAccess code={c.code.split("-")[0]} name={c.name} />
+        <CountryMarketBlock market={worldMarket(c.code)} unreadable={unreadableRegister(c.code)} countryName={c.name} />
         {hasCountryPage && (
           <Link
             href={`/crypto-casinos/in/${code}`}

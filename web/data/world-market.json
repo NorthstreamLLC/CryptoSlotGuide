@@ -1,0 +1,6095 @@
+{
+ "note": "Licensed online operators per country, read from each regulator's own register by scripts/fetch-world-licences.mjs. Rows are the register's wording; sourceUrl is the register page; asOf is the read date. Countries under 'unreadable' are ones whose regulator publishes no list a script can read, with the page to check instead.",
+ "read": "2026-10-02",
+ "countries": {
+  "DE": {
+   "regulator": "Gemeinsame Glücksspielbehörde der Länder (GGL)",
+   "casinos": {
+    "operators": [
+     {
+      "brand": "44-aces.de",
+      "licenseHolder": "Skill On Net Limited",
+      "domains": [
+       "44-aces.de"
+      ]
+     },
+     {
+      "brand": "888.de",
+      "licenseHolder": "888 Germany Limited",
+      "domains": [
+       "888.de"
+      ]
+     },
+     {
+      "brand": "888poker.de",
+      "licenseHolder": "888 Germany Limited",
+      "domains": [
+       "888poker.de"
+      ]
+     },
+     {
+      "brand": "888slots.de",
+      "licenseHolder": "888 Germany Limited",
+      "domains": [
+       "888slots.de"
+      ]
+     },
+     {
+      "brand": "ahtigames.de",
+      "licenseHolder": "Skill On Net Limited",
+      "domains": [
+       "ahtigames.de"
+      ]
+     },
+     {
+      "brand": "bacanaplay.de",
+      "licenseHolder": "Skill On Net Limited",
+      "domains": [
+       "bacanaplay.de"
+      ]
+     },
+     {
+      "brand": "bet-at-home.de",
+      "licenseHolder": "Bet-at-home.com Internet Limited",
+      "domains": [
+       "bet-at-home.de"
+      ]
+     },
+     {
+      "brand": "bet365.de",
+      "licenseHolder": "Hillside (Europe) ENC",
+      "domains": [
+       "bet365.de"
+      ]
+     },
+     {
+      "brand": "betano.de",
+      "licenseHolder": "Betkick Sportsbetting Limited",
+      "domains": [
+       "betano.de"
+      ]
+     },
+     {
+      "brand": "betway.de",
+      "licenseHolder": "Betway Limited",
+      "domains": [
+       "betway.de"
+      ]
+     },
+     {
+      "brand": "bingbong.de",
+      "licenseHolder": "DGGS Deutsche Gesellschaft für Glücksspiel mbH",
+      "domains": [
+       "bingbong.de"
+      ]
+     },
+     {
+      "brand": "bpremium.de",
+      "licenseHolder": "Ladbrokes (Deutschland) Limited",
+      "domains": [
+       "bpremium.de"
+      ]
+     },
+     {
+      "brand": "bwin.de",
+      "licenseHolder": "bwin (Deutschland) Limited",
+      "domains": [
+       "bwin.de"
+      ]
+     },
+     {
+      "brand": "casino.goldrummel.de",
+      "licenseHolder": "Tipico Karlsruhe Limited",
+      "domains": [
+       "casino.goldrummel.de"
+      ]
+     },
+     {
+      "brand": "casino.novoline.de",
+      "licenseHolder": "NOVOLINE.DE GmbH (vormals BluBet Operations Limited)",
+      "domains": [
+       "casino.novoline.de"
+      ]
+     },
+     {
+      "brand": "casino.tipico.de",
+      "licenseHolder": "Tipico Karlsruhe Limited",
+      "domains": [
+       "casino.tipico.de"
+      ]
+     },
+     {
+      "brand": "casumo.de",
+      "licenseHolder": "Rabbit Entertain IT Limited",
+      "domains": [
+       "casumo.de"
+      ]
+     },
+     {
+      "brand": "daznbet.de",
+      "licenseHolder": "DZBT Operations Limited",
+      "domains": [
+       "daznbet.de"
+      ]
+     },
+     {
+      "brand": "die-spielbank.de",
+      "licenseHolder": "Sächsische Spielbanken GmbH & Co. KG",
+      "domains": [
+       "die-spielbank.de"
+      ]
+     },
+     {
+      "brand": "drueckglueck.de",
+      "licenseHolder": "Skill On Net Limited",
+      "domains": [
+       "drueckglueck.de"
+      ]
+     },
+     {
+      "brand": "eurokingsclub.de",
+      "licenseHolder": "Skill On Net Limited",
+      "domains": [
+       "eurokingsclub.de"
+      ]
+     },
+     {
+      "brand": "euromanias.de",
+      "licenseHolder": "Skill On Net Limited",
+      "domains": [
+       "euromanias.de"
+      ]
+     },
+     {
+      "brand": "euspielothek.de",
+      "licenseHolder": "Skill On Net Limited",
+      "domains": [
+       "euspielothek.de"
+      ]
+     },
+     {
+      "brand": "games.tipico.de",
+      "licenseHolder": "Tipico Games Limited",
+      "domains": [
+       "games.tipico.de"
+      ]
+     },
+     {
+      "brand": "games.tipico.de",
+      "licenseHolder": "Tipico Karlsruhe Limited",
+      "domains": [
+       "games.tipico.de"
+      ]
+     },
+     {
+      "brand": "games.tiptorro.de",
+      "licenseHolder": "Torro Tec Gaming Limited",
+      "domains": [
+       "games.tiptorro.de"
+      ]
+     },
+     {
+      "brand": "games.tipwin.de",
+      "licenseHolder": "Tipwin Limited",
+      "domains": [
+       "games.tipwin.de"
+      ]
+     },
+     {
+      "brand": "gentingspielhalle.de",
+      "licenseHolder": "Skill On Net Limited",
+      "domains": [
+       "gentingspielhalle.de"
+      ]
+     },
+     {
+      "brand": "ggpoker.de",
+      "licenseHolder": "NSUS Malta Limited",
+      "domains": [
+       "ggpoker.de"
+      ]
+     },
+     {
+      "brand": "goldrummel.de",
+      "licenseHolder": "Tipico Games Limited",
+      "domains": [
+       "goldrummel.de"
+      ]
+     },
+     {
+      "brand": "ice36.de",
+      "licenseHolder": "Skill On Net Limited",
+      "domains": [
+       "ice36.de"
+      ]
+     },
+     {
+      "brand": "interwetten.de",
+      "licenseHolder": "Interwetten Gaming Limited",
+      "domains": [
+       "interwetten.de"
+      ]
+     },
+     {
+      "brand": "jackpotpiraten.de",
+      "licenseHolder": "DGGS Deutsche Gesellschaft für Glücksspiel mbH",
+      "domains": [
+       "jackpotpiraten.de"
+      ]
+     },
+     {
+      "brand": "jackpotstar.de",
+      "licenseHolder": "Skill On Net Limited",
+      "domains": [
+       "jackpotstar.de"
+      ]
+     },
+     {
+      "brand": "jokerstar.de",
+      "licenseHolder": "Jokerstar GmbH",
+      "domains": [
+       "jokerstar.de"
+      ]
+     },
+     {
+      "brand": "jollie.de",
+      "licenseHolder": "Aurora Alea A/S",
+      "domains": [
+       "jollie.de"
+      ]
+     },
+     {
+      "brand": "knight-slots.de",
+      "licenseHolder": "Skill On Net Limited",
+      "domains": [
+       "knight-slots.de"
+      ]
+     },
+     {
+      "brand": "lapalingo.de",
+      "licenseHolder": "Rabbit Entertain IT Limited",
+      "domains": [
+       "lapalingo.de"
+      ]
+     },
+     {
+      "brand": "lasmegas.de",
+      "licenseHolder": "Interwetten Gaming Limited",
+      "domains": [
+       "lasmegas.de"
+      ]
+     },
+     {
+      "brand": "leovegas.de",
+      "licenseHolder": "LVSports Limited",
+      "domains": [
+       "leovegas.de"
+      ]
+     },
+     {
+      "brand": "letsbet.de",
+      "licenseHolder": "Starlet Entertainment Limited",
+      "domains": [
+       "letsbet.de"
+      ]
+     },
+     {
+      "brand": "loewen-play.de",
+      "licenseHolder": "Löwen Play digital GmbH",
+      "domains": [
+       "loewen-play.de"
+      ]
+     },
+     {
+      "brand": "loewen-player.de",
+      "licenseHolder": "Löwen Play digital GmbH",
+      "domains": [
+       "loewen-player.de"
+      ]
+     },
+     {
+      "brand": "lordlucky.de",
+      "licenseHolder": "Rabbit Entertain IT Limited",
+      "domains": [
+       "lordlucky.de"
+      ]
+     },
+     {
+      "brand": "lordping.de",
+      "licenseHolder": "Skill On Net Limited",
+      "domains": [
+       "lordping.de"
+      ]
+     },
+     {
+      "brand": "lotto-bw.de",
+      "licenseHolder": "Staatliche Toto-Lotto GmbH Baden-Württemberg",
+      "domains": [
+       "lotto-bw.de"
+      ]
+     },
+     {
+      "brand": "lotto-hessen.de",
+      "licenseHolder": "LOTTO Hessen GmbH",
+      "domains": [
+       "lotto-hessen.de"
+      ]
+     },
+     {
+      "brand": "lotto.gmx.de",
+      "licenseHolder": "Lotto24 AG",
+      "domains": [
+       "lotto.gmx.de"
+      ]
+     },
+     {
+      "brand": "lotto.web.de",
+      "licenseHolder": "Lotto24 AG",
+      "domains": [
+       "lotto.web.de"
+      ]
+     },
+     {
+      "brand": "lotto24.de",
+      "licenseHolder": "Lotto24 AG",
+      "domains": [
+       "lotto24.de"
+      ]
+     },
+     {
+      "brand": "luckylouis.de",
+      "licenseHolder": "Skill On Net Limited",
+      "domains": [
+       "luckylouis.de"
+      ]
+     },
+     {
+      "brand": "luckymeslots.de",
+      "licenseHolder": "Skill On Net Limited",
+      "domains": [
+       "luckymeslots.de"
+      ]
+     },
+     {
+      "brand": "luckyniki.de",
+      "licenseHolder": "Skill On Net Limited",
+      "domains": [
+       "luckyniki.de"
+      ]
+     },
+     {
+      "brand": "luckyvegas.de",
+      "licenseHolder": "Skill On Net Limited",
+      "domains": [
+       "luckyvegas.de"
+      ]
+     },
+     {
+      "brand": "lunaslots.de",
+      "licenseHolder": "Skill On Net Limited",
+      "domains": [
+       "lunaslots.de"
+      ]
+     },
+     {
+      "brand": "maxi333.de",
+      "licenseHolder": "SCGO Limited",
+      "domains": [
+       "maxi333.de"
+      ]
+     },
+     {
+      "brand": "megaspielhalle.de",
+      "licenseHolder": "Skill On Net Limited",
+      "domains": [
+       "megaspielhalle.de"
+      ]
+     },
+     {
+      "brand": "merkur-spiel.de",
+      "licenseHolder": "Merkur Bets Malta Limited",
+      "domains": [
+       "merkur-spiel.de"
+      ]
+     },
+     {
+      "brand": "merkur-sports.de",
+      "licenseHolder": "Merkur Bets Malta Limited",
+      "domains": [
+       "merkur-sports.de"
+      ]
+     },
+     {
+      "brand": "merkurbets.de",
+      "licenseHolder": "Merkur Bets Malta Limited",
+      "domains": [
+       "merkurbets.de"
+      ]
+     },
+     {
+      "brand": "merkurslots.de",
+      "licenseHolder": "Merkur Bets Malta Limited",
+      "domains": [
+       "merkurslots.de"
+      ]
+     },
+     {
+      "brand": "metalspiel.de",
+      "licenseHolder": "Skill On Net Limited",
+      "domains": [
+       "metalspiel.de"
+      ]
+     },
+     {
+      "brand": "mrgreen.de",
+      "licenseHolder": "888 Germany Limited",
+      "domains": [
+       "mrgreen.de"
+      ]
+     },
+     {
+      "brand": "novoline.de",
+      "licenseHolder": "NOVOLINE.DE GmbH (vormals BluBet Operations Limited)",
+      "domains": [
+       "novoline.de"
+      ]
+     },
+     {
+      "brand": "original-slots.de",
+      "licenseHolder": "Tipico Karlsruhe Limited",
+      "domains": [
+       "original-slots.de"
+      ]
+     },
+     {
+      "brand": "parisvegasclub.de",
+      "licenseHolder": "Skill On Net Limited",
+      "domains": [
+       "parisvegasclub.de"
+      ]
+     },
+     {
+      "brand": "partypoker.de",
+      "licenseHolder": "Ladbrokes (Deutschland) Limited",
+      "domains": [
+       "partypoker.de"
+      ]
+     },
+     {
+      "brand": "play-jango.de",
+      "licenseHolder": "Skill On Net Limited",
+      "domains": [
+       "play-jango.de"
+      ]
+     },
+     {
+      "brand": "playland.de",
+      "licenseHolder": "Löwen Play digital GmbH",
+      "domains": [
+       "playland.de"
+      ]
+     },
+     {
+      "brand": "playmillion.de",
+      "licenseHolder": "Skill On Net Limited",
+      "domains": [
+       "playmillion.de"
+      ]
+     },
+     {
+      "brand": "playojo.de",
+      "licenseHolder": "Skill On Net Limited",
+      "domains": [
+       "playojo.de"
+      ]
+     },
+     {
+      "brand": "playspielothek.de",
+      "licenseHolder": "Skill On Net Limited",
+      "domains": [
+       "playspielothek.de"
+      ]
+     },
+     {
+      "brand": "pokerstars.de",
+      "licenseHolder": "Reel Germany Limited",
+      "domains": [
+       "pokerstars.de"
+      ]
+     },
+     {
+      "brand": "primeslots.de",
+      "licenseHolder": "Skill On Net Limited",
+      "domains": [
+       "primeslots.de"
+      ]
+     },
+     {
+      "brand": "primespielautomat.de",
+      "licenseHolder": "Skill On Net Limited",
+      "domains": [
+       "primespielautomat.de"
+      ]
+     },
+     {
+      "brand": "primespielhalle.de",
+      "licenseHolder": "Skill On Net Limited",
+      "domains": [
+       "primespielhalle.de"
+      ]
+     },
+     {
+      "brand": "queenvegas.de",
+      "licenseHolder": "Skill On Net Limited",
+      "domains": [
+       "queenvegas.de"
+      ]
+     },
+     {
+      "brand": "redkings.de",
+      "licenseHolder": "Skill On Net Limited",
+      "domains": [
+       "redkings.de"
+      ]
+     },
+     {
+      "brand": "royalbet.de",
+      "licenseHolder": "Skill On Net Limited",
+      "domains": [
+       "royalbet.de"
+      ]
+     },
+     {
+      "brand": "royale500.de",
+      "licenseHolder": "Skill On Net Limited",
+      "domains": [
+       "royale500.de"
+      ]
+     },
+     {
+      "brand": "sh-games.tipico.de",
+      "licenseHolder": "Tipico Karlsruhe Limited",
+      "domains": [
+       "sh-games.tipico.de"
+      ]
+     },
+     {
+      "brand": "sh-goldrummel.de",
+      "licenseHolder": "Tipico Karlsruhe Limited",
+      "domains": [
+       "sh-goldrummel.de"
+      ]
+     },
+     {
+      "brand": "simbagames.de",
+      "licenseHolder": "Skill On Net Limited",
+      "domains": [
+       "simbagames.de"
+      ]
+     },
+     {
+      "brand": "slingospiel.de",
+      "licenseHolder": "Skill On Net Limited",
+      "domains": [
+       "slingospiel.de"
+      ]
+     },
+     {
+      "brand": "slotmagie.de",
+      "licenseHolder": "Solis Ortus Service Limited",
+      "domains": [
+       "slotmagie.de"
+      ]
+     },
+     {
+      "brand": "slots.admiralbet.de",
+      "licenseHolder": "Greentube Betting Malta Limited",
+      "domains": [
+       "slots.admiralbet.de"
+      ]
+     },
+     {
+      "brand": "slotsfreunde.de",
+      "licenseHolder": "Skill On Net Limited",
+      "domains": [
+       "slotsfreunde.de"
+      ]
+     },
+     {
+      "brand": "slotsmagic.de",
+      "licenseHolder": "Skill On Net Limited",
+      "domains": [
+       "slotsmagic.de"
+      ]
+     },
+     {
+      "brand": "slotstarsspiel.de",
+      "licenseHolder": "Skill On Net Limited",
+      "domains": [
+       "slotstarsspiel.de"
+      ]
+     },
+     {
+      "brand": "spiel-erwin.de",
+      "licenseHolder": "Staatliche Toto-Lotto GmbH Baden-Württemberg",
+      "domains": [
+       "spiel-erwin.de"
+      ]
+     },
+     {
+      "brand": "spielbanken-bayern-online.de",
+      "licenseHolder": "Staatliche Lotterie- und Spielbankverwaltung",
+      "domains": [
+       "spielbanken-bayern-online.de"
+      ]
+     },
+     {
+      "brand": "spingenie.de",
+      "licenseHolder": "Skill On Net Limited",
+      "domains": [
+       "spingenie.de"
+      ]
+     },
+     {
+      "brand": "spinmodo.de",
+      "licenseHolder": "Modo Operations Limited",
+      "domains": [
+       "spinmodo.de"
+      ]
+     },
+     {
+      "brand": "spinz.de",
+      "licenseHolder": "Rootz Limited",
+      "domains": [
+       "spinz.de"
+      ]
+     },
+     {
+      "brand": "sportingbet.de",
+      "licenseHolder": "Sportingbet (Deutschland) Limited",
+      "domains": [
+       "sportingbet.de"
+      ]
+     },
+     {
+      "brand": "stargames.de",
+      "licenseHolder": "Greentube Malta Limited",
+      "domains": [
+       "stargames.de"
+      ]
+     },
+     {
+      "brand": "swiftspiele.de",
+      "licenseHolder": "Skill On Net Limited",
+      "domains": [
+       "swiftspiele.de"
+      ]
+     },
+     {
+      "brand": "tigerspin.de",
+      "licenseHolder": "Rabbit Entertain IT Limited",
+      "domains": [
+       "tigerspin.de"
+      ]
+     },
+     {
+      "brand": "tipp24.de",
+      "licenseHolder": "Lotto24 AG",
+      "domains": [
+       "tipp24.de"
+      ]
+     },
+     {
+      "brand": "turbonino.de",
+      "licenseHolder": "Skill On Net Limited",
+      "domains": [
+       "turbonino.de"
+      ]
+     },
+     {
+      "brand": "vbet.de",
+      "licenseHolder": "SCGO Limited",
+      "domains": [
+       "vbet.de"
+      ]
+     },
+     {
+      "brand": "vegaswinner.de",
+      "licenseHolder": "Skill On Net Limited",
+      "domains": [
+       "vegaswinner.de"
+      ]
+     },
+     {
+      "brand": "wildz.de",
+      "licenseHolder": "Rootz Limited",
+      "domains": [
+       "wildz.de"
+      ]
+     },
+     {
+      "brand": "winfest.de",
+      "licenseHolder": "Rabbit Entertain IT Limited",
+      "domains": [
+       "winfest.de"
+      ]
+     },
+     {
+      "brand": "wunderino.de",
+      "licenseHolder": "Megapixel Entertainment Limited",
+      "domains": [
+       "wunderino.de"
+      ]
+     },
+     {
+      "brand": "xtip.de",
+      "licenseHolder": "Merkur Bets Malta Limited",
+      "domains": [
+       "xtip.de"
+      ]
+     },
+     {
+      "brand": "zebrawin.de",
+      "licenseHolder": "Skill On Net Limited",
+      "domains": [
+       "zebrawin.de"
+      ]
+     }
+    ],
+    "sourceUrl": "https://www.gluecksspiel-behoerde.de/de/fuer-spielende/uebersicht-erlaubter-anbieter-whitelist",
+    "asOf": "2026-10-02",
+    "note": "The GGL whitelist, one row per permitted domain. 'Casino' here is what German law permits online nationally — virtual slot games and online poker under the 2021 Interstate Treaty — plus the state-licensed online table games where a state lists them. Each row names the domain and the company holding the permit."
+   },
+   "sportsbooks": {
+    "operators": [
+     {
+      "brand": "888sport.de",
+      "licenseHolder": "888 Germany Limited",
+      "domains": [
+       "888sport.de"
+      ]
+     },
+     {
+      "brand": "admiralbet.de",
+      "licenseHolder": "Greentube Betting Malta Limited",
+      "domains": [
+       "admiralbet.de"
+      ]
+     },
+     {
+      "brand": "bet-at-home.de",
+      "licenseHolder": "Bet-at-home.com Internet Limited",
+      "domains": [
+       "bet-at-home.de"
+      ]
+     },
+     {
+      "brand": "bet3000.de",
+      "licenseHolder": "I.B.C. Sportsbetting Limited",
+      "domains": [
+       "bet3000.de"
+      ]
+     },
+     {
+      "brand": "bet365.de",
+      "licenseHolder": "Hillside (Europe) ENC",
+      "domains": [
+       "bet365.de"
+      ]
+     },
+     {
+      "brand": "betano.de",
+      "licenseHolder": "Betkick Sportsbetting Limited",
+      "domains": [
+       "betano.de"
+      ]
+     },
+     {
+      "brand": "betway.de",
+      "licenseHolder": "Betway Limited",
+      "domains": [
+       "betway.de"
+      ]
+     },
+     {
+      "brand": "bpremium.de",
+      "licenseHolder": "Ladbrokes (Deutschland) Limited",
+      "domains": [
+       "bpremium.de"
+      ]
+     },
+     {
+      "brand": "bwin.de",
+      "licenseHolder": "bwin (Deutschland) Limited",
+      "domains": [
+       "bwin.de"
+      ]
+     },
+     {
+      "brand": "daznbet.de",
+      "licenseHolder": "DZBT Operations Limited",
+      "domains": [
+       "daznbet.de"
+      ]
+     },
+     {
+      "brand": "intertops.de",
+      "licenseHolder": "ITSP Services GmbH",
+      "domains": [
+       "intertops.de"
+      ]
+     },
+     {
+      "brand": "interwetten.de",
+      "licenseHolder": "Interwetten Gaming Limited",
+      "domains": [
+       "interwetten.de"
+      ]
+     },
+     {
+      "brand": "leovegas.de",
+      "licenseHolder": "LVSports Limited",
+      "domains": [
+       "leovegas.de"
+      ]
+     },
+     {
+      "brand": "letsbet.de",
+      "licenseHolder": "Starlet Entertainment Limited",
+      "domains": [
+       "letsbet.de"
+      ]
+     },
+     {
+      "brand": "merkur-sports.de",
+      "licenseHolder": "Merkur Bets Malta Limited",
+      "domains": [
+       "merkur-sports.de"
+      ]
+     },
+     {
+      "brand": "merkurbets.de",
+      "licenseHolder": "Merkur Bets Malta Limited",
+      "domains": [
+       "merkurbets.de"
+      ]
+     },
+     {
+      "brand": "merkurslots.de",
+      "licenseHolder": "Merkur Bets Malta Limited",
+      "domains": [
+       "merkurslots.de"
+      ]
+     },
+     {
+      "brand": "neobet.de",
+      "licenseHolder": "Greenvest Betting Limited",
+      "domains": [
+       "neobet.de"
+      ]
+     },
+     {
+      "brand": "oddset.de",
+      "licenseHolder": "Oddset Sportwetten GmbH",
+      "domains": [
+       "oddset.de"
+      ]
+     },
+     {
+      "brand": "original-wetten.de",
+      "licenseHolder": "Tipico Karlsruhe Limited",
+      "domains": [
+       "original-wetten.de"
+      ]
+     },
+     {
+      "brand": "pokerstars.de",
+      "licenseHolder": "Cyan Blue International Limited",
+      "domains": [
+       "pokerstars.de"
+      ]
+     },
+     {
+      "brand": "sportingbet.de",
+      "licenseHolder": "Sportingbet (Deutschland) Limited",
+      "domains": [
+       "sportingbet.de"
+      ]
+     },
+     {
+      "brand": "tipico.de",
+      "licenseHolder": "Tipico Co. Limited",
+      "domains": [
+       "tipico.de"
+      ]
+     },
+     {
+      "brand": "tiptorro.de",
+      "licenseHolder": "Torro Tec Limited",
+      "domains": [
+       "tiptorro.de"
+      ]
+     },
+     {
+      "brand": "tipwin.de",
+      "licenseHolder": "Tipwin Limited",
+      "domains": [
+       "tipwin.de"
+      ]
+     },
+     {
+      "brand": "vbet.de",
+      "licenseHolder": "SCGO Limited",
+      "domains": [
+       "vbet.de"
+      ]
+     },
+     {
+      "brand": "wettarena.de",
+      "licenseHolder": "I.B.C. Sportsbetting Limited",
+      "domains": [
+       "wettarena.de"
+      ]
+     },
+     {
+      "brand": "winamax.de",
+      "licenseHolder": "WINAMAX (Société anonyme)",
+      "domains": [
+       "winamax.de"
+      ]
+     },
+     {
+      "brand": "xtip.de",
+      "licenseHolder": "Merkur Bets Malta Limited",
+      "domains": [
+       "xtip.de"
+      ]
+     }
+    ],
+    "sourceUrl": "https://www.gluecksspiel-behoerde.de/de/fuer-spielende/uebersicht-erlaubter-anbieter-whitelist",
+    "asOf": "2026-10-02",
+    "note": "Sports betting permits marked 'online' on the GGL whitelist, one row per domain."
+   },
+   "why": "Germany's 2021 Interstate Treaty on Gambling (GlüStV 2021) opened a national licence for online slots, online poker and sports betting, supervised by the GGL from 2023; online table games remain a state-by-state matter. The GGL publishes every permitted domain on its whitelist, which is the only authoritative list."
+  },
+  "ES": {
+   "regulator": "Dirección General de Ordenación del Juego (DGOJ)",
+   "operators": {
+    "operators": [
+     {
+      "brand": "1xbet.es",
+      "licenseHolder": "WAGERFAIR, S.A.",
+      "domains": [
+       "1xbet.es"
+      ]
+     },
+     {
+      "brand": "44-aces.es",
+      "licenseHolder": "SKILL ON NET, SA",
+      "domains": [
+       "44-aces.es"
+      ]
+     },
+     {
+      "brand": "777.es",
+      "licenseHolder": "DIGITAL DISTRIBUTION MANAGEMENT IBÉRICA, SA",
+      "domains": [
+       "777.es"
+      ]
+     },
+     {
+      "brand": "888.es",
+      "licenseHolder": "888 ONLINE GAMES ESPAÑA, S.A.",
+      "domains": [
+       "888.es"
+      ]
+     },
+     {
+      "brand": "888casino.es",
+      "licenseHolder": "888 ONLINE GAMES ESPAÑA, S.A.",
+      "domains": [
+       "888casino.es"
+      ]
+     },
+     {
+      "brand": "888poker.es",
+      "licenseHolder": "888 ONLINE GAMES ESPAÑA, S.A.",
+      "domains": [
+       "888poker.es"
+      ]
+     },
+     {
+      "brand": "888sport.es",
+      "licenseHolder": "888 ONLINE GAMES ESPAÑA, S.A.",
+      "domains": [
+       "888sport.es"
+      ]
+     },
+     {
+      "brand": "aconcaguapoker.es",
+      "licenseHolder": "Emotiva On-Line, S.A.",
+      "domains": [
+       "aconcaguapoker.es"
+      ]
+     },
+     {
+      "brand": "admiralbet.es",
+      "licenseHolder": "BEATYA ONLINE, S.A.",
+      "domains": [
+       "admiralbet.es"
+      ]
+     },
+     {
+      "brand": "ahtigames.es",
+      "licenseHolder": "SKILL ON NET, SA",
+      "domains": [
+       "ahtigames.es"
+      ]
+     },
+     {
+      "brand": "apuestas.betfair.es",
+      "licenseHolder": "BETFAIR INTERNATIONAL SPAIN SA",
+      "domains": [
+       "apuestas.betfair.es"
+      ]
+     },
+     {
+      "brand": "apuestas.juegging.es",
+      "licenseHolder": "BANEGRAS UNIÓN, SA",
+      "domains": [
+       "apuestas.juegging.es"
+      ]
+     },
+     {
+      "brand": "apuestas.kirolbet.es",
+      "licenseHolder": "ARTXIBET 2022 SA",
+      "domains": [
+       "apuestas.kirolbet.es"
+      ]
+     },
+     {
+      "brand": "apuestas.marca.es",
+      "licenseHolder": "Casino Marbella Interactive, S.A",
+      "domains": [
+       "apuestas.marca.es"
+      ]
+     },
+     {
+      "brand": "apuestas.olybet.es",
+      "licenseHolder": "SUERTIA INTERACTIVA, SA",
+      "domains": [
+       "apuestas.olybet.es"
+      ]
+     },
+     {
+      "brand": "apuestas.retabet.es",
+      "licenseHolder": "EKASA APUESTAS ONLINE, SA",
+      "domains": [
+       "apuestas.retabet.es"
+      ]
+     },
+     {
+      "brand": "aupabet.es",
+      "licenseHolder": "MURCIAPUESTA ONLINE, SA",
+      "domains": [
+       "aupabet.es"
+      ]
+     },
+     {
+      "brand": "bacanaplay.es",
+      "licenseHolder": "SKILL ON NET, SA",
+      "domains": [
+       "bacanaplay.es"
+      ]
+     },
+     {
+      "brand": "bet365.es",
+      "licenseHolder": "HILLSIDE ESPAÑA LEISURE, SA",
+      "domains": [
+       "bet365.es"
+      ]
+     },
+     {
+      "brand": "bet365.es",
+      "licenseHolder": "HILLSIDE NEW MEDIA MALTA, PLC",
+      "domains": [
+       "bet365.es"
+      ]
+     },
+     {
+      "brand": "bet777.es",
+      "licenseHolder": "DIGITAL DISTRIBUTION MANAGEMENT IBÉRICA, SA",
+      "domains": [
+       "bet777.es"
+      ]
+     },
+     {
+      "brand": "betfair.es",
+      "licenseHolder": "BETFAIR INTERNATIONAL SPAIN SA",
+      "domains": [
+       "betfair.es"
+      ]
+     },
+     {
+      "brand": "betfred.es",
+      "licenseHolder": "BETWIN360 SPAIN, S.A.",
+      "domains": [
+       "betfred.es"
+      ]
+     },
+     {
+      "brand": "betinia.es",
+      "licenseHolder": "IBERIX GAMING, S.A. UNIPERSONAL",
+      "domains": [
+       "betinia.es"
+      ]
+     },
+     {
+      "brand": "betsson.es",
+      "licenseHolder": "PREMIÈRE MEGAPLEX, PLC",
+      "domains": [
+       "betsson.es"
+      ]
+     },
+     {
+      "brand": "betway.es",
+      "licenseHolder": "BETWAY SPAIN, S.A.",
+      "domains": [
+       "betway.es"
+      ]
+     },
+     {
+      "brand": "bluesblock.es",
+      "licenseHolder": "BLUESBLOCK, SA",
+      "domains": [
+       "bluesblock.es"
+      ]
+     },
+     {
+      "brand": "botemania.es",
+      "licenseHolder": "GAMESYS SPAIN, S.A.",
+      "domains": [
+       "botemania.es"
+      ]
+     },
+     {
+      "brand": "bwin.es",
+      "licenseHolder": "ELECTRAWORKS CEUTA ,SA",
+      "domains": [
+       "bwin.es"
+      ]
+     },
+     {
+      "brand": "casino.bet365.es",
+      "licenseHolder": "HILLSIDE ESPAÑA LEISURE, SA",
+      "domains": [
+       "casino.bet365.es"
+      ]
+     },
+     {
+      "brand": "casino777.es",
+      "licenseHolder": "DIGITAL DISTRIBUTION MANAGEMENT IBÉRICA, SA",
+      "domains": [
+       "casino777.es"
+      ]
+     },
+     {
+      "brand": "casinobarcelona.es",
+      "licenseHolder": "CASINO BARCELONA INTERACTIVO, SA",
+      "domains": [
+       "casinobarcelona.es"
+      ]
+     },
+     {
+      "brand": "casinogmonline.es",
+      "licenseHolder": "ESGAMING, SAU",
+      "domains": [
+       "casinogmonline.es"
+      ]
+     },
+     {
+      "brand": "casinogranmadridonline.es",
+      "licenseHolder": "ESGAMING, SAU",
+      "domains": [
+       "casinogranmadridonline.es"
+      ]
+     },
+     {
+      "brand": "casinogranmadridtv.es",
+      "licenseHolder": "ESGAMING, SAU",
+      "domains": [
+       "casinogranmadridtv.es"
+      ]
+     },
+     {
+      "brand": "casinogranvia.es",
+      "licenseHolder": "COMAR INVERSIONES, SA",
+      "domains": [
+       "casinogranvia.es"
+      ]
+     },
+     {
+      "brand": "casinomarbella.es",
+      "licenseHolder": "Casino Marbella Interactive, S.A",
+      "domains": [
+       "casinomarbella.es"
+      ]
+     },
+     {
+      "brand": "casinomarca.es",
+      "licenseHolder": "Casino Marbella Interactive, S.A",
+      "domains": [
+       "casinomarca.es"
+      ]
+     },
+     {
+      "brand": "casinopauseandplay.es",
+      "licenseHolder": "GIGA GAME ONLINE, SA",
+      "domains": [
+       "casinopauseandplay.es"
+      ]
+     },
+     {
+      "brand": "casumo.es",
+      "licenseHolder": "CASUMO SPAIN, PLC",
+      "domains": [
+       "casumo.es"
+      ]
+     },
+     {
+      "brand": "codere.es",
+      "licenseHolder": "CODERE ONLINE, SAU",
+      "domains": [
+       "codere.es"
+      ]
+     },
+     {
+      "brand": "codereapuestas.es",
+      "licenseHolder": "CODERE ONLINE, SAU",
+      "domains": [
+       "codereapuestas.es"
+      ]
+     },
+     {
+      "brand": "dafabet.es",
+      "licenseHolder": "EURASIA SOLUTIONS, PLC",
+      "domains": [
+       "dafabet.es"
+      ]
+     },
+     {
+      "brand": "daznbet.es",
+      "licenseHolder": "DZBT Deportes, S.A",
+      "domains": [
+       "daznbet.es"
+      ]
+     },
+     {
+      "brand": "ebingo.es",
+      "licenseHolder": "EBINGO ONLINE ESPAÑA, SA",
+      "domains": [
+       "ebingo.es"
+      ]
+     },
+     {
+      "brand": "efbet.es",
+      "licenseHolder": "EFBET, PLC",
+      "domains": [
+       "efbet.es"
+      ]
+     },
+     {
+      "brand": "emotivacasino.es",
+      "licenseHolder": "Emotiva On-Line, S.A.",
+      "domains": [
+       "emotivacasino.es"
+      ]
+     },
+     {
+      "brand": "enracha.es",
+      "licenseHolder": "RANK DIGITAL CEUTA,S.A",
+      "domains": [
+       "enracha.es"
+      ]
+     },
+     {
+      "brand": "eucasino.es",
+      "licenseHolder": "SKILL ON NET, SA",
+      "domains": [
+       "eucasino.es"
+      ]
+     },
+     {
+      "brand": "euroconcursos.es",
+      "licenseHolder": "EUROCONCURSOS, SA",
+      "domains": [
+       "euroconcursos.es"
+      ]
+     },
+     {
+      "brand": "eurojuego.es",
+      "licenseHolder": "EUROCONCURSOS, SA",
+      "domains": [
+       "eurojuego.es"
+      ]
+     },
+     {
+      "brand": "eurojuegostar.es",
+      "licenseHolder": "EUROCONCURSOS, SA",
+      "domains": [
+       "eurojuegostar.es"
+      ]
+     },
+     {
+      "brand": "fuegocasino.es",
+      "licenseHolder": "8PE ESPAÑA, PLC",
+      "domains": [
+       "fuegocasino.es"
+      ]
+     },
+     {
+      "brand": "geckoplay.es",
+      "licenseHolder": "SKILL ON NET, SA",
+      "domains": [
+       "geckoplay.es"
+      ]
+     },
+     {
+      "brand": "gentingcasino.es",
+      "licenseHolder": "SKILL ON NET, SA",
+      "domains": [
+       "gentingcasino.es"
+      ]
+     },
+     {
+      "brand": "goldenbull.es",
+      "licenseHolder": "PAF GAMES,SA",
+      "domains": [
+       "goldenbull.es"
+      ]
+     },
+     {
+      "brand": "goldenpark.es",
+      "licenseHolder": "GOLDEN PARK GAMES, SA",
+      "domains": [
+       "goldenpark.es"
+      ]
+     },
+     {
+      "brand": "granmadrid.es",
+      "licenseHolder": "ESGAMING, SAU",
+      "domains": [
+       "granmadrid.es"
+      ]
+     },
+     {
+      "brand": "gratogana.es",
+      "licenseHolder": "PLAYES, PLC",
+      "domains": [
+       "gratogana.es"
+      ]
+     },
+     {
+      "brand": "ice36.es",
+      "licenseHolder": "SKILL ON NET, SA",
+      "domains": [
+       "ice36.es"
+      ]
+     },
+     {
+      "brand": "interwetten.es",
+      "licenseHolder": "INTERWETTEN ESPAÑA, PLC",
+      "domains": [
+       "interwetten.es"
+      ]
+     },
+     {
+      "brand": "jokerbet.es",
+      "licenseHolder": "VERAMATIC ONLINE, SA",
+      "domains": [
+       "jokerbet.es"
+      ]
+     },
+     {
+      "brand": "juegging.es",
+      "licenseHolder": "BANEGRAS UNIÓN, SA",
+      "domains": [
+       "juegging.es"
+      ]
+     },
+     {
+      "brand": "leovegas.es",
+      "licenseHolder": "LEOESP, S.A.",
+      "domains": [
+       "leovegas.es"
+      ]
+     },
+     {
+      "brand": "lordping.es",
+      "licenseHolder": "SKILL ON NET, SA",
+      "domains": [
+       "lordping.es"
+      ]
+     },
+     {
+      "brand": "lowen-play.es",
+      "licenseHolder": "LP ES, PLC",
+      "domains": [
+       "lowen-play.es"
+      ]
+     },
+     {
+      "brand": "luckia.es",
+      "licenseHolder": "LUCKIA GAMES, SA",
+      "domains": [
+       "luckia.es"
+      ]
+     },
+     {
+      "brand": "luckycasino.es",
+      "licenseHolder": "FPOOCL,S.A.",
+      "domains": [
+       "luckycasino.es"
+      ]
+     },
+     {
+      "brand": "luckyvegas.es",
+      "licenseHolder": "SKILL ON NET, SA",
+      "domains": [
+       "luckyvegas.es"
+      ]
+     },
+     {
+      "brand": "lunacasino.es",
+      "licenseHolder": "SKILL ON NET, SA",
+      "domains": [
+       "lunacasino.es"
+      ]
+     },
+     {
+      "brand": "m.apuestas.codere.es",
+      "licenseHolder": "CODERE ONLINE, SAU",
+      "domains": [
+       "m.apuestas.codere.es"
+      ]
+     },
+     {
+      "brand": "marathonbet.es",
+      "licenseHolder": "MARATHONBET SPAIN, SA",
+      "domains": [
+       "marathonbet.es"
+      ]
+     },
+     {
+      "brand": "maratonbet.es",
+      "licenseHolder": "MARATHONBET SPAIN, SA",
+      "domains": [
+       "maratonbet.es"
+      ]
+     },
+     {
+      "brand": "marcaapuestas.es",
+      "licenseHolder": "Casino Marbella Interactive, S.A",
+      "domains": [
+       "marcaapuestas.es"
+      ]
+     },
+     {
+      "brand": "marcacasino.es",
+      "licenseHolder": "Casino Marbella Interactive, S.A",
+      "domains": [
+       "marcacasino.es"
+      ]
+     },
+     {
+      "brand": "mbet.es",
+      "licenseHolder": "MARATHONBET SPAIN, SA",
+      "domains": [
+       "mbet.es"
+      ]
+     },
+     {
+      "brand": "megacasinos.es",
+      "licenseHolder": "SKILL ON NET, SA",
+      "domains": [
+       "megacasinos.es"
+      ]
+     },
+     {
+      "brand": "metalcasino.es",
+      "licenseHolder": "SKILL ON NET, SA",
+      "domains": [
+       "metalcasino.es"
+      ]
+     },
+     {
+      "brand": "mobile.bet365.es",
+      "licenseHolder": "HILLSIDE ESPAÑA LEISURE, SA",
+      "domains": [
+       "mobile.bet365.es"
+      ]
+     },
+     {
+      "brand": "mondobets.es",
+      "licenseHolder": "MONDOBETS, SA",
+      "domains": [
+       "mondobets.es"
+      ]
+     },
+     {
+      "brand": "monopolycasino.es",
+      "licenseHolder": "GAMES SPAIN OPERATIONS, S.A.",
+      "domains": [
+       "monopolycasino.es"
+      ]
+     },
+     {
+      "brand": "mrgreen.es",
+      "licenseHolder": "MRG SPAIN, PLC",
+      "domains": [
+       "mrgreen.es"
+      ]
+     },
+     {
+      "brand": "olybet.es",
+      "licenseHolder": "SUERTIA INTERACTIVA, SA",
+      "domains": [
+       "olybet.es"
+      ]
+     },
+     {
+      "brand": "onecasino.es",
+      "licenseHolder": "FPOOCL,S.A.",
+      "domains": [
+       "onecasino.es"
+      ]
+     },
+     {
+      "brand": "oneplaycasino.es",
+      "licenseHolder": "GAMES ONLINE 7J, SA",
+      "domains": [
+       "oneplaycasino.es"
+      ]
+     },
+     {
+      "brand": "paf.es",
+      "licenseHolder": "PAF GAMES,SA",
+      "domains": [
+       "paf.es"
+      ]
+     },
+     {
+      "brand": "partycasino.es",
+      "licenseHolder": "ELECTRAWORKS CEUTA ,SA",
+      "domains": [
+       "partycasino.es"
+      ]
+     },
+     {
+      "brand": "partypoker.es",
+      "licenseHolder": "ELECTRAWORKS CEUTA ,SA",
+      "domains": [
+       "partypoker.es"
+      ]
+     },
+     {
+      "brand": "paston.es",
+      "licenseHolder": "EUROAPUESTAS ONLINE, SAU",
+      "domains": [
+       "paston.es"
+      ]
+     },
+     {
+      "brand": "pinatacasino.es",
+      "licenseHolder": "PAF GAMES,SA",
+      "domains": [
+       "pinatacasino.es"
+      ]
+     },
+     {
+      "brand": "platincasino.es",
+      "licenseHolder": "8PE ESPAÑA, PLC",
+      "domains": [
+       "platincasino.es"
+      ]
+     },
+     {
+      "brand": "playjango.es",
+      "licenseHolder": "SKILL ON NET, SA",
+      "domains": [
+       "playjango.es"
+      ]
+     },
+     {
+      "brand": "playkasino.es",
+      "licenseHolder": "SKILL ON NET, SA",
+      "domains": [
+       "playkasino.es"
+      ]
+     },
+     {
+      "brand": "playtoro.es",
+      "licenseHolder": "SKILL ON NET, SA",
+      "domains": [
+       "playtoro.es"
+      ]
+     },
+     {
+      "brand": "playuzu.es",
+      "licenseHolder": "SKILL ON NET, SA",
+      "domains": [
+       "playuzu.es"
+      ]
+     },
+     {
+      "brand": "poker.bet365.es",
+      "licenseHolder": "HILLSIDE ESPAÑA LEISURE, SA",
+      "domains": [
+       "poker.bet365.es"
+      ]
+     },
+     {
+      "brand": "pokerstars.es",
+      "licenseHolder": "TSG INTERACTIVE SPAIN SA",
+      "domains": [
+       "pokerstars.es"
+      ]
+     },
+     {
+      "brand": "pokerstarscasino.es",
+      "licenseHolder": "TSG INTERACTIVE SPAIN SA",
+      "domains": [
+       "pokerstarscasino.es"
+      ]
+     },
+     {
+      "brand": "pokerstarsmobile.es",
+      "licenseHolder": "TSG INTERACTIVE SPAIN SA",
+      "domains": [
+       "pokerstarsmobile.es"
+      ]
+     },
+     {
+      "brand": "pokerstarssports.es",
+      "licenseHolder": "TSG INTERACTIVE SPAIN SA",
+      "domains": [
+       "pokerstarssports.es"
+      ]
+     },
+     {
+      "brand": "primecasino.es",
+      "licenseHolder": "SKILL ON NET, SA",
+      "domains": [
+       "primecasino.es"
+      ]
+     },
+     {
+      "brand": "regencycasino.es",
+      "licenseHolder": "SKILL ON NET, SA",
+      "domains": [
+       "regencycasino.es"
+      ]
+     },
+     {
+      "brand": "retabet.es",
+      "licenseHolder": "EKASA APUESTAS ONLINE, SA",
+      "domains": [
+       "retabet.es"
+      ]
+     },
+     {
+      "brand": "royale500.es",
+      "licenseHolder": "SKILL ON NET, SA",
+      "domains": [
+       "royale500.es"
+      ]
+     },
+     {
+      "brand": "slingocasino.es",
+      "licenseHolder": "SKILL ON NET, SA",
+      "domains": [
+       "slingocasino.es"
+      ]
+     },
+     {
+      "brand": "slots.bet365.es",
+      "licenseHolder": "HILLSIDE ESPAÑA LEISURE, SA",
+      "domains": [
+       "slots.bet365.es"
+      ]
+     },
+     {
+      "brand": "slotsmagic.es",
+      "licenseHolder": "SKILL ON NET, SA",
+      "domains": [
+       "slotsmagic.es"
+      ]
+     },
+     {
+      "brand": "slotstars.es",
+      "licenseHolder": "SKILL ON NET, SA",
+      "domains": [
+       "slotstars.es"
+      ]
+     },
+     {
+      "brand": "solcasino.es",
+      "licenseHolder": "ESTRELLA SOL INTERACTIVE S.A.",
+      "domains": [
+       "solcasino.es"
+      ]
+     },
+     {
+      "brand": "speedybet.es",
+      "licenseHolder": "PAF GAMES,SA",
+      "domains": [
+       "speedybet.es"
+      ]
+     },
+     {
+      "brand": "spingenie.es",
+      "licenseHolder": "SKILL ON NET, SA",
+      "domains": [
+       "spingenie.es"
+      ]
+     },
+     {
+      "brand": "sportium.es",
+      "licenseHolder": "SPORTIUM APUESTAS DIGITAL, SA",
+      "domains": [
+       "sportium.es"
+      ]
+     },
+     {
+      "brand": "swiftcasino.es",
+      "licenseHolder": "SKILL ON NET, SA",
+      "domains": [
+       "swiftcasino.es"
+      ]
+     },
+     {
+      "brand": "tikitakaplay.es",
+      "licenseHolder": "LP ES, PLC",
+      "domains": [
+       "tikitakaplay.es"
+      ]
+     },
+     {
+      "brand": "todoslots.es",
+      "licenseHolder": "GOLDEN PARK GAMES, SA",
+      "domains": [
+       "todoslots.es"
+      ]
+     },
+     {
+      "brand": "tombola.es",
+      "licenseHolder": "TOMBOLA CEUTA SA",
+      "domains": [
+       "tombola.es"
+      ]
+     },
+     {
+      "brand": "tonybet.es",
+      "licenseHolder": "EUROBOX, SA",
+      "domains": [
+       "tonybet.es"
+      ]
+     },
+     {
+      "brand": "tuzoca.es",
+      "licenseHolder": "PLAYES, PLC",
+      "domains": [
+       "tuzoca.es"
+      ]
+     },
+     {
+      "brand": "versus.es",
+      "licenseHolder": "VERSUS ONLINE, SA",
+      "domains": [
+       "versus.es"
+      ]
+     },
+     {
+      "brand": "videoslots.es",
+      "licenseHolder": "VIDEOSLOTS CASINO, PLC",
+      "domains": [
+       "videoslots.es"
+      ]
+     },
+     {
+      "brand": "williamhill.es",
+      "licenseHolder": "WHG Ceuta, S.A.",
+      "domains": [
+       "williamhill.es"
+      ]
+     },
+     {
+      "brand": "winamax.es",
+      "licenseHolder": "WINAMAX, SA",
+      "domains": [
+       "winamax.es"
+      ]
+     },
+     {
+      "brand": "yaasscasino.es",
+      "licenseHolder": "RFRANCO DIGITAL, SAU",
+      "domains": [
+       "yaasscasino.es"
+      ]
+     },
+     {
+      "brand": "yobingo.es",
+      "licenseHolder": "RANK DIGITAL CEUTA,S.A",
+      "domains": [
+       "yobingo.es"
+      ]
+     },
+     {
+      "brand": "yocasino.es",
+      "licenseHolder": "RANK DIGITAL CEUTA,S.A",
+      "domains": [
+       "yocasino.es"
+      ]
+     },
+     {
+      "brand": "yosports.es",
+      "licenseHolder": "RANK DIGITAL CEUTA,S.A",
+      "domains": [
+       "yosports.es"
+      ]
+     },
+     {
+      "brand": "zebet.es",
+      "licenseHolder": "ZEBETTING Y GAMING ESPAÑA, SA",
+      "domains": [
+       "zebet.es"
+      ]
+     },
+     {
+      "brand": "zeturf.es",
+      "licenseHolder": "ZEBETTING Y GAMING ESPAÑA, SA",
+      "domains": [
+       "zeturf.es"
+      ]
+     }
+    ],
+    "sourceUrl": "https://www.ordenacionjuego.es/en/operadores-juego/operadores-licencia/operadores",
+    "asOf": "2026-10-02",
+    "note": "The DGOJ's register of licensed operators lists each company and the domains it is licensed to run. The register does not say which licences (betting, casino, poker, bingo) sit behind each domain, so the operators are shown in one list rather than guessed into products."
+   },
+   "why": "Spain's Gambling Act 13/2011 created a national licensing regime for online gambling, run by the DGOJ under the Ministry of Consumer Affairs. General licences cover betting, contests and 'other games' (casino, poker, bingo); a .es domain is a condition of the licence."
+  },
+  "FR": {
+   "regulator": "Autorité nationale des jeux (ANJ)",
+   "sportsbooks": {
+    "operators": [
+     {
+      "brand": "bet365.fr",
+      "licenseHolder": "HILLSIDE (New Media Malta) PLC",
+      "domains": [
+       "bet365.fr"
+      ]
+     },
+     {
+      "brand": "betclic.fr",
+      "licenseHolder": "Betclic Enterprises Limited",
+      "domains": [
+       "betclic.fr"
+      ]
+     },
+     {
+      "brand": "betsson.fr",
+      "licenseHolder": "BETSSON FRANCE SA",
+      "domains": [
+       "betsson.fr"
+      ]
+     },
+     {
+      "brand": "betstars.fr",
+      "licenseHolder": "Reel Malta Limited",
+      "domains": [
+       "betstars.fr"
+      ]
+     },
+     {
+      "brand": "bwin.fr",
+      "licenseHolder": "B.E.S. SAS",
+      "domains": [
+       "bwin.fr"
+      ]
+     },
+     {
+      "brand": "circusbet.fr",
+      "licenseHolder": "BCFR2",
+      "domains": [
+       "circusbet.fr"
+      ]
+     },
+     {
+      "brand": "daznbet.fr",
+      "licenseHolder": "BCFR4",
+      "domains": [
+       "daznbet.fr"
+      ]
+     },
+     {
+      "brand": "feelingbet.fr",
+      "licenseHolder": "Feeling Publishing",
+      "domains": [
+       "feelingbet.fr"
+      ]
+     },
+     {
+      "brand": "genybet.fr",
+      "licenseHolder": "GENYBET",
+      "domains": [
+       "genybet.fr"
+      ]
+     },
+     {
+      "brand": "jeu.fr",
+      "licenseHolder": "La Différenciation Evidente",
+      "domains": [
+       "jeu.fr"
+      ]
+     },
+     {
+      "brand": "netbet.fr",
+      "licenseHolder": "Netbet FR SAS",
+      "domains": [
+       "netbet.fr"
+      ]
+     },
+     {
+      "brand": "netbetsport.fr",
+      "licenseHolder": "Netbet FR SAS",
+      "domains": [
+       "netbetsport.fr"
+      ]
+     },
+     {
+      "brand": "olybet.fr",
+      "licenseHolder": "FP Opérateur",
+      "domains": [
+       "olybet.fr"
+      ]
+     },
+     {
+      "brand": "partypoker.fr",
+      "licenseHolder": "B.E.S. SAS",
+      "domains": [
+       "partypoker.fr"
+      ]
+     },
+     {
+      "brand": "pmu.fr",
+      "licenseHolder": "Pari Mutuel Urbain",
+      "domains": [
+       "pmu.fr"
+      ]
+     },
+     {
+      "brand": "pokerstars.fr",
+      "licenseHolder": "Reel Malta Limited",
+      "domains": [
+       "pokerstars.fr"
+      ]
+     },
+     {
+      "brand": "pokerstarsmobile.fr",
+      "licenseHolder": "Reel Malta Limited",
+      "domains": [
+       "pokerstarsmobile.fr"
+      ]
+     },
+     {
+      "brand": "pokerstarssports.fr",
+      "licenseHolder": "Reel Malta Limited",
+      "domains": [
+       "pokerstarssports.fr"
+      ]
+     },
+     {
+      "brand": "unibet.fr",
+      "licenseHolder": "Fdj Online Betting and Gaming France",
+      "domains": [
+       "unibet.fr"
+      ]
+     },
+     {
+      "brand": "vbet.fr",
+      "licenseHolder": "VBET France",
+      "domains": [
+       "vbet.fr"
+      ]
+     },
+     {
+      "brand": "winamax.fr",
+      "licenseHolder": "Winamax",
+      "domains": [
+       "winamax.fr"
+      ]
+     },
+     {
+      "brand": "zeturf.fr",
+      "licenseHolder": "Fdj Online Betting and Gaming France",
+      "domains": [
+       "zeturf.fr"
+      ]
+     }
+    ],
+    "sourceUrl": "https://anj.fr/offre-de-jeu-et-marche/operateurs-agrees",
+    "asOf": "2026-10-02",
+    "note": "ANJ-approved operators whose categories include 'Paris sportifs' (sports betting), one row per approved .fr site. Horse-race betting and poker ('Jeux de cercle') are licensed on the same page; online casino games are not licensed in France at all."
+   },
+   "casinos": {
+    "operators": [
+     {
+      "brand": "bet365.fr",
+      "licenseHolder": "HILLSIDE (New Media Malta) PLC",
+      "domains": [
+       "bet365.fr"
+      ]
+     },
+     {
+      "brand": "betclic.fr",
+      "licenseHolder": "Betclic Enterprises Limited",
+      "domains": [
+       "betclic.fr"
+      ]
+     },
+     {
+      "brand": "betstars.fr",
+      "licenseHolder": "Reel Malta Limited",
+      "domains": [
+       "betstars.fr"
+      ]
+     },
+     {
+      "brand": "bwin.fr",
+      "licenseHolder": "B.E.S. SAS",
+      "domains": [
+       "bwin.fr"
+      ]
+     },
+     {
+      "brand": "partypoker.fr",
+      "licenseHolder": "B.E.S. SAS",
+      "domains": [
+       "partypoker.fr"
+      ]
+     },
+     {
+      "brand": "pmu.fr",
+      "licenseHolder": "Pari Mutuel Urbain",
+      "domains": [
+       "pmu.fr"
+      ]
+     },
+     {
+      "brand": "pokerstars.fr",
+      "licenseHolder": "Reel Malta Limited",
+      "domains": [
+       "pokerstars.fr"
+      ]
+     },
+     {
+      "brand": "pokerstarsmobile.fr",
+      "licenseHolder": "Reel Malta Limited",
+      "domains": [
+       "pokerstarsmobile.fr"
+      ]
+     },
+     {
+      "brand": "pokerstarssports.fr",
+      "licenseHolder": "Reel Malta Limited",
+      "domains": [
+       "pokerstarssports.fr"
+      ]
+     },
+     {
+      "brand": "unibet.fr",
+      "licenseHolder": "Fdj Online Betting and Gaming France",
+      "domains": [
+       "unibet.fr"
+      ]
+     },
+     {
+      "brand": "winamax.fr",
+      "licenseHolder": "Winamax",
+      "domains": [
+       "winamax.fr"
+      ]
+     },
+     {
+      "brand": "zeturf.fr",
+      "licenseHolder": "Fdj Online Betting and Gaming France",
+      "domains": [
+       "zeturf.fr"
+      ]
+     }
+    ],
+    "sourceUrl": "https://anj.fr/offre-de-jeu-et-marche/operateurs-agrees",
+    "asOf": "2026-10-02",
+    "note": "France licenses no online casino. These are the ANJ's approved 'Jeux de cercle' (online poker) sites, listed here because poker is the only online 'game of chance' the ANJ approves."
+   },
+   "why": "France's 2010 online gambling law opened sports betting, horse-race betting and poker to licensed operators under what is now the ANJ; online casino games remain prohibited and the ANJ blocks unlicensed sites."
+  },
+  "PT": {
+   "regulator": "Serviço de Regulação e Inspeção de Jogos (SRIJ)",
+   "casinos": {
+    "operators": [
+     {
+      "brand": "888",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Bacanaplay",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Betano",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Betclic",
+      "licenseHolder": "BEM OPERATIONS LIMITED",
+      "domains": [
+       "betclic.pt"
+      ]
+     },
+     {
+      "brand": "Bwin",
+      "licenseHolder": "GOBET-ENTRETENIMENTO, S.A.",
+      "domains": [
+       "bwin.pt"
+      ]
+     },
+     {
+      "brand": "Casino Portugal",
+      "licenseHolder": "SFP ONLINE S.A.",
+      "domains": [
+       "casinoportugal.pt"
+      ]
+     },
+     {
+      "brand": "Casino Solverde",
+      "licenseHolder": "SOLVERDE - SOCIEDADE DE INVESTIMENTOS TURÍSTICOS DA COSTA VERDE, S.A.",
+      "domains": [
+       "solverde.pt"
+      ]
+     },
+     {
+      "brand": "ESCOnline",
+      "licenseHolder": "ESTORIL SOL DIGITAL, ONLINE GAMING PRODUCTS AND SERVICES, S.A.",
+      "domains": [
+       "estorilsolcasinos.pt"
+      ]
+     },
+     {
+      "brand": "GoldenPark",
+      "licenseHolder": "Azartia Games, S.A."
+     },
+     {
+      "brand": "LeBull",
+      "licenseHolder": "SOUTHERN STINGRAY, S.A."
+     },
+     {
+      "brand": "Luckia",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Nossa Aposta",
+      "licenseHolder": "A NOSSA APOSTA - JOGOS E APOSTAS ONLINE, S.A."
+     },
+     {
+      "brand": "Placard.pt",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Pokerstars",
+      "licenseHolder": "REEL EUROPE LIMITED",
+      "domains": [
+       "pokerstars.pt"
+      ]
+     },
+     {
+      "brand": "Retabet",
+      "licenseHolder": "Retabet Portugal, S.A."
+     },
+     {
+      "brand": "Vincino",
+      "licenseHolder": "Play Jogo Limited"
+     },
+     {
+      "brand": "YOBINGO",
+      "licenseHolder": "BINGOSOFT P.L.C."
+     }
+    ],
+    "sourceUrl": "https://www.srij.turismodeportugal.pt/pt/jogos-e-apostas-online/entidades-licenciadas",
+    "asOf": "2026-10-02",
+    "note": "SRIJ-licensed brands whose licences cover games of chance (slots, roulette, blackjack, French bank), with the operating entity the SRIJ names."
+   },
+   "sportsbooks": {
+    "operators": [
+     {
+      "brand": "Betano",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Betclic",
+      "licenseHolder": "BEM OPERATIONS LIMITED",
+      "domains": [
+       "betclic.pt"
+      ]
+     },
+     {
+      "brand": "Bwin",
+      "licenseHolder": "GOBET-ENTRETENIMENTO, S.A.",
+      "domains": [
+       "bwin.pt"
+      ]
+     },
+     {
+      "brand": "Casino Portugal",
+      "licenseHolder": "SFP ONLINE S.A.",
+      "domains": [
+       "casinoportugal.pt"
+      ]
+     },
+     {
+      "brand": "Casino Solverde",
+      "licenseHolder": "SOLVERDE - SOCIEDADE DE INVESTIMENTOS TURÍSTICOS DA COSTA VERDE, S.A.",
+      "domains": [
+       "solverde.pt"
+      ]
+     },
+     {
+      "brand": "ESCOnline",
+      "licenseHolder": "ESTORIL SOL DIGITAL, ONLINE GAMING PRODUCTS AND SERVICES, S.A.",
+      "domains": [
+       "estorilsolcasinos.pt"
+      ]
+     },
+     {
+      "brand": "GoldenPark",
+      "licenseHolder": "Azartia Games, S.A."
+     },
+     {
+      "brand": "LeBull",
+      "licenseHolder": "SOUTHERN STINGRAY, S.A."
+     },
+     {
+      "brand": "Luckia",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Nossa Aposta",
+      "licenseHolder": "A NOSSA APOSTA - JOGOS E APOSTAS ONLINE, S.A."
+     },
+     {
+      "brand": "Placard.pt",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Retabet",
+      "licenseHolder": "Retabet Portugal, S.A."
+     }
+    ],
+    "sourceUrl": "https://www.srij.turismodeportugal.pt/pt/jogos-e-apostas-online/entidades-licenciadas",
+    "asOf": "2026-10-02",
+    "note": "SRIJ-licensed brands whose licences cover fixed-odds sports betting."
+   },
+   "why": "Portugal's Decree-Law 66/2015 created the online gambling regime run by the SRIJ, part of Turismo de Portugal. Licences are granted per game type, which is why one brand can appear under both lists."
+  },
+  "IT": {
+   "regulator": "Agenzia delle Dogane e dei Monopoli (ADM)",
+   "operators": {
+    "operators": [
+     {
+      "brand": "admiralbet.it",
+      "licenseHolder": "Admiral Bet S.r.l.",
+      "domains": [
+       "admiralbet.it"
+      ],
+      "concession": "16048"
+     },
+     {
+      "brand": "bet365.it",
+      "licenseHolder": "Hillside (New Media Malta) Plc",
+      "domains": [
+       "bet365.it"
+      ],
+      "concession": "16030"
+     },
+     {
+      "brand": "betfair.it",
+      "licenseHolder": "Betfair Italia S.r.l.",
+      "domains": [
+       "betfair.it"
+      ],
+      "concession": "16028"
+     },
+     {
+      "brand": "betflag.it",
+      "licenseHolder": "Betflag S.p.a.",
+      "domains": [
+       "betflag.it"
+      ],
+      "concession": "16008"
+     },
+     {
+      "brand": "betitaly.it",
+      "licenseHolder": "Gi.lu.pi. S.r.l.",
+      "domains": [
+       "betitaly.it"
+      ],
+      "concession": "16040"
+     },
+     {
+      "brand": "betpassion.it",
+      "licenseHolder": "Syngame S.p.a.",
+      "domains": [
+       "betpassion.it"
+      ],
+      "concession": "16024"
+     },
+     {
+      "brand": "betpoint.it",
+      "licenseHolder": "Betpoint S.r.l.",
+      "domains": [
+       "betpoint.it"
+      ],
+      "concession": "16034"
+     },
+     {
+      "brand": "betsson.it",
+      "licenseHolder": "Azzurri Limited",
+      "domains": [
+       "betsson.it"
+      ],
+      "concession": "16027"
+     },
+     {
+      "brand": "betwin360.it",
+      "licenseHolder": "E-play 24 Ita Limited",
+      "domains": [
+       "betwin360.it"
+      ],
+      "concession": "16006"
+     },
+     {
+      "brand": "bgame.it",
+      "licenseHolder": "Bgame S.p.a. Societa' Benefit",
+      "domains": [
+       "bgame.it"
+      ],
+      "concession": "16025"
+     },
+     {
+      "brand": "bwin.it",
+      "licenseHolder": "Eurobet Italia S.r.l. Unipersonale",
+      "domains": [
+       "bwin.it"
+      ],
+      "concession": "16013"
+     },
+     {
+      "brand": "casinoveneziaonline.it",
+      "licenseHolder": "Casino' Di Venezia Gioco Spa",
+      "domains": [
+       "casinoveneziaonline.it"
+      ],
+      "concession": "16022"
+     },
+     {
+      "brand": "codere.it",
+      "licenseHolder": "Codere.it S.r.l.",
+      "domains": [
+       "codere.it"
+      ],
+      "concession": "16018"
+     },
+     {
+      "brand": "daznbet.it",
+      "licenseHolder": "Scommettendo S.r.l.",
+      "domains": [
+       "daznbet.it"
+      ],
+      "concession": "16041"
+     },
+     {
+      "brand": "domusbet.it",
+      "licenseHolder": "Domus Bet S.r.l.",
+      "domains": [
+       "domusbet.it"
+      ],
+      "concession": "16002"
+     },
+     {
+      "brand": "elabet.it",
+      "licenseHolder": "Italix Gaming Limited",
+      "domains": [
+       "elabet.it"
+      ],
+      "concession": "16036"
+     },
+     {
+      "brand": "eplay24.it",
+      "licenseHolder": "E-play 24 Ita Limited",
+      "domains": [
+       "eplay24.it"
+      ],
+      "concession": "16004"
+     },
+     {
+      "brand": "eurobet.it",
+      "licenseHolder": "Eurobet Italia S.r.l. Unipersonale",
+      "domains": [
+       "eurobet.it"
+      ],
+      "concession": "16012"
+     },
+     {
+      "brand": "fastbet.it",
+      "licenseHolder": "Replatz S.r.l.",
+      "domains": [
+       "fastbet.it"
+      ],
+      "concession": "16016"
+     },
+     {
+      "brand": "online.casinosanremo.it",
+      "licenseHolder": "Casino' Di Sanremo Spa",
+      "domains": [
+       "online.casinosanremo.it"
+      ],
+      "concession": "16029"
+     }
+    ],
+    "sourceUrl": "https://www.adm.gov.it/portale/monopoli/giochi/gioco_distanza/gioco_dist_concessionari",
+    "asOf": "2026-10-02",
+    "note": "ADM's list of concession holders authorised for remote gaming ('gioco a distanza'), with the concession code and the internet site each one is authorised to run. The list does not split casino from betting — one concession covers remote gaming as a whole."
+   },
+   "why": "Italy licenses remote gaming through concessions granted by the ADM (formerly AAMS); the 2024 reorganisation re-tendered the online concessions. Only sites on the ADM's list may offer online gambling to Italian players."
+  },
+  "CA-ON": {
+   "regulator": "iGaming Ontario (with the AGCO as regulator)",
+   "casinos": {
+    "operators": [
+     {
+      "brand": "888 Casino",
+      "licenseHolder": "VHL Ontario Limited",
+      "domains": [
+       "888casino.ca"
+      ]
+     },
+     {
+      "brand": "888 Poker",
+      "licenseHolder": "VHL Ontario Limited",
+      "domains": [
+       "888poker.ca"
+      ]
+     },
+     {
+      "brand": "Amazon Slots",
+      "licenseHolder": "The Six Gaming Limited",
+      "domains": [
+       "amazonslots.ca"
+      ]
+     },
+     {
+      "brand": "Bally Bet",
+      "licenseHolder": "Bally’s Canada Inc.",
+      "domains": [
+       "play.ballybet.ca"
+      ]
+     },
+     {
+      "brand": "Bet365",
+      "licenseHolder": "Hillside (International Sports) ENC",
+      "domains": [
+       "on.bet365.ca?btsffd=1&igo=1"
+      ]
+     },
+     {
+      "brand": "Bet99",
+      "licenseHolder": "1000007698 Ontario Ltd (Bet 99)",
+      "domains": [
+       "on.bet99.ca"
+      ]
+     },
+     {
+      "brand": "Betano",
+      "licenseHolder": "Kaizen Gaming Canada Inc.",
+      "domains": [
+       "betano.ca"
+      ]
+     },
+     {
+      "brand": "Betinia",
+      "licenseHolder": "Canadix Limited",
+      "domains": [
+       "on.betinia.com"
+      ]
+     },
+     {
+      "brand": "BetMGM Casino",
+      "licenseHolder": "BetMGM Canada Inc.",
+      "domains": [
+       "casino.on.betmgm.ca"
+      ]
+     },
+     {
+      "brand": "BetMGM Poker",
+      "licenseHolder": "BetMGM Canada Inc.",
+      "domains": [
+       "poker.on.betmgm.ca"
+      ]
+     },
+     {
+      "brand": "BetNova",
+      "licenseHolder": "Goldrush Canada Limited",
+      "domains": [
+       "betnova.ca"
+      ]
+     },
+     {
+      "brand": "BetRivers",
+      "licenseHolder": "Rush Street Interactive Canada, ULC",
+      "domains": [
+       "betrivers.ca"
+      ]
+     },
+     {
+      "brand": "Betty",
+      "licenseHolder": "Betty Gaming CA, Ltd",
+      "domains": [
+       "betty.ca"
+      ]
+     },
+     {
+      "brand": "BetUnited",
+      "licenseHolder": "United Interactive Ltd.",
+      "domains": [
+       "betuntd.ca"
+      ]
+     },
+     {
+      "brand": "BetVictor",
+      "licenseHolder": "BV (Canada) Limited",
+      "domains": [
+       "betvictor.com"
+      ]
+     },
+     {
+      "brand": "Betway",
+      "licenseHolder": "Cadway Limited",
+      "domains": [
+       "betway.ca"
+      ]
+     },
+     {
+      "brand": "Bwin",
+      "licenseHolder": "ElectraWorks Maple Limited",
+      "domains": [
+       "on.bwin.ca"
+      ]
+     },
+     {
+      "brand": "Caesars",
+      "licenseHolder": "American Wagering Inc",
+      "domains": [
+       "caesarspalaceonline.com"
+      ]
+     },
+     {
+      "brand": "Captain Cooks Casino",
+      "licenseHolder": "Apollo Entertainment Ltd",
+      "domains": [
+       "ontario.captaincooks.casino"
+      ]
+     },
+     {
+      "brand": "Casino Classic",
+      "licenseHolder": "Apollo Entertainment Ltd",
+      "domains": [
+       "ontario.casinoclassic.casino"
+      ]
+     },
+     {
+      "brand": "Casino Days",
+      "licenseHolder": "Golden Nebula Limited",
+      "domains": [
+       "casinodays.com"
+      ]
+     },
+     {
+      "brand": "Casino Time",
+      "licenseHolder": "CasinoTime Inc.",
+      "domains": [
+       "casinotime.ca"
+      ]
+     },
+     {
+      "brand": "Comeon!",
+      "licenseHolder": "Bunchberry Limited",
+      "domains": [
+       "comeon.com"
+      ]
+     },
+     {
+      "brand": "DAZN Bet",
+      "licenseHolder": "DZBT Marketing Limited",
+      "domains": [
+       "on.daznbet.ca"
+      ]
+     },
+     {
+      "brand": "Delta Casino",
+      "licenseHolder": "Delta iGaming Inc.",
+      "domains": [
+       "deltacasino.com"
+      ]
+     },
+     {
+      "brand": "DraftKings Casino",
+      "licenseHolder": "Crown DK CAN Ltd.",
+      "domains": [
+       "casino.draftkings.com"
+      ]
+     },
+     {
+      "brand": "Fanatics Casino",
+      "licenseHolder": "FBG Enterprises Canada, Inc.",
+      "domains": [
+       "fanaticscasino.ca"
+      ]
+     },
+     {
+      "brand": "FanDuel Casino",
+      "licenseHolder": "FanDuel Canada ULC",
+      "domains": [
+       "casino.fanduel.ca"
+      ]
+     },
+     {
+      "brand": "FanDuel Poker",
+      "licenseHolder": "FanDuel Canada ULC",
+      "domains": [
+       "poker.fanduel.ca"
+      ]
+     },
+     {
+      "brand": "Fever Slots",
+      "licenseHolder": "The Six Gaming Limited",
+      "domains": [
+       "feverslots.ca"
+      ]
+     },
+     {
+      "brand": "FireVegas",
+      "licenseHolder": "TWHG Inc.",
+      "domains": [
+       "firevegas.com?pureontario=1"
+      ]
+     },
+     {
+      "brand": "GGPoker",
+      "licenseHolder": "NSUS Limited",
+      "domains": [
+       "ggpoker.ca"
+      ]
+     },
+     {
+      "brand": "Golden Nugget Casino",
+      "licenseHolder": "Crown DK CAN Ltd.",
+      "domains": [
+       "goldennuggetcasino.com"
+      ]
+     },
+     {
+      "brand": "Golden Tiger",
+      "licenseHolder": "Apollo Entertainment Ltd",
+      "domains": [
+       "ontario.goldentiger.casino"
+      ]
+     },
+     {
+      "brand": "Grand Mondial",
+      "licenseHolder": "Apollo Entertainment Ltd",
+      "domains": [
+       "ontario.grandmondial.casino"
+      ]
+     },
+     {
+      "brand": "Hard Rock Bet",
+      "licenseHolder": "Hard Rock Digital (Canada) Limited",
+      "domains": [
+       "hardrockbet.ca"
+      ]
+     },
+     {
+      "brand": "High Flyer Casino",
+      "licenseHolder": "Ellipse Entertainment Limited",
+      "domains": [
+       "m.highflyercasino.com"
+      ]
+     },
+     {
+      "brand": "Hollywood Casino",
+      "licenseHolder": "Score Media and Gaming Inc.",
+      "domains": [
+       "hollywoodcasino.com"
+      ]
+     },
+     {
+      "brand": "Horseshoe Online Casino",
+      "licenseHolder": "American Wagering Inc",
+      "domains": [
+       "horseshoeonlinecasino.com"
+      ]
+     },
+     {
+      "brand": "Jackpot City",
+      "licenseHolder": "Cadtree Limited",
+      "domains": [
+       "jackpotcity.ca"
+      ]
+     },
+     {
+      "brand": "Knightslots",
+      "licenseHolder": "Skill On Net Ltd.",
+      "domains": [
+       "knightslots.ca"
+      ]
+     },
+     {
+      "brand": "LeoVegas",
+      "licenseHolder": "TigerGen Limited",
+      "domains": [
+       "leovegas.com"
+      ]
+     },
+     {
+      "brand": "Lucky Casino",
+      "licenseHolder": "LCKY Entertainment Limited",
+      "domains": [
+       "luckycasino.ca"
+      ]
+     },
+     {
+      "brand": "Lucky Days",
+      "licenseHolder": "L7 Entertainment Limited",
+      "domains": [
+       "luckydays.ca"
+      ]
+     },
+     {
+      "brand": "Luxury Casino",
+      "licenseHolder": "Apollo Entertainment Ltd",
+      "domains": [
+       "ontario.luxury.casino"
+      ]
+     },
+     {
+      "brand": "Maverick Games",
+      "licenseHolder": "Shelgeyr Ontario Ltd",
+      "domains": [
+       "maverickgames.com"
+      ]
+     },
+     {
+      "brand": "Miki",
+      "licenseHolder": "VL Canada Limited",
+      "domains": [
+       "on.miki.com"
+      ]
+     },
+     {
+      "brand": "Monopoly",
+      "licenseHolder": "Bally’s Canada Inc.",
+      "domains": [
+       "play.monopolycasino.ca"
+      ]
+     },
+     {
+      "brand": "Mr.Vegas",
+      "licenseHolder": "Videoslots Ltd.",
+      "domains": [
+       "mrvegas.ca"
+      ]
+     },
+     {
+      "brand": "Neo.bet",
+      "licenseHolder": "Reactive Betting Ltd.",
+      "domains": [
+       "on.neobet.ca"
+      ]
+     },
+     {
+      "brand": "NorthStar Bets",
+      "licenseHolder": "NorthStar Gaming (Ontario) Inc.",
+      "domains": [
+       "northstarbets.ca"
+      ]
+     },
+     {
+      "brand": "PartyCasino",
+      "licenseHolder": "ElectraWorks Maple Limited",
+      "domains": [
+       "on.partycasino.ca"
+      ]
+     },
+     {
+      "brand": "PartyPoker",
+      "licenseHolder": "ElectraWorks Maple Limited",
+      "domains": [
+       "on.partypoker.ca"
+      ]
+     },
+     {
+      "brand": "Pinnacle",
+      "licenseHolder": "Pinny (Ontario) Limited",
+      "domains": [
+       "pinnacle.ca"
+      ]
+     },
+     {
+      "brand": "Play Fallsview",
+      "licenseHolder": "MGE Digital Canada Inc.",
+      "domains": [
+       "play.playfallsview.com"
+      ]
+     },
+     {
+      "brand": "PlayOJO",
+      "licenseHolder": "Skill On Net Ltd.",
+      "domains": [
+       "playojo.ca"
+      ]
+     },
+     {
+      "brand": "PointsBet",
+      "licenseHolder": "Pointsbet Canada Operations 1 Inc.",
+      "domains": [
+       "on.pointsbet.ca"
+      ]
+     },
+     {
+      "brand": "Power Play",
+      "licenseHolder": "Trillium Ventures Limited (dba) PowerPlay",
+      "domains": [
+       "on.powerplay.com"
+      ]
+     },
+     {
+      "brand": "Royal Panda",
+      "licenseHolder": "TigerGen Limited",
+      "domains": [
+       "royalpanda.com"
+      ]
+     },
+     {
+      "brand": "Royal Vegas",
+      "licenseHolder": "Cadtree Limited",
+      "domains": [
+       "royalvegas.ca"
+      ]
+     },
+     {
+      "brand": "Ruby Fortune",
+      "licenseHolder": "Cadtree Limited",
+      "domains": [
+       "rubyfortune.ca"
+      ]
+     },
+     {
+      "brand": "SlotsMagic",
+      "licenseHolder": "Skill On Net Ltd.",
+      "domains": [
+       "slotsmagic.ca"
+      ]
+     },
+     {
+      "brand": "Spin Away",
+      "licenseHolder": "Jungle Media Ltd.",
+      "domains": [
+       "spinaway.ca"
+      ]
+     },
+     {
+      "brand": "Spin Casino",
+      "licenseHolder": "Cadtree Limited",
+      "domains": [
+       "spincasino.ca"
+      ]
+     },
+     {
+      "brand": "SpinGenie",
+      "licenseHolder": "Skill On Net Ltd.",
+      "domains": [
+       "spingenie.ca"
+      ]
+     },
+     {
+      "brand": "Sports Interaction",
+      "licenseHolder": "ElectraWorks Maple Limited",
+      "domains": [
+       "on.sportsinteraction.com"
+      ]
+     },
+     {
+      "brand": "Stardust Casino",
+      "licenseHolder": "Pala Interactive Canada, Inc.",
+      "domains": [
+       "on.stardustcasino.com"
+      ]
+     },
+     {
+      "brand": "Swiper",
+      "licenseHolder": "Canadix Limited",
+      "domains": [
+       "on.swiper.com"
+      ]
+     },
+     {
+      "brand": "TheScore Bet",
+      "licenseHolder": "Score Media and Gaming Inc.",
+      "domains": [
+       "thescore.bet"
+      ]
+     },
+     {
+      "brand": "TheScore Casino",
+      "licenseHolder": "Score Media and Gaming Inc.",
+      "domains": [
+       "thescore.casino"
+      ]
+     },
+     {
+      "brand": "Titan Play",
+      "licenseHolder": "Shark77 Limited",
+      "domains": [
+       "titanplay.ca"
+      ]
+     },
+     {
+      "brand": "TonyBet",
+      "licenseHolder": "Ligtip Limited",
+      "domains": [
+       "tonybet.ca"
+      ]
+     },
+     {
+      "brand": "ToonieBet",
+      "licenseHolder": "Canadix Limited",
+      "domains": [
+       "tooniebet.ca"
+      ]
+     },
+     {
+      "brand": "Toppz",
+      "licenseHolder": "TWHG Inc.",
+      "domains": [
+       "toppz.ca"
+      ]
+     },
+     {
+      "brand": "Videoslots",
+      "licenseHolder": "Videoslots Ltd.",
+      "domains": [
+       "videoslots.ca"
+      ]
+     },
+     {
+      "brand": "Wheel of Fortune",
+      "licenseHolder": "BetMGM Canada Inc.",
+      "domains": [
+       "casino.on.wheeloffortunecasino.com"
+      ]
+     },
+     {
+      "brand": "Yukon Gold Casino",
+      "licenseHolder": "Apollo Entertainment Ltd",
+      "domains": [
+       "ontario.yukongold.casino"
+      ]
+     },
+     {
+      "brand": "Zodiac Casino",
+      "licenseHolder": "Apollo Entertainment Ltd",
+      "domains": [
+       "ontario.zodiac.casino"
+      ]
+     }
+    ],
+    "sourceUrl": "https://igamingontario.ca/en/operator/operators",
+    "asOf": "2026-10-02",
+    "note": "Sites iGaming Ontario lists with Casino, Poker or Bingo among their offerings, under the registered operator each belongs to."
+   },
+   "sportsbooks": {
+    "operators": [
+     {
+      "brand": "888 Sport",
+      "licenseHolder": "VHL Ontario Limited",
+      "domains": [
+       "888sport.ca"
+      ]
+     },
+     {
+      "brand": "Bally Bet",
+      "licenseHolder": "Bally’s Canada Inc.",
+      "domains": [
+       "play.ballybet.ca"
+      ]
+     },
+     {
+      "brand": "Bet365",
+      "licenseHolder": "Hillside (International Sports) ENC",
+      "domains": [
+       "on.bet365.ca?btsffd=1&igo=1"
+      ]
+     },
+     {
+      "brand": "Bet99",
+      "licenseHolder": "1000007698 Ontario Ltd (Bet 99)",
+      "domains": [
+       "on.bet99.ca"
+      ]
+     },
+     {
+      "brand": "Betano",
+      "licenseHolder": "Kaizen Gaming Canada Inc.",
+      "domains": [
+       "betano.ca"
+      ]
+     },
+     {
+      "brand": "Betinia",
+      "licenseHolder": "Canadix Limited",
+      "domains": [
+       "on.betinia.com"
+      ]
+     },
+     {
+      "brand": "BetMGM Sportsbook",
+      "licenseHolder": "BetMGM Canada Inc.",
+      "domains": [
+       "sports.on.betmgm.ca"
+      ]
+     },
+     {
+      "brand": "BetNova",
+      "licenseHolder": "Goldrush Canada Limited",
+      "domains": [
+       "betnova.ca"
+      ]
+     },
+     {
+      "brand": "BetRivers",
+      "licenseHolder": "Rush Street Interactive Canada, ULC",
+      "domains": [
+       "betrivers.ca"
+      ]
+     },
+     {
+      "brand": "BetVictor",
+      "licenseHolder": "BV (Canada) Limited",
+      "domains": [
+       "betvictor.com"
+      ]
+     },
+     {
+      "brand": "Betway",
+      "licenseHolder": "Cadway Limited",
+      "domains": [
+       "betway.ca"
+      ]
+     },
+     {
+      "brand": "Bwin",
+      "licenseHolder": "ElectraWorks Maple Limited",
+      "domains": [
+       "on.bwin.ca"
+      ]
+     },
+     {
+      "brand": "Caesars",
+      "licenseHolder": "American Wagering Inc",
+      "domains": [
+       "caesarspalaceonline.com"
+      ]
+     },
+     {
+      "brand": "Comeon!",
+      "licenseHolder": "Bunchberry Limited",
+      "domains": [
+       "comeon.com"
+      ]
+     },
+     {
+      "brand": "DAZN Bet",
+      "licenseHolder": "DZBT Marketing Limited",
+      "domains": [
+       "on.daznbet.ca"
+      ]
+     },
+     {
+      "brand": "DraftKings Sportsbook",
+      "licenseHolder": "Crown DK CAN Ltd.",
+      "domains": [
+       "sportsbook.draftkings.com"
+      ]
+     },
+     {
+      "brand": "FanDuel Sportsbook",
+      "licenseHolder": "FanDuel Canada ULC",
+      "domains": [
+       "on.sportsbook.fanduel.ca"
+      ]
+     },
+     {
+      "brand": "Hard Rock Bet",
+      "licenseHolder": "Hard Rock Digital (Canada) Limited",
+      "domains": [
+       "hardrockbet.ca"
+      ]
+     },
+     {
+      "brand": "LeoVegas",
+      "licenseHolder": "TigerGen Limited",
+      "domains": [
+       "leovegas.com"
+      ]
+     },
+     {
+      "brand": "Monopoly",
+      "licenseHolder": "Bally’s Canada Inc.",
+      "domains": [
+       "play.monopolycasino.ca"
+      ]
+     },
+     {
+      "brand": "Neo.bet",
+      "licenseHolder": "Reactive Betting Ltd.",
+      "domains": [
+       "on.neobet.ca"
+      ]
+     },
+     {
+      "brand": "NorthStar Bets",
+      "licenseHolder": "NorthStar Gaming (Ontario) Inc.",
+      "domains": [
+       "northstarbets.ca"
+      ]
+     },
+     {
+      "brand": "Partysports",
+      "licenseHolder": "ElectraWorks Maple Limited",
+      "domains": [
+       "on.partysports.ca"
+      ]
+     },
+     {
+      "brand": "Pinnacle",
+      "licenseHolder": "Pinny (Ontario) Limited",
+      "domains": [
+       "pinnacle.ca"
+      ]
+     },
+     {
+      "brand": "Play Fallsview",
+      "licenseHolder": "MGE Digital Canada Inc.",
+      "domains": [
+       "play.playfallsview.com"
+      ]
+     },
+     {
+      "brand": "PointsBet",
+      "licenseHolder": "Pointsbet Canada Operations 1 Inc.",
+      "domains": [
+       "on.pointsbet.ca"
+      ]
+     },
+     {
+      "brand": "Power Play",
+      "licenseHolder": "Trillium Ventures Limited (dba) PowerPlay",
+      "domains": [
+       "on.powerplay.com"
+      ]
+     },
+     {
+      "brand": "Sports Interaction",
+      "licenseHolder": "ElectraWorks Maple Limited",
+      "domains": [
+       "on.sportsinteraction.com"
+      ]
+     },
+     {
+      "brand": "STX",
+      "licenseHolder": "SportsX, LLC",
+      "domains": [
+       "stxapp.io"
+      ]
+     },
+     {
+      "brand": "Swiper",
+      "licenseHolder": "Canadix Limited",
+      "domains": [
+       "on.swiper.com"
+      ]
+     },
+     {
+      "brand": "TheScore Bet",
+      "licenseHolder": "Score Media and Gaming Inc.",
+      "domains": [
+       "thescore.bet"
+      ]
+     },
+     {
+      "brand": "Titan Play",
+      "licenseHolder": "Shark77 Limited",
+      "domains": [
+       "titanplay.ca"
+      ]
+     },
+     {
+      "brand": "TonyBet",
+      "licenseHolder": "Ligtip Limited",
+      "domains": [
+       "tonybet.ca"
+      ]
+     },
+     {
+      "brand": "ToonieBet",
+      "licenseHolder": "Canadix Limited",
+      "domains": [
+       "tooniebet.ca"
+      ]
+     }
+    ],
+    "sourceUrl": "https://igamingontario.ca/en/operator/operators",
+    "asOf": "2026-10-02",
+    "note": "Sites iGaming Ontario lists with Sports Betting or Betting Exchange among their offerings."
+   },
+   "why": "Ontario opened a regulated private igaming market on 4 April 2022: operators register with the AGCO and contract with iGaming Ontario, a subsidiary of the AGCO, to offer casino, poker and sports betting to Ontario players. Other provinces still run online gambling through their lottery corporations."
+  },
+  "CY": {
+   "regulator": "National Betting Authority (NBA)",
+   "sportsbooks": {
+    "operators": [
+     {
+      "brand": "ALLWYNBET",
+      "licenseHolder": "OPAP SPORTS LTD",
+      "domains": [
+       "allwynbet.com.cy"
+      ]
+     },
+     {
+      "brand": "BET ON ALFA",
+      "licenseHolder": "BET ON ALFA LIMITED",
+      "domains": [
+       "betonalfa.com.cy"
+      ]
+     },
+     {
+      "brand": "COPYBET",
+      "licenseHolder": "COPYBET EU LTD",
+      "domains": [
+       "copybet.com.cy"
+      ]
+     },
+     {
+      "brand": "FONBET",
+      "licenseHolder": "FORTUNE ENTERTAINMENT RG LIMITED",
+      "domains": [
+       "fonbet.com.cy"
+      ]
+     },
+     {
+      "brand": "IN2BET",
+      "licenseHolder": "I.T.S. INFINITY TECHNOLOGY SOLUTIONS CY LIMITED",
+      "domains": [
+       "in2bet.com.cy"
+      ]
+     },
+     {
+      "brand": "MERIDIAN GAMING CY",
+      "licenseHolder": "MERIDIAN GAMING (CY) LTD",
+      "domains": [
+       "meridianbet.com.cy"
+      ]
+     },
+     {
+      "brand": "NOVIBET",
+      "licenseHolder": "GAMART LIMITED",
+      "domains": [
+       "novibet.com.cy"
+      ]
+     },
+     {
+      "brand": "STOIXIMAN",
+      "licenseHolder": "STOIXIMAN LTD",
+      "domains": [
+       "stoiximan.com.cy"
+      ]
+     },
+     {
+      "brand": "UBET",
+      "licenseHolder": "U.B.E.T. ULTIMATE BET ENTERTAINMENT TECHNOLOGIES LTD"
+     },
+     {
+      "brand": "ΒΕΤ365",
+      "licenseHolder": "HILLSIDE (NEW MEDIA CYPRUS) LIMITED",
+      "domains": [
+       "bet365.com.cy"
+      ]
+     }
+    ],
+    "sourceUrl": "https://nba.gov.cy/en/regulated-entities/registers/class-b/",
+    "asOf": "2026-10-02",
+    "note": "Class B (online betting) licensees on the NBA's register, with the trade name, licence holder and .com.cy domain the register gives. Online casino games are not licensed in Cyprus."
+   },
+   "why": "Cyprus's Betting Law of 2019 licenses online sports betting (Class B) through the National Betting Authority; online casino games, slots and poker are prohibited, and OPAP holds exclusive rights to lotteries and numerical games."
+  },
+  "BE": {
+   "regulator": "Gaming Commission (Kansspelcommissie / Commission des jeux de hasard)",
+   "casinos": {
+    "operators": [
+     {
+      "brand": "betanocasino.be",
+      "licenseHolder": "SA/NV CASINOS AUSTRIA INTERNATIONAL BELGIUM",
+      "domains": [
+       "betanocasino.be"
+      ]
+     },
+     {
+      "brand": "betssoncasino.be",
+      "licenseHolder": "SA/NV EXPLOITATIE CASINO MIDDELKERKE",
+      "domains": [
+       "betssoncasino.be"
+      ]
+     },
+     {
+      "brand": "bwincasino.be",
+      "licenseHolder": "SA/NV Infiniti Casino Oostende",
+      "domains": [
+       "bwincasino.be"
+      ]
+     },
+     {
+      "brand": "casino777.be",
+      "licenseHolder": "SA/NV CASINO DE SPA",
+      "domains": [
+       "casino777.be"
+      ]
+     },
+     {
+      "brand": "casinoladbrokes.be",
+      "licenseHolder": "SA/NV GRAND CASINO DE DINANT",
+      "domains": [
+       "casinoladbrokes.be"
+      ]
+     },
+     {
+      "brand": "circus-casino.be,www.pokerstars.be",
+      "licenseHolder": "SA/NV GAMBLING MANAGEMENT",
+      "domains": [
+       "circus-casino.be,www.pokerstars.be"
+      ]
+     },
+     {
+      "brand": "napoleoncasino.be",
+      "licenseHolder": "SA/NV E.C.K.",
+      "domains": [
+       "napoleoncasino.be"
+      ]
+     },
+     {
+      "brand": "starcasino.be",
+      "licenseHolder": "SA/NV CHAUDFONTAINE LOISIRS",
+      "domains": [
+       "starcasino.be"
+      ]
+     },
+     {
+      "brand": "unibetcasino.be",
+      "licenseHolder": "SA/NV BLANKENBERGE CASINO-KURSAAL",
+      "domains": [
+       "unibetcasino.be"
+      ]
+     }
+    ],
+    "sourceUrl": "https://www.gamingcommission.be/en/operators/licences/casinos-licence-a-a",
+    "asOf": "2026-10-02",
+    "note": "A+ licences — the online extension of a land-based casino licence — from the Gaming Commission's open-data table, one row per licensed .be site. Belgium ties every online casino to a licensed land-based casino."
+   },
+   "sportsbooks": {
+    "operators": [
+     {
+      "brand": "711sports.be",
+      "licenseHolder": "SA/NV CKO BETTING",
+      "domains": [
+       "711sports.be"
+      ]
+     },
+     {
+      "brand": "bet777.be",
+      "licenseHolder": "SA/NV CASINO DE SPA",
+      "domains": [
+       "bet777.be"
+      ]
+     },
+     {
+      "brand": "bet90.be",
+      "licenseHolder": "SRL/BV BET 90",
+      "domains": [
+       "bet90.be"
+      ]
+     },
+     {
+      "brand": "betanosports.be",
+      "licenseHolder": "SA/NV CASINOS AUSTRIA INTERNATIONAL BELGIUM",
+      "domains": [
+       "betanosports.be"
+      ]
+     },
+     {
+      "brand": "betcenter.be",
+      "licenseHolder": "SA/NV Betcenter Group",
+      "domains": [
+       "betcenter.be"
+      ]
+     },
+     {
+      "brand": "betssonsports.be",
+      "licenseHolder": "SA/NV SAGEVAS",
+      "domains": [
+       "betssonsports.be"
+      ]
+     },
+     {
+      "brand": "bingoalsport.be",
+      "licenseHolder": "SRL/BV WORLD FOOTBALL ASSOCIATION",
+      "domains": [
+       "bingoalsport.be"
+      ]
+     },
+     {
+      "brand": "blitzbet.be",
+      "licenseHolder": "SRL/BV LUDENZ",
+      "domains": [
+       "blitzbet.be"
+      ]
+     },
+     {
+      "brand": "bwin.be",
+      "licenseHolder": "SA/NV LEADER BET",
+      "domains": [
+       "bwin.be"
+      ]
+     },
+     {
+      "brand": "circus-sport.be",
+      "licenseHolder": "SA/NV CIRCUS BELGIUM",
+      "domains": [
+       "circus-sport.be"
+      ]
+     },
+     {
+      "brand": "elitesports.be",
+      "licenseHolder": "SA/NV BELGISCHE PMU",
+      "domains": [
+       "elitesports.be"
+      ]
+     },
+     {
+      "brand": "eurotierce.be",
+      "licenseHolder": "SA/NV EURO TIERCE",
+      "domains": [
+       "eurotierce.be"
+      ]
+     },
+     {
+      "brand": "goldenpalacesports.be",
+      "licenseHolder": "SA/NV STARGAMES",
+      "domains": [
+       "goldenpalacesports.be"
+      ]
+     },
+     {
+      "brand": "goldenvegas-sport.be",
+      "licenseHolder": "SPRL/BVBA PLAY N BET",
+      "domains": [
+       "goldenvegas-sport.be"
+      ]
+     },
+     {
+      "brand": "ladbrokes.be",
+      "licenseHolder": "SA/NV Derby",
+      "domains": [
+       "ladbrokes.be"
+      ]
+     },
+     {
+      "brand": "magicbettingsports.be",
+      "licenseHolder": "SRL/BV BETTING SERVICE",
+      "domains": [
+       "magicbettingsports.be"
+      ]
+     },
+     {
+      "brand": "meridiansports.be",
+      "licenseHolder": "SRL/BV Mybestodds",
+      "domains": [
+       "meridiansports.be"
+      ]
+     },
+     {
+      "brand": "napoleonsports.be",
+      "licenseHolder": "SA/NV NAPOLEON GAMES SPORTS",
+      "domains": [
+       "napoleonsports.be"
+      ]
+     },
+     {
+      "brand": "scooore.be",
+      "licenseHolder": "SA/NV SCOOORE",
+      "domains": [
+       "scooore.be"
+      ]
+     },
+     {
+      "brand": "stanleybet.be",
+      "licenseHolder": "SA/NV STANLEYBET BELGIUM",
+      "domains": [
+       "stanleybet.be"
+      ]
+     },
+     {
+      "brand": "starcasinosport.be",
+      "licenseHolder": "SRL/BV SGS BETTING",
+      "domains": [
+       "starcasinosport.be"
+      ]
+     },
+     {
+      "brand": "unibetsports.be",
+      "licenseHolder": "ETRANGERE/BUITENLAND UNIBET BELGIUM LTD",
+      "domains": [
+       "unibetsports.be"
+      ]
+     },
+     {
+      "brand": "vivatbet.be",
+      "licenseHolder": "SRL/BV L.B.C.",
+      "domains": [
+       "vivatbet.be"
+      ]
+     },
+     {
+      "brand": "zeturf.be,www.zebet.be",
+      "licenseHolder": "SA/NV TURF BELGIUM",
+      "domains": [
+       "zeturf.be,www.zebet.be"
+      ]
+     }
+    ],
+    "sourceUrl": "https://www.gamingcommission.be/en/operators/licences/betting-licence-f1-f2-f1",
+    "asOf": "2026-10-02",
+    "note": "F1+ licences — online betting — from the Gaming Commission's open-data table, one row per licensed .be site."
+   },
+   "why": "Belgium's Gaming Act of 1999, as amended in 2010, allows online gambling only as a '+' extension of a land-based licence: A+ for casinos, B+ for arcades, F1+ for betting. The Gaming Commission publishes each licence class as an open-data table."
+  },
+  "LV": {
+   "regulator": "State Revenue Service (VID), Lotteries and Gambling Supervisory Inspection",
+   "operators": {
+    "operators": [
+     {
+      "brand": "11.lv",
+      "licenseHolder": "SIA \"Viensviens\"",
+      "domains": [
+       "11.lv"
+      ]
+     },
+     {
+      "brand": "betsafe.lv",
+      "licenseHolder": "SIA \"Latsson Licensing\"",
+      "domains": [
+       "betsafe.lv"
+      ]
+     },
+     {
+      "brand": "casino777.lv",
+      "licenseHolder": "SIA \"NB\"",
+      "domains": [
+       "casino777.lv"
+      ]
+     },
+     {
+      "brand": "fenikss.lv",
+      "licenseHolder": "SIA \"ALFOR\"",
+      "domains": [
+       "fenikss.lv"
+      ]
+     },
+     {
+      "brand": "klondaika.lv",
+      "licenseHolder": "SIA \"KLONDAIKA\"",
+      "domains": [
+       "klondaika.lv"
+      ]
+     },
+     {
+      "brand": "laimz.lv",
+      "licenseHolder": "SIA \"LAIMZ\"",
+      "domains": [
+       "laimz.lv"
+      ]
+     },
+     {
+      "brand": "luckybet.lv",
+      "licenseHolder": "SIA \"Luckybet.lv\"",
+      "domains": [
+       "luckybet.lv"
+      ]
+     },
+     {
+      "brand": "lvbet.lv",
+      "licenseHolder": "SIA \"LVBet\"",
+      "domains": [
+       "lvbet.lv"
+      ]
+     },
+     {
+      "brand": "olybet.lv",
+      "licenseHolder": "SIA \"Olybet Latvia\"",
+      "domains": [
+       "olybet.lv"
+      ]
+     },
+     {
+      "brand": "optibet.lv",
+      "licenseHolder": "SIA \"OPTIBET\"",
+      "domains": [
+       "optibet.lv"
+      ]
+     },
+     {
+      "brand": "pafbet.lv",
+      "licenseHolder": "SIA \"PAF Latvija\"",
+      "domains": [
+       "pafbet.lv"
+      ]
+     },
+     {
+      "brand": "spelet.lv",
+      "licenseHolder": "SIA \"NIKS\"",
+      "domains": [
+       "spelet.lv"
+      ]
+     },
+     {
+      "brand": "spins.lv",
+      "licenseHolder": "SIA \"BALTENT\"",
+      "domains": [
+       "spins.lv"
+      ]
+     },
+     {
+      "brand": "synottip.lv",
+      "licenseHolder": "SIA \"JOKER LTD\"",
+      "domains": [
+       "synottip.lv"
+      ]
+     },
+     {
+      "brand": "tonybet.lv",
+      "licenseHolder": "SIA \"Tonybet\"",
+      "domains": [
+       "tonybet.lv"
+      ]
+     },
+     {
+      "brand": "winguru.lv",
+      "licenseHolder": "SIA \"DLV\"",
+      "domains": [
+       "winguru.lv"
+      ]
+     },
+     {
+      "brand": "x3000.lv",
+      "licenseHolder": "SIA \"X3000\"",
+      "domains": [
+       "x3000.lv"
+      ]
+     }
+    ],
+    "sourceUrl": "https://www.vid.gov.lv/lv/licencetie-azartspelu-organizetaji",
+    "asOf": "2026-10-02",
+    "note": "Licensed gambling organisers from the VID's register, one row per organiser with a website. The register lists the organiser's site, not which products the licence covers, so the operators are shown in one list."
+   },
+   "why": "Latvia's Gambling and Lotteries Law licenses interactive gambling through the Lotteries and Gambling Supervisory Inspection, now part of the State Revenue Service (VID), which publishes the licensed organisers and blocks unlicensed domains."
+  },
+  "SE": {
+   "regulator": "Spelinspektionen (Swedish Gambling Authority)",
+   "casinos": {
+    "operators": [
+     {
+      "brand": "888 Sweden Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "AB Trav och Galopp",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Alpix Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Antenor Services Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Anthium Technologies Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Auto Nordic Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Avento MT Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Betcentury Sweden Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Bethard Sweden Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Blue Star Planet Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "BRAGI SERVICES LIMITED",
+      "licenseHolder": null
+     },
+     {
+      "brand": "BS Nordic Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Buccone Trading Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Casinostugan Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Cherry Online Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "CoinToss Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "ComeOn Sweden Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "DBET Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Domherre Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Dreambox Games OÜ",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Enlabs Nordics OÜ",
+      "licenseHolder": null
+     },
+     {
+      "brand": "EntBox Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Forseti Services Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Gazelle Co. Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Glitnor Services Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Glitstar Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Greven Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Gullviva Services Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Hajper Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Hillside (Europe) ENC",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Interwetten Gaming Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Isix Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Kaprifol Services Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Kungaslottet Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "L&L Europe Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "LeoEx Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Megafortune Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Megariches Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "MGMNordic Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "MOA Gaming Sweden Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Mr Green Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Mr Vegas Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Myntet Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "NGG Nordic Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Northix Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "NSUS Malta Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Oddit Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Paf International p.l.c.",
+      "licenseHolder": null
+     },
+     {
+      "brand": "PAF MT Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "PAF New Tech Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Polar Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Premiergaming Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Prozone Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Roar Vegas Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Roi Roger Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Romix Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Scandix Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "SCGO Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Skill On Net Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Snabbare Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Speedy Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Speedy Originals Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Spin Nordic Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "SuprPlay Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Svenska Spel Sport & Casino AB",
+      "licenseHolder": null
+     },
+     {
+      "brand": "SverigeCasino Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Swedix Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Tipwin Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Tombola International PLC",
+      "licenseHolder": null
+     },
+     {
+      "brand": "TSG Interactive PLC",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Tussilago Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "UnionJack Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "United Lottery Solutions Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Videoslots Ltd",
+      "licenseHolder": null
+     }
+    ],
+    "sourceUrl": "https://www.spelinspektionen.se/licens-o-tillstand/licensregister/?licenseTypes=20",
+    "asOf": "2026-10-02",
+    "note": "Holders of a commercial online gambling licence ('Kommersiellt online'), as the licence register names them, with the web addresses the register lists under that licence type.",
+    "domains": [
+     "10bet.se",
+     "1x2.se",
+     "44aces.com",
+     "888.se",
+     "888casino.se",
+     "888poker.se",
+     "ahtigames.com",
+     "app: ggpoker",
+     "atg.se",
+     "bacanaplay.com",
+     "bet365.com",
+     "bethard.com",
+     "betinia.se",
+     "betmgm.se",
+     "betsafe.com",
+     "betsson.com",
+     "boostcasino.se",
+     "bytcasino.com",
+     "campobet.se",
+     "casinoandfriends.com",
+     "casinocasino.com",
+     "casinoepic.se",
+     "casinostugan.com",
+     "casumo.com",
+     "chanz.com",
+     "cherry.com",
+     "clemensspillehal.com",
+     "comeon.com",
+     "coolbet.com",
+     "dbet.com",
+     "drueckglueck.com",
+     "duelz.com",
+     "enlabs.se",
+     "eucasino.com",
+     "eurokingclub.com",
+     "euromania.com",
+     "expekt.se",
+     "fastbet.com",
+     "finlandiacasino.com",
+     "flaxcasino.se",
+     "frankcasino.se",
+     "frankfred.com",
+     "funcasino.com",
+     "funcasino.se",
+     "funkyspins.com",
+     "geckoplay.se",
+     "gentingcasino.se",
+     "gogocasino.com",
+     "goldenbull.se",
+     "hajper.com",
+     "happycasino.com",
+     "happycasino.se",
+     "hypercasino.com",
+     "interwetten.se",
+     "jackpotstar.com",
+     "jallacasino.se",
+     "jubla.com",
+     "jubla.se",
+     "karlcasino.com",
+     "klirr.com",
+     "knightslots.com",
+     "kungaslottet.se",
+     "körba.se",
+     "leovegas.com",
+     "lodur.se",
+     "lordping.se",
+     "losvegas.bet",
+     "lottoland.se",
+     "luckycasino.com",
+     "luckylouis.com",
+     "luckyniki.com",
+     "luckyvegas.com",
+     "lunacasino.com",
+     "lyllocasino.com",
+     "mariacasino.se",
+     "megafortune.com",
+     "megariches.com",
+     "megawayscasino.com",
+     "metalcasino.com",
+     "metalcasino.se",
+     "miamijackpots.com",
+     "momangcasino.se",
+     "mrbit.se",
+     "mrgreen.com",
+     "mrgreen.de",
+     "mrgreen.dk",
+     "mrgreen.se",
+     "mrvegas.com",
+     "mrvegas.se",
+     "nanocasino.se",
+     "ninja.se",
+     "ninjacasino.se",
+     "ninjasport.se",
+     "nobonuscasino.com",
+     "nordicbet.com",
+     "nyspins.com",
+     "onecasino.se",
+     "onerush.com",
+     "optibet.se",
+     "ottocasino.se",
+     "paf.se",
+     "parisvegasclub.com",
+     "playjango.com",
+     "playkasino.com",
+     "playojo.com",
+     "playtoro.com",
+     "playtoro.se",
+     "playuzu.com",
+     "pokerstars.se",
+     "popcasino.se",
+     "premierlivecasino.com",
+     "premierlivecasino.se",
+     "prontocasino.com",
+     "prontocasino.se",
+     "prontolive.com",
+     "prontolive.se",
+     "prontolotter.com",
+     "prontolotter.se",
+     "prontoodds.com",
+     "prontoodds.se",
+     "prontosport.com",
+     "prontosport.se",
+     "queenvegas.com",
+     "quickcasino.se",
+     "racecasino.com",
+     "racecasino.se",
+     "redkings.com",
+     "regencycasino.se",
+     "reviant.com",
+     "reviant.se",
+     "royalbet.com",
+     "royale500.com",
+     "se.bingo.com",
+     "se.luckymeslots.com",
+     "se.megacasino.com",
+     "se.primecasino.com",
+     "se.simbagames.com",
+     "se.slingo.com",
+     "se.spingenie.com",
+     "slotsmagic.com",
+     "slotstars.com",
+     "slotv.se",
+     "snabbare.com",
+     "snurrcasino.se",
+     "speedybet.com",
+     "speedycasino.com",
+     "spela.svenskaspel.se",
+     "spelklubben.se",
+     "spingenie.se",
+     "storspelare.se",
+     "superbet.se",
+     "supersnabbt.se",
+     "sv.playmillion.com",
+     "svajpa.se",
+     "swiftcasino.com",
+     "swiper.se",
+     "tillsammans.atg.se",
+     "tipwin.com",
+     "tipwin.se",
+     "tombola.se",
+     "turbonino.com",
+     "turbovegas.com",
+     "unibet.se",
+     "vbet.se",
+     "vegaswinner.com",
+     "veraandjohn.se",
+     "verajohn.se",
+     "videoslots.com",
+     "videoslots.se",
+     "voodoodreams.com",
+     "winlandia.com",
+     "winlandia.se",
+     "winningkings.com",
+     "wunderino.se",
+     "x3000.com",
+     "x3000.se",
+     "yakocasino.com",
+     "yeticasino.com",
+     "yeticasino.se",
+     "yoyocasino.se",
+     "zebrawins.com"
+    ]
+   },
+   "sportsbooks": {
+    "operators": [
+     {
+      "brand": "888 Sweden Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "AB Trav och Galopp",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Alpix Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Antenor Services Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Bethard Sweden Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Betsson Nordic Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Blue Star Planet Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "BRAGI SERVICES LIMITED",
+      "licenseHolder": null
+     },
+     {
+      "brand": "BS Nordic Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Buccone Trading Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Casinostugan Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Cherry Online Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "CoinToss Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "ComeOn Sweden Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "DBET Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Enlabs Nordics OÜ",
+      "licenseHolder": null
+     },
+     {
+      "brand": "EntBox Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Forseti Services Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Gazelle Co. Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Glitnor Services Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Glitstar Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Greven Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Hajper Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Hillside (Europe) ENC",
+      "licenseHolder": null
+     },
+     {
+      "brand": "ImpactWin Partner Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Interwetten Gaming Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Isix Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Kaprifol Services Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Kungaslottet Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "L&L Europe Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "LeoEx Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Megafortune Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Megariches Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "MGMNordic Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "MOA Gaming Sweden Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Mr Green Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Mr Vegas Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "NGG Nordic Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Northix Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Oddit Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Paf International p.l.c.",
+      "licenseHolder": null
+     },
+     {
+      "brand": "PAF MT Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "PAF New Tech Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "PinBet (Sverige) Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Polar Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Premiergaming Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Prozone Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Roar Vegas Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Romix Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Scandix Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "SCGO Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Smarkets (Malta) Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Snabbare Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Speedy Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Speedy Originals Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Spin Nordic Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Svenska Spel Sport & Casino AB",
+      "licenseHolder": null
+     },
+     {
+      "brand": "SverigeCasino Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Swedix Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Tipwin Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "TSG Interactive PLC",
+      "licenseHolder": null
+     },
+     {
+      "brand": "UnionJack Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "United Lottery Solutions Ltd",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Videoslots Sports Ltd",
+      "licenseHolder": null
+     }
+    ],
+    "sourceUrl": "https://www.spelinspektionen.se/licens-o-tillstand/licensregister/?licenseTypes=21",
+    "asOf": "2026-10-02",
+    "note": "Holders of a commercial betting licence ('Kommersiellt vadhållning'), with the web addresses the register lists under that licence type.",
+    "domains": [
+     "10bet.se",
+     "1x2.se",
+     "888.se",
+     "888sport.se",
+     "atg.se",
+     "bet365.com",
+     "bethard.com",
+     "betinia.se",
+     "betmgm.se",
+     "betsafe.com",
+     "betsbk.com",
+     "betsson.com",
+     "campobet.se",
+     "casinocasino.com",
+     "casinoepic.se",
+     "casinostugan.com",
+     "casumo.com",
+     "cherry.com",
+     "comeon.com",
+     "coolbet.com",
+     "dbet.com",
+     "expekt.se",
+     "fastbet.com",
+     "flaxcasino.se",
+     "frankfred.com",
+     "funcasino.com",
+     "funcasino.se",
+     "gogocasino.com",
+     "goldenbull.se",
+     "hajper.com",
+     "happycasino.se",
+     "hypercasino.com",
+     "impactwin.se",
+     "interwetten.se",
+     "jubla.com",
+     "jubla.se",
+     "karlcasino.com",
+     "kungaslottet.se",
+     "körba.se",
+     "leovegas.com",
+     "lodur.se",
+     "lottoexperten.com",
+     "lottoexperten.se",
+     "lottoland.se",
+     "luckycasino.com",
+     "lyllocasino.com",
+     "megafortune.com",
+     "megariches.com",
+     "mrgreen.com",
+     "mrgreen.de",
+     "mrgreen.dk",
+     "mrgreen.se",
+     "mrvegas.com",
+     "ninja.se",
+     "ninjacasino.se",
+     "nobonuscasino.com",
+     "nordicbet.com",
+     "onecasino.se",
+     "onerush.com",
+     "paf.se",
+     "pinnacle.se",
+     "pokerstars.se",
+     "prontocasino.com",
+     "prontocasino.se",
+     "prontolive.com",
+     "prontolive.se",
+     "prontolotter.com",
+     "prontolotter.se",
+     "prontoodds.com",
+     "prontoodds.se",
+     "prontosport.com",
+     "prontosport.se",
+     "quickcasino.se",
+     "racecasino.com",
+     "racecasino.se",
+     "reviant.com",
+     "reviant.se",
+     "smarkets.com",
+     "snabbare.com",
+     "snurrcasino.se",
+     "speedybet.com",
+     "speedycasino.com",
+     "spela.svenskaspel.se",
+     "spelklubben.se",
+     "sports.videoslots.com",
+     "superlottoclub.com",
+     "supersnabbt.se",
+     "swiper.se",
+     "tillsammans.atg.se",
+     "tipwin.com",
+     "tipwin.se",
+     "turbovegas.com",
+     "unibet.se",
+     "vbet.se",
+     "veraandjohn.se",
+     "verajohn.se",
+     "x3000.com",
+     "x3000.se",
+     "yakocasino.com",
+     "yeticasino.com",
+     "yeticasino.se",
+     "yoyocasino.se"
+    ]
+   },
+   "why": "Sweden's Gambling Act (2018:1138) re-regulated the market from 1 January 2019: commercial online gambling and betting require a Spelinspektionen licence, and unlicensed sites are subject to payment blocking and warnings."
+  },
+  "NL": {
+   "regulator": "Kansspelautoriteit (Ksa)",
+   "casinos": {
+    "operators": [
+     {
+      "brand": "711",
+      "licenseHolder": "711 B.V.",
+      "domains": [
+       "711.nl"
+      ]
+     },
+     {
+      "brand": "Bet365",
+      "licenseHolder": "Hillside (New Media Malta) PLC",
+      "domains": [
+       "bet365.nl"
+      ]
+     },
+     {
+      "brand": "BetCity",
+      "licenseHolder": "Betent B.V.",
+      "domains": [
+       "betcity.nl"
+      ]
+     },
+     {
+      "brand": "BetMGM",
+      "licenseHolder": "21 Heads Up Limited",
+      "domains": [
+       "betmgm.nl"
+      ]
+     },
+     {
+      "brand": "Betnation",
+      "licenseHolder": "Smart Gaming B.V.",
+      "domains": [
+       "betnation.nl"
+      ]
+     },
+     {
+      "brand": "Bingoal",
+      "licenseHolder": "Bingoal Nederland B.V.",
+      "domains": [
+       "bingoal.nl"
+      ]
+     },
+     {
+      "brand": "Casino777",
+      "licenseHolder": "Casino de Spa",
+      "domains": [
+       "casino777.nl"
+      ]
+     },
+     {
+      "brand": "Circus.nl",
+      "licenseHolder": "Cortex Holding S.A.",
+      "domains": [
+       "circus.nl"
+      ]
+     },
+     {
+      "brand": "ComeOn!",
+      "licenseHolder": "Tulipa Ent Limited",
+      "domains": [
+       "getlucky.nl",
+       "comeon.nl"
+      ]
+     },
+     {
+      "brand": "Fair Play Online Casino",
+      "licenseHolder": "FPO Nederland B.V.",
+      "domains": [
+       "fairplaycasino.nl"
+      ]
+     },
+     {
+      "brand": "GGpoker.nl",
+      "licenseHolder": "NSUS Malta Limited",
+      "domains": [
+       "ggpoker.nl"
+      ]
+     },
+     {
+      "brand": "Godwits Limited",
+      "licenseHolder": null,
+      "domains": [
+       "888.nl"
+      ]
+     },
+     {
+      "brand": "Holland Casino Online",
+      "licenseHolder": "Holland Casino N.V.",
+      "domains": [
+       "hollandcasino.nl"
+      ]
+     },
+     {
+      "brand": "Hommerson.nl",
+      "licenseHolder": "H-Online B.V.",
+      "domains": [
+       "hommerson.nl"
+      ]
+     },
+     {
+      "brand": "iCasino B.V.",
+      "licenseHolder": null,
+      "domains": [
+       "hardrockcasino.nl"
+      ]
+     },
+     {
+      "brand": "Jacks.nl",
+      "licenseHolder": "JOI Gaming Limited",
+      "domains": [
+       "jacks.nl"
+      ]
+     },
+     {
+      "brand": "JOI I Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "JOI II Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "Kansino",
+      "licenseHolder": "Play North Limited",
+      "domains": [
+       "kansino.nl"
+      ]
+     },
+     {
+      "brand": "LeoVegas",
+      "licenseHolder": "LeoVegas Gaming p.l.c.",
+      "domains": [
+       "leovegas.nl"
+      ]
+     },
+     {
+      "brand": "Lucky7casino.nl",
+      "licenseHolder": "Noord Zuid Alliantie B.V.",
+      "domains": [
+       "lucky7casino.nl"
+      ]
+     },
+     {
+      "brand": "New Future Games B.V.",
+      "licenseHolder": null
+     },
+     {
+      "brand": "One Casino",
+      "licenseHolder": "One Casino Limited",
+      "domains": [
+       "nl.onecasino.com",
+       "onesports.nl"
+      ]
+     },
+     {
+      "brand": "Orange Gaming B.V.",
+      "licenseHolder": null,
+      "domains": [
+       "winz.nl"
+      ]
+     },
+     {
+      "brand": "Oranje Palace",
+      "licenseHolder": "Holland Gaming Technology Ltd.",
+      "domains": [
+       "oranjepalace.nl"
+      ]
+     },
+     {
+      "brand": "Starcasino",
+      "licenseHolder": "Green Island N.V.",
+      "domains": [
+       "starcasino.nl"
+      ]
+     },
+     {
+      "brand": "Tonybet",
+      "licenseHolder": "TonyBet OÜ",
+      "domains": [
+       "tonybet.nl"
+      ]
+     },
+     {
+      "brand": "TOTO",
+      "licenseHolder": "TOTO Online B.V. (onderdeel van Nederlandse Loterij)",
+      "domains": [
+       "sport.toto.nl",
+       "casino.toto.nl",
+       "winn-itt.nl (casino.toto.nl",
+       "extra.toto.nl totowinkel.nederlandseloterij.nl"
+      ]
+     },
+     {
+      "brand": "TOTO Casino",
+      "licenseHolder": "TOTO Online B.V. (onderdeel van Nederlandse Loterij)",
+      "domains": [
+       "sport.toto.nl",
+       "casino.toto.nl",
+       "winn-itt.nl (casino.toto.nl",
+       "extra.toto.nl totowinkel.nederlandseloterij.nl"
+      ]
+     },
+     {
+      "brand": "TOTO Sport",
+      "licenseHolder": "TOTO Online B.V. (onderdeel van Nederlandse Loterij)",
+      "domains": [
+       "sport.toto.nl",
+       "casino.toto.nl",
+       "winn-itt.nl (casino.toto.nl",
+       "extra.toto.nl totowinkel.nederlandseloterij.nl"
+      ]
+     },
+     {
+      "brand": "Unibet",
+      "licenseHolder": "Optdeck Service Limited",
+      "domains": [
+       "unibet.nl"
+      ]
+     },
+     {
+      "brand": "Vbet",
+      "licenseHolder": "SCGO Limited",
+      "domains": [
+       "vbet.nl"
+      ]
+     },
+     {
+      "brand": "Winnitt",
+      "licenseHolder": "TOTO Online B.V. (onderdeel van Nederlandse Loterij)",
+      "domains": [
+       "sport.toto.nl",
+       "casino.toto.nl",
+       "winn-itt.nl (casino.toto.nl",
+       "extra.toto.nl totowinkel.nederlandseloterij.nl"
+      ]
+     }
+    ],
+    "sourceUrl": "https://kansspelautoriteit.nl/kansspelwijzer",
+    "asOf": "2026-10-02",
+    "note": "Licence holders whose Kansspelwijzer entry lists 'Online casinospel' among the licence types, with the brand names and websites the Ksa records for them."
+   },
+   "sportsbooks": {
+    "operators": [
+     {
+      "brand": "711",
+      "licenseHolder": "711 B.V.",
+      "domains": [
+       "711.nl"
+      ]
+     },
+     {
+      "brand": "Bet365",
+      "licenseHolder": "Hillside (New Media Malta) PLC",
+      "domains": [
+       "bet365.nl"
+      ]
+     },
+     {
+      "brand": "BetCity",
+      "licenseHolder": "Betent B.V.",
+      "domains": [
+       "betcity.nl"
+      ]
+     },
+     {
+      "brand": "BetMGM",
+      "licenseHolder": "21 Heads Up Limited",
+      "domains": [
+       "betmgm.nl"
+      ]
+     },
+     {
+      "brand": "Betnation",
+      "licenseHolder": "Smart Gaming B.V.",
+      "domains": [
+       "betnation.nl"
+      ]
+     },
+     {
+      "brand": "Bingoal",
+      "licenseHolder": "Bingoal Nederland B.V.",
+      "domains": [
+       "bingoal.nl"
+      ]
+     },
+     {
+      "brand": "Circus.nl",
+      "licenseHolder": "Cortex Holding S.A.",
+      "domains": [
+       "circus.nl"
+      ]
+     },
+     {
+      "brand": "ComeOn!",
+      "licenseHolder": "Tulipa Ent Limited",
+      "domains": [
+       "getlucky.nl",
+       "comeon.nl"
+      ]
+     },
+     {
+      "brand": "Godwits Limited",
+      "licenseHolder": null,
+      "domains": [
+       "888.nl"
+      ]
+     },
+     {
+      "brand": "Holland Casino Online",
+      "licenseHolder": "Holland Casino N.V.",
+      "domains": [
+       "hollandcasino.nl"
+      ]
+     },
+     {
+      "brand": "Hommerson.nl",
+      "licenseHolder": "H-Online B.V.",
+      "domains": [
+       "hommerson.nl"
+      ]
+     },
+     {
+      "brand": "Jacks.nl",
+      "licenseHolder": "JOI Gaming Limited",
+      "domains": [
+       "jacks.nl"
+      ]
+     },
+     {
+      "brand": "JOI I Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "JOI II Limited",
+      "licenseHolder": null
+     },
+     {
+      "brand": "LeoVegas",
+      "licenseHolder": "LeoVegas Gaming p.l.c.",
+      "domains": [
+       "leovegas.nl"
+      ]
+     },
+     {
+      "brand": "Lucky7casino.nl",
+      "licenseHolder": "Noord Zuid Alliantie B.V.",
+      "domains": [
+       "lucky7casino.nl"
+      ]
+     },
+     {
+      "brand": "One Casino",
+      "licenseHolder": "One Casino Limited",
+      "domains": [
+       "nl.onecasino.com",
+       "onesports.nl"
+      ]
+     },
+     {
+      "brand": "Oranje Palace",
+      "licenseHolder": "Holland Gaming Technology Ltd.",
+      "domains": [
+       "oranjepalace.nl"
+      ]
+     },
+     {
+      "brand": "Starcasino",
+      "licenseHolder": "Green Island N.V.",
+      "domains": [
+       "starcasino.nl"
+      ]
+     },
+     {
+      "brand": "Tonybet",
+      "licenseHolder": "TonyBet OÜ",
+      "domains": [
+       "tonybet.nl"
+      ]
+     },
+     {
+      "brand": "TOTO",
+      "licenseHolder": "TOTO Online B.V. (onderdeel van Nederlandse Loterij)",
+      "domains": [
+       "sport.toto.nl",
+       "casino.toto.nl",
+       "winn-itt.nl (casino.toto.nl",
+       "extra.toto.nl totowinkel.nederlandseloterij.nl"
+      ]
+     },
+     {
+      "brand": "TOTO Casino",
+      "licenseHolder": "TOTO Online B.V. (onderdeel van Nederlandse Loterij)",
+      "domains": [
+       "sport.toto.nl",
+       "casino.toto.nl",
+       "winn-itt.nl (casino.toto.nl",
+       "extra.toto.nl totowinkel.nederlandseloterij.nl"
+      ]
+     },
+     {
+      "brand": "TOTO Sport",
+      "licenseHolder": "TOTO Online B.V. (onderdeel van Nederlandse Loterij)",
+      "domains": [
+       "sport.toto.nl",
+       "casino.toto.nl",
+       "winn-itt.nl (casino.toto.nl",
+       "extra.toto.nl totowinkel.nederlandseloterij.nl"
+      ]
+     },
+     {
+      "brand": "Unibet",
+      "licenseHolder": "Optdeck Service Limited",
+      "domains": [
+       "unibet.nl"
+      ]
+     },
+     {
+      "brand": "Vbet",
+      "licenseHolder": "SCGO Limited",
+      "domains": [
+       "vbet.nl"
+      ]
+     },
+     {
+      "brand": "Winnitt",
+      "licenseHolder": "TOTO Online B.V. (onderdeel van Nederlandse Loterij)",
+      "domains": [
+       "sport.toto.nl",
+       "casino.toto.nl",
+       "winn-itt.nl (casino.toto.nl",
+       "extra.toto.nl totowinkel.nederlandseloterij.nl"
+      ]
+     },
+     {
+      "brand": "Zebet.nl",
+      "licenseHolder": "ZEbetting &#038; Gaming Nederland B.V.",
+      "domains": [
+       "zeturf.nl",
+       "zebet.nl"
+      ]
+     },
+     {
+      "brand": "Zeturf",
+      "licenseHolder": "ZEbetting &#038; Gaming Nederland B.V.",
+      "domains": [
+       "zeturf.nl",
+       "zebet.nl"
+      ]
+     }
+    ],
+    "sourceUrl": "https://kansspelautoriteit.nl/kansspelwijzer",
+    "asOf": "2026-10-02",
+    "note": "Licence holders whose Kansspelwijzer entry lists 'Online sportweddenschap' (online sports betting)."
+   },
+   "why": "The Remote Gambling Act (Wet kansspelen op afstand) opened the Dutch online market on 1 October 2021. The Kansspelautoriteit licenses operators and keeps the Kansspelwijzer, its public register of every permitted provider."
+  },
+  "AR": {
+   "regulator": "Lotería de la Provincia de Buenos Aires (Instituto Provincial de Lotería y Casinos)",
+   "operators": {
+    "operators": [
+     {
+      "brand": "Bet 365",
+      "licenseHolder": null,
+      "domains": [
+       "bet365.bet.ar"
+      ]
+     },
+     {
+      "brand": "Betano",
+      "licenseHolder": null,
+      "domains": [
+       "betano.bet.ar"
+      ]
+     },
+     {
+      "brand": "Betsson",
+      "licenseHolder": null,
+      "domains": [
+       "pba.betsson.bet.ar"
+      ]
+     },
+     {
+      "brand": "Betwarrior",
+      "licenseHolder": null,
+      "domains": [
+       "betwarrior.bet.ar"
+      ]
+     },
+     {
+      "brand": "Bplay",
+      "licenseHolder": null,
+      "domains": [
+       "pba.bplay.bet.ar"
+      ]
+     },
+     {
+      "brand": "Sportsbet",
+      "licenseHolder": null,
+      "domains": [
+       "sportsbet.bet.ar"
+      ]
+     },
+     {
+      "brand": "Stake",
+      "licenseHolder": null,
+      "domains": [
+       "pba.stake.bet.ar"
+      ]
+     }
+    ],
+    "sourceUrl": "https://loteria.gba.gob.ar/juego-online",
+    "asOf": "2026-10-02",
+    "note": "The online gaming sites the Province of Buenos Aires lottery links from its own 'Juego Online' page, where it states that legal sites end in .bet.ar. Argentina licenses online gambling province by province, so this list covers the Province of Buenos Aires only; the City of Buenos Aires (LOTBA) and other provinces keep their own."
+   },
+   "why": "Argentina has no national online gambling law; each province licenses its own market. The Province of Buenos Aires authorised online gaming under Law 15,079 (2018), and its lottery publishes the licensed sites, all on the .bet.ar domain."
+  },
+  "CZ": {
+   "regulator": "Ministry of Finance of the Czech Republic",
+   "casinos": {
+    "operators": [
+     {
+      "brand": "69games.cz",
+      "licenseHolder": "69GAMES a.s.",
+      "domains": [
+       "69games.cz"
+      ]
+     },
+     {
+      "brand": "allinn.cz",
+      "licenseHolder": "ALEKS CZ a.s.",
+      "domains": [
+       "allinn.cz"
+      ]
+     },
+     {
+      "brand": "allwyn.cz",
+      "licenseHolder": "Allwyn Česko a.s.",
+      "domains": [
+       "allwyn.cz"
+      ]
+     },
+     {
+      "brand": "apollogames.cz",
+      "licenseHolder": "Apollo Line s.r.o.",
+      "domains": [
+       "apollogames.cz"
+      ]
+     },
+     {
+      "brand": "bet-x.cz",
+      "licenseHolder": "EVONA ELECTRONIC, spol. s.r.o.",
+      "domains": [
+       "bet-x.cz"
+      ]
+     },
+     {
+      "brand": "betano.cz",
+      "licenseHolder": "KAIZEN GAMING CZ LIMITED",
+      "domains": [
+       "betano.cz"
+      ]
+     },
+     {
+      "brand": "betor.cz",
+      "licenseHolder": "TRELANGEN a.s.",
+      "domains": [
+       "betor.cz"
+      ]
+     },
+     {
+      "brand": "bonvercasino.cz",
+      "licenseHolder": "BONVER WIN, a.s.",
+      "domains": [
+       "bonvercasino.cz"
+      ]
+     },
+     {
+      "brand": "casino-kartac.cz",
+      "licenseHolder": "CASINO KARTÁČ Group a.s.",
+      "domains": [
+       "casino-kartac.cz"
+      ]
+     },
+     {
+      "brand": "chance.cz",
+      "licenseHolder": "CHANCE a.s.",
+      "domains": [
+       "chance.cz"
+      ]
+     },
+     {
+      "brand": "ecasino.cz",
+      "licenseHolder": "EURO QUEEN a.s.",
+      "domains": [
+       "ecasino.cz"
+      ]
+     },
+     {
+      "brand": "fbet.cz",
+      "licenseHolder": "forBET online CZ s.r.o.",
+      "domains": [
+       "fbet.cz"
+      ]
+     },
+     {
+      "brand": "forbescasino.cz",
+      "licenseHolder": "Victoria - Tip, a.s.",
+      "domains": [
+       "forbescasino.cz"
+      ]
+     },
+     {
+      "brand": "grandwin.cz",
+      "licenseHolder": "GPC WIN a.s.",
+      "domains": [
+       "grandwin.cz"
+      ]
+     },
+     {
+      "brand": "herna.gapagroup.cz",
+      "licenseHolder": "GAPA GROUP a.s",
+      "domains": [
+       "herna.gapagroup.cz"
+      ]
+     },
+     {
+      "brand": "ifortuna.cz",
+      "licenseHolder": "FORTUNA GAME a.s.",
+      "domains": [
+       "ifortuna.cz"
+      ]
+     },
+     {
+      "brand": "kajotintacto.cz",
+      "licenseHolder": "NET and GAMES a.s.",
+      "domains": [
+       "kajotintacto.cz"
+      ]
+     },
+     {
+      "brand": "kingsbet.cz",
+      "licenseHolder": "Greentube CZ a.s.",
+      "domains": [
+       "kingsbet.cz"
+      ]
+     },
+     {
+      "brand": "luckybet.cz",
+      "licenseHolder": "onebet a.s.",
+      "domains": [
+       "luckybet.cz"
+      ]
+     },
+     {
+      "brand": "magicplanet.cz",
+      "licenseHolder": "MP on-line s.r.o.",
+      "domains": [
+       "magicplanet.cz"
+      ]
+     },
+     {
+      "brand": "maxa.cz",
+      "licenseHolder": "Loterie Maxa s.r.o.",
+      "domains": [
+       "maxa.cz"
+      ]
+     },
+     {
+      "brand": "merkurxtip.cz",
+      "licenseHolder": "MerkurXtip a.s.",
+      "domains": [
+       "merkurxtip.cz"
+      ]
+     },
+     {
+      "brand": "monacobet.cz",
+      "licenseHolder": "PerixCZ s.r.o.",
+      "domains": [
+       "monacobet.cz"
+      ]
+     },
+     {
+      "brand": "online.casinoadmiral.cz",
+      "licenseHolder": "Paradise Casino Admiral,a.s.",
+      "domains": [
+       "online.casinoadmiral.cz"
+      ]
+     },
+     {
+      "brand": "star-casino.cz",
+      "licenseHolder": "CEC Praha a.s.",
+      "domains": [
+       "star-casino.cz"
+      ]
+     },
+     {
+      "brand": "synottip.cz",
+      "licenseHolder": "SYNOT TIP, a.s.",
+      "domains": [
+       "synottip.cz"
+      ]
+     },
+     {
+      "brand": "tipsport.cz",
+      "licenseHolder": "Tipsport.net a.s.",
+      "domains": [
+       "tipsport.cz"
+      ]
+     },
+     {
+      "brand": "tokyo.cz",
+      "licenseHolder": "3E Projekt, a.s.",
+      "domains": [
+       "tokyo.cz"
+      ]
+     },
+     {
+      "brand": "vsadahrej.cz",
+      "licenseHolder": "MOD PLAY, a.s.",
+      "domains": [
+       "vsadahrej.cz"
+      ]
+     }
+    ],
+    "sourceUrl": "https://mf.gov.cz/cs/kontrola-a-regulace/hazardni-hry/prehledy-a-statistiky/prehledy-legalnich-provozovatelu-whiteli/2026/seznam-legalnich-provozovatelu-hazardnich-her-dle-65357",
+    "asOf": "2026-10-02",
+    "note": "From the Ministry of Finance's current list of legal operators (the 'whitelist' spreadsheet): operators licensed for technical games (slots) or live games over the internet, one row per licensed domain."
+   },
+   "sportsbooks": {
+    "operators": [
+     {
+      "brand": "allinn.cz",
+      "licenseHolder": "ALEKS CZ a.s.",
+      "domains": [
+       "allinn.cz"
+      ]
+     },
+     {
+      "brand": "allwyn.cz",
+      "licenseHolder": "Allwyn Česko a.s.",
+      "domains": [
+       "allwyn.cz"
+      ]
+     },
+     {
+      "brand": "bet-x.cz",
+      "licenseHolder": "EVONA ELECTRONIC, spol. s.r.o.",
+      "domains": [
+       "bet-x.cz"
+      ]
+     },
+     {
+      "brand": "betano.cz",
+      "licenseHolder": "KAIZEN GAMING CZ LIMITED",
+      "domains": [
+       "betano.cz"
+      ]
+     },
+     {
+      "brand": "chance.cz",
+      "licenseHolder": "CHANCE a.s.",
+      "domains": [
+       "chance.cz"
+      ]
+     },
+     {
+      "brand": "fbet.cz",
+      "licenseHolder": "forBET online CZ s.r.o.",
+      "domains": [
+       "fbet.cz"
+      ]
+     },
+     {
+      "brand": "ifortuna.cz",
+      "licenseHolder": "FORTUNA GAME a.s.",
+      "domains": [
+       "ifortuna.cz"
+      ]
+     },
+     {
+      "brand": "kingsbet.cz",
+      "licenseHolder": "Greentube CZ a.s.",
+      "domains": [
+       "kingsbet.cz"
+      ]
+     },
+     {
+      "brand": "merkurxtip.cz",
+      "licenseHolder": "MerkurXtip a.s.",
+      "domains": [
+       "merkurxtip.cz"
+      ]
+     },
+     {
+      "brand": "synottip.cz",
+      "licenseHolder": "SYNOT TIP, a.s.",
+      "domains": [
+       "synottip.cz"
+      ]
+     },
+     {
+      "brand": "tipsport.cz",
+      "licenseHolder": "Tipsport.net a.s.",
+      "domains": [
+       "tipsport.cz"
+      ]
+     }
+    ],
+    "sourceUrl": "https://mf.gov.cz/cs/kontrola-a-regulace/hazardni-hry/prehledy-a-statistiky/prehledy-legalnich-provozovatelu-whiteli/2026/seznam-legalnich-provozovatelu-hazardnich-her-dle-65357",
+    "asOf": "2026-10-02",
+    "note": "Operators licensed for fixed-odds betting over the internet, from the same spreadsheet."
+   },
+   "why": "The Czech Gambling Act (186/2016 Sb.) licenses online casino games and betting through the Ministry of Finance, which publishes the list of legal operators and a separate blocklist of unlicensed sites."
+  },
+  "DK": {
+   "regulator": "Spillemyndigheden (Danish Gambling Authority)",
+   "casinos": {
+    "operators": [
+     {
+      "brand": "25syv A/S",
+      "licenseHolder": null,
+      "domains": [
+       "bet25.dk",
+       "casinogo.dk",
+       "derby25.dk",
+       "rod25.dk",
+       "roed25.dk",
+       "rød25.dk"
+      ]
+     },
+     {
+      "brand": "888 Denmark Limited",
+      "licenseHolder": null,
+      "domains": [
+       "888.dk",
+       "888casino.dk",
+       "888poker.dk",
+       "888sport.dk"
+      ]
+     },
+     {
+      "brand": "Apollo Entertainment Limited",
+      "licenseHolder": null,
+      "domains": [
+       "casinoaction.dk"
+      ]
+     },
+     {
+      "brand": "Betfair International Plc",
+      "licenseHolder": null,
+      "domains": [
+       "betfair.com",
+       "betfair.dk"
+      ]
+     },
+     {
+      "brand": "Bingo.dk ApS",
+      "licenseHolder": null,
+      "domains": [
+       "bingo.dk"
+      ]
+     },
+     {
+      "brand": "Blueberry (Denmark) Limited",
+      "licenseHolder": null,
+      "domains": [
+       "mrvegas.com",
+       "mrvegas.dk",
+       "videoslots.com",
+       "megariches.dk",
+       "megariches.com"
+      ]
+     },
+     {
+      "brand": "BM Solutions DK Ltd",
+      "licenseHolder": null,
+      "domains": [
+       "betmaster.dk"
+      ]
+     },
+     {
+      "brand": "Danske Licens Spil A/S",
+      "licenseHolder": null,
+      "domains": [
+       "danskespil.dk",
+       "tivolicasino.dk"
+      ]
+     },
+     {
+      "brand": "Denix Limited",
+      "licenseHolder": null,
+      "domains": [
+       "betinia.dk",
+       "campobet.dk",
+       "betoro.dk",
+       "swiper.dk",
+       "quickcasino.dk"
+      ]
+     },
+     {
+      "brand": "ElectraWorks Limited (Bwin)",
+      "licenseHolder": null,
+      "domains": [
+       "bwin.dk",
+       "da.partycasino.com",
+       "da.partypoker.com",
+       "partycasino.dk",
+       "partypoker.dk"
+      ]
+     },
+     {
+      "brand": "Hillside (New Media Malta) Plc (Bet365)",
+      "licenseHolder": null,
+      "domains": [
+       "bet365.dk"
+      ]
+     },
+     {
+      "brand": "Infiton Limited",
+      "licenseHolder": null,
+      "domains": [
+       "casongo.dk"
+      ]
+     },
+     {
+      "brand": "Insipia Limited",
+      "licenseHolder": null,
+      "domains": [
+       "betano.dk"
+      ]
+     },
+     {
+      "brand": "LeoVegas Gaming Plc",
+      "licenseHolder": null,
+      "domains": [
+       "leovegas.com",
+       "leovegas.dk",
+       "expekt.dk"
+      ]
+     },
+     {
+      "brand": "Loofers ApS",
+      "licenseHolder": null,
+      "domains": [
+       "loofers.dk"
+      ]
+     },
+     {
+      "brand": "Marathonbet Denmark ApS",
+      "licenseHolder": null,
+      "domains": [
+       "marathonbet.dk"
+      ]
+     },
+     {
+      "brand": "Merkur Bets Malta Limited",
+      "licenseHolder": null,
+      "domains": [
+       "cashpoint.dk",
+       "merkurbets.dk"
+      ]
+     },
+     {
+      "brand": "MGMNordic Limited",
+      "licenseHolder": null,
+      "domains": [
+       "expekt.dk"
+      ]
+     },
+     {
+      "brand": "Mr. Green Limited",
+      "licenseHolder": null,
+      "domains": [
+       "mrgreen.dk",
+       "mrgreen.com"
+      ]
+     },
+     {
+      "brand": "Nordic Spil Limited (Betsson)",
+      "licenseHolder": null,
+      "domains": [
+       "betsson.dk",
+       "nordicbet.dk"
+      ]
+     },
+     {
+      "brand": "Omnigame ApS (pip)",
+      "licenseHolder": null,
+      "domains": [
+       "pip.dk"
+      ]
+     },
+     {
+      "brand": "One Casino Limited",
+      "licenseHolder": null,
+      "domains": [
+       "onecasino.com"
+      ]
+     },
+     {
+      "brand": "Reel Denmark Limited (Pokerstars)",
+      "licenseHolder": null,
+      "domains": [
+       "betstars.dk",
+       "pokerstars.dk",
+       "pokerstarscasino.dk",
+       "pokerstarssports.dk"
+      ]
+     },
+     {
+      "brand": "Roar Vegas Limited",
+      "licenseHolder": null,
+      "domains": [
+       "leovegas.dk"
+      ]
+     },
+     {
+      "brand": "Røde Kors",
+      "licenseHolder": null
+     },
+     {
+      "brand": "RoyalCasino.com Limited",
+      "licenseHolder": null,
+      "domains": [
+       "royalcasino.dk",
+       "kapowcasino.dk",
+       "valhallacasino.dk"
+      ]
+     },
+     {
+      "brand": "SCGO Limited",
+      "licenseHolder": null,
+      "domains": [
+       "vbet.dk"
+      ]
+     },
+     {
+      "brand": "SIFA (Samvirkende Idræts-Foreninger Aalborg)",
+      "licenseHolder": null,
+      "domains": [
+       "sifa-online.dk",
+       "tvbingo.dk"
+      ]
+     },
+     {
+      "brand": "SKG Limited",
+      "licenseHolder": null,
+      "domains": [
+       "casinohouse.dk"
+      ]
+     },
+     {
+      "brand": "Skill on Net Limited",
+      "licenseHolder": null,
+      "domains": [
+       "44aces.com",
+       "ahtigames.com",
+       "bacanaplay.com",
+       "casinoandfriends.com",
+       "casinoandfriends.dk",
+       "clemensspillehal.com",
+       "clemensspillehal.dk",
+       "drueckglueck.com",
+       "drueckglueck.dk",
+       "eucasino.com",
+       "eucasino.dk",
+       "eurokingclub.com",
+       "eurokingclub.dk",
+       "euromania.com",
+       "finlandiacasino.com",
+       "geckoplay.dk",
+       "gentingcasino.dk",
+       "ice36.dk",
+       "knightslots.com",
+       "lordping.com",
+       "luckylouis.com",
+       "luckymeslots.com",
+       "luckymeslots.dk",
+       "luckyniki.com",
+       "luckyniki.dk",
+       "luckyvegas.com",
+       "lunacasino.com",
+       "lunacasino.dk",
+       "maskedsingergames.co.uk",
+       "megacasino.dk",
+       "megawayscasino.com",
+       "metalcasino.com",
+       "miamijackpots.com",
+       "parisvegasclub.com",
+       "parisvegasclub.dk",
+       "playjango.com",
+       "playkasino.com",
+       "playmillion.dk",
+       "playojo.com",
+       "playojo.dk",
+       "playtoro.com",
+       "primescratchards.dk",
+       "primeslots.dk",
+       "queenvegas.com",
+       "queenvegas.dk",
+       "royalbet.com",
+       "royale500.com",
+       "simbagames.dk",
+       "slingo.com",
+       "slotsmagic.com",
+       "slotsmagic.dk",
+       "slotstars.com",
+       "swiftcasino.com",
+       "turbonino.com",
+       "vegaswinner.com",
+       "vegaswinner.dk",
+       "zebrawins.com",
+       "winlandia.dk",
+       "winlandia.com"
+      ]
+     },
+     {
+      "brand": "Spilhuset.dk A/S",
+      "licenseHolder": null,
+      "domains": [
+       "spilhuset.dk"
+      ]
+     },
+     {
+      "brand": "Spillehallen.dk ApS (CompuGame)",
+      "licenseHolder": null,
+      "domains": [
+       "spillehallen.dk"
+      ]
+     },
+     {
+      "brand": "SPILNU.DK A/S",
+      "licenseHolder": null,
+      "domains": [
+       "spilnu.dk",
+       "spinking.dk"
+      ]
+     },
+     {
+      "brand": "Stake Denmark A/S",
+      "licenseHolder": null,
+      "domains": [
+       "vindercasino.dk",
+       "stake.dk"
+      ]
+     },
+     {
+      "brand": "Syreni Limited",
+      "licenseHolder": null,
+      "domains": [
+       "comeon.com",
+       "comeon.dk",
+       "getlucky.com",
+       "getlucky.dk",
+       "casinostuen.dk"
+      ]
+     },
+     {
+      "brand": "THWeb Games ApS",
+      "licenseHolder": null,
+      "domains": [
+       "vindstort.dk"
+      ]
+     },
+     {
+      "brand": "Tipwin Limited",
+      "licenseHolder": null,
+      "domains": [
+       "tipwin.com",
+       "tipwin.dk"
+      ]
+     },
+     {
+      "brand": "Tombola (International) Plc",
+      "licenseHolder": null,
+      "domains": [
+       "tombola.dk"
+      ]
+     },
+     {
+      "brand": "Unibet (Denmark) Limited",
+      "licenseHolder": null,
+      "domains": [
+       "mariacasino.dk",
+       "unibet.dk"
+      ]
+     },
+     {
+      "brand": "Winteq ApS",
+      "licenseHolder": null,
+      "domains": [
+       "spildansknu.dk",
+       "spilleautomaten.dk"
+      ]
+     }
+    ],
+    "sourceUrl": "https://spillemyndigheden.dk/en-us/licensed-gambling-operators",
+    "asOf": "2026-10-02",
+    "note": "Operators the Danish Gambling Authority lists with an online casino licence (including revenue-restricted licences), with the domains it records for each."
+   },
+   "sportsbooks": {
+    "operators": [
+     {
+      "brand": "25syv A/S",
+      "licenseHolder": null,
+      "domains": [
+       "bet25.dk",
+       "casinogo.dk",
+       "derby25.dk",
+       "rod25.dk",
+       "roed25.dk",
+       "rød25.dk"
+      ]
+     },
+     {
+      "brand": "888 Denmark Limited",
+      "licenseHolder": null,
+      "domains": [
+       "888.dk",
+       "888casino.dk",
+       "888poker.dk",
+       "888sport.dk"
+      ]
+     },
+     {
+      "brand": "Betfair International Plc",
+      "licenseHolder": null,
+      "domains": [
+       "betfair.com",
+       "betfair.dk"
+      ]
+     },
+     {
+      "brand": "BM Solutions DK Ltd",
+      "licenseHolder": null,
+      "domains": [
+       "betmaster.dk"
+      ]
+     },
+     {
+      "brand": "Danske Licens Spil A/S",
+      "licenseHolder": null,
+      "domains": [
+       "danskespil.dk",
+       "tivolicasino.dk"
+      ]
+     },
+     {
+      "brand": "Denix Limited",
+      "licenseHolder": null,
+      "domains": [
+       "betinia.dk",
+       "campobet.dk",
+       "betoro.dk",
+       "swiper.dk",
+       "quickcasino.dk"
+      ]
+     },
+     {
+      "brand": "ElectraWorks Limited (Bwin)",
+      "licenseHolder": null,
+      "domains": [
+       "bwin.dk",
+       "da.partycasino.com",
+       "da.partypoker.com",
+       "partycasino.dk",
+       "partypoker.dk"
+      ]
+     },
+     {
+      "brand": "Hillside (New Media Malta) Plc (Bet365)",
+      "licenseHolder": null,
+      "domains": [
+       "bet365.dk"
+      ]
+     },
+     {
+      "brand": "Infiton Limited",
+      "licenseHolder": null,
+      "domains": [
+       "casongo.dk"
+      ]
+     },
+     {
+      "brand": "Insipia Limited",
+      "licenseHolder": null,
+      "domains": [
+       "betano.dk"
+      ]
+     },
+     {
+      "brand": "LeoVegas Gaming Plc",
+      "licenseHolder": null,
+      "domains": [
+       "leovegas.com",
+       "leovegas.dk",
+       "expekt.dk"
+      ]
+     },
+     {
+      "brand": "Marathonbet Denmark ApS",
+      "licenseHolder": null,
+      "domains": [
+       "marathonbet.dk"
+      ]
+     },
+     {
+      "brand": "Merkur Bets Malta Limited",
+      "licenseHolder": null,
+      "domains": [
+       "cashpoint.dk",
+       "merkurbets.dk"
+      ]
+     },
+     {
+      "brand": "MGMNordic Limited",
+      "licenseHolder": null,
+      "domains": [
+       "expekt.dk"
+      ]
+     },
+     {
+      "brand": "Mr. Green Limited",
+      "licenseHolder": null,
+      "domains": [
+       "mrgreen.dk",
+       "mrgreen.com"
+      ]
+     },
+     {
+      "brand": "Nordic Spil Limited (Betsson)",
+      "licenseHolder": null,
+      "domains": [
+       "betsson.dk",
+       "nordicbet.dk"
+      ]
+     },
+     {
+      "brand": "Pelea ApS",
+      "licenseHolder": null,
+      "domains": [
+       "pelea.app"
+      ]
+     },
+     {
+      "brand": "Reel Denmark Limited (Pokerstars)",
+      "licenseHolder": null,
+      "domains": [
+       "betstars.dk",
+       "pokerstars.dk",
+       "pokerstarscasino.dk",
+       "pokerstarssports.dk"
+      ]
+     },
+     {
+      "brand": "Roar Vegas Limited",
+      "licenseHolder": null,
+      "domains": [
+       "leovegas.dk"
+      ]
+     },
+     {
+      "brand": "SCGO Limited",
+      "licenseHolder": null,
+      "domains": [
+       "vbet.dk"
+      ]
+     },
+     {
+      "brand": "SKG Limited",
+      "licenseHolder": null,
+      "domains": [
+       "casinohouse.dk"
+      ]
+     },
+     {
+      "brand": "Spilhuset.dk A/S",
+      "licenseHolder": null,
+      "domains": [
+       "spilhuset.dk"
+      ]
+     },
+     {
+      "brand": "Spread Ex Limited",
+      "licenseHolder": null,
+      "domains": [
+       "spreadex.dk"
+      ]
+     },
+     {
+      "brand": "Stake Denmark A/S",
+      "licenseHolder": null,
+      "domains": [
+       "vindercasino.dk",
+       "stake.dk"
+      ]
+     },
+     {
+      "brand": "Swush.com ApS",
+      "licenseHolder": null,
+      "domains": [
+       "holdet.dk",
+       "lynholdet.dk"
+      ]
+     },
+     {
+      "brand": "Syreni Limited",
+      "licenseHolder": null,
+      "domains": [
+       "comeon.com",
+       "comeon.dk",
+       "getlucky.com",
+       "getlucky.dk",
+       "casinostuen.dk"
+      ]
+     },
+     {
+      "brand": "Tipwin Limited",
+      "licenseHolder": null,
+      "domains": [
+       "tipwin.com",
+       "tipwin.dk"
+      ]
+     },
+     {
+      "brand": "Unibet (Denmark) Limited",
+      "licenseHolder": null,
+      "domains": [
+       "mariacasino.dk",
+       "unibet.dk"
+      ]
+     },
+     {
+      "brand": "Zweeler Limited",
+      "licenseHolder": null,
+      "domains": [
+       "zweeler.com"
+      ]
+     }
+    ],
+    "sourceUrl": "https://spillemyndigheden.dk/en-us/licensed-gambling-operators",
+    "asOf": "2026-10-02",
+    "note": "Operators listed with a betting licence, with their recorded domains."
+   },
+   "why": "Denmark's Gambling Act of 2012 ended the state monopoly on online casino and betting and put licensing under Spillemyndigheden, which publishes every licence holder and the domains each may use."
+  }
+ },
+ "unreadable": {
+  "GR": {
+   "regulator": "Hellenic Gaming Commission (HGC)",
+   "sourceUrl": "https://hgc.gov.gr/en/supervision-and-control/licences/b2c-online-licences/",
+   "note": "The HGC publishes its B2C online licence holders only through its website legality checker, not as a list that can be read; use the checker to confirm a site."
+  },
+  "MT": {
+   "regulator": "Malta Gaming Authority (MGA)",
+   "sourceUrl": "https://www.mga.org.mt/licensee-hub/licensee-register/",
+   "note": "The MGA's licensee register is a search tool rather than a published list, and it licenses operators for other markets rather than for Maltese players."
+  },
+  "RO": {
+   "regulator": "Oficiul Național pentru Jocuri de Noroc (ONJN)",
+   "sourceUrl": "https://onjn.gov.ro/",
+   "note": "ONJN's site sits behind a browser-verification wall that a reader can pass and a script cannot."
+  },
+  "AT": {
+   "regulator": "Federal Ministry of Finance (BMF)",
+   "sourceUrl": "https://www.bmf.gv.at/themen/gluecksspiel-spielerschutz/gluecksspiel-in-oesterreich.html",
+   "note": "Online casino games are a federal concession held by a single operator (win2day, Casinos Austria), so there is no register of competing online casinos; sports betting is licensed by each federal state."
+  },
+  "NO": {
+   "regulator": "Lotteritilsynet",
+   "sourceUrl": "https://lottstift.no/for-spillere/",
+   "note": "Norway's exclusive-rights model gives Norsk Tipping and Norsk Rikstoto the only legal online offers; there is no register of licensed operators."
+  },
+  "FI": {
+   "regulator": "Finnish Licensing and Supervisory Authority (Lupa- ja valvontavirasto)",
+   "sourceUrl": "https://lvv.fi/",
+   "note": "Veikkaus holds the exclusive right until the licensing market opens in 2027; the new authority has published no licensees yet."
+  },
+  "PL": {
+   "regulator": "Ministry of Finance",
+   "sourceUrl": "https://www.gov.pl/web/finanse",
+   "note": "Online casino is a state monopoly (Totalizator Sportowy's Total Casino); licensed online bookmakers are listed by the Ministry of Finance in a register this script could not reach."
+  },
+  "CH": {
+   "regulator": "Federal Gaming Board (ESBK) and Gespa",
+   "sourceUrl": "https://www.gespa.ch/en/regulation-and-licensing/operators",
+   "note": "Swiss online casino games may only be offered by land-based casinos holding an extended concession from the Federal Council; online betting is run by the two lottery companies under Gespa. The ESBK's site did not expose a readable list."
+  },
+  "IE": {
+   "regulator": "Gambling Regulatory Authority of Ireland (GRAI)",
+   "sourceUrl": "https://www.grai.ie/licensing-regulation/business-to-consumer-licenses/licensing-phasing",
+   "note": "GRAI is phasing in business-to-consumer licensing under the Gambling Regulation Act 2024 and has not yet published a register of online licensees."
+  },
+  "NZ": {
+   "regulator": "Department of Internal Affairs (DIA)",
+   "sourceUrl": "https://www.dia.govt.nz/online-casino-gambling",
+   "note": "The Online Casino Gambling Act 2026 creates licences for up to 15 online casino operators; the DIA has not yet published licensees."
+  }
+ }
+}
