@@ -7,6 +7,7 @@ import { siteData } from "./site-data";
 import { getSpecFact } from "./spec-sheet";
 import type { Operator } from "./types";
 import { inHouseOrder } from "./house-order";
+import { raceFor } from "./races";
 
 const G = "Sportsbook";
 
@@ -59,4 +60,68 @@ export const sportsbookOps = (): Operator[] => inHouseOrder(siteData.ops.filter(
 /** Casinos whose own pages name this esports title. */
 export function booksForTitle(title: string): Operator[] {
   return sportsbookOps().filter((o) => sportsFacts(o.slug).titles.includes(title));
+}
+
+/**
+ * The sportsbooks that publish a standing sports welcome offer, in the
+ * order we put them forward. An editorial list, not a derived one: most
+ * books run rotating promotions and no fixed welcome offer, which the
+ * table says per row, and a reader who came to pick a book should see the
+ * standing offers first rather than scroll past twenty rows of "rotating".
+ *
+ * Razed leads: a fixed $50 free-bet sports welcome offer and a $10K weekly
+ * race alongside its $100K monthly, each cited on its profile.
+ *
+ * Every figure shown for an entry comes from the "Sports bonus terms" group
+ * of the casino's spec sheet and the races file — nothing is typed here.
+ */
+export const SPORTS_OFFER_ORDER: string[] = ["razed", "sportsbet-io", "vave", "dicey", "500-casino", "fortunejack", "cloudbet"];
+
+/** Sportsbooks in index order, with the standing-offer books lifted to the top in SPORTS_OFFER_ORDER. */
+export function sportsbookOrder(): Operator[] {
+  const all = sportsbookOps();
+  const lead = SPORTS_OFFER_ORDER.map((slug) => all.find((o) => o.slug === slug)).filter((o): o is Operator => !!o);
+  return [...lead, ...all.filter((o) => !SPORTS_OFFER_ORDER.includes(o.slug))];
+}
+
+export interface SportsOffer {
+  slug: string;
+  name: string;
+  mono: string;
+  /** The offer, as the operator words it, cut to its first clause. */
+  headline: string;
+  /** The wagering fact, where the operator publishes one. */
+  wagering: string | null;
+  /** Minimum odds / qualifying bet, where published. */
+  minOdds: string | null;
+  /** The casino's standing race or leaderboard, from lib/races.ts. */
+  race: string | null;
+  sourceUrl: string | null;
+  href: string;
+  signupUrl?: string;
+}
+
+const firstClause = (v: string) => v.split(/(?<=[a-z0-9)])[.;](?=\s|$)/i)[0].trim();
+
+export function sportsOffers(): SportsOffer[] {
+  const all = sportsbookOps();
+  return SPORTS_OFFER_ORDER.map((slug): SportsOffer | null => {
+    const o = all.find((x) => x.slug === slug);
+    const offer = getSpecFact(slug, "Sports bonus terms", "Offer");
+    if (!o || !offer?.value) return null;
+    const wagering = getSpecFact(slug, "Sports bonus terms", "Wagering")?.value ?? null;
+    const minOdds = getSpecFact(slug, "Sports bonus terms", "Minimum odds")?.value ?? null;
+    return {
+      slug,
+      name: o.name,
+      mono: o.mono,
+      headline: firstClause(String(offer.value)),
+      wagering: wagering ? firstClause(String(wagering)) : null,
+      minOdds: minOdds ? String(minOdds) : null,
+      race: raceFor(slug)?.label ?? null,
+      sourceUrl: offer.sourceUrl ?? null,
+      href: `/casinos/${slug}`,
+      signupUrl: o.affiliate && o.signupUrl ? o.signupUrl : undefined,
+    };
+  }).filter((x): x is SportsOffer => !!x);
 }

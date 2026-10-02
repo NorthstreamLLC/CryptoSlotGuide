@@ -111,6 +111,72 @@ export function VerticalIndexPage({ kind, tabIdx = 0 }: { kind: VerticalKind; ta
           </div>
         )}
 
+        {vp.offers && vp.offers.length > 0 && (
+          <div id="best-offers" style={{ marginBottom: 22, scrollMarginTop: 110 }}>
+            <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 12, flexWrap: "wrap", marginBottom: 12 }}>
+              <h2 style={{ margin: 0, fontSize: 22, fontWeight: 800, letterSpacing: "-.02em", color: "#fff" }}>Best sports offers</h2>
+              <span style={{ fontFamily: MONO, fontSize: 11, color: "#8E9CA5" }}>Standing welcome offers, as each book publishes them · races from the same pages</span>
+            </div>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 12 }}>
+              {vp.offers.map((o, i) => {
+                const lead = i === 0;
+                return (
+                  <div
+                    key={o.slug}
+                    data-reveal
+                    className="csg-lift"
+                    style={{
+                      ["--reveal-delay" as string]: `${i * 60}ms`,
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: 10,
+                      padding: "18px 20px",
+                      borderRadius: 16,
+                      background: lead ? "radial-gradient(120% 120% at 100% 0%, rgba(255,197,49,.12), transparent 55%), #0E1317" : "#0E1317",
+                      border: `1px solid ${lead ? "rgba(255,197,49,.35)" : "rgba(255,255,255,.08)"}`,
+                      minWidth: 0,
+                    }}
+                  >
+                    <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                      {/* BrandMark fills whatever box it is given; the box is fixed here so a logo stays a mark and not a hero. */}
+                      <div style={{ width: 48, height: 48, flex: "0 0 auto" }}>
+                        <BrandMark slug={o.slug} mono={o.mono} tint={lead ? "#FFC531" : "#00C2CC"} radius={10} fontSize={11} />
+                      </div>
+                      <div style={{ minWidth: 0 }}>
+                        <div style={{ fontSize: 16, fontWeight: 800, color: "#fff", letterSpacing: "-.015em" }}>{o.name}</div>
+                        <div style={{ fontFamily: MONO, fontSize: 10, letterSpacing: ".07em", textTransform: "uppercase", color: lead ? "#FFC531" : "#8E9CA5" }}>{lead ? "Our top sports pick" : `#${i + 1} sports offer`}</div>
+                      </div>
+                    </div>
+                    <div style={{ fontSize: 15, lineHeight: 1.45, fontWeight: 700, color: "#E8EDF0", textWrap: "pretty" }}>{o.headline}</div>
+                    <div style={{ display: "flex", flexDirection: "column", gap: 4, fontSize: 12.5, lineHeight: 1.5, color: "#A8B6BE" }}>
+                      {o.wagering && <div><span style={{ color: "#8E9CA5" }}>Wagering · </span>{o.wagering}</div>}
+                      {o.minOdds && <div><span style={{ color: "#8E9CA5" }}>Minimum odds · </span>{o.minOdds}</div>}
+                      {o.race && <div><span style={{ color: "#8E9CA5" }}>Races · </span>{o.race}</div>}
+                    </div>
+                    <div style={{ display: "flex", alignItems: "center", gap: 10, marginTop: "auto", paddingTop: 6, flexWrap: "wrap" }}>
+                      {o.signupUrl ? (
+                        <a href={o.signupUrl} target="_blank" rel="noopener noreferrer sponsored" style={{ padding: "10px 16px", borderRadius: 10, background: lead ? "#FFC531" : "#00C2CC", color: "#0A0D0F", fontSize: 13.5, fontWeight: 800 }}>
+                          Claim at {o.name}
+                        </a>
+                      ) : (
+                        <Link href={o.href} style={{ padding: "10px 16px", borderRadius: 10, border: "1px solid rgba(255,255,255,.14)", color: "#E8EDF0", fontSize: 13.5, fontWeight: 700 }}>
+                          Read the review
+                        </Link>
+                      )}
+                      <Link href={`${o.href}#terms`} style={{ fontFamily: MONO, fontSize: 10.5, color: "#8DA0AA" }}>Full terms</Link>
+                      {o.sourceUrl && (
+                        <a href={o.sourceUrl} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: MONO, fontSize: 10.5, color: "#5FE3E8", marginLeft: "auto" }}>
+                          source ↗
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
         <div style={{ borderRadius: 20, border: "1px solid rgba(255,255,255,.08)", background: "linear-gradient(180deg,#0E1317,#0A0E11)", overflow: "hidden" }}>
           <div className={`hidden md:grid ${cols} items-center gap-4`} style={{ padding: "12px 20px", borderBottom: "1px solid rgba(255,255,255,.07)", fontFamily: MONO, fontSize: 10, letterSpacing: ".08em", textTransform: "uppercase", color: "#8E9CA5" }}>
             <span>{vp.kicker}</span>

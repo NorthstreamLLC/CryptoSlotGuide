@@ -16,7 +16,7 @@ import { tintFor } from "./logo";
 import { catalogueTotals } from "./slot-db";
 import { TOP_SLOTS } from "./top-slots";
 import { brandFor } from "./casino-facts";
-import { sportsFacts, sportsbookOps, booksForTitle, esportsLabel, maxPayoutShort } from "./sports";
+import { sportsFacts, sportsbookOps, sportsbookOrder, sportsOffers, booksForTitle, esportsLabel, maxPayoutShort, type SportsOffer } from "./sports";
 import { hasVol, maxWinLabel, rtpLabel } from "./slot-facts";
 import {
   lowestTakerFee,
@@ -78,6 +78,8 @@ export interface VerticalPage {
   /** Header for the optional fourth fact column; "" hides the column. */
   statLabel: string;
   note: string;
+  /** Sportsbooks: the standing sports welcome offers, shown as cards above the table. */
+  offers?: SportsOffer[];
   /** Sibling pages worth a pill above the table — filters, maps, related indexes. */
   links?: { label: string; href: string }[];
   tabs?: string[];
@@ -260,7 +262,9 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
     }
     return {
       ...base,
-      rows: books.map((o) => {
+      offers: sportsOffers(),
+      // Standing-offer books first (lib/sports.ts), then the index order.
+      rows: sportsbookOrder().map((o) => {
         const s = sportsFacts(o.slug);
         const yes = (f: unknown) => (f ? "Yes" : "—");
         const offer = s.offer?.value ?? "";
