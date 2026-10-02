@@ -1,9 +1,21 @@
 /**
- * A country's flag from its ISO code, as the two regional-indicator symbols
- * every platform renders as a flag emoji. No image, no request, no rights
- * question — and nothing for a code that is not a plain two-letter country
- * ("US-NJ", "CA-ON"), which returns an empty string rather than a wrong flag.
+ * Flags as files, not emoji.
+ *
+ * The first cut used the two regional-indicator symbols that most platforms
+ * draw as a flag emoji. Windows draws them as two letters — "FI Finland" —
+ * and Windows is most of our readers, so every country row showed a code,
+ * not a flag. These are the MIT-licensed SVGs from flag-icons, copied into
+ * public/assets/flags for the countries the law data covers (43 of them),
+ * 4:3 like the menu's game tiles. flagOf() keeps the emoji for alt text and
+ * for the few places that cannot take an image.
  */
+const SHIPPED = new Set(["ar", "at", "au", "be", "br", "ca", "ch", "co", "cw", "cy", "cz", "de", "dk", "ee", "es", "fi", "fr", "gb", "gr", "hu", "ie", "in", "it", "jp", "ke", "kr", "lv", "mt", "mx", "nl", "no", "nz", "ph", "pl", "pt", "ro", "se", "sg", "si", "sk", "tr", "ua", "za"]);
+
+export function flagSrc(code: string | null | undefined): string | null {
+  const c = (code ?? "").toLowerCase();
+  return SHIPPED.has(c) ? `/assets/flags/${c}.svg` : null;
+}
+
 export function flagOf(code: string | null | undefined): string {
   if (!code || !/^[A-Za-z]{2}$/.test(code)) return "";
   const base = 0x1f1e6 - 65;

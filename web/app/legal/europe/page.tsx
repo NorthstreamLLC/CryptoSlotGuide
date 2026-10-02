@@ -5,7 +5,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { EUROPE_SHAPES, countryBy, casinosByAccess } from "@/lib/legal";
 import { countryHoverInfo } from "@/lib/legal-hover";
 import { LegalMap } from "@/components/legal/LegalMap";
-import { flagOf } from "@/lib/flags";
+import { flagSrc } from "@/lib/flags";
 import { MapHover } from "@/components/legal/MapHover";
 import { LegalHero, RegionGrid, Tabs, Disclaimer } from "@/components/legal/LegalUI";
 import { HelpBox } from "@/components/legal/HelpBox";
@@ -72,7 +72,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<{ l
         {covered.length > 0 && (
           <>
             <h2 style={{ margin: "36px 0 14px", fontSize: 24, fontWeight: 800, letterSpacing: "-.02em", color: "#fff" }}>European countries</h2>
-            <RegionGrid items={covered.map((c) => ({ href: `/legal/${c!.code.toLowerCase()}`, name: c!.name, status: c!.onlineCasino, flag: flagOf(c!.code) }))} />
+            <RegionGrid items={covered.map((c) => ({ href: `/legal/${c!.code.toLowerCase()}`, name: c!.name, status: c!.onlineCasino, flag: flagSrc(c!.code) }))} />
           </>
         )}
         <HelpBox />

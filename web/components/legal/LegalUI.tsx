@@ -61,7 +61,7 @@ export function Disclaimer() {
   );
 }
 
-export function RegionGrid({ items }: { items: { href: string; name: string; status?: string; flag?: string }[] }) {
+export function RegionGrid({ items }: { items: { href: string; name: string; status?: string; flag?: string | null }[] }) {
   return (
     <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: 8 }}>
       {items.map((it) => {
@@ -69,7 +69,10 @@ export function RegionGrid({ items }: { items: { href: string; name: string; sta
         return (
           <Link key={it.href} href={it.href} style={{ display: "flex", alignItems: "center", gap: 9, padding: "10px 12px", borderRadius: 10, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)", fontSize: 13.5, fontWeight: 600, color: "#E8EDF0" }}>
             <span style={{ width: 9, height: 9, borderRadius: 100, background: TONE[t].fill, flex: "none" }} />
-            {it.flag && <span aria-hidden style={{ fontSize: 16, lineHeight: 1, flex: "none" }}>{it.flag}</span>}
+            {it.flag && (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={it.flag} alt="" width={20} height={15} loading="lazy" style={{ width: 20, height: 15, borderRadius: 2, flex: "none", objectFit: "cover" }} />
+            )}
             <span style={{ minWidth: 0, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{it.name}</span>
           </Link>
         );
