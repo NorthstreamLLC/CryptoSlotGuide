@@ -79,6 +79,8 @@ console.log(`${domains.size} domains in the registers · ${list.length} to fetch
  */
 function get(url, binary = false) {
   return new Promise((resolve) => {
+    // A command line has a length limit; no real page or icon URL comes near it.
+    if (!url || url.length > 2000) return resolve({ status: 0, url, body: binary ? Buffer.alloc(0) : "" });
     execFile(
       "curl",
       ["-sL", "-A", UA, "--connect-timeout", "6", "-m", "12", "--max-filesize", "4000000", "-w", "\n__META__%{http_code} %{url_effective}", url],
@@ -187,14 +189,16 @@ async function one(domain) {
     if (seen.has(c.url)) continue;
     seen.add(c.url);
     if (/\.svg(\?|$)/i.test(c.url) === false && c.size && c.size < 16) continue;
-    const r = await get(c.url, true);
+    // An icon inlined in the page as a data: URL is still the site's own icon.
+    const inline = c.url.match(/^data:image\/[\w+.-]+;base64,(.+)$/i);
+    const r = inline ? { status: 200, url: c.url, body: Buffer.from(inline[1], "base64") } : await get(c.url, true);
     if (r.status < 200 || r.status >= 300 || r.body.length < 100) continue;
     const head = r.body.slice(0, 64).toString("utf8").trim().toLowerCase();
     if (head.startsWith("<!doctype") || head.startsWith("<html")) continue; // a page, not an image
     const w = await toWebp(r.body, c.url);
     if (!w) continue;
     fs.writeFileSync(path.join(OUT, `${domain}.webp`), w.out);
-    return { file: `${domain}.webp`, sourceUrl: c.url, width: w.width };
+    return { file: `${domain}.webp`, sourceUrl: inline ? `${base} (icon inlined in the page)` : c.url, width: w.width };
   }
   return null;
 }

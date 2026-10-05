@@ -2,10 +2,11 @@ import Link from "next/link";
 import { NextSteps } from "@/components/layout/NextSteps";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { tintFor } from "@/lib/logo";
-import { fiatMarkets, fiatHref, EUROPE_FIAT, type FiatMarket } from "@/lib/fiat";
+import { fiatMarkets, fiatHref, FIAT_REGIONS, regionMarkets, type FiatMarket } from "@/lib/fiat";
 import { rankedBrands } from "@/lib/us-brands";
 import { sweepsSorted } from "@/lib/sweeps";
 import { flagSrc } from "@/lib/flags";
+import { countryBy } from "@/lib/legal";
 import world from "@/data/world-market.json";
 
 /**
@@ -58,13 +59,8 @@ function RegionHeading({ title, sub }: { title: string; sub: string }) {
 
 export function FiatHub() {
   const markets = fiatMarkets();
-  const byCode = new Map(markets.map((m) => [m.code, m]));
-  const europe = EUROPE_FIAT.map((c) => byCode.get(c)).filter((m): m is FiatMarket => !!m);
-  const ontario = byCode.get("CA-ON");
-  const argentina = byCode.get("AR");
   const us = rankedBrands();
   const sweeps = sweepsSorted();
-  const gb = byCode.get("GB");
   const unreadable = Object.entries((world as unknown as { unreadable: Record<string, { regulator: string; sourceUrl: string; note: string }> }).unreadable);
   const total = markets.reduce((n, m) => n + m.brands.length, 0);
 
@@ -88,73 +84,62 @@ export function FiatHub() {
       </section>
 
       <div style={{ maxWidth: 1240, margin: "0 auto", padding: "8px 24px 70px" }}>
-        <RegionHeading title="North America" sub="US states license their own casinos and sportsbooks; sweepstakes casinos run under a different model; Ontario is Canada's one open market." />
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 12 }}>
-          <Link href="/us-casinos" className="csg-lift" style={{ display: "block", padding: "16px 18px", borderRadius: 15, background: "#0C1013", border: "1px solid rgba(255,255,255,.08)" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 11 }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={flagSrc("US") ?? ""} alt="" width={34} height={25} style={{ width: 34, height: 25, borderRadius: 4, objectFit: "cover" }} />
-              <div>
-                <div style={{ fontSize: 15.5, fontWeight: 800, color: "#fff" }}>US-regulated</div>
-                <div style={{ fontFamily: MONO, fontSize: 10.5, color: "#83919A" }}>{us.length} brands across the legal states</div>
+        {FIAT_REGIONS.map((r) => {
+          const ms = regionMarkets(r.key);
+          if (!ms.length && r.key !== "north-america") return null;
+          return (
+            <div key={r.key} id={r.key} style={{ scrollMarginTop: 110 }}>
+              <RegionHeading title={r.title} sub={r.sub} />
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 12 }}>
+                {r.key === "north-america" && (
+                  <>
+                  <Link href="/us-casinos" className="csg-lift" style={{ display: "block", padding: "16px 18px", borderRadius: 15, background: "#0C1013", border: "1px solid rgba(255,255,255,.08)" }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 11 }}>
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={flagSrc("US") ?? ""} alt="" width={34} height={25} style={{ width: 34, height: 25, borderRadius: 4, objectFit: "cover" }} />
+                      <div>
+                        <div style={{ fontSize: 15.5, fontWeight: 800, color: "#fff" }}>US-regulated</div>
+                        <div style={{ fontFamily: MONO, fontSize: 10.5, color: "#83919A" }}>{us.length} brands across the legal states</div>
+                      </div>
+                    </div>
+                    <div style={{ display: "flex", gap: 6, marginTop: 12 }}>
+                      {us.slice(0, 6).map(({ brand }) => (
+                        <span key={brand.slug} style={{ width: 30, height: 30 }}>
+                          <BrandMark slug={brand.slug} mono={brand.name.slice(0, 2)} tint={tintFor(brand.slug)} radius={8} fontSize={9} />
+                        </span>
+                      ))}
+                    </div>
+                  </Link>
+                  <Link href="/sweepstakes-casinos" className="csg-lift" style={{ display: "block", padding: "16px 18px", borderRadius: 15, background: "#0C1013", border: "1px solid rgba(255,255,255,.08)" }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 11 }}>
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={flagSrc("US") ?? ""} alt="" width={34} height={25} style={{ width: 34, height: 25, borderRadius: 4, objectFit: "cover" }} />
+                      <div>
+                        <div style={{ fontSize: 15.5, fontWeight: 800, color: "#fff" }}>US sweepstakes</div>
+                        <div style={{ fontFamily: MONO, fontSize: 10.5, color: "#83919A" }}>{sweeps.length} sweepstakes casinos</div>
+                      </div>
+                    </div>
+                    <div style={{ display: "flex", gap: 6, marginTop: 12 }}>
+                      {sweeps.slice(0, 6).map((s) => (
+                        <span key={s.slug} style={{ width: 30, height: 30 }}>
+                          <BrandMark slug={s.slug} mono={s.name.slice(0, 2)} tint={tintFor(s.slug)} radius={8} fontSize={9} />
+                        </span>
+                      ))}
+                    </div>
+                  </Link>
+                  </>
+                )}
+                {ms.map((m) => (
+                  <MarketCard key={m.code} m={m} />
+                ))}
               </div>
             </div>
-            <div style={{ display: "flex", gap: 6, marginTop: 12 }}>
-              {us.slice(0, 6).map(({ brand }) => (
-                <span key={brand.slug} style={{ width: 30, height: 30 }}>
-                  <BrandMark slug={brand.slug} mono={brand.name.slice(0, 2)} tint={tintFor(brand.slug)} radius={8} fontSize={9} />
-                </span>
-              ))}
-            </div>
-          </Link>
-          <Link href="/sweepstakes-casinos" className="csg-lift" style={{ display: "block", padding: "16px 18px", borderRadius: 15, background: "#0C1013", border: "1px solid rgba(255,255,255,.08)" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 11 }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={flagSrc("US") ?? ""} alt="" width={34} height={25} style={{ width: 34, height: 25, borderRadius: 4, objectFit: "cover" }} />
-              <div>
-                <div style={{ fontSize: 15.5, fontWeight: 800, color: "#fff" }}>US sweepstakes</div>
-                <div style={{ fontFamily: MONO, fontSize: 10.5, color: "#83919A" }}>{sweeps.length} sweepstakes casinos</div>
-              </div>
-            </div>
-            <div style={{ display: "flex", gap: 6, marginTop: 12 }}>
-              {sweeps.slice(0, 6).map((s) => (
-                <span key={s.slug} style={{ width: 30, height: 30 }}>
-                  <BrandMark slug={s.slug} mono={s.name.slice(0, 2)} tint={tintFor(s.slug)} radius={8} fontSize={9} />
-                </span>
-              ))}
-            </div>
-          </Link>
-          {ontario && <MarketCard m={ontario} />}
-        </div>
-
-        {gb && (
-          <>
-            <RegionHeading title="United Kingdom" sub="Every site on the Gambling Commission's register held by an operator with a remote casino or betting licence." />
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 12 }}>
-              <MarketCard m={gb} />
-            </div>
-          </>
-        )}
-
-        <RegionHeading title="Europe" sub="Each country's licensed sites, read from its regulator's own register." />
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 12 }}>
-          {europe.map((m) => (
-            <MarketCard key={m.code} m={m} />
-          ))}
-        </div>
-
-        {argentina && (
-          <>
-            <RegionHeading title="Latin America" sub="Argentina licenses province by province; Buenos Aires province publishes its list." />
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 12 }}>
-              <MarketCard m={argentina} />
-            </div>
-          </>
-        )}
+          );
+        })}
 
         {unreadable.length > 0 && (
           <>
-            <RegionHeading title="Registers we can't list" sub="These regulators publish no list a reader can be given — a search tool, a monopoly, or no licences issued yet. Each links to where to check." />
+            <RegionHeading title="Registers we can't list" sub="These regulators publish no list a reader can be given — a search tool, a site that refuses automated reads, a ban, or no licences issued yet. Each links to where to check." />
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 10 }}>
               {unreadable.map(([code, u]) => (
                 <div key={code} style={{ padding: "14px 16px", borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.06)" }}>
@@ -163,7 +148,11 @@ export function FiatHub() {
                       // eslint-disable-next-line @next/next/no-img-element
                       <img src={flagSrc(code) as string} alt="" width={24} height={18} style={{ width: 24, height: 18, borderRadius: 3, objectFit: "cover" }} />
                     )}
-                    <Link href={`/legal/${code.toLowerCase()}`} style={{ fontSize: 14, fontWeight: 700, color: "#E8EDF0" }}>{u.regulator}</Link>
+                    {countryBy(code) ? (
+                      <Link href={`/legal/${code.toLowerCase()}`} style={{ fontSize: 14, fontWeight: 700, color: "#E8EDF0" }}>{u.regulator}</Link>
+                    ) : (
+                      <a href={u.sourceUrl} target="_blank" rel="noopener noreferrer nofollow" style={{ fontSize: 14, fontWeight: 700, color: "#E8EDF0" }}>{u.regulator} ↗</a>
+                    )}
                   </div>
                   <p style={{ margin: 0, fontSize: 12.5, lineHeight: 1.55, color: "#8DA0AA" }}>{u.note}</p>
                 </div>

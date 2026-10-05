@@ -772,17 +772,21 @@
   {
     "code": "BR",
     "name": "Brazil",
-    "onlineCasino": "licensed market",
-    "sportsBetting": "licensed market",
+    "onlineCasino": "not legal",
+    "sportsBetting": "not legal",
     "regulator": {
       "name": "Secretaria de Prêmios e Apostas (SPA), Ministry of Finance",
       "url": "https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas"
     },
     "minAge": "18+",
     "crypto": "Prohibited. Licensed operators may not accept deposits in virtual assets or other crypto-assets (Portaria SPA/MF 615/2024).",
-    "licensing": "Since 1 January 2025 only SPA-authorised operators may offer fixed-odds betting and online games nationally, all on '.bet.br' domains. The law requires ISPs to block unauthorised sites.",
-    "note": "Brazil runs a licensed online casino and betting market on .bet.br domains and bans crypto deposits.",
+    "licensing": "Provisional Measure 1.394 of 25 September 2026 prohibits fixed-odds betting and online games nationwide, including offers from operators based abroad and state-level authorisations; the previously authorised .bet.br sites had to go offline from 6 October 2026. Other lotteries authorised by law are not affected.",
+    "note": "Brazil banned sports betting and online casino games on 25 September 2026; the licensed .bet.br sites went offline on 6 October 2026.",
     "sources": [
+      {
+        "label": "SPA: Provisional Measure 1.394/2026 explained (the ban and its timetable)",
+        "url": "https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas/medida-provisoria-ndeg-1-394-2026-entenda-as-novas-regras-para-as-apostas-de-quota-fixa"
+      },
       {
         "label": "SPA: Fixed-odds betting (authorisation, .bet.br)",
         "url": "https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas/apostas-de-quota-fixa"

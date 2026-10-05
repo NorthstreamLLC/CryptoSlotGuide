@@ -110,6 +110,9 @@ export const fiatLogo = (domain: string): string | null => (LOGOS[domain]?.file 
 /** Whether a register's "brand" is really just a domain (Germany, Spain, Italy…). */
 const isDomain = (s: string) => /^[a-z0-9.-]+\.[a-z]{2,}$/i.test(s.trim());
 
+/** Sub-national markets, named for the place the register covers. */
+const MARKET_NAMES: Record<string, string> = { "CA-ON": "Ontario", AR: "Buenos Aires province", "AR-C": "City of Buenos Aires" };
+
 function marketOf(code: string, m: CountryMarket): FiatMarket {
   const bySite = new Map<string, FiatSite>();
   const holdersWithoutSite: string[] = [];
@@ -157,7 +160,7 @@ function marketOf(code: string, m: CountryMarket): FiatMarket {
   return {
     code,
     slug: code.toLowerCase(),
-    name: code === "CA-ON" ? "Ontario" : code === "AR" ? "Buenos Aires province" : c?.name ?? code,
+    name: MARKET_NAMES[code] ?? c?.name ?? code,
     flag: flagSrc(code.split("-")[0]),
     regulator: m.regulator,
     why: m.why,
@@ -201,6 +204,30 @@ export const fiatMarkets = (): FiatMarket[] => MARKETS;
 export const fiatMarket = (slug: string): FiatMarket | null => MARKETS.find((m) => m.slug === slug.toLowerCase()) ?? null;
 export const fiatMarketFor = (code: string): FiatMarket | null => MARKETS.find((m) => m.code === code.toUpperCase()) ?? null;
 
-/** Regions for the hub and the menu. */
-export const EUROPE_FIAT = ["DE", "ES", "SE", "DK", "NL", "BE", "CZ", "FR", "IT", "PT", "LV", "CY"];
+/**
+ * Regions for the hub and the menu, each market in the order it is listed.
+ * A code with no register on file is skipped, so a market appears here the
+ * day its adapter lands.
+ */
+export const FIAT_REGIONS: { key: string; title: string; sub: string; codes: string[] }[] = [
+  {
+    key: "north-america",
+    title: "North America",
+    sub: "US states license their own casinos and sportsbooks; sweepstakes casinos run under a different model; in Canada each province runs or licenses its own online gambling.",
+    codes: ["CA-ON", "CA-BC", "CA-AB", "CA-QC", "CA-MB", "CA-SK", "CA-NB", "CA-NS", "CA-PE", "CA-NL"],
+  },
+  { key: "uk", title: "United Kingdom", sub: "Every site on the Gambling Commission's register held by an operator with a remote casino or betting licence.", codes: ["GB"] },
+  {
+    key: "europe",
+    title: "Europe",
+    sub: "Each country's licensed sites, read from its regulator's own register.",
+    codes: ["DE", "ES", "SE", "IT", "DK", "NL", "EE", "GR", "FR", "BE", "SK", "PT", "CZ", "PL", "HR", "LV", "CY", "HU", "SI", "AT", "CH", "NO", "FI"],
+  },
+  { key: "latin-america", title: "Latin America", sub: "Each country's or province's own list of authorised online operators.", codes: ["PE", "CO", "AR", "AR-C"] },
+  { key: "asia-pacific", title: "Asia-Pacific", sub: "Australia licenses online bookmakers state by state, most of them in the Northern Territory; online casinos are prohibited nationally.", codes: ["AU-NT"] },
+];
+export const regionMarkets = (key: string): FiatMarket[] =>
+  (FIAT_REGIONS.find((r) => r.key === key)?.codes ?? []).map((c) => fiatMarketFor(c)).filter((m): m is FiatMarket => !!m);
+/** Kept for the menu: the European markets on file, in region order. */
+export const EUROPE_FIAT = FIAT_REGIONS.find((r) => r.key === "europe")!.codes;
 export const fiatHref = (code: string) => `/licensed-casinos/${code.toLowerCase()}`;

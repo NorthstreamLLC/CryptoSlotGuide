@@ -16,7 +16,7 @@ import { raceSlugs } from "./races";
 import { countryPages, casinosForCountry } from "./landing";
 import { TOP_STUDIOS } from "./top-studios";
 import { US_STATES, EUROPE_SHAPES, toneOf } from "./legal";
-import { fiatMarkets, fiatMarketFor, fiatHref, EUROPE_FIAT } from "./fiat";
+import { fiatMarkets, fiatMarketFor, fiatHref, EUROPE_FIAT, regionMarkets } from "./fiat";
 
 /** The countries the Europe map draws, for the Europe column. */
 const EUROPE_CODES = new Set(EUROPE_SHAPES.map((sh) => sh.code).filter((c): c is string => !!c));
@@ -598,7 +598,9 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
               links: [
                 { label: "US-regulated casinos", href: "/us-casinos", image: flagSrc("US") ?? undefined },
                 { label: `US sweepstakes · ${sweepsSorted().length}`, href: "/sweepstakes-casinos", image: flagSrc("US") ?? undefined },
-                ...(fiatMarketFor("CA-ON") ? [{ label: `Ontario · ${fiatMarketFor("CA-ON")!.brands.length}`, href: fiatHref("CA-ON"), image: flagSrc("CA") ?? undefined }] : []),
+                ...regionMarkets("north-america")
+                  .slice(0, 4)
+                  .map((m) => ({ label: `${m.name} · ${m.brands.length}`, href: fiatHref(m.code), image: m.flag ?? undefined })),
               ],
             },
             {
@@ -612,10 +614,10 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
               ],
             },
             {
-              title: "More",
+              title: "Latin America & Asia-Pacific",
               links: [
-                ...(fiatMarketFor("AR") ? [{ label: `Buenos Aires · ${fiatMarketFor("AR")!.brands.length}`, href: fiatHref("AR"), image: flagSrc("AR") ?? undefined }] : []),
-                { label: `All ${fiatMarkets().length + 3} licensed markets`, href: "/licensed-casinos" },
+                ...[...regionMarkets("latin-america"), ...regionMarkets("asia-pacific")].map((m) => ({ label: `${m.name} · ${m.brands.length}`, href: fiatHref(m.code), image: m.flag ?? undefined })),
+                { label: `All ${fiatMarkets().length + 2} licensed markets`, href: "/licensed-casinos" },
               ],
             },
           ],
@@ -724,23 +726,14 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
           icon: flagSrc("EU") ?? undefined,
           label: "Europe",
           tint: "#7BB8E0",
-          href: "/licensed-casinos",
-          columns: [
-            {
-              title: "Licensed sites by country",
-              links: EUROPE_FIAT.map((code) => fiatMarketFor(code))
-                .filter((m): m is NonNullable<typeof m> => !!m)
-                .slice(0, 7)
-                .map((m) => ({ label: `${m.name} · ${m.brands.length}`, href: fiatHref(m.code), image: m.flag ?? undefined })),
-            },
-            {
-              title: " ",
-              links: EUROPE_FIAT.map((code) => fiatMarketFor(code))
-                .filter((m): m is NonNullable<typeof m> => !!m)
-                .slice(7)
-                .map((m) => ({ label: `${m.name} · ${m.brands.length}`, href: fiatHref(m.code), image: m.flag ?? undefined })),
-            },
-          ],
+          href: "/licensed-casinos#europe",
+          // Three columns of eight: the European registers on file, in region order.
+          columns: [0, 8, 16].map((from, i) => ({
+            title: i === 0 ? "Licensed brands by country" : " ",
+            links: regionMarkets("europe")
+              .slice(from, from + 8)
+              .map((m) => ({ label: `${m.name} · ${m.brands.length}`, href: fiatHref(m.code), image: m.flag ?? undefined })),
+          })).filter((c) => c.links.length),
         },
       ],
     },
