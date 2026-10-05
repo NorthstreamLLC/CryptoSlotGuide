@@ -225,7 +225,7 @@ if (pragFile && fs.existsSync(pragFile)) {
       name,
       { versions, versionsFrom, released: isoDate(r["Release Date"]), demoUrl: demoUrl || undefined },
       "Pragmatic Play",
-      "https://www.pragmaticplay.com/en/slots/",
+      "https://www.pragmaticplay.com/en/games/",
       path.basename(pragFile)
     );
   }

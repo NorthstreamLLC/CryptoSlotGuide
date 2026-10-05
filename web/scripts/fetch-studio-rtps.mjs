@@ -38,6 +38,7 @@
  */
 import fs from "node:fs";
 import path from "node:path";
+import { execFileSync } from "node:child_process";
 import { titleMatcher } from "./lib/match-title.mjs";
 
 const argv = process.argv.slice(2);
@@ -64,6 +65,14 @@ async function fetchText(url, { json = false } = {}) {
   for (let attempt = 0; attempt < 3; attempt++) {
     const r = await fetch(url, { headers: { "User-Agent": UA, Accept: json ? "application/json" : "text/html,*/*" }, redirect: "follow" });
     if (r.status === 429 || r.status >= 500) {
+      // pragmaticplay.com answers every request from Node's HTTP client with
+      // 502, whatever the headers, and serves the same URL to curl. So a 5xx
+      // gets one curl attempt before the backoff.
+      const viaCurl = curlText(url);
+      if (viaCurl !== null) {
+        fs.writeFileSync(f, viaCurl);
+        return viaCurl;
+      }
       await sleep(5000 * (attempt + 1));
       continue;
     }
@@ -73,6 +82,18 @@ async function fetchText(url, { json = false } = {}) {
     return t;
   }
   return null;
+}
+
+/** GET with curl; the body on a 2xx, else null. */
+function curlText(url) {
+  try {
+    const out = execFileSync("curl", ["-sL", "-A", UA, "-m", "60", "-w", "\n%{http_code}", url], { encoding: "utf8", maxBuffer: 64 * 1024 * 1024 });
+    const cut = out.lastIndexOf("\n");
+    const code = Number(out.slice(cut + 1));
+    return code >= 200 && code < 300 ? out.slice(0, cut) : null;
+  } catch {
+    return null;
+  }
 }
 
 const decode = (s) =>
@@ -213,6 +234,49 @@ const ADAPTERS = {
     },
   },
 
+  pragmatic: {
+    studio: "Pragmatic Play",
+    // Pragmatic's game pages moved to /en/games/<slug>/, which print the RTP
+    // under "Basic Game Info". Its sitemaps list each game in up to a dozen
+    // languages and the English set is incomplete (397 of 609), so the slugs
+    // are collected across every language and the English page requested for
+    // each; a slug with no English page simply returns nothing.
+    async list() {
+      const idx = await fetchText("https://www.pragmaticplay.com/sitemap_index.xml");
+      const subs = locsOf(idx ?? "").filter((u) => /games-sitemap\d*\.xml$/.test(u));
+      const slugs = new Set();
+      for (const s of subs) {
+        const x = await fetchText(s);
+        for (const u of locsOf(x ?? "")) {
+          const m = u.match(/\/([a-z0-9-]+)\/$/);
+          if (m && /\/(games|%E3%82%B2%E3%83%BC%E3%83%A0)\//i.test(u)) slugs.add(m[1]);
+        }
+      }
+      // The sitemaps time out or 502 at times; the list read from them on
+      // 2026-10-04 is kept in data/sources for exactly that case.
+      if (!slugs.size) {
+        const saved = path.join("data", "sources", "pragmatic-game-slugs.txt");
+        if (fs.existsSync(saved)) {
+          for (const line of fs.readFileSync(saved, "utf8").split(/\r?\n/)) if (/^[a-z0-9-]+$/.test(line.trim())) slugs.add(line.trim());
+          console.log(`  sitemaps unavailable; using ${slugs.size} slugs from ${saved}`);
+        }
+      }
+      return [...slugs].map((slug) => ({ url: `https://www.pragmaticplay.com/en/games/${slug}/` }));
+    },
+    parse(html) {
+      const title = decode((html.match(/<title>(.*?)<\/title>/s) ?? [])[1])
+        .replace(/^Play\s+/i, "")
+        .replace(/\s+Slot Demo by Pragmatic Play.*$/i, "")
+        .replace(/\s+(Slot|Demo).*$/i, "")
+        .trim();
+      const flat = decode(html.replace(/<script[\s\S]*?<\/script>/gi, " ").replace(/<style[\s\S]*?<\/style>/gi, " ").replace(/<[^>]+>/g, " "));
+      // "Basic Game Info RTP: 96.50%" — one figure on most pages; a run of
+      // figures is read whole in case a page lists several builds.
+      const run = (flat.match(/\bRTP:\s*((?:[\d.,]+\s*%\s*(?:[|/,]|and|or)?\s*)+)/i) ?? [])[1] ?? "";
+      const versions = [...new Set([...run.matchAll(/([\d.,]+)\s*%/g)].map((m) => pct(m[1])).filter((v) => v !== null))].sort((a, b) => b - a);
+      return { name: title, versions, volatility: null, released: null, maxMultiplier: null };
+    },
+  },
   spinomenal: {
     studio: "Spinomenal",
     async list() {
