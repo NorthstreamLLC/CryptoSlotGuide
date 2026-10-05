@@ -28449,7 +28449,7 @@
     },
     {
       "name": "Blackjack88 Bronze 1",
-      "kind": "slot",
+      "kind": "table",
       "slug": "blackjack88-bronze-1",
       "provider": "Live",
       "providerSlug": null,
@@ -28473,7 +28473,7 @@
     },
     {
       "name": "Blackjack88 Bronze 2",
-      "kind": "slot",
+      "kind": "table",
       "slug": "blackjack88-bronze-2",
       "provider": "Live",
       "providerSlug": null,
@@ -28497,7 +28497,7 @@
     },
     {
       "name": "Blackjack88 Gold 1",
-      "kind": "slot",
+      "kind": "table",
       "slug": "blackjack88-gold-1",
       "provider": "Live",
       "providerSlug": null,
@@ -28521,7 +28521,7 @@
     },
     {
       "name": "Blackjack88 Silver 1",
-      "kind": "slot",
+      "kind": "table",
       "slug": "blackjack88-silver-1",
       "provider": "Live",
       "providerSlug": null,
@@ -28545,7 +28545,7 @@
     },
     {
       "name": "Blackjack88 Silver 2",
-      "kind": "slot",
+      "kind": "table",
       "slug": "blackjack88-silver-2",
       "provider": "Live",
       "providerSlug": null,
@@ -51002,7 +51002,7 @@
     },
     {
       "name": "CoinFlip",
-      "kind": "slot",
+      "kind": "house",
       "slug": "coinflip",
       "provider": "In house Game",
       "providerSlug": null,
@@ -158920,7 +158920,7 @@
     },
     {
       "name": "Red Baron Live",
-      "kind": "slot",
+      "kind": "house",
       "slug": "red-baron-live",
       "provider": "Evolution Gaming",
       "providerSlug": null,
@@ -166257,7 +166257,7 @@
     },
     {
       "name": "Ruleta Relámpago XXXtreme",
-      "kind": "slot",
+      "kind": "table",
       "slug": "ruleta-relampago-xxxtreme",
       "provider": "Evolution Gaming",
       "providerSlug": null,
