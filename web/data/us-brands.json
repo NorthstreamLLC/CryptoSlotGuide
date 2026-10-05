@@ -122,20 +122,6 @@
       ]
     },
     {
-      "slug": "espn-bet",
-      "name": "ESPN BET",
-      "site": "https://espnbet.com",
-      "aliases": [
-        "ESPN BET",
-        "ESPN Bet",
-        "ESPN BET (espnbet.com/casino)"
-      ],
-      "caveat": "Penn Entertainment's US consumer brand, which replaced theScore Bet. Several regulator lists have not been updated and still record theScore Bet, so the count here is what the regulators publish, not necessarily what is live.",
-      "domains": [
-        "espnbet.com"
-      ]
-    },
-    {
       "slug": "hard-rock-bet",
       "name": "Hard Rock Bet",
       "site": "https://www.hardrock.bet",
@@ -174,11 +160,15 @@
         "theScore",
         "theScore Bet Sportsbook",
         "theScore Bet (Penn Interactive)",
-        "PENN/The Score Bet"
+        "PENN/The Score Bet",
+        "ESPN BET",
+        "ESPN Bet",
+        "ESPN BET (espnbet.com/casino)"
       ],
-      "caveat": "Penn Entertainment runs both theScore Bet and ESPN BET. State regulator lists still carry both names, and entries naming only the licence holder ('Penn Sports Interactive') do not say which brand is live there, so they are not counted under either.",
+      "caveat": "Penn Entertainment's brand. ESPN BET was rebranded to theScore Bet on 1 December 2025, as the Pennsylvania Gaming Control Board records, and espnbet.com no longer resolves; regulator lists that still say ESPN BET are counted here. Entries naming only the licence holder ('Penn Sports Interactive') do not say which brand is live, so they are not counted.",
       "domains": [
-        "thescore.bet"
+        "thescore.bet",
+        "espnbet.com"
       ]
     },
     {
@@ -253,7 +243,8 @@
       ],
       "domains": [
         "sporttrade.com"
-      ]
+      ],
+      "caveat": "Not taking customers. sporttrade.com now redirects to getsporttrade.com, which says Sporttrade is re-entering the market as a sports prediction market and offers only a waitlist. The state lists below record its licences, not a live product."
     },
     {
       "slug": "prime-sportsbook",

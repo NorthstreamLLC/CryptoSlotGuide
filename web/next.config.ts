@@ -12,6 +12,8 @@ const nextConfig: NextConfig = {
       // The six hand-checked UK brands gave way to the whole Gambling
       // Commission register on the licensed-casinos page.
       { source: "/uk-casinos", destination: "/licensed-casinos/gb", permanent: true },
+      // ESPN BET became theScore Bet on 1 December 2025.
+      { source: "/us-casinos/espn-bet", destination: "/us-casinos/thescore-bet", permanent: true },
       // The regulated prediction markets were a tab on the crypto list; they
       // have their own page now.
       { source: "/prediction-markets", has: [{ type: "query", key: "tab", value: "fiat" }], destination: "/prediction-markets/regulated", permanent: true },

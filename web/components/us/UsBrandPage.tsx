@@ -30,6 +30,11 @@ function Count({ n, label, tint }: { n: number; label: string; tint: string }) {
 export function UsBrandPage({ brand }: { brand: UsBrand }) {
   const rows = statesFor(brand.slug);
   const facts = brandFactsFor(brand.slug);
+  // "Online casino" only where a regulator lists the brand for casino;
+  // Circa and Prime are sportsbooks.
+  const product = rows.some((r) => r.kind === "casino") ? "online casino" : "sportsbook";
+  // "Prime Sportsbook", "Circa Sports" already say what they are.
+  const called = /sport/i.test(brand.name) && product === "sportsbook" ? brand.name : `${brand.name} ${product}`;
   const sports = rows.filter((r) => r.kind === "sportsbook");
   const casino = rows.filter((r) => r.kind === "casino");
   const claimed = [
@@ -47,7 +52,11 @@ export function UsBrandPage({ brand }: { brand: UsBrand }) {
             <span>{brand.name}</span>
           </nav>
           <h1 style={{ margin: "0 0 12px", fontSize: 40, lineHeight: 1.05, letterSpacing: "-.035em", fontWeight: 800, color: "#fff", textWrap: "balance" }}>
-            {facts ? `${brand.name} online casino: the offer, who can play, where it is licensed` : `Where ${brand.name} is licensed`}
+            {facts
+              ? facts.offer
+                ? `${called}: the offer, who can play, where it is licensed`
+                : `${called}: who can play, where it is licensed`
+              : `Where ${brand.name} is licensed`}
           </h1>
           <p style={{ margin: 0, maxWidth: "64ch", fontSize: 16, lineHeight: 1.6, color: "#A8B6BE" }}>
             {sports.length > 0 && (
@@ -63,7 +72,7 @@ export function UsBrandPage({ brand }: { brand: UsBrand }) {
             )}
             Every row below is the regulator&rsquo;s own published list, linked.
           </p>
-          {facts && (
+          {facts?.offer && (
             <p style={{ margin: "14px 0 0", maxWidth: "64ch", fontSize: 15.5, lineHeight: 1.6, color: "#FFC531" }}>
               <span style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#C7A45C", display: "block", marginBottom: 4 }}>New-player offer, from its own page</span>
               {facts.offer}.

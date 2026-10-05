@@ -173,6 +173,477 @@
           ]
         }
       ]
+    },
+    "fanatics": {
+      "read": "2026-10-05",
+      "offer": "Up to $1,000 back in casino credit on your first day's net losses on eligible games, for new players",
+      "groups": [
+        {
+          "title": "The offer",
+          "facts": [
+            {
+              "label": "New-player offer",
+              "value": "Up to $1,000 back in Casino Credit: credit equal to cumulative losses on cash wagers on eligible games in the first 24 hours after sign-up, up to $1,000.",
+              "sourceUrl": "https://betfanatics.com/casino"
+            },
+            {
+              "label": "Using the credit",
+              "value": "Casino Credit can be used on any game in Fanatics Casino and expires 7 days after it is issued.",
+              "sourceUrl": "https://betfanatics.com/casino"
+            },
+            {
+              "label": "Rewards",
+              "value": "FanCash, Fanatics' loyalty currency, earned on every spin, hand and roll, worth dollar for dollar across Fanatics (merchandise, tickets, bonus bets). FanCash Spins are open to select customers in Michigan, New Jersey, Pennsylvania and West Virginia, one spin a day.",
+              "sourceUrl": "https://betfanatics.com/casino"
+            }
+          ]
+        },
+        {
+          "title": "Who can play",
+          "facts": [
+            {
+              "label": "Age",
+              "value": "Must be 21+.",
+              "sourceUrl": "https://betfanatics.com/casino"
+            }
+          ]
+        },
+        {
+          "title": "The library",
+          "facts": [
+            {
+              "label": "Games",
+              "value": "Thousands of slots (Triple Cash Eruption, Huff N' Puff, Hypernova Megaways among them), blackjack including the exclusive Fanatics Blackjack, baccarat, roulette and live dealer games; play is through the Fanatics Sports & Casino app.",
+              "sourceUrl": "https://betfanatics.com/casino"
+            }
+          ]
+        }
+      ]
+    },
+    "draftkings": {
+      "read": "2026-10-05",
+      "offer": "Play $5 and choose 1,000 Flex Spins or 100% of casino net losses back over 24 hours, up to $1,000 in Crown Cash, for new casino players",
+      "groups": [
+        {
+          "title": "The offer",
+          "facts": [
+            {
+              "label": "New-player offer",
+              "value": "New DraftKings Casino customers who play $5 choose one of two offers: 1,000 Flex Spins for Lightning Link High Stakes and other select games, issued 50 a day for 20 days (log in each day to collect them); or 100% of net losses on casino games back for 24 hours, up to $1,000 in Crown Cash. The choice is final.",
+              "sourceUrl": "https://casino.draftkings.com/where-is-online-gambling-legal"
+            },
+            {
+              "label": "Wagering",
+              "value": "No playthrough on the spins: Flex Spin winnings go to the cash balance and can be withdrawn. Each day's spins expire 24 hours after a game is chosen. Crown Cash is single-use, non-withdrawable site credit and expires 365 days after it is issued. Every casino game except craps and Electric Poker counts toward the qualifying play.",
+              "sourceUrl": "https://casino.draftkings.com/where-is-online-gambling-legal"
+            },
+            {
+              "label": "Rewards",
+              "value": "New accounts are enrolled automatically in the Dynasty Rewards Program, earning redeemable Crowns and access to exclusive offers and promotions.",
+              "sourceUrl": "https://casino.draftkings.com/"
+            },
+            {
+              "label": "Sportsbook offer",
+              "value": "New DraftKings Sportsbook customers who place a first bet of $5 or more get $150 in Bonus Bets: $50 at sign-up, then $50 on day 7 and $50 on day 14. A separate 20% deposit bonus pays up to $1,000 in DK Dollars and requires 25× play-through of the deposit within 90 days.",
+              "sourceUrl": "https://casino.draftkings.com/where-is-online-gambling-legal"
+            }
+          ]
+        },
+        {
+          "title": "Who can play",
+          "facts": [
+            {
+              "label": "Casino states",
+              "value": "Connecticut, Michigan, New Jersey, Pennsylvania and West Virginia, through the DraftKings Casino app and website. What is offered differs by state.",
+              "sourceUrl": "https://casino.draftkings.com/where-is-online-gambling-legal"
+            },
+            {
+              "label": "Sportsbook states",
+              "value": "The sportsbook deposit-bonus terms list Arizona, Colorado, Connecticut, DC, Iowa, Illinois, Indiana, Kansas, Kentucky, Louisiana (select parishes), Maryland, Maine, Missouri, Michigan, New Hampshire, New Jersey, New York, Ohio, Oregon, Pennsylvania, Tennessee, Virginia, Vermont, Wyoming and West Virginia, plus Ontario. The offer is void in Massachusetts.",
+              "sourceUrl": "https://casino.draftkings.com/where-is-online-gambling-legal"
+            },
+            {
+              "label": "Age",
+              "value": "Casino: only customers 21 and over. Sportsbook: 21+, or 18+ in DC, Kentucky, New Hampshire and Wyoming.",
+              "sourceUrl": "https://casino.draftkings.com/"
+            }
+          ]
+        },
+        {
+          "title": "The library",
+          "facts": [
+            {
+              "label": "Games",
+              "value": "Lobby sections for slots, table games, blackjack, roulette, craps, poker, live dealer, arcade, Bonus Buy slots and DraftKings exclusives.",
+              "sourceUrl": "https://casino.draftkings.com/"
+            }
+          ]
+        }
+      ]
+    },
+    "bet365": {
+      "read": "2026-10-05",
+      "offer": "100% deposit match up to $1,000 at 15× wagering plus up to 1,000 spins over 10 days for new casino players in New Jersey, from a $10 deposit",
+      "groups": [
+        {
+          "title": "The offer",
+          "facts": [
+            {
+              "label": "New-player offer",
+              "value": "Casino Welcome Package: deposit $10 or more and claim a 100% bonus up to $1,000; separately, reveal 50, 75 or 100 Spins on 10 separate days within 20 days of the first claim, up to 1,000 Spins in total. In New Jersey both parts can be claimed.",
+              "sourceUrl": "https://www.bet365.com/promos/en-us/casino/casino-welcome-package"
+            },
+            {
+              "label": "Wagering",
+              "value": "The bonus must be bet 15 times on eligible slots within 30 days of the qualifying deposit, with a single stake capped at 10% of the deposit or bonus while it is active. The Spins carry no betting requirement and their winnings can be withdrawn; each day's Spins must be used within seven days.",
+              "sourceUrl": "https://www.bet365.com/promos/en-us/casino/casino-welcome-package"
+            },
+            {
+              "label": "Minimum deposit",
+              "value": "$10. Deposits by paysafecard and Trustly Card do not qualify. The offer must be claimed within 30 days of registering.",
+              "sourceUrl": "https://www.bet365.com/promos/en-us/casino/casino-welcome-package"
+            }
+          ]
+        },
+        {
+          "title": "Who can play",
+          "facts": [
+            {
+              "label": "Casino states",
+              "value": "New Jersey (Hillside (New Jersey) LLC, regulated by the New Jersey Division of Gaming Enforcement) and Pennsylvania (Hillside (Pennsylvania) LLC, licensed by the Pennsylvania Gaming Control Board in partnership with Presque Isle Downs and Casino).",
+              "sourceUrl": "https://casino.pa.bet365.com/home"
+            },
+            {
+              "label": "Age and location",
+              "value": "21+ and physically located in Pennsylvania to wager on the Pennsylvania site; the New Jersey site states you must be over 21 to play.",
+              "sourceUrl": "https://casino.pa.bet365.com/home"
+            }
+          ]
+        },
+        {
+          "title": "The library",
+          "facts": [
+            {
+              "label": "Games",
+              "value": "Blackjack, roulette and slot games, with lobby sections for live casino, First Person games and Megaways slots.",
+              "sourceUrl": "https://casino.pa.bet365.com/home"
+            },
+            {
+              "label": "Jackpot365",
+              "value": "An optional progressive jackpot on eligible games: opting in adds $0.20 per round, and Grand, Major or Minor jackpots drop at random.",
+              "sourceUrl": "https://casino.pa.bet365.com/home"
+            }
+          ]
+        }
+      ]
+    },
+    "resorts-world-bet": {
+      "read": "2026-10-05",
+      "offer": "100% first-deposit match up to $1,000 for new players, at 15× wagering on slots, from a $10 deposit",
+      "groups": [
+        {
+          "title": "The offer",
+          "facts": [
+            {
+              "label": "New-player offer",
+              "value": "A 100% match on the first deposit up to $1,000, applied automatically once the deposit is made.",
+              "sourceUrl": "https://support.rwbetnj.com/hc/en-us/articles/45061606643085-Welcome-Bonus"
+            },
+            {
+              "label": "Wagering",
+              "value": "15× the bonus before it converts to cash. Only slot wagers count toward the requirement, and the bonus is valid for 14 days once credited.",
+              "sourceUrl": "https://support.rwbetnj.com/hc/en-us/articles/45061606643085-Welcome-Bonus"
+            },
+            {
+              "label": "Minimum deposit",
+              "value": "$10 to receive the match.",
+              "sourceUrl": "https://support.rwbetnj.com/hc/en-us/articles/45061606643085-Welcome-Bonus"
+            }
+          ]
+        },
+        {
+          "title": "Who can play",
+          "facts": [
+            {
+              "label": "States",
+              "value": "New Jersey only. Licensed and regulated by the New Jersey Division of Gaming Enforcement; geolocation confirms every player is inside New Jersey.",
+              "sourceUrl": "https://support.rwbetnj.com/hc/en-us/articles/40382544535565-Is-playing-at-Resorts-World-Bet-legal"
+            },
+            {
+              "label": "Age and location",
+              "value": "21 or older. New Jersey residency is not required to register, but play is only possible inside New Jersey's borders.",
+              "sourceUrl": "https://support.rwbetnj.com/hc/en-us/articles/40382492596493-Do-I-have-to-be-resident-in-New-Jersey-to-register-and-play"
+            }
+          ]
+        },
+        {
+          "title": "The library",
+          "facts": [
+            {
+              "label": "Games",
+              "value": "Table games such as roulette, blackjack and baccarat, plus slots, Slingo and video poker.",
+              "sourceUrl": "https://support.rwbetnj.com/hc/en-us/articles/40382585929613-What-games-can-I-play-at-Resorts-World-Bet"
+            },
+            {
+              "label": "Live dealer",
+              "value": "Live dealer games streamed by video feed, with real-time interaction with the dealers.",
+              "sourceUrl": "https://support.rwbetnj.com/hc/en-us/articles/40382622560013-What-are-live-dealer-games"
+            }
+          ]
+        }
+      ]
+    },
+    "prime-sportsbook": {
+      "read": "2026-10-05",
+      "offer": "100% of the first deposit up to $250 in Bonus Bets for new players, at a 2× rollover, from a $10 deposit",
+      "groups": [
+        {
+          "title": "The offer",
+          "facts": [
+            {
+              "label": "New-player offer",
+              "value": "Bonus Bets equal to 100% of the first deposit, up to $250, after opting in and depositing at least $10. There is no maximum deposit.",
+              "sourceUrl": "https://www.primesportsbook.com/help-center/welcome-bonus-offer-100-up-to-250-in-bonus-bets/"
+            },
+            {
+              "label": "Rollover",
+              "value": "2× the deposit plus the bonus in cash wagers before withdrawing: a $250 deposit and $250 bonus means $1,000 in cash wagers. Bonus Bets can only be used on straight bets at odds of +200 or shorter, and a winning Bonus Bet pays the winnings only, not the stake.",
+              "sourceUrl": "https://www.primesportsbook.com/help-center/welcome-bonus-offer-100-up-to-250-in-bonus-bets/"
+            },
+            {
+              "label": "Rewards",
+              "value": "Prime Rewards: one Prime Point per dollar of the lesser of stake or winnings, redeemable for Bonus Bets at $5, $8 or $10.50 per 1,000 points across three tiers (Prime Plus, Prime Pro, Prime Prestige). Prime Prestige players can opt in to -108 reduced-juice lines, giving up future bonuses.",
+              "sourceUrl": "https://www.primesportsbook.com/help-center/prime-rewards-program-point-system/"
+            }
+          ]
+        },
+        {
+          "title": "Who can play",
+          "facts": [
+            {
+              "label": "States",
+              "value": "Ohio, New Jersey and Kentucky. Residency is not required to register, but you must be inside one of those states to place a wager. In New Jersey, accounts can be funded and cashed out at the Prime cage inside Harrah's Atlantic City.",
+              "sourceUrl": "https://www.primesportsbook.com/help-center/about-prime-sportsbook/"
+            },
+            {
+              "label": "Age",
+              "value": "Only customers 21 and over.",
+              "sourceUrl": "https://www.primesportsbook.com/"
+            }
+          ]
+        },
+        {
+          "title": "The book",
+          "facts": [
+            {
+              "label": "Markets",
+              "value": "NFL, NBA, MLB, college football and basketball, NHL, UFC and NASCAR, plus golf, tennis, soccer, boxing and motorsports. The book sells early markets and high deposit limits.",
+              "sourceUrl": "https://www.primesportsbook.com/"
+            }
+          ]
+        }
+      ]
+    },
+    "bally-bet": {
+      "read": "2026-10-05",
+      "offer": "Up to $500 back in Bonus Money on first-deposit slot losses over seven days for new casino players in New Jersey and Pennsylvania, at 1× playthrough, from a $10 deposit",
+      "groups": [
+        {
+          "title": "The offer",
+          "facts": [
+            {
+              "label": "New-player offer",
+              "value": "Deposit at least $10 and place a first slot wager within 28 days of registering. If net slot losses pass 90% of the first deposit within seven days, you get Bonus Money equal to the deposit; otherwise you get your net loss back at the end of the seven days. Either way the cap is $500, and rewards of $100 or more are paid in four weekly installments. Any withdrawal before or during the seven days disqualifies you.",
+              "sourceUrl": "https://www.ballycasino.com/nj"
+            },
+            {
+              "label": "Wagering",
+              "value": "1× playthrough on any casino game before winnings can be withdrawn as cash. Each Bonus Money award expires seven days after it is issued.",
+              "sourceUrl": "https://www.ballycasino.com/nj"
+            },
+            {
+              "label": "Rhode Island offer",
+              "value": "In Rhode Island the new-player offer is different: lose your first deposit and get up to $100 in Bonus Money.",
+              "sourceUrl": "https://www.ballycasino.com/ri"
+            },
+            {
+              "label": "Rewards",
+              "value": "Bally Rewards: free to join, earns Bally Bucks on every online cash wager (1 per $10 on slots, $25 on baccarat and roulette, $50 on other casino games), redeemable for Bonus Money at $0.01 each. Casino in New Jersey and Pennsylvania; sports bets also earn in New Jersey.",
+              "sourceUrl": "https://www.ballycasino.com/bally-rewards"
+            },
+            {
+              "label": "Sportsbook offer",
+              "value": "Bet $10 and get $50 in Bonus Bets, new players only.",
+              "sourceUrl": "https://www.ballybet.com/"
+            }
+          ]
+        },
+        {
+          "title": "Who can play",
+          "facts": [
+            {
+              "label": "Casino states",
+              "value": "New Jersey, Pennsylvania and Rhode Island.",
+              "sourceUrl": "https://www.ballycasino.com/"
+            },
+            {
+              "label": "Sportsbook states",
+              "value": "Arizona, Colorado, Illinois, Indiana, Iowa, Maryland, Massachusetts, New Jersey, New York, Ohio, Tennessee and Virginia.",
+              "sourceUrl": "https://www.ballybet.com/"
+            },
+            {
+              "label": "Age and location",
+              "value": "21 or over and physically located in the state to wager.",
+              "sourceUrl": "https://www.ballycasino.com/nj"
+            }
+          ]
+        },
+        {
+          "title": "The library",
+          "facts": [
+            {
+              "label": "Games",
+              "value": "Over 200 games: slots including Megaways titles and exclusives, table games such as blackjack and roulette, video poker, live dealer games and progressive jackpot slots. Daily free games award free spins or Bonus Money.",
+              "sourceUrl": "https://www.ballycasino.com/"
+            }
+          ]
+        }
+      ]
+    },
+    "circa-sports": {
+      "read": "2026-10-05",
+      "groups": [
+        {
+          "title": "Who can play",
+          "facts": [
+            {
+              "label": "States",
+              "value": "Nevada, Colorado, Illinois, Iowa, Kentucky and Missouri, through the Circa | Sports app. Each state has its own app.",
+              "sourceUrl": "https://www.circasports.com/circa-sports-app"
+            },
+            {
+              "label": "Nevada sign-up",
+              "value": "Nevada law requires mobile accounts to be activated in person: bring an unexpired government photo ID to any Circa | Sports location. In the other states you register and fund inside the app from anywhere in the state.",
+              "sourceUrl": "https://www.circasports.com/nevada-app"
+            },
+            {
+              "label": "Age",
+              "value": "21+ to hold a real-money betting account.",
+              "sourceUrl": "https://www.circasports.com/colorado-app"
+            }
+          ]
+        },
+        {
+          "title": "The book",
+          "facts": [
+            {
+              "label": "Markets",
+              "value": "Pre-game and in-game betting on most major professional and college events, with parlays, teasers and round robins.",
+              "sourceUrl": "https://www.circasports.com/colorado-app"
+            },
+            {
+              "label": "Limits and futures",
+              "value": "Higher-than-most betting limits for everyone, winners included; futures can go into parlays, and futures are offered two-sided as yes/no bets.",
+              "sourceUrl": "https://www.circasports.com/kentucky-app"
+            },
+            {
+              "label": "Contests",
+              "value": "Pro football contests: Circa Million, Circa Survivor and Circa Grandissimo.",
+              "sourceUrl": "https://www.circasports.com/"
+            }
+          ]
+        }
+      ]
+    },
+    "betparx": {
+      "read": "2026-10-05",
+      "groups": [
+        {
+          "title": "Who can play",
+          "facts": [
+            {
+              "label": "States",
+              "value": "Maryland, Michigan, New Jersey and Pennsylvania. Operated by Greenwood Gaming & Entertainment, Inc.",
+              "sourceUrl": "https://www.betparx.com/"
+            },
+            {
+              "label": "Age",
+              "value": "Must be over 21.",
+              "sourceUrl": "https://www.betparx.com/"
+            }
+          ]
+        },
+        {
+          "title": "The library",
+          "facts": [
+            {
+              "label": "Casino",
+              "value": "Slots, live dealer, blackjack, roulette and table games, with progressive jackpots; live dealer covers blackjack, roulette, Three Card Poker and more.",
+              "sourceUrl": "https://www.betparx.com/"
+            },
+            {
+              "label": "Sportsbook",
+              "value": "Lines on the NFL, NBA, MLB, NHL and more, with player props and same-game parlays; one app switches between casino and sportsbook.",
+              "sourceUrl": "https://www.betparx.com/"
+            }
+          ]
+        }
+      ]
+    },
+    "betrivers": {
+      "read": "2026-10-05",
+      "groups": [
+        {
+          "title": "The offer",
+          "facts": [
+            {
+              "label": "Rewards",
+              "value": "iRush Rewards: real-money play earns Loyalty Level Points, which raise your level, and Bonus Store Points, redeemable in the Bonus Store for rewards such as Bonus Money.",
+              "sourceUrl": "https://pa.betrivers.com/?page=rewards"
+            }
+          ]
+        },
+        {
+          "title": "Who can play",
+          "facts": [
+            {
+              "label": "Casino states",
+              "value": "Michigan, New Jersey, Pennsylvania and West Virginia, plus Delaware through BetRivers at Delaware Park, BetRivers at Harrington and Bally Casino by BetRivers.",
+              "sourceUrl": "https://www.betrivers.com/"
+            },
+            {
+              "label": "Sportsbook states",
+              "value": "Arizona, Colorado, Delaware, Iowa, Illinois, Indiana, Louisiana, Maryland, Michigan, New Jersey, New York, Ohio, Pennsylvania, Virginia and West Virginia.",
+              "sourceUrl": "https://www.betrivers.com/"
+            },
+            {
+              "label": "Age and location",
+              "value": "You can register from any US state but must be 21+ and physically located in the state to wager; in Colorado you must also not be in a restricted tribal area.",
+              "sourceUrl": "https://pa.betrivers.com/"
+            }
+          ]
+        }
+      ]
+    },
+    "sporttrade": {
+      "read": "2026-10-05",
+      "groups": [
+        {
+          "title": "Who can play",
+          "facts": [
+            {
+              "label": "Status",
+              "value": "\"Re-entering the market soon\": sporttrade.com now redirects to getsporttrade.com, which describes Sporttrade as the prediction market for sports and offers a waitlist sign-up.",
+              "sourceUrl": "https://getsporttrade.com/"
+            },
+            {
+              "label": "Operator",
+              "value": "The site is run by Sporttrade DCM LLC, which calls itself the Exchange; a separate track serves FCMs, market makers and trading firms.",
+              "sourceUrl": "https://getsporttrade.com/terms-and-conditions/"
+            }
+          ]
+        }
+      ]
     }
   }
 }

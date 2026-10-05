@@ -26,9 +26,11 @@ export async function generateMetadata({ params }: { params: Promise<{ brand: st
   ].filter(Boolean);
   const facts = brandFactsFor(brand);
   return pageMetadata(
-    facts ? `${b.name} online casino: offer, states, how to sign up` : `Where ${b.name} is licensed in the US`,
     facts
-      ? `${b.name}'s new-player offer, who can play and how to sign up, from its own pages, plus the ${parts.join(" and ")} whose regulators list it.`
+      ? `${c.casino.length || !/sport/i.test(b.name) ? `${b.name} ${c.casino.length ? "online casino" : "sportsbook"}` : b.name}: ${facts.offer ? "offer, " : ""}states, who can play`
+      : `Where ${b.name} is licensed in the US`,
+    facts
+      ? `${facts.offer ? `${b.name}'s new-player offer and who` : `Who`} can play, from ${b.name}'s own pages, plus the ${parts.join(" and ")} whose regulators list it.`
       : `State regulators list ${b.name} in ${parts.join(" and ")}. Every state linked to the regulator's own published list.`,
     `/us-casinos/${brand}`
   );

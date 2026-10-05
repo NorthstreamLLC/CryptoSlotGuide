@@ -11,8 +11,8 @@ export interface BrandFactGroup {
 }
 export interface BrandFacts {
   read: string;
-  /** One line for the hero: the standing new-player offer in plain words. */
-  offer: string;
+  /** One line for the hero: the standing new-player offer in plain words. Absent where the brand's pages state none we can read. */
+  offer?: string;
   groups: BrandFactGroup[];
 }
 
