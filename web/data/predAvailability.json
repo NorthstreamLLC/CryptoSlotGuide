@@ -3,17 +3,84 @@
  "venues": {
   "polymarket": {
    "mode": "blocklist",
-   "codes": ["AU", "BE", "BY", "BR", "BI", "CF", "CD", "CU", "DE", "ET", "FR", "GB", "IE", "IR", "IQ", "IT", "JP", "KP", "LB", "LY", "MM", "MT", "NI", "NL", "NZ", "PL", "RU", "SG", "SK", "SO", "SS", "SD", "SY", "TW", "TH", "UM", "US", "VE", "YE", "ZW"],
-   "regions": [
-    { "country": "CA", "name": "Alberta" },
-    { "country": "CA", "name": "British Columbia" },
-    { "country": "CA", "name": "Ontario" },
-    { "country": "CA", "name": "Quebec" },
-    { "country": "UA", "name": "Crimea" },
-    { "country": "UA", "name": "Donetsk" },
-    { "country": "UA", "name": "Luhansk" }
+   "codes": [
+    "AU",
+    "BE",
+    "BY",
+    "BR",
+    "BI",
+    "CF",
+    "CD",
+    "CU",
+    "DE",
+    "ET",
+    "FR",
+    "GB",
+    "IE",
+    "IR",
+    "IQ",
+    "IT",
+    "JP",
+    "KP",
+    "LB",
+    "LY",
+    "MM",
+    "MT",
+    "NI",
+    "NL",
+    "NZ",
+    "PL",
+    "RU",
+    "SG",
+    "SK",
+    "SO",
+    "SS",
+    "SD",
+    "SY",
+    "TW",
+    "TH",
+    "UM",
+    "US",
+    "VE",
+    "YE",
+    "ZW"
    ],
-   "closeOnly": ["SG", "PL", "TH", "TW"],
+   "regions": [
+    {
+     "country": "CA",
+     "name": "Alberta"
+    },
+    {
+     "country": "CA",
+     "name": "British Columbia"
+    },
+    {
+     "country": "CA",
+     "name": "Ontario"
+    },
+    {
+     "country": "CA",
+     "name": "Quebec"
+    },
+    {
+     "country": "UA",
+     "name": "Crimea"
+    },
+    {
+     "country": "UA",
+     "name": "Donetsk"
+    },
+    {
+     "country": "UA",
+     "name": "Luhansk"
+    }
+   ],
+   "closeOnly": [
+    "SG",
+    "PL",
+    "TH",
+    "TW"
+   ],
    "complete": true,
    "vpnBanned": true,
    "url": "https://help.polymarket.com/en/articles/13364163-geographic-restrictions",
@@ -22,15 +89,46 @@
   },
   "limitless": {
    "mode": "blocklist",
-   "codes": ["RU", "BY", "CU", "IR", "KP", "SY", "US"],
-   "regions": [
-    { "country": "UA", "name": "Crimea" },
-    { "country": "UA", "name": "Donetsk" },
-    { "country": "UA", "name": "Luhansk" },
-    { "country": "CA", "name": "Ontario" },
-    { "country": "CA", "name": "Alberta" }
+   "codes": [
+    "RU",
+    "BY",
+    "CU",
+    "IR",
+    "KP",
+    "SY",
+    "US"
    ],
-   "unclear": [{ "quote": "Republic of China", "codes": ["CN", "TW"] }],
+   "regions": [
+    {
+     "country": "UA",
+     "name": "Crimea"
+    },
+    {
+     "country": "UA",
+     "name": "Donetsk"
+    },
+    {
+     "country": "UA",
+     "name": "Luhansk"
+    },
+    {
+     "country": "CA",
+     "name": "Ontario"
+    },
+    {
+     "country": "CA",
+     "name": "Alberta"
+    }
+   ],
+   "unclear": [
+    {
+     "quote": "Republic of China",
+     "codes": [
+      "CN",
+      "TW"
+     ]
+    }
+   ],
    "complete": true,
    "url": "https://docs.limitless.exchange/user-guide/terms-of-service.md",
    "asOf": "2026-09-15",
@@ -38,7 +136,27 @@
   },
   "overtime": {
    "mode": "blocklist",
-   "codes": ["US", "PR", "GU", "VI", "AS", "MP", "UM", "BY", "MM", "CN", "CU", "CD", "IR", "IQ", "LR", "KP", "SD", "SY", "ZW"],
+   "codes": [
+    "US",
+    "PR",
+    "GU",
+    "VI",
+    "AS",
+    "MP",
+    "UM",
+    "BY",
+    "MM",
+    "CN",
+    "CU",
+    "CD",
+    "IR",
+    "IQ",
+    "LR",
+    "KP",
+    "SD",
+    "SY",
+    "ZW"
+   ],
    "regions": [],
    "complete": true,
    "url": "https://docs.overtime.io/resources/terms-of-use",
@@ -47,8 +165,32 @@
   },
   "myriad": {
    "mode": "blocklist",
-   "codes": ["BS", "BW", "VG", "KH", "KY", "KP", "FR", "IR", "LY", "MT", "SO", "SD", "SY", "SG", "CH", "TT", "US", "ZW"],
-   "regions": [{ "country": "CA", "name": "Ontario" }],
+   "codes": [
+    "BS",
+    "BW",
+    "VG",
+    "KH",
+    "KY",
+    "KP",
+    "FR",
+    "IR",
+    "LY",
+    "MT",
+    "SO",
+    "SD",
+    "SY",
+    "SG",
+    "CH",
+    "TT",
+    "US",
+    "ZW"
+   ],
+   "regions": [
+    {
+     "country": "CA",
+     "name": "Ontario"
+    }
+   ],
    "complete": true,
    "vpnBanned": true,
    "url": "https://help.myriad.markets/myriad-terms-of-use",
@@ -56,17 +198,76 @@
    "text": "The Terms of Use (updated January 13, 2026) list 18 Prohibited Territories plus Ontario, for anyone residing in or associated with them, and prohibit using a VPN to get round the list."
   },
   "kalshi": {
-   "mode": "agreement",
-   "codes": ["US"],
-   "complete": false,
+   "mode": "blocklist",
+   "codes": [
+    "AF",
+    "DZ",
+    "AO",
+    "AU",
+    "BY",
+    "BE",
+    "BO",
+    "BG",
+    "BF",
+    "CM",
+    "CA",
+    "CF",
+    "CI",
+    "CU",
+    "CD",
+    "ET",
+    "FR",
+    "HT",
+    "HU",
+    "IN",
+    "IR",
+    "IQ",
+    "IE",
+    "IT",
+    "KE",
+    "LA",
+    "LB",
+    "LY",
+    "ML",
+    "MC",
+    "MZ",
+    "MM",
+    "NA",
+    "NZ",
+    "NI",
+    "NE",
+    "KP",
+    "CN",
+    "PL",
+    "PT",
+    "RU",
+    "SG",
+    "SO",
+    "SS",
+    "SD",
+    "CH",
+    "SY",
+    "TW",
+    "TH",
+    "UA",
+    "AE",
+    "GB",
+    "VE",
+    "YE",
+    "ZW"
+   ],
+   "regions": [],
+   "complete": true,
    "url": "https://kalshi.com/docs/kalshi-member-agreement.pdf",
-   "asOf": "2026-03-20",
    "helpUrl": "https://help.kalshi.com/en/articles/14026044-can-i-trade-on-kalshi-from-outside-the-united-states",
-   "text": "Open in the US and in many other countries. Kalshi's help centre says supported countries are set out in the Kalshi Member Agreement, and you confirm your country of residence when you verify your identity. International accounts fund by debit card, wire (minimum $1,000) or crypto."
+   "asOf": "2026-10-05",
+   "text": "Open in the US and in many other countries. The Kalshi Member Agreement names 55 Restricted Jurisdictions where members may not trade event contracts, plus any place under US economic sanctions; the restriction covers event contracts only, and Kalshi keeps the discretion to admit members from those places on its own terms. International accounts fund by debit card, wire (minimum $1,000) or crypto."
   },
   "polymarket-us": {
    "mode": "allowlist",
-   "codes": ["US"],
+   "codes": [
+    "US"
+   ],
    "complete": true,
    "url": "https://polymarket.com/transparency",
    "asOf": "2026-10-05",
@@ -74,7 +275,9 @@
   },
   "robinhood": {
    "mode": "allowlist",
-   "codes": ["US"],
+   "codes": [
+    "US"
+   ],
    "complete": true,
    "url": "https://robinhood.com/us/en/support/articles/event-contracts-overview/",
    "asOf": "2026-10-05",
@@ -90,7 +293,9 @@
   },
   "predictit": {
    "mode": "allowlist",
-   "codes": ["US"],
+   "codes": [
+    "US"
+   ],
    "complete": true,
    "url": "https://www.predictit.org/terms-and-conditions",
    "asOf": "2026-10-05",
