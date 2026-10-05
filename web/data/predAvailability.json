@@ -1,0 +1,100 @@
+{
+ "note": "Where each prediction-market venue can be used, from the venue's own restriction page or terms. mode 'blocklist': open except the listed countries (codes) and regions; 'allowlist': open only in the listed countries; 'agreement': eligibility set by a document we cite but could not read as a list; 'broker': reached through brokers, each with its own eligibility. closeOnly: may close positions but not open new ones. unclear: wording that does not map to one country, quoted as the venue wrote it.",
+ "venues": {
+  "polymarket": {
+   "mode": "blocklist",
+   "codes": ["AU", "BE", "BY", "BR", "BI", "CF", "CD", "CU", "DE", "ET", "FR", "GB", "IE", "IR", "IQ", "IT", "JP", "KP", "LB", "LY", "MM", "MT", "NI", "NL", "NZ", "PL", "RU", "SG", "SK", "SO", "SS", "SD", "SY", "TW", "TH", "UM", "US", "VE", "YE", "ZW"],
+   "regions": [
+    { "country": "CA", "name": "Alberta" },
+    { "country": "CA", "name": "British Columbia" },
+    { "country": "CA", "name": "Ontario" },
+    { "country": "CA", "name": "Quebec" },
+    { "country": "UA", "name": "Crimea" },
+    { "country": "UA", "name": "Donetsk" },
+    { "country": "UA", "name": "Luhansk" }
+   ],
+   "closeOnly": ["SG", "PL", "TH", "TW"],
+   "complete": true,
+   "vpnBanned": true,
+   "url": "https://help.polymarket.com/en/articles/13364163-geographic-restrictions",
+   "asOf": "2026-08-14",
+   "text": "Polymarket's help centre table lists 40 fully restricted countries (its heading says 39) and seven restricted regions. In Singapore, Poland, Thailand and Taiwan existing positions can be closed but no new ones opened. Access is decided by where you are, not where you live, and using a VPN to get round the list breaks its terms."
+  },
+  "limitless": {
+   "mode": "blocklist",
+   "codes": ["RU", "BY", "CU", "IR", "KP", "SY", "US"],
+   "regions": [
+    { "country": "UA", "name": "Crimea" },
+    { "country": "UA", "name": "Donetsk" },
+    { "country": "UA", "name": "Luhansk" },
+    { "country": "CA", "name": "Ontario" },
+    { "country": "CA", "name": "Alberta" }
+   ],
+   "unclear": [{ "quote": "Republic of China", "codes": ["CN", "TW"] }],
+   "complete": true,
+   "url": "https://docs.limitless.exchange/user-guide/terms-of-service.md",
+   "asOf": "2026-09-15",
+   "text": "The terms close the platform to Russia, Belarus, Cuba, Iran, North Korea, Syria and the Crimea, Donetsk and Luhansk regions, and close trading to the USA, 'Republic of China' (as the terms write it) and the provinces of Ontario and Alberta."
+  },
+  "overtime": {
+   "mode": "blocklist",
+   "codes": ["US", "PR", "GU", "VI", "AS", "MP", "UM", "BY", "MM", "CN", "CU", "CD", "IR", "IQ", "LR", "KP", "SD", "SY", "ZW"],
+   "regions": [],
+   "complete": true,
+   "url": "https://docs.overtime.io/resources/terms-of-use",
+   "asOf": "2026-10-05",
+   "text": "The Terms of Use name the United States and its territories, Belarus, Burma, China, Cuba, the Democratic Republic of Congo, Iran, Iraq, Liberia, North Korea, Sudan, Syria and Zimbabwe as Prohibited Jurisdictions, for citizens and for anyone accessing from there."
+  },
+  "myriad": {
+   "mode": "blocklist",
+   "codes": ["BS", "BW", "VG", "KH", "KY", "KP", "FR", "IR", "LY", "MT", "SO", "SD", "SY", "SG", "CH", "TT", "US", "ZW"],
+   "regions": [{ "country": "CA", "name": "Ontario" }],
+   "complete": true,
+   "vpnBanned": true,
+   "url": "https://help.myriad.markets/myriad-terms-of-use",
+   "asOf": "2026-01-13",
+   "text": "The Terms of Use (updated January 13, 2026) list 18 Prohibited Territories plus Ontario, for anyone residing in or associated with them, and prohibit using a VPN to get round the list."
+  },
+  "kalshi": {
+   "mode": "agreement",
+   "codes": ["US"],
+   "complete": false,
+   "url": "https://kalshi.com/docs/kalshi-member-agreement.pdf",
+   "asOf": "2026-03-20",
+   "helpUrl": "https://help.kalshi.com/en/articles/14026044-can-i-trade-on-kalshi-from-outside-the-united-states",
+   "text": "Open in the US and in many other countries. Kalshi's help centre says supported countries are set out in the Kalshi Member Agreement, and you confirm your country of residence when you verify your identity. International accounts fund by debit card, wire (minimum $1,000) or crypto."
+  },
+  "polymarket-us": {
+   "mode": "allowlist",
+   "codes": ["US"],
+   "complete": true,
+   "url": "https://polymarket.com/transparency",
+   "asOf": "2026-10-05",
+   "text": "A US exchange for US customers; Polymarket's international site serves the rest of the world."
+  },
+  "robinhood": {
+   "mode": "allowlist",
+   "codes": ["US"],
+   "complete": true,
+   "url": "https://robinhood.com/us/en/support/articles/event-contracts-overview/",
+   "asOf": "2026-10-05",
+   "text": "US residents aged 18 or over with an individual brokerage account, though not in every state: Maryland residents can't trade sports contracts, and Nevada residents can't open new ones."
+  },
+  "forecastex": {
+   "mode": "broker",
+   "codes": [],
+   "complete": false,
+   "url": "https://forecastex.com/about/how-forecast-contracts-work",
+   "asOf": "2026-10-05",
+   "text": "Traded through ForecastEx's member brokers, such as Interactive Brokers. Who can trade depends on the broker you hold an account with; forecastex.com keeps a broker directory."
+  },
+  "predictit": {
+   "mode": "allowlist",
+   "codes": ["US"],
+   "complete": true,
+   "url": "https://www.predictit.org/terms-and-conditions",
+   "asOf": "2026-10-05",
+   "text": "Open only to U.S. Persons aged 18 or older."
+  }
+ }
+}

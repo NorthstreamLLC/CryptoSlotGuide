@@ -195,6 +195,16 @@
       "url": "https://www.primesportsbook.com/assets/static/icon0.svg",
       "size": "vector",
       "fetchedAt": "2026-10-01"
+    },
+    "forecastex": {
+      "url": "https://forecastex.com/favicon.ico?favicon.3npzlfmzk_jkp.ico",
+      "size": "133x127",
+      "fetchedAt": "2026-10-05"
+    },
+    "predictit": {
+      "url": "https://cdn1.predictit.org/static/1857c6b80fc925696a64/icons/apple-touch-icon-152x152.png",
+      "size": "180x180",
+      "fetchedAt": "2026-10-05"
     }
   },
   "coins": {

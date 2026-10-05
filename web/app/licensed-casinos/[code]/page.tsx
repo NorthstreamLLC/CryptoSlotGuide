@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ code: str
   const m = fiatMarket(code);
   if (!m) return {};
   return pageMetadata(
-    `Licensed online casinos in ${m.name}: all ${m.sites.length} sites`,
+    `Licensed online casinos in ${m.name}: all ${m.brands.length} brands`,
     `Every online casino and sportsbook ${m.regulator} licenses in ${m.name}, with the licence holder and a link to each site, read from the regulator's own register.`,
     `/licensed-casinos/${m.slug}`
   );
@@ -31,7 +31,7 @@ export default async function Page({ params, searchParams }: { params: Promise<{
       <JsonLd
         data={[
           breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Licensed casinos", path: "/licensed-casinos" }, { name: m.name, path: `/licensed-casinos/${m.slug}` }]),
-          itemListSchema(`Licensed online casinos in ${m.name}`, m.sites.map((s) => ({ name: s.name, path: `/licensed-casinos/${m.slug}#${s.domain}` }))),
+          itemListSchema(`Licensed online casinos in ${m.name}`, m.brands.map((b) => ({ name: b.name, path: `/licensed-casinos/${m.slug}#${b.id}` }))),
         ]}
       />
       <FiatMarketPage m={m} type={t} />

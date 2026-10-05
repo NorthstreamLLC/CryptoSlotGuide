@@ -1,25 +1,32 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { siteData } from "@/lib/site-data";
-import { venuesInOrder, venueCta } from "@/lib/prediction-markets";
+import { venuesInOrder, venueCta, venueHref } from "@/lib/prediction-markets";
 import { BrandMark } from "@/components/ui/BrandMark";
 
 /**
- * Ported from the `isPredict` block in CryptoSlotGuide.dc.html (search
- * for `PREDICTION MARKETS`). Two lists split by settlement asset —
- * crypto-settled and regulated fiat — never merged.
- *
- * `initialTab` deep-links to the Regulated fiat list — the source's
- * `predTab` state that the mega-menu's Regulated fiat rail item and its
- * venue links (Kalshi, Polymarket US, ...) jump straight to. Read
- * server-side in app/prediction-markets/page.tsx (same pattern as
- * /search's `q` param) rather than via useSearchParams, so the page
- * stays statically prerenderable.
+ * One of the two venue lists, split by settlement asset and never merged:
+ * crypto-settled at /prediction-markets, regulated fiat at
+ * /prediction-markets/regulated — two pages, the same split the casino side
+ * makes between crypto casinos and licensed casinos.
  */
-export function PredictionMarketsPage({ initialTab = "crypto" }: { initialTab?: "crypto" | "fiat" }) {
+const COPY = {
+  crypto: {
+    eyebrow: "Prediction markets · crypto-settled",
+    h1: "Crypto prediction markets",
+    lede: "Event contracts settled in stablecoins, traded from a wallet or an email login. Each venue publishes its own list of countries it refuses; each venue's page shows that list, and the country pages below show which venues take you.",
+  },
+  fiat: {
+    eyebrow: "Prediction markets · regulated fiat",
+    h1: "Regulated prediction markets",
+    lede: "Event contracts in US dollars on exchanges the CFTC oversees, with identity checks before you trade. Four of the five serve US residents only; Kalshi also accepts members from many other countries under its Member Agreement.",
+  },
+} as const;
+
+export function PredictionMarketsPage({ tab }: { tab: "crypto" | "fiat" }) {
   const { predMarkets } = siteData;
-  const [tab, setTab] = useState<"crypto" | "fiat">(initialTab);
   const [open, setOpen] = useState<string | null>(null);
   // Placement order, shared with the page's ItemList — see lib/prediction-markets.ts.
   // Every figure is from the venue's own pages (see facts).
@@ -30,15 +37,15 @@ export function PredictionMarketsPage({ initialTab = "crypto" }: { initialTab?: 
       <section style={{ borderBottom: "1px solid rgba(255,255,255,.07)", background: "#0B0F12" }}>
         <div style={{ maxWidth: 1400, margin: "0 auto", padding: "48px 40px 36px" }}>
           <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 16 }}>
-            Prediction markets · event contracts
+            {COPY[tab].eyebrow}
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "1.3fr .7fr", gap: 56, alignItems: "end" }}>
             <div>
               <h1 style={{ margin: "0 0 14px", fontSize: 48, lineHeight: 1.02, letterSpacing: "-.038em", fontWeight: 800, fontStretch: "116%", color: "#fff", textWrap: "balance" }}>
-                Odds set by people with money on it
+                {COPY[tab].h1}
               </h1>
               <p style={{ margin: 0, maxWidth: "70ch", fontSize: 16.5, lineHeight: 1.65, color: "#96A6AF", textWrap: "pretty" }}>
-                Event contracts price probability instead of paying a bookmaker&apos;s margin — which is why the effective hold is a fee, not a spread. Two lists, because the settlement asset decides everything else: what account you need, whether you pass KYC, and how quickly you get paid.
+                {COPY[tab].lede}
               </p>
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 1, background: "rgba(255,255,255,.08)", border: "1px solid rgba(255,255,255,.08)", borderRadius: 13, overflow: "hidden" }}>
@@ -57,16 +64,16 @@ export function PredictionMarketsPage({ initialTab = "crypto" }: { initialTab?: 
           <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginTop: 32 }}>
             {(
               [
-                { key: "crypto" as const, label: "Crypto-settled", note: "Stablecoins, wallet or email login" },
-                { key: "fiat" as const, label: "Regulated fiat", note: "USD, identity checks" },
+                { key: "crypto" as const, label: "Crypto-settled", note: "Stablecoins, wallet or email login", href: "/prediction-markets" },
+                { key: "fiat" as const, label: "Regulated fiat", note: "USD, CFTC-regulated, identity checks", href: "/prediction-markets/regulated" },
               ]
             ).map((t) => {
               const active = tab === t.key;
               return (
-                <button
+                <Link
                   key={t.key}
-                  type="button"
-                  onClick={() => setTab(t.key)}
+                  href={t.href}
+                  aria-current={active ? "page" : undefined}
                   style={{
                     display: "flex",
                     flexDirection: "column",
@@ -81,7 +88,7 @@ export function PredictionMarketsPage({ initialTab = "crypto" }: { initialTab?: 
                 >
                   <span style={{ fontSize: 14, fontWeight: 600, letterSpacing: "-.01em" }}>{t.label}</span>
                   <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".05em", color: "#83919A" }}>{t.note}</span>
-                </button>
+                </Link>
               );
             })}
           </div>
@@ -104,7 +111,7 @@ export function PredictionMarketsPage({ initialTab = "crypto" }: { initialTab?: 
                   <BrandMark slug={m.slug} mono={m.name.slice(0, 2).toUpperCase()} tint={m.tint} radius={9} fontSize={11} />
                 </span>
                 <div style={{ minWidth: 0 }}>
-                  <div style={{ fontSize: 14.5, fontWeight: 700, letterSpacing: "-.015em", color: "#fff" }}>{m.name}</div>
+                  <Link href={venueHref(m.slug)} className="hover:!text-accent" style={{ display: "block", fontSize: 14.5, fontWeight: 700, letterSpacing: "-.015em", color: "#fff" }}>{m.name} →</Link>
                   <div style={{ fontSize: 12, lineHeight: 1.5, color: "#7B8A93", marginTop: 4, maxWidth: "52ch" }}>{m.note}</div>
                 </div>
               </div>

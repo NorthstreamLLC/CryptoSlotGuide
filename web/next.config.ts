@@ -12,6 +12,9 @@ const nextConfig: NextConfig = {
       // The six hand-checked UK brands gave way to the whole Gambling
       // Commission register on the licensed-casinos page.
       { source: "/uk-casinos", destination: "/licensed-casinos/gb", permanent: true },
+      // The regulated prediction markets were a tab on the crypto list; they
+      // have their own page now.
+      { source: "/prediction-markets", has: [{ type: "query", key: "tab", value: "fiat" }], destination: "/prediction-markets/regulated", permanent: true },
       { source: "/razed-casino", destination: "/casinos/razed", permanent: true },
       { source: "/top-crypto-casinos", destination: "/crypto-casinos", permanent: true },
       { source: "/casino-sign-up-bonuses", destination: "/bonuses", permanent: true },

@@ -11,6 +11,7 @@ import { topSlotEntries, slotArtBySlug } from "./slot-page";
 import { sweepsSorted } from "./sweeps";
 import { inHouseOrder } from "./house-order";
 import { houseThumb } from "./house-thumbs";
+import { venuesInOrder, venueHref, openCount, predCountryHref, countryNameOf } from "./prediction-markets";
 import { raceSlugs } from "./races";
 import { countryPages, casinosForCountry } from "./landing";
 import { TOP_STUDIOS } from "./top-studios";
@@ -441,16 +442,21 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
           columns: [
             {
               title: "Venues",
-              links: ["Polymarket", "Limitless", "Overtime", "Myriad"].map((name) => ({
-                label: name,
-                href: "/prediction-markets",
-                brand: slug(name),
+              links: venuesInOrder("crypto").map((v) => ({ label: v.name, href: venueHref(v.slug), brand: v.slug })),
+            },
+            {
+              title: "By country",
+              links: ["US", "GB", "CA", "DE", "AU", "BR"].map((code) => ({
+                label: `${countryNameOf(code)} · ${openCount("crypto", code)}/${venuesInOrder("crypto").length}`,
+                href: predCountryHref(code),
+                image: flagSrc(code) ?? undefined,
               })),
             },
             {
               title: "What to know",
               links: [
                 { label: "All crypto-settled venues", href: "/prediction-markets" },
+                { label: "Every country", href: "/prediction-markets#by-country" },
                 { label: "Wallets to trade from", href: "/wallets" },
                 { label: "Coins and networks", href: "/coins" },
               ],
@@ -461,22 +467,17 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
           mono: "🏛️",
           label: "Regulated fiat",
           tint: "#6BC7FF",
-          href: "/prediction-markets?tab=fiat",
+          href: "/prediction-markets/regulated",
           columns: [
             {
               title: "Venues",
-              links: ["Kalshi", "Polymarket US", "Robinhood Prediction Markets", "ForecastEx", "PredictIt"].map(
-                (name) => ({
-                  label: name,
-                  href: "/prediction-markets?tab=fiat",
-                  brand: name.startsWith("Robinhood") ? "robinhood" : slug(name),
-                })
-              ),
+              links: venuesInOrder("fiat").map((v) => ({ label: v.name, href: venueHref(v.slug), brand: v.slug })),
             },
             {
               title: "What to know",
               links: [
-                { label: "All regulated venues", href: "/prediction-markets?tab=fiat" },
+                { label: "All regulated venues", href: "/prediction-markets/regulated" },
+                { label: "Kalshi outside the US", href: `${venueHref("kalshi")}#availability` },
                 { label: "Exchanges to fund with", href: "/exchanges" },
                 { label: "How we source information", href: "/how-we-rate" },
               ],
@@ -597,23 +598,23 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
               links: [
                 { label: "US-regulated casinos", href: "/us-casinos", image: flagSrc("US") ?? undefined },
                 { label: `US sweepstakes · ${sweepsSorted().length}`, href: "/sweepstakes-casinos", image: flagSrc("US") ?? undefined },
-                ...(fiatMarketFor("CA-ON") ? [{ label: `Ontario · ${fiatMarketFor("CA-ON")!.sites.length}`, href: fiatHref("CA-ON"), image: flagSrc("CA") ?? undefined }] : []),
+                ...(fiatMarketFor("CA-ON") ? [{ label: `Ontario · ${fiatMarketFor("CA-ON")!.brands.length}`, href: fiatHref("CA-ON"), image: flagSrc("CA") ?? undefined }] : []),
               ],
             },
             {
               title: "Europe",
               links: [
-                { label: `United Kingdom · ${fiatMarketFor("GB")?.sites.length ?? 0}`, href: fiatHref("GB"), image: flagSrc("GB") ?? undefined },
+                { label: `United Kingdom · ${fiatMarketFor("GB")?.brands.length ?? 0}`, href: fiatHref("GB"), image: flagSrc("GB") ?? undefined },
                 ...EUROPE_FIAT.map((code) => fiatMarketFor(code))
                   .filter((m): m is NonNullable<typeof m> => !!m)
                   .slice(0, 5)
-                  .map((m) => ({ label: `${m.name} · ${m.sites.length}`, href: fiatHref(m.code), image: m.flag ?? undefined })),
+                  .map((m) => ({ label: `${m.name} · ${m.brands.length}`, href: fiatHref(m.code), image: m.flag ?? undefined })),
               ],
             },
             {
               title: "More",
               links: [
-                ...(fiatMarketFor("AR") ? [{ label: `Buenos Aires · ${fiatMarketFor("AR")!.sites.length}`, href: fiatHref("AR"), image: flagSrc("AR") ?? undefined }] : []),
+                ...(fiatMarketFor("AR") ? [{ label: `Buenos Aires · ${fiatMarketFor("AR")!.brands.length}`, href: fiatHref("AR"), image: flagSrc("AR") ?? undefined }] : []),
                 { label: `All ${fiatMarkets().length + 3} licensed markets`, href: "/licensed-casinos" },
               ],
             },
@@ -679,17 +680,17 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
             {
               title: "Licensed in Ontario",
               links: [
-                { label: `All ${fiatMarketFor("CA-ON")?.sites.length ?? 0} iGaming Ontario sites`, href: fiatHref("CA-ON") },
+                { label: `All ${fiatMarketFor("CA-ON")?.brands.length ?? 0} iGaming Ontario brands`, href: fiatHref("CA-ON") },
                 { label: "Casinos only", href: `${fiatHref("CA-ON")}?type=casino` },
                 { label: "Sportsbooks only", href: `${fiatHref("CA-ON")}?type=sports` },
               ],
             },
             {
               title: "On the register",
-              links: (fiatMarketFor("CA-ON")?.sites ?? [])
+              links: (fiatMarketFor("CA-ON")?.brands ?? [])
                 .filter((x) => x.logo)
                 .slice(0, 6)
-                .map((x) => ({ label: x.name, href: `${fiatHref("CA-ON")}#${x.domain}`, image: x.logo ?? undefined })),
+                .map((x) => ({ label: x.name, href: `${fiatHref("CA-ON")}#${x.id}`, image: x.logo ?? undefined })),
             },
           ],
         },
@@ -703,7 +704,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
             {
               title: "Gambling Commission register",
               links: [
-                { label: `All ${fiatMarketFor("GB")?.sites.length ?? 0} UK-licensed sites`, href: fiatHref("GB") },
+                { label: `All ${fiatMarketFor("GB")?.brands.length ?? 0} UK-licensed brands`, href: fiatHref("GB") },
                 { label: "Casinos only", href: `${fiatHref("GB")}?type=casino` },
                 { label: "Sportsbooks only", href: `${fiatHref("GB")}?type=sports` },
                 { label: "UK gambling law", href: "/legal/gb" },
@@ -711,10 +712,10 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
             },
             {
               title: "On the register",
-              links: (fiatMarketFor("GB")?.sites ?? [])
+              links: (fiatMarketFor("GB")?.brands ?? [])
                 .filter((x) => x.logo)
                 .slice(0, 6)
-                .map((x) => ({ label: x.name, href: `${fiatHref("GB")}#${x.domain}`, image: x.logo ?? undefined })),
+                .map((x) => ({ label: x.name, href: `${fiatHref("GB")}#${x.id}`, image: x.logo ?? undefined })),
             },
           ],
         },
@@ -730,14 +731,14 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
               links: EUROPE_FIAT.map((code) => fiatMarketFor(code))
                 .filter((m): m is NonNullable<typeof m> => !!m)
                 .slice(0, 7)
-                .map((m) => ({ label: `${m.name} · ${m.sites.length}`, href: fiatHref(m.code), image: m.flag ?? undefined })),
+                .map((m) => ({ label: `${m.name} · ${m.brands.length}`, href: fiatHref(m.code), image: m.flag ?? undefined })),
             },
             {
               title: " ",
               links: EUROPE_FIAT.map((code) => fiatMarketFor(code))
                 .filter((m): m is NonNullable<typeof m> => !!m)
                 .slice(7)
-                .map((m) => ({ label: `${m.name} · ${m.sites.length}`, href: fiatHref(m.code), image: m.flag ?? undefined })),
+                .map((m) => ({ label: `${m.name} · ${m.brands.length}`, href: fiatHref(m.code), image: m.flag ?? undefined })),
             },
           ],
         },

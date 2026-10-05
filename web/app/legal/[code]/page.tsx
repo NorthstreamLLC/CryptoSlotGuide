@@ -66,7 +66,7 @@ export default async function Page({ params }: { params: Promise<{ code: string 
           countryName={c.name}
           fiat={(() => {
             const f = fiatMarketFor(c.code);
-            return f ? { href: fiatHref(f.code), sites: f.sites.length } : null;
+            return f ? { href: fiatHref(f.code), sites: f.brands.length, brands: f.brands } : null;
           })()}
         />
         {hasCountryPage && (

@@ -98,6 +98,8 @@ const LOGOS: Record<string, string> = {
   "playson": "/assets/logos/playson.png",
   "playtech": "/assets/logos/playtech.png",
   "polymarket": "/assets/logos/polymarket.png",
+  "forecastex": "/assets/logos/forecastex.png",
+  "predictit": "/assets/logos/predictit.png",
   "polymarket-us": "/assets/logos/polymarket-us.png",
   "pragmatic-play": "/assets/logos/pragmatic-play.png",
   "prime-sportsbook": "/assets/logos/prime-sportsbook.svg",
@@ -164,6 +166,8 @@ const LIGHT_PLATE = new Set([
   // Myriad's mark is a black glyph on transparent (mean luminance 11, two thirds
   // of the square transparent) — invisible on the dark tile.
   "myriad",
+  // ForecastEx's mark is half navy, which disappears on the dark tile.
+  "forecastex",
 ]);
 
 export function needsLightPlate(slug: string): boolean {

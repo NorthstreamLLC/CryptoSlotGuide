@@ -1,5 +1,7 @@
 import Link from "next/link";
 import type { CountryMarket, WorldOperatorList, UnreadableRegister } from "@/lib/world-market";
+import type { FiatBrand, FiatProduct } from "@/lib/fiat";
+import { FiatBrandCard } from "@/components/fiat/FiatSiteCard";
 
 const MONO = "var(--font-jetbrains-mono), monospace";
 
@@ -73,6 +75,34 @@ function Operators({ title, list, id, more }: { title: string; list: WorldOperat
 }
 
 /**
+ * The licensed brands on a law page: the first 24, by the name a reader knows
+ * (ATG, not "AB Trav och Galopp"), with the rest on the licensed-casinos page.
+ */
+function Brands({ title, id, brands, more, source }: { title: string; id: string; brands: FiatBrand[]; more: string; source: WorldOperatorList | undefined }) {
+  if (!brands.length) return null;
+  return (
+    <div id={id} style={{ marginTop: 22, scrollMarginTop: 110 }}>
+      <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 12, flexWrap: "wrap", marginBottom: 10 }}>
+        <h2 style={{ margin: 0, fontSize: 20, fontWeight: 800, letterSpacing: "-.02em", color: "#fff" }}>
+          {title} <span style={{ fontFamily: MONO, fontSize: 13, fontWeight: 400, color: "#8E9CA5" }}>({brands.length})</span>
+        </h2>
+        {source && <Source url={source.sourceUrl} asOf={source.asOf} />}
+      </div>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(230px, 1fr))", gap: 8 }}>
+        {brands.slice(0, CAP).map((b) => (
+          <FiatBrandCard key={b.id} brand={b} compact />
+        ))}
+      </div>
+      {brands.length > CAP && (
+        <Link href={more} style={{ display: "inline-block", marginTop: 10, fontFamily: MONO, fontSize: 12, color: "#5FE3E8" }}>
+          See all {brands.length}, with search →
+        </Link>
+      )}
+    </div>
+  );
+}
+
+/**
  * The regulated-market block on a country page: who the regulator licenses
  * for online casino and betting, and the law behind it — or, where the
  * regulator publishes nothing a script can read, the page to check.
@@ -87,7 +117,7 @@ export function CountryMarketBlock({
   unreadable: UnreadableRegister | null;
   countryName: string;
   /** The country's page in the licensed (fiat) section, where it has one. */
-  fiat?: { href: string; sites: number } | null;
+  fiat?: { href: string; sites: number; brands: FiatBrand[] } | null;
 }) {
   if (!market && !unreadable) return null;
   return (
@@ -105,13 +135,31 @@ export function CountryMarketBlock({
                 href={fiat.href}
                 style={{ display: "inline-flex", alignItems: "center", gap: 8, marginTop: 12, padding: "11px 17px", borderRadius: 10, background: "#00C2CC", color: "#04191B", fontSize: 14, fontWeight: 800 }}
               >
-                All {fiat.sites} licensed sites, with logos and links →
+                All {fiat.sites} licensed brands, with logos, search and links →
               </Link>
             )}
           </div>
-          {market.casinos && <Operators id="licensed-casinos" title="Licensed online casinos" list={market.casinos} more={fiat ? `${fiat.href}?type=casino` : null} />}
-          {market.sportsbooks && <Operators id="licensed-sportsbooks" title="Licensed online sportsbooks" list={market.sportsbooks} more={fiat ? `${fiat.href}?type=sports` : null} />}
-          {market.operators && <Operators id="licensed-operators" title="Licensed online operators" list={market.operators} more={fiat?.href ?? null} />}
+          {fiat ? (
+            <>
+              {(() => {
+                const of = (p: FiatProduct) => fiat.brands.filter((b) => b.products.includes(p));
+                return market.operators && !market.casinos && !market.sportsbooks ? (
+                  <Brands id="licensed-operators" title="Licensed online sites" brands={fiat.brands} more={fiat.href} source={market.operators} />
+                ) : (
+                  <>
+                    <Brands id="licensed-casinos" title="Licensed online casinos" brands={of("casino")} more={`${fiat.href}?type=casino`} source={market.casinos} />
+                    <Brands id="licensed-sportsbooks" title="Licensed online sportsbooks" brands={of("sports")} more={`${fiat.href}?type=sports`} source={market.sportsbooks} />
+                  </>
+                );
+              })()}
+            </>
+          ) : (
+            <>
+              {market.casinos && <Operators id="licensed-casinos" title="Licensed online casinos" list={market.casinos} />}
+              {market.sportsbooks && <Operators id="licensed-sportsbooks" title="Licensed online sportsbooks" list={market.sportsbooks} />}
+              {market.operators && <Operators id="licensed-operators" title="Licensed online operators" list={market.operators} />}
+            </>
+          )}
           <div style={{ marginTop: 22, padding: "20px 24px", borderRadius: 16, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
             <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 8 }}>How it works here</div>
             <p style={{ margin: 0, maxWidth: "80ch", fontSize: 14.5, lineHeight: 1.7, color: "#C6D1D7", textWrap: "pretty" }}>{market.why}</p>

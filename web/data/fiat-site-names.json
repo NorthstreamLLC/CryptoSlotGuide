@@ -1,0 +1,4359 @@
+{
+ "names": {
+  "bet365.com": {
+   "name": "bet365",
+   "sourceUrl": "https://www.bet365.com/"
+  },
+  "casumo.com": {
+   "name": "Casumo",
+   "sourceUrl": "https://www.casumo.com/gi/"
+  },
+  "prontocasino.se": {
+   "name": "Pronto Casino",
+   "sourceUrl": "https://www.prontocasino.se/"
+  },
+  "spela.svenskaspel.se": {
+   "name": "Svenska Spel",
+   "sourceUrl": "https://spela.svenskaspel.se/"
+  },
+  "hajper.com": {
+   "name": "Hajper",
+   "sourceUrl": "https://www.hajper.com/sv"
+  },
+  "unibet.se": {
+   "name": "Unibet",
+   "sourceUrl": "https://www.unibet.se/"
+  },
+  "betmgm.se": {
+   "name": "BetMGM",
+   "sourceUrl": "https://www.betmgm.se/"
+  },
+  "leovegas.com": {
+   "name": "LeoVegas",
+   "sourceUrl": "https://www.leovegas.com/en-row"
+  },
+  "atg.se": {
+   "name": "ATG",
+   "sourceUrl": "https://www.atg.se/"
+  },
+  "44-aces.es": {
+   "name": "44Aces Casino Español",
+   "sourceUrl": "https://44-aces.es/"
+  },
+  "21betscasino.com": {
+   "name": "21BetsCasino",
+   "sourceUrl": "https://www.21betscasino.com/"
+  },
+  "1x2.se": {
+   "name": "1x2",
+   "sourceUrl": "https://www.1x2.se/en"
+  },
+  "24bettle.com": {
+   "name": "24Bettle",
+   "sourceUrl": "https://www.24bettle.com/en/"
+  },
+  "36vegas.co.uk": {
+   "name": "36vegas",
+   "sourceUrl": "https://www.36vegas.co.uk/"
+  },
+  "21prive.com": {
+   "name": "21Prive Casino",
+   "sourceUrl": "https://www.21prive.com/"
+  },
+  "24spin.com": {
+   "name": "24 Spin",
+   "sourceUrl": "https://www.24spin.com/"
+  },
+  "44-aces.de": {
+   "name": "44Aces",
+   "sourceUrl": "https://www.44-aces.de/"
+  },
+  "7bet.co.uk": {
+   "name": "Play Online Casino Games at 7bet",
+   "sourceUrl": "https://7bet.co.uk/"
+  },
+  "666casino.com": {
+   "name": "666 Casino",
+   "sourceUrl": "https://www.666casino.com/"
+  },
+  "888bingo.com": {
+   "name": "888Bingo",
+   "sourceUrl": "https://www.888bingo.com/"
+  },
+  "21casino.com": {
+   "name": "21 Casino",
+   "sourceUrl": "https://www.21casino.com/us"
+  },
+  "44aces.com": {
+   "name": "44Aces",
+   "sourceUrl": "https://www.44aces.com/"
+  },
+  "32red.com": {
+   "name": "32Red",
+   "sourceUrl": "https://www.32red.com/"
+  },
+  "888.com": {
+   "name": "888",
+   "sourceUrl": "https://www.888.com/"
+  },
+  "888.co.uk": {
+   "name": "888",
+   "sourceUrl": "https://www.888.com/"
+  },
+  "888.nl": {
+   "name": "888",
+   "sourceUrl": "https://www.888.nl/nl"
+  },
+  "888ladies.com": {
+   "name": "888 Ladies",
+   "sourceUrl": "https://www.888ladies.com/"
+  },
+  "888casino.ca": {
+   "name": "888 Casino",
+   "sourceUrl": "https://www.888casino.ca/"
+  },
+  "69games.cz": {
+   "name": "69GAMES Casino",
+   "sourceUrl": "https://www.69games.cz/en"
+  },
+  "888casino.it": {
+   "name": "888 Casinò",
+   "sourceUrl": "https://www.888casino.it/"
+  },
+  "247bet.com": {
+   "name": "247Bet",
+   "sourceUrl": "https://www.247bet.com/en/"
+  },
+  "888casino.se": {
+   "name": "888 Casino",
+   "sourceUrl": "https://www.888casino.se/"
+  },
+  "888sport.ca": {
+   "name": "Bet with 888 Sportsbook",
+   "sourceUrl": "https://www.888sport.ca/"
+  },
+  "888casino.dk": {
+   "name": "888casino",
+   "sourceUrl": "https://www.888casino.dk/"
+  },
+  "888poker.com": {
+   "name": "888 Poker Online Poker",
+   "sourceUrl": "https://www.888poker.com/"
+  },
+  "888poker.de": {
+   "name": "888 Poker",
+   "sourceUrl": "https://www.888poker.de/"
+  },
+  "888poker.es": {
+   "name": "888 Poker",
+   "sourceUrl": "https://www.888poker.es/"
+  },
+  "accatap.co.uk": {
+   "name": "AccaTap",
+   "sourceUrl": "https://www.accatap.com/"
+  },
+  "888poker.dk": {
+   "name": "888Poker",
+   "sourceUrl": "https://www.888poker.dk/"
+  },
+  "888poker.se": {
+   "name": "888Poker",
+   "sourceUrl": "https://www.888poker.se/"
+  },
+  "accatap.com": {
+   "name": "AccaTap",
+   "sourceUrl": "https://www.accatap.com/"
+  },
+  "888sport.com": {
+   "name": "888sport",
+   "sourceUrl": "https://www.888sport.com/"
+  },
+  "888sport.de": {
+   "name": "Online Wetten 888 sport",
+   "sourceUrl": "https://www.888sport.de/"
+  },
+  "888slots.de": {
+   "name": "888slots",
+   "sourceUrl": "https://www.888slots.de/"
+  },
+  "acedbet.com": {
+   "name": "Acedbet",
+   "sourceUrl": "https://www.acedbet.com/"
+  },
+  "allwynbet.com.cy": {
+   "name": "allwynbet",
+   "sourceUrl": "https://allwynbet.com.cy/"
+  },
+  "alohaslots.com": {
+   "name": "Aloha Slots",
+   "sourceUrl": "https://www.alohaslots.com/"
+  },
+  "888sport.se": {
+   "name": "888 Sport",
+   "sourceUrl": "https://www.888sport.se/"
+  },
+  "allbritishcasino.com": {
+   "name": "All British Casino",
+   "sourceUrl": "https://www.allbritishcasino.com/en/index"
+  },
+  "aladdinslots.com": {
+   "name": "Aladdin Slots",
+   "sourceUrl": "https://www.aladdinslots.com/"
+  },
+  "admiralbet.es": {
+   "name": "AdmiralBet",
+   "sourceUrl": "https://www.admiralbet.es/es"
+  },
+  "admiralcasino.co.uk": {
+   "name": "Admiral Casino",
+   "sourceUrl": "https://www.admiralcasino.co.uk/en"
+  },
+  "ahtigames.de": {
+   "name": "AHTI Games",
+   "sourceUrl": "https://www.ahtigames.de/"
+  },
+  "admiralbet.de": {
+   "name": "AdmiralBet",
+   "sourceUrl": "https://www.admiralbet.de/de"
+  },
+  "amazonslots.com": {
+   "name": "Amazon Slots",
+   "sourceUrl": "https://www.amazonslots.com/"
+  },
+  "amigoslots.com": {
+   "name": "Amigo Slots",
+   "sourceUrl": "https://www.amigoslots.com/"
+  },
+  "apollogames.cz": {
+   "name": "Apollo Games online casino",
+   "sourceUrl": "https://www.apollogames.cz/"
+  },
+  "allwyn.cz": {
+   "name": "Allwyn",
+   "sourceUrl": "https://www.allwyn.cz/"
+  },
+  "b-bets.com": {
+   "name": "b-Bets",
+   "sourceUrl": "https://www.b-bets.com/en/"
+  },
+  "bet365.bet.ar": {
+   "name": "bet365",
+   "sourceUrl": "https://www.bet365.bet.ar/"
+  },
+  "bet-at-home.de": {
+   "name": "bet-at-home",
+   "sourceUrl": "https://www.bet-at-home.de/"
+  },
+  "bet-x.cz": {
+   "name": "BETX",
+   "sourceUrl": "https://bet-x.cz/"
+  },
+  "bacanaplay.com": {
+   "name": "BacanaPlay",
+   "sourceUrl": "https://www.bacanaplay.com/"
+  },
+  "balmybingo.com": {
+   "name": "Balmy Bingo",
+   "sourceUrl": "https://www.balmybingo.com/"
+  },
+  "atthebingo.com": {
+   "name": "At The Bingo",
+   "sourceUrl": "https://atthebingo.com/"
+  },
+  "bet25.dk": {
+   "name": "Bet25",
+   "sourceUrl": "https://bet25.dk/"
+  },
+  "barbadoscasino.com": {
+   "name": "Barbados Casino",
+   "sourceUrl": "https://www.barbadoscasino.com/"
+  },
+  "barbadosbingo.com": {
+   "name": "Barbados Bingo",
+   "sourceUrl": "https://www.barbadosbingo.com/"
+  },
+  "bacanaplay.es": {
+   "name": "BacanaPlay",
+   "sourceUrl": "https://www.bacanaplay.es/"
+  },
+  "bet365.com.cy": {
+   "name": "bet365",
+   "sourceUrl": "https://www.bet365.com.cy/"
+  },
+  "bet365.de": {
+   "name": "bet365",
+   "sourceUrl": "https://www.bet365.de/"
+  },
+  "bet365.es": {
+   "name": "bet365",
+   "sourceUrl": "https://www.bet365.es/"
+  },
+  "bet365.dk": {
+   "name": "bet365",
+   "sourceUrl": "https://www.bet365.dk/"
+  },
+  "bet365.nl": {
+   "name": "bet365",
+   "sourceUrl": "https://www.bet365.nl/"
+  },
+  "bet365.fr": {
+   "name": "bet365",
+   "sourceUrl": "https://www.bet365.fr/"
+  },
+  "bet365.it": {
+   "name": "bet365",
+   "sourceUrl": "https://www.bet365.it/"
+  },
+  "bestodds.com": {
+   "name": "BestOdds",
+   "sourceUrl": "https://www.bestodds.com/"
+  },
+  "betconnect.com": {
+   "name": "BetConnect",
+   "sourceUrl": "https://www.betconnect.com/"
+  },
+  "bet600.co.uk": {
+   "name": "Bet600",
+   "sourceUrl": "https://www.bet600.co.uk/"
+  },
+  "betarno.com": {
+   "name": "Betarno",
+   "sourceUrl": "https://betarno.com/"
+  },
+  "betboro.com": {
+   "name": "betboro",
+   "sourceUrl": "https://www.betboro.com/"
+  },
+  "betdaq.com": {
+   "name": "BETDAQ Online Betting Exchange",
+   "sourceUrl": "https://www.betdaq.com/"
+  },
+  "betcrown.co.uk": {
+   "name": "Betcrown",
+   "sourceUrl": "https://betcrown.co.uk/"
+  },
+  "betdukes.com": {
+   "name": "BetDukes",
+   "sourceUrl": "https://www.betdukes.com/"
+  },
+  "betinia.dk": {
+   "name": "Betinia",
+   "sourceUrl": "https://nj.betinia.com/dk/"
+  },
+  "betinia.se": {
+   "name": "Betinia",
+   "sourceUrl": "https://nj.betinia.com/sv/"
+  },
+  "betlegend.co.uk": {
+   "name": "BetLegend",
+   "sourceUrl": "https://betlegend.co.uk/"
+  },
+  "betitaly.it": {
+   "name": "betitaly",
+   "sourceUrl": "https://www.betitaly.it/"
+  },
+  "betmorph.com": {
+   "name": "BetMorph",
+   "sourceUrl": "https://betmorph.com/"
+  },
+  "betmaster.co.uk": {
+   "name": "Betmaster",
+   "sourceUrl": "https://betmaster.co.uk/en"
+  },
+  "betmonie.com": {
+   "name": "Betmonie NG",
+   "sourceUrl": "https://betmonie.com/"
+  },
+  "betmaster.uk": {
+   "name": "Betmaster",
+   "sourceUrl": "https://betmaster.co.uk/en"
+  },
+  "betpoint.co.uk": {
+   "name": "BetPoint",
+   "sourceUrl": "https://betpoint.co.uk/"
+  },
+  "betmaster.dk": {
+   "name": "Betmaster",
+   "sourceUrl": "https://betmaster.dk/da"
+  },
+  "betgoodwin.co.uk": {
+   "name": "BetGoodwin",
+   "sourceUrl": "https://www.betgoodwin.co.uk/"
+  },
+  "betnero.co.uk": {
+   "name": "Betnero",
+   "sourceUrl": "https://betnero.co.uk/"
+  },
+  "betonalfa.com.cy": {
+   "name": "BetOnAlfa",
+   "sourceUrl": "https://betonalfa.com.cy/"
+  },
+  "bet777.es": {
+   "name": "Bet777",
+   "sourceUrl": "https://www.bet777.es/"
+  },
+  "betrivers.ca": {
+   "name": "BetRivers Sportsbook & Casino",
+   "sourceUrl": "https://betrivers.ca/"
+  },
+  "betproiq.com": {
+   "name": "BetPro",
+   "sourceUrl": "https://betproiq.com/"
+  },
+  "betrino.com": {
+   "name": "Betrino",
+   "sourceUrl": "https://www.betrino.com/"
+  },
+  "betty.ca": {
+   "name": "Betty",
+   "sourceUrl": "https://betty.ca/"
+  },
+  "betty.com": {
+   "name": "Betty",
+   "sourceUrl": "https://betty.com/"
+  },
+  "betor.cz": {
+   "name": "BETOR",
+   "sourceUrl": "https://www.betor.cz/"
+  },
+  "betway.ca": {
+   "name": "Betway Canada: The Official Site",
+   "sourceUrl": "https://betway.ca/"
+  },
+  "betway.com": {
+   "name": "Betway: Official Website",
+   "sourceUrl": "https://betway.com/"
+  },
+  "betmgm.nl": {
+   "name": "BetMGM NL",
+   "sourceUrl": "https://www.betmgm.nl/"
+  },
+  "bettabet.co.uk": {
+   "name": "Betta Bet",
+   "sourceUrl": "https://www.bettabet.co.uk/"
+  },
+  "betwarrior.bet.ar": {
+   "name": "BetWarrior",
+   "sourceUrl": "https://betwarrior.bet.ar/"
+  },
+  "betway.es": {
+   "name": "Betway",
+   "sourceUrl": "https://betway.es/en-es/"
+  },
+  "betwright.com": {
+   "name": "BetWright",
+   "sourceUrl": "https://betwright.com/"
+  },
+  "betway.de": {
+   "name": "Betway: The Official Site",
+   "sourceUrl": "https://betway.de/en-de/"
+  },
+  "bettom.com": {
+   "name": "BetTOM",
+   "sourceUrl": "https://www.bettom.com/"
+  },
+  "bidbingo.co.uk": {
+   "name": "Bid Bingo",
+   "sourceUrl": "https://www.bidbingo.co.uk/"
+  },
+  "bezy.co.uk": {
+   "name": "Bezy",
+   "sourceUrl": "https://bezy.co.uk/"
+  },
+  "bingo-ireland.com": {
+   "name": "Bingo Ireland",
+   "sourceUrl": "https://www.bingo-ireland.com/"
+  },
+  "bet442.co.uk": {
+   "name": "Bet442",
+   "sourceUrl": "https://www.bet442.co.uk/"
+  },
+  "bingbong.de": {
+   "name": "BingBong Online Spielothek",
+   "sourceUrl": "https://www.bingbong.de/"
+  },
+  "bingo-plus.co.uk": {
+   "name": "PlayBingoPlus",
+   "sourceUrl": "https://playbingoplus.com/"
+  },
+  "bingobarmy.com": {
+   "name": "Bingo Barmy",
+   "sourceUrl": "https://www.bingobarmy.com/"
+  },
+  "bgtgames.com": {
+   "name": "BGT Games",
+   "sourceUrl": "https://www.bgtgames.com/"
+  },
+  "bigwinvegas.com": {
+   "name": "Big Win Vegas",
+   "sourceUrl": "https://www.bigwinvegas.com/"
+  },
+  "bigthunderslots.com": {
+   "name": "Big Thunder Slots",
+   "sourceUrl": "https://www.bigthunderslots.com/"
+  },
+  "big5casino.com": {
+   "name": "Big5Casino",
+   "sourceUrl": "https://www.big5casino.com/en/"
+  },
+  "billioncasino.com": {
+   "name": "Billion Casino",
+   "sourceUrl": "https://www.billioncasino.com/"
+  },
+  "bingohollywood.com": {
+   "name": "Bingo Hollywood",
+   "sourceUrl": "https://www.bingohollywood.com/"
+  },
+  "bingoaliens.com": {
+   "name": "Bingo Aliens",
+   "sourceUrl": "https://www.bingoaliens.com/"
+  },
+  "bingo.games": {
+   "name": "Bingo Games",
+   "sourceUrl": "https://www.bingo.games/"
+  },
+  "bingodiamond.com": {
+   "name": "Welcome to Bingo Diamond",
+   "sourceUrl": "https://www.bingodiamond.com/"
+  },
+  "bingoplus.ltd": {
+   "name": "PlayBingoPlus",
+   "sourceUrl": "https://playbingoplus.com/"
+  },
+  "bingoloft.com": {
+   "name": "Bingo Loft",
+   "sourceUrl": "https://www.bingoloft.com/"
+  },
+  "bingobritain.com": {
+   "name": "Bingo Britain",
+   "sourceUrl": "https://www.bingobritain.com/"
+  },
+  "bingostorm.com": {
+   "name": "Play Online Bingo at BingoStorm",
+   "sourceUrl": "https://www.bingostorm.com/"
+  },
+  "bingocrazy.com": {
+   "name": "Bingo Crazy",
+   "sourceUrl": "https://www.bingocrazy.com/"
+  },
+  "betuk.com": {
+   "name": "Bet on Sports at BetUK",
+   "sourceUrl": "https://www.betuk.com/"
+  },
+  "blightybingo.com": {
+   "name": "Blighty Bingo",
+   "sourceUrl": "https://www.blightybingo.com/"
+  },
+  "bingoclubhouse.com": {
+   "name": "Bingo Clubhouse",
+   "sourceUrl": "https://www.bingoclubhouse.com/"
+  },
+  "bjsarcade.co.uk": {
+   "name": "BJs Arcade",
+   "sourceUrl": "https://bjsarcade.co.uk/"
+  },
+  "bjsgames.co.uk": {
+   "name": "BJs Games",
+   "sourceUrl": "https://bjsgames.co.uk/"
+  },
+  "bonanzaslots.co.uk": {
+   "name": "Bonanza Slots",
+   "sourceUrl": "https://bonanzaslots.co.uk/"
+  },
+  "bootybingo.com": {
+   "name": "Booty Bingo",
+   "sourceUrl": "https://www.bootybingo.com/"
+  },
+  "britbingo.com": {
+   "name": "Brit Bingo",
+   "sourceUrl": "https://britbingo.com/"
+  },
+  "bubblebonusbingo.com": {
+   "name": "Bubble Bonus Bingo",
+   "sourceUrl": "https://www.bubblebonusbingo.com/"
+  },
+  "bumblebingo.com": {
+   "name": "Bumble Bingo",
+   "sourceUrl": "https://www.bumblebingo.com/"
+  },
+  "botemania.es": {
+   "name": "Botemanía",
+   "sourceUrl": "https://www.botemania.es/"
+  },
+  "bjsbingo.co.uk": {
+   "name": "BJ's Bingo",
+   "sourceUrl": "https://www.bjsbingo.co.uk/"
+  },
+  "butterflybingo.com": {
+   "name": "Butterfly Bingo",
+   "sourceUrl": "https://www.butterflybingo.com/"
+  },
+  "bluefoxcasino.com": {
+   "name": "Bluefox Casino",
+   "sourceUrl": "https://www.bluefoxcasino.com/"
+  },
+  "buzzbingo.com": {
+   "name": "Buzz Bingo",
+   "sourceUrl": "https://www.buzzbingo.com/"
+  },
+  "butlersbingo.com": {
+   "name": "Welcome to Butlers Bingo",
+   "sourceUrl": "https://www.butlersbingo.com/"
+  },
+  "buzzcasino.com": {
+   "name": "Buzz Casino",
+   "sourceUrl": "https://www.buzzcasino.com/"
+  },
+  "bingostars.co.uk": {
+   "name": "Bingostars: Play Online Bingo",
+   "sourceUrl": "https://www.bingostars.co.uk/"
+  },
+  "bwin.com": {
+   "name": "bwin",
+   "sourceUrl": "https://www.bwin.com/en/sports"
+  },
+  "bynton.com": {
+   "name": "Bynton",
+   "sourceUrl": "https://bynton.com/"
+  },
+  "buddyslots.com": {
+   "name": "Buddy Slots",
+   "sourceUrl": "https://www.buddyslots.com/"
+  },
+  "caesarspalaceonline.com": {
+   "name": "Caesars Palace Online Casino",
+   "sourceUrl": "https://caesarspalaceonline.com/"
+  },
+  "buffalospins.com": {
+   "name": "Buffalo Spins",
+   "sourceUrl": "https://www.buffalospins.com/"
+  },
+  "brillbet.co.uk": {
+   "name": "Bet",
+   "sourceUrl": "https://www.brillbet.co.uk:443/en/"
+  },
+  "bonvercasino.cz": {
+   "name": "Bonver Casino",
+   "sourceUrl": "https://www.bonvercasino.cz/en"
+  },
+  "cashcasino.co.uk": {
+   "name": "Cash Casino",
+   "sourceUrl": "https://cashcasino.co.uk/"
+  },
+  "carltonbingo.com": {
+   "name": "Carlton Bingo",
+   "sourceUrl": "https://www.carltonbingo.com/"
+  },
+  "casino.draftkings.com": {
+   "name": "DraftKings",
+   "sourceUrl": "https://casino.draftkings.com/"
+  },
+  "casino.netbet.co.uk": {
+   "name": "NetBet",
+   "sourceUrl": "https://casino.netbet.co.uk/"
+  },
+  "carltongames.com": {
+   "name": "Carlton Games",
+   "sourceUrl": "https://www.carltongames.com/"
+  },
+  "casino77.com": {
+   "name": "casino77",
+   "sourceUrl": "https://www.casino77.com/"
+  },
+  "casino.novoline.de": {
+   "name": "NOVOLINE",
+   "sourceUrl": "https://casino.novoline.de/"
+  },
+  "casino.bet365.es": {
+   "name": "bet365",
+   "sourceUrl": "https://casino.bet365.es/home"
+  },
+  "casino.on.betmgm.ca": {
+   "name": "BetMGM",
+   "sourceUrl": "https://www.on.betmgm.ca/en/casino"
+  },
+  "casino-kartac.cz": {
+   "name": "Casino Kartáč",
+   "sourceUrl": "https://www.casino-kartac.cz/"
+  },
+  "casino.on.wheeloffortunecasino.com": {
+   "name": "Wheel of Fortune Casino",
+   "sourceUrl": "https://www.on.wheeloffortunecasino.com/en/p/closed"
+  },
+  "casilando.com": {
+   "name": "Casilando",
+   "sourceUrl": "https://www.casilando.com/us"
+  },
+  "casino.toto.nl": {
+   "name": "http://TOTO.nl",
+   "sourceUrl": "https://casino.toto.nl/"
+  },
+  "casino.betway.com": {
+   "name": "Online Casino Betway",
+   "sourceUrl": "https://betway.com/g/en/casino"
+  },
+  "casino777.lv": {
+   "name": "Casino777",
+   "sourceUrl": "https://casino777.lv/lv"
+  },
+  "casimba.com": {
+   "name": "Casimba Casino",
+   "sourceUrl": "https://www.casimba.com/en/"
+  },
+  "casino.fanduel.ca": {
+   "name": "FanDuel",
+   "sourceUrl": "https://casino.fanduel.ca/"
+  },
+  "casino777.nl": {
+   "name": "Casino777",
+   "sourceUrl": "https://www.casino777.nl/"
+  },
+  "casimpo.com": {
+   "name": "Casimpo",
+   "sourceUrl": "https://www.casimpo.com/"
+  },
+  "casinogame.co.uk": {
+   "name": "Casino Game",
+   "sourceUrl": "https://casinogame.co.uk/"
+  },
+  "casinofantastico.co.uk": {
+   "name": "Welcome to Casino Fantastico",
+   "sourceUrl": "https://www.casinofantastico.co.uk/"
+  },
+  "casinoandfriends.com": {
+   "name": "Casino and friends",
+   "sourceUrl": "https://www.casinoandfriends.com/"
+  },
+  "casinokings.com": {
+   "name": "Casino Kings",
+   "sourceUrl": "https://www.casinokings.com/"
+  },
+  "casinoepic.se": {
+   "name": "Casino Epic",
+   "sourceUrl": "https://www.casinoepic.se/en"
+  },
+  "casinoandfriends.dk": {
+   "name": "Casino and friends",
+   "sourceUrl": "https://www.casinoandfriends.dk/"
+  },
+  "casinoofdreams.uk": {
+   "name": "Welcome to Casino Of Dreams",
+   "sourceUrl": "https://www.casinoofdreams.uk/"
+  },
+  "casinomarbella.es": {
+   "name": "Casino Marbella",
+   "sourceUrl": "https://www.casinomarbella.es/casino"
+  },
+  "casinogo.dk": {
+   "name": "CasinoGo",
+   "sourceUrl": "https://www.casinogo.dk/"
+  },
+  "casinosieger.com": {
+   "name": "CasinoSieger",
+   "sourceUrl": "https://www.casinosieger.com/en/"
+  },
+  "casinostuen.dk": {
+   "name": "casinostuen",
+   "sourceUrl": "https://www.casinostuen.dk/da"
+  },
+  "casiku.com": {
+   "name": "Casiku",
+   "sourceUrl": "https://www.casiku.com/en"
+  },
+  "betsuna.com": {
+   "name": "Betsuna",
+   "sourceUrl": "https://www.betsuna.com/"
+  },
+  "casinohouse.dk": {
+   "name": "Casino House",
+   "sourceUrl": "https://www.casinohouse.dk/"
+  },
+  "chitchatbingo.com": {
+   "name": "Chit Chat Bingo",
+   "sourceUrl": "https://www.chitchatbingo.com/"
+  },
+  "cloud9sports.co.uk": {
+   "name": "Cloud 9",
+   "sourceUrl": "https://cloud9sports.co.uk/"
+  },
+  "chanz.com": {
+   "name": "Chanz",
+   "sourceUrl": "https://casino.chanz.com/en/"
+  },
+  "chatmagbingo.com": {
+   "name": "Chat Mag Bingo",
+   "sourceUrl": "https://www.chatmagbingo.com/"
+  },
+  "casinostugan.com": {
+   "name": "casinostugan",
+   "sourceUrl": "https://www.casinostugan.com/sv"
+  },
+  "cherrywins.com": {
+   "name": "Cherry Wins",
+   "sourceUrl": "https://www.cherrywins.com/"
+  },
+  "casushi.com": {
+   "name": "Casushi",
+   "sourceUrl": "https://www.casushi.com/"
+  },
+  "casinogranvia.es": {
+   "name": "Casino Gran Vía Online",
+   "sourceUrl": "https://www.casinogranvia.es/"
+  },
+  "cheekycasino.com": {
+   "name": "Cheeky Casino",
+   "sourceUrl": "https://www.cheekycasino.com/"
+  },
+  "citybingo.com": {
+   "name": "City Bingo",
+   "sourceUrl": "https://www.citybingo.com/"
+  },
+  "clemensspillehal.com": {
+   "name": "Clemensspillehal",
+   "sourceUrl": "https://www.clemensspillehal.com/"
+  },
+  "chelseapalace.com": {
+   "name": "Chelsea Palace",
+   "sourceUrl": "https://www.chelseapalace.com/"
+  },
+  "charitybingo.com": {
+   "name": "Charity Bingo",
+   "sourceUrl": "https://www.charitybingo.com/"
+  },
+  "clemensspillehal.dk": {
+   "name": "Clemensspillehal",
+   "sourceUrl": "https://www.clemensspillehal.com/dk/"
+  },
+  "codere.es": {
+   "name": "Codere",
+   "sourceUrl": "https://www.codere.es/"
+  },
+  "club3000bingoonline.com": {
+   "name": "Club 3000 Bingo",
+   "sourceUrl": "https://www.club3000bingoonline.com/"
+  },
+  "clovercasino.com": {
+   "name": "Clover Casino",
+   "sourceUrl": "https://www.clovercasino.com/"
+  },
+  "cloverbingo.com": {
+   "name": "Clover Bingo",
+   "sourceUrl": "https://www.cloverbingo.com/"
+  },
+  "chillispins.com": {
+   "name": "Chilli Spins",
+   "sourceUrl": "https://www.chillispins.com/"
+  },
+  "colossusbets.com": {
+   "name": "Colossus Bets",
+   "sourceUrl": "https://colossusbets.com/"
+  },
+  "daznbet.es": {
+   "name": "DAZN Bet",
+   "sourceUrl": "https://www.daznbet.es/"
+  },
+  "daznbet.de": {
+   "name": "DAZN Bet",
+   "sourceUrl": "https://www.daznbet.de/"
+  },
+  "crystalslots.com": {
+   "name": "Crystal Slots",
+   "sourceUrl": "https://www.crystalslots.com/"
+  },
+  "daznbet.com": {
+   "name": "DAZN Bet",
+   "sourceUrl": "https://www.daznbet.com/"
+  },
+  "costabingo.com": {
+   "name": "Costabingo",
+   "sourceUrl": "https://www.costabingo.com/"
+  },
+  "costagames.com": {
+   "name": "Costa Games",
+   "sourceUrl": "https://www.costagames.com/"
+  },
+  "dcbet.co.uk": {
+   "name": "DC Bet",
+   "sourceUrl": "https://dcbet.co.uk/"
+  },
+  "dazzlebingo.com": {
+   "name": "Dazzle Bingo",
+   "sourceUrl": "https://dazzlebingo.com/"
+  },
+  "conquercasino.com": {
+   "name": "Conquer Casino",
+   "sourceUrl": "https://www.conquercasino.com/"
+  },
+  "danskespil.dk": {
+   "name": "Danske Spil",
+   "sourceUrl": "https://danskespil.dk/"
+  },
+  "dcbet.uk": {
+   "name": "DC BET - Coming Soon",
+   "sourceUrl": "https://dcbet.uk/"
+  },
+  "daisyslots.com": {
+   "name": "Daisy Slots",
+   "sourceUrl": "https://www.daisyslots.com/"
+  },
+  "dbet.com": {
+   "name": "DBET",
+   "sourceUrl": "https://www.dbet.com/"
+  },
+  "divabingo.com": {
+   "name": "Diva Bingo",
+   "sourceUrl": "https://www.divabingo.com/"
+  },
+  "deltacasino.com": {
+   "name": "Delta Casino Online",
+   "sourceUrl": "https://www.deltacasino.com/en/casino"
+  },
+  "dealornodealspin.com": {
+   "name": "Deal Or No Deal",
+   "sourceUrl": "https://www.dealornodealspin.com/"
+  },
+  "diamond7casino.com": {
+   "name": "Welcome to Diamond 7 Casino",
+   "sourceUrl": "https://www.diamond7casino.com/"
+  },
+  "dipstakes.com": {
+   "name": "DipStakes",
+   "sourceUrl": "https://www.dipstakes.com/"
+  },
+  "cosmicspins.com": {
+   "name": "Cosmic Spins Casino",
+   "sourceUrl": "https://www.cosmicspins.com/"
+  },
+  "dottybingo.com": {
+   "name": "Welcome to Dotty Bingo",
+   "sourceUrl": "https://www.dottybingo.com/"
+  },
+  "dovebingo.com": {
+   "name": "Dove Bingo",
+   "sourceUrl": "https://www.dovebingo.com/"
+  },
+  "doveslots.com": {
+   "name": "Dove Slots",
+   "sourceUrl": "https://www.doveslots.com/"
+  },
+  "die-spielbank.de": {
+   "name": "SPIELBANK",
+   "sourceUrl": "https://www.die-spielbank.de/de"
+  },
+  "dovecasino.com": {
+   "name": "Dove Casino",
+   "sourceUrl": "https://www.dovecasino.com/"
+  },
+  "dreampalacecasino.com": {
+   "name": "Dream Palace Casino",
+   "sourceUrl": "https://www.dreampalacecasino.com/"
+  },
+  "dreambingo.com": {
+   "name": "Dream Bingo",
+   "sourceUrl": "https://www.dreambingo.com/"
+  },
+  "duckduckbingo.com": {
+   "name": "Duck Duck Bingo",
+   "sourceUrl": "https://www.duckduckbingo.com/"
+  },
+  "duelz.com": {
+   "name": "Duelz",
+   "sourceUrl": "https://www.duelz.com/en/"
+  },
+  "dukescasino.com": {
+   "name": "Dukes Casino",
+   "sourceUrl": "https://www.dukescasino.com/"
+  },
+  "dreamvegas.com": {
+   "name": "Dream Vegas Casino",
+   "sourceUrl": "https://www.dreamvegas.com/en/"
+  },
+  "easybet.net": {
+   "name": "easyBet",
+   "sourceUrl": "https://www.easybet.net/"
+  },
+  "engagegames.io": {
+   "name": "Engage Games",
+   "sourceUrl": "https://engagegames.io/"
+  },
+  "ecasino.cz": {
+   "name": "eCasino",
+   "sourceUrl": "https://www.ecasino.cz/"
+  },
+  "dreamjackpot.com": {
+   "name": "Dream Jackpot",
+   "sourceUrl": "https://www.dreamjackpot.com/"
+  },
+  "egyptslots.com": {
+   "name": "Egypt Slots",
+   "sourceUrl": "https://www.egyptslots.com/"
+  },
+  "elfslots.com": {
+   "name": "Elf Slots",
+   "sourceUrl": "https://www.elfslots.com/"
+  },
+  "ebingo.es": {
+   "name": "Ebingo. La emoción del juego",
+   "sourceUrl": "https://www.ebingo.es/"
+  },
+  "elfbingo.com": {
+   "name": "Elf Bingo",
+   "sourceUrl": "https://www.elfbingo.com/"
+  },
+  "enlabs.se": {
+   "name": "Enlabs",
+   "sourceUrl": "https://enlabs.com/"
+  },
+  "euroconcursos.es": {
+   "name": "EUROCONCURSOS",
+   "sourceUrl": "https://euroconcursos.es/"
+  },
+  "euro-millions.com": {
+   "name": "EuroMillions",
+   "sourceUrl": "https://www.euro-millions.com/"
+  },
+  "eurokingclub.com": {
+   "name": "EuroKingClub",
+   "sourceUrl": "https://www.eurokingclub.com/"
+  },
+  "enracha.es": {
+   "name": "enracha",
+   "sourceUrl": "https://www.enracha.es/"
+  },
+  "eucasino.es": {
+   "name": "EUcasino",
+   "sourceUrl": "https://www.eucasino.es/"
+  },
+  "eucasino.co.uk": {
+   "name": "EUcasino",
+   "sourceUrl": "https://www.eucasino.com/"
+  },
+  "euspielothek.de": {
+   "name": "EUspielothek",
+   "sourceUrl": "https://www.euspielothek.de/"
+  },
+  "eucasino.com": {
+   "name": "EUcasino",
+   "sourceUrl": "https://www.eucasino.com/"
+  },
+  "eucasino.dk": {
+   "name": "EUcasino",
+   "sourceUrl": "https://www.eucasino.com/dk/"
+  },
+  "eurotierce.be": {
+   "name": "Eurotiercé",
+   "sourceUrl": "https://www.eurotierce.be/fr/accueil"
+  },
+  "fabulousbingo.co.uk": {
+   "name": "Fabulous Bingo",
+   "sourceUrl": "https://www.fabulousbingo.co.uk/"
+  },
+  "fanteam.com": {
+   "name": "FanTeam",
+   "sourceUrl": "https://fanteam.com/"
+  },
+  "fabulousvegas.co.uk": {
+   "name": "Fabulous Vegas",
+   "sourceUrl": "https://www.fabulousvegas.co.uk/"
+  },
+  "fantasyfootyleague.co.uk": {
+   "name": "Fantasy Footy League",
+   "sourceUrl": "https://www.fantasyfootyleague.co.uk/"
+  },
+  "fanduel.com": {
+   "name": "FanDuel",
+   "sourceUrl": "https://www.fanduel.com/"
+  },
+  "fantasticspins.com": {
+   "name": "Fantastic Spins",
+   "sourceUrl": "https://www.fantasticspins.com/"
+  },
+  "euromania.com": {
+   "name": "Welcome to Euromania Casino!",
+   "sourceUrl": "https://www.euromania.com/"
+  },
+  "finlandiacasino.com": {
+   "name": "Finlandia Casino",
+   "sourceUrl": "https://finlandiacasino.com/"
+  },
+  "first1club.com": {
+   "name": "First1Club",
+   "sourceUrl": "https://first1club.com/"
+  },
+  "expekt.se": {
+   "name": "nya expekt",
+   "sourceUrl": "https://www.expekt.se/"
+  },
+  "expekt.dk": {
+   "name": "Expekt",
+   "sourceUrl": "https://www.expekt.dk/"
+  },
+  "feverbingo.com": {
+   "name": "Fever Bingo",
+   "sourceUrl": "https://www.feverbingo.com/"
+  },
+  "fbet.cz": {
+   "name": "fBET",
+   "sourceUrl": "https://www.fbet.cz/"
+  },
+  "fitzwilliamsports.com": {
+   "name": "Fitzwilliam Sports",
+   "sourceUrl": "https://fitzwilliamsports.com/"
+  },
+  "feverslots.ca": {
+   "name": "Fever Slots",
+   "sourceUrl": "https://www.feverslots.ca/"
+  },
+  "feverslots.com": {
+   "name": "Fever Slots",
+   "sourceUrl": "https://www.feverslots.com/"
+  },
+  "fluffywins.com": {
+   "name": "Welcome to Fluffy Wins",
+   "sourceUrl": "https://www.fluffywins.com/"
+  },
+  "fortunegames.com": {
+   "name": "Fortune Games",
+   "sourceUrl": "https://www.fortunegames.com/"
+  },
+  "fluffyspins.com": {
+   "name": "Fluffy Spins",
+   "sourceUrl": "https://www.fluffyspins.com/"
+  },
+  "freespinsbingo.co.uk": {
+   "name": "Free Spins Bingo",
+   "sourceUrl": "https://freespinsbingo.co.uk/"
+  },
+  "frankfred.com": {
+   "name": "Frank & Fred",
+   "sourceUrl": "https://frankfred.com/"
+  },
+  "fortunemobilecasino.co.uk": {
+   "name": "Fortune Mobile Casino",
+   "sourceUrl": "https://www.fortunemobilecasino.co.uk/"
+  },
+  "funkyjackpot.com": {
+   "name": "Funkyjackpot",
+   "sourceUrl": "https://funkyjackpot.com/"
+  },
+  "fruityking.co.uk": {
+   "name": "Fruity King",
+   "sourceUrl": "https://www.fruityking.co.uk/"
+  },
+  "freespinsnodeposit.casino": {
+   "name": "Free Spins No Deposit",
+   "sourceUrl": "https://www.freespinsnodeposit.casino/"
+  },
+  "freebet.casino": {
+   "name": "Freebet Casino",
+   "sourceUrl": "https://www.freebet.casino/"
+  },
+  "gameweekxi.com": {
+   "name": "Gameweek XI",
+   "sourceUrl": "https://gameweekxi.com/"
+  },
+  "forbescasino.cz": {
+   "name": "Forbes",
+   "sourceUrl": "https://www.forbescasino.cz/"
+  },
+  "fruitkings.com": {
+   "name": "Fruitkings",
+   "sourceUrl": "https://www.fruitkings.com/"
+  },
+  "funcasino.com": {
+   "name": "Fun Casino",
+   "sourceUrl": "https://www.funcasino.com/en/index"
+  },
+  "funcasino.se": {
+   "name": "Fun Casino",
+   "sourceUrl": "https://www.funcasino.com/en/index"
+  },
+  "fruitywins.co.uk": {
+   "name": "Fruity Wins",
+   "sourceUrl": "https://www.fruitywins.co.uk/"
+  },
+  "games.tipico.de": {
+   "name": "Tipico No Service",
+   "sourceUrl": "https://games.tipico.de/"
+  },
+  "fuegocasino.es": {
+   "name": "Fuego Casino",
+   "sourceUrl": "https://www.fuegocasino.es/"
+  },
+  "fluffywincasino.com": {
+   "name": "Fluffy Win Casino",
+   "sourceUrl": "https://fluffywincasino.com/"
+  },
+  "game-nation.co.uk": {
+   "name": "Game Nation",
+   "sourceUrl": "https://game-nation.co.uk/"
+  },
+  "funkyspins.com": {
+   "name": "FunkySpins",
+   "sourceUrl": "https://funkyspins.com/sv"
+  },
+  "genieriches.com": {
+   "name": "Genie Riches",
+   "sourceUrl": "https://www.genieriches.com/"
+  },
+  "gdaycasino.com": {
+   "name": "G'Day Casino",
+   "sourceUrl": "https://www.gdaycasino.com/"
+  },
+  "geoffbanks.bet": {
+   "name": "GeoffBanks",
+   "sourceUrl": "https://geoffbanks.bet/"
+  },
+  "geckoplay.co.uk": {
+   "name": "GeckoPlay Casino",
+   "sourceUrl": "https://www.geckoplay.com/"
+  },
+  "geckoplay.dk": {
+   "name": "GeckoPlay Casino",
+   "sourceUrl": "https://www.geckoplay.com/"
+  },
+  "getsbk.com": {
+   "name": "SBK",
+   "sourceUrl": "https://getsbk.com/"
+  },
+  "geckoplay.es": {
+   "name": "GeckoPlay Casino",
+   "sourceUrl": "https://www.geckoplay.es/"
+  },
+  "genybet.fr": {
+   "name": "Genybet",
+   "sourceUrl": "https://www.genybet.fr/"
+  },
+  "gentingcasino.com": {
+   "name": "Genting Casino",
+   "sourceUrl": "https://www.gentingcasino.com/"
+  },
+  "gentingcasino.dk": {
+   "name": "Genting Casino",
+   "sourceUrl": "https://www.gentingcasino.dk/"
+  },
+  "gentingcasino.se": {
+   "name": "Genting Casino",
+   "sourceUrl": "https://www.gentingcasino.se/"
+  },
+  "giantspins.com": {
+   "name": "Giant Spins Casino",
+   "sourceUrl": "https://www.giantspins.com/"
+  },
+  "gentingcasino.es": {
+   "name": "Genting Casino",
+   "sourceUrl": "https://www.gentingcasino.es/"
+  },
+  "geckoplay.se": {
+   "name": "GeckoPlay Casino",
+   "sourceUrl": "https://www.geckoplay.se/"
+  },
+  "ggpoker.de": {
+   "name": "GGPokerDE",
+   "sourceUrl": "https://ggpoker.de/"
+  },
+  "ggpoker.nl": {
+   "name": "GGPoker",
+   "sourceUrl": "https://ggpoker.nl/"
+  },
+  "glitterbingo.com": {
+   "name": "Glitter Bingo",
+   "sourceUrl": "https://www.glitterbingo.com/"
+  },
+  "gloriousbingo.com": {
+   "name": "Glorious Bingo",
+   "sourceUrl": "https://www.gloriousbingo.com/"
+  },
+  "getlucky.dk": {
+   "name": "getlucky",
+   "sourceUrl": "https://www.getlucky.com/da"
+  },
+  "ggpoker.co.uk": {
+   "name": "GGPoker",
+   "sourceUrl": "https://ggpoker.co.uk/"
+  },
+  "getlucky.com": {
+   "name": "getlucky",
+   "sourceUrl": "https://www.getlucky.com/en"
+  },
+  "ggpoker.ca": {
+   "name": "GGPokerCA",
+   "sourceUrl": "https://ggpoker.ca/"
+  },
+  "glossybingo.com": {
+   "name": "Welcome to Glossy Bingo",
+   "sourceUrl": "https://www.glossybingo.com/"
+  },
+  "giantwins.com": {
+   "name": "Giant Wins",
+   "sourceUrl": "https://www.giantwins.com/"
+  },
+  "getlucky.nl": {
+   "name": "getlucky",
+   "sourceUrl": "https://www.getlucky.com/en"
+  },
+  "gossipbingo.com": {
+   "name": "Gossip Bingo",
+   "sourceUrl": "https://www.gossipbingo.com/"
+  },
+  "goldenbull.es": {
+   "name": "Golden Bull",
+   "sourceUrl": "https://www.goldenbull.es/"
+  },
+  "goldenpalacesports.be": {
+   "name": "Golden Palace Sports",
+   "sourceUrl": "https://www.goldenpalacesports.be/en"
+  },
+  "goldenbull.se": {
+   "name": "Golden Bull",
+   "sourceUrl": "https://www.goldenbull.se/en"
+  },
+  "gullycricket.us": {
+   "name": "GullyCricket",
+   "sourceUrl": "https://gullycricket.us/"
+  },
+  "gooddayslots.com": {
+   "name": "Good Day Slots",
+   "sourceUrl": "https://www.gooddayslots.com/"
+  },
+  "hardrockbet.ca": {
+   "name": "Hard Rock Bet",
+   "sourceUrl": "https://www.hardrockbet.ca/"
+  },
+  "happycasino.se": {
+   "name": "HappyCasino",
+   "sourceUrl": "https://happycasino.se/"
+  },
+  "grandwin.cz": {
+   "name": "Grand",
+   "sourceUrl": "https://www.grandwin.cz/"
+  },
+  "gullycricket.uk": {
+   "name": "GullyCricket",
+   "sourceUrl": "https://gullycricket.uk/"
+  },
+  "grandivy.com": {
+   "name": "Grand Ivy",
+   "sourceUrl": "https://www.grandivy.com/en/"
+  },
+  "greatbritaincasino.com": {
+   "name": "Great Britain Casino",
+   "sourceUrl": "https://www.greatbritaincasino.com/"
+  },
+  "hellocasino.com": {
+   "name": "Hello Casino",
+   "sourceUrl": "https://www.hellocasino.com/"
+  },
+  "gogocasino.com": {
+   "name": "GoGoCasino",
+   "sourceUrl": "https://www.gogocasino.com/en"
+  },
+  "hattricks.app": {
+   "name": "Hat Tricks",
+   "sourceUrl": "https://hattricks.app/onboarding"
+  },
+  "healthlottery.co.uk": {
+   "name": "The Health Lottery",
+   "sourceUrl": "https://www.healthlottery.co.uk:443/"
+  },
+  "hippozino.com": {
+   "name": "Hippozino",
+   "sourceUrl": "https://www.hippozino.com/"
+  },
+  "hardrockcasino.nl": {
+   "name": "Hard Rock Casino",
+   "sourceUrl": "https://hardrockcasino.nl/"
+  },
+  "heyspin.com": {
+   "name": "HeySpin",
+   "sourceUrl": "https://www.heyspin.com/"
+  },
+  "highbet.co.uk": {
+   "name": "Highbet UK Official Page",
+   "sourceUrl": "https://www.highbet.co.uk/"
+  },
+  "horseshoeonlinecasino.com": {
+   "name": "Horseshoe Online Casino",
+   "sourceUrl": "https://horseshoeonlinecasino.com/"
+  },
+  "hippobingo.com": {
+   "name": "Hippo Bingo",
+   "sourceUrl": "https://www.hippobingo.com/"
+  },
+  "herna.gapagroup.cz": {
+   "name": "GapaGroup",
+   "sourceUrl": "https://herna.gapagroup.cz/"
+  },
+  "hollywoodbets.co.uk": {
+   "name": "Hollywoodbets",
+   "sourceUrl": "https://hollywoodbets.co.uk/sports"
+  },
+  "hotstreakcasino.com": {
+   "name": "Hot Streak Casino",
+   "sourceUrl": "https://casino.hotstreakcasino.com/"
+  },
+  "hommerson.nl": {
+   "name": "Hommerson",
+   "sourceUrl": "https://www.hommerson.nl/"
+  },
+  "horizonscasino.com": {
+   "name": "Horizons Casino Leicester Square",
+   "sourceUrl": "https://www.horizonscasino.com/"
+  },
+  "ice36.co.uk": {
+   "name": "Ice36 Casino",
+   "sourceUrl": "https://www.ice36.co.uk/"
+  },
+  "ice36.es": {
+   "name": "ICE36",
+   "sourceUrl": "https://www.ice36.es/"
+  },
+  "ice36.de": {
+   "name": "ICE36",
+   "sourceUrl": "https://www.ice36.de/"
+  },
+  "impactwin.se": {
+   "name": "Impactwin",
+   "sourceUrl": "https://impactwin.se/"
+  },
+  "incrediblespins.co.uk": {
+   "name": "Incredible Spins",
+   "sourceUrl": "https://incrediblespins.co.uk/"
+  },
+  "hyperslots.com": {
+   "name": "Hyper Slots",
+   "sourceUrl": "https://www.hyperslots.com/"
+  },
+  "ice36.dk": {
+   "name": "ICE36",
+   "sourceUrl": "https://www.ice36.dk/"
+  },
+  "intertops.de": {
+   "name": "Intertops",
+   "sourceUrl": "https://intertops.de/"
+  },
+  "innspins.com": {
+   "name": "Inn Spins",
+   "sourceUrl": "https://www.innspins.com/"
+  },
+  "irishspins.com": {
+   "name": "Irish Spins",
+   "sourceUrl": "https://www.irishspins.com/"
+  },
+  "ifortuna.cz": {
+   "name": "Fortuna",
+   "sourceUrl": "https://www.ifortuna.cz/"
+  },
+  "itunes.apple.com": {
+   "name": "Apple",
+   "sourceUrl": "https://www.apple.com/itunes/"
+  },
+  "irishracingraceclubs.com": {
+   "name": "Irish Racing Race Clubs",
+   "sourceUrl": "https://irishracingraceclubs.com/"
+  },
+  "hippodromecasino.com": {
+   "name": "Hippodrome Casino",
+   "sourceUrl": "https://www.hippodromecasino.com/"
+  },
+  "irishlottery.com": {
+   "name": "Irish Lottery",
+   "sourceUrl": "https://www.irishlottery.com/"
+  },
+  "irishwins.co.uk": {
+   "name": "Irish Wins",
+   "sourceUrl": "https://irishwins.co.uk/"
+  },
+  "jackpotcafe.co.uk": {
+   "name": "Jackpot Cafe",
+   "sourceUrl": "https://www.jackpotcafe.co.uk/"
+  },
+  "jackpotliner.co.uk": {
+   "name": "Jackpot Liner",
+   "sourceUrl": "https://www.jackpotliner.co.uk/"
+  },
+  "jazzyspins.com": {
+   "name": "Jazzy Spins",
+   "sourceUrl": "https://jazzyspins.com/"
+  },
+  "jackpotpiraten.de": {
+   "name": "Jackpotpiraten",
+   "sourceUrl": "https://www.jackpotpiraten.de/"
+  },
+  "jeffbet.net": {
+   "name": "JeffBet",
+   "sourceUrl": "https://www.jeffbet.net/"
+  },
+  "jackpotjoy.com": {
+   "name": "Join Jackpotjoy",
+   "sourceUrl": "https://www.jackpotjoy.com/"
+  },
+  "ivybet.com": {
+   "name": "Ivy Bet",
+   "sourceUrl": "https://www.ivybet.com/"
+  },
+  "jackpotvillage.com": {
+   "name": "Jackpot Village",
+   "sourceUrl": "https://www.jackpotvillage.com/en-mt/"
+  },
+  "jokerstar.de": {
+   "name": "Jokerstar",
+   "sourceUrl": "https://jokerstar.de/de"
+  },
+  "ivycasino.com": {
+   "name": "Ivy Casino",
+   "sourceUrl": "https://www.ivycasino.com/"
+  },
+  "jeu.fr": {
+   "name": "Jeux gratuits en ligne",
+   "sourceUrl": "https://www.jeu.fr/"
+  },
+  "jazzycat.com": {
+   "name": "Jazzy Cat",
+   "sourceUrl": "https://www.jazzycat.com/"
+  },
+  "junglereels.com": {
+   "name": "Welcome to Jungle Reels",
+   "sourceUrl": "https://www.junglereels.com/"
+  },
+  "jubla.com": {
+   "name": "Jubla",
+   "sourceUrl": "https://jubla.se/"
+  },
+  "jubla.se": {
+   "name": "Jubla",
+   "sourceUrl": "https://jubla.se/"
+  },
+  "juegging.es": {
+   "name": "Juegging Apuestas Deportivas",
+   "sourceUrl": "https://juegging.es/"
+  },
+  "kajotintacto.cz": {
+   "name": "KAJOT INTACTO",
+   "sourceUrl": "https://kajotintacto.cz/"
+  },
+  "jupiterslots.com": {
+   "name": "Jupiter Slots",
+   "sourceUrl": "https://www.jupiterslots.com/"
+  },
+  "justincasino.com": {
+   "name": "Justin Casino",
+   "sourceUrl": "https://www.justincasino.com/"
+  },
+  "katiesbingo.com": {
+   "name": "Katies Bingo",
+   "sourceUrl": "https://katiesbingo.com/"
+  },
+  "kalookisportsbook.co.uk": {
+   "name": "Kalooki Sportsbook",
+   "sourceUrl": "https://www.kalookisportsbook.co.uk/"
+  },
+  "kambi.com": {
+   "name": "Kambi",
+   "sourceUrl": "https://www.kambi.com/"
+  },
+  "kingjackpot.co.uk": {
+   "name": "King Jackpot",
+   "sourceUrl": "https://www.kingjackpot.co.uk/"
+  },
+  "kansino.nl": {
+   "name": "Kansino",
+   "sourceUrl": "https://www.kansino.nl/"
+  },
+  "karlcasino.com": {
+   "name": "KarlCasino",
+   "sourceUrl": "https://www.karlcasino.com/sv/index"
+  },
+  "joejennings.co.uk": {
+   "name": "Joe Jennings Bookmakers",
+   "sourceUrl": "https://www.joejennings.co.uk/"
+  },
+  "kongcasino.com": {
+   "name": "Kong Casino",
+   "sourceUrl": "https://www.kongcasino.com/"
+  },
+  "lastfanstanding.co.uk": {
+   "name": "Last Fan Standing",
+   "sourceUrl": "https://lastfanstanding.co.uk/"
+  },
+  "klirr.com": {
+   "name": "Klirr",
+   "sourceUrl": "https://klirr.com/"
+  },
+  "kapowcasino.dk": {
+   "name": "KapowCasino",
+   "sourceUrl": "https://www.kapowcasino.dk/"
+  },
+  "lasvegascasino.com": {
+   "name": "lasvegascasino",
+   "sourceUrl": "https://www.lasvegascasino.com/"
+  },
+  "lazerlightbingo.com": {
+   "name": "Lazerlight Bingo",
+   "sourceUrl": "https://lazerlightbingo.com/"
+  },
+  "knightslots.ca": {
+   "name": "Knightslots",
+   "sourceUrl": "https://www.knightslots.ca/"
+  },
+  "ladbrokes.be": {
+   "name": "Ladbrokes hub",
+   "sourceUrl": "https://ladbrokeshub.be/?lang=en"
+  },
+  "kungaslottet.se": {
+   "name": "Kungaslottet",
+   "sourceUrl": "https://www.kungaslottet.se/"
+  },
+  "kingcasino.com": {
+   "name": "King Casino",
+   "sourceUrl": "https://www.kingcasino.com/"
+  },
+  "latecasino.com": {
+   "name": "Late Casino",
+   "sourceUrl": "https://www.latecasino.com/"
+  },
+  "lebom.app": {
+   "name": "LEBOM: Football Betting",
+   "sourceUrl": "https://www.lebom.app/"
+  },
+  "ladyriches.com": {
+   "name": "Lady Riches",
+   "sourceUrl": "https://www.ladyriches.com/"
+  },
+  "lippybingo.com": {
+   "name": "Lippy Bingo",
+   "sourceUrl": "https://www.lippybingo.com/"
+  },
+  "kittybingo.com": {
+   "name": "Kitty Bingo",
+   "sourceUrl": "https://www.kittybingo.com/"
+  },
+  "ladbet.com": {
+   "name": "Lad Bet",
+   "sourceUrl": "https://www.ladbet.com/"
+  },
+  "ladcasino.com": {
+   "name": "Lad Casino",
+   "sourceUrl": "https://www.ladcasino.com/"
+  },
+  "livescorebet.com": {
+   "name": "LiveScore Bet",
+   "sourceUrl": "https://www.livescorebet.com/"
+  },
+  "lightscamerabingo.com": {
+   "name": "Lights Camera Bingo",
+   "sourceUrl": "https://www.lightscamerabingo.com/"
+  },
+  "loadsabingo.com": {
+   "name": "Loadsa Bingo",
+   "sourceUrl": "https://www.loadsabingo.com/"
+  },
+  "leovegas.de": {
+   "name": "LeoVegas - King of Mobile & Live",
+   "sourceUrl": "https://www.leovegas.de/de-de/"
+  },
+  "loonybingo.com": {
+   "name": "Loony Bingo",
+   "sourceUrl": "https://www.loonybingo.com/"
+  },
+  "loofers.dk": {
+   "name": "Loofers",
+   "sourceUrl": "https://www.loofers.dk/"
+  },
+  "londonjackpots.com": {
+   "name": "London Jackpots",
+   "sourceUrl": "https://www.londonjackpots.com/"
+  },
+  "lobby.alfobet.com": {
+   "name": "Alfobet",
+   "sourceUrl": "https://lobby.alfobet.com/"
+  },
+  "lordping.com": {
+   "name": "Lord Ping",
+   "sourceUrl": "https://www.lordping.com/"
+  },
+  "leovegas.it": {
+   "name": "LeoVegas",
+   "sourceUrl": "https://www.leovegas.it/"
+  },
+  "lootcasino.com": {
+   "name": "Loot Casino",
+   "sourceUrl": "https://www.lootcasino.com/"
+  },
+  "losvegas.bet": {
+   "name": "Los Vegas",
+   "sourceUrl": "https://www.losvegas.bet/en/"
+  },
+  "lordping.de": {
+   "name": "Lord Ping",
+   "sourceUrl": "https://www.lordping.de/"
+  },
+  "lordping.se": {
+   "name": "Lord Ping",
+   "sourceUrl": "https://www.lordping.se/"
+  },
+  "lordping.co.uk": {
+   "name": "Lord Ping",
+   "sourceUrl": "https://www.lordping.co.uk/"
+  },
+  "lordping.es": {
+   "name": "Lord Ping",
+   "sourceUrl": "https://www.lordping.es/"
+  },
+  "lottery.co.uk": {
+   "name": "Lottery",
+   "sourceUrl": "https://www.lottery.co.uk/"
+  },
+  "live.netbet.co.uk": {
+   "name": "NetBet",
+   "sourceUrl": "https://casino.netbet.co.uk/live-casino"
+  },
+  "lotto.web.de": {
+   "name": "WEB.DE Lotto",
+   "sourceUrl": "https://lotto.web.de/"
+  },
+  "lotto.net": {
+   "name": "Lotto",
+   "sourceUrl": "https://www.lotto.net/"
+  },
+  "lottery.netbet.co.uk": {
+   "name": "NetBet",
+   "sourceUrl": "https://lottery.netbet.co.uk/"
+  },
+  "lottoexperten.com": {
+   "name": "Lottoexperten",
+   "sourceUrl": "https://lottoexperten.com/"
+  },
+  "lottomart.com": {
+   "name": "Lottomart",
+   "sourceUrl": "https://lottomart.com/en-gb/"
+  },
+  "lottomart.co.uk": {
+   "name": "Lottomart",
+   "sourceUrl": "https://lottomart.com/en-gb/"
+  },
+  "lotto.gmx.de": {
+   "name": "GMX Lotto",
+   "sourceUrl": "https://lotto.gmx.de/"
+  },
+  "leovegas.es": {
+   "name": "LeoVegas Casino",
+   "sourceUrl": "https://www.leovegas.es/"
+  },
+  "leovegas.nl": {
+   "name": "LeoVegas Casino",
+   "sourceUrl": "https://www.leovegas.nl/"
+  },
+  "leovegas.dk": {
+   "name": "LeoVegas Casino",
+   "sourceUrl": "https://www.leovegas.dk/"
+  },
+  "loveheartsbingo.com": {
+   "name": "Lovehearts Bingo",
+   "sourceUrl": "https://www.loveheartsbingo.com/"
+  },
+  "luckycasino.ca": {
+   "name": "LuckyCasino",
+   "sourceUrl": "https://luckycasino.ca/"
+  },
+  "luckycharmbingo.com": {
+   "name": "LuckyCharmBingo",
+   "sourceUrl": "https://www.luckycharmbingo.com/"
+  },
+  "leovegas.co.uk": {
+   "name": "LeoVegas Casino",
+   "sourceUrl": "https://www.leovegas.co.uk/"
+  },
+  "lucky7casino.nl": {
+   "name": "Lucky7Casino Online",
+   "sourceUrl": "https://lucky7casino.nl/"
+  },
+  "luckstarscasino.com": {
+   "name": "Luck Stars Casino",
+   "sourceUrl": "https://www.luckstarscasino.com/"
+  },
+  "luckycasino.es": {
+   "name": "LuckyCasino",
+   "sourceUrl": "https://www.luckycasino.es/"
+  },
+  "lottoland.se": {
+   "name": "Lottoland",
+   "sourceUrl": "https://www.lottoland.se/"
+  },
+  "lucky247.uk": {
+   "name": "Welcome to Lucky 247 Casino",
+   "sourceUrl": "https://www.lucky247.uk/"
+  },
+  "luckyadmiral.com": {
+   "name": "Lucky Admiral",
+   "sourceUrl": "https://www.luckyadmiral.com/"
+  },
+  "luckymate.co.uk": {
+   "name": "LuckyMate",
+   "sourceUrl": "https://luckymate.co.uk/"
+  },
+  "luckypence.com": {
+   "name": "Lucky Pence",
+   "sourceUrl": "https://www.luckypence.com/"
+  },
+  "luckycowbingo.com": {
+   "name": "Lucky Cow Bingo",
+   "sourceUrl": "https://www.luckycowbingo.com/"
+  },
+  "lottoland.co.uk": {
+   "name": "Lottoland",
+   "sourceUrl": "https://www.lottoland.co.uk/"
+  },
+  "luckyniki.co.uk": {
+   "name": "LuckyNiki",
+   "sourceUrl": "https://www.luckyniki.co.uk/"
+  },
+  "luckymeslots.com": {
+   "name": "LuckyMe Slots",
+   "sourceUrl": "https://www.luckymeslots.com/"
+  },
+  "luckymeslots.co.uk": {
+   "name": "LuckyMe Slots",
+   "sourceUrl": "https://www.luckymeslots.co.uk/"
+  },
+  "luckylouis.com": {
+   "name": "LuckyLouis Official Site",
+   "sourceUrl": "https://www.luckylouis.com/"
+  },
+  "luckyniki.com": {
+   "name": "LuckyNiki",
+   "sourceUrl": "https://www.luckyniki.com/"
+  },
+  "luckyvegas.de": {
+   "name": "Lucky Vegas Online Spiele",
+   "sourceUrl": "https://www.luckyvegas.de/"
+  },
+  "luckymeslots.dk": {
+   "name": "LuckyMe Slots",
+   "sourceUrl": "https://www.luckymeslots.dk/"
+  },
+  "luckyniki.de": {
+   "name": "LuckyNiki",
+   "sourceUrl": "https://www.luckyniki.com/"
+  },
+  "luckyniki.dk": {
+   "name": "LuckyNiki",
+   "sourceUrl": "https://www.luckyniki.dk/"
+  },
+  "luckyvegas.com": {
+   "name": "LuckyVegas Online Casino",
+   "sourceUrl": "https://www.luckyvegas.com/"
+  },
+  "luxurycasino.co.uk": {
+   "name": "Luxury Casino",
+   "sourceUrl": "https://www.luxurycasino.co.uk/en-gb/"
+  },
+  "luckyvegas.es": {
+   "name": "Luckyvegas Online Casino",
+   "sourceUrl": "https://www.luckyvegas.es/"
+  },
+  "m.highflyercasino.com": {
+   "name": "High Flyer Casino",
+   "sourceUrl": "https://m.highflyercasino.com/mv2/"
+  },
+  "luckylouis.de": {
+   "name": "LuckyLouis Offizielle Webseite",
+   "sourceUrl": "https://www.luckylouis.de/"
+  },
+  "luckybet.cz": {
+   "name": "Casino LuckyBet",
+   "sourceUrl": "https://www.luckybet.cz/en"
+  },
+  "majesticbingo.com": {
+   "name": "Majestic Bingo",
+   "sourceUrl": "https://www.majesticbingo.com/"
+  },
+  "mainstagebingo.com": {
+   "name": "Mainstage Bingo",
+   "sourceUrl": "https://www.mainstagebingo.com/"
+  },
+  "lyllocasino.com": {
+   "name": "Lyllo Casino",
+   "sourceUrl": "https://www.lyllocasino.com/sv"
+  },
+  "marcaapuestas.es": {
+   "name": "Marca",
+   "sourceUrl": "https://www.marcaapuestas.es/"
+  },
+  "marathonbet.es": {
+   "name": "Marathonbet",
+   "sourceUrl": "https://www.marathonbet.es/en/"
+  },
+  "match15.com": {
+   "name": "Match15",
+   "sourceUrl": "https://match15.com/"
+  },
+  "luckyvip.com": {
+   "name": "Lucky VIP Casino",
+   "sourceUrl": "https://www.luckyvip.com/"
+  },
+  "marathonbet.dk": {
+   "name": "Marathonbet",
+   "sourceUrl": "https://www.marathonbet.dk/en/"
+  },
+  "mariacasino.dk": {
+   "name": "Maria Casino",
+   "sourceUrl": "https://www.mariacasino.dk/"
+  },
+  "matchbook.com": {
+   "name": "Matchbook",
+   "sourceUrl": "https://www.matchbook.com/"
+  },
+  "maverickgames.com": {
+   "name": "Maverick Games",
+   "sourceUrl": "https://www.maverickgames.com/"
+  },
+  "mangospins.com": {
+   "name": "Mango Spins Casino",
+   "sourceUrl": "https://www.mangospins.com/"
+  },
+  "magicalvegas.com": {
+   "name": "Magical Vegas",
+   "sourceUrl": "https://www.magicalvegas.com/"
+  },
+  "maxiplay.com": {
+   "name": "Maxiplay Casino",
+   "sourceUrl": "https://www.maxiplay.com/"
+  },
+  "mariacasino.se": {
+   "name": "Maria Casino",
+   "sourceUrl": "https://www.mariacasino.se/"
+  },
+  "matchbingo.co.uk": {
+   "name": "Match Bingo by Match15",
+   "sourceUrl": "https://www.matchbingo.co.uk/"
+  },
+  "maxmillions.com": {
+   "name": "Max Millions",
+   "sourceUrl": "https://www.maxmillions.com/"
+  },
+  "megacasino.co.uk": {
+   "name": "Mega Casino",
+   "sourceUrl": "https://www.megacasino.co.uk/"
+  },
+  "megafan.bet": {
+   "name": "MegaFan Games",
+   "sourceUrl": "https://www.megafan.game/"
+  },
+  "megafan.game": {
+   "name": "MegaFan Games",
+   "sourceUrl": "https://www.megafan.game/"
+  },
+  "megafortune.com": {
+   "name": "Megafortune",
+   "sourceUrl": "https://www.megafortune.com/"
+  },
+  "megacasino.dk": {
+   "name": "Mega Casino",
+   "sourceUrl": "https://www.megacasino.dk/"
+  },
+  "lunacasino.es": {
+   "name": "Luna Casino",
+   "sourceUrl": "https://www.lunacasino.es/"
+  },
+  "megacasinos.es": {
+   "name": "Mega Casino",
+   "sourceUrl": "https://www.megacasinos.es/"
+  },
+  "merkurbets.de": {
+   "name": "Merkurbets",
+   "sourceUrl": "https://www.merkurbets.de/restrict/block/index.html"
+  },
+  "lunacasino.com": {
+   "name": "Luna Casino",
+   "sourceUrl": "https://www.lunacasino.com/"
+  },
+  "lunacasino.dk": {
+   "name": "Luna Casino",
+   "sourceUrl": "https://www.lunacasino.com/da-dk/"
+  },
+  "lunacasino.co.uk": {
+   "name": "Luna Casino",
+   "sourceUrl": "https://www.lunacasino.com/en-gb/"
+  },
+  "megareelspins.com": {
+   "name": "Mega Reel Spins",
+   "sourceUrl": "https://www.megareelspins.com/"
+  },
+  "megareel.com": {
+   "name": "Mega Reel",
+   "sourceUrl": "https://www.megareel.com/"
+  },
+  "megariches.com": {
+   "name": "Megariches",
+   "sourceUrl": "https://www.megariches.com/"
+  },
+  "megariches.dk": {
+   "name": "Megariches",
+   "sourceUrl": "https://www.megariches.com/"
+  },
+  "metalspiel.de": {
+   "name": "MetalSpiel",
+   "sourceUrl": "https://www.metalspiel.de/"
+  },
+  "meccagames.com": {
+   "name": "Mecca Games",
+   "sourceUrl": "https://www.meccagames.com/"
+  },
+  "magicplanet.cz": {
+   "name": "Magic Planet Online Casino",
+   "sourceUrl": "https://www.magicplanet.cz/en"
+  },
+  "merkurbets.dk": {
+   "name": "Merkurbets",
+   "sourceUrl": "https://www.merkurbets.dk/sports"
+  },
+  "megawayscasino.com": {
+   "name": "Megaways Casino",
+   "sourceUrl": "https://www.megawayscasino.com/"
+  },
+  "miamijackpots.com": {
+   "name": "Miami Jackpots Casino",
+   "sourceUrl": "https://www.miamijackpots.com/"
+  },
+  "millionaire.co.uk": {
+   "name": "Millionaire",
+   "sourceUrl": "https://www.millionaire.co.uk/"
+  },
+  "midnite.com": {
+   "name": "Midnite",
+   "sourceUrl": "https://www.midnite.com:443/"
+  },
+  "metalcasino.com": {
+   "name": "Metal Casino",
+   "sourceUrl": "https://www.metalcasino.com/"
+  },
+  "miamidice.com": {
+   "name": "Miami Dice",
+   "sourceUrl": "https://www.miamidice.com/"
+  },
+  "metalcasino.es": {
+   "name": "Metal Casino",
+   "sourceUrl": "https://www.metalcasino.es/es-ES"
+  },
+  "mobile.sportingindex.com": {
+   "name": "Sporting Index Mobile",
+   "sourceUrl": "https://www.sportingindex.com/sports/mobile"
+  },
+  "metalcasino.se": {
+   "name": "Metal Casino",
+   "sourceUrl": "https://www.metalcasino.com/en-US"
+  },
+  "millionairegames.com": {
+   "name": "Millionaire Games",
+   "sourceUrl": "https://www.millionairegames.com/"
+  },
+  "mobile.betboro.com": {
+   "name": "betboro",
+   "sourceUrl": "https://m.betboro.com/"
+  },
+  "mobile.betdaq.com": {
+   "name": "BETDAQ Online Betting Exchange",
+   "sourceUrl": "https://www.betdaq.com/"
+  },
+  "mirrorbingo.com": {
+   "name": "Mirror Bingo",
+   "sourceUrl": "https://www.mirrorbingo.com/"
+  },
+  "monkeycasino.com": {
+   "name": "Monkey Casino",
+   "sourceUrl": "https://www.monkeycasino.com/"
+  },
+  "mobilewins.co.uk": {
+   "name": "Mobile Wins",
+   "sourceUrl": "https://www.mobilewins.co.uk/"
+  },
+  "mrgreen.co.uk": {
+   "name": "mrgreen",
+   "sourceUrl": "https://www.mrgreen.co.uk/"
+  },
+  "moongames.com": {
+   "name": "Moon Games",
+   "sourceUrl": "https://www.moongames.com/"
+  },
+  "moonbingo.com": {
+   "name": "Moon Bingo",
+   "sourceUrl": "https://www.moonbingo.com/"
+  },
+  "mogobet.com": {
+   "name": "MOGOBET",
+   "sourceUrl": "https://www.mogobet.com/"
+  },
+  "moneyreels.com": {
+   "name": "MoneyReels",
+   "sourceUrl": "https://www.moneyreels.com/"
+  },
+  "mrslot.com": {
+   "name": "Spin & Win at MrSlot",
+   "sourceUrl": "https://www.mrslot.com/"
+  },
+  "mrmobi.com": {
+   "name": "Spin & Win at MrMobi",
+   "sourceUrl": "https://www.mrmobi.com/"
+  },
+  "momangcasino.se": {
+   "name": "Momang Casino",
+   "sourceUrl": "https://www.momangcasino.se/"
+  },
+  "mondobets.es": {
+   "name": "Mondobets",
+   "sourceUrl": "https://cdn1.mondobets.es/splash_page/mantenimiento.html"
+  },
+  "mrsuperplay.com": {
+   "name": "Spin & Win at MrSuperPlay",
+   "sourceUrl": "https://www.mrsuperplay.com/"
+  },
+  "mrjackvegas.com": {
+   "name": "Spin & Win at MrJackvegas",
+   "sourceUrl": "https://www.mrjackvegas.com/"
+  },
+  "monstercasino.com": {
+   "name": "Monster Casino",
+   "sourceUrl": "https://www.monstercasino.com/"
+  },
+  "nationbingo.co.uk": {
+   "name": "Nation Bingo",
+   "sourceUrl": "https://nationbingo.co.uk/"
+  },
+  "mrgreen.de": {
+   "name": "Mr Green",
+   "sourceUrl": "https://www.mrgreen.de/"
+  },
+  "national-lottery.com": {
+   "name": "National Lottery",
+   "sourceUrl": "https://www.national-lottery.com/"
+  },
+  "netbet.co.uk": {
+   "name": "NetBet UK: Online Casino",
+   "sourceUrl": "https://www.netbet.co.uk/"
+  },
+  "northstarbets.ca": {
+   "name": "NorthStar Bets",
+   "sourceUrl": "https://www.northstarbets.ca/"
+  },
+  "novibet.com.cy": {
+   "name": "Novibet",
+   "sourceUrl": "https://www.novibet.com.cy/stoixima"
+  },
+  "nobonuscasino.com": {
+   "name": "No Bonus Casino",
+   "sourceUrl": "https://www.nobonuscasino.com/en/index"
+  },
+  "nl.onecasino.com": {
+   "name": "OneCasino",
+   "sourceUrl": "https://nl.onecasino.com/"
+  },
+  "newonlineslots.co.uk": {
+   "name": "New Online Slots",
+   "sourceUrl": "https://newonlineslots.co.uk/"
+  },
+  "nyspins.com": {
+   "name": "NYspins",
+   "sourceUrl": "https://www.nyspins.com/en/"
+  },
+  "nuttybingo.com": {
+   "name": "Nutty Bingo",
+   "sourceUrl": "https://www.nuttybingo.com/"
+  },
+  "octopusservice.co.uk": {
+   "name": "Octopus Service",
+   "sourceUrl": "https://octopusservice.co.uk/"
+  },
+  "nodepositslots.com": {
+   "name": "No Deposit Slots",
+   "sourceUrl": "https://www.nodepositslots.com/"
+  },
+  "netbet.fr": {
+   "name": "NetBet Sport",
+   "sourceUrl": "https://www.netbet.fr/"
+  },
+  "on.daznbet.ca": {
+   "name": "DAZN Bet",
+   "sourceUrl": "https://on.daznbet.ca/"
+  },
+  "oddset.de": {
+   "name": "ODDSET",
+   "sourceUrl": "https://www.oddset.de/de/sports"
+  },
+  "mrluck.com": {
+   "name": "Mr Luck",
+   "sourceUrl": "https://www.mrluck.com/"
+  },
+  "olivecasino.com": {
+   "name": "Olive Casino",
+   "sourceUrl": "https://www.olivecasino.com/"
+  },
+  "on.pointsbet.ca": {
+   "name": "PointsBet",
+   "sourceUrl": "https://on.pointsbet.ca/"
+  },
+  "on.sportsbook.fanduel.ca": {
+   "name": "FanDuel Sportsbook",
+   "sourceUrl": "https://on.sportsbook.fanduel.ca/"
+  },
+  "on.partycasino.ca": {
+   "name": "PartyCasino",
+   "sourceUrl": "https://www.on.partycasino.ca/en-ca/games"
+  },
+  "olybet.es": {
+   "name": "OlyBet",
+   "sourceUrl": "https://www.olybet.es/olybet-access-denied"
+  },
+  "on.bwin.ca": {
+   "name": "Bwin",
+   "sourceUrl": "https://www.on.bwin.ca/en-ca/sports"
+  },
+  "on.partysports.ca": {
+   "name": "PartySports",
+   "sourceUrl": "https://www.on.partysports.ca/en-ca/sports"
+  },
+  "on.partypoker.ca": {
+   "name": "PartyPoker",
+   "sourceUrl": "https://www.on.partypoker.ca/en-ca/poker"
+  },
+  "onecasino.se": {
+   "name": "One Casino",
+   "sourceUrl": "https://onecasino.se/"
+  },
+  "netbetsport.fr": {
+   "name": "NetBet Sport",
+   "sourceUrl": "https://www.netbet.fr/"
+  },
+  "online.casinoadmiral.cz": {
+   "name": "Casino Admiral",
+   "sourceUrl": "https://online.casinoadmiral.cz/"
+  },
+  "ontario.casinoclassic.casino": {
+   "name": "Casino Classic",
+   "sourceUrl": "https://ontario.casinoclassic.casino/en/"
+  },
+  "ontario.captaincooks.casino": {
+   "name": "Captain Cooks Casino",
+   "sourceUrl": "https://ontario.captaincooks.casino/en/"
+  },
+  "onecasino.com": {
+   "name": "OneCasino",
+   "sourceUrl": "https://www.onecasino.com/"
+  },
+  "ontario.luxury.casino": {
+   "name": "Luxury Casino",
+   "sourceUrl": "https://ontario.luxury.casino/en/"
+  },
+  "ontario.goldentiger.casino": {
+   "name": "Golden Tiger Casino",
+   "sourceUrl": "https://ontario.goldentiger.casino/en/"
+  },
+  "ontario.grandmondial.casino": {
+   "name": "Grand Mondial Casino",
+   "sourceUrl": "https://ontario.grandmondial.casino/en/"
+  },
+  "onecasino.es": {
+   "name": "OneCasino",
+   "sourceUrl": "https://www.onecasino.es/"
+  },
+  "ontario.zodiac.casino": {
+   "name": "Zodiac Casino",
+   "sourceUrl": "https://ontario.zodiac.casino/en/"
+  },
+  "ontario.yukongold.casino": {
+   "name": "Yukon Gold Casino",
+   "sourceUrl": "https://ontario.yukongold.casino/en/"
+  },
+  "novoline.de": {
+   "name": "NOVOLINE",
+   "sourceUrl": "https://www.novoline.de/en"
+  },
+  "onlinecasinolondon.com": {
+   "name": "Online Casino London",
+   "sourceUrl": "https://www.onlinecasinolondon.com/"
+  },
+  "onlinebingo.co": {
+   "name": "Online Bingo",
+   "sourceUrl": "https://www.onlinebingo.co/"
+  },
+  "onerush.com": {
+   "name": "Onerush",
+   "sourceUrl": "https://onerush.com/se"
+  },
+  "pandabingo.com": {
+   "name": "Panda Bingo",
+   "sourceUrl": "https://www.pandabingo.com/"
+  },
+  "onlineslotsuk.com": {
+   "name": "Online Slots",
+   "sourceUrl": "https://www.onlineslotsuk.com/"
+  },
+  "palacebingo.com": {
+   "name": "Palace Bingo",
+   "sourceUrl": "https://www.palacebingo.com/"
+  },
+  "partycasino.com": {
+   "name": "partycasino",
+   "sourceUrl": "https://www.partycasino.com/en/games"
+  },
+  "parisvegasclub.com": {
+   "name": "ParisVegasClub",
+   "sourceUrl": "https://www.parisvegasclub.com/"
+  },
+  "paf.se": {
+   "name": "Paf",
+   "sourceUrl": "https://www.paf.se/en"
+  },
+  "ottocasino.se": {
+   "name": "Otto Casino",
+   "sourceUrl": "https://www.ottocasino.se/"
+  },
+  "partypoker.com": {
+   "name": "PartyPoker",
+   "sourceUrl": "https://www.partypoker.com/en/poker"
+  },
+  "pafbet.lv": {
+   "name": "Pafbet",
+   "sourceUrl": "https://www.pafbet.lv/"
+  },
+  "pelea.app": {
+   "name": "Pelea",
+   "sourceUrl": "https://pelea.app/en"
+  },
+  "paf.es": {
+   "name": "Paf",
+   "sourceUrl": "https://www.paf.es/en"
+  },
+  "pickmeupbingo.com": {
+   "name": "Pick Me Up Bingo",
+   "sourceUrl": "https://www.pickmeupbingo.com/"
+  },
+  "paybymobileslots.com": {
+   "name": "Pay By Mobile Slots",
+   "sourceUrl": "https://www.paybymobileslots.com/"
+  },
+  "paybymobilecasino.com": {
+   "name": "Pay By Mobile Casino",
+   "sourceUrl": "https://www.paybymobilecasino.com/"
+  },
+  "pinkriches.co.uk": {
+   "name": "Pink Riches",
+   "sourceUrl": "https://pinkriches.co.uk/"
+  },
+  "pinkribbonbingo.com": {
+   "name": "Pinkribbonbingo",
+   "sourceUrl": "https://www.pinkribbonbingo.com/"
+  },
+  "oreels.com": {
+   "name": "O'Reels Casino",
+   "sourceUrl": "https://www.oreels.com/"
+  },
+  "pinnacle.ca": {
+   "name": "Pinnacle",
+   "sourceUrl": "https://www.pinnacle.ca/en/"
+  },
+  "peachygames.com": {
+   "name": "Peachy Games Casino",
+   "sourceUrl": "https://www.peachygames.com/"
+  },
+  "playbingoplus.com": {
+   "name": "PlayBingoPlus",
+   "sourceUrl": "https://playbingoplus.com/"
+  },
+  "pinnacle.se": {
+   "name": "Pinnacle",
+   "sourceUrl": "https://www.pinnacle.se/en/"
+  },
+  "pinatacasino.es": {
+   "name": "Piñata Casino",
+   "sourceUrl": "https://www.pinatacasino.es/en"
+  },
+  "playbetty.co.uk": {
+   "name": "Betty",
+   "sourceUrl": "https://playbetty.co.uk/"
+  },
+  "pirateslots.com": {
+   "name": "Pirate Slots",
+   "sourceUrl": "https://www.pirateslots.com/"
+  },
+  "play.google.com": {
+   "name": "Android Apps on Google Play",
+   "sourceUrl": "https://play.google.com/store/games?device=windows"
+  },
+  "playkasino.com": {
+   "name": "PlayKasino",
+   "sourceUrl": "https://www.playkasino.com/"
+  },
+  "playkasino.es": {
+   "name": "PlayKasino",
+   "sourceUrl": "https://www.playkasino.es/"
+  },
+  "playgrand.com": {
+   "name": "PlayGrand",
+   "sourceUrl": "https://www.playgrand.com/us"
+  },
+  "playmillion.co.uk": {
+   "name": "PlayMillion",
+   "sourceUrl": "https://www.playmillion.co.uk/"
+  },
+  "playojo.de": {
+   "name": "PlayOJO: Online-Spielhaus-Spiele",
+   "sourceUrl": "https://www.playojo.de/"
+  },
+  "playspielothek.de": {
+   "name": "Playspielothek",
+   "sourceUrl": "https://www.playspielothek.de/"
+  },
+  "playojo.ca": {
+   "name": "PlayOJO",
+   "sourceUrl": "https://www.playojo.ca/"
+  },
+  "playmillion.de": {
+   "name": "PlayMillion",
+   "sourceUrl": "https://www.playmillion.de/"
+  },
+  "playmillion.dk": {
+   "name": "PlayMillion",
+   "sourceUrl": "https://www.playmillion.dk/"
+  },
+  "playsunny.co.uk": {
+   "name": "Playsunny: Play Online Casino",
+   "sourceUrl": "https://www.playsunny.co.uk/"
+  },
+  "plucky.com": {
+   "name": "Plucky",
+   "sourceUrl": "https://www.plucky.com/"
+  },
+  "poker.bet365.es": {
+   "name": "bet365",
+   "sourceUrl": "https://casino.bet365.es/home"
+  },
+  "poker.netbet.co.uk": {
+   "name": "NetBet Poker",
+   "sourceUrl": "https://poker.netbet.co.uk/"
+  },
+  "playzee.com": {
+   "name": "Playzee",
+   "sourceUrl": "https://www.playzee.com/"
+  },
+  "playyourcardsrightgames.com": {
+   "name": "Play Your Cards Right Games",
+   "sourceUrl": "https://www.playyourcardsrightgames.com/"
+  },
+  "poker.on.betmgm.ca": {
+   "name": "BetMGM",
+   "sourceUrl": "https://www.on.betmgm.ca/en/poker"
+  },
+  "playuk.com": {
+   "name": "PlayUK",
+   "sourceUrl": "https://www.playuk.com/"
+  },
+  "playuzu.com": {
+   "name": "PlayUZU",
+   "sourceUrl": "https://www.playuzu.com/"
+  },
+  "polobingo.com": {
+   "name": "Polo Bingo",
+   "sourceUrl": "https://www.polobingo.com/"
+  },
+  "popcasino.se": {
+   "name": "Pop Casino",
+   "sourceUrl": "https://popcasino.se/"
+  },
+  "playuzu.es": {
+   "name": "PlayUZU",
+   "sourceUrl": "https://www.playuzu.es/"
+  },
+  "poshbingo.co.uk": {
+   "name": "Posh Bingo",
+   "sourceUrl": "https://www.poshbingo.co.uk/"
+  },
+  "pokerstarscasino.uk": {
+   "name": "PokerStars Casino",
+   "sourceUrl": "https://www.pokerstarscasinous.com/"
+  },
+  "pokerstarscasino.dk": {
+   "name": "PokerStars Casino",
+   "sourceUrl": "https://www.pokerstarscasinous.com/"
+  },
+  "pokerstarscasino.es": {
+   "name": "PokerStars Casino",
+   "sourceUrl": "https://www.pokerstarscasinous.com/"
+  },
+  "predictstreet.matchbook.com": {
+   "name": "Predict Street x Matchbook",
+   "sourceUrl": "https://predictstreet.matchbook.com/"
+  },
+  "premierlivecasino.com": {
+   "name": "Premier Live Casino",
+   "sourceUrl": "https://www.premierlivecasino.com/"
+  },
+  "powerslots.com": {
+   "name": "Power Slots",
+   "sourceUrl": "https://www.powerslots.com/"
+  },
+  "premierlivecasino.se": {
+   "name": "Premier Live Casino",
+   "sourceUrl": "https://www.premierlivecasino.com/sv/"
+  },
+  "prizelandbingo.com": {
+   "name": "Prize Land Bingo",
+   "sourceUrl": "https://prizelandbingo.com/"
+  },
+  "primecasino.co.uk": {
+   "name": "Prime Casino",
+   "sourceUrl": "https://www.primecasino.co.uk/"
+  },
+  "prontocasino.com": {
+   "name": "Pronto Casino",
+   "sourceUrl": "https://www.prontocasino.se/"
+  },
+  "primecasino.es": {
+   "name": "Prime Casino",
+   "sourceUrl": "https://www.primecasino.es/"
+  },
+  "primescratchcards.co.uk": {
+   "name": "Prime Scratch Cards",
+   "sourceUrl": "https://www.primescratchcards.co.uk/"
+  },
+  "primeslots.co.uk": {
+   "name": "Prime Slots",
+   "sourceUrl": "https://www.primeslots.co.uk/"
+  },
+  "prontolive.se": {
+   "name": "https://www.prontolive.se",
+   "sourceUrl": "https://www.prontolive.se/sv"
+  },
+  "primeslots.de": {
+   "name": "Prime Slots",
+   "sourceUrl": "https://www.primeslots.de/"
+  },
+  "queensbingo.com": {
+   "name": "Queen's Bingo",
+   "sourceUrl": "https://www.queensbingo.com/"
+  },
+  "quizingo.co.uk": {
+   "name": "Quizingo",
+   "sourceUrl": "https://quizingo.co.uk/"
+  },
+  "pubcasino.co.uk": {
+   "name": "Pub Casino",
+   "sourceUrl": "https://www.pubcasino.co.uk/en/index"
+  },
+  "quickbet.co.uk": {
+   "name": "QuickBet",
+   "sourceUrl": "https://www.quickbet.co.uk/en/index"
+  },
+  "racerival.co.uk": {
+   "name": "Race Rival",
+   "sourceUrl": "https://www.racerival.co.uk/"
+  },
+  "racecasino.com": {
+   "name": "Race Casino",
+   "sourceUrl": "https://www.racecasino.com/en/index"
+  },
+  "rainbowrichescasino.co.uk": {
+   "name": "Rainbow Riches Casino",
+   "sourceUrl": "https://www.rainbowrichescasino.com/"
+  },
+  "prophetleague.com": {
+   "name": "Prophet League",
+   "sourceUrl": "https://prophetleague.com/"
+  },
+  "prophetleague.app": {
+   "name": "Prophet League",
+   "sourceUrl": "https://prophetleague.com/"
+  },
+  "redbusbingo.com": {
+   "name": "Redbus Bingo",
+   "sourceUrl": "https://www.redbusbingo.com/"
+  },
+  "rainbowrichescasino.com": {
+   "name": "Rainbow Riches Casino",
+   "sourceUrl": "https://www.rainbowrichescasino.com/"
+  },
+  "realfungames.co.uk": {
+   "name": "Real Fun Games",
+   "sourceUrl": "https://realfungames.co.uk/"
+  },
+  "reelscasino.co.uk": {
+   "name": "Reels Casino",
+   "sourceUrl": "https://reelscasino.co.uk/"
+  },
+  "rainbowspins.com": {
+   "name": "Rainbow Spins",
+   "sourceUrl": "https://www.rainbowspins.com/"
+  },
+  "redspins.com": {
+   "name": "Red Spins Casino",
+   "sourceUrl": "https://www.redspins.com/"
+  },
+  "reviant.se": {
+   "name": "Reviant",
+   "sourceUrl": "https://reviant.se/"
+  },
+  "redcasino.com": {
+   "name": "Red Casino",
+   "sourceUrl": "https://www.redcasino.com/"
+  },
+  "richmondslots.com": {
+   "name": "Richmond Slots",
+   "sourceUrl": "https://richmondslots.com/"
+  },
+  "robinhoodbingo.com": {
+   "name": "Robin Hood Bingo",
+   "sourceUrl": "https://www.robinhoodbingo.com/"
+  },
+  "retabet.es": {
+   "name": "RETABET",
+   "sourceUrl": "https://www.retabet.es/"
+  },
+  "rembrandtcasino.com": {
+   "name": "RembrandtCasino",
+   "sourceUrl": "https://www.rembrandtcasino.com/en/"
+  },
+  "rocketbingo.co.uk": {
+   "name": "Rocket Bingo",
+   "sourceUrl": "https://rocketbingo.co.uk/"
+  },
+  "relax-gaming.com": {
+   "name": "Relax Gaming",
+   "sourceUrl": "https://www.relax-gaming.com/"
+  },
+  "rocketslots.co.uk": {
+   "name": "Rocket Slots",
+   "sourceUrl": "https://rocketslots.co.uk/"
+  },
+  "round4pound.co.uk": {
+   "name": "Round 4 Pound",
+   "sourceUrl": "https://round4pound.co.uk/"
+  },
+  "reviant.com": {
+   "name": "Reviant",
+   "sourceUrl": "https://www.reviant.com/sv"
+  },
+  "rosybingo.com": {
+   "name": "Welcome to Rosy Bingo",
+   "sourceUrl": "https://www.rosybingo.com/"
+  },
+  "royalol.co.uk": {
+   "name": "Royalol",
+   "sourceUrl": "https://royalol.co.uk/"
+  },
+  "rialtocasino.com": {
+   "name": "Rialto Casino",
+   "sourceUrl": "https://www.rialtocasino.com/"
+  },
+  "rightbet.com": {
+   "name": "Right Bet",
+   "sourceUrl": "https://www.rightbet.com/"
+  },
+  "rollerbet.co.uk": {
+   "name": "Rollerbet",
+   "sourceUrl": "https://www.rollerbet.co.uk/"
+  },
+  "rouletteonline.co.uk": {
+   "name": "Roulette Online",
+   "sourceUrl": "https://rouletteonline.co.uk/"
+  },
+  "regalwins.com": {
+   "name": "Regal Wins Casino",
+   "sourceUrl": "https://www.regalwins.com/"
+  },
+  "royalbet.com": {
+   "name": "Royalbet",
+   "sourceUrl": "https://www.royalbet.com/"
+  },
+  "rollbit.co.uk": {
+   "name": "Rollbit Casino",
+   "sourceUrl": "https://www.rollbit.co.uk/"
+  },
+  "safaribingo.com": {
+   "name": "Safari Bingo",
+   "sourceUrl": "https://safaribingo.com/"
+  },
+  "royalspins.com": {
+   "name": "Royal Spins",
+   "sourceUrl": "https://www.royalspins.com/"
+  },
+  "rubyriches.co.uk": {
+   "name": "Ruby Riches",
+   "sourceUrl": "https://www.rubyriches.co.uk/"
+  },
+  "royalswipe.com": {
+   "name": "Royal Swipe",
+   "sourceUrl": "https://www.royalswipe.com/"
+  },
+  "saferplay.gentingcasino.com": {
+   "name": "Safer Play by Genting Casino",
+   "sourceUrl": "https://saferplay.gentingcasino.com/"
+  },
+  "se.luckymeslots.com": {
+   "name": "LuckyMe Slots",
+   "sourceUrl": "https://se.luckymeslots.com/"
+  },
+  "se.megacasino.com": {
+   "name": "Mega Casino",
+   "sourceUrl": "https://se.megacasino.com/"
+  },
+  "se.bingo.com": {
+   "name": "Spela online 2026 hos Bingo.com",
+   "sourceUrl": "https://se.bingo.com/"
+  },
+  "royalcasino.dk": {
+   "name": "RoyalCasino",
+   "sourceUrl": "https://www.royalcasino.dk/"
+  },
+  "seasideslots.com": {
+   "name": "Seaside Slots",
+   "sourceUrl": "https://seasideslots.com/"
+  },
+  "se.simbagames.com": {
+   "name": "Välkommen till SimbaGames",
+   "sourceUrl": "https://se.simbagames.com/"
+  },
+  "silkbet.bet": {
+   "name": "Silkbet",
+   "sourceUrl": "https://silkbet.bet/"
+  },
+  "se.spingenie.com": {
+   "name": "Spin Genie",
+   "sourceUrl": "https://se.spingenie.com/"
+  },
+  "se.slingo.com": {
+   "name": "Slingo",
+   "sourceUrl": "https://se.slingo.com/"
+  },
+  "silkbet.co.uk": {
+   "name": "Silkbet",
+   "sourceUrl": "https://silkbet.bet/"
+  },
+  "silkpyjamas.vip": {
+   "name": "Silk Pyjamas",
+   "sourceUrl": "https://silkpyjamas.vip/"
+  },
+  "sh-games.tipico.de": {
+   "name": "Tipico No Service",
+   "sourceUrl": "https://sh-games.tipico.de/"
+  },
+  "rosecasino.com": {
+   "name": "Rose Casino",
+   "sourceUrl": "https://www.rosecasino.com/"
+  },
+  "shipleyslots.com": {
+   "name": "Shipley Slots",
+   "sourceUrl": "https://www.shipleyslots.com/"
+  },
+  "skolcasino.com": {
+   "name": "Skol Casino",
+   "sourceUrl": "https://www.skolcasino.com/"
+  },
+  "silkpyjamas.bet": {
+   "name": "Silk Pyjamas",
+   "sourceUrl": "https://silkpyjamas.bet/"
+  },
+  "sifa-online.dk": {
+   "name": "SIFA online",
+   "sourceUrl": "https://sifa-online.dk/"
+  },
+  "secretpyramids.com": {
+   "name": "Secret Pyramids",
+   "sourceUrl": "https://www.secretpyramids.com/"
+  },
+  "simbagames.co.uk": {
+   "name": "Simba Games",
+   "sourceUrl": "https://www.simbagames.co.uk/"
+  },
+  "slotlux.com": {
+   "name": "SlotLux",
+   "sourceUrl": "https://slotlux.com/"
+  },
+  "simbagames.de": {
+   "name": "Simba Games",
+   "sourceUrl": "https://www.simbagames.de/"
+  },
+  "slotcrazy.com": {
+   "name": "Slot Crazy",
+   "sourceUrl": "https://www.slotcrazy.com/"
+  },
+  "singbingo.com": {
+   "name": "Singbingo",
+   "sourceUrl": "https://www.singbingo.com/"
+  },
+  "slingo.com": {
+   "name": "Slingo",
+   "sourceUrl": "https://www.slingo.com/"
+  },
+  "slotgames.co.uk": {
+   "name": "Slot Games",
+   "sourceUrl": "https://slotgames.co.uk/"
+  },
+  "slingospiel.de": {
+   "name": "Slingo",
+   "sourceUrl": "https://www.slingospiel.de/"
+  },
+  "slingocasino.es": {
+   "name": "Slingo",
+   "sourceUrl": "https://www.slingocasino.es/"
+  },
+  "slotmachine.co.uk": {
+   "name": "Slot Machine",
+   "sourceUrl": "https://slotmachine.co.uk/"
+  },
+  "slots.bet365.es": {
+   "name": "bet365",
+   "sourceUrl": "https://casino.bet365.es/home"
+  },
+  "slotsite.com": {
+   "name": "Slotsite.com Casino",
+   "sourceUrl": "https://www.slotsite.com/"
+  },
+  "slotnite.com": {
+   "name": "Slotnite Casino",
+   "sourceUrl": "https://www.slotnite.com/"
+  },
+  "slotskingdom.co.uk": {
+   "name": "Slots Kingdom",
+   "sourceUrl": "https://slotskingdom.co.uk/"
+  },
+  "slotshack.co.uk": {
+   "name": "Slot Shack",
+   "sourceUrl": "https://slotshack.co.uk/"
+  },
+  "slotsitesuk.co.uk": {
+   "name": "Slot Sites",
+   "sourceUrl": "https://slotsitesuk.co.uk/"
+  },
+  "slotsbaby.com": {
+   "name": "Slots Baby",
+   "sourceUrl": "https://www.slotsbaby.com/"
+  },
+  "slotplanet.com": {
+   "name": "Slot Planet",
+   "sourceUrl": "https://www.slotplanet.com/us"
+  },
+  "slotsmagic.ca": {
+   "name": "SlotsMagic",
+   "sourceUrl": "https://www.slotsmagic.ca/"
+  },
+  "slotmagie.de": {
+   "name": "SlotMagie",
+   "sourceUrl": "https://www.slotmagie.de/"
+  },
+  "slotsmagic.de": {
+   "name": "SlotsMagic",
+   "sourceUrl": "https://www.slotsmagic.de/"
+  },
+  "slotsroyale.co.uk": {
+   "name": "Slots Royale",
+   "sourceUrl": "https://slotsroyale.co.uk/"
+  },
+  "slotsmagic.com": {
+   "name": "SlotsMagic",
+   "sourceUrl": "https://www.slotsmagic.com/"
+  },
+  "slotsracer.com": {
+   "name": "Slots Racer",
+   "sourceUrl": "https://www.slotsracer.com/"
+  },
+  "slotsuk.co.uk": {
+   "name": "Slots",
+   "sourceUrl": "https://slotsuk.co.uk/"
+  },
+  "slotsmagic.es": {
+   "name": "SlotsMagic",
+   "sourceUrl": "https://www.slotsmagic.es/"
+  },
+  "slots.admiralbet.de": {
+   "name": "AdmiralBet",
+   "sourceUrl": "https://www.admiralbet.de/de/slots"
+  },
+  "slotsmagic.co.uk": {
+   "name": "SlotsMagic",
+   "sourceUrl": "https://www.slotsmagic.com/"
+  },
+  "slotsmagic.dk": {
+   "name": "SlotsMagic",
+   "sourceUrl": "https://www.slotsmagic.com/dk/"
+  },
+  "slotsfreunde.de": {
+   "name": "SlotsFreunde",
+   "sourceUrl": "https://www.slotsfreunde.de/"
+  },
+  "slotstars.es": {
+   "name": "SlotStars",
+   "sourceUrl": "https://www.slotstars.es/"
+  },
+  "smarkets.com": {
+   "name": "Smarkets Predictions",
+   "sourceUrl": "https://smarkets.com/"
+  },
+  "slotstars.com": {
+   "name": "SlotStars",
+   "sourceUrl": "https://www.slotstars.com/"
+  },
+  "slotsuk.co": {
+   "name": "SlotsUK",
+   "sourceUrl": "https://www.slotsuk.co/"
+  },
+  "soccerpots.net": {
+   "name": "Soccerpots",
+   "sourceUrl": "https://www.soccerpots.co.uk/"
+  },
+  "spectrabingo.com": {
+   "name": "Spectra Bingo",
+   "sourceUrl": "https://www.spectrabingo.com/"
+  },
+  "snabbare.com": {
+   "name": "Snabbare",
+   "sourceUrl": "https://www.snabbare.com/sv"
+  },
+  "snurrcasino.se": {
+   "name": "Snurr Casino",
+   "sourceUrl": "https://www.snurrcasino.se/en"
+  },
+  "soccerpots.com": {
+   "name": "Soccerpots",
+   "sourceUrl": "https://www.soccerpots.co.uk/"
+  },
+  "soccerpots.co.uk": {
+   "name": "Soccerpots",
+   "sourceUrl": "https://www.soccerpots.co.uk/"
+  },
+  "spilhuset.dk": {
+   "name": "Spilhuset",
+   "sourceUrl": "https://www.spilhuset.dk/"
+  },
+  "spin-king.com": {
+   "name": "Spin King",
+   "sourceUrl": "https://spin-king.com/"
+  },
+  "spielbanken-bayern-online.de": {
+   "name": "Spielbanken Bayern Online",
+   "sourceUrl": "https://www.spielbanken-bayern-online.de/"
+  },
+  "speedybet.com": {
+   "name": "SpeedyBet",
+   "sourceUrl": "https://www.speedybet.com/en"
+  },
+  "solcasino.es": {
+   "name": "Solcasino",
+   "sourceUrl": "https://solcasino.es/casino"
+  },
+  "spingenie.ca": {
+   "name": "Spin Genie",
+   "sourceUrl": "https://on.spingenie.ca/"
+  },
+  "speedycasino.com": {
+   "name": "SpeedyCasino",
+   "sourceUrl": "https://www.speedycasino.com/en"
+  },
+  "spelet.lv": {
+   "name": "Official Site Spelet",
+   "sourceUrl": "https://spelet.lv/en"
+  },
+  "spingenie.de": {
+   "name": "Spin Genie: Online Slots",
+   "sourceUrl": "https://www.spingenie.de/"
+  },
+  "spingenie.se": {
+   "name": "Spin Genie",
+   "sourceUrl": "https://se.spingenie.com/"
+  },
+  "spingenie.es": {
+   "name": "Spin Genie",
+   "sourceUrl": "https://www.spingenie.es/"
+  },
+  "sport.netbet.co.uk": {
+   "name": "NetBet Sport",
+   "sourceUrl": "https://sport.netbet.co.uk/"
+  },
+  "spinzilla.com": {
+   "name": "Spinzilla Casino",
+   "sourceUrl": "https://www.spinzilla.com/"
+  },
+  "spinland.com": {
+   "name": "Spinland Online Casino",
+   "sourceUrl": "https://www.spinland.com/"
+  },
+  "spinrider.com": {
+   "name": "Spin Rider Casino",
+   "sourceUrl": "https://www.spinrider.com/"
+  },
+  "spinstation.com": {
+   "name": "SpinStation",
+   "sourceUrl": "https://www.spinstation.com/en-mt/"
+  },
+  "spinzwin.com": {
+   "name": "Spinzwin Casino",
+   "sourceUrl": "https://www.spinzwin.com/"
+  },
+  "spinyoo.com": {
+   "name": "SpinYoo",
+   "sourceUrl": "https://www.spinyoo.com/en"
+  },
+  "sports.on.betmgm.ca": {
+   "name": "BetMGM",
+   "sourceUrl": "https://www.on.betmgm.ca/en/sports"
+  },
+  "sport.toto.nl": {
+   "name": "TOTO",
+   "sourceUrl": "https://sport.toto.nl/"
+  },
+  "sportskins.uk": {
+   "name": "Sportskins",
+   "sourceUrl": "https://sportskins.uk/"
+  },
+  "spiel-erwin.de": {
+   "name": "erwin",
+   "sourceUrl": "https://www.lotto-bw.de/automatenspiele?mkid=002000101600016&etcc_cmp=Einf%c3%bchrungskampagneVA+spiel-erwin&etcc_med=Landingpage+VA"
+  },
+  "sportsbet.bet.ar": {
+   "name": "SportsBet Landing",
+   "sourceUrl": "https://sports.bet.ar:443/"
+  },
+  "sportsbroker.com": {
+   "name": "SportsBroker",
+   "sourceUrl": "https://sportsbroker.com/"
+  },
+  "spreadex.com": {
+   "name": "Spreadex",
+   "sourceUrl": "https://www.spreadex.com/"
+  },
+  "sportito.co.uk": {
+   "name": "Sportito",
+   "sourceUrl": "https://www.sportito.co.uk/"
+  },
+  "squadbets.co.uk": {
+   "name": "Squad Bets",
+   "sourceUrl": "https://www.squadbets.co.uk/"
+  },
+  "sportito.com": {
+   "name": "Sportito",
+   "sourceUrl": "https://www.sportito.com/"
+  },
+  "sports.betway.com": {
+   "name": "Betway",
+   "sourceUrl": "https://betway.com/g/en/sports"
+  },
+  "stakemate.com": {
+   "name": "Stakemate: Upgrade your betting",
+   "sourceUrl": "https://www.stakemate.com/"
+  },
+  "starcasino.be": {
+   "name": "Starcasino",
+   "sourceUrl": "https://starcasino.be/home"
+  },
+  "spreadex.dk": {
+   "name": "Spreadex online sportsbetting",
+   "sourceUrl": "https://www.spreadex.dk/sports/da-DK/spread-betting"
+  },
+  "starcasino.nl": {
+   "name": "Starcasino",
+   "sourceUrl": "https://starcasino.nl/casino"
+  },
+  "stxapp.io": {
+   "name": "STX",
+   "sourceUrl": "https://stxapp.io/"
+  },
+  "supapools.com": {
+   "name": "Supa Pool",
+   "sourceUrl": "https://supapools.com/"
+  },
+  "stiona.com": {
+   "name": "Stiona Software",
+   "sourceUrl": "https://www.stiona.com/"
+  },
+  "strike6.co.uk": {
+   "name": "Strike6",
+   "sourceUrl": "https://strike6.co.uk/"
+  },
+  "sugarbingo.com": {
+   "name": "Sugar Bingo",
+   "sourceUrl": "https://www.sugarbingo.com/"
+  },
+  "star-casino.cz": {
+   "name": "Starcasino",
+   "sourceUrl": "https://www.star-casino.cz/"
+  },
+  "starsportsbet.com": {
+   "name": "Star Sports",
+   "sourceUrl": "https://www.starsportsbet.co.uk/"
+  },
+  "stargames.de": {
+   "name": "StarGames",
+   "sourceUrl": "https://www.stargames.de/de"
+  },
+  "sunbingo.co.uk": {
+   "name": "Sun Bingo",
+   "sourceUrl": "https://www.sunbingo.co.uk/"
+  },
+  "sugarspins.com": {
+   "name": "Sugar Spins",
+   "sourceUrl": "https://www.sugarspins.com/"
+  },
+  "starsportsbet.co.uk": {
+   "name": "Star Sports",
+   "sourceUrl": "https://www.starsportsbet.co.uk/"
+  },
+  "sweeps.game": {
+   "name": "Sweeps",
+   "sourceUrl": "https://sweeps.game/"
+  },
+  "storspelare.se": {
+   "name": "Storspelare",
+   "sourceUrl": "https://www.storspelare.se/"
+  },
+  "sweepsteak.co.uk": {
+   "name": "Sweepsteak Ltd",
+   "sourceUrl": "https://www.sweepsteak.co.uk/"
+  },
+  "sweepmate.app": {
+   "name": "Sweepmate",
+   "sourceUrl": "https://sweepmate.app/"
+  },
+  "svajpa.se": {
+   "name": "Svajpa",
+   "sourceUrl": "https://www.svajpa.se/en"
+  },
+  "sv.playmillion.com": {
+   "name": "PlayMillion",
+   "sourceUrl": "https://sv.playmillion.com/"
+  },
+  "swiftcasino.com": {
+   "name": "Swift Casino",
+   "sourceUrl": "https://www.swiftcasino.com/"
+  },
+  "swiftcasino.es": {
+   "name": "Swift Casino",
+   "sourceUrl": "https://www.swiftcasino.es/"
+  },
+  "takeabreakbingo.co.uk": {
+   "name": "Take a Break Bingo",
+   "sourceUrl": "https://takeabreakbingo.co.uk/"
+  },
+  "tastybingo.com": {
+   "name": "Tasty Bingo",
+   "sourceUrl": "https://www.tastybingo.com/"
+  },
+  "synottip.lv": {
+   "name": "SYNOT TIP",
+   "sourceUrl": "https://synottip.lv/"
+  },
+  "tedbingo.com": {
+   "name": "Ted Bingo",
+   "sourceUrl": "https://www.tedbingo.com/"
+  },
+  "theslotsisland.com": {
+   "name": "The Slots Island",
+   "sourceUrl": "https://theslotsisland.com/"
+  },
+  "takeawayslots.com": {
+   "name": "Takeaway Slots",
+   "sourceUrl": "https://www.takeawayslots.com/"
+  },
+  "thepalaces.com": {
+   "name": "ThePalaces",
+   "sourceUrl": "https://www.thepalaces.com/"
+  },
+  "thelastman.online": {
+   "name": "The Last Man",
+   "sourceUrl": "https://thelastman.online/"
+  },
+  "templenile.com": {
+   "name": "Temple Nile",
+   "sourceUrl": "https://www.templenile.com/en-mt/"
+  },
+  "telephonebetting.co.uk": {
+   "name": "Telephone Betting",
+   "sourceUrl": "https://www.telephonebetting.co.uk/"
+  },
+  "thesunvegas.co.uk": {
+   "name": "The Sun Vegas",
+   "sourceUrl": "https://www.thesunvegas.co.uk/"
+  },
+  "synottip.cz": {
+   "name": "SYNOT TIP",
+   "sourceUrl": "https://www.synottip.cz/"
+  },
+  "targetslots.com": {
+   "name": "Target Slots",
+   "sourceUrl": "https://www.targetslots.com/"
+  },
+  "swiftysports.co.uk": {
+   "name": "Bet with Swifty Sports",
+   "sourceUrl": "https://www.swiftysports.co.uk:443/en/"
+  },
+  "thexfactorgames.com": {
+   "name": "The X Factor Games",
+   "sourceUrl": "https://www.thexfactorgames.com/"
+  },
+  "theonlinecasino.co.uk": {
+   "name": "theonlinecasino",
+   "sourceUrl": "https://www.theonlinecasino.co.uk/"
+  },
+  "thephonecasino.com": {
+   "name": "The Phone Casino",
+   "sourceUrl": "https://www.thephonecasino.com/"
+  },
+  "thesunplay.co.uk": {
+   "name": "The Sun Play",
+   "sourceUrl": "https://thesunplay.co.uk/"
+  },
+  "tiptopbingo.com": {
+   "name": "Tip Top Bingo",
+   "sourceUrl": "https://www.tiptopbingo.com/"
+  },
+  "thunderkick.com": {
+   "name": "Thunderkick",
+   "sourceUrl": "https://www.thunderkick.com/"
+  },
+  "tonybet.ca": {
+   "name": "Tonybet",
+   "sourceUrl": "https://tonybet.ca/"
+  },
+  "tillsammans.atg.se": {
+   "name": "ATG",
+   "sourceUrl": "https://www.atg.se/tillsammans/start"
+  },
+  "tipico.de": {
+   "name": "Tipico No Service",
+   "sourceUrl": "https://tipico.de/"
+  },
+  "tonybet.nl": {
+   "name": "Tonybet",
+   "sourceUrl": "https://tonybet.nl/"
+  },
+  "tigerbet.co.uk": {
+   "name": "TigerBet",
+   "sourceUrl": "https://www.tigerbet.co.uk:443/en/"
+  },
+  "tonybet.lv": {
+   "name": "Tonybet",
+   "sourceUrl": "https://tonybet.lv/"
+  },
+  "tonybet.es": {
+   "name": "Tonybet",
+   "sourceUrl": "https://tonybet.es/"
+  },
+  "uk-bingo.net": {
+   "name": "UK Bingo",
+   "sourceUrl": "https://www.uk-bingo.net/"
+  },
+  "thevic.com": {
+   "name": "The Vic",
+   "sourceUrl": "https://www.thevic.com/"
+  },
+  "twofatladies.co.uk": {
+   "name": "Two Fat Ladies",
+   "sourceUrl": "https://www.twofatladies.co.uk/"
+  },
+  "toppz.ca": {
+   "name": "Toppz",
+   "sourceUrl": "https://www.toppz.ca/en/"
+  },
+  "tivolicasino.dk": {
+   "name": "Tivoli Casino",
+   "sourceUrl": "https://tivolicasino.dk/"
+  },
+  "ukcasino-club.co.uk": {
+   "name": "Join UK Casino Club",
+   "sourceUrl": "https://www.ukcasino-club.co.uk/en-gb/"
+  },
+  "ukslots.com": {
+   "name": "UK Slots",
+   "sourceUrl": "https://ukslots.com/"
+  },
+  "ukonlineslots.com": {
+   "name": "UK Online Slots",
+   "sourceUrl": "https://www.ukonlineslots.com/"
+  },
+  "tvbingo.dk": {
+   "name": "SIFA TVBingo",
+   "sourceUrl": "https://tvbingo.dk/"
+  },
+  "ukslotgames.com": {
+   "name": "UK Slot Games",
+   "sourceUrl": "https://www.ukslotgames.com/"
+  },
+  "vampirebingo.com": {
+   "name": "Vampire Bingo",
+   "sourceUrl": "https://www.vampirebingo.com/"
+  },
+  "ukriches.com": {
+   "name": "UK Riches",
+   "sourceUrl": "https://www.ukriches.com/"
+  },
+  "turbovegas.com": {
+   "name": "TurboVegas",
+   "sourceUrl": "https://www.turbovegas.com/en/"
+  },
+  "umbingo.com": {
+   "name": "Um Bingo",
+   "sourceUrl": "https://www.umbingo.com/"
+  },
+  "vbet.nl": {
+   "name": "VBET",
+   "sourceUrl": "https://www.vbet.nl/"
+  },
+  "vbet.dk": {
+   "name": "VBET DK",
+   "sourceUrl": "https://www.vbet.dk/"
+  },
+  "vbet.fr": {
+   "name": "VBET",
+   "sourceUrl": "https://www.vbet.fr/"
+  },
+  "unibet.dk": {
+   "name": "Unibet",
+   "sourceUrl": "https://www.unibet.dk/"
+  },
+  "vegasparadise.com": {
+   "name": "VegasParadise",
+   "sourceUrl": "https://vegasparadise.com/"
+  },
+  "unibet.nl": {
+   "name": "Unibet",
+   "sourceUrl": "https://www.unibet.nl/"
+  },
+  "unibetsports.be": {
+   "name": "Unibet",
+   "sourceUrl": "https://www.unibet.be/"
+  },
+  "unibet.co.uk": {
+   "name": "Unibet",
+   "sourceUrl": "https://www.unibet.co.uk/"
+  },
+  "unibetcasino.be": {
+   "name": "Unibet",
+   "sourceUrl": "https://www.unibet.be/"
+  },
+  "vegasspins.com": {
+   "name": "Vegas Spins",
+   "sourceUrl": "https://www.vegasspins.com/"
+  },
+  "valhallacasino.dk": {
+   "name": "ValhallaCasino",
+   "sourceUrl": "https://www.valhallacasino.dk/"
+  },
+  "vegas.netbet.co.uk": {
+   "name": "NetBet",
+   "sourceUrl": "https://casino.netbet.co.uk/"
+  },
+  "vegasmoose.com": {
+   "name": "Vegas Moose",
+   "sourceUrl": "https://www.vegasmoose.com/"
+  },
+  "versus.es": {
+   "name": "VERSUS",
+   "sourceUrl": "https://www.versus.es/"
+  },
+  "verajohn.se": {
+   "name": "Vera&John",
+   "sourceUrl": "https://verajohn.se/"
+  },
+  "versusuk.com": {
+   "name": "versus",
+   "sourceUrl": "https://app.versusapp.com/"
+  },
+  "virginbet.com": {
+   "name": "Virgin Bet",
+   "sourceUrl": "https://www.virginbet.com/"
+  },
+  "voodoodreams.com": {
+   "name": "VoodooDreams",
+   "sourceUrl": "https://www.voodoodreams.com/en/"
+  },
+  "vegaswins.co.uk": {
+   "name": "Vegaswins",
+   "sourceUrl": "https://www.vegaswins.co.uk/"
+  },
+  "watchmyspin.com": {
+   "name": "WatchMySpin",
+   "sourceUrl": "https://www.watchmyspin.com/"
+  },
+  "wickedjackpots.com": {
+   "name": "Wicked Jackpots",
+   "sourceUrl": "https://www.wickedjackpots.com/"
+  },
+  "vipspins.com": {
+   "name": "VIP Spins",
+   "sourceUrl": "https://www.vipspins.com/"
+  },
+  "volcanobingo.co.uk": {
+   "name": "Volcano Bingo",
+   "sourceUrl": "https://volcanobingo.co.uk/"
+  },
+  "williamhill.com": {
+   "name": "William Hill",
+   "sourceUrl": "https://www.williamhill.com/"
+  },
+  "welcomeslots.com": {
+   "name": "Welcome Slots",
+   "sourceUrl": "https://www.welcomeslots.com/"
+  },
+  "wild24.com": {
+   "name": "Wild 24",
+   "sourceUrl": "https://www.wild24.com/"
+  },
+  "virgingames.com": {
+   "name": "Virgin Games Online Casino",
+   "sourceUrl": "https://www.virgingames.com/"
+  },
+  "vegasmobilecasino.co.uk": {
+   "name": "Vegas Mobile Casino",
+   "sourceUrl": "https://www.vegasmobilecasino.co.uk/"
+  },
+  "winissimo.com": {
+   "name": "Winissimo",
+   "sourceUrl": "https://www.winissimo.com/"
+  },
+  "winkbingo.com": {
+   "name": "Wink Bingo",
+   "sourceUrl": "https://www.winkbingo.com/"
+  },
+  "winamax.fr": {
+   "name": "Winamax",
+   "sourceUrl": "https://www.winamax.fr/"
+  },
+  "winningkings.com": {
+   "name": "WinningKings",
+   "sourceUrl": "https://www.winningkings.com/"
+  },
+  "winningkings.co.uk": {
+   "name": "WinningKings",
+   "sourceUrl": "https://winningkings.co.uk/"
+  },
+  "womanbingo.com": {
+   "name": "Woman Bingo",
+   "sourceUrl": "https://www.womanbingo.com/"
+  },
+  "wombatbingo.com": {
+   "name": "Wombat Bingo",
+   "sourceUrl": "https://www.wombatbingo.com/"
+  },
+  "winamax.de": {
+   "name": "Winamax",
+   "sourceUrl": "https://www.winamax.de/sportwetten"
+  },
+  "winamax.it": {
+   "name": "Winamax",
+   "sourceUrl": "https://www.winamax.it/scommesse-sportive"
+  },
+  "womansown-bingo.co.uk": {
+   "name": "Woman's Own Bingo",
+   "sourceUrl": "https://www.womansown-bingo.co.uk/"
+  },
+  "winz.nl": {
+   "name": "Online Casino Winz",
+   "sourceUrl": "https://www.winz.nl/"
+  },
+  "winomania.co.uk": {
+   "name": "WinOMania Casino",
+   "sourceUrl": "https://www.winomania.co.uk/"
+  },
+  "winkslots.com": {
+   "name": "Wink Slots",
+   "sourceUrl": "https://www.winkslots.com/"
+  },
+  "winlandia.com": {
+   "name": "Winlandia",
+   "sourceUrl": "https://www.winlandia.com/"
+  },
+  "wolfspins.com": {
+   "name": "Wolf Spins",
+   "sourceUrl": "https://www.wolfspins.com/"
+  },
+  "wizardslots.com": {
+   "name": "Wizard Slots",
+   "sourceUrl": "https://www.wizardslots.com/"
+  },
+  "wongagames.co.uk": {
+   "name": "Wonga Games",
+   "sourceUrl": "https://wongagames.co.uk/"
+  },
+  "wombatcasino.com": {
+   "name": "Wombat Casino",
+   "sourceUrl": "https://www.wombatcasino.com/"
+  },
+  "wtgbingo.com": {
+   "name": "WTG Bingo",
+   "sourceUrl": "https://www.wtgbingo.com/"
+  },
+  "xlcasino.com": {
+   "name": "XL Casino",
+   "sourceUrl": "https://www.xlcasino.com/"
+  },
+  "x3000.se": {
+   "name": "X3000",
+   "sourceUrl": "https://www.x3000.com/"
+  },
+  "x3000.com": {
+   "name": "X3000",
+   "sourceUrl": "https://www.x3000.com/"
+  },
+  "wowcherbingo.com": {
+   "name": "Wowcher Bingo",
+   "sourceUrl": "https://www.wowcherbingo.com/"
+  },
+  "winlandia.co.uk": {
+   "name": "Winlandia",
+   "sourceUrl": "https://www.winlandia.com/"
+  },
+  "winlandia.se": {
+   "name": "Winlandia",
+   "sourceUrl": "https://www.winlandia.com/"
+  },
+  "x3000.lv": {
+   "name": "X3000",
+   "sourceUrl": "https://www.x3000.lv/"
+  },
+  "yeticasino.se": {
+   "name": "Yeti Casino",
+   "sourceUrl": "https://www.yeticasino.com/sv/index"
+  },
+  "yakocasino.com": {
+   "name": "Yako Casino",
+   "sourceUrl": "https://www.yakocasino.com/en/index"
+  },
+  "yobingo.es": {
+   "name": "Bingo",
+   "sourceUrl": "https://www.yobingo.es/"
+  },
+  "yosports.es": {
+   "name": "YoSports",
+   "sourceUrl": "https://www.yosports.es/"
+  },
+  "zeturf.fr": {
+   "name": "ZETURF",
+   "sourceUrl": "https://zeturf.fr/en"
+  },
+  "wunderino.se": {
+   "name": "Wunderino",
+   "sourceUrl": "https://www.wunderino.se/sv/casino"
+  },
+  "zodiac-casino.co.uk": {
+   "name": "Zodiac Casino",
+   "sourceUrl": "https://www.zodiac-casino.co.uk/en-gb/"
+  },
+  "yocasino.es": {
+   "name": "YoCasino",
+   "sourceUrl": "https://www.yocasino.es/"
+  },
+  "zebrabingo.com": {
+   "name": "ZebraBingo",
+   "sourceUrl": "https://www.zebrabingo.com/"
+  },
+  "zeusbingo.com": {
+   "name": "Zeus Bingo",
+   "sourceUrl": "https://www.zeusbingo.com/"
+  },
+  "zeturf.es": {
+   "name": "ZETURF",
+   "sourceUrl": "https://zeturf.es/en"
+  },
+  "zingobingo.co.uk": {
+   "name": "Zingo Bingo",
+   "sourceUrl": "https://www.zingobingo.co.uk/"
+  },
+  "zweeler.com": {
+   "name": "Zweeler - Fantasy Sports Games",
+   "sourceUrl": "https://en.zweeler.com/"
+  },
+  "zeturf.nl": {
+   "name": "ZEturf / ZEbet",
+   "sourceUrl": "https://www.zeturf.com/"
+  }
+ },
+ "failed": {
+  "betsson.com": "HTTP 200, no matching name",
+  "mrgreen.se": "HTTP 200, no matching name",
+  "10bet.se": "HTTP 200, no matching name",
+  "mrgreen.com": "HTTP 200, no matching name",
+  "mrgreen.dk": "HTTP 200, no matching name",
+  "10bet.ie": "no answer",
+  "1xbet.es": "HTTP 403, no matching name",
+  "123spins.com": "HTTP 403, no matching name",
+  "711.nl": "HTTP 403, no matching name",
+  "777tigers.com": "no answer",
+  "10bet.co.uk": "HTTP 200, no matching name",
+  "11.lv": "HTTP 200, no matching name",
+  "21luckybet.com": "HTTP 200, no matching name",
+  "711sports.be": "HTTP 200, no matching name",
+  "777.es": "HTTP 200, no matching name",
+  "777.com": "HTTP 200, no matching name",
+  "21.co.uk": "HTTP 200, no matching name",
+  "888poker.co.uk": "no answer",
+  "888.es": "HTTP 200, no matching name",
+  "777bet.casino": "HTTP 200, no matching name",
+  "888.de": "HTTP 200, no matching name",
+  "888.dk": "HTTP 200, no matching name",
+  "888.se": "HTTP 200, no matching name",
+  "888casino.com": "HTTP 200, no matching name",
+  "888.info": "no answer",
+  "888poker-promotions.com": "HTTP 200, no matching name",
+  "888poker.ca": "HTTP 200, no matching name",
+  "888poker.net": "HTTP 200, no matching name",
+  "888casino.es": "HTTP 200, no matching name",
+  "accajack.co.uk": "HTTP 200, no matching name",
+  "accajack.com": "HTTP 200, no matching name",
+  "allinn.cz": "HTTP 403, no matching name",
+  "akbets.bet": "HTTP 403, no matching name",
+  "888sport.dk": "HTTP 200, no matching name",
+  "amazonslots.ca": "HTTP 403, no matching name",
+  "888sport.es": "HTTP 200, no matching name",
+  "amberspins.com": "HTTP 200, no matching name",
+  "apuestas.juegging.es": "HTTP 403, no matching name",
+  "888vipcasinoclub.com": "HTTP 200, no matching name",
+  "admiralbet.it": "HTTP 403, no matching name",
+  "apuestas.kirolbet.es": "HTTP 403, no matching name",
+  "africasports.com": "HTTP 200, no matching name",
+  "acelucky.com": "HTTP 200, no matching name",
+  "apuestas.olybet.es": "HTTP 403, no matching name",
+  "ahtigames.com": "HTTP 200, no matching name",
+  "arrowbet.co.uk": "HTTP 403, no matching name",
+  "aztecriches.co.uk": "no answer",
+  "aconcaguapoker.es": "HTTP 200, no matching name",
+  "anytimecasino.com": "HTTP 200, no matching name",
+  "ahtigames.es": "HTTP 200, no matching name",
+  "aupabet.es": "HTTP 403, no matching name",
+  "baroneracing.com": "HTTP 200, no matching name",
+  "apuestas.betfair.es": "HTTP 200, no matching name",
+  "bet3000.de": "HTTP 403, no matching name",
+  "bacanaplay.de": "HTTP 200, no matching name",
+  "bet90.be": "no answer",
+  "betano.co.uk": "HTTP 451, no matching name",
+  "ballycasino.co.uk": "HTTP 200, no matching name",
+  "barz.com": "HTTP 200, no matching name",
+  "betano.ca": "HTTP 403, no matching name",
+  "bet777.be": "HTTP 403, no matching name",
+  "betano.de": "HTTP 403, no matching name",
+  "betboro.co.uk": "HTTP 403, no matching name",
+  "betclic.fr": "HTTP 403, no matching name",
+  "betcity.nl": "HTTP 403, no matching name",
+  "betano.bet.ar": "HTTP 403, no matching name",
+  "betanosports.be": "HTTP 403, no matching name",
+  "betclic.pt": "HTTP 403, no matching name",
+  "betano.dk": "HTTP 403, no matching name",
+  "betanocasino.be": "HTTP 403, no matching name",
+  "betcenter.be": "HTTP 200, no matching name",
+  "betano.cz": "HTTP 403, no matching name",
+  "betfair.com": "HTTP 403, no matching name",
+  "betfair.es": "HTTP 403, no matching name",
+  "betflag.it": "HTTP 403, no matching name",
+  "betfair.dk": "HTTP 403, no matching name",
+  "betfred.com": "HTTP 302, no matching name",
+  "betblink.com": "HTTP 200, no matching name",
+  "betfair.it": "HTTP 403, no matching name",
+  "betahoy.co.uk": "HTTP 200, no matching name",
+  "bellacasino.com": "HTTP 200, no matching name",
+  "betfusion.com": "HTTP 200, no matching name",
+  "betfred.es": "HTTP 200, no matching name",
+  "betinia.es": "HTTP 403, no matching name",
+  "betnova.ca": "HTTP 403, no matching name",
+  "betnation.nl": "HTTP 403, no matching name",
+  "bethard.com": "HTTP 200, no matching name",
+  "apuestas.retabet.es": "HTTP 403, no matching name",
+  "betoro.dk": "HTTP 403, no matching name",
+  "betmonie.co.uk": "HTTP 200, no matching name",
+  "betmgm.co.uk": "HTTP 200, no matching name",
+  "betsbk.com": "HTTP 403, no matching name",
+  "betmaze.co.uk": "HTTP 200, no matching name",
+  "betsson.fr": "HTTP 403, no matching name",
+  "betneptune.com": "HTTP 200, no matching name",
+  "betpassion.it": "HTTP 200, no matching name",
+  "betsson.it": "HTTP 403, no matching name",
+  "betsafe.com": "HTTP 200, no matching name",
+  "apuestas.marca.es": "no answer",
+  "betsson.es": "HTTP 200, no matching name",
+  "betsafe.lv": "HTTP 200, no matching name",
+  "betsson.dk": "HTTP 200, no matching name",
+  "betvickers.co.uk": "no answer",
+  "betscreamer.com": "HTTP 200, no matching name",
+  "betvictor.com": "HTTP 451, no matching name",
+  "betuntd.ca": "HTTP 200, no matching name",
+  "betreels.com": "HTTP 200, no matching name",
+  "betssoncasino.be": "HTTP 200, no matching name",
+  "betssonsports.be": "HTTP 200, no matching name",
+  "betsteve.com": "HTTP 200, no matching name",
+  "betvictor.mobi": "HTTP 451, no matching name",
+  "betwin360.it": "HTTP 403, no matching name",
+  "betstars.dk": "HTTP 200, no matching name",
+  "bgame.it": "HTTP 403, no matching name",
+  "betstorm.com": "HTTP 200, no matching name",
+  "bigbangbet.co.uk": "no answer",
+  "betyoucan.com": "HTTP 200, no matching name",
+  "bingo.boylesports.com": "HTTP 403, no matching name",
+  "betstars.uk": "HTTP 200, no matching name",
+  "bingoalsport.be": "HTTP 403, no matching name",
+  "betvickers.com": "HTTP 200, no matching name",
+  "bingofling.com": "HTTP 403, no matching name",
+  "betstars.fr": "HTTP 200, no matching name",
+  "bingo.dk": "HTTP 200, no matching name",
+  "bingoal.nl": "HTTP 200, no matching name",
+  "bingosplus.com": "HTTP 200, no matching name",
+  "betfred.mobi": "no answer",
+  "bluesblock.es": "HTTP 200, no matching name",
+  "bingosplus.co.uk": "HTTP 200, no matching name",
+  "blackjackballroom.co.uk": "HTTP 200, no matching name",
+  "bonniebingo.com": "HTTP 200, no matching name",
+  "boostcasino.se": "no answer",
+  "blitzbet.be": "HTTP 403, no matching name",
+  "brillbet.com": "HTTP 200, no matching name",
+  "britainplay.co.uk": "HTTP 403, no matching name",
+  "boylebingo.com": "HTTP 403, no matching name",
+  "brotherbets.co.uk": "HTTP 403, no matching name",
+  "boylesports.com": "HTTP 403, no matching name",
+  "boylegames.com": "HTTP 403, no matching name",
+  "boylepoker.com": "HTTP 403, no matching name",
+  "boylelotto.com": "HTTP 403, no matching name",
+  "boylecasino.com": "HTTP 403, no matching name",
+  "betpoint.it": "no answer",
+  "boylevegas.com": "HTTP 403, no matching name",
+  "buckybingo.co.uk": "HTTP 200, no matching name",
+  "blackjackcity.com": "HTTP 200, no matching name",
+  "bpremium.de": "HTTP 200, no matching name",
+  "bubble.bingo": "HTTP 200, no matching name",
+  "bwin.be": "HTTP 200, no matching name",
+  "bwin.es": "HTTP 200, no matching name",
+  "bwin.de": "HTTP 403, no matching name",
+  "captaincookcasino.co.uk": "HTTP 200, no matching name",
+  "bwincasino.be": "HTTP 200, no matching name",
+  "bytcasino.com": "HTTP 200, no matching name",
+  "bwin.pt": "HTTP 200, no matching name",
+  "bwin.dk": "HTTP 200, no matching name",
+  "campobet.se": "HTTP 403, no matching name",
+  "bwin.it": "HTTP 200, no matching name",
+  "casino-kingdom.co.uk": "no answer",
+  "campobet.dk": "HTTP 403, no matching name",
+  "casino-action.co.uk": "HTTP 200, no matching name",
+  "casino.goldrummel.de": "no answer",
+  "casino.boylesports.com": "HTTP 403, no matching name",
+  "bwin.fr": "HTTP 200, no matching name",
+  "casino.tipico.de": "HTTP 403, no matching name",
+  "casinoaction.dk": "no answer",
+  "casino777.be": "HTTP 403, no matching name",
+  "casino-www.888poker.com": "HTTP 200, no matching name",
+  "casino-www.888sport.com": "HTTP 200, no matching name",
+  "casinoandfriends.co.uk": "HTTP 403, no matching name",
+  "casino777.es": "HTTP 403, no matching name",
+  "casinoclassic.co.uk": "HTTP 200, no matching name",
+  "casinodays.com": "HTTP 200, no matching name",
+  "casinogranmadridtv.es": "HTTP 403, no matching name",
+  "casinogranmadridonline.es": "HTTP 403, no matching name",
+  "bingoplus.tv": "no answer",
+  "casinogmonline.es": "HTTP 200, no matching name",
+  "cashpoint.dk": "HTTP 200, no matching name",
+  "casinobarcelona.es": "HTTP 403, no matching name",
+  "casinoshare.co.uk": "no answer",
+  "casinocasino.com": "HTTP 200, no matching name",
+  "casongo.dk": "HTTP 403, no matching name",
+  "casinoveneziaonline.it": "no answer",
+  "casinopalace.com": "HTTP 200, no matching name",
+  "casinopauseandplay.es": "HTTP 200, no matching name",
+  "casinomite.com": "HTTP 200, no matching name",
+  "casinotime.ca": "HTTP 403, no matching name",
+  "challengecasino.co.uk": "no answer",
+  "casinomarca.es": "no answer",
+  "casumo.de": "HTTP 403, no matching name",
+  "casinoladbrokes.be": "HTTP 200, no matching name",
+  "casumo.es": "HTTP 403, no matching name",
+  "casinoportugal.pt": "HTTP 403, no matching name",
+  "circusbet.fr": "HTTP 403, no matching name",
+  "circus.nl": "HTTP 403, no matching name",
+  "casinogo.com": "HTTP 200, no matching name",
+  "circus-sport.be": "HTTP 403, no matching name",
+  "clubpools.com": "HTTP 401, no matching name",
+  "cherry.com": "HTTP 200, no matching name",
+  "comeon.com": "HTTP 403, no matching name",
+  "colosseum-casino.co.uk": "no answer",
+  "chance.cz": "HTTP 403, no matching name",
+  "cozino.com": "HTTP 403, no matching name",
+  "copybet.com": "HTTP 403, no matching name",
+  "copybet.com.cy": "HTTP 403, no matching name",
+  "comeon.nl": "HTTP 403, no matching name",
+  "codereapuestas.es": "no answer",
+  "comeon.dk": "HTTP 403, no matching name",
+  "coolbet.com": "HTTP 200, no matching name",
+  "da.partypoker.com": "HTTP 200, no matching name",
+  "da.partycasino.com": "HTTP 200, no matching name",
+  "dailyrecordbingo.com": "HTTP 403, no matching name",
+  "dafabet.co.uk": "HTTP 403, no matching name",
+  "coral.co.uk": "HTTP 200, no matching name",
+  "crazykingcasino.com": "HTTP 403, no matching name",
+  "codere.it": "no answer",
+  "daznbet.it": "HTTP 403, no matching name",
+  "daznbet.fr": "HTTP 403, no matching name",
+  "dabble.uk": "HTTP 200, no matching name",
+  "dabble.co.uk": "HTTP 200, no matching name",
+  "domusbet.it": "HTTP 403, no matching name",
+  "dragoni.gg": "no answer",
+  "dragonbet.co.uk": "HTTP 403, no matching name",
+  "derby25.dk": "HTTP 200, no matching name",
+  "easyslots.com": "HTTP 403, no matching name",
+  "dcbet.com": "HTTP 200, no matching name",
+  "doublebubblebingo.com": "HTTP 200, no matching name",
+  "efbet.es": "HTTP 403, no matching name",
+  "drueckglueck.com": "HTTP 200, no matching name",
+  "drueckglueck.co.uk": "HTTP 200, no matching name",
+  "elabet.it": "HTTP 525, no matching name",
+  "dynobet.com": "HTTP 200, no matching name",
+  "drueckglueck.de": "HTTP 200, no matching name",
+  "estorilsolcasinos.pt": "HTTP 403, no matching name",
+  "electricspins.com": "HTTP 200, no matching name",
+  "eplay24.it": "HTTP 403, no matching name",
+  "ejjabet.com": "HTTP 200, no matching name",
+  "eurokingclub.dk": "HTTP 404, no matching name",
+  "emotivacasino.es": "HTTP 200, no matching name",
+  "expresswins.co.uk": "HTTP 403, no matching name",
+  "eurobet.it": "HTTP 200, no matching name",
+  "elitesports.be": "HTTP 200, no matching name",
+  "eurokingsclub.de": "HTTP 200, no matching name",
+  "eurojuegostar.es": "HTTP 200, no matching name",
+  "fafabet.co.uk": "no answer",
+  "eurolottocasino.com": "HTTP 200, no matching name",
+  "fafabet.ie": "HTTP 403, no matching name",
+  "fairplaycasino.nl": "HTTP 403, no matching name",
+  "eurojuego.es": "HTTP 200, no matching name",
+  "feelingbet.fr": "HTTP 403, no matching name",
+  "fenikss.lv": "HTTP 403, no matching name",
+  "drueckglueck.dk": "HTTP 200, no matching name",
+  "fantasyboss.co.uk": "HTTP 200, no matching name",
+  "euromanias.de": "HTTP 200, no matching name",
+  "fantasygameday.app": "HTTP 200, no matching name",
+  "fastbet.it": "HTTP 200, no matching name",
+  "fitzdares.com": "HTTP 403, no matching name",
+  "fanaticscasino.ca": "HTTP 200, no matching name",
+  "foot.net": "HTTP 200, no matching name",
+  "fastbet.com": "HTTP 200, no matching name",
+  "communitygaming.co.uk": "no answer",
+  "fonbet.com.cy": "HTTP 403, no matching name",
+  "fitzwilliam.bet": "HTTP 200, no matching name",
+  "frankcasino.se": "HTTP 403, no matching name",
+  "footballpools.com": "HTTP 403, no matching name",
+  "flaxcasino.se": "HTTP 200, no matching name",
+  "foxygames.com": "HTTP 200, no matching name",
+  "foxybingo.com": "HTTP 200, no matching name",
+  "games.boylesports.com": "HTTP 403, no matching name",
+  "galabingo.com": "HTTP 200, no matching name",
+  "galaspins.com": "HTTP 200, no matching name",
+  "games.tiptorro.de": "HTTP 403, no matching name",
+  "dafabet.es": "HTTP 302, no matching name",
+  "gamebookers.com": "HTTP 200, no matching name",
+  "games.tipwin.de": "HTTP 200, no matching name",
+  "galacasino.com": "HTTP 200, no matching name",
+  "fulltilt.uk": "HTTP 200, no matching name",
+  "gioca7.it": "HTTP 403, no matching name",
+  "giochi24.it": "HTTP 403, no matching name",
+  "goldenreefcasino.co.uk": "no answer",
+  "goldrummel.de": "no answer",
+  "goldbet.it": "HTTP 403, no matching name",
+  "giocodigitale.it": "HTTP 200, no matching name",
+  "goldennuggetcasino.com": "HTTP 403, no matching name",
+  "gothamslots.com": "HTTP 403, no matching name",
+  "goldenpark.es": "HTTP 403, no matching name",
+  "glimmercasino.com": "HTTP 200, no matching name",
+  "goldenvegas-sport.be": "HTTP 403, no matching name",
+  "gratogana.es": "HTTP 403, no matching name",
+  "grandmondial.co.uk": "HTTP 200, no matching name",
+  "grandhotelcasino.co.uk": "HTTP 200, no matching name",
+  "greenlightbet.co.uk": "HTTP 200, no matching name",
+  "happycasino.com": "HTTP 403, no matching name",
+  "ggvegas.co.uk": "no answer",
+  "grpcasino.com": "HTTP 200, no matching name",
+  "footie5.com": "no answer",
+  "hattricks.com": "HTTP 403, no matching name",
+  "gtcasino.co.uk": "HTTP 200, no matching name",
+  "happytiger.co.uk": "HTTP 403, no matching name",
+  "heartbingo.co.uk": "HTTP 451, no matching name",
+  "hbingo.co.uk": "HTTP 451, no matching name",
+  "granmadrid.es": "HTTP 403, no matching name",
+  "hollywoodcasino.com": "HTTP 200, no matching name",
+  "grosvenorcasinos.com": "HTTP 200, no matching name",
+  "hollandcasino.nl": "HTTP 403, no matching name",
+  "highstakes.co.uk": "HTTP 200, no matching name",
+  "hunkybingo.com": "HTTP 200, no matching name",
+  "holdet.dk": "HTTP 200, no matching name",
+  "hypercasino.com": "HTTP 200, no matching name",
+  "interwetten.es": "HTTP 403, no matching name",
+  "interwetten.de": "HTTP 403, no matching name",
+  "hotwinscasino.com": "HTTP 200, no matching name",
+  "in2bet.com.cy": "HTTP 200, no matching name",
+  "jackpotcity.ca": "HTTP 403, no matching name",
+  "goodwinracing.co.uk": "no answer",
+  "jackpotmobilecasino.co.uk": "HTTP 403, no matching name",
+  "jackpotcity.co.uk": "HTTP 200, no matching name",
+  "jackpotcitycasino.co.uk": "HTTP 200, no matching name",
+  "hippodromeonline.com": "HTTP 200, no matching name",
+  "iwonvegas.com": "HTTP 200, no matching name",
+  "jallacasino.se": "HTTP 200, no matching name",
+  "jackpot.com": "HTTP 200, no matching name",
+  "jacks.nl": "HTTP 200, no matching name",
+  "jokerslots.co.uk": "HTTP 403, no matching name",
+  "jointextbet.co.uk": "HTTP 403, no matching name",
+  "healthgames.co.uk": "no answer",
+  "jollie.de": "HTTP 403, no matching name",
+  "jokerbet.es": "HTTP 200, no matching name",
+  "jesterbet.com": "HTTP 200, no matching name",
+  "kalookiracing.co.uk": "no answer",
+  "kalookisportsbook.com": "no answer",
+  "i-pools.co.uk": "no answer",
+  "interwetten.se": "HTTP 200, no matching name",
+  "kingspin.co.uk": "no answer",
+  "jackpotstar.com": "HTTP 200, no matching name",
+  "kingsbet.cz": "HTTP 401, no matching name",
+  "kingspin.uk": "HTTP 403, no matching name",
+  "inplay.betway.com": "no answer",
+  "king-spin.co.uk": "HTTP 403, no matching name",
+  "king-spin.uk": "HTTP 403, no matching name",
+  "klubfunder.com": "HTTP 502, no matching name",
+  "klondaika.lv": "HTTP 403, no matching name",
+  "kwiff.co.uk": "no answer",
+  "jackpotstar.de": "HTTP 200, no matching name",
+  "kwiffcasino.com": "HTTP 200, no matching name",
+  "kwiff.com": "HTTP 200, no matching name",
+  "laimz.lv": "HTTP 403, no matching name",
+  "gentingspielhalle.de": "no answer",
+  "knightslots.com": "HTTP 200, no matching name",
+  "knight-slots.de": "HTTP 200, no matching name",
+  "lapalingo.de": "HTTP 403, no matching name",
+  "ladbrokes.com": "HTTP 200, no matching name",
+  "lionwins.com": "HTTP 403, no matching name",
+  "lclubonline.com": "HTTP 200, no matching name",
+  "litwins.co.uk": "HTTP 403, no matching name",
+  "letsbet.de": "HTTP 403, no matching name",
+  "livecasino.boylesports.com": "HTTP 403, no matching name",
+  "lekkerbets.co.za": "HTTP 200, no matching name",
+  "london.bet": "HTTP 200, no matching name",
+  "lordlucky.de": "HTTP 403, no matching name",
+  "loewen-player.de": "HTTP 200, no matching name",
+  "lotterycasino.net": "HTTP 200, no matching name",
+  "lotteryuk.casino-pp.net": "HTTP 200, no matching name",
+  "lotto.boylesports.com": "HTTP 403, no matching name",
+  "lotto24.de": "HTTP 403, no matching name",
+  "loewen-play.de": "HTTP 200, no matching name",
+  "lottofy.co.uk": "HTTP 200, no matching name",
+  "lottoexperten.se": "HTTP 200, no matching name",
+  "lotto-hessen.de": "HTTP 200, no matching name",
+  "luckia.es": "HTTP 451, no matching name",
+  "lasmegas.de": "no answer",
+  "lottomatica.it": "HTTP 403, no matching name",
+  "luckycasino.com": "HTTP 403, no matching name",
+  "lotto-bw.de": "HTTP 200, no matching name",
+  "luckydays.ca": "HTTP 403, no matching name",
+  "luckyemperorcasino.co.uk": "no answer",
+  "lowen-play.es": "HTTP 200, no matching name",
+  "lottogo.com": "HTTP 200, no matching name",
+  "lottozone.com": "HTTP 200, no matching name",
+  "luckymeslots.de": "HTTP 403, no matching name",
+  "luckytiger.co.uk": "HTTP 403, no matching name",
+  "lucycasino.com": "HTTP 403, no matching name",
+  "luckybet.lv": "HTTP 200, no matching name",
+  "luckcity.com": "HTTP 200, no matching name",
+  "lumoslots.com": "no answer",
+  "luxcasino.co.uk": "HTTP 403, no matching name",
+  "luckyprocasino.com": "HTTP 200, no matching name",
+  "m.betboro.co.uk": "HTTP 403, no matching name",
+  "m.skybet.com": "HTTP 403, no matching name",
+  "luckymatecasino.co.uk": "no answer",
+  "m.hollywoodbets.co.uk": "no answer",
+  "m.skyvegas.com": "HTTP 403, no matching name",
+  "m.quinnbet.com": "HTTP 403, no matching name",
+  "m.skypoker.com": "HTTP 403, no matching name",
+  "lvbet.lv": "HTTP 403, no matching name",
+  "m.apuestas.codere.es": "HTTP 403, no matching name",
+  "magicbettingsports.be": "HTTP 200, no matching name",
+  "lynholdet.dk": "HTTP 200, no matching name",
+  "marathonbet.it": "HTTP 403, no matching name",
+  "maskedsingergames.co.uk": "HTTP 404, no matching name",
+  "mamzinobet.com": "HTTP 200, no matching name",
+  "maratonbet.es": "HTTP 200, no matching name",
+  "magic888casino.com": "no answer",
+  "matchitsports.com": "HTTP 200, no matching name",
+  "luckypantsbingo.com": "HTTP 200, no matching name",
+  "maxi333.de": "HTTP 403, no matching name",
+  "matchbingo.com": "HTTP 500, no matching name",
+  "marcacasino.es": "no answer",
+  "mbingo.boylesports.com": "HTTP 403, no matching name",
+  "mcbookie.com": "HTTP 403, no matching name",
+  "maxa.cz": "HTTP 403, no matching name",
+  "mbet.es": "HTTP 200, no matching name",
+  "mcasino.boylesports.com": "HTTP 403, no matching name",
+  "meridianbet.com.cy": "HTTP 403, no matching name",
+  "lunaslots.de": "HTTP 200, no matching name",
+  "meridiansports.be": "HTTP 404, no matching name",
+  "megaspielhalle.de": "HTTP 404, no matching name",
+  "merkur-spiel.de": "HTTP 200, no matching name",
+  "merkur-sports.de": "HTTP 200, no matching name",
+  "merkurslots.de": "HTTP 200, no matching name",
+  "mobile.bet365.es": "HTTP 403, no matching name",
+  "mipools.com": "HTTP 403, no matching name",
+  "meccabingo.com": "HTTP 200, no matching name",
+  "mobile.starsportsbet.com": "no answer",
+  "mgames.boylesports.com": "HTTP 403, no matching name",
+  "mlotto.boylesports.com": "HTTP 403, no matching name",
+  "metabetting.co.uk": "HTTP 200, no matching name",
+  "merkurxtip.cz": "HTTP 200, no matching name",
+  "mobilemillions.co.uk": "HTTP 200, no matching name",
+  "mobile.boylesports.com": "HTTP 403, no matching name",
+  "moneyplay.com": "HTTP 200, no matching name",
+  "mrben.com": "HTTP 403, no matching name",
+  "mobileslots.com": "HTTP 200, no matching name",
+  "mlivecasino.boylesports.com": "HTTP 403, no matching name",
+  "mrbit.se": "HTTP 403, no matching name",
+  "moolzy.com": "HTTP 200, no matching name",
+  "mobile.vbet.co.uk": "HTTP 403, no matching name",
+  "mrrun.com": "HTTP 403, no matching name",
+  "mrgreen.es": "HTTP 200, no matching name",
+  "mrvegas.ca": "HTTP 403, no matching name",
+  "mrvegas.dk": "HTTP 403, no matching name",
+  "mrrex.com": "HTTP 200, no matching name",
+  "mrvegas.com": "HTTP 403, no matching name",
+  "myarcade.co.uk": "HTTP 200, no matching name",
+  "myarkade.co.uk": "no answer",
+  "mrvegas.se": "HTTP 403, no matching name",
+  "nanocasino.se": "no answer",
+  "musichallcasino.co.uk": "no answer",
+  "napoleonsports.be": "HTTP 403, no matching name",
+  "monopolycasino.com": "HTTP 200, no matching name",
+  "napoleoncasino.be": "HTTP 403, no matching name",
+  "neptuneplay.com": "HTTP 403, no matching name",
+  "net88.uk.com": "HTTP 403, no matching name",
+  "mrq.com": "HTTP 200, no matching name",
+  "net88uk.com": "HTTP 403, no matching name",
+  "monopolycasino.es": "HTTP 200, no matching name",
+  "neobet.de": "HTTP 403, no matching name",
+  "newspins.co.uk": "HTTP 403, no matching name",
+  "ne-bet.com": "HTTP 404, no matching name",
+  "netwin.it": "HTTP 403, no matching name",
+  "mvegas.boylesports.com": "HTTP 403, no matching name",
+  "monacobet.cz": "HTTP 200, no matching name",
+  "nostalgiacasino.co.uk": "no answer",
+  "ninja.se": "HTTP 403, no matching name",
+  "ninjacasino.se": "HTTP 403, no matching name",
+  "networkgaming.co.uk": "HTTP 200, no matching name",
+  "nordicbet.dk": "HTTP 200, no matching name",
+  "okbingo.co.uk": "HTTP 403, no matching name",
+  "netbet.it": "HTTP 403, no matching name",
+  "olybet.fr": "HTTP 403, no matching name",
+  "olybet.lv": "HTTP 403, no matching name",
+  "oddsking.com": "HTTP 403, no matching name",
+  "octobet.com": "HTTP 200, no matching name",
+  "on.neobet.ca": "HTTP 403, no matching name",
+  "on.bet99.ca": "HTTP 403, no matching name",
+  "on.stardustcasino.com": "HTTP 200, no matching name",
+  "mylotteriesplay.it": "no answer",
+  "on.powerplay.com": "HTTP 403, no matching name",
+  "on.miki.com": "HTTP 403, no matching name",
+  "on.swiper.com": "HTTP 403, no matching name",
+  "oneplaycasino.es": "HTTP 403, no matching name",
+  "on.sportsinteraction.com": "HTTP 200, no matching name",
+  "online.casinosanremo.it": "HTTP 403, no matching name",
+  "oranjepalace.nl": "HTTP 403, no matching name",
+  "optibet.se": "no answer",
+  "onesports.nl": "HTTP 200, no matching name",
+  "original-slots.de": "no answer",
+  "paddypower.com": "HTTP 403, no matching name",
+  "optibet.lv": "HTTP 403, no matching name",
+  "original-wetten.de": "no answer",
+  "parisvegasclub.dk": "HTTP 404, no matching name",
+  "parimatch.co.uk": "HTTP 451, no matching name",
+  "on.betinia.com": "HTTP 403, no matching name",
+  "partycasino.es": "HTTP 200, no matching name",
+  "paston.es": "HTTP 403, no matching name",
+  "pba.stake.bet.ar": "HTTP 403, no matching name",
+  "pba.bplay.bet.ar": "HTTP 403, no matching name",
+  "partypoker.de": "HTTP 200, no matching name",
+  "pba.betsson.bet.ar": "HTTP 200, no matching name",
+  "phoeniciancasino.co.uk": "no answer",
+  "perlaplay.it": "HTTP 403, no matching name",
+  "partypoker.fr": "HTTP 200, no matching name",
+  "parisvegasclub.de": "HTTP 200, no matching name",
+  "partypoker.es": "HTTP 200, no matching name",
+  "planetsportbet.com": "HTTP 403, no matching name",
+  "play.ballybet.ca": "HTTP 200, no matching name",
+  "platincasino.es": "HTTP 403, no matching name",
+  "partycasino.dk": "no answer",
+  "play.match15.com": "no answer",
+  "partypoker.dk": "HTTP 200, no matching name",
+  "planetwin365.it": "HTTP 403, no matching name",
+  "play.monopolycasino.ca": "HTTP 200, no matching name",
+  "play.playfallsview.com": "HTTP 200, no matching name",
+  "pip.dk": "HTTP 403, no matching name",
+  "play.betzi.co": "HTTP 200, no matching name",
+  "play.matchbingo.co.uk": "HTTP 200, no matching name",
+  "play.neonrush.com": "HTTP 200, no matching name",
+  "playleon.com": "HTTP 403, no matching name",
+  "placebet.co.uk": "HTTP 200, no matching name",
+  "play-www.777.com": "HTTP 200, no matching name",
+  "pinkcasino.co.uk": "HTTP 200, no matching name",
+  "playland.de": "HTTP 200, no matching name",
+  "playlebom.com": "HTTP 200, no matching name",
+  "playjango.com": "HTTP 200, no matching name",
+  "playjango.es": "HTTP 200, no matching name",
+  "playtoro.com": "HTTP 200, no matching name",
+  "playmagical.com": "HTTP 200, no matching name",
+  "playcasinoplus.co.uk": "HTTP 200, no matching name",
+  "playojo.com": "HTTP 200, no matching name",
+  "playojo.co.uk": "HTTP 200, no matching name",
+  "playtoro.es": "HTTP 200, no matching name",
+  "playwins.com": "HTTP 200, no matching name",
+  "ninjasport.se": "no answer",
+  "poker.boylesports.com": "HTTP 403, no matching name",
+  "playtoro.se": "HTTP 200, no matching name",
+  "playojo.dk": "HTTP 200, no matching name",
+  "pmu.fr": "HTTP 200, no matching name",
+  "poker.fanduel.ca": "HTTP 200, no matching name",
+  "play-jango.de": "HTTP 200, no matching name",
+  "pokerstars.dk": "HTTP 200, no matching name",
+  "pokerstars.es": "HTTP 200, no matching name",
+  "pokerstars.de": "HTTP 200, no matching name",
+  "pokerstars.uk": "HTTP 200, no matching name",
+  "predicts.betfair.com": "HTTP 403, no matching name",
+  "pokerstars.se": "HTTP 200, no matching name",
+  "pokerstarsmobile.es": "HTTP 200, no matching name",
+  "pokerstarsmobile.fr": "HTTP 200, no matching name",
+  "pokerstars.fr": "HTTP 200, no matching name",
+  "pokerstars.pt": "HTTP 200, no matching name",
+  "playbetplus.co.uk": "no answer",
+  "playbetplus.com": "no answer",
+  "playbingoplus.co.uk": "no answer",
+  "primescratchards.dk": "HTTP 404, no matching name",
+  "pokerstarssports.dk": "HTTP 200, no matching name",
+  "pokerstarssports.uk": "HTTP 200, no matching name",
+  "playcasinoplus.com": "no answer",
+  "primeslots.dk": "HTTP 200, no matching name",
+  "potsofluck.com": "HTTP 200, no matching name",
+  "pokerstarssports.fr": "HTTP 200, no matching name",
+  "pricedup.bet": "HTTP 403, no matching name",
+  "pokerstarssports.es": "HTTP 200, no matching name",
+  "prontolotter.se": "HTTP 200, no matching name",
+  "proper.bet": "HTTP 403, no matching name",
+  "prontoodds.com": "HTTP 200, no matching name",
+  "primespielhalle.de": "HTTP 200, no matching name",
+  "prontosport.com": "HTTP 200, no matching name",
+  "prontosport.se": "HTTP 200, no matching name",
+  "prontolive.com": "HTTP 200, no matching name",
+  "prontoodds.se": "HTTP 200, no matching name",
+  "primespielautomat.de": "HTTP 200, no matching name",
+  "qualitybingo.com": "HTTP 200, no matching name",
+  "quatrocasino.co.uk": "HTTP 200, no matching name",
+  "prontolotter.com": "HTTP 200, no matching name",
+  "quinnbet.com": "HTTP 403, no matching name",
+  "pushbet.co.uk": "HTTP 200, no matching name",
+  "quickcasino.dk": "HTTP 403, no matching name",
+  "quickcasino.se": "HTTP 403, no matching name",
+  "q88bets.com": "HTTP 200, no matching name",
+  "racecasino.se": "HTTP 200, no matching name",
+  "queenvegas.de": "HTTP 200, no matching name",
+  "queenvegas.com": "HTTP 200, no matching name",
+  "queenvegas.co.uk": "HTTP 200, no matching name",
+  "quigioco.it": "HTTP 403, no matching name",
+  "quidslots.com": "HTTP 200, no matching name",
+  "rangerspools.com": "HTTP 403, no matching name",
+  "queenvegas.dk": "HTTP 200, no matching name",
+  "rainbowrichesbingo.co.uk": "HTTP 200, no matching name",
+  "rambobet.co.uk": "HTTP 404, no matching name",
+  "regencycasino.es": "HTTP 403, no matching name",
+  "redaxeplay.com": "HTTP 403, no matching name",
+  "rainbetsplash.com": "HTTP 200, no matching name",
+  "regencycasino.se": "HTTP 403, no matching name",
+  "richreels.co.uk": "no answer",
+  "risecasino.com": "HTTP 200, no matching name",
+  "redkings.com": "HTTP 200, no matching name",
+  "redkings.de": "HTTP 200, no matching name",
+  "roseslots.com": "HTTP 403, no matching name",
+  "regencycasino.com": "HTTP 200, no matching name",
+  "rod25.dk": "HTTP 200, no matching name",
+  "royalpanda.com": "HTTP 200, no matching name",
+  "roed25.dk": "HTTP 200, no matching name",
+  "royalvegas.ca": "HTTP 403, no matching name",
+  "royale500.de": "HTTP 200, no matching name",
+  "rubyfortune.ca": "HTTP 403, no matching name",
+  "royalvalleycasino.com": "HTTP 200, no matching name",
+  "royalbet.de": "HTTP 200, no matching name",
+  "royale500.com": "HTTP 200, no matching name",
+  "royale500.es": "HTTP 200, no matching name",
+  "scooore.be": "HTTP 403, no matching name",
+  "rainbowriches.co.uk": "no answer",
+  "rainbowriches.com": "no answer",
+  "rainbowslots.com": "no answer",
+  "rainbowslots.co.uk": "no answer",
+  "se.primecasino.com": "HTTP 200, no matching name",
+  "rubybet.com": "HTTP 200, no matching name",
+  "savibet.com": "HTTP 200, no matching name",
+  "sh-goldrummel.de": "no answer",
+  "simbaslots.com": "HTTP 403, no matching name",
+  "scorchingslots.com": "HTTP 200, no matching name",
+  "skybet.com": "HTTP 403, no matching name",
+  "skycasino.com": "HTTP 403, no matching name",
+  "skybingo.com": "HTTP 403, no matching name",
+  "sladders.com": "no answer",
+  "skypoker.com": "HTTP 403, no matching name",
+  "skyvegas.com": "HTTP 403, no matching name",
+  "sinspins.com": "HTTP 200, no matching name",
+  "simbagames.dk": "HTTP 200, no matching name",
+  "slotsking.com": "HTTP 200, no matching name",
+  "pokerstars.it": "HTTP 301, no matching name",
+  "slotstemple.com": "HTTP 403, no matching name",
+  "smoothspins.co.uk": "HTTP 451, no matching name",
+  "slotv.se": "HTTP 403, no matching name",
+  "spacewins.com": "HTTP 403, no matching name",
+  "spillehallen.dk": "HTTP 403, no matching name",
+  "spildansknu.dk": "HTTP 403, no matching name",
+  "quartzcasino.co.uk": "no answer",
+  "spelklubben.se": "HTTP 200, no matching name",
+  "spin-king.co.uk": "HTTP 403, no matching name",
+  "spin-king.uk": "HTTP 403, no matching name",
+  "spincasino.ca": "HTTP 403, no matching name",
+  "solverde.pt": "HTTP 200, no matching name",
+  "spinaway.ca": "HTTP 403, no matching name",
+  "slotboss.co.uk": "HTTP 200, no matching name",
+  "spincasino.co.uk": "HTTP 200, no matching name",
+  "spinking.co.uk": "HTTP 403, no matching name",
+  "spilleautomaten.dk": "HTTP 200, no matching name",
+  "spilnu.dk": "HTTP 200, no matching name",
+  "spinking.uk": "HTTP 403, no matching name",
+  "spinking.dk": "HTTP 403, no matching name",
+  "spinking.com": "HTTP 403, no matching name",
+  "spingenie.co.uk": "HTTP 200, no matching name",
+  "speedybet.es": "HTTP 200, no matching name",
+  "spingenie.com": "HTTP 200, no matching name",
+  "spinz.de": "HTTP 403, no matching name",
+  "spins.lv": "HTTP 200, no matching name",
+  "sportito.com.br": "no answer",
+  "sportbet.it": "HTTP 403, no matching name",
+  "spinandwin.com": "HTTP 200, no matching name",
+  "sportium.it": "HTTP 403, no matching name",
+  "sportingbet.com": "HTTP 403, no matching name",
+  "sports.videoslots.com": "HTTP 403, no matching name",
+  "sports.sbet.com": "HTTP 403, no matching name",
+  "sportingbet.de": "HTTP 200, no matching name",
+  "slotstarsspiel.de": "HTTP 200, no matching name",
+  "sportingindex.com": "HTTP 200, no matching name",
+  "sportium.es": "HTTP 200, no matching name",
+  "stanleybet.it": "HTTP 403, no matching name",
+  "stanleybet.be": "HTTP 403, no matching name",
+  "stake.dk": "HTTP 403, no matching name",
+  "sportito.mx": "HTTP 200, no matching name",
+  "starslots.com": "HTTP 403, no matching name",
+  "sportsbook.draftkings.com": "HTTP 200, no matching name",
+  "starsports.bet": "HTTP 403, no matching name",
+  "stake.it": "HTTP 200, no matching name",
+  "starcasino.it": "HTTP 200, no matching name",
+  "starwins.co.uk": "HTTP 403, no matching name",
+  "stakespin.casino": "HTTP 200, no matching name",
+  "sunbet.it": "HTTP 403, no matching name",
+  "starvegas.it": "HTTP 403, no matching name",
+  "sisal.it": "HTTP 301, no matching name",
+  "superbet.se": "no answer",
+  "superlottoclub.com": "no answer",
+  "starcasinosport.be": "HTTP 200, no matching name",
+  "stakewise.co.uk": "HTTP 200, no matching name",
+  "spinmodo.de": "no answer",
+  "stoiximan.com.cy": "HTTP 403, no matching name",
+  "swankybingo.com": "HTTP 403, no matching name",
+  "sunnycasino.com": "HTTP 200, no matching name",
+  "staryes.it": "HTTP 200, no matching name",
+  "supermegafluffyrainbowvegasjackpotcasino.com": "HTTP 200, no matching name",
+  "swiper.dk": "HTTP 403, no matching name",
+  "swiper.se": "HTTP 403, no matching name",
+  "supabet.co.uk": "HTTP 200, no matching name",
+  "talksportbet.com": "HTTP 451, no matching name",
+  "swiftspiele.de": "HTTP 200, no matching name",
+  "talksportbet.co.uk": "HTTP 451, no matching name",
+  "telephonebetting.com": "no answer",
+  "text-bet.com": "HTTP 403, no matching name",
+  "thescore.bet": "HTTP 403, no matching name",
+  "supersnabbt.se": "HTTP 200, no matching name",
+  "thescore.casino": "HTTP 200, no matching name",
+  "thepools.com": "HTTP 403, no matching name",
+  "thorslots.com": "HTTP 403, no matching name",
+  "tangobet.co.uk": "HTTP 200, no matching name",
+  "swiftypredictions.co.uk": "HTTP 200, no matching name",
+  "snai.it": "HTTP 301, no matching name",
+  "tikitakaplay.es": "HTTP 403, no matching name",
+  "tipp24.de": "HTTP 403, no matching name",
+  "tiptorro.de": "HTTP 403, no matching name",
+  "tigerspin.de": "HTTP 403, no matching name",
+  "tipwin.de": "HTTP 200, no matching name",
+  "tipwin.se": "HTTP 200, no matching name",
+  "tipwin.dk": "HTTP 200, no matching name",
+  "tokyo.cz": "HTTP 403, no matching name",
+  "tombola.co.uk": "HTTP 451, no matching name",
+  "todoslots.es": "HTTP 403, no matching name",
+  "tipwin.com": "HTTP 200, no matching name",
+  "tombola.dk": "HTTP 451, no matching name",
+  "tombola.com": "HTTP 451, no matching name",
+  "tombola.es": "HTTP 451, no matching name",
+  "tipsport.cz": "HTTP 403, no matching name",
+  "touch.unibt.co.uk": "no answer",
+  "superfluffycasino.com": "no answer",
+  "tombola.se": "HTTP 451, no matching name",
+  "tombola.it": "HTTP 451, no matching name",
+  "totosi.it": "HTTP 403, no matching name",
+  "tombolaarcade.co.uk": "HTTP 451, no matching name",
+  "titanplay.ca": "HTTP 403, no matching name",
+  "tuzoca.es": "HTTP 403, no matching name",
+  "uk-m.bingo.com": "no answer",
+  "tooniebet.ca": "HTTP 403, no matching name",
+  "tote.co.uk": "HTTP 200, no matching name",
+  "unibet.fr": "HTTP 403, no matching name",
+  "turbonino.com": "HTTP 200, no matching name",
+  "turbonino.de": "HTTP 200, no matching name",
+  "tombolaarcade.com": "no answer",
+  "uk.fulltilt.com": "HTTP 200, no matching name",
+  "uk.bingo.com": "HTTP 200, no matching name",
+  "vegascountrycasino.co.uk": "no answer",
+  "vbet.de": "HTTP 403, no matching name",
+  "vegas.betway.com": "HTTP 404, no matching name",
+  "vegasslotcasino.co.uk": "no answer",
+  "veraandjohn.se": "HTTP 403, no matching name",
+  "vbet.se": "HTTP 403, no matching name",
+  "vbet.co.uk": "HTTP 403, no matching name",
+  "vegas.boylesports.com": "HTTP 403, no matching name",
+  "videoslots.co.uk": "HTTP 403, no matching name",
+  "videoslots.com": "HTTP 403, no matching name",
+  "vegaswinner.co.uk": "HTTP 404, no matching name",
+  "vincitu.it": "HTTP 403, no matching name",
+  "villento.co.uk": "HTTP 200, no matching name",
+  "videoslots.se": "HTTP 403, no matching name",
+  "vindercasino.dk": "HTTP 403, no matching name",
+  "videoslots.es": "HTTP 403, no matching name",
+  "vivatbet.be": "HTTP 203, no matching name",
+  "virtualcitycasino.co.uk": "no answer",
+  "wettarena.de": "HTTP 403, no matching name",
+  "wildwestwins.com": "HTTP 403, no matching name",
+  "vegaswinner.com": "HTTP 200, no matching name",
+  "vindstort.dk": "HTTP 200, no matching name",
+  "videoslots.ca": "HTTP 403, no matching name",
+  "wildz.de": "HTTP 403, no matching name",
+  "voodoslots.com": "HTTP 200, no matching name",
+  "vegaswinner.dk": "HTTP 200, no matching name",
+  "williamhill.it": "HTTP 403, no matching name",
+  "winfest.de": "HTTP 403, no matching name",
+  "williamhill.es": "HTTP 500, no matching name",
+  "winlandia.dk": "HTTP 404, no matching name",
+  "vegaswinner.de": "HTTP 200, no matching name",
+  "winguru.lv": "HTTP 200, no matching name",
+  "wunderino.de": "HTTP 403, no matching name",
+  "yaasscasino.es": "HTTP 403, no matching name",
+  "xtip.de": "HTTP 200, no matching name",
+  "winzila.co.uk": "HTTP 200, no matching name",
+  "vsadahrej.cz": "HTTP 200, no matching name",
+  "yaybingo.com": "HTTP 200, no matching name",
+  "winbet.it": "HTTP 200, no matching name",
+  "yoyocasino.se": "HTTP 403, no matching name",
+  "yukongoldcasino.co.uk": "HTTP 200, no matching name",
+  "yeticasino.com": "HTTP 200, no matching name",
+  "zoesbingo.com": "HTTP 200, no matching name",
+  "zonagioco.it": "HTTP 200, no matching name",
+  "yokocasino.com": "HTTP 200, no matching name",
+  "zebet.es": "HTTP 200, no matching name",
+  "zebet.nl": "HTTP 200, no matching name",
+  "winamax.es": "HTTP 302, no matching name",
+  "zebrawin.de": "HTTP 302, no matching name",
+  "zebrawins.com": "HTTP 301, no matching name"
+ },
+ "note": "Each licensed site's own name, read from its home page (og:site_name, application-name or <title>) by scripts/fetch-fiat-names.mjs, kept only where it matches the domain. sourceUrl is the page it was read from."
+}

@@ -17,13 +17,13 @@ import world from "@/data/world-market.json";
 const MONO = "var(--font-jetbrains-mono), monospace";
 
 function LogoStrip({ m }: { m: FiatMarket }) {
-  const logos = m.sites.filter((s) => s.logo).slice(0, 6);
+  const logos = m.brands.filter((s) => s.logo).slice(0, 6);
   if (!logos.length) return null;
   return (
     <div style={{ display: "flex", gap: 6, marginTop: 12 }}>
       {logos.map((s) => (
         // eslint-disable-next-line @next/next/no-img-element
-        <img key={s.domain} src={s.logo as string} alt="" width={30} height={30} loading="lazy" style={{ width: 30, height: 30, borderRadius: 8, background: "#EEF1F3", objectFit: "contain", padding: 3 }} />
+        <img key={s.id} src={s.logo as string} alt="" width={30} height={30} loading="lazy" style={{ width: 30, height: 30, borderRadius: 8, background: "#EEF1F3", objectFit: "contain", padding: 3 }} />
       ))}
     </div>
   );
@@ -39,7 +39,7 @@ function MarketCard({ m }: { m: FiatMarket }) {
         )}
         <div style={{ minWidth: 0 }}>
           <div style={{ fontSize: 15.5, fontWeight: 800, color: "#fff" }}>{m.name}</div>
-          <div style={{ fontFamily: MONO, fontSize: 10.5, color: "#83919A" }}>{m.sites.length} licensed sites</div>
+          <div style={{ fontFamily: MONO, fontSize: 10.5, color: "#83919A" }}>{m.brands.length} licensed brands</div>
         </div>
       </div>
       <LogoStrip m={m} />
@@ -66,7 +66,7 @@ export function FiatHub() {
   const sweeps = sweepsSorted();
   const gb = byCode.get("GB");
   const unreadable = Object.entries((world as unknown as { unreadable: Record<string, { regulator: string; sourceUrl: string; note: string }> }).unreadable);
-  const total = markets.reduce((n, m) => n + m.sites.length, 0);
+  const total = markets.reduce((n, m) => n + m.brands.length, 0);
 
   return (
     <main style={{ background: "#07090B", color: "#E8EDF0" }}>
@@ -80,7 +80,7 @@ export function FiatHub() {
             Licensed casinos and sportsbooks, country by country
           </h1>
           <p style={{ margin: 0, maxWidth: "66ch", fontSize: 16.5, lineHeight: 1.6, color: "#A8B6BE", textWrap: "pretty" }}>
-            The sites each country&rsquo;s own regulator licenses — {total.toLocaleString("en-GB")} across {markets.length} registers, plus the US states —
+            The brands each country&rsquo;s own regulator licenses — {total.toLocaleString("en-GB")} across {markets.length} registers, plus the US states —
             each with its logo and a link to the site. For crypto casinos, see{" "}
             <Link href="/crypto-casinos" style={{ color: "#5FE3E8" }}>crypto casinos by country</Link>.
           </p>

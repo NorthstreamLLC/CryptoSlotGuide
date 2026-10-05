@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { NextSteps } from "@/components/layout/NextSteps";
 import { ReportIssue } from "@/components/ui/ReportIssue";
-import { FiatSiteCard } from "@/components/fiat/FiatSiteCard";
+import { FiatBrandGrid } from "@/components/fiat/FiatBrandGrid";
 import { casinosForCountry } from "@/lib/landing";
 import type { FiatMarket, FiatProduct } from "@/lib/fiat";
 
@@ -18,11 +18,11 @@ const FILTERS: { key: FiatProduct | "all"; label: string }[] = [
 ];
 
 export function FiatMarketPage({ m, type }: { m: FiatMarket; type: FiatProduct | "all" }) {
-  const casinos = m.sites.filter((s) => s.products.includes("casino")).length;
-  const sports = m.sites.filter((s) => s.products.includes("sports")).length;
+  const casinos = m.brands.filter((s) => s.products.includes("casino")).length;
+  const sports = m.brands.filter((s) => s.products.includes("sports")).length;
   const split = casinos + sports > 0;
-  const shown = type === "all" ? m.sites : m.sites.filter((s) => s.products.includes(type));
-  const withLogo = m.sites.filter((s) => s.logo).length;
+  const shown = type === "all" ? m.brands : m.brands.filter((s) => s.products.includes(type));
+  const withLogo = m.brands.filter((s) => s.logo).length;
   const crypto = casinosForCountry(m.code.split("-")[0]);
   const lawCode = m.code === "CA-ON" ? "ca-on" : m.code.split("-")[0].toLowerCase();
 
@@ -47,12 +47,12 @@ export function FiatMarketPage({ m, type }: { m: FiatMarket; type: FiatProduct |
             </div>
           </div>
           <p style={{ margin: "0 0 18px", maxWidth: "70ch", fontSize: 16, lineHeight: 1.6, color: "#A8B6BE", textWrap: "pretty" }}>
-            Every site {m.regulator} lists on its register — {m.sites.length} in all — with the company holding each licence and a link to the site. These are the
-            locally licensed options; crypto casinos are listed separately.
+            Every brand {m.regulator} licenses — {m.brands.length} brands across the {m.sites.length} web addresses on its register — with the company holding
+            each licence and a link to the site. Search for a name below. These are the locally licensed options; crypto casinos are listed separately.
           </p>
           <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
             {[
-              [String(m.sites.length), "licensed sites"],
+              [String(m.brands.length), "licensed brands"],
               ...(split ? [[String(casinos), "licensed for casino"], [String(sports), "licensed for sports betting"]] : []),
             ].map(([v, l]) => (
               <span key={l} style={{ display: "inline-flex", alignItems: "baseline", gap: 8, padding: "8px 13px", borderRadius: 100, background: "rgba(255,255,255,.04)", border: "1px solid rgba(255,255,255,.09)", fontSize: 13.5, color: "#A8B6BE" }}>
@@ -69,7 +69,7 @@ export function FiatMarketPage({ m, type }: { m: FiatMarket; type: FiatProduct |
           <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 16 }}>
             {FILTERS.map((f) => {
               const on = f.key === type;
-              const n = f.key === "all" ? m.sites.length : f.key === "casino" ? casinos : sports;
+              const n = f.key === "all" ? m.brands.length : f.key === "casino" ? casinos : sports;
               return (
                 <Link
                   key={f.key}
@@ -83,11 +83,7 @@ export function FiatMarketPage({ m, type }: { m: FiatMarket; type: FiatProduct |
           </div>
         )}
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))", gap: 10 }}>
-          {shown.map((s) => (
-            <FiatSiteCard key={s.domain} site={s} />
-          ))}
-        </div>
+        <FiatBrandGrid brands={shown} marketName={m.name} />
 
         <p style={{ margin: "14px 0 0", maxWidth: "88ch", fontSize: 12.5, lineHeight: 1.6, color: "#77858E" }}>
           Read from {m.regulator}&rsquo;s register
@@ -99,7 +95,7 @@ export function FiatMarketPage({ m, type }: { m: FiatMarket; type: FiatProduct |
               </a>
             </span>
           ))}
-          . Logos are each site&rsquo;s own icon ({withLogo} of {m.sites.length}); a site whose pages would not give one shows its initials.
+          . Names and logos are each site&rsquo;s own, from its home page ({withLogo} of {m.brands.length} brands have a logo); a site whose pages would not give one shows its initials.
           {m.holdersWithoutSite.length > 0 && <> The register also lists {m.holdersWithoutSite.length} licence {m.holdersWithoutSite.length === 1 ? "holder" : "holders"} without a web address.</>}
         </p>
 

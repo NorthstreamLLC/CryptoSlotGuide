@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { fiatMarkets } from "@/lib/fiat";
+import { allVenues, predCountries } from "@/lib/prediction-markets";
 import { sportsbookOps } from "@/lib/sports";
 import { catalogueStudios } from "@/lib/studio-pages";
 import { siteData } from "@/lib/site-data";
@@ -50,6 +51,7 @@ const STATIC_ROUTES = [
   "/legal/europe",
   "/sportsbooks",
   "/prediction-markets",
+  "/prediction-markets/regulated",
   "/wallets",
   "/exchanges",
   "/coins",
@@ -87,6 +89,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // The licensed (fiat) section: the hub and each market's site list.
     "/licensed-casinos",
     ...fiatMarkets().map((m) => slugPath("/licensed-casinos", m.slug)),
+    ...allVenues().map(({ v }) => slugPath("/prediction-markets", v.slug)),
+    ...predCountries().map((c) => slugPath("/prediction-markets/in", c.code.toLowerCase())),
     ...[...new Set([...providers.map((p) => p.slug), ...STUDIOS.map((st) => st.slug), ...catalogueStudios().map((c) => c.slug)])].map((sl) => slugPath("/providers", sl)),
     ...walletRows.map((w) => slugPath("/wallets", w.slug)),
     ...exchangeRows.map((x) => slugPath("/exchanges", x.slug)),

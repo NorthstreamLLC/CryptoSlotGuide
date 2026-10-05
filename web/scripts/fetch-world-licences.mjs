@@ -26,6 +26,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { execSync } from "node:child_process";
+import { createHash } from "node:crypto";
 
 const OUT = path.join("data", "world-market.json");
 const CACHE = path.join(".cache", "world-licences");
@@ -39,7 +40,9 @@ fs.mkdirSync(CACHE, { recursive: true });
 
 /** curl rather than fetch: several of these hosts reset Node's TLS handshake and accept curl's. */
 function get(url, { binary = false, headers = [] } = {}) {
-  const key = url.replace(/[^a-z0-9]+/gi, "_").slice(0, 150);
+  // The readable prefix is cut short, so the hash of the whole URL keeps
+  // paged URLs (which differ only at the end) from sharing one cache file.
+  const key = url.replace(/[^a-z0-9]+/gi, "_").slice(0, 110) + "_" + createHash("sha1").update(url).digest("hex").slice(0, 12);
   const file = path.join(CACHE, key + (binary ? ".bin" : ".html"));
   if (fs.existsSync(file) && Date.now() - fs.statSync(file).mtimeMs < 6 * 3600 * 1000) {
     return binary ? fs.readFileSync(file) : fs.readFileSync(file, "utf8");
@@ -302,14 +305,30 @@ const ADAPTERS = {
   },
 
   SE() {
-    const api = (t) => JSON.parse(get(`https://www.spelinspektionen.se/api/licenseregistryapi/?licenseTypes=${t}&page=1`));
-    const online = api(20), betting = api(21);
-    const mk = (j) => j.holders.filter((h) => !/Personuppgift/.test(h.name)).map((h) => op(h.name, null));
-    const domains = (j) => [...new Set(j.urls.map(host).filter(Boolean))].sort();
+    // The register's search answer lists holders and web addresses as two
+    // separate facets; GetLicensesForHolder (the call the register page makes
+    // when a holder is opened) ties them together: each licence with its
+    // type, status, dates and the web addresses it covers.
+    const API = "https://www.spelinspektionen.se/api/licenseregistryapi/";
+    const holders = new Map();
+    for (const t of [20, 21]) for (const h of JSON.parse(get(`${API}?licenseTypes=${t}&page=1`)).holders) holders.set(h.id, h.name);
+    const casinos = [], sportsbooks = [];
+    for (const [id, name] of holders) {
+      if (/Personuppgift/.test(name)) continue;
+      for (const l of JSON.parse(get(`${API}GetLicensesForHolder?holderId=${id}`))) {
+        if (l.licenseStatus?.licenseStatusName !== "Aktiv") continue;
+        const t = l.licenseType?.licenseTypeId;
+        if (t !== 20 && t !== 21) continue;
+        const urls = (l.licenseUrls ?? []).map((u) => u.licenseUrl).filter(Boolean);
+        const row = { ...op(name, name, urls), validTo: (l.licenseTo ?? "").slice(0, 10) || null };
+        (t === 20 ? casinos : sportsbooks).push(row);
+      }
+    }
+    const page = (t) => `https://www.spelinspektionen.se/licens-o-tillstand/licensregister/?licenseTypes=${t}`;
     return {
       regulator: "Spelinspektionen (Swedish Gambling Authority)",
-      casinos: { ...list(mk(online), "https://www.spelinspektionen.se/licens-o-tillstand/licensregister/?licenseTypes=20", "Holders of a commercial online gambling licence ('Kommersiellt online'), as the licence register names them, with the web addresses the register lists under that licence type."), domains: domains(online) },
-      sportsbooks: { ...list(mk(betting), "https://www.spelinspektionen.se/licens-o-tillstand/licensregister/?licenseTypes=21", "Holders of a commercial betting licence ('Kommersiellt vadhållning'), with the web addresses the register lists under that licence type."), domains: domains(betting) },
+      casinos: list(casinos, page(20), "Active commercial online gambling licences ('Kommersiellt online'), each holder with the web addresses the register lists under that licence."),
+      sportsbooks: list(sportsbooks, page(21), "Active commercial betting licences ('Kommersiellt vadhållning'), each holder with the web addresses the register lists under that licence."),
       why: "Sweden's Gambling Act (2018:1138) re-regulated the market from 1 January 2019: commercial online gambling and betting require a Spelinspektionen licence, and unlicensed sites are subject to payment blocking and warnings.",
     };
   },

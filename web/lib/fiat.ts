@@ -1,5 +1,6 @@
 import world from "@/data/world-market.json";
 import logoSources from "@/data/fiat-logo-sources.json";
+import siteNames from "@/data/fiat-site-names.json";
 import { countryBy } from "./legal";
 import { flagSrc } from "./flags";
 import type { CountryMarket, WorldOperatorList } from "./world-market";
@@ -34,6 +35,22 @@ export interface FiatSite {
   logo: string | null;
 }
 
+/**
+ * One brand in a market: the register's web addresses that share a name,
+ * shown as one card. Sweden lists mrgreen.com, .de, .dk and .se under the same
+ * licence; a reader is looking for "Mr Green", not four rows.
+ */
+export interface FiatBrand {
+  /** Anchor id on the market page. */
+  id: string;
+  name: string;
+  /** Every web address the register lists for the brand, main one first. */
+  domains: string[];
+  holders: string[];
+  products: FiatProduct[];
+  logo: string | null;
+}
+
 export interface FiatMarket {
   /** Our country code, e.g. "DE", "CA-ON". */
   code: string;
@@ -46,6 +63,8 @@ export interface FiatMarket {
   /** The register page(s) the lists were read from. */
   sources: { label: string; url: string; asOf: string }[];
   sites: FiatSite[];
+  /** The same sites grouped by brand name, alphabetical. */
+  brands: FiatBrand[];
   /** Register rows that name no web address (a holder with no site on the register). */
   holdersWithoutSite: string[];
 }
@@ -60,6 +79,31 @@ const host = (d: string) =>
     .replace(/^https?:\/\//, "")
     .replace(/\/.*$/, "")
     .replace(/^www\./, "");
+
+const NAMES = (siteNames as { names: Record<string, { name: string }> }).names;
+
+/** The naming label of a domain: "spela.svenskaspel.se" → "svenskaspel". */
+const labelOf = (d: string) => {
+  const parts = d.split(".");
+  const tld2 = parts.length > 2 && /^(co|com|org|net|bet|gov)$/.test(parts[parts.length - 2]);
+  return parts[parts.length - (tld2 ? 3 : 2)] ?? d;
+};
+/** A name the site gave itself on any domain with this label ("Mr Green" from mrgreen.com, for mrgreen.se). */
+const NAME_BY_LABEL = new Map<string, string>();
+for (const [d, v] of Object.entries(NAMES)) if (!NAME_BY_LABEL.has(labelOf(d))) NAME_BY_LABEL.set(labelOf(d), v.name);
+
+/**
+ * What a site is called on the page: the register's own brand where it names
+ * one, else the name the site gives itself (data/fiat-site-names.json), else
+ * a sibling domain's name, else the domain's label set as a word.
+ */
+function displayName(domain: string, registerBrand: string | null): string {
+  if (registerBrand && !isDomain(registerBrand)) return registerBrand;
+  const own = NAMES[domain]?.name ?? NAME_BY_LABEL.get(labelOf(domain));
+  if (own) return own;
+  const l = labelOf(domain);
+  return l.length <= 3 ? l.toUpperCase() : l.charAt(0).toUpperCase() + l.slice(1);
+}
 
 export const fiatLogo = (domain: string): string | null => (LOGOS[domain]?.file ? `/assets/logos/fiat/${LOGOS[domain].file}` : null);
 
@@ -81,6 +125,8 @@ function marketOf(code: string, m: CountryMarket): FiatMarket {
     }
     bySite.set(d, { domain: d, name, holder, products: product ? [product] : [], logo: fiatLogo(d) });
   };
+  // Where a register row names a brand and one domain, that brand is the
+  // register's word for the site; otherwise the row's name is a company.
   const lists: [WorldOperatorList | undefined, FiatProduct | null][] = [
     [m.casinos, "casino"],
     [m.sportsbooks, "sports"],
@@ -102,6 +148,7 @@ function marketOf(code: string, m: CountryMarket): FiatMarket {
     // Sweden: the web addresses under the licence type, not tied to a holder.
     for (const d of l.domains ?? []) add(d, host(d), null, product);
   }
+  for (const site of bySite.values()) site.name = displayName(site.domain, isDomain(site.name) || site.name === site.holder ? null : site.name);
   const c = countryBy(code);
   const sources = [m.casinos, m.sportsbooks, m.operators]
     .filter((l): l is WorldOperatorList => !!l)
@@ -116,8 +163,34 @@ function marketOf(code: string, m: CountryMarket): FiatMarket {
     why: m.why,
     sources,
     sites: [...bySite.values()].sort((a, b) => a.name.localeCompare(b.name)),
+    brands: brandsOf([...bySite.values()], code),
     holdersWithoutSite: [...new Set(holdersWithoutSite)].sort(),
   };
+}
+
+const letters = (s: string) => s.toLowerCase().normalize("NFKD").replace(/[^a-z0-9]/g, "");
+
+function brandsOf(sites: FiatSite[], code: string): FiatBrand[] {
+  const tld = code.split("-")[0].toLowerCase().replace(/^gb$/, "uk");
+  const groups = new Map<string, FiatSite[]>();
+  for (const s of sites) {
+    const k = letters(s.name) || s.domain;
+    groups.set(k, [...(groups.get(k) ?? []), s]);
+  }
+  return [...groups.entries()]
+    .map(([k, g]) => {
+      // The market's own country domain first, then the shortest.
+      const main = [...g].sort((a, b) => Number(b.domain.endsWith("." + tld)) - Number(a.domain.endsWith("." + tld)) || a.domain.length - b.domain.length);
+      return {
+        id: k,
+        name: main[0].name,
+        domains: main.map((s) => s.domain),
+        holders: [...new Set(g.map((s) => s.holder).filter((h): h is string => !!h))],
+        products: (["casino", "sports"] as const).filter((p) => g.some((s) => s.products.includes(p))),
+        logo: main.find((s) => s.logo)?.logo ?? null,
+      };
+    })
+    .sort((a, b) => a.name.localeCompare(b.name, "en", { sensitivity: "base" }));
 }
 
 const MARKETS: FiatMarket[] = Object.entries(DATA.countries)
