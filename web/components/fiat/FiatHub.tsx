@@ -6,7 +6,6 @@ import { fiatMarkets, fiatHref, EUROPE_FIAT, type FiatMarket } from "@/lib/fiat"
 import { rankedBrands } from "@/lib/us-brands";
 import { sweepsSorted } from "@/lib/sweeps";
 import { flagSrc } from "@/lib/flags";
-import ukLicences from "@/data/uk-licences.json";
 import world from "@/data/world-market.json";
 
 /**
@@ -65,7 +64,7 @@ export function FiatHub() {
   const argentina = byCode.get("AR");
   const us = rankedBrands();
   const sweeps = sweepsSorted();
-  const uk = Object.entries((ukLicences as { brands: Record<string, { name: string }> }).brands);
+  const gb = byCode.get("GB");
   const unreadable = Object.entries((world as unknown as { unreadable: Record<string, { regulator: string; sourceUrl: string; note: string }> }).unreadable);
   const total = markets.reduce((n, m) => n + m.sites.length, 0);
 
@@ -81,8 +80,8 @@ export function FiatHub() {
             Licensed casinos and sportsbooks, country by country
           </h1>
           <p style={{ margin: 0, maxWidth: "66ch", fontSize: 16.5, lineHeight: 1.6, color: "#A8B6BE", textWrap: "pretty" }}>
-            The sites each country&rsquo;s own regulator licenses — {total.toLocaleString("en-GB")} across {markets.length} registers, plus the US states and
-            the UK — each with its logo and a link to the site. For crypto casinos, see{" "}
+            The sites each country&rsquo;s own regulator licenses — {total.toLocaleString("en-GB")} across {markets.length} registers, plus the US states —
+            each with its logo and a link to the site. For crypto casinos, see{" "}
             <Link href="/crypto-casinos" style={{ color: "#5FE3E8" }}>crypto casinos by country</Link>.
           </p>
         </div>
@@ -128,19 +127,14 @@ export function FiatHub() {
           {ontario && <MarketCard m={ontario} />}
         </div>
 
-        <RegionHeading title="United Kingdom" sub="Checked against the Gambling Commission's public register, brand by brand." />
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 12 }}>
-          <Link href="/uk-casinos" className="csg-lift" style={{ display: "block", padding: "16px 18px", borderRadius: 15, background: "#0C1013", border: "1px solid rgba(255,255,255,.08)" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: 11 }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={flagSrc("GB") ?? ""} alt="" width={34} height={25} style={{ width: 34, height: 25, borderRadius: 4, objectFit: "cover" }} />
-              <div>
-                <div style={{ fontSize: 15.5, fontWeight: 800, color: "#fff" }}>UK-licensed casinos</div>
-                <div style={{ fontFamily: MONO, fontSize: 10.5, color: "#83919A" }}>{uk.length} brands checked on the register</div>
-              </div>
+        {gb && (
+          <>
+            <RegionHeading title="United Kingdom" sub="Every site on the Gambling Commission's register held by an operator with a remote casino or betting licence." />
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 12 }}>
+              <MarketCard m={gb} />
             </div>
-          </Link>
-        </div>
+          </>
+        )}
 
         <RegionHeading title="Europe" sub="Each country's licensed sites, read from its regulator's own register." />
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: 12 }}>

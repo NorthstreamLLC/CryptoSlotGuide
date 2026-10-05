@@ -35,7 +35,6 @@ const STATIC_ROUTES = [
   "/legal/canada",
   "/us-casinos",
   "/us-sportsbooks",
-  "/uk-casinos",
   "/casino-sportsbooks",
   "/esports-casinos",
   "/slots",

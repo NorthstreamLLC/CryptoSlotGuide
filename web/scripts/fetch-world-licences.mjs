@@ -290,7 +290,7 @@ const ADAPTERS = {
     const url = "https://www.vid.gov.lv/lv/licencetie-azartspelu-organizetaji";
     const html = get(url).replace(/\s+/g, " ");
     const ops = [];
-    for (const [, company, reg, site] of html.matchAll(/<tr>\s*<td>\s*<h5><a[^>]*>([^<]+)<\/a><\/h5>\s*<\/td>\s*<td>\s*<h5>([^<]*)<\/h5>\s*<\/td>\s*<td>\s*<h5>(?:<a[^>]*>)?([^<]*)/g)) {
+    for (const [, company, , site] of html.matchAll(/<tr>\s*<td>\s*<h5><a[^>]*>([^<]+)<\/a><\/h5>\s*<\/td>\s*<td>\s*<h5>([^<]*)<\/h5>\s*<\/td>\s*<td>\s*<h5>(?:<a[^>]*>)?([^<]*)/g)) {
       if (!site || !/\./.test(site)) continue;
       ops.push(op(host(site), company, [site]));
     }
@@ -360,6 +360,64 @@ const ADAPTERS = {
       casinos: list(casinos, src, "Operators the Danish Gambling Authority lists with an online casino licence (including revenue-restricted licences), with the domains it records for each."),
       sportsbooks: list(sportsbooks, src, "Operators listed with a betting licence, with their recorded domains."),
       why: "Denmark's Gambling Act of 2012 ended the state monopoly on online casino and betting and put licensing under Spillemyndigheden, which publishes every licence holder and the domains each may use.",
+    };
+  },
+
+  GB() {
+    // The Gambling Commission publishes its whole business register as CSV
+    // files joined on account number: businesses (the licensee's name),
+    // licences (type, activity, status) and domain names (with a status).
+    const base = "https://www.gamblingcommission.gov.uk/downloads/business-licence-register-";
+    const page = "https://www.gamblingcommission.gov.uk/public-register/businesses/download";
+    const csv = (name) => {
+      const text = get(`${base}${name}.csv`);
+      const rows = [];
+      for (const line of text.split(/\r?\n/).slice(1)) {
+        if (!line.trim()) continue;
+        const cells = [];
+        let cur = "", q = false;
+        for (let i = 0; i < line.length; i++) {
+          const ch = line[i];
+          if (ch === '"') {
+            if (q && line[i + 1] === '"') { cur += '"'; i++; } else q = !q;
+          } else if (ch === "," && !q) { cells.push(cur); cur = ""; }
+          else cur += ch;
+        }
+        cells.push(cur);
+        rows.push(cells.map((c) => c.trim()));
+      }
+      return rows;
+    };
+    const names = new Map(csv("businesses").map(([acc, name]) => [acc, name]));
+    // Consumer-facing online gambling only: an active Remote licence for
+    // casino, or for betting. Software, B2B "host" licences, lotteries and
+    // land-based licences are not the sites a player signs up to.
+    const CASINO = /^Casino$/i;
+    const BETTING = /^(General Betting Standard - (Real|Virtual) Event|Pool Betting|Betting Intermediary|General Betting Limited)$/i;
+    const kinds = new Map();
+    for (const [acc, , status, type, activity] of csv("licences")) {
+      if (status !== "Active" || type !== "Remote") continue;
+      const k = kinds.get(acc) ?? { casino: false, sports: false };
+      if (CASINO.test(activity)) k.casino = true;
+      if (BETTING.test(activity)) k.sports = true;
+      kinds.set(acc, k);
+    }
+    const casinos = [], sportsbooks = [];
+    for (const [acc, domain, status] of csv("domain-names")) {
+      // "White Label" domains are consumer sites run under the account's
+      // licence; "Inactive" ones no longer are.
+      if (status !== "Active" && status !== "White Label") continue;
+      const k = kinds.get(acc);
+      if (!k || (!k.casino && !k.sports)) continue;
+      const row = op(host(domain), names.get(acc) ?? null, [domain]);
+      if (k.casino) casinos.push(row);
+      if (k.sports) sportsbooks.push(row);
+    }
+    return {
+      regulator: "Gambling Commission",
+      casinos: list(casinos, page, "Every active or white-label domain on the Gambling Commission's register held by an account with an active Remote casino licence, with the licensee the register names. Read from the Commission's downloadable register files."),
+      sportsbooks: list(sportsbooks, page, "Every active or white-label domain held by an account with an active Remote betting licence (real-event, virtual-event or pool betting, or betting intermediary)."),
+      why: "Great Britain licenses online gambling under the Gambling Act 2005: any operator taking bets from British players needs a Gambling Commission remote licence, wherever it is based, and must list every domain it trades on. The Commission publishes the whole register, licensees, licences and domains, as open data.",
     };
   },
 

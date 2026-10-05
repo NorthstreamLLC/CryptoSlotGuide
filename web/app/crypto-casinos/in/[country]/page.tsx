@@ -132,8 +132,8 @@ export default async function Page({ params }: { params: Promise<{ country: stri
               {country === "gb" && (
                 <>
                   {" "}
-                  We check six of them against that register on{" "}
-                  <Link href="/uk-casinos" style={{ color: "#7BE0B8" }}>
+                  Every site on that register is on{" "}
+                  <Link href="/licensed-casinos/gb" style={{ color: "#7BE0B8" }}>
                     our UK-licensed casinos page
                   </Link>
                   .

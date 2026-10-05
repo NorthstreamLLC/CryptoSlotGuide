@@ -22,8 +22,16 @@ function Source({ url, asOf }: { url: string; asOf: string | null }) {
  * the product because the lists come from different licence classes; a
  * register that does not split by product gets the neutral heading.
  */
-function Operators({ title, list, id }: { title: string; list: WorldOperatorList; id: string }) {
+/**
+ * A law page shows the first 24 of a list; the licensed-casinos page has the
+ * rest, with logos and filters. Germany's 136 rows and the UK's 1,400 made the
+ * law page a directory, which is the other page's job.
+ */
+const CAP = 24;
+
+function Operators({ title, list, id, more }: { title: string; list: WorldOperatorList; id: string; more?: string | null }) {
   if (!list.operators.length) return null;
+  const shown = more ? list.operators.slice(0, CAP) : list.operators;
   return (
     <div id={id} style={{ marginTop: 22, scrollMarginTop: 110 }}>
       <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 12, flexWrap: "wrap", marginBottom: 10 }}>
@@ -33,7 +41,7 @@ function Operators({ title, list, id }: { title: string; list: WorldOperatorList
         <Source url={list.sourceUrl} asOf={list.asOf} />
       </div>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(230px, 1fr))", gap: 8 }}>
-        {list.operators.map((o, i) => (
+        {shown.map((o, i) => (
           <div key={o.brand + i} data-reveal style={{ ["--reveal-delay" as string]: `${Math.min(i, 12) * 30}ms`, padding: "11px 14px", borderRadius: 11, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)", minWidth: 0 }}>
             <div style={{ fontSize: 14, fontWeight: 700, color: "#E8EDF0", overflowWrap: "anywhere" }}>{o.brand}</div>
             {o.licenseHolder && o.licenseHolder.toLowerCase() !== o.brand.toLowerCase() && (
@@ -46,6 +54,11 @@ function Operators({ title, list, id }: { title: string; list: WorldOperatorList
           </div>
         ))}
       </div>
+      {more && list.operators.length > CAP && (
+        <Link href={more} style={{ display: "inline-block", marginTop: 10, fontFamily: MONO, fontSize: 12, color: "#5FE3E8" }}>
+          See all {list.operators.length} →
+        </Link>
+      )}
       {list.domains && list.domains.length > 0 && (
         <details style={{ marginTop: 10 }}>
           <summary style={{ cursor: "pointer", fontFamily: MONO, fontSize: 11, color: "#8DA0AA" }}>
@@ -96,9 +109,9 @@ export function CountryMarketBlock({
               </Link>
             )}
           </div>
-          {market.casinos && <Operators id="licensed-casinos" title="Licensed online casinos" list={market.casinos} />}
-          {market.sportsbooks && <Operators id="licensed-sportsbooks" title="Licensed online sportsbooks" list={market.sportsbooks} />}
-          {market.operators && <Operators id="licensed-operators" title="Licensed online operators" list={market.operators} />}
+          {market.casinos && <Operators id="licensed-casinos" title="Licensed online casinos" list={market.casinos} more={fiat ? `${fiat.href}?type=casino` : null} />}
+          {market.sportsbooks && <Operators id="licensed-sportsbooks" title="Licensed online sportsbooks" list={market.sportsbooks} more={fiat ? `${fiat.href}?type=sports` : null} />}
+          {market.operators && <Operators id="licensed-operators" title="Licensed online operators" list={market.operators} more={fiat?.href ?? null} />}
           <div style={{ marginTop: 22, padding: "20px 24px", borderRadius: 16, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
             <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 8 }}>How it works here</div>
             <p style={{ margin: 0, maxWidth: "80ch", fontSize: 14.5, lineHeight: 1.7, color: "#C6D1D7", textWrap: "pretty" }}>{market.why}</p>

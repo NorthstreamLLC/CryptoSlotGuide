@@ -9,6 +9,9 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       { source: "/roobet-casino", destination: "/casinos/roobet", permanent: true },
+      // The six hand-checked UK brands gave way to the whole Gambling
+      // Commission register on the licensed-casinos page.
+      { source: "/uk-casinos", destination: "/licensed-casinos/gb", permanent: true },
       { source: "/razed-casino", destination: "/casinos/razed", permanent: true },
       { source: "/top-crypto-casinos", destination: "/crypto-casinos", permanent: true },
       { source: "/casino-sign-up-bonuses", destination: "/bonuses", permanent: true },
