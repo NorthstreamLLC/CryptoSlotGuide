@@ -11,6 +11,7 @@ import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
 import { HouseIcon } from "@/components/house/HouseIcon";
 import { OfferCta } from "@/components/ui/OfferCta";
 import { inHouseOrder } from "@/lib/house-order";
+import { houseThumb } from "@/lib/house-thumbs";
 
 /**
  * How-to page for one originals game. Edges are each casino's own published
@@ -23,7 +24,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return pageMetadata(
     `${h.name}: the rules, the edge, and what you actually decide`,
     `${h.note} Casinos publish house edges of ${h.edgeRange} for their versions; here is what each one says.`,
-    `/house-games/${slug}`
+    `/house-games/${slug}`,
+    houseThumb(slug).replace(/[.]svg$/, ".png")
   );
 }
 
@@ -64,11 +66,15 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
               </p>
               <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11.5, color: "#83919A" }}>Edges as each casino publishes them · {h.edges.length} casinos</div>
             </div>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 1, borderRadius: 14, overflow: "hidden", border: "1px solid rgba(255,255,255,.09)", background: "rgba(255,255,255,.07)" }}>
-              <StatTile label="Published edges" value={h.edgeRange} color="#5FE3E8" />
-              <StatTile label="Casinos listed" value={String(h.edges.length)} />
-              <StatTile label="Provably fair" value={h.fair} small />
-              <StatTile label="Round length" value={h.speed} small />
+            <div style={{ display: "flex", flexDirection: "column", gap: 12, minWidth: 0 }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={houseThumb(h.slug)} alt={`${h.name}, drawn`} width={320} height={200} style={{ display: "block", width: "100%", height: "auto", aspectRatio: "16 / 10", borderRadius: 14, border: "1px solid rgba(255,255,255,.09)" }} />
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 1, borderRadius: 14, overflow: "hidden", border: "1px solid rgba(255,255,255,.09)", background: "rgba(255,255,255,.07)" }}>
+                <StatTile label="Published edges" value={h.edgeRange} color="#5FE3E8" />
+                <StatTile label="Casinos listed" value={String(whereToPlay.length)} />
+                <StatTile label="Provably fair" value={h.fair} small />
+                <StatTile label="Round length" value={h.speed} small />
+              </div>
             </div>
           </div>
         </div>
@@ -133,7 +139,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         </div>
 
         <h2 style={{ margin: "0 0 8px", fontSize: 28, letterSpacing: "-.028em", fontWeight: 800, fontStretch: "112%", color: "#E8EDF0" }}>House edge by casino</h2>
-        <p style={{ margin: "0 0 20px", maxWidth: "80ch", fontSize: 15, lineHeight: 1.6, color: "#8DA0AA" }}>What each casino publishes for its own {h.name}, with the page it comes from. Where a casino&apos;s pages disagree, both figures are shown. We haven&apos;t checked these inside the games ourselves.</p>
+        <p style={{ margin: "0 0 20px", maxWidth: "80ch", fontSize: 15, lineHeight: 1.6, color: "#8DA0AA" }}>What each casino publishes for its own {h.name}, with the page it comes from. Where a casino&apos;s pages disagree, both figures are shown.</p>
         <div style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 13, overflow: "hidden", background: "#0C1013", marginBottom: 38 }}>
           {h.edges.map((e, i) => (
             <div key={e.url + i} style={{ display: "grid", gridTemplateColumns: "44px 160px 220px 1fr", alignItems: "center", borderBottom: "1px solid rgba(255,255,255,.05)" }}>
@@ -161,10 +167,13 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         <h2 style={{ margin: "0 0 20px", fontSize: 24, letterSpacing: "-.025em", fontWeight: 800, fontStretch: "112%", color: "#E8EDF0" }}>Other originals</h2>
         <div style={{ display: "grid", minWidth: 0, gridTemplateColumns: "repeat(auto-fit,minmax(232px,1fr))", gap: 12 }}>
           {others.map((g) => (
-            <Link key={g.slug} href={`/house-games/${g.slug}`} style={{ display: "flex", alignItems: "center", gap: 12, padding: 18, borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
-              <HouseIcon slug={g.slug} mono={g.mono} tint={g.tint} size={30} radius={8} />
-              <span style={{ fontSize: 14.5, fontWeight: 600, color: "#E8EDF0" }}>{g.name}</span>
-              <span style={{ marginLeft: "auto", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11.5, color: "#5FE3E8" }}>{g.edgeRange}</span>
+            <Link key={g.slug} href={`/house-games/${g.slug}`} className="csg-lift" style={{ display: "flex", flexDirection: "column", borderRadius: 13, overflow: "hidden", background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={houseThumb(g.slug)} alt="" width={320} height={200} loading="lazy" style={{ display: "block", width: "100%", height: "auto", aspectRatio: "16 / 10" }} />
+              <span style={{ display: "flex", alignItems: "baseline", gap: 12, padding: "13px 16px" }}>
+                <span style={{ fontSize: 14.5, fontWeight: 600, color: "#E8EDF0" }}>{g.name}</span>
+                <span style={{ marginLeft: "auto", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11.5, color: "#5FE3E8" }}>{g.edgeRange}</span>
+              </span>
             </Link>
           ))}
         </div>

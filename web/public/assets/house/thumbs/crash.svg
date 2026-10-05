@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200">
+  <defs>
+    <radialGradient id="g" cx="72%" cy="22%" r="85%">
+      <stop offset="0" stop-color="#C4795A" stop-opacity=".55"/>
+      <stop offset=".55" stop-color="#C4795A" stop-opacity=".14"/>
+      <stop offset="1" stop-color="#0A0E11" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="p" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M16 0H0V16" fill="none" stroke="#fff" stroke-opacity=".05" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="320" height="200" fill="#0C1114"/>
+  <rect width="320" height="200" fill="url(#g)"/>
+  <rect width="320" height="200" fill="url(#p)"/>
+  
+  <path d="M28 172 C 120 168, 180 140, 230 70" fill="none" stroke="#C4795A" stroke-width="6" stroke-linecap="round"/>
+  <path d="M28 172 C 120 168, 180 140, 230 70 L 230 172 Z" fill="#C4795A" fill-opacity=".18"/>
+  <g transform="translate(230 70) rotate(-48)">
+    <path d="M0 -20 C 10 -8, 10 8, 6 18 L -6 18 C -10 8, -10 -8, 0 -20 Z" fill="#fff"/>
+    <circle cy="-2" r="4" fill="#C4795A"/>
+    <path d="M-6 18 L -12 26 L -4 22 Z M6 18 L 12 26 L 4 22 Z" fill="#fff"/>
+    <path d="M-3 20 L 0 34 L 3 20 Z" fill="#FFC531"/>
+  </g>
+  <text x="304" y="150" text-anchor="end" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="800" fill="#fff">4.20×</text>
+</svg>

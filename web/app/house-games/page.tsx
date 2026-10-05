@@ -4,7 +4,10 @@ import { pageMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { NextSteps } from "@/components/layout/NextSteps";
-import { HouseIcon } from "@/components/house/HouseIcon";
+import { BrandMark } from "@/components/ui/BrandMark";
+import { tintFor } from "@/lib/logo";
+import { houseThumb } from "@/lib/house-thumbs";
+import { inHouseOrder } from "@/lib/house-order";
 
 /**
  * Ported from the `isHouse` block in CryptoSlotGuide.dc.html (search
@@ -16,9 +19,30 @@ export const metadata = pageMetadata(
   "/house-games"
 );
 
+/** The logos of the casinos that publish an edge for the game. */
+function CasinoStrip({ casinos, nameOf }: { casinos: string[]; nameOf: (s: string) => string }) {
+  if (!casinos.length) return null;
+  const shown = casinos.slice(0, 7);
+  return (
+    <div style={{ display: "flex", alignItems: "center", gap: 5, marginBottom: 14, flexWrap: "wrap" }} aria-label={`Published by ${casinos.map(nameOf).join(", ")}`}>
+      {shown.map((c) => (
+        <span key={c} title={nameOf(c)} style={{ width: 26, height: 26, flex: "none", borderRadius: 7, overflow: "hidden" }}>
+          <BrandMark slug={c} mono={nameOf(c).slice(0, 2)} tint={tintFor(c)} radius={7} fontSize={8.5} />
+        </span>
+      ))}
+      {casinos.length > shown.length && (
+        <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#83919A", marginLeft: 3 }}>+{casinos.length - shown.length}</span>
+      )}
+    </div>
+  );
+}
+
 export default function Page() {
   const { houseGames, houseCasinoWide, ops } = siteData;
   const nameOf = (slug: string) => ops.find((o) => o.slug === slug)?.name ?? slug;
+  // The casinos publishing an edge for a game, once each, in house order.
+  const playedAt = (edges: { casino: string }[]) =>
+    inHouseOrder(ops.filter((o) => edges.some((e) => e.casino === o.slug))).map((o) => o.slug);
 
   return (
     <main>
@@ -40,15 +64,16 @@ export default function Page() {
       <section style={{ maxWidth: 1400, margin: "0 auto", padding: "32px 40px 0" }}>
         <div style={{ display: "grid", minWidth: 0, gridTemplateColumns: "repeat(auto-fit,minmax(232px,1fr))", gap: 12 }}>
           {houseGames.map((g) => (
-            <Link key={g.slug} href={`/house-games/${g.slug}`} data-reveal className="csg-lift" style={{ display: "flex", flexDirection: "column", padding: 22, borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.06)" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
-                <HouseIcon slug={g.slug} mono={g.mono} tint={g.tint} size={44} radius={11} />
-                <div>
-                  <div style={{ fontSize: 16.5, fontWeight: 700, color: "#fff", letterSpacing: "-.02em" }}>{g.name}</div>
-                  <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#83919A", marginTop: 2 }}>{g.speed}</div>
-                </div>
+            <Link key={g.slug} href={`/house-games/${g.slug}`} data-reveal className="csg-lift" style={{ display: "flex", flexDirection: "column", borderRadius: 14, overflow: "hidden", background: "#0C1013", border: "1px solid rgba(255,255,255,.06)" }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={houseThumb(g.slug)} alt={`${g.name}, drawn`} width={320} height={200} loading="lazy" style={{ display: "block", width: "100%", height: "auto", aspectRatio: "16 / 10", borderBottom: "1px solid rgba(255,255,255,.06)" }} />
+              <div style={{ display: "flex", flexDirection: "column", flex: 1, padding: "18px 20px 20px" }}>
+              <div style={{ marginBottom: 10 }}>
+                <div style={{ fontSize: 17, fontWeight: 700, color: "#fff", letterSpacing: "-.02em" }}>{g.name}</div>
+                <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#83919A", marginTop: 2 }}>{g.speed}</div>
               </div>
-              <p style={{ margin: "0 0 18px", fontSize: 12.5, lineHeight: 1.55, color: "#7B8A93", textWrap: "pretty" }}>{g.note}</p>
+              <p style={{ margin: "0 0 14px", fontSize: 12.5, lineHeight: 1.55, color: "#7B8A93", textWrap: "pretty" }}>{g.note}</p>
+              <CasinoStrip casinos={playedAt(g.edges)} nameOf={nameOf} />
               <div style={{ marginTop: "auto", display: "flex", flexDirection: "column", gap: 1, borderRadius: 9, overflow: "hidden" }}>
                 <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 10, padding: "9px 11px", background: "#0F1417" }}>
                   <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 9.5, letterSpacing: ".06em", textTransform: "uppercase", color: "#83919A" }}>Published edges</span>
@@ -58,6 +83,7 @@ export default function Page() {
                   <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 9.5, letterSpacing: ".06em", textTransform: "uppercase", color: "#83919A" }}>Provably fair</span>
                   <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12.5, color: "#E8EDF0" }}>{g.fair}</span>
                 </div>
+              </div>
               </div>
             </Link>
           ))}

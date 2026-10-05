@@ -17,8 +17,9 @@ export const SITE_NAME = "CryptoSlotGuide";
  * the same "derived, not hand-authored twice" pattern the rest of the
  * codebase follows (see lib/entity-view.ts's header comment).
  */
-export function pageMetadata(title: string, description: string, path: string) {
+export function pageMetadata(title: string, description: string, path: string, image?: string) {
   const url = `${SITE_URL}${path}`;
+  const images = image ? [{ url: image }] : undefined;
   return {
     title,
     description,
@@ -29,11 +30,13 @@ export function pageMetadata(title: string, description: string, path: string) {
       url,
       siteName: SITE_NAME,
       type: "website" as const,
+      ...(images ? { images } : {}),
     },
     twitter: {
-      card: "summary" as const,
+      card: image ? ("summary_large_image" as const) : ("summary" as const),
       title,
       description,
+      ...(images ? { images } : {}),
     },
   };
 }

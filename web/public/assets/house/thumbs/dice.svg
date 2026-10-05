@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200">
+  <defs>
+    <radialGradient id="g" cx="72%" cy="22%" r="85%">
+      <stop offset="0" stop-color="#2FA8B0" stop-opacity=".55"/>
+      <stop offset=".55" stop-color="#2FA8B0" stop-opacity=".14"/>
+      <stop offset="1" stop-color="#0A0E11" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="p" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M16 0H0V16" fill="none" stroke="#fff" stroke-opacity=".05" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="320" height="200" fill="#0C1114"/>
+  <rect width="320" height="200" fill="url(#g)"/>
+  <rect width="320" height="200" fill="url(#p)"/>
+  
+  <g transform="translate(92 52) rotate(-12 48 48)">
+    <rect width="96" height="96" rx="20" fill="#fff"/>
+    <circle cx="26" cy="26" r="6.5" fill="#0C1114"/><circle cx="70" cy="26" r="6.5" fill="#0C1114"/><circle cx="48" cy="48" r="6.5" fill="#0C1114"/><circle cx="26" cy="70" r="6.5" fill="#0C1114"/><circle cx="70" cy="70" r="6.5" fill="#0C1114"/>
+  </g>
+  <g transform="translate(176 72) rotate(14 40 40)">
+    <rect width="80" height="80" rx="17" fill="#2FA8B0"/>
+    <circle cx="22" cy="22" r="6" fill="#0C1114"/><circle cx="58" cy="22" r="6" fill="#0C1114"/><circle cx="22" cy="58" r="6" fill="#0C1114"/><circle cx="58" cy="58" r="6" fill="#0C1114"/>
+  </g>
+</svg>

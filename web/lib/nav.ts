@@ -10,12 +10,12 @@ import { siteData } from "./site-data";
 import { topSlotEntries, slotArtBySlug } from "./slot-page";
 import { sweepsSorted } from "./sweeps";
 import { inHouseOrder } from "./house-order";
+import { houseThumb } from "./house-thumbs";
 import { raceSlugs } from "./races";
 import { countryPages, casinosForCountry } from "./landing";
 import { TOP_STUDIOS } from "./top-studios";
 import { US_STATES, EUROPE_SHAPES, toneOf } from "./legal";
-import { fiatMarkets, fiatMarketFor, fiatHref, fiatLogo, EUROPE_FIAT } from "./fiat";
-import ukLicences from "@/data/uk-licences.json";
+import { fiatMarkets, fiatMarketFor, fiatHref, EUROPE_FIAT } from "./fiat";
 
 /** The countries the Europe map draws, for the Europe column. */
 const EUROPE_CODES = new Set(EUROPE_SHAPES.map((sh) => sh.code).filter((c): c is string => !!c));
@@ -200,6 +200,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
               links: ["Dice", "Crash", "Plinko", "Mines"].map((name) => ({
                 label: name,
                 href: `/house-games/${slug(name)}`,
+                image: houseThumb(slug(name)),
               })),
             },
             {
@@ -207,6 +208,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
               links: ["Limbo", "Keno", "Hi-Lo", "Wheel"].map((name) => ({
                 label: name,
                 href: `/house-games/${slug(name)}`,
+                image: houseThumb(slug(name)),
               })),
             },
           ],
@@ -601,7 +603,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
             {
               title: "Europe",
               links: [
-                { label: "United Kingdom", href: "/uk-casinos", image: flagSrc("GB") ?? undefined },
+                { label: `United Kingdom · ${fiatMarketFor("GB")?.sites.length ?? 0}`, href: fiatHref("GB"), image: flagSrc("GB") ?? undefined },
                 ...EUROPE_FIAT.map((code) => fiatMarketFor(code))
                   .filter((m): m is NonNullable<typeof m> => !!m)
                   .slice(0, 5)
@@ -696,14 +698,23 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
           icon: flagSrc("GB") ?? undefined,
           label: "United Kingdom",
           tint: "#7BB8E0",
-          href: "/uk-casinos",
+          href: fiatHref("GB"),
           columns: [
             {
-              title: "UK-licensed",
-              links: Object.entries((ukLicences as { brands: Record<string, { name: string; licences: { domains: string[] }[] }> }).brands).map(([slug, b]) => {
-                const d = b.licences.flatMap((l) => l.domains).find((x) => fiatLogo(x.replace(/^www\./, "")));
-                return { label: b.name, href: `/uk-casinos#${slug}`, image: d ? fiatLogo(d.replace(/^www\./, "")) ?? undefined : undefined };
-              }),
+              title: "Gambling Commission register",
+              links: [
+                { label: `All ${fiatMarketFor("GB")?.sites.length ?? 0} UK-licensed sites`, href: fiatHref("GB") },
+                { label: "Casinos only", href: `${fiatHref("GB")}?type=casino` },
+                { label: "Sportsbooks only", href: `${fiatHref("GB")}?type=sports` },
+                { label: "UK gambling law", href: "/legal/gb" },
+              ],
+            },
+            {
+              title: "On the register",
+              links: (fiatMarketFor("GB")?.sites ?? [])
+                .filter((x) => x.logo)
+                .slice(0, 6)
+                .map((x) => ({ label: x.name, href: `${fiatHref("GB")}#${x.domain}`, image: x.logo ?? undefined })),
             },
           ],
         },
