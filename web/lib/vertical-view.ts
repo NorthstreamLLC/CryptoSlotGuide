@@ -292,8 +292,9 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
           m2: yes(s.cashout),
           m3: yes(s.betBuilder),
           stat: maxPayoutShort(o.slug).replace("Not found", "—"),
-          cta: o.affiliate && o.signupUrl ? `Visit ${o.name}` : "Read review",
-          href: `/casinos/${o.slug}`,
+          cta: o.affiliate && o.signupUrl ? `Bet at ${o.name}` : "Sportsbook profile",
+          // The book's sportsbook page, not its casino review.
+          href: `/sportsbooks/${o.slug}`,
           signupUrl: o.affiliate && o.signupUrl ? o.signupUrl : undefined,
         };
       }),

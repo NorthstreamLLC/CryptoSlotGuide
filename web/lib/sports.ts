@@ -133,7 +133,7 @@ export function sportsOffers(): SportsOffer[] {
         return v ? firstClause(String(v)) : null;
       })(),
       sourceUrl: offer.sourceUrl ?? null,
-      href: `/casinos/${slug}`,
+      href: `/sportsbooks/${slug}`,
       signupUrl: o.affiliate && o.signupUrl ? o.signupUrl : undefined,
     };
   }).filter((x): x is SportsOffer => !!x);
@@ -177,3 +177,147 @@ export function sportsPromoLine(slug: string): string | null {
   }
   return parts.length ? parts.slice(0, 3).join(" · ") : null;
 }
+
+/* ------------------------------------------------------------------ */
+/* Sportsbook pages: races, boosts and one book's full sports profile  */
+/* ------------------------------------------------------------------ */
+
+export interface SportsHighlight {
+  slug: string;
+  name: string;
+  mono: string;
+  /** The prize or feature in a few words, e.g. "$10,000 Sports Race". */
+  headline: string;
+  /** What it is, in the operator's terms. */
+  detail: string;
+  /** "Sports bets only" or how sports bets take part. */
+  tag: string;
+  sourceUrl: string | null;
+}
+
+const sentenceWith = (text: string, re: RegExp): string | null => {
+  const parts = text.split(/(?<=[.;])\s+/);
+  return parts.find((p) => re.test(p))?.replace(/[.;]$/, "") ?? null;
+};
+const opBy = (slug: string) => sportsbookOps().find((o) => o.slug === slug);
+const bonusBy = (slug: string, re: RegExp) => getCasinoBonuses(slug).find((b) => re.test(b.title));
+
+/**
+ * The races and raffles sports bets take part in, in the order we put them
+ * forward. Editorial order; every line is read out of the book's own cited
+ * facts or promotion entries, so nothing here is typed by hand.
+ */
+const SPORTS_RACE_READERS: Record<string, () => Omit<SportsHighlight, "slug" | "name" | "mono"> | null> = {
+  razed: () => {
+    const f = getSpecFact("razed", "Sports bonus terms", "Sports race");
+    if (!f?.value) return null;
+    return { headline: f.value.split(":")[0], detail: f.value.split(":").slice(1).join(":").trim(), tag: "Sports bets only", sourceUrl: f.sourceUrl ?? null };
+  },
+  rollbit: () => {
+    const f = getSpecFact("rollbit", "Bonus terms", "Leaderboards");
+    const s = f?.value ? sentenceWith(f.value, /sports betting tournament/i) : null;
+    if (!s) return null;
+    const amount = (s.match(/\$[\d,]+/) ?? [])[0];
+    return {
+      headline: `${amount ?? ""} weekly sports tournament`.trim(),
+      // "A $25,000 weekly sports betting tournament also runs Monday to Sunday…"
+      // reads as a continuation once lifted out of its paragraph.
+      detail: s.replace(/^A\s+/, "").replace(/\s+also runs\b/, " runs"),
+      tag: "Sports bets only",
+      sourceUrl: f?.sourceUrl ?? null,
+    };
+  },
+  degen: () => {
+    const b = bonusBy("degen", /weekly race/i);
+    if (!b || !/sport/i.test(b.subCopy)) return null;
+    return { headline: b.title, detail: b.subCopy, tag: "Sports bets count", sourceUrl: b.sourceUrl };
+  },
+  toshibet: () => {
+    const b = bonusBy("toshibet", /raffle/i);
+    if (!b || !/sport/i.test(b.subCopy)) return null;
+    return { headline: b.title, detail: b.subCopy, tag: "3× tickets on sports", sourceUrl: b.sourceUrl };
+  },
+  flush: () => {
+    const f = getSpecFact("flush", "Sports bonus terms", "Offer");
+    const s = f?.value ? sentenceWith(f.value, /race/i) : null;
+    if (!s) return null;
+    const amount = (s.match(/\$[\d,]+/) ?? [])[0];
+    return { headline: `${amount ?? ""} weekly race`.trim(), detail: s, tag: "Sports bets count", sourceUrl: f?.sourceUrl ?? null };
+  },
+};
+
+export function sportsRaces(): SportsHighlight[] {
+  return Object.entries(SPORTS_RACE_READERS)
+    .map(([slug, read]) => {
+      const o = opBy(slug);
+      const r = read();
+      return o && r ? { slug, name: o.name, mono: o.mono, ...r } : null;
+    })
+    .filter((x): x is SportsHighlight => !!x);
+}
+
+/**
+ * Standing sportsbook features worth choosing a book for: early payout and
+ * multiples boosts. Same rule — read from each book's cited facts.
+ */
+const BOOST_READERS: Record<string, () => Omit<SportsHighlight, "slug" | "name" | "mono"> | null> = {
+  razed: () => {
+    const f = getSpecFact("razed", "Sports bonus terms", "Other sports promotions");
+    if (!f?.value) return null;
+    return { headline: "Early Payout", detail: f.value.replace(/^Early Payout:\s*/i, ""), tag: "Early payout", sourceUrl: f.sourceUrl ?? null };
+  },
+  rollbit: () => {
+    const f = getSpecFact("rollbit", "Sports bonus terms", "Offer");
+    if (!f?.value) return null;
+    return { headline: f.value.split(":")[0], detail: f.value.split(":").slice(1).join(":").trim() || f.value, tag: "Early payout", sourceUrl: f.sourceUrl ?? null };
+  },
+  rainbet: () => {
+    const f = getSpecFact("rainbet", "Sports bonus terms", "Offer");
+    const s = f?.value ? sentenceWith(f.value, /early payout/i) : null;
+    if (!s) return null;
+    return { headline: "Early Payout", detail: s.replace(/^.*?Early Payout\s*/i, "Settles ").replace(/^Settles settles/i, "Settles"), tag: "Early payout", sourceUrl: f?.sourceUrl ?? null };
+  },
+  dustbit: () => {
+    const b = bonusBy("dustbit", /early payout/i);
+    if (!b) return null;
+    return { headline: b.title, detail: b.subCopy, tag: "Early payout", sourceUrl: b.sourceUrl };
+  },
+  "bc-game": () => {
+    const f = getSpecFact("bc-game", "Sports bonus terms", "Offer");
+    const s = f?.value ? sentenceWith(f.value, /comboboost/i) : null;
+    if (!s) return null;
+    return { headline: "Comboboost", detail: s, tag: "Multiples boost", sourceUrl: f?.sourceUrl ?? null };
+  },
+  bluff: () => {
+    const f = getSpecFact("bluff", "Sports bonus terms", "Other sports promotions");
+    if (!f?.value) return null;
+    // The card carries what it is; the 19-step table stays on the book's page.
+    const s = sentenceWith(f.value, /combo boost/i) ?? f.value;
+    return { headline: "Combo Boost", detail: s.split(":")[0], tag: "Multiples boost", sourceUrl: f.sourceUrl ?? null };
+  },
+  coincasino: () => {
+    const f = getSpecFact("coincasino", "Sports bonus terms", "Offer");
+    if (!f?.value) return null;
+    const [head, ...rest] = f.value.split(":");
+    return { headline: head.trim(), detail: rest.join(":").trim() || f.value, tag: "Multiples boost", sourceUrl: f.sourceUrl ?? null };
+  },
+};
+
+export function sportsBoosts(): SportsHighlight[] {
+  return Object.entries(BOOST_READERS)
+    .map(([slug, read]) => {
+      const o = opBy(slug);
+      const r = read();
+      return o && r ? { slug, name: o.name, mono: o.mono, ...r } : null;
+    })
+    .filter((x): x is SportsHighlight => !!x);
+}
+
+/** Where a book's own sportsbook lives — the page its "Sportsbook" fact was read from. */
+export function sportsbookUrl(slug: string): string | null {
+  const u = getSpecFact(slug, "Sportsbook", "Sportsbook")?.sourceUrl ?? null;
+  return u && /^https?:\/\//.test(u) ? u : null;
+}
+
+/** The sportsbook page on this site for a book. */
+export const sportsbookHref = (slug: string) => `/sportsbooks/${slug}`;

@@ -166,7 +166,7 @@ export function VerticalIndexPage({ kind, tabIdx = 0, after }: { kind: VerticalK
                           Read the review
                         </Link>
                       )}
-                      <Link href={`${o.href}#terms`} style={{ fontFamily: MONO, fontSize: 10.5, color: "#8DA0AA" }}>Full terms</Link>
+                      <Link href={`${o.href}#offer`} style={{ fontFamily: MONO, fontSize: 10.5, color: "#8DA0AA" }}>Full terms</Link>
                       {o.sourceUrl && (
                         <a href={o.sourceUrl} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: MONO, fontSize: 10.5, color: "#5FE3E8", marginLeft: "auto" }}>
                           source ↗

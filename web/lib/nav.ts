@@ -19,6 +19,7 @@ import { marketsWithLists } from "./world-market";
 /** The countries the Europe map draws, for the Europe column. */
 const EUROPE_CODES = new Set(EUROPE_SHAPES.map((sh) => sh.code).filter((c): c is string => !!c));
 import { flagSrc } from "./flags";
+import { sportsOffers, sportsRaces, sportsBoosts, sportsbookHref } from "./sports";
 import { rankedBrands } from "./us-brands";
 
 const slotCatLabels = siteData.slotCatDefs.map((d) => ({ tag: d.tag, label: d.label }));
@@ -425,13 +426,30 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
                 { label: "Sportsbook margin, explained", href: "/guides/sportsbook-margin-explained" },
               ],
             },
+            // Ranked, and each link goes to the book's sportsbook page rather
+            // than its casino review (lib/sports.ts).
             {
-              title: "Book profiles",
-              links: ["BC.Game", "Cloudbet", "Roobet", "Stake"].map((name) => ({
-                label: name,
-                href: `/casinos/${slug(name)}`,
-                brand: slug(name),
-              })),
+              title: "Top welcome bonus",
+              links: sportsOffers()
+                .slice(0, 4)
+                .map((o) => ({ label: o.name, href: sportsbookHref(o.slug), brand: o.slug })),
+            },
+            {
+              title: "Top races",
+              links: sportsRaces()
+                .slice(0, 4)
+                .map((r) => {
+                  // "$10,000 race", "$25,000 raffle": the prize and what kind it is.
+                  const amount = (r.headline.match(/\$[\d,]+/) ?? [""])[0];
+                  const kind = /raffle/i.test(r.headline) ? "raffle" : /tournament/i.test(r.headline) ? "tournament" : "race";
+                  return { label: `${r.name} · ${amount} ${kind}`.trim(), href: sportsbookHref(r.slug), brand: r.slug };
+                }),
+            },
+            {
+              title: "Boosts & early payout",
+              links: sportsBoosts()
+                .slice(0, 4)
+                .map((b) => ({ label: `${b.name} · ${b.headline}`, href: sportsbookHref(b.slug), brand: b.slug })),
             },
           ],
         },
