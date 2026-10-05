@@ -10019,160 +10019,1763 @@
       "width": 60,
       "via": "winz.nl",
       "fetched": "2026-10-05"
+    },
+    "888poker.de": {
+      "file": "888poker.de.webp",
+      "sourceUrl": "https://apps.apple.com/de/app/888-poker-texas-holdem-online/id534130702",
+      "via": "App Store icon (developer website 888poker.com)",
+      "width": 512
+    },
+    "888slots.de": {
+      "file": "888slots.de.webp",
+      "sourceUrl": "https://apps.apple.com/de/app/888-slots-echtgeld-spiele/id1531598440",
+      "via": "App Store icon (developer website 888slots.de)",
+      "width": 512
+    },
+    "betano.de": {
+      "file": "betano.de.webp",
+      "sourceUrl": "https://apps.apple.com/de/app/betano-sportwetten-und-slots/id1105421899",
+      "via": "App Store icon (developer website betano.com)",
+      "width": 512
+    },
+    "casino.tipico.de": {
+      "file": "casino.tipico.de.webp",
+      "sourceUrl": "https://apps.apple.com/de/app/tipico-sportwetten-app/id1051329602",
+      "via": "App Store icon (developer website tipico.de)",
+      "width": 512
+    },
+    "lapalingo.de": {
+      "file": "lapalingo.de.webp",
+      "sourceUrl": "https://apps.apple.com/de/app/lapalingo-echtgeld-slots/id6451312135",
+      "via": "App Store icon (developer website lapalingo.de)",
+      "width": 512
+    },
+    "letsbet.de": {
+      "file": "letsbet.de.webp",
+      "sourceUrl": "https://apps.apple.com/de/app/letsbet-sportwetten-slots/id6755378120",
+      "via": "App Store icon (developer website letsbet.de)",
+      "width": 512
+    },
+    "lordlucky.de": {
+      "file": "lordlucky.de.webp",
+      "sourceUrl": "https://apps.apple.com/de/app/lord-lucky-online-spielothek/id6451444992",
+      "via": "App Store icon (developer website lordlucky.de)",
+      "width": 512
+    },
+    "lotto24.de": {
+      "file": "lotto24.de.webp",
+      "sourceUrl": "https://apps.apple.com/de/app/lotto24-lotto-eurojackpot/id784389203",
+      "via": "App Store icon (developer website lotto24.de)",
+      "width": 512
+    },
+    "merkurbets.de": {
+      "file": "merkurbets.de.webp",
+      "sourceUrl": "https://apps.apple.com/de/app/merkur-bets-sportwetten-slots/id1313169236",
+      "via": "App Store icon (developer website merkurbets.de)",
+      "width": 512
+    },
+    "mrgreen.de": {
+      "file": "mrgreen.de.webp",
+      "sourceUrl": "https://apps.apple.com/de/app/mr-green-slots-games-spielen/id1664478946",
+      "via": "App Store icon (developer website mrgreen.de)",
+      "width": 512
+    },
+    "royalbet.de": {
+      "file": "royalbet.de.webp",
+      "sourceUrl": "https://apps.apple.com/de/app/royalbet/id1559502078",
+      "via": "App Store icon (developer website royalbet.com)",
+      "width": 512
+    },
+    "tipp24.de": {
+      "file": "tipp24.de.webp",
+      "sourceUrl": "https://apps.apple.com/de/app/lotto-und-eurojackpot-tipp24/id431239396",
+      "via": "App Store icon (developer website tipp24.de)",
+      "width": 512
+    },
+    "neobet.de": {
+      "file": "neobet.de.webp",
+      "sourceUrl": "https://apps.apple.com/de/app/neo-bet-sportwetten/id1340747937",
+      "via": "App Store icon (publisher Greenvest Betting Limited)",
+      "width": 512
+    },
+    "oddset.de": {
+      "file": "oddset.de.webp",
+      "sourceUrl": "https://apps.apple.com/de/app/oddset-sportwetten/id1659017585",
+      "via": "App Store icon (developer website oddset.de)",
+      "width": 512
+    },
+    "tiptorro.de": {
+      "file": "tiptorro.de.webp",
+      "sourceUrl": "https://apps.apple.com/de/app/tiptorro/id1458130795",
+      "via": "App Store icon (publisher Torro Tec Limited)",
+      "width": 512
+    },
+    "wettarena.de": {
+      "file": "wettarena.de.webp",
+      "sourceUrl": "https://apps.apple.com/de/app/wettarena-sportwetten/id1639867897",
+      "via": "App Store icon (publisher I. B. C. SPORTSBETTING LIMITED)",
+      "width": 512
+    },
+    "1xbet.es": {
+      "file": "1xbet.es.webp",
+      "sourceUrl": "https://apps.apple.com/es/app/1xbet-apuestas-deportivas-es/id6499217811",
+      "via": "App Store icon (developer website 1xbet.es)",
+      "width": 512
+    },
+    "888casino.es": {
+      "file": "888casino.es.webp",
+      "sourceUrl": "https://apps.apple.com/es/app/888-casino-ruleta-y-slots/id932802053",
+      "via": "App Store icon (developer website 888casino.es)",
+      "width": 512
+    },
+    "888poker.es": {
+      "file": "888poker.es.webp",
+      "sourceUrl": "https://apps.apple.com/es/app/888-poker-online/id932749849",
+      "via": "App Store icon (developer website 888poker.es)",
+      "width": 512
+    },
+    "apuestas.kirolbet.es": {
+      "file": "apuestas.kirolbet.es.webp",
+      "sourceUrl": "https://apps.apple.com/es/app/kirolbet-apuestas-deportivas/id961644971",
+      "via": "App Store icon (publisher ARTXIBET 2022, S.A.)",
+      "width": 512
+    },
+    "apuestas.olybet.es": {
+      "file": "apuestas.olybet.es.webp",
+      "sourceUrl": "https://apps.apple.com/es/app/olybet-apuestas-deportivas/id6467187483",
+      "via": "App Store icon (developer website olybet.es)",
+      "width": 512
+    },
+    "aupabet.es": {
+      "file": "aupabet.es.webp",
+      "sourceUrl": "https://apps.apple.com/es/app/aupabet-apuestas-deportivas/id6751581229",
+      "via": "App Store icon (developer website promociones.aupabet.es)",
+      "width": 512
+    },
+    "betinia.es": {
+      "file": "betinia.es.webp",
+      "sourceUrl": "https://apps.apple.com/us/app/betinia-nj-casino-betting/id6755875947",
+      "via": "App Store icon (developer website nj.betinia.com)",
+      "width": 512
+    },
+    "betsson.es": {
+      "file": "betsson.es.webp",
+      "sourceUrl": "https://apps.apple.com/es/app/betsson-casino-y-apuestas/id6755822634",
+      "via": "App Store icon (publisher Premiere Megaplex PLC)",
+      "width": 512
+    },
+    "casinobarcelona.es": {
+      "file": "casinobarcelona.es.webp",
+      "sourceUrl": "https://apps.apple.com/es/app/apuestas-en-casinobarcelona-es/id1439798006",
+      "via": "App Store icon (developer website casinobarcelona.es)",
+      "width": 512
+    },
+    "casinomarbella.es": {
+      "file": "casinomarbella.es.webp",
+      "sourceUrl": "https://apps.apple.com/es/app/casinomarbella-es-app-casino/id6755812192",
+      "via": "App Store icon (developer website casinomarbella.es)",
+      "width": 512
+    },
+    "casinopauseandplay.es": {
+      "file": "casinopauseandplay.es.webp",
+      "sourceUrl": "https://apps.apple.com/es/app/casino-pause-and-play/id6499124867",
+      "via": "App Store icon (developer website casinopauseandplay.es)",
+      "width": 512
+    },
+    "luckia.es": {
+      "file": "luckia.es.webp",
+      "sourceUrl": "https://apps.apple.com/es/app/luckia-apuestas-y-casino/id903811043",
+      "via": "App Store icon (developer website luckia.es)",
+      "width": 512
+    },
+    "olybet.es": {
+      "file": "olybet.es.webp",
+      "sourceUrl": "https://apps.apple.com/es/app/olybet-apuestas-deportivas/id6467187483",
+      "via": "App Store icon (developer website olybet.es)",
+      "width": 512
+    },
+    "solcasino.es": {
+      "file": "solcasino.es.webp",
+      "sourceUrl": "https://apps.apple.com/es/app/solcasino-casino-online/id6753804635",
+      "via": "App Store icon (publisher ESTRELLA SOL INTERACTIVE S.A.)",
+      "width": 512
+    },
+    "sportium.es": {
+      "file": "sportium.es.webp",
+      "sourceUrl": "https://apps.apple.com/es/app/sportium-apuestas-deportivas/id871140981",
+      "via": "App Store icon (developer website sportium.es)",
+      "width": 512
+    },
+    "tombola.es": {
+      "file": "tombola.es.webp",
+      "sourceUrl": "https://apps.apple.com/es/app/tombola-bingo-slots-y-mas/id1149338714",
+      "via": "App Store icon (publisher tombola ltd)",
+      "width": 512
+    },
+    "versus.es": {
+      "file": "versus.es.webp",
+      "sourceUrl": "https://apps.apple.com/es/app/versus-apuestas/id1559532163",
+      "via": "App Store icon (publisher VERSUS ONLINE, S.A.)",
+      "width": 512
+    },
+    "yaasscasino.es": {
+      "file": "yaasscasino.es.webp",
+      "sourceUrl": "https://apps.apple.com/es/app/yaass-casino/id6479704345",
+      "via": "App Store icon (developer website yaasscasino.es)",
+      "width": 512
+    },
+    "betclic.fr": {
+      "file": "betclic.fr.webp",
+      "sourceUrl": "https://apps.apple.com/fr/app/betclic-paris-sportifs-poker/id441081528",
+      "via": "App Store icon (developer website betclic.fr)",
+      "width": 512
+    },
+    "pmu.fr": {
+      "file": "pmu.fr.webp",
+      "sourceUrl": "https://apps.apple.com/fr/app/pmu-play-turf-sport-poker/id369344998",
+      "via": "App Store icon (developer website pmu.fr)",
+      "width": 512
+    },
+    "betsson.fr": {
+      "file": "betsson.fr.webp",
+      "sourceUrl": "https://apps.apple.com/fr/app/betsson/id6463237718",
+      "via": "App Store icon (developer website betsson.fr)",
+      "width": 512
+    },
+    "circusbet.fr": {
+      "file": "circusbet.fr.webp",
+      "sourceUrl": "https://apps.apple.com/fr/app/circusbet-paris-sportifs/id6636485429",
+      "via": "App Store icon (developer website circusbet.fr)",
+      "width": 512
+    },
+    "feelingbet.fr": {
+      "file": "feelingbet.fr.webp",
+      "sourceUrl": "https://apps.apple.com/fr/app/feelingbet/id1101079001",
+      "via": "App Store icon (developer website feelingbet.fr)",
+      "width": 512
+    },
+    "netbet.fr": {
+      "file": "netbet.fr.webp",
+      "sourceUrl": "https://apps.apple.com/fr/app/netbet-paris-sportifs-en-ligne/id819416901",
+      "via": "App Store icon (developer website netbet.fr)",
+      "width": 512
+    },
+    "olybet.fr": {
+      "file": "olybet.fr.webp",
+      "sourceUrl": "https://apps.apple.com/fr/app/olybet-paris-sportifs/id6477542737",
+      "via": "App Store icon (developer website olybet.fr)",
+      "width": 512
+    },
+    "betclic.pt": {
+      "file": "betclic.pt.webp",
+      "sourceUrl": "https://apps.apple.com/pt/app/betclic-apostas-e-casino/id1117298532",
+      "via": "App Store icon (developer website m.betclic.pt)",
+      "width": 512
+    },
+    "estorilsolcasinos.pt": {
+      "file": "estorilsolcasinos.pt.webp",
+      "sourceUrl": "https://apps.apple.com/pt/app/esc-online-casino-e-apostas/id6467654923",
+      "via": "App Store icon (developer website estorilsolcasinos.pt)",
+      "width": 512
+    },
+    "888casino.it": {
+      "file": "888casino.it.webp",
+      "sourceUrl": "https://apps.apple.com/it/app/888-casino-slot-e-blackjack/id846549672",
+      "via": "App Store icon (developer website 888casino.it)",
+      "width": 512
+    },
+    "betflag.it": {
+      "file": "betflag.it.webp",
+      "sourceUrl": "https://apps.apple.com/it/app/betflag-casin%C3%B2-e-slot-machine/id1580384386",
+      "via": "App Store icon (developer website betflag.it)",
+      "width": 512
+    },
+    "betitaly.it": {
+      "file": "betitaly.it.webp",
+      "sourceUrl": "https://apps.apple.com/it/app/betitaly-scommesse/id1032750577",
+      "via": "App Store icon (developer website betitaly.it)",
+      "width": 512
+    },
+    "betpoint.it": {
+      "file": "betpoint.it.webp",
+      "sourceUrl": "https://apps.apple.com/it/app/betpoint-scommesse/id1555516619",
+      "via": "App Store icon (developer website betpoint.it)",
+      "width": 512
+    },
+    "betsson.it": {
+      "file": "betsson.it.webp",
+      "sourceUrl": "https://apps.apple.com/it/app/betsson-sportsbook-casin%C3%B2/id6478149161",
+      "via": "App Store icon (developer website betsson.it)",
+      "width": 512
+    },
+    "betwin360.it": {
+      "file": "betwin360.it.webp",
+      "sourceUrl": "https://apps.apple.com/it/app/betwin360/id6444791840",
+      "via": "App Store icon (developer website betwin360.it)",
+      "width": 512
+    },
+    "bgame.it": {
+      "file": "bgame.it.webp",
+      "sourceUrl": "https://apps.apple.com/it/app/bgame/id1566553591",
+      "via": "App Store icon (publisher Bgame srl)",
+      "width": 512
+    },
+    "domusbet.it": {
+      "file": "domusbet.it.webp",
+      "sourceUrl": "https://apps.apple.com/it/app/domusbet-sport-e-casin%C3%B2/id6464075907",
+      "via": "App Store icon (developer website domusbet.it)",
+      "width": 512
+    },
+    "eplay24.it": {
+      "file": "eplay24.it.webp",
+      "sourceUrl": "https://apps.apple.com/it/app/eplay24/id6444334026",
+      "via": "App Store icon (developer website eplay24.it)",
+      "width": 512
+    },
+    "eurobet.it": {
+      "file": "eurobet.it.webp",
+      "sourceUrl": "https://apps.apple.com/it/app/eurobet-scommesse-sportive/id500139665",
+      "via": "App Store icon (developer website eurobet.it)",
+      "width": 512
+    },
+    "gioca7.it": {
+      "file": "gioca7.it.webp",
+      "sourceUrl": "https://apps.apple.com/it/app/gioca7/id586549903",
+      "via": "App Store icon (developer website gioca7.it)",
+      "width": 512
+    },
+    "giochi24.it": {
+      "file": "giochi24.it.webp",
+      "sourceUrl": "https://apps.apple.com/it/app/giochi24casino-gratis/id6733242375",
+      "via": "App Store icon (publisher Giochi24 SRL)",
+      "width": 512
+    },
+    "goldbet.it": {
+      "file": "goldbet.it.webp",
+      "sourceUrl": "https://apps.apple.com/it/app/goldbet-poker/id1601412018",
+      "via": "App Store icon (developer website promo.goldbet.it)",
+      "width": 512
+    },
+    "mylotteriesplay.it": {
+      "file": "mylotteriesplay.it.webp",
+      "sourceUrl": "https://apps.apple.com/it/app/my-lotteries-play/id6759918101",
+      "via": "App Store icon (developer website mylotteriesplay.it)",
+      "width": 512
+    },
+    "netbet.it": {
+      "file": "netbet.it.webp",
+      "sourceUrl": "https://apps.apple.com/it/app/netbet/id6443489319",
+      "via": "App Store icon (developer website netbet.it)",
+      "width": 512
+    },
+    "perlaplay.it": {
+      "file": "perlaplay.it.webp",
+      "sourceUrl": "https://apps.apple.com/it/app/perlaplay/id6752602344",
+      "via": "App Store icon (publisher Hit d.d., Nova Gorica)",
+      "width": 512
+    },
+    "planetwin365.it": {
+      "file": "planetwin365.it.webp",
+      "sourceUrl": "https://apps.apple.com/it/app/planetwin365-scommesse-sport/id6742659283",
+      "via": "App Store icon (developer website m.planetwin365.it)",
+      "width": 512
+    },
+    "quigioco.it": {
+      "file": "quigioco.it.webp",
+      "sourceUrl": "https://apps.apple.com/it/app/quigioco/id1609088070",
+      "via": "App Store icon (publisher HBG ON LINE GAMING S.R.L)",
+      "width": 512
+    },
+    "sisal.it": {
+      "file": "sisal.it.webp",
+      "sourceUrl": "https://apps.apple.com/it/app/sisal-scommesse-sportive/id525415975",
+      "via": "App Store icon (developer website sisal.it)",
+      "width": 512
+    },
+    "snai.it": {
+      "file": "snai.it.webp",
+      "sourceUrl": "https://apps.apple.com/it/app/snai-sport-scommesse-sportive/id518361690",
+      "via": "App Store icon (developer website snai.it)",
+      "width": 512
+    },
+    "sportbet.it": {
+      "file": "sportbet.it.webp",
+      "sourceUrl": "https://apps.apple.com/it/app/sportbet-scommesse-e-casino/id1548318549",
+      "via": "App Store icon (developer website sportbet.it)",
+      "width": 512
+    },
+    "sportium.it": {
+      "file": "sportium.it.webp",
+      "sourceUrl": "https://apps.apple.com/it/app/sportium/id6450983132",
+      "via": "App Store icon (developer website sportium.it)",
+      "width": 512
+    },
+    "sunbet.it": {
+      "file": "sunbet.it.webp",
+      "sourceUrl": "https://apps.apple.com/it/app/sunbet-scommesse-casin%C3%B2/id719444298",
+      "via": "App Store icon (developer website sunbet.it)",
+      "width": 512
+    },
+    "tombola.it": {
+      "file": "tombola.it.webp",
+      "sourceUrl": "https://apps.apple.com/it/app/tombola-casin%C3%B2-con-soldi-veri/id765651921",
+      "via": "App Store icon (publisher tombola ltd)",
+      "width": 512
+    },
+    "vincitu.it": {
+      "file": "vincitu.it.webp",
+      "sourceUrl": "https://apps.apple.com/it/app/vincitu-scommesse-e-casin%C3%B2/id6753353812",
+      "via": "App Store icon (publisher VINCITU' S.R.L.)",
+      "width": 512
+    },
+    "winbet.it": {
+      "file": "winbet.it.webp",
+      "sourceUrl": "https://apps.apple.com/it/app/winbet/id6480588628",
+      "via": "App Store icon (developer website winbet.it)",
+      "width": 512
+    },
+    "888casino.ca": {
+      "file": "888casino.ca.webp",
+      "sourceUrl": "https://apps.apple.com/ca/app/888-casino-real-money-games/id586196841",
+      "via": "App Store icon (developer website 888casino.com)",
+      "width": 512
+    },
+    "888poker.ca": {
+      "file": "888poker.ca.webp",
+      "sourceUrl": "https://apps.apple.com/ca/app/888-poker-texas-holdem-online/id534130702",
+      "via": "App Store icon (developer website 888poker.com)",
+      "width": 512
+    },
+    "on.bet99.ca": {
+      "file": "on.bet99.ca.webp",
+      "sourceUrl": "https://apps.apple.com/ca/app/bet99-sportsbook-casino/id6447921766",
+      "via": "App Store icon (publisher 1000007698 Ontario Ltd)",
+      "width": 512
+    },
+    "betano.ca": {
+      "file": "betano.ca.webp",
+      "sourceUrl": "https://apps.apple.com/ca/app/betano-online-betting/id1105421899",
+      "via": "App Store icon (developer website betano.com)",
+      "width": 512
+    },
+    "on.betinia.com": {
+      "file": "on.betinia.com.webp",
+      "sourceUrl": "https://apps.apple.com/ca/app/betinia-casino-betting/id6760007897",
+      "via": "App Store icon (developer website on.betinia.com)",
+      "width": 512
+    },
+    "betvictor.com": {
+      "file": "betvictor.com.webp",
+      "sourceUrl": "https://apps.apple.com/ca/app/betvictor-sports-bet-casino/id1615593807",
+      "via": "App Store icon (developer website betvictor.com)",
+      "width": 512
+    },
+    "ontario.captaincooks.casino": {
+      "file": "ontario.captaincooks.casino.webp",
+      "sourceUrl": "https://apps.apple.com/ca/app/captain-cooks-casino-ontario/id6748097371",
+      "via": "App Store icon (publisher Apollo Entertainment Ltd)",
+      "width": 512
+    },
+    "deltacasino.com": {
+      "file": "deltacasino.com.webp",
+      "sourceUrl": "https://apps.apple.com/ca/app/delta-casino/id6758727855",
+      "via": "App Store icon (developer website deltacasino.com)",
+      "width": 512
+    },
+    "goldennuggetcasino.com": {
+      "file": "goldennuggetcasino.com.webp",
+      "sourceUrl": "https://apps.apple.com/ca/app/golden-nugget-online-casino/id1632626653",
+      "via": "App Store icon (developer website goldennuggetcasino.com)",
+      "width": 512
+    },
+    "jackpotcity.ca": {
+      "file": "jackpotcity.ca.webp",
+      "sourceUrl": "https://apps.apple.com/ca/app/jackpot-city-real-money-casino/id1620306376",
+      "via": "App Store icon (developer website jackpotcity.ca)",
+      "width": 512
+    },
+    "luckydays.ca": {
+      "file": "luckydays.ca.webp",
+      "sourceUrl": "https://apps.apple.com/ca/app/lucky-days-casino-canada/id6746437949",
+      "via": "App Store icon (developer website luckydays.com)",
+      "width": 512
+    },
+    "royalvegas.ca": {
+      "file": "royalvegas.ca.webp",
+      "sourceUrl": "https://apps.apple.com/ca/app/royal-vegas-casino-real-money/id1620311343",
+      "via": "App Store icon (developer website royalvegas.ca)",
+      "width": 512
+    },
+    "rubyfortune.ca": {
+      "file": "rubyfortune.ca.webp",
+      "sourceUrl": "https://apps.apple.com/ca/app/ruby-fortune-casino-real-money/id1620311411",
+      "via": "App Store icon (developer website rubyfortune.ca)",
+      "width": 512
+    },
+    "spincasino.ca": {
+      "file": "spincasino.ca.webp",
+      "sourceUrl": "https://apps.apple.com/ca/app/spin-casino-real-money-slots/id1620306560",
+      "via": "App Store icon (developer website spincasino.ca)",
+      "width": 512
+    },
+    "on.stardustcasino.com": {
+      "file": "on.stardustcasino.com.webp",
+      "sourceUrl": "https://apps.apple.com/ca/app/stardust-ontario-casino-games/id1606024952",
+      "via": "App Store icon (developer website on.stardustcasino.com)",
+      "width": 512
+    },
+    "on.swiper.com": {
+      "file": "on.swiper.com.webp",
+      "sourceUrl": "https://apps.apple.com/ca/app/swiper-ontario-live-casino/id6749288908",
+      "via": "App Store icon (publisher CANADIX LIMITED)",
+      "width": 512
+    },
+    "tooniebet.ca": {
+      "file": "tooniebet.ca.webp",
+      "sourceUrl": "https://apps.apple.com/ca/app/tooniebet-casino-betting/id6746644042",
+      "via": "App Store icon (developer website tooniebet.com)",
+      "width": 512
+    },
+    "casino.on.wheeloffortunecasino.com": {
+      "file": "casino.on.wheeloffortunecasino.com.webp",
+      "sourceUrl": "https://apps.apple.com/ca/app/wheel-of-fortune-casino-on/id6474994671",
+      "via": "App Store icon (developer website casino.on.wheeloffortunecasino.com)",
+      "width": 512
+    },
+    "napoleoncasino.be": {
+      "file": "napoleoncasino.be.webp",
+      "sourceUrl": "https://apps.apple.com/be/app/napoleon-games-casino-online/id1632869192",
+      "via": "App Store icon (developer website apps.napoleoncasino.be)",
+      "width": 512
+    },
+    "betcenter.be": {
+      "file": "betcenter.be.webp",
+      "sourceUrl": "https://apps.apple.com/be/app/betcenter/id1167984518",
+      "via": "App Store icon (developer website betcenter.be)",
+      "width": 512
+    },
+    "circus-sport.be": {
+      "file": "circus-sport.be.webp",
+      "sourceUrl": "https://apps.apple.com/be/app/circus-sport-sports-betting/id6444860869",
+      "via": "App Store icon (developer website circus-sport.be)",
+      "width": 512
+    },
+    "napoleonsports.be": {
+      "file": "napoleonsports.be.webp",
+      "sourceUrl": "https://apps.apple.com/be/app/napoleon-sport-live-betting/id1046810152",
+      "via": "App Store icon (developer website apps.napoleonsports.be)",
+      "width": 512
+    },
+    "vivatbet.be": {
+      "file": "vivatbet.be.webp",
+      "sourceUrl": "https://apps.apple.com/be/app/vivatbet-sports-betting/id6450733082",
+      "via": "App Store icon (publisher L.B.C.)",
+      "width": 512
+    },
+    "optibet.lv": {
+      "file": "optibet.lv.webp",
+      "sourceUrl": "https://apps.apple.com/lv/app/optibet-totalizators-kazino/id6502403932",
+      "via": "App Store icon (developer website optibet.lv)",
+      "width": 512
+    },
+    "888casino.se": {
+      "file": "888casino.se.webp",
+      "sourceUrl": "https://apps.apple.com/se/app/888casino-svenska-casino-spel/id1436816261",
+      "via": "App Store icon (developer website 888casino.se)",
+      "width": 512
+    },
+    "888poker.se": {
+      "file": "888poker.se.webp",
+      "sourceUrl": "https://apps.apple.com/se/app/888poker-svenska-poker-spel/id1435166885",
+      "via": "App Store icon (developer website 888poker.se)",
+      "width": 512
+    },
+    "swiper.se": {
+      "file": "swiper.se.webp",
+      "sourceUrl": "https://apps.apple.com/se/app/swiper-sport-och-casino/id6748669687",
+      "via": "App Store icon (developer website swiper.se)",
+      "width": 512
+    },
+    "10bet.se": {
+      "file": "10bet.se.webp",
+      "sourceUrl": "https://apps.apple.com/se/app/10bet/id1473593092",
+      "via": "App Store icon (developer website 10bet.se)",
+      "width": 512
+    },
+    "yoyocasino.se": {
+      "file": "yoyocasino.se.webp",
+      "sourceUrl": "https://apps.apple.com/se/app/yoyocasino-casino-slots-online/id1542373261",
+      "via": "App Store icon (developer website yoyocasino.se)",
+      "width": 512
+    },
+    "mrgreen.se": {
+      "file": "mrgreen.se.webp",
+      "sourceUrl": "https://apps.apple.com/se/app/mr-green-casino-blackjack/id1664477817",
+      "via": "App Store icon (developer website mrgreen.se)",
+      "width": 512
+    },
+    "coolbet.com": {
+      "file": "coolbet.com.webp",
+      "sourceUrl": "https://apps.apple.com/se/app/coolbet-poker-sverige/id1515453486",
+      "via": "App Store icon (developer website coolbet.com)",
+      "width": 512
+    },
+    "campobet.se": {
+      "file": "campobet.se.webp",
+      "sourceUrl": "https://apps.apple.com/se/app/campobet-casino-slots-spel/id1610739194",
+      "via": "App Store icon (developer website campobet.se)",
+      "width": 512
+    },
+    "betinia.se": {
+      "file": "betinia.se.webp",
+      "sourceUrl": "https://apps.apple.com/se/app/betinia-casino-svenska-slots/id6754159202",
+      "via": "App Store icon (publisher Scandix Limited)",
+      "width": 512
+    },
+    "tombola.se": {
+      "file": "tombola.se.webp",
+      "sourceUrl": "https://apps.apple.com/se/app/tombola-se-bingo-slots/id1451476920",
+      "via": "App Store icon (publisher tombola ltd)",
+      "width": 512
+    },
+    "betcity.nl": {
+      "file": "betcity.nl.webp",
+      "sourceUrl": "https://apps.apple.com/nl/app/betcity/id6447310552",
+      "via": "App Store icon (developer website betcity.nl)",
+      "width": 512
+    },
+    "hollandcasino.nl": {
+      "file": "hollandcasino.nl.webp",
+      "sourceUrl": "https://apps.apple.com/nl/app/holland-casino-online/id6557061753",
+      "via": "App Store icon (developer website hollandcasino.nl)",
+      "width": 512
+    },
+    "betano.cz": {
+      "file": "betano.cz.webp",
+      "sourceUrl": "https://apps.apple.com/cz/app/betano-online-betting/id1105421899",
+      "via": "App Store icon (developer website betano.com)",
+      "width": 512
+    },
+    "chance.cz": {
+      "file": "chance.cz.webp",
+      "sourceUrl": "https://apps.apple.com/cz/app/chance-cz/id992106641",
+      "via": "App Store icon (publisher CHANCE a.s.)",
+      "width": 512
+    },
+    "grandwin.cz": {
+      "file": "grandwin.cz.webp",
+      "sourceUrl": "https://apps.apple.com/cz/app/grandwin-casino/id6449930714",
+      "via": "App Store icon (publisher GPC WIN a.s.)",
+      "width": 512
+    },
+    "ifortuna.cz": {
+      "file": "ifortuna.cz.webp",
+      "sourceUrl": "https://apps.apple.com/cz/app/fortuna-sport/id806260257",
+      "via": "App Store icon (developer website ifortuna.cz)",
+      "width": 512
+    },
+    "kingsbet.cz": {
+      "file": "kingsbet.cz.webp",
+      "sourceUrl": "https://apps.apple.com/cz/app/kingsbet-online-s%C3%A1zen%C3%AD/id6587567158",
+      "via": "App Store icon (publisher Greentube CZ a.s.)",
+      "width": 512
+    },
+    "maxa.cz": {
+      "file": "maxa.cz.webp",
+      "sourceUrl": "https://apps.apple.com/cz/app/loterie-maxa/id1539408687",
+      "via": "App Store icon (developer website maxa.cz)",
+      "width": 512
+    },
+    "star-casino.cz": {
+      "file": "star-casino.cz.webp",
+      "sourceUrl": "https://apps.apple.com/cz/app/star-casino-cz-automaty/id6757848905",
+      "via": "App Store icon (developer website star-casino.cz)",
+      "width": 512
+    },
+    "tipsport.cz": {
+      "file": "tipsport.cz.webp",
+      "sourceUrl": "https://apps.apple.com/cz/app/tipsport-cz/id545573417",
+      "via": "App Store icon (publisher Tipsport.net a.s.)",
+      "width": 512
+    },
+    "888casino.dk": {
+      "file": "888casino.dk.webp",
+      "sourceUrl": "https://apps.apple.com/dk/app/888-casino/id998457567",
+      "via": "App Store icon (developer website 888casino.dk)",
+      "width": 512
+    },
+    "888poker.dk": {
+      "file": "888poker.dk.webp",
+      "sourceUrl": "https://apps.apple.com/dk/app/888-poker-spil-online-poker/id990232507",
+      "via": "App Store icon (developer website 888poker.dk)",
+      "width": 512
+    },
+    "betinia.dk": {
+      "file": "betinia.dk.webp",
+      "sourceUrl": "https://apps.apple.com/dk/app/betinia-casino-sport-bets/id1623843519",
+      "via": "App Store icon (developer website betinia.com)",
+      "width": 512
+    },
+    "betoro.dk": {
+      "file": "betoro.dk.webp",
+      "sourceUrl": "https://apps.apple.com/dk/app/betoro-casino-sport-betting/id6758759727",
+      "via": "App Store icon (developer website betoro.dk)",
+      "width": 512
+    },
+    "quickcasino.dk": {
+      "file": "quickcasino.dk.webp",
+      "sourceUrl": "https://apps.apple.com/dk/app/quickcasino-sport-casino/id6758666597",
+      "via": "App Store icon (developer website quickcasino.dk)",
+      "width": 512
+    },
+    "merkurbets.dk": {
+      "file": "merkurbets.dk.webp",
+      "sourceUrl": "https://apps.apple.com/dk/app/cashpoint-sportsbetting/id1620181908",
+      "via": "App Store icon (developer website merkurbets.dk)",
+      "width": 512
+    },
+    "spildansknu.dk": {
+      "file": "spildansknu.dk.webp",
+      "sourceUrl": "https://apps.apple.com/dk/app/spildansknu-dk-online-casino/id6742437418",
+      "via": "App Store icon (developer website spildansknu.dk)",
+      "width": 512
+    },
+    "666casino.com": {
+      "file": "666casino.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/real-money-slots-666-casino/id6473719791",
+      "via": "App Store icon (developer website 666casino.com)",
+      "width": 512
+    },
+    "777.com": {
+      "file": "777.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/777-casino-real-money-games/id1008635411",
+      "via": "App Store icon (developer website 777.com)",
+      "width": 512
+    },
+    "888casino.com": {
+      "file": "888casino.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/888-casino-real-money-games/id586196841",
+      "via": "App Store icon (developer website 888casino.com)",
+      "width": 512
+    },
+    "888poker.com": {
+      "file": "888poker.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/888-poker-texas-holdem-online/id534130702",
+      "via": "App Store icon (developer website 888poker.com)",
+      "width": 512
+    },
+    "888poker.net": {
+      "file": "888poker.net.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/888-poker-texas-holdem-online/id534130702",
+      "via": "App Store icon (developer website 888poker.com)",
+      "width": 512
+    },
+    "baroneracing.com": {
+      "file": "baroneracing.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/bar-1-betting-casino/id6748904266",
+      "via": "App Store icon (developer website baroneracing.com)",
+      "width": 512
+    },
+    "betdaq.com": {
+      "file": "betdaq.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/betdaq-exchange-betting/id532543478",
+      "via": "App Store icon (developer website betdaq.com)",
+      "width": 512
+    },
+    "betfred.com": {
+      "file": "betfred.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/betfred-sports-casino-games/id632113432",
+      "via": "App Store icon (developer website betfred.com)",
+      "width": 512
+    },
+    "betfred.mobi": {
+      "file": "betfred.mobi.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/betfred-sports-casino-games/id632113432",
+      "via": "App Store icon (developer website betfred.com)",
+      "width": 512
+    },
+    "betvictor.mobi": {
+      "file": "betvictor.mobi.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/betvictor-sports-bets-casino/id564194423",
+      "via": "App Store icon (developer website betvictor.com)",
+      "width": 512
+    },
+    "bingo.boylesports.com": {
+      "file": "bingo.boylesports.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/boylesports-sports-betting-app/id505521160",
+      "via": "App Store icon (developer website boylesports.com)",
+      "width": 512
+    },
+    "bingobritain.com": {
+      "file": "bingobritain.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/bingobritain/id6755452890",
+      "via": "App Store icon (developer website bingobritain.com)",
+      "width": 512
+    },
+    "boylepoker.com": {
+      "file": "boylepoker.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/boyle-poker/id1127358078",
+      "via": "App Store icon (publisher Boylesports Ltd)",
+      "width": 512
+    },
+    "boylesports.com": {
+      "file": "boylesports.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/boylesports-sports-betting-app/id505521160",
+      "via": "App Store icon (developer website boylesports.com)",
+      "width": 512
+    },
+    "buzzbingo.com": {
+      "file": "buzzbingo.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/buzz-bingo-slots-casino/id1658280594",
+      "via": "App Store icon (publisher Buzz Group Limited)",
+      "width": 512
+    },
+    "buzzcasino.com": {
+      "file": "buzzcasino.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/buzz-casino-slots-games/id6467188412",
+      "via": "App Store icon (publisher Buzz Group Limited)",
+      "width": 512
+    },
+    "casino-www.888poker.com": {
+      "file": "casino-www.888poker.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/888-poker-texas-holdem-online/id534130702",
+      "via": "App Store icon (developer website 888poker.com)",
+      "width": 512
+    },
+    "casino.boylesports.com": {
+      "file": "casino.boylesports.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/boylesports-sports-betting-app/id505521160",
+      "via": "App Store icon (developer website boylesports.com)",
+      "width": 512
+    },
+    "cozino.com": {
+      "file": "cozino.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/cozino-saloon-casino/id6504926059",
+      "via": "App Store icon (developer website cozino.com)",
+      "width": 512
+    },
+    "dreamjackpot.com": {
+      "file": "dreamjackpot.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/dream-jackpot/id6480595150",
+      "via": "App Store icon (developer website dreamjackpot.com)",
+      "width": 512
+    },
+    "fitzdares.com": {
+      "file": "fitzdares.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/fitzdares-premium-betting/id968411471",
+      "via": "App Store icon (developer website fitzdares.com)",
+      "width": 512
+    },
+    "galabingo.com": {
+      "file": "galabingo.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/gala-bingo-slot-games/id579575934",
+      "via": "App Store icon (developer website galabingo.com)",
+      "width": 512
+    },
+    "galacasino.com": {
+      "file": "galacasino.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/gala-casino-real-money-games/id706012393",
+      "via": "App Store icon (developer website galacasino.com)",
+      "width": 512
+    },
+    "gamebookers.com": {
+      "file": "gamebookers.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/gamebookers-sports-betting/id914502902",
+      "via": "App Store icon (developer website sports.gamebookers.com)",
+      "width": 512
+    },
+    "games.boylesports.com": {
+      "file": "games.boylesports.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/boylesports-sports-betting-app/id505521160",
+      "via": "App Store icon (developer website boylesports.com)",
+      "width": 512
+    },
+    "grosvenorcasinos.com": {
+      "file": "grosvenorcasinos.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/grosvenor-poker-live/id591108202",
+      "via": "App Store icon (developer website grosvenorcasinos.com)",
+      "width": 512
+    },
+    "grpcasino.com": {
+      "file": "grpcasino.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/grp-casino/id6755774523",
+      "via": "App Store icon (developer website grpcasino.com)",
+      "width": 512
+    },
+    "hippodromeonline.com": {
+      "file": "hippodromeonline.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/hippodrome-real-money-casino/id619054820",
+      "via": "App Store icon (developer website hippodromeonline.com)",
+      "width": 512
+    },
+    "kwiff.com": {
+      "file": "kwiff.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/kwiff-sports-betting-casino/id1116593875",
+      "via": "App Store icon (developer website kwiff.com)",
+      "width": 512
+    },
+    "livecasino.boylesports.com": {
+      "file": "livecasino.boylesports.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/boylesports-sports-betting-app/id505521160",
+      "via": "App Store icon (developer website boylesports.com)",
+      "width": 512
+    },
+    "lotto.boylesports.com": {
+      "file": "lotto.boylesports.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/boylesports-sports-betting-app/id505521160",
+      "via": "App Store icon (developer website boylesports.com)",
+      "width": 512
+    },
+    "luckcity.com": {
+      "file": "luckcity.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/luckcity-online-casino-slots/id6503964036",
+      "via": "App Store icon (developer website luckcity.com)",
+      "width": 512
+    },
+    "m.quinnbet.com": {
+      "file": "m.quinnbet.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/quinnbet-sports-bets-casino/id1246193763",
+      "via": "App Store icon (publisher QuinnBet(Gibraltar) Limited)",
+      "width": 512
+    },
+    "m.skypoker.com": {
+      "file": "m.skypoker.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/sky-poker-texas-holdem-omaha/id871803752",
+      "via": "App Store icon (developer website skypoker.com)",
+      "width": 512
+    },
+    "m.skyvegas.com": {
+      "file": "m.skyvegas.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/sky-vegas-casino-games/id577802013",
+      "via": "App Store icon (developer website skyvegas.com)",
+      "width": 512
+    },
+    "mbingo.boylesports.com": {
+      "file": "mbingo.boylesports.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/boylesports-sports-betting-app/id505521160",
+      "via": "App Store icon (developer website boylesports.com)",
+      "width": 512
+    },
+    "mcasino.boylesports.com": {
+      "file": "mcasino.boylesports.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/boylesports-sports-betting-app/id505521160",
+      "via": "App Store icon (developer website boylesports.com)",
+      "width": 512
+    },
+    "mcbookie.com": {
+      "file": "mcbookie.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/mcbookie/id990617741",
+      "via": "App Store icon (developer website mcbookie.com)",
+      "width": 512
+    },
+    "mgames.boylesports.com": {
+      "file": "mgames.boylesports.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/boylesports-sports-betting-app/id505521160",
+      "via": "App Store icon (developer website boylesports.com)",
+      "width": 512
+    },
+    "mlivecasino.boylesports.com": {
+      "file": "mlivecasino.boylesports.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/boylesports-sports-betting-app/id505521160",
+      "via": "App Store icon (developer website boylesports.com)",
+      "width": 512
+    },
+    "mlotto.boylesports.com": {
+      "file": "mlotto.boylesports.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/boylesports-sports-betting-app/id505521160",
+      "via": "App Store icon (developer website boylesports.com)",
+      "width": 512
+    },
+    "mobile.betdaq.com": {
+      "file": "mobile.betdaq.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/betdaq-exchange-betting/id532543478",
+      "via": "App Store icon (developer website betdaq.com)",
+      "width": 512
+    },
+    "mobile.boylesports.com": {
+      "file": "mobile.boylesports.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/boylesports-sports-betting-app/id505521160",
+      "via": "App Store icon (developer website boylesports.com)",
+      "width": 512
+    },
+    "mrluck.com": {
+      "file": "mrluck.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/mr-luck-casino-online-slots/id6742497428",
+      "via": "App Store icon (developer website mrluck.com)",
+      "width": 512
+    },
+    "mvegas.boylesports.com": {
+      "file": "mvegas.boylesports.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/boylesports-sports-betting-app/id505521160",
+      "via": "App Store icon (developer website boylesports.com)",
+      "width": 512
+    },
+    "paddypower.com": {
+      "file": "paddypower.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/paddy-power-sports-betting/id382030091",
+      "via": "App Store icon (developer website paddypower.com)",
+      "width": 512
+    },
+    "planetsportbet.com": {
+      "file": "planetsportbet.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/planetsportbet/id1597953323",
+      "via": "App Store icon (publisher PLANET BET LIMITED)",
+      "width": 512
+    },
+    "play-www.777.com": {
+      "file": "play-www.777.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/777-casino-real-money-games/id1008635411",
+      "via": "App Store icon (developer website 777.com)",
+      "width": 512
+    },
+    "poker.boylesports.com": {
+      "file": "poker.boylesports.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/boylesports-sports-betting-app/id505521160",
+      "via": "App Store icon (developer website boylesports.com)",
+      "width": 512
+    },
+    "pricedup.bet": {
+      "file": "pricedup.bet.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/pricedup/id6587559294",
+      "via": "App Store icon (publisher Off Course Bookmakers Limited)",
+      "width": 512
+    },
+    "quinnbet.com": {
+      "file": "quinnbet.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/quinnbet-sports-bets-casino/id1246193763",
+      "via": "App Store icon (publisher QuinnBet(Gibraltar) Limited)",
+      "width": 512
+    },
+    "rainbowriches.com": {
+      "file": "rainbowriches.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/rainbow-riches-casino-slots/id1482409381",
+      "via": "App Store icon (publisher Gamesys Limited)",
+      "width": 512
+    },
+    "redcasino.com": {
+      "file": "redcasino.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/red-casino-slot-games/id6497794346",
+      "via": "App Store icon (developer website redcasino.com)",
+      "width": 512
+    },
+    "savibet.com": {
+      "file": "savibet.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/savibet-sports-betting/id6503629529",
+      "via": "App Store icon (developer website savibet.com)",
+      "width": 512
+    },
+    "skybingo.com": {
+      "file": "skybingo.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/online-bingo-from-sky-bingo/id576797863",
+      "via": "App Store icon (developer website skybingo.com)",
+      "width": 512
+    },
+    "skycasino.com": {
+      "file": "skycasino.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/sky-casino-blackjack-roulette/id892812691",
+      "via": "App Store icon (developer website skycasino.com)",
+      "width": 512
+    },
+    "skypoker.com": {
+      "file": "skypoker.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/sky-poker-texas-holdem-omaha/id871803752",
+      "via": "App Store icon (developer website skypoker.com)",
+      "width": 512
+    },
+    "skyvegas.com": {
+      "file": "skyvegas.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/sky-vegas-casino-games/id577802013",
+      "via": "App Store icon (developer website skyvegas.com)",
+      "width": 512
+    },
+    "spin-king.uk": {
+      "file": "spin-king.uk.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/spin-king-slots-casino/id6747701322",
+      "via": "App Store icon (developer website spinking.co.uk)",
+      "width": 512
+    },
+    "spinking.uk": {
+      "file": "spinking.uk.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/spin-king-slots-casino/id6747701322",
+      "via": "App Store icon (developer website spinking.co.uk)",
+      "width": 512
+    },
+    "stakespin.casino": {
+      "file": "stakespin.casino.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/stake-spin-casino-real-money/id6756399096",
+      "via": "App Store icon (developer website stakespin.casino)",
+      "width": 512
+    },
+    "starsports.bet": {
+      "file": "starsports.bet.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/star-sports-sports-betting/id1444845627",
+      "via": "App Store icon (publisher Star Racing Ltd)",
+      "width": 512
+    },
+    "talksportbet.com": {
+      "file": "talksportbet.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/talksport-bet-sports-casino/id6443924977",
+      "via": "App Store icon (developer website talksportbet.com)",
+      "width": 512
+    },
+    "thepalaces.com": {
+      "file": "thepalaces.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/the-palaces/id6749435027",
+      "via": "App Store icon (developer website thepalaces.com)",
+      "width": 512
+    },
+    "tombola.com": {
+      "file": "tombola.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/tombola-arcade-casino-games/id1039373311",
+      "via": "App Store icon (publisher tombola ltd)",
+      "width": 512
+    },
+    "tombolaarcade.com": {
+      "file": "tombolaarcade.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/tombola-arcade-casino-games/id1039373311",
+      "via": "App Store icon (publisher tombola ltd)",
+      "width": 512
+    },
+    "vegas.boylesports.com": {
+      "file": "vegas.boylesports.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/boylesports-sports-betting-app/id505521160",
+      "via": "App Store icon (developer website boylesports.com)",
+      "width": 512
+    },
+    "copybet.com": {
+      "file": "copybet.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/copybet-sports-betting/id1533225950",
+      "via": "App Store icon (developer website copybet.com)",
+      "width": 512
+    },
+    "fanteam.com": {
+      "file": "fanteam.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/fanteam/id1510984625",
+      "via": "App Store icon (developer website fanteam.com)",
+      "width": 512
+    },
+    "gameweekxi.com": {
+      "file": "gameweekxi.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/gameweek-xi/id6749299959",
+      "via": "App Store icon (developer website gameweekxi.com)",
+      "width": 512
+    },
+    "m.skybet.com": {
+      "file": "m.skybet.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/sky-bet-sports-betting/id428237841",
+      "via": "App Store icon (developer website skybet.com)",
+      "width": 512
+    },
+    "skybet.com": {
+      "file": "skybet.com.webp",
+      "sourceUrl": "https://apps.apple.com/gb/app/sky-bet-sports-betting/id428237841",
+      "via": "App Store icon (developer website skybet.com)",
+      "width": 512
+    },
+    "betano.co": {
+      "file": "betano.co.webp",
+      "sourceUrl": "https://apps.apple.com/co/app/betano-apuestas-en-l%C3%ADnea/id1105421899",
+      "via": "App Store icon (developer website betano.com)",
+      "width": 512
+    },
+    "yajuego.co": {
+      "file": "yajuego.co.webp",
+      "sourceUrl": "https://apps.apple.com/co/app/yajuego-divi%C3%A9rtete-apostando/id6473184359",
+      "via": "App Store icon (publisher Games and Betting SAS)",
+      "width": 512
+    },
+    "1xbet.pe": {
+      "file": "1xbet.pe.webp",
+      "sourceUrl": "https://apps.apple.com/pe/app/1xbet-apuestas-deportivas-pe/id6741896573",
+      "via": "App Store icon (developer website new.1xbet.pe)",
+      "width": 512
+    },
+    "betano.pe": {
+      "file": "betano.pe.webp",
+      "sourceUrl": "https://apps.apple.com/pe/app/betano-apuestas-en-l%C3%ADnea/id1105421899",
+      "via": "App Store icon (developer website betano.com)",
+      "width": 512
+    },
+    "betcris.pe": {
+      "file": "betcris.pe.webp",
+      "sourceUrl": "https://apps.apple.com/us/app/betcris-sportsbook-arizona-az/id6739094736",
+      "via": "App Store icon (developer website sportsbook.betcris.com)",
+      "width": 512
+    },
+    "betwarrior.pe": {
+      "file": "betwarrior.pe.webp",
+      "sourceUrl": "https://apps.apple.com/pe/app/betwarrior-per%C3%BA-apuestas/id6514323063",
+      "via": "App Store icon (developer website betwarrior.pe)",
+      "width": 512
+    },
+    "caliente.pe": {
+      "file": "caliente.pe.webp",
+      "sourceUrl": "https://apps.apple.com/pe/app/caliente-casino-online-per%C3%BA/id6767058273",
+      "via": "App Store icon (developer website caliente.pe)",
+      "width": 512
+    },
+    "coolbet.pe": {
+      "file": "coolbet.pe.webp",
+      "sourceUrl": "https://apps.apple.com/pe/app/coolbet-poker-peru/id6670785493",
+      "via": "App Store icon (developer website coolbet.pe)",
+      "width": 512
+    },
+    "inkabet.pe": {
+      "file": "inkabet.pe.webp",
+      "sourceUrl": "https://apps.apple.com/pe/app/inkabet-apuestas-y-casino/id6758657157",
+      "via": "App Store icon (publisher Lucky Torito S.A.C)",
+      "width": 512
+    },
+    "meridianbet.pe": {
+      "file": "meridianbet.pe.webp",
+      "sourceUrl": "https://apps.apple.com/pe/app/meridianbet-pe/id1241358851",
+      "via": "App Store icon (publisher Meridian Gaming Ltd.)",
+      "width": 512
+    },
+    "optibet.ee": {
+      "file": "optibet.ee.webp",
+      "sourceUrl": "https://apps.apple.com/ee/app/optibet-panustamine-kasiino/id6466156217",
+      "via": "App Store icon (developer website optibet.ee)",
+      "width": 512
+    },
+    "vivatbet.ee": {
+      "file": "vivatbet.ee.webp",
+      "sourceUrl": "https://apps.apple.com/ee/app/vivatbet-sports-betting/id6443720447",
+      "via": "App Store icon (developer website vivatbet.ee)",
+      "width": 512
+    },
+    "chance.sk": {
+      "file": "chance.sk.webp",
+      "sourceUrl": "https://apps.apple.com/sk/app/chance-sk/id6749004062",
+      "via": "App Store icon (publisher CHANCE SK, a. s.)",
+      "width": 512
+    },
+    "ifortuna.sk": {
+      "file": "ifortuna.sk.webp",
+      "sourceUrl": "https://apps.apple.com/sk/app/fortuna-casino/id1572643716",
+      "via": "App Store icon (developer website ifortuna.sk)",
+      "width": 512
+    },
+    "nike.sk": {
+      "file": "nike.sk.webp",
+      "sourceUrl": "https://apps.apple.com/sk/app/nik%C3%A9-je-tipovanie/id978371559",
+      "via": "App Store icon (publisher Nike, spol. s r.o.)",
+      "width": 512
+    },
+    "tipsport.sk": {
+      "file": "tipsport.sk.webp",
+      "sourceUrl": "https://apps.apple.com/sk/app/tipsport-sk/id691949685",
+      "via": "App Store icon (publisher TIPSPORT SK, a.s.)",
+      "width": 512
+    },
+    "favbet.hr": {
+      "file": "favbet.hr.webp",
+      "sourceUrl": "https://apps.apple.com/hr/app/favbet-hr/id1494156956",
+      "via": "App Store icon (publisher FAVORIT SPORTSKA KLADIONICA d.o.o.)",
+      "width": 512
+    },
+    "lutrija.hr": {
+      "file": "lutrija.hr.webp",
+      "sourceUrl": "https://apps.apple.com/hr/app/cro-bet/id6446175496",
+      "via": "App Store icon (developer website lutrija.hr)",
+      "width": 512
+    },
+    "olybet.hr": {
+      "file": "olybet.hr.webp",
+      "sourceUrl": "https://apps.apple.com/hr/app/olybet-casino-hrvatska/id6761818431",
+      "via": "App Store icon (developer website olybet.hr)",
+      "width": 512
+    },
+    "psk.hr": {
+      "file": "psk.hr.webp",
+      "sourceUrl": "https://apps.apple.com/hr/app/psk-sport/id642032278",
+      "via": "App Store icon (developer website casino.psk.hr)",
+      "width": 512
+    },
+    "casino.si": {
+      "file": "casino.si.webp",
+      "sourceUrl": "https://apps.apple.com/si/app/casino-si/id6761711987",
+      "via": "App Store icon (publisher Casino Portoroz, d.d.)",
+      "width": 512
+    },
+    "supercasino.si": {
+      "file": "supercasino.si.webp",
+      "sourceUrl": "https://apps.apple.com/si/app/supercasino-si/id6799084307",
+      "via": "App Store icon (publisher Casino Portoroz, d.d.)",
+      "width": 512
+    },
+    "betclic.pl": {
+      "file": "betclic.pl.webp",
+      "sourceUrl": "https://apps.apple.com/pl/app/betclic-zak%C5%82ady-bukmacherskie/id1457069221",
+      "via": "App Store icon (developer website m.betclic.pl)",
+      "width": 512
+    },
+    "betsport.pl": {
+      "file": "betsport.pl.webp",
+      "sourceUrl": "https://apps.apple.com/pl/app/betsport-bukmacher-online/id6476663230",
+      "via": "App Store icon (publisher BETSPORT Zakłady Bukmacherskie Sp z o.o.)",
+      "width": 512
+    },
+    "betters.pl": {
+      "file": "betters.pl.webp",
+      "sourceUrl": "https://apps.apple.com/pl/app/betters-sports-betting/id1627925979",
+      "via": "App Store icon (publisher SILESIA ENTERTAINMENT SP Z O O)",
+      "width": 512
+    },
+    "efortuna.pl": {
+      "file": "efortuna.pl.webp",
+      "sourceUrl": "https://apps.apple.com/pl/app/fortuna-zak%C5%82ady-bukmacherskie/id806115544",
+      "via": "App Store icon (developer website efortuna.pl)",
+      "width": 512
+    },
+    "lebull.pl": {
+      "file": "lebull.pl.webp",
+      "sourceUrl": "https://apps.apple.com/pl/app/lebull-zak%C5%82ady-bukmacherskie/id6741144676",
+      "via": "App Store icon (publisher FUN PROJECT Sp. z o.o.)",
+      "width": 512
+    },
+    "sts.pl": {
+      "file": "sts.pl.webp",
+      "sourceUrl": "https://apps.apple.com/pl/app/sts-zak%C5%82ady-bukmacherskie/id904595321",
+      "via": "App Store icon (developer website mobile.sts.pl)",
+      "width": 512
+    },
+    "superbet.pl": {
+      "file": "superbet.pl.webp",
+      "sourceUrl": "https://apps.apple.com/pl/app/superbet-zak%C5%82ady-bukmacherskie/id1484074364",
+      "via": "App Store icon (developer website superbet.pl)",
+      "width": 512
+    },
+    "wettarena.pl": {
+      "file": "wettarena.pl.webp",
+      "sourceUrl": "https://apps.apple.com/pl/app/wettarena/id6502938054",
+      "via": "App Store icon (developer website wettarena.pl)",
+      "width": 512
+    },
+    "casino.pamestoixima.gr": {
+      "file": "casino.pamestoixima.gr.webp",
+      "sourceUrl": "https://apps.apple.com/gr/app/pame-stoixima-betting-app/id1346609165",
+      "via": "App Store icon (developer website pamestoixima.gr)",
+      "width": 512
+    },
+    "efbet.gr": {
+      "file": "efbet.gr.webp",
+      "sourceUrl": "https://apps.apple.com/gr/app/efbet-sports-casino/id6504614605",
+      "via": "App Store icon (publisher Brobet Limited)",
+      "width": 512
+    },
+    "n1casino.gr": {
+      "file": "n1casino.gr.webp",
+      "sourceUrl": "https://apps.apple.com/gr/app/n1-casino-live-games/id6444887981",
+      "via": "App Store icon (developer website n1casino.gr)",
+      "width": 512
+    },
+    "stoiximan.gr": {
+      "file": "stoiximan.gr.webp",
+      "sourceUrl": "https://apps.apple.com/gr/app/stoiximan-betting-l-casino/id1081294809",
+      "via": "App Store icon (developer website stoiximan.gr)",
+      "width": 512
+    },
+    "superbet.gr": {
+      "file": "superbet.gr.webp",
+      "sourceUrl": "https://apps.apple.com/gr/app/superbet-%CF%83%CF%84%CE%BF%CE%AF%CF%87%CE%B7%CE%BC%CE%B1/id6759789330",
+      "via": "App Store icon (publisher EXOPLAY LIMITED)",
+      "width": 512
+    },
+    "vistabet.gr": {
+      "file": "vistabet.gr.webp",
+      "sourceUrl": "https://apps.apple.com/gr/app/vistabet-%CF%83%CF%84%CE%BF%CE%AF%CF%87%CE%B7%CE%BC%CE%B1/id835940768",
+      "via": "App Store icon (developer website sports.vistabet.gr)",
+      "width": 512
+    },
+    "winmasters.gr": {
+      "file": "winmasters.gr.webp",
+      "sourceUrl": "https://apps.apple.com/gr/app/winmasters-%CF%83%CF%84%CE%BF%CE%AF%CF%87%CE%B7%CE%BC%CE%B1-%CE%BA%CE%B1%CE%B6%CE%AF%CE%BD%CE%BF/id1395803351",
+      "via": "App Store icon (developer website winmasters.gr)",
+      "width": 512
+    },
+    "www2.pamestoixima.gr": {
+      "file": "www2.pamestoixima.gr.webp",
+      "sourceUrl": "https://apps.apple.com/gr/app/pame-stoixima-betting-app/id1346609165",
+      "via": "App Store icon (developer website pamestoixima.gr)",
+      "width": 512
+    },
+    "pamestoixima.gr": {
+      "file": "pamestoixima.gr.webp",
+      "sourceUrl": "https://apps.apple.com/gr/app/pame-stoixima-betting-app/id1346609165",
+      "via": "App Store icon (developer website pamestoixima.gr)",
+      "width": 512
+    },
+    "betdragon.au": {
+      "file": "betdragon.au.webp",
+      "sourceUrl": "https://apps.apple.com/au/app/bet-dragon-sports-betting-app/id6748491055",
+      "via": "App Store icon (developer website betdragon.au)",
+      "width": 512
+    },
+    "mintbet.au": {
+      "file": "mintbet.au.webp",
+      "sourceUrl": "https://apps.apple.com/au/app/mintbet/id1636829978",
+      "via": "App Store icon (developer website mintbet.au)",
+      "width": 512
+    },
+    "ripperbet.au": {
+      "file": "ripperbet.au.webp",
+      "sourceUrl": "https://apps.apple.com/au/app/ripperbet-sports-betting-app/id6748491148",
+      "via": "App Store icon (developer website ripperbet.au)",
+      "width": 512
+    },
+    "caesars.com": {
+      "file": "caesars.com.webp",
+      "sourceUrl": "https://apps.apple.com/ca/app/caesars-rewards-resort-offers/id720839830",
+      "via": "App Store icon (developer website caesars.com)",
+      "width": 512
+    },
+    "purecasino.ca": {
+      "file": "purecasino.ca.webp",
+      "sourceUrl": "https://apps.apple.com/ca/app/pure-casino/id6768417568",
+      "via": "App Store icon (publisher Pure Casino Entertainment Limited Partnership)",
+      "width": 512
+    },
+    "stardustcasino.com": {
+      "file": "stardustcasino.com.webp",
+      "sourceUrl": "https://apps.apple.com/us/app/stardust-casino-real-money/id1658649113",
+      "via": "App Store icon (developer website stardustcasino.com)",
+      "width": 512
+    },
+    "thescore-casino.ca": {
+      "file": "thescore-casino.ca.webp",
+      "sourceUrl": "https://apps.apple.com/ca/app/thescore-casino/id6742160154",
+      "via": "App Store icon (publisher Score Media and Gaming Inc.)",
+      "width": 512
+    },
+    "melbet.ke": {
+      "file": "melbet.ke.webp",
+      "sourceUrl": "https://apps.apple.com/ke/app/melbet-sport-betting-casino/id1523834045",
+      "via": "App Store icon (publisher GAME TOSHA LIMITED)",
+      "width": 512
+    },
+    "meridianbet.ke": {
+      "file": "meridianbet.ke.webp",
+      "sourceUrl": "https://apps.apple.com/ke/app/meridianbet-ke/id6479372737",
+      "via": "App Store icon (developer website promo.meridianbet.ke)",
+      "width": 512
+    },
+    "777.ua": {
+      "file": "777.ua.webp",
+      "sourceUrl": "https://apps.apple.com/ua/app/777-ua-casino-play-slots/id6737478644",
+      "via": "App Store icon (developer website 777.ua)",
+      "width": 512
+    },
+    "beton.ua": {
+      "file": "beton.ua.webp",
+      "sourceUrl": "https://apps.apple.com/ua/app/beton-ua/id6752378294",
+      "via": "App Store icon (developer website beton.ua)",
+      "width": 512
+    },
+    "ggbet.ua": {
+      "file": "ggbet.ua.webp",
+      "sourceUrl": "https://apps.apple.com/ua/app/ggbet-ua/id6450049712",
+      "via": "App Store icon (developer website ggbet.ua)",
+      "width": 512
+    },
+    "cosmolot.ua": {
+      "file": "cosmolot.ua.webp",
+      "sourceUrl": "https://apps.apple.com/ua/app/cosmolot/id1585136004",
+      "via": "App Store icon (developer website cosmolot.ua)",
+      "width": 512
+    },
+    "arionplay.com": {
+      "file": "arionplay.com.webp",
+      "sourceUrl": "https://apps.apple.com/ph/app/arionplay-casino-slots-games/id6755110143",
+      "via": "App Store icon (publisher NEMO INTERACTIVE GROUP CORPORATION)",
+      "width": 512
+    },
+    "casinoplus.ph": {
+      "file": "casinoplus.ph.webp",
+      "sourceUrl": "https://apps.apple.com/ph/app/casino-plus-ph/id6479251349",
+      "via": "App Store icon (developer website casinoplus.com.ph)",
+      "width": 512
+    },
+    "crazywin.ph": {
+      "file": "crazywin.ph.webp",
+      "sourceUrl": "https://apps.apple.com/ph/app/crazywingo/id6475525904",
+      "via": "App Store icon (publisher BREDDAS INC.)",
+      "width": 512
+    },
+    "crazywingo.ph": {
+      "file": "crazywingo.ph.webp",
+      "sourceUrl": "https://apps.apple.com/ph/app/crazywingo/id6475525904",
+      "via": "App Store icon (publisher BREDDAS INC.)",
+      "width": 512
+    },
+    "crazywingo.asia": {
+      "file": "crazywingo.asia.webp",
+      "sourceUrl": "https://apps.apple.com/ph/app/crazywingo/id6475525904",
+      "via": "App Store icon (publisher BREDDAS INC.)",
+      "width": 512
+    },
+    "deskace.app": {
+      "file": "deskace.app.webp",
+      "sourceUrl": "https://apps.apple.com/ph/app/deskace/id6759784434",
+      "via": "App Store icon (publisher Red Fu Entertainment Technologies Corp.)",
+      "width": 512
+    },
+    "deskace.com": {
+      "file": "deskace.com.webp",
+      "sourceUrl": "https://apps.apple.com/ph/app/deskace/id6759784434",
+      "via": "App Store icon (publisher Red Fu Entertainment Technologies Corp.)",
+      "width": 512
+    },
+    "deskace.ph": {
+      "file": "deskace.ph.webp",
+      "sourceUrl": "https://apps.apple.com/ph/app/deskace/id6759784434",
+      "via": "App Store icon (publisher Red Fu Entertainment Technologies Corp.)",
+      "width": 512
+    },
+    "deskace.pro": {
+      "file": "deskace.pro.webp",
+      "sourceUrl": "https://apps.apple.com/ph/app/deskace/id6759784434",
+      "via": "App Store icon (publisher Red Fu Entertainment Technologies Corp.)",
+      "width": 512
+    },
+    "deskace.vip": {
+      "file": "deskace.vip.webp",
+      "sourceUrl": "https://apps.apple.com/ph/app/deskace/id6759784434",
+      "via": "App Store icon (publisher Red Fu Entertainment Technologies Corp.)",
+      "width": 512
+    },
+    "deskgame.com": {
+      "file": "deskgame.com.webp",
+      "sourceUrl": "https://apps.apple.com/ph/app/deskgame/id6740980817",
+      "via": "App Store icon (publisher Red Fu Entertainment Technologies Corp.)",
+      "width": 512
+    },
+    "deskgame.app": {
+      "file": "deskgame.app.webp",
+      "sourceUrl": "https://apps.apple.com/ph/app/deskgame/id6740980817",
+      "via": "App Store icon (publisher Red Fu Entertainment Technologies Corp.)",
+      "width": 512
+    },
+    "deskgame.club": {
+      "file": "deskgame.club.webp",
+      "sourceUrl": "https://apps.apple.com/ph/app/deskgame/id6740980817",
+      "via": "App Store icon (publisher Red Fu Entertainment Technologies Corp.)",
+      "width": 512
+    },
+    "deskgame.ph": {
+      "file": "deskgame.ph.webp",
+      "sourceUrl": "https://apps.apple.com/ph/app/deskgame/id6740980817",
+      "via": "App Store icon (publisher Red Fu Entertainment Technologies Corp.)",
+      "width": 512
+    },
+    "deskgame.pro": {
+      "file": "deskgame.pro.webp",
+      "sourceUrl": "https://apps.apple.com/ph/app/deskgame/id6740980817",
+      "via": "App Store icon (publisher Red Fu Entertainment Technologies Corp.)",
+      "width": 512
+    },
+    "deskgame.vip": {
+      "file": "deskgame.vip.webp",
+      "sourceUrl": "https://apps.apple.com/ph/app/deskgame/id6740980817",
+      "via": "App Store icon (publisher Red Fu Entertainment Technologies Corp.)",
+      "width": 512
+    },
+    "desklucky.com": {
+      "file": "desklucky.com.webp",
+      "sourceUrl": "https://apps.apple.com/ph/app/desklucky/id6785666707",
+      "via": "App Store icon (developer website desklucky.com)",
+      "width": 512
+    },
+    "ebingo.ninogaming.com": {
+      "file": "ebingo.ninogaming.com.webp",
+      "sourceUrl": "https://apps.apple.com/ph/app/ninogaming-casino-slots/id6755863165",
+      "via": "App Store icon (developer website ninogaming.com)",
+      "width": 512
+    },
+    "ecasino.ninogaming.com": {
+      "file": "ecasino.ninogaming.com.webp",
+      "sourceUrl": "https://apps.apple.com/ph/app/ninogaming-casino-slots/id6755863165",
+      "via": "App Store icon (developer website ninogaming.com)",
+      "width": 512
+    },
+    "arenaplus.ph": {
+      "file": "arenaplus.ph.webp",
+      "sourceUrl": "https://apps.apple.com/ph/app/arenaplus-live-sports-betting/id6443807361",
+      "via": "App Store icon (developer website arenaplus.ph)",
+      "width": 512
+    },
+    "hannonline.ph": {
+      "file": "hannonline.ph.webp",
+      "sourceUrl": "https://apps.apple.com/ph/app/hann-online-casino-slots/id6758831621",
+      "via": "App Store icon (publisher HANN PHILIPPINES, INC.)",
+      "width": 512
+    },
+    "happybingo.ph": {
+      "file": "happybingo.ph.webp",
+      "sourceUrl": "https://apps.apple.com/ph/app/happybingo/id6758967139",
+      "via": "App Store icon (developer website happybingo.ph)",
+      "width": 512
+    },
+    "juan365.com": {
+      "file": "juan365.com.webp",
+      "sourceUrl": "https://apps.apple.com/ph/app/juan365/id6749568347",
+      "via": "App Store icon (developer website juan365.com)",
+      "width": 512
+    },
+    "juanbingo.ph": {
+      "file": "juanbingo.ph.webp",
+      "sourceUrl": "https://apps.apple.com/ph/app/juanbingo/id6751944466",
+      "via": "App Store icon (developer website juanbingo.ph)",
+      "width": 512
+    },
+    "lakiplay.com": {
+      "file": "lakiplay.com.webp",
+      "sourceUrl": "https://apps.apple.com/ph/app/laki-play-1-ph-sport/id6689505372",
+      "via": "App Store icon (publisher RAC PHIL CORP.)",
+      "width": 512
+    },
+    "midori.bet": {
+      "file": "midori.bet.webp",
+      "sourceUrl": "https://apps.apple.com/ph/app/midori-rewards/id6754442562",
+      "via": "App Store icon (publisher BB INTERNATIONAL LEISURE AND RESORT DEVELOPMENT CORPORATION)",
+      "width": 512
+    },
+    "midori.net": {
+      "file": "midori.net.webp",
+      "sourceUrl": "https://apps.apple.com/ph/app/midori-rewards/id6754442562",
+      "via": "App Store icon (publisher BB INTERNATIONAL LEISURE AND RESORT DEVELOPMENT CORPORATION)",
+      "width": 512
+    },
+    "midori.online": {
+      "file": "midori.online.webp",
+      "sourceUrl": "https://apps.apple.com/ph/app/midori-rewards/id6754442562",
+      "via": "App Store icon (publisher BB INTERNATIONAL LEISURE AND RESORT DEVELOPMENT CORPORATION)",
+      "width": 512
+    },
+    "ninogaming.com": {
+      "file": "ninogaming.com.webp",
+      "sourceUrl": "https://apps.apple.com/ph/app/ninogaming-casino-slots/id6755863165",
+      "via": "App Store icon (developer website ninogaming.com)",
+      "width": 512
+    },
+    "ok-games.ph": {
+      "file": "ok-games.ph.webp",
+      "sourceUrl": "https://apps.apple.com/ph/app/okgames-bingo-casino-slots/id6469493995",
+      "via": "App Store icon (publisher GAVIN VENTURES,INC.)",
+      "width": 512
+    },
+    "sports.ninogaming.com": {
+      "file": "sports.ninogaming.com.webp",
+      "sourceUrl": "https://apps.apple.com/ph/app/ninogaming-casino-slots/id6755863165",
+      "via": "App Store icon (developer website ninogaming.com)",
+      "width": 512
+    },
+    "winzir.ph": {
+      "file": "winzir.ph.webp",
+      "sourceUrl": "https://apps.apple.com/ph/app/winzir/id6446307486",
+      "via": "App Store icon (publisher SANDBOX ENTERTAINMENT CORP)",
+      "width": 512
+    },
+    "winzir.com": {
+      "file": "winzir.com.webp",
+      "sourceUrl": "https://apps.apple.com/ph/app/winzir/id6446307486",
+      "via": "App Store icon (publisher SANDBOX ENTERTAINMENT CORP)",
+      "width": 512
+    },
+    "winzir.net": {
+      "file": "winzir.net.webp",
+      "sourceUrl": "https://apps.apple.com/ph/app/winzir/id6446307486",
+      "via": "App Store icon (publisher SANDBOX ENTERTAINMENT CORP)",
+      "width": 512
+    },
+    "oddspark.com": {
+      "file": "oddspark.com.webp",
+      "sourceUrl": "https://apps.apple.com/jp/app/%E3%82%AA%E3%83%83%E3%82%BA%E3%83%91%E3%83%BC%E3%82%AF-%E7%AB%B6%E9%A6%AC-%E7%AB%B6%E8%BC%AA-%E3%82%AA%E3%83%BC%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B9%E4%BA%88%E6%83%B3-%E3%83%8D%E3%83%83%E3%83%88%E6%8A%95%E7%A5%A8%E3%82%A2%E3%83%97%E3%83%AA/id1451925438",
+      "via": "App Store icon (developer website oddspark.com)",
+      "width": 512
     }
   },
   "failed": {
-    "10bet.se": "2026-10-05",
-    "1xbet.es": "2026-10-05",
     "711.nl": "2026-10-05",
     "777.es": "2026-10-05",
-    "888casino.ca": "2026-10-05",
-    "888casino.com": "2026-10-05",
-    "888casino.dk": "2026-10-05",
-    "888casino.es": "2026-10-05",
-    "888casino.se": "2026-10-05",
     "888poker-promotions.com": "2026-10-05",
-    "888poker.ca": "2026-10-05",
-    "888poker.net": "2026-10-05",
-    "888poker.com": "2026-10-05",
-    "888poker.de": "2026-10-05",
-    "888poker.dk": "2026-10-05",
-    "888poker.es": "2026-10-05",
     "888pokercam.com": "2026-10-05",
     "888pokeruk.com": "2026-10-05",
-    "888poker.se": "2026-10-05",
     "888responsible.com": "2026-10-05",
-    "888slots.de": "2026-10-05",
     "888vipcasinoclub.com": "2026-10-05",
     "allinn.cz": "2026-10-05",
-    "apuestas.kirolbet.es": "2026-10-05",
-    "apuestas.marca.es": "2026-10-05",
-    "apuestas.olybet.es": "2026-10-05",
-    "aupabet.es": "2026-10-05",
     "bet-x.cz": "2026-10-05",
     "bet3000.de": "2026-10-05",
     "bet90.be": "2026-10-05",
-    "betano.ca": "2026-10-05",
-    "betano.cz": "2026-10-05",
-    "betano.de": "2026-10-05",
     "betano.dk": "2026-10-05",
     "betanocasino.be": "2026-10-05",
     "betanosports.be": "2026-10-05",
-    "betcenter.be": "2026-10-05",
-    "betcity.nl": "2026-10-05",
-    "betclic.fr": "2026-10-05",
-    "betclic.pt": "2026-10-05",
-    "betflag.it": "2026-10-05",
     "betfred.es": "2026-10-05",
-    "betinia.dk": "2026-10-05",
-    "betinia.es": "2026-10-05",
-    "betinia.se": "2026-10-05",
-    "betitaly.it": "2026-10-05",
     "betnation.nl": "2026-10-05",
-    "betoro.dk": "2026-10-05",
     "betpassion.it": "2026-10-05",
-    "betpoint.it": "2026-10-05",
     "betsafe.com": "2026-10-05",
     "betsafe.lv": "2026-10-05",
     "betsbk.com": "2026-10-05",
     "betsson.com": "2026-10-05",
     "betsson.dk": "2026-10-05",
-    "betsson.es": "2026-10-05",
-    "betsson.fr": "2026-10-05",
-    "betsson.it": "2026-10-05",
-    "betvictor.com": "2026-10-05",
-    "betwin360.it": "2026-10-05",
-    "bgame.it": "2026-10-05",
     "bingoalsport.be": "2026-10-05",
     "blitzbet.be": "2026-10-05",
     "bluesblock.es": "2026-10-05",
     "boostcasino.se": "2026-10-05",
     "bwincasino.be": "2026-10-05",
     "campobet.dk": "2026-10-05",
-    "campobet.se": "2026-10-05",
     "cashpoint.dk": "2026-10-05",
     "casino-kartac.cz": "2026-10-05",
-    "casino-www.888poker.com": "2026-10-05",
     "casino.goldrummel.de": "2026-10-05",
-    "casino.on.wheeloffortunecasino.com": "2026-10-05",
-    "casino.tipico.de": "2026-10-05",
     "bpremium.de": "2026-10-05",
     "casinoaction.dk": "2026-10-05",
-    "casinobarcelona.es": "2026-10-05",
     "casinogmonline.es": "2026-10-05",
     "casinogranmadridonline.es": "2026-10-05",
     "casinogranmadridtv.es": "2026-10-05",
     "casinohouse.dk": "2026-10-05",
-    "casinomarbella.es": "2026-10-05",
     "casinomarca.es": "2026-10-05",
-    "casinopauseandplay.es": "2026-10-05",
     "casinoportugal.pt": "2026-10-05",
     "casinotime.ca": "2026-10-05",
     "casongo.dk": "2026-10-05",
-    "chance.cz": "2026-10-05",
-    "circus-sport.be": "2026-10-05",
-    "circusbet.fr": "2026-10-05",
     "comeon.com": "2026-10-05",
     "comeon.dk": "2026-10-05",
     "comeon.nl": "2026-10-05",
-    "domusbet.it": "2026-10-05",
     "danskespil.dk": "2026-10-05",
-    "deltacasino.com": "2026-10-05",
-    "coolbet.com": "2026-10-05",
     "elabet.it": "2026-10-05",
     "die-spielbank.de": "2026-10-05",
-    "estorilsolcasinos.pt": "2026-10-05",
-    "eplay24.it": "2026-10-05",
     "duelz.com": "2026-10-05",
-    "eurobet.it": "2026-10-05",
     "fenikss.lv": "2026-10-05",
-    "feelingbet.fr": "2026-10-05",
     "ecasino.cz": "2026-10-05",
     "frankcasino.se": "2026-10-05",
-    "games.tiptorro.de": "2026-10-05",
     "games.tipico.de": "2026-10-05",
     "finlandiacasino.com": "2026-10-05",
     "fuegocasino.es": "2026-10-05",
-    "goldennuggetcasino.com": "2026-10-05",
     "goldrummel.de": "2026-10-05",
     "gratogana.es": "2026-10-05",
     "goldenpark.es": "2026-10-05",
     "goldenvegas-sport.be": "2026-10-05",
     "granmadrid.es": "2026-10-05",
-    "hollandcasino.nl": "2026-10-05",
-    "grandwin.cz": "2026-10-05",
     "herna.gapagroup.cz": "2026-10-05",
     "intertops.de": "2026-10-05",
-    "jackpotcity.ca": "2026-10-05",
-    "ifortuna.cz": "2026-10-05",
     "jallacasino.se": "2026-10-05",
     "jollie.de": "2026-10-05",
     "klondaika.lv": "2026-10-05",
-    "kingsbet.cz": "2026-10-05",
     "kajotintacto.cz": "2026-10-05",
     "jeu.fr": "2026-10-05",
     "laimz.lv": "2026-10-05",
-    "lapalingo.de": "2026-10-05",
     "efbet.es": "2026-10-05",
-    "letsbet.de": "2026-10-05",
-    "lordlucky.de": "2026-10-05",
     "lodur.se": "2026-10-05",
     "loewen-player.de": "2026-10-05",
     "lottoexperten.com": "2026-10-05",
-    "lotto24.de": "2026-10-05",
-    "luckia.es": "2026-10-05",
-    "luckydays.ca": "2026-10-05",
     "lottoexperten.se": "2026-10-05",
     "losvegas.bet": "2026-10-05",
     "lasmegas.de": "2026-10-05",
     "gentingspielhalle.de": "2026-10-05",
     "maxi333.de": "2026-10-05",
     "marcaapuestas.es": "2026-10-05",
-    "maxa.cz": "2026-10-05",
     "magic888casino.com": "2026-10-05",
     "maverickgames.com": "2026-10-05",
     "meridiansports.be": "2026-10-05",
-    "merkurbets.de": "2026-10-05",
     "merkur-sports.de": "2026-10-05",
     "merkur-spiel.de": "2026-10-05",
     "megawayscasino.com": "2026-10-05",
@@ -10180,106 +11783,62 @@
     "metalspiel.de": "2026-10-05",
     "mrbit.se": "2026-10-05",
     "nanocasino.se": "2026-10-05",
-    "napoleoncasino.be": "2026-10-05",
     "mrgreen.es": "2026-10-05",
-    "mrgreen.dk": "2026-10-05",
     "marcacasino.es": "2026-10-05",
-    "napoleonsports.be": "2026-10-05",
-    "neobet.de": "2026-10-05",
-    "mrgreen.com": "2026-10-05",
-    "mrgreen.de": "2026-10-05",
     "monacobet.cz": "2026-10-05",
     "ninja.se": "2026-10-05",
     "ninjacasino.se": "2026-10-05",
-    "netbet.fr": "2026-10-05",
     "nordicbet.com": "2026-10-05",
     "nordicbet.dk": "2026-10-05",
-    "olybet.fr": "2026-10-05",
     "olybet.lv": "2026-10-05",
-    "mrgreen.se": "2026-10-05",
-    "oddset.de": "2026-10-05",
     "netbetsport.fr": "2026-10-05",
-    "on.bet99.ca": "2026-10-05",
     "on.neobet.ca": "2026-10-05",
     "nyspins.com": "2026-10-05",
-    "on.stardustcasino.com": "2026-10-05",
-    "olybet.es": "2026-10-05",
     "on.sportsinteraction.com": "2026-10-05",
     "oneplaycasino.es": "2026-10-05",
-    "on.swiper.com": "2026-10-05",
-    "on.betinia.com": "2026-10-05",
     "online.casinosanremo.it": "2026-10-05",
-    "on.partysports.ca": "2026-10-05",
-    "optibet.lv": "2026-10-05",
     "optibet.se": "2026-10-05",
     "original-slots.de": "2026-10-05",
-    "ontario.captaincooks.casino": "2026-10-05",
     "original-wetten.de": "2026-10-05",
     "oranjepalace.nl": "2026-10-05",
     "online.casinoadmiral.cz": "2026-10-05",
-    "merkurbets.dk": "2026-10-05",
     "platincasino.es": "2026-10-05",
     "pip.dk": "2026-10-05",
-    "playland.de": "2026-10-05",
-    "pmu.fr": "2026-10-05",
     "pokerstarscasino.es": "2026-10-05",
     "pokerstarscasino.dk": "2026-10-05",
     "primescratchards.dk": "2026-10-05",
     "quickcasino.se": "2026-10-05",
-    "quickcasino.dk": "2026-10-05",
-    "royalvegas.ca": "2026-10-05",
-    "rubyfortune.ca": "2026-10-05",
     "sh-goldrummel.de": "2026-10-05",
     "sh-games.tipico.de": "2026-10-05",
     "royalbet.com": "2026-10-05",
-    "royalbet.de": "2026-10-05",
     "slotv.se": "2026-10-05",
     "smarkets.com": "2026-10-05",
     "ninjasport.se": "2026-10-05",
-    "solcasino.es": "2026-10-05",
-    "spildansknu.dk": "2026-10-05",
     "spillehallen.dk": "2026-10-05",
     "spinaway.ca": "2026-10-05",
-    "spincasino.ca": "2026-10-05",
     "spinking.dk": "2026-10-05",
-    "spinz.de": "2026-10-05",
     "stanleybet.be": "2026-10-05",
-    "sportium.es": "2026-10-05",
     "superlottoclub.com": "2026-10-05",
     "superbet.se": "2026-10-05",
     "swiper.dk": "2026-10-05",
     "tikitakaplay.es": "2026-10-05",
-    "swiper.se": "2026-10-05",
     "tigerspin.de": "2026-10-05",
-    "tiptorro.de": "2026-10-05",
-    "tipp24.de": "2026-10-05",
-    "tipsport.cz": "2026-10-05",
     "todoslots.es": "2026-10-05",
     "tokyo.cz": "2026-10-05",
-    "titanplay.ca": "2026-10-05",
     "tombola.dk": "2026-10-05",
-    "tombola.es": "2026-10-05",
-    "tombola.se": "2026-10-05",
     "tipico.de": "2026-10-05",
-    "star-casino.cz": "2026-10-05",
     "tuzoca.es": "2026-10-05",
-    "tooniebet.ca": "2026-10-05",
     "supersnabbt.se": "2026-10-05",
     "tvbingo.dk": "2026-10-05",
     "toppz.ca": "2026-10-05",
     "veraandjohn.se": "2026-10-05",
-    "versus.es": "2026-10-05",
     "vindercasino.dk": "2026-10-05",
-    "wettarena.de": "2026-10-05",
-    "vivatbet.be": "2026-10-05",
     "turbovegas.com": "2026-10-05",
     "vindstort.dk": "2026-10-05",
     "spinmodo.de": "2026-10-05",
     "winfest.de": "2026-10-05",
     "voodoodreams.com": "2026-10-05",
-    "yaasscasino.es": "2026-10-05",
     "xtip.de": "2026-10-05",
-    "yoyocasino.se": "2026-10-05",
     "123spins.com": "2026-10-05",
     "10bet.ie": "2026-10-05",
     "21luckybet.com": "2026-10-05",
@@ -10287,58 +11846,42 @@
     "777tigers.com": "2026-10-05",
     "24bettle.com": "2026-10-05",
     "21prive.com": "2026-10-05",
-    "666casino.com": "2026-10-05",
     "777bet.casino": "2026-10-05",
-    "777.com": "2026-10-05",
     "acedbet.com": "2026-10-05",
     "akbets.bet": "2026-10-05",
     "africasports.com": "2026-10-05",
     "acelucky.com": "2026-10-05",
     "anytimecasino.com": "2026-10-05",
-    "baroneracing.com": "2026-10-05",
     "b-bets.com": "2026-10-05",
     "bellacasino.com": "2026-10-05",
-    "betdaq.com": "2026-10-05",
     "betdukes.com": "2026-10-05",
-    "betfred.com": "2026-10-05",
     "betblink.com": "2026-10-05",
     "betmorph.com": "2026-10-05",
     "betneptune.com": "2026-10-05",
     "betreels.com": "2026-10-05",
     "betscreamer.com": "2026-10-05",
     "betstorm.com": "2026-10-05",
-    "betvictor.mobi": "2026-10-05",
     "betsteve.com": "2026-10-05",
     "big5casino.com": "2026-10-05",
-    "bingo.boylesports.com": "2026-10-05",
     "bingofling.com": "2026-10-05",
     "bingodiamond.com": "2026-10-05",
-    "bingobritain.com": "2026-10-05",
     "boylebingo.com": "2026-10-05",
-    "boylesports.com": "2026-10-05",
     "boylegames.com": "2026-10-05",
     "brillbet.com": "2026-10-05",
     "boylelotto.com": "2026-10-05",
-    "boylepoker.com": "2026-10-05",
-    "betfred.mobi": "2026-10-05",
     "boylecasino.com": "2026-10-05",
     "britbingo.com": "2026-10-05",
     "bubble.bingo": "2026-10-05",
     "boylevegas.com": "2026-10-05",
-    "buzzbingo.com": "2026-10-05",
     "butlersbingo.com": "2026-10-05",
-    "buzzcasino.com": "2026-10-05",
-    "casino.boylesports.com": "2026-10-05",
     "casino77.com": "2026-10-05",
     "casinopalace.com": "2026-10-05",
     "casinomite.com": "2026-10-05",
     "casinoofdreams.uk": "2026-10-05",
     "casinosieger.com": "2026-10-05",
     "clubpools.com": "2026-10-05",
-    "cozino.com": "2026-10-05",
     "crazykingcasino.com": "2026-10-05",
     "dailyrecordbingo.com": "2026-10-05",
-    "copybet.com": "2026-10-05",
     "dazzlebingo.com": "2026-10-05",
     "dcbet.uk": "2026-10-05",
     "dragoni.gg": "2026-10-05",
@@ -10347,31 +11890,20 @@
     "easyslots.com": "2026-10-05",
     "dukescasino.com": "2026-10-05",
     "dynobet.com": "2026-10-05",
-    "dreamjackpot.com": "2026-10-05",
     "ejjabet.com": "2026-10-05",
     "dcbet.com": "2026-10-05",
     "fafabet.ie": "2026-10-05",
     "eurolottocasino.com": "2026-10-05",
-    "fitzdares.com": "2026-10-05",
-    "fanteam.com": "2026-10-05",
     "foot.net": "2026-10-05",
     "fluffywincasino.com": "2026-10-05",
     "first1club.com": "2026-10-05",
     "footballpools.com": "2026-10-05",
-    "games.boylesports.com": "2026-10-05",
-    "gameweekxi.com": "2026-10-05",
-    "gamebookers.com": "2026-10-05",
-    "galabingo.com": "2026-10-05",
     "galaspins.com": "2026-10-05",
     "gdaycasino.com": "2026-10-05",
     "glimmercasino.com": "2026-10-05",
-    "galacasino.com": "2026-10-05",
     "gothamslots.com": "2026-10-05",
     "glossybingo.com": "2026-10-05",
-    "grosvenorcasinos.com": "2026-10-05",
-    "grpcasino.com": "2026-10-05",
     "hippozino.com": "2026-10-05",
-    "hippodromeonline.com": "2026-10-05",
     "footie5.com": "2026-10-05",
     "hotwinscasino.com": "2026-10-05",
     "iwonvegas.com": "2026-10-05",
@@ -10381,44 +11913,28 @@
     "king-spin.uk": "2026-10-05",
     "katiesbingo.com": "2026-10-05",
     "kingspin.uk": "2026-10-05",
-    "kwiff.com": "2026-10-05",
     "kwiffcasino.com": "2026-10-05",
     "lazerlightbingo.com": "2026-10-05",
     "kittybingo.com": "2026-10-05",
     "lionwins.com": "2026-10-05",
     "lclubonline.com": "2026-10-05",
-    "livecasino.boylesports.com": "2026-10-05",
     "lobby.alfobet.com": "2026-10-05",
     "lotteryuk.casino-pp.net": "2026-10-05",
-    "lotto.boylesports.com": "2026-10-05",
-    "luckcity.com": "2026-10-05",
     "lottozone.com": "2026-10-05",
     "lucky247.uk": "2026-10-05",
     "lumoslots.com": "2026-10-05",
     "lucycasino.com": "2026-10-05",
-    "m.quinnbet.com": "2026-10-05",
-    "m.skypoker.com": "2026-10-05",
-    "m.skybet.com": "2026-10-05",
-    "m.skyvegas.com": "2026-10-05",
     "luckyprocasino.com": "2026-10-05",
     "luckypantsbingo.com": "2026-10-05",
     "mainstagebingo.com": "2026-10-05",
     "majesticbingo.com": "2026-10-05",
     "mamzinobet.com": "2026-10-05",
     "matchbingo.com": "2026-10-05",
-    "mcbookie.com": "2026-10-05",
-    "mbingo.boylesports.com": "2026-10-05",
     "maxiplay.com": "2026-10-05",
-    "mcasino.boylesports.com": "2026-10-05",
     "magicalvegas.com": "2026-10-05",
-    "mgames.boylesports.com": "2026-10-05",
     "meccabingo.com": "2026-10-05",
     "mipools.com": "2026-10-05",
-    "mlivecasino.boylesports.com": "2026-10-05",
-    "mlotto.boylesports.com": "2026-10-05",
-    "mobile.boylesports.com": "2026-10-05",
     "mobileslots.com": "2026-10-05",
-    "mobile.betdaq.com": "2026-10-05",
     "moolzy.com": "2026-10-05",
     "mrben.com": "2026-10-05",
     "mrrun.com": "2026-10-05",
@@ -10426,29 +11942,20 @@
     "mrrex.com": "2026-10-05",
     "mrsuperplay.com": "2026-10-05",
     "mrslot.com": "2026-10-05",
-    "mvegas.boylesports.com": "2026-10-05",
     "net88.uk.com": "2026-10-05",
     "net88uk.com": "2026-10-05",
-    "mrluck.com": "2026-10-05",
     "ne-bet.com": "2026-10-05",
     "neptuneplay.com": "2026-10-05",
     "oddsking.com": "2026-10-05",
-    "paddypower.com": "2026-10-05",
-    "planetsportbet.com": "2026-10-05",
     "play.betzi.co": "2026-10-05",
     "play.google.com": "2026-10-05",
-    "play-www.777.com": "2026-10-05",
     "playleon.com": "2026-10-05",
     "play.neonrush.com": "2026-10-05",
-    "poker.boylesports.com": "2026-10-05",
     "playmagical.com": "2026-10-05",
-    "pricedup.bet": "2026-10-05",
     "potsofluck.com": "2026-10-05",
-    "proper.bet": "2026-10-05",
     "prizelandbingo.com": "2026-10-05",
     "pokerstarscasino.uk": "2026-10-05",
     "q88bets.com": "2026-10-05",
-    "quinnbet.com": "2026-10-05",
     "quidslots.com": "2026-10-05",
     "playbetplus.com": "2026-10-05",
     "playcasinoplus.com": "2026-10-05",
@@ -10461,19 +11968,11 @@
     "rialtocasino.com": "2026-10-05",
     "rosybingo.com": "2026-10-05",
     "royalvalleycasino.com": "2026-10-05",
-    "redcasino.com": "2026-10-05",
     "safaribingo.com": "2026-10-05",
-    "savibet.com": "2026-10-05",
     "rubybet.com": "2026-10-05",
     "scorchingslots.com": "2026-10-05",
     "silkbet.bet": "2026-10-05",
     "simbaslots.com": "2026-10-05",
-    "skybet.com": "2026-10-05",
-    "skybingo.com": "2026-10-05",
-    "rainbowriches.com": "2026-10-05",
-    "skycasino.com": "2026-10-05",
-    "skypoker.com": "2026-10-05",
-    "skyvegas.com": "2026-10-05",
     "sinspins.com": "2026-10-05",
     "rainbowslots.com": "2026-10-05",
     "skolcasino.com": "2026-10-05",
@@ -10481,95 +11980,53 @@
     "slotsking.com": "2026-10-05",
     "slotnite.com": "2026-10-05",
     "spacewins.com": "2026-10-05",
-    "spin-king.com": "2026-10-05",
-    "spin-king.uk": "2026-10-05",
-    "spinking.com": "2026-10-05",
-    "spinking.uk": "2026-10-05",
     "sports.sbet.com": "2026-10-05",
     "sportsbroker.com": "2026-10-05",
     "starslots.com": "2026-10-05",
-    "starsports.bet": "2026-10-05",
     "spinandwin.com": "2026-10-05",
-    "stakespin.casino": "2026-10-05",
     "sunnycasino.com": "2026-10-05",
     "stiona.com": "2026-10-05",
     "swankybingo.com": "2026-10-05",
     "sweepmate.app": "2026-10-05",
-    "sweeps.game": "2026-10-05",
-    "talksportbet.com": "2026-10-05",
     "telephonebetting.com": "2026-10-05",
     "text-bet.com": "2026-10-05",
     "thepools.com": "2026-10-05",
     "thorslots.com": "2026-10-05",
     "theslotsisland.com": "2026-10-05",
-    "tombola.com": "2026-10-05",
-    "thepalaces.com": "2026-10-05",
     "thevic.com": "2026-10-05",
     "superfluffycasino.com": "2026-10-05",
     "vampirebingo.com": "2026-10-05",
-    "vegas.boylesports.com": "2026-10-05",
-    "tombolaarcade.com": "2026-10-05",
     "vegasparadise.com": "2026-10-05",
     "wildwestwins.com": "2026-10-05",
     "watchmyspin.com": "2026-10-05",
     "yokocasino.com": "2026-10-05",
     "zoesbingo.com": "2026-10-05",
-    "1xbet.pe": "2026-10-05",
-    "888casino.it": "2026-10-05",
     "bestamerica.pe": "2026-10-05",
-    "betano.co": "2026-10-05",
-    "betano.pe": "2026-10-05",
-    "betcris.pe": "2026-10-05",
     "betsafe.pe": "2026-10-05",
     "betsson.co": "2026-10-05",
     "betsson.pe": "2026-10-05",
-    "betwarrior.pe": "2026-10-05",
     "bonanzabet.pe": "2026-10-05",
-    "caliente.pe": "2026-10-05",
-    "coolbet.pe": "2026-10-05",
     "fixplay.pe": "2026-10-05",
     "ganaexpress.bet": "2026-10-05",
-    "gioca7.it": "2026-10-05",
-    "giochi24.it": "2026-10-05",
-    "goldbet.it": "2026-10-05",
-    "inkabet.pe": "2026-10-05",
     "lottomatica.it": "2026-10-05",
     "luckia.co": "2026-10-05",
     "masterbets365.com": "2026-10-05",
     "megapuesta.pe": "2026-10-05",
-    "meridianbet.pe": "2026-10-05",
     "micasino.com": "2026-10-05",
     "mryoker.co": "2026-10-05",
     "netwin.it": "2026-10-05",
-    "netbet.it": "2026-10-05",
     "pentagol.pe": "2026-10-05",
-    "perlaplay.it": "2026-10-05",
-    "planetwin365.it": "2026-10-05",
-    "mylotteriesplay.it": "2026-10-05",
-    "quigioco.it": "2026-10-05",
     "rivalo.co": "2026-10-05",
-    "sportbet.it": "2026-10-05",
-    "sportium.it": "2026-10-05",
     "stanleybet.it": "2026-10-05",
-    "sunbet.it": "2026-10-05",
     "tiorico.bet": "2026-10-05",
-    "tombola.it": "2026-10-05",
     "totosi.it": "2026-10-05",
-    "vincitu.it": "2026-10-05",
-    "yajuego.co": "2026-10-05",
-    "sisal.it": "2026-10-05",
-    "snai.it": "2026-10-05",
-    "winbet.it": "2026-10-05",
     "777casino.si": "2026-10-05",
     "22bet.com": "2026-10-05",
     "astrabull.com": "2026-10-05",
-    "betclic.pl": "2026-10-05",
     "betistan.com": "2026-10-05",
-    "betsport.pl": "2026-10-05",
     "betsafe.ee": "2026-10-05",
     "betsamigo.ee": "2026-10-05",
     "betsson.gr": "2026-10-05",
-    "betters.pl": "2026-10-05",
     "bigwin.com": "2026-10-05",
     "boostcasino.com": "2026-10-05",
     "bombaycasino.com": "2026-10-05",
@@ -10577,25 +12034,19 @@
     "buumi.com": "2026-10-05",
     "campeonbet.ee": "2026-10-05",
     "campeonbet.com": "2026-10-05",
-    "casino.pamestoixima.gr": "2026-10-05",
     "casinobud.com": "2026-10-05",
     "casinofriday.com": "2026-10-05",
-    "casino.si": "2026-10-05",
     "cardwin.sk": "2026-10-05",
     "celebrino.com": "2026-10-05",
     "celebrino.ee": "2026-10-05",
-    "chance.sk": "2026-10-05",
     "comeon.pl": "2026-10-05",
-    "efbet.gr": "2026-10-05",
     "doublestar.sk": "2026-10-05",
     "epicbet.com": "2026-10-05",
     "elabet.gr": "2026-10-05",
     "evobet.com": "2026-10-05",
-    "favbet.hr": "2026-10-05",
     "fenixbet.ee": "2026-10-05",
     "firespin.com": "2026-10-05",
     "evobet.ee": "2026-10-05",
-    "efortuna.pl": "2026-10-05",
     "fruta.com": "2026-10-05",
     "fyffe.com": "2026-10-05",
     "highroller.com": "2026-10-05",
@@ -10607,7 +12058,6 @@
     "kaista.com": "2026-10-05",
     "grandx.com": "2026-10-05",
     "joker.io": "2026-10-05",
-    "ifortuna.sk": "2026-10-05",
     "jackpoty.com": "2026-10-05",
     "kanuuna.com": "2026-10-05",
     "jallacasino.ee": "2026-10-05",
@@ -10618,10 +12068,8 @@
     "kajotintacto.sk": "2026-10-05",
     "lonkerokasino.com": "2026-10-05",
     "kingswin.ee": "2026-10-05",
-    "lebull.pl": "2026-10-05",
     "luckia.hr": "2026-10-05",
     "luckynordic.com": "2026-10-05",
-    "lutrija.hr": "2026-10-05",
     "lysti.com": "2026-10-05",
     "magnusbet.sk": "2026-10-05",
     "mirage777.sk": "2026-10-05",
@@ -10629,20 +12077,15 @@
     "monacobet.sk": "2026-10-05",
     "nalucasino.com": "2026-10-05",
     "nalucasino.ee": "2026-10-05",
-    "n1casino.gr": "2026-10-05",
     "ninjacasino.ee": "2026-10-05",
     "ninjacasino.com": "2026-10-05",
     "ninjasports.ee": "2026-10-05",
-    "netbet.gr": "2026-10-05",
     "nubet.com": "2026-10-05",
     "nopein.com": "2026-10-05",
     "nutz.ee": "2026-10-05",
-    "nike.sk": "2026-10-05",
     "olybet.ee": "2026-10-05",
     "olybet.eu": "2026-10-05",
-    "olybet.hr": "2026-10-05",
     "olybet.sk": "2026-10-05",
-    "optibet.ee": "2026-10-05",
     "pelipeto.com": "2026-10-05",
     "pelikioski.com": "2026-10-05",
     "online.casinoadmiral.sk": "2026-10-05",
@@ -10655,11 +12098,8 @@
     "pokerstarscasino.gr": "2026-10-05",
     "privabet.com": "2026-10-05",
     "pottila.com": "2026-10-05",
-    "psk.hr": "2026-10-05",
     "respin.com": "2026-10-05",
     "rizk.hr": "2026-10-05",
-    "pamestoixima.gr": "2026-10-05",
-    "rooster.bet": "2026-10-05",
     "rulikk.com": "2026-10-05",
     "rooli.com": "2026-10-05",
     "shokker.com": "2026-10-05",
@@ -10669,48 +12109,25 @@
     "slotbox.ee": "2026-10-05",
     "sombrerospins.com": "2026-10-05",
     "spinokkio.com": "2026-10-05",
-    "superbet.gr": "2026-10-05",
-    "supercasino.si": "2026-10-05",
-    "sts.pl": "2026-10-05",
     "svenbet.com": "2026-10-05",
-    "stoiximan.gr": "2026-10-05",
-    "supersport.hr": "2026-10-05",
     "svenbet.ee": "2026-10-05",
-    "superbet.pl": "2026-10-05",
     "svenplay.ee": "2026-10-05",
-    "tipsport.sk": "2026-10-05",
-    "vivatbet.com": "2026-10-05",
-    "wettarena.pl": "2026-10-05",
     "wallacebet.ee": "2026-10-05",
-    "winmasters.gr": "2026-10-05",
     "winnerz.com": "2026-10-05",
-    "www2.pamestoixima.gr": "2026-10-05",
     "voomcasino.com": "2026-10-05",
     "winnerz.ee": "2026-10-05",
-    "vistabet.gr": "2026-10-05",
-    "vivatbet.ee": "2026-10-05",
     "vivatbet.eu": "2026-10-05",
     "zlots.com": "2026-10-05",
     "xcasino.hu": "2026-10-05",
-    "yolo.com": "2026-10-05",
     "alberta.casinotime.ca": "2026-10-05",
     "ab.sportsinteraction.com": "2026-10-05",
     "bet99.com": "2026-10-05",
     "betalpha.au": "2026-10-05",
     "betbuzz.au": "2026-10-05",
-    "betdragon.au": "2026-10-05",
-    "caesars.com": "2026-10-05",
     "casineo.ch": "2026-10-05",
     "firevegas.com": "2026-10-05",
     "jeux.loro.ch": "2026-10-05",
-    "mintbet.au": "2026-10-05",
-    "purecasino.ca": "2026-10-05",
-    "ripperbet.au": "2026-10-05",
-    "stardustcasino.com": "2026-10-05",
-    "thescore-casino.ca": "2026-10-05",
-    "777.ua": "2026-10-05",
     "bcgame.ke": "2026-10-05",
-    "beton.ua": "2026-10-05",
     "betwin.ke": "2026-10-05",
     "bongobongo.ke": "2026-10-05",
     "buudahbet.com": "2026-10-05",
@@ -10718,15 +12135,11 @@
     "chezabet.ke": "2026-10-05",
     "cosmobet.ua": "2026-10-05",
     "dabodabo.com": "2026-10-05",
-    "cosmolot.ua": "2026-10-05",
-    "ggbet.ua": "2026-10-05",
     "kilibet.ke": "2026-10-05",
     "first.ua": "2026-10-05",
     "maycasino.com": "2026-10-05",
     "metabet.ke": "2026-10-05",
     "michezobet.ke": "2026-10-05",
-    "melbet.ke": "2026-10-05",
-    "meridianbet.ke": "2026-10-05",
     "moyobet.ke": "2026-10-05",
     "pakakumi.com": "2026-10-05",
     "maybets.com": "2026-10-05",
@@ -10738,11 +12151,8 @@
     "wrbet.ke": "2026-10-05",
     "winkbet.com": "2026-10-05",
     "spotika.com": "2026-10-05",
-    "123go.com": "2026-10-05",
     "123bingo.ph": "2026-10-05",
-    "123go.games": "2026-10-05",
     "123poker.ph": "2026-10-05",
-    "123go.ph": "2026-10-05",
     "123perya.ph": "2026-10-05",
     "123swerte.ph": "2026-10-05",
     "123sports.ph": "2026-10-05",
@@ -10751,11 +12161,8 @@
     "6swerte.com": "2026-10-05",
     "6tara.com": "2026-10-05",
     "arenapluspro.com": "2026-10-05",
-    "arionplay.com": "2026-10-05",
     "arenapluspro.net": "2026-10-05",
-    "arenaplus.net": "2026-10-05",
     "bet88.ph": "2026-10-05",
-    "arenaplus.ph": "2026-10-05",
     "bet88.stream": "2026-10-05",
     "betano.ph": "2026-10-05",
     "bets5.ph": "2026-10-05",
@@ -10770,16 +12177,6 @@
     "bingopluspoker.ph": "2026-10-05",
     "binggoplusandroid3.com": "2026-10-05",
     "bp.plus": "2026-10-05",
-    "buenas.asia": "2026-10-05",
-    "buenas.bet": "2026-10-05",
-    "buenas.cc": "2026-10-05",
-    "buenas.life": "2026-10-05",
-    "buenas.ph": "2026-10-05",
-    "buenas.plus": "2026-10-05",
-    "buenas.site": "2026-10-05",
-    "buenas.pro": "2026-10-05",
-    "buenas.win": "2026-10-05",
-    "buenas.vip": "2026-10-05",
     "buenas.live": "2026-10-05",
     "binggoplus.net": "2026-10-05",
     "buenasfun.ph": "2026-10-05",
@@ -10787,8 +12184,6 @@
     "buenasgames.ph": "2026-10-05",
     "casinofortunegate.com": "2026-10-05",
     "casinoplus.ai": "2026-10-05",
-    "casinoplus.com": "2026-10-05",
-    "casinoplus.ph": "2026-10-05",
     "casinoplusdeals.com": "2026-10-05",
     "casinoplusoffer.com": "2026-10-05",
     "casinoplusfreebie.com": "2026-10-05",
@@ -10800,30 +12195,10 @@
     "combowin.ph": "2026-10-05",
     "coolgameslakiwin.com": "2026-10-05",
     "casinoplusevent.com": "2026-10-05",
-    "crazywingo.asia": "2026-10-05",
-    "crazywingo.ph": "2026-10-05",
-    "crazywin.ph": "2026-10-05",
-    "deskace.com": "2026-10-05",
-    "deskgame.com": "2026-10-05",
-    "deskace.app": "2026-10-05",
-    "deskace.vip": "2026-10-05",
-    "deskace.ph": "2026-10-05",
-    "deskace.pro": "2026-10-05",
     "casinoplusonlineph.com": "2026-10-05",
-    "deskgame.club": "2026-10-05",
-    "deskgame.app": "2026-10-05",
     "casinoplusonline.com": "2026-10-05",
-    "deskgame.ph": "2026-10-05",
-    "deskgame.pro": "2026-10-05",
-    "deskgame.vip": "2026-10-05",
-    "desklucky.club": "2026-10-05",
-    "desklucky.app": "2026-10-05",
-    "desklucky.com": "2026-10-05",
-    "desklucky.vip": "2026-10-05",
     "desktaya.club": "2026-10-05",
-    "desklucky.ph": "2026-10-05",
     "desktaya.app": "2026-10-05",
-    "desklucky.pro": "2026-10-05",
     "desktaya.ph": "2026-10-05",
     "desktaya.pro": "2026-10-05",
     "desktaya.com": "2026-10-05",
@@ -10832,11 +12207,9 @@
     "deskwin.club": "2026-10-05",
     "digiwin.ph": "2026-10-05",
     "deskwin.com": "2026-10-05",
-    "ebingo.ninogaming.com": "2026-10-05",
     "deskwin.ph": "2026-10-05",
     "deskwin.pro": "2026-10-05",
     "deskwin.vip": "2026-10-05",
-    "ecasino.ninogaming.com": "2026-10-05",
     "eplay.egamescasino.ph": "2026-10-05",
     "fairplay.ph": "2026-10-05",
     "fastwin.ph": "2026-10-05",
@@ -10846,7 +12219,6 @@
     "fbmplay.com": "2026-10-05",
     "fbmcasino.ph": "2026-10-05",
     "fbmgame.online": "2026-10-05",
-    "fbm.casino": "2026-10-05",
     "fgc88.com": "2026-10-05",
     "filgame.ph": "2026-10-05",
     "fbmplay.ph": "2026-10-05",
@@ -10875,41 +12247,26 @@
     "grandwin.ph": "2026-10-05",
     "ggvibe.ph": "2026-10-05",
     "h5.123go.games": "2026-10-05",
-    "gzone.ph": "2026-10-05",
-    "hannonline.ph": "2026-10-05",
-    "happybingo.fun": "2026-10-05",
-    "happybingo.ph": "2026-10-05",
-    "happybingo.games": "2026-10-05",
     "hannliveonline.com": "2026-10-05",
     "gjack.ph": "2026-10-05",
     "gjackpot.ph": "2026-10-05",
     "inplay.1play.ph": "2026-10-05",
-    "igo.ph": "2026-10-05",
     "goace.ph": "2026-10-05",
     "inplay.88play.ph": "2026-10-05",
     "igoegaming.ph": "2026-10-05",
     "inplay.luckyu.ph": "2026-10-05",
-    "inplay.ph": "2026-10-05",
     "jackpotcombo.com": "2026-10-05",
     "gomax.ph": "2026-10-05",
     "gomega.ph": "2026-10-05",
     "gprize.ph": "2026-10-05",
-    "juan365.app": "2026-10-05",
-    "juan365.com": "2026-10-05",
     "juanace.app": "2026-10-05",
     "juanace.ph": "2026-10-05",
     "juanace.com": "2026-10-05",
-    "juan365.ph": "2026-10-05",
-    "juan365.win": "2026-10-05",
-    "juan365.online": "2026-10-05",
-    "juanbingo.ph": "2026-10-05",
     "juankada.com": "2026-10-05",
-    "juanbingo.com": "2026-10-05",
     "juankada.app": "2026-10-05",
     "juanmate.com": "2026-10-05",
     "greel.ph": "2026-10-05",
     "juankada.ph": "2026-10-05",
-    "juanbingo.app": "2026-10-05",
     "juanpanalo.ph": "2026-10-05",
     "juanpanalo.app": "2026-10-05",
     "juanmate.ph": "2026-10-05",
@@ -10925,7 +12282,6 @@
     "lakilucky.com": "2026-10-05",
     "lakijackpot.com": "2026-10-05",
     "lakigames.com": "2026-10-05",
-    "lakiplay.com": "2026-10-05",
     "landing.wing.ph": "2026-10-05",
     "lakiwin.com": "2026-10-05",
     "gwinner.ph": "2026-10-05",
@@ -10938,7 +12294,6 @@
     "legendlink.com": "2026-10-05",
     "luckygame.ph": "2026-10-05",
     "luckygameph.com": "2026-10-05",
-    "laki.casino": "2026-10-05",
     "luckyi.ph": "2026-10-05",
     "luckyplay.ph": "2026-10-05",
     "laki7.com": "2026-10-05",
@@ -10987,11 +12342,8 @@
     "midori-online.com": "2026-10-05",
     "midoricasino.cc": "2026-10-05",
     "midori-casino.club": "2026-10-05",
-    "midori.bet": "2026-10-05",
     "midori-casino.net": "2026-10-05",
-    "midori.net": "2026-10-05",
     "minesplus.ph": "2026-10-05",
-    "midori.online": "2026-10-05",
     "midori-casino.com": "2026-10-05",
     "midoricasino.co": "2026-10-05",
     "midoricasino.club": "2026-10-05",
@@ -11021,20 +12373,11 @@
     "newportpanalobet.ph": "2026-10-05",
     "newportjackpotworld.ph": "2026-10-05",
     "newportvmx.ph": "2026-10-05",
-    "ninogaming.com": "2026-10-05",
     "newportgames.com": "2026-10-05",
     "numerouno.egamescasino.ph": "2026-10-05",
-    "novalink.art": "2026-10-05",
-    "novalink.biz": "2026-10-05",
-    "novalink.fashion": "2026-10-05",
-    "novalink.cloud": "2026-10-05",
-    "novalink.design": "2026-10-05",
-    "novalink.health": "2026-10-05",
     "novalink.it.com": "2026-10-05",
     "novalink.ph": "2026-10-05",
     "nwrluckyworld.ph": "2026-10-05",
-    "novalink.bid": "2026-10-05",
-    "ok-games.ph": "2026-10-05",
     "okapp.chat": "2026-10-05",
     "okadaonlinecasino.com": "2026-10-05",
     "numerouno.ph": "2026-10-05",
@@ -11054,7 +12397,6 @@
     "playpal77.ph": "2026-10-05",
     "playsg8.com": "2026-10-05",
     "peryaplus.com": "2026-10-05",
-    "oddspark.com": "2026-10-05",
     "pin77.net": "2026-10-05",
     "prizewin.ph": "2026-10-05",
     "rlivegame.net": "2026-10-05",
@@ -11068,10 +12410,8 @@
     "s5live.ph": "2026-10-05",
     "slotplus.ph": "2026-10-05",
     "solaireonline.com": "2026-10-05",
-    "sports.ninogaming.com": "2026-10-05",
     "spinplusph.com": "2026-10-05",
     "spat4.jp": "2026-10-05",
-    "sportsplus.ph": "2026-10-05",
     "store.fbmplay.com": "2026-10-05",
     "sulobet.ph": "2026-10-05",
     "texasplus.ph": "2026-10-05",
@@ -11080,11 +12420,7 @@
     "toto-dream.com": "2026-10-05",
     "thunderbirdonlinerizal.com": "2026-10-05",
     "wilyonaryo.com": "2026-10-05",
-    "wing.ph": "2026-10-05",
-    "winzir.com": "2026-10-05",
     "wins.ph": "2026-10-05",
-    "winzir.net": "2026-10-05",
-    "winzir.ph": "2026-10-05",
     "wownumero.ph": "2026-10-05",
     "wowgames.com": "2026-10-05",
     "wowperya.ph": "2026-10-05",
