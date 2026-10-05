@@ -7,6 +7,7 @@ import { tintFor } from "@/lib/logo";
 import { CryptoTicker } from "@/components/home/CryptoTicker";
 import { LogoColumns } from "@/components/home/LogoColumns";
 import { SlotsPreviewTable } from "@/components/home/SlotsPreviewTable";
+import { topSlotRows, studioCatalogue } from "@/lib/slot-page";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { filterFns } from "@/lib/casino-index";
 import { casinoFacts } from "@/lib/casino-facts";
@@ -479,10 +480,10 @@ export default function HomePage() {
             </p>
           </div>
           <Link href="/slots" style={{ fontSize: 14, fontWeight: 600, color: "#00C2CC", whiteSpace: "nowrap" }}>
-            All {c.slots} slots →
+            All {topSlotRows().length} top slots →
           </Link>
         </div>
-        <SlotsPreviewTable slots={slots.slice(0, 8)} />
+        <SlotsPreviewTable slots={topSlotRows().slice(0, 8)} />
       </section>
 
       {/* Providers */}
@@ -502,7 +503,10 @@ export default function HomePage() {
               <div style={{ fontSize: 12, lineHeight: 1.5, color: "#7B8A93", marginBottom: 14 }}>{p.note}</div>
               <div style={{ display: "flex", flexDirection: "column", gap: 6, paddingTop: 12, borderTop: "1px solid rgba(255,255,255,.07)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#83919A" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", gap: 8 }}><span>rtp</span><span style={{ color: "#C3CFD5", textAlign: "right" }}>{p.rtp}</span></div>
-                <div style={{ display: "flex", justifyContent: "space-between", gap: 8 }}><span>catalogue</span><span style={{ color: "#C3CFD5", textAlign: "right" }}>{p.titlesStated ?? "not stated"}</span></div>
+                {/* The slots we hold for the studio, not the studio's own stated
+                    catalogue size, which most do not publish ("not stated" on
+                    every card read as a gap in our data). */}
+                <div style={{ display: "flex", justifyContent: "space-between", gap: 8 }}><span>slots</span><span style={{ color: "#C3CFD5", textAlign: "right" }}>{studioCatalogue(p.name).titles ? studioCatalogue(p.name).titles.toLocaleString("en-GB") : p.titlesStated ?? "—"}</span></div>
                 
               </div>
             </Link>

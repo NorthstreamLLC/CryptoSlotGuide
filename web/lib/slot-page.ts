@@ -414,6 +414,10 @@ export function topSlotRows(): {
   rtp: string;
   volatility: string;
   maxWin: string;
+  /** How many RTP builds the studio publishes for the title; 0 where none is on record. */
+  versions: number;
+  /** The tile, where we hold art we may serve. */
+  image: string | null;
 }[] {
   const reviews = new Map(siteData.slots.map((s) => [s.slug, s]));
   return TOP_SLOTS.map((slug, i) => {
@@ -422,6 +426,7 @@ export function topSlotRows(): {
       const un = (k: "rtp" | "vol" | "maxWin") => !!r.unpublished?.includes(k);
       const fb = catalogueFallback(slug, r.provider, r.name);
       const vol = un("vol") ? fb.vol : r.vol;
+      const g = PAGES.get(slug);
       return {
         slug,
         rank: i + 1,
@@ -430,6 +435,8 @@ export function topSlotRows(): {
         rtp: !un("rtp") && typeof r.rtp === "number" ? `${r.rtp}%` : fb.rtp ?? "Not published",
         volatility: vol ? `${vol[0].toUpperCase()}${vol.slice(1)}` : "Not published",
         maxWin: (un("maxWin") ? fb.maxWin : r.maxWin) ?? "Not published",
+        versions: r.rtpVersions ? r.rtpVersions.split("/").length : g ? rtpVersions(g).length : 0,
+        image: slotArtBySlug(slug),
       };
     }
     const g = PAGES.get(slug);
@@ -446,6 +453,8 @@ export function topSlotRows(): {
         return vol ? `${vol[0].toUpperCase()}${vol.slice(1)}` : "Not published";
       })(),
       maxWin: g.maxWinMultiplier ? `${g.maxWinMultiplier.toLocaleString()}x` : "Not published",
+      versions: v.length,
+      image: slotArtBySlug(slug),
     };
   }).filter((r): r is NonNullable<typeof r> => !!r);
 }
