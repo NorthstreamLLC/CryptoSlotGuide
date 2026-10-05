@@ -1139,6 +1139,338 @@ const ADAPTERS = {
       why: "Under the Money Gaming Act in force since 1 January 2019, online casino games may only be offered by Swiss land-based casinos whose concession the Federal Council has extended to online play, with each game approved by the ESBK; large-scale lotteries are reserved to Swisslos and Loterie Romande, which also run the licensed online sports betting, under Gespa's supervision. Sites without Swiss authorisation are blocked.",
     };
   },
+
+  KE() {
+    // The Gambling Regulatory Authority (successor of the BCLB, whose domain
+    // now redirects here) publishes one table of licensed gaming companies:
+    // company, trading name, the Bookmaker (BK), Public Gaming (PG) and Public
+    // Lottery (PL) licence numbers it holds ("Nil" where none), status and
+    // domain. The link targets in the domain column are shifted against the
+    // rows on several entries, so the domain is the cell's visible text, which
+    // is what the register states.
+    const url = "https://gra.go.ke/licensed-operators/";
+    const html = get(url).replace(/\s+/g, " ");
+    const period = (clean(html).match(/LICENSED COMPANIES FOR (\d{4}\/\d{4}) FINANCIAL YEAR/i) || [])[1];
+    if (!period) throw new Error("GRA: licensed companies heading not found");
+    const table = (html.match(/<table[\s\S]*?<\/table>/) || [])[0];
+    if (!table || !/Operators Name/.test(table) || !/DOMAINS/.test(table)) throw new Error("GRA: table not found");
+    const has = (c) => /\d{4,}/.test(clean(c));
+    const casinos = [], sportsbooks = [];
+    for (const tr of table.split(/<tr[^>]*>/).slice(1)) {
+      const c = [...tr.matchAll(/<td[^>]*>([\s\S]*?)<\/td>/g)].map((m) => m[1]);
+      if (c.length < 8) continue;
+      const [, company, trading, bk, pg, , , domainCell] = c;
+      const d = clean(domainCell).replace(/\s+/g, "");
+      if (!d || /^nil$/i.test(d) || !/\./.test(d)) continue;
+      const row = op(trading, company, [d]);
+      if (has(bk)) sportsbooks.push(row);
+      if (has(pg)) casinos.push(row);
+    }
+    if (sportsbooks.length < 50) throw new Error(`GRA: only ${sportsbooks.length} bookmakers read`);
+    return {
+      regulator: "Gambling Regulatory Authority of Kenya (GRA), successor of the Betting Control and Licensing Board (BCLB)",
+      casinos: list(casinos, url, `Companies on the GRA's list of licensed gaming companies for the ${period} financial year that hold a Public Gaming (casino) licence and have a domain listed, each with the trading name and domain the list gives. Licensed casinos with no domain on the list, which are land-based casinos, are left out.`),
+      sportsbooks: list(sportsbooks, url, `Companies on the GRA's list of licensed gaming companies for the ${period} financial year that hold a Bookmaker licence and have a domain listed, each with the trading name and domain the list gives. Bookmakers with no domain on the list are left out.`),
+      why: "Kenya's Gambling Control Act, 2025, in force since 26 August 2025, established the Gambling Regulatory Authority as successor of the Betting Control and Licensing Board and requires an online bookmaker, online lottery or online casino licence from the Authority to offer online gambling in Kenya. Licences issued under the repealed Betting, Lotteries and Gaming Act remain valid until they expire.",
+    };
+  },
+
+  UA() {
+    // PlayCity's open-data page links its registers of gambling organisers as
+    // spreadsheets (one per licence type) published from the agency's Google
+    // Drive. Each sheet starts with a row of English field names, then the
+    // Ukrainian headers and a row of column numbers; one row per licence. The
+    // links are found by their titles, so a re-uploaded file is still read.
+    const page = "https://playcity.gov.ua/publichna-informatsiia/vidkryti-dani-playcity";
+    const html = get(page).replace(/\s+/g, " ");
+    const sheetId = (re) => {
+      for (const [, href, text] of html.matchAll(/<a [^>]*href="([^"]+)"[^>]*>([^<]+)</g))
+        if (re.test(clean(text))) return (href.match(/spreadsheets\/d\/([\w-]+)/) || [])[1];
+      throw new Error(`PlayCity: register link not found (${re})`);
+    };
+    const today = new Date(TODAY + "T00:00:00Z");
+    const day = (v) => {
+      const s = clean(v);
+      if (/^\d{5}$/.test(s)) return new Date(Date.UTC(1899, 11, 30) + +s * 86400000);
+      const m = s.match(/(\d{2})\.(\d{2})\.(\d{4})/);
+      return m ? new Date(`${m[3]}-${m[2]}-${m[1]}T00:00:00Z`) : null;
+    };
+    const blank = (v) => !v || /^null$/i.test(clean(v));
+    const read = (re) => {
+      const rows = readXlsx(get(`https://docs.google.com/spreadsheets/d/${sheetId(re)}/export?format=xlsx`, { binary: true }));
+      // Map the English field names to columns; the first one wins where a name repeats.
+      const col = {};
+      for (const [c, name] of Object.entries(rows[0])) {
+        const k = String(name ?? "").replace(/\s+/g, "").toLowerCase();
+        if (k && !(k in col)) col[k] = c;
+      }
+      const f = (r, ...names) => { for (const n of names) if (col[n] && !blank(r[col[n]])) return r[col[n]]; return null; };
+      if (!col.legalname || !col["website/mobileapp"]) throw new Error(`PlayCity: unexpected columns (${re})`);
+      const out = [];
+      for (const r of rows.slice(3)) {
+        const holder = f(r, "legalname");
+        const site = f(r, "website/mobileapp");
+        if (!holder || !site) continue;
+        // In force: no termination decision (or one a court has suspended, as
+        // the register records), not marked expired, and inside its term.
+        const appeal = clean(f(r, "resultappealdecision") ?? "");
+        if (f(r, "datelicensedecisionend") && !/зупинено/i.test(appeal)) continue;
+        if (/строк дії ліцензії закінчився/i.test(clean(f(r, "groundslicensetermination") ?? ""))) continue;
+        const issued = day(f(r, "datelicense"));
+        const years = parseInt(clean(f(r, "licensevalidityperiod")), 10);
+        if (!issued || !years) continue;
+        const end = new Date(issued); end.setUTCFullYear(end.getUTCFullYear() + years);
+        if (end <= today) continue;
+        const domains = [...new Set((clean(site).match(/\b[a-z0-9][a-z0-9-]*(?:\.[a-z0-9-]+)*\.[a-z]{2,}\b/gi) || []).map((d) => d.toLowerCase()))];
+        if (!domains.length) continue;
+        out.push({ ...op(f(r, "organizerbrand", "brand") ?? domains[0], holder, domains), validTo: end.toISOString().slice(0, 10) });
+      }
+      return out;
+    };
+    const casinos = [...read(/казино в мережі Інтернет/i), ...read(/покер в мережі Інтернет/i)];
+    const sportsbooks = read(/букмекерської діяльності/i);
+    if (casinos.length < 5) throw new Error(`PlayCity: only ${casinos.length} online casino licences read`);
+    return {
+      regulator: "Державне агентство України PlayCity (PlayCity, State Agency of Ukraine for the control of gambling and lotteries; formerly KRAIL)",
+      casinos: list(casinos, page, "PlayCity's registers of organisers of online casino games and of online poker, published as open data: each licence in force, with the brand, the company holding the licence, and the website the register gives. Licences the register shows as expired or terminated are left out; a licence whose termination a court has suspended is kept, as the register records it."),
+      sportsbooks: list(sportsbooks, page, "PlayCity's register of organisers of bookmaking activity, published as open data: each licence in force with a website listed, with the brand and the company holding the licence. Licences the register shows as expired or terminated are left out."),
+      why: "Ukraine legalised and licensed gambling under the Law 'On State Regulation of Activities Concerning the Organisation and Conduct of Gambling' (No. 768-IX). Online casino games, online poker and bookmaking each require a licence, issued by the State Agency PlayCity, which took over from the Commission for the Regulation of Gambling and Lotteries (KRAIL) and publishes the registers of licensed organisers.",
+    };
+  },
+
+  PH() {
+    // PAGCOR's Electronic Gaming Licensing Department page links two PDF
+    // registers of the web addresses PAGCOR has approved for play in the
+    // Philippines: one for the accredited Gaming System Administrators (GSAs,
+    // the licensed online gaming platforms), one for the online brands of the
+    // licensed land-based casinos. Each is a table — row number, company,
+    // game offerings, main brand, root word, sub-brands, main domain,
+    // sub-domains, additional URLs — under a diagonal "PAGCOR" watermark.
+    const page = "https://www.pagcor.ph/regulatory/cegs.php";
+    const html = get(page);
+    const text = clean(html);
+    for (const re of [/PAGCOR regulates all games of chance and issues licenses to all gaming operations within the Philippine territory/, /Electronic \(eCasino\) Games, Sports Betting/, /along with the online operation of their respective online gaming platforms/])
+      if (!re.test(text)) throw new Error(`PAGCOR EGLD page: expected wording not found (${re})`);
+    const pdfHref = (label) => {
+      const m = [...html.matchAll(/<a[^>]*href="([^"]+\.pdf)"[^>]*>([\s\S]*?)<\/a>/g)].find((a) => clean(a[2]) === label);
+      if (!m) throw new Error(`PAGCOR: no link "${label}"`);
+      return new URL(m[1].replace(/ /g, "%20"), page).href;
+    };
+    const gsaUrl = pdfHref("List of PAGCOR-Accredited Gaming System Administrators and Registered Brands and Domain Names/URLs");
+    const lcUrl = pdfHref("List of Registered Brands and Domain Names/URLs of Licensed Casinos");
+    const bin = process.platform === "win32" && fs.existsSync("C:/Program Files/Git/mingw64/bin/pdftotext.exe") ? '"C:/Program Files/Git/mingw64/bin/pdftotext.exe"' : "pdftotext";
+    const compact = (s) => s.replace(/\s+/g, "");
+    const dom = (s) => /^(?:[a-z0-9-]+\.)+[a-z]{2,}$/i.test(s);
+    // Reads one register PDF into rows { no, name, offerings[], brand, main[], domains[] }.
+    // pdftotext's table mode (-nodiag drops the watermark) puts each cell under
+    // its column heading but not at its height on the page; line-printer mode
+    // keeps the height. Each table-mode cell is found in the line-printer text
+    // to get its height, and table rows are told apart by the gap between them.
+    const readRegister = (url, file, nameLabel, offerLabel) => {
+      const pdf = path.join(CACHE, file);
+      fs.writeFileSync(pdf, get(url, { binary: true }));
+      const run = (opts) => execSync(`${bin} -enc UTF-8 ${opts} -nodiag "${pdf}" -`, { encoding: "utf8", maxBuffer: 64 << 20 }).split("\f");
+      const tPages = run("-table"), lPages = run("-lineprinter -linespacing 2 -fixed 3");
+      if (tPages.length !== lPages.length) throw new Error(`PAGCOR ${file}: page counts differ`);
+      const asOf = (tPages[0].match(/as of ([A-Z][a-z]+ \d{1,2}, \d{4})/) || [])[1];
+      if (!asOf) throw new Error(`PAGCOR ${file}: no "as of" date`);
+      const labels = ["NO.", nameLabel, offerLabel, "MAIN BRAND", "ROOT WORD", "SUB BRAND", "MAIN DOMAIN", "SUB-DOMAIN", "ADDITIONAL URL"];
+      const rows = new Map(), brands = new Set(), skipped = [], seen = new Set();
+      let last = null;
+      tPages.forEach((tp, p) => {
+        const tl = tp.split(/\r?\n/);
+        const h = tl.findIndex((l) => /^NO\.\s/.test(l) && l.includes("MAIN DOMAIN"));
+        if (h < 0) return;
+        // Where each column starts on this page.
+        const start = [];
+        for (const lab of labels) {
+          const i = tl[h].indexOf(lab, start.length ? start[start.length - 1] + 1 : 0);
+          if (i < 0) throw new Error(`PAGCOR ${file}: column "${lab}" not found on page ${p + 1}`);
+          start.push(i);
+        }
+        const body = tl.findIndex((l, i) => i > h && l.includes("(Max of 6)"));
+        const lraw = lPages[p].split(/\r?\n/), ll = lraw.map(compact);
+        // The line-printer line holding `test`, nearest to line `y` within `span`.
+        const near = (y, span, test) => {
+          let best = -1;
+          for (let j = Math.max(0, y - span); j < Math.min(ll.length, y + span + 1); j++) if (test(j) && (best < 0 || Math.abs(j - y) < Math.abs(best - y))) best = j;
+          return best;
+        };
+        const cells = [];
+        let y = 0;
+        for (let i = body + 1; i < tl.length; i++) {
+          const c = compact(tl[i]);
+          if (/^Page\d+of\d+$/.test(c) || /^NOTHINGFOLLOWS/.test(c) || /^Note:/.test(c)) break;
+          const ms = [...tl[i].matchAll(/\S+(?: \S+)*/g)];
+          if (!ms.length) continue;
+          // Roughly where the line sits: its longest cell, nearest the previous line.
+          const key = ms.map((m) => compact(m[0])).sort((a, b) => b.length - a.length)[0];
+          const at = near(y, 400, (j) => j >= y - 8 && ll[j].includes(key));
+          if (at < 0) throw new Error(`PAGCOR ${file}: "${key}" not found in line-printer text on page ${p + 1}`);
+          y = at;
+          // Then each cell's own height (table mode merges cells a few points apart into one line).
+          for (const m of ms) {
+            let k = start.reduce((a, s, n) => (s <= m.index + 2 ? n : a), 0);
+            if (k === 0 && !/^\d+$/.test(m[0])) k = 1; // the NO. column holds only row numbers; a company name can start left of its heading
+            const key = compact(m[0]);
+            const cy = k === 0 ? near(at, 5, (j) => new RegExp(`^\\s{0,24}${key}(\\s|$)`).test(lraw[j])) : near(at, 5, (j) => ll[j].includes(key));
+            if (cy < 0) throw new Error(`PAGCOR ${file}: cell "${m[0]}" not placed on page ${p + 1}`);
+            cells.push({ col: labels[k], text: m[0], y: cy });
+          }
+        }
+        cells.sort((a, b) => a.y - b.y);
+        // Rows: lines inside a table row sit 5 apart (10pt), rows at least 9 apart.
+        const groups = [];
+        let prev = -99;
+        for (const c of cells) {
+          if (c.y - prev >= 8) groups.push([]);
+          prev = c.y;
+          groups[groups.length - 1].push(c);
+        }
+        for (const g of groups) {
+          const col = (lab) => g.filter((c) => c.col === lab).map((c) => c.text);
+          const nos = [...new Set(col("NO."))];
+          if (nos.length > 1 || (nos.length === 1 && !/^\d+$/.test(nos[0]))) throw new Error(`PAGCOR ${file}: a row on page ${p + 1} has row numbers ${nos.join(",")}`);
+          const no = nos[0] ?? last; // a row carried over from the previous page
+          if (!no) throw new Error(`PAGCOR ${file}: first row has no number`);
+          last = no;
+          const r = rows.get(no) ?? rows.set(no, { no: +no, name: "", offerings: [], brand: "", main: [], domains: [] }).get(no);
+          const name = col(nameLabel).filter((s) => s !== "continuation").join(" ");
+          if (!r.name) r.name = name;
+          r.offerings.push(...col(offerLabel));
+          // One row (KAIZEN) has its brand in the root-word cell and the main-brand cell empty.
+          if (!r.brand) r.brand = col("MAIN BRAND").join(" ") || col("ROOT WORD").join(" ");
+          r.main.push(...col("MAIN DOMAIN"));
+          // A cell that is not a web address (the register prints one as "novalink fyi") is left out.
+          for (const d of [...col("MAIN DOMAIN"), ...col("SUB-DOMAIN"), ...col("ADDITIONAL URL")]) (dom(d) ? r.domains : skipped).push(d);
+          for (const b of [...col("MAIN BRAND"), ...col("SUB BRAND")]) brands.add(b.toLowerCase());
+        }
+        for (const l of tl) for (const w of l.split(/\s+/)) if (dom(w)) seen.add(w.toLowerCase());
+      });
+      if (skipped.length) console.warn(`PAGCOR ${file}: not a web address, left out: ${skipped.join(", ")}`);
+      // Every web address on the pages must have landed in a row, and nothing else.
+      const got = new Set([...rows.values()].flatMap((r) => r.domains.map((d) => d.toLowerCase())));
+      const want = new Set([...seen].filter((d) => !brands.has(d)));
+      const missing = [...want].filter((d) => !got.has(d)), extra = [...got].filter((d) => !want.has(d));
+      if (missing.length || extra.length) throw new Error(`PAGCOR ${file}: web addresses did not line up (missing ${missing.join(" ")}; extra ${extra.join(" ")})`);
+      const out = [...rows.values()].sort((a, b) => a.no - b.no).map((r) => ({ ...r, offerings: [...new Set(r.offerings)] }));
+      for (let i = 0; i < out.length; i++) if (out[i].no !== i + 1) throw new Error(`PAGCOR ${file}: rows not numbered 1..n (row ${i + 1} is ${out[i].no})`);
+      // A row may have no web address yet (an administrator whose games have not commenced); it yields no rows below.
+      for (const r of out) if (!r.name || !r.offerings.length) throw new Error(`PAGCOR ${file}: row ${r.no} is missing its company or games`);
+      return { rows: out, asOf };
+    };
+
+    const gsa = readRegister(gsaUrl, "ph-gsa.pdf", "GAMING SYSTEM", "GAME OFFERING");
+    const lc = readRegister(lcUrl, "ph-casinos.pdf", "INTEGRATED RESORT", "SUITE OF GAMES");
+    if (gsa.rows.length < 30) throw new Error(`PAGCOR: only ${gsa.rows.length} GSAs read`);
+    if (lc.rows.length < 5) throw new Error(`PAGCOR: only ${lc.rows.length} licensed casinos read`);
+    // One row for the main brand on its main domain, then one per other
+    // registered web address (the register does not tie sub-brands to domains).
+    const rowsOf = (r) => {
+      const main = [...new Set(r.main.map(host))];
+      const rest = [...new Set(r.domains.map(host))].filter((d) => !main.includes(d));
+      return [...main.map((d) => op(r.brand || d, r.name, [d])), ...rest.map((d) => op(d, r.name, [d]))];
+    };
+    // An offering marked * has yet to commence commercial operations (the register's note).
+    const live = (r, name) => r.offerings.includes(name);
+    const casinos = [], sportsbooks = [], others = [];
+    for (const r of gsa.rows) {
+      const c = live(r, "Electronic Casino Games"), s = live(r, "Sports Betting");
+      if (c) casinos.push(...rowsOf(r));
+      if (s) sportsbooks.push(...rowsOf(r));
+      if (!c && !s && r.offerings.some((o) => !o.startsWith("*"))) others.push(...rowsOf(r));
+    }
+    for (const r of lc.rows) casinos.push(...rowsOf(r));
+    // Legal basis: the Remote Operations page's notice on offshore licences.
+    const roas = clean(get("https://www.pagcor.ph/regulatory/remote-operations-and-ancillary-services.php"));
+    if (!/Executive Order No\. 74 which mandates the immediate ban of Philippine offshore gaming operations/.test(roas) || !/ALL Internet Gaming Licensees and Authorized Providers were cancelled effective December 15, 2024/.test(roas))
+      throw new Error("PAGCOR: offshore notice wording changed");
+    const gsaNote = `PAGCOR's list of accredited Gaming System Administrators and their registered brands and domain names (as of ${gsa.asOf}). For each administrator the register gives a main brand on a main domain, which is one row here under that brand, and further registered domains, sub-domains and additional URLs, one row each under the web address. The register says which games each administrator offers; game offerings it marks as not yet in commercial operation are left out.`;
+    return {
+      regulator: "Philippine Amusement and Gaming Corporation (PAGCOR)",
+      casinos: list(casinos, gsaUrl, `${gsaNote} Casino rows are the administrators offering Electronic (eCasino) Games, plus the online brands PAGCOR has approved for its licensed land-based casinos (${lcUrl}, as of ${lc.asOf}).`),
+      sportsbooks: list(sportsbooks, gsaUrl, `${gsaNote} Sportsbook rows are the administrators offering Sports Betting.`),
+      ...(others.length ? { operators: list(others, gsaUrl, `${gsaNote} These administrators offer neither eCasino games nor sports betting: only bingo, e-bingo, numeric, specialty or online poker games.`) } : {}),
+      why: "PAGCOR regulates all games of chance in the Philippines and licenses every gaming operation there; online casino games, e-bingo and sports betting reach players in the Philippines only through PAGCOR-accredited Gaming System Administrators' registered sites and the online brands of PAGCOR-licensed casinos. All offshore internet gaming licences were cancelled effective 15 December 2024 under Executive Order No. 74, so a site claiming an offshore PAGCOR licence is unauthorised.",
+    };
+  },
+
+  SG() {
+    // GRA's page on unlawful remote gambling names Singapore Pools (Private)
+    // Limited as the only operator licensed to provide remote gambling. GRA
+    // does not give its web address; the Tote Board, the statutory board that
+    // owns Singapore Pools, links it from its subsidiaries page.
+    const url = "https://www.gra.gov.sg/harm-minimisation/unlawful-remote-gambling-activities";
+    const text = clean(get(url));
+    for (const re of [/Singapore Pools \(Private\) Limited is the only operator licensed by GRA to provide remote gambling services/, /It is unlawful for any person to provide unlicensed remote gambling services in or from Singapore, or from outside Singapore to persons situated in Singapore/, /It is also an offence for any person in Singapore to participate in unlicensed remote gambling activities/])
+      if (!re.test(text)) throw new Error(`GRA: expected wording not found (${re})`);
+    const licUrl = "https://www.gra.gov.sg/licenses-approvals/licences-for-other-gambling-operators/lottery-betting";
+    if (!/GRA has renewed the licence of Singapore Pools \(Private\) Limited \(“Singapore Pools”\) to conduct betting operations, gaming and lotteries under Section 54 of the Gambling Control Act 2022/.test(clean(get(licUrl))))
+      throw new Error("GRA: licence page wording changed");
+    const tbUrl = "https://www.toteboard.gov.sg/about-us/our-subsidiaries/";
+    const tb = get(tbUrl);
+    if (!/Singapore Pools ↗ \(opens in new tab\) was established by the Singapore government on 23 May 1968/.test(clean(tb))) throw new Error("Tote Board: Singapore Pools wording changed");
+    const href = (tb.match(/href="(https:\/\/www\.singaporepools\.com\.sg\/?)"/) || [])[1];
+    if (!href) throw new Error("Tote Board: no link to singaporepools.com.sg");
+    return {
+      regulator: "Gambling Regulatory Authority of Singapore (GRA)",
+      operators: list([op("Singapore Pools", "Singapore Pools (Private) Limited", [href])], url, `GRA: Singapore Pools (Private) Limited is the only operator licensed by GRA to provide remote gambling services; its licence (${licUrl}) covers betting operations, gaming and lotteries. The web address is the one the Tote Board, Singapore Pools' government owner, links (${tbUrl}). GRA does not say which products are offered online, so the row is not split into casino or sports betting.`),
+      why: "Under Singapore's Gambling Control Act 2022 it is unlawful to provide unlicensed remote gambling to people in Singapore, and an offence to take part in it; Singapore Pools (Private) Limited is the only operator GRA licenses for remote gambling. Since 1 January 2025 the Singapore Police Force blocks unlawful gambling sites, their advertising and payments.",
+    };
+  },
+
+  JP() {
+    // Japan has no licensing register: betting is legal only where a law sets
+    // it up, run by public bodies. Two of them name their online sales sites
+    // on their own pages. The Japan Sport Council (JSC), which runs the sports
+    // lottery (toto, BIG, WINNER) under the 1998 Sports Promotion Lottery Act,
+    // links "スポーツくじオフィシャルサイト" (the sports lottery's official site).
+    // The National Association of Racing (NAR, keiba.go.jp), which oversees
+    // local horse racing, lists the internet voting sites where its races can
+    // be bet, each with its log-in address. Japanese text is compared with the
+    // spaces removed, as pages break it across tags.
+    const flat = (html) => clean(html).replace(/\s+/g, "");
+    const jscUrl = "https://www.jpnsport.go.jp/sinko/josei/tabid/61/Default.aspx";
+    const jsc = get(jscUrl);
+    for (const re of [/スポーツ振興投票の実施等に関する法律/, /独立行政法人日本スポーツ振興センター（当時:日本体育・学校健康センター）がスポーツくじの実施主体/, /独立行政法人日本スポーツ振興センターの直接運営方式で事業を行っています/])
+      if (!re.test(flat(jsc))) throw new Error(`JSC: expected wording not found (${re})`);
+    const toto = [...jsc.matchAll(/<a[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/g)].find((m) => clean(m[2]) === "スポーツくじオフィシャルサイト");
+    if (!toto || !/toto-dream\.com/.test(toto[1])) throw new Error("JSC: no link to the sports lottery's official site");
+
+    const narUrl = "https://www.keiba.go.jp/beginner/step4.html";
+    const nar = get(narUrl);
+    for (const re of [/インターネットでも馬券が買えるの？/, /以下のいずれかの投票サイト会員へご加入いただいた後、すぐに投票が可能となります/, /ＪＲＡのインターネット投票会員にご加入の方は、地方競馬の馬券もご購入いただけます/])
+      if (!re.test(flat(nar))) throw new Error(`NAR: expected wording not found (${re})`);
+    // The section between "６．インターネット…" and "７．発売締切…": one <h4> per voting site,
+    // each with a "投票ログイン" (voting log-in) link.
+    const sec = nar.slice(nar.indexOf("６．インターネット"), nar.indexOf("７．発売締切"));
+    const racing = [];
+    for (const part of sec.split(/<h4[^>]*>/).slice(1)) {
+      const name = clean(part.slice(0, part.indexOf("</h4>")));
+      const links = [...part.matchAll(/<a[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/g)];
+      const login = links.find((m) => clean(m[2]) === "投票ログイン");
+      const top = links.find((m) => clean(m[2]) === "投票サイトトップ");
+      if (!name || !login) throw new Error(`NAR: voting site "${name}" has no log-in link`);
+      // The site's top page where it is the same site as the log-in (keiba.rakuten.co.jp
+      // rather than my.keiba.rakuten.co.jp), else the log-in address.
+      const site = top && (host(login[1]) === host(top[1]) || host(login[1]).endsWith("." + host(top[1]))) ? top[1] : login[1];
+      const jra = /^JRAネット投票/.test(name);
+      racing.push(op(jra ? "JRAネット投票" : name, jra ? "JRA" : null, [site]));
+    }
+    if (racing.length < 3) throw new Error(`NAR: only ${racing.length} voting sites read`);
+    if (!racing.some((o) => o.domains[0] === "oddspark.com") || !/競輪やオートレースも購入可能です/.test(flat(nar))) throw new Error("NAR: Oddspark wording changed");
+
+    // Legal basis for online casinos: the National Police Agency's page.
+    const npa = flat(get("https://www.npa.go.jp/bureau/safetylife/hoan/onlinecasino/onlinecasino.html"));
+    for (const re of [/海外で合法的に運営されているオンラインカジノであっても、日本国内から接続して賭博を行うことは犯罪です/, /令和７年９月25日から施行されます/])
+      if (!re.test(npa)) throw new Error(`NPA: expected wording not found (${re})`);
+    return {
+      regulator: "Japan Sport Council (sports lottery); National Association of Racing (local horse racing)",
+      sportsbooks: list([op("スポーツくじ (toto)", "独立行政法人日本スポーツ振興センター (Japan Sport Council)", [toto[1]])], jscUrl, "The Japan Sport Council runs Japan's sports lottery (toto, BIG, WINNER, on football and basketball) directly under the Sports Promotion Lottery Act, and links its official sales site, toto-dream.com."),
+      operators: list(racing, narUrl, "Pari-mutuel horse-race betting, not a sportsbook: the internet voting sites the National Association of Racing lists for local (NAR) horse racing, each under the name NAR gives it and the address NAR links for it (the voting log-in, or the site's top page where that is the same site). JRA net voting (即PAT / A-PAT members) also sells JRA races; Oddspark also sells keirin and auto racing. Boat racing, keirin and auto racing have further official sites that no government page lists, so they are not here."),
+      why: "Japan has no online casino licence: the National Police Agency states that betting at an online casino from Japan is a crime even when the casino is legally run abroad, and since 25 September 2025 the amended Basic Act on Gambling Addiction Countermeasures also bans presenting online casino sites or linking to them. Legal online betting is limited to state-run schemes: the sports lottery, run by the Japan Sport Council under the 1998 Sports Promotion Lottery Act, and the public races, whose internet voting sites the racing bodies name.",
+    };
+  },
 };
 
 /** Minimal .xlsx reader: shared strings + the first worksheet, cells keyed by column letter. */
@@ -1164,16 +1496,21 @@ function readXlsx(buf) {
 
 /** Registers we could not read into rows, so the page can say so and link the regulator instead. */
 const UNREADABLE = {
-  MT: { regulator: "Malta Gaming Authority (MGA)", sourceUrl: "https://www.mga.org.mt/licensee-hub/licensee-register/", note: "The MGA's licensee register is a search tool rather than a published list, and it licenses operators for other markets rather than for Maltese players." },
+  MT: { regulator: "Malta Gaming Authority (MGA)", sourceUrl: "https://www.mga.org.mt/licensee-hub/licensee-register/", note: "The MGA's licensee register is an embedded search application whose data service refuses automated reads behind a Cloudflare bot check, and the MGA publishes no downloadable list of licensees. MGA licences cover operators serving players in other countries rather than a Maltese market, so they are not a list of sites licensed for any one country." },
   RO: { regulator: "Oficiul Național pentru Jocuri de Noroc (ONJN)", sourceUrl: "https://onjn.gov.ro/", note: "ONJN's site sits behind a browser-verification wall that a reader can pass and a script cannot." },
   NO: { regulator: "Lotteritilsynet", sourceUrl: "https://lottstift.no/for-spillere/", note: "Norway's exclusive-rights model gives Norsk Tipping and Norsk Rikstoto the only legal online offers; there is no register of licensed operators." },
   FI: { regulator: "Finnish Licensing and Supervisory Authority (Lupa- ja valvontavirasto)", sourceUrl: "https://lvv.fi/", note: "Veikkaus holds the exclusive right until the licensing market opens in 2027; the new authority has published no licensees yet." },
-  IE: { regulator: "Gambling Regulatory Authority of Ireland (GRAI)", sourceUrl: "https://www.grai.ie/licensing-regulation/business-to-consumer-licenses/licensing-phasing", note: "GRAI is phasing in business-to-consumer licensing under the Gambling Regulation Act 2024 and has not yet published a register of online licensees." },
+  IE: { regulator: "Gambling Regulatory Authority of Ireland (GRAI)", sourceUrl: "https://www.grai.ie/register", note: "GRAI's licence register, live since the first business-to-consumer licences of July 2026, lists remote betting and remote betting intermediary licence holders with their trading names (bet365, Paddy Power, Betfair, BoyleSports, William Hill and others) but no web addresses; the domain field on each holder's entry is empty. No gaming (online casino) licences have been issued yet." },
   BR: { regulator: "Secretaria de Prêmios e Apostas (SPA), Ministério da Fazenda", sourceUrl: "https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas/medida-provisoria-ndeg-1-394-2026-entenda-as-novas-regras-para-as-apostas-de-quota-fixa", note: "Provisional Measure (Medida Provisória) nº 1.394 of 25 September 2026 prohibits fixed-odds betting and online games nationwide, and the previously authorised sites had to go offline from 6 October 2026. The SPA keeps its list of the companies authorised before the measure, but none may operate." },
   MX: { regulator: "Secretaría de Gobernación (SEGOB), Dirección General de Juegos y Sorteos", sourceUrl: "http://www.juegosysorteos.gob.mx/", note: "The Dirección General de Juegos y Sorteos publishes its permit holders and their authorised websites on juegosysorteos.gob.mx, which does not answer automated reads, and SEGOB's pages on gob.mx sit behind a browser-verification wall that a reader can pass and a script cannot." },
   LT: { regulator: "Lošimų priežiūros tarnyba (Gaming Control Authority under the Ministry of Finance)", sourceUrl: "https://lpt.lrv.lt/lt/losimu-organizatoriai/leidimu-zurnalas/nuotoliniai-losimai/", note: "The Gaming Control Authority's permit journal for remote gaming sits behind a Cloudflare browser check that a reader can pass and a script cannot, and the copies it publishes on the national open-data portal (data.gov.lt) are behind a firewall block page; check the journal on the Authority's site." },
   BG: { regulator: "National Revenue Agency (НАП / NRA)", sourceUrl: "https://nra.bg/wps/portal/nra/registers-i-spisuci/registers/page.registers-po-zakona-za-hazarta", note: "The National Revenue Agency keeps the registers under the Gambling Act, including the list of websites licensed organisers run games through, on nra.bg; the site does not accept a script's connections and the national open-data portal (data.egov.bg) refuses them too, so check the registers on the NRA site." },
-  NZ: { regulator: "Department of Internal Affairs (DIA)", sourceUrl: "https://www.dia.govt.nz/online-casino-gambling", note: "The Online Casino Gambling Act 2026 creates licences for up to 15 online casino operators; the DIA has not yet published licensees." },
+  ZA: { regulator: "Provincial licensing authorities (Western Cape Gambling and Racing Board, Gauteng Gambling Board, Mpumalanga Economic Regulator, KwaZulu-Natal Economic Regulatory Authority and others), with the National Gambling Board", sourceUrl: "https://www.ngb.org.za/verified-operators/", note: "South Africa licenses bookmakers, including online bookmakers, province by province; online casino games are not permitted under the National Gambling Act. The National Gambling Board's Verified Operators list, compiled from the provincial licensing authorities, names every licensed bookmaker with its physical premises and licence number but no web address, and the provincial boards' own lists, such as the Western Cape board's licence holders page, name the bookmakers without their websites." },
+  CW: { regulator: "Curaçao Gaming Authority (CGA)", sourceUrl: "https://www.cga.cw/en/133i348441001", note: "The Curaçao Gaming Authority publishes its online gaming licence register as a PDF listing each licensee, its licence number, whether the licence is B2C or B2B, and its status, but not the websites the licences cover; individual sites are checked through the seal on each site, which links to cert.cga.cw. Curaçao licenses operators that serve players in other countries, not a Curaçao market." },
+  KR: { regulator: "National Gambling Control Commission (사행산업통합감독위원회), with the Korea Sports Promotion Foundation (KSPO) as issuer of sports betting tickets", sourceUrl: "https://www.kspo.or.kr/kspo/main/contents.do?menuNo=200144", note: "Sports betting in Korea is limited to the sports promotion betting tickets (체육진흥투표권, Sports Toto) issued by the Korea Sports Promotion Foundation under the National Sports Promotion Act and supervised by the National Gambling Control Commission. KSPO's Sports Toto page names the Betman online site (베트맨 온라인 사이트) as its online sales channel but gives no web address for it, and the Commission's pages do not name the site." },
+  IN: { regulator: "Ministry of Electronics and Information Technology (MeitY); Online Gaming Authority of India", sourceUrl: "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2241804&reg=3&lang=1", note: "The Promotion and Regulation of Online Gaming Act, 2025 prohibits all forms of online money games nationwide, whether games of chance, games of skill or a mix of both, along with their advertising and the processing of payments for them; its Rules came into force on 1 May 2026. No online casino or sports betting site may lawfully serve players in India, so there is no register of licensees, state or central." },
+  TR: { regulator: "Spor Toto Teşkilat Başkanlığı (Ministry of Youth and Sports)", sourceUrl: "https://www.sportoto.gov.tr/", note: "Fixed-odds sports betting (iddaa) and the Spor Toto pool are state games run by Spor Toto Teşkilat Başkanlığı through dealers it licenses, with iddaa.com as the game's own site. The organisation publishes no list of the dealers licensed to sell iddaa online; its home page carries only logo links to betting sites, with no text naming them as authorised dealers." },
+  NZ: { regulator: "Department of Internal Affairs (DIA)", sourceUrl: "https://www.dia.govt.nz/Online-Gambling-for-players", note: "The Online Casino Gambling Act 2026 allows up to 15 licensed online casinos; the auction for the right to apply was held on 29 September 2026 and the DIA expects to issue licences from early 2027, when it will publish a public register. Online sports and racing betting is limited to TAB NZ and its brand betcha under the Racing Industry Act 2020; the DIA names them but lists no web addresses." },
 };
 
 // ---------------------------------------------------------------------------

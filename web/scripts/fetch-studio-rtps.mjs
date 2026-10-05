@@ -98,7 +98,10 @@ function curlText(url) {
 
 const decode = (s) =>
   String(s ?? "")
-    .replace(/&#0?39;|&rsquo;|&#8217;|&#x27;/g, "'")
+    // Numeric references first: Pragmatic writes its ™ as "&#x2122;".
+    .replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCodePoint(parseInt(h, 16)))
+    .replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(Number(d)))
+    .replace(/&rsquo;/g, "'")
     .replace(/&#8211;|&ndash;/g, "–")
     .replace(/&amp;/g, "&")
     .replace(/&quot;/g, '"')
@@ -264,7 +267,10 @@ const ADAPTERS = {
       return [...slugs].map((slug) => ({ url: `https://www.pragmaticplay.com/en/games/${slug}/` }));
     },
     parse(html) {
-      const title = decode((html.match(/<title>(.*?)<\/title>/s) ?? [])[1])
+      // The page's own game heading; the <title> is translated on some
+      // locales ("Joacă …") even under /en/.
+      const h1 = decode((html.match(/<h1[^>]*game-details__title[^>]*>([^<]*)</) ?? [])[1]);
+      const title = (h1 || decode((html.match(/<title>(.*?)<\/title>/s) ?? [])[1]))
         .replace(/^Play\s+/i, "")
         .replace(/\s+Slot Demo by Pragmatic Play.*$/i, "")
         .replace(/\s+(Slot|Demo).*$/i, "")

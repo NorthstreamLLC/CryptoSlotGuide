@@ -3,7 +3,7 @@ import { NextSteps } from "@/components/layout/NextSteps";
 import { ReportIssue } from "@/components/ui/ReportIssue";
 import { FiatBrandGrid } from "@/components/fiat/FiatBrandGrid";
 import { casinosForCountry } from "@/lib/landing";
-import type { FiatMarket, FiatProduct } from "@/lib/fiat";
+import { marketNoun, type FiatMarket, type FiatProduct } from "@/lib/fiat";
 
 /**
  * One market's licensed sites: every web address its regulator lists, with
@@ -42,7 +42,7 @@ export function FiatMarketPage({ m, type }: { m: FiatMarket; type: FiatProduct |
             <div>
               <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".1em", textTransform: "uppercase", color: "#5FE3E8", marginBottom: 4 }}>Licensed in {m.name} · fiat</div>
               <h1 style={{ margin: 0, fontSize: "clamp(30px, 4vw, 46px)", lineHeight: 1.05, letterSpacing: "-.035em", fontWeight: 800, color: "#fff", textWrap: "balance" }}>
-                {casinos === 0 && sports > 0 ? `Licensed online sportsbooks in ${m.name}` : `Licensed online casinos and sportsbooks in ${m.name}`}
+                {marketNoun(m) === "casinos" ? `Licensed online casinos and sportsbooks in ${m.name}` : `Licensed online ${marketNoun(m)} in ${m.name}`}
               </h1>
             </div>
           </div>

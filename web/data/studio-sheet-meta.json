@@ -34401,6 +34401,361 @@
       "studio": "Yggdrasil",
       "sheet": "Yggdrasil game page",
       "volatility": "High"
+    },
+    "888-gold": {
+      "name": "888 Gold",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "the-catfather-part-ii": {
+      "name": "The Catfather Part II",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "aladdin-s-treasure": {
+      "name": "Aladdin's Treasure",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "lady-of-the-moon": {
+      "name": "Lady of the Moon",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "dwarven-gold": {
+      "name": "Dwarven Gold",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "rock-vegas": {
+      "name": "Rock Vegas",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "spin-score-megaways": {
+      "name": "Spin & Score Megaways",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "snakes-ladders-snake-eyes": {
+      "name": "Snakes & Ladders - Snake Eyes",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "big-bass-hold-spinner-megaways": {
+      "name": "Big Bass Hold & Spinner Megaways",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "big-bass-crash": {
+      "name": "Big Bass Crash",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "floating-dragon-new-year-festival-ultra-megaways-hold-spin": {
+      "name": "Floating Dragon New Year Festival Ultra Megaways Hold & Spin",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "cult": {
+      "name": "CULT",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "steamin-reels": {
+      "name": "Steamin' Reels",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "triple-pot-diamond": {
+      "name": "Triple Pot Diamond",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "snow-party": {
+      "name": "Snow Party",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "multihand-blackjack": {
+      "name": "Multihand Blackjack",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "baccarat": {
+      "name": "Baccarat",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "idol-pop-fever": {
+      "name": "Idol Pop Fever",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "jelly-express": {
+      "name": "Jelly Express",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "roulette": {
+      "name": "Roulette",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "big-bass-trophy-catch": {
+      "name": "Big Bass Trophy Catch",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "inca-queen": {
+      "name": "Inca Queen",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "great-ghosts": {
+      "name": "Great Ghosts!",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "dragon-pots-megaways": {
+      "name": "Dragon Pots Megaways",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "sweet-bonanza-2500": {
+      "name": "Sweet Bonanza 2500",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "launch-to-riches": {
+      "name": "Launch to Riches",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "heartbreakers": {
+      "name": "Heartbreakers",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "mr-null-s-wicked-wares": {
+      "name": "Mr. Null's Wicked Wares",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "triple-pot-plinko---hercules": {
+      "name": "Triple Pot Plinko - Hercules",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "dragon-s-gate-bonus-choice": {
+      "name": "Dragon’s Gate – Bonus Choice",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "spaceman": {
+      "name": "Spaceman",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "high-flyer": {
+      "name": "High Flyer",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "the-big-dog-house": {
+      "name": "The Big Dog House",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "sanatorium-secrets": {
+      "name": "Sanatorium Secrets",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "jokers-revenge": {
+      "name": "Joker’s Revenge",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "candy-rush": {
+      "name": "Candy Rush",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "caishens-cash-pots": {
+      "name": "Caishen’s Cash Pots",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "bear-crazy": {
+      "name": "Bear Crazy",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "mahjong-wins-triple-pot": {
+      "name": "Mahjong Wins Triple Pot",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "better-barnhouse-bonanza": {
+      "name": "Better Barnhouse Bonanza",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "fury-of-anubis": {
+      "name": "Fury of Anubis",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "big-bass-football-bonanza": {
+      "name": "Big Bass Football Bonanza",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "hell-butcher": {
+      "name": "Hell Butcher",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "luxor-of-cleopatra": {
+      "name": "Luxor of Cleopatra",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "big-bass-blast": {
+      "name": "Big Bass Blast",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "out-of-the-woods": {
+      "name": "Out of the Woods",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "the-dog-house-megaways-1000": {
+      "name": "The Dog House Megaways 1000",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "cosmic-clusters": {
+      "name": "Cosmic Clusters!",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "sleeping-dragon-ultra-dark": {
+      "name": "Sleeping Dragon Ultra Dark",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "sunnydaze-asylum": {
+      "name": "Sunnydaze Asylum",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "happy-dragon": {
+      "name": "Happy Dragon",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "death-dominion": {
+      "name": "Death Dominion",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "jade-legends": {
+      "name": "Jade Legends",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "super-serge": {
+      "name": "Super Serge",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "777-wheel-blitz": {
+      "name": "777 Wheel Blitz",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "harvest-moon-grave-profits": {
+      "name": "Harvest Moon – Grave Profits",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "golden-retriever": {
+      "name": "Golden Retriever",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "bubble-up": {
+      "name": "Bubble Up!",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "lucky-drums-88": {
+      "name": "Lucky Drums 88",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "ra-vs-osiris": {
+      "name": "Ra vs Osiris",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "eternal-diamonds": {
+      "name": "Eternal Diamonds",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "triple-hop-pots": {
+      "name": "Triple Hop Pots",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "helios-triple-sun": {
+      "name": "Helios – Triple Sun",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "freya-1000": {
+      "name": "Freya 1000",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "coven-rising": {
+      "name": "Coven Rising",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "eastern-fury": {
+      "name": "Eastern Fury",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "gates-of-olympus-pop": {
+      "name": "Gates of Olympus POP",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "gates-of-olympus-2500": {
+      "name": "Gates of Olympus 2500",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "forever-split-megaways": {
+      "name": "Forever Split Megaways",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "deep-sea-frenzy": {
+      "name": "Deep Sea Frenzy",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
+    },
+    "big-bass-vegas-1000": {
+      "name": "Big Bass Vegas 1000",
+      "studio": "Pragmatic Play",
+      "sheet": "Pragmatic Play game page"
     }
   }
 }

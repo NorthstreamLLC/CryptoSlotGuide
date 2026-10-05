@@ -614,9 +614,9 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
               ],
             },
             {
-              title: "Latin America & Asia-Pacific",
+              title: "Latin America, Africa & Asia-Pacific",
               links: [
-                ...[...regionMarkets("latin-america"), ...regionMarkets("asia-pacific")].map((m) => ({ label: `${m.name} · ${m.brands.length}`, href: fiatHref(m.code), image: m.flag ?? undefined })),
+                ...[...regionMarkets("latin-america"), ...regionMarkets("africa"), ...regionMarkets("asia-pacific")].map((m) => ({ label: `${m.name} · ${m.brands.length}`, href: fiatHref(m.code), image: m.flag ?? undefined })),
                 { label: `All ${fiatMarkets().length + 2} licensed markets`, href: "/licensed-casinos" },
               ],
             },

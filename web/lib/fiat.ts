@@ -254,13 +254,26 @@ export const FIAT_REGIONS: { key: string; title: string; sub: string; codes: str
     key: "europe",
     title: "Europe",
     sub: "Each country's licensed sites, read from its regulator's own register.",
-    codes: ["DE", "ES", "SE", "IT", "DK", "NL", "EE", "GR", "FR", "BE", "SK", "PT", "CZ", "PL", "HR", "CH", "LV", "CY", "HU", "SI", "AT"],
+    codes: ["DE", "ES", "SE", "IT", "DK", "NL", "EE", "GR", "FR", "BE", "SK", "PT", "CZ", "PL", "HR", "CH", "UA", "LV", "CY", "HU", "SI", "AT"],
   },
   { key: "latin-america", title: "Latin America", sub: "Each country's or province's own list of authorised online operators.", codes: ["PE", "CO", "AR", "AR-C"] },
-  { key: "asia-pacific", title: "Asia-Pacific", sub: "Australia licenses online bookmakers state by state, most of them in the Northern Territory; online casinos are prohibited nationally.", codes: ["AU-NT"] },
+  { key: "africa", title: "Africa", sub: "Each country's own list of licensed online operators.", codes: ["KE"] },
+  { key: "asia-pacific", title: "Asia-Pacific", sub: "Each country's own register or its state operator: the Philippines licenses online gaming through PAGCOR; Singapore and Japan allow only their state schemes; Australia licenses bookmakers, mostly in the Northern Territory, and prohibits online casinos.", codes: ["PH", "AU-NT", "SG", "JP"] },
 ];
 export const regionMarkets = (key: string): FiatMarket[] =>
   (FIAT_REGIONS.find((r) => r.key === key)?.codes ?? []).map((c) => fiatMarketFor(c)).filter((m): m is FiatMarket => !!m);
 /** Kept for the menu: the European markets on file, in region order. */
 export const EUROPE_FIAT = FIAT_REGIONS.find((r) => r.key === "europe")!.codes;
+/**
+ * What a market's page lists, for its title: "sportsbooks" where every brand
+ * is licensed for betting only (Australia), "betting sites" where the
+ * country's law entry says online casinos are not legal (Japan, Singapore),
+ * else "casinos".
+ */
+export function marketNoun(m: FiatMarket): "casinos" | "sportsbooks" | "betting sites" {
+  if (m.brands.length && m.brands.every((b) => b.products.length === 1 && b.products[0] === "sports")) return "sportsbooks";
+  if (countryBy(m.code.split("-")[0])?.onlineCasino === "not legal") return "betting sites";
+  return "casinos";
+}
+
 export const fiatHref = (code: string) => `/licensed-casinos/${code.toLowerCase()}`;

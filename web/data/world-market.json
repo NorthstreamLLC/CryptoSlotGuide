@@ -19846,13 +19846,7123 @@
     "note": "Gespa: the two lottery companies offer sports betting online and in retail under the brands 'Jouez Sport' (Loterie Romande, French-speaking cantons) and 'Sporttip' (Swisslos, German- and Italian-speaking cantons); Gespa links each company's site."
    },
    "why": "Under the Money Gaming Act in force since 1 January 2019, online casino games may only be offered by Swiss land-based casinos whose concession the Federal Council has extended to online play, with each game approved by the ESBK; large-scale lotteries are reserved to Swisslos and Loterie Romande, which also run the licensed online sports betting, under Gespa's supervision. Sites without Swiss authorisation are blocked."
+  },
+  "KE": {
+   "regulator": "Gambling Regulatory Authority of Kenya (GRA), successor of the Betting Control and Licensing Board (BCLB)",
+   "casinos": {
+    "operators": [
+     {
+      "brand": "1Xbet",
+      "licenseHolder": "Advanced Gaming Limited",
+      "domains": [
+       "1xbet.co.ke"
+      ]
+     },
+     {
+      "brand": "22Bet",
+      "licenseHolder": "Nuntis Holdings Limited",
+      "domains": [
+       "22bet.co.ke"
+      ]
+     },
+     {
+      "brand": "9Ubet",
+      "licenseHolder": "Glostar Trading Co. Limited",
+      "domains": [
+       "9ubet.co.ke"
+      ]
+     },
+     {
+      "brand": "Bangbet Casino",
+      "licenseHolder": "Bangbet Limited",
+      "domains": [
+       "bangbet.com"
+      ]
+     },
+     {
+      "brand": "Begame",
+      "licenseHolder": "Blockdance Africa Limited",
+      "domains": [
+       "bcgame.ke"
+      ]
+     },
+     {
+      "brand": "Bet Lion",
+      "licenseHolder": "Zumandu Limited",
+      "domains": [
+       "betlion.com"
+      ]
+     },
+     {
+      "brand": "Betato",
+      "licenseHolder": "Poker Masters Limited",
+      "domains": [
+       "betato.com"
+      ]
+     },
+     {
+      "brand": "Betfalme",
+      "licenseHolder": "Falmebet Limited",
+      "domains": [
+       "betfalme.ke"
+      ]
+     },
+     {
+      "brand": "Betika",
+      "licenseHolder": "Shop & Deliver Limited",
+      "domains": [
+       "betika.com"
+      ]
+     },
+     {
+      "brand": "Betken",
+      "licenseHolder": "Cotes Du Rhone Limited",
+      "domains": [
+       "betken.co.ke"
+      ]
+     },
+     {
+      "brand": "Betpawa",
+      "licenseHolder": "Nanovas International (K) Ltd",
+      "domains": [
+       "betpawa.co.ke"
+      ]
+     },
+     {
+      "brand": "Betrg8",
+      "licenseHolder": "Level X Tech Limited",
+      "domains": [
+       "betgr8.co.ke"
+      ]
+     },
+     {
+      "brand": "Bongo Bongo",
+      "licenseHolder": "Kensen Limited",
+      "domains": [
+       "bongobongo.ke"
+      ]
+     },
+     {
+      "brand": "Captainsbet",
+      "licenseHolder": "Zitron Limited",
+      "domains": [
+       "captainsbet.ke"
+      ]
+     },
+     {
+      "brand": "Fanaka",
+      "licenseHolder": "Clarity Limited",
+      "domains": [
+       "fanakabet.com"
+      ]
+     },
+     {
+      "brand": "Fasfas",
+      "licenseHolder": "Five Stride Technologies Ltd",
+      "domains": [
+       "fasfasgames.co.ke"
+      ]
+     },
+     {
+      "brand": "Game Guys",
+      "licenseHolder": "Gameguys Limited",
+      "domains": [
+       "aviator.co.ke"
+      ]
+     },
+     {
+      "brand": "Gamema Pro",
+      "licenseHolder": "Probet Masters Limited",
+      "domains": [
+       "winkbet.com"
+      ]
+     },
+     {
+      "brand": "Gamemania",
+      "licenseHolder": "Rabow Co Limited",
+      "domains": [
+       "gamemania.co.ke"
+      ]
+     },
+     {
+      "brand": "Games dreams",
+      "licenseHolder": "Games Dreams Technologies Limited",
+      "domains": [
+       "wezabet.ke"
+      ]
+     },
+     {
+      "brand": "Gameshow",
+      "licenseHolder": "Gameshow Bet Limited",
+      "domains": [
+       "gameshowbet.co.ke"
+      ]
+     },
+     {
+      "brand": "Ilot Bet",
+      "licenseHolder": "Ilot Kenya Limited",
+      "domains": [
+       "ilotbet.com"
+      ]
+     },
+     {
+      "brand": "Jambobet",
+      "licenseHolder": "Tekonstruct Limited",
+      "domains": [
+       "jambobet.co.ke"
+      ]
+     },
+     {
+      "brand": "Juicebet",
+      "licenseHolder": "Gamma Gaming Group Limited",
+      "domains": [
+       "juicebet.co.ke"
+      ]
+     },
+     {
+      "brand": "Kaya Game Casino",
+      "licenseHolder": "Kaya Game Limited",
+      "domains": [
+       "gamekaya.com"
+      ]
+     },
+     {
+      "brand": "Kessbet",
+      "licenseHolder": "Kessun Kenya Limited",
+      "domains": [
+       "kessbet.com"
+      ]
+     },
+     {
+      "brand": "Kessgame Casino",
+      "licenseHolder": "Kesstime Kenya Limited",
+      "domains": [
+       "kessgame.co.ke"
+      ]
+     },
+     {
+      "brand": "Kilibet",
+      "licenseHolder": "Apuesta Kenya Limited",
+      "domains": [
+       "kilibet.ke"
+      ]
+     },
+     {
+      "brand": "Kings Bet",
+      "licenseHolder": "Poker Kings Limited",
+      "domains": [
+       "spotika.com"
+      ]
+     },
+     {
+      "brand": "Kwachua",
+      "licenseHolder": "Kwachua Entertainment Limited",
+      "domains": [
+       "ken.bet"
+      ]
+     },
+     {
+      "brand": "Las Vegas Casino",
+      "licenseHolder": "Family Town 2002 Limited",
+      "domains": [
+       "lasvegas.co.ke"
+      ]
+     },
+     {
+      "brand": "Maycasino",
+      "licenseHolder": "Maypay Limited",
+      "domains": [
+       "maycasino.com"
+      ]
+     },
+     {
+      "brand": "Melbet",
+      "licenseHolder": "Game Tosha Limited",
+      "domains": [
+       "melbet.ke"
+      ]
+     },
+     {
+      "brand": "MeridianBet",
+      "licenseHolder": "Gameday Enterprise Limited",
+      "domains": [
+       "meridianbet.ke"
+      ]
+     },
+     {
+      "brand": "Moyobet",
+      "licenseHolder": "Carnaval Kenya Limited",
+      "domains": [
+       "moyobet.ke"
+      ]
+     },
+     {
+      "brand": "Mozzartbet",
+      "licenseHolder": "Mozzartbet Kenya Limited",
+      "domains": [
+       "mozzartbet.co.ke"
+      ]
+     },
+     {
+      "brand": "Odibets",
+      "licenseHolder": "Kareco Holdings Limited",
+      "domains": [
+       "odibets.com"
+      ]
+     },
+     {
+      "brand": "Odipay",
+      "licenseHolder": "Odipay Limited",
+      "domains": [
+       "chezagame.com"
+      ]
+     },
+     {
+      "brand": "Okoabets",
+      "licenseHolder": "Curtis and Fletcher Solutions Limited",
+      "domains": [
+       "naibet.co.ke"
+      ]
+     },
+     {
+      "brand": "PakaKumi",
+      "licenseHolder": "Reys & Meys Limited",
+      "domains": [
+       "pakakumi.com"
+      ]
+     },
+     {
+      "brand": "Pepeta",
+      "licenseHolder": "Norm Kick-off Limited",
+      "domains": [
+       "pepeta.com"
+      ]
+     },
+     {
+      "brand": "Pitch 90 Bet",
+      "licenseHolder": "Bet Mbao Limited",
+      "domains": [
+       "pitch90bet.com"
+      ]
+     },
+     {
+      "brand": "Play Master",
+      "licenseHolder": "Nest Bit Kenya Limited",
+      "domains": [
+       "playmaster.co.ke"
+      ]
+     },
+     {
+      "brand": "Regency slots",
+      "licenseHolder": "Sky Gaming Kenya Limited",
+      "domains": [
+       "skycitycasino.com"
+      ]
+     },
+     {
+      "brand": "Royal Palms Casino",
+      "licenseHolder": "Southcape Investment Limited",
+      "domains": [
+       "palmsbet.co.ke"
+      ]
+     },
+     {
+      "brand": "Shabiki",
+      "licenseHolder": "Playco Technology Limited",
+      "domains": [
+       "shabiki.com"
+      ]
+     },
+     {
+      "brand": "Solid bets",
+      "licenseHolder": "Solid Gaming Limited",
+      "domains": [
+       "imarabet.co.ke"
+      ]
+     },
+     {
+      "brand": "Sportybet",
+      "licenseHolder": "Dreamhub Technology Limited",
+      "domains": [
+       "sportybet.com"
+      ]
+     },
+     {
+      "brand": "Tigon Bet",
+      "licenseHolder": "Universal Winners Ltd",
+      "domains": [
+       "tigonbet.co.ke"
+      ]
+     },
+     {
+      "brand": "Vincitutbet Casino",
+      "licenseHolder": "Vincitu Africa Limited",
+      "domains": [
+       "vincitubet.co.ke"
+      ]
+     },
+     {
+      "brand": "Viva bet",
+      "licenseHolder": "Solomo Limited",
+      "domains": [
+       "vivabet.ke"
+      ]
+     },
+     {
+      "brand": "Wakabet",
+      "licenseHolder": "Golden Honey Badger",
+      "domains": [
+       "tuzowins.com"
+      ]
+     }
+    ],
+    "sourceUrl": "https://gra.go.ke/licensed-operators/",
+    "asOf": "2026-10-05",
+    "note": "Companies on the GRA's list of licensed gaming companies for the 2025/2026 financial year that hold a Public Gaming (casino) licence and have a domain listed, each with the trading name and domain the list gives. Licensed casinos with no domain on the list, which are land-based casinos, are left out."
+   },
+   "sportsbooks": {
+    "operators": [
+     {
+      "brand": "1Xbet",
+      "licenseHolder": "Advanced Gaming Limited",
+      "domains": [
+       "1xbet.co.ke"
+      ]
+     },
+     {
+      "brand": "22Bet",
+      "licenseHolder": "Nuntis Holdings Limited",
+      "domains": [
+       "22bet.co.ke"
+      ]
+     },
+     {
+      "brand": "254spin",
+      "licenseHolder": "Gkimilili Technologies Limited",
+      "domains": [
+       "254spin.co.ke"
+      ]
+     },
+     {
+      "brand": "888starz",
+      "licenseHolder": "Zenit Solutions Limited",
+      "domains": [
+       "888starz.co.ke"
+      ]
+     },
+     {
+      "brand": "9Ubet",
+      "licenseHolder": "Glostar Trading Co. Limited",
+      "domains": [
+       "9ubet.co.ke"
+      ]
+     },
+     {
+      "brand": "Ajebet",
+      "licenseHolder": "Cobuin Solutions Limited",
+      "domains": [
+       "ajebet.co.ke"
+      ]
+     },
+     {
+      "brand": "Bahati Bet",
+      "licenseHolder": "Lucky Majesty Limited",
+      "domains": [
+       "bahati.bet"
+      ]
+     },
+     {
+      "brand": "Bangbet Casino",
+      "licenseHolder": "Bangbet Limited",
+      "domains": [
+       "bangbet.com"
+      ]
+     },
+     {
+      "brand": "Bantu Bet",
+      "licenseHolder": "IGLMS Limited",
+      "domains": [
+       "bantubet.co.ke"
+      ]
+     },
+     {
+      "brand": "Begame",
+      "licenseHolder": "Blockdance Africa Limited",
+      "domains": [
+       "bcgame.ke"
+      ]
+     },
+     {
+      "brand": "Bestbets",
+      "licenseHolder": "Superior Ideas Kenya Limited",
+      "domains": [
+       "dabodabo.com"
+      ]
+     },
+     {
+      "brand": "Bestnow bets",
+      "licenseHolder": "Bestnow Analytics Technologies Limited",
+      "domains": [
+       "millionsbets.co.ke"
+      ]
+     },
+     {
+      "brand": "Bet Lion",
+      "licenseHolder": "Zumandu Limited",
+      "domains": [
+       "betlion.com"
+      ]
+     },
+     {
+      "brand": "Betato",
+      "licenseHolder": "Poker Masters Limited",
+      "domains": [
+       "betato.com"
+      ]
+     },
+     {
+      "brand": "Betbox",
+      "licenseHolder": "Betbox Limited",
+      "domains": [
+       "betbox.co.ke"
+      ]
+     },
+     {
+      "brand": "BetBureau",
+      "licenseHolder": "Sportbureau Kenya Limited",
+      "domains": [
+       "betbureau.co.ke"
+      ]
+     },
+     {
+      "brand": "Betdonjo",
+      "licenseHolder": "Gikenoh Enterprises Limited",
+      "domains": [
+       "betdonjo.co.ke"
+      ]
+     },
+     {
+      "brand": "Betfalme",
+      "licenseHolder": "Falmebet Limited",
+      "domains": [
+       "betfalme.ke"
+      ]
+     },
+     {
+      "brand": "Betfiti",
+      "licenseHolder": "Bet Fiti Limited",
+      "domains": [
+       "betfiti.ke"
+      ]
+     },
+     {
+      "brand": "Betika",
+      "licenseHolder": "Shop & Deliver Limited",
+      "domains": [
+       "betika.com"
+      ]
+     },
+     {
+      "brand": "Betkali",
+      "licenseHolder": "Bet Kali Limited",
+      "domains": [
+       "betkali.ke"
+      ]
+     },
+     {
+      "brand": "Betken",
+      "licenseHolder": "Cotes Du Rhone Limited",
+      "domains": [
+       "betken.co.ke"
+      ]
+     },
+     {
+      "brand": "Betkumi",
+      "licenseHolder": "Incline Technologies Limited",
+      "domains": [
+       "betkumi.co.ke"
+      ]
+     },
+     {
+      "brand": "Betnare",
+      "licenseHolder": "Beyond Intouch Software Limited",
+      "domains": [
+       "betnare.co.ke"
+      ]
+     },
+     {
+      "brand": "Betpawa",
+      "licenseHolder": "Nanovas International (K) Ltd",
+      "domains": [
+       "betpawa.co.ke"
+      ]
+     },
+     {
+      "brand": "Betrg8",
+      "licenseHolder": "Level X Tech Limited",
+      "domains": [
+       "betgr8.co.ke"
+      ]
+     },
+     {
+      "brand": "Bets307",
+      "licenseHolder": "Nadhra Limited",
+      "domains": [
+       "bets307.co.ke"
+      ]
+     },
+     {
+      "brand": "Bettena.com",
+      "licenseHolder": "Smart Plays Limited",
+      "domains": [
+       "bettena.com"
+      ]
+     },
+     {
+      "brand": "Bombet",
+      "licenseHolder": "Buenotech Limited",
+      "domains": [
+       "bombet.co.ke"
+      ]
+     },
+     {
+      "brand": "Bongo Bongo",
+      "licenseHolder": "Kensen Limited",
+      "domains": [
+       "bongobongo.ke"
+      ]
+     },
+     {
+      "brand": "Bonusbet",
+      "licenseHolder": "JXL solutions Limited",
+      "domains": [
+       "bonusbet.co.ke"
+      ]
+     },
+     {
+      "brand": "Buudhabet",
+      "licenseHolder": "Buudha Technologies Limited",
+      "domains": [
+       "buudahbet.com"
+      ]
+     },
+     {
+      "brand": "Captainsbet",
+      "licenseHolder": "Zitron Limited",
+      "domains": [
+       "captainsbet.ke"
+      ]
+     },
+     {
+      "brand": "Cheza Cash",
+      "licenseHolder": "Infiniti Capital Limited",
+      "domains": [
+       "chezacash.com"
+      ]
+     },
+     {
+      "brand": "Chezabet",
+      "licenseHolder": "Chezamonster Limited",
+      "domains": [
+       "chezabet.ke"
+      ]
+     },
+     {
+      "brand": "Dafabet",
+      "licenseHolder": "Asian Betting & Gaming Enterprise Africa Limited",
+      "domains": [
+       "dafabet.co.ke"
+      ]
+     },
+     {
+      "brand": "Dbets",
+      "licenseHolder": "Peapay Payments Limited",
+      "domains": [
+       "dbets.co.ke"
+      ]
+     },
+     {
+      "brand": "Dolabets",
+      "licenseHolder": "Ortic Connections Limited",
+      "domains": [
+       "sakatabets.co.ke"
+      ]
+     },
+     {
+      "brand": "Falcon Bet",
+      "licenseHolder": "Savy Bet Limited",
+      "domains": [
+       "falconbet.co.ke"
+      ]
+     },
+     {
+      "brand": "Fanaka",
+      "licenseHolder": "Clarity Limited",
+      "domains": [
+       "fanakabet.com"
+      ]
+     },
+     {
+      "brand": "Fortbet",
+      "licenseHolder": "Life is A Game Limited",
+      "domains": [
+       "fortebet.co.ke"
+      ]
+     },
+     {
+      "brand": "Galaxy betting",
+      "licenseHolder": "Galaxy Betting Limited",
+      "domains": [
+       "galaxybet.co.ke"
+      ]
+     },
+     {
+      "brand": "Game Guys",
+      "licenseHolder": "Gameguys Limited",
+      "domains": [
+       "aviator.co.ke"
+      ]
+     },
+     {
+      "brand": "Gamekali",
+      "licenseHolder": "Game Kali Limited",
+      "domains": [
+       "gamekali.com"
+      ]
+     },
+     {
+      "brand": "Gamema Pro",
+      "licenseHolder": "Probet Masters Limited",
+      "domains": [
+       "winkbet.com"
+      ]
+     },
+     {
+      "brand": "Gamemania",
+      "licenseHolder": "Rabow Co Limited",
+      "domains": [
+       "gamemania.co.ke"
+      ]
+     },
+     {
+      "brand": "Gamepro",
+      "licenseHolder": "Gamepro Limited",
+      "domains": [
+       "wekelea.com"
+      ]
+     },
+     {
+      "brand": "Games dreams",
+      "licenseHolder": "Games Dreams Technologies Limited",
+      "domains": [
+       "wezabet.ke"
+      ]
+     },
+     {
+      "brand": "Gameshow",
+      "licenseHolder": "Gameshow Bet Limited",
+      "domains": [
+       "gameshowbet.co.ke"
+      ]
+     },
+     {
+      "brand": "Gamestream",
+      "licenseHolder": "Game Stream Limited",
+      "domains": [
+       "gamestream.co.ke"
+      ]
+     },
+     {
+      "brand": "Goalpesa",
+      "licenseHolder": "Sakabets Safi Limited",
+      "domains": [
+       "goalpesa.co.ke"
+      ]
+     },
+     {
+      "brand": "Grantbet",
+      "licenseHolder": "Grantel Limited",
+      "domains": [
+       "qbet.ke"
+      ]
+     },
+     {
+      "brand": "Greatech",
+      "licenseHolder": "Greatech Technology Limited",
+      "domains": [
+       "tushindebet.com"
+      ]
+     },
+     {
+      "brand": "HotCrash",
+      "licenseHolder": "Candybuzz Limited",
+      "domains": [
+       "hot-crash.com"
+      ]
+     },
+     {
+      "brand": "Ilot Bet",
+      "licenseHolder": "Ilot Kenya Limited",
+      "domains": [
+       "ilotbet.com"
+      ]
+     },
+     {
+      "brand": "Inbet",
+      "licenseHolder": "Mopa Investment Limited",
+      "domains": [
+       "inbetkenya.co.ke"
+      ]
+     },
+     {
+      "brand": "Instabets",
+      "licenseHolder": "Supabet Kenya Limited",
+      "domains": [
+       "instabets.co.ke"
+      ]
+     },
+     {
+      "brand": "Inukabets",
+      "licenseHolder": "Takaful Technologies Limited",
+      "domains": [
+       "inukabet.co.ke"
+      ]
+     },
+     {
+      "brand": "Jackpotbet",
+      "licenseHolder": "Jackpot Junction",
+      "domains": [
+       "jackpotbet.co.ke"
+      ]
+     },
+     {
+      "brand": "Jambobet",
+      "licenseHolder": "Tekonstruct Limited",
+      "domains": [
+       "jambobet.co.ke"
+      ]
+     },
+     {
+      "brand": "Janta bets",
+      "licenseHolder": "Ufalme Createch Limited",
+      "domains": [
+       "jantabets.co.ke"
+      ]
+     },
+     {
+      "brand": "Jet bet",
+      "licenseHolder": "Ahkum Limited",
+      "domains": [
+       "jetbet.co.ke"
+      ]
+     },
+     {
+      "brand": "Juicebet",
+      "licenseHolder": "Gamma Gaming Group Limited",
+      "domains": [
+       "juicebet.co.ke"
+      ]
+     },
+     {
+      "brand": "Ke7",
+      "licenseHolder": "Kimili Technologies Limited",
+      "domains": [
+       "ke7.com"
+      ]
+     },
+     {
+      "brand": "Kenya Charity Sweepstake",
+      "licenseHolder": "Kenya Charity Sweepstake Limited",
+      "domains": [
+       "bandabet.co.ke"
+      ]
+     },
+     {
+      "brand": "Kessbet",
+      "licenseHolder": "Kessun Kenya Limited",
+      "domains": [
+       "kessbet.com"
+      ]
+     },
+     {
+      "brand": "Kilibet",
+      "licenseHolder": "Apuesta Kenya Limited",
+      "domains": [
+       "kilibet.ke"
+      ]
+     },
+     {
+      "brand": "Kings Bet",
+      "licenseHolder": "Poker Kings Limited",
+      "domains": [
+       "spotika.com"
+      ]
+     },
+     {
+      "brand": "Kwachua",
+      "licenseHolder": "Kwachua Entertainment Limited",
+      "domains": [
+       "ken.bet"
+      ]
+     },
+     {
+      "brand": "Kwik Bet",
+      "licenseHolder": "Solami Limited",
+      "domains": [
+       "kwikbet.co.ke"
+      ]
+     },
+     {
+      "brand": "Lakibets",
+      "licenseHolder": "Lenstech Technologies Limited",
+      "domains": [
+       "hakibets.com"
+      ]
+     },
+     {
+      "brand": "Locket",
+      "licenseHolder": "Floe Investment Limited",
+      "domains": [
+       "lockbet.co.ke"
+      ]
+     },
+     {
+      "brand": "Malisaifi Bets",
+      "licenseHolder": "DigiSwift Communications Limited",
+      "domains": [
+       "crashkali.co.ke"
+      ]
+     },
+     {
+      "brand": "mbogibet",
+      "licenseHolder": "Geneinebottle Limited",
+      "domains": [
+       "mbogibet.co.ke"
+      ]
+     },
+     {
+      "brand": "Melbet",
+      "licenseHolder": "Game Tosha Limited",
+      "domains": [
+       "melbet.ke"
+      ]
+     },
+     {
+      "brand": "MeridianBet",
+      "licenseHolder": "Gameday Enterprise Limited",
+      "domains": [
+       "meridianbet.ke"
+      ]
+     },
+     {
+      "brand": "Metabet",
+      "licenseHolder": "Metaweb Solutions Limited",
+      "domains": [
+       "metabet.ke"
+      ]
+     },
+     {
+      "brand": "Meziz bet",
+      "licenseHolder": "Meziz Bet Limited",
+      "domains": [
+       "mezizbet.com"
+      ]
+     },
+     {
+      "brand": "Michezobet",
+      "licenseHolder": "Michezobet Kenya Limited",
+      "domains": [
+       "michezobet.ke"
+      ]
+     },
+     {
+      "brand": "Mobi bet",
+      "licenseHolder": "Lottotech Solutions Limited",
+      "domains": [
+       "tucheze.com"
+      ]
+     },
+     {
+      "brand": "Moss bet",
+      "licenseHolder": "Mossberg Solutions Ltd",
+      "domains": [
+       "mossbets.co.ke"
+      ]
+     },
+     {
+      "brand": "MowinBet",
+      "licenseHolder": "Mowinbet Limited",
+      "domains": [
+       "mowinbet.co.ke"
+      ]
+     },
+     {
+      "brand": "Moyobet",
+      "licenseHolder": "Carnaval Kenya Limited",
+      "domains": [
+       "moyobet.ke"
+      ]
+     },
+     {
+      "brand": "Mozzartbet",
+      "licenseHolder": "Mozzartbet Kenya Limited",
+      "domains": [
+       "mozzartbet.co.ke"
+      ]
+     },
+     {
+      "brand": "Mshike Bet",
+      "licenseHolder": "Antoz Technology Limited",
+      "domains": [
+       "mshikebet.co.ke"
+      ]
+     },
+     {
+      "brand": "Msport",
+      "licenseHolder": "Sparksmatrix Limited",
+      "domains": [
+       "maybets.com"
+      ]
+     },
+     {
+      "brand": "Ngirbets",
+      "licenseHolder": "Fastbook Solutions Limited",
+      "domains": [
+       "ngiribets.co.ke"
+      ]
+     },
+     {
+      "brand": "Odibets",
+      "licenseHolder": "Kareco Holdings Limited",
+      "domains": [
+       "odibets.com"
+      ]
+     },
+     {
+      "brand": "Odipay",
+      "licenseHolder": "Odipay Limited",
+      "domains": [
+       "chezagame.com"
+      ]
+     },
+     {
+      "brand": "Okoabets",
+      "licenseHolder": "Curtis and Fletcher Solutions Limited",
+      "domains": [
+       "naibet.co.ke"
+      ]
+     },
+     {
+      "brand": "PakaKumi",
+      "licenseHolder": "Reys & Meys Limited",
+      "domains": [
+       "pakakumi.com"
+      ]
+     },
+     {
+      "brand": "Pepeta",
+      "licenseHolder": "Norm Kick-off Limited",
+      "domains": [
+       "pepeta.com"
+      ]
+     },
+     {
+      "brand": "Pitch 90 Bet",
+      "licenseHolder": "Bet Mbao Limited",
+      "domains": [
+       "pitch90bet.com"
+      ]
+     },
+     {
+      "brand": "Play Master",
+      "licenseHolder": "Nest Bit Kenya Limited",
+      "domains": [
+       "playmaster.co.ke"
+      ]
+     },
+     {
+      "brand": "Rabbit bet",
+      "licenseHolder": "Fakel Ventures Limited",
+      "domains": [
+       "wrbet.ke"
+      ]
+     },
+     {
+      "brand": "Radabet",
+      "licenseHolder": "Mobisphere Limited",
+      "domains": [
+       "radabet.co.ke"
+      ]
+     },
+     {
+      "brand": "Royal Palms Casino",
+      "licenseHolder": "Southcape Investment Limited",
+      "domains": [
+       "palmsbet.co.ke"
+      ]
+     },
+     {
+      "brand": "Safari Games",
+      "licenseHolder": "Emart Bonanza Limited",
+      "domains": [
+       "safarigames.co.ke"
+      ]
+     },
+     {
+      "brand": "Scorpesa",
+      "licenseHolder": "Betwin Limited",
+      "domains": [
+       "betwin.ke"
+      ]
+     },
+     {
+      "brand": "Sembobet",
+      "licenseHolder": "Jombuny Technologies Limited",
+      "domains": [
+       "semobet.ke"
+      ]
+     },
+     {
+      "brand": "Shabiki",
+      "licenseHolder": "Playco Technology Limited",
+      "domains": [
+       "shabiki.com"
+      ]
+     },
+     {
+      "brand": "Shinebet",
+      "licenseHolder": "Shine Bet Limited",
+      "domains": [
+       "shinebet.co.ke"
+      ]
+     },
+     {
+      "brand": "Smata bet",
+      "licenseHolder": "Better Bet Limited",
+      "domains": [
+       "smatabets.com"
+      ]
+     },
+     {
+      "brand": "Sofabets",
+      "licenseHolder": "Down Town Bets Kenya Limited",
+      "domains": [
+       "sofabets.com"
+      ]
+     },
+     {
+      "brand": "Solid bets",
+      "licenseHolder": "Solid Gaming Limited",
+      "domains": [
+       "imarabet.co.ke"
+      ]
+     },
+     {
+      "brand": "Sportpesa",
+      "licenseHolder": "Milestone Games Limited",
+      "domains": [
+       "sportpesa.com"
+      ]
+     },
+     {
+      "brand": "Sportybet",
+      "licenseHolder": "Dreamhub Technology Limited",
+      "domains": [
+       "sportybet.com"
+      ]
+     },
+     {
+      "brand": "Starbet",
+      "licenseHolder": "Lyle Kenya Limited",
+      "domains": [
+       "starbet.co.ke"
+      ]
+     },
+     {
+      "brand": "Surebet",
+      "licenseHolder": "Risecom Limited",
+      "domains": [
+       "surebet.co.ke"
+      ]
+     },
+     {
+      "brand": "Swiftbet",
+      "licenseHolder": "Tripsmon Limited",
+      "domains": [
+       "swiftbet.co.ke"
+      ]
+     },
+     {
+      "brand": "Tigon Bet",
+      "licenseHolder": "Universal Winners Ltd",
+      "domains": [
+       "tigonbet.co.ke"
+      ]
+     },
+     {
+      "brand": "Ushindi Bet",
+      "licenseHolder": "Dumu Kenya Limited",
+      "domains": [
+       "ushindibet.com"
+      ]
+     },
+     {
+      "brand": "Vincitutbet Casino",
+      "licenseHolder": "Vincitu Africa Limited",
+      "domains": [
+       "vincitubet.co.ke"
+      ]
+     },
+     {
+      "brand": "Viva bet",
+      "licenseHolder": "Solomo Limited",
+      "domains": [
+       "vivabet.ke"
+      ]
+     },
+     {
+      "brand": "Wakabet",
+      "licenseHolder": "Golden Honey Badger",
+      "domains": [
+       "tuzowins.com"
+      ]
+     },
+     {
+      "brand": "Zawadika Bet",
+      "licenseHolder": "Zawadika Promotions Limited",
+      "domains": [
+       "zawadika.co.ke"
+      ]
+     }
+    ],
+    "sourceUrl": "https://gra.go.ke/licensed-operators/",
+    "asOf": "2026-10-05",
+    "note": "Companies on the GRA's list of licensed gaming companies for the 2025/2026 financial year that hold a Bookmaker licence and have a domain listed, each with the trading name and domain the list gives. Bookmakers with no domain on the list are left out."
+   },
+   "why": "Kenya's Gambling Control Act, 2025, in force since 26 August 2025, established the Gambling Regulatory Authority as successor of the Betting Control and Licensing Board and requires an online bookmaker, online lottery or online casino licence from the Authority to offer online gambling in Kenya. Licences issued under the repealed Betting, Lotteries and Gaming Act remain valid until they expire."
+  },
+  "UA": {
+   "regulator": "Державне агентство України PlayCity (PlayCity, State Agency of Ukraine for the control of gambling and lotteries; formerly KRAIL)",
+   "casinos": {
+    "operators": [
+     {
+      "brand": "777",
+      "licenseHolder": "ТОВАРИСТВО З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ «СЛОТС Ю.ЕЙ.»",
+      "domains": [
+       "777.ua"
+      ],
+      "validTo": "2028-09-15"
+     },
+     {
+      "brand": "777UA",
+      "licenseHolder": "ТОВАРИСТВО З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ «БРІДЖПОІНТ»",
+      "domains": [
+       "777ua.com.ua"
+      ],
+      "validTo": "2031-08-13"
+     },
+     {
+      "brand": "Betking",
+      "licenseHolder": "ТОВАРИСТВО З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ «СЛОТС Ю.ЕЙ.»",
+      "domains": [
+       "betking.com.ua"
+      ],
+      "validTo": "2031-04-09"
+     },
+     {
+      "brand": "BETON",
+      "licenseHolder": "ТОВАРИСТВО З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ «СІТІКОД»",
+      "domains": [
+       "beton.ua"
+      ],
+      "validTo": "2028-11-20"
+     },
+     {
+      "brand": "CATBET",
+      "licenseHolder": "ТОВАРИСТВО З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ «4Фан»",
+      "domains": [
+       "catbet.com.ua"
+      ],
+      "validTo": "2031-03-24"
+     },
+     {
+      "brand": "ChampionClub",
+      "licenseHolder": "ТОВАРИСТВО З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ «МАЛІНА»",
+      "domains": [
+       "championclub.ua"
+      ],
+      "validTo": "2029-04-17"
+     },
+     {
+      "brand": "F1RST",
+      "licenseHolder": "ТОВАРИСТВО З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ «ФЬОРСТ ЕЛЕМЕНТ»",
+      "domains": [
+       "first.ua"
+      ],
+      "validTo": "2031-02-23"
+     },
+     {
+      "brand": "GGBET",
+      "licenseHolder": "ТОВАРИСТВО З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ «ГГБЕТ»",
+      "domains": [
+       "ggbet.ua"
+      ],
+      "validTo": "2028-08-23"
+     },
+     {
+      "brand": "GORILLA",
+      "licenseHolder": "ТОВАРИСТВО З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ «ГОРИЛЛАБЕТ»",
+      "domains": [
+       "gorilla.ua"
+      ],
+      "validTo": "2029-09-02"
+     },
+     {
+      "brand": "Kazik24",
+      "licenseHolder": "ТОВАРИСТВО З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ «РІЧ КЛАБ»",
+      "domains": [
+       "kazik24.com.ua"
+      ],
+      "validTo": "2030-10-13"
+     },
+     {
+      "brand": "Party Poker",
+      "licenseHolder": "ТОВАРИСТВО З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ «ПАТІ ПЛЕНЕТ»",
+      "domains": [
+       "partypoker.ua"
+      ],
+      "validTo": "2029-09-25"
+     },
+     {
+      "brand": "SLOT CITY",
+      "licenseHolder": "ТОВАРИСТВО З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ «ОЛЛ СІТІ ГЕЙМС»",
+      "domains": [
+       "slotcity.ua"
+      ],
+      "validTo": "2030-11-04"
+     },
+     {
+      "brand": "SLOTOR777",
+      "licenseHolder": "ТОВАРИСТВО З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ «СТАРБЛУМ ГЕЙМІНГ»",
+      "domains": [
+       "slotor777.ua"
+      ],
+      "validTo": "2028-09-01"
+     },
+     {
+      "brand": "SLOTS CITY",
+      "licenseHolder": "ТОВАРИСТВО З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ «ГЕЙМСІТІ»",
+      "domains": [
+       "slotcity.com.ua"
+      ],
+      "validTo": "2031-08-03"
+     },
+     {
+      "brand": "Super Gra",
+      "licenseHolder": "ТОВАРИСТВО З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ «НЕЙТІВ АППС»",
+      "domains": [
+       "supergra.ua"
+      ],
+      "validTo": "2027-12-22"
+     },
+     {
+      "brand": "VBET",
+      "licenseHolder": "ТОВАРИСТВО З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ «ВБЕТ УКРАЇНА»",
+      "domains": [
+       "vbet.ua"
+      ],
+      "validTo": "2031-05-18"
+     },
+     {
+      "brand": "VEGAS",
+      "licenseHolder": "ТОВАРИСТВО З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ «СПАРКТЕК»",
+      "domains": [
+       "vegas.ua"
+      ],
+      "validTo": "2029-11-21"
+     },
+     {
+      "brand": "КОСМОБЕТ/ COSMOBET/ KOSMOBET",
+      "licenseHolder": "ТОВАРИСТВО З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ «НЕЙРОЛІНК»",
+      "domains": [
+       "cosmobet.ua"
+      ],
+      "validTo": "2029-03-26"
+     },
+     {
+      "brand": "Космолот, Cosmolot",
+      "licenseHolder": "ТОВАРИСТВО З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ «СПЕЙСИКС»",
+      "domains": [
+       "cosmolot.ua"
+      ],
+      "validTo": "2031-01-28"
+     }
+    ],
+    "sourceUrl": "https://playcity.gov.ua/publichna-informatsiia/vidkryti-dani-playcity",
+    "asOf": "2026-10-05",
+    "note": "PlayCity's registers of organisers of online casino games and of online poker, published as open data: each licence in force, with the brand, the company holding the licence, and the website the register gives. Licences the register shows as expired or terminated are left out; a licence whose termination a court has suspended is kept, as the register records it."
+   },
+   "sportsbooks": {
+    "operators": [
+     {
+      "brand": "BETKING",
+      "licenseHolder": "ТОВАРИСТВО З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ «СЛОТС Ю.ЕЙ.»",
+      "domains": [
+       "betking.com.ua"
+      ],
+      "validTo": "2029-12-05"
+     },
+     {
+      "brand": "BETON",
+      "licenseHolder": "ТОВАРИСТВО З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ «СІТІКОД»",
+      "domains": [
+       "beton.ua"
+      ],
+      "validTo": "2030-10-10"
+     },
+     {
+      "brand": "GGBET",
+      "licenseHolder": "ТОВАРИСТВО З ОБМЕЖЕНОЮ ВІДПОВІДАЛЬНІСТЮ «ГГБЕТ»",
+      "domains": [
+       "ggbet.ua"
+      ],
+      "validTo": "2027-12-28"
+     }
+    ],
+    "sourceUrl": "https://playcity.gov.ua/publichna-informatsiia/vidkryti-dani-playcity",
+    "asOf": "2026-10-05",
+    "note": "PlayCity's register of organisers of bookmaking activity, published as open data: each licence in force with a website listed, with the brand and the company holding the licence. Licences the register shows as expired or terminated are left out."
+   },
+   "why": "Ukraine legalised and licensed gambling under the Law 'On State Regulation of Activities Concerning the Organisation and Conduct of Gambling' (No. 768-IX). Online casino games, online poker and bookmaking each require a licence, issued by the State Agency PlayCity, which took over from the Commission for the Regulation of Gambling and Lotteries (KRAIL) and publishes the registers of licensed organisers."
+  },
+  "PH": {
+   "regulator": "Philippine Amusement and Gaming Corporation (PAGCOR)",
+   "casinos": {
+    "operators": [
+     {
+      "brand": "123bingo.ph",
+      "licenseHolder": "META INTERACTIVE SOFTWARE SOLUTIONS INC. (MISSI)",
+      "domains": [
+       "123bingo.ph"
+      ]
+     },
+     {
+      "brand": "123Go",
+      "licenseHolder": "META INTERACTIVE SOFTWARE SOLUTIONS INC. (MISSI)",
+      "domains": [
+       "123go.com"
+      ]
+     },
+     {
+      "brand": "123go.games",
+      "licenseHolder": "META INTERACTIVE SOFTWARE SOLUTIONS INC. (MISSI)",
+      "domains": [
+       "123go.games"
+      ]
+     },
+     {
+      "brand": "123go.ph",
+      "licenseHolder": "META INTERACTIVE SOFTWARE SOLUTIONS INC. (MISSI)",
+      "domains": [
+       "123go.ph"
+      ]
+     },
+     {
+      "brand": "123perya.ph",
+      "licenseHolder": "META INTERACTIVE SOFTWARE SOLUTIONS INC. (MISSI)",
+      "domains": [
+       "123perya.ph"
+      ]
+     },
+     {
+      "brand": "123poker.ph",
+      "licenseHolder": "META INTERACTIVE SOFTWARE SOLUTIONS INC. (MISSI)",
+      "domains": [
+       "123poker.ph"
+      ]
+     },
+     {
+      "brand": "123sports.ph",
+      "licenseHolder": "META INTERACTIVE SOFTWARE SOLUTIONS INC. (MISSI)",
+      "domains": [
+       "123sports.ph"
+      ]
+     },
+     {
+      "brand": "123swerte.ph",
+      "licenseHolder": "META INTERACTIVE SOFTWARE SOLUTIONS INC. (MISSI)",
+      "domains": [
+       "123swerte.ph"
+      ]
+     },
+     {
+      "brand": "6bet.com",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "6bet.com"
+      ]
+     },
+     {
+      "brand": "6paldo.com",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "6paldo.com"
+      ]
+     },
+     {
+      "brand": "6saya.com",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "6saya.com"
+      ]
+     },
+     {
+      "brand": "6swerte.com",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "6swerte.com"
+      ]
+     },
+     {
+      "brand": "6tara.com",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "6tara.com"
+      ]
+     },
+     {
+      "brand": "747",
+      "licenseHolder": "CD EXTREME OPC (CD Extreme)",
+      "domains": [
+       "ph.747.live"
+      ]
+     },
+     {
+      "brand": "747.live",
+      "licenseHolder": "CD EXTREME OPC (CD Extreme)",
+      "domains": [
+       "747.live"
+      ]
+     },
+     {
+      "brand": "747live.com",
+      "licenseHolder": "CD EXTREME OPC (CD Extreme)",
+      "domains": [
+       "747live.com"
+      ]
+     },
+     {
+      "brand": "747ph.live",
+      "licenseHolder": "CD EXTREME OPC (CD Extreme)",
+      "domains": [
+       "747ph.live"
+      ]
+     },
+     {
+      "brand": "789.com",
+      "licenseHolder": "BB WAVE INC. (BB Wave)",
+      "domains": [
+       "789.com"
+      ]
+     },
+     {
+      "brand": "789Bingo",
+      "licenseHolder": "BB WAVE INC. (BB Wave)",
+      "domains": [
+       "789bingo.com"
+      ]
+     },
+     {
+      "brand": "789games.com",
+      "licenseHolder": "BB WAVE INC. (BB Wave)",
+      "domains": [
+       "789games.com"
+      ]
+     },
+     {
+      "brand": "789play.com",
+      "licenseHolder": "BB WAVE INC. (BB Wave)",
+      "domains": [
+       "789play.com"
+      ]
+     },
+     {
+      "brand": "anybet.sg8.casino",
+      "licenseHolder": "SILVER GOOSE 8 INTERNATIONAL, INC. (SGII)",
+      "domains": [
+       "anybet.sg8.casino"
+      ]
+     },
+     {
+      "brand": "arenaplus.com.ph",
+      "licenseHolder": "TOTAL GAMEZONE XTREME INCORPORATED (TGXI)",
+      "domains": [
+       "arenaplus.com.ph"
+      ]
+     },
+     {
+      "brand": "arionplay.com",
+      "licenseHolder": "NEMO INTERACTIVE GROUP CORPORATION (NEMO-IG)",
+      "domains": [
+       "arionplay.com"
+      ]
+     },
+     {
+      "brand": "Bet88",
+      "licenseHolder": "TROJANS WELL ENTERTAINMENT CORP. (TWEC)",
+      "domains": [
+       "bet88.ph"
+      ]
+     },
+     {
+      "brand": "bet88.stream",
+      "licenseHolder": "TROJANS WELL ENTERTAINMENT CORP. (TWEC)",
+      "domains": [
+       "bet88.stream"
+      ]
+     },
+     {
+      "brand": "Betano",
+      "licenseHolder": "KAIZEN GAMING PHILIPPINES INC. (KAIZEN)",
+      "domains": [
+       "betano.ph"
+      ]
+     },
+     {
+      "brand": "bets5.ph",
+      "licenseHolder": "GLOWLIGHT CORPORATION (Glowlight)",
+      "domains": [
+       "bets5.ph"
+      ]
+     },
+     {
+      "brand": "betwin.ph",
+      "licenseHolder": "DW TECHNOLOGIES ASIA INC. (DW Technologies)",
+      "domains": [
+       "betwin.ph"
+      ]
+     },
+     {
+      "brand": "BIGBUNNY",
+      "licenseHolder": "BLUE PHOENIX TECH SOLUTIONS CORP. (Blue Phoenix)",
+      "domains": [
+       "bigbunny.ph"
+      ]
+     },
+     {
+      "brand": "bossbunny.ph",
+      "licenseHolder": "BLUE PHOENIX TECH SOLUTIONS CORP. (Blue Phoenix)",
+      "domains": [
+       "bossbunny.ph"
+      ]
+     },
+     {
+      "brand": "Buenas",
+      "licenseHolder": "HHR PHILIPPINES, INC. (HPI)",
+      "domains": [
+       "buenas.ph"
+      ]
+     },
+     {
+      "brand": "buenas.asia",
+      "licenseHolder": "HHR PHILIPPINES, INC. (HPI)",
+      "domains": [
+       "buenas.asia"
+      ]
+     },
+     {
+      "brand": "buenas.bet",
+      "licenseHolder": "HHR PHILIPPINES, INC. (HPI)",
+      "domains": [
+       "buenas.bet"
+      ]
+     },
+     {
+      "brand": "buenas.cc",
+      "licenseHolder": "HHR PHILIPPINES, INC. (HPI)",
+      "domains": [
+       "buenas.cc"
+      ]
+     },
+     {
+      "brand": "buenas.life",
+      "licenseHolder": "HHR PHILIPPINES, INC. (HPI)",
+      "domains": [
+       "buenas.life"
+      ]
+     },
+     {
+      "brand": "buenas.live",
+      "licenseHolder": "HHR PHILIPPINES, INC. (HPI)",
+      "domains": [
+       "buenas.live"
+      ]
+     },
+     {
+      "brand": "buenas.plus",
+      "licenseHolder": "HHR PHILIPPINES, INC. (HPI)",
+      "domains": [
+       "buenas.plus"
+      ]
+     },
+     {
+      "brand": "buenas.pro",
+      "licenseHolder": "HHR PHILIPPINES, INC. (HPI)",
+      "domains": [
+       "buenas.pro"
+      ]
+     },
+     {
+      "brand": "buenas.site",
+      "licenseHolder": "HHR PHILIPPINES, INC. (HPI)",
+      "domains": [
+       "buenas.site"
+      ]
+     },
+     {
+      "brand": "buenas.vip",
+      "licenseHolder": "HHR PHILIPPINES, INC. (HPI)",
+      "domains": [
+       "buenas.vip"
+      ]
+     },
+     {
+      "brand": "buenas.win",
+      "licenseHolder": "HHR PHILIPPINES, INC. (HPI)",
+      "domains": [
+       "buenas.win"
+      ]
+     },
+     {
+      "brand": "buenasfun.ph",
+      "licenseHolder": "HHR PHILIPPINES, INC. (HPI)",
+      "domains": [
+       "buenasfun.ph"
+      ]
+     },
+     {
+      "brand": "buenasgames.ph",
+      "licenseHolder": "HHR PHILIPPINES, INC. (HPI)",
+      "domains": [
+       "buenasgames.ph"
+      ]
+     },
+     {
+      "brand": "buenasplay.ph",
+      "licenseHolder": "HHR PHILIPPINES, INC. (HPI)",
+      "domains": [
+       "buenasplay.ph"
+      ]
+     },
+     {
+      "brand": "by-bet.com",
+      "licenseHolder": "GLOBAL PLAY HUB INNOVATIONS CORP (Global Play)",
+      "domains": [
+       "by-bet.com"
+      ]
+     },
+     {
+      "brand": "ByBet",
+      "licenseHolder": "GLOBAL PLAY HUB INNOVATIONS CORP (Global Play)",
+      "domains": [
+       "bybet.com"
+      ]
+     },
+     {
+      "brand": "bybet.app",
+      "licenseHolder": "GLOBAL PLAY HUB INNOVATIONS CORP (Global Play)",
+      "domains": [
+       "bybet.app"
+      ]
+     },
+     {
+      "brand": "bybet.co",
+      "licenseHolder": "GLOBAL PLAY HUB INNOVATIONS CORP (Global Play)",
+      "domains": [
+       "bybet.co"
+      ]
+     },
+     {
+      "brand": "bybet.io",
+      "licenseHolder": "GLOBAL PLAY HUB INNOVATIONS CORP (Global Play)",
+      "domains": [
+       "bybet.io"
+      ]
+     },
+     {
+      "brand": "bybet.ph",
+      "licenseHolder": "GLOBAL PLAY HUB INNOVATIONS CORP (Global Play)",
+      "domains": [
+       "bybet.ph"
+      ]
+     },
+     {
+      "brand": "bybet.tv",
+      "licenseHolder": "GLOBAL PLAY HUB INNOVATIONS CORP (Global Play)",
+      "domains": [
+       "bybet.tv"
+      ]
+     },
+     {
+      "brand": "bybet.vip",
+      "licenseHolder": "GLOBAL PLAY HUB INNOVATIONS CORP (Global Play)",
+      "domains": [
+       "bybet.vip"
+      ]
+     },
+     {
+      "brand": "bygame.com",
+      "licenseHolder": "GLOBAL PLAY HUB INNOVATIONS CORP (Global Play)",
+      "domains": [
+       "bygame.com"
+      ]
+     },
+     {
+      "brand": "bysport.com",
+      "licenseHolder": "GLOBAL PLAY HUB INNOVATIONS CORP (Global Play)",
+      "domains": [
+       "bysport.com"
+      ]
+     },
+     {
+      "brand": "bysport.ph",
+      "licenseHolder": "GLOBAL PLAY HUB INNOVATIONS CORP (Global Play)",
+      "domains": [
+       "bysport.ph"
+      ]
+     },
+     {
+      "brand": "bysports.com",
+      "licenseHolder": "GLOBAL PLAY HUB INNOVATIONS CORP (Global Play)",
+      "domains": [
+       "bysports.com"
+      ]
+     },
+     {
+      "brand": "bysports.ph",
+      "licenseHolder": "GLOBAL PLAY HUB INNOVATIONS CORP (Global Play)",
+      "domains": [
+       "bysports.ph"
+      ]
+     },
+     {
+      "brand": "Casino Maxx",
+      "licenseHolder": "UNIVERSAL HOTELS AND RESORTS, INC. (NuSTAR RESORT & CASINO)",
+      "domains": [
+       "casinomaxx.ph"
+      ]
+     },
+     {
+      "brand": "Casino Plus",
+      "licenseHolder": "STOTSENBERG LEISURE PARK & HOTEL CORPORATION AND FRONTIER CAPITAL GROUP LIMITED (CASINO PLUS)",
+      "domains": [
+       "casinoplus.com.ph"
+      ]
+     },
+     {
+      "brand": "casinofortunegate.com",
+      "licenseHolder": "STOTSENBERG LEISURE PARK & HOTEL CORPORATION AND FRONTIER CAPITAL GROUP LIMITED (CASINO PLUS)",
+      "domains": [
+       "casinofortunegate.com"
+      ]
+     },
+     {
+      "brand": "casinomaxx.com.ph",
+      "licenseHolder": "UNIVERSAL HOTELS AND RESORTS, INC. (NuSTAR RESORT & CASINO)",
+      "domains": [
+       "casinomaxx.com.ph"
+      ]
+     },
+     {
+      "brand": "casinoplus.ai",
+      "licenseHolder": "STOTSENBERG LEISURE PARK & HOTEL CORPORATION AND FRONTIER CAPITAL GROUP LIMITED (CASINO PLUS)",
+      "domains": [
+       "casinoplus.ai"
+      ]
+     },
+     {
+      "brand": "casinoplus.com",
+      "licenseHolder": "STOTSENBERG LEISURE PARK & HOTEL CORPORATION AND FRONTIER CAPITAL GROUP LIMITED (CASINO PLUS)",
+      "domains": [
+       "casinoplus.com"
+      ]
+     },
+     {
+      "brand": "casinoplus.event.com.ph",
+      "licenseHolder": "STOTSENBERG LEISURE PARK & HOTEL CORPORATION AND FRONTIER CAPITAL GROUP LIMITED (CASINO PLUS)",
+      "domains": [
+       "casinoplus.event.com.ph"
+      ]
+     },
+     {
+      "brand": "casinoplus.ph",
+      "licenseHolder": "STOTSENBERG LEISURE PARK & HOTEL CORPORATION AND FRONTIER CAPITAL GROUP LIMITED (CASINO PLUS)",
+      "domains": [
+       "casinoplus.ph"
+      ]
+     },
+     {
+      "brand": "casinoplusdeals.com",
+      "licenseHolder": "STOTSENBERG LEISURE PARK & HOTEL CORPORATION AND FRONTIER CAPITAL GROUP LIMITED (CASINO PLUS)",
+      "domains": [
+       "casinoplusdeals.com"
+      ]
+     },
+     {
+      "brand": "casinoplusdeals.com.ph",
+      "licenseHolder": "STOTSENBERG LEISURE PARK & HOTEL CORPORATION AND FRONTIER CAPITAL GROUP LIMITED (CASINO PLUS)",
+      "domains": [
+       "casinoplusdeals.com.ph"
+      ]
+     },
+     {
+      "brand": "casinoplusevent.com",
+      "licenseHolder": "STOTSENBERG LEISURE PARK & HOTEL CORPORATION AND FRONTIER CAPITAL GROUP LIMITED (CASINO PLUS)",
+      "domains": [
+       "casinoplusevent.com"
+      ]
+     },
+     {
+      "brand": "casinoplusfreebie.com",
+      "licenseHolder": "STOTSENBERG LEISURE PARK & HOTEL CORPORATION AND FRONTIER CAPITAL GROUP LIMITED (CASINO PLUS)",
+      "domains": [
+       "casinoplusfreebie.com"
+      ]
+     },
+     {
+      "brand": "casinoplusfreebie.com.ph",
+      "licenseHolder": "STOTSENBERG LEISURE PARK & HOTEL CORPORATION AND FRONTIER CAPITAL GROUP LIMITED (CASINO PLUS)",
+      "domains": [
+       "casinoplusfreebie.com.ph"
+      ]
+     },
+     {
+      "brand": "casinoplusoffer.com",
+      "licenseHolder": "STOTSENBERG LEISURE PARK & HOTEL CORPORATION AND FRONTIER CAPITAL GROUP LIMITED (CASINO PLUS)",
+      "domains": [
+       "casinoplusoffer.com"
+      ]
+     },
+     {
+      "brand": "casinoplusoffer.com.ph",
+      "licenseHolder": "STOTSENBERG LEISURE PARK & HOTEL CORPORATION AND FRONTIER CAPITAL GROUP LIMITED (CASINO PLUS)",
+      "domains": [
+       "casinoplusoffer.com.ph"
+      ]
+     },
+     {
+      "brand": "casinoplusonline.com",
+      "licenseHolder": "STOTSENBERG LEISURE PARK & HOTEL CORPORATION AND FRONTIER CAPITAL GROUP LIMITED (CASINO PLUS)",
+      "domains": [
+       "casinoplusonline.com"
+      ]
+     },
+     {
+      "brand": "casinoplusonlineph.com",
+      "licenseHolder": "STOTSENBERG LEISURE PARK & HOTEL CORPORATION AND FRONTIER CAPITAL GROUP LIMITED (CASINO PLUS)",
+      "domains": [
+       "casinoplusonlineph.com"
+      ]
+     },
+     {
+      "brand": "casinopluspromo.com",
+      "licenseHolder": "STOTSENBERG LEISURE PARK & HOTEL CORPORATION AND FRONTIER CAPITAL GROUP LIMITED (CASINO PLUS)",
+      "domains": [
+       "casinopluspromo.com"
+      ]
+     },
+     {
+      "brand": "casinopluspromo.com.ph",
+      "licenseHolder": "STOTSENBERG LEISURE PARK & HOTEL CORPORATION AND FRONTIER CAPITAL GROUP LIMITED (CASINO PLUS)",
+      "domains": [
+       "casinopluspromo.com.ph"
+      ]
+     },
+     {
+      "brand": "casinoplusrewards.com",
+      "licenseHolder": "STOTSENBERG LEISURE PARK & HOTEL CORPORATION AND FRONTIER CAPITAL GROUP LIMITED (CASINO PLUS)",
+      "domains": [
+       "casinoplusrewards.com"
+      ]
+     },
+     {
+      "brand": "casinoplusrewards.com.ph",
+      "licenseHolder": "STOTSENBERG LEISURE PARK & HOTEL CORPORATION AND FRONTIER CAPITAL GROUP LIMITED (CASINO PLUS)",
+      "domains": [
+       "casinoplusrewards.com.ph"
+      ]
+     },
+     {
+      "brand": "championzone.ph",
+      "licenseHolder": "TOTAL GAMEZONE XTREME INCORPORATED (TGXI)",
+      "domains": [
+       "championzone.ph"
+      ]
+     },
+     {
+      "brand": "colorgame.com.ph",
+      "licenseHolder": "STOTSENBERG LEISURE PARK & HOTEL CORPORATION AND FRONTIER CAPITAL GROUP LIMITED (CASINO PLUS)",
+      "domains": [
+       "colorgame.com.ph"
+      ]
+     },
+     {
+      "brand": "combowin.ph",
+      "licenseHolder": "DW TECHNOLOGIES ASIA INC. (DW Technologies)",
+      "domains": [
+       "combowin.ph"
+      ]
+     },
+     {
+      "brand": "coolgames.sg8.casino",
+      "licenseHolder": "SILVER GOOSE 8 INTERNATIONAL, INC. (SGII)",
+      "domains": [
+       "coolgames.sg8.casino"
+      ]
+     },
+     {
+      "brand": "coolgameslakiwin.com",
+      "licenseHolder": "RAC PHIL CORP. (RAC)",
+      "domains": [
+       "coolgameslakiwin.com"
+      ]
+     },
+     {
+      "brand": "crazywin.ph",
+      "licenseHolder": "BREDDAS INC. (Breddas)",
+      "domains": [
+       "crazywin.ph"
+      ]
+     },
+     {
+      "brand": "CrazywinGo",
+      "licenseHolder": "BREDDAS INC. (Breddas)",
+      "domains": [
+       "crazywingo.ph"
+      ]
+     },
+     {
+      "brand": "crazywingo.asia",
+      "licenseHolder": "BREDDAS INC. (Breddas)",
+      "domains": [
+       "crazywingo.asia"
+      ]
+     },
+     {
+      "brand": "D'Heights Online",
+      "licenseHolder": "DONGGWANG CLARK CORPORATION (D'HEIGHTS RESORT AND CASINO CLARK)",
+      "domains": [
+       "dheightscasino.com"
+      ]
+     },
+     {
+      "brand": "deskace.app",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "deskace.app"
+      ]
+     },
+     {
+      "brand": "deskace.com",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "deskace.com"
+      ]
+     },
+     {
+      "brand": "deskace.ph",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "deskace.ph"
+      ]
+     },
+     {
+      "brand": "deskace.pro",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "deskace.pro"
+      ]
+     },
+     {
+      "brand": "deskace.vip",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "deskace.vip"
+      ]
+     },
+     {
+      "brand": "DeskGame",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "deskgame.com"
+      ]
+     },
+     {
+      "brand": "deskgame.app",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "deskgame.app"
+      ]
+     },
+     {
+      "brand": "deskgame.club",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "deskgame.club"
+      ]
+     },
+     {
+      "brand": "deskgame.ph",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "deskgame.ph"
+      ]
+     },
+     {
+      "brand": "deskgame.pro",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "deskgame.pro"
+      ]
+     },
+     {
+      "brand": "deskgame.vip",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "deskgame.vip"
+      ]
+     },
+     {
+      "brand": "desklucky.app",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "desklucky.app"
+      ]
+     },
+     {
+      "brand": "desklucky.club",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "desklucky.club"
+      ]
+     },
+     {
+      "brand": "desklucky.com",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "desklucky.com"
+      ]
+     },
+     {
+      "brand": "desklucky.com.ph",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "desklucky.com.ph"
+      ]
+     },
+     {
+      "brand": "desklucky.ph",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "desklucky.ph"
+      ]
+     },
+     {
+      "brand": "desklucky.pro",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "desklucky.pro"
+      ]
+     },
+     {
+      "brand": "desklucky.vip",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "desklucky.vip"
+      ]
+     },
+     {
+      "brand": "desktaya.app",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "desktaya.app"
+      ]
+     },
+     {
+      "brand": "desktaya.club",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "desktaya.club"
+      ]
+     },
+     {
+      "brand": "desktaya.com",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "desktaya.com"
+      ]
+     },
+     {
+      "brand": "desktaya.ph",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "desktaya.ph"
+      ]
+     },
+     {
+      "brand": "desktaya.pro",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "desktaya.pro"
+      ]
+     },
+     {
+      "brand": "desktaya.vip",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "desktaya.vip"
+      ]
+     },
+     {
+      "brand": "deskwin.app",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "deskwin.app"
+      ]
+     },
+     {
+      "brand": "deskwin.club",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "deskwin.club"
+      ]
+     },
+     {
+      "brand": "deskwin.com",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "deskwin.com"
+      ]
+     },
+     {
+      "brand": "deskwin.com.ph",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "deskwin.com.ph"
+      ]
+     },
+     {
+      "brand": "deskwin.ph",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "deskwin.ph"
+      ]
+     },
+     {
+      "brand": "deskwin.pro",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "deskwin.pro"
+      ]
+     },
+     {
+      "brand": "deskwin.vip",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "deskwin.vip"
+      ]
+     },
+     {
+      "brand": "DigitalWin",
+      "licenseHolder": "DW TECHNOLOGIES ASIA INC. (DW Technologies)",
+      "domains": [
+       "digiwin.ph"
+      ]
+     },
+     {
+      "brand": "ebingo.ninogaming.com",
+      "licenseHolder": "GEMINI GAMING MANAGEMENT CORPORATION (GGMC)",
+      "domains": [
+       "ebingo.ninogaming.com"
+      ]
+     },
+     {
+      "brand": "ecasino.ninogaming.com",
+      "licenseHolder": "GEMINI GAMING MANAGEMENT CORPORATION (GGMC)",
+      "domains": [
+       "ecasino.ninogaming.com"
+      ]
+     },
+     {
+      "brand": "eGames",
+      "licenseHolder": "PHILWEB CORPORATION (PhilWeb)",
+      "domains": [
+       "egamescasino.ph"
+      ]
+     },
+     {
+      "brand": "eplay.egamescasino.ph",
+      "licenseHolder": "PHILWEB CORPORATION (PhilWeb)",
+      "domains": [
+       "eplay.egamescasino.ph"
+      ]
+     },
+     {
+      "brand": "esportsbet.ph",
+      "licenseHolder": "PHILWEB CORPORATION (PhilWeb)",
+      "domains": [
+       "esportsbet.ph"
+      ]
+     },
+     {
+      "brand": "esportsbetegamescasino.ph",
+      "licenseHolder": "PHILWEB CORPORATION (PhilWeb)",
+      "domains": [
+       "esportsbetegamescasino.ph"
+      ]
+     },
+     {
+      "brand": "Fairplay",
+      "licenseHolder": "NEMO INTERACTIVE GROUP CORPORATION (NEMO-IG)",
+      "domains": [
+       "fairplay.ph"
+      ]
+     },
+     {
+      "brand": "fastplay.ph",
+      "licenseHolder": "KIRSCHNER GAMES INTERNATIONAL, INC. (KGI)",
+      "domains": [
+       "fastplay.ph"
+      ]
+     },
+     {
+      "brand": "Fastwin",
+      "licenseHolder": "KIRSCHNER GAMES INTERNATIONAL, INC. (KGI)",
+      "domains": [
+       "fastwin.ph"
+      ]
+     },
+     {
+      "brand": "FBM PLAY",
+      "licenseHolder": "MEMO MULTINATIONAL CORP. (MMC)",
+      "domains": [
+       "fbmplay.ph"
+      ]
+     },
+     {
+      "brand": "fbm.casino",
+      "licenseHolder": "MEMO MULTINATIONAL CORP. (MMC)",
+      "domains": [
+       "fbm.casino"
+      ]
+     },
+     {
+      "brand": "fbmcasino.ph",
+      "licenseHolder": "MEMO MULTINATIONAL CORP. (MMC)",
+      "domains": [
+       "fbmcasino.ph"
+      ]
+     },
+     {
+      "brand": "fbmemotion.ph",
+      "licenseHolder": "MEMO MULTINATIONAL CORP. (MMC)",
+      "domains": [
+       "fbmemotion.ph"
+      ]
+     },
+     {
+      "brand": "fbmgame.online",
+      "licenseHolder": "MEMO MULTINATIONAL CORP. (MMC)",
+      "domains": [
+       "fbmgame.online"
+      ]
+     },
+     {
+      "brand": "fbmplay.com",
+      "licenseHolder": "MEMO MULTINATIONAL CORP. (MMC)",
+      "domains": [
+       "fbmplay.com"
+      ]
+     },
+     {
+      "brand": "fbmslots.com",
+      "licenseHolder": "MEMO MULTINATIONAL CORP. (MMC)",
+      "domains": [
+       "fbmslots.com"
+      ]
+     },
+     {
+      "brand": "festival.sg8.casino",
+      "licenseHolder": "SILVER GOOSE 8 INTERNATIONAL, INC. (SGII)",
+      "domains": [
+       "festival.sg8.casino"
+      ]
+     },
+     {
+      "brand": "fgc88.com",
+      "licenseHolder": "STOTSENBERG LEISURE PARK & HOTEL CORPORATION AND FRONTIER CAPITAL GROUP LIMITED (CASINO PLUS)",
+      "domains": [
+       "fgc88.com"
+      ]
+     },
+     {
+      "brand": "Filbet",
+      "licenseHolder": "GOTECH ENTERTAINMENT INC. (GEI)",
+      "domains": [
+       "filbet.com"
+      ]
+     },
+     {
+      "brand": "filbet.com.ph",
+      "licenseHolder": "GOTECH ENTERTAINMENT INC. (GEI)",
+      "domains": [
+       "filbet.com.ph"
+      ]
+     },
+     {
+      "brand": "filgame.com",
+      "licenseHolder": "GOTECH ENTERTAINMENT INC. (GEI)",
+      "domains": [
+       "filgame.com"
+      ]
+     },
+     {
+      "brand": "filgame.com.ph",
+      "licenseHolder": "GOTECH ENTERTAINMENT INC. (GEI)",
+      "domains": [
+       "filgame.com.ph"
+      ]
+     },
+     {
+      "brand": "filgame.ph",
+      "licenseHolder": "GOTECH ENTERTAINMENT INC. (GEI)",
+      "domains": [
+       "filgame.ph"
+      ]
+     },
+     {
+      "brand": "filplay.com",
+      "licenseHolder": "GOTECH ENTERTAINMENT INC. (GEI)",
+      "domains": [
+       "filplay.com"
+      ]
+     },
+     {
+      "brand": "filplay.com.ph",
+      "licenseHolder": "GOTECH ENTERTAINMENT INC. (GEI)",
+      "domains": [
+       "filplay.com.ph"
+      ]
+     },
+     {
+      "brand": "filplay.ph",
+      "licenseHolder": "GOTECH ENTERTAINMENT INC. (GEI)",
+      "domains": [
+       "filplay.ph"
+      ]
+     },
+     {
+      "brand": "filslots.com",
+      "licenseHolder": "GOTECH ENTERTAINMENT INC. (GEI)",
+      "domains": [
+       "filslots.com"
+      ]
+     },
+     {
+      "brand": "filslots.com.ph",
+      "licenseHolder": "GOTECH ENTERTAINMENT INC. (GEI)",
+      "domains": [
+       "filslots.com.ph"
+      ]
+     },
+     {
+      "brand": "filslots.ph",
+      "licenseHolder": "GOTECH ENTERTAINMENT INC. (GEI)",
+      "domains": [
+       "filslots.ph"
+      ]
+     },
+     {
+      "brand": "fortunegatecasino.com",
+      "licenseHolder": "STOTSENBERG LEISURE PARK & HOTEL CORPORATION AND FRONTIER CAPITAL GROUP LIMITED (CASINO PLUS)",
+      "domains": [
+       "fortunegatecasino.com"
+      ]
+     },
+     {
+      "brand": "fortunelink.com.ph",
+      "licenseHolder": "LEGEND LINK TECHNOLOGY, INC. (Legend Link)",
+      "domains": [
+       "fortunelink.com.ph"
+      ]
+     },
+     {
+      "brand": "FUNaloMAX",
+      "licenseHolder": "BLOOMBERRY RESORTS AND HOTELS, INC. (Solaire Resorts and Casino)",
+      "domains": [
+       "funalomax.com"
+      ]
+     },
+     {
+      "brand": "g777.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "g777.ph"
+      ]
+     },
+     {
+      "brand": "Gamezone",
+      "licenseHolder": "TOTAL GAMEZONE XTREME INCORPORATED (TGXI)",
+      "domains": [
+       "gamezone.ph",
+       "arenaplus.ph"
+      ]
+     },
+     {
+      "brand": "gamezone.com.ph",
+      "licenseHolder": "TOTAL GAMEZONE XTREME INCORPORATED (TGXI)",
+      "domains": [
+       "gamezone.com.ph"
+      ]
+     },
+     {
+      "brand": "gamezone88.com",
+      "licenseHolder": "TOTAL GAMEZONE XTREME INCORPORATED (TGXI)",
+      "domains": [
+       "gamezone88.com"
+      ]
+     },
+     {
+      "brand": "Gbet",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "gbet.com"
+      ]
+     },
+     {
+      "brand": "gbingo.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "gbingo.ph"
+      ]
+     },
+     {
+      "brand": "gbonus.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "gbonus.ph"
+      ]
+     },
+     {
+      "brand": "gfortune.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "gfortune.ph"
+      ]
+     },
+     {
+      "brand": "ggold.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "ggold.ph"
+      ]
+     },
+     {
+      "brand": "ggpanalo.com",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "ggpanalo.com"
+      ]
+     },
+     {
+      "brand": "ggprime.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "ggprime.ph"
+      ]
+     },
+     {
+      "brand": "ggtara.com",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "ggtara.com"
+      ]
+     },
+     {
+      "brand": "ggtropa.com",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "ggtropa.com"
+      ]
+     },
+     {
+      "brand": "ggvibe.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "ggvibe.ph"
+      ]
+     },
+     {
+      "brand": "gjack.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "gjack.ph"
+      ]
+     },
+     {
+      "brand": "gjackpot.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "gjackpot.ph"
+      ]
+     },
+     {
+      "brand": "gking.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "gking.ph"
+      ]
+     },
+     {
+      "brand": "glucky.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "glucky.ph"
+      ]
+     },
+     {
+      "brand": "goace.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "goace.ph"
+      ]
+     },
+     {
+      "brand": "golaro.com",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "golaro.com"
+      ]
+     },
+     {
+      "brand": "goldengames-sg8.casino",
+      "licenseHolder": "SILVER GOOSE 8 INTERNATIONAL, INC. (SGII)",
+      "domains": [
+       "goldengames-sg8.casino"
+      ]
+     },
+     {
+      "brand": "gomax.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "gomax.ph"
+      ]
+     },
+     {
+      "brand": "gomega.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "gomega.ph"
+      ]
+     },
+     {
+      "brand": "goxbet.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "goxbet.ph"
+      ]
+     },
+     {
+      "brand": "gperya.com",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "gperya.com"
+      ]
+     },
+     {
+      "brand": "gprize.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "gprize.ph"
+      ]
+     },
+     {
+      "brand": "grandwin.ph",
+      "licenseHolder": "DW TECHNOLOGIES ASIA INC. (DW Technologies)",
+      "domains": [
+       "grandwin.ph"
+      ]
+     },
+     {
+      "brand": "greel.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "greel.ph"
+      ]
+     },
+     {
+      "brand": "grush.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "grush.ph"
+      ]
+     },
+     {
+      "brand": "gslots.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "gslots.ph"
+      ]
+     },
+     {
+      "brand": "gspin.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "gspin.ph"
+      ]
+     },
+     {
+      "brand": "gstar.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "gstar.ph"
+      ]
+     },
+     {
+      "brand": "gtaya.com",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "gtaya.com"
+      ]
+     },
+     {
+      "brand": "gtongits.com",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "gtongits.com"
+      ]
+     },
+     {
+      "brand": "gwinner.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "gwinner.ph"
+      ]
+     },
+     {
+      "brand": "gyaman.com",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "gyaman.com"
+      ]
+     },
+     {
+      "brand": "gzone.ph",
+      "licenseHolder": "TOTAL GAMEZONE XTREME INCORPORATED (TGXI)",
+      "domains": [
+       "gzone.ph"
+      ]
+     },
+     {
+      "brand": "h5.123go.games",
+      "licenseHolder": "META INTERACTIVE SOFTWARE SOLUTIONS INC. (MISSI)",
+      "domains": [
+       "h5.123go.games"
+      ]
+     },
+     {
+      "brand": "HANN ONLINE",
+      "licenseHolder": "HANN PHILIPPINES, INC. (Hann Casino Resort)",
+      "domains": [
+       "hannonline.ph"
+      ]
+     },
+     {
+      "brand": "hannliveonline.com",
+      "licenseHolder": "HANN PHILIPPINES, INC. (Hann Casino Resort)",
+      "domains": [
+       "hannliveonline.com"
+      ]
+     },
+     {
+      "brand": "happybingo.fun",
+      "licenseHolder": "BREDDAS INC. (Breddas)",
+      "domains": [
+       "happybingo.fun"
+      ]
+     },
+     {
+      "brand": "happybingo.games",
+      "licenseHolder": "BREDDAS INC. (Breddas)",
+      "domains": [
+       "happybingo.games"
+      ]
+     },
+     {
+      "brand": "happybingo.ph",
+      "licenseHolder": "BREDDAS INC. (Breddas)",
+      "domains": [
+       "happybingo.ph"
+      ]
+     },
+     {
+      "brand": "IGO",
+      "licenseHolder": "IGO DIGITAL HIGH TECHNOLOGY INC. (IGO)",
+      "domains": [
+       "igo.ph"
+      ]
+     },
+     {
+      "brand": "igoegaming.ph",
+      "licenseHolder": "IGO DIGITAL HIGH TECHNOLOGY INC. (IGO)",
+      "domains": [
+       "igoegaming.ph"
+      ]
+     },
+     {
+      "brand": "Inplay",
+      "licenseHolder": "INTER-ACTIVE ENTERTAINMENT SOLUTIONS TECHNOLOGIES INC. (IEST)",
+      "domains": [
+       "inplay.ph"
+      ]
+     },
+     {
+      "brand": "inplay.1play.ph",
+      "licenseHolder": "INTER-ACTIVE ENTERTAINMENT SOLUTIONS TECHNOLOGIES INC. (IEST)",
+      "domains": [
+       "inplay.1play.ph"
+      ]
+     },
+     {
+      "brand": "inplay.88play.ph",
+      "licenseHolder": "INTER-ACTIVE ENTERTAINMENT SOLUTIONS TECHNOLOGIES INC. (IEST)",
+      "domains": [
+       "inplay.88play.ph"
+      ]
+     },
+     {
+      "brand": "inplay.instaplay.com.ph",
+      "licenseHolder": "INTER-ACTIVE ENTERTAINMENT SOLUTIONS TECHNOLOGIES INC. (IEST)",
+      "domains": [
+       "inplay.instaplay.com.ph"
+      ]
+     },
+     {
+      "brand": "inplay.luckyu.ph",
+      "licenseHolder": "INTER-ACTIVE ENTERTAINMENT SOLUTIONS TECHNOLOGIES INC. (IEST)",
+      "domains": [
+       "inplay.luckyu.ph"
+      ]
+     },
+     {
+      "brand": "inplay.powerplay.ph",
+      "licenseHolder": "INTER-ACTIVE ENTERTAINMENT SOLUTIONS TECHNOLOGIES INC. (IEST)",
+      "domains": [
+       "inplay.powerplay.ph"
+      ]
+     },
+     {
+      "brand": "Jackpot Combo",
+      "licenseHolder": "GOLDEN ALPHA VENTURE CORPORATION (GAVC)",
+      "domains": [
+       "jackpotcombo.com"
+      ]
+     },
+     {
+      "brand": "Juan365",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juan365.com"
+      ]
+     },
+     {
+      "brand": "juan365.app",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juan365.app"
+      ]
+     },
+     {
+      "brand": "juan365.com.ph",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juan365.com.ph"
+      ]
+     },
+     {
+      "brand": "juan365.online",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juan365.online"
+      ]
+     },
+     {
+      "brand": "juan365.ph",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juan365.ph"
+      ]
+     },
+     {
+      "brand": "juan365.win",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juan365.win"
+      ]
+     },
+     {
+      "brand": "juanace.app",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juanace.app"
+      ]
+     },
+     {
+      "brand": "juanace.com",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juanace.com"
+      ]
+     },
+     {
+      "brand": "juanace.com.ph",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juanace.com.ph"
+      ]
+     },
+     {
+      "brand": "juanace.ph",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juanace.ph"
+      ]
+     },
+     {
+      "brand": "juanbingo.app",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juanbingo.app"
+      ]
+     },
+     {
+      "brand": "juanbingo.com",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juanbingo.com"
+      ]
+     },
+     {
+      "brand": "juanbingo.com.ph",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juanbingo.com.ph"
+      ]
+     },
+     {
+      "brand": "juanbingo.ph",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juanbingo.ph"
+      ]
+     },
+     {
+      "brand": "juankada.app",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juankada.app"
+      ]
+     },
+     {
+      "brand": "juankada.com",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juankada.com"
+      ]
+     },
+     {
+      "brand": "juankada.ph",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juankada.ph"
+      ]
+     },
+     {
+      "brand": "juanmate.app",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juanmate.app"
+      ]
+     },
+     {
+      "brand": "juanmate.com",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juanmate.com"
+      ]
+     },
+     {
+      "brand": "juanmate.ph",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juanmate.ph"
+      ]
+     },
+     {
+      "brand": "juanpanalo.app",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juanpanalo.app"
+      ]
+     },
+     {
+      "brand": "juanpanalo.com",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juanpanalo.com"
+      ]
+     },
+     {
+      "brand": "juanpanalo.ph",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juanpanalo.ph"
+      ]
+     },
+     {
+      "brand": "juanzone.app",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juanzone.app"
+      ]
+     },
+     {
+      "brand": "juanzone.com",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juanzone.com"
+      ]
+     },
+     {
+      "brand": "juanzone.com.ph",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juanzone.com.ph"
+      ]
+     },
+     {
+      "brand": "juanzone.ph",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juanzone.ph"
+      ]
+     },
+     {
+      "brand": "laki.casino",
+      "licenseHolder": "RAC PHIL CORP. (RAC)",
+      "domains": [
+       "laki.casino"
+      ]
+     },
+     {
+      "brand": "laki.playdailyfantasy.com",
+      "licenseHolder": "RAC PHIL CORP. (RAC)",
+      "domains": [
+       "laki.playdailyfantasy.com"
+      ]
+     },
+     {
+      "brand": "laki7.com",
+      "licenseHolder": "RAC PHIL CORP. (RAC)",
+      "domains": [
+       "laki7.com"
+      ]
+     },
+     {
+      "brand": "lakigames.com",
+      "licenseHolder": "RAC PHIL CORP. (RAC)",
+      "domains": [
+       "lakigames.com"
+      ]
+     },
+     {
+      "brand": "lakijackpot.com",
+      "licenseHolder": "RAC PHIL CORP. (RAC)",
+      "domains": [
+       "lakijackpot.com"
+      ]
+     },
+     {
+      "brand": "lakilucky.com",
+      "licenseHolder": "RAC PHIL CORP. (RAC)",
+      "domains": [
+       "lakilucky.com"
+      ]
+     },
+     {
+      "brand": "lakiplay.com",
+      "licenseHolder": "RAC PHIL CORP. (RAC)",
+      "domains": [
+       "lakiplay.com"
+      ]
+     },
+     {
+      "brand": "LakiWin",
+      "licenseHolder": "RAC PHIL CORP. (RAC)",
+      "domains": [
+       "lakiwin.com"
+      ]
+     },
+     {
+      "brand": "landing.wing.ph",
+      "licenseHolder": "SANDBOX ENTERTAINMENT CORP. (Sandbox)",
+      "domains": [
+       "landing.wing.ph"
+      ]
+     },
+     {
+      "brand": "landing.winzir.ph",
+      "licenseHolder": "SANDBOX ENTERTAINMENT CORP. (Sandbox)",
+      "domains": [
+       "landing.winzir.ph"
+      ]
+     },
+     {
+      "brand": "Lavie Resort & Casino Manila",
+      "licenseHolder": "MARINA SQUARE PROPERTIES INC. AND NEW COAST LEISURE, INC. (LAVIE RESORT AND CASINO MANILA)",
+      "domains": [
+       "laviergp.com"
+      ]
+     },
+     {
+      "brand": "LAVIE RESORT & CASINO MANILA",
+      "licenseHolder": "NEW COAST LEISURE INC. (NCLI)",
+      "domains": [
+       "laviergp.net"
+      ]
+     },
+     {
+      "brand": "Legend Link",
+      "licenseHolder": "LEGEND LINK TECHNOLOGY, INC. (Legend Link)",
+      "domains": [
+       "legendlink.com"
+      ]
+     },
+     {
+      "brand": "login.747.live",
+      "licenseHolder": "CD EXTREME OPC (CD Extreme)",
+      "domains": [
+       "login.747.live"
+      ]
+     },
+     {
+      "brand": "login.747ph.live",
+      "licenseHolder": "CD EXTREME OPC (CD Extreme)",
+      "domains": [
+       "login.747ph.live"
+      ]
+     },
+     {
+      "brand": "lovefun.com",
+      "licenseHolder": "BLOOMBERRY RESORTS AND HOTELS, INC. (Solaire Resorts and Casino)",
+      "domains": [
+       "lovefun.com"
+      ]
+     },
+     {
+      "brand": "luckybetsg8.casino",
+      "licenseHolder": "SILVER GOOSE 8 INTERNATIONAL, INC. (SGII)",
+      "domains": [
+       "luckybetsg8.casino"
+      ]
+     },
+     {
+      "brand": "luckybunny.ph",
+      "licenseHolder": "BLUE PHOENIX TECH SOLUTIONS CORP. (Blue Phoenix)",
+      "domains": [
+       "luckybunny.ph"
+      ]
+     },
+     {
+      "brand": "luckygame.ph",
+      "licenseHolder": "CYBER DOT COM TECHNOLOGY CORP. (Cyber Dot)",
+      "domains": [
+       "luckygame.ph"
+      ]
+     },
+     {
+      "brand": "luckygameph.com",
+      "licenseHolder": "CYBER DOT COM TECHNOLOGY CORP. (Cyber Dot)",
+      "domains": [
+       "luckygameph.com"
+      ]
+     },
+     {
+      "brand": "Luckyi",
+      "licenseHolder": "CYBER DOT COM TECHNOLOGY CORP. (Cyber Dot)",
+      "domains": [
+       "luckyi.com"
+      ]
+     },
+     {
+      "brand": "luckyi.ph",
+      "licenseHolder": "CYBER DOT COM TECHNOLOGY CORP. (Cyber Dot)",
+      "domains": [
+       "luckyi.ph"
+      ]
+     },
+     {
+      "brand": "luckyplay.ph",
+      "licenseHolder": "NEMO INTERACTIVE GROUP CORPORATION (NEMO-IG)",
+      "domains": [
+       "luckyplay.ph"
+      ]
+     },
+     {
+      "brand": "luckyplus.com",
+      "licenseHolder": "STOTSENBERG LEISURE PARK & HOTEL CORPORATION AND FRONTIER CAPITAL GROUP LIMITED (CASINO PLUS)",
+      "domains": [
+       "luckyplus.com"
+      ]
+     },
+     {
+      "brand": "luckyplusbonus.com",
+      "licenseHolder": "STOTSENBERG LEISURE PARK & HOTEL CORPORATION AND FRONTIER CAPITAL GROUP LIMITED (CASINO PLUS)",
+      "domains": [
+       "luckyplusbonus.com"
+      ]
+     },
+     {
+      "brand": "luckyplusbonus.com.ph",
+      "licenseHolder": "STOTSENBERG LEISURE PARK & HOTEL CORPORATION AND FRONTIER CAPITAL GROUP LIMITED (CASINO PLUS)",
+      "domains": [
+       "luckyplusbonus.com.ph"
+      ]
+     },
+     {
+      "brand": "luckyplusrewards.com",
+      "licenseHolder": "STOTSENBERG LEISURE PARK & HOTEL CORPORATION AND FRONTIER CAPITAL GROUP LIMITED (CASINO PLUS)",
+      "domains": [
+       "luckyplusrewards.com"
+      ]
+     },
+     {
+      "brand": "luckyplusrewards.com.ph",
+      "licenseHolder": "STOTSENBERG LEISURE PARK & HOTEL CORPORATION AND FRONTIER CAPITAL GROUP LIMITED (CASINO PLUS)",
+      "domains": [
+       "luckyplusrewards.com.ph"
+      ]
+     },
+     {
+      "brand": "luckypro.com",
+      "licenseHolder": "CYBER DOT COM TECHNOLOGY CORP. (Cyber Dot)",
+      "domains": [
+       "luckypro.com"
+      ]
+     },
+     {
+      "brand": "luckystarph.com",
+      "licenseHolder": "CYBER DOT COM TECHNOLOGY CORP. (Cyber Dot)",
+      "domains": [
+       "luckystarph.com"
+      ]
+     },
+     {
+      "brand": "luckytok.com",
+      "licenseHolder": "CYBER DOT COM TECHNOLOGY CORP. (Cyber Dot)",
+      "domains": [
+       "luckytok.com"
+      ]
+     },
+     {
+      "brand": "luckyv.com",
+      "licenseHolder": "CYBER DOT COM TECHNOLOGY CORP. (Cyber Dot)",
+      "domains": [
+       "luckyv.com"
+      ]
+     },
+     {
+      "brand": "luckywin.ph",
+      "licenseHolder": "DW TECHNOLOGIES ASIA INC. (DW Technologies)",
+      "domains": [
+       "luckywin.ph"
+      ]
+     },
+     {
+      "brand": "M GAME",
+      "licenseHolder": "ESAT PILIPINAS TEKNIK, OPC. (ESAT)",
+      "domains": [
+       "mgame.ph"
+      ]
+     },
+     {
+      "brand": "m.casinoplus.com.ph",
+      "licenseHolder": "STOTSENBERG LEISURE PARK & HOTEL CORPORATION AND FRONTIER CAPITAL GROUP LIMITED (CASINO PLUS)",
+      "domains": [
+       "m.casinoplus.com.ph"
+      ]
+     },
+     {
+      "brand": "megaaaraw.com",
+      "licenseHolder": "XN SOLUTIONS INC. (Xn Solutions)",
+      "domains": [
+       "megaaaraw.com"
+      ]
+     },
+     {
+      "brand": "megaaraw.net",
+      "licenseHolder": "XN SOLUTIONS INC. (Xn Solutions)",
+      "domains": [
+       "megaaraw.net"
+      ]
+     },
+     {
+      "brand": "megaaraw.ph",
+      "licenseHolder": "XN SOLUTIONS INC. (Xn Solutions)",
+      "domains": [
+       "megaaraw.ph"
+      ]
+     },
+     {
+      "brand": "megaccm.com",
+      "licenseHolder": "XN SOLUTIONS INC. (Xn Solutions)",
+      "domains": [
+       "megaccm.com"
+      ]
+     },
+     {
+      "brand": "megaccm.net",
+      "licenseHolder": "XN SOLUTIONS INC. (Xn Solutions)",
+      "domains": [
+       "megaccm.net"
+      ]
+     },
+     {
+      "brand": "megadelta.net",
+      "licenseHolder": "XN SOLUTIONS INC. (Xn Solutions)",
+      "domains": [
+       "megadelta.net"
+      ]
+     },
+     {
+      "brand": "megadelta88.com",
+      "licenseHolder": "XN SOLUTIONS INC. (Xn Solutions)",
+      "domains": [
+       "megadelta88.com"
+      ]
+     },
+     {
+      "brand": "megagd.com",
+      "licenseHolder": "XN SOLUTIONS INC. (Xn Solutions)",
+      "domains": [
+       "megagd.com"
+      ]
+     },
+     {
+      "brand": "megagd.net",
+      "licenseHolder": "XN SOLUTIONS INC. (Xn Solutions)",
+      "domains": [
+       "megagd.net"
+      ]
+     },
+     {
+      "brand": "megajd.com",
+      "licenseHolder": "XN SOLUTIONS INC. (Xn Solutions)",
+      "domains": [
+       "megajd.com"
+      ]
+     },
+     {
+      "brand": "megakingdom88.net",
+      "licenseHolder": "XN SOLUTIONS INC. (Xn Solutions)",
+      "domains": [
+       "megakingdom88.net"
+      ]
+     },
+     {
+      "brand": "MegaPerya",
+      "licenseHolder": "XN SOLUTIONS INC. (Xn Solutions)",
+      "domains": [
+       "megaperya.com"
+      ]
+     },
+     {
+      "brand": "megapp.net",
+      "licenseHolder": "XN SOLUTIONS INC. (Xn Solutions)",
+      "domains": [
+       "megapp.net"
+      ]
+     },
+     {
+      "brand": "megapp88.com",
+      "licenseHolder": "XN SOLUTIONS INC. (Xn Solutions)",
+      "domains": [
+       "megapp88.com"
+      ]
+     },
+     {
+      "brand": "megapremyo.com",
+      "licenseHolder": "XN SOLUTIONS INC. (Xn Solutions)",
+      "domains": [
+       "megapremyo.com"
+      ]
+     },
+     {
+      "brand": "megapremyo.ph",
+      "licenseHolder": "XN SOLUTIONS INC. (Xn Solutions)",
+      "domains": [
+       "megapremyo.ph"
+      ]
+     },
+     {
+      "brand": "megapv.net",
+      "licenseHolder": "XN SOLUTIONS INC. (Xn Solutions)",
+      "domains": [
+       "megapv.net"
+      ]
+     },
+     {
+      "brand": "megapv88.com",
+      "licenseHolder": "XN SOLUTIONS INC. (Xn Solutions)",
+      "domains": [
+       "megapv88.com"
+      ]
+     },
+     {
+      "brand": "megaraffle.ph",
+      "licenseHolder": "XN SOLUTIONS INC. (Xn Solutions)",
+      "domains": [
+       "megaraffle.ph"
+      ]
+     },
+     {
+      "brand": "megark88.com",
+      "licenseHolder": "XN SOLUTIONS INC. (Xn Solutions)",
+      "domains": [
+       "megark88.com"
+      ]
+     },
+     {
+      "brand": "megark88.net",
+      "licenseHolder": "XN SOLUTIONS INC. (Xn Solutions)",
+      "domains": [
+       "megark88.net"
+      ]
+     },
+     {
+      "brand": "megaroyale.net",
+      "licenseHolder": "XN SOLUTIONS INC. (Xn Solutions)",
+      "domains": [
+       "megaroyale.net"
+      ]
+     },
+     {
+      "brand": "megaroyale88.com",
+      "licenseHolder": "XN SOLUTIONS INC. (Xn Solutions)",
+      "domains": [
+       "megaroyale88.com"
+      ]
+     },
+     {
+      "brand": "megavm.net",
+      "licenseHolder": "XN SOLUTIONS INC. (Xn Solutions)",
+      "domains": [
+       "megavm.net"
+      ]
+     },
+     {
+      "brand": "megavm88.com",
+      "licenseHolder": "XN SOLUTIONS INC. (Xn Solutions)",
+      "domains": [
+       "megavm88.com"
+      ]
+     },
+     {
+      "brand": "megavph.com",
+      "licenseHolder": "XN SOLUTIONS INC. (Xn Solutions)",
+      "domains": [
+       "megavph.com"
+      ]
+     },
+     {
+      "brand": "megavph.net",
+      "licenseHolder": "XN SOLUTIONS INC. (Xn Solutions)",
+      "domains": [
+       "megavph.net"
+      ]
+     },
+     {
+      "brand": "megawagi.co",
+      "licenseHolder": "XN SOLUTIONS INC. (Xn Solutions)",
+      "domains": [
+       "megawagi.co"
+      ]
+     },
+     {
+      "brand": "megawagi.com",
+      "licenseHolder": "XN SOLUTIONS INC. (Xn Solutions)",
+      "domains": [
+       "megawagi.com"
+      ]
+     },
+     {
+      "brand": "megawagi.info",
+      "licenseHolder": "XN SOLUTIONS INC. (Xn Solutions)",
+      "domains": [
+       "megawagi.info"
+      ]
+     },
+     {
+      "brand": "megawagi.net",
+      "licenseHolder": "XN SOLUTIONS INC. (Xn Solutions)",
+      "domains": [
+       "megawagi.net"
+      ]
+     },
+     {
+      "brand": "megawagi.ph",
+      "licenseHolder": "XN SOLUTIONS INC. (Xn Solutions)",
+      "domains": [
+       "megawagi.ph"
+      ]
+     },
+     {
+      "brand": "megawagi.vip",
+      "licenseHolder": "XN SOLUTIONS INC. (Xn Solutions)",
+      "domains": [
+       "megawagi.vip"
+      ]
+     },
+     {
+      "brand": "mfe.bigbunny.ph",
+      "licenseHolder": "BLUE PHOENIX TECH SOLUTIONS CORP. (Blue Phoenix)",
+      "domains": [
+       "mfe.bigbunny.ph"
+      ]
+     },
+     {
+      "brand": "mgamecasino.ph",
+      "licenseHolder": "ESAT PILIPINAS TEKNIK, OPC. (ESAT)",
+      "domains": [
+       "mgamecasino.ph"
+      ]
+     },
+     {
+      "brand": "Midori Online",
+      "licenseHolder": "BB INTERNATIONAL LEISURE AND RESORT DEVELOPMENT CORPORATION (MIDORI CLARK CASINO)",
+      "domains": [
+       "midoricasino.com",
+       "midori-online.com"
+      ]
+     },
+     {
+      "brand": "midori-casino.club",
+      "licenseHolder": "BB INTERNATIONAL LEISURE AND RESORT DEVELOPMENT CORPORATION (MIDORI CLARK CASINO)",
+      "domains": [
+       "midori-casino.club"
+      ]
+     },
+     {
+      "brand": "midori-casino.com",
+      "licenseHolder": "BB INTERNATIONAL LEISURE AND RESORT DEVELOPMENT CORPORATION (MIDORI CLARK CASINO)",
+      "domains": [
+       "midori-casino.com"
+      ]
+     },
+     {
+      "brand": "midori-casino.net",
+      "licenseHolder": "BB INTERNATIONAL LEISURE AND RESORT DEVELOPMENT CORPORATION (MIDORI CLARK CASINO)",
+      "domains": [
+       "midori-casino.net"
+      ]
+     },
+     {
+      "brand": "midori.bet",
+      "licenseHolder": "BB INTERNATIONAL LEISURE AND RESORT DEVELOPMENT CORPORATION (MIDORI CLARK CASINO)",
+      "domains": [
+       "midori.bet"
+      ]
+     },
+     {
+      "brand": "midori.net",
+      "licenseHolder": "BB INTERNATIONAL LEISURE AND RESORT DEVELOPMENT CORPORATION (MIDORI CLARK CASINO)",
+      "domains": [
+       "midori.net"
+      ]
+     },
+     {
+      "brand": "midori.online",
+      "licenseHolder": "BB INTERNATIONAL LEISURE AND RESORT DEVELOPMENT CORPORATION (MIDORI CLARK CASINO)",
+      "domains": [
+       "midori.online"
+      ]
+     },
+     {
+      "brand": "midoricasino.cc",
+      "licenseHolder": "BB INTERNATIONAL LEISURE AND RESORT DEVELOPMENT CORPORATION (MIDORI CLARK CASINO)",
+      "domains": [
+       "midoricasino.cc"
+      ]
+     },
+     {
+      "brand": "midoricasino.club",
+      "licenseHolder": "BB INTERNATIONAL LEISURE AND RESORT DEVELOPMENT CORPORATION (MIDORI CLARK CASINO)",
+      "domains": [
+       "midoricasino.club"
+      ]
+     },
+     {
+      "brand": "midoricasino.co",
+      "licenseHolder": "BB INTERNATIONAL LEISURE AND RESORT DEVELOPMENT CORPORATION (MIDORI CLARK CASINO)",
+      "domains": [
+       "midoricasino.co"
+      ]
+     },
+     {
+      "brand": "midoricasino.net",
+      "licenseHolder": "BB INTERNATIONAL LEISURE AND RESORT DEVELOPMENT CORPORATION (MIDORI CLARK CASINO)",
+      "domains": [
+       "midoricasino.net"
+      ]
+     },
+     {
+      "brand": "midoricasino.vip",
+      "licenseHolder": "BB INTERNATIONAL LEISURE AND RESORT DEVELOPMENT CORPORATION (MIDORI CLARK CASINO)",
+      "domains": [
+       "midoricasino.vip"
+      ]
+     },
+     {
+      "brand": "Newport Epic World",
+      "licenseHolder": "TRAVELLERS INTERNATIONAL HOTEL GROUP, INC. (doing business under the name and style of Newport World Resorts)",
+      "domains": [
+       "newportepicworld.com"
+      ]
+     },
+     {
+      "brand": "newportbingoworld.com",
+      "licenseHolder": "TRAVELLERS INTERNATIONAL HOTEL GROUP, INC. (doing business under the name and style of Newport World Resorts)",
+      "domains": [
+       "newportbingoworld.com"
+      ]
+     },
+     {
+      "brand": "newportbingoworld.ph",
+      "licenseHolder": "TRAVELLERS INTERNATIONAL HOTEL GROUP, INC. (doing business under the name and style of Newport World Resorts)",
+      "domains": [
+       "newportbingoworld.ph"
+      ]
+     },
+     {
+      "brand": "newportepicworld.ph",
+      "licenseHolder": "TRAVELLERS INTERNATIONAL HOTEL GROUP, INC. (doing business under the name and style of Newport World Resorts)",
+      "domains": [
+       "newportepicworld.ph"
+      ]
+     },
+     {
+      "brand": "newportfortuneworld.com",
+      "licenseHolder": "TRAVELLERS INTERNATIONAL HOTEL GROUP, INC. (doing business under the name and style of Newport World Resorts)",
+      "domains": [
+       "newportfortuneworld.com"
+      ]
+     },
+     {
+      "brand": "newportfortuneworld.ph",
+      "licenseHolder": "TRAVELLERS INTERNATIONAL HOTEL GROUP, INC. (doing business under the name and style of Newport World Resorts)",
+      "domains": [
+       "newportfortuneworld.ph"
+      ]
+     },
+     {
+      "brand": "newportgames.com",
+      "licenseHolder": "TRAVELLERS INTERNATIONAL HOTEL GROUP, INC. (doing business under the name and style of Newport World Resorts)",
+      "domains": [
+       "newportgames.com"
+      ]
+     },
+     {
+      "brand": "newportgames.ph",
+      "licenseHolder": "TRAVELLERS INTERNATIONAL HOTEL GROUP, INC. (doing business under the name and style of Newport World Resorts)",
+      "domains": [
+       "newportgames.ph"
+      ]
+     },
+     {
+      "brand": "newportgrandworld.com",
+      "licenseHolder": "TRAVELLERS INTERNATIONAL HOTEL GROUP, INC. (doing business under the name and style of Newport World Resorts)",
+      "domains": [
+       "newportgrandworld.com"
+      ]
+     },
+     {
+      "brand": "newportgrandworld.ph",
+      "licenseHolder": "TRAVELLERS INTERNATIONAL HOTEL GROUP, INC. (doing business under the name and style of Newport World Resorts)",
+      "domains": [
+       "newportgrandworld.ph"
+      ]
+     },
+     {
+      "brand": "newportjackpotworld.com",
+      "licenseHolder": "TRAVELLERS INTERNATIONAL HOTEL GROUP, INC. (doing business under the name and style of Newport World Resorts)",
+      "domains": [
+       "newportjackpotworld.com"
+      ]
+     },
+     {
+      "brand": "newportjackpotworld.ph",
+      "licenseHolder": "TRAVELLERS INTERNATIONAL HOTEL GROUP, INC. (doing business under the name and style of Newport World Resorts)",
+      "domains": [
+       "newportjackpotworld.ph"
+      ]
+     },
+     {
+      "brand": "newportluckystars.com",
+      "licenseHolder": "TRAVELLERS INTERNATIONAL HOTEL GROUP, INC. (doing business under the name and style of Newport World Resorts)",
+      "domains": [
+       "newportluckystars.com"
+      ]
+     },
+     {
+      "brand": "newportluckystars.ph",
+      "licenseHolder": "TRAVELLERS INTERNATIONAL HOTEL GROUP, INC. (doing business under the name and style of Newport World Resorts)",
+      "domains": [
+       "newportluckystars.ph"
+      ]
+     },
+     {
+      "brand": "newportluckyworld.com",
+      "licenseHolder": "TRAVELLERS INTERNATIONAL HOTEL GROUP, INC. (doing business under the name and style of Newport World Resorts)",
+      "domains": [
+       "newportluckyworld.com"
+      ]
+     },
+     {
+      "brand": "newportluckyworld.ph",
+      "licenseHolder": "TRAVELLERS INTERNATIONAL HOTEL GROUP, INC. (doing business under the name and style of Newport World Resorts)",
+      "domains": [
+       "newportluckyworld.ph"
+      ]
+     },
+     {
+      "brand": "newportmegabet.com",
+      "licenseHolder": "TRAVELLERS INTERNATIONAL HOTEL GROUP, INC. (doing business under the name and style of Newport World Resorts)",
+      "domains": [
+       "newportmegabet.com"
+      ]
+     },
+     {
+      "brand": "newportmegabet.ph",
+      "licenseHolder": "TRAVELLERS INTERNATIONAL HOTEL GROUP, INC. (doing business under the name and style of Newport World Resorts)",
+      "domains": [
+       "newportmegabet.ph"
+      ]
+     },
+     {
+      "brand": "newportpanalobet.com",
+      "licenseHolder": "TRAVELLERS INTERNATIONAL HOTEL GROUP, INC. (doing business under the name and style of Newport World Resorts)",
+      "domains": [
+       "newportpanalobet.com"
+      ]
+     },
+     {
+      "brand": "newportpanalobet.ph",
+      "licenseHolder": "TRAVELLERS INTERNATIONAL HOTEL GROUP, INC. (doing business under the name and style of Newport World Resorts)",
+      "domains": [
+       "newportpanalobet.ph"
+      ]
+     },
+     {
+      "brand": "newportplay.com",
+      "licenseHolder": "TRAVELLERS INTERNATIONAL HOTEL GROUP, INC. (doing business under the name and style of Newport World Resorts)",
+      "domains": [
+       "newportplay.com"
+      ]
+     },
+     {
+      "brand": "newportvmx.com",
+      "licenseHolder": "TRAVELLERS INTERNATIONAL HOTEL GROUP, INC. (doing business under the name and style of Newport World Resorts)",
+      "domains": [
+       "newportvmx.com"
+      ]
+     },
+     {
+      "brand": "newportvmx.ph",
+      "licenseHolder": "TRAVELLERS INTERNATIONAL HOTEL GROUP, INC. (doing business under the name and style of Newport World Resorts)",
+      "domains": [
+       "newportvmx.ph"
+      ]
+     },
+     {
+      "brand": "Ninogaming",
+      "licenseHolder": "GEMINI GAMING MANAGEMENT CORPORATION (GGMC)",
+      "domains": [
+       "ninogaming.com"
+      ]
+     },
+     {
+      "brand": "novalink.art",
+      "licenseHolder": "LEGEND LINK TECHNOLOGY, INC. (Legend Link)",
+      "domains": [
+       "novalink.art"
+      ]
+     },
+     {
+      "brand": "novalink.bid",
+      "licenseHolder": "LEGEND LINK TECHNOLOGY, INC. (Legend Link)",
+      "domains": [
+       "novalink.bid"
+      ]
+     },
+     {
+      "brand": "novalink.biz",
+      "licenseHolder": "LEGEND LINK TECHNOLOGY, INC. (Legend Link)",
+      "domains": [
+       "novalink.biz"
+      ]
+     },
+     {
+      "brand": "novalink.cloud",
+      "licenseHolder": "LEGEND LINK TECHNOLOGY, INC. (Legend Link)",
+      "domains": [
+       "novalink.cloud"
+      ]
+     },
+     {
+      "brand": "novalink.com.ph",
+      "licenseHolder": "LEGEND LINK TECHNOLOGY, INC. (Legend Link)",
+      "domains": [
+       "novalink.com.ph"
+      ]
+     },
+     {
+      "brand": "novalink.design",
+      "licenseHolder": "LEGEND LINK TECHNOLOGY, INC. (Legend Link)",
+      "domains": [
+       "novalink.design"
+      ]
+     },
+     {
+      "brand": "novalink.fashion",
+      "licenseHolder": "LEGEND LINK TECHNOLOGY, INC. (Legend Link)",
+      "domains": [
+       "novalink.fashion"
+      ]
+     },
+     {
+      "brand": "novalink.health",
+      "licenseHolder": "LEGEND LINK TECHNOLOGY, INC. (Legend Link)",
+      "domains": [
+       "novalink.health"
+      ]
+     },
+     {
+      "brand": "novalink.it.com",
+      "licenseHolder": "LEGEND LINK TECHNOLOGY, INC. (Legend Link)",
+      "domains": [
+       "novalink.it.com"
+      ]
+     },
+     {
+      "brand": "novalink.ph",
+      "licenseHolder": "LEGEND LINK TECHNOLOGY, INC. (Legend Link)",
+      "domains": [
+       "novalink.ph"
+      ]
+     },
+     {
+      "brand": "numerouno.com.ph",
+      "licenseHolder": "PHILWEB CORPORATION (PhilWeb)",
+      "domains": [
+       "numerouno.com.ph"
+      ]
+     },
+     {
+      "brand": "numerouno.egamescasino.ph",
+      "licenseHolder": "PHILWEB CORPORATION (PhilWeb)",
+      "domains": [
+       "numerouno.egamescasino.ph"
+      ]
+     },
+     {
+      "brand": "numerouno.ph",
+      "licenseHolder": "PHILWEB CORPORATION (PhilWeb)",
+      "domains": [
+       "numerouno.ph"
+      ]
+     },
+     {
+      "brand": "NuSTAR",
+      "licenseHolder": "PREMIER ONLINE DIGITAL ENTERTAINMENT CORPORATION (PODEC)",
+      "domains": [
+       "nustargame.ph"
+      ]
+     },
+     {
+      "brand": "nustargame.com",
+      "licenseHolder": "PREMIER ONLINE DIGITAL ENTERTAINMENT CORPORATION (PODEC)",
+      "domains": [
+       "nustargame.com"
+      ]
+     },
+     {
+      "brand": "nustargame.com.ph",
+      "licenseHolder": "PREMIER ONLINE DIGITAL ENTERTAINMENT CORPORATION (PODEC)",
+      "domains": [
+       "nustargame.com.ph"
+      ]
+     },
+     {
+      "brand": "nustaronline.vip",
+      "licenseHolder": "PREMIER ONLINE DIGITAL ENTERTAINMENT CORPORATION (PODEC)",
+      "domains": [
+       "nustaronline.vip"
+      ]
+     },
+     {
+      "brand": "nwrluckyworld.ph",
+      "licenseHolder": "TRAVELLERS INTERNATIONAL HOTEL GROUP, INC. (doing business under the name and style of Newport World Resorts)",
+      "domains": [
+       "nwrluckyworld.ph"
+      ]
+     },
+     {
+      "brand": "ok-games.ph",
+      "licenseHolder": "GAVIN VENTURES INC. (GVI)",
+      "domains": [
+       "ok-games.ph"
+      ]
+     },
+     {
+      "brand": "ok-web.okbet.com",
+      "licenseHolder": "GAVIN VENTURES INC. (GVI)",
+      "domains": [
+       "ok-web.okbet.com"
+      ]
+     },
+     {
+      "brand": "Okada Online Casino",
+      "licenseHolder": "TIGER RESORT, LEISURE AND ENTERTAINMENT, INC. (doing business under the Name and Style of OKADA MANILA)",
+      "domains": [
+       "okadaonlinecasino.com"
+      ]
+     },
+     {
+      "brand": "okadaplay.com",
+      "licenseHolder": "TIGER RESORT, LEISURE AND ENTERTAINMENT, INC. (doing business under the Name and Style of OKADA MANILA)",
+      "domains": [
+       "okadaplay.com"
+      ]
+     },
+     {
+      "brand": "okadaplay.com.ph",
+      "licenseHolder": "TIGER RESORT, LEISURE AND ENTERTAINMENT, INC. (doing business under the Name and Style of OKADA MANILA)",
+      "domains": [
+       "okadaplay.com.ph"
+      ]
+     },
+     {
+      "brand": "okadaplay.jp",
+      "licenseHolder": "TIGER RESORT, LEISURE AND ENTERTAINMENT, INC. (doing business under the Name and Style of OKADA MANILA)",
+      "domains": [
+       "okadaplay.jp"
+      ]
+     },
+     {
+      "brand": "okadaplay.ph",
+      "licenseHolder": "TIGER RESORT, LEISURE AND ENTERTAINMENT, INC. (doing business under the Name and Style of OKADA MANILA)",
+      "domains": [
+       "okadaplay.ph"
+      ]
+     },
+     {
+      "brand": "okadaplay.vip",
+      "licenseHolder": "TIGER RESORT, LEISURE AND ENTERTAINMENT, INC. (doing business under the Name and Style of OKADA MANILA)",
+      "domains": [
+       "okadaplay.vip"
+      ]
+     },
+     {
+      "brand": "okapp.chat",
+      "licenseHolder": "GAVIN VENTURES INC. (GVI)",
+      "domains": [
+       "okapp.chat"
+      ]
+     },
+     {
+      "brand": "OKBet",
+      "licenseHolder": "GAVIN VENTURES INC. (GVI)",
+      "domains": [
+       "okbet.com"
+      ]
+     },
+     {
+      "brand": "okbet.game",
+      "licenseHolder": "GAVIN VENTURES INC. (GVI)",
+      "domains": [
+       "okbet.game"
+      ]
+     },
+     {
+      "brand": "okbet.help",
+      "licenseHolder": "GAVIN VENTURES INC. (GVI)",
+      "domains": [
+       "okbet.help"
+      ]
+     },
+     {
+      "brand": "okbet.link",
+      "licenseHolder": "GAVIN VENTURES INC. (GVI)",
+      "domains": [
+       "okbet.link"
+      ]
+     },
+     {
+      "brand": "okbet.net",
+      "licenseHolder": "GAVIN VENTURES INC. (GVI)",
+      "domains": [
+       "okbet.net"
+      ]
+     },
+     {
+      "brand": "okbet.one",
+      "licenseHolder": "GAVIN VENTURES INC. (GVI)",
+      "domains": [
+       "okbet.one"
+      ]
+     },
+     {
+      "brand": "okcards.com",
+      "licenseHolder": "GAVIN VENTURES INC. (GVI)",
+      "domains": [
+       "okcards.com"
+      ]
+     },
+     {
+      "brand": "okcards.ph",
+      "licenseHolder": "GAVIN VENTURES INC. (GVI)",
+      "domains": [
+       "okcards.ph"
+      ]
+     },
+     {
+      "brand": "okdunk.net",
+      "licenseHolder": "GAVIN VENTURES INC. (GVI)",
+      "domains": [
+       "okdunk.net"
+      ]
+     },
+     {
+      "brand": "okdunk.ph",
+      "licenseHolder": "GAVIN VENTURES INC. (GVI)",
+      "domains": [
+       "okdunk.ph"
+      ]
+     },
+     {
+      "brand": "okfun.ph",
+      "licenseHolder": "GAVIN VENTURES INC. (GVI)",
+      "domains": [
+       "okfun.ph"
+      ]
+     },
+     {
+      "brand": "okgames.com",
+      "licenseHolder": "GAVIN VENTURES INC. (GVI)",
+      "domains": [
+       "okgames.com"
+      ]
+     },
+     {
+      "brand": "okgames.net",
+      "licenseHolder": "GAVIN VENTURES INC. (GVI)",
+      "domains": [
+       "okgames.net"
+      ]
+     },
+     {
+      "brand": "okgames.ph",
+      "licenseHolder": "GAVIN VENTURES INC. (GVI)",
+      "domains": [
+       "okgames.ph"
+      ]
+     },
+     {
+      "brand": "okpisoluck.com",
+      "licenseHolder": "GAVIN VENTURES INC. (GVI)",
+      "domains": [
+       "okpisoluck.com"
+      ]
+     },
+     {
+      "brand": "okpisoluck.ph",
+      "licenseHolder": "GAVIN VENTURES INC. (GVI)",
+      "domains": [
+       "okpisoluck.ph"
+      ]
+     },
+     {
+      "brand": "okplay.ph",
+      "licenseHolder": "GAVIN VENTURES INC. (GVI)",
+      "domains": [
+       "okplay.ph"
+      ]
+     },
+     {
+      "brand": "old.747ph.live",
+      "licenseHolder": "CD EXTREME OPC (CD Extreme)",
+      "domains": [
+       "old.747ph.live"
+      ]
+     },
+     {
+      "brand": "onlyfun.ph",
+      "licenseHolder": "BLOOMBERRY RESORTS AND HOTELS, INC. (Solaire Resorts and Casino)",
+      "domains": [
+       "onlyfun.ph"
+      ]
+     },
+     {
+      "brand": "Patokbet",
+      "licenseHolder": "ENIGMA SOFTWARE SOLUTIONS, INC. (Enigma)",
+      "domains": [
+       "patokbet.com"
+      ]
+     },
+     {
+      "brand": "peryaplay.ph",
+      "licenseHolder": "NEMO INTERACTIVE GROUP CORPORATION (NEMO-IG)",
+      "domains": [
+       "peryaplay.ph"
+      ]
+     },
+     {
+      "brand": "peryaplus.com",
+      "licenseHolder": "STOTSENBERG LEISURE PARK & HOTEL CORPORATION AND FRONTIER CAPITAL GROUP LIMITED (CASINO PLUS)",
+      "domains": [
+       "peryaplus.com"
+      ]
+     },
+     {
+      "brand": "pesomaxfun.com",
+      "licenseHolder": "BLOOMBERRY RESORTS AND HOTELS, INC. (Solaire Resorts and Casino)",
+      "domains": [
+       "pesomaxfun.com"
+      ]
+     },
+     {
+      "brand": "ph.747live.com",
+      "licenseHolder": "CD EXTREME OPC (CD Extreme)",
+      "domains": [
+       "ph.747live.com"
+      ]
+     },
+     {
+      "brand": "Pin77",
+      "licenseHolder": "LARGE-HUB MIND RECREATION, INCORPORATED (Large-Hub)",
+      "domains": [
+       "pin77.com",
+       "chamba77.com"
+      ]
+     },
+     {
+      "brand": "pin77.net",
+      "licenseHolder": "LARGE-HUB MIND RECREATION, INCORPORATED (Large-Hub)",
+      "domains": [
+       "pin77.net"
+      ]
+     },
+     {
+      "brand": "pin77.ph",
+      "licenseHolder": "LARGE-HUB MIND RECREATION, INCORPORATED (Large-Hub)",
+      "domains": [
+       "pin77.ph"
+      ]
+     },
+     {
+      "brand": "pinoygamessg8.club",
+      "licenseHolder": "SILVER GOOSE 8 INTERNATIONAL, INC. (SGII)",
+      "domains": [
+       "pinoygamessg8.club"
+      ]
+     },
+     {
+      "brand": "playpal77.fun",
+      "licenseHolder": "LARGE-HUB MIND RECREATION, INCORPORATED (Large-Hub)",
+      "domains": [
+       "playpal77.fun"
+      ]
+     },
+     {
+      "brand": "playpal77.ph",
+      "licenseHolder": "LARGE-HUB MIND RECREATION, INCORPORATED (Large-Hub)",
+      "domains": [
+       "playpal77.ph"
+      ]
+     },
+     {
+      "brand": "playsg8.com",
+      "licenseHolder": "SILVER GOOSE 8 INTERNATIONAL, INC. (SGII)",
+      "domains": [
+       "playsg8.com"
+      ]
+     },
+     {
+      "brand": "ppl.747ph.live",
+      "licenseHolder": "CD EXTREME OPC (CD Extreme)",
+      "domains": [
+       "ppl.747ph.live"
+      ]
+     },
+     {
+      "brand": "prizewin.ph",
+      "licenseHolder": "DW TECHNOLOGIES ASIA INC. (DW Technologies)",
+      "domains": [
+       "prizewin.ph"
+      ]
+     },
+     {
+      "brand": "PT GAMING",
+      "licenseHolder": "PLAYMATE LEISURE SOLUTIONS CORP. (Playmate)",
+      "domains": [
+       "ptgaming.ph"
+      ]
+     },
+     {
+      "brand": "ptgaming.com.ph",
+      "licenseHolder": "PLAYMATE LEISURE SOLUTIONS CORP. (Playmate)",
+      "domains": [
+       "ptgaming.com.ph"
+      ]
+     },
+     {
+      "brand": "raffle.747ph.live",
+      "licenseHolder": "CD EXTREME OPC (CD Extreme)",
+      "domains": [
+       "raffle.747ph.live"
+      ]
+     },
+     {
+      "brand": "rgp.egamescasino.ph",
+      "licenseHolder": "PHILWEB CORPORATION (PhilWeb)",
+      "domains": [
+       "rgp.egamescasino.ph"
+      ]
+     },
+     {
+      "brand": "S5 Arena",
+      "licenseHolder": "GLOWLIGHT CORPORATION (Glowlight)",
+      "domains": [
+       "s5.com"
+      ]
+     },
+     {
+      "brand": "s5-games.ph",
+      "licenseHolder": "GLOWLIGHT CORPORATION (Glowlight)",
+      "domains": [
+       "s5-games.ph"
+      ]
+     },
+     {
+      "brand": "s5casino.ph",
+      "licenseHolder": "GLOWLIGHT CORPORATION (Glowlight)",
+      "domains": [
+       "s5casino.ph"
+      ]
+     },
+     {
+      "brand": "s5club.ph",
+      "licenseHolder": "GLOWLIGHT CORPORATION (Glowlight)",
+      "domains": [
+       "s5club.ph"
+      ]
+     },
+     {
+      "brand": "s5games.ph",
+      "licenseHolder": "GLOWLIGHT CORPORATION (Glowlight)",
+      "domains": [
+       "s5games.ph"
+      ]
+     },
+     {
+      "brand": "s5live.ph",
+      "licenseHolder": "GLOWLIGHT CORPORATION (Glowlight)",
+      "domains": [
+       "s5live.ph"
+      ]
+     },
+     {
+      "brand": "s5vip.ph",
+      "licenseHolder": "GLOWLIGHT CORPORATION (Glowlight)",
+      "domains": [
+       "s5vip.ph"
+      ]
+     },
+     {
+      "brand": "SG8",
+      "licenseHolder": "SILVER GOOSE 8 INTERNATIONAL, INC. (SGII)",
+      "domains": [
+       "sg8.casino"
+      ]
+     },
+     {
+      "brand": "sg8.bet",
+      "licenseHolder": "SILVER GOOSE 8 INTERNATIONAL, INC. (SGII)",
+      "domains": [
+       "sg8.bet"
+      ]
+     },
+     {
+      "brand": "sg8.zone",
+      "licenseHolder": "SILVER GOOSE 8 INTERNATIONAL, INC. (SGII)",
+      "domains": [
+       "sg8.zone"
+      ]
+     },
+     {
+      "brand": "Solaire Online",
+      "licenseHolder": "BLOOMBERRY RESORTS AND HOTELS, INC. (SOLAIRE RESORTS AND CASINO)",
+      "domains": [
+       "solaireonline.com"
+      ]
+     },
+     {
+      "brand": "spinmaster.com.ph",
+      "licenseHolder": "STOTSENBERG LEISURE PARK & HOTEL CORPORATION AND FRONTIER CAPITAL GROUP LIMITED (CASINO PLUS)",
+      "domains": [
+       "spinmaster.com.ph"
+      ]
+     },
+     {
+      "brand": "sports.ninogaming.com",
+      "licenseHolder": "GEMINI GAMING MANAGEMENT CORPORATION (GGMC)",
+      "domains": [
+       "sports.ninogaming.com"
+      ]
+     },
+     {
+      "brand": "SportsPlus",
+      "licenseHolder": "INFINITECH DIGITAL GAMING CORPORATION (IDGC)",
+      "domains": [
+       "sportsplus.ph"
+      ]
+     },
+     {
+      "brand": "sportsplus.com.ph",
+      "licenseHolder": "INFINITECH DIGITAL GAMING CORPORATION (IDGC)",
+      "domains": [
+       "sportsplus.com.ph"
+      ]
+     },
+     {
+      "brand": "store.fbmplay.com",
+      "licenseHolder": "MEMO MULTINATIONAL CORP. (MMC)",
+      "domains": [
+       "store.fbmplay.com"
+      ]
+     },
+     {
+      "brand": "SuloBet",
+      "licenseHolder": "PURE LUCK GAMING CORPORATION (PLGC)",
+      "domains": [
+       "sulobet.ph"
+      ]
+     },
+     {
+      "brand": "superace.com.ph",
+      "licenseHolder": "STOTSENBERG LEISURE PARK & HOTEL CORPORATION AND FRONTIER CAPITAL GROUP LIMITED (CASINO PLUS)",
+      "domains": [
+       "superace.com.ph"
+      ]
+     },
+     {
+      "brand": "tablegame.com.ph",
+      "licenseHolder": "STOTSENBERG LEISURE PARK & HOTEL CORPORATION AND FRONTIER CAPITAL GROUP LIMITED (CASINO PLUS)",
+      "domains": [
+       "tablegame.com.ph"
+      ]
+     },
+     {
+      "brand": "tg789.ph",
+      "licenseHolder": "BB WAVE INC. (BB Wave)",
+      "domains": [
+       "tg789.ph"
+      ]
+     },
+     {
+      "brand": "Thunderbird Poro Online Casino",
+      "licenseHolder": "THUNDERBIRD PILIPINAS HOTELS & RESORTS INC. (THUNDERBIRD RESORTS & CASINO - PORO POINT",
+      "domains": [
+       "thunderbirdonlineporo.com"
+      ]
+     },
+     {
+      "brand": "Thunderbird Rizal Online Casino",
+      "licenseHolder": "EASTBAY RESORTS, INC. (THUNDERBIRD RESORTS & CASINO - RIZAL)",
+      "domains": [
+       "thunderbirdonlinerizal.com"
+      ]
+     },
+     {
+      "brand": "tregs.sg8.casino",
+      "licenseHolder": "SILVER GOOSE 8 INTERNATIONAL, INC. (SGII)",
+      "domains": [
+       "tregs.sg8.casino"
+      ]
+     },
+     {
+      "brand": "viplucky.com",
+      "licenseHolder": "CYBER DOT COM TECHNOLOGY CORP. (Cyber Dot)",
+      "domains": [
+       "viplucky.com"
+      ]
+     },
+     {
+      "brand": "Winford",
+      "licenseHolder": "MJC INVESTMENTS CORP. (WINFORD MANILA RESORT AND CASINO)",
+      "domains": [
+       "winfordonline.com"
+      ]
+     },
+     {
+      "brand": "wing.ph",
+      "licenseHolder": "SANDBOX ENTERTAINMENT CORP. (Sandbox)",
+      "domains": [
+       "wing.ph"
+      ]
+     },
+     {
+      "brand": "wins.ph",
+      "licenseHolder": "SANDBOX ENTERTAINMENT CORP. (Sandbox)",
+      "domains": [
+       "wins.ph"
+      ]
+     },
+     {
+      "brand": "winz.ph",
+      "licenseHolder": "SANDBOX ENTERTAINMENT CORP. (Sandbox)",
+      "domains": [
+       "winz.ph"
+      ]
+     },
+     {
+      "brand": "Winzir",
+      "licenseHolder": "SANDBOX ENTERTAINMENT CORP. (Sandbox)",
+      "domains": [
+       "winzir.ph"
+      ]
+     },
+     {
+      "brand": "winzir.com",
+      "licenseHolder": "SANDBOX ENTERTAINMENT CORP. (Sandbox)",
+      "domains": [
+       "winzir.com"
+      ]
+     },
+     {
+      "brand": "winzir.com.ph",
+      "licenseHolder": "SANDBOX ENTERTAINMENT CORP. (Sandbox)",
+      "domains": [
+       "winzir.com.ph"
+      ]
+     },
+     {
+      "brand": "winzir.net",
+      "licenseHolder": "SANDBOX ENTERTAINMENT CORP. (Sandbox)",
+      "domains": [
+       "winzir.net"
+      ]
+     },
+     {
+      "brand": "WOWGames",
+      "licenseHolder": "WEBZOID SYSTEM SOLUTIONS CORPORATION (Webzoid)",
+      "domains": [
+       "wowgames.com"
+      ]
+     },
+     {
+      "brand": "wowgames.app",
+      "licenseHolder": "WEBZOID SYSTEM SOLUTIONS CORPORATION (Webzoid)",
+      "domains": [
+       "wowgames.app"
+      ]
+     },
+     {
+      "brand": "wowgames.chat",
+      "licenseHolder": "WEBZOID SYSTEM SOLUTIONS CORPORATION (Webzoid)",
+      "domains": [
+       "wowgames.chat"
+      ]
+     },
+     {
+      "brand": "wowgames.game",
+      "licenseHolder": "WEBZOID SYSTEM SOLUTIONS CORPORATION (Webzoid)",
+      "domains": [
+       "wowgames.game"
+      ]
+     },
+     {
+      "brand": "wowgames.help",
+      "licenseHolder": "WEBZOID SYSTEM SOLUTIONS CORPORATION (Webzoid)",
+      "domains": [
+       "wowgames.help"
+      ]
+     },
+     {
+      "brand": "wowgames.link",
+      "licenseHolder": "WEBZOID SYSTEM SOLUTIONS CORPORATION (Webzoid)",
+      "domains": [
+       "wowgames.link"
+      ]
+     },
+     {
+      "brand": "wowgames.live",
+      "licenseHolder": "WEBZOID SYSTEM SOLUTIONS CORPORATION (Webzoid)",
+      "domains": [
+       "wowgames.live"
+      ]
+     },
+     {
+      "brand": "wowgames.net",
+      "licenseHolder": "WEBZOID SYSTEM SOLUTIONS CORPORATION (Webzoid)",
+      "domains": [
+       "wowgames.net"
+      ]
+     },
+     {
+      "brand": "wowgames.one",
+      "licenseHolder": "WEBZOID SYSTEM SOLUTIONS CORPORATION (Webzoid)",
+      "domains": [
+       "wowgames.one"
+      ]
+     },
+     {
+      "brand": "wowgames.ph",
+      "licenseHolder": "WEBZOID SYSTEM SOLUTIONS CORPORATION (Webzoid)",
+      "domains": [
+       "wowgames.ph"
+      ]
+     },
+     {
+      "brand": "wowgames.vip",
+      "licenseHolder": "WEBZOID SYSTEM SOLUTIONS CORPORATION (Webzoid)",
+      "domains": [
+       "wowgames.vip"
+      ]
+     },
+     {
+      "brand": "wownumero.ph",
+      "licenseHolder": "WEBZOID SYSTEM SOLUTIONS CORPORATION (Webzoid)",
+      "domains": [
+       "wownumero.ph"
+      ]
+     },
+     {
+      "brand": "wowperya.ph",
+      "licenseHolder": "WEBZOID SYSTEM SOLUTIONS CORPORATION (Webzoid)",
+      "domains": [
+       "wowperya.ph"
+      ]
+     },
+     {
+      "brand": "wowspin.ph",
+      "licenseHolder": "WEBZOID SYSTEM SOLUTIONS CORPORATION (Webzoid)",
+      "domains": [
+       "wowspin.ph"
+      ]
+     },
+     {
+      "brand": "wowsports.ph",
+      "licenseHolder": "WEBZOID SYSTEM SOLUTIONS CORPORATION (Webzoid)",
+      "domains": [
+       "wowsports.ph"
+      ]
+     },
+     {
+      "brand": "wzr.ph",
+      "licenseHolder": "SANDBOX ENTERTAINMENT CORP. (Sandbox)",
+      "domains": [
+       "wzr.ph"
+      ]
+     },
+     {
+      "brand": "xoplay.ph",
+      "licenseHolder": "NEMO INTERACTIVE GROUP CORPORATION (NEMO-IG)",
+      "domains": [
+       "xoplay.ph"
+      ]
+     }
+    ],
+    "sourceUrl": "https://www.pagcor.ph/regulatory/pdf/App%20Kits/List-of-PAGCOR-Accredited-Gaming-System-Administrators-and-Registered-Brands-and-Domain-Names-URLs.pdf",
+    "asOf": "2026-10-05",
+    "note": "PAGCOR's list of accredited Gaming System Administrators and their registered brands and domain names (as of September 17, 2026). For each administrator the register gives a main brand on a main domain, which is one row here under that brand, and further registered domains, sub-domains and additional URLs, one row each under the web address. The register says which games each administrator offers; game offerings it marks as not yet in commercial operation are left out. Casino rows are the administrators offering Electronic (eCasino) Games, plus the online brands PAGCOR has approved for its licensed land-based casinos (https://www.pagcor.ph/regulatory/pdf/App%20Kits/List-of-Registered-Brands-and-Domain-Names-URLs-of-Licensed-Casinos.pdf, as of September 17, 2026)."
+   },
+   "sportsbooks": {
+    "operators": [
+     {
+      "brand": "123bingo.ph",
+      "licenseHolder": "META INTERACTIVE SOFTWARE SOLUTIONS INC. (MISSI)",
+      "domains": [
+       "123bingo.ph"
+      ]
+     },
+     {
+      "brand": "123Go",
+      "licenseHolder": "META INTERACTIVE SOFTWARE SOLUTIONS INC. (MISSI)",
+      "domains": [
+       "123go.com"
+      ]
+     },
+     {
+      "brand": "123go.games",
+      "licenseHolder": "META INTERACTIVE SOFTWARE SOLUTIONS INC. (MISSI)",
+      "domains": [
+       "123go.games"
+      ]
+     },
+     {
+      "brand": "123go.ph",
+      "licenseHolder": "META INTERACTIVE SOFTWARE SOLUTIONS INC. (MISSI)",
+      "domains": [
+       "123go.ph"
+      ]
+     },
+     {
+      "brand": "123perya.ph",
+      "licenseHolder": "META INTERACTIVE SOFTWARE SOLUTIONS INC. (MISSI)",
+      "domains": [
+       "123perya.ph"
+      ]
+     },
+     {
+      "brand": "123poker.ph",
+      "licenseHolder": "META INTERACTIVE SOFTWARE SOLUTIONS INC. (MISSI)",
+      "domains": [
+       "123poker.ph"
+      ]
+     },
+     {
+      "brand": "123sports.ph",
+      "licenseHolder": "META INTERACTIVE SOFTWARE SOLUTIONS INC. (MISSI)",
+      "domains": [
+       "123sports.ph"
+      ]
+     },
+     {
+      "brand": "123swerte.ph",
+      "licenseHolder": "META INTERACTIVE SOFTWARE SOLUTIONS INC. (MISSI)",
+      "domains": [
+       "123swerte.ph"
+      ]
+     },
+     {
+      "brand": "6bet.com",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "6bet.com"
+      ]
+     },
+     {
+      "brand": "6paldo.com",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "6paldo.com"
+      ]
+     },
+     {
+      "brand": "6saya.com",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "6saya.com"
+      ]
+     },
+     {
+      "brand": "6swerte.com",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "6swerte.com"
+      ]
+     },
+     {
+      "brand": "6tara.com",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "6tara.com"
+      ]
+     },
+     {
+      "brand": "747",
+      "licenseHolder": "CD EXTREME OPC (CD Extreme)",
+      "domains": [
+       "ph.747.live"
+      ]
+     },
+     {
+      "brand": "747.live",
+      "licenseHolder": "CD EXTREME OPC (CD Extreme)",
+      "domains": [
+       "747.live"
+      ]
+     },
+     {
+      "brand": "747live.com",
+      "licenseHolder": "CD EXTREME OPC (CD Extreme)",
+      "domains": [
+       "747live.com"
+      ]
+     },
+     {
+      "brand": "747ph.live",
+      "licenseHolder": "CD EXTREME OPC (CD Extreme)",
+      "domains": [
+       "747ph.live"
+      ]
+     },
+     {
+      "brand": "789.com",
+      "licenseHolder": "BB WAVE INC. (BB Wave)",
+      "domains": [
+       "789.com"
+      ]
+     },
+     {
+      "brand": "789Bingo",
+      "licenseHolder": "BB WAVE INC. (BB Wave)",
+      "domains": [
+       "789bingo.com"
+      ]
+     },
+     {
+      "brand": "789games.com",
+      "licenseHolder": "BB WAVE INC. (BB Wave)",
+      "domains": [
+       "789games.com"
+      ]
+     },
+     {
+      "brand": "789play.com",
+      "licenseHolder": "BB WAVE INC. (BB Wave)",
+      "domains": [
+       "789play.com"
+      ]
+     },
+     {
+      "brand": "anybet.sg8.casino",
+      "licenseHolder": "SILVER GOOSE 8 INTERNATIONAL, INC. (SGII)",
+      "domains": [
+       "anybet.sg8.casino"
+      ]
+     },
+     {
+      "brand": "arenaplus.com.ph",
+      "licenseHolder": "TOTAL GAMEZONE XTREME INCORPORATED (TGXI)",
+      "domains": [
+       "arenaplus.com.ph"
+      ]
+     },
+     {
+      "brand": "arionplay.com",
+      "licenseHolder": "NEMO INTERACTIVE GROUP CORPORATION (NEMO-IG)",
+      "domains": [
+       "arionplay.com"
+      ]
+     },
+     {
+      "brand": "Bet88",
+      "licenseHolder": "TROJANS WELL ENTERTAINMENT CORP. (TWEC)",
+      "domains": [
+       "bet88.ph"
+      ]
+     },
+     {
+      "brand": "bet88.stream",
+      "licenseHolder": "TROJANS WELL ENTERTAINMENT CORP. (TWEC)",
+      "domains": [
+       "bet88.stream"
+      ]
+     },
+     {
+      "brand": "Betano",
+      "licenseHolder": "KAIZEN GAMING PHILIPPINES INC. (KAIZEN)",
+      "domains": [
+       "betano.ph"
+      ]
+     },
+     {
+      "brand": "bets5.ph",
+      "licenseHolder": "GLOWLIGHT CORPORATION (Glowlight)",
+      "domains": [
+       "bets5.ph"
+      ]
+     },
+     {
+      "brand": "BIGBUNNY",
+      "licenseHolder": "BLUE PHOENIX TECH SOLUTIONS CORP. (Blue Phoenix)",
+      "domains": [
+       "bigbunny.ph"
+      ]
+     },
+     {
+      "brand": "bossbunny.ph",
+      "licenseHolder": "BLUE PHOENIX TECH SOLUTIONS CORP. (Blue Phoenix)",
+      "domains": [
+       "bossbunny.ph"
+      ]
+     },
+     {
+      "brand": "by-bet.com",
+      "licenseHolder": "GLOBAL PLAY HUB INNOVATIONS CORP (Global Play)",
+      "domains": [
+       "by-bet.com"
+      ]
+     },
+     {
+      "brand": "ByBet",
+      "licenseHolder": "GLOBAL PLAY HUB INNOVATIONS CORP (Global Play)",
+      "domains": [
+       "bybet.com"
+      ]
+     },
+     {
+      "brand": "bybet.app",
+      "licenseHolder": "GLOBAL PLAY HUB INNOVATIONS CORP (Global Play)",
+      "domains": [
+       "bybet.app"
+      ]
+     },
+     {
+      "brand": "bybet.co",
+      "licenseHolder": "GLOBAL PLAY HUB INNOVATIONS CORP (Global Play)",
+      "domains": [
+       "bybet.co"
+      ]
+     },
+     {
+      "brand": "bybet.io",
+      "licenseHolder": "GLOBAL PLAY HUB INNOVATIONS CORP (Global Play)",
+      "domains": [
+       "bybet.io"
+      ]
+     },
+     {
+      "brand": "bybet.ph",
+      "licenseHolder": "GLOBAL PLAY HUB INNOVATIONS CORP (Global Play)",
+      "domains": [
+       "bybet.ph"
+      ]
+     },
+     {
+      "brand": "bybet.tv",
+      "licenseHolder": "GLOBAL PLAY HUB INNOVATIONS CORP (Global Play)",
+      "domains": [
+       "bybet.tv"
+      ]
+     },
+     {
+      "brand": "bybet.vip",
+      "licenseHolder": "GLOBAL PLAY HUB INNOVATIONS CORP (Global Play)",
+      "domains": [
+       "bybet.vip"
+      ]
+     },
+     {
+      "brand": "bygame.com",
+      "licenseHolder": "GLOBAL PLAY HUB INNOVATIONS CORP (Global Play)",
+      "domains": [
+       "bygame.com"
+      ]
+     },
+     {
+      "brand": "bysport.com",
+      "licenseHolder": "GLOBAL PLAY HUB INNOVATIONS CORP (Global Play)",
+      "domains": [
+       "bysport.com"
+      ]
+     },
+     {
+      "brand": "bysport.ph",
+      "licenseHolder": "GLOBAL PLAY HUB INNOVATIONS CORP (Global Play)",
+      "domains": [
+       "bysport.ph"
+      ]
+     },
+     {
+      "brand": "bysports.com",
+      "licenseHolder": "GLOBAL PLAY HUB INNOVATIONS CORP (Global Play)",
+      "domains": [
+       "bysports.com"
+      ]
+     },
+     {
+      "brand": "bysports.ph",
+      "licenseHolder": "GLOBAL PLAY HUB INNOVATIONS CORP (Global Play)",
+      "domains": [
+       "bysports.ph"
+      ]
+     },
+     {
+      "brand": "championzone.ph",
+      "licenseHolder": "TOTAL GAMEZONE XTREME INCORPORATED (TGXI)",
+      "domains": [
+       "championzone.ph"
+      ]
+     },
+     {
+      "brand": "coolgames.sg8.casino",
+      "licenseHolder": "SILVER GOOSE 8 INTERNATIONAL, INC. (SGII)",
+      "domains": [
+       "coolgames.sg8.casino"
+      ]
+     },
+     {
+      "brand": "coolgameslakiwin.com",
+      "licenseHolder": "RAC PHIL CORP. (RAC)",
+      "domains": [
+       "coolgameslakiwin.com"
+      ]
+     },
+     {
+      "brand": "crazywin.ph",
+      "licenseHolder": "BREDDAS INC. (Breddas)",
+      "domains": [
+       "crazywin.ph"
+      ]
+     },
+     {
+      "brand": "CrazywinGo",
+      "licenseHolder": "BREDDAS INC. (Breddas)",
+      "domains": [
+       "crazywingo.ph"
+      ]
+     },
+     {
+      "brand": "crazywingo.asia",
+      "licenseHolder": "BREDDAS INC. (Breddas)",
+      "domains": [
+       "crazywingo.asia"
+      ]
+     },
+     {
+      "brand": "deskace.app",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "deskace.app"
+      ]
+     },
+     {
+      "brand": "deskace.com",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "deskace.com"
+      ]
+     },
+     {
+      "brand": "deskace.ph",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "deskace.ph"
+      ]
+     },
+     {
+      "brand": "deskace.pro",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "deskace.pro"
+      ]
+     },
+     {
+      "brand": "deskace.vip",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "deskace.vip"
+      ]
+     },
+     {
+      "brand": "DeskGame",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "deskgame.com"
+      ]
+     },
+     {
+      "brand": "deskgame.app",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "deskgame.app"
+      ]
+     },
+     {
+      "brand": "deskgame.club",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "deskgame.club"
+      ]
+     },
+     {
+      "brand": "deskgame.ph",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "deskgame.ph"
+      ]
+     },
+     {
+      "brand": "deskgame.pro",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "deskgame.pro"
+      ]
+     },
+     {
+      "brand": "deskgame.vip",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "deskgame.vip"
+      ]
+     },
+     {
+      "brand": "desklucky.app",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "desklucky.app"
+      ]
+     },
+     {
+      "brand": "desklucky.club",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "desklucky.club"
+      ]
+     },
+     {
+      "brand": "desklucky.com",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "desklucky.com"
+      ]
+     },
+     {
+      "brand": "desklucky.com.ph",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "desklucky.com.ph"
+      ]
+     },
+     {
+      "brand": "desklucky.ph",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "desklucky.ph"
+      ]
+     },
+     {
+      "brand": "desklucky.pro",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "desklucky.pro"
+      ]
+     },
+     {
+      "brand": "desklucky.vip",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "desklucky.vip"
+      ]
+     },
+     {
+      "brand": "desktaya.app",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "desktaya.app"
+      ]
+     },
+     {
+      "brand": "desktaya.club",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "desktaya.club"
+      ]
+     },
+     {
+      "brand": "desktaya.com",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "desktaya.com"
+      ]
+     },
+     {
+      "brand": "desktaya.ph",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "desktaya.ph"
+      ]
+     },
+     {
+      "brand": "desktaya.pro",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "desktaya.pro"
+      ]
+     },
+     {
+      "brand": "desktaya.vip",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "desktaya.vip"
+      ]
+     },
+     {
+      "brand": "deskwin.app",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "deskwin.app"
+      ]
+     },
+     {
+      "brand": "deskwin.club",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "deskwin.club"
+      ]
+     },
+     {
+      "brand": "deskwin.com",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "deskwin.com"
+      ]
+     },
+     {
+      "brand": "deskwin.com.ph",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "deskwin.com.ph"
+      ]
+     },
+     {
+      "brand": "deskwin.ph",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "deskwin.ph"
+      ]
+     },
+     {
+      "brand": "deskwin.pro",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "deskwin.pro"
+      ]
+     },
+     {
+      "brand": "deskwin.vip",
+      "licenseHolder": "RED FU ENTERTAINMENT TECHNOLOGIES CORP. (Red Fu)",
+      "domains": [
+       "deskwin.vip"
+      ]
+     },
+     {
+      "brand": "ebingo.ninogaming.com",
+      "licenseHolder": "GEMINI GAMING MANAGEMENT CORPORATION (GGMC)",
+      "domains": [
+       "ebingo.ninogaming.com"
+      ]
+     },
+     {
+      "brand": "ecasino.ninogaming.com",
+      "licenseHolder": "GEMINI GAMING MANAGEMENT CORPORATION (GGMC)",
+      "domains": [
+       "ecasino.ninogaming.com"
+      ]
+     },
+     {
+      "brand": "eGames",
+      "licenseHolder": "PHILWEB CORPORATION (PhilWeb)",
+      "domains": [
+       "egamescasino.ph"
+      ]
+     },
+     {
+      "brand": "eplay.egamescasino.ph",
+      "licenseHolder": "PHILWEB CORPORATION (PhilWeb)",
+      "domains": [
+       "eplay.egamescasino.ph"
+      ]
+     },
+     {
+      "brand": "esportsbet.ph",
+      "licenseHolder": "PHILWEB CORPORATION (PhilWeb)",
+      "domains": [
+       "esportsbet.ph"
+      ]
+     },
+     {
+      "brand": "esportsbetegamescasino.ph",
+      "licenseHolder": "PHILWEB CORPORATION (PhilWeb)",
+      "domains": [
+       "esportsbetegamescasino.ph"
+      ]
+     },
+     {
+      "brand": "Fairplay",
+      "licenseHolder": "NEMO INTERACTIVE GROUP CORPORATION (NEMO-IG)",
+      "domains": [
+       "fairplay.ph"
+      ]
+     },
+     {
+      "brand": "FBM PLAY",
+      "licenseHolder": "MEMO MULTINATIONAL CORP. (MMC)",
+      "domains": [
+       "fbmplay.ph"
+      ]
+     },
+     {
+      "brand": "fbm.casino",
+      "licenseHolder": "MEMO MULTINATIONAL CORP. (MMC)",
+      "domains": [
+       "fbm.casino"
+      ]
+     },
+     {
+      "brand": "fbmcasino.ph",
+      "licenseHolder": "MEMO MULTINATIONAL CORP. (MMC)",
+      "domains": [
+       "fbmcasino.ph"
+      ]
+     },
+     {
+      "brand": "fbmemotion.ph",
+      "licenseHolder": "MEMO MULTINATIONAL CORP. (MMC)",
+      "domains": [
+       "fbmemotion.ph"
+      ]
+     },
+     {
+      "brand": "fbmgame.online",
+      "licenseHolder": "MEMO MULTINATIONAL CORP. (MMC)",
+      "domains": [
+       "fbmgame.online"
+      ]
+     },
+     {
+      "brand": "fbmplay.com",
+      "licenseHolder": "MEMO MULTINATIONAL CORP. (MMC)",
+      "domains": [
+       "fbmplay.com"
+      ]
+     },
+     {
+      "brand": "fbmslots.com",
+      "licenseHolder": "MEMO MULTINATIONAL CORP. (MMC)",
+      "domains": [
+       "fbmslots.com"
+      ]
+     },
+     {
+      "brand": "festival.sg8.casino",
+      "licenseHolder": "SILVER GOOSE 8 INTERNATIONAL, INC. (SGII)",
+      "domains": [
+       "festival.sg8.casino"
+      ]
+     },
+     {
+      "brand": "Filbet",
+      "licenseHolder": "GOTECH ENTERTAINMENT INC. (GEI)",
+      "domains": [
+       "filbet.com"
+      ]
+     },
+     {
+      "brand": "filbet.com.ph",
+      "licenseHolder": "GOTECH ENTERTAINMENT INC. (GEI)",
+      "domains": [
+       "filbet.com.ph"
+      ]
+     },
+     {
+      "brand": "filgame.com",
+      "licenseHolder": "GOTECH ENTERTAINMENT INC. (GEI)",
+      "domains": [
+       "filgame.com"
+      ]
+     },
+     {
+      "brand": "filgame.com.ph",
+      "licenseHolder": "GOTECH ENTERTAINMENT INC. (GEI)",
+      "domains": [
+       "filgame.com.ph"
+      ]
+     },
+     {
+      "brand": "filgame.ph",
+      "licenseHolder": "GOTECH ENTERTAINMENT INC. (GEI)",
+      "domains": [
+       "filgame.ph"
+      ]
+     },
+     {
+      "brand": "filplay.com",
+      "licenseHolder": "GOTECH ENTERTAINMENT INC. (GEI)",
+      "domains": [
+       "filplay.com"
+      ]
+     },
+     {
+      "brand": "filplay.com.ph",
+      "licenseHolder": "GOTECH ENTERTAINMENT INC. (GEI)",
+      "domains": [
+       "filplay.com.ph"
+      ]
+     },
+     {
+      "brand": "filplay.ph",
+      "licenseHolder": "GOTECH ENTERTAINMENT INC. (GEI)",
+      "domains": [
+       "filplay.ph"
+      ]
+     },
+     {
+      "brand": "filslots.com",
+      "licenseHolder": "GOTECH ENTERTAINMENT INC. (GEI)",
+      "domains": [
+       "filslots.com"
+      ]
+     },
+     {
+      "brand": "filslots.com.ph",
+      "licenseHolder": "GOTECH ENTERTAINMENT INC. (GEI)",
+      "domains": [
+       "filslots.com.ph"
+      ]
+     },
+     {
+      "brand": "filslots.ph",
+      "licenseHolder": "GOTECH ENTERTAINMENT INC. (GEI)",
+      "domains": [
+       "filslots.ph"
+      ]
+     },
+     {
+      "brand": "fortunelink.com.ph",
+      "licenseHolder": "LEGEND LINK TECHNOLOGY, INC. (Legend Link)",
+      "domains": [
+       "fortunelink.com.ph"
+      ]
+     },
+     {
+      "brand": "FUNaloMAX",
+      "licenseHolder": "BLOOMBERRY RESORTS AND HOTELS, INC. (Solaire Resorts and Casino)",
+      "domains": [
+       "funalomax.com"
+      ]
+     },
+     {
+      "brand": "g777.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "g777.ph"
+      ]
+     },
+     {
+      "brand": "GameX",
+      "licenseHolder": "LAS CASAS GAMING, INC. (LCGI)",
+      "domains": [
+       "gamexsports.com.ph"
+      ]
+     },
+     {
+      "brand": "Gamezone",
+      "licenseHolder": "TOTAL GAMEZONE XTREME INCORPORATED (TGXI)",
+      "domains": [
+       "gamezone.ph",
+       "arenaplus.ph"
+      ]
+     },
+     {
+      "brand": "gamezone.com.ph",
+      "licenseHolder": "TOTAL GAMEZONE XTREME INCORPORATED (TGXI)",
+      "domains": [
+       "gamezone.com.ph"
+      ]
+     },
+     {
+      "brand": "gamezone88.com",
+      "licenseHolder": "TOTAL GAMEZONE XTREME INCORPORATED (TGXI)",
+      "domains": [
+       "gamezone88.com"
+      ]
+     },
+     {
+      "brand": "Gbet",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "gbet.com"
+      ]
+     },
+     {
+      "brand": "gbingo.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "gbingo.ph"
+      ]
+     },
+     {
+      "brand": "gbonus.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "gbonus.ph"
+      ]
+     },
+     {
+      "brand": "gfortune.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "gfortune.ph"
+      ]
+     },
+     {
+      "brand": "ggold.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "ggold.ph"
+      ]
+     },
+     {
+      "brand": "ggpanalo.com",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "ggpanalo.com"
+      ]
+     },
+     {
+      "brand": "ggprime.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "ggprime.ph"
+      ]
+     },
+     {
+      "brand": "ggtara.com",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "ggtara.com"
+      ]
+     },
+     {
+      "brand": "ggtropa.com",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "ggtropa.com"
+      ]
+     },
+     {
+      "brand": "ggvibe.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "ggvibe.ph"
+      ]
+     },
+     {
+      "brand": "gjack.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "gjack.ph"
+      ]
+     },
+     {
+      "brand": "gjackpot.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "gjackpot.ph"
+      ]
+     },
+     {
+      "brand": "gking.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "gking.ph"
+      ]
+     },
+     {
+      "brand": "glucky.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "glucky.ph"
+      ]
+     },
+     {
+      "brand": "goace.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "goace.ph"
+      ]
+     },
+     {
+      "brand": "golaro.com",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "golaro.com"
+      ]
+     },
+     {
+      "brand": "goldengames-sg8.casino",
+      "licenseHolder": "SILVER GOOSE 8 INTERNATIONAL, INC. (SGII)",
+      "domains": [
+       "goldengames-sg8.casino"
+      ]
+     },
+     {
+      "brand": "gomax.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "gomax.ph"
+      ]
+     },
+     {
+      "brand": "gomega.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "gomega.ph"
+      ]
+     },
+     {
+      "brand": "goxbet.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "goxbet.ph"
+      ]
+     },
+     {
+      "brand": "gperya.com",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "gperya.com"
+      ]
+     },
+     {
+      "brand": "gprize.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "gprize.ph"
+      ]
+     },
+     {
+      "brand": "greel.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "greel.ph"
+      ]
+     },
+     {
+      "brand": "grush.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "grush.ph"
+      ]
+     },
+     {
+      "brand": "gslots.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "gslots.ph"
+      ]
+     },
+     {
+      "brand": "gspin.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "gspin.ph"
+      ]
+     },
+     {
+      "brand": "gstar.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "gstar.ph"
+      ]
+     },
+     {
+      "brand": "gtaya.com",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "gtaya.com"
+      ]
+     },
+     {
+      "brand": "gtongits.com",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "gtongits.com"
+      ]
+     },
+     {
+      "brand": "gwinner.ph",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "gwinner.ph"
+      ]
+     },
+     {
+      "brand": "gyaman.com",
+      "licenseHolder": "TOPBET TECH CORP. (Topbet)",
+      "domains": [
+       "gyaman.com"
+      ]
+     },
+     {
+      "brand": "gzone.ph",
+      "licenseHolder": "TOTAL GAMEZONE XTREME INCORPORATED (TGXI)",
+      "domains": [
+       "gzone.ph"
+      ]
+     },
+     {
+      "brand": "h5.123go.games",
+      "licenseHolder": "META INTERACTIVE SOFTWARE SOLUTIONS INC. (MISSI)",
+      "domains": [
+       "h5.123go.games"
+      ]
+     },
+     {
+      "brand": "HANN ONLINE",
+      "licenseHolder": "HANN PHILIPPINES, INC. (Hann Casino Resort)",
+      "domains": [
+       "hannonline.ph"
+      ]
+     },
+     {
+      "brand": "hannliveonline.com",
+      "licenseHolder": "HANN PHILIPPINES, INC. (Hann Casino Resort)",
+      "domains": [
+       "hannliveonline.com"
+      ]
+     },
+     {
+      "brand": "happybingo.fun",
+      "licenseHolder": "BREDDAS INC. (Breddas)",
+      "domains": [
+       "happybingo.fun"
+      ]
+     },
+     {
+      "brand": "happybingo.games",
+      "licenseHolder": "BREDDAS INC. (Breddas)",
+      "domains": [
+       "happybingo.games"
+      ]
+     },
+     {
+      "brand": "happybingo.ph",
+      "licenseHolder": "BREDDAS INC. (Breddas)",
+      "domains": [
+       "happybingo.ph"
+      ]
+     },
+     {
+      "brand": "IGO",
+      "licenseHolder": "IGO DIGITAL HIGH TECHNOLOGY INC. (IGO)",
+      "domains": [
+       "igo.ph"
+      ]
+     },
+     {
+      "brand": "igoegaming.ph",
+      "licenseHolder": "IGO DIGITAL HIGH TECHNOLOGY INC. (IGO)",
+      "domains": [
+       "igoegaming.ph"
+      ]
+     },
+     {
+      "brand": "Jackpot Combo",
+      "licenseHolder": "GOLDEN ALPHA VENTURE CORPORATION (GAVC)",
+      "domains": [
+       "jackpotcombo.com"
+      ]
+     },
+     {
+      "brand": "Juan365",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juan365.com"
+      ]
+     },
+     {
+      "brand": "juan365.app",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juan365.app"
+      ]
+     },
+     {
+      "brand": "juan365.com.ph",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juan365.com.ph"
+      ]
+     },
+     {
+      "brand": "juan365.online",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juan365.online"
+      ]
+     },
+     {
+      "brand": "juan365.ph",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juan365.ph"
+      ]
+     },
+     {
+      "brand": "juan365.win",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juan365.win"
+      ]
+     },
+     {
+      "brand": "juanace.app",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juanace.app"
+      ]
+     },
+     {
+      "brand": "juanace.com",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juanace.com"
+      ]
+     },
+     {
+      "brand": "juanace.com.ph",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juanace.com.ph"
+      ]
+     },
+     {
+      "brand": "juanace.ph",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juanace.ph"
+      ]
+     },
+     {
+      "brand": "juanbingo.app",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juanbingo.app"
+      ]
+     },
+     {
+      "brand": "juanbingo.com",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juanbingo.com"
+      ]
+     },
+     {
+      "brand": "juanbingo.com.ph",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juanbingo.com.ph"
+      ]
+     },
+     {
+      "brand": "juanbingo.ph",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juanbingo.ph"
+      ]
+     },
+     {
+      "brand": "juankada.app",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juankada.app"
+      ]
+     },
+     {
+      "brand": "juankada.com",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juankada.com"
+      ]
+     },
+     {
+      "brand": "juankada.ph",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juankada.ph"
+      ]
+     },
+     {
+      "brand": "juanmate.app",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juanmate.app"
+      ]
+     },
+     {
+      "brand": "juanmate.com",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juanmate.com"
+      ]
+     },
+     {
+      "brand": "juanmate.ph",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juanmate.ph"
+      ]
+     },
+     {
+      "brand": "juanpanalo.app",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juanpanalo.app"
+      ]
+     },
+     {
+      "brand": "juanpanalo.com",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juanpanalo.com"
+      ]
+     },
+     {
+      "brand": "juanpanalo.ph",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juanpanalo.ph"
+      ]
+     },
+     {
+      "brand": "juanzone.app",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juanzone.app"
+      ]
+     },
+     {
+      "brand": "juanzone.com",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juanzone.com"
+      ]
+     },
+     {
+      "brand": "juanzone.com.ph",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juanzone.com.ph"
+      ]
+     },
+     {
+      "brand": "juanzone.ph",
+      "licenseHolder": "SKYLINE NEXUS CORPORATION (Skyline)",
+      "domains": [
+       "juanzone.ph"
+      ]
+     },
+     {
+      "brand": "laki.casino",
+      "licenseHolder": "RAC PHIL CORP. (RAC)",
+      "domains": [
+       "laki.casino"
+      ]
+     },
+     {
+      "brand": "laki.playdailyfantasy.com",
+      "licenseHolder": "RAC PHIL CORP. (RAC)",
+      "domains": [
+       "laki.playdailyfantasy.com"
+      ]
+     },
+     {
+      "brand": "laki7.com",
+      "licenseHolder": "RAC PHIL CORP. (RAC)",
+      "domains": [
+       "laki7.com"
+      ]
+     },
+     {
+      "brand": "lakigames.com",
+      "licenseHolder": "RAC PHIL CORP. (RAC)",
+      "domains": [
+       "lakigames.com"
+      ]
+     },
+     {
+      "brand": "lakijackpot.com",
+      "licenseHolder": "RAC PHIL CORP. (RAC)",
+      "domains": [
+       "lakijackpot.com"
+      ]
+     },
+     {
+      "brand": "lakilucky.com",
+      "licenseHolder": "RAC PHIL CORP. (RAC)",
+      "domains": [
+       "lakilucky.com"
+      ]
+     },
+     {
+      "brand": "lakiplay.com",
+      "licenseHolder": "RAC PHIL CORP. (RAC)",
+      "domains": [
+       "lakiplay.com"
+      ]
+     },
+     {
+      "brand": "LakiWin",
+      "licenseHolder": "RAC PHIL CORP. (RAC)",
+      "domains": [
+       "lakiwin.com"
+      ]
+     },
+     {
+      "brand": "landing.wing.ph",
+      "licenseHolder": "SANDBOX ENTERTAINMENT CORP. (Sandbox)",
+      "domains": [
+       "landing.wing.ph"
+      ]
+     },
+     {
+      "brand": "landing.winzir.ph",
+      "licenseHolder": "SANDBOX ENTERTAINMENT CORP. (Sandbox)",
+      "domains": [
+       "landing.winzir.ph"
+      ]
+     },
+     {
+      "brand": "Legend Link",
+      "licenseHolder": "LEGEND LINK TECHNOLOGY, INC. (Legend Link)",
+      "domains": [
+       "legendlink.com"
+      ]
+     },
+     {
+      "brand": "login.747.live",
+      "licenseHolder": "CD EXTREME OPC (CD Extreme)",
+      "domains": [
+       "login.747.live"
+      ]
+     },
+     {
+      "brand": "login.747ph.live",
+      "licenseHolder": "CD EXTREME OPC (CD Extreme)",
+      "domains": [
+       "login.747ph.live"
+      ]
+     },
+     {
+      "brand": "lovefun.com",
+      "licenseHolder": "BLOOMBERRY RESORTS AND HOTELS, INC. (Solaire Resorts and Casino)",
+      "domains": [
+       "lovefun.com"
+      ]
+     },
+     {
+      "brand": "LUCKY TAYA",
+      "licenseHolder": "LUCKY TAYA GAMING CORPORATION (LTGC)",
+      "domains": [
+       "luckytayasports.com"
+      ]
+     },
+     {
+      "brand": "luckybetsg8.casino",
+      "licenseHolder": "SILVER GOOSE 8 INTERNATIONAL, INC. (SGII)",
+      "domains": [
+       "luckybetsg8.casino"
+      ]
+     },
+     {
+      "brand": "luckybunny.ph",
+      "licenseHolder": "BLUE PHOENIX TECH SOLUTIONS CORP. (Blue Phoenix)",
+      "domains": [
+       "luckybunny.ph"
+      ]
+     },
+     {
+      "brand": "luckygame.ph",
+      "licenseHolder": "CYBER DOT COM TECHNOLOGY CORP. (Cyber Dot)",
+      "domains": [
+       "luckygame.ph"
+      ]
+     },
+     {
+      "brand": "luckygameph.com",
+      "licenseHolder": "CYBER DOT COM TECHNOLOGY CORP. (Cyber Dot)",
+      "domains": [
+       "luckygameph.com"
+      ]
+     },
+     {
+      "brand": "Luckyi",
+      "licenseHolder": "CYBER DOT COM TECHNOLOGY CORP. (Cyber Dot)",
+      "domains": [
+       "luckyi.com"
+      ]
+     },
+     {
+      "brand": "luckyi.ph",
+      "licenseHolder": "CYBER DOT COM TECHNOLOGY CORP. (Cyber Dot)",
+      "domains": [
+       "luckyi.ph"
+      ]
+     },
+     {
+      "brand": "luckyplay.ph",
+      "licenseHolder": "NEMO INTERACTIVE GROUP CORPORATION (NEMO-IG)",
+      "domains": [
+       "luckyplay.ph"
+      ]
+     },
+     {
+      "brand": "luckypro.com",
+      "licenseHolder": "CYBER DOT COM TECHNOLOGY CORP. (Cyber Dot)",
+      "domains": [
+       "luckypro.com"
+      ]
+     },
+     {
+      "brand": "luckystarph.com",
+      "licenseHolder": "CYBER DOT COM TECHNOLOGY CORP. (Cyber Dot)",
+      "domains": [
+       "luckystarph.com"
+      ]
+     },
+     {
+      "brand": "luckytayabilyarbet.com",
+      "licenseHolder": "LUCKY TAYA GAMING CORPORATION (LTGC)",
+      "domains": [
+       "luckytayabilyarbet.com"
+      ]
+     },
+     {
+      "brand": "luckytok.com",
+      "licenseHolder": "CYBER DOT COM TECHNOLOGY CORP. (Cyber Dot)",
+      "domains": [
+       "luckytok.com"
+      ]
+     },
+     {
+      "brand": "luckyv.com",
+      "licenseHolder": "CYBER DOT COM TECHNOLOGY CORP. (Cyber Dot)",
+      "domains": [
+       "luckyv.com"
+      ]
+     },
+     {
+      "brand": "M GAME",
+      "licenseHolder": "ESAT PILIPINAS TEKNIK, OPC. (ESAT)",
+      "domains": [
+       "mgame.ph"
+      ]
+     },
+     {
+      "brand": "MegaSportsWorld / MSW",
+      "licenseHolder": "ORIENT CAPITAL VENTURES INC. (OCVI)",
+      "domains": [
+       "msw.ph"
+      ]
+     },
+     {
+      "brand": "mfe.bigbunny.ph",
+      "licenseHolder": "BLUE PHOENIX TECH SOLUTIONS CORP. (Blue Phoenix)",
+      "domains": [
+       "mfe.bigbunny.ph"
+      ]
+     },
+     {
+      "brand": "mgamecasino.ph",
+      "licenseHolder": "ESAT PILIPINAS TEKNIK, OPC. (ESAT)",
+      "domains": [
+       "mgamecasino.ph"
+      ]
+     },
+     {
+      "brand": "Newport Epic World",
+      "licenseHolder": "TRAVELLERS INTERNATIONAL HOTEL GROUP, INC. (doing business under the name and style of Newport World Resorts)",
+      "domains": [
+       "newportepicworld.com"
+      ]
+     },
+     {
+      "brand": "newportgames.com",
+      "licenseHolder": "TRAVELLERS INTERNATIONAL HOTEL GROUP, INC. (doing business under the name and style of Newport World Resorts)",
+      "domains": [
+       "newportgames.com"
+      ]
+     },
+     {
+      "brand": "newportluckyworld.com",
+      "licenseHolder": "TRAVELLERS INTERNATIONAL HOTEL GROUP, INC. (doing business under the name and style of Newport World Resorts)",
+      "domains": [
+       "newportluckyworld.com"
+      ]
+     },
+     {
+      "brand": "newportluckyworld.ph",
+      "licenseHolder": "TRAVELLERS INTERNATIONAL HOTEL GROUP, INC. (doing business under the name and style of Newport World Resorts)",
+      "domains": [
+       "newportluckyworld.ph"
+      ]
+     },
+     {
+      "brand": "newportmegabet.com",
+      "licenseHolder": "TRAVELLERS INTERNATIONAL HOTEL GROUP, INC. (doing business under the name and style of Newport World Resorts)",
+      "domains": [
+       "newportmegabet.com"
+      ]
+     },
+     {
+      "brand": "newportmegabet.ph",
+      "licenseHolder": "TRAVELLERS INTERNATIONAL HOTEL GROUP, INC. (doing business under the name and style of Newport World Resorts)",
+      "domains": [
+       "newportmegabet.ph"
+      ]
+     },
+     {
+      "brand": "newportpanalobet.com",
+      "licenseHolder": "TRAVELLERS INTERNATIONAL HOTEL GROUP, INC. (doing business under the name and style of Newport World Resorts)",
+      "domains": [
+       "newportpanalobet.com"
+      ]
+     },
+     {
+      "brand": "newportpanalobet.ph",
+      "licenseHolder": "TRAVELLERS INTERNATIONAL HOTEL GROUP, INC. (doing business under the name and style of Newport World Resorts)",
+      "domains": [
+       "newportpanalobet.ph"
+      ]
+     },
+     {
+      "brand": "newportplay.com",
+      "licenseHolder": "TRAVELLERS INTERNATIONAL HOTEL GROUP, INC. (doing business under the name and style of Newport World Resorts)",
+      "domains": [
+       "newportplay.com"
+      ]
+     },
+     {
+      "brand": "newportvmx.com",
+      "licenseHolder": "TRAVELLERS INTERNATIONAL HOTEL GROUP, INC. (doing business under the name and style of Newport World Resorts)",
+      "domains": [
+       "newportvmx.com"
+      ]
+     },
+     {
+      "brand": "newportvmx.ph",
+      "licenseHolder": "TRAVELLERS INTERNATIONAL HOTEL GROUP, INC. (doing business under the name and style of Newport World Resorts)",
+      "domains": [
+       "newportvmx.ph"
+      ]
+     },
+     {
+      "brand": "Ninogaming",
+      "licenseHolder": "GEMINI GAMING MANAGEMENT CORPORATION (GGMC)",
+      "domains": [
+       "ninogaming.com"
+      ]
+     },
+     {
+      "brand": "novalink.art",
+      "licenseHolder": "LEGEND LINK TECHNOLOGY, INC. (Legend Link)",
+      "domains": [
+       "novalink.art"
+      ]
+     },
+     {
+      "brand": "novalink.bid",
+      "licenseHolder": "LEGEND LINK TECHNOLOGY, INC. (Legend Link)",
+      "domains": [
+       "novalink.bid"
+      ]
+     },
+     {
+      "brand": "novalink.biz",
+      "licenseHolder": "LEGEND LINK TECHNOLOGY, INC. (Legend Link)",
+      "domains": [
+       "novalink.biz"
+      ]
+     },
+     {
+      "brand": "novalink.cloud",
+      "licenseHolder": "LEGEND LINK TECHNOLOGY, INC. (Legend Link)",
+      "domains": [
+       "novalink.cloud"
+      ]
+     },
+     {
+      "brand": "novalink.com.ph",
+      "licenseHolder": "LEGEND LINK TECHNOLOGY, INC. (Legend Link)",
+      "domains": [
+       "novalink.com.ph"
+      ]
+     },
+     {
+      "brand": "novalink.design",
+      "licenseHolder": "LEGEND LINK TECHNOLOGY, INC. (Legend Link)",
+      "domains": [
+       "novalink.design"
+      ]
+     },
+     {
+      "brand": "novalink.fashion",
+      "licenseHolder": "LEGEND LINK TECHNOLOGY, INC. (Legend Link)",
+      "domains": [
+       "novalink.fashion"
+      ]
+     },
+     {
+      "brand": "novalink.health",
+      "licenseHolder": "LEGEND LINK TECHNOLOGY, INC. (Legend Link)",
+      "domains": [
+       "novalink.health"
+      ]
+     },
+     {
+      "brand": "novalink.it.com",
+      "licenseHolder": "LEGEND LINK TECHNOLOGY, INC. (Legend Link)",
+      "domains": [
+       "novalink.it.com"
+      ]
+     },
+     {
+      "brand": "novalink.ph",
+      "licenseHolder": "LEGEND LINK TECHNOLOGY, INC. (Legend Link)",
+      "domains": [
+       "novalink.ph"
+      ]
+     },
+     {
+      "brand": "numerouno.com.ph",
+      "licenseHolder": "PHILWEB CORPORATION (PhilWeb)",
+      "domains": [
+       "numerouno.com.ph"
+      ]
+     },
+     {
+      "brand": "numerouno.egamescasino.ph",
+      "licenseHolder": "PHILWEB CORPORATION (PhilWeb)",
+      "domains": [
+       "numerouno.egamescasino.ph"
+      ]
+     },
+     {
+      "brand": "numerouno.ph",
+      "licenseHolder": "PHILWEB CORPORATION (PhilWeb)",
+      "domains": [
+       "numerouno.ph"
+      ]
+     },
+     {
+      "brand": "NuSTAR",
+      "licenseHolder": "PREMIER ONLINE DIGITAL ENTERTAINMENT CORPORATION (PODEC)",
+      "domains": [
+       "nustargame.ph"
+      ]
+     },
+     {
+      "brand": "nustargame.com",
+      "licenseHolder": "PREMIER ONLINE DIGITAL ENTERTAINMENT CORPORATION (PODEC)",
+      "domains": [
+       "nustargame.com"
+      ]
+     },
+     {
+      "brand": "nustargame.com.ph",
+      "licenseHolder": "PREMIER ONLINE DIGITAL ENTERTAINMENT CORPORATION (PODEC)",
+      "domains": [
+       "nustargame.com.ph"
+      ]
+     },
+     {
+      "brand": "nustaronline.vip",
+      "licenseHolder": "PREMIER ONLINE DIGITAL ENTERTAINMENT CORPORATION (PODEC)",
+      "domains": [
+       "nustaronline.vip"
+      ]
+     },
+     {
+      "brand": "nwrluckyworld.ph",
+      "licenseHolder": "TRAVELLERS INTERNATIONAL HOTEL GROUP, INC. (doing business under the name and style of Newport World Resorts)",
+      "domains": [
+       "nwrluckyworld.ph"
+      ]
+     },
+     {
+      "brand": "ok-games.ph",
+      "licenseHolder": "GAVIN VENTURES INC. (GVI)",
+      "domains": [
+       "ok-games.ph"
+      ]
+     },
+     {
+      "brand": "ok-web.okbet.com",
+      "licenseHolder": "GAVIN VENTURES INC. (GVI)",
+      "domains": [
+       "ok-web.okbet.com"
+      ]
+     },
+     {
+      "brand": "Okada Online Casino",
+      "licenseHolder": "TIGER RESORT, LEISURE AND ENTERTAINMENT, INC. (doing business under the Name and Style of OKADA MANILA)",
+      "domains": [
+       "okadaonlinecasino.com"
+      ]
+     },
+     {
+      "brand": "okadaplay.com",
+      "licenseHolder": "TIGER RESORT, LEISURE AND ENTERTAINMENT, INC. (doing business under the Name and Style of OKADA MANILA)",
+      "domains": [
+       "okadaplay.com"
+      ]
+     },
+     {
+      "brand": "okadaplay.com.ph",
+      "licenseHolder": "TIGER RESORT, LEISURE AND ENTERTAINMENT, INC. (doing business under the Name and Style of OKADA MANILA)",
+      "domains": [
+       "okadaplay.com.ph"
+      ]
+     },
+     {
+      "brand": "okadaplay.jp",
+      "licenseHolder": "TIGER RESORT, LEISURE AND ENTERTAINMENT, INC. (doing business under the Name and Style of OKADA MANILA)",
+      "domains": [
+       "okadaplay.jp"
+      ]
+     },
+     {
+      "brand": "okadaplay.ph",
+      "licenseHolder": "TIGER RESORT, LEISURE AND ENTERTAINMENT, INC. (doing business under the Name and Style of OKADA MANILA)",
+      "domains": [
+       "okadaplay.ph"
+      ]
+     },
+     {
+      "brand": "okadaplay.vip",
+      "licenseHolder": "TIGER RESORT, LEISURE AND ENTERTAINMENT, INC. (doing business under the Name and Style of OKADA MANILA)",
+      "domains": [
+       "okadaplay.vip"
+      ]
+     },
+     {
+      "brand": "okapp.chat",
+      "licenseHolder": "GAVIN VENTURES INC. (GVI)",
+      "domains": [
+       "okapp.chat"
+      ]
+     },
+     {
+      "brand": "OKBet",
+      "licenseHolder": "GAVIN VENTURES INC. (GVI)",
+      "domains": [
+       "okbet.com"
+      ]
+     },
+     {
+      "brand": "okbet.game",
+      "licenseHolder": "GAVIN VENTURES INC. (GVI)",
+      "domains": [
+       "okbet.game"
+      ]
+     },
+     {
+      "brand": "okbet.help",
+      "licenseHolder": "GAVIN VENTURES INC. (GVI)",
+      "domains": [
+       "okbet.help"
+      ]
+     },
+     {
+      "brand": "okbet.link",
+      "licenseHolder": "GAVIN VENTURES INC. (GVI)",
+      "domains": [
+       "okbet.link"
+      ]
+     },
+     {
+      "brand": "okbet.net",
+      "licenseHolder": "GAVIN VENTURES INC. (GVI)",
+      "domains": [
+       "okbet.net"
+      ]
+     },
+     {
+      "brand": "okbet.one",
+      "licenseHolder": "GAVIN VENTURES INC. (GVI)",
+      "domains": [
+       "okbet.one"
+      ]
+     },
+     {
+      "brand": "okcards.com",
+      "licenseHolder": "GAVIN VENTURES INC. (GVI)",
+      "domains": [
+       "okcards.com"
+      ]
+     },
+     {
+      "brand": "okcards.ph",
+      "licenseHolder": "GAVIN VENTURES INC. (GVI)",
+      "domains": [
+       "okcards.ph"
+      ]
+     },
+     {
+      "brand": "okdunk.net",
+      "licenseHolder": "GAVIN VENTURES INC. (GVI)",
+      "domains": [
+       "okdunk.net"
+      ]
+     },
+     {
+      "brand": "okdunk.ph",
+      "licenseHolder": "GAVIN VENTURES INC. (GVI)",
+      "domains": [
+       "okdunk.ph"
+      ]
+     },
+     {
+      "brand": "okfun.ph",
+      "licenseHolder": "GAVIN VENTURES INC. (GVI)",
+      "domains": [
+       "okfun.ph"
+      ]
+     },
+     {
+      "brand": "okgames.com",
+      "licenseHolder": "GAVIN VENTURES INC. (GVI)",
+      "domains": [
+       "okgames.com"
+      ]
+     },
+     {
+      "brand": "okgames.net",
+      "licenseHolder": "GAVIN VENTURES INC. (GVI)",
+      "domains": [
+       "okgames.net"
+      ]
+     },
+     {
+      "brand": "okgames.ph",
+      "licenseHolder": "GAVIN VENTURES INC. (GVI)",
+      "domains": [
+       "okgames.ph"
+      ]
+     },
+     {
+      "brand": "okpisoluck.com",
+      "licenseHolder": "GAVIN VENTURES INC. (GVI)",
+      "domains": [
+       "okpisoluck.com"
+      ]
+     },
+     {
+      "brand": "okpisoluck.ph",
+      "licenseHolder": "GAVIN VENTURES INC. (GVI)",
+      "domains": [
+       "okpisoluck.ph"
+      ]
+     },
+     {
+      "brand": "okplay.ph",
+      "licenseHolder": "GAVIN VENTURES INC. (GVI)",
+      "domains": [
+       "okplay.ph"
+      ]
+     },
+     {
+      "brand": "old.747ph.live",
+      "licenseHolder": "CD EXTREME OPC (CD Extreme)",
+      "domains": [
+       "old.747ph.live"
+      ]
+     },
+     {
+      "brand": "onlyfun.ph",
+      "licenseHolder": "BLOOMBERRY RESORTS AND HOTELS, INC. (Solaire Resorts and Casino)",
+      "domains": [
+       "onlyfun.ph"
+      ]
+     },
+     {
+      "brand": "peryaplay.ph",
+      "licenseHolder": "NEMO INTERACTIVE GROUP CORPORATION (NEMO-IG)",
+      "domains": [
+       "peryaplay.ph"
+      ]
+     },
+     {
+      "brand": "pesomaxfun.com",
+      "licenseHolder": "BLOOMBERRY RESORTS AND HOTELS, INC. (Solaire Resorts and Casino)",
+      "domains": [
+       "pesomaxfun.com"
+      ]
+     },
+     {
+      "brand": "ph.747live.com",
+      "licenseHolder": "CD EXTREME OPC (CD Extreme)",
+      "domains": [
+       "ph.747live.com"
+      ]
+     },
+     {
+      "brand": "Pin77",
+      "licenseHolder": "LARGE-HUB MIND RECREATION, INCORPORATED (Large-Hub)",
+      "domains": [
+       "pin77.com",
+       "chamba77.com"
+      ]
+     },
+     {
+      "brand": "pin77.net",
+      "licenseHolder": "LARGE-HUB MIND RECREATION, INCORPORATED (Large-Hub)",
+      "domains": [
+       "pin77.net"
+      ]
+     },
+     {
+      "brand": "pin77.ph",
+      "licenseHolder": "LARGE-HUB MIND RECREATION, INCORPORATED (Large-Hub)",
+      "domains": [
+       "pin77.ph"
+      ]
+     },
+     {
+      "brand": "pinoygamessg8.club",
+      "licenseHolder": "SILVER GOOSE 8 INTERNATIONAL, INC. (SGII)",
+      "domains": [
+       "pinoygamessg8.club"
+      ]
+     },
+     {
+      "brand": "playpal77.fun",
+      "licenseHolder": "LARGE-HUB MIND RECREATION, INCORPORATED (Large-Hub)",
+      "domains": [
+       "playpal77.fun"
+      ]
+     },
+     {
+      "brand": "playpal77.ph",
+      "licenseHolder": "LARGE-HUB MIND RECREATION, INCORPORATED (Large-Hub)",
+      "domains": [
+       "playpal77.ph"
+      ]
+     },
+     {
+      "brand": "playsg8.com",
+      "licenseHolder": "SILVER GOOSE 8 INTERNATIONAL, INC. (SGII)",
+      "domains": [
+       "playsg8.com"
+      ]
+     },
+     {
+      "brand": "ppl.747ph.live",
+      "licenseHolder": "CD EXTREME OPC (CD Extreme)",
+      "domains": [
+       "ppl.747ph.live"
+      ]
+     },
+     {
+      "brand": "PT GAMING",
+      "licenseHolder": "PLAYMATE LEISURE SOLUTIONS CORP. (Playmate)",
+      "domains": [
+       "ptgaming.ph"
+      ]
+     },
+     {
+      "brand": "ptgaming.com.ph",
+      "licenseHolder": "PLAYMATE LEISURE SOLUTIONS CORP. (Playmate)",
+      "domains": [
+       "ptgaming.com.ph"
+      ]
+     },
+     {
+      "brand": "raffle.747ph.live",
+      "licenseHolder": "CD EXTREME OPC (CD Extreme)",
+      "domains": [
+       "raffle.747ph.live"
+      ]
+     },
+     {
+      "brand": "rgp.egamescasino.ph",
+      "licenseHolder": "PHILWEB CORPORATION (PhilWeb)",
+      "domains": [
+       "rgp.egamescasino.ph"
+      ]
+     },
+     {
+      "brand": "S5 Arena",
+      "licenseHolder": "GLOWLIGHT CORPORATION (Glowlight)",
+      "domains": [
+       "s5.com"
+      ]
+     },
+     {
+      "brand": "s5-games.ph",
+      "licenseHolder": "GLOWLIGHT CORPORATION (Glowlight)",
+      "domains": [
+       "s5-games.ph"
+      ]
+     },
+     {
+      "brand": "s5casino.ph",
+      "licenseHolder": "GLOWLIGHT CORPORATION (Glowlight)",
+      "domains": [
+       "s5casino.ph"
+      ]
+     },
+     {
+      "brand": "s5club.ph",
+      "licenseHolder": "GLOWLIGHT CORPORATION (Glowlight)",
+      "domains": [
+       "s5club.ph"
+      ]
+     },
+     {
+      "brand": "s5games.ph",
+      "licenseHolder": "GLOWLIGHT CORPORATION (Glowlight)",
+      "domains": [
+       "s5games.ph"
+      ]
+     },
+     {
+      "brand": "s5live.ph",
+      "licenseHolder": "GLOWLIGHT CORPORATION (Glowlight)",
+      "domains": [
+       "s5live.ph"
+      ]
+     },
+     {
+      "brand": "s5vip.ph",
+      "licenseHolder": "GLOWLIGHT CORPORATION (Glowlight)",
+      "domains": [
+       "s5vip.ph"
+      ]
+     },
+     {
+      "brand": "SG8",
+      "licenseHolder": "SILVER GOOSE 8 INTERNATIONAL, INC. (SGII)",
+      "domains": [
+       "sg8.casino"
+      ]
+     },
+     {
+      "brand": "sg8.bet",
+      "licenseHolder": "SILVER GOOSE 8 INTERNATIONAL, INC. (SGII)",
+      "domains": [
+       "sg8.bet"
+      ]
+     },
+     {
+      "brand": "sg8.zone",
+      "licenseHolder": "SILVER GOOSE 8 INTERNATIONAL, INC. (SGII)",
+      "domains": [
+       "sg8.zone"
+      ]
+     },
+     {
+      "brand": "sports.msw.ph",
+      "licenseHolder": "ORIENT CAPITAL VENTURES INC. (OCVI)",
+      "domains": [
+       "sports.msw.ph"
+      ]
+     },
+     {
+      "brand": "sports.ninogaming.com",
+      "licenseHolder": "GEMINI GAMING MANAGEMENT CORPORATION (GGMC)",
+      "domains": [
+       "sports.ninogaming.com"
+      ]
+     },
+     {
+      "brand": "store.fbmplay.com",
+      "licenseHolder": "MEMO MULTINATIONAL CORP. (MMC)",
+      "domains": [
+       "store.fbmplay.com"
+      ]
+     },
+     {
+      "brand": "tg789.ph",
+      "licenseHolder": "BB WAVE INC. (BB Wave)",
+      "domains": [
+       "tg789.ph"
+      ]
+     },
+     {
+      "brand": "tregs.sg8.casino",
+      "licenseHolder": "SILVER GOOSE 8 INTERNATIONAL, INC. (SGII)",
+      "domains": [
+       "tregs.sg8.casino"
+      ]
+     },
+     {
+      "brand": "viplucky.com",
+      "licenseHolder": "CYBER DOT COM TECHNOLOGY CORP. (Cyber Dot)",
+      "domains": [
+       "viplucky.com"
+      ]
+     },
+     {
+      "brand": "wing.ph",
+      "licenseHolder": "SANDBOX ENTERTAINMENT CORP. (Sandbox)",
+      "domains": [
+       "wing.ph"
+      ]
+     },
+     {
+      "brand": "wins.ph",
+      "licenseHolder": "SANDBOX ENTERTAINMENT CORP. (Sandbox)",
+      "domains": [
+       "wins.ph"
+      ]
+     },
+     {
+      "brand": "winz.ph",
+      "licenseHolder": "SANDBOX ENTERTAINMENT CORP. (Sandbox)",
+      "domains": [
+       "winz.ph"
+      ]
+     },
+     {
+      "brand": "Winzir",
+      "licenseHolder": "SANDBOX ENTERTAINMENT CORP. (Sandbox)",
+      "domains": [
+       "winzir.ph"
+      ]
+     },
+     {
+      "brand": "winzir.com",
+      "licenseHolder": "SANDBOX ENTERTAINMENT CORP. (Sandbox)",
+      "domains": [
+       "winzir.com"
+      ]
+     },
+     {
+      "brand": "winzir.com.ph",
+      "licenseHolder": "SANDBOX ENTERTAINMENT CORP. (Sandbox)",
+      "domains": [
+       "winzir.com.ph"
+      ]
+     },
+     {
+      "brand": "winzir.net",
+      "licenseHolder": "SANDBOX ENTERTAINMENT CORP. (Sandbox)",
+      "domains": [
+       "winzir.net"
+      ]
+     },
+     {
+      "brand": "wzr.ph",
+      "licenseHolder": "SANDBOX ENTERTAINMENT CORP. (Sandbox)",
+      "domains": [
+       "wzr.ph"
+      ]
+     },
+     {
+      "brand": "xoplay.ph",
+      "licenseHolder": "NEMO INTERACTIVE GROUP CORPORATION (NEMO-IG)",
+      "domains": [
+       "xoplay.ph"
+      ]
+     }
+    ],
+    "sourceUrl": "https://www.pagcor.ph/regulatory/pdf/App%20Kits/List-of-PAGCOR-Accredited-Gaming-System-Administrators-and-Registered-Brands-and-Domain-Names-URLs.pdf",
+    "asOf": "2026-10-05",
+    "note": "PAGCOR's list of accredited Gaming System Administrators and their registered brands and domain names (as of September 17, 2026). For each administrator the register gives a main brand on a main domain, which is one row here under that brand, and further registered domains, sub-domains and additional URLs, one row each under the web address. The register says which games each administrator offers; game offerings it marks as not yet in commercial operation are left out. Sportsbook rows are the administrators offering Sports Betting."
+   },
+   "operators": {
+    "operators": [
+     {
+      "brand": "arenaplus.net",
+      "licenseHolder": "AB LEISURE EXPONENT, INC. (ABLE)",
+      "domains": [
+       "arenaplus.net"
+      ]
+     },
+     {
+      "brand": "arenaplus.net",
+      "licenseHolder": "GAMEMASTER INTEGRATED, INC. (GII)",
+      "domains": [
+       "arenaplus.net"
+      ]
+     },
+     {
+      "brand": "arenaplus.ph",
+      "licenseHolder": "GAMEMASTER INTEGRATED, INC. (GII)",
+      "domains": [
+       "arenaplus.ph"
+      ]
+     },
+     {
+      "brand": "arenapluspro.com",
+      "licenseHolder": "AB LEISURE EXPONENT, INC. (ABLE)",
+      "domains": [
+       "arenapluspro.com"
+      ]
+     },
+     {
+      "brand": "arenapluspro.com",
+      "licenseHolder": "GAMEMASTER INTEGRATED, INC. (GII)",
+      "domains": [
+       "arenapluspro.com"
+      ]
+     },
+     {
+      "brand": "arenapluspro.net",
+      "licenseHolder": "AB LEISURE EXPONENT, INC. (ABLE)",
+      "domains": [
+       "arenapluspro.net"
+      ]
+     },
+     {
+      "brand": "arenapluspro.net",
+      "licenseHolder": "GAMEMASTER INTEGRATED, INC. (GII)",
+      "domains": [
+       "arenapluspro.net"
+      ]
+     },
+     {
+      "brand": "binggoplus.net",
+      "licenseHolder": "AB LEISURE EXPONENT, INC. (ABLE)",
+      "domains": [
+       "binggoplus.net"
+      ]
+     },
+     {
+      "brand": "binggoplusandroid3.com",
+      "licenseHolder": "AB LEISURE EXPONENT, INC. (ABLE)",
+      "domains": [
+       "binggoplusandroid3.com"
+      ]
+     },
+     {
+      "brand": "BingoPlus",
+      "licenseHolder": "AB LEISURE EXPONENT, INC. (ABLE)",
+      "domains": [
+       "bingoplus.ph"
+      ]
+     },
+     {
+      "brand": "BingoPlus Poker",
+      "licenseHolder": "GAMEMASTER INTEGRATED, INC. (GII)",
+      "domains": [
+       "bingopluspoker.ph"
+      ]
+     },
+     {
+      "brand": "bingoplus.com",
+      "licenseHolder": "AB LEISURE EXPONENT, INC. (ABLE)",
+      "domains": [
+       "bingoplus.com"
+      ]
+     },
+     {
+      "brand": "bingoplus.com",
+      "licenseHolder": "GAMEMASTER INTEGRATED, INC. (GII)",
+      "domains": [
+       "bingoplus.com"
+      ]
+     },
+     {
+      "brand": "bingoplus.com.ph",
+      "licenseHolder": "AB LEISURE EXPONENT, INC. (ABLE)",
+      "domains": [
+       "bingoplus.com.ph"
+      ]
+     },
+     {
+      "brand": "bingoplus.net",
+      "licenseHolder": "AB LEISURE EXPONENT, INC. (ABLE)",
+      "domains": [
+       "bingoplus.net"
+      ]
+     },
+     {
+      "brand": "bingoplus.online",
+      "licenseHolder": "AB LEISURE EXPONENT, INC. (ABLE)",
+      "domains": [
+       "bingoplus.online"
+      ]
+     },
+     {
+      "brand": "bingoplus.ph",
+      "licenseHolder": "GAMEMASTER INTEGRATED, INC. (GII)",
+      "domains": [
+       "bingoplus.ph"
+      ]
+     },
+     {
+      "brand": "bingoplus.site",
+      "licenseHolder": "AB LEISURE EXPONENT, INC. (ABLE)",
+      "domains": [
+       "bingoplus.site"
+      ]
+     },
+     {
+      "brand": "bingoplusandroid1.com",
+      "licenseHolder": "AB LEISURE EXPONENT, INC. (ABLE)",
+      "domains": [
+       "bingoplusandroid1.com"
+      ]
+     },
+     {
+      "brand": "bingoplusandroid2.com",
+      "licenseHolder": "AB LEISURE EXPONENT, INC. (ABLE)",
+      "domains": [
+       "bingoplusandroid2.com"
+      ]
+     },
+     {
+      "brand": "bingoplusios1.com",
+      "licenseHolder": "AB LEISURE EXPONENT, INC. (ABLE)",
+      "domains": [
+       "bingoplusios1.com"
+      ]
+     },
+     {
+      "brand": "bingoplusios2.com",
+      "licenseHolder": "AB LEISURE EXPONENT, INC. (ABLE)",
+      "domains": [
+       "bingoplusios2.com"
+      ]
+     },
+     {
+      "brand": "bingoplusios3.com",
+      "licenseHolder": "AB LEISURE EXPONENT, INC. (ABLE)",
+      "domains": [
+       "bingoplusios3.com"
+      ]
+     },
+     {
+      "brand": "bingopluspoker.ph",
+      "licenseHolder": "AB LEISURE EXPONENT, INC. (ABLE)",
+      "domains": [
+       "bingopluspoker.ph"
+      ]
+     },
+     {
+      "brand": "bp.plus",
+      "licenseHolder": "AB LEISURE EXPONENT, INC. (ABLE)",
+      "domains": [
+       "bp.plus"
+      ]
+     },
+     {
+      "brand": "colorgameplus.com",
+      "licenseHolder": "AB LEISURE EXPONENT, INC. (ABLE)",
+      "domains": [
+       "colorgameplus.com"
+      ]
+     },
+     {
+      "brand": "fishplus.ph",
+      "licenseHolder": "AB LEISURE EXPONENT, INC. (ABLE)",
+      "domains": [
+       "fishplus.ph"
+      ]
+     },
+     {
+      "brand": "fun.bingoplus.com",
+      "licenseHolder": "AB LEISURE EXPONENT, INC. (ABLE)",
+      "domains": [
+       "fun.bingoplus.com"
+      ]
+     },
+     {
+      "brand": "GGPoker",
+      "licenseHolder": "GOOD GAMES SOLUTIONS PILIPINAS INC. (GGSPI)",
+      "domains": [
+       "ggpoker.ph"
+      ]
+     },
+     {
+      "brand": "Karera Live",
+      "licenseHolder": "GLOBALX DIGITAL CORPORATION (GLOBALX)",
+      "domains": [
+       "karera.live"
+      ]
+     },
+     {
+      "brand": "lucky.bingoplus.com",
+      "licenseHolder": "AB LEISURE EXPONENT, INC. (ABLE)",
+      "domains": [
+       "lucky.bingoplus.com"
+      ]
+     },
+     {
+      "brand": "minesplus.ph",
+      "licenseHolder": "AB LEISURE EXPONENT, INC. (ABLE)",
+      "domains": [
+       "minesplus.ph"
+      ]
+     },
+     {
+      "brand": "peryaplus.net",
+      "licenseHolder": "AB LEISURE EXPONENT, INC. (ABLE)",
+      "domains": [
+       "peryaplus.net"
+      ]
+     },
+     {
+      "brand": "peryaplus.net",
+      "licenseHolder": "GAMEMASTER INTEGRATED, INC. (GII)",
+      "domains": [
+       "peryaplus.net"
+      ]
+     },
+     {
+      "brand": "play.bingoplus.com",
+      "licenseHolder": "AB LEISURE EXPONENT, INC. (ABLE)",
+      "domains": [
+       "play.bingoplus.com"
+      ]
+     },
+     {
+      "brand": "R-Live",
+      "licenseHolder": "H&H GAMING SOLUTIONS GROUP. INC. (H&H)",
+      "domains": [
+       "rlivegame.net"
+      ]
+     },
+     {
+      "brand": "slotplus.ph",
+      "licenseHolder": "AB LEISURE EXPONENT, INC. (ABLE)",
+      "domains": [
+       "slotplus.ph"
+      ]
+     },
+     {
+      "brand": "slotplus.ph",
+      "licenseHolder": "GAMEMASTER INTEGRATED, INC. (GII)",
+      "domains": [
+       "slotplus.ph"
+      ]
+     },
+     {
+      "brand": "spinplusph.com",
+      "licenseHolder": "AB LEISURE EXPONENT, INC. (ABLE)",
+      "domains": [
+       "spinplusph.com"
+      ]
+     },
+     {
+      "brand": "spinplusph.com",
+      "licenseHolder": "GAMEMASTER INTEGRATED, INC. (GII)",
+      "domains": [
+       "spinplusph.com"
+      ]
+     },
+     {
+      "brand": "texasplus.ph",
+      "licenseHolder": "GAMEMASTER INTEGRATED, INC. (GII)",
+      "domains": [
+       "texasplus.ph"
+      ]
+     },
+     {
+      "brand": "tournamentplus.com",
+      "licenseHolder": "GAMEMASTER INTEGRATED, INC. (GII)",
+      "domains": [
+       "tournamentplus.com"
+      ]
+     },
+     {
+      "brand": "Wilyonaryo",
+      "licenseHolder": "WIL NETWORK INC.",
+      "domains": [
+       "wilyonaryo.com"
+      ]
+     }
+    ],
+    "sourceUrl": "https://www.pagcor.ph/regulatory/pdf/App%20Kits/List-of-PAGCOR-Accredited-Gaming-System-Administrators-and-Registered-Brands-and-Domain-Names-URLs.pdf",
+    "asOf": "2026-10-05",
+    "note": "PAGCOR's list of accredited Gaming System Administrators and their registered brands and domain names (as of September 17, 2026). For each administrator the register gives a main brand on a main domain, which is one row here under that brand, and further registered domains, sub-domains and additional URLs, one row each under the web address. The register says which games each administrator offers; game offerings it marks as not yet in commercial operation are left out. These administrators offer neither eCasino games nor sports betting: only bingo, e-bingo, numeric, specialty or online poker games."
+   },
+   "why": "PAGCOR regulates all games of chance in the Philippines and licenses every gaming operation there; online casino games, e-bingo and sports betting reach players in the Philippines only through PAGCOR-accredited Gaming System Administrators' registered sites and the online brands of PAGCOR-licensed casinos. All offshore internet gaming licences were cancelled effective 15 December 2024 under Executive Order No. 74, so a site claiming an offshore PAGCOR licence is unauthorised."
+  },
+  "SG": {
+   "regulator": "Gambling Regulatory Authority of Singapore (GRA)",
+   "operators": {
+    "operators": [
+     {
+      "brand": "Singapore Pools",
+      "licenseHolder": "Singapore Pools (Private) Limited",
+      "domains": [
+       "singaporepools.com.sg"
+      ]
+     }
+    ],
+    "sourceUrl": "https://www.gra.gov.sg/harm-minimisation/unlawful-remote-gambling-activities",
+    "asOf": "2026-10-05",
+    "note": "GRA: Singapore Pools (Private) Limited is the only operator licensed by GRA to provide remote gambling services; its licence (https://www.gra.gov.sg/licenses-approvals/licences-for-other-gambling-operators/lottery-betting) covers betting operations, gaming and lotteries. The web address is the one the Tote Board, Singapore Pools' government owner, links (https://www.toteboard.gov.sg/about-us/our-subsidiaries/). GRA does not say which products are offered online, so the row is not split into casino or sports betting."
+   },
+   "why": "Under Singapore's Gambling Control Act 2022 it is unlawful to provide unlicensed remote gambling to people in Singapore, and an offence to take part in it; Singapore Pools (Private) Limited is the only operator GRA licenses for remote gambling. Since 1 January 2025 the Singapore Police Force blocks unlawful gambling sites, their advertising and payments."
+  },
+  "JP": {
+   "regulator": "Japan Sport Council (sports lottery); National Association of Racing (local horse racing)",
+   "sportsbooks": {
+    "operators": [
+     {
+      "brand": "スポーツくじ (toto)",
+      "licenseHolder": "独立行政法人日本スポーツ振興センター (Japan Sport Council)",
+      "domains": [
+       "toto-dream.com"
+      ]
+     }
+    ],
+    "sourceUrl": "https://www.jpnsport.go.jp/sinko/josei/tabid/61/Default.aspx",
+    "asOf": "2026-10-05",
+    "note": "The Japan Sport Council runs Japan's sports lottery (toto, BIG, WINNER, on football and basketball) directly under the Sports Promotion Lottery Act, and links its official sales site, toto-dream.com."
+   },
+   "operators": {
+    "operators": [
+     {
+      "brand": "JRAネット投票",
+      "licenseHolder": "JRA",
+      "domains": [
+       "n.ipat.jra.go.jp"
+      ]
+     },
+     {
+      "brand": "ＳＰＡＴ４",
+      "licenseHolder": null,
+      "domains": [
+       "spat4.jp"
+      ]
+     },
+     {
+      "brand": "オッズパーク",
+      "licenseHolder": null,
+      "domains": [
+       "oddspark.com"
+      ]
+     },
+     {
+      "brand": "楽天競馬",
+      "licenseHolder": null,
+      "domains": [
+       "keiba.rakuten.co.jp"
+      ]
+     }
+    ],
+    "sourceUrl": "https://www.keiba.go.jp/beginner/step4.html",
+    "asOf": "2026-10-05",
+    "note": "Pari-mutuel horse-race betting, not a sportsbook: the internet voting sites the National Association of Racing lists for local (NAR) horse racing, each under the name NAR gives it and the address NAR links for it (the voting log-in, or the site's top page where that is the same site). JRA net voting (即PAT / A-PAT members) also sells JRA races; Oddspark also sells keirin and auto racing. Boat racing, keirin and auto racing have further official sites that no government page lists, so they are not here."
+   },
+   "why": "Japan has no online casino licence: the National Police Agency states that betting at an online casino from Japan is a crime even when the casino is legally run abroad, and since 25 September 2025 the amended Basic Act on Gambling Addiction Countermeasures also bans presenting online casino sites or linking to them. Legal online betting is limited to state-run schemes: the sports lottery, run by the Japan Sport Council under the 1998 Sports Promotion Lottery Act, and the public races, whose internet voting sites the racing bodies name."
   }
  },
  "unreadable": {
   "MT": {
    "regulator": "Malta Gaming Authority (MGA)",
    "sourceUrl": "https://www.mga.org.mt/licensee-hub/licensee-register/",
-   "note": "The MGA's licensee register is a search tool rather than a published list, and it licenses operators for other markets rather than for Maltese players."
+   "note": "The MGA's licensee register is an embedded search application whose data service refuses automated reads behind a Cloudflare bot check, and the MGA publishes no downloadable list of licensees. MGA licences cover operators serving players in other countries rather than a Maltese market, so they are not a list of sites licensed for any one country."
   },
   "RO": {
    "regulator": "Oficiul Național pentru Jocuri de Noroc (ONJN)",
@@ -19871,8 +26981,8 @@
   },
   "IE": {
    "regulator": "Gambling Regulatory Authority of Ireland (GRAI)",
-   "sourceUrl": "https://www.grai.ie/licensing-regulation/business-to-consumer-licenses/licensing-phasing",
-   "note": "GRAI is phasing in business-to-consumer licensing under the Gambling Regulation Act 2024 and has not yet published a register of online licensees."
+   "sourceUrl": "https://www.grai.ie/register",
+   "note": "GRAI's licence register, live since the first business-to-consumer licences of July 2026, lists remote betting and remote betting intermediary licence holders with their trading names (bet365, Paddy Power, Betfair, BoyleSports, William Hill and others) but no web addresses; the domain field on each holder's entry is empty. No gaming (online casino) licences have been issued yet."
   },
   "BR": {
    "regulator": "Secretaria de Prêmios e Apostas (SPA), Ministério da Fazenda",
@@ -19894,10 +27004,35 @@
    "sourceUrl": "https://nra.bg/wps/portal/nra/registers-i-spisuci/registers/page.registers-po-zakona-za-hazarta",
    "note": "The National Revenue Agency keeps the registers under the Gambling Act, including the list of websites licensed organisers run games through, on nra.bg; the site does not accept a script's connections and the national open-data portal (data.egov.bg) refuses them too, so check the registers on the NRA site."
   },
+  "ZA": {
+   "regulator": "Provincial licensing authorities (Western Cape Gambling and Racing Board, Gauteng Gambling Board, Mpumalanga Economic Regulator, KwaZulu-Natal Economic Regulatory Authority and others), with the National Gambling Board",
+   "sourceUrl": "https://www.ngb.org.za/verified-operators/",
+   "note": "South Africa licenses bookmakers, including online bookmakers, province by province; online casino games are not permitted under the National Gambling Act. The National Gambling Board's Verified Operators list, compiled from the provincial licensing authorities, names every licensed bookmaker with its physical premises and licence number but no web address, and the provincial boards' own lists, such as the Western Cape board's licence holders page, name the bookmakers without their websites."
+  },
+  "CW": {
+   "regulator": "Curaçao Gaming Authority (CGA)",
+   "sourceUrl": "https://www.cga.cw/en/133i348441001",
+   "note": "The Curaçao Gaming Authority publishes its online gaming licence register as a PDF listing each licensee, its licence number, whether the licence is B2C or B2B, and its status, but not the websites the licences cover; individual sites are checked through the seal on each site, which links to cert.cga.cw. Curaçao licenses operators that serve players in other countries, not a Curaçao market."
+  },
+  "KR": {
+   "regulator": "National Gambling Control Commission (사행산업통합감독위원회), with the Korea Sports Promotion Foundation (KSPO) as issuer of sports betting tickets",
+   "sourceUrl": "https://www.kspo.or.kr/kspo/main/contents.do?menuNo=200144",
+   "note": "Sports betting in Korea is limited to the sports promotion betting tickets (체육진흥투표권, Sports Toto) issued by the Korea Sports Promotion Foundation under the National Sports Promotion Act and supervised by the National Gambling Control Commission. KSPO's Sports Toto page names the Betman online site (베트맨 온라인 사이트) as its online sales channel but gives no web address for it, and the Commission's pages do not name the site."
+  },
+  "IN": {
+   "regulator": "Ministry of Electronics and Information Technology (MeitY); Online Gaming Authority of India",
+   "sourceUrl": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2241804&reg=3&lang=1",
+   "note": "The Promotion and Regulation of Online Gaming Act, 2025 prohibits all forms of online money games nationwide, whether games of chance, games of skill or a mix of both, along with their advertising and the processing of payments for them; its Rules came into force on 1 May 2026. No online casino or sports betting site may lawfully serve players in India, so there is no register of licensees, state or central."
+  },
+  "TR": {
+   "regulator": "Spor Toto Teşkilat Başkanlığı (Ministry of Youth and Sports)",
+   "sourceUrl": "https://www.sportoto.gov.tr/",
+   "note": "Fixed-odds sports betting (iddaa) and the Spor Toto pool are state games run by Spor Toto Teşkilat Başkanlığı through dealers it licenses, with iddaa.com as the game's own site. The organisation publishes no list of the dealers licensed to sell iddaa online; its home page carries only logo links to betting sites, with no text naming them as authorised dealers."
+  },
   "NZ": {
    "regulator": "Department of Internal Affairs (DIA)",
-   "sourceUrl": "https://www.dia.govt.nz/online-casino-gambling",
-   "note": "The Online Casino Gambling Act 2026 creates licences for up to 15 online casino operators; the DIA has not yet published licensees."
+   "sourceUrl": "https://www.dia.govt.nz/Online-Gambling-for-players",
+   "note": "The Online Casino Gambling Act 2026 allows up to 15 licensed online casinos; the auction for the right to apply was held on 29 September 2026 and the DIA expects to issue licences from early 2027, when it will publish a public register. Online sports and racing betting is limited to TAB NZ and its brand betcha under the Racing Industry Act 2020; the DIA names them but lists no web addresses."
   }
  }
 }
