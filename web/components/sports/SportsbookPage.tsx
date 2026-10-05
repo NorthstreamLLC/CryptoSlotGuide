@@ -3,6 +3,7 @@ import { BrandMark } from "@/components/ui/BrandMark";
 import { NextSteps } from "@/components/layout/NextSteps";
 import { ReportIssue } from "@/components/ui/ReportIssue";
 import { SportsAura } from "@/components/sports/SportsAura";
+import { SportsLogoDrift } from "@/components/sports/SportsLogoDrift";
 import { tintFor } from "@/lib/logo";
 import { getCasinoSpecSheet } from "@/lib/spec-sheet";
 import { getCasinoBonuses } from "@/lib/casino-bonuses";
@@ -92,7 +93,7 @@ export function SportsbookPage({ o }: { o: Operator }) {
   const provider = s.provider?.value ? String(s.provider.value).split(/[.(,;]/)[0].trim() : null;
 
   const quick: { k: string; v: string }[] = [
-    ...(race ? [{ k: "Sports race", v: race.headline }] : []),
+    ...(race ? [{ k: race.sportsOnly ? "Sports race" : "Casino race (sports count)", v: race.headline }] : []),
     ...(races ? [{ k: "Races", v: races }] : []),
     ...(s.cashout ? [{ k: "Cash-out", v: "Yes" }] : []),
     ...(s.betBuilder ? [{ k: "Bet builder", v: "Yes" }] : []),
@@ -104,6 +105,7 @@ export function SportsbookPage({ o }: { o: Operator }) {
     <main style={{ background: "#07090B", color: "#E8EDF0" }}>
       <section style={{ position: "relative", borderBottom: "1px solid rgba(255,255,255,.07)", background: "#090D0C" }}>
         <SportsAura />
+        <SportsLogoDrift lead={o.slug} />
         <div style={{ position: "relative", maxWidth: 1180, margin: "0 auto", padding: "30px 24px 40px" }}>
           <div style={{ fontFamily: MONO, fontSize: 11, color: "#83919A", marginBottom: 22 }}>
             <Link href="/" style={{ color: "#83919A" }}>Home</Link> / <Link href="/sportsbooks" style={{ color: "#83919A" }}>Sportsbooks</Link> /{" "}
@@ -131,7 +133,7 @@ export function SportsbookPage({ o }: { o: Operator }) {
             <span style={{ fontFamily: MONO, fontSize: 10.5, color: "#77858E" }}>{o.affiliate && o.signupUrl ? "Affiliate link · " : ""}18+ · T&amp;Cs apply</span>
           </div>
           {quick.length > 0 && (
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: 10 }}>
+            <div data-keep-grid style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: 10 }}>
               {quick.map((q) => (
                 <div key={q.k} style={{ padding: "13px 15px", borderRadius: 12, background: "rgba(9,13,12,.72)", border: "1px solid rgba(255,255,255,.08)", backdropFilter: "blur(6px)", minWidth: 0 }}>
                   <div style={{ fontFamily: MONO, fontSize: 9.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#8E9CA5", marginBottom: 4 }}>{q.k}</div>
@@ -146,7 +148,7 @@ export function SportsbookPage({ o }: { o: Operator }) {
       <div style={{ maxWidth: 1180, margin: "0 auto", padding: "36px 24px 70px" }}>
         {(race || boosts.length > 0 || promos.length > 0) && (
           <section id="rewards" style={{ marginBottom: 38, scrollMarginTop: 110 }}>
-            <h2 style={{ margin: "0 0 6px", fontSize: 24, fontWeight: 800, letterSpacing: "-.025em", color: "#fff" }}>Sports races and rewards</h2>
+            <h2 style={{ margin: "0 0 6px", fontSize: 24, fontWeight: 800, letterSpacing: "-.025em", color: "#fff" }}>{race?.sportsOnly ? "Sports races and rewards" : "Races and rewards for sports bettors"}</h2>
             <p style={{ margin: "0 0 16px", maxWidth: "76ch", fontSize: 14, lineHeight: 1.6, color: "#8DA0AA" }}>
               What {o.name} runs for sports bettors beyond the welcome offer, as its own promotion pages describe it.
             </p>

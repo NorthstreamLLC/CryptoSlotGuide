@@ -193,6 +193,12 @@ export interface SportsHighlight {
   /** "Sports bets only" or how sports bets take part. */
   tag: string;
   sourceUrl: string | null;
+  /**
+   * Races only: true when the race is for sports bets alone. Degen's and
+   * Flush's races and Toshibet's raffle are casino-wide — sports bets count,
+   * but so does everything else — and are shown as such, never as sports races.
+   */
+  sportsOnly?: boolean;
 }
 
 const sentenceWith = (text: string, re: RegExp): string | null => {
@@ -248,13 +254,19 @@ const SPORTS_RACE_READERS: Record<string, () => Omit<SportsHighlight, "slug" | "
 
 export function sportsRaces(): SportsHighlight[] {
   return Object.entries(SPORTS_RACE_READERS)
-    .map(([slug, read]) => {
+    .map(([slug, read]): SportsHighlight | null => {
       const o = opBy(slug);
       const r = read();
-      return o && r ? { slug, name: o.name, mono: o.mono, ...r } : null;
+      return o && r ? { slug, name: o.name, mono: o.mono, ...r, sportsOnly: r.tag === "Sports bets only" } : null;
     })
     .filter((x): x is SportsHighlight => !!x);
 }
+
+/** Races for sports bets alone. */
+export const sportsOnlyRaces = (): SportsHighlight[] => sportsRaces().filter((r) => r.sportsOnly);
+
+/** Casino-wide races and raffles that sports bets count toward. */
+export const sharedRaces = (): SportsHighlight[] => sportsRaces().filter((r) => !r.sportsOnly);
 
 /**
  * Standing sportsbook features worth choosing a book for: early payout and

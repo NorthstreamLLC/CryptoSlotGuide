@@ -3,11 +3,13 @@ import { BrandMark } from "@/components/ui/BrandMark";
 import { NextSteps } from "@/components/layout/NextSteps";
 import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
 import { SportsAura } from "@/components/sports/SportsAura";
+import { SportsLogoDrift } from "@/components/sports/SportsLogoDrift";
 import { tintFor } from "@/lib/logo";
 import {
   sportsFacts,
   sportsOffers,
-  sportsRaces,
+  sportsOnlyRaces,
+  sharedRaces,
   sportsBoosts,
   sportsbookOrder,
   sportsPromoLine,
@@ -86,7 +88,8 @@ export function SportsbooksIndex() {
   const books = sportsbookOrder();
   const ops = new Map(books.map((o) => [o.slug, o]));
   const offers = sportsOffers();
-  const races = sportsRaces();
+  const races = sportsOnlyRaces();
+  const shared = sharedRaces();
   const boosts = sportsBoosts();
   const esportsMax = Math.max(0, ...books.map((o) => sportsFacts(o.slug).titles.length));
 
@@ -94,6 +97,7 @@ export function SportsbooksIndex() {
     <main style={{ background: "#07090B", color: "#E8EDF0" }}>
       <section style={{ position: "relative", borderBottom: "1px solid rgba(255,255,255,.07)", background: "#090D0C" }}>
         <SportsAura />
+        <SportsLogoDrift />
         <div style={{ position: "relative", maxWidth: 1280, margin: "0 auto", padding: "34px 24px 40px" }}>
           <div style={{ fontFamily: MONO, fontSize: 11, color: "#83919A", marginBottom: 22 }}>
             <Link href="/" style={{ color: "#83919A" }}>Home</Link> / <span style={{ color: "#A8B6BE" }}>Sportsbooks</span>
@@ -110,7 +114,7 @@ export function SportsbooksIndex() {
             {[
               [String(books.length), "sportsbooks"],
               [String(offers.length), "standing welcome offers"],
-              [String(races.length), "races sports bets enter"],
+              [String(races.length), "sports-only races"],
               [String(boosts.length), "boosts & early payouts"],
               [String(esportsMax), "esports titles at the widest book"],
             ].map(([v, l]) => (
@@ -169,12 +173,25 @@ export function SportsbooksIndex() {
         </Section>
 
         {races.length > 0 && (
-          <Section id="sports-races" kicker="Top races" title="Races your sports bets enter" sub="Leaderboards and raffles where sports bets count — two run on sports bets alone. Read from each book's own race and promotion pages.">
+          <Section id="sports-races" kicker="Top races" title="Sports races" sub="Leaderboards for sports bets alone — casino play does not count toward these. Read from each book's own race page.">
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(270px, 1fr))", gap: 12 }}>
               {races.map((h, i) => (
                 <HighlightCard key={h.slug} h={h} rank={i} accent={GOLD} ops={ops} />
               ))}
             </div>
+            {shared.length > 0 && (
+              <div style={{ marginTop: 22 }}>
+                <h3 style={{ margin: "0 0 4px", fontSize: 17, fontWeight: 800, color: "#E8EDF0" }}>Casino races that count sports bets</h3>
+                <p style={{ margin: "0 0 12px", maxWidth: "76ch", fontSize: 13.5, lineHeight: 1.6, color: "#8DA0AA" }}>
+                  Not sports races: these are casino-wide leaderboards and raffles, but sports bets earn places or tickets in them alongside casino play.
+                </p>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(270px, 1fr))", gap: 12 }}>
+                  {shared.map((h, i) => (
+                    <HighlightCard key={h.slug} h={h} rank={i + 1} accent={GREEN} ops={ops} />
+                  ))}
+                </div>
+              </div>
+            )}
           </Section>
         )}
 

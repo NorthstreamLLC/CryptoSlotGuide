@@ -19,7 +19,7 @@ import { marketsWithLists } from "./world-market";
 /** The countries the Europe map draws, for the Europe column. */
 const EUROPE_CODES = new Set(EUROPE_SHAPES.map((sh) => sh.code).filter((c): c is string => !!c));
 import { flagSrc } from "./flags";
-import { sportsOffers, sportsRaces, sportsBoosts, sportsbookHref } from "./sports";
+import { sportsOffers, sportsOnlyRaces, sportsBoosts, sportsbookHref } from "./sports";
 import { rankedBrands } from "./us-brands";
 
 const slotCatLabels = siteData.slotCatDefs.map((d) => ({ tag: d.tag, label: d.label }));
@@ -435,8 +435,10 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
                 .map((o) => ({ label: o.name, href: sportsbookHref(o.slug), brand: o.slug })),
             },
             {
-              title: "Top races",
-              links: sportsRaces()
+              // Sports-only races; the casino-wide ones sports bets count
+              // toward are on /sportsbooks, labelled as what they are.
+              title: "Sports races",
+              links: sportsOnlyRaces()
                 .slice(0, 4)
                 .map((r) => {
                   // "$10,000 race", "$25,000 raffle": the prize and what kind it is.
