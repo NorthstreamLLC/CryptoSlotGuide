@@ -780,8 +780,8 @@
     },
     "minAge": "18+",
     "crypto": "Prohibited. Licensed operators may not accept deposits in virtual assets or other crypto-assets (Portaria SPA/MF 615/2024).",
-    "licensing": "Provisional Measure 1.394 of 25 September 2026 prohibits fixed-odds betting and online games nationwide, including offers from operators based abroad and state-level authorisations; the previously authorised .bet.br sites had to go offline from 6 October 2026. Other lotteries authorised by law are not affected.",
-    "note": "Brazil banned sports betting and online casino games on 25 September 2026; the licensed .bet.br sites went offline on 6 October 2026.",
+    "licensing": "Provisional Measure 1.394 of 25 September 2026 prohibits fixed-odds betting and online games nationwide, including offers from operators based abroad and state-level authorisations; the previously authorised .bet.br sites had to go offline from 6 October 2026. Other lotteries authorised by law are not affected. The ban is a provisional measure: under Article 62 of the Constitution it lapses unless Congress converts it into law within 60 days, extendable once by another 60.",
+    "note": "Brazil banned sports betting and online casino games on 25 September 2026 by provisional measure; the licensed .bet.br sites went offline on 6 October 2026. The ban lapses unless Congress converts it into law.",
     "sources": [
       {
         "label": "SPA: Provisional Measure 1.394/2026 explained (the ban and its timetable)",
@@ -798,6 +798,10 @@
       {
         "label": "Portaria SPA/MF 615/2024 (crypto ban)",
         "url": "https://www.in.gov.br/en/web/dou/-/portaria-normativa-spa/mf-n-615-de-16-de-abril-de-2024-554928583"
+      },
+      {
+        "label": "Constitution of Brazil, Article 62 (provisional measures lapse unless converted into law)",
+        "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
       }
     ]
   },
