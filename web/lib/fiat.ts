@@ -111,7 +111,21 @@ export const fiatLogo = (domain: string): string | null => (LOGOS[domain]?.file 
 const isDomain = (s: string) => /^[a-z0-9.-]+\.[a-z]{2,}$/i.test(s.trim());
 
 /** Sub-national markets, named for the place the register covers. */
-const MARKET_NAMES: Record<string, string> = { "CA-ON": "Ontario", AR: "Buenos Aires province", "AR-C": "City of Buenos Aires" };
+const MARKET_NAMES: Record<string, string> = {
+  "CA-ON": "Ontario",
+  "CA-BC": "British Columbia",
+  "CA-AB": "Alberta",
+  "CA-QC": "Quebec",
+  "CA-MB": "Manitoba",
+  "CA-SK": "Saskatchewan",
+  "CA-NB": "New Brunswick",
+  "CA-NS": "Nova Scotia",
+  "CA-PE": "Prince Edward Island",
+  "CA-NL": "Newfoundland and Labrador",
+  AR: "Buenos Aires province",
+  "AR-C": "City of Buenos Aires",
+  "AU-NT": "Australia",
+};
 
 function marketOf(code: string, m: CountryMarket): FiatMarket {
   const bySite = new Map<string, FiatSite>();
@@ -221,7 +235,7 @@ export const FIAT_REGIONS: { key: string; title: string; sub: string; codes: str
     key: "europe",
     title: "Europe",
     sub: "Each country's licensed sites, read from its regulator's own register.",
-    codes: ["DE", "ES", "SE", "IT", "DK", "NL", "EE", "GR", "FR", "BE", "SK", "PT", "CZ", "PL", "HR", "LV", "CY", "HU", "SI", "AT", "CH", "NO", "FI"],
+    codes: ["DE", "ES", "SE", "IT", "DK", "NL", "EE", "GR", "FR", "BE", "SK", "PT", "CZ", "PL", "HR", "CH", "LV", "CY", "HU", "SI", "AT"],
   },
   { key: "latin-america", title: "Latin America", sub: "Each country's or province's own list of authorised online operators.", codes: ["PE", "CO", "AR", "AR-C"] },
   { key: "asia-pacific", title: "Asia-Pacific", sub: "Australia licenses online bookmakers state by state, most of them in the Northern Territory; online casinos are prohibited nationally.", codes: ["AU-NT"] },

@@ -22,6 +22,8 @@ export function FiatBrandGrid({ brands, marketName }: { brands: FiatBrand[]; mar
 
   return (
     <>
+      {/* A search box over a handful of cards is noise. */}
+      {brands.length >= 8 && (
       <div style={{ display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap", marginBottom: 14 }}>
         <label htmlFor="fiat-search" style={{ position: "absolute", width: 1, height: 1, overflow: "hidden", clip: "rect(0 0 0 0)" }}>
           Search licensed sites in {marketName}
@@ -41,6 +43,7 @@ export function FiatBrandGrid({ brands, marketName }: { brands: FiatBrand[]; mar
           </span>
         )}
       </div>
+      )}
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))", gap: 10 }}>
         {brands.map((b) => (
           <div key={b.id} style={{ display: shown.has(b) ? "contents" : "none" }}>

@@ -13,8 +13,10 @@ export async function generateMetadata({ params }: { params: Promise<{ code: str
   const { code } = await params;
   const m = fiatMarket(code);
   if (!m) return {};
+  // Australia licenses bookmakers only; its page is not about casinos.
+  const what = m.brands.length && m.brands.every((b) => b.products.length === 1 && b.products[0] === "sports") ? "sportsbooks" : "casinos";
   return pageMetadata(
-    `Licensed online casinos in ${m.name}: all ${m.brands.length} brands`,
+    m.brands.length === 1 ? `Licensed online ${what} in ${m.name}: ${m.brands[0].name} only` : `Licensed online ${what} in ${m.name}: all ${m.brands.length} brands`,
     `Every online casino and sportsbook ${m.regulator} licenses in ${m.name}, with the licence holder and a link to each site, read from the regulator's own register.`,
     `/licensed-casinos/${m.slug}`
   );

@@ -18887,6 +18887,965 @@
     "note": "Holders of a valid HGC Type 1 licence ('Online Betting'), from the same register, one row per website."
    },
    "why": "Greece licenses online gambling under Law 4002/2011 and Ministerial Decision 79835 ΕΞ 2020: the Hellenic Gaming Commission grants Type 1 licences for online betting and Type 2 for other online games, and possession of an HGC licence is a prerequisite for offering online gambling to players in Greece."
+  },
+  "AU-NT": {
+   "regulator": "Northern Territory Wagering Commission",
+   "sportsbooks": {
+    "operators": [
+     {
+      "brand": "Bet Buzz AU",
+      "licenseHolder": "MintSports Pty Ltd",
+      "domains": [
+       "betbuzz.au"
+      ]
+     },
+     {
+      "brand": "BET NATION",
+      "licenseHolder": "Amused Australia Pty Ltd",
+      "domains": [
+       "betnation.com.au"
+      ]
+     },
+     {
+      "brand": "BET365",
+      "licenseHolder": "Hillside (Australia New Media) Pty Ltd",
+      "domains": [
+       "bet365.com.au"
+      ]
+     },
+     {
+      "brand": "BETALPHA AU",
+      "licenseHolder": "MintSports Pty Ltd",
+      "domains": [
+       "betalpha.au"
+      ]
+     },
+     {
+      "brand": "Betdeluxe",
+      "licenseHolder": "Amused Australia Pty Ltd",
+      "domains": [
+       "betdeluxe.com.au"
+      ]
+     },
+     {
+      "brand": "BETDRAGON",
+      "licenseHolder": "MintSports Pty Ltd",
+      "domains": [
+       "betdragon.au"
+      ]
+     },
+     {
+      "brand": "BetExpress",
+      "licenseHolder": "Amused Australia Pty Ltd",
+      "domains": [
+       "betexpress.com.au"
+      ]
+     },
+     {
+      "brand": "Betfair",
+      "licenseHolder": "Betfair Pty Ltd",
+      "domains": [
+       "betfair.com.au"
+      ]
+     },
+     {
+      "brand": "BetIt Online",
+      "licenseHolder": "Booki.com.au Pty Ltd",
+      "domains": [
+       "betit.com.au"
+      ]
+     },
+     {
+      "brand": "BetJet AU",
+      "licenseHolder": "Amused Australia Pty Ltd",
+      "domains": [
+       "betjet.com.au"
+      ]
+     },
+     {
+      "brand": "BetRight",
+      "licenseHolder": "IRPSX Pty Ltd",
+      "domains": [
+       "betright.com.au"
+      ]
+     },
+     {
+      "brand": "BigBet AU",
+      "licenseHolder": "Amused Australia Pty Ltd",
+      "domains": [
+       "bigbet.com.au"
+      ]
+     },
+     {
+      "brand": "CrownBet",
+      "licenseHolder": "Betfair Pty Ltd",
+      "domains": [
+       "crownbet.com.au"
+      ]
+     },
+     {
+      "brand": "Dabble",
+      "licenseHolder": "Dabble Sports Pty Ltd",
+      "domains": [
+       "dabble.com.au"
+      ]
+     },
+     {
+      "brand": "Draftstars",
+      "licenseHolder": "Nextbet Pty Ltd",
+      "domains": [
+       "playup.com.au"
+      ]
+     },
+     {
+      "brand": "Earlycrow",
+      "licenseHolder": "Booki.com.au Pty Ltd",
+      "domains": [
+       "earlycrow.bet"
+      ]
+     },
+     {
+      "brand": "EpicOdds",
+      "licenseHolder": "Vuka Global Pty Ltd",
+      "domains": [
+       "epicodds.com.au"
+      ]
+     },
+     {
+      "brand": "GoldenBet888",
+      "licenseHolder": "Fortuna Felicitas Pty Ltd",
+      "domains": [
+       "goldenbet888.com.au"
+      ]
+     },
+     {
+      "brand": "InfoMarkets",
+      "licenseHolder": "IRPSX Pty Ltd",
+      "domains": [
+       "infomarket.com.au"
+      ]
+     },
+     {
+      "brand": "Knucklebet",
+      "licenseHolder": "Booki.com.au Pty Ltd",
+      "domains": [
+       "knucklebet.com.au"
+      ]
+     },
+     {
+      "brand": "LADBROKES AU",
+      "licenseHolder": "Entain Group Pty Ltd",
+      "domains": [
+       "ladbrokes.com.au"
+      ]
+     },
+     {
+      "brand": "MightyBet",
+      "licenseHolder": "Amused Australia Pty Ltd",
+      "domains": [
+       "mightybet.com.au"
+      ]
+     },
+     {
+      "brand": "MINTBET AU",
+      "licenseHolder": "MintSports Pty Ltd",
+      "domains": [
+       "mintbet.au"
+      ]
+     },
+     {
+      "brand": "NEDS AU",
+      "licenseHolder": "Entain Group Pty Ltd",
+      "domains": [
+       "neds.com.au"
+      ]
+     },
+     {
+      "brand": "NEXT2GO",
+      "licenseHolder": "Zinger Bookmaking Pty Ltd",
+      "domains": [
+       "next2go.com.au"
+      ]
+     },
+     {
+      "brand": "Nextbet",
+      "licenseHolder": "Nextbet Pty Ltd",
+      "domains": [
+       "nextbet.com.au"
+      ]
+     },
+     {
+      "brand": "NOISY AU",
+      "licenseHolder": "Amused Australia Pty Ltd",
+      "domains": [
+       "noisy.com.au"
+      ]
+     },
+     {
+      "brand": "PICKLEBET",
+      "licenseHolder": "Puntaa Pty Ltd",
+      "domains": [
+       "puntcity.com.au"
+      ]
+     },
+     {
+      "brand": "PlayUp",
+      "licenseHolder": "Nextbet Pty Ltd",
+      "domains": [
+       "playup.com.au"
+      ]
+     },
+     {
+      "brand": "Pointsbet",
+      "licenseHolder": "Pointsbet Australia Pty Ltd",
+      "domains": [
+       "pointsbet.com.au"
+      ]
+     },
+     {
+      "brand": "PonyBet.com.au",
+      "licenseHolder": "Booki.com.au Pty Ltd",
+      "domains": [
+       "ponybet.com.au"
+      ]
+     },
+     {
+      "brand": "PulseBet",
+      "licenseHolder": "Amused Australia Pty Ltd",
+      "domains": [
+       "pulsebet.com.au"
+      ]
+     },
+     {
+      "brand": "PuntX",
+      "licenseHolder": "Zinger Bookmaking Pty Ltd",
+      "domains": [
+       "puntx.com.au"
+      ]
+     },
+     {
+      "brand": "RIPPERBET",
+      "licenseHolder": "MintSports Pty Ltd",
+      "domains": [
+       "ripperbet.au"
+      ]
+     },
+     {
+      "brand": "Sportsbet",
+      "licenseHolder": "Sportsbet Pty Ltd",
+      "domains": [
+       "sportsbet.com.au"
+      ]
+     },
+     {
+      "brand": "Surge AU",
+      "licenseHolder": "Amused Australia Pty Ltd",
+      "domains": [
+       "surge.com.au"
+      ]
+     },
+     {
+      "brand": "Ubet NT",
+      "licenseHolder": "Ubet NT Pty Ltd",
+      "domains": [
+       "tab.com.au"
+      ]
+     },
+     {
+      "brand": "UNIBET",
+      "licenseHolder": "BetChoice Corporation Pty Ltd",
+      "domains": [
+       "unibet.com.au"
+      ]
+     },
+     {
+      "brand": "UpYaGo",
+      "licenseHolder": "Zinger Bookmaking Pty Ltd",
+      "domains": [
+       "upyago.com.au"
+      ]
+     },
+     {
+      "brand": "YesBet",
+      "licenseHolder": "Amused Australia Pty Ltd",
+      "domains": [
+       "yesbet.com.au"
+      ]
+     }
+    ],
+    "sourceUrl": "https://dth.nt.gov.au/boards-and-committees/wagering-commission/licensed-wagering-operators",
+    "asOf": "2026-10-05",
+    "note": "The NT Wagering Commission's list of licensed wagering operators (sports bookmakers, betting exchanges and the NT totalisator), one row per trading name with the licensed company and the website the list gives. Trading names the list marks 'Not currently trading' are left out. Most Australian online bookmakers hold their licence in the Northern Territory; the TAB row is Ubet NT, licensed by the Director of Totalisator Licensing and Regulation."
+   },
+   "why": "Under the Interactive Gambling Act 2001, online casino games are prohibited interactive gambling services that may not be provided to customers in Australia, and the ACMA investigates breaches, so there are no licensed online casinos. Online sports and race betting is legal only through wagering operators licensed in an Australian state or territory; the Northern Territory licenses most of them under its Racing and Wagering Act 2024."
+  },
+  "CA-BC": {
+   "regulator": "Independent Gambling Control Office (IGCO), with BCLC as operator",
+   "operators": {
+    "operators": [
+     {
+      "brand": "PlayNow.com",
+      "licenseHolder": "BC Lottery Corporation (BCLC)",
+      "domains": [
+       "playnow.com"
+      ]
+     }
+    ],
+    "sourceUrl": "https://www2.gov.bc.ca/gov/content/sports-culture/gambling-fundraising/gambling-in-bc",
+    "asOf": "2026-10-05",
+    "note": "The Government of British Columbia names PlayNow.com, run by the BC Lottery Corporation, as the only legal online gambling site in B.C."
+   },
+   "why": "In B.C., gambling is legal only when it is run by the provincial government: the BC Lottery Corporation manages all commercial gambling, including online gambling, and PlayNow.com is the only legal online gambling site. The Independent Gambling Control Office regulates gambling in the province."
+  },
+  "CA-AB": {
+   "regulator": "Alberta Gaming, Liquor and Cannabis (AGLC), with the Alberta iGaming Corporation",
+   "operators": {
+    "operators": [
+     {
+      "brand": "247bet.com",
+      "licenseHolder": "TWHG Inc.",
+      "domains": [
+       "247bet.com"
+      ]
+     },
+     {
+      "brand": "888.ca",
+      "licenseHolder": "VHL Ontario Limited",
+      "domains": [
+       "888.ca"
+      ]
+     },
+     {
+      "brand": "ab.daznbet.ca",
+      "licenseHolder": "DZBT Marketing Limited",
+      "domains": [
+       "ab.daznbet.ca"
+      ]
+     },
+     {
+      "brand": "ab.partycasino.ca",
+      "licenseHolder": "Electraworks Maple Limited",
+      "domains": [
+       "ab.partycasino.ca"
+      ]
+     },
+     {
+      "brand": "ab.playvegasclub.ca",
+      "licenseHolder": "G2 Digital AB LLC",
+      "domains": [
+       "ab.playvegasclub.ca"
+      ]
+     },
+     {
+      "brand": "ab.sportsinteraction.com",
+      "licenseHolder": "Electraworks Maple Limited",
+      "domains": [
+       "ab.sportsinteraction.com"
+      ]
+     },
+     {
+      "brand": "alberta.CasinoTime.ca",
+      "licenseHolder": "CasinoTime Inc.",
+      "domains": [
+       "alberta.casinotime.ca"
+      ]
+     },
+     {
+      "brand": "BallyBet Sportsbook and Casino",
+      "licenseHolder": "Bally's Canada, Inc."
+     },
+     {
+      "brand": "bet365.com",
+      "licenseHolder": "Hillside (International Gaming) ENC",
+      "domains": [
+       "bet365.com"
+      ]
+     },
+     {
+      "brand": "bet365.com",
+      "licenseHolder": "Hillside (International Sports) ENC",
+      "domains": [
+       "bet365.com"
+      ]
+     },
+     {
+      "brand": "bet99.com",
+      "licenseHolder": "2786638 Alberta Inc. o/a Bet99",
+      "domains": [
+       "bet99.com"
+      ]
+     },
+     {
+      "brand": "betano.ca",
+      "licenseHolder": "Kaizen Gaming Canada Inc.",
+      "domains": [
+       "betano.ca"
+      ]
+     },
+     {
+      "brand": "BetMGM.ca",
+      "licenseHolder": "BetMGM Canada Inc.",
+      "domains": [
+       "betmgm.ca"
+      ]
+     },
+     {
+      "brand": "betnova.ca",
+      "licenseHolder": "Goldrush Alberta Limited",
+      "domains": [
+       "betnova.ca"
+      ]
+     },
+     {
+      "brand": "BetRivers.ca",
+      "licenseHolder": "Rush Street Interactive Canada ULC",
+      "domains": [
+       "betrivers.ca"
+      ]
+     },
+     {
+      "brand": "Betty.ca",
+      "licenseHolder": "Betty Gaming CA, Ltd.",
+      "domains": [
+       "betty.ca"
+      ]
+     },
+     {
+      "brand": "Betvictor.com",
+      "licenseHolder": "BV (Canada) Ltd.",
+      "domains": [
+       "betvictor.com"
+      ]
+     },
+     {
+      "brand": "betway.ca",
+      "licenseHolder": "Cadway Limited",
+      "domains": [
+       "betway.ca"
+      ]
+     },
+     {
+      "brand": "Caesars.com",
+      "licenseHolder": "American Wagering, Inc.",
+      "domains": [
+       "caesars.com"
+      ]
+     },
+     {
+      "brand": "CaesarsPalaceOnline.com",
+      "licenseHolder": "American Wagering, Inc.",
+      "domains": [
+       "caesarspalaceonline.com"
+      ]
+     },
+     {
+      "brand": "canada.casino.fanduel.com",
+      "licenseHolder": "FanDuel Canada ULC",
+      "domains": [
+       "canada.casino.fanduel.com"
+      ]
+     },
+     {
+      "brand": "canada.sportsbook.fanduel.com",
+      "licenseHolder": "FanDuel Canada ULC",
+      "domains": [
+       "canada.sportsbook.fanduel.com"
+      ]
+     },
+     {
+      "brand": "Captain Cooks Casino",
+      "licenseHolder": "Apollo Entertainment Limited"
+     },
+     {
+      "brand": "Casino Classic",
+      "licenseHolder": "Apollo Entertainment Limited"
+     },
+     {
+      "brand": "casinodays.com",
+      "licenseHolder": "Golden Nebula Limited",
+      "domains": [
+       "casinodays.com"
+      ]
+     },
+     {
+      "brand": "DeltaCasino.com",
+      "licenseHolder": "Delta iGaming Inc.",
+      "domains": [
+       "deltacasino.com"
+      ]
+     },
+     {
+      "brand": "DraftKings.com",
+      "licenseHolder": "Crown DK CAN Ltd.",
+      "domains": [
+       "draftkings.com"
+      ]
+     },
+     {
+      "brand": "firevegas.com",
+      "licenseHolder": "TWHG Inc.",
+      "domains": [
+       "firevegas.com"
+      ]
+     },
+     {
+      "brand": "GG Poker",
+      "licenseHolder": "GG International Limited o/a GG Poker"
+     },
+     {
+      "brand": "Golden Tiger Casino",
+      "licenseHolder": "Apollo Entertainment Limited"
+     },
+     {
+      "brand": "goldennuggetcasino.com",
+      "licenseHolder": "GNOG CAN Ltd.",
+      "domains": [
+       "goldennuggetcasino.com"
+      ]
+     },
+     {
+      "brand": "Grand Mondial Casino",
+      "licenseHolder": "Apollo Entertainment Limited"
+     },
+     {
+      "brand": "hollywoodcasino.com",
+      "licenseHolder": "Score Media & Gaming Inc.",
+      "domains": [
+       "hollywoodcasino.com"
+      ]
+     },
+     {
+      "brand": "Horseshoeonlinecasino.com",
+      "licenseHolder": "American Wagering, Inc.",
+      "domains": [
+       "horseshoeonlinecasino.com"
+      ]
+     },
+     {
+      "brand": "JackpotCity",
+      "licenseHolder": "Cadtree Limited"
+     },
+     {
+      "brand": "Luckydays.ca",
+      "licenseHolder": "L7 Entertainment Limited",
+      "domains": [
+       "luckydays.ca"
+      ]
+     },
+     {
+      "brand": "luckyliner.com",
+      "licenseHolder": "Ellipse Entertainment Limited",
+      "domains": [
+       "luckyliner.com"
+      ]
+     },
+     {
+      "brand": "Luxury Casino",
+      "licenseHolder": "Apollo Entertainment Limited"
+     },
+     {
+      "brand": "megacasino.ca",
+      "licenseHolder": "Skill on Net Ltd.",
+      "domains": [
+       "megacasino.ca"
+      ]
+     },
+     {
+      "brand": "Monopoly Casino & Sportsbook",
+      "licenseHolder": "Bally's Canada, Inc."
+     },
+     {
+      "brand": "Mrvegas.ca",
+      "licenseHolder": "Blueberry (Alberta) Ltd.",
+      "domains": [
+       "mrvegas.ca"
+      ]
+     },
+     {
+      "brand": "playalberta.ca",
+      "licenseHolder": "Play Alberta",
+      "domains": [
+       "playalberta.ca"
+      ]
+     },
+     {
+      "brand": "playojo.ca",
+      "licenseHolder": "Skill on Net Ltd.",
+      "domains": [
+       "playojo.ca"
+      ]
+     },
+     {
+      "brand": "pointsbet.ca",
+      "licenseHolder": "PointsBet Canada Operations 1 Inc.",
+      "domains": [
+       "pointsbet.ca"
+      ]
+     },
+     {
+      "brand": "powerplay.com",
+      "licenseHolder": "Trillium Ventures Limited",
+      "domains": [
+       "powerplay.com"
+      ]
+     },
+     {
+      "brand": "PureCasino.ca",
+      "licenseHolder": "Pure Casino Entertainment Limited Partnership",
+      "domains": [
+       "purecasino.ca"
+      ]
+     },
+     {
+      "brand": "River Cree iGaming",
+      "licenseHolder": "River Cree iGaming Limited Partnership o/a River Cree iGaming"
+     },
+     {
+      "brand": "Royal Vegas",
+      "licenseHolder": "Cadtree Limited"
+     },
+     {
+      "brand": "Ruby Fortune",
+      "licenseHolder": "Cadtree Limited"
+     },
+     {
+      "brand": "slotsmagic.ca",
+      "licenseHolder": "Skill on Net Ltd.",
+      "domains": [
+       "slotsmagic.ca"
+      ]
+     },
+     {
+      "brand": "Spin Casino",
+      "licenseHolder": "Cadtree Limited"
+     },
+     {
+      "brand": "spingenie.ca",
+      "licenseHolder": "Skill on Net Ltd.",
+      "domains": [
+       "spingenie.ca"
+      ]
+     },
+     {
+      "brand": "Stake Canada Ltd.",
+      "licenseHolder": "Stake Canada Ltd."
+     },
+     {
+      "brand": "StardustCasino.com",
+      "licenseHolder": "Pala Interactive Canada, Inc.",
+      "domains": [
+       "stardustcasino.com"
+      ]
+     },
+     {
+      "brand": "thescore-casino.ca",
+      "licenseHolder": "Score Media & Gaming Inc.",
+      "domains": [
+       "thescore-casino.ca"
+      ]
+     },
+     {
+      "brand": "thescore.bet",
+      "licenseHolder": "Score Media & Gaming Inc.",
+      "domains": [
+       "thescore.bet"
+      ]
+     },
+     {
+      "brand": "Tonybetalberta.ca",
+      "licenseHolder": "Tonybet Northpoint Limited",
+      "domains": [
+       "tonybetalberta.ca"
+      ]
+     },
+     {
+      "brand": "tooniebet.ca",
+      "licenseHolder": "Albertix Gaming Ltd.",
+      "domains": [
+       "tooniebet.ca"
+      ]
+     },
+     {
+      "brand": "Videoslots.ca",
+      "licenseHolder": "Blueberry (Alberta) Ltd.",
+      "domains": [
+       "videoslots.ca"
+      ]
+     },
+     {
+      "brand": "Yukon Gold Casino",
+      "licenseHolder": "Apollo Entertainment Limited"
+     },
+     {
+      "brand": "Zodiac Casino",
+      "licenseHolder": "Apollo Entertainment Limited"
+     }
+    ],
+    "sourceUrl": "https://aglc.ca/gaming-registrants?class_of_registration=315",
+    "asOf": "2026-10-05",
+    "note": "AGLC's Gaming Registrants list, filtered to 'iGaming - Operator' (42 registrants). One row per site or brand AGLC shows under each registrant, with the registrant's name as AGLC gives it; a registrant listed without a site appears once under its own name. The list does not say which registrants run casino and which run sports betting, so they are in one list. Play Alberta (playalberta.ca) is the province's own site, run by AGLC."
+   },
+   "why": "Alberta opened its online gambling market in 2026: since 13 July every iGaming operator must be registered with AGLC, the regulator, and hold a commercial agreement with the Alberta iGaming Corporation (AiGC). Play Alberta, the AGLC-run site that was previously the only regulated option, continues alongside the registered private operators."
+  },
+  "CA-QC": {
+   "regulator": "Loto-Québec (government corporation)",
+   "casinos": {
+    "operators": [
+     {
+      "brand": "lotoquebec.com",
+      "licenseHolder": "Loto-Québec",
+      "domains": [
+       "lotoquebec.com"
+      ]
+     }
+    ],
+    "sourceUrl": "https://societe.lotoquebec.com/en/offering/online-gaming",
+    "asOf": "2026-10-05",
+    "note": "Loto-Québec states that its gaming website, lotoquebec.com, is the only legal gaming website in Québec. The site carries casino games (slots, table and live games), poker and bingo, and sports betting (Mise-o-jeu), lotteries and instant games."
+   },
+   "sportsbooks": {
+    "operators": [
+     {
+      "brand": "lotoquebec.com",
+      "licenseHolder": "Loto-Québec",
+      "domains": [
+       "lotoquebec.com"
+      ]
+     }
+    ],
+    "sourceUrl": "https://societe.lotoquebec.com/en/offering/online-gaming",
+    "asOf": "2026-10-05",
+    "note": "Loto-Québec states that its gaming website, lotoquebec.com, is the only legal gaming website in Québec. The site carries casino games (slots, table and live games), poker and bingo, and sports betting (Mise-o-jeu), lotteries and instant games."
+   },
+   "why": "Loto-Québec, the Québec government corporation set up in 1969 to run gambling in the province, operates the province's only legal gaming website, lotoquebec.com, which offers both online casino games and sports betting."
+  },
+  "CA-MB": {
+   "regulator": "Liquor, Gaming and Cannabis Authority of Manitoba (LGCA)",
+   "operators": {
+    "operators": [
+     {
+      "brand": "PlayNow.com",
+      "licenseHolder": "Manitoba Liquor and Lotteries",
+      "domains": [
+       "playnow.com"
+      ]
+     }
+    ],
+    "sourceUrl": "https://cml-kml.ca/en/gambling/sports-betting/",
+    "asOf": "2026-10-05",
+    "note": "The LGCA's public-education site states that the only gambling site licensed in Manitoba is PlayNow.com, and (https://cml-kml.ca/en/gambling/online-gambling/) that Manitoba Liquor and Lotteries' PlayNow is the only regulated site in the province."
+   },
+   "why": "Manitoba's only licensed online gambling site is PlayNow.com, operated by the Crown corporation Manitoba Liquor and Lotteries and regulated by the Liquor, Gaming and Cannabis Authority of Manitoba; other sites offering gambling to Manitobans are not regulated in the province."
+  },
+  "CA-SK": {
+   "regulator": "Saskatchewan Liquor and Gaming Authority (SLGA)",
+   "operators": {
+    "operators": [
+     {
+      "brand": "PlayNow.com",
+      "licenseHolder": "Saskatchewan Indian Gaming Authority (SIGA)",
+      "domains": [
+       "playnow.com"
+      ]
+     }
+    ],
+    "sourceUrl": "https://www.slga.com/faqs",
+    "asOf": "2026-10-05",
+    "note": "SLGA's FAQ: PlayNow.com is Saskatchewan's only legal online gaming website, operated by the Saskatchewan Indian Gaming Authority (SIGA) and managed by Lotteries and Gaming Saskatchewan (LGS), the commercial Crown corporation."
+   },
+   "why": "Saskatchewan has one legal online gaming website, PlayNow.com, operated by SIGA and managed by the Crown corporation Lotteries and Gaming Saskatchewan; the Saskatchewan Liquor and Gaming Authority regulates gaming in the province."
+  },
+  "CA-NB": {
+   "regulator": "Atlantic Lottery Corporation (owned by the governments of New Brunswick, Nova Scotia, Prince Edward Island and Newfoundland and Labrador)",
+   "operators": {
+    "operators": [
+     {
+      "brand": "alc.ca",
+      "licenseHolder": "Atlantic Lottery Corporation Inc.",
+      "domains": [
+       "alc.ca"
+      ]
+     }
+    ],
+    "sourceUrl": "https://www.alc.ca/content/alc/en/legal/terms-and-conditions.html",
+    "asOf": "2026-10-05",
+    "note": "Atlantic Lottery's terms of service: alc.ca is offered by Atlantic Lottery Corporation Inc. to residents of the four Atlantic provinces, New Brunswick among them. The Government of Newfoundland and Labrador (https://www.gov.nl.ca/releases/2023/fin/0612n03/) describes Atlantic Lottery as the only regulated provider in the region. alc.ca carries lottery, instant-win, casino and PRO•LINE sports betting games."
+   },
+   "why": "Online gambling in New Brunswick is offered only through Atlantic Lottery's alc.ca: Atlantic Lottery is owned by the four Atlantic provincial governments, and the Government of Newfoundland and Labrador describes it as the only regulated provider in the region. New Brunswick was the first Atlantic province to make online games available, in 2020."
+  },
+  "CA-NS": {
+   "regulator": "Atlantic Lottery Corporation (owned by the governments of New Brunswick, Nova Scotia, Prince Edward Island and Newfoundland and Labrador)",
+   "operators": {
+    "operators": [
+     {
+      "brand": "alc.ca",
+      "licenseHolder": "Atlantic Lottery Corporation Inc.",
+      "domains": [
+       "alc.ca"
+      ]
+     }
+    ],
+    "sourceUrl": "https://www.alc.ca/content/alc/en/legal/terms-and-conditions.html",
+    "asOf": "2026-10-05",
+    "note": "Atlantic Lottery's terms of service: alc.ca is offered by Atlantic Lottery Corporation Inc. to residents of the four Atlantic provinces, Nova Scotia among them. The Government of Newfoundland and Labrador (https://www.gov.nl.ca/releases/2023/fin/0612n03/) describes Atlantic Lottery as the only regulated provider in the region. alc.ca carries lottery, instant-win, casino and PRO•LINE sports betting games."
+   },
+   "why": "Online gambling in Nova Scotia is offered only through Atlantic Lottery's alc.ca: Atlantic Lottery is owned by the four Atlantic provincial governments, and the Government of Newfoundland and Labrador describes it as the only regulated provider in the region. Nova Scotia made online games available in 2022."
+  },
+  "CA-PE": {
+   "regulator": "Atlantic Lottery Corporation (owned by the governments of New Brunswick, Nova Scotia, Prince Edward Island and Newfoundland and Labrador)",
+   "operators": {
+    "operators": [
+     {
+      "brand": "alc.ca",
+      "licenseHolder": "Atlantic Lottery Corporation Inc.",
+      "domains": [
+       "alc.ca"
+      ]
+     }
+    ],
+    "sourceUrl": "https://www.alc.ca/content/alc/en/legal/terms-and-conditions.html",
+    "asOf": "2026-10-05",
+    "note": "Atlantic Lottery's terms of service: alc.ca is offered by Atlantic Lottery Corporation Inc. to residents of the four Atlantic provinces, Prince Edward Island among them. The Government of Newfoundland and Labrador (https://www.gov.nl.ca/releases/2023/fin/0612n03/) describes Atlantic Lottery as the only regulated provider in the region. alc.ca carries lottery, instant-win, casino and PRO•LINE sports betting games."
+   },
+   "why": "Online gambling in Prince Edward Island is offered only through Atlantic Lottery's alc.ca: Atlantic Lottery is owned by the four Atlantic provincial governments, and the Government of Newfoundland and Labrador describes it as the only regulated provider in the region. Atlantic Lottery's casino page lists Prince Edward Island among the provinces where its live online casino games are available."
+  },
+  "CA-NL": {
+   "regulator": "Atlantic Lottery Corporation (owned by the governments of New Brunswick, Nova Scotia, Prince Edward Island and Newfoundland and Labrador)",
+   "operators": {
+    "operators": [
+     {
+      "brand": "alc.ca",
+      "licenseHolder": "Atlantic Lottery Corporation Inc.",
+      "domains": [
+       "alc.ca"
+      ]
+     }
+    ],
+    "sourceUrl": "https://www.gov.nl.ca/releases/2023/fin/0612n03/",
+    "asOf": "2026-10-05",
+    "note": "The Government of Newfoundland and Labrador's release on online gaming: an online gaming platform is available in the province through Atlantic Lottery (alc.ca), the only regulated provider in the region. alc.ca carries lottery, instant-win, casino and PRO•LINE sports betting games."
+   },
+   "why": "Online gambling in Newfoundland and Labrador is offered only through Atlantic Lottery's alc.ca: Atlantic Lottery is owned by the four Atlantic provincial governments, and the Government of Newfoundland and Labrador describes it as the only regulated provider in the region. Newfoundland and Labrador made online games available through Atlantic Lottery in June 2023."
+  },
+  "AT": {
+   "regulator": "Federal Ministry of Finance (BMF); supervision by the Finanzamt Österreich",
+   "casinos": {
+    "operators": [
+     {
+      "brand": "win2day",
+      "licenseHolder": "Österreichische Lotterien GmbH",
+      "domains": [
+       "win2day.at"
+      ]
+     }
+    ],
+    "sourceUrl": "https://www.bmf.gv.at/themen/gluecksspiel-spielerschutz/gesetzliche-grundlagen-gluecksspiel/konzessionaere-ausspielbewilligte.html",
+    "asOf": "2026-10-05",
+    "note": "The BMF lists Österreichische Lotterien GmbH as the federal lottery concession holder (until 30 September 2027); its concession includes electronic lotteries — online gambling — on www.win2day.at. It is the only online casino concession in Austria."
+   },
+   "why": "Under Austria's Gambling Act (GSpG), casino games may not be offered online without a federal concession, and a licence from another EU country does not count; the only concession covering online gambling is the lottery concession held by Österreichische Lotterien, used on win2day.at. Sports betting needs a licence from the federal state instead. A new Gambling Act, sent to the EU for notification in August 2026, would open online gambling to an open concession procedure."
+  },
+  "CH": {
+   "regulator": "Federal Gaming Board (ESBK) for casinos; Gespa for lotteries and sports betting",
+   "casinos": {
+    "operators": [
+     {
+      "brand": "7melons.ch",
+      "licenseHolder": "Casino Bern",
+      "domains": [
+       "7melons.ch"
+      ]
+     },
+     {
+      "brand": "admiral.ch",
+      "licenseHolder": "Casino Mendrisio",
+      "domains": [
+       "admiral.ch"
+      ]
+     },
+     {
+      "brand": "casineo.ch",
+      "licenseHolder": "Casino Locarno",
+      "domains": [
+       "casineo.ch"
+      ]
+     },
+     {
+      "brand": "casino777.ch",
+      "licenseHolder": "Casino Davos",
+      "domains": [
+       "casino777.ch"
+      ]
+     },
+     {
+      "brand": "jackpots.ch",
+      "licenseHolder": "Casino Baden",
+      "domains": [
+       "jackpots.ch"
+      ]
+     },
+     {
+      "brand": "mycasino.ch",
+      "licenseHolder": "Casino Luzern",
+      "domains": [
+       "mycasino.ch"
+      ]
+     },
+     {
+      "brand": "online.swisscasinos.ch",
+      "licenseHolder": "Casino Pfäffikon",
+      "domains": [
+       "online.swisscasinos.ch"
+      ]
+     },
+     {
+      "brand": "pasino.ch",
+      "licenseHolder": "Casino Meyrin",
+      "domains": [
+       "pasino.ch"
+      ]
+     },
+     {
+      "brand": "starvegas.ch",
+      "licenseHolder": "Casino Interlaken",
+      "domains": [
+       "starvegas.ch"
+      ]
+     },
+     {
+      "brand": "swiss4win.ch",
+      "licenseHolder": "Casino Lugano",
+      "domains": [
+       "swiss4win.ch"
+      ]
+     }
+    ],
+    "sourceUrl": "https://www.esbk.admin.ch/de/online-spielbanken",
+    "asOf": "2026-10-05",
+    "note": "The ESBK's list of Swiss casinos with an online platform: each row is the web address the ESBK gives and the land-based casino whose concession, extended by the Federal Council, covers it."
+   },
+   "sportsbooks": {
+    "operators": [
+     {
+      "brand": "Loterie Romande",
+      "licenseHolder": "Loterie Romande",
+      "domains": [
+       "jeux.loro.ch"
+      ]
+     },
+     {
+      "brand": "Swisslos",
+      "licenseHolder": "Swisslos",
+      "domains": [
+       "swisslos.ch"
+      ]
+     }
+    ],
+    "sourceUrl": "https://www.gespa.ch/en/types-of-gambling/sports-betting",
+    "asOf": "2026-10-05",
+    "note": "Gespa: the two lottery companies offer sports betting online and in retail under the brands 'Jouez Sport' (Loterie Romande, French-speaking cantons) and 'Sporttip' (Swisslos, German- and Italian-speaking cantons); Gespa links each company's site."
+   },
+   "why": "Under the Money Gaming Act in force since 1 January 2019, online casino games may only be offered by Swiss land-based casinos whose concession the Federal Council has extended to online play, with each game approved by the ESBK; large-scale lotteries are reserved to Swisslos and Loterie Romande, which also run the licensed online sports betting, under Gespa's supervision. Sites without Swiss authorisation are blocked."
   }
  },
  "unreadable": {
@@ -18900,11 +19859,6 @@
    "sourceUrl": "https://onjn.gov.ro/",
    "note": "ONJN's site sits behind a browser-verification wall that a reader can pass and a script cannot."
   },
-  "AT": {
-   "regulator": "Federal Ministry of Finance (BMF)",
-   "sourceUrl": "https://www.bmf.gv.at/themen/gluecksspiel-spielerschutz/gluecksspiel-in-oesterreich.html",
-   "note": "Online casino games are a federal concession held by a single operator (win2day, Casinos Austria), so there is no register of competing online casinos; sports betting is licensed by each federal state."
-  },
   "NO": {
    "regulator": "Lotteritilsynet",
    "sourceUrl": "https://lottstift.no/for-spillere/",
@@ -18914,11 +19868,6 @@
    "regulator": "Finnish Licensing and Supervisory Authority (Lupa- ja valvontavirasto)",
    "sourceUrl": "https://lvv.fi/",
    "note": "Veikkaus holds the exclusive right until the licensing market opens in 2027; the new authority has published no licensees yet."
-  },
-  "CH": {
-   "regulator": "Federal Gaming Board (ESBK) and Gespa",
-   "sourceUrl": "https://www.gespa.ch/en/regulation-and-licensing/operators",
-   "note": "Swiss online casino games may only be offered by land-based casinos holding an extended concession from the Federal Council; online betting is run by the two lottery companies under Gespa. The ESBK's site did not expose a readable list."
   },
   "IE": {
    "regulator": "Gambling Regulatory Authority of Ireland (GRAI)",

@@ -823,6 +823,322 @@ const ADAPTERS = {
       why: "Greece licenses online gambling under Law 4002/2011 and Ministerial Decision 79835 ΕΞ 2020: the Hellenic Gaming Commission grants Type 1 licences for online betting and Type 2 for other online games, and possession of an HGC licence is a prerequisite for offering online gambling to players in Greece.",
     };
   },
+
+  "AU-NT"() {
+    // The NT Wagering Commission's list: one table row per trading name, with
+    // the licensed company, the website and a comments column. Rows marked
+    // "Not currently trading" have no website and are left out.
+    const url = "https://dth.nt.gov.au/boards-and-committees/wagering-commission/licensed-wagering-operators";
+    const html = get(url).replace(/\s+/g, " ");
+    const table = (html.match(/<table id="bookmakers"[\s\S]*?<\/table>/) || [])[0];
+    if (!table || !/Trading as/.test(table)) throw new Error("NT Wagering Commission: licensed operators table not found");
+    const sportsbooks = [];
+    for (const tr of table.split(/<tr[\s>]/).slice(1)) {
+      const td = [...tr.matchAll(/<td[^>]*>([\s\S]*?)<\/td>/g)].map((m) => m[1]);
+      if (td.length < 4) continue;
+      const [, company, brand, site, comment = ""] = td;
+      const href = (site.match(/href="([^"]+)"/) || [])[1];
+      if (!href || /not currently trading/i.test(clean(comment))) continue;
+      sportsbooks.push(op(brand, company, [href]));
+    }
+    if (sportsbooks.length < 20) throw new Error(`NT Wagering Commission: only ${sportsbooks.length} trading operators read`);
+    // Online casino: the Interactive Gambling Act 2001 on the Federal Register of Legislation.
+    const igaUrl = "https://www.legislation.gov.au/C2004A00851/latest/text";
+    const iga = clean(get(igaUrl));
+    if (!/Interactive Gambling Act 2001/.test(iga) || !/Prohibited interactive gambling services not to be provided to customers in Australia/.test(iga))
+      throw new Error("Interactive Gambling Act page did not show the s 15 prohibition");
+    return {
+      regulator: "Northern Territory Wagering Commission",
+      sportsbooks: list(sportsbooks, url, "The NT Wagering Commission's list of licensed wagering operators (sports bookmakers, betting exchanges and the NT totalisator), one row per trading name with the licensed company and the website the list gives. Trading names the list marks 'Not currently trading' are left out. Most Australian online bookmakers hold their licence in the Northern Territory; the TAB row is Ubet NT, licensed by the Director of Totalisator Licensing and Regulation."),
+      why: "Under the Interactive Gambling Act 2001, online casino games are prohibited interactive gambling services that may not be provided to customers in Australia, and the ACMA investigates breaches, so there are no licensed online casinos. Online sports and race betting is legal only through wagering operators licensed in an Australian state or territory; the Northern Territory licenses most of them under its Racing and Wagering Act 2024.",
+    };
+  },
+
+  "CA-BC"() {
+    // B.C. government's "Gambling in B.C." page names PlayNow.com as the only
+    // legal online gambling site and BCLC as the operator. bclc.com itself
+    // answers scripts with an Akamai "Access Denied" page, so it is not used.
+    const url = "https://www2.gov.bc.ca/gov/content/sports-culture/gambling-fundraising/gambling-in-bc";
+    const html = get(url);
+    const text = clean(html);
+    for (const re of [/PlayNow\.com\s+is the only legal online gambling site in B\.C\./, /BC Lottery Corporation \(BCLC\) manages all commercial gambling, including casinos and online gambling/])
+      if (!re.test(text)) throw new Error(`gov.bc.ca: expected wording not found (${re})`);
+    const href = (html.match(/href="(https?:\/\/(?:www\.)?playnow\.com[^"]*)"/) || [])[1];
+    if (!href) throw new Error("gov.bc.ca: no link to playnow.com");
+    return {
+      regulator: "Independent Gambling Control Office (IGCO), with BCLC as operator",
+      operators: list([op("PlayNow.com", "BC Lottery Corporation (BCLC)", [href])], url, "The Government of British Columbia names PlayNow.com, run by the BC Lottery Corporation, as the only legal online gambling site in B.C."),
+      why: "In B.C., gambling is legal only when it is run by the provincial government: the BC Lottery Corporation manages all commercial gambling, including online gambling, and PlayNow.com is the only legal online gambling site. The Independent Gambling Control Office regulates gambling in the province.",
+    };
+  },
+
+  "CA-AB"() {
+    // AGLC's Gaming Registrants list filtered to class "iGaming - Operator"
+    // (class id 315), ten registrants a page. Each registrant shows its
+    // registered name and, one paragraph each, the sites or brands it is
+    // registered for.
+    const base = "https://aglc.ca/gaming-registrants?class_of_registration=315";
+    const operators = [];
+    let registrants = 0;
+    for (let page = 0; page < 20; page++) {
+      const html = get(`${base}&page=${page}`).replace(/\s+/g, " ");
+      if (!/Gaming Registrants/.test(html)) throw new Error("AGLC: registrants page did not load");
+      let found = 0;
+      for (const a of html.split(/<article data-history-node-id/).slice(1)) {
+        const name = clean((a.match(/<h2>\s*<span>([^<]+)<\/span>/) || [])[1]);
+        if (!name || !/iGaming - Operator/.test(a)) continue;
+        found++;
+        const box = (a.match(/<div>([\s\S]*?)<\/div>\s*<p class="stream"/) || [])[1] || "";
+        const items = [...box.matchAll(/<p>([\s\S]*?)<\/p>/g)].flatMap((m) => {
+          const t = clean(m[1]);
+          // A bold line is either one brand name or one or more web addresses.
+          return /^[\w.-]+\.[a-z]{2,}(\s+[\w.-]+\.[a-z]{2,})*$/i.test(t) ? t.split(/\s+/) : [t];
+        }).filter(Boolean);
+        if (!items.length) operators.push(op(name.replace(/^.* o\/a /, ""), name));
+        for (const it of items) operators.push(op(it, name, /\./.test(it) && !/\s/.test(it) ? [it] : []));
+      }
+      registrants += found;
+      if (!found) break;
+    }
+    if (registrants < 20) throw new Error(`AGLC: only ${registrants} iGaming operators read`);
+    // Legal basis: AGLC's iGaming page.
+    const why = "https://aglc.ca/igaming";
+    const w = clean(get(why));
+    if (!/registered with AGLC/.test(w) || !/Alberta iGaming Corporat/.test(w)) throw new Error("AGLC iGaming page wording changed");
+    return {
+      regulator: "Alberta Gaming, Liquor and Cannabis (AGLC), with the Alberta iGaming Corporation",
+      operators: list(operators, base, `AGLC's Gaming Registrants list, filtered to 'iGaming - Operator' (${registrants} registrants). One row per site or brand AGLC shows under each registrant, with the registrant's name as AGLC gives it; a registrant listed without a site appears once under its own name. The list does not say which registrants run casino and which run sports betting, so they are in one list. Play Alberta (playalberta.ca) is the province's own site, run by AGLC.`),
+      why: "Alberta opened its online gambling market in 2026: since 13 July every iGaming operator must be registered with AGLC, the regulator, and hold a commercial agreement with the Alberta iGaming Corporation (AiGC). Play Alberta, the AGLC-run site that was previously the only regulated option, continues alongside the registered private operators.",
+    };
+  },
+
+  "CA-QC"() {
+    // Loto-Québec's own "Online gaming" page: lotoquebec.com is the only legal
+    // gaming website in Québec and carries casino games and sports betting.
+    const url = "https://societe.lotoquebec.com/en/offering/online-gaming";
+    const html = get(url);
+    const text = clean(html);
+    for (const re of [/lotoquebec\.com, is the only legal gaming website in Québec/, /Casino games/, /Sports betting/])
+      if (!re.test(text)) throw new Error(`Loto-Québec: expected wording not found (${re})`);
+    if (!/Loto-Québec was introduced in 1969 to regulate gambling/.test(clean(get("https://societe.lotoquebec.com/en/corporation/about-us"))))
+      throw new Error("Loto-Québec: about page wording changed");
+    const row = op("lotoquebec.com", "Loto-Québec", ["lotoquebec.com"]);
+    const note = "Loto-Québec states that its gaming website, lotoquebec.com, is the only legal gaming website in Québec. The site carries casino games (slots, table and live games), poker and bingo, and sports betting (Mise-o-jeu), lotteries and instant games.";
+    return {
+      regulator: "Loto-Québec (government corporation)",
+      casinos: list([row], url, note),
+      sportsbooks: list([row], url, note),
+      why: "Loto-Québec, the Québec government corporation set up in 1969 to run gambling in the province, operates the province's only legal gaming website, lotoquebec.com, which offers both online casino games and sports betting.",
+    };
+  },
+
+  "CA-MB"() {
+    // Know My Limits is the public-education arm of the Liquor, Gaming and
+    // Cannabis Authority of Manitoba (LGCA); its sports-betting page names
+    // PlayNow.com as the only gambling site licensed in Manitoba, and its
+    // online-gambling page names Manitoba Liquor and Lotteries as PlayNow's operator.
+    const url = "https://cml-kml.ca/en/gambling/sports-betting/";
+    const url2 = "https://cml-kml.ca/en/gambling/online-gambling/";
+    const a = clean(get(url)), b = clean(get(url2));
+    if (!/The only gambling site licensed in Manitoba is PlayNow\.com/.test(a)) throw new Error("LGCA Know My Limits: sports-betting wording changed");
+    if (!/Manitoba Liquor and Lotteries.{0,3}\s*PlayNow is the only regulated site in Manitoba/.test(b)) throw new Error("LGCA Know My Limits: online-gambling wording changed");
+    if (!/public education arm of the Liquor, Gaming and Cannabis Authority of Manitoba/.test(clean(get("https://cml-kml.ca/en/")))) throw new Error("Know My Limits no longer identifies itself as the LGCA's");
+    return {
+      regulator: "Liquor, Gaming and Cannabis Authority of Manitoba (LGCA)",
+      operators: list([op("PlayNow.com", "Manitoba Liquor and Lotteries", ["playnow.com"])], url, `The LGCA's public-education site states that the only gambling site licensed in Manitoba is PlayNow.com, and (${url2}) that Manitoba Liquor and Lotteries' PlayNow is the only regulated site in the province.`),
+      why: "Manitoba's only licensed online gambling site is PlayNow.com, operated by the Crown corporation Manitoba Liquor and Lotteries and regulated by the Liquor, Gaming and Cannabis Authority of Manitoba; other sites offering gambling to Manitobans are not regulated in the province.",
+    };
+  },
+
+  "CA-SK"() {
+    // SLGA's FAQ names PlayNow.com as Saskatchewan's only legal online gaming
+    // website, operated by SIGA and managed by Lotteries and Gaming Saskatchewan.
+    const url = "https://www.slga.com/faqs";
+    const text = clean(get(url));
+    if (!/PlayNow\.com, Saskatchewan's only legal online gaming website \(operated by SIGA\)/.test(text)) throw new Error("SLGA FAQ: PlayNow wording changed");
+    if (!/Lotteries and Gaming Saskatchewan \(LGS\)/.test(text)) throw new Error("SLGA FAQ: LGS not named");
+    return {
+      regulator: "Saskatchewan Liquor and Gaming Authority (SLGA)",
+      operators: list([op("PlayNow.com", "Saskatchewan Indian Gaming Authority (SIGA)", ["playnow.com"])], url, "SLGA's FAQ: PlayNow.com is Saskatchewan's only legal online gaming website, operated by the Saskatchewan Indian Gaming Authority (SIGA) and managed by Lotteries and Gaming Saskatchewan (LGS), the commercial Crown corporation."),
+      why: "Saskatchewan has one legal online gaming website, PlayNow.com, operated by SIGA and managed by the Crown corporation Lotteries and Gaming Saskatchewan; the Saskatchewan Liquor and Gaming Authority regulates gaming in the province.",
+    };
+  },
+
+  "CA-NB"() {
+    // Atlantic Lottery (alc.ca) is the Crown corporation owned by the four
+    // Atlantic provincial governments. Its own pages give the company name,
+    // the provinces it serves and its online casino; the Government of
+    // Newfoundland and Labrador's release on online gaming states that it is
+    // the only regulated provider in the region.
+    const terms = "https://www.alc.ca/content/alc/en/legal/terms-and-conditions.html";
+    const about = "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery.html";
+    const casino = "https://www.alc.ca/content/alc/en/our-games/casino.html";
+    const release = "https://www.gov.nl.ca/releases/2023/fin/0612n03/";
+    const checks = [
+      [terms, /Atlantic Lottery Corporation Inc\./],
+      [terms, /resident of either Newfoundland and Labrador, Nova Scotia, New Brunswick or Prince Edward Island/],
+      [about, /owned by the four regional provincial governments/],
+      [casino, /secure and regulated online Casino/],
+      [casino, /available in Nova Scotia, Newfoundland and Labrador, and Prince Edward Island/],
+      [release, /As the only regulated provider in the region, Atlantic Lottery/],
+      [release, /following New Brunswick in 2020 and Nova Scotia in 2022/],
+    ];
+    for (const [u, re] of checks) if (!re.test(clean(get(u)))) throw new Error(`Atlantic Lottery: expected wording not found on ${u} (${re})`);
+    const url = terms;
+    return {
+      regulator: "Atlantic Lottery Corporation (owned by the governments of New Brunswick, Nova Scotia, Prince Edward Island and Newfoundland and Labrador)",
+      operators: list([op("alc.ca", "Atlantic Lottery Corporation Inc.", ["alc.ca"])], url, "Atlantic Lottery's terms of service: alc.ca is offered by Atlantic Lottery Corporation Inc. to residents of the four Atlantic provinces, New Brunswick among them. The Government of Newfoundland and Labrador (https://www.gov.nl.ca/releases/2023/fin/0612n03/) describes Atlantic Lottery as the only regulated provider in the region. alc.ca carries lottery, instant-win, casino and PRO•LINE sports betting games."),
+      why: "Online gambling in New Brunswick is offered only through Atlantic Lottery's alc.ca: Atlantic Lottery is owned by the four Atlantic provincial governments, and the Government of Newfoundland and Labrador describes it as the only regulated provider in the region. New Brunswick was the first Atlantic province to make online games available, in 2020.",
+    };
+  },
+
+  "CA-NS"() {
+    // Atlantic Lottery (alc.ca) is the Crown corporation owned by the four
+    // Atlantic provincial governments. Its own pages give the company name,
+    // the provinces it serves and its online casino; the Government of
+    // Newfoundland and Labrador's release on online gaming states that it is
+    // the only regulated provider in the region.
+    const terms = "https://www.alc.ca/content/alc/en/legal/terms-and-conditions.html";
+    const about = "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery.html";
+    const casino = "https://www.alc.ca/content/alc/en/our-games/casino.html";
+    const release = "https://www.gov.nl.ca/releases/2023/fin/0612n03/";
+    const checks = [
+      [terms, /Atlantic Lottery Corporation Inc\./],
+      [terms, /resident of either Newfoundland and Labrador, Nova Scotia, New Brunswick or Prince Edward Island/],
+      [about, /owned by the four regional provincial governments/],
+      [casino, /secure and regulated online Casino/],
+      [casino, /available in Nova Scotia, Newfoundland and Labrador, and Prince Edward Island/],
+      [release, /As the only regulated provider in the region, Atlantic Lottery/],
+      [release, /following New Brunswick in 2020 and Nova Scotia in 2022/],
+    ];
+    for (const [u, re] of checks) if (!re.test(clean(get(u)))) throw new Error(`Atlantic Lottery: expected wording not found on ${u} (${re})`);
+    const url = terms;
+    return {
+      regulator: "Atlantic Lottery Corporation (owned by the governments of New Brunswick, Nova Scotia, Prince Edward Island and Newfoundland and Labrador)",
+      operators: list([op("alc.ca", "Atlantic Lottery Corporation Inc.", ["alc.ca"])], url, "Atlantic Lottery's terms of service: alc.ca is offered by Atlantic Lottery Corporation Inc. to residents of the four Atlantic provinces, Nova Scotia among them. The Government of Newfoundland and Labrador (https://www.gov.nl.ca/releases/2023/fin/0612n03/) describes Atlantic Lottery as the only regulated provider in the region. alc.ca carries lottery, instant-win, casino and PRO•LINE sports betting games."),
+      why: "Online gambling in Nova Scotia is offered only through Atlantic Lottery's alc.ca: Atlantic Lottery is owned by the four Atlantic provincial governments, and the Government of Newfoundland and Labrador describes it as the only regulated provider in the region. Nova Scotia made online games available in 2022.",
+    };
+  },
+
+  "CA-PE"() {
+    // Atlantic Lottery (alc.ca) is the Crown corporation owned by the four
+    // Atlantic provincial governments. Its own pages give the company name,
+    // the provinces it serves and its online casino; the Government of
+    // Newfoundland and Labrador's release on online gaming states that it is
+    // the only regulated provider in the region.
+    // princeedwardisland.ca answers scripts with a Radware bot check, so no PEI
+    // government page is read.
+    const terms = "https://www.alc.ca/content/alc/en/legal/terms-and-conditions.html";
+    const about = "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery.html";
+    const casino = "https://www.alc.ca/content/alc/en/our-games/casino.html";
+    const release = "https://www.gov.nl.ca/releases/2023/fin/0612n03/";
+    const checks = [
+      [terms, /Atlantic Lottery Corporation Inc\./],
+      [terms, /resident of either Newfoundland and Labrador, Nova Scotia, New Brunswick or Prince Edward Island/],
+      [about, /owned by the four regional provincial governments/],
+      [casino, /secure and regulated online Casino/],
+      [casino, /available in Nova Scotia, Newfoundland and Labrador, and Prince Edward Island/],
+      [release, /As the only regulated provider in the region, Atlantic Lottery/],
+      [release, /following New Brunswick in 2020 and Nova Scotia in 2022/],
+    ];
+    for (const [u, re] of checks) if (!re.test(clean(get(u)))) throw new Error(`Atlantic Lottery: expected wording not found on ${u} (${re})`);
+    const url = terms;
+    return {
+      regulator: "Atlantic Lottery Corporation (owned by the governments of New Brunswick, Nova Scotia, Prince Edward Island and Newfoundland and Labrador)",
+      operators: list([op("alc.ca", "Atlantic Lottery Corporation Inc.", ["alc.ca"])], url, "Atlantic Lottery's terms of service: alc.ca is offered by Atlantic Lottery Corporation Inc. to residents of the four Atlantic provinces, Prince Edward Island among them. The Government of Newfoundland and Labrador (https://www.gov.nl.ca/releases/2023/fin/0612n03/) describes Atlantic Lottery as the only regulated provider in the region. alc.ca carries lottery, instant-win, casino and PRO•LINE sports betting games."),
+      why: "Online gambling in Prince Edward Island is offered only through Atlantic Lottery's alc.ca: Atlantic Lottery is owned by the four Atlantic provincial governments, and the Government of Newfoundland and Labrador describes it as the only regulated provider in the region. Atlantic Lottery's casino page lists Prince Edward Island among the provinces where its live online casino games are available.",
+    };
+  },
+
+  "CA-NL"() {
+    // Atlantic Lottery (alc.ca) is the Crown corporation owned by the four
+    // Atlantic provincial governments. Its own pages give the company name,
+    // the provinces it serves and its online casino; the Government of
+    // Newfoundland and Labrador's release on online gaming states that it is
+    // the only regulated provider in the region.
+    const terms = "https://www.alc.ca/content/alc/en/legal/terms-and-conditions.html";
+    const about = "https://www.alc.ca/content/alc/en/corporate/about-atlantic-lottery.html";
+    const casino = "https://www.alc.ca/content/alc/en/our-games/casino.html";
+    const release = "https://www.gov.nl.ca/releases/2023/fin/0612n03/";
+    const checks = [
+      [terms, /Atlantic Lottery Corporation Inc\./],
+      [terms, /resident of either Newfoundland and Labrador, Nova Scotia, New Brunswick or Prince Edward Island/],
+      [about, /owned by the four regional provincial governments/],
+      [casino, /secure and regulated online Casino/],
+      [casino, /available in Nova Scotia, Newfoundland and Labrador, and Prince Edward Island/],
+      [release, /As the only regulated provider in the region, Atlantic Lottery/],
+      [release, /following New Brunswick in 2020 and Nova Scotia in 2022/],
+    ];
+    for (const [u, re] of checks) if (!re.test(clean(get(u)))) throw new Error(`Atlantic Lottery: expected wording not found on ${u} (${re})`);
+    const url = release;
+    return {
+      regulator: "Atlantic Lottery Corporation (owned by the governments of New Brunswick, Nova Scotia, Prince Edward Island and Newfoundland and Labrador)",
+      operators: list([op("alc.ca", "Atlantic Lottery Corporation Inc.", ["alc.ca"])], url, "The Government of Newfoundland and Labrador's release on online gaming: an online gaming platform is available in the province through Atlantic Lottery (alc.ca), the only regulated provider in the region. alc.ca carries lottery, instant-win, casino and PRO•LINE sports betting games."),
+      why: "Online gambling in Newfoundland and Labrador is offered only through Atlantic Lottery's alc.ca: Atlantic Lottery is owned by the four Atlantic provincial governments, and the Government of Newfoundland and Labrador describes it as the only regulated provider in the region. Newfoundland and Labrador made online games available through Atlantic Lottery in June 2023.",
+    };
+  },
+
+  AT() {
+    // BMF's list of federal concession holders: Österreichische Lotterien GmbH
+    // holds the lottery concession, which covers electronic lotteries (online
+    // gambling) on win2day.at.
+    const url = "https://www.bmf.gv.at/themen/gluecksspiel-spielerschutz/gesetzliche-grundlagen-gluecksspiel/konzessionaere-ausspielbewilligte.html";
+    const html = get(url);
+    const text = clean(html);
+    for (const re of [/Österreichische Lotterien GmbH/, /Elektronische Lotterien \( ?Online ?-Glücksspiel\) auf www\.win2day\.at/, /bis 30\. September 2027 berechtigt/])
+      if (!re.test(text)) throw new Error(`BMF: expected wording not found (${re})`);
+    if (!/href="https:\/\/www\.win2day\.at\/?"/.test(html)) throw new Error("BMF: no link to win2day.at");
+    // The BMF's monopoly FAQ, for the legal basis in `why`.
+    const faq = clean(get("https://www.bmf.gv.at/themen/gluecksspiel-spielerschutz/gesetzliche-grundlagen-gluecksspiel/faq-gluecksspielmonopol.html"));
+    for (const re of [/dürfen weder real noch online im Internet ohne Konzession nach dem Glücksspielgesetz entgeltlich angeboten werden/, /Die Annahme von Sportwetten bedarf einer landesgesetzlichen Bewilligung/])
+      if (!re.test(faq)) throw new Error(`BMF FAQ: expected wording not found (${re})`);
+    return {
+      regulator: "Federal Ministry of Finance (BMF); supervision by the Finanzamt Österreich",
+      casinos: list([op("win2day", "Österreichische Lotterien GmbH", ["https://www.win2day.at/"])], url, "The BMF lists Österreichische Lotterien GmbH as the federal lottery concession holder (until 30 September 2027); its concession includes electronic lotteries — online gambling — on www.win2day.at. It is the only online casino concession in Austria."),
+      why: "Under Austria's Gambling Act (GSpG), casino games may not be offered online without a federal concession, and a licence from another EU country does not count; the only concession covering online gambling is the lottery concession held by Österreichische Lotterien, used on win2day.at. Sports betting needs a licence from the federal state instead. A new Gambling Act, sent to the EU for notification in August 2026, would open online gambling to an open concession procedure.",
+    };
+  },
+
+  CH() {
+    // Casinos: the ESBK's "Online-Spielbanken" page lists the land-based
+    // casinos with an online platform in a table (casino, web address, start
+    // of online business). The site is a Nuxt app, so the table is read from
+    // the page's own embedded __NUXT_DATA__ payload, which the server sends
+    // with the HTML.
+    const url = "https://www.esbk.admin.ch/de/online-spielbanken";
+    const html = get(url);
+    if (!/Konzessionserweiterung, die vom Bundesrat erteilt wird/.test(clean(html))) throw new Error("ESBK: online casino page wording changed");
+    const data = JSON.parse((html.match(/<script[^>]*id="__NUXT_DATA__"[^>]*>([\s\S]*?)<\/script>/) || [])[1] || "null");
+    if (!Array.isArray(data)) throw new Error("ESBK: page data not found");
+    const txt = (i) => (typeof data[i] === "string" ? data[i] : "");
+    const table = data.find((v) => v && typeof v === "object" && !Array.isArray(v) && "bodyRows" in v && "headerColumns" in v
+      && data[v.headerColumns].some((h) => txt(data[h].text) === "Web-Adresse"));
+    if (!table) throw new Error("ESBK: online casino table not found");
+    const casinos = [];
+    for (const r of data[table.bodyRows]) {
+      const cells = data[r].map((c) => data[data[c].cellContent].map((x) => txt(data[x].text)).join(" "));
+      const [casino, site] = cells;
+      const href = (site.match(/href="([^"]+)"/) || [])[1];
+      if (!casino || !href) continue;
+      casinos.push(op(host(href), clean(casino), [href]));
+    }
+    if (casinos.length < 5) throw new Error(`ESBK: only ${casinos.length} online casinos read`);
+    // Betting: Gespa's sports-betting page names the two lottery companies and links their sites.
+    const betUrl = "https://www.gespa.ch/en/types-of-gambling/sports-betting";
+    const bet = get(betUrl);
+    const b = clean(bet);
+    for (const re of [/Sports betting with Loterie Romande and Swisslos/, /“Jouez Sport” and “Sporttip”/, /playable on the internet/])
+      if (!re.test(b)) throw new Error(`Gespa: expected wording not found (${re})`);
+    const sw = (bet.match(/href="(https:\/\/www\.swisslos\.ch[^"]*)"/) || [])[1];
+    const lr = (bet.match(/href="(https:\/\/jeux\.loro\.ch[^"]*)"/) || [])[1];
+    if (!sw || !lr) throw new Error("Gespa: lottery company links not found");
+    return {
+      regulator: "Federal Gaming Board (ESBK) for casinos; Gespa for lotteries and sports betting",
+      casinos: list(casinos, url, "The ESBK's list of Swiss casinos with an online platform: each row is the web address the ESBK gives and the land-based casino whose concession, extended by the Federal Council, covers it."),
+      sportsbooks: list([op("Swisslos", "Swisslos", [sw]), op("Loterie Romande", "Loterie Romande", [lr])], betUrl, "Gespa: the two lottery companies offer sports betting online and in retail under the brands 'Jouez Sport' (Loterie Romande, French-speaking cantons) and 'Sporttip' (Swisslos, German- and Italian-speaking cantons); Gespa links each company's site."),
+      why: "Under the Money Gaming Act in force since 1 January 2019, online casino games may only be offered by Swiss land-based casinos whose concession the Federal Council has extended to online play, with each game approved by the ESBK; large-scale lotteries are reserved to Swisslos and Loterie Romande, which also run the licensed online sports betting, under Gespa's supervision. Sites without Swiss authorisation are blocked.",
+    };
+  },
 };
 
 /** Minimal .xlsx reader: shared strings + the first worksheet, cells keyed by column letter. */
@@ -850,10 +1166,8 @@ function readXlsx(buf) {
 const UNREADABLE = {
   MT: { regulator: "Malta Gaming Authority (MGA)", sourceUrl: "https://www.mga.org.mt/licensee-hub/licensee-register/", note: "The MGA's licensee register is a search tool rather than a published list, and it licenses operators for other markets rather than for Maltese players." },
   RO: { regulator: "Oficiul Național pentru Jocuri de Noroc (ONJN)", sourceUrl: "https://onjn.gov.ro/", note: "ONJN's site sits behind a browser-verification wall that a reader can pass and a script cannot." },
-  AT: { regulator: "Federal Ministry of Finance (BMF)", sourceUrl: "https://www.bmf.gv.at/themen/gluecksspiel-spielerschutz/gluecksspiel-in-oesterreich.html", note: "Online casino games are a federal concession held by a single operator (win2day, Casinos Austria), so there is no register of competing online casinos; sports betting is licensed by each federal state." },
   NO: { regulator: "Lotteritilsynet", sourceUrl: "https://lottstift.no/for-spillere/", note: "Norway's exclusive-rights model gives Norsk Tipping and Norsk Rikstoto the only legal online offers; there is no register of licensed operators." },
   FI: { regulator: "Finnish Licensing and Supervisory Authority (Lupa- ja valvontavirasto)", sourceUrl: "https://lvv.fi/", note: "Veikkaus holds the exclusive right until the licensing market opens in 2027; the new authority has published no licensees yet." },
-  CH: { regulator: "Federal Gaming Board (ESBK) and Gespa", sourceUrl: "https://www.gespa.ch/en/regulation-and-licensing/operators", note: "Swiss online casino games may only be offered by land-based casinos holding an extended concession from the Federal Council; online betting is run by the two lottery companies under Gespa. The ESBK's site did not expose a readable list." },
   IE: { regulator: "Gambling Regulatory Authority of Ireland (GRAI)", sourceUrl: "https://www.grai.ie/licensing-regulation/business-to-consumer-licenses/licensing-phasing", note: "GRAI is phasing in business-to-consumer licensing under the Gambling Regulation Act 2024 and has not yet published a register of online licensees." },
   BR: { regulator: "Secretaria de Prêmios e Apostas (SPA), Ministério da Fazenda", sourceUrl: "https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas/medida-provisoria-ndeg-1-394-2026-entenda-as-novas-regras-para-as-apostas-de-quota-fixa", note: "Provisional Measure (Medida Provisória) nº 1.394 of 25 September 2026 prohibits fixed-odds betting and online games nationwide, and the previously authorised sites had to go offline from 6 October 2026. The SPA keeps its list of the companies authorised before the measure, but none may operate." },
   MX: { regulator: "Secretaría de Gobernación (SEGOB), Dirección General de Juegos y Sorteos", sourceUrl: "http://www.juegosysorteos.gob.mx/", note: "The Dirección General de Juegos y Sorteos publishes its permit holders and their authorised websites on juegosysorteos.gob.mx, which does not answer automated reads, and SEGOB's pages on gob.mx sit behind a browser-verification wall that a reader can pass and a script cannot." },

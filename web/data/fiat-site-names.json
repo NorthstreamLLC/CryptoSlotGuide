@@ -3923,6 +3923,190 @@
   "winz.io": {
    "name": "Winz Casino",
    "sourceUrl": "https://winz.io/"
+  },
+  "ab.daznbet.ca": {
+   "name": "DAZN Bet",
+   "sourceUrl": "https://ab.daznbet.ca/"
+  },
+  "bet365.com.au": {
+   "name": "bet365",
+   "sourceUrl": "https://www.bet365.com.au/"
+  },
+  "888.ca": {
+   "name": "888",
+   "sourceUrl": "https://www.888.ca/"
+  },
+  "ab.partycasino.ca": {
+   "name": "PartyCasino",
+   "sourceUrl": "https://www.ab.partycasino.ca/en-ca/games"
+  },
+  "betit.com.au": {
+   "name": "Betit",
+   "sourceUrl": "https://betit.com.au/"
+  },
+  "epicodds.com.au": {
+   "name": "EpicOdds",
+   "sourceUrl": "https://epicodds.com.au/"
+  },
+  "goldenbet888.com.au": {
+   "name": "GoldenBet888",
+   "sourceUrl": "https://goldenbet888.com.au/"
+  },
+  "admiral.ch": {
+   "name": "Admiral",
+   "sourceUrl": "https://www.admiral.ch/en"
+  },
+  "betmgm.ca": {
+   "name": "BetMGM",
+   "sourceUrl": "https://www.nj.betmgm.com/en/engage/lan/geolocator?orh=www.betmgm.com"
+  },
+  "crownbet.com.au": {
+   "name": "CrownBet",
+   "sourceUrl": "https://crownbet.com.au/"
+  },
+  "luckyliner.com": {
+   "name": "LuckyLiner",
+   "sourceUrl": "https://luckyliner.com/"
+  },
+  "earlycrow.bet": {
+   "name": "EarlyCrow",
+   "sourceUrl": "https://earlycrow.bet/"
+  },
+  "canada.sportsbook.fanduel.com": {
+   "name": "FanDuel Sportsbook",
+   "sourceUrl": "https://sportsbook.fanduel.ca/"
+  },
+  "dabble.com.au": {
+   "name": "Dabble: You Better Believe It",
+   "sourceUrl": "https://www.dabble.com.au/"
+  },
+  "betalpha.au": {
+   "name": "Bet Alpha",
+   "sourceUrl": "https://www.betalpha.au/"
+  },
+  "betbuzz.au": {
+   "name": "BetBuzz",
+   "sourceUrl": "https://www.betbuzz.au/"
+  },
+  "betdragon.au": {
+   "name": "Bet Dragon",
+   "sourceUrl": "https://www.betdragon.au/"
+  },
+  "knucklebet.com.au": {
+   "name": "KnuckleBet",
+   "sourceUrl": "https://knucklebet.com.au/"
+  },
+  "nextbet.com.au": {
+   "name": "NextBet",
+   "sourceUrl": "https://www.nextbet.com.au/"
+  },
+  "caesars.com": {
+   "name": "Caesars Home Page",
+   "sourceUrl": "https://www.caesars.com/"
+  },
+  "online.swisscasinos.ch": {
+   "name": "Swiss Casinos",
+   "sourceUrl": "https://online.swisscasinos.ch/"
+  },
+  "casineo.ch": {
+   "name": "Casineo",
+   "sourceUrl": "https://casineo.ch/en"
+  },
+  "playalberta.ca": {
+   "name": "Play Alberta",
+   "sourceUrl": "https://playalberta.ca/"
+  },
+  "playup.com.au": {
+   "name": "PlayUp",
+   "sourceUrl": "https://www.playup.com.au/"
+  },
+  "mycasino.ch": {
+   "name": "mycasino",
+   "sourceUrl": "https://www.mycasino.ch/en"
+  },
+  "pointsbet.com.au": {
+   "name": "PointsBet",
+   "sourceUrl": "https://pointsbet.com.au/"
+  },
+  "next2go.com.au": {
+   "name": "Next2Go",
+   "sourceUrl": "https://next2go.com.au/"
+  },
+  "firevegas.com": {
+   "name": "FireVegas",
+   "sourceUrl": "https://www.firevegas.com/en/"
+  },
+  "lotoquebec.com": {
+   "name": "lotoquebec",
+   "sourceUrl": "https://portail.lotoquebec.com/fr/accueil"
+  },
+  "stardustcasino.com": {
+   "name": "Stardust Casino in NJ, PA,",
+   "sourceUrl": "https://www.stardustcasino.com:443/"
+  },
+  "canada.casino.fanduel.com": {
+   "name": "FanDuel",
+   "sourceUrl": "https://casino.fanduel.ca:443/"
+  },
+  "ponybet.com.au": {
+   "name": "PonyBet",
+   "sourceUrl": "https://ponybet.com.au/"
+  },
+  "swiss4win.ch": {
+   "name": "Swiss4Win.ch by Casinò Lugano",
+   "sourceUrl": "https://www.swiss4win.ch/"
+  },
+  "tonybetalberta.ca": {
+   "name": "Tonybet",
+   "sourceUrl": "https://tonybetalberta.ca/"
+  },
+  "puntx.com.au": {
+   "name": "PuntX",
+   "sourceUrl": "https://puntx.com.au/"
+  },
+  "playnow.com": {
+   "name": "PlayNow",
+   "sourceUrl": "https://www.playnow.com/"
+  },
+  "casino777.ch": {
+   "name": "Casino777",
+   "sourceUrl": "https://www.casino777.ch/"
+  },
+  "upyago.com.au": {
+   "name": "UpYaGo",
+   "sourceUrl": "https://upyago.com.au/"
+  },
+  "mintbet.au": {
+   "name": "MintBet",
+   "sourceUrl": "https://www.mintbet.au/"
+  },
+  "ripperbet.au": {
+   "name": "Ripper Bet",
+   "sourceUrl": "https://www.ripperbet.au/"
+  },
+  "starvegas.ch": {
+   "name": "StarVegas",
+   "sourceUrl": "https://www.starvegas.ch/de"
+  },
+  "pasino.ch": {
+   "name": "Swiss Online Casino PASINO.ch",
+   "sourceUrl": "https://www.pasino.ch/en/"
+  },
+  "win2day.at": {
+   "name": "win2day",
+   "sourceUrl": "https://www.win2day.at/"
+  },
+  "unibet.com.au": {
+   "name": "Unibet",
+   "sourceUrl": "https://www.unibet.com.au/"
+  },
+  "pointsbet.ca": {
+   "name": "PointsBet",
+   "sourceUrl": "https://www.pointsbet.ca/"
+  },
+  "swisslos.ch": {
+   "name": "Swisslos",
+   "sourceUrl": "https://www.swisslos.ch/de/home.html"
   }
  },
  "failed": {
@@ -4912,7 +5096,38 @@
   "toto.ee": "no answer",
   "xcasino.hu": "no answer",
   "kaszino.hu": "no answer",
-  "vegas.hu": "no answer"
+  "vegas.hu": "no answer",
+  "ab.playvegasclub.ca": "HTTP 200, no matching name",
+  "betfair.com.au": "HTTP 403, no matching name",
+  "alberta.casinotime.ca": "HTTP 403, no matching name",
+  "ab.sportsinteraction.com": "HTTP 200, no matching name",
+  "betright.com.au": "HTTP 403, no matching name",
+  "betdeluxe.com.au": "HTTP 403, no matching name",
+  "bet99.com": "HTTP 403, no matching name",
+  "betexpress.com.au": "HTTP 403, no matching name",
+  "betjet.com.au": "HTTP 403, no matching name",
+  "betnation.com.au": "HTTP 403, no matching name",
+  "bigbet.com.au": "HTTP 403, no matching name",
+  "infomarket.com.au": "HTTP 403, no matching name",
+  "alc.ca": "HTTP 200, no matching name",
+  "ladbrokes.com.au": "HTTP 403, no matching name",
+  "megacasino.ca": "HTTP 404, no matching name",
+  "mightybet.com.au": "HTTP 403, no matching name",
+  "neds.com.au": "HTTP 403, no matching name",
+  "draftkings.com": "HTTP 200, no matching name",
+  "jeux.loro.ch": "HTTP 200, no matching name",
+  "jackpots.ch": "HTTP 200, no matching name",
+  "noisy.com.au": "HTTP 403, no matching name",
+  "powerplay.com": "HTTP 200, no matching name",
+  "puntcity.com.au": "HTTP 200, no matching name",
+  "pulsebet.com.au": "HTTP 403, no matching name",
+  "purecasino.ca": "HTTP 200, no matching name",
+  "thescore-casino.ca": "no answer",
+  "sportsbet.com.au": "HTTP 403, no matching name",
+  "surge.com.au": "HTTP 403, no matching name",
+  "7melons.ch": "HTTP 200, no matching name",
+  "yesbet.com.au": "HTTP 403, no matching name",
+  "tab.com.au": "HTTP 500, no matching name"
  },
  "note": "Each licensed site's own name, read from its home page (og:site_name, application-name or <title>) by scripts/fetch-fiat-names.mjs, kept only where it matches the domain. sourceUrl is the page it was read from."
 }

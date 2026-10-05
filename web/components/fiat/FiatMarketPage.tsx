@@ -42,17 +42,26 @@ export function FiatMarketPage({ m, type }: { m: FiatMarket; type: FiatProduct |
             <div>
               <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".1em", textTransform: "uppercase", color: "#5FE3E8", marginBottom: 4 }}>Licensed in {m.name} · fiat</div>
               <h1 style={{ margin: 0, fontSize: "clamp(30px, 4vw, 46px)", lineHeight: 1.05, letterSpacing: "-.035em", fontWeight: 800, color: "#fff", textWrap: "balance" }}>
-                Licensed online casinos and sportsbooks in {m.name}
+                {casinos === 0 && sports > 0 ? `Licensed online sportsbooks in ${m.name}` : `Licensed online casinos and sportsbooks in ${m.name}`}
               </h1>
             </div>
           </div>
           <p style={{ margin: "0 0 18px", maxWidth: "70ch", fontSize: 16, lineHeight: 1.6, color: "#A8B6BE", textWrap: "pretty" }}>
-            Every brand {m.regulator} licenses — {m.brands.length} brands across the {m.sites.length} web addresses on its register — with the company holding
-            each licence and a link to the site. Search for a name below. These are the locally licensed options; crypto casinos are listed separately.
+            {m.brands.length === 1 ? (
+              <>
+                {m.brands[0].name} is the one legal online operator {m.regulator} names, run by {m.brands[0].holders[0] ?? "the province"}. It is the locally
+                licensed option; crypto casinos are listed separately.
+              </>
+            ) : (
+              <>
+                Every brand {m.regulator} licenses — {m.brands.length} brands across the {m.sites.length} web addresses on its register — with the company holding
+                each licence and a link to the site. Search for a name below. These are the locally licensed options; crypto casinos are listed separately.
+              </>
+            )}
           </p>
           <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
             {[
-              [String(m.brands.length), "licensed brands"],
+              [String(m.brands.length), m.brands.length === 1 ? "licensed brand" : "licensed brands"],
               ...(split ? [[String(casinos), "licensed for casino"], [String(sports), "licensed for sports betting"]] : []),
             ].map(([v, l]) => (
               <span key={l} style={{ display: "inline-flex", alignItems: "baseline", gap: 8, padding: "8px 13px", borderRadius: 100, background: "rgba(255,255,255,.04)", border: "1px solid rgba(255,255,255,.09)", fontSize: 13.5, color: "#A8B6BE" }}>
