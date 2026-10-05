@@ -93,13 +93,32 @@ const NAME_BY_LABEL = new Map<string, string>();
 for (const [d, v] of Object.entries(NAMES)) if (!NAME_BY_LABEL.has(labelOf(d))) NAME_BY_LABEL.set(labelOf(d), v.name);
 
 /**
+ * A brand another register gives a domain with this label: Ontario's register
+ * names "Mr Green" for its .ca site, so Sweden's mrgreen.se can say so too.
+ */
+let registerByLabel: Map<string, string> | null = null;
+const REGISTER_BY_LABEL = () => {
+  if (registerByLabel) return registerByLabel;
+  const m = (registerByLabel = new Map<string, string>());
+  for (const c of Object.values((world as unknown as { countries: Record<string, CountryMarket> }).countries))
+    for (const l of [c.casinos, c.sportsbooks, c.operators])
+      for (const o of l?.operators ?? []) {
+        const doms = o.domains ?? [];
+        if (doms.length !== 1 || isDomain(o.brand) || o.brand === o.licenseHolder || o.brand.includes(" / ")) continue;
+        const lab = labelOf(host(doms[0]));
+        if (!m.has(lab) && letters(o.brand).includes(letters(lab))) m.set(lab, o.brand);
+      }
+  return m;
+};
+
+/**
  * What a site is called on the page: the register's own brand where it names
  * one, else the name the site gives itself (data/fiat-site-names.json), else
  * a sibling domain's name, else the domain's label set as a word.
  */
 function displayName(domain: string, registerBrand: string | null): string {
   if (registerBrand && !isDomain(registerBrand)) return registerBrand;
-  const own = NAMES[domain]?.name ?? NAME_BY_LABEL.get(labelOf(domain));
+  const own = NAMES[domain]?.name ?? NAME_BY_LABEL.get(labelOf(domain)) ?? REGISTER_BY_LABEL().get(labelOf(domain));
   if (own) return own;
   const l = labelOf(domain);
   return l.length <= 3 ? l.toUpperCase() : l.charAt(0).toUpperCase() + l.slice(1);

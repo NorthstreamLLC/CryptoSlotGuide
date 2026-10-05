@@ -1,4 +1,70 @@
 {
+  "brazil-bans-sports-betting-and-online-casinos": {
+    "published": "2026-10-05",
+    "key": [
+      "Provisional Measure 1.394 of 25 September 2026 prohibits fixed-odds betting across Brazil: sports betting and online casino games alike.",
+      "The licensed .bet.br sites had to go offline from 6 October. Remaining balances go back to players through their banks between 9 and 14 October.",
+      "The ban reaches operators based abroad that offer bets to people in Brazil, which includes crypto casinos.",
+      "The measure lapses unless Congress converts it into law within 60 days, a period that can be extended once by another 60."
+    ],
+    "body": [
+      "Brazil's government published Provisional Measure 1.394 on 25 September 2026. It prohibits, across the whole country, the operation, offer, intermediation and advertising of fixed-odds betting. Fixed-odds betting is the legal category that covered both sports betting and online casino games in Brazil's licensed market.",
+      "## What the ban covers",
+      "According to the Ministry of Finance, the measure applies to sports bets and to online games, in physical and virtual settings alike. It applies even when an operator based abroad offers them to people located in Brazil. It also covers the concessions, permits and authorisations that states and the Federal District had granted for fixed-odds betting. Other lotteries authorised by law are not affected.",
+      "## The timetable",
+      "From 25 September, no new money could go into betting accounts. Players had until 23:59 on 5 October to request their balances. From 6 October, betting sites and apps had to be unavailable.",
+      "On 6 and 7 October, operators must report each player's remaining balance to the banks, listed by CPF and with the bank account the deposits came from. The banks return the money between 9 and 14 October. Where a bank cannot, Caixa Econômica Federal acts as intermediary from 14 October.",
+      "## What happened to the licensed market",
+      "Brazil opened its licensed market on 1 January 2025, with every authorised operator on a .bet.br domain. The Secretariat of Prizes and Bets (SPA) still publishes its list of the companies it authorised, now titled as authorised until the measure took effect, but none of them may operate. Our licensed-casinos page lists Brazil as a market with no legal operators for that reason.",
+      "## What it means for crypto casinos",
+      "Licensed operators were already barred from taking crypto deposits under SPA Ordinance 615 of 2024. The new measure goes further: offering bets or online casino games to people in Brazil is prohibited, whoever the operator is and wherever it is based. A crypto casino that leaves Brazil off its own restricted list is not thereby lawful to play at from Brazil. Our Brazil country pages now lead with the ban.",
+      "## How long it lasts",
+      "A provisional measure has the force of law from the day it is published. Under Article 62 of the Constitution, it lapses unless Congress converts it into law within 60 days, a period that can be extended once by another 60. We will update the Brazil pages when Congress acts."
+    ],
+    "sources": [
+      {
+        "label": "Ministry of Finance (SPA): Provisional Measure 1.394/2026 explained, with the timetable (2 October 2026)",
+        "url": "https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas/medida-provisoria-ndeg-1-394-2026-entenda-as-novas-regras-para-as-apostas-de-quota-fixa"
+      },
+      {
+        "label": "Provisional Measure 1.394 of 25 September 2026, Diário Oficial da União",
+        "url": "https://www.in.gov.br/web/dou/-/medida-provisoria-n-1.394-de-25-de-setembro-de-2026-734808521"
+      },
+      {
+        "label": "SPA: companies authorised until the measure took effect",
+        "url": "https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas/transparencia-ativa-processos-de-autorizacao-de-apostas-de-quota-fixa/empresas-autorizadas"
+      },
+      {
+        "label": "Constitution of Brazil, Article 62 (provisional measures)",
+        "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      {
+        "label": "SPA/MF Ordinance 615 of 2024 (crypto deposits)",
+        "url": "https://www.in.gov.br/en/web/dou/-/portaria-normativa-spa/mf-n-615-de-16-de-abril-de-2024-554928583"
+      },
+      {
+        "label": "SPA: fixed-odds betting and the .bet.br domain",
+        "url": "https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas/apostas-de-quota-fixa"
+      }
+    ],
+    "next": [
+      {
+        "href": "/legal/br",
+        "label": "Gambling law in Brazil",
+        "hint": "The regulator, the ban and its sources."
+      },
+      {
+        "href": "/licensed-casinos",
+        "label": "Licensed casinos, country by country",
+        "hint": "Every regulator's own list of licensed sites."
+      },
+      {
+        "href": "/legal",
+        "label": "Gambling law, every country",
+        "hint": "What each country's own regulator allows."
+      }
+    ]
+  },
   "how-casino-rtp-versions-work": {
     "key": [
       "Studios can license one title at several return rates",

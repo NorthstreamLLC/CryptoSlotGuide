@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { siteData } from "@/lib/site-data";
 import { fill } from "@/lib/derived";
 import { pageMetadata } from "@/lib/seo";
-import { breadcrumbSchema } from "@/lib/schema";
+import { articleSchema, breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { NextSteps } from "@/components/layout/NextSteps";
 import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
@@ -62,7 +62,12 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 
   return (
     <main>
-      <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Guides", path: "/guides" }, { name: g.title, path: `/guides/${slug}` }])} />
+      <JsonLd
+        data={[
+          breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Guides", path: "/guides" }, { name: g.title, path: `/guides/${slug}` }]),
+          ...(body.published ? [articleSchema(g.title, fill(g.standfirst, siteData), `/guides/${slug}`, body.published, body.published)] : []),
+        ]}
+      />
       <article style={{ maxWidth: 820, margin: "0 auto", padding: "52px 40px 40px" }}>
         <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#83919A", marginBottom: 26 }}>
           <Link href="/" style={{ color: "#83919A" }}>Index</Link> / <Link href="/guides" style={{ color: "#83919A" }}>Guides</Link> / <span style={{ color: "#A8B6BE" }}>{g.category}</span>
@@ -91,13 +96,35 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         </div>
 
         <div style={{ display: "flex", flexDirection: "column", gap: 22, marginBottom: 38 }}>
-          {body.body.map((p) => (
-            <p key={p.slice(0, 40)} style={{ margin: 0, fontSize: 17, lineHeight: 1.75, color: "#B0BEC5", textWrap: "pretty" }}>{emphasise(fill(p, siteData))}</p>
-          ))}
+          {/* "## " starts a section heading; everything else is a paragraph. */}
+          {body.body.map((p) =>
+            p.startsWith("## ") ? (
+              <h2 key={p} style={{ margin: "12px 0 -6px", fontSize: 24, lineHeight: 1.2, letterSpacing: "-.022em", fontWeight: 800, color: "#fff", textWrap: "balance" }}>
+                {p.slice(3)}
+              </h2>
+            ) : (
+              <p key={p.slice(0, 40)} style={{ margin: 0, fontSize: 17, lineHeight: 1.75, color: "#B0BEC5", textWrap: "pretty" }}>{emphasise(fill(p, siteData))}</p>
+            )
+          )}
         </div>
 
         {/* The dataset the prose is arguing from, where a guide names one. */}
         {dataBlock?.()}
+
+        {body.sources && body.sources.length > 0 && (
+          <section style={{ marginBottom: 38, padding: "20px 24px", borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
+            <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 12 }}>Sources</div>
+            <ol style={{ margin: 0, paddingLeft: 20, display: "flex", flexDirection: "column", gap: 8 }}>
+              {body.sources.map((s) => (
+                <li key={s.url} style={{ fontSize: 14, lineHeight: 1.5, color: "#B0BEC5" }}>
+                  <a href={s.url} target="_blank" rel="noopener noreferrer nofollow" style={{ color: "#5FE3E8" }}>
+                    {s.label} ↗
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </section>
+        )}
 
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
           {related.map((r) => (
@@ -109,7 +136,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         </div>
         <FeaturedPartner context={{ kind: "general" }} />
         <NextSteps
-          steps={[
+          steps={body.next ?? [
             { href: "/guides", label: "All guides", hint: "The operational detail behind the reviews, kept current." },
             { href: "/crypto-casinos", label: "All crypto casinos", hint: "Put this guide to work on the full index." },
             { href: "/how-we-rate", label: "How we source every fact", hint: "The method behind every figure on the site." },

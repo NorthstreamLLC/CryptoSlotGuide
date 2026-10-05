@@ -306,6 +306,12 @@ export interface GuideBody {
    * it on trust, which is the thing this site exists not to ask.
    */
   data?: string;
+  /** The pages a news piece is written from, listed under it. Every claim in it traces to one. */
+  sources?: { label: string; url: string }[];
+  /** ISO date first published; adds Article markup. */
+  published?: string;
+  /** Where the reader goes next, when the guide has better places than the defaults. */
+  next?: { href: string; label: string; hint: string }[];
 }
 /** Keyed by guide slug. */
 export type GuideBodies = Record<string, GuideBody>;

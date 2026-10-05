@@ -163,7 +163,9 @@ async function toWebp(buf, url) {
 }
 
 async function one(domain) {
-  const home = await get(`https://${domain}/`);
+  let home = await get(`https://${domain}/`);
+  // Registers list the bare domain; some sites answer only at www.
+  if (!(home.status >= 200 && home.status < 400) && !domain.startsWith("www.")) home = await get(`https://www.${domain}/`);
   const base = home.url || `https://${domain}/`;
   let cands = home.status >= 200 && home.status < 400 ? candidates(home.body, base) : [];
   // Manifest icons carry real sizes; open the manifest if there is one.
@@ -182,7 +184,14 @@ async function one(domain) {
   }
   cands = cands.filter((c) => c.kind === "icon");
   // The conventional paths, last, for sites that declare nothing.
-  cands.push({ kind: "icon", url: `https://${domain}/apple-touch-icon.png`, size: 180 }, { kind: "icon", url: `https://${domain}/favicon.ico`, size: 16 });
+  const origin = (() => {
+    try {
+      return new URL(base).origin;
+    } catch {
+      return `https://${domain}`;
+    }
+  })();
+  cands.push({ kind: "icon", url: `${origin}/apple-touch-icon.png`, size: 180 }, { kind: "icon", url: `${origin}/favicon.ico`, size: 16 });
   cands.sort((a, b) => b.size - a.size);
   const seen = new Set();
   for (const c of cands) {

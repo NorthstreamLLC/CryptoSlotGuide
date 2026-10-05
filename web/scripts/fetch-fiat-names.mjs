@@ -106,7 +106,9 @@ const queue = [...todo];
 async function worker() {
   while (queue.length) {
     const d = queue.shift();
-    const r = await get(`https://${d}/`);
+    let r = await get(`https://${d}/`);
+    // Registers list the bare domain; some sites answer only at www.
+    if (!(r.status >= 200 && r.status < 400) && !d.startsWith("www.")) r = await get(`https://www.${d}/`);
     const name = r.status >= 200 && r.status < 400 ? pick(r.body, d) : null;
     if (name) {
       data.names[d] = { name, sourceUrl: r.url };
