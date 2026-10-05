@@ -218,7 +218,12 @@ export function Header({ counts }: { counts: SiteCounts }) {
                         style={{ display: "flex", alignItems: "center", gap: 11, padding: "9px 2px", color: "#C3CFD5", fontSize: 14, fontWeight: 500 }}
                       >
                         <span style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 26, height: 26, flex: "none", borderRadius: 7, background: "rgba(255,255,255,.04)", border: "1px solid rgba(255,255,255,.07)", fontSize: 13 }}>
-                          {section.mono}
+                          {section.icon ? (
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img src={section.icon} alt="" width={18} height={13} style={{ width: 18, height: 13, borderRadius: 2, objectFit: "cover" }} />
+                        ) : (
+                          section.mono
+                        )}
                         </span>
                         {section.label}
                       </Link>
@@ -306,7 +311,12 @@ export function Header({ counts }: { counts: SiteCounts }) {
                         lineHeight: 1,
                       }}
                     >
-                      {section.mono}
+                      {section.icon ? (
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img src={section.icon} alt="" width={18} height={13} style={{ width: 18, height: 13, borderRadius: 2, objectFit: "cover" }} />
+                        ) : (
+                          section.mono
+                        )}
                     </span>
                     <span style={{ fontSize: 13.5, fontWeight: 600, letterSpacing: "-.012em" }}>
                       {section.label}

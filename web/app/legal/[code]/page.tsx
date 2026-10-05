@@ -7,6 +7,7 @@ import { COUNTRIES, countryBy } from "@/lib/legal";
 import { CasinoAccess } from "@/components/legal/CasinoAccess";
 import { CountryMarketBlock } from "@/components/legal/CountryMarket";
 import { worldMarket, unreadableRegister } from "@/lib/world-market";
+import { fiatMarketFor, fiatHref } from "@/lib/fiat";
 import { countryPages } from "@/lib/landing";
 import { LegalHero, StatusTile, Sources, Disclaimer, JumpList, MONO } from "@/components/legal/LegalUI";
 import { HelpBox } from "@/components/legal/HelpBox";
@@ -59,7 +60,15 @@ export default async function Page({ params }: { params: Promise<{ code: string 
         </div>
 
         <CasinoAccess code={c.code.split("-")[0]} name={c.name} />
-        <CountryMarketBlock market={worldMarket(c.code)} unreadable={unreadableRegister(c.code)} countryName={c.name} />
+        <CountryMarketBlock
+          market={worldMarket(c.code)}
+          unreadable={unreadableRegister(c.code)}
+          countryName={c.name}
+          fiat={(() => {
+            const f = fiatMarketFor(c.code);
+            return f ? { href: fiatHref(f.code), sites: f.sites.length } : null;
+          })()}
+        />
         {hasCountryPage && (
           <Link
             href={`/crypto-casinos/in/${code}`}

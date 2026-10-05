@@ -1,0 +1,3422 @@
+{
+  "note": "Site icons for licensed (fiat) sites, each read from the site's own pages by scripts/fetch-fiat-logos.mjs and stored as a 96px WebP in public/assets/logos/fiat. sourceUrl is the icon file it came from. `failed` lists domains whose own pages gave no usable icon (bot walls, geo-blocks, bitmap-only ICOs).",
+  "logos": {
+    "69games.cz": {
+      "file": "69games.cz.webp",
+      "sourceUrl": "https://www.69games.cz/static/favicons/android-chrome-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "44aces.com": {
+      "file": "44aces.com.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/44aces/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "44-aces.es": {
+      "file": "44-aces.es.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/44aces/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "44-aces.de": {
+      "file": "44-aces.de.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/44aces/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "11.lv": {
+      "file": "11.lv.webp",
+      "sourceUrl": "https://www.11.lv/_next/static/chunks/favicon-32x32-D_hAsW8m.png",
+      "width": 32,
+      "fetched": "2026-10-05"
+    },
+    "711sports.be": {
+      "file": "711sports.be.webp",
+      "sourceUrl": "https://www.711sports.be/media/2025-04/favicon-180x180-px-1-z9Y-favicon_apple-touch.png",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "1x2.se": {
+      "file": "1x2.se.webp",
+      "sourceUrl": "https://www.1x2.se/_next/static/chunks/favicon-32x32-C0ZzdciI.png",
+      "width": 32,
+      "fetched": "2026-10-05"
+    },
+    "888sport.com": {
+      "file": "888sport.com.webp",
+      "sourceUrl": "https://www.888sport.com/content/dam/holdings888/888sport/common/favicons/new-icons/888sport-new-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "aconcaguapoker.es": {
+      "file": "aconcaguapoker.es.webp",
+      "sourceUrl": "https://aconcaguapoker.es/favicon.ico",
+      "width": 48,
+      "fetched": "2026-10-05"
+    },
+    "admiralbet.de": {
+      "file": "admiralbet.de.webp",
+      "sourceUrl": "https://admiralbet-de-prod-cdn-static.gt-cdn.net/web_assets/abde/assets/img/favicon/android-chrome-512x512.686d7620.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "888.nl": {
+      "file": "888.nl.webp",
+      "sourceUrl": "https://d3j4vz29nirhst.cloudfront.net/888/nl_nl/general/FAVICON_MOBILE_ANDROID_CHROME_192x192/2/web-app-manifest-192x192.png",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "ahtigames.com": {
+      "file": "ahtigames.com.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/ahtigames/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "ahtigames.de": {
+      "file": "ahtigames.de.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/ahtigames/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "admiralbet.es": {
+      "file": "admiralbet.es.webp",
+      "sourceUrl": "https://admiralbet-es-cdn-static.gt-cdn.net/web_assets/abes/assets/img/favicon/android-chrome-512x512.686d7620.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "ahtigames.es": {
+      "file": "ahtigames.es.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/ahtigames/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "atg.se": {
+      "file": "atg.se.webp",
+      "sourceUrl": "https://static-content.prod.c1.atg.cloud/atg-web/assets/frame/icons/apple-touch-icon.png",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "allwyn.cz": {
+      "file": "allwyn.cz.webp",
+      "sourceUrl": "https://www.allwyn.cz/favicon/web-app-manifest-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "apollogames.cz": {
+      "file": "apollogames.cz.webp",
+      "sourceUrl": "https://www.apollogames.cz/assets/img/favicon-32x32.png",
+      "width": 32,
+      "fetched": "2026-10-05"
+    },
+    "bacanaplay.com": {
+      "file": "bacanaplay.com.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/bacanaplay/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "bacanaplay.de": {
+      "file": "bacanaplay.de.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/bacanaplay/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "bacanaplay.es": {
+      "file": "bacanaplay.es.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/bacanaplay/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "bet-at-home.de": {
+      "file": "bet-at-home.de.webp",
+      "sourceUrl": "https://www.bet-at-home.de/static/img/icon-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "bet25.dk": {
+      "file": "bet25.dk.webp",
+      "sourceUrl": "https://bet25.dk/favicon.svg",
+      "width": 4267,
+      "fetched": "2026-10-05"
+    },
+    "bet365.bet.ar": {
+      "file": "bet365.bet.ar.webp",
+      "sourceUrl": "https://www.bet365.bet.ar/sportsbook-static/favicons/favicon-192x192.png",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "bet365.com": {
+      "file": "bet365.com.webp",
+      "sourceUrl": "https://www.bet365.com/sportsbook-static/favicons/favicon-192x192.png",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "bet365.es": {
+      "file": "bet365.es.webp",
+      "sourceUrl": "https://www.bet365.es/sportsbook-static/favicons/favicon-192x192.png",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "bet365.com.cy": {
+      "file": "bet365.com.cy.webp",
+      "sourceUrl": "https://www.bet365.com.cy/sportsbook-static/favicons/favicon-192x192.png",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "bet365.de": {
+      "file": "bet365.de.webp",
+      "sourceUrl": "https://www.bet365.de/sportsbook-static/favicons/favicon-192x192.png",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "bet365.dk": {
+      "file": "bet365.dk.webp",
+      "sourceUrl": "https://www.bet365.dk/sportsbook-static/favicons/favicon-192x192.png",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "bet365.fr": {
+      "file": "bet365.fr.webp",
+      "sourceUrl": "https://www.bet365.fr/sportsbook-static/favicons/favicon-192x192.png",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "bet365.it": {
+      "file": "bet365.it.webp",
+      "sourceUrl": "https://www.bet365.it/sportsbook-static/favicons/favicon-192x192.png",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "bet365.nl": {
+      "file": "bet365.nl.webp",
+      "sourceUrl": "https://www.bet365.nl/sportsbook-static/favicons/favicon-192x192.png",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "bet777.be": {
+      "file": "bet777.be.webp",
+      "sourceUrl": "https://bet777.be/apple-touch-icon.png",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "bethard.com": {
+      "file": "bethard.com.webp",
+      "sourceUrl": "https://bethard.com/apple-touch-icon.png",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "betonalfa.com.cy": {
+      "file": "betonalfa.com.cy.webp",
+      "sourceUrl": "https://betonalfa.com.cy/android-icon-192x192.png",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "betmgm.se": {
+      "file": "betmgm.se.webp",
+      "sourceUrl": "https://www.betmgm.se/static/pwa-icons/512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "betmgm.nl": {
+      "file": "betmgm.nl.webp",
+      "sourceUrl": "https://www.betmgm.nl/static/pwa-icons/512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "betmaster.dk": {
+      "file": "betmaster.dk.webp",
+      "sourceUrl": "https://betmaster.dk/static/favicons/apple-touch-icon-1024x1024.png",
+      "width": 1024,
+      "fetched": "2026-10-05"
+    },
+    "betor.cz": {
+      "file": "betor.cz.webp",
+      "sourceUrl": "https://www.betor.cz/images/favicons/betorRed_apple-touch-icon.png",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "betssoncasino.be": {
+      "file": "betssoncasino.be.webp",
+      "sourceUrl": "https://www.betssoncasino.be/assets/favicons/apple-touch-icon.png",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "betrivers.ca": {
+      "file": "betrivers.ca.webp",
+      "sourceUrl": "https://betrivers.ca/assets/favicon/apple-touch-icon.png",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "betssonsports.be": {
+      "file": "betssonsports.be.webp",
+      "sourceUrl": "https://www.betssonsports.be/assets/favicons/apple-touch-icon.png",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "betstars.fr": {
+      "file": "betstars.fr.webp",
+      "sourceUrl": "https://www.foxsports.com/android-chrome-256x256.png",
+      "width": 256,
+      "fetched": "2026-10-05"
+    },
+    "betty.ca": {
+      "file": "betty.ca.webp",
+      "sourceUrl": "https://betty.ca/favicon/android-icon-192x192.png",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "betstars.dk": {
+      "file": "betstars.dk.webp",
+      "sourceUrl": "https://www.foxsports.com/android-chrome-256x256.png",
+      "width": 256,
+      "fetched": "2026-10-05"
+    },
+    "betuntd.ca": {
+      "file": "betuntd.ca.webp",
+      "sourceUrl": "https://betuntd.ca/dl/betur-icon-512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "betway.ca": {
+      "file": "betway.ca.webp",
+      "sourceUrl": "https://betway.ca/assets/images/icons/icon-512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "betway.com": {
+      "file": "betway.com.webp",
+      "sourceUrl": "https://betway.com/assets/images/icons/icon-512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "betway.de": {
+      "file": "betway.de.webp",
+      "sourceUrl": "https://betway.de/assets/images/icons/icon-512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "betway.es": {
+      "file": "betway.es.webp",
+      "sourceUrl": "https://betway.es/assets/images/icons/icon-512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "bingo.dk": {
+      "file": "bingo.dk.webp",
+      "sourceUrl": "https://www.bingo.dk/assets/images/favicons/android-chrome-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "bonvercasino.cz": {
+      "file": "bonvercasino.cz.webp",
+      "sourceUrl": "https://www.bonvercasino.cz/apple-icon.png?2c583824e1c56123",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "bingoal.nl": {
+      "file": "bingoal.nl.webp",
+      "sourceUrl": "https://www.bingoal.nl/images/favicon/android-chrome-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "bingbong.de": {
+      "file": "bingbong.de.webp",
+      "sourceUrl": "https://www.bingbong.de/android-chrome-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "botemania.es": {
+      "file": "botemania.es.webp",
+      "sourceUrl": "https://www.botemania.es/icons/botemania/192x192.png",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "bwin.dk": {
+      "file": "bwin.dk.webp",
+      "sourceUrl": "https://help.bwin.dk/-/media/31D1268CCAB24872B30A2417B435E21F.ashx",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "casino.betway.com": {
+      "file": "casino.betway.com.webp",
+      "sourceUrl": "https://betway.com/g/static/media/betway-icon-512x512.d0812e89.png?dpl=dpl-mur3jt4a",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "bytcasino.com": {
+      "file": "bytcasino.com.webp",
+      "sourceUrl": "https://images.naturalint.com/iu/c_scale,h_32,w_32/f_png/q_auto/v1/production/sites/uploads/photo/GDBjZosg.20211209123821.png",
+      "width": 32,
+      "fetched": "2026-10-05"
+    },
+    "caesarspalaceonline.com": {
+      "file": "caesarspalaceonline.com.webp",
+      "sourceUrl": "https://caesarspalaceonline.com/astro-favicons/cpo-favicon-32x32.png",
+      "width": 32,
+      "fetched": "2026-10-05"
+    },
+    "casino.novoline.de": {
+      "file": "casino.novoline.de.webp",
+      "sourceUrl": "https://casino.novoline.de/pwa/icons/icon-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "casino.toto.nl": {
+      "file": "casino.toto.nl.webp",
+      "sourceUrl": "https://casino.toto.nl/favicons/casino/icon-512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "casino777.be": {
+      "file": "casino777.be.webp",
+      "sourceUrl": "https://casino777.be/apple-touch-icon.png",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "casino777.lv": {
+      "file": "casino777.lv.webp",
+      "sourceUrl": "https://casino777.lv/static/images/icon512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "casino777.nl": {
+      "file": "casino777.nl.webp",
+      "sourceUrl": "https://www.casino777.nl/icon.png?9be93283b33ca8bc",
+      "width": 32,
+      "fetched": "2026-10-05"
+    },
+    "casinoandfriends.com": {
+      "file": "casinoandfriends.com.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/casinoandfriends/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "casinoandfriends.dk": {
+      "file": "casinoandfriends.dk.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/casinoandfriends/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "casinocasino.com": {
+      "file": "casinocasino.com.webp",
+      "sourceUrl": "https://www.casinocasino.com/android-chrome-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "casinodays.com": {
+      "file": "casinodays.com.webp",
+      "sourceUrl": "https://casinodays.imgix.net/icons/favicons/android-icon-192x192.png?w=1",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "casinoepic.se": {
+      "file": "casinoepic.se.webp",
+      "sourceUrl": "https://www.casinoepic.se/_next/static/chunks/favicon-32x32-D7CVwiFO.png",
+      "width": 32,
+      "fetched": "2026-10-05"
+    },
+    "casinogo.dk": {
+      "file": "casinogo.dk.webp",
+      "sourceUrl": "https://www.casinogo.dk/favicon/android-chrome-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "casinogranvia.es": {
+      "file": "casinogranvia.es.webp",
+      "sourceUrl": "https://www.casinogranvia.es/apple-touch-icon.png",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "casinoladbrokes.be": {
+      "file": "casinoladbrokes.be.webp",
+      "sourceUrl": "https://ladbrokeshub.be/assets/img/android-chrome-192x192.png",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "casumo.com": {
+      "file": "casumo.com.webp",
+      "sourceUrl": "https://casumo.com/apple-touch-icon.png",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "betnova.ca": {
+      "file": "betnova.ca.webp",
+      "sourceUrl": "https://betnova.ca/cdn/5121/apple-touch-icon.png",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "casinostugan.com": {
+      "file": "casinostugan.com.webp",
+      "sourceUrl": "https://d3j4vz29nirhst.cloudfront.net/casinostugan/sv_se/general/FAVICON_MOBILE_ANDROID_CHROME_192x192/1/web-app-manifest-192x192.png",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "casinostuen.dk": {
+      "file": "casinostuen.dk.webp",
+      "sourceUrl": "https://d3j4vz29nirhst.cloudfront.net/casinostuen/da_dk/general/FAVICON_MOBILE_ANDROID_CHROME_192x192/2/web-app-manifest-192x192.png",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "cherry.com": {
+      "file": "cherry.com.webp",
+      "sourceUrl": "https://cherry.com/apple-touch-icon.png",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "clemensspillehal.dk": {
+      "file": "clemensspillehal.dk.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/clemensspillehal/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "codere.es": {
+      "file": "codere.es.webp",
+      "sourceUrl": "https://www.codere.es/assets1/icons/nuevos/deportes/deportes-fav-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "clemensspillehal.com": {
+      "file": "clemensspillehal.com.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/clemensspillehal/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "chanz.com": {
+      "file": "chanz.com.webp",
+      "sourceUrl": "https://casino.chanz.com/images/favicon/android-chrome-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "da.partycasino.com": {
+      "file": "da.partycasino.com.webp",
+      "sourceUrl": "https://help.partypoker.dk/-/media/8B0F77917F964BBBA638E850A83DAB16.ashx",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "da.partypoker.com": {
+      "file": "da.partypoker.com.webp",
+      "sourceUrl": "https://help.partypoker.dk/-/media/8B0F77917F964BBBA638E850A83DAB16.ashx",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "daznbet.de": {
+      "file": "daznbet.de.webp",
+      "sourceUrl": "https://www.daznbet.de/assets/favicons/apple-touch-icon.png",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "daznbet.es": {
+      "file": "daznbet.es.webp",
+      "sourceUrl": "https://www.daznbet.es/assets/favicons/apple-touch-icon.png",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "dbet.com": {
+      "file": "dbet.com.webp",
+      "sourceUrl": "https://www.dbet.com/diamondbet/images/dbet/mobile/android-chrome-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "drueckglueck.com": {
+      "file": "drueckglueck.com.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/drueckglueck/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "derby25.dk": {
+      "file": "derby25.dk.webp",
+      "sourceUrl": "https://bet25.dk/heste/favicon/android-icon-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "drueckglueck.dk": {
+      "file": "drueckglueck.dk.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/drueckglueck/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "drueckglueck.de": {
+      "file": "drueckglueck.de.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/drueckglueck/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "enracha.es": {
+      "file": "enracha.es.webp",
+      "sourceUrl": "https://www.enracha.es/images/apple-touch-icon.png?ts=en0980",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "enlabs.se": {
+      "file": "enlabs.se.webp",
+      "sourceUrl": "https://enlabs.com/favicon.png",
+      "width": 32,
+      "fetched": "2026-10-05"
+    },
+    "eucasino.com": {
+      "file": "eucasino.com.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/eucasino/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "eucasino.dk": {
+      "file": "eucasino.dk.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/eucasino/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "eucasino.es": {
+      "file": "eucasino.es.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/eucasino/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "euroconcursos.es": {
+      "file": "euroconcursos.es.webp",
+      "sourceUrl": "https://euroconcursos.es/wp-content/uploads/2022/09/logo-euroconcursos-favcon.png",
+      "width": 100,
+      "fetched": "2026-10-05"
+    },
+    "ebingo.es": {
+      "file": "ebingo.es.webp",
+      "sourceUrl": "https://www.ebingo.es/img/iconEbingo/ebingo_icon_152.png",
+      "width": 152,
+      "fetched": "2026-10-05"
+    },
+    "elitesports.be": {
+      "file": "elitesports.be.webp",
+      "sourceUrl": "https://cselite-prod-storage.s3.eu-west-3.amazonaws.com/sports/icons/es.svg",
+      "width": 225,
+      "fetched": "2026-10-05"
+    },
+    "dafabet.es": {
+      "file": "dafabet.es.webp",
+      "sourceUrl": "https://sports.dafabet.com/next/pwa/dafabet/icons/icon-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "eurojuego.es": {
+      "file": "eurojuego.es.webp",
+      "sourceUrl": "https://euroconcursos.es/wp-content/uploads/2022/09/logo-euroconcursos-favcon.png",
+      "width": 100,
+      "fetched": "2026-10-05"
+    },
+    "eurokingclub.com": {
+      "file": "eurokingclub.com.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/eurokingcasino/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "eurojuegostar.es": {
+      "file": "eurojuegostar.es.webp",
+      "sourceUrl": "https://euroconcursos.es/wp-content/uploads/2022/09/logo-euroconcursos-favcon.png",
+      "width": 100,
+      "fetched": "2026-10-05"
+    },
+    "eurokingsclub.de": {
+      "file": "eurokingsclub.de.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/eurokingcasino/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "euromanias.de": {
+      "file": "euromanias.de.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/euromania/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "euspielothek.de": {
+      "file": "euspielothek.de.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/eucasino/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "euromania.com": {
+      "file": "euromania.com.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/euromania/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "expekt.se": {
+      "file": "expekt.se.webp",
+      "sourceUrl": "https://www.expekt.se/static/pwa-icons/512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "fbet.cz": {
+      "file": "fbet.cz.webp",
+      "sourceUrl": "https://www.fbet.cz/assets/img/favicon/favicon-196x196.png",
+      "width": 196,
+      "fetched": "2026-10-05"
+    },
+    "eurotierce.be": {
+      "file": "eurotierce.be.webp",
+      "sourceUrl": "https://www.eurotierce.be/web-app-manifest-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "emotivacasino.es": {
+      "file": "emotivacasino.es.webp",
+      "sourceUrl": "https://emotivacasino.es/favicon.ico",
+      "width": 48,
+      "fetched": "2026-10-05"
+    },
+    "expekt.dk": {
+      "file": "expekt.dk.webp",
+      "sourceUrl": "https://www.expekt.dk/static/pwa-icons/512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "fastbet.it": {
+      "file": "fastbet.it.webp",
+      "sourceUrl": "https://www.fastbet.it/fav/icon-512.png",
+      "width": 513,
+      "fetched": "2026-10-05"
+    },
+    "flaxcasino.se": {
+      "file": "flaxcasino.se.webp",
+      "sourceUrl": "https://flaxcasino.se/icons/flax/flax-icon-dark.png",
+      "width": 587,
+      "fetched": "2026-10-05"
+    },
+    "frankfred.com": {
+      "file": "frankfred.com.webp",
+      "sourceUrl": "https://frankfred.com/web-app-manifest-512x512.png?v1",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "feverslots.ca": {
+      "file": "feverslots.ca.webp",
+      "sourceUrl": "https://www.feverslots.ca/themes/default/android-chrome-192x192.png",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "fanaticscasino.ca": {
+      "file": "fanaticscasino.ca.webp",
+      "sourceUrl": "https://fanaticscasino.ca/images/icon-light.png",
+      "width": 32,
+      "fetched": "2026-10-05"
+    },
+    "forbescasino.cz": {
+      "file": "forbescasino.cz.webp",
+      "sourceUrl": "https://www.forbescasino.cz/assets/apple_icons/apple-icon-120.png",
+      "width": 120,
+      "fetched": "2026-10-05"
+    },
+    "funcasino.se": {
+      "file": "funcasino.se.webp",
+      "sourceUrl": "https://www.funcasino.com/android-chrome-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "fastbet.com": {
+      "file": "fastbet.com.webp",
+      "sourceUrl": "https://www.fastbet.com/skin/images/512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "funkyspins.com": {
+      "file": "funkyspins.com.webp",
+      "sourceUrl": "https://funkyspins.com/api/icon/512",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "funcasino.com": {
+      "file": "funcasino.com.webp",
+      "sourceUrl": "https://www.funcasino.com/android-chrome-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "games.tipwin.de": {
+      "file": "games.tipwin.de.webp",
+      "sourceUrl": "https://games.tipwin.de/assets/images/favicon/android-icon-192x192.png",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "gentingcasino.dk": {
+      "file": "gentingcasino.dk.webp",
+      "sourceUrl": "https://www.gentingcasino.dk/img/logos/pwa-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "geckoplay.es": {
+      "file": "geckoplay.es.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/geckoplay/icon_192x192.png",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "geckoplay.dk": {
+      "file": "geckoplay.dk.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/geckoplay/icon_192x192.png",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "geckoplay.se": {
+      "file": "geckoplay.se.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/geckoplay/icon_192x192.png",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "gentingcasino.es": {
+      "file": "gentingcasino.es.webp",
+      "sourceUrl": "https://www.gentingcasino.es/img/logos/pwa-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "gentingcasino.se": {
+      "file": "gentingcasino.se.webp",
+      "sourceUrl": "https://www.gentingcasino.se/img/logos/pwa-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "getlucky.dk": {
+      "file": "getlucky.dk.webp",
+      "sourceUrl": "https://d3j4vz29nirhst.cloudfront.net/getlucky/en_xx/general/FAVICON_MOBILE_ANDROID_CHROME_192x192/1/android-chrome-192x192.png",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "genybet.fr": {
+      "file": "genybet.fr.webp",
+      "sourceUrl": "https://static1.genybet.fr/1-5-59/static/images/img/favicon.ico",
+      "width": 256,
+      "fetched": "2026-10-05"
+    },
+    "ggpoker.de": {
+      "file": "ggpoker.de.webp",
+      "sourceUrl": "https://ssl.gg-global-cdn.com/bd/front/img/web/gg-192x192.webp",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "getlucky.com": {
+      "file": "getlucky.com.webp",
+      "sourceUrl": "https://d3j4vz29nirhst.cloudfront.net/getlucky/en_xx/general/FAVICON_MOBILE_ANDROID_CHROME_192x192/1/android-chrome-192x192.png",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "ggpoker.ca": {
+      "file": "ggpoker.ca.webp",
+      "sourceUrl": "https://ssl.gg-global-cdn.com/bd/front/img/web/gg-192x192.webp",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "getlucky.nl": {
+      "file": "getlucky.nl.webp",
+      "sourceUrl": "https://d3j4vz29nirhst.cloudfront.net/getlucky/en_xx/general/FAVICON_MOBILE_ANDROID_CHROME_192x192/1/android-chrome-192x192.png",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "goldenpalacesports.be": {
+      "file": "goldenpalacesports.be.webp",
+      "sourceUrl": "https://www.goldenpalacesports.be/theme/goldenPalaceSports/img/logo/apple-touch-icon.png",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "goldenbull.es": {
+      "file": "goldenbull.es.webp",
+      "sourceUrl": "https://www.goldenbull.es/_next/static/chunks/favicon-32x32-DwcIKqY5.png",
+      "width": 32,
+      "fetched": "2026-10-05"
+    },
+    "goldenbull.se": {
+      "file": "goldenbull.se.webp",
+      "sourceUrl": "https://www.goldenbull.se/_next/static/chunks/favicon-32x32-DwcIKqY5.png",
+      "width": 32,
+      "fetched": "2026-10-05"
+    },
+    "gogocasino.com": {
+      "file": "gogocasino.com.webp",
+      "sourceUrl": "https://www.gogocasino.com/static/pwa-icons/512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "hardrockbet.ca": {
+      "file": "hardrockbet.ca.webp",
+      "sourceUrl": "https://www.hardrockbet.ca/wp-content/uploads/2022/12/icon.png",
+      "width": 32,
+      "fetched": "2026-10-05"
+    },
+    "happycasino.se": {
+      "file": "happycasino.se.webp",
+      "sourceUrl": "https://happycasino.se/images/favicon.png",
+      "width": 120,
+      "fetched": "2026-10-05"
+    },
+    "hollywoodcasino.com": {
+      "file": "hollywoodcasino.com.webp",
+      "sourceUrl": "https://hollywoodcasino.com/favicon.svg",
+      "width": 750,
+      "fetched": "2026-10-05"
+    },
+    "hardrockcasino.nl": {
+      "file": "hardrockcasino.nl.webp",
+      "sourceUrl": "https://hardrockcasino.nl/media/2024-06/favicon-180x180-aMl-favicon_apple-touch.png",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "horseshoeonlinecasino.com": {
+      "file": "horseshoeonlinecasino.com.webp",
+      "sourceUrl": "https://horseshoeonlinecasino.com/astro-favicons/hrs-favicon-32x32.png",
+      "width": 32,
+      "fetched": "2026-10-05"
+    },
+    "hajper.com": {
+      "file": "hajper.com.webp",
+      "sourceUrl": "https://kampanjer.hajper.com/wp-content/themes/hajper/dist/images/favicon/favicon.png?x17629",
+      "width": 96,
+      "fetched": "2026-10-05"
+    },
+    "hommerson.nl": {
+      "file": "hommerson.nl.webp",
+      "sourceUrl": "https://www.hommerson.nl/android-chrome-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "impactwin.se": {
+      "file": "impactwin.se.webp",
+      "sourceUrl": "https://impactwin.se/icon-192.png",
+      "width": 353,
+      "fetched": "2026-10-05"
+    },
+    "holdet.dk": {
+      "file": "holdet.dk.webp",
+      "sourceUrl": "https://cdn.swush.com/nexus/tenants/holdet/icon-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "ice36.dk": {
+      "file": "ice36.dk.webp",
+      "sourceUrl": "https://www.ice36.dk/img/logos/icon-192x192.png",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "hypercasino.com": {
+      "file": "hypercasino.com.webp",
+      "sourceUrl": "https://www.hypercasino.com/android-chrome-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "ice36.es": {
+      "file": "ice36.es.webp",
+      "sourceUrl": "https://www.ice36.es/img/logos/icon-192x192.png",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "jackpotpiraten.de": {
+      "file": "jackpotpiraten.de.webp",
+      "sourceUrl": "https://www.jackpotpiraten.de/android-chrome-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "jacks.nl": {
+      "file": "jacks.nl.webp",
+      "sourceUrl": "https://jacks.nl/media/2023-04/apple-touch-icon-648-favicon_apple-touch.jpeg",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "jackpotstar.de": {
+      "file": "jackpotstar.de.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/jackpotstar/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "jackpotstar.com": {
+      "file": "jackpotstar.com.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/jackpotstar/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "jubla.se": {
+      "file": "jubla.se.webp",
+      "sourceUrl": "https://jubla.se/apple-touch-icon.png",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "jubla.com": {
+      "file": "jubla.com.webp",
+      "sourceUrl": "https://jubla.se/apple-touch-icon.png",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "jokerstar.de": {
+      "file": "jokerstar.de.webp",
+      "sourceUrl": "https://jokerstar.de/android-chrome-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "ice36.de": {
+      "file": "ice36.de.webp",
+      "sourceUrl": "https://www.ice36.de/img/logos/icon-192x192.png",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "kansino.nl": {
+      "file": "kansino.nl.webp",
+      "sourceUrl": "https://cloudinary.kansino.nl/q_auto:low,f_auto/v1551869101/siteAssets/kansino/icons/favicon/android-chrome-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "klirr.com": {
+      "file": "klirr.com.webp",
+      "sourceUrl": "https://klirr.com/android-chrome-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "knight-slots.de": {
+      "file": "knight-slots.de.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/knightslots/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "knightslots.com": {
+      "file": "knightslots.com.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/knightslots/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "knightslots.ca": {
+      "file": "knightslots.ca.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/knightslots/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "kapowcasino.dk": {
+      "file": "kapowcasino.dk.webp",
+      "sourceUrl": "https://api.kapowcasino.dk/media/General/public-pwa/pwa-pwa-logokc.webp",
+      "width": 216,
+      "fetched": "2026-10-05"
+    },
+    "kungaslottet.se": {
+      "file": "kungaslottet.se.webp",
+      "sourceUrl": "https://www.kungaslottet.se/diamondbet/images/kungaslottet/mobile/android-chrome-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "juegging.es": {
+      "file": "juegging.es.webp",
+      "sourceUrl": "https://www.juegging.es/wp-content/uploads/2024/04/favicon.png",
+      "width": 144,
+      "fetched": "2026-10-05"
+    },
+    "karlcasino.com": {
+      "file": "karlcasino.com.webp",
+      "sourceUrl": "https://www.karlcasino.com/KLC-icons-512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "leovegas.dk": {
+      "file": "leovegas.dk.webp",
+      "sourceUrl": "https://www.leovegas.dk/static/pwa-icons/512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "ladbrokes.be": {
+      "file": "ladbrokes.be.webp",
+      "sourceUrl": "https://ladbrokeshub.be/assets/img/android-chrome-192x192.png",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "leovegas.de": {
+      "file": "leovegas.de.webp",
+      "sourceUrl": "https://www.leovegas.de/static/fulcrum/apple-touch-icon.png",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "loofers.dk": {
+      "file": "loofers.dk.webp",
+      "sourceUrl": "https://www.loofers.dk/icon.svg?icon.0-md3kzz8ukt..svg",
+      "width": 692,
+      "fetched": "2026-10-05"
+    },
+    "leovegas.com": {
+      "file": "leovegas.com.webp",
+      "sourceUrl": "https://www.leovegas.com/static/pwa-icons/512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "leovegas.es": {
+      "file": "leovegas.es.webp",
+      "sourceUrl": "https://www.leovegas.es/static/pwa-icons/512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "leovegas.nl": {
+      "file": "leovegas.nl.webp",
+      "sourceUrl": "https://www.leovegas.nl/static/pwa-icons/512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "loewen-play.de": {
+      "file": "loewen-play.de.webp",
+      "sourceUrl": "https://www.loewen-play.de/apple-touch-icon-180x180.png",
+      "width": 120,
+      "fetched": "2026-10-05"
+    },
+    "lordping.es": {
+      "file": "lordping.es.webp",
+      "sourceUrl": "https://www.lordping.es/img/icons/maskable_icon.png",
+      "width": 640,
+      "fetched": "2026-10-05"
+    },
+    "lordping.com": {
+      "file": "lordping.com.webp",
+      "sourceUrl": "https://www.lordping.com/img/icons/maskable_icon.png",
+      "width": 640,
+      "fetched": "2026-10-05"
+    },
+    "lordping.de": {
+      "file": "lordping.de.webp",
+      "sourceUrl": "https://www.lordping.de/img/icons/maskable_icon.png",
+      "width": 640,
+      "fetched": "2026-10-05"
+    },
+    "lordping.se": {
+      "file": "lordping.se.webp",
+      "sourceUrl": "https://www.lordping.se/img/icons/maskable_icon.png",
+      "width": 640,
+      "fetched": "2026-10-05"
+    },
+    "lotto-hessen.de": {
+      "file": "lotto-hessen.de.webp",
+      "sourceUrl": "https://www.lotto-hessen.de/static/gamebroker_5/de/app/img/touch-icon-512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "lotto-bw.de": {
+      "file": "lotto-bw.de.webp",
+      "sourceUrl": "https://www.lotto-bw.de/static/gamebroker_3/de/assets/pwa/icons/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "lotto.gmx.de": {
+      "file": "lotto.gmx.de.webp",
+      "sourceUrl": "https://lotto.gmx.de/assets/images/favicons/gmx/android-chrome-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "lotto.web.de": {
+      "file": "lotto.web.de.webp",
+      "sourceUrl": "https://lotto.web.de/assets/images/favicons/web/android-chrome-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "lowen-play.es": {
+      "file": "lowen-play.es.webp",
+      "sourceUrl": "https://www.lowen-play.es/build/assets/images/favicon/apple-touch-icon.png?v=1786454089",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "lottoland.se": {
+      "file": "lottoland.se.webp",
+      "sourceUrl": "https://www.lottoland.se/cms/5cab2875fc80f8000ce35ec5/512_l_round_corners_high_dp_pwa.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "lucky7casino.nl": {
+      "file": "lucky7casino.nl.webp",
+      "sourceUrl": "https://lucky7casino.nl/android-chrome-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "leovegas.co.uk": {
+      "file": "leovegas.co.uk.webp",
+      "sourceUrl": "https://www.leovegas.co.uk/static/pwa-icons/512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "luckybet.lv": {
+      "file": "luckybet.lv.webp",
+      "sourceUrl": "https://luckybet.lv/static/images/icon512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "luckycasino.es": {
+      "file": "luckycasino.es.webp",
+      "sourceUrl": "https://www.luckycasino.es/img/favicons/brands/luckycasino/favicon-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "luckyniki.com": {
+      "file": "luckyniki.com.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/luckyniki/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "luckybet.cz": {
+      "file": "luckybet.cz.webp",
+      "sourceUrl": "https://www.luckybet.cz/static/favicons/android-chrome-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "luckyniki.dk": {
+      "file": "luckyniki.dk.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/luckyniki/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "luckylouis.com": {
+      "file": "luckylouis.com.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/luckylouis/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "luckyniki.de": {
+      "file": "luckyniki.de.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/luckyniki/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "luckylouis.de": {
+      "file": "luckylouis.de.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/luckylouis/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "luckyvegas.com": {
+      "file": "luckyvegas.com.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/luckyvegas/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "luckyvegas.es": {
+      "file": "luckyvegas.es.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/luckyvegas/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "luckyvegas.de": {
+      "file": "luckyvegas.de.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/luckyvegas/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "lyllocasino.com": {
+      "file": "lyllocasino.com.webp",
+      "sourceUrl": "https://kampanjer.lyllocasino.com/wp-content/themes/lyllo/dist/images/favicon/favicon.png?x29613",
+      "width": 96,
+      "fetched": "2026-10-05"
+    },
+    "magicbettingsports.be": {
+      "file": "magicbettingsports.be.webp",
+      "sourceUrl": "https://magicbettingsports.be/img/logos/Favicon.webp",
+      "width": 96,
+      "fetched": "2026-10-05"
+    },
+    "lunacasino.dk": {
+      "file": "lunacasino.dk.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/lunacasino/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "lunacasino.com": {
+      "file": "lunacasino.com.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/lunacasino/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "m.highflyercasino.com": {
+      "file": "m.highflyercasino.com.webp",
+      "sourceUrl": "https://m.highflyercasino.com/mv2/images/icons/ios/pwa-icon/apple-touch-icon.png",
+      "width": 152,
+      "fetched": "2026-10-05"
+    },
+    "lunacasino.es": {
+      "file": "lunacasino.es.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/lunacasino/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "marathonbet.dk": {
+      "file": "marathonbet.dk.webp",
+      "sourceUrl": "https://www.marathonbet.dk/cdn/1-352/images/favicon/favicon-192.png",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "lunaslots.de": {
+      "file": "lunaslots.de.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/lunacasino_de/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "maratonbet.es": {
+      "file": "maratonbet.es.webp",
+      "sourceUrl": "https://web.mbstatic.org/008AE5/1-353/images/favicon/favicon-192.png",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "marathonbet.es": {
+      "file": "marathonbet.es.webp",
+      "sourceUrl": "https://web.mbstatic.org/008AE5/1-353/images/favicon/favicon-192.png",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "lynholdet.dk": {
+      "file": "lynholdet.dk.webp",
+      "sourceUrl": "https://cdn.swush.com/nexus/tenants/holdet/icon-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "mariacasino.dk": {
+      "file": "mariacasino.dk.webp",
+      "sourceUrl": "https://www.mariacasino.dk/kwp-bundle-store/kwp-assets/0.12.0/assets/maria/webmanifest/icons/icon_512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "mbet.es": {
+      "file": "mbet.es.webp",
+      "sourceUrl": "https://web.mbstatic.org/008AE5/1-353/images/favicon/favicon-192.png",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "mariacasino.se": {
+      "file": "mariacasino.se.webp",
+      "sourceUrl": "https://www.mariacasino.se/kwp-bundle-store/kwp-assets/0.12.0/assets/maria/webmanifest/icons/icon_512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "magicplanet.cz": {
+      "file": "magicplanet.cz.webp",
+      "sourceUrl": "https://www.magicplanet.cz/static/favicons/android-chrome-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "megariches.com": {
+      "file": "megariches.com.webp",
+      "sourceUrl": "https://www.megariches.com/diamondbet/images/megariches/mobile/android-chrome-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "megacasino.dk": {
+      "file": "megacasino.dk.webp",
+      "sourceUrl": "https://www.megacasino.dk/img/logos/favicon-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "megafortune.com": {
+      "file": "megafortune.com.webp",
+      "sourceUrl": "https://www.megafortune.com/diamondbet/images/megafortune/mobile/android-chrome-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "megacasinos.es": {
+      "file": "megacasinos.es.webp",
+      "sourceUrl": "https://www.megacasinos.es/img/logos/favicon-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "megariches.dk": {
+      "file": "megariches.dk.webp",
+      "sourceUrl": "https://www.megariches.com/diamondbet/images/megariches/mobile/android-chrome-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "mobile.bet365.es": {
+      "file": "mobile.bet365.es.webp",
+      "sourceUrl": "https://www.bet365.es/sportsbook-static/favicons/favicon-192x192.png",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "merkurxtip.cz": {
+      "file": "merkurxtip.cz.webp",
+      "sourceUrl": "https://www.merkurxtip.cz/media/2021-12/favicon-merkur.svg",
+      "width": 67,
+      "fetched": "2026-10-05"
+    },
+    "miamijackpots.com": {
+      "file": "miamijackpots.com.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/miamijackpots/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "metalcasino.com": {
+      "file": "metalcasino.com.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/metalcasino/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "monopolycasino.es": {
+      "file": "monopolycasino.es.webp",
+      "sourceUrl": "https://www.monopolycasino.es/icons/monopolycasino_es/192x192.png",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "metalcasino.es": {
+      "file": "metalcasino.es.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/metalcasino/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "metalcasino.se": {
+      "file": "metalcasino.se.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/metalcasino/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "mrvegas.ca": {
+      "file": "mrvegas.ca.webp",
+      "sourceUrl": "https://www.mrvegas.com/diamondbet/images/mrvegas/mobile/android-chrome-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "momangcasino.se": {
+      "file": "momangcasino.se.webp",
+      "sourceUrl": "https://cdn1.svenskaspel.net/images/config/meta-data/momang-android-chrome-512x512.png?v=allKLj2600",
+      "width": 1024,
+      "fetched": "2026-10-05"
+    },
+    "mondobets.es": {
+      "file": "mondobets.es.webp",
+      "sourceUrl": "http://cdn1.mondobets.es/favicons/android-chrome-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "nl.onecasino.com": {
+      "file": "nl.onecasino.com.webp",
+      "sourceUrl": "https://nl.onecasino.com/img/favicons/favicon-svg.svg",
+      "width": 400,
+      "fetched": "2026-10-05"
+    },
+    "nobonuscasino.com": {
+      "file": "nobonuscasino.com.webp",
+      "sourceUrl": "https://www.nobonuscasino.com/android-chrome-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "northstarbets.ca": {
+      "file": "northstarbets.ca.webp",
+      "sourceUrl": "https://www.northstarbets.ca/favicons/favicon-128.png",
+      "width": 128,
+      "fetched": "2026-10-05"
+    },
+    "novoline.de": {
+      "file": "novoline.de.webp",
+      "sourceUrl": "https://www.novoline.de/pwa/icons/icon-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "on.daznbet.ca": {
+      "file": "on.daznbet.ca.webp",
+      "sourceUrl": "https://on.daznbet.ca/assets/favicons/apple-touch-icon.png",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "on.pointsbet.ca": {
+      "file": "on.pointsbet.ca.webp",
+      "sourceUrl": "https://on.pointsbet.ca/_static/favicon/android-chrome-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "onerush.com": {
+      "file": "onerush.com.webp",
+      "sourceUrl": "https://onerush.com/web-app-manifest-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "ontario.grandmondial.casino": {
+      "file": "ontario.grandmondial.casino.webp",
+      "sourceUrl": "https://ontario.grandmondial.casino/Content/themes/gmd/shared/images/favicon.png",
+      "width": 32,
+      "fetched": "2026-10-05"
+    },
+    "onecasino.com": {
+      "file": "onecasino.com.webp",
+      "sourceUrl": "https://www.onecasino.com/img/favicons/favicon-svg.svg",
+      "width": 400,
+      "fetched": "2026-10-05"
+    },
+    "ontario.casinoclassic.casino": {
+      "file": "ontario.casinoclassic.casino.webp",
+      "sourceUrl": "https://ontario.casinoclassic.casino/Content/bundles/styles/cc_2026/images/favicon.png",
+      "width": 32,
+      "fetched": "2026-10-05"
+    },
+    "onecasino.es": {
+      "file": "onecasino.es.webp",
+      "sourceUrl": "https://www.onecasino.es/img/favicons/favicon-svg.svg",
+      "width": 400,
+      "fetched": "2026-10-05"
+    },
+    "ontario.goldentiger.casino": {
+      "file": "ontario.goldentiger.casino.webp",
+      "sourceUrl": "https://ontario.goldentiger.casino/Content/bundles/styles/gt_2026/images/favicon.png",
+      "width": 64,
+      "fetched": "2026-10-05"
+    },
+    "ontario.luxury.casino": {
+      "file": "ontario.luxury.casino.webp",
+      "sourceUrl": "https://ontario.luxury.casino/Content/themes/lxc/shared/images/favicon.png",
+      "width": 57,
+      "fetched": "2026-10-05"
+    },
+    "ontario.yukongold.casino": {
+      "file": "ontario.yukongold.casino.webp",
+      "sourceUrl": "https://ontario.yukongold.casino/Content/themes/yg/shared/images/favicon.png",
+      "width": 32,
+      "fetched": "2026-10-05"
+    },
+    "onesports.nl": {
+      "file": "onesports.nl.webp",
+      "sourceUrl": "https://nl.onecasino.com/img/favicons/favicon-svg.svg",
+      "width": 400,
+      "fetched": "2026-10-05"
+    },
+    "ontario.zodiac.casino": {
+      "file": "ontario.zodiac.casino.webp",
+      "sourceUrl": "https://ontario.zodiac.casino/Content/themes/zc/shared/images/favicon.png",
+      "width": 32,
+      "fetched": "2026-10-05"
+    },
+    "parisvegasclub.com": {
+      "file": "parisvegasclub.com.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/parisvegascasino/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "partypoker.de": {
+      "file": "partypoker.de.webp",
+      "sourceUrl": "https://help.partypoker.de/-/media/8B0F77917F964BBBA638E850A83DAB16.ashx",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "parisvegasclub.de": {
+      "file": "parisvegasclub.de.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/parisvegascasino/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "pafbet.lv": {
+      "file": "pafbet.lv.webp",
+      "sourceUrl": "https://www.pafbet.lv/_next/static/chunks/favicon-32x32-BmMy1qEu.png",
+      "width": 32,
+      "fetched": "2026-10-05"
+    },
+    "paf.se": {
+      "file": "paf.se.webp",
+      "sourceUrl": "https://www.paf.se/_next/static/chunks/favicon-32x32-BmMy1qEu.png",
+      "width": 32,
+      "fetched": "2026-10-05"
+    },
+    "paf.es": {
+      "file": "paf.es.webp",
+      "sourceUrl": "https://www.paf.es/_next/static/chunks/favicon-32x32-BmMy1qEu.png",
+      "width": 32,
+      "fetched": "2026-10-05"
+    },
+    "partypoker.dk": {
+      "file": "partypoker.dk.webp",
+      "sourceUrl": "https://help.partypoker.dk/-/media/8B0F77917F964BBBA638E850A83DAB16.ashx",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "pelea.app": {
+      "file": "pelea.app.webp",
+      "sourceUrl": "https://pelea.app/android-chrome-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "pinnacle.ca": {
+      "file": "pinnacle.ca.webp",
+      "sourceUrl": "https://www.pinnacle.ca/img/icons/pwa-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "play.ballybet.ca": {
+      "file": "play.ballybet.ca.webp",
+      "sourceUrl": "https://play.ballybet.ca/assets/common/images/favicon.png",
+      "width": 128,
+      "fetched": "2026-10-05"
+    },
+    "play.monopolycasino.ca": {
+      "file": "play.monopolycasino.ca.webp",
+      "sourceUrl": "https://play.monopolycasino.ca/assets/common/images/favicon.png",
+      "width": 70,
+      "fetched": "2026-10-05"
+    },
+    "ottocasino.se": {
+      "file": "ottocasino.se.webp",
+      "sourceUrl": "https://www.ottocasino.se/kwp-bundle-store/kwp-assets/0.12.0/assets/ottokasino/webmanifest/icons/icon_512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "pinnacle.se": {
+      "file": "pinnacle.se.webp",
+      "sourceUrl": "https://www.pinnacle.se/img/icons/pwa-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "pinatacasino.es": {
+      "file": "pinatacasino.es.webp",
+      "sourceUrl": "https://www.pinatacasino.es/_next/static/chunks/favicon-32x32-CbBpmYUK.png",
+      "width": 32,
+      "fetched": "2026-10-05"
+    },
+    "play.playfallsview.com": {
+      "file": "play.playfallsview.com.webp",
+      "sourceUrl": "https://play.playfallsview.com/assets/images/favicon.svg",
+      "width": 2133,
+      "fetched": "2026-10-05"
+    },
+    "play-jango.de": {
+      "file": "play-jango.de.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/playjango/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "playjango.com": {
+      "file": "playjango.com.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/playjango/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "playkasino.com": {
+      "file": "playkasino.com.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/playkasino/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "playjango.es": {
+      "file": "playjango.es.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/playjango/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "playkasino.es": {
+      "file": "playkasino.es.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/playkasino/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "playojo.de": {
+      "file": "playojo.de.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/playojo/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "playtoro.com": {
+      "file": "playtoro.com.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/playtoro/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "playtoro.es": {
+      "file": "playtoro.es.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/playtoro/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "playspielothek.de": {
+      "file": "playspielothek.de.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/playkasino/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "playojo.ca": {
+      "file": "playojo.ca.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/playojo/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "playtoro.se": {
+      "file": "playtoro.se.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/playtoro/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "playmillion.dk": {
+      "file": "playmillion.dk.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/playmillion/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "playmillion.de": {
+      "file": "playmillion.de.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/playmillion/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "playojo.dk": {
+      "file": "playojo.dk.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/playojo/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "playuzu.com": {
+      "file": "playuzu.com.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/playuzu/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "playuzu.es": {
+      "file": "playuzu.es.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/playuzu/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "popcasino.se": {
+      "file": "popcasino.se.webp",
+      "sourceUrl": "https://popcasino.se/android-chrome-384x384.png",
+      "width": 384,
+      "fetched": "2026-10-05"
+    },
+    "premierlivecasino.com": {
+      "file": "premierlivecasino.com.webp",
+      "sourceUrl": "https://www.premierlivecasino.com/wp-content/themes/tigershark/images/site/pl/web-app-manifest-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "pokerstarssports.es": {
+      "file": "pokerstarssports.es.webp",
+      "sourceUrl": "https://www.foxsports.com/android-chrome-256x256.png",
+      "width": 256,
+      "fetched": "2026-10-05"
+    },
+    "pokerstarssports.dk": {
+      "file": "pokerstarssports.dk.webp",
+      "sourceUrl": "https://www.foxsports.com/android-chrome-256x256.png",
+      "width": 256,
+      "fetched": "2026-10-05"
+    },
+    "pokerstarssports.fr": {
+      "file": "pokerstarssports.fr.webp",
+      "sourceUrl": "https://www.foxsports.com/android-chrome-256x256.png",
+      "width": 256,
+      "fetched": "2026-10-05"
+    },
+    "premierlivecasino.se": {
+      "file": "premierlivecasino.se.webp",
+      "sourceUrl": "https://www.premierlivecasino.com/wp-content/themes/tigershark/images/site/pl/web-app-manifest-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "primecasino.es": {
+      "file": "primecasino.es.webp",
+      "sourceUrl": "https://www.primecasino.es/img/logos/windows11/SplashScreen.scale-400.png",
+      "width": 2480,
+      "fetched": "2026-10-05"
+    },
+    "prontocasino.com": {
+      "file": "prontocasino.com.webp",
+      "sourceUrl": "https://www.prontocasino.se/wp-content/themes/tigershark/images/site/pr/web-app-manifest-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "prontolotter.com": {
+      "file": "prontolotter.com.webp",
+      "sourceUrl": "https://static.loopia.se/responsive/images/iOS-57.png",
+      "width": 57,
+      "fetched": "2026-10-05"
+    },
+    "prontolive.com": {
+      "file": "prontolive.com.webp",
+      "sourceUrl": "https://www.pronto.net/wp-content/uploads/2021/10/cropped-ProntoFavIcon-120x120-1.png",
+      "width": 120,
+      "fetched": "2026-10-05"
+    },
+    "prontoodds.com": {
+      "file": "prontoodds.com.webp",
+      "sourceUrl": "https://static.loopia.se/responsive/images/iOS-57.png",
+      "width": 57,
+      "fetched": "2026-10-05"
+    },
+    "prontolotter.se": {
+      "file": "prontolotter.se.webp",
+      "sourceUrl": "https://static.loopia.se/responsive/images/iOS-57.png",
+      "width": 57,
+      "fetched": "2026-10-05"
+    },
+    "prontocasino.se": {
+      "file": "prontocasino.se.webp",
+      "sourceUrl": "https://www.prontocasino.se/wp-content/themes/tigershark/images/site/pr/web-app-manifest-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "primespielhalle.de": {
+      "file": "primespielhalle.de.webp",
+      "sourceUrl": "https://www.primespielhalle.de/img/logos/windows11/SplashScreen.scale-400.png",
+      "width": 2480,
+      "fetched": "2026-10-05"
+    },
+    "prontoodds.se": {
+      "file": "prontoodds.se.webp",
+      "sourceUrl": "https://www.prontoodds.se/wp-content/themes/tigershark/images/site/ps/favicon.png",
+      "width": 32,
+      "fetched": "2026-10-05"
+    },
+    "prontosport.se": {
+      "file": "prontosport.se.webp",
+      "sourceUrl": "https://www.prontosport.se/wp-content/themes/tigershark/images/site/ps/web-app-manifest-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "prontosport.com": {
+      "file": "prontosport.com.webp",
+      "sourceUrl": "https://www.prontosport.se/wp-content/themes/tigershark/images/site/ps/web-app-manifest-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "queenvegas.de": {
+      "file": "queenvegas.de.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/queenvegas/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "queenvegas.com": {
+      "file": "queenvegas.com.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/queenvegas/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "racecasino.se": {
+      "file": "racecasino.se.webp",
+      "sourceUrl": "https://www.racecasino.com/android-chrome-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "queenvegas.dk": {
+      "file": "queenvegas.dk.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/queenvegas/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "racecasino.com": {
+      "file": "racecasino.com.webp",
+      "sourceUrl": "https://www.racecasino.com/android-chrome-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "redkings.de": {
+      "file": "redkings.de.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/casinoredkings/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "redkings.com": {
+      "file": "redkings.com.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/casinoredkings/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "retabet.es": {
+      "file": "retabet.es.webp",
+      "sourceUrl": "https://www.retabet.es/android-chrome-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "rod25.dk": {
+      "file": "rod25.dk.webp",
+      "sourceUrl": "https://bet25.dk/casino/favicon/android/android-512-512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "reviant.com": {
+      "file": "reviant.com.webp",
+      "sourceUrl": "https://kampanjer.reviant.com/wp-content/themes/reviant/dist/images/favicon/favicon.png?x12519",
+      "width": 96,
+      "fetched": "2026-10-05"
+    },
+    "prontolive.se": {
+      "file": "prontolive.se.webp",
+      "sourceUrl": "https://4ldhjehs7c.ucarecd.net/d0e33ddc-9d65-498f-b6ae-5edcc056c458/",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "royalpanda.com": {
+      "file": "royalpanda.com.webp",
+      "sourceUrl": "https://royalpanda.com/apple-touch-icon.png",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "reviant.se": {
+      "file": "reviant.se.webp",
+      "sourceUrl": "https://reviant.se/wp-content/themes/reviant/dist/images/favicon/favicon.png",
+      "width": 96,
+      "fetched": "2026-10-05"
+    },
+    "roed25.dk": {
+      "file": "roed25.dk.webp",
+      "sourceUrl": "https://bet25.dk/casino/favicon/android/android-512-512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "royale500.de": {
+      "file": "royale500.de.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/royale500/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "royale500.com": {
+      "file": "royale500.com.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/royale500/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "royale500.es": {
+      "file": "royale500.es.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/royale500/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "scooore.be": {
+      "file": "scooore.be.webp",
+      "sourceUrl": "https://scooore.be/favicon.ico",
+      "width": 256,
+      "fetched": "2026-10-05"
+    },
+    "se.megacasino.com": {
+      "file": "se.megacasino.com.webp",
+      "sourceUrl": "https://se.megacasino.com/img/logos/favicon-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "se.slingo.com": {
+      "file": "se.slingo.com.webp",
+      "sourceUrl": "https://se.slingo.com/img/logos/icon-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "se.primecasino.com": {
+      "file": "se.primecasino.com.webp",
+      "sourceUrl": "https://se.primecasino.com/img/logos/windows11/SplashScreen.scale-400.png",
+      "width": 2480,
+      "fetched": "2026-10-05"
+    },
+    "royalcasino.dk": {
+      "file": "royalcasino.dk.webp",
+      "sourceUrl": "https://api.royalcasino.dk/media/General/public-pwa/pwa-pwa-icon-512x512.webp",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "se.spingenie.com": {
+      "file": "se.spingenie.com.webp",
+      "sourceUrl": "https://se.spingenie.com/img/logos/windows10/SplashScreen.scale-400.png",
+      "width": 2480,
+      "fetched": "2026-10-05"
+    },
+    "se.bingo.com": {
+      "file": "se.bingo.com.webp",
+      "sourceUrl": "https://se.bingo.com/kwp-bundle-store/kwp-assets/0.12.0/assets/bingo_com/webmanifest/icons/icon_512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "slingo.com": {
+      "file": "slingo.com.webp",
+      "sourceUrl": "https://www.slingo.com/img/logos/icon-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "sifa-online.dk": {
+      "file": "sifa-online.dk.webp",
+      "sourceUrl": "https://sifa-online.dk/assets/images/android-chrome-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "slingocasino.es": {
+      "file": "slingocasino.es.webp",
+      "sourceUrl": "https://www.slingocasino.es/img/logos/icon-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "slingospiel.de": {
+      "file": "slingospiel.de.webp",
+      "sourceUrl": "https://www.slingospiel.de/img/logos/icon-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "slotmagie.de": {
+      "file": "slotmagie.de.webp",
+      "sourceUrl": "https://www.slotmagie.de/_internal/hy-images/AxykQxc6RSo6CIa7qZ10tz/cmdd06jtl0fro07ur1wqwlb34",
+      "width": 720,
+      "fetched": "2026-10-05"
+    },
+    "slotsmagic.ca": {
+      "file": "slotsmagic.ca.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/slotsmagic/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "slotsfreunde.de": {
+      "file": "slotsfreunde.de.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/casinoandfriends/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "slots.admiralbet.de": {
+      "file": "slots.admiralbet.de.webp",
+      "sourceUrl": "https://admiralbet-de-prod-cdn-static.gt-cdn.net/web_assets/abde/assets/img/favicon/android-chrome-512x512.686d7620.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "slotsmagic.com": {
+      "file": "slotsmagic.com.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/slotsmagic/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "slotsmagic.de": {
+      "file": "slotsmagic.de.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/slotsmagic/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "slotsmagic.es": {
+      "file": "slotsmagic.es.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/slotsmagic/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "slotsmagic.dk": {
+      "file": "slotsmagic.dk.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/slotsmagic/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "slotstars.com": {
+      "file": "slotstars.com.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/slotstars/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "slotstars.es": {
+      "file": "slotstars.es.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/slotstars/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "solverde.pt": {
+      "file": "solverde.pt.webp",
+      "sourceUrl": "https://www.solverde.pt/library/favicons/solverde_favicon.svg",
+      "width": 1042,
+      "fetched": "2026-10-05"
+    },
+    "snurrcasino.se": {
+      "file": "snurrcasino.se.webp",
+      "sourceUrl": "https://www.snurrcasino.se/_next/static/chunks/favicon-32x32-XAXpOKDk.png",
+      "width": 32,
+      "fetched": "2026-10-05"
+    },
+    "snabbare.com": {
+      "file": "snabbare.com.webp",
+      "sourceUrl": "https://kampanjer.snabbare.com/wp-content/themes/snabbare/dist/images/favicon/favicon.png?x15360",
+      "width": 96,
+      "fetched": "2026-10-05"
+    },
+    "speedybet.com": {
+      "file": "speedybet.com.webp",
+      "sourceUrl": "https://www.speedybet.com/_next/static/chunks/favicon-32x32-BbY0nlp0.png",
+      "width": 32,
+      "fetched": "2026-10-05"
+    },
+    "speedycasino.com": {
+      "file": "speedycasino.com.webp",
+      "sourceUrl": "https://www.speedycasino.com/_next/static/chunks/favicon-32x32-bfmUv37B.png",
+      "width": 32,
+      "fetched": "2026-10-05"
+    },
+    "spelklubben.se": {
+      "file": "spelklubben.se.webp",
+      "sourceUrl": "https://spelklubben.se/apple-touch-icon.png",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "speedybet.es": {
+      "file": "speedybet.es.webp",
+      "sourceUrl": "https://www.speedybet.es/_next/static/chunks/favicon-32x32-BbY0nlp0.png",
+      "width": 32,
+      "fetched": "2026-10-05"
+    },
+    "spelet.lv": {
+      "file": "spelet.lv.webp",
+      "sourceUrl": "https://spelet.lv/_cms_api/assets/70244852-5f3e-4d58-a0fe-e3a603ae3a2f",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "spela.svenskaspel.se": {
+      "file": "spela.svenskaspel.se.webp",
+      "sourceUrl": "https://cdn1.svenskaspel.net/images/lb-ui/favicons/web-app-manifest-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "slotstarsspiel.de": {
+      "file": "slotstarsspiel.de.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/slotstars/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "spilleautomaten.dk": {
+      "file": "spilleautomaten.dk.webp",
+      "sourceUrl": "https://www.spilleautomaten.dk/build/assets/images/icons/Logo_icon_g_192.png",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "spilnu.dk": {
+      "file": "spilnu.dk.webp",
+      "sourceUrl": "https://www.spilnu.dk/cdn-cgi/image/width=512,height=512,quality=100/media/logo/512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "spingenie.ca": {
+      "file": "spingenie.ca.webp",
+      "sourceUrl": "https://on.spingenie.ca/img/logos/windows10/SplashScreen.scale-400.png",
+      "width": 2480,
+      "fetched": "2026-10-05"
+    },
+    "spins.lv": {
+      "file": "spins.lv.webp",
+      "sourceUrl": "https://spins.lv/assets/pwa_images/app-icon-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "spingenie.es": {
+      "file": "spingenie.es.webp",
+      "sourceUrl": "https://www.spingenie.es/img/logos/windows10/SplashScreen.scale-400.png",
+      "width": 2480,
+      "fetched": "2026-10-05"
+    },
+    "spingenie.se": {
+      "file": "spingenie.se.webp",
+      "sourceUrl": "https://se.spingenie.com/img/logos/windows10/SplashScreen.scale-400.png",
+      "width": 2480,
+      "fetched": "2026-10-05"
+    },
+    "spingenie.de": {
+      "file": "spingenie.de.webp",
+      "sourceUrl": "https://www.spingenie.de/img/logos/windows10/SplashScreen.scale-400.png",
+      "width": 2480,
+      "fetched": "2026-10-05"
+    },
+    "spilhuset.dk": {
+      "file": "spilhuset.dk.webp",
+      "sourceUrl": "https://www.spilhuset.dk/icons/Icon-512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "sportingbet.de": {
+      "file": "sportingbet.de.webp",
+      "sourceUrl": "https://help.sportingbet.de/-/media/A88283911D9C4AB5A160847C3429F8C4.ashx",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "sport.toto.nl": {
+      "file": "sport.toto.nl.webp",
+      "sourceUrl": "https://sport.toto.nl/favicons/icon-512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "sports.betway.com": {
+      "file": "sports.betway.com.webp",
+      "sourceUrl": "https://betway.com/g/static/media/betway-icon-512x512.d0812e89.png?dpl=dpl-mur3jt4a",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "spielbanken-bayern-online.de": {
+      "file": "spielbanken-bayern-online.de.webp",
+      "sourceUrl": "https://spielbanken-bayern-online.de/favicon.ico",
+      "width": 256,
+      "fetched": "2026-10-05"
+    },
+    "sportsbet.bet.ar": {
+      "file": "sportsbet.bet.ar.webp",
+      "sourceUrl": "https://sports.bet.ar/images/logos/sportsbet-pba/sportsbet-pba-favicon.png",
+      "width": 1080,
+      "fetched": "2026-10-05"
+    },
+    "sportsbook.draftkings.com": {
+      "file": "sportsbook.draftkings.com.webp",
+      "sourceUrl": "https://sportsbook.draftkings.com/apple-touch-icon.png",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "spiel-erwin.de": {
+      "file": "spiel-erwin.de.webp",
+      "sourceUrl": "https://www.lotto-bw.de/static/gamebroker_3/de/assets/pwa/icons/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "stxapp.io": {
+      "file": "stxapp.io.webp",
+      "sourceUrl": "https://stxapp.io/assets/apple-touch-icon.png",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "starcasino.nl": {
+      "file": "starcasino.nl.webp",
+      "sourceUrl": "https://starcasino.nl/favicon.ico",
+      "width": 48,
+      "fetched": "2026-10-05"
+    },
+    "sv.playmillion.com": {
+      "file": "sv.playmillion.com.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/playmillion/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "stargames.de": {
+      "file": "stargames.de.webp",
+      "sourceUrl": "https://stargames-de-cdn-static.gt-cdn.net/web_assets/sgde/assets/img/favicon/android-chrome-512x512.e5729648.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "swiftcasino.com": {
+      "file": "swiftcasino.com.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/swiftcasino/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "swiftcasino.es": {
+      "file": "swiftcasino.es.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/swiftcasino/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "starcasinosport.be": {
+      "file": "starcasinosport.be.webp",
+      "sourceUrl": "https://starcasinosport.be/favicon.ico",
+      "width": 128,
+      "fetched": "2026-10-05"
+    },
+    "svajpa.se": {
+      "file": "svajpa.se.webp",
+      "sourceUrl": "https://www.svajpa.se/_next/static/chunks/favicon-32x32-DeAZUull.png",
+      "width": 32,
+      "fetched": "2026-10-05"
+    },
+    "swiftspiele.de": {
+      "file": "swiftspiele.de.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/swiftcasino/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "thescore.casino": {
+      "file": "thescore.casino.webp",
+      "sourceUrl": "https://thescore.casino/favicon.svg",
+      "width": 750,
+      "fetched": "2026-10-05"
+    },
+    "storspelare.se": {
+      "file": "storspelare.se.webp",
+      "sourceUrl": "https://www.storspelare.se/kwp-bundle-store/kwp-assets/0.12.0/assets/highroller/webmanifest/icons/icon_512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "synottip.lv": {
+      "file": "synottip.lv.webp",
+      "sourceUrl": "https://synottip.lv/Content/sharedComponents/WebParts__Synottip/WebIcons/android/android-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "synottip.cz": {
+      "file": "synottip.cz.webp",
+      "sourceUrl": "https://www.synottip.cz/Content/sharedComponents/WebParts__Synottip/WebIcons/android/android-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "tipwin.se": {
+      "file": "tipwin.se.webp",
+      "sourceUrl": "https://tipwin.se/assets/images/favicon/android-icon-192x192.png",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "tipwin.de": {
+      "file": "tipwin.de.webp",
+      "sourceUrl": "https://tipwin.de/assets/images/favicon/android-icon-192x192.png",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "tipwin.com": {
+      "file": "tipwin.com.webp",
+      "sourceUrl": "https://tipwin.com/assets/images/favicon/android-icon-192x192.png",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "tipwin.dk": {
+      "file": "tipwin.dk.webp",
+      "sourceUrl": "https://tipwin.dk/assets/images/favicon/android-icon-192x192.png",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "tonybet.ca": {
+      "file": "tonybet.ca.webp",
+      "sourceUrl": "https://tonybet.ca/assets/pwa-icon-512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "tillsammans.atg.se": {
+      "file": "tillsammans.atg.se.webp",
+      "sourceUrl": "https://static-content.prod.c1.atg.cloud/atg-web/assets/frame/icons/apple-touch-icon.png",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "tonybet.es": {
+      "file": "tonybet.es.webp",
+      "sourceUrl": "https://tonybet.es/assets/pwa-icon-512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "tonybet.nl": {
+      "file": "tonybet.nl.webp",
+      "sourceUrl": "https://tonybet.nl/assets/pwa-icon-512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "tonybet.lv": {
+      "file": "tonybet.lv.webp",
+      "sourceUrl": "https://tonybet.lv/assets/pwa-icon-512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "turbonino.de": {
+      "file": "turbonino.de.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/turbonino/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "turbonino.com": {
+      "file": "turbonino.com.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/turbonino/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "tivolicasino.dk": {
+      "file": "tivolicasino.dk.webp",
+      "sourceUrl": "https://tivolicasino.dk/dist/assets/images/android-icon-192x192.png",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "unibet.dk": {
+      "file": "unibet.dk.webp",
+      "sourceUrl": "https://www.unibet.dk/kwp-bundle-store/kwp-assets/0.12.0/assets/unibet/webmanifest/icons/icon_512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "unibet.nl": {
+      "file": "unibet.nl.webp",
+      "sourceUrl": "https://www.unibet.nl/kwp-bundle-store/kwp-assets/0.12.0/assets/unibet/webmanifest/icons/icon_512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "unibet.se": {
+      "file": "unibet.se.webp",
+      "sourceUrl": "https://www.unibet.se/kwp-bundle-store/kwp-assets/0.12.0/assets/unibet/webmanifest/icons/icon_512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "unibetsports.be": {
+      "file": "unibetsports.be.webp",
+      "sourceUrl": "https://www.unibet.be/kwp-bundle-store/kwp-assets/0.12.0/assets/unibet/webmanifest/icons/icon_512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "valhallacasino.dk": {
+      "file": "valhallacasino.dk.webp",
+      "sourceUrl": "https://api.valhallacasino.dk/media/General/public-pwa/pwa-pwa-logoVC.webp",
+      "width": 290,
+      "fetched": "2026-10-05"
+    },
+    "unibetcasino.be": {
+      "file": "unibetcasino.be.webp",
+      "sourceUrl": "https://www.unibet.be/kwp-bundle-store/kwp-assets/0.12.0/assets/unibet/webmanifest/icons/icon_512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "vegaswinner.de": {
+      "file": "vegaswinner.de.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/vegaswinner/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "verajohn.se": {
+      "file": "verajohn.se.webp",
+      "sourceUrl": "https://verajohn.se/icons/vj.png",
+      "width": 80,
+      "fetched": "2026-10-05"
+    },
+    "videoslots.es": {
+      "file": "videoslots.es.webp",
+      "sourceUrl": "https://www.videoslots.com/diamondbet/images/mobile/android-chrome-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "winguru.lv": {
+      "file": "winguru.lv.webp",
+      "sourceUrl": "https://azartspeles.com/wp-content/uploads/2025/01/cropped-nopeat_round-192x192.png",
+      "width": 192,
+      "fetched": "2026-10-05"
+    },
+    "winamax.fr": {
+      "file": "winamax.fr.webp",
+      "sourceUrl": "https://operator-front-static-cdn.winamax.fr/img/style/v2/202410-apple-touch-icon.png",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "winamax.de": {
+      "file": "winamax.de.webp",
+      "sourceUrl": "https://operator-front-static-cdn.winamax.fr/img/style/v2/202410-apple-touch-icon.png",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "vsadahrej.cz": {
+      "file": "vsadahrej.cz.webp",
+      "sourceUrl": "https://www.vsadahrej.cz/static/favicons/android-chrome-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "winningkings.com": {
+      "file": "winningkings.com.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/winningkings/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "vbet.fr": {
+      "file": "vbet.fr.webp",
+      "sourceUrl": "https://www.vbet.fr/fs/userFiles-v2/france-18746848/images/favicon.png?v=1753261723",
+      "width": 48,
+      "fetched": "2026-10-05"
+    },
+    "winlandia.com": {
+      "file": "winlandia.com.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/winlandia/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "winlandia.se": {
+      "file": "winlandia.se.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/winlandia/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "wunderino.se": {
+      "file": "wunderino.se.webp",
+      "sourceUrl": "https://www.wunderino.se/images/appIcons/wunderino-512x512px.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "winz.nl": {
+      "file": "winz.nl.webp",
+      "sourceUrl": "https://eu-central-1-mill-temp.graphassets.com/AxykQxc6RSo6CIa7qZ10tz/x0AngDYSTKOQGUOy7vFO",
+      "width": 60,
+      "fetched": "2026-10-05"
+    },
+    "x3000.lv": {
+      "file": "x3000.lv.webp",
+      "sourceUrl": "https://www.x3000.lv/_next/static/chunks/favicon-32x32-DvcqrgAs.png",
+      "width": 32,
+      "fetched": "2026-10-05"
+    },
+    "yobingo.es": {
+      "file": "yobingo.es.webp",
+      "sourceUrl": "https://www.yobingo.es/images/apple-touch-icon.png?ts=yb0980",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "x3000.com": {
+      "file": "x3000.com.webp",
+      "sourceUrl": "https://www.x3000.com/_next/static/chunks/favicon-32x32-DvcqrgAs.png",
+      "width": 32,
+      "fetched": "2026-10-05"
+    },
+    "yakocasino.com": {
+      "file": "yakocasino.com.webp",
+      "sourceUrl": "https://www.yakocasino.com/android-chrome-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "yeticasino.se": {
+      "file": "yeticasino.se.webp",
+      "sourceUrl": "https://www.yeticasino.com/android-chrome-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "yosports.es": {
+      "file": "yosports.es.webp",
+      "sourceUrl": "https://www.yosports.es/images/apple-touch-icon.png?ts=ys0980",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "yocasino.es": {
+      "file": "yocasino.es.webp",
+      "sourceUrl": "https://www.yocasino.es/images/apple-touch-icon.png?ts=yc0980",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "yeticasino.com": {
+      "file": "yeticasino.com.webp",
+      "sourceUrl": "https://www.yeticasino.com/android-chrome-512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "zebrawin.de": {
+      "file": "zebrawin.de.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/zebrawins/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "zebrawins.com": {
+      "file": "zebrawins.com.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/zebrawins/icon_512x512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "zeturf.es": {
+      "file": "zeturf.es.webp",
+      "sourceUrl": "https://zeturf.es/apple-touch-icon.png",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "zebet.nl": {
+      "file": "zebet.nl.webp",
+      "sourceUrl": "https://www.zebet.nl/assets/img/core/mobile_app_logo-512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "zeturf.fr": {
+      "file": "zeturf.fr.webp",
+      "sourceUrl": "https://zeturf.fr/apple-touch-icon.png",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "zeturf.nl": {
+      "file": "zeturf.nl.webp",
+      "sourceUrl": "https://zeturf.nl/apple-touch-icon.png",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "zebet.es": {
+      "file": "zebet.es.webp",
+      "sourceUrl": "https://www.zebet.es/assets/img/core/mobile_app_logo-512.png",
+      "width": 512,
+      "fetched": "2026-10-05"
+    },
+    "zweeler.com": {
+      "file": "zweeler.com.webp",
+      "sourceUrl": "https://en.zweeler.com/assets/favicons/android-chrome-256x256.png?v=3.3.002",
+      "width": 256,
+      "fetched": "2026-10-05"
+    },
+    "winamax.es": {
+      "file": "winamax.es.webp",
+      "sourceUrl": "https://winamax.es/apple-touch-icon.png",
+      "width": 180,
+      "fetched": "2026-10-05"
+    },
+    "x3000.se": {
+      "file": "x3000.se.webp",
+      "sourceUrl": "https://www.x3000.com/_next/static/chunks/favicon-32x32-DvcqrgAs.png",
+      "width": 32,
+      "fetched": "2026-10-05"
+    },
+    "888.co.uk": {
+      "file": "888.co.uk.webp",
+      "sourceUrl": "https://www.leovegas.co.uk/static/pwa-icons/512.png",
+      "width": 512,
+      "via": "leovegas.co.uk",
+      "fetched": "2026-10-05"
+    },
+    "888.info": {
+      "file": "888.info.webp",
+      "sourceUrl": "https://d3j4vz29nirhst.cloudfront.net/888/nl_nl/general/FAVICON_MOBILE_ANDROID_CHROME_192x192/2/web-app-manifest-192x192.png",
+      "width": 192,
+      "via": "888.nl",
+      "fetched": "2026-10-05"
+    },
+    "888.com": {
+      "file": "888.com.webp",
+      "sourceUrl": "https://d3j4vz29nirhst.cloudfront.net/888/nl_nl/general/FAVICON_MOBILE_ANDROID_CHROME_192x192/2/web-app-manifest-192x192.png",
+      "width": 192,
+      "via": "888.nl",
+      "fetched": "2026-10-05"
+    },
+    "888.de": {
+      "file": "888.de.webp",
+      "sourceUrl": "https://d3j4vz29nirhst.cloudfront.net/888/nl_nl/general/FAVICON_MOBILE_ANDROID_CHROME_192x192/2/web-app-manifest-192x192.png",
+      "width": 192,
+      "via": "888.nl",
+      "fetched": "2026-10-05"
+    },
+    "888.dk": {
+      "file": "888.dk.webp",
+      "sourceUrl": "https://d3j4vz29nirhst.cloudfront.net/888/nl_nl/general/FAVICON_MOBILE_ANDROID_CHROME_192x192/2/web-app-manifest-192x192.png",
+      "width": 192,
+      "via": "888.nl",
+      "fetched": "2026-10-05"
+    },
+    "888.es": {
+      "file": "888.es.webp",
+      "sourceUrl": "https://d3j4vz29nirhst.cloudfront.net/888/nl_nl/general/FAVICON_MOBILE_ANDROID_CHROME_192x192/2/web-app-manifest-192x192.png",
+      "width": 192,
+      "via": "888.nl",
+      "fetched": "2026-10-05"
+    },
+    "888.se": {
+      "file": "888.se.webp",
+      "sourceUrl": "https://d3j4vz29nirhst.cloudfront.net/888/nl_nl/general/FAVICON_MOBILE_ANDROID_CHROME_192x192/2/web-app-manifest-192x192.png",
+      "width": 192,
+      "via": "888.nl",
+      "fetched": "2026-10-05"
+    },
+    "888poker.co.uk": {
+      "file": "888poker.co.uk.webp",
+      "sourceUrl": "https://www.leovegas.co.uk/static/pwa-icons/512.png",
+      "width": 512,
+      "via": "leovegas.co.uk",
+      "fetched": "2026-10-05"
+    },
+    "888sport.ca": {
+      "file": "888sport.ca.webp",
+      "sourceUrl": "https://www.888sport.com/content/dam/holdings888/888sport/common/favicons/new-icons/888sport-new-512x512.png",
+      "width": 512,
+      "via": "888sport.com",
+      "fetched": "2026-10-05"
+    },
+    "888sport.de": {
+      "file": "888sport.de.webp",
+      "sourceUrl": "https://www.888sport.com/content/dam/holdings888/888sport/common/favicons/new-icons/888sport-new-512x512.png",
+      "width": 512,
+      "via": "888sport.com",
+      "fetched": "2026-10-05"
+    },
+    "888sport.dk": {
+      "file": "888sport.dk.webp",
+      "sourceUrl": "https://www.888sport.com/content/dam/holdings888/888sport/common/favicons/new-icons/888sport-new-512x512.png",
+      "width": 512,
+      "via": "888sport.com",
+      "fetched": "2026-10-05"
+    },
+    "888sport.es": {
+      "file": "888sport.es.webp",
+      "sourceUrl": "https://www.888sport.com/content/dam/holdings888/888sport/common/favicons/new-icons/888sport-new-512x512.png",
+      "width": 512,
+      "via": "888sport.com",
+      "fetched": "2026-10-05"
+    },
+    "888sport.se": {
+      "file": "888sport.se.webp",
+      "sourceUrl": "https://www.888sport.com/content/dam/holdings888/888sport/common/favicons/new-icons/888sport-new-512x512.png",
+      "width": 512,
+      "via": "888sport.com",
+      "fetched": "2026-10-05"
+    },
+    "admiralbet.it": {
+      "file": "admiralbet.it.webp",
+      "sourceUrl": "https://admiralbet-de-prod-cdn-static.gt-cdn.net/web_assets/abde/assets/img/favicon/android-chrome-512x512.686d7620.png",
+      "width": 512,
+      "via": "admiralbet.de",
+      "fetched": "2026-10-05"
+    },
+    "allwynbet.com.cy": {
+      "file": "allwynbet.com.cy.webp",
+      "sourceUrl": "https://www.bet365.com.cy/sportsbook-static/favicons/favicon-192x192.png",
+      "width": 192,
+      "via": "bet365.com.cy",
+      "fetched": "2026-10-05"
+    },
+    "apuestas.juegging.es": {
+      "file": "apuestas.juegging.es.webp",
+      "sourceUrl": "https://www.juegging.es/wp-content/uploads/2024/04/favicon.png",
+      "width": 144,
+      "via": "juegging.es",
+      "fetched": "2026-10-05"
+    },
+    "apuestas.retabet.es": {
+      "file": "apuestas.retabet.es.webp",
+      "sourceUrl": "https://www.retabet.es/android-chrome-512x512.png",
+      "width": 512,
+      "via": "retabet.es",
+      "fetched": "2026-10-05"
+    },
+    "bet777.es": {
+      "file": "bet777.es.webp",
+      "sourceUrl": "https://bet777.be/apple-touch-icon.png",
+      "width": 180,
+      "via": "bet777.be",
+      "fetched": "2026-10-05"
+    },
+    "betano.bet.ar": {
+      "file": "betano.bet.ar.webp",
+      "sourceUrl": "https://www.bet365.bet.ar/sportsbook-static/favicons/favicon-192x192.png",
+      "width": 192,
+      "via": "bet365.bet.ar",
+      "fetched": "2026-10-05"
+    },
+    "betwarrior.bet.ar": {
+      "file": "betwarrior.bet.ar.webp",
+      "sourceUrl": "https://www.bet365.bet.ar/sportsbook-static/favicons/favicon-192x192.png",
+      "width": 192,
+      "via": "bet365.bet.ar",
+      "fetched": "2026-10-05"
+    },
+    "bwin.be": {
+      "file": "bwin.be.webp",
+      "sourceUrl": "https://help.bwin.dk/-/media/31D1268CCAB24872B30A2417B435E21F.ashx",
+      "width": 180,
+      "via": "bwin.dk",
+      "fetched": "2026-10-05"
+    },
+    "bwin.de": {
+      "file": "bwin.de.webp",
+      "sourceUrl": "https://help.bwin.dk/-/media/31D1268CCAB24872B30A2417B435E21F.ashx",
+      "width": 180,
+      "via": "bwin.dk",
+      "fetched": "2026-10-05"
+    },
+    "bwin.es": {
+      "file": "bwin.es.webp",
+      "sourceUrl": "https://help.bwin.dk/-/media/31D1268CCAB24872B30A2417B435E21F.ashx",
+      "width": 180,
+      "via": "bwin.dk",
+      "fetched": "2026-10-05"
+    },
+    "bwin.fr": {
+      "file": "bwin.fr.webp",
+      "sourceUrl": "https://help.bwin.dk/-/media/31D1268CCAB24872B30A2417B435E21F.ashx",
+      "width": 180,
+      "via": "bwin.dk",
+      "fetched": "2026-10-05"
+    },
+    "bwin.it": {
+      "file": "bwin.it.webp",
+      "sourceUrl": "https://help.bwin.dk/-/media/31D1268CCAB24872B30A2417B435E21F.ashx",
+      "width": 180,
+      "via": "bwin.dk",
+      "fetched": "2026-10-05"
+    },
+    "bwin.pt": {
+      "file": "bwin.pt.webp",
+      "sourceUrl": "https://help.bwin.dk/-/media/31D1268CCAB24872B30A2417B435E21F.ashx",
+      "width": 180,
+      "via": "bwin.dk",
+      "fetched": "2026-10-05"
+    },
+    "casino-www.888sport.com": {
+      "file": "casino-www.888sport.com.webp",
+      "sourceUrl": "https://www.888sport.com/content/dam/holdings888/888sport/common/favicons/new-icons/888sport-new-512x512.png",
+      "width": 512,
+      "via": "888sport.com",
+      "fetched": "2026-10-05"
+    },
+    "casino.bet365.es": {
+      "file": "casino.bet365.es.webp",
+      "sourceUrl": "https://www.bet365.com/sportsbook-static/favicons/favicon-192x192.png",
+      "width": 192,
+      "via": "bet365.com",
+      "fetched": "2026-10-05"
+    },
+    "casino.draftkings.com": {
+      "file": "casino.draftkings.com.webp",
+      "sourceUrl": "https://sportsbook.draftkings.com/apple-touch-icon.png",
+      "width": 180,
+      "via": "sportsbook.draftkings.com",
+      "fetched": "2026-10-05"
+    },
+    "casino.on.betmgm.ca": {
+      "file": "casino.on.betmgm.ca.webp",
+      "sourceUrl": "https://www.betmgm.se/static/pwa-icons/512.png",
+      "width": 512,
+      "via": "betmgm.se",
+      "fetched": "2026-10-05"
+    },
+    "casino777.es": {
+      "file": "casino777.es.webp",
+      "sourceUrl": "https://casino777.be/apple-touch-icon.png",
+      "width": 180,
+      "via": "casino777.be",
+      "fetched": "2026-10-05"
+    },
+    "casumo.de": {
+      "file": "casumo.de.webp",
+      "sourceUrl": "https://casumo.com/apple-touch-icon.png",
+      "width": 180,
+      "via": "casumo.com",
+      "fetched": "2026-10-05"
+    },
+    "casumo.es": {
+      "file": "casumo.es.webp",
+      "sourceUrl": "https://casumo.com/apple-touch-icon.png",
+      "width": 180,
+      "via": "casumo.com",
+      "fetched": "2026-10-05"
+    },
+    "codere.it": {
+      "file": "codere.it.webp",
+      "sourceUrl": "https://www.codere.es/assets1/icons/nuevos/deportes/deportes-fav-512x512.png",
+      "width": 512,
+      "via": "codere.es",
+      "fetched": "2026-10-05"
+    },
+    "copybet.com.cy": {
+      "file": "copybet.com.cy.webp",
+      "sourceUrl": "https://www.bet365.com.cy/sportsbook-static/favicons/favicon-192x192.png",
+      "width": 192,
+      "via": "bet365.com.cy",
+      "fetched": "2026-10-05"
+    },
+    "daznbet.fr": {
+      "file": "daznbet.fr.webp",
+      "sourceUrl": "https://www.daznbet.de/assets/favicons/apple-touch-icon.png",
+      "width": 180,
+      "via": "daznbet.de",
+      "fetched": "2026-10-05"
+    },
+    "daznbet.it": {
+      "file": "daznbet.it.webp",
+      "sourceUrl": "https://www.daznbet.de/assets/favicons/apple-touch-icon.png",
+      "width": 180,
+      "via": "daznbet.de",
+      "fetched": "2026-10-05"
+    },
+    "eurokingclub.dk": {
+      "file": "eurokingclub.dk.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/eurokingcasino/icon_512x512.png",
+      "width": 512,
+      "via": "eurokingclub.com",
+      "fetched": "2026-10-05"
+    },
+    "fonbet.com.cy": {
+      "file": "fonbet.com.cy.webp",
+      "sourceUrl": "https://www.bet365.com.cy/sportsbook-static/favicons/favicon-192x192.png",
+      "width": 192,
+      "via": "bet365.com.cy",
+      "fetched": "2026-10-05"
+    },
+    "ggpoker.nl": {
+      "file": "ggpoker.nl.webp",
+      "sourceUrl": "https://ssl.gg-global-cdn.com/bd/front/img/web/gg-192x192.webp",
+      "width": 192,
+      "via": "ggpoker.de",
+      "fetched": "2026-10-05"
+    },
+    "happycasino.com": {
+      "file": "happycasino.com.webp",
+      "sourceUrl": "https://happycasino.se/images/favicon.png",
+      "width": 120,
+      "via": "happycasino.se",
+      "fetched": "2026-10-05"
+    },
+    "in2bet.com.cy": {
+      "file": "in2bet.com.cy.webp",
+      "sourceUrl": "https://www.bet365.com.cy/sportsbook-static/favicons/favicon-192x192.png",
+      "width": 192,
+      "via": "bet365.com.cy",
+      "fetched": "2026-10-05"
+    },
+    "luckycasino.com": {
+      "file": "luckycasino.com.webp",
+      "sourceUrl": "https://www.luckycasino.es/img/favicons/brands/luckycasino/favicon-512x512.png",
+      "width": 512,
+      "via": "luckycasino.es",
+      "fetched": "2026-10-05"
+    },
+    "luckycasino.ca": {
+      "file": "luckycasino.ca.webp",
+      "sourceUrl": "https://www.luckycasino.es/img/favicons/brands/luckycasino/favicon-512x512.png",
+      "width": 512,
+      "via": "luckycasino.es",
+      "fetched": "2026-10-05"
+    },
+    "inplay.betway.com": {
+      "file": "inplay.betway.com.webp",
+      "sourceUrl": "https://betway.ca/assets/images/icons/icon-512.png",
+      "width": 512,
+      "via": "betway.ca",
+      "fetched": "2026-10-05"
+    },
+    "m.apuestas.codere.es": {
+      "file": "m.apuestas.codere.es.webp",
+      "sourceUrl": "https://www.codere.es/assets1/icons/nuevos/deportes/deportes-fav-512x512.png",
+      "width": 512,
+      "via": "codere.es",
+      "fetched": "2026-10-05"
+    },
+    "maskedsingergames.co.uk": {
+      "file": "maskedsingergames.co.uk.webp",
+      "sourceUrl": "https://www.leovegas.co.uk/static/pwa-icons/512.png",
+      "width": 512,
+      "via": "leovegas.co.uk",
+      "fetched": "2026-10-05"
+    },
+    "meridianbet.com.cy": {
+      "file": "meridianbet.com.cy.webp",
+      "sourceUrl": "https://www.bet365.com.cy/sportsbook-static/favicons/favicon-192x192.png",
+      "width": 192,
+      "via": "bet365.com.cy",
+      "fetched": "2026-10-05"
+    },
+    "mrvegas.com": {
+      "file": "mrvegas.com.webp",
+      "sourceUrl": "https://www.mrvegas.com/diamondbet/images/mrvegas/mobile/android-chrome-512x512.png",
+      "width": 512,
+      "via": "mrvegas.ca",
+      "fetched": "2026-10-05"
+    },
+    "mrvegas.dk": {
+      "file": "mrvegas.dk.webp",
+      "sourceUrl": "https://www.mrvegas.com/diamondbet/images/mrvegas/mobile/android-chrome-512x512.png",
+      "width": 512,
+      "via": "mrvegas.ca",
+      "fetched": "2026-10-05"
+    },
+    "mrvegas.se": {
+      "file": "mrvegas.se.webp",
+      "sourceUrl": "https://www.mrvegas.com/diamondbet/images/mrvegas/mobile/android-chrome-512x512.png",
+      "width": 512,
+      "via": "mrvegas.ca",
+      "fetched": "2026-10-05"
+    },
+    "novibet.com.cy": {
+      "file": "novibet.com.cy.webp",
+      "sourceUrl": "https://www.bet365.com.cy/sportsbook-static/favicons/favicon-192x192.png",
+      "width": 192,
+      "via": "bet365.com.cy",
+      "fetched": "2026-10-05"
+    },
+    "on.bwin.ca": {
+      "file": "on.bwin.ca.webp",
+      "sourceUrl": "https://help.bwin.dk/-/media/31D1268CCAB24872B30A2417B435E21F.ashx",
+      "width": 180,
+      "via": "bwin.dk",
+      "fetched": "2026-10-05"
+    },
+    "on.partycasino.ca": {
+      "file": "on.partycasino.ca.webp",
+      "sourceUrl": "https://help.partypoker.dk/-/media/8B0F77917F964BBBA638E850A83DAB16.ashx",
+      "width": 180,
+      "via": "da.partycasino.com",
+      "fetched": "2026-10-05"
+    },
+    "on.partypoker.ca": {
+      "file": "on.partypoker.ca.webp",
+      "sourceUrl": "https://help.partypoker.dk/-/media/8B0F77917F964BBBA638E850A83DAB16.ashx",
+      "width": 180,
+      "via": "da.partypoker.com",
+      "fetched": "2026-10-05"
+    },
+    "onecasino.se": {
+      "file": "onecasino.se.webp",
+      "sourceUrl": "https://nl.onecasino.com/img/favicons/favicon-svg.svg",
+      "width": 400,
+      "via": "nl.onecasino.com",
+      "fetched": "2026-10-05"
+    },
+    "parisvegasclub.dk": {
+      "file": "parisvegasclub.dk.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/parisvegascasino/icon_512x512.png",
+      "width": 512,
+      "via": "parisvegasclub.com",
+      "fetched": "2026-10-05"
+    },
+    "pba.stake.bet.ar": {
+      "file": "pba.stake.bet.ar.webp",
+      "sourceUrl": "https://www.bet365.bet.ar/sportsbook-static/favicons/favicon-192x192.png",
+      "width": 192,
+      "via": "bet365.bet.ar",
+      "fetched": "2026-10-05"
+    },
+    "pba.bplay.bet.ar": {
+      "file": "pba.bplay.bet.ar.webp",
+      "sourceUrl": "https://www.bet365.bet.ar/sportsbook-static/favicons/favicon-192x192.png",
+      "width": 192,
+      "via": "bet365.bet.ar",
+      "fetched": "2026-10-05"
+    },
+    "pba.betsson.bet.ar": {
+      "file": "pba.betsson.bet.ar.webp",
+      "sourceUrl": "https://www.bet365.bet.ar/sportsbook-static/favicons/favicon-192x192.png",
+      "width": 192,
+      "via": "bet365.bet.ar",
+      "fetched": "2026-10-05"
+    },
+    "partypoker.es": {
+      "file": "partypoker.es.webp",
+      "sourceUrl": "https://help.partypoker.dk/-/media/8B0F77917F964BBBA638E850A83DAB16.ashx",
+      "width": 180,
+      "via": "da.partypoker.com",
+      "fetched": "2026-10-05"
+    },
+    "partycasino.es": {
+      "file": "partycasino.es.webp",
+      "sourceUrl": "https://help.partypoker.dk/-/media/8B0F77917F964BBBA638E850A83DAB16.ashx",
+      "width": 180,
+      "via": "da.partycasino.com",
+      "fetched": "2026-10-05"
+    },
+    "partypoker.fr": {
+      "file": "partypoker.fr.webp",
+      "sourceUrl": "https://help.partypoker.dk/-/media/8B0F77917F964BBBA638E850A83DAB16.ashx",
+      "width": 180,
+      "via": "da.partypoker.com",
+      "fetched": "2026-10-05"
+    },
+    "playojo.co.uk": {
+      "file": "playojo.co.uk.webp",
+      "sourceUrl": "https://www.leovegas.co.uk/static/pwa-icons/512.png",
+      "width": 512,
+      "via": "leovegas.co.uk",
+      "fetched": "2026-10-05"
+    },
+    "playojo.com": {
+      "file": "playojo.com.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/playojo/icon_512x512.png",
+      "width": 512,
+      "via": "playojo.de",
+      "fetched": "2026-10-05"
+    },
+    "partycasino.dk": {
+      "file": "partycasino.dk.webp",
+      "sourceUrl": "https://help.partypoker.dk/-/media/8B0F77917F964BBBA638E850A83DAB16.ashx",
+      "width": 180,
+      "via": "da.partycasino.com",
+      "fetched": "2026-10-05"
+    },
+    "poker.on.betmgm.ca": {
+      "file": "poker.on.betmgm.ca.webp",
+      "sourceUrl": "https://www.betmgm.se/static/pwa-icons/512.png",
+      "width": 512,
+      "via": "betmgm.se",
+      "fetched": "2026-10-05"
+    },
+    "poker.bet365.es": {
+      "file": "poker.bet365.es.webp",
+      "sourceUrl": "https://www.bet365.com/sportsbook-static/favicons/favicon-192x192.png",
+      "width": 192,
+      "via": "bet365.com",
+      "fetched": "2026-10-05"
+    },
+    "slots.bet365.es": {
+      "file": "slots.bet365.es.webp",
+      "sourceUrl": "https://www.bet365.com/sportsbook-static/favicons/favicon-192x192.png",
+      "width": 192,
+      "via": "bet365.com",
+      "fetched": "2026-10-05"
+    },
+    "sports.videoslots.com": {
+      "file": "sports.videoslots.com.webp",
+      "sourceUrl": "https://www.videoslots.com/diamondbet/images/mobile/android-chrome-512x512.png",
+      "width": 512,
+      "via": "videoslots.es",
+      "fetched": "2026-10-05"
+    },
+    "sports.on.betmgm.ca": {
+      "file": "sports.on.betmgm.ca.webp",
+      "sourceUrl": "https://www.betmgm.se/static/pwa-icons/512.png",
+      "width": 512,
+      "via": "betmgm.se",
+      "fetched": "2026-10-05"
+    },
+    "starcasino.be": {
+      "file": "starcasino.be.webp",
+      "sourceUrl": "https://starcasino.nl/favicon.ico",
+      "width": 48,
+      "via": "starcasino.nl",
+      "fetched": "2026-10-05"
+    },
+    "stoiximan.com.cy": {
+      "file": "stoiximan.com.cy.webp",
+      "sourceUrl": "https://www.bet365.com.cy/sportsbook-static/favicons/favicon-192x192.png",
+      "width": 192,
+      "via": "bet365.com.cy",
+      "fetched": "2026-10-05"
+    },
+    "thescore.bet": {
+      "file": "thescore.bet.webp",
+      "sourceUrl": "https://thescore.casino/favicon.svg",
+      "width": 750,
+      "via": "thescore.casino",
+      "fetched": "2026-10-05"
+    },
+    "unibet.fr": {
+      "file": "unibet.fr.webp",
+      "sourceUrl": "https://www.unibet.dk/kwp-bundle-store/kwp-assets/0.12.0/assets/unibet/webmanifest/icons/icon_512.png",
+      "width": 512,
+      "via": "unibet.dk",
+      "fetched": "2026-10-05"
+    },
+    "vbet.de": {
+      "file": "vbet.de.webp",
+      "sourceUrl": "https://www.vbet.fr/fs/userFiles-v2/france-18746848/images/favicon.png?v=1753261723",
+      "width": 48,
+      "via": "vbet.fr",
+      "fetched": "2026-10-05"
+    },
+    "vbet.dk": {
+      "file": "vbet.dk.webp",
+      "sourceUrl": "https://www.vbet.fr/fs/userFiles-v2/france-18746848/images/favicon.png?v=1753261723",
+      "width": 48,
+      "via": "vbet.fr",
+      "fetched": "2026-10-05"
+    },
+    "vegas.betway.com": {
+      "file": "vegas.betway.com.webp",
+      "sourceUrl": "https://betway.ca/assets/images/icons/icon-512.png",
+      "width": 512,
+      "via": "betway.ca",
+      "fetched": "2026-10-05"
+    },
+    "vbet.se": {
+      "file": "vbet.se.webp",
+      "sourceUrl": "https://www.vbet.fr/fs/userFiles-v2/france-18746848/images/favicon.png?v=1753261723",
+      "width": 48,
+      "via": "vbet.fr",
+      "fetched": "2026-10-05"
+    },
+    "vbet.nl": {
+      "file": "vbet.nl.webp",
+      "sourceUrl": "https://www.vbet.fr/fs/userFiles-v2/france-18746848/images/favicon.png?v=1753261723",
+      "width": 48,
+      "via": "vbet.fr",
+      "fetched": "2026-10-05"
+    },
+    "videoslots.com": {
+      "file": "videoslots.com.webp",
+      "sourceUrl": "https://www.videoslots.com/diamondbet/images/mobile/android-chrome-512x512.png",
+      "width": 512,
+      "via": "videoslots.es",
+      "fetched": "2026-10-05"
+    },
+    "videoslots.ca": {
+      "file": "videoslots.ca.webp",
+      "sourceUrl": "https://www.videoslots.com/diamondbet/images/mobile/android-chrome-512x512.png",
+      "width": 512,
+      "via": "videoslots.es",
+      "fetched": "2026-10-05"
+    },
+    "videoslots.se": {
+      "file": "videoslots.se.webp",
+      "sourceUrl": "https://www.videoslots.com/diamondbet/images/mobile/android-chrome-512x512.png",
+      "width": 512,
+      "via": "videoslots.es",
+      "fetched": "2026-10-05"
+    },
+    "vegaswinner.com": {
+      "file": "vegaswinner.com.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/vegaswinner/icon_512x512.png",
+      "width": 512,
+      "via": "vegaswinner.de",
+      "fetched": "2026-10-05"
+    },
+    "wunderino.de": {
+      "file": "wunderino.de.webp",
+      "sourceUrl": "https://www.wunderino.se/images/appIcons/wunderino-512x512px.png",
+      "width": 512,
+      "via": "wunderino.se",
+      "fetched": "2026-10-05"
+    },
+    "winlandia.dk": {
+      "file": "winlandia.dk.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/winlandia/icon_512x512.png",
+      "width": 512,
+      "via": "winlandia.com",
+      "fetched": "2026-10-05"
+    },
+    "vegaswinner.dk": {
+      "file": "vegaswinner.dk.webp",
+      "sourceUrl": "https://service.image-tech-storage.com/pwa/vegaswinner/icon_512x512.png",
+      "width": 512,
+      "via": "vegaswinner.de",
+      "fetched": "2026-10-05"
+    }
+  },
+  "failed": {
+    "10bet.se": "2026-10-05",
+    "1xbet.es": "2026-10-05",
+    "711.nl": "2026-10-05",
+    "777.es": "2026-10-05",
+    "888casino.ca": "2026-10-05",
+    "888casino.com": "2026-10-05",
+    "888casino.dk": "2026-10-05",
+    "888casino.es": "2026-10-05",
+    "888casino.se": "2026-10-05",
+    "888poker-promotions.com": "2026-10-05",
+    "888poker.ca": "2026-10-05",
+    "888poker.net": "2026-10-05",
+    "888poker.com": "2026-10-05",
+    "888poker.de": "2026-10-05",
+    "888poker.dk": "2026-10-05",
+    "888poker.es": "2026-10-05",
+    "888pokercam.com": "2026-10-05",
+    "888pokeruk.com": "2026-10-05",
+    "888poker.se": "2026-10-05",
+    "888responsible.com": "2026-10-05",
+    "888slots.de": "2026-10-05",
+    "888vipcasinoclub.com": "2026-10-05",
+    "allinn.cz": "2026-10-05",
+    "amazonslots.ca": "2026-10-05",
+    "apuestas.betfair.es": "2026-10-05",
+    "apuestas.kirolbet.es": "2026-10-05",
+    "apuestas.marca.es": "2026-10-05",
+    "apuestas.olybet.es": "2026-10-05",
+    "aupabet.es": "2026-10-05",
+    "bet-x.cz": "2026-10-05",
+    "bet3000.de": "2026-10-05",
+    "bet90.be": "2026-10-05",
+    "betano.ca": "2026-10-05",
+    "betano.cz": "2026-10-05",
+    "betano.de": "2026-10-05",
+    "betano.dk": "2026-10-05",
+    "betanocasino.be": "2026-10-05",
+    "betanosports.be": "2026-10-05",
+    "betcenter.be": "2026-10-05",
+    "betcity.nl": "2026-10-05",
+    "betclic.fr": "2026-10-05",
+    "betclic.pt": "2026-10-05",
+    "betfair.com": "2026-10-05",
+    "betfair.dk": "2026-10-05",
+    "betfair.es": "2026-10-05",
+    "betfair.it": "2026-10-05",
+    "betflag.it": "2026-10-05",
+    "betfred.es": "2026-10-05",
+    "betinia.dk": "2026-10-05",
+    "betinia.es": "2026-10-05",
+    "betinia.se": "2026-10-05",
+    "betitaly.it": "2026-10-05",
+    "betnation.nl": "2026-10-05",
+    "betoro.dk": "2026-10-05",
+    "betpassion.it": "2026-10-05",
+    "betpoint.it": "2026-10-05",
+    "betsafe.com": "2026-10-05",
+    "betsafe.lv": "2026-10-05",
+    "betsbk.com": "2026-10-05",
+    "betsson.com": "2026-10-05",
+    "betsson.dk": "2026-10-05",
+    "betsson.es": "2026-10-05",
+    "betsson.fr": "2026-10-05",
+    "betsson.it": "2026-10-05",
+    "betvictor.com": "2026-10-05",
+    "betwin360.it": "2026-10-05",
+    "bgame.it": "2026-10-05",
+    "bingoalsport.be": "2026-10-05",
+    "blitzbet.be": "2026-10-05",
+    "bluesblock.es": "2026-10-05",
+    "boostcasino.se": "2026-10-05",
+    "bwincasino.be": "2026-10-05",
+    "campobet.dk": "2026-10-05",
+    "campobet.se": "2026-10-05",
+    "cashpoint.dk": "2026-10-05",
+    "casino-kartac.cz": "2026-10-05",
+    "casino-www.888poker.com": "2026-10-05",
+    "casino.fanduel.ca": "2026-10-05",
+    "casino.goldrummel.de": "2026-10-05",
+    "casino.on.wheeloffortunecasino.com": "2026-10-05",
+    "casino.tipico.de": "2026-10-05",
+    "bpremium.de": "2026-10-05",
+    "casinoaction.dk": "2026-10-05",
+    "casinobarcelona.es": "2026-10-05",
+    "casinogmonline.es": "2026-10-05",
+    "casinogranmadridonline.es": "2026-10-05",
+    "casinogranmadridtv.es": "2026-10-05",
+    "casinohouse.dk": "2026-10-05",
+    "casinomarbella.es": "2026-10-05",
+    "casinomarca.es": "2026-10-05",
+    "casinopauseandplay.es": "2026-10-05",
+    "casinoportugal.pt": "2026-10-05",
+    "casinotime.ca": "2026-10-05",
+    "casinoveneziaonline.it": "2026-10-05",
+    "casongo.dk": "2026-10-05",
+    "chance.cz": "2026-10-05",
+    "circus-sport.be": "2026-10-05",
+    "circus.nl": "2026-10-05",
+    "circusbet.fr": "2026-10-05",
+    "codereapuestas.es": "2026-10-05",
+    "comeon.com": "2026-10-05",
+    "comeon.dk": "2026-10-05",
+    "comeon.nl": "2026-10-05",
+    "domusbet.it": "2026-10-05",
+    "danskespil.dk": "2026-10-05",
+    "deltacasino.com": "2026-10-05",
+    "coolbet.com": "2026-10-05",
+    "elabet.it": "2026-10-05",
+    "die-spielbank.de": "2026-10-05",
+    "estorilsolcasinos.pt": "2026-10-05",
+    "eplay24.it": "2026-10-05",
+    "duelz.com": "2026-10-05",
+    "eurobet.it": "2026-10-05",
+    "fairplaycasino.nl": "2026-10-05",
+    "fenikss.lv": "2026-10-05",
+    "feelingbet.fr": "2026-10-05",
+    "ecasino.cz": "2026-10-05",
+    "frankcasino.se": "2026-10-05",
+    "games.tiptorro.de": "2026-10-05",
+    "games.tipico.de": "2026-10-05",
+    "finlandiacasino.com": "2026-10-05",
+    "fuegocasino.es": "2026-10-05",
+    "goldennuggetcasino.com": "2026-10-05",
+    "goldrummel.de": "2026-10-05",
+    "gratogana.es": "2026-10-05",
+    "goldenpark.es": "2026-10-05",
+    "goldenvegas-sport.be": "2026-10-05",
+    "granmadrid.es": "2026-10-05",
+    "hollandcasino.nl": "2026-10-05",
+    "grandwin.cz": "2026-10-05",
+    "herna.gapagroup.cz": "2026-10-05",
+    "intertops.de": "2026-10-05",
+    "interwetten.es": "2026-10-05",
+    "interwetten.de": "2026-10-05",
+    "jackpotcity.ca": "2026-10-05",
+    "ifortuna.cz": "2026-10-05",
+    "jallacasino.se": "2026-10-05",
+    "jollie.de": "2026-10-05",
+    "klondaika.lv": "2026-10-05",
+    "kingsbet.cz": "2026-10-05",
+    "kajotintacto.cz": "2026-10-05",
+    "jeu.fr": "2026-10-05",
+    "jokerbet.es": "2026-10-05",
+    "laimz.lv": "2026-10-05",
+    "lapalingo.de": "2026-10-05",
+    "efbet.es": "2026-10-05",
+    "letsbet.de": "2026-10-05",
+    "lordlucky.de": "2026-10-05",
+    "lodur.se": "2026-10-05",
+    "loewen-player.de": "2026-10-05",
+    "lottoexperten.com": "2026-10-05",
+    "interwetten.se": "2026-10-05",
+    "lotto24.de": "2026-10-05",
+    "luckia.es": "2026-10-05",
+    "luckydays.ca": "2026-10-05",
+    "lottoexperten.se": "2026-10-05",
+    "losvegas.bet": "2026-10-05",
+    "luckymeslots.de": "2026-10-05",
+    "luckymeslots.dk": "2026-10-05",
+    "luckymeslots.com": "2026-10-05",
+    "lvbet.lv": "2026-10-05",
+    "lasmegas.de": "2026-10-05",
+    "gentingspielhalle.de": "2026-10-05",
+    "maxi333.de": "2026-10-05",
+    "marcaapuestas.es": "2026-10-05",
+    "maxa.cz": "2026-10-05",
+    "magic888casino.com": "2026-10-05",
+    "maverickgames.com": "2026-10-05",
+    "megaspielhalle.de": "2026-10-05",
+    "meridiansports.be": "2026-10-05",
+    "merkurbets.de": "2026-10-05",
+    "merkur-sports.de": "2026-10-05",
+    "merkur-spiel.de": "2026-10-05",
+    "megawayscasino.com": "2026-10-05",
+    "merkurslots.de": "2026-10-05",
+    "metalspiel.de": "2026-10-05",
+    "mrbit.se": "2026-10-05",
+    "nanocasino.se": "2026-10-05",
+    "napoleoncasino.be": "2026-10-05",
+    "mrgreen.es": "2026-10-05",
+    "mrgreen.dk": "2026-10-05",
+    "marcacasino.es": "2026-10-05",
+    "napoleonsports.be": "2026-10-05",
+    "neobet.de": "2026-10-05",
+    "mrgreen.com": "2026-10-05",
+    "mrgreen.de": "2026-10-05",
+    "monacobet.cz": "2026-10-05",
+    "ninja.se": "2026-10-05",
+    "ninjacasino.se": "2026-10-05",
+    "netbet.fr": "2026-10-05",
+    "nordicbet.com": "2026-10-05",
+    "nordicbet.dk": "2026-10-05",
+    "olybet.fr": "2026-10-05",
+    "olybet.lv": "2026-10-05",
+    "mrgreen.se": "2026-10-05",
+    "on.miki.com": "2026-10-05",
+    "oddset.de": "2026-10-05",
+    "netbetsport.fr": "2026-10-05",
+    "on.bet99.ca": "2026-10-05",
+    "on.neobet.ca": "2026-10-05",
+    "nyspins.com": "2026-10-05",
+    "on.stardustcasino.com": "2026-10-05",
+    "on.powerplay.com": "2026-10-05",
+    "olybet.es": "2026-10-05",
+    "on.sportsinteraction.com": "2026-10-05",
+    "oneplaycasino.es": "2026-10-05",
+    "on.swiper.com": "2026-10-05",
+    "on.betinia.com": "2026-10-05",
+    "on.sportsbook.fanduel.ca": "2026-10-05",
+    "online.casinosanremo.it": "2026-10-05",
+    "on.partysports.ca": "2026-10-05",
+    "optibet.lv": "2026-10-05",
+    "optibet.se": "2026-10-05",
+    "original-slots.de": "2026-10-05",
+    "ontario.captaincooks.casino": "2026-10-05",
+    "original-wetten.de": "2026-10-05",
+    "oranjepalace.nl": "2026-10-05",
+    "online.casinoadmiral.cz": "2026-10-05",
+    "paston.es": "2026-10-05",
+    "merkurbets.dk": "2026-10-05",
+    "platincasino.es": "2026-10-05",
+    "pip.dk": "2026-10-05",
+    "playland.de": "2026-10-05",
+    "pmu.fr": "2026-10-05",
+    "poker.fanduel.ca": "2026-10-05",
+    "pokerstars.fr": "2026-10-05",
+    "pokerstarscasino.es": "2026-10-05",
+    "pokerstars.se": "2026-10-05",
+    "pokerstars.dk": "2026-10-05",
+    "pokerstars.es": "2026-10-05",
+    "pokerstarsmobile.es": "2026-10-05",
+    "pokerstars.de": "2026-10-05",
+    "pokerstarscasino.dk": "2026-10-05",
+    "primeslots.dk": "2026-10-05",
+    "pokerstarsmobile.fr": "2026-10-05",
+    "pokerstars.pt": "2026-10-05",
+    "primescratchards.dk": "2026-10-05",
+    "primeslots.de": "2026-10-05",
+    "regencycasino.es": "2026-10-05",
+    "regencycasino.se": "2026-10-05",
+    "quickcasino.se": "2026-10-05",
+    "quickcasino.dk": "2026-10-05",
+    "royalvegas.ca": "2026-10-05",
+    "rubyfortune.ca": "2026-10-05",
+    "se.luckymeslots.com": "2026-10-05",
+    "sh-goldrummel.de": "2026-10-05",
+    "sh-games.tipico.de": "2026-10-05",
+    "simbagames.dk": "2026-10-05",
+    "royalbet.com": "2026-10-05",
+    "royalbet.de": "2026-10-05",
+    "slotv.se": "2026-10-05",
+    "smarkets.com": "2026-10-05",
+    "ninjasport.se": "2026-10-05",
+    "solcasino.es": "2026-10-05",
+    "spildansknu.dk": "2026-10-05",
+    "spillehallen.dk": "2026-10-05",
+    "spinaway.ca": "2026-10-05",
+    "spincasino.ca": "2026-10-05",
+    "spinking.dk": "2026-10-05",
+    "spinz.de": "2026-10-05",
+    "se.simbagames.com": "2026-10-05",
+    "stake.dk": "2026-10-05",
+    "stanleybet.be": "2026-10-05",
+    "sportium.es": "2026-10-05",
+    "superlottoclub.com": "2026-10-05",
+    "superbet.se": "2026-10-05",
+    "spreadex.dk": "2026-10-05",
+    "simbagames.de": "2026-10-05",
+    "swiper.dk": "2026-10-05",
+    "tikitakaplay.es": "2026-10-05",
+    "swiper.se": "2026-10-05",
+    "tigerspin.de": "2026-10-05",
+    "tiptorro.de": "2026-10-05",
+    "tipp24.de": "2026-10-05",
+    "tipsport.cz": "2026-10-05",
+    "todoslots.es": "2026-10-05",
+    "tokyo.cz": "2026-10-05",
+    "titanplay.ca": "2026-10-05",
+    "tombola.dk": "2026-10-05",
+    "tombola.es": "2026-10-05",
+    "tombola.se": "2026-10-05",
+    "tipico.de": "2026-10-05",
+    "star-casino.cz": "2026-10-05",
+    "tuzoca.es": "2026-10-05",
+    "tooniebet.ca": "2026-10-05",
+    "supersnabbt.se": "2026-10-05",
+    "tvbingo.dk": "2026-10-05",
+    "toppz.ca": "2026-10-05",
+    "veraandjohn.se": "2026-10-05",
+    "versus.es": "2026-10-05",
+    "vindercasino.dk": "2026-10-05",
+    "wettarena.de": "2026-10-05",
+    "wildz.de": "2026-10-05",
+    "vivatbet.be": "2026-10-05",
+    "turbovegas.com": "2026-10-05",
+    "vindstort.dk": "2026-10-05",
+    "spinmodo.de": "2026-10-05",
+    "winfest.de": "2026-10-05",
+    "primespielautomat.de": "2026-10-05",
+    "voodoodreams.com": "2026-10-05",
+    "yaasscasino.es": "2026-10-05",
+    "xtip.de": "2026-10-05",
+    "williamhill.es": "2026-10-05",
+    "yoyocasino.se": "2026-10-05"
+  }
+}

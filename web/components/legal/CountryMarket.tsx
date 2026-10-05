@@ -1,3 +1,4 @@
+import Link from "next/link";
 import type { CountryMarket, WorldOperatorList, UnreadableRegister } from "@/lib/world-market";
 
 const MONO = "var(--font-jetbrains-mono), monospace";
@@ -63,7 +64,18 @@ function Operators({ title, list, id }: { title: string; list: WorldOperatorList
  * for online casino and betting, and the law behind it — or, where the
  * regulator publishes nothing a script can read, the page to check.
  */
-export function CountryMarketBlock({ market, unreadable, countryName }: { market: CountryMarket | null; unreadable: UnreadableRegister | null; countryName: string }) {
+export function CountryMarketBlock({
+  market,
+  unreadable,
+  countryName,
+  fiat,
+}: {
+  market: CountryMarket | null;
+  unreadable: UnreadableRegister | null;
+  countryName: string;
+  /** The country's page in the licensed (fiat) section, where it has one. */
+  fiat?: { href: string; sites: number } | null;
+}) {
   if (!market && !unreadable) return null;
   return (
     <section style={{ marginTop: 34 }}>
@@ -75,6 +87,14 @@ export function CountryMarketBlock({ market, unreadable, countryName }: { market
             <p style={{ margin: "6px 0 0", maxWidth: "80ch", fontSize: 14, lineHeight: 1.6, color: "#8DA0AA" }}>
               Read from {market.regulator}&rsquo;s own register. These hold a {countryName} licence; the crypto casinos above do not, and most of them say so on their own restricted lists.
             </p>
+            {fiat && (
+              <Link
+                href={fiat.href}
+                style={{ display: "inline-flex", alignItems: "center", gap: 8, marginTop: 12, padding: "11px 17px", borderRadius: 10, background: "#00C2CC", color: "#04191B", fontSize: 14, fontWeight: 800 }}
+              >
+                All {fiat.sites} licensed sites, with logos and links →
+              </Link>
+            )}
           </div>
           {market.casinos && <Operators id="licensed-casinos" title="Licensed online casinos" list={market.casinos} />}
           {market.sportsbooks && <Operators id="licensed-sportsbooks" title="Licensed online sportsbooks" list={market.sportsbooks} />}

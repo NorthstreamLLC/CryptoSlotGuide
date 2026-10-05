@@ -9,7 +9,7 @@
  * 4:3 like the menu's game tiles. flagOf() keeps the emoji for alt text and
  * for the few places that cannot take an image.
  */
-const SHIPPED = new Set(["ar", "at", "au", "be", "br", "ca", "ch", "co", "cw", "cy", "cz", "de", "dk", "ee", "es", "fi", "fr", "gb", "gr", "hu", "ie", "in", "it", "jp", "ke", "kr", "lv", "mt", "mx", "nl", "no", "nz", "ph", "pl", "pt", "ro", "se", "sg", "si", "sk", "tr", "ua", "za"]);
+const SHIPPED = new Set(["ar", "at", "au", "be", "br", "ca", "ch", "co", "cw", "cy", "cz", "de", "dk", "ee", "es", "fi", "fr", "gb", "gr", "hu", "ie", "in", "it", "jp", "ke", "kr", "lv", "mt", "mx", "nl", "no", "nz", "ph", "pl", "pt", "ro", "se", "sg", "si", "sk", "tr", "ua", "us", "za", "eu"]);
 
 export function flagSrc(code: string | null | undefined): string | null {
   const c = (code ?? "").toLowerCase();

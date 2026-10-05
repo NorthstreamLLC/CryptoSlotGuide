@@ -11,10 +11,11 @@ import { topSlotEntries, slotArtBySlug } from "./slot-page";
 import { sweepsSorted } from "./sweeps";
 import { inHouseOrder } from "./house-order";
 import { raceSlugs } from "./races";
-import { countryPages } from "./landing";
+import { countryPages, casinosForCountry } from "./landing";
 import { TOP_STUDIOS } from "./top-studios";
-import { US_STATES, EUROPE_SHAPES, COUNTRIES, toneOf } from "./legal";
-import { marketsWithLists } from "./world-market";
+import { US_STATES, EUROPE_SHAPES, toneOf } from "./legal";
+import { fiatMarkets, fiatMarketFor, fiatHref, fiatLogo, EUROPE_FIAT } from "./fiat";
+import ukLicences from "@/data/uk-licences.json";
 
 /** The countries the Europe map draws, for the Europe column. */
 const EUROPE_CODES = new Set(EUROPE_SHAPES.map((sh) => sh.code).filter((c): c is string => !!c));
@@ -66,6 +67,8 @@ export interface NavLink {
 
 export interface NavSection {
   mono: string;
+  /** An image for the rail instead of the mono glyph — a flag, where the emoji would render as letters on Windows. */
+  icon?: string;
   label: string;
   tint: string;
   href: string;
@@ -78,7 +81,7 @@ export interface NavColumn {
 }
 
 export interface NavTab {
-  key: "gambling" | "where" | "sports" | "predict" | "crypto";
+  key: "gambling" | "where" | "licensed" | "sports" | "predict" | "crypto";
   label: string;
   sections: NavSection[];
 }
@@ -251,49 +254,152 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
       ],
     },
     {
-      // Everything about where a reader can actually play, in one tab: the
-      // maps, then each market the site covers. "US regulated" and "US
-      // sweepstakes" were sections of the Gambling tab, and the regulated and
-      // sweeps lists are two answers to the same question — which is where
-      // you are — so they sit together here, with Canada, Europe and the UK.
+      // Crypto only: which crypto casinos take players from each country, and
+      // the law there. The licensed (fiat) side has its own tab below — the
+      // two used to share this one, unlabelled, with the same law pages
+      // linked from three sections.
       key: "where",
-      label: "Where you can play",
+      label: "Crypto by country",
       sections: [
         {
           mono: "🌍",
-          label: "World map",
+          label: "Worldwide",
           tint: "#7BE0B8",
           href: "/legal",
           columns: [
             {
-              title: "Maps",
-              links: [
-                { label: "Gambling laws, every country", href: "/legal" },
-                { label: "US state by state", href: "/legal/us" },
-                { label: "Canada by province", href: "/legal/canada" },
-                { label: "Europe", href: "/legal/europe" },
-                { label: "UK-licensed casinos", href: "/uk-casinos" },
-              ],
-            },
-            {
-              // Countries where the most of our casinos say, in their own
+              // Countries where the most crypto casinos say, in their own
               // terms, that they will take you. Counted, not chosen — except
               // that a country whose law bans online casinos is left out,
-              // whatever the operators' terms omit: India scored 30 here while
-              // its own page shows the law and no list, and a menu that sells
-              // what the page refuses is the contradiction that page exists
-              // to prevent.
-              title: "Most casinos accept",
+              // whatever the operators' terms omit.
+              title: "Most crypto casinos accept",
               links: [...countryPages()]
                 .filter(({ c }) => !/not legal|banned|prohibit/i.test(c.onlineCasino ?? ""))
                 .sort((a, b) => b.accepts.length - a.accepts.length || a.c.name.localeCompare(b.c.name))
-                .slice(0, 6)
+                .slice(0, 7)
                 .map(({ c, accepts }) => ({ label: `${c.name} · ${accepts.length}`, image: flagSrc(c.code) ?? undefined, href: `/crypto-casinos/in/${c.code.toLowerCase()}` })),
+            },
+            {
+              title: "The law",
+              links: [
+                { label: "Gambling law, every country", href: "/legal" },
+                { label: "Crypto casinos, all of them", href: "/crypto-casinos" },
+                { label: "By coin", href: "/crypto-casinos/accepting/bitcoin" },
+              ],
             },
           ],
         },
         {
-          mono: "🇺🇸",
+          mono: "EU",
+          icon: flagSrc("EU") ?? undefined,
+          label: "Europe",
+          tint: "#7BB8E0",
+          href: "/legal/europe",
+          columns: [
+            {
+              title: "Most crypto casinos accept",
+              links: [...countryPages()]
+                .filter(({ c }) => EUROPE_CODES.has(c.code) && !/not legal|banned|prohibit/i.test(c.onlineCasino ?? ""))
+                .sort((a, b) => b.accepts.length - a.accepts.length || a.c.name.localeCompare(b.c.name))
+                .slice(0, 7)
+                .map(({ c, accepts }) => ({ label: `${c.name} · ${accepts.length}`, image: flagSrc(c.code) ?? undefined, href: `/crypto-casinos/in/${c.code.toLowerCase()}` })),
+            },
+            {
+              title: "The law",
+              links: [
+                { label: "Europe, country by country", href: "/legal/europe" },
+                { label: "UK gambling law", href: "/legal/gb" },
+              ],
+            },
+          ],
+        },
+        {
+          mono: "CA",
+          icon: flagSrc("CA") ?? undefined,
+          label: "Canada",
+          tint: "#E07B7B",
+          href: "/crypto-casinos/in/ca",
+          columns: [
+            {
+              title: "Crypto casinos",
+              links: [{ label: `${casinosForCountry("CA").accepts.length} accept Canada`, href: "/crypto-casinos/in/ca", image: flagSrc("CA") ?? undefined }],
+            },
+            {
+              title: "The law",
+              links: [
+                { label: "Canada by province", href: "/legal/canada" },
+                { label: "Canadian gambling law", href: "/legal/ca" },
+              ],
+            },
+          ],
+        },
+        {
+          mono: "US",
+          icon: flagSrc("US") ?? undefined,
+          label: "United States",
+          tint: "#7BE0B8",
+          href: "/legal/us",
+          columns: [
+            {
+              // Most crypto casinos refuse US players in their own terms; the
+              // count says so rather than leaving the section looking empty.
+              title: "Crypto casinos",
+              links: [
+                { label: `${casinosForCountry("US").restricted} of ${casinosForCountry("US").total} restrict the US`, href: "/legal/us", image: flagSrc("US") ?? undefined },
+                { label: "Sweepstakes casinos instead", href: "/sweepstakes-casinos" },
+              ],
+            },
+            {
+              title: "The law",
+              links: [{ label: "US state by state", href: "/legal/us" }],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      // The licensed (fiat) side: every site each regulator lists, with its
+      // own logo, region by region (lib/fiat.ts). Kept apart from the crypto
+      // tab so a reader always knows which kind of list they are in.
+      key: "licensed",
+      label: "Licensed casinos",
+      sections: [
+        {
+          mono: "🏛",
+          label: "All markets",
+          tint: "#5FE3E8",
+          href: "/licensed-casinos",
+          columns: [
+            {
+              title: "North America",
+              links: [
+                { label: "US-regulated casinos", href: "/us-casinos", image: flagSrc("US") ?? undefined },
+                { label: `US sweepstakes · ${sweepsSorted().length}`, href: "/sweepstakes-casinos", image: flagSrc("US") ?? undefined },
+                ...(fiatMarketFor("CA-ON") ? [{ label: `Ontario · ${fiatMarketFor("CA-ON")!.sites.length}`, href: fiatHref("CA-ON"), image: flagSrc("CA") ?? undefined }] : []),
+              ],
+            },
+            {
+              title: "Europe",
+              links: [
+                { label: "United Kingdom", href: "/uk-casinos", image: flagSrc("GB") ?? undefined },
+                ...EUROPE_FIAT.map((code) => fiatMarketFor(code))
+                  .filter((m): m is NonNullable<typeof m> => !!m)
+                  .slice(0, 5)
+                  .map((m) => ({ label: `${m.name} · ${m.sites.length}`, href: fiatHref(m.code), image: m.flag ?? undefined })),
+              ],
+            },
+            {
+              title: "More",
+              links: [
+                ...(fiatMarketFor("AR") ? [{ label: `Buenos Aires · ${fiatMarketFor("AR")!.sites.length}`, href: fiatHref("AR"), image: flagSrc("AR") ?? undefined }] : []),
+                { label: `All ${fiatMarkets().length + 3} licensed markets`, href: "/licensed-casinos" },
+              ],
+            },
+          ],
+        },
+        {
+          mono: "US",
+          icon: flagSrc("US") ?? undefined,
           label: "US regulated",
           tint: "#7BE0B8",
           href: "/us-casinos",
@@ -304,21 +410,17 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
                 { label: "US-regulated casinos", href: "/us-casinos" },
                 { label: "US-regulated sportsbooks", href: "/us-sportsbooks" },
                 { label: "Casinos by state", href: "/us-casinos#by-state" },
-                { label: "State-by-state law", href: "/legal/us" },
-                { label: "US sweepstakes casinos", href: "/sweepstakes-casinos" },
               ],
             },
             {
-              // Widest sportsbook footprint, by state count, not by anything
-              // commercial — we hold no deal with any of them. Sportsbook
-              // rather than casino because the spread is far wider there:
-              // 27 states against 5.
               // The states where a licensed online casino is live, from each
               // state's own law page.
               title: "Live states",
               links: US_STATES.filter((st) => toneOf(st.onlineCasino) === "legal").map((st) => ({ label: st.name, href: `/us-casinos/in/${st.code.toLowerCase()}` })),
             },
             {
+              // Widest sportsbook footprint, by state count — we hold no deal
+              // with any of them.
               title: "Biggest footprints",
               links: rankedBrands("sportsbook")
                 .slice(0, 5)
@@ -334,15 +436,10 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
           columns: [
             {
               title: "Browse",
-              links: [
-                { label: `All ${sweepsSorted().length} sweepstakes casinos`, href: "/sweepstakes-casinos" },
-                { label: "US state by state", href: "/legal/us" },
-                { label: "US-regulated casinos", href: "/us-casinos" },
-              ],
+              links: [{ label: `All ${sweepsSorted().length} sweepstakes casinos`, href: "/sweepstakes-casinos" }],
             },
             {
-              // The same house order the index uses, so the menu and the page
-              // never disagree about who comes first.
+              // The same house order the index uses.
               title: "Top sweepstakes",
               links: sweepsSorted()
                 .slice(0, 5)
@@ -351,58 +448,65 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
           ],
         },
         {
-          mono: "🇨🇦",
-          label: "Canada",
+          mono: "CA",
+          icon: flagSrc("CA") ?? undefined,
+          label: "Ontario",
           tint: "#E07B7B",
-          href: "/legal/canada",
+          href: fiatHref("CA-ON"),
           columns: [
             {
-              title: "Browse",
+              title: "Licensed in Ontario",
               links: [
-                { label: "Canada by province", href: "/legal/canada" },
-                { label: "Crypto casinos accepting Canada", href: "/crypto-casinos/in/ca" },
-                { label: "Canadian gambling law", href: "/legal/ca" },
+                { label: `All ${fiatMarketFor("CA-ON")?.sites.length ?? 0} iGaming Ontario sites`, href: fiatHref("CA-ON") },
+                { label: "Casinos only", href: `${fiatHref("CA-ON")}?type=casino` },
+                { label: "Sportsbooks only", href: `${fiatHref("CA-ON")}?type=sports` },
               ],
+            },
+            {
+              title: "On the register",
+              links: (fiatMarketFor("CA-ON")?.sites ?? [])
+                .filter((x) => x.logo)
+                .slice(0, 6)
+                .map((x) => ({ label: x.name, href: `${fiatHref("CA-ON")}#${x.domain}`, image: x.logo ?? undefined })),
             },
           ],
         },
         {
-          mono: "🇪🇺",
-          label: "Europe",
+          mono: "GB",
+          icon: flagSrc("GB") ?? undefined,
+          label: "United Kingdom",
           tint: "#7BB8E0",
-          href: "/legal/europe",
+          href: "/uk-casinos",
           columns: [
             {
-              title: "Browse",
-              links: [
-                { label: "Europe, country by country", href: "/legal/europe" },
-                { label: "UK-licensed casinos", href: "/uk-casinos" },
-                { label: "UK gambling law", href: "/legal/gb" },
-              ],
+              title: "UK-licensed",
+              links: Object.entries((ukLicences as { brands: Record<string, { name: string; licences: { domains: string[] }[] }> }).brands).map(([slug, b]) => {
+                const d = b.licences.flatMap((l) => l.domains).find((x) => fiatLogo(x.replace(/^www\./, "")));
+                return { label: b.name, href: `/uk-casinos#${slug}`, image: d ? fiatLogo(d.replace(/^www\./, "")) ?? undefined : undefined };
+              }),
             },
+          ],
+        },
+        {
+          mono: "EU",
+          icon: flagSrc("EU") ?? undefined,
+          label: "Europe",
+          tint: "#7BB8E0",
+          href: "/licensed-casinos",
+          columns: [
             {
-              // European countries where the most of our casinos say they
-              // will take you — the same count as the world column, limited
-              // to the continent, with the law-banned ones left out.
-              title: "Most casinos accept",
-              links: [...countryPages()]
-                .filter(({ c }) => EUROPE_CODES.has(c.code) && !/not legal|banned|prohibit/i.test(c.onlineCasino ?? ""))
-                .sort((a, b) => b.accepts.length - a.accepts.length || a.c.name.localeCompare(b.c.name))
-                .slice(0, 6)
-                .map(({ c, accepts }) => ({ label: `${c.name} · ${accepts.length}`, image: flagSrc(c.code) ?? undefined, href: `/crypto-casinos/in/${c.code.toLowerCase()}` })),
-            },
-            {
-              // The regulated side: countries whose regulator's register we
-              // read, with the number of licensed brands on it. Links go to
-              // the licensed lists on the country's law page.
-              title: "Licensed markets",
-              links: marketsWithLists()
-                .filter((m) => EUROPE_CODES.has(m.code) && m.brands > 0)
-                .map((m) => ({ m, c: COUNTRIES.find((x) => x.code === m.code) }))
-                .filter((x): x is { m: ReturnType<typeof marketsWithLists>[number]; c: NonNullable<typeof x.c> } => !!x.c)
-                .sort((a, b) => b.m.brands - a.m.brands)
+              title: "Licensed sites by country",
+              links: EUROPE_FIAT.map((code) => fiatMarketFor(code))
+                .filter((m): m is NonNullable<typeof m> => !!m)
                 .slice(0, 7)
-                .map(({ m, c }) => ({ label: `${c.name} · ${m.brands}`, image: flagSrc(c.code) ?? undefined, href: `/legal/${c.code.toLowerCase()}#licensed-casinos` })),
+                .map((m) => ({ label: `${m.name} · ${m.sites.length}`, href: fiatHref(m.code), image: m.flag ?? undefined })),
+            },
+            {
+              title: " ",
+              links: EUROPE_FIAT.map((code) => fiatMarketFor(code))
+                .filter((m): m is NonNullable<typeof m> => !!m)
+                .slice(7)
+                .map((m) => ({ label: `${m.name} · ${m.sites.length}`, href: fiatHref(m.code), image: m.flag ?? undefined })),
             },
           ],
         },

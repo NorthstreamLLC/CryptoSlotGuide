@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { fiatMarkets } from "@/lib/fiat";
 import { sportsbookOps } from "@/lib/sports";
 import { catalogueStudios } from "@/lib/studio-pages";
 import { siteData } from "@/lib/site-data";
@@ -84,6 +85,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...rankedBrands().map(({ brand }) => slugPath("/us-casinos", brand.slug)),
     // Each book's sportsbook page.
     ...sportsbookOps().map((o) => slugPath("/sportsbooks", o.slug)),
+    // The licensed (fiat) section: the hub and each market's site list.
+    "/licensed-casinos",
+    ...fiatMarkets().map((m) => slugPath("/licensed-casinos", m.slug)),
     ...[...new Set([...providers.map((p) => p.slug), ...STUDIOS.map((st) => st.slug), ...catalogueStudios().map((c) => c.slug)])].map((sl) => slugPath("/providers", sl)),
     ...walletRows.map((w) => slugPath("/wallets", w.slug)),
     ...exchangeRows.map((x) => slugPath("/exchanges", x.slug)),
