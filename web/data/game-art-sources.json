@@ -30892,44 +30892,322 @@
       "provider": "Endorphina",
       "fetched": "2026-10-06",
       "via": "Endorphina's own game page"
+    },
+    "888-gold": {
+      "file": "888-gold.webp",
+      "bytes": 13874,
+      "type": "image/webp",
+      "sourceUrl": "https://www.pragmaticplay.com/wp-content/uploads/2017/02/thumbs-pt-site_888_GOLD_330x140px-2.png",
+      "sourceHost": "www.pragmaticplay.com",
+      "page": "https://www.pragmaticplay.com/en/games/888-gold-slot/",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-06",
+      "via": "Pragmatic Play's own game page"
+    },
+    "tales-of-egypt": {
+      "file": "tales-of-egypt.webp",
+      "bytes": 14142,
+      "type": "image/webp",
+      "sourceUrl": "https://www.pragmaticplay.com/wp-content/uploads/2016/05/59_Tales-of-Egypt_desktop-330x140px-1.png",
+      "sourceHost": "www.pragmaticplay.com",
+      "page": "https://www.pragmaticplay.com/en/games/tales-of-egypt-slot/",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-06",
+      "via": "Pragmatic Play's own game page"
+    },
+    "temujin-treasures": {
+      "file": "temujin-treasures.webp",
+      "bytes": 17692,
+      "type": "image/webp",
+      "sourceUrl": "https://www.pragmaticplay.com/wp-content/uploads/2021/03/Tamujin_Treasures_EN_339x180.png",
+      "sourceHost": "www.pragmaticplay.com",
+      "page": "https://www.pragmaticplay.com/en/games/temujin-treasures/",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-06",
+      "via": "Pragmatic Play's own game page"
+    },
+    "shining-hot-20": {
+      "file": "shining-hot-20.webp",
+      "bytes": 14406,
+      "type": "image/webp",
+      "sourceUrl": "https://www.pragmaticplay.com/wp-content/uploads/2022/07/Shining-Hot-20_339x180.png",
+      "sourceHost": "www.pragmaticplay.com",
+      "page": "https://www.pragmaticplay.com/en/games/shining-hot-20/",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-06",
+      "via": "Pragmatic Play's own game page"
+    },
+    "big-bass-crash": {
+      "file": "big-bass-crash.webp",
+      "bytes": 10796,
+      "type": "image/webp",
+      "sourceUrl": "https://www.pragmaticplay.com/wp-content/uploads/2023/09/Big-Bass-Crash_339x180.png",
+      "sourceHost": "www.pragmaticplay.com",
+      "page": "https://www.pragmaticplay.com/en/games/big-bass-crash/",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-06",
+      "via": "Pragmatic Play's own game page"
+    },
+    "the-big-dawgs": {
+      "file": "the-big-dawgs.webp",
+      "bytes": 14576,
+      "type": "image/webp",
+      "sourceUrl": "https://www.pragmaticplay.com/wp-content/uploads/2023/12/The-Big-Dawgs_339x180.png",
+      "sourceHost": "www.pragmaticplay.com",
+      "page": "https://www.pragmaticplay.com/en/games/the-big-dawgs/",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-06",
+      "via": "Pragmatic Play's own game page"
+    },
+    "wild-wildebeest-wins": {
+      "file": "wild-wildebeest-wins.webp",
+      "bytes": 12684,
+      "type": "image/webp",
+      "sourceUrl": "https://www.pragmaticplay.com/wp-content/uploads/2025/01/WILD-WILDEBEEST-WINS_339x180.png",
+      "sourceHost": "www.pragmaticplay.com",
+      "page": "https://www.pragmaticplay.com/en/games/wild-wildebeest-wins/",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-06",
+      "via": "Pragmatic Play's own game page"
+    },
+    "chilli-heat-spicy-spins": {
+      "file": "chilli-heat-spicy-spins.webp",
+      "bytes": 16546,
+      "type": "image/webp",
+      "sourceUrl": "https://www.pragmaticplay.com/wp-content/uploads/2025/07/Chilli-Heat-Spicy-Spins_339x180.png",
+      "sourceHost": "www.pragmaticplay.com",
+      "page": "https://www.pragmaticplay.com/en/games/chilli-heat-spicy-spins/",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-06",
+      "via": "Pragmatic Play's own game page"
+    },
+    "captain-kraken-megaways": {
+      "file": "captain-kraken-megaways.webp",
+      "bytes": 12278,
+      "type": "image/webp",
+      "sourceUrl": "https://www.pragmaticplay.com/wp-content/uploads/2025/08/Captain-Kraken-Megaways_339x180.png",
+      "sourceHost": "www.pragmaticplay.com",
+      "page": "https://www.pragmaticplay.com/en/games/captain-kraken-megaways/",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-06",
+      "via": "Pragmatic Play's own game page"
+    },
+    "lobster-house": {
+      "file": "lobster-house.webp",
+      "bytes": 12450,
+      "type": "image/webp",
+      "sourceUrl": "https://www.pragmaticplay.com/wp-content/uploads/2025/08/Lobster-House_339x180_EN.png",
+      "sourceHost": "www.pragmaticplay.com",
+      "page": "https://www.pragmaticplay.com/en/games/lobster-house/",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-06",
+      "via": "Pragmatic Play's own game page"
+    },
+    "bounty-hunter": {
+      "file": "bounty-hunter.webp",
+      "bytes": 10076,
+      "type": "image/webp",
+      "sourceUrl": "https://www.pragmaticplay.com/wp-content/uploads/2025/09/Bounty-Hunter_339x180.png",
+      "sourceHost": "www.pragmaticplay.com",
+      "page": "https://www.pragmaticplay.com/en/games/bounty-hunter/",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-06",
+      "via": "Pragmatic Play's own game page"
+    },
+    "bigger-barn-house-bonanza": {
+      "file": "bigger-barn-house-bonanza.webp",
+      "bytes": 12448,
+      "type": "image/webp",
+      "sourceUrl": "https://www.pragmaticplay.com/wp-content/uploads/2025/09/Bigger-Barn-House-Bonanza_339x180_EN.png",
+      "sourceHost": "www.pragmaticplay.com",
+      "page": "https://www.pragmaticplay.com/en/games/bigger-barn-house-bonanza/",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-06",
+      "via": "Pragmatic Play's own game page"
+    },
+    "odds-on-winner": {
+      "file": "odds-on-winner.webp",
+      "bytes": 12532,
+      "type": "image/webp",
+      "sourceUrl": "https://www.pragmaticplay.com/wp-content/uploads/2024/05/ODDS-ON-WINNER_339x180.png",
+      "sourceHost": "www.pragmaticplay.com",
+      "page": "https://www.pragmaticplay.com/en/games/front-runner-odds-on/",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-06",
+      "via": "Pragmatic Play's own game page"
+    },
+    "big-bass-splash-1000": {
+      "file": "big-bass-splash-1000.webp",
+      "bytes": 19348,
+      "type": "image/webp",
+      "sourceUrl": "https://www.pragmaticplay.com/wp-content/uploads/2025/11/Big-Bass-Splash-1000_339x180_EN.png",
+      "sourceHost": "www.pragmaticplay.com",
+      "page": "https://www.pragmaticplay.com/en/games/big-bass-splash-1000/",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-06",
+      "via": "Pragmatic Play's own game page"
+    },
+    "rolling-in-treasures": {
+      "file": "rolling-in-treasures.webp",
+      "bytes": 10910,
+      "type": "image/webp",
+      "sourceUrl": "https://www.pragmaticplay.com/wp-content/uploads/2026/02/Rolling-in-Treasures_339x180_EN.png",
+      "sourceHost": "www.pragmaticplay.com",
+      "page": "https://www.pragmaticplay.com/en/games/rolling-in-treasures/",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-06",
+      "via": "Pragmatic Play's own game page"
+    },
+    "snow-party": {
+      "file": "snow-party.webp",
+      "bytes": 14036,
+      "type": "image/webp",
+      "sourceUrl": "https://www.pragmaticplay.com/wp-content/uploads/2026/03/Snow-Party_339x180_EN.png",
+      "sourceHost": "www.pragmaticplay.com",
+      "page": "https://www.pragmaticplay.com/en/games/snow-party/",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-06",
+      "via": "Pragmatic Play's own game page"
+    },
+    "multihand-blackjack": {
+      "file": "multihand-blackjack.webp",
+      "bytes": 12538,
+      "type": "image/webp",
+      "sourceUrl": "https://www.pragmaticplay.com/wp-content/uploads/2016/11/thumbs-pt-site_Multihand-Blackjack_330x140px_new.png",
+      "sourceHost": "www.pragmaticplay.com",
+      "page": "https://www.pragmaticplay.com/en/games/multihand-blackjack/",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-06",
+      "via": "Pragmatic Play's own game page"
+    },
+    "idol-pop-fever": {
+      "file": "idol-pop-fever.webp",
+      "bytes": 16424,
+      "type": "image/webp",
+      "sourceUrl": "https://www.pragmaticplay.com/wp-content/uploads/2026/03/Idol-Pop-Fever_339x180_EN.png",
+      "sourceHost": "www.pragmaticplay.com",
+      "page": "https://www.pragmaticplay.com/en/games/idol-pop-fever/",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-06",
+      "via": "Pragmatic Play's own game page"
+    },
+    "roulette": {
+      "file": "roulette.webp",
+      "bytes": 14332,
+      "type": "image/webp",
+      "sourceUrl": "https://www.pragmaticplay.com/wp-content/uploads/2017/12/thumbs-pt-site_Roulette_330x140px.png",
+      "sourceHost": "www.pragmaticplay.com",
+      "page": "https://www.pragmaticplay.com/en/games/roulette/",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-06",
+      "via": "Pragmatic Play's own game page"
+    },
+    "inca-queen": {
+      "file": "inca-queen.webp",
+      "bytes": 14808,
+      "type": "image/webp",
+      "sourceUrl": "https://www.pragmaticplay.com/wp-content/uploads/2026/03/Inca-Queen_339x180_EN.png",
+      "sourceHost": "www.pragmaticplay.com",
+      "page": "https://www.pragmaticplay.com/en/games/inca-queen/",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-06",
+      "via": "Pragmatic Play's own game page"
+    },
+    "dragon-pots-megaways": {
+      "file": "dragon-pots-megaways.webp",
+      "bytes": 11550,
+      "type": "image/webp",
+      "sourceUrl": "https://www.pragmaticplay.com/wp-content/uploads/2026/04/Dragon-Pots-Megaways_339x180_EN.png",
+      "sourceHost": "www.pragmaticplay.com",
+      "page": "https://www.pragmaticplay.com/en/games/dragon-pots-megaways/",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-06",
+      "via": "Pragmatic Play's own game page"
+    },
+    "mr-null-s-wicked-wares": {
+      "file": "mr-null-s-wicked-wares.webp",
+      "bytes": 15898,
+      "type": "image/webp",
+      "sourceUrl": "https://www.pragmaticplay.com/wp-content/uploads/2026/04/Mr.-Nulls-Wicked-Wares_339x180_EN.png",
+      "sourceHost": "www.pragmaticplay.com",
+      "page": "https://www.pragmaticplay.com/en/games/mr-nulls-wicked-wares/",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-06",
+      "via": "Pragmatic Play's own game page"
+    },
+    "spaceman": {
+      "file": "spaceman.webp",
+      "bytes": 8266,
+      "type": "image/webp",
+      "sourceUrl": "https://www.pragmaticplay.com/wp-content/uploads/2022/03/Spaceman_EN_339x180.png",
+      "sourceHost": "www.pragmaticplay.com",
+      "page": "https://www.pragmaticplay.com/en/games/spaceman/",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-06",
+      "via": "Pragmatic Play's own game page"
+    },
+    "high-flyer": {
+      "file": "high-flyer.webp",
+      "bytes": 8732,
+      "type": "image/webp",
+      "sourceUrl": "https://www.pragmaticplay.com/wp-content/uploads/2024/09/High-Flyer_339x180.png",
+      "sourceHost": "www.pragmaticplay.com",
+      "page": "https://www.pragmaticplay.com/en/games/high-flyer/",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-06",
+      "via": "Pragmatic Play's own game page"
+    },
+    "pig-farm": {
+      "file": "pig-farm.webp",
+      "bytes": 16268,
+      "type": "image/webp",
+      "sourceUrl": "https://www.pragmaticplay.com/wp-content/uploads/2025/06/Pig-Farm_339x180_NB.png",
+      "sourceHost": "www.pragmaticplay.com",
+      "page": "https://www.pragmaticplay.com/en/games/pig-farm/",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-06",
+      "via": "Pragmatic Play's own game page"
+    },
+    "lucky-panda": {
+      "file": "lucky-panda.webp",
+      "bytes": 16592,
+      "type": "image/webp",
+      "sourceUrl": "https://www.pragmaticplay.com/wp-content/uploads/2025/12/Lucky-Panda_339x180_B.png",
+      "sourceHost": "www.pragmaticplay.com",
+      "page": "https://www.pragmaticplay.com/en/games/lucky-panda/",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-06",
+      "via": "Pragmatic Play's own game page"
+    },
+    "olympus-wins": {
+      "file": "olympus-wins.webp",
+      "bytes": 10456,
+      "type": "image/webp",
+      "sourceUrl": "https://www.pragmaticplay.com/wp-content/uploads/2025/08/Olympus-Wins-Super-Scatter_339x180_B.png",
+      "sourceHost": "www.pragmaticplay.com",
+      "page": "https://www.pragmaticplay.com/en/games/olympus-wins/",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-06",
+      "via": "Pragmatic Play's own game page"
+    },
+    "mahjong-wins-super-scatter": {
+      "file": "mahjong-wins-super-scatter.webp",
+      "bytes": 13236,
+      "type": "image/webp",
+      "sourceUrl": "https://www.pragmaticplay.com/wp-content/uploads/2025/05/Mahjong-Wins-Super-Scatter_339x180.png",
+      "sourceHost": "www.pragmaticplay.com",
+      "page": "https://www.pragmaticplay.com/en/games/mahjong-wins-super-scatter/",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-06",
+      "via": "Pragmatic Play's own game page"
     }
   },
   "heldPendingRights": {
-    "888-gold": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/pragmatic/888-gold.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Pragmatic Play",
-      "name": "888 Gold"
-    },
-    "bigger-barn-house-bonanza": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/pragmatic-play/bigger-barn-house-bonanza.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Pragmatic Play",
-      "name": "Bigger Barn House Bonanza"
-    },
     "book-of-fallen": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/pragmatic/book-of-fallen.jpg",
       "sourceHost": "cdn-cms.razed.com",
       "provider": "Pragmatic Play",
       "name": "Book of Fallen"
-    },
-    "bounty-hunter": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/pragmatic-play/bounty-hunter.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Pragmatic Play",
-      "name": "Bounty Hunter"
-    },
-    "captain-kraken-megaways": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/pragmatic-play/captain-kraken-megaways.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Pragmatic Play",
-      "name": "Captain Kraken Megaways"
-    },
-    "chilli-heat-spicy-spins": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/pragmatic-play/chilli-heat-spicy-spins.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Pragmatic Play",
-      "name": "Chilli Heat Spicy Spins"
     },
     "crypto-crown-10": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/hub88/avatarux/avx-cryptocrown10.jpg",
@@ -30943,83 +31221,17 @@
       "provider": "Play'n GO",
       "name": "Free Reelin' Joker"
     },
-    "lobster-house": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/pragmatic-play/lobster-house.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Pragmatic Play",
-      "name": "Lobster House"
-    },
-    "lucky-panda": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/pragmatic-play/lucky-panda.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Pragmatic Play",
-      "name": "Lucky Panda"
-    },
-    "mahjong-wins-super-scatter": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Pragmatic/mahjong-wins-super-scatter.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Pragmatic Play",
-      "name": "Mahjong Wins Super Scatter"
-    },
-    "mr-null-s-wicked-wares": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/neutron/pragmatic-play/mr-nulls-wicked-wares.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Pragmatic Play",
-      "name": "Mr. Null's Wicked Wares"
-    },
-    "olympus-wins": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/pragmatic-play/olympus-wins.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Pragmatic Play",
-      "name": "Olympus Wins"
-    },
-    "pig-farm": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/pragmatic-play/pig-farm.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Pragmatic Play",
-      "name": "Pig Farm"
-    },
     "rise-of-orpheus": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/rise-of-orpheus.jpg",
       "sourceHost": "cdn-cms.razed.com",
       "provider": "Play'n GO",
       "name": "Rise of Orpheus"
     },
-    "rolling-in-treasures": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/pragmatic-play/rolling-in-treasures.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Pragmatic Play",
-      "name": "Rolling in Treasures"
-    },
-    "tales-of-egypt": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/pragmatic/tales-of-egypt.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Pragmatic Play",
-      "name": "Tales of Egypt"
-    },
-    "temujin-treasures": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/pragmatic/temujin-treasures.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Pragmatic Play",
-      "name": "Temujin Treasures"
-    },
-    "the-big-dawgs": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/pragmatic-play/the-big-dawgs.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Pragmatic Play",
-      "name": "The Big Dawgs"
-    },
     "treats-of-terror-ii": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/treats-of-terror-ii.jpg",
       "sourceHost": "cdn-cms.razed.com",
       "provider": "Play'n GO",
       "name": "Treats of Terror II"
-    },
-    "wild-wildebeest-wins": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Pragmatic-Play/wild-wildebeest-wins.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Pragmatic Play",
-      "name": "Wild Wildebeest Wins"
     }
   }
 }
