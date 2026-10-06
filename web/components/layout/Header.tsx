@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { buildNavTabs, type NavTab } from "@/lib/nav";
+import type { NavTab } from "@/lib/nav";
 import type { SiteCounts } from "@/lib/derived";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { tintFor } from "@/lib/logo";
@@ -12,8 +12,14 @@ import { tintFor } from "@/lib/logo";
  * file for `<header onMouseLeave`). Structure, spacing and colors are the
  * real ones — see lib/nav.ts for where the mega-menu content comes from.
  */
-export function Header({ counts }: { counts: SiteCounts }) {
-  const navTabs = buildNavTabs(counts);
+/**
+ * The menu arrives built: lib/nav.ts reaches into the slot catalogue, the
+ * registers and the art sources to fill the mega-menu, and building it in
+ * this client component shipped all of that — 7 MB, including the operator
+ * image URLs we hold back — to every visitor. The layout builds it on the
+ * server and passes only the finished tabs.
+ */
+export function Header({ counts, navTabs }: { counts: SiteCounts; navTabs: NavTab[] }) {
   const [menu, setMenu] = useState<string | null>(null);
   const [rail, setRail] = useState(0);
   const [mobileOpen, setMobileOpen] = useState(false);

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { buildNavTabs } from "@/lib/nav";
 import { RevealObserver } from "@/components/motion/RevealObserver";
 import { Archivo, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
@@ -43,7 +44,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-page text-text-primary">
         <JsonLd data={[organizationSchema(), websiteSchema()]} />
         <a href="#main" className="csg-skip">Skip to content</a>
-        <Header counts={siteCounts} />
+        <Header counts={siteCounts} navTabs={buildNavTabs(siteCounts)} />
         <RevealObserver />
         <main id="main" className="flex-1">{children}</main>
         <NewsletterBand />
