@@ -30056,6 +30056,171 @@
       "provider": "Play'n GO",
       "fetched": "2026-10-06",
       "via": "Play'n GO's own game page"
+    },
+    "shark-spark-hold": {
+      "file": "shark-spark-hold.webp",
+      "bytes": 22508,
+      "type": "image/webp",
+      "sourceUrl": "https://bgaming.com/wp-content/uploads/2026/04/Shark_Spark_Hold_Win_1020x618_1x.webp",
+      "sourceHost": "bgaming.com",
+      "page": "https://bgaming.com/games/shark-spark-hold-win",
+      "provider": "BGaming",
+      "fetched": "2026-10-06",
+      "via": "BGaming's own game page"
+    },
+    "grand-patron": {
+      "file": "grand-patron.webp",
+      "bytes": 26976,
+      "type": "image/webp",
+      "sourceUrl": "https://bgaming.com/wp-content/uploads/2025/04/6669ba784a9b58be2500646e_Grand_Patron_1020x618.webp",
+      "sourceHost": "bgaming.com",
+      "page": "https://bgaming.com/games/grand-patron",
+      "provider": "BGaming",
+      "fetched": "2026-10-06",
+      "via": "BGaming's own game page"
+    },
+    "aztec-s-claw-wild-dice": {
+      "file": "aztec-s-claw-wild-dice.webp",
+      "bytes": 30388,
+      "type": "image/webp",
+      "sourceUrl": "https://bgaming.com/wp-content/uploads/2025/06/66d9aabbd0564690d1e59524_Aztecs_Claw_Wild_Dice_1020x618-1.webp",
+      "sourceHost": "bgaming.com",
+      "page": "https://bgaming.com/games/aztecs-claw-wild-dice",
+      "provider": "BGaming",
+      "fetched": "2026-10-06",
+      "via": "BGaming's own game page"
+    },
+    "robospin": {
+      "file": "robospin.webp",
+      "bytes": 23050,
+      "type": "image/webp",
+      "sourceUrl": "https://bgaming.com/wp-content/uploads/2025/04/66b65a5159c9d7d56c01a17a_Robospin_1020x618.webp",
+      "sourceHost": "bgaming.com",
+      "page": "https://bgaming.com/games/robospin",
+      "provider": "BGaming",
+      "fetched": "2026-10-06",
+      "via": "BGaming's own game page"
+    },
+    "space-xy": {
+      "file": "space-xy.webp",
+      "bytes": 12322,
+      "type": "image/webp",
+      "sourceUrl": "https://bgaming.com/wp-content/uploads/2025/04/66953c2bd7303ecc9179534a_Space_XY_1020x618.webp",
+      "sourceHost": "bgaming.com",
+      "page": "https://bgaming.com/games/space-xy",
+      "provider": "BGaming",
+      "fetched": "2026-10-06",
+      "via": "BGaming's own game page"
+    },
+    "rocket-dice-xy": {
+      "file": "rocket-dice-xy.webp",
+      "bytes": 12364,
+      "type": "image/webp",
+      "sourceUrl": "https://bgaming.com/wp-content/uploads/2025/04/669538056ac6cd03f7b1a4d9_Rocket_dice_XY_1020x618.webp",
+      "sourceHost": "bgaming.com",
+      "page": "https://bgaming.com/games/rocket-dice-xy",
+      "provider": "BGaming",
+      "fetched": "2026-10-06",
+      "via": "BGaming's own game page"
+    },
+    "rocket-dice": {
+      "file": "rocket-dice.webp",
+      "bytes": 20146,
+      "type": "image/webp",
+      "sourceUrl": "https://bgaming.com/wp-content/uploads/2025/04/6695380c68a328bd0cda7365_Rocket_dice_1020x618.webp",
+      "sourceHost": "bgaming.com",
+      "page": "https://bgaming.com/games/rocket-dice",
+      "provider": "BGaming",
+      "fetched": "2026-10-06",
+      "via": "BGaming's own game page"
+    },
+    "princess-of-sky": {
+      "file": "princess-of-sky.webp",
+      "bytes": 25414,
+      "type": "image/webp",
+      "sourceUrl": "https://bgaming.com/wp-content/uploads/2025/04/6695373d89b1f39dca37bad1_Princess_of_Sky_1020x618.webp",
+      "sourceHost": "bgaming.com",
+      "page": "https://bgaming.com/games/princess-of-sky",
+      "provider": "BGaming",
+      "fetched": "2026-10-06",
+      "via": "BGaming's own game page"
+    },
+    "princess-royal": {
+      "file": "princess-royal.webp",
+      "bytes": 30216,
+      "type": "image/webp",
+      "sourceUrl": "https://bgaming.com/wp-content/uploads/2025/04/66953773ed500f35220ad427_Princess_Royal_1020x618.webp",
+      "sourceHost": "bgaming.com",
+      "page": "https://bgaming.com/games/princess-royal",
+      "provider": "BGaming",
+      "fetched": "2026-10-06",
+      "via": "BGaming's own game page"
+    },
+    "platinum-lightning-deluxe": {
+      "file": "platinum-lightning-deluxe.webp",
+      "bytes": 19370,
+      "type": "image/webp",
+      "sourceUrl": "https://bgaming.com/wp-content/uploads/2025/04/669536531b330afc5afd8cc2_Platinum_Lightning_Deluxe_1020x618.webp",
+      "sourceHost": "bgaming.com",
+      "page": "https://bgaming.com/games/platinum-lightning-deluxe",
+      "provider": "BGaming",
+      "fetched": "2026-10-06",
+      "via": "BGaming's own game page"
+    },
+    "platinum-lightning": {
+      "file": "platinum-lightning.webp",
+      "bytes": 26026,
+      "type": "image/webp",
+      "sourceUrl": "https://bgaming.com/wp-content/uploads/2025/04/Platinum_lightning_main_1020x1280.webp",
+      "sourceHost": "bgaming.com",
+      "page": "https://bgaming.com/games/platinum-lightning",
+      "provider": "BGaming",
+      "fetched": "2026-10-06",
+      "via": "BGaming's own game page"
+    },
+    "fire-lightning": {
+      "file": "fire-lightning.webp",
+      "bytes": 32054,
+      "type": "image/webp",
+      "sourceUrl": "https://bgaming.com/wp-content/uploads/2025/04/66951c978fb35834c3b72ab8_Fire_Lightning_1020x618.webp",
+      "sourceHost": "bgaming.com",
+      "page": "https://bgaming.com/games/fire-lightning",
+      "provider": "BGaming",
+      "fetched": "2026-10-06",
+      "via": "BGaming's own game page"
+    },
+    "capymania-orange": {
+      "file": "capymania-orange.webp",
+      "bytes": 26390,
+      "type": "image/webp",
+      "sourceUrl": "https://bgaming.com/wp-content/uploads/2025/04/6695162ab120c115e2c1abf8_Capymania_orange_1020x618.webp",
+      "sourceHost": "bgaming.com",
+      "page": "https://bgaming.com/games/capymania-orange",
+      "provider": "BGaming",
+      "fetched": "2026-10-06",
+      "via": "BGaming's own game page"
+    },
+    "balloon-mania": {
+      "file": "balloon-mania.webp",
+      "bytes": 21410,
+      "type": "image/webp",
+      "sourceUrl": "https://bgaming.com/wp-content/uploads/2025/06/680b791e413fb422aafaa78b_Balloon_Mania_1020x618-1.webp",
+      "sourceHost": "bgaming.com",
+      "page": "https://bgaming.com/games/balloon-mania",
+      "provider": "BGaming",
+      "fetched": "2026-10-06",
+      "via": "BGaming's own game page"
+    },
+    "aztec-magic-deluxe": {
+      "file": "aztec-magic-deluxe.webp",
+      "bytes": 39106,
+      "type": "image/webp",
+      "sourceUrl": "https://bgaming.com/wp-content/uploads/2025/04/6695130434128c9674a75c47_Aztec_magic_deluxe_1020x618.webp",
+      "sourceHost": "bgaming.com",
+      "page": "https://bgaming.com/games/aztec-magic-deluxe",
+      "provider": "BGaming",
+      "fetched": "2026-10-06",
+      "via": "BGaming's own game page"
     }
   },
   "heldPendingRights": {
