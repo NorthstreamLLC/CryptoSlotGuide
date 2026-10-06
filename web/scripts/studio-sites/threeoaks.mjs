@@ -34,7 +34,7 @@ export default {
       }
       for (const g of d?.items ?? []) {
         if (g.name && g.has_page !== false)
-          out.push({ url: `${ORIGIN}/api/v1/games/${g.name}`, name: g.title_text, mainLogo: g.main_logo_file, icon: g.icon_file });
+          out.push({ url: `${ORIGIN}/api/v1/games/${g.name}`, page: `${ORIGIN}/games/${g.name}`, name: g.title_text, mainLogo: g.main_logo_file, icon: g.icon_file });
       }
       if (!d?.items?.length || page >= (d.total_pages ?? 0)) break;
     }

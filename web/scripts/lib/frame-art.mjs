@@ -14,9 +14,11 @@ export const ART_WIDTH = 640;
 const FRAME_H = 400;
 
 export async function frameArt(buf) {
-  const img = sharp(buf);
-  const { width = 0, height = 0 } = await img.metadata();
+  const { width = 0, height = 0, hasAlpha } = await sharp(buf).metadata();
   if (!width || !height) throw new Error("not an image");
+  // Title logos on transparency (ELK publishes only these) are laid on
+  // near-black, so the tile reads the same on any page background.
+  if (hasAlpha) buf = await sharp(buf).flatten({ background: "#0d0d12" }).png().toBuffer();
   if (width / height >= 1.3) {
     return sharp(buf).resize({ width: ART_WIDTH, withoutEnlargement: true }).webp({ quality: 74 }).toBuffer();
   }

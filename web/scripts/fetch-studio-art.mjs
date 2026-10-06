@@ -121,7 +121,9 @@ for (const key of keys) {
       type: "image/webp",
       sourceUrl: found.image,
       sourceHost: new URL(found.image).hostname,
-      page: item.url,
+      // The game's own page where the reader names one (it may read a grid
+      // or a JSON feed instead).
+      page: item.page ?? item.url,
       provider: g.provider,
       fetched: TODAY,
       via: `${site.studio}'s own game page`,
