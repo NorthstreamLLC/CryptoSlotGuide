@@ -7,6 +7,15 @@ import { fetchText, locsOf, meta, decode } from "../lib/studio-fetch.mjs";
  * page shows as its `img.poster`; the other pictures on the page are
  * award badges, feature "highlights" and loose symbols, not key art.
  * Files sit on wazdan.com/wp-content/uploads.
+ *
+ * The sitemap is the whole list: the /games page embeds the same 265 games
+ * (name, page, tile) as JSON, and the WordPress REST API asks for a login.
+ * The seasonal network-promotion builds in the catalogue ("... Easter
+ * Jackpots", "Halloween Jackpots", "Love the Jackpot", "Score the
+ * Jackpot", "Xmas Edition", and most "Burning Board" builds) have no page
+ * and no tile of their own anywhere on the site, only a campaign banner on
+ * the promotion's news post, so they stay unmatched; the base game's tile
+ * is never taken for one, as an edition is a different title.
  */
 export default {
   studio: "Wazdan",

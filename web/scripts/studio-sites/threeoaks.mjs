@@ -1,4 +1,7 @@
+import fs from "node:fs";
+import path from "node:path";
 import { fetchText, decode } from "../lib/studio-fetch.mjs";
+import { titleMatcher } from "../lib/match-title.mjs";
 
 /**
  * 3 Oaks Gaming (3oaks.com). The site is a single-page app with no sitemap
@@ -14,12 +17,34 @@ import { fetchText, decode } from "../lib/studio-fetch.mjs";
  *   gallery_images  in-game screenshots, not key art
  * The landscape banner is taken first, then the square tile. All files sit
  * on 3oaks.com itself.
+ *
+ * The public list holds only the games 3 Oaks currently markets (about 110,
+ * all `provider: "3oaks"`; its search, `game_name=`, finds no others). The
+ * older catalogue titles from the studio's Booongo years ("Book of Sun",
+ * "Wolf Saga", "Pearl Diver" ...) are not on it, and the fuller list the
+ * site has (/games/client_area) is behind the partner login, so they stay
+ * unmatched.
+ *
+ * One site name differs from the catalogue's in spelling only: "Coin
+ * Princess x1000" is the catalogue's "Coin Princess 1000" (3 Oaks writes
+ * its x1000 builds "x1000": "DJ Tiger x1000", "Egypt Power x1000"; the
+ * studio has no other Coin Princess 1000). The reader offers the site's
+ * name first and, only when the catalogue does not hold it, the catalogue's
+ * spelling from the table below; either must still match a 3 Oaks title
+ * exactly.
  */
 const ORIGIN = "https://3oaks.com";
+const STUDIO = "3 Oaks Gaming";
+const SPELLED = { "Coin Princess x1000": "Coin Princess 1000" };
+let matcher = null;
+const known = (name) => {
+  matcher ??= titleMatcher(JSON.parse(fs.readFileSync(path.join("data", "gameCatalogue.json"), "utf8")).games);
+  return Boolean(matcher.match(name, STUDIO));
+};
 const abs = (p) => (p ? new URL(p, ORIGIN).href : null);
 
 export default {
-  studio: "3 Oaks Gaming",
+  studio: STUDIO,
   host: "3oaks.com",
   async list() {
     const out = [];
@@ -47,7 +72,8 @@ export default {
     } catch {
       /* fall back to the list record */
     }
-    const name = decode(d.title_text ?? item.name ?? "");
+    const site = decode(d.title_text ?? item.name ?? "");
+    const name = known(site) ? site : SPELLED[site] ?? site;
     const image = abs(d.banner_file) ?? abs(item.mainLogo) ?? abs(item.icon);
     return { name, image };
   },
