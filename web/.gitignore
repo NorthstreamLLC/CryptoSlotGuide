@@ -43,3 +43,6 @@ next-env.d.ts
 
 # fetch caches (scripts/fetch-*.mjs)
 .cache/
+
+# studio-art fetch cache (scripts/lib/studio-fetch.mjs)
+/csg-studio-art/
