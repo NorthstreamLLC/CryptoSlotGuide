@@ -35,6 +35,9 @@ export function titleKey(raw) {
   }
   s = s.normalize("NFKD").replace(/[̀-ͯ]/g, ""); // fold accents
   s = s.replace(/[™®©]/g, "");
+  // "Cake & Ice Cream" on the studio's page is "Cake and Ice Cream" in the
+  // catalogue: the same name, the ampersand written out.
+  s = s.replace(/&/g, " and ");
   return s.toLowerCase().replace(/[^a-z0-9]/g, "");
 }
 
