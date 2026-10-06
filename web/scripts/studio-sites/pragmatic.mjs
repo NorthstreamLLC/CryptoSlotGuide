@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fetchText, locsOf, meta, decode } from "../lib/studio-fetch.mjs";
+import { titleMatcher } from "../lib/match-title.mjs";
 
 /**
  * Pragmatic Play (pragmaticplay.com). WordPress; game pages at
@@ -14,9 +15,25 @@ import { fetchText, locsOf, meta, decode } from "../lib/studio-fetch.mjs";
  * ("<CODE>_EN_339x180.png", the logo over the game's art) in
  * wp-content/uploads; the page has no larger picture of the game. The name
  * is the page's <h1 class="game-details__title"> (™ written "&#x2122;").
+ *
+ * One page names its game differently from the catalogue: "Book of the
+ * Fallen" (/en/games/book-of-the-fallen/, tile "Book-of-Fallen_339x180") is
+ * the catalogue's "Book of Fallen". The catalogue's spelling is offered only
+ * when the page's own is not in the catalogue, and must still match a
+ * Pragmatic Play title exactly. The jackpot builds ("Wolf Gold 1 Million",
+ * "Diamond Strike 100,000", "Queen of Gold 100,000") are other games and are
+ * not aliased to their base titles.
  */
+const STUDIO = "Pragmatic Play";
+const ALIAS = { "Book of the Fallen": "Book of Fallen" };
+let matcher = null;
+const known = (name) => {
+  matcher ??= titleMatcher(JSON.parse(fs.readFileSync(path.join("data", "gameCatalogue.json"), "utf8")).games);
+  return Boolean(matcher.match(name, STUDIO));
+};
+const spelling = (name) => (!known(name) && ALIAS[name] && known(ALIAS[name]) ? ALIAS[name] : name);
 export default {
-  studio: "Pragmatic Play",
+  studio: STUDIO,
   host: "pragmaticplay.com",
   async list() {
     const idx = await fetchText("https://www.pragmaticplay.com/sitemap_index.xml");
@@ -42,6 +59,6 @@ export default {
     const og = meta(html, "og:image");
     // The game's own tile only: an upload, not the theme's or a logo.
     const image = og && /^https:\/\/www\.pragmaticplay\.com\/wp-content\/uploads\//.test(og) && !/logo/i.test(og) ? og : null;
-    return { name, image };
+    return { name: spelling(name), image };
   },
 };

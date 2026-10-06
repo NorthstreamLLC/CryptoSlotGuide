@@ -85,7 +85,8 @@ export const decode = (s) =>
 export function meta(html, prop) {
   for (const tag of html.match(/<meta\b[^>]*>/gi) ?? []) {
     if (new RegExp(`(?:property|name)=["']${prop}["']`, "i").test(tag)) {
-      const c = (tag.match(/\bcontent=["']([^"']*)["']/i) ?? [])[1];
+      // Close on the quote that opened: content="Gonzo's Quest" holds an apostrophe.
+      const c = (tag.match(/\bcontent=(["'])(.*?)\1/i) ?? [])[2];
       if (c) return decode(c);
     }
   }

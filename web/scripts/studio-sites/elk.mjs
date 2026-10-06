@@ -1,4 +1,7 @@
+import fs from "node:fs";
+import path from "node:path";
 import { fetchText, decode } from "../lib/studio-fetch.mjs";
+import { titleMatcher } from "../lib/match-title.mjs";
 
 /**
  * ELK Studios (elk-studios.com). The /games/ grid lists every game as a tile:
@@ -14,11 +17,31 @@ import { fetchText, decode } from "../lib/studio-fetch.mjs";
  * grid page instead of 160 game pages: every item points at /games/, which
  * the runner then fetches once from cache. If /games/ itself is answered
  * with a 429, list() returns nothing; rerun a few minutes later.
+ *
+ * The grid names three games differently from the catalogue, for the same
+ * game: "Gritty Kitty" and "Rogue Rats" are the Nitropolis spin-offs the
+ * catalogue calls "Gritty Kitty of Nitropolis" and "Rogue Rats of
+ * Nitropolis" (the full name is on their logos), and "Taco Brothers
+ * Deralied" is a typo for "Taco Brothers Derailed". The catalogue's spelling
+ * is offered only when the grid's own is not in the catalogue, and must still
+ * match an ELK Studios title exactly.
  */
+const STUDIO = "ELK Studios";
+const ALIAS = {
+  "Gritty Kitty": "Gritty Kitty of Nitropolis",
+  "Rogue Rats": "Rogue Rats of Nitropolis",
+  "Taco Brothers Deralied": "Taco Brothers Derailed",
+};
+let matcher = null;
+const known = (name) => {
+  matcher ??= titleMatcher(JSON.parse(fs.readFileSync(path.join("data", "gameCatalogue.json"), "utf8")).games);
+  return Boolean(matcher.match(name, STUDIO));
+};
+const spelling = (name) => (!known(name) && ALIAS[name] && known(ALIAS[name]) ? ALIAS[name] : name);
 const GRID = "https://www.elk-studios.com/games/";
 
 export default {
-  studio: "ELK Studios",
+  studio: STUDIO,
   host: "elk-studios.com",
   async list() {
     const html = await fetchText(GRID);
@@ -33,7 +56,7 @@ export default {
       const page = (tile.match(/href="(https:\/\/www\.elk-studios\.com\/games\/[^"]+)">Info</) ?? [])[1];
       if (!image || !name || seen.has(name)) continue;
       seen.add(name);
-      items.push({ url: GRID, name, image, page });
+      items.push({ url: GRID, name: spelling(name), image, page });
     }
     return items;
   },

@@ -33,8 +33,9 @@ export function titleKey(raw) {
   for (let i = 0; i < 2; i++) {
     s = s.replace(/&(amp|lt|gt|quot|apos|nbsp);/g, (_, n) => ENTITIES[n]).replace(/&#(\d+);/g, (_, n) => String.fromCharCode(Number(n)));
   }
-  s = s.normalize("NFKD").replace(/[̀-ͯ]/g, ""); // fold accents
+  // Marks go before the fold: NFKD spells ™ as the letters "TM".
   s = s.replace(/[™®©]/g, "");
+  s = s.normalize("NFKD").replace(/[̀-ͯ]/g, ""); // fold accents
   // "Cake & Ice Cream" on the studio's page is "Cake and Ice Cream" in the
   // catalogue: the same name, the ampersand written out.
   s = s.replace(/&/g, " and ");

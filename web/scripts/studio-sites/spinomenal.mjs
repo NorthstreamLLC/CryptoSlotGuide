@@ -16,6 +16,12 @@ import { titleMatcher } from "../lib/match-title.mjs";
  * multiplication sign. The reader offers the site's spelling first and, only
  * when the catalogue does not hold it, the "and"/"x" spelling; either must
  * still match a Spinomenal title exactly.
+ *
+ * Likewise a trailing sequel number: the site's "Story Of Medusa 2" is the
+ * catalogue's "Story Of Medusa II", the same game with the numeral written
+ * in Roman, so "2" is also offered as "II" when the site's own spelling is
+ * not in the catalogue. The site's Christmas, "– ED" (Egyptian Darkness) and
+ * other editions are separate titles and are never folded onto their base.
  */
 const STUDIO = "Spinomenal";
 let matcher = null;
@@ -23,7 +29,7 @@ const known = (name) => {
   matcher ??= titleMatcher(JSON.parse(fs.readFileSync(path.join("data", "gameCatalogue.json"), "utf8")).games);
   return Boolean(matcher.match(name, STUDIO));
 };
-const spellings = (name) => [name, name.replace(/×/g, "x"), name.replace(/×/g, "x").replace(/\s*&\s*/g, " and ")];
+const spellings = (name) => [name, name.replace(/×/g, "x"), name.replace(/×/g, "x").replace(/\s*&\s*/g, " and "), name.replace(/ 2$/, " II")];
 
 export default {
   studio: STUDIO,

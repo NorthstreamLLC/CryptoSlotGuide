@@ -1,4 +1,7 @@
+import fs from "node:fs";
+import path from "node:path";
 import { sitemapUrls, decode, meta } from "../lib/studio-fetch.mjs";
+import { titleMatcher } from "../lib/match-title.mjs";
 
 /**
  * NetEnt (netent.com). Same Evolution fan-site build as Red Tiger: the
@@ -8,7 +11,35 @@ import { sitemapUrls, decode, meta } from "../lib/studio-fetch.mjs";
  * `logo` (the bare title logo) and `images` (symbols and feature screens,
  * not key art). The banner is taken first, then the tile; files sit on the
  * group CDN fan-cdn.nolimitcity.com, which netent.com's own pages load.
+ *
+ * A few game records spell the name differently from the catalogue, for the
+ * same game (one page each on the site, no second game of either name):
+ * "Blood Suckers 2" (the catalogue's "Blood Suckers II"), "Fruit Shop
+ * Christmas" ("Fruit Shop Christmas Edition"), "Jack Hammer 3: Diamond
+ * Affair" (the catalogue drops the subtitle: "Jack Hammer 3"), "Ozzy
+ * Osbourne" (netent.com's own branded-games page names it "Ozzy Osbourne
+ * Video Slots", as the catalogue does) and "Codex of Fortune" (the catalogue
+ * writes "Codex of Fortune™", and titleKey reads its ™ as the letters "TM").
+ * The catalogue's spelling is offered only when the site's own is not in
+ * the catalogue, and must still match a NetEnt title exactly. Sequels and
+ * builds ("Victorious MAX", "Dead or Alive 2" vs "... Feature Buy") are
+ * other games and are not aliased.
  */
+const STUDIO = "NetEnt";
+const ALIAS = {
+  "Blood Suckers 2": "Blood Suckers II",
+  "Fruit Shop Christmas": "Fruit Shop Christmas Edition",
+  "Jack Hammer 3: Diamond Affair": "Jack Hammer 3",
+  "Ozzy Osbourne": "Ozzy Osbourne Video Slots",
+  "Codex of Fortune": "Codex of Fortune™",
+};
+let matcher = null;
+const known = (name) => {
+  matcher ??= titleMatcher(JSON.parse(fs.readFileSync(path.join("data", "gameCatalogue.json"), "utf8")).games);
+  return Boolean(matcher.match(name, STUDIO));
+};
+const spelling = (name) => (!known(name) && ALIAS[name] && known(ALIAS[name]) ? ALIAS[name] : name);
+
 function pick(rec, field) {
   const start = rec.search(new RegExp(`"${field}":\\[?\\{"id":\\d+,"name":`));
   if (start < 0) return null;
@@ -27,7 +58,7 @@ function pick(rec, field) {
 }
 
 export default {
-  studio: "NetEnt",
+  studio: STUDIO,
   host: "netent.com",
   async list() {
     const urls = await sitemapUrls("https://netent.com/sitemap.xml");
@@ -50,6 +81,6 @@ export default {
     if (/^druids'? dream$/i.test(name.replace(/[’']/g, "'"))) return { name, image: pick(flat, "logo") };
     const image = pick(flat, "splashPoster") ?? pick(flat, "icon");
     // An unreleased game's banner is a generic "Coming Soon" placard.
-    return { name, image: /coming_soon/i.test(image ?? "") ? null : image };
+    return { name: spelling(name), image: /coming_soon/i.test(image ?? "") ? null : image };
   },
 };
