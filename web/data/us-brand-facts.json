@@ -752,14 +752,29 @@
     "betjack": {
       "read": "2026-10-05",
       "readBy": "by the site owner in a browser, as betJACK's pages load nothing readable for automated readers",
-      "offer": "$277 Second Chance Bet: if your first wager loses, a second-chance bet token up to $277, for new sign-ups",
+      "offer": "Up to $777 in Bonus Bets for new sign-ups: a $277 no-sweat first bet, then a five-week rebate programme worth up to $100 a week",
       "groups": [
         {
           "title": "The offer",
           "facts": [
             {
               "label": "New-player offer",
-              "value": "$277 Second Chance Bet: betJACK covers your first wager up to $277; opt in to claim the second-chance bet token. New sign-ups only, one sign-up offer per registration.",
+              "value": "$277 Second Chance Bet: opt in, place a first wager of $10 to $277 with the No Sweat Token, and if it loses, get 100% of it back in Bonus Bets. The token expires seven days after opting in. Terms for registrations from October 1 to October 31, 2026.",
+              "sourceUrl": "https://betjack.com/en-us/promotions"
+            },
+            {
+              "label": "Rebate programme",
+              "value": "Within seven days of that first wager you are invited to a Rebate Program running five consecutive weeks, with up to $100 in Bonus Bets a week; it has its own terms. With the $277 bet, that is the 'up to $777 in Bonus Bets' on the offer banner.",
+              "sourceUrl": "https://betjack.com/en-us/promotions"
+            },
+            {
+              "label": "Qualifying wager",
+              "value": "A straight bet or parlay at -200 or longer, on any market.",
+              "sourceUrl": "https://betjack.com/en-us/promotions"
+            },
+            {
+              "label": "Bonus Bets",
+              "value": "Must be used within seven days, as a single wager at -200 or longer; not on same-game parlays, round robins or Profit Boosts, and not eligible for early cash-out. A winning Bonus Bet pays the winnings as withdrawable cash, not the stake.",
               "sourceUrl": "https://betjack.com/en-us/promotions"
             },
             {
@@ -774,7 +789,12 @@
           "facts": [
             {
               "label": "State",
-              "value": "Ohio: betJACK calls itself Ohio's Sportsbook.",
+              "value": "Must be located in Ohio when wagering; betJACK calls itself Ohio's Sportsbook.",
+              "sourceUrl": "https://betjack.com/en-us/promotions"
+            },
+            {
+              "label": "Eligibility",
+              "value": "New users who complete registration and identity checks on the betJACK website or app; claiming this offer rules out any other welcome offer.",
               "sourceUrl": "https://betjack.com/en-us/promotions"
             }
           ]
