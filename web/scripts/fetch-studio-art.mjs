@@ -71,9 +71,12 @@ for (const key of keys) {
   if (!wanted.length) continue;
   let items = await site.list();
   console.log(`  ${items.length} game pages on ${site.host}`);
-  if (LIMIT) items = items.slice(0, LIMIT);
+  // A preview stops after --limit saved tiles (reading at most 8× that many
+  // pages); otherwise --limit caps the pages read.
+  if (LIMIT) items = items.slice(0, PREVIEW ? LIMIT * 8 : LIMIT);
   const stat = { matched: 0, saved: 0, noArt: 0, unmatched: [], already: 0 };
   for (const item of items) {
+    if (PREVIEW && LIMIT && stat.saved >= LIMIT) break;
     const html = await fetchText(item.url);
     if (!html) continue;
     const found = site.art(html, item);
