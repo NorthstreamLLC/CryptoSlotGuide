@@ -28934,74 +28934,1136 @@
       "provider": "Spinomenal",
       "fetched": "2026-10-06",
       "via": "Spinomenal's own game page"
+    },
+    "dragon-ship": {
+      "file": "dragon-ship.webp",
+      "bytes": 28720,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/3b5cfd_5d8730d6cb794e7880b2b3557f26a3c3~mv2.webp/v1/fill/w_500,h_350,al_c/3b5cfd_5d8730d6cb794e7880b2b3557f26a3c3~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/dragon-ship",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "ninja-fruits": {
+      "file": "ninja-fruits.webp",
+      "bytes": 24594,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/3d1173_c36ba5f1ac4e4dd88671315cdc880bc9~mv2.webp/v1/fill/w_500,h_350,al_c/3d1173_c36ba5f1ac4e4dd88671315cdc880bc9~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/ninja-fruits",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "house-of-doom": {
+      "file": "house-of-doom.webp",
+      "bytes": 16958,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/086571_9ee3f10c9d79461cbba5fc082ac67bea~mv2.webp/v1/fill/w_500,h_350,al_c/086571_9ee3f10c9d79461cbba5fc082ac67bea~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/house-of-doom",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "tower-quest": {
+      "file": "tower-quest.webp",
+      "bytes": 20170,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/834b55_73d8f32e5d3d4f479a37e32a968f7a5c~mv2.webp/v1/fill/w_500,h_350,al_c/834b55_73d8f32e5d3d4f479a37e32a968f7a5c~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/tower-quest",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "the-shimmering-woods": {
+      "file": "the-shimmering-woods.webp",
+      "bytes": 16346,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/1bcf01_9fabb48bb8a6487fa92e1cf63a29c7cd~mv2.webp/v1/fill/w_500,h_350,al_c/1bcf01_9fabb48bb8a6487fa92e1cf63a29c7cd~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/the-shimmering-woods",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "prosperity-palace": {
+      "file": "prosperity-palace.webp",
+      "bytes": 31360,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/7b26b8_67c7ee76e82548b98eb20c8365a2c85f~mv2.webp/v1/fill/w_500,h_350,al_c/7b26b8_67c7ee76e82548b98eb20c8365a2c85f~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/prosperity-palace",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "sails-of-gold": {
+      "file": "sails-of-gold.webp",
+      "bytes": 14902,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/700ab9_1a1ba53d9c344858a541080c3d0cf4fb~mv2.webp/v1/fill/w_500,h_350,al_c/700ab9_1a1ba53d9c344858a541080c3d0cf4fb~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/sails-of-gold",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "dragon-maiden": {
+      "file": "dragon-maiden.webp",
+      "bytes": 21040,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/550f0e_230a3140df0b4c968c42353991e1789a~mv2.webp/v1/fill/w_500,h_350,al_c/550f0e_230a3140df0b4c968c42353991e1789a~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/dragon-maiden",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "crystal-sun": {
+      "file": "crystal-sun.webp",
+      "bytes": 16720,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/c3c22c_7255a25a9dfa4081a3de21bea879c446~mv2.webp/v1/fill/w_500,h_350,al_c/c3c22c_7255a25a9dfa4081a3de21bea879c446~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/crystal-sun",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "gemix-2": {
+      "file": "gemix-2.webp",
+      "bytes": 25880,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/a52def_73163144ffa04fee86318e7ffaa2b01c~mv2.webp/v1/fill/w_500,h_350,al_c/a52def_73163144ffa04fee86318e7ffaa2b01c~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/gemix-2",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "fu-er-dai": {
+      "file": "fu-er-dai.webp",
+      "bytes": 21710,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/ac8f12_ae2f5f7131944780b99bfd9047d33dca~mv2.webp/v1/fill/w_500,h_350,al_c/ac8f12_ae2f5f7131944780b99bfd9047d33dca~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/fu-er-dai",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "jewel-box": {
+      "file": "jewel-box.webp",
+      "bytes": 23854,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/e5a3b3_7bd3d392d9984f559ad0e44ad21f64cf~mv2.webp/v1/fill/w_500,h_350,al_c/e5a3b3_7bd3d392d9984f559ad0e44ad21f64cf~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/jewel-box",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "eye-of-the-kraken": {
+      "file": "eye-of-the-kraken.webp",
+      "bytes": 28006,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/9c7065_3bc3834cfd13402d9f779f26a99baeae~mv2.webp/v1/fill/w_500,h_350,al_c/9c7065_3bc3834cfd13402d9f779f26a99baeae~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/eye-of-the-kraken",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "house-of-doom-2-the-crypt": {
+      "file": "house-of-doom-2-the-crypt.webp",
+      "bytes": 17704,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/b25f16_fbd43a30c65b4e1388a27877adda32f3~mv2.webp/v1/fill/w_500,h_350,al_c/b25f16_fbd43a30c65b4e1388a27877adda32f3~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/house-of-doom-2%3A-the-crypt",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "sizzling-spins": {
+      "file": "sizzling-spins.webp",
+      "bytes": 16948,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/f8f9bd_906b1675982d44acb0b4e316b5095dcb~mv2.webp/v1/fill/w_500,h_350,al_c/f8f9bd_906b1675982d44acb0b4e316b5095dcb~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/sizzling-spins",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "sweet-27": {
+      "file": "sweet-27.webp",
+      "bytes": 23074,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/050e15_b416f9d40f324f18a7dca58c85db92d3~mv2.jpg/v1/fill/w_500,h_350,al_c,q_80/sweet27_panel_small_new.jpg",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/sweet-27",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "crazy-cows": {
+      "file": "crazy-cows.webp",
+      "bytes": 23052,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/0468a7_e82ce168ee134a99ae03f3faecdea775~mv2.webp/v1/fill/w_500,h_350,al_c/0468a7_e82ce168ee134a99ae03f3faecdea775~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/crazy-cows",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "wild-falls": {
+      "file": "wild-falls.webp",
+      "bytes": 27026,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/9096b7_7df7bb8bd77f41a387e97fe7f4c3225d~mv2.webp/v1/fill/w_500,h_350,al_c/9096b7_7df7bb8bd77f41a387e97fe7f4c3225d~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/wild-falls",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "phoenix-reborn": {
+      "file": "phoenix-reborn.webp",
+      "bytes": 25692,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/a25c33_7019a58ea94c4413bdfbfa2944247a35~mv2.webp/v1/fill/w_500,h_350,al_c/a25c33_7019a58ea94c4413bdfbfa2944247a35~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/phoenix-reborn",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "sabaton": {
+      "file": "sabaton.webp",
+      "bytes": 28840,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/bc16ad_b566f0697186488597c0e2ba708658fe~mv2.webp/v1/fill/w_500,h_350,al_c/bc16ad_b566f0697186488597c0e2ba708658fe~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/sabaton",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "contact": {
+      "file": "contact.webp",
+      "bytes": 25508,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/a1674f_9a8cee53366c47ae8ed9ebc0bc59c369~mv2.webp/v1/fill/w_500,h_350,al_c/a1674f_9a8cee53366c47ae8ed9ebc0bc59c369~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/contact",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "hugo-goal": {
+      "file": "hugo-goal.webp",
+      "bytes": 25116,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/49f80f_ab276e7801f148c29cce31d4d32a9d63~mv2.webp/v1/fill/w_500,h_350,al_c/49f80f_ab276e7801f148c29cce31d4d32a9d63~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/hugo-goal",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "jacks-or-better-mh": {
+      "file": "jacks-or-better-mh.webp",
+      "bytes": 14406,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/86411c_b0d50df6f86d42e6ac2d3630956c8feb~mv2.jpg/v1/fill/w_500,h_350,al_c,q_80/jacksorbetter_panel_small.jpg",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/jacks-or-better-mh",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "gemix": {
+      "file": "gemix.webp",
+      "bytes": 27752,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/ce2401_2a5ebed76d144fe484a146516300dbe9~mv2.jpg/v1/fill/w_500,h_350,al_c,q_80/gemix_panel_small_new.jpg",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/gemix",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "planet-fortune": {
+      "file": "planet-fortune.webp",
+      "bytes": 18178,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/44367d_2705fc3ed6bb47d292f2841dd28ac89a~mv2.webp/v1/fill/w_500,h_350,al_c/44367d_2705fc3ed6bb47d292f2841dd28ac89a~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/planet-fortune",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "riches-of-ra": {
+      "file": "riches-of-ra.webp",
+      "bytes": 13126,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/abd695_1091b3eee6e248e29362ee5359e2507e~mv2.webp/v1/fill/w_500,h_350,al_c/abd695_1091b3eee6e248e29362ee5359e2507e~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/riches-of-ra",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "photo-safari": {
+      "file": "photo-safari.webp",
+      "bytes": 27840,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/252d71_2bb805ad7c5a4a1f9c70099fdc8aef6d~mv2.webp/v1/fill/w_500,h_350,al_c/252d71_2bb805ad7c5a4a1f9c70099fdc8aef6d~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/photo-safari",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "irish-gold": {
+      "file": "irish-gold.webp",
+      "bytes": 25786,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/c0d960_5f30e2b9d7514dfb8fbfe9edc86e3568~mv2.jpg/v1/fill/w_500,h_350,al_c,q_80/irishgold_panel_small_new.jpg",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/irish-gold",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "troll-hunters": {
+      "file": "troll-hunters.webp",
+      "bytes": 32250,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/12d28e_5b66f40349d74a35a5b06661370dca0e~mv2.webp/v1/fill/w_500,h_350,al_c/12d28e_5b66f40349d74a35a5b06661370dca0e~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/troll-hunters",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "wild-melon": {
+      "file": "wild-melon.webp",
+      "bytes": 17870,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/eb1f4e_2d4e262300484fcc8ffe792d6bd7bc64~mv2.webp/v1/fill/w_500,h_350,al_c/eb1f4e_2d4e262300484fcc8ffe792d6bd7bc64~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/wild-melon",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "cloud-quest": {
+      "file": "cloud-quest.webp",
+      "bytes": 27224,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/131bd3_40c874d5103a49e88e183f23d13c7f90~mv2.webp/v1/fill/w_500,h_350,al_c/131bd3_40c874d5103a49e88e183f23d13c7f90~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/cloud-quest",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "xmas-joker": {
+      "file": "xmas-joker.webp",
+      "bytes": 28240,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/a800a1_fa7e7ea84208414d882ef15470076154~mv2.webp/v1/fill/w_500,h_350,al_c/a800a1_fa7e7ea84208414d882ef15470076154~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/xmas-joker",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "bugs-party": {
+      "file": "bugs-party.webp",
+      "bytes": 14960,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/e74c60_bf4be453040d43a7a478892262c5c07f~mv2.webp/v1/fill/w_500,h_350,al_c/e74c60_bf4be453040d43a7a478892262c5c07f~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/bugs-party",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "golden-legend": {
+      "file": "golden-legend.webp",
+      "bytes": 19518,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/03900c_9c001650276941f4b8a92294e9f82dc8~mv2.webp/v1/fill/w_500,h_350,al_c/03900c_9c001650276941f4b8a92294e9f82dc8~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/golden-legend",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "samba-carnival": {
+      "file": "samba-carnival.webp",
+      "bytes": 25302,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/6d456a_02f38b8ad29246b6a45878a2a36724dc~mv2.webp/v1/fill/w_500,h_350,al_c/6d456a_02f38b8ad29246b6a45878a2a36724dc~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/samba-carnival",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "fortune-teller": {
+      "file": "fortune-teller.webp",
+      "bytes": 31374,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/b98bf4_45f1e8c50a5f474fa8bac52dffa134cf~mv2.webp/v1/fill/w_500,h_350,al_c/b98bf4_45f1e8c50a5f474fa8bac52dffa134cf~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/fortune-teller",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "lucky-diamonds": {
+      "file": "lucky-diamonds.webp",
+      "bytes": 13990,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/c512e7_2cea3fc0f35b443cbdf023bb49d1bbae~mv2.webp/v1/fill/w_500,h_350,al_c/c512e7_2cea3fc0f35b443cbdf023bb49d1bbae~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/lucky-diamonds",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "hugo": {
+      "file": "hugo.webp",
+      "bytes": 19186,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/690d03_201cd049e332445cbc0054451f396012~mv2.webp/v1/fill/w_500,h_350,al_c/690d03_201cd049e332445cbc0054451f396012~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/hugo",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "grim-muerto": {
+      "file": "grim-muerto.webp",
+      "bytes": 23192,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/dbf390_c66c1df98ab6478e87e517070f2d6ae2~mv2.webp/v1/fill/w_500,h_350,al_c/dbf390_c66c1df98ab6478e87e517070f2d6ae2~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/grim-muerto",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "merry-xmas": {
+      "file": "merry-xmas.webp",
+      "bytes": 23562,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/dce825_71acca3e8466466595651466a2167297~mv2.webp/v1/fill/w_500,h_350,al_c/dce825_71acca3e8466466595651466a2167297~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/merry-xmas",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "wizard-of-gems": {
+      "file": "wizard-of-gems.webp",
+      "bytes": 22152,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/4528a5_7f78f84eedc84231892d90fae04c87dc~mv2.webp/v1/fill/w_500,h_350,al_c/4528a5_7f78f84eedc84231892d90fae04c87dc~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/wizard-of-gems",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "viking-runecraft": {
+      "file": "viking-runecraft.webp",
+      "bytes": 21022,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/ca2635_f8c96bef51cb4fec85abe915d114e1fd~mv2.webp/v1/fill/w_500,h_350,al_c/ca2635_f8c96bef51cb4fec85abe915d114e1fd~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/viking-runecraft",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "royal-masquerade": {
+      "file": "royal-masquerade.webp",
+      "bytes": 27516,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/276e53_28c469a215f94f6aa3d987975cca9e77~mv2.webp/v1/fill/w_500,h_350,al_c/276e53_28c469a215f94f6aa3d987975cca9e77~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/royal-masquerade",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "golden-ticket": {
+      "file": "golden-ticket.webp",
+      "bytes": 34684,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/f65361_01b0639bf5e640aab11d0932972701d8~mv2.jpg/v1/fill/w_500,h_350,al_c,q_80/goldenticket_panel_small_new.jpg",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/golden-ticket",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "gold-king": {
+      "file": "gold-king.webp",
+      "bytes": 24742,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/b396ef_72b6758ff34d4ed5ab71bd6dbf8aff02~mv2.webp/v1/fill/w_500,h_350,al_c/b396ef_72b6758ff34d4ed5ab71bd6dbf8aff02~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/gold-king",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "rich-wilde-and-the-amulet-of-dead": {
+      "file": "rich-wilde-and-the-amulet-of-dead.webp",
+      "bytes": 22204,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/829f72_2c92ea229f01473b982c337f8a99a2eb~mv2.webp/v1/fill/w_500,h_350,al_c/829f72_2c92ea229f01473b982c337f8a99a2eb~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/rich-wilde-and-the-amulet-of-dead",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "jolly-roger": {
+      "file": "jolly-roger.webp",
+      "bytes": 22710,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/adf078_70aab6b005ae409e81b323e171ff9ba1~mv2.webp/v1/fill/w_500,h_350,al_c/adf078_70aab6b005ae409e81b323e171ff9ba1~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/jolly-roger",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "mahjong-88": {
+      "file": "mahjong-88.webp",
+      "bytes": 23650,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/bccc59_4396b2c521174711a46f1cf23be3ed76~mv2.webp/v1/fill/w_500,h_350,al_c/bccc59_4396b2c521174711a46f1cf23be3ed76~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/mahjong-88",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "matsuri": {
+      "file": "matsuri.webp",
+      "bytes": 19406,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/8ef31b_914019f0769e4ff0af12380b71c66ebb~mv2.webp/v1/fill/w_500,h_350,al_c/8ef31b_914019f0769e4ff0af12380b71c66ebb~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/matsuri",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "rage-to-riches": {
+      "file": "rage-to-riches.webp",
+      "bytes": 26872,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/dbb7dd_afd66b9016da48c698301e590f02908d~mv2.webp/v1/fill/w_500,h_350,al_c/dbb7dd_afd66b9016da48c698301e590f02908d~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/rage-to-riches",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "imperial-opera": {
+      "file": "imperial-opera.webp",
+      "bytes": 23086,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/4db90d_20b13c9bc91a449ca190a715cabe3c4e~mv2.webp/v1/fill/w_500,h_350,al_c/4db90d_20b13c9bc91a449ca190a715cabe3c4e~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/imperial-opera",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "hugo-2": {
+      "file": "hugo-2.webp",
+      "bytes": 19186,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/5eb3f9_da79a0187e364cea92eca264947f855f~mv2.webp/v1/fill/w_500,h_350,al_c/5eb3f9_da79a0187e364cea92eca264947f855f~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/hugo-2",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "star-joker": {
+      "file": "star-joker.webp",
+      "bytes": 25750,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/b87737_c071d39bf62e4fd4bf97dc8210215943~mv2.webp/v1/fill/w_500,h_350,al_c/b87737_c071d39bf62e4fd4bf97dc8210215943~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/star-joker",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "street-magic": {
+      "file": "street-magic.webp",
+      "bytes": 15884,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/59a356_cc7d465d2bee456ab543e30800ce1b2b~mv2.webp/v1/fill/w_500,h_350,al_c/59a356_cc7d465d2bee456ab543e30800ce1b2b~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/street-magic",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "iron-girl": {
+      "file": "iron-girl.webp",
+      "bytes": 18888,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/cd077d_e0ec0931883f4e7aa7da5fae62ac5f60~mv2.webp/v1/fill/w_500,h_350,al_c/cd077d_e0ec0931883f4e7aa7da5fae62ac5f60~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/iron-girl",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "easter-eggs": {
+      "file": "easter-eggs.webp",
+      "bytes": 18064,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/b0f4f2_d55fd4215880403e93952a15c620e00d~mv2.webp/v1/fill/w_500,h_350,al_c/b0f4f2_d55fd4215880403e93952a15c620e00d~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/easter-eggs",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "hugo-carts": {
+      "file": "hugo-carts.webp",
+      "bytes": 19834,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/32343d_7fb75a592bc84b3bb54ee960ef5dce59~mv2.jpeg/v1/fill/w_500,h_350,al_c,q_80/hugo_carts_panel_small.jpeg",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/hugo-carts",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "flying-pigs": {
+      "file": "flying-pigs.webp",
+      "bytes": 17474,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/8da34b_dae75e9dc93945a5add2dcce9cad24cc~mv2.webp/v1/fill/w_500,h_350,al_c/8da34b_dae75e9dc93945a5add2dcce9cad24cc~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/flying-pigs",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "7-sins": {
+      "file": "7-sins.webp",
+      "bytes": 14194,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/0e60c5_dd1fabbe9f2d4277beb04b6878ba273f~mv2.webp/v1/fill/w_500,h_350,al_c/0e60c5_dd1fabbe9f2d4277beb04b6878ba273f~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/7-sins",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "pimped": {
+      "file": "pimped.webp",
+      "bytes": 18906,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/4c5945_a9614957bc5a49d3afce9ae9baa8f238~mv2.webp/v1/fill/w_500,h_350,al_c/4c5945_a9614957bc5a49d3afce9ae9baa8f238~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/pimped",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "lady-of-fortune": {
+      "file": "lady-of-fortune.webp",
+      "bytes": 21408,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/a11b6f_fa377a0d6cdf4d15a89d6c52c54b4c6a~mv2.webp/v1/fill/w_500,h_350,al_c/a11b6f_fa377a0d6cdf4d15a89d6c52c54b4c6a~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/lady-of-fortune",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "holiday-season": {
+      "file": "holiday-season.webp",
+      "bytes": 17950,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/cac942_951b98d15ac64e4ca45ae3a3f55bd314~mv2.webp/v1/fill/w_500,h_350,al_c/cac942_951b98d15ac64e4ca45ae3a3f55bd314~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/holiday-season",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "aztec-warrior-princess": {
+      "file": "aztec-warrior-princess.webp",
+      "bytes": 30604,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/00153c_a592654f2807414dad49504313ee7fa1~mv2.webp/v1/fill/w_500,h_350,al_c/00153c_a592654f2807414dad49504313ee7fa1~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/aztec-warrior-princess",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "cats-and-cash": {
+      "file": "cats-and-cash.webp",
+      "bytes": 24058,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/5180f3_a6dc802c22454107b8ad84a047ceddb4~mv2.webp/v1/fill/w_500,h_350,al_c/5180f3_a6dc802c22454107b8ad84a047ceddb4~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/cats-and-cash",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "spin-party": {
+      "file": "spin-party.webp",
+      "bytes": 15884,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/7a3af2_83389f97718540c4ae72543f951fc926~mv2.webp/v1/fill/w_500,h_350,al_c/7a3af2_83389f97718540c4ae72543f951fc926~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/spin-party",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "agent-of-hearts": {
+      "file": "agent-of-hearts.webp",
+      "bytes": 22024,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/6c92b8_6d188f7eaecf48c99f17944cc6a027a7~mv2.webp/v1/fill/w_500,h_350,al_c/6c92b8_6d188f7eaecf48c99f17944cc6a027a7~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/agent-of-hearts",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "prissy-princess": {
+      "file": "prissy-princess.webp",
+      "bytes": 25864,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/c46ca5_d330a8a9aeb141b3a2ab4ee2028a3fa3~mv2.webp/v1/fill/w_500,h_350,al_c/c46ca5_d330a8a9aeb141b3a2ab4ee2028a3fa3~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/prissy-princess",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "deuces-wild-mh": {
+      "file": "deuces-wild-mh.webp",
+      "bytes": 13372,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/0e03b6_139c9d84bba34effa57099f20bf7b278~mv2.jpg/v1/fill/w_500,h_350,al_c,q_80/deuceswild_panel_small.jpg",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/deuces-wild-mh",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "banana-rock": {
+      "file": "banana-rock.webp",
+      "bytes": 25722,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/1446a0_d4ddb7bb082e48c3b43a7ca26ad3e957~mv2.webp/v1/fill/w_500,h_350,al_c/1446a0_d4ddb7bb082e48c3b43a7ca26ad3e957~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/banana-rock",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "golden-caravan": {
+      "file": "golden-caravan.webp",
+      "bytes": 19540,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/0f9312_7c29979d9f6040838a6d3454fe49969c~mv2.webp/v1/fill/w_500,h_350,al_c/0f9312_7c29979d9f6040838a6d3454fe49969c~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/golden-caravan",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "5x-magic": {
+      "file": "5x-magic.webp",
+      "bytes": 16428,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/4d0d57_d1147dd3d1734948ae94d6ffa1137767~mv2.webp/v1/fill/w_500,h_350,al_c/4d0d57_d1147dd3d1734948ae94d6ffa1137767~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/5x-magic",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "enchanted-meadow": {
+      "file": "enchanted-meadow.webp",
+      "bytes": 17364,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/669db6_f58840563771400982fcb544576b6c05~mv2.webp/v1/fill/w_500,h_350,al_c/669db6_f58840563771400982fcb544576b6c05~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/enchanted-meadow",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "mystery-joker": {
+      "file": "mystery-joker.webp",
+      "bytes": 16302,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/98068e_336f7d10813f4014bff49726d90c1f3a~mv2.webp/v1/fill/w_500,h_350,al_c/98068e_336f7d10813f4014bff49726d90c1f3a~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/mystery-joker",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "ace-of-spades": {
+      "file": "ace-of-spades.webp",
+      "bytes": 13638,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/9a1570_d0cc7fcad2d449f988cc263fe68e29c6~mv2.webp/v1/fill/w_500,h_350,al_c/9a1570_d0cc7fcad2d449f988cc263fe68e29c6~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/ace-of-spades",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "pearl-lagoon": {
+      "file": "pearl-lagoon.webp",
+      "bytes": 16046,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/079a83_2375559b6b2b4a7ab946d8a8caf4e86b~mv2.webp/v1/fill/w_500,h_350,al_c/079a83_2375559b6b2b4a7ab946d8a8caf4e86b~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/pearl-lagoon",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "wild-blood": {
+      "file": "wild-blood.webp",
+      "bytes": 16596,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/76bcfa_df3ce4a91c0e4731a7dda631af5adb53~mv2.webp/v1/fill/w_500,h_350,al_c/76bcfa_df3ce4a91c0e4731a7dda631af5adb53~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/wild-blood",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "happy-halloween": {
+      "file": "happy-halloween.webp",
+      "bytes": 17808,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/442c84_dfe479912e7642f3aef4cb05af307043~mv2.webp/v1/fill/w_500,h_350,al_c/442c84_dfe479912e7642f3aef4cb05af307043~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/happy-halloween",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "aztec-idols": {
+      "file": "aztec-idols.webp",
+      "bytes": 22202,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/858712_47a8f16f211b4adc95a7e96768a4a492~mv2.jpg/v1/fill/w_500,h_350,al_c,q_80/aztecidols_panel_small.jpg",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/aztec-idols",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "chinese-new-year": {
+      "file": "chinese-new-year.webp",
+      "bytes": 19818,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/a55928_e605870d325845d2b707f574ec64ded4~mv2.webp/v1/fill/w_500,h_350,al_c/a55928_e605870d325845d2b707f574ec64ded4~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/chinese-new-year",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "24k-dragon": {
+      "file": "24k-dragon.webp",
+      "bytes": 34182,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/4f46ba_a5d0483d44804cd59f067f6a57ef272c~mv2.jpg/v1/fill/w_500,h_350,al_c,q_80/twentyfourkdragon_panel_small_new.jpg",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/24k-dragon",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "super-flip": {
+      "file": "super-flip.webp",
+      "bytes": 17608,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/5650b5_374f26d7ab8a40faadf3d893a5bc39d2~mv2.webp/v1/fill/w_500,h_350,al_c/5650b5_374f26d7ab8a40faadf3d893a5bc39d2~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/super-flip",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "golden-colts": {
+      "file": "golden-colts.webp",
+      "bytes": 18084,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/743a14_d1d15f4e3abb4af19f11395e565c0681~mv2.webp/v1/fill/w_500,h_350,al_c/743a14_d1d15f4e3abb4af19f11395e565c0681~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/golden-colts",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "pack-cash": {
+      "file": "pack-cash.webp",
+      "bytes": 15688,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/1c3085_1bf1ad3f59bc433aa3a083e02d1cb895~mv2.webp/v1/fill/w_500,h_350,al_c/1c3085_1bf1ad3f59bc433aa3a083e02d1cb895~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/pack-%26-cash",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "the-wild-class": {
+      "file": "the-wild-class.webp",
+      "bytes": 22138,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/a5b253_a08fd86d52c540bf8c703c704067a367~mv2.webp/v1/fill/w_500,h_350,al_c/a5b253_a08fd86d52c540bf8c703c704067a367~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/the-wild-class",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "multifruit-81": {
+      "file": "multifruit-81.webp",
+      "bytes": 21384,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/13669d_c1fa22dad90b43578a19295dc5b62f12~mv2.webp/v1/fill/w_500,h_350,al_c/13669d_c1fa22dad90b43578a19295dc5b62f12~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/multifruit-81",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "enchanted-crystals": {
+      "file": "enchanted-crystals.webp",
+      "bytes": 33172,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/91209f_e98d6a786fbb4e50a33532d19c287177~mv2.webp/v1/fill/w_500,h_350,al_c/91209f_e98d6a786fbb4e50a33532d19c287177~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/enchanted-crystals",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "perfect-gems": {
+      "file": "perfect-gems.webp",
+      "bytes": 22010,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/430d39_f890a034386f4debacd27bc19ffcc7f5~mv2.webp/v1/fill/w_500,h_350,al_c/430d39_f890a034386f4debacd27bc19ffcc7f5~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/perfect-gems",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "jade-magician": {
+      "file": "jade-magician.webp",
+      "bytes": 17996,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/e9c3fb_e270be50a151423a9b7381c48b782902~mv2.webp/v1/fill/w_500,h_350,al_c/e9c3fb_e270be50a151423a9b7381c48b782902~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/jade-magician",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "cops-n-robbers": {
+      "file": "cops-n-robbers.webp",
+      "bytes": 21756,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/0b06e1_822590af9f814c7489dc6ed267d84717~mv2.webp/v1/fill/w_500,h_350,al_c/0b06e1_822590af9f814c7489dc6ed267d84717~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/cops-%E2%80%99n%E2%80%99-robbers",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "leprechaun-goes-egypt": {
+      "file": "leprechaun-goes-egypt.webp",
+      "bytes": 24890,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/2a4a18_6c26bc32f78441b09618acefad25794f~mv2.jpg/v1/fill/w_500,h_350,al_c,q_80/leprechaungoesegypt_panel_small_new.jpg",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/leprechaun-goes-egypt",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "pearls-of-india": {
+      "file": "pearls-of-india.webp",
+      "bytes": 19650,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/fa9ece_21cbe2bf94c24d808502146810869304~mv2.webp/v1/fill/w_500,h_350,al_c/fa9ece_21cbe2bf94c24d808502146810869304~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/pearls-of-india",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "fire-joker": {
+      "file": "fire-joker.webp",
+      "bytes": 21204,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/c8b740_7f7e7cef03e9442b8da06fecc3c5b22a~mv2.webp/v1/fill/w_500,h_350,al_c/c8b740_7f7e7cef03e9442b8da06fecc3c5b22a~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/fire-joker",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "gold-trophy-2": {
+      "file": "gold-trophy-2.webp",
+      "bytes": 18270,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/c1480e_6dd94c7616b0486bb9ca603d6054de24~mv2.webp/v1/fill/w_500,h_350,al_c/c1480e_6dd94c7616b0486bb9ca603d6054de24~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/gold-trophy-2",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "mystery-joker-6000": {
+      "file": "mystery-joker-6000.webp",
+      "bytes": 22234,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/3537d9_d7154e1d93c1493492ad2c80c3c4840c~mv2.webp/v1/fill/w_500,h_350,al_c/3537d9_d7154e1d93c1493492ad2c80c3c4840c~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/mystery-joker-6000",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "inferno-star": {
+      "file": "inferno-star.webp",
+      "bytes": 8842,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/bdbc60_541a96d8e4ef45748fa0c52b905bf7ff~mv2.webp/v1/fill/w_500,h_350,al_c/bdbc60_541a96d8e4ef45748fa0c52b905bf7ff~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/inferno-star",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "battle-royal": {
+      "file": "battle-royal.webp",
+      "bytes": 27870,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/165762_843be3320a324829b73f758814962c72~mv2.webp/v1/fill/w_500,h_350,al_c/165762_843be3320a324829b73f758814962c72~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/battle-royal",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "space-race": {
+      "file": "space-race.webp",
+      "bytes": 14418,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/4e80c5_4ac02deb75bf41f49342b1ed34afcfcb~mv2.webp/v1/fill/w_500,h_350,al_c/4e80c5_4ac02deb75bf41f49342b1ed34afcfcb~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/space-race",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "sea-hunter": {
+      "file": "sea-hunter.webp",
+      "bytes": 15996,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/5eaf02_b7a68e7b249447bb89d8d3534f78f66b~mv2.webp/v1/fill/w_500,h_350,al_c/5eaf02_b7a68e7b249447bb89d8d3534f78f66b~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/sea-hunter",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "super-wheel": {
+      "file": "super-wheel.webp",
+      "bytes": 23182,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/e1428a_aa93a1a020e3478c9cbfea3d7594549d~mv2.webp/v1/fill/w_500,h_350,al_c/e1428a_aa93a1a020e3478c9cbfea3d7594549d~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/super-wheel",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "big-win-cat": {
+      "file": "big-win-cat.webp",
+      "bytes": 18718,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/dbf959_ef86c816ff7145299664bfa93b768511~mv2.webp/v1/fill/w_500,h_350,al_c/dbf959_ef86c816ff7145299664bfa93b768511~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/big-win-cat",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "myth": {
+      "file": "myth.webp",
+      "bytes": 18856,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/1cc057_5efc409939c74952a188650ac40fd77a~mv2.webp/v1/fill/w_500,h_350,al_c/1cc057_5efc409939c74952a188650ac40fd77a~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/myth",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
+    },
+    "cash-vandal": {
+      "file": "cash-vandal.webp",
+      "bytes": 18698,
+      "type": "image/webp",
+      "sourceUrl": "https://static.wixstatic.com/media/347053_ebec4bdae96c4240813d7ee509f6717a~mv2.webp/v1/fill/w_500,h_350,al_c/347053_ebec4bdae96c4240813d7ee509f6717a~mv2.webp",
+      "sourceHost": "static.wixstatic.com",
+      "page": "https://www.playngo.com/games/cash-vandal",
+      "provider": "Play'n GO",
+      "fetched": "2026-10-06",
+      "via": "Play'n GO's own game page"
     }
   },
   "heldPendingRights": {
-    "24k-dragon": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/24k-dragon.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "24k Dragon"
-    },
-    "5x-magic": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/5x-magic.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "5x Magic"
-    },
-    "7-sins": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/7-sins.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "7 Sins"
-    },
     "888-gold": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/pragmatic/888-gold.jpg",
       "sourceHost": "cdn-cms.razed.com",
       "provider": "Pragmatic Play",
       "name": "888 Gold"
-    },
-    "ace-of-spades": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/ace-of-spades.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Ace of Spades"
-    },
-    "agent-of-hearts": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/agent-of-hearts.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Agent of Hearts"
-    },
-    "aztec-idols": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/aztec-idols.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Aztec Idols"
-    },
-    "aztec-warrior-princess": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/aztec-warrior-princess.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Aztec Warrior Princess"
-    },
-    "banana-rock": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/banana-rock.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Banana Rock"
-    },
-    "battle-royal": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/battle-royal.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Battle Royal"
-    },
-    "big-win-cat": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/big-win-cat.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Big Win Cat"
     },
     "bigger-barn-house-bonanza": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/pragmatic-play/bigger-barn-house-bonanza.jpg",
@@ -29021,29 +30083,11 @@
       "provider": "Pragmatic Play",
       "name": "Bounty Hunter"
     },
-    "bugs-party": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/bugs-party.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Bugs Party"
-    },
     "captain-kraken-megaways": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/pragmatic-play/captain-kraken-megaways.jpg",
       "sourceHost": "cdn-cms.razed.com",
       "provider": "Pragmatic Play",
       "name": "Captain Kraken Megaways"
-    },
-    "cash-vandal": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/cash-vandal.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Cash Vandal"
-    },
-    "cats-and-cash": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/cats-and-cash.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Cats and Cash"
     },
     "chilli-heat-spicy-spins": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/pragmatic-play/chilli-heat-spicy-spins.jpg",
@@ -29051,107 +30095,11 @@
       "provider": "Pragmatic Play",
       "name": "Chilli Heat Spicy Spins"
     },
-    "chinese-new-year": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/chinese-new-year.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Chinese New Year"
-    },
-    "cloud-quest": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/cloud-quest.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Cloud Quest"
-    },
-    "contact": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/contact.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Contact"
-    },
-    "cops-n-robbers": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/cops-n-robber.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Cops'n'Robbers"
-    },
-    "crazy-cows": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/crazy-cows.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Crazy Cows"
-    },
     "crypto-crown-10": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/hub88/avatarux/avx-cryptocrown10.jpg",
       "sourceHost": "cdn-cms.razed.com",
       "provider": "AvatarUX",
       "name": "Crypto Crown 10"
-    },
-    "crystal-sun": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/crystal-sun.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Crystal Sun"
-    },
-    "deuces-wild-mh": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/vertexst8/png/png-deuces-wild-mh.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Deuces Wild MH"
-    },
-    "dragon-maiden": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/dragon-maiden.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Dragon Maiden"
-    },
-    "dragon-ship": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/dragon-ship.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Dragon Ship"
-    },
-    "easter-eggs": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/easter-eggs.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Easter Eggs"
-    },
-    "enchanted-crystals": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/enchanted-crystals.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Enchanted Crystals"
-    },
-    "enchanted-meadow": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/enchanted-meadow.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Enchanted Meadow"
-    },
-    "eye-of-the-kraken": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/eye-of-the-kraken.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Eye of the Kraken"
-    },
-    "fire-joker": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/fire-joker.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Fire Joker"
-    },
-    "flying-pigs": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/flying-pigs.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Flying Pigs"
-    },
-    "fortune-teller": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/fortune-teller.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Fortune Teller"
     },
     "free-reelin-joker": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/free-reelin-joker.jpg",
@@ -29159,185 +30107,11 @@
       "provider": "Play'n GO",
       "name": "Free Reelin' Joker"
     },
-    "fu-er-dai": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/fu-er-dai.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "FU ER DAI"
-    },
-    "gemix": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/gemix.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Gemix"
-    },
-    "gemix-2": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/gemix-2.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Gemix 2"
-    },
-    "gold-king": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/gold-king.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Gold King"
-    },
-    "gold-trophy-2": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/gold-trophy-2.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Gold Trophy 2"
-    },
-    "golden-caravan": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/golden-caravan.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Golden Caravan"
-    },
-    "golden-colts": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/golden-colts.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Golden Colts"
-    },
-    "golden-legend": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/golden-legend.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Golden Legend"
-    },
-    "golden-ticket": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/golden-ticket.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Golden Ticket"
-    },
-    "grim-muerto": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/grim-muerto.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Grim Muerto"
-    },
-    "happy-halloween": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/happy-halloween.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Happy Halloween"
-    },
-    "holiday-season": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/holiday-season.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Holiday Season"
-    },
-    "house-of-doom": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/house-of-doom.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "House of Doom"
-    },
-    "house-of-doom-2-the-crypt": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/house-of-doom-2-the-crypt.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "House of Doom 2: The Crypt"
-    },
-    "hugo": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/hugo.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Hugo"
-    },
-    "hugo-2": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/hugo-2.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Hugo 2"
-    },
-    "hugo-carts": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/hugo-carts.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Hugo Carts"
-    },
-    "hugo-goal": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/hugo-goal.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Hugo Goal"
-    },
-    "imperial-opera": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/imperial-opera.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Imperial Opera"
-    },
-    "inferno-star": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/inferno-star.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Inferno Star"
-    },
-    "irish-gold": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/irish-gold.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Irish Gold"
-    },
-    "iron-girl": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/iron-girl.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Iron Girl"
-    },
-    "jacks-or-better-mh": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/vertexst8/png/png-jacks-or-better-mh.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Jacks or Better MH"
-    },
-    "jade-magician": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/jade-magician.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Jade Magician"
-    },
-    "jewel-box": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/jewel-box.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Jewel Box"
-    },
-    "jolly-roger": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/jolly-roger.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Jolly Roger"
-    },
-    "lady-of-fortune": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/lady-of-fortune.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Lady of Fortune"
-    },
-    "leprechaun-goes-egypt": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/leprechaun-goes-egypt.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Leprechaun goes Egypt"
-    },
     "lobster-house": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/pragmatic-play/lobster-house.jpg",
       "sourceHost": "cdn-cms.razed.com",
       "provider": "Pragmatic Play",
       "name": "Lobster House"
-    },
-    "lucky-diamonds": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/lucky-diamonds.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Lucky Diamonds"
     },
     "lucky-panda": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/pragmatic-play/lucky-panda.jpg",
@@ -29345,29 +30119,11 @@
       "provider": "Pragmatic Play",
       "name": "Lucky Panda"
     },
-    "mahjong-88": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/mahjong-88.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Mahjong 88"
-    },
     "mahjong-wins-super-scatter": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Pragmatic/mahjong-wins-super-scatter.jpg",
       "sourceHost": "cdn-cms.razed.com",
       "provider": "Pragmatic Play",
       "name": "Mahjong Wins Super Scatter"
-    },
-    "matsuri": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/matsuri.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Matsuri"
-    },
-    "merry-xmas": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/merry-xmas.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Merry Xmas"
     },
     "mr-null-s-wicked-wares": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/neutron/pragmatic-play/mr-nulls-wicked-wares.jpg",
@@ -29375,119 +30131,17 @@
       "provider": "Pragmatic Play",
       "name": "Mr. Null's Wicked Wares"
     },
-    "multifruit-81": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/multifruit-81.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "MULTIFRUIT 81"
-    },
-    "mystery-joker": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/mystery-joker.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Mystery Joker"
-    },
-    "mystery-joker-6000": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/mystery-joker-6000.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Mystery Joker 6000"
-    },
-    "myth": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/myth.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Myth"
-    },
-    "ninja-fruits": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/ninja-fruits.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Ninja Fruits"
-    },
     "olympus-wins": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/pragmatic-play/olympus-wins.jpg",
       "sourceHost": "cdn-cms.razed.com",
       "provider": "Pragmatic Play",
       "name": "Olympus Wins"
     },
-    "pearl-lagoon": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/pearl-lagoon.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Pearl Lagoon"
-    },
-    "pearls-of-india": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/pearls-of-india.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Pearls of India"
-    },
-    "perfect-gems": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/perfect-gems.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Perfect Gems"
-    },
-    "phoenix-reborn": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/phoenix-reborn.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Phoenix Reborn"
-    },
-    "photo-safari": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/photo-safari.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Photo Safari"
-    },
     "pig-farm": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/pragmatic-play/pig-farm.jpg",
       "sourceHost": "cdn-cms.razed.com",
       "provider": "Pragmatic Play",
       "name": "Pig Farm"
-    },
-    "pimped": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/pimped.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Pimped"
-    },
-    "planet-fortune": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/planet-fortune.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Planet Fortune"
-    },
-    "prissy-princess": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/prissy-princess.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Prissy Princess"
-    },
-    "prosperity-palace": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/prosperity-palace.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Prosperity Palace"
-    },
-    "rage-to-riches": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/rage-to-riches.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Rage to Riches"
-    },
-    "rich-wilde-and-the-amulet-of-dead": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/rich-wilde-and-the-amulet-of-dead.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Rich Wilde and the Amulet of Dead"
-    },
-    "riches-of-ra": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/riches-of-ra.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Riches of RA"
     },
     "rise-of-orpheus": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/rise-of-orpheus.jpg",
@@ -29500,84 +30154,6 @@
       "sourceHost": "cdn-cms.razed.com",
       "provider": "Pragmatic Play",
       "name": "Rolling in Treasures"
-    },
-    "royal-masquerade": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/royal-masquerade.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Royal Masquerade"
-    },
-    "sabaton": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/sabaton.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Sabaton"
-    },
-    "sails-of-gold": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/sails-of-gold.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Sails of Gold"
-    },
-    "samba-carnival": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/samba-carnival.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Samba Carnival"
-    },
-    "sea-hunter": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/sea-hunter.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Sea Hunter"
-    },
-    "sizzling-spins": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/sizzling-spins.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Sizzling Spins"
-    },
-    "space-race": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/space-race.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Space Race"
-    },
-    "spin-party": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/spin-party.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Spin Party"
-    },
-    "star-joker": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/star-joker.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Star Joker"
-    },
-    "street-magic": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/street-magic.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Street Magic"
-    },
-    "super-flip": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/super-flip.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Super Flip"
-    },
-    "super-wheel": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/super-wheel.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Super Wheel"
-    },
-    "sweet-27": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/sweet-27.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Sweet 27"
     },
     "tales-of-egypt": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/pragmatic/tales-of-egypt.jpg",
@@ -29597,77 +30173,17 @@
       "provider": "Pragmatic Play",
       "name": "The Big Dawgs"
     },
-    "the-shimmering-woods": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/vertexst8/png/png-the-shimmering-woods.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "The Shimmering Woods"
-    },
-    "the-wild-class": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/the-wild-class.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "The Wild Class"
-    },
-    "tower-quest": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/tower-quest.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Tower Quest"
-    },
     "treats-of-terror-ii": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/treats-of-terror-ii.jpg",
       "sourceHost": "cdn-cms.razed.com",
       "provider": "Play'n GO",
       "name": "Treats of Terror II"
     },
-    "troll-hunters": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/troll-hunters.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Troll Hunters"
-    },
-    "viking-runecraft": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/viking-runecraft.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Viking Runecraft"
-    },
-    "wild-blood": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/wild-blood.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Wild Blood"
-    },
-    "wild-falls": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/wild-falls.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Wild Falls"
-    },
-    "wild-melon": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/wild-melon.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Wild Melon"
-    },
     "wild-wildebeest-wins": {
       "sourceUrl": "https://cdn-cms.razed.com/game-assets/razed/Pragmatic-Play/wild-wildebeest-wins.jpg",
       "sourceHost": "cdn-cms.razed.com",
       "provider": "Pragmatic Play",
       "name": "Wild Wildebeest Wins"
-    },
-    "wizard-of-gems": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/wizard-of-gems.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Wizard of Gems"
-    },
-    "xmas-joker": {
-      "sourceUrl": "https://cdn-cms.razed.com/game-assets/alea/playn-go/xmas-joker.jpg",
-      "sourceHost": "cdn-cms.razed.com",
-      "provider": "Play'n GO",
-      "name": "Xmas Joker"
     }
   }
 }
