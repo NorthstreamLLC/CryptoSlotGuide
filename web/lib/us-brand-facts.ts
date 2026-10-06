@@ -14,6 +14,8 @@ export interface BrandFacts {
   /** One line for the hero: the standing new-player offer in plain words. Absent where the brand's pages state none we can read. */
   offer?: string;
   groups: BrandFactGroup[];
+  /** Who read the pages, where it was not our own reader: a brand whose site blocks automated requests is read by the site owner in a browser. */
+  readBy?: string;
 }
 
 /**

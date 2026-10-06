@@ -123,7 +123,7 @@ export function UsBrandPage({ brand }: { brand: UsBrand }) {
                 </div>
               </div>
             ))}
-            <p style={{ margin: 0, fontFamily: MONO, fontSize: 10.5, color: "#77858E" }}>Read from {brand.name}&rsquo;s own pages on {facts.read}. Where the regulator and the brand disagree, the regulator&rsquo;s list below is the one we rank on.</p>
+            <p style={{ margin: 0, fontFamily: MONO, fontSize: 10.5, color: "#77858E" }}>Read from {brand.name}&rsquo;s own pages on {facts.read}{facts.readBy ? `, ${facts.readBy}` : ""}. Where the regulator and the brand disagree, the regulator&rsquo;s list below is the one we rank on.</p>
           </div>
         )}
 

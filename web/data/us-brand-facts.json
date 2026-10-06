@@ -644,6 +644,110 @@
           ]
         }
       ]
+    },
+    "thescore-bet": {
+      "read": "2026-10-05",
+      "readBy": "by the site owner in a browser, as theScore Bet's site refuses automated readers",
+      "offer": "$1,000 Bet Reset: if your first cash wager loses, 100% of it back up to $1,000, paid as five Bonus Bets",
+      "groups": [
+        {
+          "title": "The offer",
+          "facts": [
+            {
+              "label": "New-player offer",
+              "value": "$1,000 Bet Reset: place a cash wager on any market or game; if it settles as a loss, get the stake back up to $1,000, paid as five Bonus Bets each worth 20% of it. Runs to December 31, 2026.",
+              "sourceUrl": "https://www.thescore.bet/"
+            },
+            {
+              "label": "Bonus Bets",
+              "value": "Credited within 72 hours and must be used within seven days. A winning Bonus Bet returns only the winnings, as withdrawable cash. Wagers cashed out, voided, not funded from the cash wallet or placed with a Profit Boost do not qualify.",
+              "sourceUrl": "https://www.thescore.bet/"
+            },
+            {
+              "label": "Rewards",
+              "value": "PENN Play, the official loyalty programme of Hollywood Casino: rewards earned online and at PENN's 35+ destinations.",
+              "sourceUrl": "https://www.thescore.bet/"
+            }
+          ]
+        },
+        {
+          "title": "Who can play",
+          "facts": [
+            {
+              "label": "States",
+              "value": "Must be physically present in AZ, CO, IA, IL, IN, KS, KY, LA, MA, MD, MI, NC, NJ, OH, PA, TN, VA or WV to wager.",
+              "sourceUrl": "https://www.thescore.bet/"
+            },
+            {
+              "label": "Operator",
+              "value": "Penn Sports Interactive, LLC and its affiliates.",
+              "sourceUrl": "https://www.thescore.bet/"
+            }
+          ]
+        },
+        {
+          "title": "The casino",
+          "facts": [
+            {
+              "label": "Online casino",
+              "value": "theScore Bet's casino link opens Hollywood Casino, PENN's online casino brand.",
+              "sourceUrl": "https://www.thescore.bet/"
+            }
+          ]
+        }
+      ]
+    },
+    "golden-nugget": {
+      "read": "2026-10-05",
+      "readBy": "by the site owner in a browser, as Golden Nugget's site refuses automated readers",
+      "offer": "Player's Choice: play $5 and take either $50 in Crown Cash or 500 Flex Spins, for new players",
+      "groups": [
+        {
+          "title": "The offer",
+          "facts": [
+            {
+              "label": "New-player offer",
+              "value": "Player's Choice: wager $5 on eligible games, then choose $50 in Crown Cash or 500 Flex Spins. One choice and one redemption per customer. Terms valid August 31 to November 29, 2026.",
+              "sourceUrl": "https://www.goldennuggetcasino.com/"
+            },
+            {
+              "label": "Flex Spins",
+              "value": "50 spins a day for 10 days; you must log in each day to receive that day's spins, and each day's spins expire 24 hours after they are issued and are locked to the game you choose. Spin winnings go to your cash balance.",
+              "sourceUrl": "https://www.goldennuggetcasino.com/"
+            },
+            {
+              "label": "Crown Cash",
+              "value": "Must be played through once (1×) before any winnings can be withdrawn; expires 365 days after it is issued; usable only at Golden Nugget Online Casino.",
+              "sourceUrl": "https://www.goldennuggetcasino.com/"
+            },
+            {
+              "label": "Eligible games",
+              "value": "All slots, table games and video poker; craps games are excluded. Qualifying wagers must be placed with cash or GN Dollars.",
+              "sourceUrl": "https://www.goldennuggetcasino.com/"
+            },
+            {
+              "label": "Rewards",
+              "value": "Golden Nugget play earns Crown Cash under DraftKings Rewards, shared with DraftKings Sportsbook, Casino and Jackpocket.",
+              "sourceUrl": "https://www.goldennuggetcasino.com/"
+            }
+          ]
+        },
+        {
+          "title": "Who can play",
+          "facts": [
+            {
+              "label": "States",
+              "value": "Must be physically located in Pennsylvania, Michigan, New Jersey or West Virginia.",
+              "sourceUrl": "https://www.goldennuggetcasino.com/"
+            },
+            {
+              "label": "Age and eligibility",
+              "value": "21+. New customers only, meaning anyone who has never completed a deposit at Golden Nugget Online Casino.",
+              "sourceUrl": "https://www.goldennuggetcasino.com/"
+            }
+          ]
+        }
+      ]
     }
   }
 }
