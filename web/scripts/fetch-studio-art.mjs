@@ -12,7 +12,8 @@
  * — the same rule the RTP readers use — so a near-namesake never takes
  * another game's art.
  *
- * Each image is saved as a 640px-wide WebP in public/assets/games/<slug>.webp
+ * Each image is saved as a 640px-wide WebP (square tiles framed, see
+ * scripts/lib/frame-art.mjs) in public/assets/games/<slug>.webp
  * and recorded in data/game-art-sources.json under `art`, with the image URL,
  * the studio page it came from and the date; the title leaves
  * `heldPendingRights`. Only titles still without publishable art are
@@ -28,6 +29,7 @@ import path from "node:path";
 import sharp from "sharp";
 import { titleMatcher } from "./lib/match-title.mjs";
 import { fetchText, fetchBinary } from "./lib/studio-fetch.mjs";
+import { frameArt } from "./lib/frame-art.mjs";
 
 const argv = process.argv.slice(2);
 const arg = (k, d = null) => (argv.includes(k) ? argv[argv.indexOf(k) + 1] : d);
@@ -37,7 +39,6 @@ const LIMIT = Number(arg("--limit", 0)) || 0;
 // --preview <dir>: write the chosen images there as <slug>.jpg and touch no
 // site data, so a reader's picks can be checked by eye before a real run.
 const PREVIEW = arg("--preview", null);
-const WIDTH = 640;
 const TODAY = new Date().toISOString().slice(0, 10);
 
 const OUT = path.join("public", "assets", "games");
@@ -98,7 +99,7 @@ for (const key of keys) {
     }
     let out;
     try {
-      out = await sharp(buf).resize({ width: WIDTH, withoutEnlargement: true }).webp({ quality: 74 }).toBuffer();
+      out = await frameArt(buf);
     } catch {
       stat.noArt++;
       continue;
