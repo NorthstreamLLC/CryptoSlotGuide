@@ -748,6 +748,38 @@
           ]
         }
       ]
+    },
+    "betjack": {
+      "read": "2026-10-05",
+      "readBy": "by the site owner in a browser, as betJACK's pages load nothing readable for automated readers",
+      "offer": "$277 Second Chance Bet: if your first wager loses, a second-chance bet token up to $277, for new sign-ups",
+      "groups": [
+        {
+          "title": "The offer",
+          "facts": [
+            {
+              "label": "New-player offer",
+              "value": "$277 Second Chance Bet: betJACK covers your first wager up to $277; opt in to claim the second-chance bet token. New sign-ups only, one sign-up offer per registration.",
+              "sourceUrl": "https://betjack.com/en-us/promotions"
+            },
+            {
+              "label": "Refer a friend",
+              "value": "You and your friend each get a 100% Profit Boost when they sign up through your referral link and deposit at least $10; up to 3 friends every 90 days.",
+              "sourceUrl": "https://betjack.com/en-us/promotions"
+            }
+          ]
+        },
+        {
+          "title": "Who can play",
+          "facts": [
+            {
+              "label": "State",
+              "value": "Ohio: betJACK calls itself Ohio's Sportsbook.",
+              "sourceUrl": "https://betjack.com/en-us/promotions"
+            }
+          ]
+        }
+      ]
     }
   }
 }
