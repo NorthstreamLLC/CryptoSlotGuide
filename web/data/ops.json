@@ -64,7 +64,7 @@
     "kyc": "tiered",
     "bonus": "Monthly 4-deposit bonus: 180%, 240%, 300% and 360%, resetting every month",
     "wager": 40,
-    "signupUrl": "https://bc.game",
+    "signupUrl": "https://bc.game/i-97ecknzbtm-n/",
     "conf": 2,
     "absorbsFee": false,
     "ln": false,
@@ -75,7 +75,8 @@
     "bonusShort": "Up to 360% on 4 deposits every month",
     "wagerNote": "unlocks gradually as you wager",
     "payoutObserved": "Instant",
-    "payoutObservedMins": 0
+    "payoutObservedMins": 0,
+    "affiliate": true
   },
   {
     "slug": "shuffle",
