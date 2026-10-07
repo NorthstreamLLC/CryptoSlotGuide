@@ -8,6 +8,10 @@ import { brandFor, casinoFacts } from "@/lib/casino-facts";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { Icon } from "@/components/ui/Icon";
 import { NextSteps } from "@/components/layout/NextSteps";
+import { HeroDrift } from "@/components/ui/HeroDrift";
+import { CountUp } from "@/components/ui/CountUp";
+import { OfferCta } from "@/components/ui/OfferCta";
+import { logoFor } from "@/lib/logo";
 
 export const metadata = pageMetadata(
   "Biggest crypto casino races and raffles",
@@ -16,18 +20,20 @@ export const metadata = pageMetadata(
 );
 
 const MONO = "var(--font-jetbrains-mono), monospace";
-const COLS = "md:grid-cols-[40px_minmax(190px,1.1fr)_minmax(240px,1.6fr)_120px_minmax(180px,1fr)_140px]";
+const COLS = "md:grid-cols-[40px_minmax(170px,1fr)_minmax(240px,1.6fr)_100px_minmax(170px,1fr)_200px]";
 const KIND: Record<string, string> = { race: "Race", raffle: "Raffle", draw: "Prize draw", tournament: "Tournament" };
 
 export default function Page() {
   const slugs = raceSlugs().filter((s) => siteData.ops.some((o) => o.slug === s));
   const total = slugs.reduce((n, s) => n + (raceFor(s)?.monthly ?? 0), 0);
+  const top = Math.max(...slugs.map((s) => raceFor(s)?.monthly ?? 0), 1);
 
   return (
     <main style={{ background: "#07090B" }}>
       <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Races", path: "/races" }])} />
-      <section style={{ borderBottom: "1px solid rgba(255,255,255,.07)", background: "radial-gradient(80% 120% at 85% 0%, rgba(214,182,92,.12), transparent 55%), radial-gradient(60% 80% at 0% 100%, rgba(0,194,204,.07), transparent 60%), #0A0D10" }}>
-        <div style={{ maxWidth: 1280, margin: "0 auto", padding: "40px 24px 40px" }}>
+      <section style={{ position: "relative", overflow: "hidden", borderBottom: "1px solid rgba(255,255,255,.07)", background: "radial-gradient(80% 120% at 85% 0%, rgba(214,182,92,.12), transparent 55%), radial-gradient(60% 80% at 0% 100%, rgba(0,194,204,.07), transparent 60%), #0A0D10" }}>
+        <HeroDrift logos={slugs.filter((s) => logoFor(s))} />
+        <div className="csg-hero-pad" style={{ position: "relative", maxWidth: 1280, margin: "0 auto", padding: "40px 24px 40px" }}>
           <div style={{ fontFamily: MONO, fontSize: 11, color: "#83919A", marginBottom: 22 }}>
             <Link href="/" style={{ color: "#83919A" }}>Home</Link> / <span style={{ color: "#A8B6BE" }}>Races</span>
           </div>
@@ -38,16 +44,19 @@ export default function Page() {
           <p style={{ margin: "0 0 26px", maxWidth: "62ch", fontSize: 16.5, lineHeight: 1.6, color: "#A8B6BE" }}>
             Wager races, raffles and prize draws that run every day, week or month, sorted by prize money a month. You enter by playing, and every figure comes from the casino&apos;s own promotions pages.
           </p>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
-            {[
-              [String(slugs.length), "casinos with recurring races"],
-              [`$${Math.round(total / 1_000_000)}M+`, "in prizes a month"],
-            ].map(([v, l]) => (
-              <span key={l} style={{ display: "inline-flex", alignItems: "baseline", gap: 8, padding: "9px 14px", borderRadius: 100, background: "rgba(255,255,255,.045)", border: "1px solid rgba(255,255,255,.08)", fontSize: 13.5, color: "#A8B6BE" }}>
-                <strong style={{ fontSize: 15, fontWeight: 800, color: "#fff" }}>{v}</strong>
-                {l}
-              </span>
-            ))}
+          <div style={{ display: "flex", flexWrap: "wrap", alignItems: "flex-end", gap: "14px 34px" }}>
+            <div>
+              <div style={{ fontSize: "clamp(34px, 4vw, 46px)", lineHeight: 1, fontWeight: 800, letterSpacing: "-.03em", color: "#FFD36B" }}>
+                <CountUp value={Math.round(total / 1_000_000)} prefix="$" suffix="M+" />
+              </div>
+              <div style={{ marginTop: 6, fontFamily: MONO, fontSize: 11, letterSpacing: ".06em", textTransform: "uppercase", color: "#A8B6BE" }}>in prizes a month</div>
+            </div>
+            <div>
+              <div style={{ fontSize: "clamp(34px, 4vw, 46px)", lineHeight: 1, fontWeight: 800, letterSpacing: "-.03em", color: "#fff" }}>
+                <CountUp value={slugs.length} />
+              </div>
+              <div style={{ marginTop: 6, fontFamily: MONO, fontSize: 11, letterSpacing: ".06em", textTransform: "uppercase", color: "#A8B6BE" }}>casinos with recurring races</div>
+            </div>
           </div>
         </div>
       </section>
@@ -79,18 +88,22 @@ export default function Page() {
                   </span>
                   <span style={{ fontSize: 15.5, fontWeight: 800, color: "#fff" }}>{o.name}</span>
                 </Link>
-                <div className="col-span-2 md:col-span-1" style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 15, fontWeight: 800, color: "#fff" }}>
-                  <span style={{ color: "#D6B65C", display: "inline-flex" }}><Icon name="trophy" size={16} /></span>
-                  {r.label}
+                <div className="col-span-2 md:col-span-1" style={{ minWidth: 0 }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 15, fontWeight: 800, color: "#fff" }}>
+                    <span style={{ color: "#D6B65C", display: "inline-flex" }}><Icon name="trophy" size={16} /></span>
+                    {r.label}
+                  </div>
+                  {/* Prize money a month relative to the biggest pool, grown in on scroll. */}
+                  <div aria-hidden style={{ marginTop: 8, height: 5, borderRadius: 3, background: "rgba(255,255,255,.06)", overflow: "hidden" }}>
+                    <div className="csg-grow" style={{ width: `${Math.max(4, Math.round((r.monthly / top) * 100))}%`, height: "100%", borderRadius: 3, background: "linear-gradient(90deg, #C79A2E, #FFD36B)" }} />
+                  </div>
                 </div>
                 <div>
                   <span style={{ padding: "3px 9px", borderRadius: 100, background: "rgba(214,182,92,.12)", fontFamily: MONO, fontSize: 10, letterSpacing: ".05em", textTransform: "uppercase", color: "#D6B65C" }}>{KIND[r.kind]}</span>
                 </div>
                 <div className="hidden md:block" style={{ fontSize: 13, lineHeight: 1.35, color: "#A8B6BE" }}>{casinoFacts(o).headline}</div>
-                <div className="col-span-2 md:col-span-1">
-                  <Link href={href} style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 6, padding: "10px 12px", borderRadius: 10, background: o.featured ? brand : "#00C2CC", color: "#0A0D0F", fontSize: 13, fontWeight: 800, whiteSpace: "nowrap" }}>
-                    View offer <Icon name="arrow" size={14} />
-                  </Link>
+                <div className="col-span-2 md:col-span-1" style={{ display: "flex" }}>
+                  <OfferCta o={o} size="sm" />
                 </div>
               </div>
             );
