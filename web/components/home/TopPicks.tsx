@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { CoinStack } from "@/components/ui/CoinIcon";
+import { CodeOffer } from "@/components/ui/CodeOffer";
 import { Icon, type IconName } from "@/components/ui/Icon";
 
 const MONO = "var(--font-jetbrains-mono), monospace";
@@ -41,6 +42,9 @@ export interface Pick {
   signupUrl?: string;
   featured?: boolean;
   cta: string;
+  /** Referral code and the casino's own offer, for the "Sign up with code" line. */
+  code?: string;
+  offer?: string;
 }
 
 const ROTATE_MS = 7000;
@@ -164,12 +168,19 @@ export function TopPicks({ picks }: { picks: Pick[] }) {
           </div>
         )}
 
+        {p.signupUrl && p.code && p.offer && (
+          <div style={{ marginBottom: 12 }}>
+            <CodeOffer code={p.code} offer={p.offer} casino={p.name} tint={p.tint} compact />
+          </div>
+        )}
+
         <div style={{ display: "flex", gap: 9, flexWrap: "wrap" }}>
           {p.signupUrl ? (
             <a
               href={p.signupUrl}
               target="_blank"
               rel="noopener sponsored nofollow"
+              data-copy-code={p.code}
               className="transition-transform hover:-translate-y-px"
               style={{ flex: "1 1 180px", display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 8, padding: "13px 18px", borderRadius: 11, background: "#FFC531", color: "#141007", fontSize: 14.5, fontWeight: 800, whiteSpace: "nowrap" }}
             >

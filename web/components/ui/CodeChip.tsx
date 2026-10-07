@@ -3,7 +3,7 @@
  * copying is done by CodeCopier's one listener (data-copy-code), so lists of
  * forty rows stay server components.
  */
-export function CodeChip({ code, tint = "#57E39A", size = "md" }: { code: string; tint?: string; size?: "sm" | "md" }) {
+export function CodeChip({ code, tint = "#57E39A", size = "md", bare = false }: { code: string; tint?: string; size?: "sm" | "md"; bare?: boolean }) {
   const sm = size === "sm";
   return (
     <button
@@ -26,7 +26,7 @@ export function CodeChip({ code, tint = "#57E39A", size = "md" }: { code: string
         whiteSpace: "nowrap",
       }}
     >
-      {sm ? "Code" : "Use code"}{" "}
+      {bare ? null : <>{sm ? "Code" : "Use code"} </>}
       <strong style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: sm ? 11.5 : 14.5, letterSpacing: ".04em", color: tint }}>{code}</strong>
       <svg width={sm ? 12 : 14} height={sm ? 12 : 14} viewBox="0 0 24 24" fill="none" stroke={tint} strokeWidth="2" aria-hidden>
         <rect x="9" y="9" width="12" height="12" rx="2" />

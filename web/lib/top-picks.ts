@@ -86,6 +86,8 @@ function operatorPick(slug: string, category: string, cta: string): Pick | null 
     signupUrl: o.affiliate && o.signupUrl ? o.signupUrl : undefined,
     featured: !!o.affiliate,
     cta,
+    code: o.affiliate && o.signupUrl ? o.promoCode : undefined,
+    offer: o.bonusShort ?? o.bonus,
   };
 }
 

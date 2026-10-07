@@ -214,9 +214,16 @@ export function FeaturedPartner({
                   {o.name}
                 </Link>
                 <span style={{ fontFamily: MONO, fontSize: 11, color: "#8E9CA5" }}>{o.licence} licence</span>
-                {o.promoCode && <CodeChip code={o.promoCode} tint={tint} size="sm" />}
               </div>
-              <p style={{ margin: "4px 0 0", maxWidth: "72ch", fontSize: 13.5, lineHeight: 1.55, color: "#A9B8C0", textWrap: "pretty" }}>{pitch}</p>
+              {o.promoCode ? (
+                <p style={{ margin: "4px 0 0", maxWidth: "72ch", fontSize: 13.5, lineHeight: 1.55, color: "#A9B8C0", textWrap: "pretty" }}>
+                  Sign up with code <CodeChip code={o.promoCode} tint={tint} size="sm" bare /> and get{" "}
+                  <strong style={{ color: "#E8EDF0" }}>{o.bonusShort ?? o.bonus}</strong>
+                  <span style={{ color: "#77858E" }}> · {pitch}</span>
+                </p>
+              ) : (
+                <p style={{ margin: "4px 0 0", maxWidth: "72ch", fontSize: 13.5, lineHeight: 1.55, color: "#A9B8C0", textWrap: "pretty" }}>{pitch}</p>
+              )}
             </div>
             </div>
 
