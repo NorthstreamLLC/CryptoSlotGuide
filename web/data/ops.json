@@ -541,7 +541,9 @@
     "payoutStatedMaxMins": 1440,
     "bonusExpiry": "Instant Rakeback does not expire",
     "bonusShort": "100% up to $1,000 + rakeback to 10%",
-    "wagerBasis": "deposit + bonus"
+    "wagerBasis": "deposit + bonus",
+    "signupUrl": "https://yeet.com/register?aff=slotsguide",
+    "affiliate": true
   },
   {
     "slug": "razed",
