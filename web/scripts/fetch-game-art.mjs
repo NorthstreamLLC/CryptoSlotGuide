@@ -33,6 +33,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { makeThumb } from "./make-art-thumbs.mjs";
 
 const web = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DATA = path.join(web, "data");
@@ -138,7 +139,11 @@ for (let i = 0; i < targets.length; i += 6) {
         const buf = Buffer.from(await r.arrayBuffer());
         if (buf.length < 1024) { dead++; return; }
         const file = `${base}.${ext}`;
-        if (!DRY) fs.writeFileSync(path.join(OUT, file), buf);
+        if (!DRY) {
+          fs.writeFileSync(path.join(OUT, file), buf);
+          // List rows draw the 128px copy (scripts/make-art-thumbs.mjs).
+          await makeThumb(file, true);
+        }
         art[base] = { file, bytes: buf.length, type, sourceUrl: g.image, sourceHost: new URL(g.image).hostname, provider: g.provider, fetched: new Date().toISOString().slice(0, 10) };
         written++;
       } catch { dead++; }

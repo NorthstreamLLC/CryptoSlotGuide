@@ -399,3 +399,14 @@ p {
     scroll-behavior: auto !important;
   }
 }
+
+/* Slot list rows (components/slots/SlotCategoryPage.tsx): one class set
+   shared by hundreds of rows instead of repeated inline styles. */
+.csg-srow { display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: 12px; background: rgba(12,16,19,.7); border: 1px solid rgba(255,255,255,.07); }
+.csg-srow-art { width: 52px; height: 39px; flex: none; border-radius: 8px; overflow: hidden; background: #0E1316; }
+.csg-srow-art img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.csg-srow-txt { min-width: 0; flex: 1; }
+.csg-srow-name { display: block; font-size: 14px; font-weight: 700; color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.csg-srow-sub { display: block; font-size: 12px; color: #7B8A93; margin-top: 2px; }
+.csg-srow-rtp { font-family: var(--font-jetbrains-mono), monospace; font-size: 13px; color: #fff; white-space: nowrap; }
+.csg-srow-rtp-multi { color: #FFC531; }

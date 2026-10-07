@@ -179,6 +179,18 @@ export function publishableArt(g: CatalogueSlotPage): string | null {
 }
 
 /**
+ * The same art as publishableArt(), at list-row size: the 128px copy in
+ * public/assets/games/t (scripts/make-art-thumbs.mjs) or the proxy's
+ * 128px rendition. For tiles drawn small; a page's hero keeps the full file.
+ */
+export function publishableThumb(g: CatalogueSlotPage): string | null {
+  const rec = g.slug ? ART[g.slug] : undefined;
+  if (rec?.file) return `/assets/games/t/${rec.file}`;
+  const p = artProxyPath(g.slug);
+  return p ? `${p}?w=128` : null;
+}
+
+/**
  * Published RTP configurations, best first.
  *
  * A studio's own game page beats the catalogue import outright. The import is

@@ -30,6 +30,7 @@ import sharp from "sharp";
 import { titleMatcher } from "./lib/match-title.mjs";
 import { fetchText, fetchBinary } from "./lib/studio-fetch.mjs";
 import { frameArt } from "./lib/frame-art.mjs";
+import { makeThumb } from "./make-art-thumbs.mjs";
 
 const argv = process.argv.slice(2);
 const arg = (k, d = null) => (argv.includes(k) ? argv[argv.indexOf(k) + 1] : d);
@@ -114,7 +115,11 @@ for (const key of keys) {
       stat.saved++;
       continue;
     }
-    if (!DRY) fs.writeFileSync(path.join(OUT, file), out);
+    if (!DRY) {
+      fs.writeFileSync(path.join(OUT, file), out);
+      // List rows draw the 128px copy (scripts/make-art-thumbs.mjs).
+      await makeThumb(file, true);
+    }
     sources.art[g.slug] = {
       file,
       bytes: out.length,

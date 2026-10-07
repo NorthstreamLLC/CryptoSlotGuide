@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { maxWinLabel, rtpLabel, rtpSortValue, volLabel } from "@/lib/slot-facts";
 import { siteData, siteCounts } from "@/lib/site-data";
-import { catalogueByMechanic, rtpVersions, publishableArt } from "@/lib/slot-page";
+import { catalogueByMechanic, rtpVersions, publishableThumb } from "@/lib/slot-page";
 import { volatilityOf } from "@/lib/slot-db";
 import type { SlotMechanicTag } from "@/lib/types";
 import { NextSteps } from "@/components/layout/NextSteps";
@@ -102,20 +102,22 @@ export function SlotCategoryPage({ tag }: { tag: SlotMechanicTag }) {
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 10 }}>
               {more.map((g) => {
                 const v = rtpVersions(g);
-                const art = publishableArt(g);
+                const art = publishableThumb(g);
                 return (
-                  <Link key={g.slug} href={`/slots/${g.slug}`} data-reveal className="csg-lift" style={{ display: "flex", alignItems: "center", gap: 12, padding: "12px 14px", borderRadius: 12, background: "rgba(12,16,19,.7)", border: "1px solid rgba(255,255,255,.07)" }}>
-                    <span style={{ width: 52, height: 39, flex: "none", borderRadius: 8, overflow: "hidden", background: "#0E1316" }}>
+                  // Classes, not inline styles: 700+ rows each repeating the
+                  // same style objects doubled this page's HTML and its RSC copy.
+                  <Link key={g.slug} href={`/slots/${g.slug}`} data-reveal className="csg-lift csg-srow">
+                    <span className="csg-srow-art">
                       {art ? (
                         // eslint-disable-next-line @next/next/no-img-element
-                        <img src={art} alt="" width={52} height={39} loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                        <img src={art} alt="" width={52} height={39} loading="lazy" />
                       ) : null}
                     </span>
-                    <span style={{ minWidth: 0, flex: 1 }}>
-                      <span style={{ display: "block", fontSize: 14, fontWeight: 700, color: "#fff", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{g.name}</span>
-                      <span style={{ display: "block", fontSize: 12, color: "#7B8A93", marginTop: 2 }}>{g.provider}{volatilityOf(g) ? ` · ${volatilityOf(g)}` : ""}</span>
+                    <span className="csg-srow-txt">
+                      <span className="csg-srow-name">{g.name}</span>
+                      <span className="csg-srow-sub">{g.provider}{volatilityOf(g) ? ` · ${volatilityOf(g)}` : ""}</span>
                     </span>
-                    <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 13, color: v.length > 1 ? "#FFC531" : "#fff", whiteSpace: "nowrap" }}>
+                    <span className={v.length > 1 ? "csg-srow-rtp csg-srow-rtp-multi" : "csg-srow-rtp"}>
                       {v.length > 1 ? `${v[0]}% – ${v[v.length - 1]}%` : v.length ? `${v[0]}%` : g.rtp != null ? `${g.rtp}%` : "—"}
                     </span>
                   </Link>
