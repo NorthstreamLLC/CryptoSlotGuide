@@ -410,3 +410,34 @@ p {
 .csg-srow-sub { display: block; font-size: 12px; color: #7B8A93; margin-top: 2px; }
 .csg-srow-rtp { font-family: var(--font-jetbrains-mono), monospace; font-size: 13px; color: #fff; white-space: nowrap; }
 .csg-srow-rtp-multi { color: #FFC531; }
+
+/* Licensed-brand cards (components/fiat/FiatSiteCard.tsx): hundreds per
+   register page, so one class set instead of repeated inline styles. */
+.csg-fb { scroll-margin-top: 110px; display: flex; flex-direction: column; gap: 10px; padding: 14px 16px; border-radius: 14px; background: #0C1013; border: 1px solid rgba(255,255,255,.07); min-width: 0; }
+.csg-fb-c { gap: 8px; padding: 12px 14px; }
+.csg-fb-head { display: flex; gap: 12px; align-items: center; min-width: 0; }
+.csg-fb-text { min-width: 0; }
+.csg-fb-name { font-size: 15px; font-weight: 800; color: #fff; overflow-wrap: anywhere; }
+.csg-fb-c .csg-fb-name { font-size: 14px; }
+.csg-fb-dom { font-family: var(--font-jetbrains-mono), monospace; font-size: 10.5px; line-height: 1.5; color: #83919A; overflow-wrap: anywhere; }
+.csg-fb-hold { font-size: 12px; line-height: 1.4; color: #8DA0AA; overflow-wrap: anywhere; }
+.csg-fb-foot { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; margin-top: auto; }
+.csg-fb-tag { padding: 3px 9px; border-radius: 100px; border: 1px solid rgba(255,255,255,.1); font-family: var(--font-jetbrains-mono), monospace; font-size: 10px; letter-spacing: .04em; color: #BDE8D2; }
+.csg-fb-tag-casino { color: #5FE3E8; }
+.csg-fb-visit { margin-left: auto; font-family: var(--font-jetbrains-mono), monospace; font-size: 11px; color: #5FE3E8; white-space: nowrap; }
+.csg-fb-logo { width: 44px; height: 44px; flex: none; border-radius: 11px; background: #EEF1F3; object-fit: contain; padding: 4px; }
+.csg-fb-logo-c { width: 36px; height: 36px; border-radius: 9px; padding: 3px; }
+
+/* Slot tables on studio pages (EntityReviewPageClient, CatalogueStudioPage):
+   several hundred rows each, so classes instead of repeated inline styles. */
+.csg-trow { display: grid; border-bottom: 1px solid rgba(255,255,255,.05); }
+.csg-trow-e { grid-template-columns: minmax(240px,1.5fr) 130px 150px 130px; min-width: 650px; }
+.csg-trow-c { grid-template-columns: minmax(260px,1.6fr) 150px 130px 120px; min-width: 680px; }
+.csg-tc-main { padding: 12px 18px; min-width: 0; display: flex; align-items: center; gap: 12px; }
+.csg-tc-img { width: 52px; height: 31px; object-fit: cover; border-radius: 6px; border: 1px solid rgba(255,255,255,.08); flex: 0 0 auto; }
+.csg-tc-text { min-width: 0; }
+.csg-tc-name { font-size: 13.5px; font-weight: 600; color: #E8EDF0; display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.csg-tc-name a { color: #E8EDF0; }
+.csg-tc-tag { font-family: var(--font-jetbrains-mono), monospace; font-size: 10px; letter-spacing: .05em; color: #5FE3E8; white-space: nowrap; }
+.csg-tc-note { font-size: 12px; color: #83919A; margin-top: 2px; }
+.csg-tc-num { padding: 14px 18px; font-family: var(--font-jetbrains-mono), monospace; font-size: 12.5px; color: #B7C4CB; }

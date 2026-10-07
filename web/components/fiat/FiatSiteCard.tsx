@@ -15,7 +15,7 @@ const PRODUCT_LABEL = { casino: "Casino", sports: "Sportsbook" } as const;
 function Mark({ brand, size }: { brand: FiatBrand; size: number }) {
   if (brand.logo) {
     // eslint-disable-next-line @next/next/no-img-element
-    return <img src={brand.logo} alt="" width={size} height={size} loading="lazy" style={{ width: size, height: size, flex: "none", borderRadius: size / 4, background: "#EEF1F3", objectFit: "contain", padding: size / 11 }} />;
+    return <img src={brand.logo} alt="" width={size} height={size} loading="lazy" className={size === 36 ? "csg-fb-logo csg-fb-logo-c" : "csg-fb-logo"} />;
   }
   // No icon of its own: a monogram in the brand's own tint (derived from its
   // name), large enough to read. Our own type treatment, not an imitation of
@@ -51,30 +51,31 @@ function Mark({ brand, size }: { brand: FiatBrand; size: number }) {
   );
 }
 
+// Classes in globals.css (.csg-fb*), not inline styles: a register page draws
+// hundreds of these cards, and the same style objects repeated on every one
+// were most of the UK page's 1.7MB.
 export function FiatBrandCard({ brand, compact = false }: { brand: FiatBrand; compact?: boolean }) {
   const [main, ...more] = brand.domains;
   return (
-    <div id={brand.id} style={{ scrollMarginTop: 110, display: "flex", flexDirection: "column", gap: compact ? 8 : 10, padding: compact ? "12px 14px" : "14px 16px", borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)", minWidth: 0 }}>
-      <div style={{ display: "flex", gap: 12, alignItems: "center", minWidth: 0 }}>
+    <div id={brand.id} className={compact ? "csg-fb csg-fb-c" : "csg-fb"}>
+      <div className="csg-fb-head">
         <Mark brand={brand} size={compact ? 36 : 44} />
-        <div style={{ minWidth: 0 }}>
-          <div style={{ fontSize: compact ? 14 : 15, fontWeight: 800, color: "#fff", overflowWrap: "anywhere" }}>{brand.name}</div>
-          <div style={{ fontFamily: MONO, fontSize: 10.5, lineHeight: 1.5, color: "#83919A", overflowWrap: "anywhere" }}>
+        <div className="csg-fb-text">
+          <div className="csg-fb-name">{brand.name}</div>
+          <div className="csg-fb-dom">
             {main}
             {more.length > 0 && <span title={more.join(", ")}> +{more.length} more</span>}
           </div>
         </div>
       </div>
-      {brand.holders.length > 0 && (
-        <div style={{ fontSize: 12, lineHeight: 1.4, color: "#8DA0AA", overflowWrap: "anywhere" }}>Licence held by {brand.holders.join(", ")}</div>
-      )}
-      <div style={{ display: "flex", gap: 6, alignItems: "center", flexWrap: "wrap", marginTop: "auto" }}>
+      {brand.holders.length > 0 && <div className="csg-fb-hold">Licence held by {brand.holders.join(", ")}</div>}
+      <div className="csg-fb-foot">
         {brand.products.map((p) => (
-          <span key={p} style={{ padding: "3px 9px", borderRadius: 100, border: "1px solid rgba(255,255,255,.1)", fontFamily: MONO, fontSize: 10, letterSpacing: ".04em", color: p === "casino" ? "#5FE3E8" : "#BDE8D2" }}>
+          <span key={p} className={p === "casino" ? "csg-fb-tag csg-fb-tag-casino" : "csg-fb-tag"}>
             {PRODUCT_LABEL[p]}
           </span>
         ))}
-        <a href={`https://${main}/`} target="_blank" rel="noopener noreferrer nofollow" className="hover:!text-accent" style={{ marginLeft: "auto", fontFamily: MONO, fontSize: 11, color: "#5FE3E8", whiteSpace: "nowrap" }}>
+        <a href={`https://${main}/`} target="_blank" rel="noopener noreferrer nofollow" className="csg-fb-visit hover:!text-accent">
           Visit site ↗
         </a>
       </div>

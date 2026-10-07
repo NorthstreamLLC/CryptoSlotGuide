@@ -6,6 +6,7 @@ import { NextSteps } from "@/components/layout/NextSteps";
 import { tintFor } from "@/lib/logo";
 import { studioAllTitles, studioStats } from "@/lib/slot-page";
 import { slotEssentialsStudio } from "@/lib/slotessentials";
+import { thumbOf } from "@/lib/thumb";
 import type { CatalogueStudio } from "@/lib/studio-pages";
 
 /**
@@ -117,35 +118,35 @@ export function CatalogueStudioPage({ studio }: { studio: CatalogueStudio }) {
             ))}
           </div>
           {rows.map((r, i) => (
-            <div key={`${r.slug ?? r.name}-${i}`} style={{ display: "grid", gridTemplateColumns: "minmax(260px,1.6fr) 150px 130px 120px", minWidth: 680, borderBottom: "1px solid rgba(255,255,255,.05)" }}>
-              <div style={{ padding: "11px 18px", minWidth: 0, display: "flex", alignItems: "center", gap: 12 }}>
+            <div key={`${r.slug ?? r.name}-${i}`} className="csg-trow csg-trow-c">
+              <div className="csg-tc-main">
                 {r.image && (
                   // eslint-disable-next-line @next/next/no-img-element
-                  <img src={r.image} alt="" width={52} height={31} loading="lazy" style={{ width: 52, height: 31, objectFit: "cover", borderRadius: 6, border: "1px solid rgba(255,255,255,.08)", flex: "0 0 auto" }} />
+                  <img src={thumbOf(r.image)} alt="" width={52} height={31} loading="lazy" className="csg-tc-img" />
                 )}
-                <div style={{ minWidth: 0 }}>
-                  <div style={{ fontSize: 13.5, fontWeight: 600, color: "#E8EDF0", display: "flex", alignItems: "baseline", gap: 8, flexWrap: "wrap" }}>
+                <div className="csg-tc-text">
+                  <div className="csg-tc-name">
                     {r.href ? (
                       /^https?:\/\//.test(r.href) ? (
-                        <a href={r.href} target="_blank" rel="noopener" style={{ color: "#E8EDF0" }}>{r.name}</a>
+                        <a href={r.href} target="_blank" rel="noopener">{r.name}</a>
                       ) : (
-                        <Link href={r.href} style={{ color: "#E8EDF0" }}>{r.name}</Link>
+                        <Link href={r.href}>{r.name}</Link>
                       )
                     ) : (
                       r.name
                     )}
                     {r.href && r.hrefLabel && (
-                      <span style={{ fontFamily: MONO, fontSize: 10, letterSpacing: ".05em", color: "#5FE3E8", whiteSpace: "nowrap" }}>
+                      <span className="csg-tc-tag">
                         {r.hrefLabel}{/^https?:\/\//.test(r.href) ? " ↗" : " →"}
                       </span>
                     )}
                   </div>
-                  <div style={{ fontSize: 12, color: "#83919A", marginTop: 2 }}>{r.note}</div>
+                  <div className="csg-tc-note">{r.note}</div>
                 </div>
               </div>
-              <div style={{ padding: "13px 18px", fontFamily: MONO, fontSize: 12.5, color: "#B7C4CB" }}>{r.m1}</div>
-              <div style={{ padding: "13px 18px", fontFamily: MONO, fontSize: 12.5, color: "#B7C4CB" }}>{r.m2}</div>
-              <div style={{ padding: "13px 18px", fontFamily: MONO, fontSize: 12.5, color: "#B7C4CB" }}>{r.m3}</div>
+              <div className="csg-tc-num">{r.m1}</div>
+              <div className="csg-tc-num">{r.m2}</div>
+              <div className="csg-tc-num">{r.m3}</div>
             </div>
           ))}
         </div>
