@@ -597,7 +597,10 @@
     "bonusExpiry": "14 days per bonus",
     "cashoutCap": "Free-spin winnings max $550",
     "bonusShort": "Up to 590% + 225 free spins",
-    "wagerBasis": ""
+    "wagerBasis": "",
+    "signupUrl": "https://betfury.com/?r=SLOTGUIDE",
+    "affiliate": true,
+    "promoCode": "SLOTGUIDE"
   },
   {
     "slug": "gamba",
