@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { track } from "@vercel/analytics";
 
 /**
  * Copies a casino's referral code for the reader, site-wide, from one listener.
@@ -13,7 +14,8 @@ import { useEffect, useState } from "react";
  * prevents the click; a chip is a <button> and goes nowhere.
  *
  * One listener in the layout rather than a client component per button, so
- * the server-rendered lists stay server-rendered.
+ * the server-rendered lists stay server-rendered. The same listener counts
+ * clicks on casino review links (review_click) as a demand signal.
  */
 export function CodeCopier() {
   const [toast, setToast] = useState<string | null>(null);
@@ -21,6 +23,20 @@ export function CodeCopier() {
   useEffect(() => {
     let timer: ReturnType<typeof setTimeout> | undefined;
     const onClick = (e: MouseEvent) => {
+      // Demand signal: which casino reviews readers open, and from where.
+      // With /go/'s affiliate_click this shows the casinos people want that
+      // carry no deal yet. Slug and page only — nothing about the reader.
+      const review = (e.target as HTMLElement | null)?.closest<HTMLAnchorElement>('a[href^="/casinos/"]');
+      if (review) {
+        const slug = review.getAttribute("href")!.split(/[/?#]/)[2];
+        if (slug) {
+          try {
+            track("review_click", { slug, from: location.pathname });
+          } catch {
+            /* analytics off */
+          }
+        }
+      }
       const el = (e.target as HTMLElement | null)?.closest<HTMLElement>("[data-copy-code]");
       const code = el?.dataset.copyCode;
       if (!code) return;
