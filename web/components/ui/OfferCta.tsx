@@ -33,7 +33,6 @@ export function OfferCta({ o, size = "md" }: { o: Operator; size?: "sm" | "md" }
           href={o.signupUrl}
           target="_blank"
           rel="noopener sponsored nofollow"
-          data-copy-code={o.promoCode}
           className="transition-transform hover:-translate-y-px"
           style={{
             flex: "1 1 auto",

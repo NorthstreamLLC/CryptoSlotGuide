@@ -135,8 +135,7 @@ function Row({ o, pos }: { o: Operator; pos: number }) {
             href={o.signupUrl}
             target="_blank"
             rel="noopener sponsored nofollow"
-            data-copy-code={o.promoCode}
-            className="transition-transform hover:-translate-y-px"
+              className="transition-transform hover:-translate-y-px"
             style={{ flex: 1, display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 6, padding: "10px 12px", borderRadius: 10, background: o.featured ? brand : "#00C2CC", color: "#0A0D0F", fontSize: 13, fontWeight: 800, whiteSpace: "nowrap" }}
           >
             Visit {o.name} <Icon name="arrow" size={14} />

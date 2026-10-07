@@ -9,7 +9,6 @@ import { payoutView } from "@/lib/payout";
 import { wagerView } from "@/lib/wager";
 import type { Operator } from "@/lib/types";
 import { inHouseOrder } from "@/lib/house-order";
-import { CodeChip } from "@/components/ui/CodeChip";
 
 const MONO = "var(--font-jetbrains-mono), monospace";
 
@@ -215,16 +214,10 @@ export function FeaturedPartner({
                 </Link>
                 <span style={{ fontFamily: MONO, fontSize: 11, color: "#8E9CA5" }}>{o.licence} licence</span>
               </div>
-              {o.promoCode ? (
-                <p style={{ margin: "4px 0 0", maxWidth: "72ch", fontSize: 13.5, lineHeight: 1.55, color: "#A9B8C0", textWrap: "pretty" }}>
-                  Sign up with code <CodeChip code={o.promoCode} tint={tint} size="sm" bare /> and get{" "}
-                  <strong style={{ color: "#E8EDF0" }}>{o.bonusShort ?? o.bonus}</strong>
-                  {o.codePerk && <strong style={{ color: "#FFE08A" }}> + {o.codePerk.text} (only with our code)</strong>}
-                  <span style={{ color: "#77858E" }}> · {pitch}</span>
-                </p>
-              ) : (
-                <p style={{ margin: "4px 0 0", maxWidth: "72ch", fontSize: 13.5, lineHeight: 1.55, color: "#A9B8C0", textWrap: "pretty" }}>{pitch}</p>
-              )}
+              <p style={{ margin: "4px 0 0", maxWidth: "72ch", fontSize: 13.5, lineHeight: 1.55, color: "#A9B8C0", textWrap: "pretty" }}>
+                <strong style={{ color: "#E8EDF0" }}>{o.bonusShort ?? o.bonus}</strong>
+                <span style={{ color: "#77858E" }}> · {pitch}</span>
+              </p>
             </div>
             </div>
 
@@ -240,7 +233,6 @@ export function FeaturedPartner({
                 href={o.signupUrl}
                 target="_blank"
                 rel="noopener sponsored nofollow"
-                data-copy-code={o.promoCode}
                 className="transition-transform hover:-translate-y-px"
                 style={{ padding: "10px 17px", borderRadius: 9, background: i === 0 ? "#FFC531" : "#00C2CC", color: i === 0 ? "#141007" : "#04191B", fontSize: 13.5, fontWeight: 700, whiteSpace: "nowrap" }}
               >
