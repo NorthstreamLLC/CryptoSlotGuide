@@ -1,4 +1,5 @@
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
+import renames from "@/data/slug-renames.json";
 import { getEntityView, backLink } from "@/lib/entity-view";
 import { EntityReviewPage } from "@/components/entity/EntityReviewPage";
 import { SlotDataPage } from "@/components/slots/SlotDataPage";
@@ -87,7 +88,13 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   }
 
   const g = cataloguePage(slug);
-  if (!g) notFound();
+  if (!g) {
+    // Slugs that once carried "&", "'" or "+" were cleaned (data/slug-renames.json);
+    // their old addresses, in search indexes and other sites' links, move here.
+    const moved = (renames as Record<string, string>)[decodeURIComponent(slug)];
+    if (moved) permanentRedirect(`/slots/${moved}`);
+    notFound();
+  }
 
   const versions = rtpVersions(g);
   const only = singleRtp(g);

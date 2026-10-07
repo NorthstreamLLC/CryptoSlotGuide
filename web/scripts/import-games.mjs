@@ -36,6 +36,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { urlSlug } from "./lib/url-slug.mjs";
 
 const web = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DATA = path.join(web, "data");
@@ -456,7 +457,8 @@ function main() {
       name,
       /** slot | table | house — so nothing lists Roulette among the slots. */
       kind,
-      slug: iSlug !== -1 && (r[iSlug] ?? "").trim() ? r[iSlug].trim() : null,
+      // URL-safe: the feed's slugs can carry "&", "'" or "+" (scripts/lib/url-slug.mjs).
+      slug: iSlug !== -1 && (r[iSlug] ?? "").trim() ? urlSlug(r[iSlug].trim()) || null : null,
       provider: prov?.name ?? aliased ?? null,
       // Null whenever authorship is unconfirmed, so nothing can link a game to
       // a studio page on the strength of a delivery label.

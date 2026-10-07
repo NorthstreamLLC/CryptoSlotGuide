@@ -976,15 +976,6 @@
       "provider": "Pragmatic Play",
       "fetched": "2026-09-28"
     },
-    "bigger-bass-blizzard---christmas-catch": {
-      "file": "bigger-bass-blizzard---christmas-catch.webp",
-      "bytes": 71670,
-      "type": "image/webp",
-      "sourceUrl": "https://api.slotessentials.com/public/files/slots/6227afaf-0279-42f4-b1c1-b75079e1a04f.webp",
-      "sourceHost": "api.slotessentials.com",
-      "provider": "Pragmatic Play",
-      "fetched": "2026-09-28"
-    },
     "bigger-bass-splash": {
       "file": "bigger-bass-splash.webp",
       "bytes": 86562,
@@ -1611,15 +1602,6 @@
       "bytes": 59668,
       "type": "image/webp",
       "sourceUrl": "https://api.slotessentials.com/public/files/slots/c589a40e-6c83-4e62-85a8-820979caa18e.webp",
-      "sourceHost": "api.slotessentials.com",
-      "provider": "Pragmatic Play",
-      "fetched": "2026-09-28"
-    },
-    "eternal-empress---freeze-time": {
-      "file": "eternal-empress---freeze-time.webp",
-      "bytes": 60818,
-      "type": "image/webp",
-      "sourceUrl": "https://api.slotessentials.com/public/files/slots/ef7727eb-55c2-47f6-88e5-e09c91508f8f.webp",
       "sourceHost": "api.slotessentials.com",
       "provider": "Pragmatic Play",
       "fetched": "2026-09-28"
@@ -2371,15 +2353,6 @@
       "provider": "Pragmatic Play",
       "fetched": "2026-09-28"
     },
-    "john-hunter-and-galileo's-secrets": {
-      "file": "john-hunter-and-galileo's-secrets.webp",
-      "bytes": 48170,
-      "type": "image/webp",
-      "sourceUrl": "https://api.slotessentials.com/public/files/slots/91d2e7ad-c907-48d6-b65c-5ab0a1422c16.webp",
-      "sourceHost": "api.slotessentials.com",
-      "provider": "Pragmatic Play",
-      "fetched": "2026-09-28"
-    },
     "john-hunter-and-the-tomb-of-the-scarab-queen": {
       "file": "john-hunter-and-the-tomb-of-the-scarab-queen.webp",
       "bytes": 73282,
@@ -2799,15 +2772,6 @@
       "bytes": 59080,
       "type": "image/webp",
       "sourceUrl": "https://api.slotessentials.com/public/files/slots/2896c454-ccff-4af3-a25b-ad960bb52fb2.webp",
-      "sourceHost": "api.slotessentials.com",
-      "provider": "Pragmatic Play",
-      "fetched": "2026-09-28"
-    },
-    "mummy's-jewels": {
-      "file": "mummy's-jewels.webp",
-      "bytes": 81992,
-      "type": "image/webp",
-      "sourceUrl": "https://api.slotessentials.com/public/files/slots/1c278c2e-bde8-44a6-b869-bea533bedc26.webp",
       "sourceHost": "api.slotessentials.com",
       "provider": "Pragmatic Play",
       "fetched": "2026-09-28"
@@ -28913,17 +28877,6 @@
       "fetched": "2026-10-06",
       "via": "Spinomenal's own game page"
     },
-    "poseidon-s-rising-": {
-      "file": "poseidon-s-rising-.webp",
-      "bytes": 54278,
-      "type": "image/webp",
-      "sourceUrl": "https://spinomenal.com/wp-content/uploads/2021/01/650X406_PoseidonsRising-650x406.jpg",
-      "sourceHost": "spinomenal.com",
-      "page": "https://spinomenal.com/portfolio/poseidons-rising/",
-      "provider": "Spinomenal",
-      "fetched": "2026-10-06",
-      "via": "Spinomenal's own game page"
-    },
     "athena-s-glory": {
       "file": "athena-s-glory.webp",
       "bytes": 42796,
@@ -30706,17 +30659,6 @@
       "fetched": "2026-10-06",
       "via": "Endorphina's own game page"
     },
-    "Macarons": {
-      "file": "Macarons.webp",
-      "bytes": 30850,
-      "type": "image/webp",
-      "sourceUrl": "https://endorphina.com/uploads/photos/loader-b7c56097f9.jpg",
-      "sourceHost": "endorphina.com",
-      "page": "https://endorphina.com/games/macarons",
-      "provider": "Endorphina",
-      "fetched": "2026-10-06",
-      "via": "Endorphina's own game page"
-    },
     "2016-gladiators-1": {
       "file": "2016-gladiators-1.webp",
       "bytes": 29846,
@@ -32400,17 +32342,6 @@
       "fetched": "2026-10-06",
       "via": "Evolution Gaming's own game page"
     },
-    "dynamo's-show": {
-      "file": "dynamo's-show.webp",
-      "bytes": 29778,
-      "type": "image/webp",
-      "sourceUrl": "https://cdn.sanity.io/images/oyszdhdc/production/2e1f0f55aad8db10bc598da843f79898a1f8b222-1200x800.webp",
-      "sourceHost": "cdn.sanity.io",
-      "page": "https://www.just-slots.com/game/dynamos-show",
-      "provider": "Just Slots",
-      "fetched": "2026-10-06",
-      "via": "Just Slots's own game page"
-    },
     "gator-hunters": {
       "file": "gator-hunters.webp",
       "bytes": 45202,
@@ -33554,6 +33485,75 @@
       "provider": "Ela Games",
       "fetched": "2026-10-06",
       "via": "Ela Games's own game page"
+    },
+    "bigger-bass-blizzard-christmas-catch": {
+      "file": "bigger-bass-blizzard-christmas-catch.webp",
+      "bytes": 71670,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/6227afaf-0279-42f4-b1c1-b75079e1a04f.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-09-28"
+    },
+    "dynamos-show": {
+      "file": "dynamos-show.webp",
+      "bytes": 29778,
+      "type": "image/webp",
+      "sourceUrl": "https://cdn.sanity.io/images/oyszdhdc/production/2e1f0f55aad8db10bc598da843f79898a1f8b222-1200x800.webp",
+      "sourceHost": "cdn.sanity.io",
+      "page": "https://www.just-slots.com/game/dynamos-show",
+      "provider": "Just Slots",
+      "fetched": "2026-10-06",
+      "via": "Just Slots's own game page"
+    },
+    "eternal-empress-freeze-time": {
+      "file": "eternal-empress-freeze-time.webp",
+      "bytes": 60818,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/ef7727eb-55c2-47f6-88e5-e09c91508f8f.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-09-28"
+    },
+    "john-hunter-and-galileos-secrets": {
+      "file": "john-hunter-and-galileos-secrets.webp",
+      "bytes": 48170,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/91d2e7ad-c907-48d6-b65c-5ab0a1422c16.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-09-28"
+    },
+    "macarons": {
+      "file": "macarons.webp",
+      "bytes": 30850,
+      "type": "image/webp",
+      "sourceUrl": "https://endorphina.com/uploads/photos/loader-b7c56097f9.jpg",
+      "sourceHost": "endorphina.com",
+      "page": "https://endorphina.com/games/macarons",
+      "provider": "Endorphina",
+      "fetched": "2026-10-06",
+      "via": "Endorphina's own game page"
+    },
+    "mummys-jewels": {
+      "file": "mummys-jewels.webp",
+      "bytes": 81992,
+      "type": "image/webp",
+      "sourceUrl": "https://api.slotessentials.com/public/files/slots/1c278c2e-bde8-44a6-b869-bea533bedc26.webp",
+      "sourceHost": "api.slotessentials.com",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-09-28"
+    },
+    "poseidon-s-rising": {
+      "file": "poseidon-s-rising.webp",
+      "bytes": 54278,
+      "type": "image/webp",
+      "sourceUrl": "https://spinomenal.com/wp-content/uploads/2021/01/650X406_PoseidonsRising-650x406.jpg",
+      "sourceHost": "spinomenal.com",
+      "page": "https://spinomenal.com/portfolio/poseidons-rising/",
+      "provider": "Spinomenal",
+      "fetched": "2026-10-06",
+      "via": "Spinomenal's own game page"
     }
   },
   "heldPendingRights": {
