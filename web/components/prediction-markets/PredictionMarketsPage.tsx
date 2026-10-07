@@ -5,6 +5,7 @@ import Link from "next/link";
 import { siteData } from "@/lib/site-data";
 import { venuesInOrder, venueCta, venueHref } from "@/lib/prediction-markets";
 import { BrandMark } from "@/components/ui/BrandMark";
+import { HeroDrift } from "@/components/ui/HeroDrift";
 
 /**
  * One of the two venue lists, split by settlement asset and never merged:
@@ -34,8 +35,9 @@ export function PredictionMarketsPage({ tab }: { tab: "crypto" | "fiat" }) {
 
   return (
     <main>
-      <section style={{ borderBottom: "1px solid rgba(255,255,255,.07)", background: "#0B0F12" }}>
-        <div style={{ maxWidth: 1400, margin: "0 auto", padding: "48px 40px 36px" }}>
+      <section style={{ position: "relative", overflow: "hidden", borderBottom: "1px solid rgba(255,255,255,.07)", background: "#0B0F12" }}>
+        <HeroDrift logos={[...predMarkets.crypto, ...predMarkets.fiat].map((r) => r.slug)} />
+        <div className="csg-hero-pad" style={{ position: "relative", maxWidth: 1400, margin: "0 auto", padding: "48px 40px 36px" }}>
           <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 16 }}>
             {COPY[tab].eyebrow}
           </div>
@@ -48,13 +50,13 @@ export function PredictionMarketsPage({ tab }: { tab: "crypto" | "fiat" }) {
                 {COPY[tab].lede}
               </p>
             </div>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 1, background: "rgba(255,255,255,.08)", border: "1px solid rgba(255,255,255,.08)", borderRadius: 13, overflow: "hidden" }}>
-              <div style={{ padding: "18px 20px", background: "rgba(12,16,19,.86)" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 1, background: "rgba(255,255,255,.08)", border: "1px solid rgba(255,255,255,.08)", borderRadius: 13, overflow: "hidden", backdropFilter: "blur(12px)", WebkitBackdropFilter: "blur(12px)", boxShadow: "0 18px 40px -20px rgba(0,0,0,.8)" }}>
+              <div style={{ padding: "18px 20px", background: "rgba(12,16,19,.94)" }}>
                 <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 9.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#83919A", marginBottom: 8 }}>Crypto-settled</div>
                 <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 21, color: "#fff" }}>{predMarkets.crypto.length}</div>
                 <div style={{ fontSize: 11.5, color: "#7B8A93", marginTop: 3 }}>Venues listed</div>
               </div>
-              <div style={{ padding: "18px 20px", background: "rgba(12,16,19,.86)" }}>
+              <div style={{ padding: "18px 20px", background: "rgba(12,16,19,.94)" }}>
                 <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 9.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#83919A", marginBottom: 8 }}>Regulated fiat</div>
                 <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 21, color: "#fff" }}>{predMarkets.fiat.length}</div>
                 <div style={{ fontSize: 11.5, color: "#7B8A93", marginTop: 3 }}>Venues listed</div>
@@ -97,14 +99,14 @@ export function PredictionMarketsPage({ tab }: { tab: "crypto" | "fiat" }) {
 
       <section style={{ maxWidth: 1400, margin: "0 auto", padding: "36px 40px 80px" }}>
         <div style={{ border: "1px solid rgba(255,255,255,.08)", borderRadius: 14, overflowX: "auto" }}>
-          <div style={{ display: "grid", minWidth: 1020, gridTemplateColumns: "44px minmax(220px,1.3fr) minmax(150px,1fr) minmax(150px,1fr) 150px 170px 150px", background: "rgba(255,255,255,.03)", borderBottom: "1px solid rgba(255,255,255,.08)" }}>
+          <div style={{ display: "grid", minWidth: 1020, gridTemplateColumns: "44px minmax(220px,1.3fr) minmax(150px,1fr) minmax(150px,1fr) 140px 160px 185px", background: "rgba(255,255,255,.03)", borderBottom: "1px solid rgba(255,255,255,.08)" }}>
             {["#", "Venue", "Settlement", "Cost to trade", "Account", "Payout", ""].map((h) => (
               <div key={h} style={{ padding: "14px 16px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".07em", textTransform: "uppercase", color: "#83919A" }}>{h}</div>
             ))}
           </div>
           {rows.map((m, i) => (
             <div key={m.name}>
-            <div style={{ display: "grid", minWidth: 1020, gridTemplateColumns: "44px minmax(220px,1.3fr) minmax(150px,1fr) minmax(150px,1fr) 150px 170px 150px", alignItems: "center", borderBottom: "1px solid rgba(255,255,255,.05)" }}>
+            <div style={{ display: "grid", minWidth: 1020, gridTemplateColumns: "44px minmax(220px,1.3fr) minmax(150px,1fr) minmax(150px,1fr) 140px 160px 185px", alignItems: "center", borderBottom: "1px solid rgba(255,255,255,.05)" }}>
               <div style={{ padding: "14px 0 14px 16px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, color: "#83919A" }}>{i + 1}</div>
               <div style={{ padding: "14px 16px", display: "flex", alignItems: "center", gap: 12 }}>
                 <span style={{ width: 34, height: 34, flex: "none", borderRadius: 9, overflow: "hidden" }}>
