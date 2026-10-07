@@ -519,7 +519,10 @@
     "payoutStated": "Instant",
     "payoutStatedMaxMins": 0,
     "bonusShort": "$25,000 weekly race + $2,500 daily race",
-    "noDepositBonus": true
+    "noDepositBonus": true,
+    "signupUrl": "https://www.goated.com/r/SLOTGUIDE",
+    "affiliate": true,
+    "promoCode": "SLOTGUIDE"
   },
   {
     "slug": "yeet",
