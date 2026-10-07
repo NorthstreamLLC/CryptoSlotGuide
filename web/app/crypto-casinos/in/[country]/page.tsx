@@ -58,6 +58,15 @@ export default async function Page({ params }: { params: Promise<{ country: stri
   // separate thing. Said plainly rather than left for the reader to infer
   // from a page that lists thirty places to play.
   const banned = /not legal|banned|prohibit/i.test(c.onlineCasino ?? "");
+  /**
+   * In a licensed market (GB, DE, NL, ES, IT, SE ...) a casino needs that
+   * country's own licence, and advertising one without it is an offence for
+   * the affiliate too. The list still shows who accepts players there, with
+   * the facts and a link to each review — but no affiliate button: no
+   * crypto casino listed here holds those licences.
+   */
+  const licensedMarket = /licensed market/i.test(c.onlineCasino ?? "");
+  const listed = (ops: typeof accepts) => (licensedMarket ? ops.map((o) => ({ ...o, affiliate: false, signupUrl: undefined })) : ops);
   const one = accepts.length === 1;
   const others = countryPages().filter((x) => x.c.code !== c.code).sort((a, b) => a.c.name.localeCompare(b.c.name));
 
@@ -142,7 +151,7 @@ export default async function Page({ params }: { params: Promise<{ country: stri
             </p>
           </div>
         )}
-        {!banned && <CasinoOfferList ops={accepts} />}
+        {!banned && <CasinoOfferList ops={listed(accepts)} />}
         {!banned && Object.keys(except).length > 0 && (
           <p style={{ margin: "12px 0 0", fontSize: 13.5, color: "#8DA0AA" }}>
             Regional exceptions: {Object.entries(except).map(([slug, regions]) => `${accepts.find((o) => o.slug === slug)?.name} excludes ${regions.join(", ")}`).join("; ")}.
@@ -152,7 +161,7 @@ export default async function Page({ params }: { params: Promise<{ country: stri
           <>
             <h2 style={{ margin: "36px 0 6px", fontSize: 22, fontWeight: 800, letterSpacing: "-.02em", color: "#fff" }}>Also not restricting {c.name}, but check their terms</h2>
             <p style={{ margin: "0 0 14px", fontSize: 14, color: "#8DA0AA" }}>These casinos don&apos;t name {c.name}, but say their restricted list isn&apos;t complete.</p>
-            <CasinoOfferList ops={partial} />
+            <CasinoOfferList ops={listed(partial)} />
           </>
         )}
         <p style={{ margin: "22px 0 0", maxWidth: "86ch", fontSize: 12.5, lineHeight: 1.6, color: "#8E9CA5" }}>
