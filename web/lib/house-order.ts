@@ -25,7 +25,7 @@ const TIERS: string[][] = [
   // and a US reader browsing sweeps sees the .us names, so both spellings have
   // to be here or the order silently applies to only half the site.
   ["stake", "stake-us", "shuffle", "shuffle-us"],
-  ["rainbet", "gamdom", "bc-game", "duelbits", "razed", "500-casino"],
+  ["degen", "yeet", "rainbet", "gamdom", "bc-game", "duelbits", "razed", "500-casino"],
   // Prediction-market venues (data/predMarkets.json). They never share a list
   // with a casino, so sitting below the casino tiers costs them nothing; what
   // matters is the order within each tab. This is the order the records were
