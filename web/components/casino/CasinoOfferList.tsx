@@ -5,7 +5,6 @@ import { BrandMark } from "@/components/ui/BrandMark";
 import { CoinStack } from "@/components/ui/CoinIcon";
 import { Icon } from "@/components/ui/Icon";
 import { raceFor, dropFor } from "@/lib/races";
-import { CodeChip } from "@/components/ui/CodeChip";
 import { isWelcomeOffer, offerKind } from "@/lib/casino-bonuses";
 
 const MONO = "var(--font-jetbrains-mono), monospace";
@@ -90,6 +89,16 @@ function Row({ o, pos }: { o: Operator; pos: number }) {
           >
             {offerKind(o)}
           </span>
+          {/* The code beside the offer it goes with. Visit copies it too
+              (CodeCopier), and the toast says so. */}
+          {o.affiliate && o.signupUrl && o.promoCode && (
+            <span
+              data-copy-code={o.promoCode}
+              style={{ flex: "none", padding: "2px 8px", borderRadius: 100, border: `1px dashed ${o.featured ? brand : "#5FE3E8"}99`, background: `${o.featured ? brand : "#5FE3E8"}14`, fontFamily: MONO, fontSize: 9.5, fontWeight: 700, letterSpacing: ".04em", color: o.featured ? brand : "#5FE3E8", whiteSpace: "nowrap" }}
+            >
+              CODE {o.promoCode}
+            </span>
+          )}
         </span>
         <span style={{ display: "flex", flexWrap: "wrap", gap: "2px 12px", marginTop: 4 }}>
           {raceFor(o.slug) && (
@@ -127,7 +136,7 @@ function Row({ o, pos }: { o: Operator; pos: number }) {
           the offer button goes to the operator; where it does not, the button
           says what it actually does. The casino name and the offer cell above
           both still link to the profile either way. */}
-      <div className="col-span-3 md:col-span-1" style={{ display: "flex", flexDirection: "column", alignItems: "stretch", gap: 6 }}>
+      <div className="col-span-3 md:col-span-1" style={{ display: "flex", gap: 8 }}>
         {o.affiliate && o.signupUrl ? (
           <a
             href={o.signupUrl}
@@ -143,12 +152,6 @@ function Row({ o, pos }: { o: Operator; pos: number }) {
           <Link href={href} className="transition-colors hover:!border-white/25" style={{ flex: 1, display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 6, padding: "10px 12px", borderRadius: 10, border: "1px solid rgba(255,255,255,.16)", color: "#DCE5E9", fontSize: 13, fontWeight: 700, whiteSpace: "nowrap" }}>
             Read review <Icon name="arrow" size={14} />
           </Link>
-        )}
-        {/* The code under its button: tap to copy (CodeCopier); the button copies it too. */}
-        {o.affiliate && o.signupUrl && o.promoCode && (
-          <span style={{ display: "flex", justifyContent: "center" }}>
-            <CodeChip code={o.promoCode} tint={o.featured ? brand : "#5FE3E8"} size="sm" />
-          </span>
         )}
       </div>
     </div>
