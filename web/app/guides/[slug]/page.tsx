@@ -7,6 +7,7 @@ import { articleSchema, breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { NextSteps } from "@/components/layout/NextSteps";
 import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
+import { GuideCover } from "@/components/guides/GuideCover";
 import { KycTiersTable } from "@/components/guides/KycTiersTable";
 
 /**
@@ -72,8 +73,10 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#83919A", marginBottom: 26 }}>
           <Link href="/" style={{ color: "#83919A" }}>Index</Link> / <Link href="/guides" style={{ color: "#83919A" }}>Guides</Link> / <span style={{ color: "#A8B6BE" }}>{g.category}</span>
         </div>
-        <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 22 }}>
-          <span style={{ width: 32, height: 32, flex: "none", borderRadius: 8, background: g.tint, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, fontWeight: 700, color: "#0A0D0F" }}>{g.mono}</span>
+        <div className="csg-guide-cover" style={{ position: "relative", aspectRatio: "16 / 6", borderRadius: 16, overflow: "hidden", border: "1px solid rgba(255,255,255,.08)", marginBottom: 24 }}>
+          <GuideCover category={g.category} tint={g.tint} label={false} rounded={0} />
+        </div>
+        <div style={{ marginBottom: 14 }}>
           <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#00C2CC" }}>{g.category} · {g.readMins} min read</span>
         </div>
         <h1 style={{ margin: "0 0 18px", fontSize: 44, lineHeight: 1.06, letterSpacing: "-.035em", fontWeight: 800, fontStretch: "114%", color: "#fff", textWrap: "balance" }}>{g.title}</h1>

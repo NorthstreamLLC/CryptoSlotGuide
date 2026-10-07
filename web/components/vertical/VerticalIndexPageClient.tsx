@@ -3,6 +3,7 @@
 import type React from "react";
 import Link from "next/link";
 import type { VerticalKind, VerticalPage, VerticalRow } from "@/lib/vertical-view";
+import { GuideCover } from "@/components/guides/GuideCover";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { Icon } from "@/components/ui/Icon";
 import { NextSteps } from "@/components/layout/NextSteps";
@@ -235,6 +236,10 @@ function Row({ r, first, cols, labels, hasStat }: { r: VerticalRow; first: boole
           <span style={{ width: 52, height: 39, flex: "none", borderRadius: 8, overflow: "hidden", background: "#0E1316" }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={r.image} alt="" width={52} height={39} loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+          </span>
+        ) : r.cover ? (
+          <span style={{ width: 64, height: 36, flex: "none", borderRadius: 8, overflow: "hidden", border: "1px solid rgba(255,255,255,.08)" }}>
+            <GuideCover category={r.cover.category} tint={r.tint} label={false} rounded={0} tile />
           </span>
         ) : (
           <span style={{ width: 36, height: 36, flex: "none", borderRadius: 10, overflow: "hidden" }}>

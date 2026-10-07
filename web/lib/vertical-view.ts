@@ -55,6 +55,8 @@ export interface VerticalRow {
   signupUrl?: string;
   /** Art for the row where the thing listed is a game, not a brand: the slot's tile instead of a mark. */
   image?: string;
+  /** A guide's cover (category emblem in its tint) in place of the mark. */
+  cover?: { category: string };
   /** A second, off-site link shown under the name — the studio's SlotEssentials profile. */
   extLink?: { href: string; label: string };
   /** A few of the row's games as small tiles (studios: three of their slots). */
@@ -403,6 +405,7 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
       stat: "—",
       cta: "Read guide",
       href: `/guides/${g.slug}`,
+      cover: { category: g.category },
     })),
   };
 }
