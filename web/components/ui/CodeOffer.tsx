@@ -7,7 +7,7 @@ import { CodeChip } from "@/components/ui/CodeChip";
  * line says what signing up with our code gets, never that the code is what
  * unlocks it. A code-only extra would be its own field, labelled as such.
  */
-export function CodeOffer({ code, offer, casino, tint = "#57E39A", compact = false }: { code: string; offer: string; casino: string; tint?: string; compact?: boolean }) {
+export function CodeOffer({ code, offer, casino, perk, tint = "#57E39A", compact = false }: { code: string; offer: string; casino: string; perk?: string; tint?: string; compact?: boolean }) {
   return (
     <div>
     <div
@@ -30,11 +30,18 @@ export function CodeOffer({ code, offer, casino, tint = "#57E39A", compact = fal
       <span>
         and get <strong style={{ color: "#fff" }}>{offer}</strong>
       </span>
+      {/* Ours, not the casino's: said as such. */}
+      {perk && (
+        <span style={{ flexBasis: "100%", display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
+          <span style={{ padding: "2px 8px", borderRadius: 100, background: "#FFC531", color: "#141007", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 9.5, fontWeight: 800, letterSpacing: ".05em" }}>ONLY WITH CODE {code}</span>
+          <strong style={{ color: "#FFE08A" }}>+ {perk}</strong>
+        </span>
+      )}
     </div>
     {/* Whose offer it is, and what the link is: the casino sets the bonus;
         we earn a commission on the sign-up. Both said plainly, every time. */}
     <div style={{ marginTop: 5, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: compact ? 9.5 : 10.5, lineHeight: 1.5, color: "#7F8D96" }}>
-      {casino}&apos;s own offer, set by {casino}, not by us · Affiliate link: we may earn a commission, which never changes what we report · 18+
+      {casino}&apos;s own offer, set by {casino}, not by us{perk ? "; the extra is ours, paid by us" : ""} · Affiliate link: we may earn a commission, which never changes what we report · 18+
     </div>
     </div>
   );

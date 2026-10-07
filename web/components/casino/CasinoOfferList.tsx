@@ -99,6 +99,11 @@ function Row({ o, pos }: { o: Operator; pos: number }) {
               CODE {o.promoCode}
             </span>
           )}
+          {o.affiliate && o.signupUrl && o.promoCode && o.codePerk && (
+            <span style={{ flex: "none", padding: "2px 8px", borderRadius: 100, background: "#FFC531", color: "#141007", fontFamily: MONO, fontSize: 9, fontWeight: 800, letterSpacing: ".05em", whiteSpace: "nowrap" }}>
+              + {o.codePerk.text}
+            </span>
+          )}
         </span>
         <span style={{ display: "flex", flexWrap: "wrap", gap: "2px 12px", marginTop: 4 }}>
           {raceFor(o.slug) && (

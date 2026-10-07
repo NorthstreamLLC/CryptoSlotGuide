@@ -45,6 +45,7 @@ export interface Pick {
   /** Referral code and the casino's own offer, for the "Sign up with code" line. */
   code?: string;
   offer?: string;
+  perk?: string;
 }
 
 const ROTATE_MS = 7000;
@@ -170,7 +171,7 @@ export function TopPicks({ picks }: { picks: Pick[] }) {
 
         {p.signupUrl && p.code && p.offer && (
           <div style={{ marginBottom: 12 }}>
-            <CodeOffer code={p.code} offer={p.offer} casino={p.name} tint={p.tint} compact />
+            <CodeOffer code={p.code} offer={p.offer} casino={p.name} perk={p.perk} tint={p.tint} compact />
           </div>
         )}
 

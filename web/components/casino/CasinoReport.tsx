@@ -314,7 +314,7 @@ export function CasinoReport({ e }: { e: EntityView }) {
 
               {o.signupUrl && o.promoCode && (
                 <div style={{ marginBottom: 12, maxWidth: 560 }}>
-                  <CodeOffer code={o.promoCode} offer={o.bonusShort ?? o.bonus} casino={o.name} tint={brand} />
+                  <CodeOffer code={o.promoCode} offer={o.bonusShort ?? o.bonus} casino={o.name} perk={o.codePerk?.text} tint={brand} />
                 </div>
               )}
               <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 12 }}>

@@ -86,6 +86,13 @@ export interface Operator {
   affiliate?: boolean;
   /** Referral code carried by the affiliate link, shown so players can also enter it at sign-up. */
   promoCode?: string;
+  /**
+   * Something only players who sign up with our code get, on top of the
+   * casino's own offer — paid or arranged by us (e.g. a share of our
+   * commission back). Shown as "Only with code X". Set it only while it is
+   * really being paid; `since` is when it started.
+   */
+  codePerk?: { text: string; since: string };
   /** Confirmations required before a deposit/withdrawal clears. */
   conf: number;
   absorbsFee: boolean;
