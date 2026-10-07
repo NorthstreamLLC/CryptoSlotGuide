@@ -21,6 +21,7 @@ import { StickyOffer } from "@/components/casino/StickyOffer";
 import { rivalPairs } from "@/lib/versus";
 import type { SpecFact } from "@/lib/types";
 import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
+import { CodeChip } from "@/components/ui/CodeChip";
 import { ReportIssue } from "@/components/ui/ReportIssue";
 import { PaymentPartners } from "@/components/ui/PaymentPartners";
 
@@ -313,15 +314,11 @@ export function CasinoReport({ e }: { e: EntityView }) {
 
               <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 12 }}>
                 {o.signupUrl ? (
-                  <a href={o.signupUrl} target="_blank" rel="nofollow sponsored noopener" style={{ display: "inline-flex", alignItems: "center", gap: 10, padding: "15px 26px", borderRadius: 11, background: brand, color: "#0A0D0F", fontSize: 15, fontWeight: 800, boxShadow: `0 10px 30px ${brand}40` }}>
+                  <a href={o.signupUrl} target="_blank" rel="nofollow sponsored noopener" data-copy-code={o.promoCode} style={{ display: "inline-flex", alignItems: "center", gap: 10, padding: "15px 26px", borderRadius: 11, background: brand, color: "#0A0D0F", fontSize: 15, fontWeight: 800, boxShadow: `0 10px 30px ${brand}40` }}>
                     Claim offer at {o.name} <span aria-hidden>→</span>
                   </a>
                 ) : null}
-                {o.promoCode && (
-                  <span style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "13px 16px", borderRadius: 11, border: `1px dashed ${brand}80`, background: `${brand}12`, fontSize: 13.5, color: "#DCE5E9" }}>
-                    Use code <strong style={{ fontFamily: MONO, fontSize: 14.5, letterSpacing: ".04em", color: brand }}>{o.promoCode}</strong>
-                  </span>
-                )}
+                {o.promoCode && <CodeChip code={o.promoCode} tint={brand} />}
                 <a href="#bonuses" style={{ padding: "15px 20px", borderRadius: 11, border: "1px solid rgba(255,255,255,.16)", color: "#DCE5E9", fontSize: 14.5, fontWeight: 600 }}>
                   See the terms
                 </a>
@@ -564,7 +561,7 @@ export function CasinoReport({ e }: { e: EntityView }) {
                   {o.promoCode ? ` · Code ${o.promoCode}` : ""} · 18+, play responsibly
                 </p>
               </div>
-              <a href={o.signupUrl} target="_blank" rel="nofollow sponsored noopener" style={{ display: "inline-flex", alignItems: "center", gap: 10, padding: "15px 26px", borderRadius: 11, background: brand, color: "#0A0D0F", fontSize: 15, fontWeight: 800, whiteSpace: "nowrap", boxShadow: `0 10px 30px ${brand}40` }}>
+              <a href={o.signupUrl} target="_blank" rel="nofollow sponsored noopener" data-copy-code={o.promoCode} style={{ display: "inline-flex", alignItems: "center", gap: 10, padding: "15px 26px", borderRadius: 11, background: brand, color: "#0A0D0F", fontSize: 15, fontWeight: 800, whiteSpace: "nowrap", boxShadow: `0 10px 30px ${brand}40` }}>
                 Claim offer at {o.name} <span aria-hidden>→</span>
               </a>
             </div>
@@ -597,6 +594,7 @@ export function CasinoReport({ e }: { e: EntityView }) {
             offer={o.bonusShort ?? o.bonus}
             note={wv.kind === "none" ? "No wagering" : `Wagering ${wv.label}`}
             brand={brand}
+            code={o.promoCode}
           />
         )}
 

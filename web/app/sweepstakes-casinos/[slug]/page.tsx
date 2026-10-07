@@ -8,6 +8,7 @@ import { brandFor } from "@/lib/casino-facts";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { Icon, type IconName } from "@/components/ui/Icon";
 import { NextSteps } from "@/components/layout/NextSteps";
+import { CodeChip } from "@/components/ui/CodeChip";
 import { StickyOffer } from "@/components/casino/StickyOffer";
 
 const MONO = "var(--font-jetbrains-mono), monospace";
@@ -92,14 +93,10 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           </div>
 
           <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 12 }}>
-            <a href={s.signupUrl ?? `https://${s.domain}`} target="_blank" rel={s.affiliate ? "nofollow sponsored noopener" : "nofollow noopener"} style={{ display: "inline-flex", alignItems: "center", gap: 10, padding: "15px 26px", borderRadius: 11, background: brand, color: "#0A0D0F", fontSize: 15, fontWeight: 800 }}>
+            <a href={s.signupUrl ?? `https://${s.domain}`} target="_blank" rel={s.affiliate ? "nofollow sponsored noopener" : "nofollow noopener"} data-copy-code={s.promoCode} style={{ display: "inline-flex", alignItems: "center", gap: 10, padding: "15px 26px", borderRadius: 11, background: brand, color: "#0A0D0F", fontSize: 15, fontWeight: 800 }}>
               Claim offer at {s.name} <span aria-hidden>→</span>
             </a>
-            {s.promoCode && (
-              <span style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "13px 16px", borderRadius: 11, border: `1px dashed ${brand}80`, background: `${brand}12`, fontSize: 13.5, color: "#DCE5E9" }}>
-                Use code <strong style={{ fontFamily: MONO, fontSize: 14.5, letterSpacing: ".04em", color: brand }}>{s.promoCode}</strong>
-              </span>
-            )}
+            {s.promoCode && <CodeChip code={s.promoCode} tint={brand} />}
           </div>
           <div style={{ marginTop: 14, fontFamily: MONO, fontSize: 10.5, color: "#83919A" }}>
             No purchase necessary · 18+ or 21+ by casino · Void where prohibited{s.affiliate ? " · Affiliate link" : ""} · Facts from {s.domain}
