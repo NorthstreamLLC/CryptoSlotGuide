@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ogCardPath } from "@/lib/og";
 import { sportsFacts, booksForTitle } from "@/lib/sports";
 import { rtpSortValue } from "@/lib/slot-facts";
 import { siteData, siteCounts } from "@/lib/site-data";
@@ -30,8 +31,9 @@ export const metadata = {
     url: SITE_URL,
     siteName: SITE_NAME,
     type: "website" as const,
+    images: [{ url: ogCardPath("Crypto casinos, slots and sportsbooks — every figure sourced", "/"), width: 1200, height: 630 }],
   },
-  twitter: { card: "summary" as const },
+  twitter: { card: "summary_large_image" as const },
 };
 import { CasinoOfferList } from "@/components/casino/CasinoOfferList";
 import { raceFor, raceSlugs } from "@/lib/races";

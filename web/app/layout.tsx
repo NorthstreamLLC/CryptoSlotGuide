@@ -10,6 +10,7 @@ import { Footer } from "@/components/layout/Footer";
 import { NewsletterBand } from "@/components/layout/NewsletterBand";
 import { siteCounts } from "@/lib/site-data";
 import { SITE_URL, SITE_NAME } from "@/lib/seo";
+import { ogCardPath } from "@/lib/og";
 import { organizationSchema, websiteSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 
@@ -33,6 +34,13 @@ export const metadata: Metadata = {
   },
   description:
     "Crypto casino, slot, sportsbook and wallet reviews that say where every figure comes from — field-tested once we fund an account, assessed from public sources until then, and labelled either way.",
+  // The card for any page that sets no Open Graph of its own (lib/og.ts).
+  openGraph: {
+    siteName: SITE_NAME,
+    type: "website",
+    images: [{ url: ogCardPath("Crypto casinos, slots and sportsbooks — every figure sourced", "/"), width: 1200, height: 630 }],
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 export default function RootLayout({

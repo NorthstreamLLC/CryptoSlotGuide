@@ -11,6 +11,8 @@
 export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://cryptoslotguide.example";
 export const SITE_NAME = "CryptoSlotGuide";
 
+import { ogCardPath } from "./og";
+
 /**
  * Builds page-level metadata from the same headline/standfirst copy the
  * page itself renders — so a data edit updates search-result copy too,
@@ -19,7 +21,9 @@ export const SITE_NAME = "CryptoSlotGuide";
  */
 export function pageMetadata(title: string, description: string, path: string, image?: string) {
   const url = `${SITE_URL}${path}`;
-  const images = image ? [{ url: image }] : undefined;
+  // A page with no picture of its own still gets a card bearing its title,
+  // so a shared link never shows as a blank box.
+  const images = [image ? { url: image } : { url: ogCardPath(title, path), width: 1200, height: 630, alt: title }];
   return {
     title,
     description,
@@ -30,13 +34,13 @@ export function pageMetadata(title: string, description: string, path: string, i
       url,
       siteName: SITE_NAME,
       type: "website" as const,
-      ...(images ? { images } : {}),
+      images,
     },
     twitter: {
-      card: image ? ("summary_large_image" as const) : ("summary" as const),
+      card: "summary_large_image" as const,
       title,
       description,
-      ...(images ? { images } : {}),
+      images,
     },
   };
 }
