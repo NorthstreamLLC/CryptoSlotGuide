@@ -1044,6 +1044,8 @@
     "payoutStatedMaxMins": 7200,
     "bonusShort": "Up to 500% + 500 free spins",
     "wagerBasis": "bonus",
-    "cashoutCap": "Max withdrawal ×1, max bonus $500"
+    "cashoutCap": "Max withdrawal ×1, max bonus $500",
+    "signupUrl": "https://lkfg.pro/379110",
+    "affiliate": true
   }
 ]
