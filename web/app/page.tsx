@@ -44,6 +44,8 @@ import { COUNTRIES } from "@/lib/legal";
 import { LazyLegalMap } from "@/components/home/LazyLegalMap";
 import { slotPageCount } from "@/lib/slot-page";
 import { inHouseOrder } from "@/lib/house-order";
+import { LogoStrip } from "@/components/home/LogoStrip";
+import { reviewPath } from "@/lib/outbound";
 
 /**
  * Ported from the HOME section of CryptoSlotGuide.dc.html (hero through
@@ -121,6 +123,10 @@ export default function HomePage() {
    * than a number.
    */
   const topOffers = inHouseOrder(ops.filter((o) => !!casinoFacts(o).offer && !/^advertised/i.test(casinoFacts(o).headline))).slice(0, 10);
+  const stripCasinos = inHouseOrder(ops).slice(0, 16).map((o) => ({ slug: o.slug, name: o.name, href: reviewPath(o.slug), kind: "Casino" }));
+  const stripStudios = TOP_STUDIOS.map((sl) => providers.find((p) => p.slug === sl)).filter((p): p is NonNullable<typeof p> => !!p).map((p) => ({ slug: p.slug, name: p.name, href: `/providers/${p.slug}`, kind: "Studio" }));
+  const stripWallets = walletRows.slice(0, 6).map((w) => ({ slug: w.slug, name: w.name, href: `/wallets/${w.slug}`, kind: "Wallet" }));
+  const stripItems = stripCasinos.flatMap((c, i) => [c, ...(i % 2 === 1 ? [stripStudios[(i - 1) / 2], stripWallets[(i - 1) / 2]] : [])]).filter((x): x is NonNullable<typeof x> => !!x);
 
   // Highest studio-published RTP — a factual sort, not a rating.
   const topSlot = [...slots].sort((a, b) => rtpSortValue(b) - rtpSortValue(a))[0];
@@ -351,6 +357,9 @@ export default function HomePage() {
           <CryptoTicker coins={siteData.coinDefs} />
         </div>
       </section>
+
+      {/* What the site covers, gliding past: casinos, studios, wallets, interleaved. */}
+      <LogoStrip label="Casinos, studios and wallets we cover" items={stripItems} />
 
       {/* Top offers */}
       <section data-reveal style={{ maxWidth: 1400, margin: "0 auto", padding: "68px 40px 0" }}>
