@@ -12,6 +12,8 @@ import { NextSteps } from "@/components/layout/NextSteps";
 import { byHouse } from "@/lib/house-order";
 import { isWelcomeOffer } from "@/lib/casino-bonuses";
 import { OfferCta } from "@/components/ui/OfferCta";
+import { CodeOffer } from "@/components/ui/CodeOffer";
+import { inHouseOrder } from "@/lib/house-order";
 
 /**
  * Compare casino bonuses, split by how each one works:
@@ -36,6 +38,9 @@ const WELCOME_COLS = "md:grid-cols-[minmax(150px,1fr)_minmax(210px,1.4fr)_96px_1
 const REWARD_COLS = "md:grid-cols-[minmax(150px,1fr)_minmax(200px,1.4fr)_132px_132px_minmax(130px,1fr)_236px]";
 
 /** The largest match percentage in an offer headline, e.g. 360 from "Up to 360% on 4 deposits". */
+/** "no wagering" / "40× wagering", or nothing where the terms give no figure. */
+const wagerNote = (t: string): string | null => (/no wager|^none$/i.test(t) ? "no wagering" : /\d/.test(t) ? `${t} wagering` : null);
+
 function matchPct(o: Operator): number {
   const all = [...(o.bonusShort ?? o.bonus).matchAll(/(\d{2,4})%/g)].map((m) => Number(m[1]));
   return all.length ? Math.max(...all) : 0;
@@ -118,6 +123,8 @@ export function BonusesPage() {
     lowest && { tag: "Easiest welcome bonus", o: lowest, line: `${wagerView(lowest).mult}× to withdraw · ${lowest.bonusShort ?? lowest.bonus}`, icon: "bolt" as const },
     raceTop && { tag: "Biggest races", o: raceTop, line: raceFor(raceTop.slug)?.label ?? "", icon: "trophy" as const },
   ].filter(Boolean) as { tag: string; o: Operator; line: string; icon: IconName }[];
+  // Partners with a live link and a code, in house order (Roobet first).
+  const partners = inHouseOrder(ops.filter((o) => o.affiliate && o.signupUrl && o.promoCode)).slice(0, 6);
 
   return (
     <main style={{ background: "#07090B" }}>
@@ -138,6 +145,44 @@ export function BonusesPage() {
       </section>
 
       <section style={{ maxWidth: 1280, margin: "0 auto", padding: "28px 24px 80px" }}>
+        {/* The partners' sign-up offers first, in house order: what each casino
+            gives a new player, the code to use, one tap to claim. The offers
+            are the casinos' own; the line under the grid says so. */}
+        {partners.length > 0 && (
+          <div style={{ marginBottom: 40 }}>
+            <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 12, flexWrap: "wrap", marginBottom: 12 }}>
+              <h2 style={{ margin: 0, fontSize: 24, letterSpacing: "-.025em", fontWeight: 800, color: "#fff" }}>Sign-up offers with our codes</h2>
+              <span style={{ fontFamily: MONO, fontSize: 10.5, color: "#8E9CA5" }}>Tap a code to copy it · Claim copies it too</span>
+            </div>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 360px), 1fr))", gap: 12 }}>
+              {partners.map((o, i) => {
+                const brand = brandFor(o.slug);
+                return (
+                  <div key={o.slug} style={{ display: "flex", flexDirection: "column", gap: 12, padding: 18, borderRadius: 16, background: `radial-gradient(120% 90% at 100% 0%, ${brand}1f, transparent 60%), #0C1013`, border: `1px solid ${i === 0 ? brand + "66" : brand + "33"}` }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                      <span style={{ width: 36, height: 36, flex: "none", borderRadius: 10, overflow: "hidden" }}>
+                        <BrandMark slug={o.slug} mono={o.mono} tint={brand} radius={10} fontSize={11} />
+                      </span>
+                      <span style={{ minWidth: 0, flex: 1 }}>
+                        <span style={{ display: "block", fontSize: 16, fontWeight: 800, color: "#fff" }}>{o.name}</span>
+                        <span style={{ display: "block", fontFamily: MONO, fontSize: 10, color: "#8E9CA5" }}>{[casinoFacts(o).licence ?? "Crypto casino", wagerNote(toWithdraw(o).text)].filter(Boolean).join(" · ")}</span>
+                      </span>
+                      {i === 0 && <span style={{ padding: "2px 8px", borderRadius: 100, background: `${brand}24`, fontFamily: MONO, fontSize: 9, fontWeight: 700, letterSpacing: ".06em", color: brand }}>TOP PICK</span>}
+                    </div>
+                    <CodeOffer code={o.promoCode as string} offer={o.bonusShort ?? o.bonus} casino={o.name} perk={o.codePerk?.text} tint={brand} compact quiet />
+                    <div style={{ display: "flex", gap: 8, marginTop: "auto" }}>
+                      <OfferCta o={o} size="sm" />
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+            <p style={{ margin: "10px 0 0", fontFamily: MONO, fontSize: 10.5, lineHeight: 1.6, color: "#7F8D96" }}>
+              Each offer is the casino&apos;s own, set by the casino, not by us, and quoted from its bonus terms. These are affiliate links: we may earn a commission when you sign up, which never changes what we report. 18+, play responsibly.
+            </p>
+          </div>
+        )}
+
         <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#8E9CA5", marginBottom: 12 }}>Best for</div>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 12, marginBottom: 44 }}>
           {picks.map((pk) => {
@@ -155,7 +200,7 @@ export function BonusesPage() {
                 </span>
                 <span style={{ fontSize: 15.5, lineHeight: 1.3, fontWeight: 800, color: "#fff" }}>{pk.line}</span>
                 <span style={{ marginTop: "auto", display: "inline-flex", alignItems: "center", gap: 6, fontSize: 13, fontWeight: 700, color: "#00C2CC" }}>
-                  View offer <Icon name="arrow" size={14} />
+                  {pk.o.affiliate && pk.o.signupUrl ? (pk.o.promoCode ? `Read the review · code ${pk.o.promoCode}` : "Read the review") : "Read the review"} <Icon name="arrow" size={14} />
                 </span>
               </Link>
             );
@@ -304,6 +349,11 @@ function Offer({ o }: { o: Operator }) {
   return (
     <Link href={`/casinos/${o.slug}`} className="col-span-2 md:col-span-1" style={{ fontSize: 15, lineHeight: 1.3, fontWeight: 700, color: "#E8EDF0", minWidth: 0 }}>
       {o.bonusShort ?? o.bonus}
+      {o.affiliate && o.signupUrl && o.promoCode && (
+        <span data-copy-code={o.promoCode} style={{ display: "inline-block", marginLeft: 8, padding: "1px 8px", borderRadius: 100, border: "1px dashed rgba(95,227,232,.6)", background: "rgba(95,227,232,.08)", fontFamily: MONO, fontSize: 9.5, fontWeight: 700, letterSpacing: ".04em", color: "#5FE3E8", verticalAlign: "middle", whiteSpace: "nowrap" }}>
+          CODE {o.promoCode}
+        </span>
+      )}
     </Link>
   );
 }

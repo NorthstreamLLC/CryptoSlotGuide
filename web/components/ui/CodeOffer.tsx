@@ -7,7 +7,7 @@ import { CodeChip } from "@/components/ui/CodeChip";
  * line says what signing up with our code gets, never that the code is what
  * unlocks it. A code-only extra would be its own field, labelled as such.
  */
-export function CodeOffer({ code, offer, casino, perk, tint = "#57E39A", compact = false }: { code: string; offer: string; casino: string; perk?: string; tint?: string; compact?: boolean }) {
+export function CodeOffer({ code, offer, casino, perk, tint = "#57E39A", compact = false, quiet = false }: { code: string; offer: string; casino: string; perk?: string; tint?: string; compact?: boolean; /** Leave the disclosure line to the surrounding block (a grid of these carries one). */ quiet?: boolean }) {
   return (
     <div>
     <div
@@ -40,9 +40,9 @@ export function CodeOffer({ code, offer, casino, perk, tint = "#57E39A", compact
     </div>
     {/* Whose offer it is, and what the link is: the casino sets the bonus;
         we earn a commission on the sign-up. Both said plainly, every time. */}
-    <div style={{ marginTop: 5, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: compact ? 9.5 : 10.5, lineHeight: 1.5, color: "#7F8D96" }}>
+    {!quiet && <div style={{ marginTop: 5, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: compact ? 9.5 : 10.5, lineHeight: 1.5, color: "#7F8D96" }}>
       {casino}&apos;s own offer, set by {casino}, not by us{perk ? "; the extra is ours, paid by us" : ""} · Affiliate link: we may earn a commission, which never changes what we report · 18+
-    </div>
+    </div>}
     </div>
   );
 }
