@@ -10,7 +10,7 @@
  * 2894-2900) are all exchanges now present in exchangeRows.json.
  */
 import { siteData } from "./site-data";
-import { topSlotRows, slotArtBySlug, catalogueFallback, studioCatalogue } from "./slot-page";
+import { topSlotRows, slotArtBySlug, catalogueFallback, studioCatalogue, studioThumbs } from "./slot-page";
 import { slotEssentialsStudio } from "./slotessentials";
 import { topStudioRank } from "./top-studios";
 import { tintFor } from "./logo";
@@ -57,6 +57,8 @@ export interface VerticalRow {
   image?: string;
   /** A second, off-site link shown under the name — the studio's SlotEssentials profile. */
   extLink?: { href: string; label: string };
+  /** A few of the row's games as small tiles (studios: three of their slots). */
+  thumbs?: { src: string; name: string; href: string }[];
 }
 
 export interface VerticalAward {
@@ -228,6 +230,7 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
         })(),
         stat: "—",
         cta: "Studio profile",
+        thumbs: studioThumbs(p.name, 3),
         ...(slotEssentialsStudio(p.name) ? { extLink: { href: slotEssentialsStudio(p.name) as string, label: "Profile on SlotEssentials" } } : {}),
         href: `/providers/${p.slug}`,
       })),

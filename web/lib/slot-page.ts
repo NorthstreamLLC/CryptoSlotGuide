@@ -778,3 +778,20 @@ export function heroArtTiles(n = 48): string[] {
   }
   return out.slice(0, n);
 }
+
+/** A studio's first few titles with our own art, as 128px tiles, for a row preview. */
+export function studioThumbs(studio: string, n = 3): { src: string; name: string; href: string }[] {
+  const out: { src: string; name: string; href: string }[] = [];
+  // The studio's reviewed slots first (the titles we chose to write up), then the catalogue.
+  for (const s of siteData.slots) {
+    if (out.length >= n) break;
+    const art = s.provider === studio ? slotArtBySlug(s.slug) : null;
+    if (art) out.push({ src: art.replace("/assets/games/", "/assets/games/t/").replace(/^(\/api\/art\/[^?]+)$/, "$1?w=128"), name: s.name, href: `/slots/${s.slug}` });
+  }
+  for (const g of PAGES.values()) {
+    if (out.length >= n) break;
+    const rec = g.slug ? ART[g.slug] : undefined;
+    if (g.provider === studio && rec?.file && !out.some((o) => o.href === `/slots/${g.slug}`)) out.push({ src: `/assets/games/t/${rec.file}`, name: g.name, href: `/slots/${g.slug}` });
+  }
+  return out;
+}

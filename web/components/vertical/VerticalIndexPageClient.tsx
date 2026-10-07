@@ -246,6 +246,16 @@ function Row({ r, first, cols, labels, hasStat }: { r: VerticalRow; first: boole
           {r.note && <span style={{ display: "block", fontSize: 12.5, lineHeight: 1.4, color: "#8DA0AA", marginTop: 2 }}>{r.note}</span>}
         </span>
       </Link>
+      {r.thumbs && r.thumbs.length > 0 && (
+        <span style={{ display: "flex", gap: 6, marginTop: 8, marginLeft: 48 }}>
+          {r.thumbs.map((t) => (
+            <Link key={t.href} href={t.href} title={t.name} className="csg-lift" style={{ display: "block", width: 62, height: 39, borderRadius: 7, overflow: "hidden", border: "1px solid rgba(255,255,255,.08)" }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={t.src} alt={t.name} width={62} height={39} loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+            </Link>
+          ))}
+        </span>
+      )}
       {r.extLink && (
         // Outside the row's own link: an anchor cannot sit inside another.
         <a href={r.extLink.href} target="_blank" rel="noopener" className="hover:!text-accent" style={{ display: "inline-block", marginTop: 6, marginLeft: 48, fontFamily: MONO, fontSize: 10.5, letterSpacing: ".04em", color: "#5FE3E8" }}>
