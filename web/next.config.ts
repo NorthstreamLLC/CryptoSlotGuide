@@ -19,6 +19,8 @@ const nextConfig: NextConfig = {
       { source: "/prediction-markets", has: [{ type: "query", key: "tab", value: "fiat" }], destination: "/prediction-markets/regulated", permanent: true },
       { source: "/razed-casino", destination: "/casinos/razed", permanent: true },
       { source: "/top-crypto-casinos", destination: "/crypto-casinos", permanent: true },
+      // /casinos/<slug> is a review; the list itself lives at /crypto-casinos.
+      { source: "/casinos", destination: "/crypto-casinos", permanent: true },
       { source: "/casino-sign-up-bonuses", destination: "/bonuses", permanent: true },
       { source: "/sample-page", destination: "/", permanent: true },
       { source: "/home", destination: "/", permanent: true },

@@ -1,5 +1,6 @@
 import sweeps from "@/data/sweeps.json";
 import { inHouseOrder } from "./house-order";
+import { viaGo } from "./outbound";
 
 /**
  * US sweepstakes (social) casinos: play with Gold Coins for fun and Sweeps
@@ -27,7 +28,8 @@ export interface SweepsCasino {
   asOf?: string;
 }
 
-export const SWEEPS = sweeps as SweepsCasino[];
+// Affiliate buttons point at /go/<slug>; see lib/outbound.ts.
+export const SWEEPS = (sweeps as SweepsCasino[]).map(viaGo);
 
 export const sweepsBySlug = (slug: string) => SWEEPS.find((s) => s.slug === slug) ?? null;
 

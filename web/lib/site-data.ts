@@ -63,9 +63,11 @@ import type {
   WatchOperator,
 } from "./types";
 import { counts } from "./derived";
+import { viaGo } from "./outbound";
 
 export const siteData = {
-  ops: ops as Operator[],
+  // Affiliate buttons point at /go/<slug>; see lib/outbound.ts.
+  ops: (ops as Operator[]).map(viaGo),
   slots: slots as Slot[],
   slotTags: slotTags as SlotTags,
   slotCatDefs: slotCatDefs as SlotCategoryDef[],
@@ -83,7 +85,10 @@ export const siteData = {
   // notice, because every value in these rows predates the sourcing rule and
   // has no source URL. Loaded so the count is available; not rendered.
   fiatCasinos: (fiatCasinos as { casinos: FiatCasino[] }).casinos,
-  predMarkets: predMarkets as PredictionMarkets,
+  predMarkets: {
+    crypto: (predMarkets as PredictionMarkets).crypto.map(viaGo),
+    fiat: (predMarkets as PredictionMarkets).fiat.map(viaGo),
+  } as PredictionMarkets,
   tickerFacts: tickerFacts as TickerFact[],
   coinDefs: coinDefs as CoinDef[],
   coinsBy: coinsBy as CoinsByOperator,

@@ -3,6 +3,8 @@ import { buildNavTabs } from "@/lib/nav";
 import { RevealObserver } from "@/components/motion/RevealObserver";
 import { Archivo, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { NewsletterBand } from "@/components/layout/NewsletterBand";
@@ -49,6 +51,8 @@ export default function RootLayout({
         <main id="main" className="flex-1">{children}</main>
         <NewsletterBand />
         <Footer />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

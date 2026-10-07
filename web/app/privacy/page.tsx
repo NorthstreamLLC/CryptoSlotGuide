@@ -30,7 +30,7 @@ const SECTIONS: { title: string; body: string[] }[] = [
     title: "Cookies and similar technology",
     body: [
       "Affiliate tracking cookies: when you click a link to a casino, wallet, or exchange listed here, a cookie may be set so that operator knows the referral came from this site. This is how we earn commission — see How We Rate for the full disclosure. These cookies are set by the operator or their affiliate network, not by us directly, and are governed by that operator's own privacy policy once you're on their site.",
-      "Analytics cookies: we use standard web analytics to understand which pages are useful and which aren't. This data is aggregated and not used to identify you individually.",
+      "Analytics: we use Vercel Web Analytics and Speed Insights to understand which pages are useful and how fast they load. They set no cookies and keep no IP addresses; the data is aggregated and not used to identify you individually. When you click an affiliate link we count the click — which operator, which of our pages it came from, and your country — so we know which pages are useful. Nothing in that count names you.",
       "You can block or delete cookies at any time in your browser settings. Doing so may affect whether affiliate links credit us correctly, but won't affect your ability to read the site.",
     ],
   },

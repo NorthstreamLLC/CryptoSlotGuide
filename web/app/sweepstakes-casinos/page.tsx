@@ -16,7 +16,7 @@ export const metadata = pageMetadata(
 );
 
 const MONO = "var(--font-jetbrains-mono), monospace";
-const COLS = "md:grid-cols-[minmax(180px,1fr)_minmax(220px,1.4fr)_minmax(150px,1fr)_120px_130px_80px_130px]";
+const COLS = "md:grid-cols-[minmax(180px,1fr)_minmax(220px,1.4fr)_minmax(150px,1fr)_120px_120px_56px_205px]";
 
 export default function Page() {
   const list = sweepsSorted();
@@ -102,9 +102,23 @@ export default function Page() {
                   {cell("Crypto", crypto ? shortFact(crypto, 30) : "No", crypto ? "#7BE0B8" : "#8E9CA5")}
                   {cell("Age", age ?? null)}
                   <div className="col-span-2 md:col-span-1">
-                    <Link href={href} style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 6, padding: "10px 12px", borderRadius: 10, background: "#57E39A", color: "#0A0D0F", fontSize: 13, fontWeight: 800, whiteSpace: "nowrap" }}>
-                      View offer <Icon name="arrow" size={14} />
-                    </Link>
+                    {/* A deal goes to the casino (via /go/, marked sponsored) with
+                        the review one tap away; without one the button says it
+                        opens our review instead of promising an offer. */}
+                    {s.affiliate && s.signupUrl ? (
+                      <span style={{ display: "flex", gap: 6 }}>
+                        <a href={s.signupUrl} target="_blank" rel="nofollow sponsored noopener" className="transition-transform hover:-translate-y-px" style={{ flex: "1 1 auto", display: "flex", alignItems: "center", justifyContent: "center", gap: 5, padding: "10px 9px", borderRadius: 10, background: "#57E39A", color: "#0A0D0F", fontSize: 13, fontWeight: 800, whiteSpace: "nowrap" }}>
+                          Visit {s.name} <Icon name="arrow" size={14} />
+                        </a>
+                        <Link href={href} style={{ flex: "none", display: "flex", alignItems: "center", padding: "10px 8px", borderRadius: 10, border: "1px solid rgba(255,255,255,.16)", color: "#9FB0B9", fontSize: 12, fontWeight: 600 }}>
+                          Review
+                        </Link>
+                      </span>
+                    ) : (
+                      <Link href={href} style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 6, padding: "10px 12px", borderRadius: 10, border: "1px solid rgba(87,227,154,.45)", color: "#57E39A", fontSize: 13, fontWeight: 800, whiteSpace: "nowrap" }}>
+                        Read review <Icon name="arrow" size={14} />
+                      </Link>
+                    )}
                   </div>
                 </div>
               );
