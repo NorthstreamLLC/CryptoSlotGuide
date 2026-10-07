@@ -131,6 +131,14 @@ export function Header({ counts, navTabs }: { counts: SiteCounts; navTabs: NavTa
         </nav>
 
         <div style={{ display: "flex", alignItems: "center", gap: 12, flex: "none", marginLeft: "auto" }}>
+          {/* The page most readers come for, one click from anywhere. */}
+          <Link
+            href="/bonuses"
+            className="csg-desktop-only transition-transform hover:-translate-y-px"
+            style={{ display: "flex", alignItems: "center", gap: 6, padding: "7px 13px", borderRadius: 8, background: "#FFC531", color: "#141007", fontSize: 12.5, fontWeight: 800, whiteSpace: "nowrap" }}
+          >
+            🎁 Best bonuses
+          </Link>
           <Link
             href="/search"
             aria-label="Search"

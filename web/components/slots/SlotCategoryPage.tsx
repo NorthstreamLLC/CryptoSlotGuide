@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { maxWinLabel, rtpLabel, rtpSortValue, volLabel } from "@/lib/slot-facts";
-import { siteData, siteCounts } from "@/lib/site-data";
-import { catalogueByMechanic, rtpVersions, publishableThumb } from "@/lib/slot-page";
+import { siteData } from "@/lib/site-data";
+import { catalogueByMechanic, rtpVersions, publishableThumb, slotPageCount } from "@/lib/slot-page";
 import { volatilityOf } from "@/lib/slot-db";
 import type { SlotMechanicTag } from "@/lib/types";
 import { NextSteps } from "@/components/layout/NextSteps";
@@ -52,7 +52,7 @@ export function SlotCategoryPage({ tag }: { tag: SlotMechanicTag }) {
           <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".06em", textTransform: "uppercase", color: "#83919A" }}>
             {rows.length + more.length} titles · sorted by published RTP
           </div>
-          <Link href="/slots" style={{ fontSize: 14, fontWeight: 600, color: "#00C2CC" }}>All {siteCounts.slots} slots →</Link>
+          <Link href="/slots" style={{ fontSize: 14, fontWeight: 600, color: "#00C2CC" }}>All {slotPageCount().toLocaleString()} slots →</Link>
         </div>
         <div style={{ display: "grid", minWidth: 0, gridTemplateColumns: "repeat(auto-fit,minmax(292px,1fr))", gap: 12 }}>
           {rows.map((s) => {

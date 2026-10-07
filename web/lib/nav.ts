@@ -82,12 +82,12 @@ export interface NavColumn {
 }
 
 export interface NavTab {
-  key: "gambling" | "where" | "licensed" | "sports" | "predict" | "crypto";
+  key: "gambling" | "where" | "licensed" | "casinos" | "slots" | "countries" | "sports" | "predict" | "crypto";
   label: string;
   sections: NavSection[];
 }
 
-export function buildNavTabs(c: SiteCounts): NavTab[] {
+function rawNavTabs(c: SiteCounts): NavTab[] {
   return [
     {
       key: "gambling",
@@ -745,4 +745,38 @@ function slug(name: string): string {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)/g, "");
+}
+
+/**
+ * The menu as readers use it. "Gambling" held casinos, slots, studios, house
+ * games, bonuses and guides — slots, the biggest section of the site, sat one
+ * level down under a label that names none of it — and countries were split
+ * across "Crypto casinos by country" and "Licensed casinos". Regrouped here
+ * rather than rewritten above, so every column keeps its data and links:
+ *   Casinos · Slots · Countries · Sports · Predictions · Crypto
+ */
+/** The licensed-register entries, named for what they hold once they share a tab with the crypto-casino countries. */
+const LICENSED_LABEL: Record<string, string> = {
+  "All markets": "Licensed sites, every market",
+  "US regulated": "US state-licensed sites",
+  "US sweepstakes": "US sweepstakes sites",
+  Ontario: "Ontario-licensed sites",
+  "United Kingdom": "UK-licensed sites",
+  Europe: "Europe-licensed sites",
+};
+
+export function buildNavTabs(c: SiteCounts): NavTab[] {
+  const raw = rawNavTabs(c);
+  const tab = (key: string) => raw.find((t) => t.key === key);
+  const gambling = tab("gambling")?.sections ?? [];
+  const pick = (labels: string[]) => labels.map((l) => gambling.find((s) => s.label === l)).filter((s): s is NavSection => !!s);
+  const out: NavTab[] = [
+    { key: "casinos", label: "Casinos", sections: pick(["Crypto casinos", "Bonuses", "House games", "Guides"]) },
+    { key: "slots", label: "Slots", sections: pick(["Slots & RTP", "Game providers"]) },
+    { key: "countries", label: "Countries", sections: [...(tab("where")?.sections ?? []), ...(tab("licensed")?.sections ?? []).map((s) => ({ ...s, label: LICENSED_LABEL[s.label] ?? `Licensed: ${s.label}` }))] },
+    { ...(tab("sports") as NavTab), label: "Sports" },
+    { ...(tab("predict") as NavTab), label: "Predictions" },
+    { ...(tab("crypto") as NavTab), label: "Crypto" },
+  ];
+  return out.filter((t) => t && t.sections.length);
 }

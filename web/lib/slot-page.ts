@@ -149,6 +149,9 @@ const PAGES: Map<string, CatalogueSlotPage> = (() => {
 
 export const cataloguePageSlugs = (): string[] => [...PAGES.keys()];
 export const cataloguePage = (slug: string): CatalogueSlotPage | undefined => PAGES.get(slug);
+
+/** Every slot with a page of its own: the reviews plus the catalogue pages. */
+export const slotPageCount = (): number => REVIEWED.size + PAGES.size;
 export const cataloguePageCount = PAGES.size;
 
 /**

@@ -42,6 +42,7 @@ import { topPicks } from "@/lib/top-picks";
 import { CoinIcon } from "@/components/ui/CoinIcon";
 import { COUNTRIES } from "@/lib/legal";
 import { LazyLegalMap } from "@/components/home/LazyLegalMap";
+import { slotPageCount } from "@/lib/slot-page";
 import { inHouseOrder } from "@/lib/house-order";
 
 /**
@@ -173,7 +174,7 @@ export default function HomePage() {
   const verticals = [
     { icon: "♠️", title: "Crypto casinos", tint: "#00C2CC", count: c.casinos, factLabel: "No-KYC", factValue: String(ops.filter((o) => o.kyc === "none").length), href: "/crypto-casinos" },
     { icon: "🎲", title: "House games", tint: "#FF7EB6", count: houseGames.length, factLabel: "Game types", factValue: String(houseGames.length), href: "/house-games" },
-    { icon: "🎰", title: "Slots & RTP", tint: "#FFB347", count: c.slots, factLabel: topSlot?.name ?? "—", factValue: topSlot ? `${topSlot.rtp.toFixed(1)}%` : "—", href: "/slots" },
+    { icon: "🎰", title: "Slots & RTP", tint: "#FFB347", count: slotPageCount(), factLabel: topSlot?.name ?? "—", factValue: topSlot ? `${topSlot.rtp.toFixed(1)}%` : "—", href: "/slots" },
     { icon: "🎮", title: "Game studios", tint: "#B284FF", count: c.providers, factLabel: "All RTPs listed", factValue: String(allVersionsListedStudios(providers)), href: "/providers" },
     { icon: "⚽", title: "Sportsbooks", tint: "#57E39A", count: c.books, factLabel: "With esports", factValue: String(ops.filter((o) => o.esports).length), href: "/sportsbooks" },
     { icon: "👛", title: "Wallets", tint: "#6BC7FF", count: c.wallets, factLabel: "Self-custody", factValue: String(selfCustodyWallets(walletRows)), href: "/wallets" },
@@ -286,7 +287,7 @@ export default function HomePage() {
 
             <div style={{ display: "flex", gap: 32, flexWrap: "wrap", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, color: "#83919A" }}>
               <span><strong style={{ color: "#DCE5E9", fontWeight: 500 }}>{c.casinos}</strong> crypto casinos listed</span>
-              <span><strong style={{ color: "#DCE5E9", fontWeight: 500 }}>{c.slots}</strong> published slot RTPs</span>
+              <span><strong style={{ color: "#DCE5E9", fontWeight: 500 }}>{slotPageCount().toLocaleString()}</strong> slots with published RTPs</span>
               <span><strong style={{ color: "#DCE5E9", fontWeight: 500 }}>{c.providers}</strong> game studios profiled</span>
             </div>
           </div>
