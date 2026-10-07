@@ -8,11 +8,13 @@ import coinsBy from "@/data/coinsBy.json";
 import { payoutView } from "@/lib/payout";
 import { wagerView } from "@/lib/wager";
 import type { Operator } from "@/lib/types";
+import { inHouseOrder } from "@/lib/house-order";
 
 const MONO = "var(--font-jetbrains-mono), monospace";
 
 /**
- * The featured operator, placed on pages that would otherwise end without one.
+ * The top partners (three by default, in house order), placed on pages that
+ * would otherwise end without a casino to go to.
  *
  * Three rules it enforces itself, rather than leaving to whoever adds it to a
  * page:
@@ -35,7 +37,7 @@ const MONO = "var(--font-jetbrains-mono), monospace";
  *    stops being declared anywhere on these pages and this unit has to carry
  *    its own label again.
  *
- * It is deliberately one quiet row rather than a second hero: the point is to
+ * It is deliberately a quiet panel rather than a second hero: the point is to
  * be present everywhere, not loud anywhere.
  */
 
@@ -65,9 +67,11 @@ function pitchFor(slug: string, ctx: PartnerContext): string | null {
     case "esports":
       return spec("Sportsbook", "Esports titles") ?? spec("Sportsbook", "Esports");
     case "slots":
-      // The bonus term that decides whether slot play counts: game
-      // contribution first, else the standing offer itself.
-      return spec("Bonus terms", "Game contribution") ?? spec("Bonus terms", "Standing offer");
+      // Withdrawal speed and wagering (defaultPitch) is what a slot player
+      // choosing a casino weighs. The "Game contribution" term used here
+      // before reads as a formula ("Progress = wager × (house edge ÷ 4%)")
+      // once more than one partner shows.
+      return null;
     case "house": {
       // What this casino publishes for its own originals — the edge figures
       // on data/houseGames.json, each read from the casino's own page.
@@ -129,91 +133,112 @@ export function FeaturedPartner({
   context = { kind: "general" },
   country,
   state,
-  heading = "Casino we recommend",
+  heading,
+  count = 3,
+  exclude,
 }: {
   context?: PartnerContext;
   /** ISO code of the country this page is about, if it is about one. */
   country?: string;
-  /** US state code. The operator restricts the whole US, so any value suppresses it. */
+  /** US state code. Every partner restricts the whole US, so any value suppresses it. */
   state?: string;
   heading?: string;
+  /** How many partners to show, in house order (lib/house-order.ts). */
+  count?: number;
+  /** A casino not to recommend — the one whose own page this is. */
+  exclude?: string;
 }) {
-  const o = siteData.ops.find((x) => x.featured);
-  if (!o || !o.signupUrl) return null;
-
   // Rule 1, before anything else is computed.
   if (state) return null;
-  if (country && accessIn(o.slug, country) === "restricted") return null;
   /**
-   * And where the country itself bans online casinos, whatever the operator's
-   * own terms say. The gate above only asked whether the operator would take
-   * you, which is a different question: Roobet does not restrict India, so a
-   * "Visit Roobet" button was sitting on a page that opens by saying online
-   * casinos are not legal in India. Nine countries are in that position.
+   * And where the country itself bans online casinos, whatever the operators'
+   * own terms say. The per-operator gate below only asks whether the operator
+   * would take you, which is a different question: Roobet does not restrict
+   * India, so a "Visit Roobet" button was sitting on a page that opens by
+   * saying online casinos are not legal in India. Nine countries are in that
+   * position.
    */
   if (country && /not legal|banned|prohibit/i.test(countryBy(country)?.onlineCasino ?? "")) return null;
+  /**
+   * Nor in a licensed market (GB, DE, NL, ES, IT, SE ...): there a casino
+   * needs the country's own licence, and advertising one without it is an
+   * offence for the affiliate too. No partner holds one, and an operator not
+   * listing the country as restricted does not make it licensed there — with
+   * Roobet alone this was hidden by Roobet blocking GB; with three partners
+   * it put Curaçao casinos on the UK page.
+   */
+  if (country && /licensed market/i.test(countryBy(country)?.onlineCasino ?? "")) return null;
 
-  const raw = pitchFor(o.slug, context) ?? defaultPitch(o);
-  if (!raw) return null;
-  const pitch = firstSentence(raw);
+  // Partners with a live link, in the site-wide placement order (Roobet
+  // first), each gated on its own restricted list: one partner blocking a
+  // country no longer hides the others, and none is shown where it is shut.
+  const rows = inHouseOrder(siteData.ops.filter((o) => o.affiliate && o.signupUrl && o.slug !== exclude))
+    .filter((o) => !(country && accessIn(o.slug, country) === "restricted"))
+    .map((o) => {
+      const raw = pitchFor(o.slug, context) ?? defaultPitch(o);
+      return raw ? { o, pitch: firstSentence(raw) } : null;
+    })
+    .filter((r): r is { o: Operator; pitch: string } => !!r)
+    .slice(0, count);
+  if (!rows.length) return null;
 
-  const tint = brandFor(o.slug);
+  const title = heading ?? (rows.length > 1 ? "Casinos we recommend" : "Casino we recommend");
 
   return (
-    <aside
-      // A stable hook for the placement audit. Matching on the visible copy
-      // does not work: React splits `Visit {name}` into separate SSR text
-      // nodes, so a regex for the rendered sentence silently finds nothing and
-      // reports a clean geo-gate that was never actually tested.
-      data-featured-partner={o.slug}
-      style={{
-        marginTop: 44,
-        padding: "18px 20px",
-        borderRadius: 16,
-        background: "#0C1013",
-        border: "1px solid rgba(255,255,255,.07)",
-        // One hairline of brand colour is the whole visual budget here.
-        borderLeft: `2px solid ${tint}`,
-      }}
-    >
-      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 12 }}>
-        <span style={{ fontFamily: MONO, fontSize: 10, letterSpacing: ".1em", textTransform: "uppercase", color: "#C7A45C" }}>{heading}</span>
+    <aside style={{ marginTop: 44, padding: "18px 20px", borderRadius: 16, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
+        <span style={{ fontFamily: MONO, fontSize: 10, letterSpacing: ".1em", textTransform: "uppercase", color: "#C7A45C" }}>{title}</span>
       </div>
+      {rows.map(({ o, pitch }, i) => {
+        const tint = brandFor(o.slug);
+        return (
+          <div
+            key={o.slug}
+            // A stable hook for the placement audit (scripts/audit-partner-geo.mjs).
+            // Matching on the visible copy does not work: React splits
+            // `Visit {name}` into separate SSR text nodes.
+            data-featured-partner={o.slug}
+            style={{ display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap", padding: "12px 0", borderTop: i ? "1px solid rgba(255,255,255,.06)" : undefined }}
+          >
+            {/* Number, mark and text stay on one line; only the buttons wrap. */}
+            <div style={{ display: "flex", alignItems: "center", gap: 14, flex: "1 1 300px", minWidth: 0 }}>
+            <span style={{ fontFamily: MONO, fontSize: 11, color: "#5C6A72", width: 12, flex: "none" }}>{i + 1}</span>
+            <span style={{ width: 44, height: 44, flex: "none", borderRadius: 12, overflow: "hidden", border: `1px solid ${tint}55` }}>
+              <BrandMark slug={o.slug} mono={o.mono} tint={tint} radius={12} fontSize={15} />
+            </span>
 
-      <div style={{ display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>
-        <span style={{ width: 44, height: 44, flex: "none", borderRadius: 12, overflow: "hidden", border: "1px solid rgba(255,255,255,.08)" }}>
-          <BrandMark slug={o.slug} mono={o.mono} tint={tint} radius={12} fontSize={15} />
-        </span>
+            <div style={{ flex: "1 1 auto", minWidth: 0 }}>
+              <div style={{ display: "flex", alignItems: "baseline", gap: 9, flexWrap: "wrap" }}>
+                <Link href={`/casinos/${o.slug}`} className="hover:!text-accent" style={{ fontSize: 16, fontWeight: 800, letterSpacing: "-.015em", color: "#fff" }}>
+                  {o.name}
+                </Link>
+                <span style={{ fontFamily: MONO, fontSize: 11, color: "#8E9CA5" }}>{o.licence} licence</span>
+              </div>
+              <p style={{ margin: "4px 0 0", maxWidth: "72ch", fontSize: 13.5, lineHeight: 1.55, color: "#A9B8C0", textWrap: "pretty" }}>{pitch}</p>
+            </div>
+            </div>
 
-        <div style={{ flex: "1 1 260px", minWidth: 0 }}>
-          <div style={{ display: "flex", alignItems: "baseline", gap: 9, flexWrap: "wrap" }}>
-            <Link href={`/casinos/${o.slug}`} className="hover:!text-accent" style={{ fontSize: 16, fontWeight: 800, letterSpacing: "-.015em", color: "#fff" }}>
-              {o.name}
-            </Link>
-            <span style={{ fontFamily: MONO, fontSize: 11, color: "#8E9CA5" }}>{o.licence} licence</span>
+            <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
+              <Link
+                href={`/casinos/${o.slug}`}
+                className="transition-colors hover:!border-white/25"
+                style={{ padding: "10px 15px", borderRadius: 9, border: "1px solid rgba(255,255,255,.14)", fontSize: 13.5, fontWeight: 600, color: "#C6D1D7", whiteSpace: "nowrap" }}
+              >
+                Review
+              </Link>
+              <a
+                href={o.signupUrl}
+                target="_blank"
+                rel="noopener sponsored nofollow"
+                className="transition-transform hover:-translate-y-px"
+                style={{ padding: "10px 17px", borderRadius: 9, background: i === 0 ? "#FFC531" : "#00C2CC", color: i === 0 ? "#141007" : "#04191B", fontSize: 13.5, fontWeight: 700, whiteSpace: "nowrap" }}
+              >
+                Visit {o.name} →
+              </a>
+            </div>
           </div>
-          <p style={{ margin: "4px 0 0", maxWidth: "72ch", fontSize: 13.5, lineHeight: 1.55, color: "#A9B8C0", textWrap: "pretty" }}>{pitch}</p>
-        </div>
-
-        <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
-          <Link
-            href={`/casinos/${o.slug}`}
-            className="transition-colors hover:!border-white/25"
-            style={{ padding: "10px 15px", borderRadius: 9, border: "1px solid rgba(255,255,255,.14)", fontSize: 13.5, fontWeight: 600, color: "#C6D1D7", whiteSpace: "nowrap" }}
-          >
-            Read the review
-          </Link>
-          <a
-            href={o.signupUrl}
-            target="_blank"
-            rel="noopener sponsored nofollow"
-            className="transition-transform hover:-translate-y-px"
-            style={{ padding: "10px 17px", borderRadius: 9, background: "#00C2CC", color: "#04191B", fontSize: 13.5, fontWeight: 700, whiteSpace: "nowrap" }}
-          >
-            Visit {o.name} →
-          </a>
-        </div>
-      </div>
+        );
+      })}
     </aside>
   );
 }

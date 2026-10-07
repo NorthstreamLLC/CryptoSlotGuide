@@ -152,6 +152,12 @@ export function SlotDataPage({ g, review }: { g: CatalogueSlotPage; review?: Rea
         )}
       </section>
 
+      {/* Right after the returns, where most readers still are — not only at
+          the foot of the page. Same partners, same geo rules. */}
+      <section className="csg-partner-slot" style={{ maxWidth: 1100, margin: "0 auto", padding: "8px 40px 0" }}>
+        <FeaturedPartner context={{ kind: "slots" }} />
+      </section>
+
       {specs.length > 0 && (
         <section style={{ maxWidth: 1100, margin: "0 auto", padding: "36px 40px 0" }}>
           <h2 style={{ margin: "0 0 14px", fontSize: 22, fontWeight: 800, letterSpacing: "-.02em", color: "#fff" }}>Specs</h2>
@@ -218,10 +224,6 @@ export function SlotDataPage({ g, review }: { g: CatalogueSlotPage; review?: Rea
       )}
 
       {review}
-
-      <section style={{ maxWidth: 1100, margin: "0 auto", padding: "36px 40px 0" }}>
-        <FeaturedPartner context={{ kind: "general" }} heading="Casino we recommend" />
-      </section>
 
       <section style={{ maxWidth: 1100, margin: "0 auto", padding: "36px 40px 80px" }}>
         <NextSteps

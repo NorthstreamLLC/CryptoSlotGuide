@@ -602,7 +602,7 @@ export function CasinoReport({ e }: { e: EntityView }) {
 
         {/* Not on the featured operator's own profile, which would be a page
             advertising itself. */}
-        {!o.featured && <FeaturedPartner context={{ kind: "general" }} heading="Casino we also recommend" />}
+        <FeaturedPartner context={{ kind: "general" }} heading="Casinos we also recommend" exclude={o.slug} count={2} />
         <ReportIssue subject={o.name} />
         <NextSteps
           steps={[
