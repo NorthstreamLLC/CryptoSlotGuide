@@ -48,7 +48,7 @@ const INDEX_NEXT: Record<VerticalKind, { href: string; label: string; hint: stri
   ],
 };
 
-export function VerticalIndexPageClient({ kind, tabIdx, vp, after }: { kind: VerticalKind; tabIdx: number; vp: VerticalPage; after?: React.ReactNode }) {
+export function VerticalIndexPageClient({ kind, tabIdx, vp, after, heroVisual }: { kind: VerticalKind; tabIdx: number; vp: VerticalPage; after?: React.ReactNode; heroVisual?: React.ReactNode }) {
   const hasStat = vp.statLabel !== "";
   const cols = hasStat
     ? "md:grid-cols-[minmax(220px,1.5fr)_minmax(110px,1fr)_minmax(110px,1fr)_minmax(110px,1fr)_90px_130px]"
@@ -56,8 +56,9 @@ export function VerticalIndexPageClient({ kind, tabIdx, vp, after }: { kind: Ver
 
   return (
     <main style={{ background: "#07090B" }}>
-      <section style={{ borderBottom: "1px solid rgba(255,255,255,.07)", background: "radial-gradient(80% 120% at 85% 0%, rgba(0,194,204,.09), transparent 55%), radial-gradient(60% 80% at 0% 100%, rgba(155,143,196,.06), transparent 60%), #0A0D10" }}>
-        <div style={{ maxWidth: 1280, margin: "0 auto", padding: "40px 24px 40px" }}>
+      <section style={{ position: "relative", overflow: "hidden", borderBottom: "1px solid rgba(255,255,255,.07)", background: "radial-gradient(80% 120% at 85% 0%, rgba(0,194,204,.09), transparent 55%), radial-gradient(60% 80% at 0% 100%, rgba(155,143,196,.06), transparent 60%), #0A0D10" }}>
+        {heroVisual}
+        <div className={heroVisual ? "csg-hero-pad" : undefined} style={{ position: "relative", maxWidth: 1280, margin: "0 auto", padding: "40px 24px 40px" }}>
           <div style={{ fontFamily: MONO, fontSize: 11, color: "#83919A", marginBottom: 22 }}>
             <Link href="/" style={{ color: "#83919A" }}>Home</Link> / <span style={{ color: "#A8B6BE" }}>{vp.kicker}</span>
           </div>

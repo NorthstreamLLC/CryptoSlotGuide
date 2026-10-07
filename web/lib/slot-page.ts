@@ -755,3 +755,26 @@ export function studioStats(studioName: string): {
     lastRelease: dates[dates.length - 1] ?? null,
   };
 }
+
+/**
+ * Tiles for a hero's drifting art wall: the 128px copies of our own studio
+ * art, from the best-known studios first, one title per name. Decorative;
+ * every tile is art we hold the right to show (data/game-art-sources.json).
+ */
+const HERO_STUDIOS = ["Pragmatic Play", "Hacksaw Gaming", "Play'n GO", "Nolimit City", "Push Gaming", "Relax Gaming", "NetEnt", "Red Tiger", "Big Time Gaming", "ELK Studios"];
+export function heroArtTiles(n = 48): string[] {
+  const out: string[] = [];
+  const per = Math.ceil(n / HERO_STUDIOS.length);
+  for (const studio of HERO_STUDIOS) {
+    let k = 0;
+    for (const g of PAGES.values()) {
+      if (k >= per) break;
+      const rec = g.slug ? ART[g.slug] : undefined;
+      if (g.provider === studio && rec?.file) {
+        out.push(`/assets/games/t/${rec.file}`);
+        k++;
+      }
+    }
+  }
+  return out.slice(0, n);
+}
