@@ -107,8 +107,10 @@ export function TopPicks({ picks }: { picks: Pick[] }) {
       </div>
 
       <div
+        key={p.slug}
         id={`pick-${p.slug}`}
         role="tabpanel"
+        className="csg-tab-in"
         aria-live="polite"
         style={{
           padding: "22px 24px 24px",

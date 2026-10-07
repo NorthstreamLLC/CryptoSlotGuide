@@ -457,3 +457,14 @@ p {
 .csg-strip-tile { display: flex; align-items: center; gap: 9px; flex: none; padding: 7px 14px 7px 7px; border-radius: 100px; border: 1px solid rgba(255,255,255,.08); background: rgba(255,255,255,.02); transition: border-color .15s ease, background .15s ease; }
 .csg-strip-tile:hover { border-color: rgba(0,194,204,.45); background: rgba(0,194,204,.06); }
 @media (prefers-reduced-motion: reduce) { .csg-strip { overflow-x: auto; } }
+
+/* A slow light sweep across the top-ranked row, every few seconds. */
+.csg-shine { position: relative; overflow: hidden; }
+.csg-shine::after { content: ""; position: absolute; inset: 0; pointer-events: none; transform: translateX(-100%);
+  background: linear-gradient(105deg, transparent 35%, rgba(255,255,255,.055) 50%, transparent 65%);
+  animation: csg-shine 8s ease-in-out 1.5s infinite; }
+@keyframes csg-shine { 0% { transform: translateX(-100%); } 28%, 100% { transform: translateX(100%); } }
+
+/* A tab panel's content eases in when the tab changes. */
+.csg-tab-in { animation: csg-tab-in .32s ease-out both; }
+@keyframes csg-tab-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }

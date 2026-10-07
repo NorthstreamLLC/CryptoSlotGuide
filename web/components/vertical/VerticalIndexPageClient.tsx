@@ -3,6 +3,7 @@
 import type React from "react";
 import Link from "next/link";
 import type { VerticalKind, VerticalPage, VerticalRow } from "@/lib/vertical-view";
+import { CountUp } from "@/components/ui/CountUp";
 import { GuideCover } from "@/components/guides/GuideCover";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { Icon } from "@/components/ui/Icon";
@@ -69,7 +70,7 @@ export function VerticalIndexPageClient({ kind, tabIdx, vp, after, heroVisual }:
           <div style={{ display: "flex", flexWrap: "wrap", gap: 10 }}>
             {vp.stats.map(([value, label]) => (
               <span key={label} style={{ display: "inline-flex", alignItems: "baseline", gap: 8, padding: "9px 14px", borderRadius: 100, background: "rgba(255,255,255,.045)", border: "1px solid rgba(255,255,255,.08)", fontSize: 13.5, color: "#A8B6BE" }}>
-                <strong style={{ fontSize: 15, fontWeight: 800, color: "#fff" }}>{value}</strong>
+                <strong style={{ fontSize: 15, fontWeight: 800, color: "#fff" }}>{countable(value)}</strong>
                 {label}
               </span>
             ))}
@@ -292,4 +293,10 @@ function vertHref(kind: VerticalKind, tab: number): string {
   // /casino-sportsbooks and /esports-casinos are casino-list filters, so the
   // sportsbook tabs live under a query param instead of their own URL.
   return tab === 0 ? "/sportsbooks" : "/sportsbooks?tab=2";
+}
+
+/** A whole-number stat ("2,427", "46", "12 min") counts up; anything else ("96.8%", "Yes") shows as is. */
+function countable(value: string) {
+  const m = /^(\d{1,3}(?:,\d{3})*|\d+)(\s.*)?$/.exec(value);
+  return m ? <CountUp value={Number(m[1].replace(/,/g, ""))} suffix={m[2] ?? ""} ms={1100} /> : value;
 }

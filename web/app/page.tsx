@@ -44,6 +44,7 @@ import { COUNTRIES } from "@/lib/legal";
 import { LazyLegalMap } from "@/components/home/LazyLegalMap";
 import { slotPageCount } from "@/lib/slot-page";
 import { inHouseOrder } from "@/lib/house-order";
+import { CountUp } from "@/components/ui/CountUp";
 import { LogoStrip } from "@/components/home/LogoStrip";
 import { reviewPath } from "@/lib/outbound";
 
@@ -295,9 +296,9 @@ export default function HomePage() {
             </div>
 
             <div style={{ display: "flex", gap: 32, flexWrap: "wrap", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, color: "#83919A" }}>
-              <span><strong style={{ color: "#DCE5E9", fontWeight: 500 }}>{c.casinos}</strong> crypto casinos listed</span>
-              <span><strong style={{ color: "#DCE5E9", fontWeight: 500 }}>{slotPageCount().toLocaleString()}</strong> slots with published RTPs</span>
-              <span><strong style={{ color: "#DCE5E9", fontWeight: 500 }}>{c.providers}</strong> game studios profiled</span>
+              <span><strong style={{ color: "#DCE5E9", fontWeight: 500 }}><CountUp value={c.casinos} /></strong> crypto casinos listed</span>
+              <span><strong style={{ color: "#DCE5E9", fontWeight: 500 }}><CountUp value={slotPageCount()} /></strong> slots with published RTPs</span>
+              <span><strong style={{ color: "#DCE5E9", fontWeight: 500 }}><CountUp value={c.providers} /></strong> game studios profiled</span>
             </div>
           </div>
 
@@ -337,7 +338,7 @@ export default function HomePage() {
                   <span style={{ fontSize: 17, fontWeight: 700, letterSpacing: "-.022em", color: "#fff" }}>{v.title}</span>
                 </div>
                 <div style={{ display: "flex", alignItems: "baseline", gap: 8, flexWrap: "wrap", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, letterSpacing: ".05em", color: "#83919A" }}>
-                  <span style={{ color: v.tint }}>{v.count}</span>
+                  <span style={{ color: v.tint }}><CountUp value={v.count} ms={1100} /></span>
                   <span>listed</span>
                 </div>
                 <div style={{ display: "flex", alignItems: "baseline", gap: 7, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12.5, letterSpacing: ".04em", color: "#9AAAB3", minWidth: 0 }}>
