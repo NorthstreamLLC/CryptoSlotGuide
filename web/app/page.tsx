@@ -96,6 +96,9 @@ function buildFeatured() {
   ];
 }
 
+/** The studios the homepage shows: the best-known names; the rest are on /providers. */
+const TOP_STUDIOS = ["pragmatic-play", "hacksaw-gaming", "play-n-go", "nolimit-city", "push-gaming", "relax-gaming"];
+
 export default function HomePage() {
   const { ops, slots, houseGames, providers, walletRows, exchangeRows, coinDefs, coinsBy, esportsTitles, criteria } = siteData;
   const c = siteCounts;
@@ -491,19 +494,24 @@ export default function HomePage() {
 
       {/* Providers */}
       <section data-reveal style={{ maxWidth: 1400, margin: "0 auto", padding: "58px 40px 0" }}>
-        <div style={{ marginBottom: 20 }}>
-          <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 12 }}>Providers</div>
-          <h2 style={{ margin: "0 0 9px", fontSize: 32, letterSpacing: "-.03em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Who actually makes the games</h2>
-          <p style={{ margin: 0, fontSize: 15, color: "#8DA0AA", maxWidth: "70ch" }}>Studio profiles with the RTP range each one ships, their volatility signature, and how many crypto casinos carry them.</p>
+        <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 16, flexWrap: "wrap", marginBottom: 20 }}>
+          <div>
+            <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 12 }}>Providers</div>
+            <h2 style={{ margin: "0 0 9px", fontSize: 32, letterSpacing: "-.03em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Who actually makes the games</h2>
+            <p style={{ margin: 0, fontSize: 15, color: "#8DA0AA", maxWidth: "70ch" }}>The studios behind the slots crypto players reach for most, with the RTPs each one publishes.</p>
+          </div>
+          <Link href="/providers" style={{ fontSize: 14, fontWeight: 600, color: "#00C2CC", whiteSpace: "nowrap" }}>All {providers.length} studios →</Link>
         </div>
+        {/* One row of the best-known studios; every profile is a click away
+            on /providers rather than a wall of 24 cards on the homepage. */}
         <div style={{ display: "grid", minWidth: 0, gridTemplateColumns: "repeat(auto-fit,minmax(178px,1fr))", gap: 12 }}>
-          {providers.map((p) => (
+          {TOP_STUDIOS.map((s) => providers.find((p) => p.slug === s)).filter((p): p is NonNullable<typeof p> => !!p).map((p) => (
             <Link key={p.slug} href={`/providers/${p.slug}`} className="hover:!border-accent hover:!bg-[#111619]" style={{ display: "block", padding: 20, borderRadius: 13, background: "rgba(14,18,21,.72)", border: "1px solid rgba(255,255,255,.06)" }}>
               <div style={{ width: 40, height: 40, marginBottom: 16 }}>
                 <BrandMark slug={p.slug} mono={p.mono} tint={p.tint} fontSize={12} />
               </div>
               <div style={{ fontSize: 14.5, fontWeight: 600, color: "#E8EDF0", marginBottom: 5 }}>{p.name}</div>
-              <div style={{ fontSize: 12, lineHeight: 1.5, color: "#7B8A93", marginBottom: 14 }}>{p.note}</div>
+              <div style={{ fontSize: 12, lineHeight: 1.5, color: "#7B8A93", marginBottom: 14, display: "-webkit-box", WebkitLineClamp: 3, WebkitBoxOrient: "vertical", overflow: "hidden" }}>{p.note}</div>
               <div style={{ display: "flex", flexDirection: "column", gap: 6, paddingTop: 12, borderTop: "1px solid rgba(255,255,255,.07)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#83919A" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", gap: 8 }}><span>rtp</span><span style={{ color: "#C3CFD5", textAlign: "right" }}>{p.rtp}</span></div>
                 {/* The slots we hold for the studio, not the studio's own stated
@@ -514,6 +522,11 @@ export default function HomePage() {
               </div>
             </Link>
           ))}
+        </div>
+        <div style={{ marginTop: 16, textAlign: "center" }}>
+          <Link href="/providers" className="transition-colors hover:!border-white/25" style={{ display: "inline-flex", padding: "11px 18px", borderRadius: 10, border: "1px solid rgba(255,255,255,.14)", fontSize: 14, fontWeight: 700, color: "#DCE5E9" }}>
+            Read about all {providers.length} studios →
+          </Link>
         </div>
       </section>
 

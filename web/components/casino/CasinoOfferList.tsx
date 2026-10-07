@@ -64,6 +64,9 @@ function Row({ o, pos }: { o: Operator; pos: number }) {
             {o.featured && <span style={{ padding: "2px 7px", borderRadius: 100, background: `${brand}1f`, fontFamily: MONO, fontSize: 8.5, fontWeight: 700, letterSpacing: ".06em", color: brand }}>FEATURED</span>}
           </span>
           <span style={{ display: "block", fontFamily: MONO, fontSize: 10, color: "#8E9CA5", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{c.licence ?? "Crypto casino"}</span>
+          <span className="csg-review-hint" style={{ display: "inline-flex", alignItems: "center", gap: 4, marginTop: 3, fontSize: 11.5, fontWeight: 700, color: "#5FE3E8" }}>
+            Full review <Icon name="arrow" size={11} />
+          </span>
         </span>
       </Link>
 
@@ -89,21 +92,6 @@ function Row({ o, pos }: { o: Operator; pos: number }) {
           >
             {offerKind(o)}
           </span>
-          {/* The code beside the offer it goes with. Visit copies it too
-              (CodeCopier), and the toast says so. */}
-          {o.affiliate && o.signupUrl && o.promoCode && (
-            <span
-              data-copy-code={o.promoCode}
-              style={{ flex: "none", padding: "2px 8px", borderRadius: 100, border: `1px dashed ${o.featured ? brand : "#5FE3E8"}99`, background: `${o.featured ? brand : "#5FE3E8"}14`, fontFamily: MONO, fontSize: 9.5, fontWeight: 700, letterSpacing: ".04em", color: o.featured ? brand : "#5FE3E8", whiteSpace: "nowrap" }}
-            >
-              CODE {o.promoCode}
-            </span>
-          )}
-          {o.affiliate && o.signupUrl && o.promoCode && o.codePerk && (
-            <span style={{ flex: "none", padding: "2px 8px", borderRadius: 100, background: "#FFC531", color: "#141007", fontFamily: MONO, fontSize: 9, fontWeight: 800, letterSpacing: ".05em", whiteSpace: "nowrap" }}>
-              + {o.codePerk.text}
-            </span>
-          )}
         </span>
         <span style={{ display: "flex", flexWrap: "wrap", gap: "2px 12px", marginTop: 4 }}>
           {raceFor(o.slug) && (
@@ -153,6 +141,13 @@ function Row({ o, pos }: { o: Operator; pos: number }) {
           >
             Visit {o.name} <Icon name="arrow" size={14} />
           </a>
+        ) : null}
+        {o.affiliate && o.signupUrl ? (
+          // Phones only: on a desktop row the "Full review" link under the
+          // name does this job and the column has no room for a second button.
+          <Link href={href} className="md:!hidden transition-colors hover:!border-white/25 hover:!text-white" style={{ flex: "none", display: "inline-flex", alignItems: "center", justifyContent: "center", padding: "10px 12px", borderRadius: 10, border: "1px solid rgba(255,255,255,.16)", color: "#B7C4CB", fontSize: 12.5, fontWeight: 700, whiteSpace: "nowrap" }}>
+            Review
+          </Link>
         ) : (
           <Link href={href} className="transition-colors hover:!border-white/25" style={{ flex: 1, display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 6, padding: "10px 12px", borderRadius: 10, border: "1px solid rgba(255,255,255,.16)", color: "#DCE5E9", fontSize: 13, fontWeight: 700, whiteSpace: "nowrap" }}>
             Read review <Icon name="arrow" size={14} />
