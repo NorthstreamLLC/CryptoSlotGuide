@@ -76,7 +76,8 @@
     "wagerNote": "unlocks gradually as you wager",
     "payoutObserved": "Instant",
     "payoutObservedMins": 0,
-    "affiliate": true
+    "affiliate": true,
+    "promoCode": "97ecknzbtm"
   },
   {
     "slug": "shuffle",

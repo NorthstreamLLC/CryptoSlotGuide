@@ -97,7 +97,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             </a>
             {s.promoCode && (
               <span style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "13px 16px", borderRadius: 11, border: `1px dashed ${brand}80`, background: `${brand}12`, fontSize: 13.5, color: "#DCE5E9" }}>
-                Use code <strong style={{ fontFamily: MONO, fontSize: 14.5, letterSpacing: ".04em", color: brand }}>{s.promoCode.toUpperCase()}</strong>
+                Use code <strong style={{ fontFamily: MONO, fontSize: 14.5, letterSpacing: ".04em", color: brand }}>{s.promoCode}</strong>
               </span>
             )}
           </div>
