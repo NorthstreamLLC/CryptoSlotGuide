@@ -33554,6 +33554,28 @@
       "provider": "Spinomenal",
       "fetched": "2026-10-06",
       "via": "Spinomenal's own game page"
+    },
+    "win-replay": {
+      "file": "win-replay.webp",
+      "bytes": 64324,
+      "type": "image/webp",
+      "sourceUrl": "https://wazdan.com/wp-content/uploads/WinReplay_icon_600x450_webp90.webp",
+      "sourceHost": "wazdan.com",
+      "page": "https://wazdan.com/games/win-replay",
+      "provider": "Wazdan",
+      "fetched": "2026-10-07",
+      "via": "Wazdan's own game page"
+    },
+    "destiny-of-sun-and-moon": {
+      "file": "destiny-of-sun-and-moon.webp",
+      "bytes": 19974,
+      "type": "image/webp",
+      "sourceUrl": "https://www.pgsoft.com/uploads/Games/Images/651ec904-b975-42eb-83e8-5de6efb34dbb.jpg",
+      "sourceHost": "www.pgsoft.com",
+      "page": "https://www.pgsoft.com/games/112/",
+      "provider": "PG Soft",
+      "fetched": "2026-10-07",
+      "via": "PG Soft's own game page"
     }
   },
   "heldPendingRights": {
