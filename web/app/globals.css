@@ -471,3 +471,7 @@ p {
 
 /* One sign-up per page: a topic sign-up (slot RTP, races, guides) replaces the footer band. */
 body:has([data-signup]:not([data-signup="site"])) .csg-nl-band { display: none; }
+
+/* Brazil restricted-lists table (components/guides/BrazilListsTable.tsx): four columns, two on phones. */
+.csg-br-row { grid-template-columns: minmax(110px,1fr) minmax(150px,1.3fr) 104px 64px; }
+@media (max-width: 640px) { .csg-br-row { grid-template-columns: 1fr auto; row-gap: 4px !important; } }

@@ -222,5 +222,63 @@
       "**Send a small test to any address you have not used before.** The smallest amount the operator will credit, confirmed arrived, then the real amount. It costs one extra network fee and it is the only way to find out you had the network wrong while it still costs almost nothing. Minimums are low enough that this is cheap: Shuffle credits from $0.01, and {noMinimum} operators including Roobet, Stake and Duelbits state no crypto minimum at all. Rollbit sets its by coin — $5 for stablecoins, 0.0001 BTC, 0.002 ETH.",
       "**Then wait for confirmations.** The casino credits after a set number of blocks, not instantly, and that number is theirs to choose. Minutes on a fast chain, longer on Bitcoin when it is busy. A deposit that has not appeared is almost always still confirming — check the transaction on a block explorer with the hash your wallet gave you before contacting anyone. Who pays the network fee, and how to cut it, is its own guide."
     ]
+  },
+  "brazil-ban-crypto-casino-restricted-lists": {
+    "published": "2026-10-08",
+    "data": "brazil-lists",
+    "noPartners": true,
+    "key": [
+      "8 of the 46 crypto casinos we track name Brazil on their restricted lists, two weeks after Brazil banned online betting and casino games.",
+      "25 publish a full restricted list that leaves Brazil off. We re-read 12 of those on 8 October 2026; Brazil was on none of them.",
+      "One casino, Gamba, says on its own page that its services are available to users in Brazil.",
+      "A casino leaving Brazil off its list does not make playing lawful: the ban covers operators based abroad that offer bets to people in Brazil."
+    ],
+    "body": [
+      "Brazil's Provisional Measure 1.394 of 25 September 2026 prohibits fixed-odds betting nationwide, sports betting and online casino games alike, and the Ministry of Finance says it applies even when an operator based abroad offers them to people in Brazil. The licensed .bet.br sites went offline on 6 October. Crypto casinos licensed elsewhere were never part of that market, so the question is what they do now.",
+      "Every crypto casino publishes a list of the countries it does not accept, usually in its terms or help centre. We read that list for each of the 46 crypto casinos we track. The full table, each row linked to the casino's own page, is below, and the same data is a CSV.",
+      "## How we checked",
+      "On 8 October 2026 we loaded each casino's own restricted-countries page. Where the page builds its list in the browser, we loaded it in a browser. Where a page sat behind a bot check or did not load, we did not get around it: the row shows our earlier reading and is marked that way. A list we count as complete is one the casino publishes in full; where a casino refers to a list it does not publish, we mark it not complete, because a missing name there proves nothing.",
+      "## What the lists say",
+      "**8 casinos name Brazil.** Four of those pages were re-read on 8 October (BitStarz, mBit, Yeet and Spartans); the other four (Stake, Bitcasino.io, Housebets and Toshibet) sit behind bot checks, so their rows carry our earlier reading.",
+      "**25 publish a full list without Brazil.** We re-read 12 of them on 8 October, among them Roobet, Shuffle, BC.Game, Cloudbet and MetaWin; Brazil was not on any. Two needed a closer look: Roobet's page mentions Brazil only in its language menu (Português do Brasil), and 7Bit names Brazil only under restrictions for specific live games and slots, not in its casino-wide list.",
+      "**One says Brazil is welcome.** Gamba's page lists the countries it refuses and then says its services are available to users from all other countries, \"including … Brazil\".",
+      "**12 do not publish a complete list**, so whether they accept Brazil cannot be read from their terms.",
+      "## Why a missing name matters",
+      "For a player in Brazil, a casino's restricted list is not the law. The measure prohibits offering these games to people in Brazil whoever the operator is, so a casino that leaves Brazil off its list is not thereby lawful to play at from Brazil. Our Brazil country pages lead with the ban for that reason and show no casino offers.",
+      "The lists matter because they are the casinos' own statement of where they operate. Two weeks in, most of them have not changed it.",
+      "## What happens next",
+      "A provisional measure has the force of law from the day it is published, and lapses unless Congress converts it into law within 60 days, extendable once by another 60. We will re-read these lists each month while the measure stands, and when Congress acts."
+    ],
+    "sources": [
+      {
+        "label": "Ministry of Finance (SPA): Provisional Measure 1.394/2026 explained, with the timetable (2 October 2026)",
+        "url": "https://www.gov.br/fazenda/pt-br/composicao/orgaos/secretaria-de-premios-e-apostas/medida-provisoria-ndeg-1-394-2026-entenda-as-novas-regras-para-as-apostas-de-quota-fixa"
+      },
+      {
+        "label": "Provisional Measure 1.394 of 25 September 2026, Diário Oficial da União",
+        "url": "https://www.in.gov.br/web/dou/-/medida-provisoria-n-1.394-de-25-de-setembro-de-2026-734808521"
+      },
+      {
+        "label": "Constitution of Brazil, Article 62 (provisional measures)",
+        "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      }
+    ],
+    "next": [
+      {
+        "href": "/guides/brazil-bans-sports-betting-and-online-casinos",
+        "label": "What Brazil's ban covers",
+        "hint": "The measure, the timetable and its sources."
+      },
+      {
+        "href": "/legal/br",
+        "label": "Gambling law in Brazil",
+        "hint": "The regulator, the ban and its sources."
+      },
+      {
+        "href": "/legal",
+        "label": "Gambling law, every country",
+        "hint": "What each country's own regulator allows."
+      }
+    ]
   }
 }

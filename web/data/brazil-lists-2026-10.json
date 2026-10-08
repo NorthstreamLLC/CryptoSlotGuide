@@ -1,0 +1,374 @@
+{
+  "checkedOn": "2026-10-08",
+  "ban": "Provisional Measure 1.394, 25 September 2026",
+  "rows": [
+    {
+      "slug": "bitcasino-io",
+      "name": "Bitcasino.io",
+      "status": "blocks",
+      "checked": null,
+      "url": "https://bitcasino.io/help-center/help-terms-and-conditions/restricted-jurisdictions",
+      "note": null
+    },
+    {
+      "slug": "bitstarz",
+      "name": "BitStarz",
+      "status": "blocks",
+      "checked": "2026-10-08",
+      "url": "https://www.bitstarz.com/terms",
+      "note": null
+    },
+    {
+      "slug": "housebets",
+      "name": "Housebets",
+      "status": "blocks",
+      "checked": null,
+      "url": "https://www.housebets.com/legal/terms-of-service",
+      "note": null
+    },
+    {
+      "slug": "mbit",
+      "name": "mBit",
+      "status": "blocks",
+      "checked": "2026-10-08",
+      "url": "https://www.mbitcasino.io/terms/player-terms",
+      "note": null
+    },
+    {
+      "slug": "spartans",
+      "name": "Spartans",
+      "status": "blocks",
+      "checked": "2026-10-08",
+      "url": "https://spartans.com/help-center/general-terms-and-conditions",
+      "note": null
+    },
+    {
+      "slug": "stake",
+      "name": "Stake",
+      "status": "blocks",
+      "checked": null,
+      "url": "https://stake.com/policies/terms",
+      "note": null
+    },
+    {
+      "slug": "toshibet",
+      "name": "Toshibet",
+      "status": "blocks",
+      "checked": null,
+      "url": "https://toshi.bet/policies/user-agreement",
+      "note": null
+    },
+    {
+      "slug": "yeet",
+      "name": "Yeet",
+      "status": "blocks",
+      "checked": "2026-10-08",
+      "url": "https://help.yeet.com/en/articles/12052402-license-regulation",
+      "note": null
+    },
+    {
+      "slug": "gamba",
+      "name": "Gamba",
+      "status": "allows",
+      "checked": "2026-10-08",
+      "url": "https://help.gamba.com/en/articles/8271491-geo-restrictions-licensed-operation",
+      "note": "Its page says its services are available to users from all countries not listed, \"including … Brazil\"."
+    },
+    {
+      "slug": "1win",
+      "name": "1win",
+      "status": "not-listed",
+      "checked": null,
+      "url": "https://1win.com/rules",
+      "note": null
+    },
+    {
+      "slug": "500-casino",
+      "name": "500 Casino",
+      "status": "not-listed",
+      "checked": null,
+      "url": "https://500.casino/terms-of-service",
+      "note": null
+    },
+    {
+      "slug": "7bit",
+      "name": "7Bit",
+      "status": "not-listed",
+      "checked": "2026-10-08",
+      "url": "https://7bitcasino.com/terms-and-conditions",
+      "note": "Brazil appears only under restrictions for specific live games and slots (section 4.3), not the casino-wide list. Re-read 8 Oct 2026 via plain fetch."
+    },
+    {
+      "slug": "acebet",
+      "name": "Acebet",
+      "status": "not-listed",
+      "checked": null,
+      "url": "https://acebet.co/policies/terms-of-service",
+      "note": null
+    },
+    {
+      "slug": "bc-game",
+      "name": "BC.Game",
+      "status": "not-listed",
+      "checked": "2026-10-08",
+      "url": "https://bc.game/help/terms-service",
+      "note": null
+    },
+    {
+      "slug": "betplay",
+      "name": "Betplay",
+      "status": "not-listed",
+      "checked": null,
+      "url": "https://betplay.io/en/info/terms",
+      "note": null
+    },
+    {
+      "slug": "cloudbet",
+      "name": "Cloudbet",
+      "status": "not-listed",
+      "checked": "2026-10-08",
+      "url": "https://www.cloudbet.com/en/help/terms",
+      "note": null
+    },
+    {
+      "slug": "degencity",
+      "name": "Degencity",
+      "status": "not-listed",
+      "checked": null,
+      "url": "https://degencity.com/terms-of-service",
+      "note": null
+    },
+    {
+      "slug": "dicey",
+      "name": "Dicey",
+      "status": "not-listed",
+      "checked": "2026-10-08",
+      "url": "https://help.dicey.com/en/articles/12611841-restricted-regions",
+      "note": null
+    },
+    {
+      "slug": "duel",
+      "name": "Duel",
+      "status": "not-listed",
+      "checked": "2026-10-08",
+      "url": "https://duel.com/policies/tos",
+      "note": null
+    },
+    {
+      "slug": "duelbits",
+      "name": "Duelbits",
+      "status": "not-listed",
+      "checked": null,
+      "url": "https://help.duelbits.com/en/articles/16451925-what-countries-does-duelbits-accept",
+      "note": null
+    },
+    {
+      "slug": "flush",
+      "name": "Flush",
+      "status": "not-listed",
+      "checked": "2026-10-08",
+      "url": "https://flush.com/terms-of-service/",
+      "note": null
+    },
+    {
+      "slug": "fortunejack",
+      "name": "FortuneJack",
+      "status": "not-listed",
+      "checked": null,
+      "url": "https://fortunejack.com/faq/terms_and_conditions",
+      "note": null
+    },
+    {
+      "slug": "gamdom",
+      "name": "Gamdom",
+      "status": "not-listed",
+      "checked": null,
+      "url": "https://gamdom.com/policy/terms-of-service",
+      "note": null
+    },
+    {
+      "slug": "jackpotbet",
+      "name": "JackpotBet",
+      "status": "not-listed",
+      "checked": "2026-10-08",
+      "url": "https://help.jackpot.bet/en/articles/9007350-restricted-regions",
+      "note": null
+    },
+    {
+      "slug": "metawin",
+      "name": "MetaWin",
+      "status": "not-listed",
+      "checked": "2026-10-08",
+      "url": "https://metawin.com/terms-and-conditions/",
+      "note": null
+    },
+    {
+      "slug": "rainbet",
+      "name": "Rainbet",
+      "status": "not-listed",
+      "checked": null,
+      "url": "https://rainbet.com/terms",
+      "note": null
+    },
+    {
+      "slug": "razed",
+      "name": "Razed",
+      "status": "not-listed",
+      "checked": null,
+      "url": "https://www.razed.com/policy/terms/",
+      "note": null
+    },
+    {
+      "slug": "roobet",
+      "name": "Roobet",
+      "status": "not-listed",
+      "checked": "2026-10-08",
+      "url": "https://help.roobet.com/en/articles/13686927-roobet-restricted-regions",
+      "note": "Brazil appears only in the page language menu (Português do Brasil), not the list."
+    },
+    {
+      "slug": "shuffle",
+      "name": "Shuffle",
+      "status": "not-listed",
+      "checked": "2026-10-08",
+      "url": "https://shuffle.com/info/terms",
+      "note": null
+    },
+    {
+      "slug": "sportsbet-io",
+      "name": "Sportsbet.io",
+      "status": "not-listed",
+      "checked": null,
+      "url": "https://sportsbet.io/help-centre/help-other/help-other-terms-and-conditions/restricted-jurisdictions",
+      "note": null
+    },
+    {
+      "slug": "thrill",
+      "name": "Thrill",
+      "status": "not-listed",
+      "checked": "2026-10-08",
+      "url": "https://intercom.help/thrill/en/articles/10078718-why-isn-t-thrill-available-in-my-region",
+      "note": null
+    },
+    {
+      "slug": "wager-com",
+      "name": "Wager.com",
+      "status": "not-listed",
+      "checked": "2026-10-08",
+      "url": "https://wager.com/policy/term-and-conditions/",
+      "note": null
+    },
+    {
+      "slug": "whale-io",
+      "name": "Whale.io",
+      "status": "not-listed",
+      "checked": null,
+      "url": "https://whale.io/restricted-jurisdictions",
+      "note": null
+    },
+    {
+      "slug": "winna",
+      "name": "Winna",
+      "status": "not-listed",
+      "checked": null,
+      "url": "https://winna.com/tos",
+      "note": null
+    },
+    {
+      "slug": "betfury",
+      "name": "BetFury",
+      "status": "incomplete",
+      "checked": null,
+      "url": "https://docs.betfury.com/betfury/terms-of-services/terms-and-conditions",
+      "note": null
+    },
+    {
+      "slug": "bluff",
+      "name": "Bluff",
+      "status": "incomplete",
+      "checked": null,
+      "url": "https://www.bluff.com/terms",
+      "note": null
+    },
+    {
+      "slug": "coincasino",
+      "name": "CoinCasino",
+      "status": "incomplete",
+      "checked": null,
+      "url": "https://www.coincasino.com/",
+      "note": null
+    },
+    {
+      "slug": "cybet",
+      "name": "Cybet",
+      "status": "incomplete",
+      "checked": null,
+      "url": "https://cybet.com/terms",
+      "note": null
+    },
+    {
+      "slug": "degen",
+      "name": "Degen",
+      "status": "incomplete",
+      "checked": null,
+      "url": "https://www.degen.com/policies/terms-of-service",
+      "note": null
+    },
+    {
+      "slug": "dustbit",
+      "name": "Dustbit",
+      "status": "incomplete",
+      "checked": null,
+      "url": "https://dustbit.com/legal/terms",
+      "note": null
+    },
+    {
+      "slug": "goated",
+      "name": "Goated",
+      "status": "incomplete",
+      "checked": null,
+      "url": "https://www.goated.com/policies/terms",
+      "note": null
+    },
+    {
+      "slug": "qzino",
+      "name": "Qzino",
+      "status": "incomplete",
+      "checked": null,
+      "url": "https://qzino.tech/docs/Qzino_Terms_and_Conditions.pdf",
+      "note": null
+    },
+    {
+      "slug": "rollbit",
+      "name": "Rollbit",
+      "status": "incomplete",
+      "checked": null,
+      "url": "https://help.rollbit.com/en/articles/6176539-restricted-countries",
+      "note": null
+    },
+    {
+      "slug": "shock",
+      "name": "Shock",
+      "status": "incomplete",
+      "checked": null,
+      "url": "https://www.shock.com/policies/terms",
+      "note": null
+    },
+    {
+      "slug": "solcasino",
+      "name": "Solcasino",
+      "status": "incomplete",
+      "checked": null,
+      "url": "https://docs.solcasino.io/rules-and-conditions/terms-and-condition",
+      "note": null
+    },
+    {
+      "slug": "vave",
+      "name": "Vave",
+      "status": "incomplete",
+      "checked": null,
+      "url": "https://vave.com/information/terms",
+      "note": null
+    }
+  ]
+}

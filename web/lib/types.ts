@@ -319,6 +319,8 @@ export interface GuideBody {
   published?: string;
   /** Where the reader goes next, when the guide has better places than the defaults. */
   next?: { href: string; label: string; hint: string }[];
+  /** No casino offers on this guide: one about a country's ban, say, which an offer would undercut. */
+  noPartners?: boolean;
 }
 /** Keyed by guide slug. */
 export type GuideBodies = Record<string, GuideBody>;

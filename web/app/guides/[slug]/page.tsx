@@ -9,6 +9,7 @@ import { NextSteps } from "@/components/layout/NextSteps";
 import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
 import { EmailSignup } from "@/components/ui/EmailSignup";
 import { GuideCover } from "@/components/guides/GuideCover";
+import { BrazilListsTable } from "@/components/guides/BrazilListsTable";
 import { KycTiersTable } from "@/components/guides/KycTiersTable";
 
 /**
@@ -67,7 +68,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const related = guideRows.filter((r) => r.slug !== g.slug).slice(0, 4);
   // A guide may render a dataset under its prose. Named rather than inferred,
   // so a guide only gets a table when it was written to have one.
-  const DATA_BLOCKS: Record<string, () => React.ReactNode> = { "kyc-tiers": () => <KycTiersTable /> };
+  const DATA_BLOCKS: Record<string, () => React.ReactNode> = { "kyc-tiers": () => <KycTiersTable />, "brazil-lists": () => <BrazilListsTable /> };
   const dataBlock = body.data ? DATA_BLOCKS[body.data] : undefined;
 
   return (
@@ -165,7 +166,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             />
           )}
         </div>
-        <FeaturedPartner context={{ kind: "general" }} />
+        {!body.noPartners && <FeaturedPartner context={{ kind: "general" }} />}
         <NextSteps
           steps={body.next ?? [
             { href: "/guides", label: "All guides", hint: "The operational detail behind the reviews, kept current." },
