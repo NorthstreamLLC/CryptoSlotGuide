@@ -7,6 +7,7 @@ import { articleSchema, breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { NextSteps } from "@/components/layout/NextSteps";
 import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
+import { EmailSignup } from "@/components/ui/EmailSignup";
 import { GuideCover } from "@/components/guides/GuideCover";
 import { KycTiersTable } from "@/components/guides/KycTiersTable";
 
@@ -136,6 +137,24 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
               <span style={{ fontSize: 15, fontWeight: 600, color: "#E8EDF0", lineHeight: 1.35, textWrap: "pretty" }}>{r.title}</span>
             </Link>
           ))}
+        </div>
+        <div style={{ marginTop: 32 }}>
+          {g.category === "Law" ? (
+            <EmailSignup
+              source={`guide:${g.slug}`.slice(0, 40)}
+              eyebrow="Law changes"
+              title="Hear when the rules change"
+              sub="Bans, new licences and casinos leaving a country: when a law we cover changes, it's at the top of our weekly email, with the source. One email a week, unsubscribe any time."
+              button="Get law updates"
+            />
+          ) : (
+            <EmailSignup
+              source={`guide:${g.slug}`.slice(0, 40)}
+              eyebrow="Weekly email"
+              title="Guides like this, once a week"
+              sub="New guides, what changed at each casino this week and the week's biggest races. One email a week, unsubscribe any time."
+            />
+          )}
         </div>
         <FeaturedPartner context={{ kind: "general" }} />
         <NextSteps

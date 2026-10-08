@@ -8,6 +8,7 @@ import { brandFor, casinoFacts } from "@/lib/casino-facts";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { Icon } from "@/components/ui/Icon";
 import { NextSteps } from "@/components/layout/NextSteps";
+import { EmailSignup } from "@/components/ui/EmailSignup";
 import { HeroDrift } from "@/components/ui/HeroDrift";
 import { CountUp } from "@/components/ui/CountUp";
 import { OfferCta } from "@/components/ui/OfferCta";
@@ -112,6 +113,15 @@ export default function Page() {
         <p style={{ margin: "18px 0 0", maxWidth: "80ch", fontSize: 13.5, lineHeight: 1.6, color: "#7B8A93" }}>
           Races are sorted by prize money a month (daily pools x30, weekly x4.3). Most rank players by amount wagered, some by points weighted to each game&apos;s house edge; each casino&apos;s report explains its own rules.
         </p>
+        <div style={{ marginTop: 32 }}>
+          <EmailSignup
+            source="races"
+            eyebrow="Races, weekly"
+            title="This week's biggest races, in one email"
+            sub="New races, prize pools that went up or down, and raffles worth entering — taken from each casino's own pages, like the table above. One email a week, unsubscribe any time."
+            button="Get the races email"
+          />
+        </div>
         <NextSteps
           steps={[
             { href: "/bonuses", label: "Bonuses & rewards", hint: "Welcome offers, rakeback and cashback with the wagering each carries." },

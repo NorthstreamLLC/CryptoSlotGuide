@@ -1,9 +1,9 @@
 import { EmailSignup } from "@/components/ui/EmailSignup";
 
-/** Site-wide newsletter sign-up, shown above the footer on every page. */
+/** Site-wide newsletter sign-up above the footer, hidden (globals.css) on pages that carry their own topic sign-up, so no page asks twice. */
 export function NewsletterBand() {
   return (
-    <section style={{ background: "#07090B", borderTop: "1px solid rgba(255,255,255,.06)" }}>
+    <section className="csg-nl-band" style={{ background: "#07090B", borderTop: "1px solid rgba(255,255,255,.06)" }}>
       <div style={{ maxWidth: 1180, margin: "0 auto", padding: "44px 24px" }}>
         <EmailSignup
           source="site"

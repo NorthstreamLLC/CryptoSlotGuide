@@ -14,6 +14,7 @@ import { CasinoBonuses } from "./CasinoBonuses";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { GlanceCard } from "./GlanceCard";
 import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
+import { EmailSignup } from "@/components/ui/EmailSignup";
 import { thumbOf } from "@/lib/thumb";
 import { ReportIssue } from "@/components/ui/ReportIssue";
 
@@ -382,6 +383,17 @@ export function EntityReviewPageClient({ e, review, chrome }: { e: EntityView; r
         </div>
 
         {review}
+        {e.type === "slot" && (
+          <div style={{ marginTop: 32 }}>
+            <EmailSignup
+              source={`rtp:${e.slug}`.slice(0, 40)}
+              eyebrow="RTP Watch"
+              title={`Know which ${e.name} build you're playing`}
+              sub={`When RTP Watch records which build a casino runs for ${e.name}, or the studio changes its published figures, it's in our weekly email, along with the week's biggest races. One email a week, unsubscribe any time.`}
+              button="Get RTP updates"
+            />
+          </div>
+        )}
         {!isCasino && <FeaturedPartner context={e.type === "slot" ? { kind: "slots" } : e.type === "market" ? { kind: "sports" } : { kind: "wallet" }} />}
         <ReportIssue subject={e.name} />
         <NextSteps steps={chrome.next} />

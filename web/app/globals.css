@@ -468,3 +468,6 @@ p {
 /* A tab panel's content eases in when the tab changes. */
 .csg-tab-in { animation: csg-tab-in .32s ease-out both; }
 @keyframes csg-tab-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+/* One sign-up per page: a topic sign-up (slot RTP, races, guides) replaces the footer band. */
+body:has([data-signup]:not([data-signup="site"])) .csg-nl-band { display: none; }

@@ -2,6 +2,7 @@ import type React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
+import { EmailSignup } from "@/components/ui/EmailSignup";
 import { NextSteps } from "@/components/layout/NextSteps";
 import { publishableArt, rtpSpread, rtpVersions, singleRtp, rtpSource, slotSpecs, type CatalogueSlotPage } from "@/lib/slot-page";
 import { isTopSlot } from "@/lib/top-slots";
@@ -151,6 +152,21 @@ export function SlotDataPage({ g, review }: { g: CatalogueSlotPage; review?: Rea
         </p>
         )}
       </section>
+
+      {/* A slot sold in several RTP builds is the one where knowing which
+          build a casino ships matters, so the sign-up sits here, on those
+          pages only. Same weekly email; the source tags the slot. */}
+      {versions.length > 1 && (
+        <section style={{ maxWidth: 1100, margin: "0 auto", padding: "28px 40px 0" }}>
+          <EmailSignup
+            source={`rtp:${g.slug ?? ""}`.slice(0, 40)}
+            eyebrow="RTP Watch"
+            title={`Know which ${g.name} build you're playing`}
+            sub={`${g.name} ships in ${versions.length} RTP builds. When RTP Watch records which build a casino runs, or a studio changes its published figures, it's in our weekly email, along with the week's biggest races. One email a week, unsubscribe any time.`}
+            button="Get RTP updates"
+          />
+        </section>
+      )}
 
       {/* Right after the returns, where most readers still are — not only at
           the foot of the page. Same partners, same geo rules. */}

@@ -22,7 +22,21 @@ const isValidEmail = (v: string) => {
   return t.length <= 254 && VALID_EMAIL.test(t) && !t.includes("..");
 };
 
-export function EmailSignup({ source, title = "Join the weekly bonus & races newsletter", sub = "The best affiliate casino bonuses, the biggest races, raffles, leaderboards and what changed at each casino this week. One email a week, no spam, unsubscribe any time." }: { source: string; title?: string; sub?: string }) {
+/**
+ * Every placement signs up to the same weekly email; `source` (stored as
+ * signup_source in SendGrid, 40 chars max) records which page and topic
+ * brought the reader — "rtp:sweet-bonanza", "races", "guide:…" — so the list
+ * can be segmented and each reader's email can lead with what they came for.
+ * A placement's wording must only promise what the weekly email carries.
+ */
+export function EmailSignup({
+  source,
+  title = "Join the weekly bonus & races newsletter",
+  sub = "The best affiliate casino bonuses, the biggest races, raffles, leaderboards and what changed at each casino this week. One email a week, no spam, unsubscribe any time.",
+  eyebrow = "Free weekly updates",
+  button = "Join newsletter",
+  done = "You're on the list — the next digest will land in your inbox.",
+}: { source: string; title?: string; sub?: string; eyebrow?: string; button?: string; done?: string }) {
   const live = process.env.NEXT_PUBLIC_NEWSLETTER_ON === "1";
   const [email, setEmail] = useState("");
   const [agree, setAgree] = useState(false);
@@ -62,12 +76,12 @@ export function EmailSignup({ source, title = "Join the weekly bonus & races new
   }
 
   return (
-    <section style={{ padding: "26px 28px", borderRadius: 18, background: "radial-gradient(120% 120% at 100% 0%, rgba(0,194,204,.12), transparent 55%), #0C1013", border: "1px solid rgba(0,194,204,.22)" }}>
-      <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 8 }}>Free weekly updates</div>
+    <section data-signup={source} style={{ padding: "26px 28px", borderRadius: 18, background: "radial-gradient(120% 120% at 100% 0%, rgba(0,194,204,.12), transparent 55%), #0C1013", border: "1px solid rgba(0,194,204,.22)" }}>
+      <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 8 }}>{eyebrow}</div>
       <h2 style={{ margin: "0 0 6px", fontSize: 22, fontWeight: 800, letterSpacing: "-.02em", color: "#fff" }}>{title}</h2>
       <p style={{ margin: "0 0 16px", maxWidth: "60ch", fontSize: 14, lineHeight: 1.6, color: "#A8B6BE" }}>{sub}</p>
       {state === "done" ? (
-        <div style={{ fontSize: 15, fontWeight: 700, color: "#7BE0B8" }}>You&apos;re on the list — the next digest will land in your inbox.</div>
+        <div style={{ fontSize: 15, fontWeight: 700, color: "#7BE0B8" }}>{done}</div>
       ) : (
         <form onSubmit={submit} style={{ display: "flex", flexDirection: "column", gap: 10 }}>
           {/*
@@ -91,9 +105,9 @@ export function EmailSignup({ source, title = "Join the weekly bonus & races new
             style={{ position: "absolute", left: -9999, width: 1, height: 1, opacity: 0 }}
           />
           <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-            <label htmlFor={`email-${source}`} style={{ position: "absolute", width: 1, height: 1, overflow: "hidden", clip: "rect(0 0 0 0)" }}>Email address</label>
+            <label htmlFor={`email-${source.replace(/[^a-z0-9-]/gi, "-")}`} style={{ position: "absolute", width: 1, height: 1, overflow: "hidden", clip: "rect(0 0 0 0)" }}>Email address</label>
             <input
-              id={`email-${source}`}
+              id={`email-${source.replace(/[^a-z0-9-]/gi, "-")}`}
               type="email"
               required
               value={email}
@@ -108,7 +122,7 @@ export function EmailSignup({ source, title = "Join the weekly bonus & races new
               disabled={!canSubmit}
               style={{ padding: "12px 20px", borderRadius: 10, border: 0, background: canSubmit ? "#00C2CC" : "#2A3439", color: canSubmit ? "#0A0D0F" : "#7B8A93", fontSize: 14, fontWeight: 800, cursor: canSubmit ? "pointer" : "not-allowed" }}
             >
-              {state === "sending" ? "Joining…" : live ? "Join newsletter" : "Opens at launch"}
+              {state === "sending" ? "Joining…" : live ? button : "Opens at launch"}
             </button>
           </div>
           <label style={{ display: "flex", alignItems: "flex-start", gap: 8, fontSize: 12.5, lineHeight: 1.5, color: "#8DA0AA" }}>
