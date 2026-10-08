@@ -22,6 +22,8 @@ const nextConfig: NextConfig = {
       // /casinos/<slug> is a review; the list itself lives at /crypto-casinos.
       { source: "/casinos", destination: "/crypto-casinos", permanent: true },
       { source: "/casino-sign-up-bonuses", destination: "/bonuses", permanent: true },
+      // A 2025 roundup written as "2025 is shaping up..."; the 2026 list replaces it.
+      { source: "/the-best-crypto-slots-to-play-in-2025", destination: "/the-best-crypto-slots-with-high-rtp-in-2026", permanent: true },
       { source: "/sample-page", destination: "/", permanent: true },
       { source: "/home", destination: "/", permanent: true },
       { source: "/author/:name", destination: "/blog", permanent: true },

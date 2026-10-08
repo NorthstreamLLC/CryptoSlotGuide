@@ -20,7 +20,11 @@ export async function generateMetadata({ params }: { params: Promise<{ country: 
   return pageMetadata(
     c.code === "US" ? `Prediction markets in the United States: ${fiat} regulated venues` : `Prediction markets in ${c.name}: ${n} of ${total} crypto venues available`,
     `Which prediction markets accept users in ${c.name} — Polymarket, Limitless, Overtime, Myriad, Kalshi and the regulated US venues — each from the venue's own restricted list.`,
-    `/prediction-markets/in/${country}`
+    `/prediction-markets/in/${country}`,
+    undefined,
+    // The US page has its own regulated-venue content; the rest are one
+    // template with a country swapped in, so they stay out of the index.
+    { noindex: c.code !== "US" }
   );
 }
 

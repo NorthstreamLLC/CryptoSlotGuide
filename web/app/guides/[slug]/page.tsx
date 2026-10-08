@@ -41,6 +41,13 @@ function emphasise(text: string) {
   );
 }
 
+/** guideRows.json's "updated" ("16 Sep") as an ISO date; every guide was last passed in 2026. */
+function updatedIso(d: string): string | null {
+  const m = /^(\d{1,2}) ([A-Z][a-z]{2})$/.exec(d.trim());
+  const mon = m ? "JanFebMarAprMayJunJulAugSepOctNovDec".indexOf(m[2]) / 3 + 1 : 0;
+  return m && mon >= 1 ? `2026-${String(mon).padStart(2, "0")}-${m[1].padStart(2, "0")}` : null;
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const { guideRows } = siteData;
@@ -55,6 +62,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const g = guideRows.find((r) => r.slug === slug);
   const body = guideBodies[slug];
   if (!g || !body) notFound();
+  const updated = updatedIso(g.updated);
 
   const related = guideRows.filter((r) => r.slug !== g.slug).slice(0, 4);
   // A guide may render a dataset under its prose. Named rather than inferred,
@@ -67,7 +75,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       <JsonLd
         data={[
           breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Guides", path: "/guides" }, { name: g.title, path: `/guides/${slug}` }]),
-          ...(body.published ? [articleSchema(g.title, fill(g.standfirst, siteData), `/guides/${slug}`, body.published, body.published)] : []),
+          ...(updated ? [articleSchema(g.title, fill(g.standfirst, siteData), `/guides/${slug}`, body.published ?? updated, updated)] : []),
         ]}
       />
       <article style={{ maxWidth: 820, margin: "0 auto", padding: "52px 40px 40px" }}>
@@ -85,6 +93,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         <div style={{ display: "flex", alignItems: "center", gap: 14, padding: "14px 0", borderTop: "1px solid rgba(255,255,255,.07)", borderBottom: "1px solid rgba(255,255,255,.07)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#83919A", marginBottom: 32 }}>
           <span style={{ width: 26, height: 26, flex: "none", borderRadius: "50%", background: "#1B2226", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 9, color: "#8DA0AA" }}>CS</span>
           <span>CryptoSlotGuide editorial desk</span>
+          {updated && <span style={{ marginLeft: "auto" }}>Updated <time dateTime={updated}>{g.updated} 2026</time></span>}
         </div>
 
         <div style={{ padding: "24px 28px", borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)", marginBottom: 32 }}>

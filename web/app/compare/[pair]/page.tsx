@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ pair: str
   const p = parsePair(pair);
   if (!p) return {};
   const [a, b] = p;
-  return pageMetadata(`${a.name} vs ${b.name}: bonuses, withdrawals and rewards compared`, `${a.name} or ${b.name}? Welcome offers, wagering, withdrawal speed, races, rakeback, coins, sportsbook and licence side by side, from each casino's own terms.`, `/compare/${pair}`);
+  return pageMetadata(`${a.name} vs ${b.name}: bonuses, withdrawals and rewards compared`, `${a.name} or ${b.name}? Welcome offers, wagering, withdrawal speed, races, rakeback, coins, sportsbook and licence side by side, from each casino's own terms.`, `/compare/${pair}`, undefined, { noindex: true });
 }
 
 export default async function Page({ params }: { params: Promise<{ pair: string }> }) {

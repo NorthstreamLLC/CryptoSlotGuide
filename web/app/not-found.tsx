@@ -19,7 +19,7 @@ const LINKS = [
 
 export default function NotFound() {
   return (
-    <section style={{ maxWidth: 1100, margin: "0 auto", padding: "72px 24px 80px" }}>
+    <main style={{ maxWidth: 1100, margin: "0 auto", padding: "72px 24px 80px" }}>
       <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, letterSpacing: ".12em", color: "#00C2CC", marginBottom: 14 }}>ERROR 404</div>
       <h1 style={{ margin: "0 0 12px", fontSize: "clamp(34px, 5vw, 56px)", lineHeight: 1.02, letterSpacing: "-.035em", fontWeight: 800, color: "#fff" }}>
         This page isn&apos;t here.
@@ -51,6 +51,6 @@ export default function NotFound() {
       </div>
 
       <FeaturedPartner context={{ kind: "general" }} />
-    </section>
+    </main>
   );
 }

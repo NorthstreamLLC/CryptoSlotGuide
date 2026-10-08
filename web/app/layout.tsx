@@ -57,7 +57,7 @@ export default function RootLayout({
         <a href="#main" className="csg-skip">Skip to content</a>
         <Header counts={siteCounts} navTabs={buildNavTabs(siteCounts)} />
         <RevealObserver />
-        <main id="main" className="flex-1">{children}</main>
+        <div id="main" className="flex-1">{children}</div>
         <NewsletterBand />
         <Footer />
         <CodeCopier />

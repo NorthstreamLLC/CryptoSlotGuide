@@ -19,15 +19,21 @@ import { ogCardPath } from "./og";
  * the same "derived, not hand-authored twice" pattern the rest of the
  * codebase follows (see lib/entity-view.ts's header comment).
  */
-export function pageMetadata(title: string, description: string, path: string, image?: string) {
+export function pageMetadata(title: string, description: string, path: string, image?: string, opts: { noindex?: boolean } = {}) {
   const url = `${SITE_URL}${path}`;
   // A page with no picture of its own still gets a card bearing its title,
   // so a shared link never shows as a blank box.
   const images = [image ? { url: image } : { url: ogCardPath(title, path), width: 1200, height: 630, alt: title }];
   return {
-    title,
+    // The layout appends " | CryptoSlotGuide" (18 characters). Search results
+    // cut titles at about 60, so a long title goes out without it rather than
+    // losing its own last words.
+    title: title.length > 44 ? { absolute: title } : title,
     description,
     alternates: { canonical: path },
+    // Pages kept for visitors but out of the index until they carry enough of
+    // their own content (see app/sitemap.ts, which leaves them out too).
+    ...(opts.noindex ? { robots: { index: false, follow: true } } : {}),
     openGraph: {
       title,
       description,

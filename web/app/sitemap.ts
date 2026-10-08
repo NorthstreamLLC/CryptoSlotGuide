@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { fiatMarkets } from "@/lib/fiat";
-import { allVenues, predCountries } from "@/lib/prediction-markets";
+import { allVenues } from "@/lib/prediction-markets";
 import { sportsbookOps } from "@/lib/sports";
 import { catalogueStudios } from "@/lib/studio-pages";
 import { siteData } from "@/lib/site-data";
@@ -8,7 +8,6 @@ import { SITE_URL } from "@/lib/seo";
 import { sweepsSorted } from "@/lib/sweeps";
 import { US_STATES, COUNTRIES } from "@/lib/legal";
 import { STUDIOS } from "@/lib/studios";
-import { versusPairs, pairSlug } from "@/lib/versus";
 import { countryPages, COIN_PAGES, casinosForCoin } from "@/lib/landing";
 import { LEGACY_ITEMS, LEGACY_CATEGORIES } from "@/lib/legacy";
 import { cataloguePageSlugs } from "@/lib/slot-page";
@@ -90,19 +89,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/licensed-casinos",
     ...fiatMarkets().map((m) => slugPath("/licensed-casinos", m.slug)),
     ...allVenues().map(({ v }) => slugPath("/prediction-markets", v.slug)),
-    ...predCountries().map((c) => slugPath("/prediction-markets/in", c.code.toLowerCase())),
+    // Other countries' pages are noindex (see their generateMetadata).
+    slugPath("/prediction-markets/in", "us"),
     ...[...new Set([...providers.map((p) => p.slug), ...STUDIOS.map((st) => st.slug), ...catalogueStudios().map((c) => c.slug)])].map((sl) => slugPath("/providers", sl)),
     ...walletRows.map((w) => slugPath("/wallets", w.slug)),
     ...exchangeRows.map((x) => slugPath("/exchanges", x.slug)),
     ...esportsTitles.map((t) => slugPath("/betting", slug(t.name))),
     ...guideRows.map((g) => slugPath("/guides", g.slug)),
     ...houseGames.map((h) => slugPath("/house-games", h.slug)),
-    ...LEGACY_ITEMS.map((i) => slugPath("", i.slug)),
+    // Old posts that next.config.ts now redirects stay out: a sitemap lists final addresses only.
+    ...LEGACY_ITEMS.filter((i) => !["top-crypto-casinos", "casino-sign-up-bonuses", "the-best-crypto-slots-to-play-in-2025"].includes(i.slug)).map((i) => slugPath("", i.slug)),
     ...LEGACY_CATEGORIES.map((c) => slugPath("/category", c.slug)),
     ...countryPages().map(({ c }) => slugPath("/crypto-casinos/in", c.code.toLowerCase())),
     ...US_STATES.map((st) => slugPath("/us-casinos/in", st.code.toLowerCase())),
     ...COIN_PAGES.filter((c) => casinosForCoin(c.ticker).length >= 3).map((c) => slugPath("/crypto-casinos/accepting", c.slug)),
-    ...versusPairs().map(([a, b]) => slugPath("/compare", pairSlug(a, b))),
+    // Casino-vs-casino pages are noindex until they carry their own analysis.
     ...sweepsSorted().map((w) => slugPath("/sweepstakes-casinos", w.slug)),
     ...US_STATES.map((st) => slugPath("/legal/us", st.code.toLowerCase())),
     ...COUNTRIES.filter((c) => c.code !== "US").map((c) => slugPath("/legal", c.code.toLowerCase())),
