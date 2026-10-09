@@ -373,6 +373,7 @@ function rawNavTabs(c: SiteCounts): NavTab[] {
             {
               title: "Browse",
               links: [
+                { label: "Roobet sportsbook · our pick", href: sportsbookHref("roobet"), brand: "roobet" },
                 { label: `All ${c.books} sportsbooks`, href: "/sportsbooks" },
                 { label: "Compare side by side", href: "/compare" },
                 { label: "Sportsbook margin, explained", href: "/guides/sportsbook-margin-explained" },

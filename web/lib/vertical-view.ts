@@ -17,7 +17,7 @@ import { tintFor } from "./logo";
 import { catalogueTotals } from "./slot-db";
 import { TOP_SLOTS } from "./top-slots";
 import { brandFor } from "./casino-facts";
-import { sportsFacts, sportsbookOps, sportsbookOrder, sportsOffers, sportsPromoLine, booksForTitle, esportsLabel, maxPayoutShort, type SportsOffer } from "./sports";
+import { sportsFacts, sportsbookOps, sportsbookOrder, sportsOffers, sportsPick, sportsPromoLine, booksForTitle, esportsLabel, maxPayoutShort, type SportsOffer } from "./sports";
 import { hasVol, hasRtp, hasMaxWin, maxWinLabel, rtpLabel } from "./slot-facts";
 import {
   lowestTakerFee,
@@ -280,7 +280,7 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
     }
     return {
       ...base,
-      offers: sportsOffers(),
+      offers: [sportsPick(), ...sportsOffers()].filter((x): x is SportsOffer => !!x),
       // Standing-offer books first (lib/sports.ts), then the index order.
       rows: sportsbookOrder().map((o) => {
         const s = sportsFacts(o.slug);

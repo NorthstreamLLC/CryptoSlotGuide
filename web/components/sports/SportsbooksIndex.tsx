@@ -8,6 +8,7 @@ import { tintFor } from "@/lib/logo";
 import {
   sportsFacts,
   sportsOffers,
+  sportsPick,
   sportsOnlyRaces,
   sharedRaces,
   sportsBoosts,
@@ -88,6 +89,9 @@ export function SportsbooksIndex() {
   const books = sportsbookOrder();
   const ops = new Map(books.map((o) => [o.slug, o]));
   const offers = sportsOffers();
+  // Our pick leads the cards even without a fixed welcome offer; its card says so.
+  const pick = sportsPick();
+  const cards = pick ? [pick, ...offers] : offers;
   const races = sportsOnlyRaces();
   const shared = sharedRaces();
   const boosts = sportsBoosts();
@@ -141,9 +145,9 @@ export function SportsbooksIndex() {
       </section>
 
       <div style={{ maxWidth: 1280, margin: "0 auto", padding: "40px 24px 24px" }}>
-        <Section id="welcome-offers" kicker="Top welcome bonus" title="The best sports welcome offers" sub="The books that publish a standing sports welcome offer, in the order we put them forward. Most books run rotating promotions instead; those are in the full list below.">
+        <Section id="welcome-offers" kicker="Top welcome bonus" title="The best sports welcome offers" sub="Our pick first, then the books that publish a standing sports welcome offer, in the order we put them forward. Most books run rotating promotions instead; those are in the full list below.">
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(270px, 1fr))", gap: 12 }}>
-            {offers.map((x, i) => (
+            {cards.map((x, i) => (
               <div key={x.slug} data-reveal className="csg-lift" style={{ ["--reveal-delay" as string]: `${i * 50}ms`, display: "flex", flexDirection: "column", gap: 10, padding: "18px 20px", borderRadius: 16, background: i === 0 ? `radial-gradient(120% 120% at 100% 0%, ${GOLD}1f, transparent 55%), #0E1316` : "#0E1316", border: `1px solid ${i === 0 ? `${GOLD}59` : "rgba(255,255,255,.08)"}`, minWidth: 0 }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
                   <div style={{ width: 44, height: 44, flex: "none" }}>
@@ -160,9 +164,10 @@ export function SportsbooksIndex() {
                   {x.minOdds && <div><span style={{ color: "#8E9CA5" }}>Minimum odds · </span>{x.minOdds}</div>}
                   {x.sportsRace && <div style={{ color: "#DCE5E9" }}><span style={{ color: "#8E9CA5" }}>Sports race · </span>{x.sportsRace.split(":")[0]}</div>}
                   {x.race && <div><span style={{ color: "#8E9CA5" }}>Races · </span>{x.race}</div>}
+                  {x.promos && <div><span style={{ color: "#8E9CA5" }}>Also · </span>{x.promos}</div>}
                 </div>
                 <div style={{ display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap", marginTop: "auto", paddingTop: 6 }}>
-                  <BetCta o={{ slug: x.slug, name: x.name, affiliate: !!x.signupUrl, signupUrl: x.signupUrl }} label={`Claim at ${x.name}`} />
+                  <BetCta o={{ slug: x.slug, name: x.name, affiliate: !!x.signupUrl, signupUrl: x.signupUrl }} label={x.cta ?? `Claim at ${x.name}`} />
                   <Link href={sportsbookHref(x.slug)} style={{ padding: "10px 15px", borderRadius: 10, border: "1px solid rgba(255,255,255,.16)", color: "#E8EDF0", fontSize: 13.5, fontWeight: 700 }}>
                     {x.signupUrl ? "Full terms" : "Sportsbook profile"}
                   </Link>

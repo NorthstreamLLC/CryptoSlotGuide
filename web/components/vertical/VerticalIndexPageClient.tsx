@@ -161,7 +161,7 @@ export function VerticalIndexPageClient({ kind, tabIdx, vp, after, heroVisual }:
                     <div style={{ display: "flex", alignItems: "center", gap: 10, marginTop: "auto", paddingTop: 6, flexWrap: "wrap" }}>
                       {o.signupUrl ? (
                         <a href={o.signupUrl} target="_blank" rel="noopener noreferrer sponsored" style={{ padding: "10px 16px", borderRadius: 10, background: lead ? "#FFC531" : "#00C2CC", color: "#0A0D0F", fontSize: 13.5, fontWeight: 800 }}>
-                          Claim at {o.name}
+                          {o.cta ?? `Claim at ${o.name}`}
                         </a>
                       ) : (
                         <Link href={o.href} style={{ padding: "10px 16px", borderRadius: 10, border: "1px solid rgba(255,255,255,.14)", color: "#E8EDF0", fontSize: 13.5, fontWeight: 700 }}>
