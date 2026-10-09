@@ -33631,6 +33631,39 @@
       "provider": "Big Time Gaming",
       "fetched": "2026-10-09",
       "via": "Big Time Gaming's own game page"
+    },
+    "sugar-rush": {
+      "file": "sugar-rush.webp",
+      "bytes": 13020,
+      "type": "image/webp",
+      "sourceUrl": "https://www.pragmaticplay.com/wp-content/uploads/2022/06/Sugar_Rush_EN_339x180.png",
+      "sourceHost": "www.pragmaticplay.com",
+      "page": "https://www.pragmaticplay.com/en/games/sugar-rush/",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-09",
+      "via": "Pragmatic Play's own game page"
+    },
+    "zeus-vs-hades-gods-of-war": {
+      "file": "zeus-vs-hades-gods-of-war.webp",
+      "bytes": 17970,
+      "type": "image/webp",
+      "sourceUrl": "https://www.pragmaticplay.com/wp-content/uploads/2023/05/Zeus-vs-Hades-Gods-of-war_339x180.png",
+      "sourceHost": "www.pragmaticplay.com",
+      "page": "https://www.pragmaticplay.com/en/games/zeus-vs-hades-gods-of-war/",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-09",
+      "via": "Pragmatic Play's own game page"
+    },
+    "the-dog-house-megaways-1000": {
+      "file": "the-dog-house-megaways-1000.webp",
+      "bytes": 14894,
+      "type": "image/webp",
+      "sourceUrl": "https://www.pragmaticplay.com/wp-content/uploads/2026/06/The-Dog-House-Megaways-1000_339x180_EN.png",
+      "sourceHost": "www.pragmaticplay.com",
+      "page": "https://www.pragmaticplay.com/en/games/the-dog-house-megaways-1000/",
+      "provider": "Pragmatic Play",
+      "fetched": "2026-10-09",
+      "via": "Pragmatic Play's own game page"
     }
   },
   "heldPendingRights": {
