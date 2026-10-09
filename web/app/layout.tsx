@@ -6,6 +6,7 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { CodeCopier } from "@/components/ui/CodeCopier";
+import { AgeGate } from "@/components/layout/AgeGate";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { NewsletterBand } from "@/components/layout/NewsletterBand";
@@ -61,6 +62,7 @@ export default function RootLayout({
         <NewsletterBand />
         <Footer />
         <CodeCopier />
+        <AgeGate />
         <Analytics />
         <SpeedInsights />
       </body>
