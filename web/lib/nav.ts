@@ -85,6 +85,8 @@ export interface NavTab {
   key: "gambling" | "where" | "licensed" | "casinos" | "slots" | "countries" | "sports" | "predict" | "crypto";
   label: string;
   sections: NavSection[];
+  /** The tab's own page: clicking the label goes there; hovering opens the menu. */
+  href?: string;
 }
 
 function rawNavTabs(c: SiteCounts): NavTab[] {
@@ -772,12 +774,12 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
   const gambling = tab("gambling")?.sections ?? [];
   const pick = (labels: string[]) => labels.map((l) => gambling.find((s) => s.label === l)).filter((s): s is NavSection => !!s);
   const out: NavTab[] = [
-    { key: "casinos", label: "Casinos", sections: pick(["Crypto casinos", "Bonuses", "House games", "Guides"]) },
-    { key: "slots", label: "Slots", sections: pick(["Slots & RTP", "Game providers"]) },
-    { key: "countries", label: "Countries", sections: [...(tab("where")?.sections ?? []), ...(tab("licensed")?.sections ?? []).map((s) => ({ ...s, label: LICENSED_LABEL[s.label] ?? `Licensed: ${s.label}` }))] },
-    { ...(tab("sports") as NavTab), label: "Sports" },
-    { ...(tab("predict") as NavTab), label: "Predictions" },
-    { ...(tab("crypto") as NavTab), label: "Crypto" },
+    { key: "casinos", label: "Casinos", href: "/crypto-casinos", sections: pick(["Crypto casinos", "Bonuses", "House games", "Guides"]) },
+    { key: "slots", label: "Slots", href: "/slots", sections: pick(["Slots & RTP", "Game providers"]) },
+    { key: "countries", label: "Countries", href: "/legal", sections: [...(tab("where")?.sections ?? []), ...(tab("licensed")?.sections ?? []).map((s) => ({ ...s, label: LICENSED_LABEL[s.label] ?? `Licensed: ${s.label}` }))] },
+    { ...(tab("sports") as NavTab), label: "Sports", href: "/sportsbooks" },
+    { ...(tab("predict") as NavTab), label: "Predictions", href: "/prediction-markets" },
+    { ...(tab("crypto") as NavTab), label: "Crypto", href: "/coins" },
   ];
   return out.filter((t) => t && t.sections.length);
 }

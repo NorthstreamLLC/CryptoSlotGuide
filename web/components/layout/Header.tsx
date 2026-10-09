@@ -99,10 +99,17 @@ export function Header({ counts, navTabs }: { counts: SiteCounts; navTabs: NavTa
           {navTabs.map((tab) => {
             const active = menu === tab.key;
             return (
-              <button
+              // A link to the tab's own page; hovering (or focusing) opens its menu.
+              <Link
                 key={tab.key}
-                type="button"
-                onClick={() => setMenu(active ? null : tab.key)}
+                href={tab.href ?? tab.sections[0]?.href ?? "/"}
+                aria-haspopup="true"
+                aria-expanded={active}
+                onClick={closeMenu}
+                onFocus={() => {
+                  setMenu(tab.key);
+                  setRail(0);
+                }}
                 onMouseEnter={() => {
                   setMenu(tab.key);
                   setRail(0);
@@ -125,7 +132,7 @@ export function Header({ counts, navTabs }: { counts: SiteCounts; navTabs: NavTa
               >
                 {tab.label}
                 <span style={{ fontSize: 8, opacity: 0.5 }}>▾</span>
-              </button>
+              </Link>
             );
           })}
         </nav>
@@ -224,6 +231,9 @@ export function Header({ counts, navTabs }: { counts: SiteCounts; navTabs: NavTa
                 </button>
                 {open && (
                   <div style={{ display: "flex", flexDirection: "column", paddingBottom: 10 }}>
+                    <Link href={tab.href ?? tab.sections[0]?.href ?? "/"} onClick={() => setMobileOpen(false)} style={{ padding: "6px 2px 10px", color: "#00C2CC", fontSize: 14, fontWeight: 700 }}>
+                      All {tab.label.toLowerCase()} →
+                    </Link>
                     {tab.sections.map((section, i) => (
                       <Link
                         key={section.label + i}
