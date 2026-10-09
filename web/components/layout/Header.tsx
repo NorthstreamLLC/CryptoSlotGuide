@@ -367,25 +367,13 @@ export function Header({ counts, navTabs }: { counts: SiteCounts; navTabs: NavTa
                   See all {counts.total} listings →
                 </Link>
               </div>
-            </div>
-
-            {/* A 64px gap fitted two columns; sections now run to four, which at
-                that gap squeezed each one to about 150px and broke the labels
-                across lines. Tighter gap, and wrapping rather than crushing. */}
-            <div
-              style={
-                activeSection.feature
-                  ? { display: "grid", gridTemplateColumns: `178px repeat(${activeSection.columns.length}, minmax(0, 1fr))`, gap: "22px 22px", padding: "26px 30px 32px", alignItems: "start" }
-                  : { display: "flex", flexWrap: "wrap", gap: "22px 30px", padding: "26px 34px 32px" }
-              }
-            >
               {activeSection.feature && (
-                // Our pick for this section: a small card ahead of the columns.
+                // Our pick for this section, in the rail under the section list.
                 <Link
                   href={activeSection.feature.href}
                   onClick={closeMenu}
                   className="csg-nav-feature"
-                  style={{ display: "flex", flexDirection: "column", gap: 8, padding: "14px 14px 13px", borderRadius: 14, background: "radial-gradient(120% 100% at 0% 0%, rgba(255,197,49,.14), transparent 60%), #10161A", border: "1px solid rgba(255,197,49,.3)", alignSelf: "flex-start" }}
+                  style={{ display: "flex", flexDirection: "column", gap: 8, margin: "16px 2px 0", padding: "14px 14px 13px", borderRadius: 14, background: "radial-gradient(120% 100% at 0% 0%, rgba(255,197,49,.14), transparent 60%), #10161A", border: "1px solid rgba(255,197,49,.3)" }}
                 >
                   <span style={{ display: "flex", alignItems: "center", gap: 6, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 9.5, letterSpacing: ".1em", textTransform: "uppercase", color: "#FFC531" }}>
                     <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#57E39A", boxShadow: "0 0 0 3px rgba(87,227,154,.18)" }} />
@@ -401,10 +389,16 @@ export function Header({ counts, navTabs }: { counts: SiteCounts; navTabs: NavTa
                   <span style={{ marginTop: 2, fontSize: 12.5, fontWeight: 800, color: "#FFC531" }}>{activeSection.feature.cta} →</span>
                 </Link>
               )}
+            </div>
+
+            {/* A 64px gap fitted two columns; sections now run to four, which at
+                that gap squeezed each one to about 150px and broke the labels
+                across lines. Tighter gap, and wrapping rather than crushing. */}
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "22px 30px", padding: "26px 34px 32px" }}>
               {activeSection.columns.map((col, i) => (
                 // 150px lets four columns sit across the panel; at 170px the
                 // fourth wrapped under the first and the menu read as a pile.
-                <div key={col.title + i} style={activeSection.feature ? { minWidth: 0 } : { flex: "1 1 150px", minWidth: 0, maxWidth: 250 }}>
+                <div key={col.title + i} style={{ flex: "1 1 150px", minWidth: 0, maxWidth: 250 }}>
                   <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 12 }}>
                     <span
                       style={{
