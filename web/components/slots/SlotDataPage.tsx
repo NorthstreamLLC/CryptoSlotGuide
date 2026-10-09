@@ -2,6 +2,7 @@ import type React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
+import { thumbOf } from "@/lib/thumb";
 import { EmailSignup } from "@/components/ui/EmailSignup";
 import { SlotPerks } from "@/components/slots/SlotPerks";
 import { NextSteps } from "@/components/layout/NextSteps";
@@ -46,8 +47,16 @@ export function SlotDataPage({ g, review }: { g: CatalogueSlotPage; review?: Rea
 
   return (
     <main style={{ background: "#07090B", color: "#E8EDF0" }}>
-      <section style={{ borderBottom: "1px solid rgba(255,255,255,.07)", background: "radial-gradient(100% 100% at 20% 0%, rgba(0,194,204,.07), transparent 60%), #0B0F12" }}>
-        <div style={{ maxWidth: 1100, margin: "0 auto", padding: "40px 40px 44px" }}>
+      <section style={{ position: "relative", overflow: "hidden", borderBottom: "1px solid rgba(255,255,255,.07)", background: "radial-gradient(100% 100% at 20% 0%, rgba(0,194,204,.07), transparent 60%), #0B0F12" }}>
+        {art && (
+          // The game's colours as a soft wash behind the hero; the 128px tile
+          // is plenty once blurred.
+          <div aria-hidden style={{ position: "absolute", inset: 0, pointerEvents: "none" }}>
+            <div style={{ position: "absolute", inset: "-10%", backgroundImage: `url(${thumbOf(art)})`, backgroundSize: "cover", backgroundPosition: "center", filter: "blur(44px) saturate(1.5)", opacity: 0.55, transform: "scale(1.1)" }} />
+            <div style={{ position: "absolute", inset: 0, background: "linear-gradient(90deg, rgba(11,15,18,.55) 0%, rgba(11,15,18,.82) 45%, #0B0F12 100%), linear-gradient(0deg, #0B0F12 0%, transparent 45%)" }} />
+          </div>
+        )}
+        <div style={{ position: "relative", maxWidth: 1100, margin: "0 auto", padding: "40px 40px 44px" }}>
           <nav style={{ fontFamily: MONO, fontSize: 11, color: "#83919A", marginBottom: 22 }}>
             <Link href="/slots" style={{ color: "#83919A" }}>Slots</Link>
             <span style={{ margin: "0 8px" }}>/</span>

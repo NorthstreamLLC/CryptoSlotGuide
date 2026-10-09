@@ -55,8 +55,16 @@ export function EntityReviewPageClient({ e, review, chrome }: { e: EntityView; r
 
   return (
     <main style={{ background: "#07090B", color: "#E8EDF0" }}>
-      <section style={{ background: "#0B0F12", borderBottom: "1px solid rgba(255,255,255,.07)" }}>
-        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "26px 40px 48px" }}>
+      <section style={{ position: "relative", overflow: "hidden", background: "#0B0F12", borderBottom: "1px solid rgba(255,255,255,.07)" }}>
+        {e.heroArt && (
+          // The slot's own art, blurred into a wash of its colours behind the
+          // hero, fading out before the text so the copy stays readable.
+          <div aria-hidden style={{ position: "absolute", inset: 0, pointerEvents: "none" }}>
+            <div style={{ position: "absolute", inset: "-10%", backgroundImage: `url(${thumbOf(e.heroArt)})`, backgroundSize: "cover", backgroundPosition: "center", filter: "blur(44px) saturate(1.5)", opacity: 0.55, transform: "scale(1.1)" }} />
+            <div style={{ position: "absolute", inset: 0, background: "linear-gradient(90deg, rgba(11,15,18,.92) 0%, rgba(11,15,18,.78) 40%, rgba(11,15,18,.4) 100%), linear-gradient(0deg, #0B0F12 0%, transparent 35%)" }} />
+          </div>
+        )}
+        <div style={{ position: "relative", maxWidth: 1180, margin: "0 auto", padding: "26px 40px 48px" }}>
           <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#83919A", marginBottom: 26 }}>
             <Link href="/" style={{ color: "#83919A" }}>Home</Link> / <Link href={back.href} style={{ color: "#83919A" }}>{e.kicker}</Link> /{" "}
             <span style={{ color: "#A8B6BE" }}>{e.name}</span>
@@ -65,9 +73,14 @@ export function EntityReviewPageClient({ e, review, chrome }: { e: EntityView; r
           <div style={{ display: "grid", gridTemplateColumns: "1.25fr .75fr", gap: 56, alignItems: "start" }}>
             <div>
               <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 22 }}>
-                <div style={{ width: 38, height: 38, flex: "none" }}>
-                  <BrandMark slug={e.slug} mono={e.mono} tint={e.tint} radius={9} />
-                </div>
+                {e.heroArt ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={e.heroArt} alt={`${e.name} game art`} width={128} height={80} style={{ width: 128, height: 80, flex: "none", objectFit: "cover", borderRadius: 12, border: "1px solid rgba(255,255,255,.14)", boxShadow: "0 12px 30px rgba(0,0,0,.45)" }} />
+                ) : (
+                  <div style={{ width: 38, height: 38, flex: "none" }}>
+                    <BrandMark slug={e.slug} mono={e.mono} tint={e.tint} radius={9} />
+                  </div>
+                )}
                 <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".09em", textTransform: "uppercase", color: "#00C2CC" }}>
                   {e.kicker}
                 </span>

@@ -76,31 +76,69 @@ export function SlotReview({ slug, review, facts }: { slug: string; review: Revi
           )}
         </div>
 
-        {/* every figure we hold */}
-        {facts.stats.length > 0 && (
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))", gap: 1, background: "rgba(255,255,255,.06)", borderBottom: "1px solid rgba(255,255,255,.06)" }}>
-            {facts.stats.map((s) => (
-              <div key={s.k} style={{ display: "flex", flexDirection: "column", gap: 5, padding: "14px 18px", background: "#0C1013", minWidth: 0 }}>
-                <span style={{ fontFamily: MONO, fontSize: 10, letterSpacing: ".08em", textTransform: "uppercase", color: "#8E9CA5" }}>{s.k}</span>
-                <span style={{ fontSize: 15.5, fontWeight: 800, letterSpacing: "-.01em", color: "#fff", fontVariantNumeric: "tabular-nums", overflowWrap: "anywhere" }}>{s.v}</span>
-              </div>
-            ))}
-          </div>
-        )}
+        {/* every figure we hold: the returns first, as chips, then one even row of the rest */}
+        {facts.stats.length > 0 && (() => {
+          const rtp = facts.stats.find((x) => /return|rtp/i.test(x.k));
+          const rest = facts.stats.filter((x) => x !== rtp);
+          const builds = rtp ? rtp.v.split(/\s*·\s*/).filter(Boolean) : [];
+          return (
+            <div style={{ padding: "22px 30px", borderBottom: "1px solid rgba(255,255,255,.06)", display: "flex", flexDirection: "column", gap: 20 }}>
+              {rtp && (
+                <div>
+                  <div style={{ fontFamily: MONO, fontSize: 10, letterSpacing: ".08em", textTransform: "uppercase", color: "#8E9CA5", marginBottom: 9 }}>{rtp.k}</div>
+                  <div style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
+                    {builds.map((b, i) => (
+                      <span
+                        key={b + i}
+                        style={{
+                          padding: "7px 13px",
+                          borderRadius: 100,
+                          fontFamily: MONO,
+                          fontSize: i === 0 ? 15 : 13,
+                          fontWeight: 700,
+                          fontVariantNumeric: "tabular-nums",
+                          color: i === 0 ? "#141007" : "#C3CFD5",
+                          background: i === 0 ? "#FFC531" : "rgba(255,255,255,.05)",
+                          border: i === 0 ? "none" : "1px solid rgba(255,255,255,.1)",
+                        }}
+                      >
+                        {b}
+                      </span>
+                    ))}
+                    {builds.length > 1 && <span style={{ fontSize: 12.5, color: "#8E9CA5", marginLeft: 4 }}>Best build highlighted; the lobby doesn&apos;t say which one is loaded.</span>}
+                  </div>
+                </div>
+              )}
+              {rest.length > 0 && (
+                <div style={{ display: "flex", flexWrap: "wrap", gap: "16px 0" }}>
+                  {rest.map((x, i) => (
+                    <div key={x.k} style={{ display: "flex", flexDirection: "column", gap: 4, padding: i === 0 ? "0 26px 0 0" : "0 26px", borderLeft: i === 0 ? "none" : "1px solid rgba(255,255,255,.08)", minWidth: 0 }}>
+                      <span style={{ fontFamily: MONO, fontSize: 10, letterSpacing: ".08em", textTransform: "uppercase", color: "#8E9CA5", whiteSpace: "nowrap" }}>{x.k}</span>
+                      <span style={{ fontSize: 16, fontWeight: 800, letterSpacing: "-.01em", color: "#fff", fontVariantNumeric: "tabular-nums", whiteSpace: "nowrap" }}>{x.v}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          );
+        })()}
 
-        {/* the argument */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "26px 36px", padding: "26px 30px 28px" }}>
+        {/* the argument: each section its own panel */}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 14, padding: "24px 30px 26px" }}>
           {review.sections.map((sec, i) => (
-            <div key={sec.title} data-reveal style={{ ["--reveal-delay" as string]: `${i * 60}ms`, minWidth: 0 }}>
-              <h3 style={{ margin: "0 0 8px", fontSize: 15, fontWeight: 800, letterSpacing: "-.015em", color: "#E8EDF0" }}>{sec.title}</h3>
-              <p style={{ margin: 0, fontSize: 14.5, lineHeight: 1.7, color: "#A8B6BE", textWrap: "pretty" }}>{sec.body}</p>
+            <div key={sec.title} data-reveal style={{ ["--reveal-delay" as string]: `${i * 60}ms`, minWidth: 0, padding: "18px 20px", borderRadius: 14, background: "rgba(255,255,255,.025)", border: "1px solid rgba(255,255,255,.06)" }}>
+              <h3 style={{ display: "flex", alignItems: "center", gap: 10, margin: "0 0 10px", fontFamily: MONO, fontSize: 11, fontWeight: 700, letterSpacing: ".09em", textTransform: "uppercase", color: "#FFC531" }}>
+                <span style={{ width: 18, height: 2, borderRadius: 2, background: "#FFC531", flex: "none" }} />
+                {sec.title}
+              </h3>
+              <p style={{ margin: 0, fontSize: 15, lineHeight: 1.7, color: "#B7C4CB", textWrap: "pretty" }}>{sec.body}</p>
             </div>
           ))}
         </div>
 
         {/* where it came from, where to go */}
-        <div style={{ display: "flex", gap: 10, flexWrap: "wrap", alignItems: "center", padding: "16px 30px 20px", borderTop: "1px solid rgba(255,255,255,.06)" }}>
-          <span style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".05em", color: "#6E7A82", marginRight: "auto" }}>
+        <div style={{ display: "flex", gap: "10px 12px", flexWrap: "wrap", alignItems: "center", padding: "16px 30px 18px", borderTop: "1px solid rgba(255,255,255,.06)", background: "rgba(0,0,0,.18)" }}>
+          <span style={{ flex: "1 1 320px", fontFamily: MONO, fontSize: 10.5, lineHeight: 1.6, letterSpacing: ".03em", color: "#6E7A82" }}>
             {review.featureSource && host ? (
               <>
                 Mechanics from{" "}

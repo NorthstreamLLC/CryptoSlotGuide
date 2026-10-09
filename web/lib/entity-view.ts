@@ -102,6 +102,8 @@ export interface EntityView {
    * plain <span> — a dead element styled exactly like a button.
    */
   ctaHref?: string;
+  /** A slot's own art, for its hero (thumbnail and the blurred backdrop). */
+  heroArt?: string;
   /** The casino that carries this title, where its own record names one. */
   playAtName?: string;
   /** The same subject on SlotEssentials, the sister site: a studio profile or a slot page. */
@@ -310,7 +312,8 @@ export function getEntityView(type: EntityType, slug: string, opts: { fullTable?
       hasVol(s) ? `${s.vol} volatility` : null,
       hasMaxWin(s) ? `${s.maxWin} max win` : null,
     ].filter(Boolean) as string[];
-    const describe = `${s.name} is ${hasVol(s) ? `a ${s.vol}-volatility` : "a"} ${s.provider} title${hasMaxWin(s) ? ` with a ${s.maxWin} max win` : ""}${hasRtp(s) ? ` and a published return of ${rtpTxt}` : ""}.`;
+    const an = (w: string) => (/^[aeiou]/i.test(w) ? "an" : "a");
+    const describe = `${s.name} is ${hasVol(s) ? `${an(s.vol)} ${s.vol}-volatility` : an(s.provider)} ${s.provider} title${hasMaxWin(s) ? ` with a ${s.maxWin} max win` : ""}${hasRtp(s) ? ` and a published return of ${rtpTxt}` : ""}.`;
     const versionsNote = s.rtpVersions ? ` ${s.provider} publishes ${s.rtpVersions.split("/").length} configurations: ${s.rtpVersions}%.` : "";
     /**
      * Which casino the "play it" button points at.
@@ -343,6 +346,7 @@ export function getEntityView(type: EntityType, slug: string, opts: { fullTable?
       signupUrl: playAt?.affiliate && playAt.signupUrl ? playAt.signupUrl : undefined,
       affiliate: !!(playAt?.affiliate && playAt.signupUrl),
       ctaHref: playAt ? `/casinos/${playAt.slug}` : undefined,
+      heroArt: slotArtBySlug(s.slug) ?? undefined,
       playAtName: playAt?.name,
       name: s.name,
       slug: s.slug,
