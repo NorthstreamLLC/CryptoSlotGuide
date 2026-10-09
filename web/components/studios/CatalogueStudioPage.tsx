@@ -6,7 +6,8 @@ import { NextSteps } from "@/components/layout/NextSteps";
 import { tintFor } from "@/lib/logo";
 import { studioAllTitles, studioStats } from "@/lib/slot-page";
 import { slotEssentialsStudio } from "@/lib/slotessentials";
-import { thumbOf } from "@/lib/thumb";
+import { TitlesTable, TitlesPager } from "@/components/studios/TitlesTable";
+import { TITLES_PER_PAGE } from "@/lib/titles";
 import type { CatalogueStudio } from "@/lib/studio-pages";
 
 /**
@@ -111,45 +112,8 @@ export function CatalogueStudioPage({ studio }: { studio: CatalogueStudio }) {
         <p style={{ margin: "0 0 16px", maxWidth: "80ch", fontSize: 14, lineHeight: 1.6, color: "#8DA0AA" }}>
           Titles with a page here link to it; the rest link to SlotEssentials, which has a page for nearly every one.
         </p>
-        <div style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 13, overflowX: "auto", background: "#0C1013" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "minmax(260px,1.6fr) 150px 130px 120px", minWidth: 680, background: "#101519", borderBottom: "1px solid rgba(255,255,255,.07)" }}>
-            {["Slot", "RTP", "Volatility", "Max win"].map((h) => (
-              <div key={h} style={{ padding: "12px 18px", fontFamily: MONO, fontSize: 10.5, letterSpacing: ".07em", textTransform: "uppercase", color: "#83919A" }}>{h}</div>
-            ))}
-          </div>
-          {rows.map((r, i) => (
-            <div key={`${r.slug ?? r.name}-${i}`} className="csg-trow csg-trow-c">
-              <div className="csg-tc-main">
-                {r.image && (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img src={thumbOf(r.image)} alt="" width={52} height={31} loading="lazy" className="csg-tc-img" />
-                )}
-                <div className="csg-tc-text">
-                  <div className="csg-tc-name">
-                    {r.href ? (
-                      /^https?:\/\//.test(r.href) ? (
-                        <a href={r.href} target="_blank" rel="noopener">{r.name}</a>
-                      ) : (
-                        <Link href={r.href}>{r.name}</Link>
-                      )
-                    ) : (
-                      r.name
-                    )}
-                    {r.href && r.hrefLabel && (
-                      <span className="csg-tc-tag">
-                        {r.hrefLabel}{/^https?:\/\//.test(r.href) ? " ↗" : " →"}
-                      </span>
-                    )}
-                  </div>
-                  <div className="csg-tc-note">{r.note}</div>
-                </div>
-              </div>
-              <div className="csg-tc-num">{r.m1}</div>
-              <div className="csg-tc-num">{r.m2}</div>
-              <div className="csg-tc-num">{r.m3}</div>
-            </div>
-          ))}
-        </div>
+        <TitlesTable rows={rows.slice(0, TITLES_PER_PAGE)} />
+        <TitlesPager slug={studio.slug} total={rows.length} page={1} perPage={TITLES_PER_PAGE} />
       </section>
 
       <section style={{ maxWidth: 1180, margin: "0 auto", padding: "36px 24px 64px" }}>

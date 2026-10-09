@@ -15,6 +15,7 @@ import { isStaleReading } from "./derived";
 import { payoutView } from "./payout";
 import { wagerView, bonusWithWager } from "./wager";
 import { hasMaxWin, hasVol, maxWinLabel, rtpLabel, hasRtp, rtpSortValue, volLabel } from "./slot-facts";
+import { TITLES_PER_PAGE } from "./titles";
 import { isFieldTestedOperator, isEditoriallyAudited } from "./field-tested";
 import { tintFor } from "./logo";
 import { studioCatalogue, studioAllTitles, catalogueFallback, slotArtBySlug } from "./slot-page";
@@ -83,6 +84,8 @@ export interface EntityView {
   tableSub: string;
   tableCols: [string, string, string];
   tableRows: TableRow[];
+  /** Rows in the full table where tableRows is its first page (studio pages); the rest are on numbered pages. */
+  tableTotal?: number;
   /** Shown in place of the table when tableRows is empty — per type, since "no builds read" means different things for a slot vs a casino. */
   tableEmpty?: string;
   /** Shown in place of the chip row when chips is empty. */
@@ -148,7 +151,9 @@ function unconfirmed(k: string): SpecRow {
   return { k, v: "Not stated", label: "Not stated", color: "#8DA0AA", background: "rgba(255,255,255,.05)" };
 }
 
-export function getEntityView(type: EntityType, slug: string): EntityView | null {
+
+/** `fullTable` returns every row of a studio's titles (for its numbered title pages) instead of the first page. */
+export function getEntityView(type: EntityType, slug: string, opts: { fullTable?: boolean } = {}): EntityView | null {
   const { ops, slots, walletRows, exchangeRows, providers, coinsBy, rtpWatch, watchOps } = siteData;
 
   if (type === "exchange") {
@@ -555,7 +560,9 @@ export function getEntityView(type: EntityType, slug: string): EntityView | null
       // The reviews first, then the catalogue. The component hides the table
       // when it has no rows, so a studio with 400 catalogue titles and no
       // hand-written review used to show nothing here at all.
-      tableRows: allRows,
+      tableRows: opts.fullTable ? allRows : allRows.slice(0, TITLES_PER_PAGE),
+      tableTotal: allRows.length,
+      ctaHref: "#titles",
       tableEmpty: "None of this studio's titles are on our slot index yet.",
       tableNote: "Where a casino ships a reduced configuration of one of these titles we name it in that casino's review rather than here, because the studio is not the party that chose it.",
       pros: [

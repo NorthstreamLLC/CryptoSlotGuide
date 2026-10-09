@@ -16,6 +16,8 @@ import { GlanceCard } from "./GlanceCard";
 import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
 import { EmailSignup } from "@/components/ui/EmailSignup";
 import { SlotPerks } from "@/components/slots/SlotPerks";
+import { TitlesPager } from "@/components/studios/TitlesTable";
+import { TITLES_PER_PAGE } from "@/lib/titles";
 import { thumbOf } from "@/lib/thumb";
 import { ReportIssue } from "@/components/ui/ReportIssue";
 
@@ -347,6 +349,11 @@ export function EntityReviewPageClient({ e, review, chrome }: { e: EntityView; r
             </div>
           ))}
         </div>
+        )}
+        {e.type === "provider" && e.tableTotal && e.tableTotal > e.tableRows.length && (
+          <div style={{ marginBottom: 18 }}>
+            <TitlesPager slug={e.slug} total={e.tableTotal} page={1} perPage={TITLES_PER_PAGE} />
+          </div>
         )}
         {e.tableRows.length > 0 && <p style={{ margin: "0 0 38px", fontSize: 13.5, lineHeight: 1.6, color: "#7B8A93", maxWidth: "84ch", textWrap: "pretty" }}>{e.tableNote}</p>}
 
