@@ -21,7 +21,7 @@ import { fiatMarkets, fiatMarketFor, fiatHref, EUROPE_FIAT, regionMarkets } from
 /** The countries the Europe map draws, for the Europe column. */
 const EUROPE_CODES = new Set(EUROPE_SHAPES.map((sh) => sh.code).filter((c): c is string => !!c));
 import { flagSrc } from "./flags";
-import { sportsOffers, sportsOnlyRaces, sportsBoosts, sportsbookHref } from "./sports";
+import { sportsOffers, sportsOnlyRaces, sportsBoosts, sportsbookHref, sportsPick } from "./sports";
 import { rankedBrands } from "./us-brands";
 
 const slotCatLabels = siteData.slotCatDefs.map((d) => ({ tag: d.tag, label: d.label }));
@@ -74,6 +74,19 @@ export interface NavSection {
   tint: string;
   href: string;
   columns: NavColumn[];
+  /** A pick shown as a small card before the columns: our recommendation for this section. */
+  feature?: NavFeature;
+}
+
+export interface NavFeature {
+  /** Operator slug, for its mark. */
+  brand: string;
+  kicker: string;
+  title: string;
+  /** One line from the operator's own facts. */
+  sub: string;
+  href: string;
+  cta: string;
 }
 
 export interface NavColumn {
@@ -100,6 +113,10 @@ function rawNavTabs(c: SiteCounts): NavTab[] {
           label: "Crypto casinos",
           tint: "#5FE3E8",
           href: "/crypto-casinos",
+          feature: (() => {
+            const o = siteData.ops.find((x) => x.featured);
+            return o ? { brand: o.slug, kicker: "Our top casino", title: o.name, sub: o.bonusShort ?? o.bonus, href: `/casinos/${o.slug}`, cta: "Read the review" } : undefined;
+          })(),
           columns: [
             {
               title: "Browse",
@@ -371,11 +388,16 @@ function rawNavTabs(c: SiteCounts): NavTab[] {
           label: "Sportsbooks",
           tint: "#57B98C",
           href: "/sportsbooks",
+          feature: (() => {
+            const p = sportsPick();
+            return p
+              ? { brand: p.slug, kicker: "Our sports pick", title: `${p.name} sportsbook`, sub: p.promos ?? "Rotating sports promotions instead of one fixed welcome offer", href: sportsbookHref(p.slug), cta: "View sportsbook" }
+              : undefined;
+          })(),
           columns: [
             {
               title: "Browse",
               links: [
-                { label: "Roobet sportsbook · our pick", href: sportsbookHref("roobet"), brand: "roobet" },
                 { label: `All ${c.books} sportsbooks`, href: "/sportsbooks" },
                 { label: "Compare side by side", href: "/compare" },
                 { label: "Sportsbook margin, explained", href: "/guides/sportsbook-margin-explained" },

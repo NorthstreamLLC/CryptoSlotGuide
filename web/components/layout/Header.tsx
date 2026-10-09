@@ -372,11 +372,39 @@ export function Header({ counts, navTabs }: { counts: SiteCounts; navTabs: NavTa
             {/* A 64px gap fitted two columns; sections now run to four, which at
                 that gap squeezed each one to about 150px and broke the labels
                 across lines. Tighter gap, and wrapping rather than crushing. */}
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "22px 30px", padding: "26px 34px 32px" }}>
+            <div
+              style={
+                activeSection.feature
+                  ? { display: "grid", gridTemplateColumns: `178px repeat(${activeSection.columns.length}, minmax(0, 1fr))`, gap: "22px 22px", padding: "26px 30px 32px", alignItems: "start" }
+                  : { display: "flex", flexWrap: "wrap", gap: "22px 30px", padding: "26px 34px 32px" }
+              }
+            >
+              {activeSection.feature && (
+                // Our pick for this section: a small card ahead of the columns.
+                <Link
+                  href={activeSection.feature.href}
+                  onClick={closeMenu}
+                  className="csg-nav-feature"
+                  style={{ display: "flex", flexDirection: "column", gap: 8, padding: "14px 14px 13px", borderRadius: 14, background: "radial-gradient(120% 100% at 0% 0%, rgba(255,197,49,.14), transparent 60%), #10161A", border: "1px solid rgba(255,197,49,.3)", alignSelf: "flex-start" }}
+                >
+                  <span style={{ display: "flex", alignItems: "center", gap: 6, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 9.5, letterSpacing: ".1em", textTransform: "uppercase", color: "#FFC531" }}>
+                    <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#57E39A", boxShadow: "0 0 0 3px rgba(87,227,154,.18)" }} />
+                    {activeSection.feature.kicker}
+                  </span>
+                  <span style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                    <span style={{ width: 34, height: 34, flex: "none", borderRadius: 9, overflow: "hidden" }}>
+                      <BrandMark slug={activeSection.feature.brand} mono={activeSection.feature.title.slice(0, 2).toUpperCase()} tint={tintFor(activeSection.feature.brand)} radius={9} fontSize={11} />
+                    </span>
+                    <span style={{ fontSize: 16, fontWeight: 800, lineHeight: 1.2, letterSpacing: "-.015em", color: "#fff" }}>{activeSection.feature.title}</span>
+                  </span>
+                  <span style={{ fontSize: 12.5, lineHeight: 1.45, color: "#A8B6BE" }}>{activeSection.feature.sub}</span>
+                  <span style={{ marginTop: 2, fontSize: 12.5, fontWeight: 800, color: "#FFC531" }}>{activeSection.feature.cta} →</span>
+                </Link>
+              )}
               {activeSection.columns.map((col, i) => (
                 // 150px lets four columns sit across the panel; at 170px the
                 // fourth wrapped under the first and the menu read as a pile.
-                <div key={col.title + i} style={{ flex: "1 1 150px", minWidth: 0, maxWidth: 250 }}>
+                <div key={col.title + i} style={activeSection.feature ? { minWidth: 0 } : { flex: "1 1 150px", minWidth: 0, maxWidth: 250 }}>
                   <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 12 }}>
                     <span
                       style={{
