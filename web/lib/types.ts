@@ -143,6 +143,8 @@ export interface SlotCategoryDef {
   tag: SlotMechanicTag;
   label: string;
   standfirst: string;
+  /** The category's best-known titles, shown first as picture cards. Editorial: popularity, not RTP. */
+  featured?: string[];
 }
 
 export interface LiveCasino {

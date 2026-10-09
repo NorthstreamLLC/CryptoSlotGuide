@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { maxWinLabel, rtpLabel, rtpSortValue, volLabel } from "@/lib/slot-facts";
 import { siteData } from "@/lib/site-data";
-import { catalogueByMechanic, rtpVersions, publishableThumb, slotPageCount } from "@/lib/slot-page";
+import { catalogueByMechanic, cataloguePage, rtpVersions, singleRtp, publishableThumb, slotArtBySlug, slotPageCount } from "@/lib/slot-page";
+import { thumbOf } from "@/lib/thumb";
 import { volatilityOf } from "@/lib/slot-db";
 import type { SlotMechanicTag } from "@/lib/types";
 import { NextSteps } from "@/components/layout/NextSteps";
@@ -21,6 +22,20 @@ export function SlotCategoryPage({ tag }: { tag: SlotMechanicTag }) {
   // Everything else in the catalogue that carries this mechanic and has a
   // page — see catalogueByMechanic for which signal each tag uses.
   const more = catalogueByMechanic(tag, new Set(rows.map((s) => s.slug)));
+  // The titles people come here for, as picture cards above the RTP-sorted
+  // list: a reviewed slot's own figures, else the catalogue's.
+  const featured = (cat.featured ?? [])
+    .map((slug) => {
+      const r = slots.find((s) => s.slug === slug);
+      const g = r ? undefined : cataloguePage(slug);
+      const art = slotArtBySlug(slug);
+      if ((!r && !g) || !art) return null;
+      const versions = g ? rtpVersions(g) : [];
+      const one = g ? singleRtp(g) : null;
+      const rtp = r ? rtpLabel(r) : versions.length > 1 ? `${Math.max(...versions)}%` : one !== null ? `${one}%` : versions[0] ? `${versions[0]}%` : null;
+      return { slug, name: r?.name ?? g!.name, provider: r?.provider ?? g!.provider, art, rtp, builds: r ? (r.rtpVersions ? r.rtpVersions.split("/").length : 1) : versions.length };
+    })
+    .filter((x): x is NonNullable<typeof x> => !!x);
 
   return (
     <main>
@@ -48,6 +63,37 @@ export function SlotCategoryPage({ tag }: { tag: SlotMechanicTag }) {
       </section>
 
       <section style={{ maxWidth: 1400, margin: "0 auto", padding: "36px 40px 80px" }}>
+        {featured.length > 0 && (
+          <div style={{ marginBottom: 44 }}>
+            <h2 style={{ margin: "0 0 14px", fontSize: 24, letterSpacing: "-.025em", fontWeight: 800, color: "#E8EDF0" }}>Top {cat.label} slots</h2>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(230px,1fr))", gap: 14 }}>
+              {featured.map((f, i) => (
+                <Link key={f.slug} href={`/slots/${f.slug}`} data-reveal className="csg-lift" style={{ ["--reveal-delay" as string]: `${i * 40}ms`, display: "block", borderRadius: 14, overflow: "hidden", background: "#0C1013", border: "1px solid rgba(255,255,255,.08)" }}>
+                  <span style={{ display: "block", position: "relative", aspectRatio: "16 / 10", background: "#0E1316" }}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={f.art} alt={f.name} width={320} height={200} loading={i < 4 ? "eager" : "lazy"} style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                    <span style={{ position: "absolute", top: 10, left: 10, padding: "3px 8px", borderRadius: 100, background: "rgba(7,9,11,.78)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#FFC531" }}>#{i + 1}</span>
+                  </span>
+                  <span style={{ display: "flex", alignItems: "center", gap: 10, padding: "12px 14px" }}>
+                    <span style={{ minWidth: 0 }}>
+                      <span style={{ display: "block", fontSize: 15, fontWeight: 800, color: "#fff", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{f.name}</span>
+                      <span style={{ display: "block", fontSize: 12, color: "#7B8A93" }}>
+                        {f.provider}
+                        {f.builds > 1 ? ` · ${f.builds} builds` : ""}
+                      </span>
+                    </span>
+                    {f.rtp && (
+                      <span style={{ marginLeft: "auto", flex: "none", textAlign: "right", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 14, color: "#5FE3E8", whiteSpace: "nowrap" }}>
+                        {f.builds > 1 && <span style={{ display: "block", fontSize: 9.5, letterSpacing: ".06em", textTransform: "uppercase", color: "#7B8A93" }}>up to</span>}
+                        {f.rtp}
+                      </span>
+                    )}
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
         <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 24, marginBottom: 16 }}>
           <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".06em", textTransform: "uppercase", color: "#83919A" }}>
             {rows.length + more.length} titles · sorted by published RTP
@@ -67,9 +113,14 @@ export function SlotCategoryPage({ tag }: { tag: SlotMechanicTag }) {
               >
                 <span style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: `linear-gradient(90deg,${s.tint},transparent)` }} />
                 <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 14 }}>
-                  <span style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 38, height: 38, flex: "none", borderRadius: 9, background: "rgba(255,255,255,.05)", border: "1px solid rgba(255,255,255,.09)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: s.tint }}>
-                    {s.mono}
-                  </span>
+                  {slotArtBySlug(s.slug) ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={thumbOf(slotArtBySlug(s.slug)!)} alt="" width={60} height={38} loading="lazy" style={{ width: 60, height: 38, flex: "none", borderRadius: 8, objectFit: "cover", border: "1px solid rgba(255,255,255,.09)" }} />
+                  ) : (
+                    <span style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 38, height: 38, flex: "none", borderRadius: 9, background: "rgba(255,255,255,.05)", border: "1px solid rgba(255,255,255,.09)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: s.tint }}>
+                      {s.mono}
+                    </span>
+                  )}
                   <div style={{ minWidth: 0 }}>
                     <div style={{ fontSize: 15, fontWeight: 700, letterSpacing: "-.02em", color: "#fff" }}>{s.name}</div>
                     <div style={{ fontSize: 12, color: "#7B8A93", marginTop: 2 }}>{s.provider}</div>

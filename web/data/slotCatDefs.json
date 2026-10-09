@@ -7,7 +7,17 @@
   {
     "tag": "megaways",
     "label": "Megaways",
-    "standfirst": "Reel heights change every spin, up to 117,649 ways to win. High hit frequency, thin individual wins, and licensed to many studios, so the games differ more than the name suggests."
+    "standfirst": "Reel heights change every spin, up to 117,649 ways to win. High hit frequency, thin individual wins, and licensed to many studios, so the games differ more than the name suggests.",
+    "featured": [
+      "5-lions-megaways",
+      "the-dog-house-megaways-1000",
+      "bonanza-megaways",
+      "big-bass-bonanza-megaways",
+      "the-dog-house-megaways",
+      "gonzo-s-quest-megaways",
+      "madame-destiny-megaways",
+      "great-rhino-megaways"
+    ]
   },
   {
     "tag": "jackpot",
