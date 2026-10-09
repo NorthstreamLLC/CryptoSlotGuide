@@ -162,7 +162,7 @@ export function SlotReview({ slug, review, facts }: { slug: string; review: Revi
             </a>
           )}
           <Link href="/slots" style={{ padding: "8px 14px", borderRadius: 100, border: "1px solid rgba(255,197,49,.3)", background: "rgba(255,197,49,.08)", color: "#FFC531", fontFamily: MONO, fontSize: 11, letterSpacing: ".04em" }}>
-            All 13 picks →
+            Every slot on our list →
           </Link>
           <span hidden data-slug={slug} />
         </div>
