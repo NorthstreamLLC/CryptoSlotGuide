@@ -1,5 +1,5 @@
 {
-  "note": "Long-form reviews for the editorial picks (lib/top-slots.ts). The score is ours and the page says so; the byline is the site's games desk, never an invented name. Every figure in a review is the one the slot page already shows from the studio's own data; where a studio publishes a feature description on its own game page, that page is cited as featureSource and the mechanics are described from it. Where no studio page exists (Dork Unit is no longer on Hacksaw's public catalogue; Pragmatic publishes no readable game pages) the review stays with the figures and the studio's own demo.",
+  "note": "Long-form reviews for every slot on our list: the editorial picks (lib/top-slots.ts) and the reviewed slots after them. The score is ours and the page says so; the byline is the site's games desk, never an invented name. Every figure in a review is the one the slot page already shows from the studio's own data; where a studio publishes a feature description on its own game page, that page is cited as featureSource and the mechanics are described from it. Where no studio page exists (Dork Unit is no longer on Hacksaw's public catalogue; Pragmatic publishes no readable game pages) the review stays with the figures and the studio's own demo.",
   "byline": "CryptoSlotGuide games desk",
   "reviews": {
     "wanted-dead-or-a-wild": {
@@ -289,6 +289,365 @@
         {
           "title": "Who it is for",
           "body": "Players who liked the idea of Wanted Dead or a Wild more than the experience of it. This is the one to play."
+        }
+      ]
+    },
+    "money-train-4": {
+      "score": 8.2,
+      "read": "2026-10-09",
+      "featureSource": "https://www.relax-gaming.com/products/casino/moneytrain4",
+      "verdict": "The last stop on Relax Gaming's Money Train line: a scatter-pays slot the studio says carries more than 20 features, a 150,000× ceiling and a bet capped at €6.",
+      "sections": [
+        {
+          "title": "Why it is on the list",
+          "body": "Money Train 4 is the final entry in Relax Gaming's series, and the studio's own page frames it that way: the bandits ride the rails \"for the last time\". It is listed as a video slot with a scatter-pays payout mechanic, and Relax counts more than 20 features in it. The headline figure is the ceiling. At 150,000× the bet it sits level with San Quentin xWays as the highest max win on this list, which is the reason it is here."
+        },
+        {
+          "title": "How it plays",
+          "body": "Relax's page names the new pieces rather than explaining every rule. The Arms Dealer joins the cast and hands out features in exchange for Bonus symbols at any moment. A Respin feature extends the base game, an Upgrader gives features a persistent edge, an Unlocker reveals more rows, and a Reset feature refills the spin counter. Beyond that, the studio's page does not spell out the rounds in detail; its own demo, behind the Try Game button, shows the rest."
+        },
+        {
+          "title": "The maths",
+          "body": "Relax does not print a return on this game's page, so the 96.1% we carry for Money Train 4 cannot be confirmed there; the paytable inside the game is where to check the build you are on. Volatility is high. Max win is 150,000× the bet, a figure the studio states itself. The bet range on the page is €0.10 to €6, low for a game with this ceiling, so the top end is reached through the multiple, not the stake."
+        },
+        {
+          "title": "Who it is for",
+          "body": "Players who want the largest multiple on offer and are content with a small maximum stake to chase it. If you want the same 150,000× ceiling from a studio that publishes its return on the game page, San Quentin xWays lists 96.03%. If 150,000× is more variance than you want, Le Bandit stops at 10,000×, a fifteenth of the ceiling."
+        }
+      ]
+    },
+    "mental": {
+      "score": 8.2,
+      "read": "2026-10-09",
+      "featureSource": "https://nolimitcity.com/games/mental",
+      "verdict": "Nolimit City's asylum slot, with xWays, xNudge and xSplit on one board, Dead Patient multipliers from x5 to x9999, and a 66,666× ceiling at 96.08% and extreme volatility.",
+      "sections": [
+        {
+          "title": "Why it is on the list",
+          "body": "Mental stacks three of Nolimit City's xMechanics on one board (xWays, xNudge and xSplit) and builds its identity on a fourth feature, the Dead Patient. From the studio's own page: whenever two Dead Patient symbols land, a random multiplier from x5 to x9999 can be applied to a patient symbol. Any symbol landing in a Fire Frame splits into two parts, and collecting fire frames unlocks the Enhancer Cells. The Spider symbol triggers Mental Transform, a symbol-transform feature. Released 31 August 2021."
+        },
+        {
+          "title": "How it plays",
+          "body": "The bonus is a ladder, per Nolimit's feature notes. Three Scorpion symbols trigger Autopsy Freespins, with sticky Fire Frames. Three Scorpions plus a Spider give Lobotomy Freespins, where the Spider is sticky, awards Mental Transform on every spin, and a Dead Multiplier is transferred to a Patient symbol. Three Scorpions and two Spiders open Mental Freespins, where the Spiders are sticky and the Dead Multiplier never decreases. The lower rounds may be upgraded as they play out, so every Spider matters."
+        },
+        {
+          "title": "The maths",
+          "body": "Nolimit publishes one return on the game page: 96.08%, with no statement on lower builds. The page splits it as 58.16% from the base game and 37.93% from the bonus. Volatility is extreme. Max win is 66,666× the bet, and the page states that reaching it ends the game round. The studio lists a bet range of €0.20 to €70 and a feature buy from 80× to 1,000× the bet, which it notes may be removed in some regulated markets."
+        },
+        {
+          "title": "Who it is for",
+          "body": "Players who want Nolimit at full intensity and accept the long dry stretches extreme volatility brings. The appeal is the Dead Multiplier ladder, so this is a bonus-chasing game. If you want the studio's mechanics with a smaller ceiling, Outsourced caps at 5,000× on a 4×4 grid. If you want more headroom on the same xWays engine, San Quentin xWays runs to 150,000×."
+        }
+      ]
+    },
+    "razor-shark": {
+      "score": 8.1,
+      "read": "2026-10-09",
+      "featureSource": "https://www.pushgaming.com/games/razor-shark.html",
+      "verdict": "Push Gaming's underwater mystery-symbol slot: a 5×4, 20-line game where Mystery Stacks become mini-reels of instant prizes up to 2,500×, with two published builds and high volatility.",
+      "sections": [
+        {
+          "title": "Why it is on the list",
+          "body": "Razor Shark is a 5×4 slot with 20 paylines, and its engine is the Mystery Stack. From Push's own page: Mystery Stacks land in stacks of 4 anywhere on the reels and trigger the nudge and reveal feature. When golden shark symbols appear they trigger the Razor Reveal, which turns the mystery symbols into mini-reels that award instant bet multipliers from 1× to 2,500×, as well as scatters. That gives a plain line game a second way to pay on any spin."
+        },
+        {
+          "title": "How it plays",
+          "body": "Three scatters, landing anywhere at any time, lead to the free games, and more than three enhance the round. In the free games, reels 2 and 4 fill with mystery symbols that nudge down one position every spin and apply a multiplier to every win, and every nudge raises the multipliers. Enter with extra scatters and the stacks nudge upwards and more free spins are awarded. The base game's Razor Reveal and the free games' multipliers are the two places the big wins come from."
+        },
+        {
+          "title": "The maths",
+          "body": "Push publishes two returns for Razor Shark on its own page: 96.70% and 94.06%, 2.64 points apart. The studio says RTPs may vary per casino and that the figure is in the game's user panel and loading screen, which is where to check it. Volatility is high. The max win we carry is 50,000× the bet; Push's page does not state one, so treat that figure as unconfirmed by the studio and check the paytable in the game."
+        },
+        {
+          "title": "Who it is for",
+          "body": "Players who like a classic 20-line slot with a mystery mechanic on top, and who want a free games round where the multiplier climbs with every nudge rather than arriving at random. If you want the same studio on a cluster grid, Jammin' Jars caps at 20,000×. For Push's gamble-led design, Big Bamboo lists the same 50,000× figure, with two published builds of its own."
+        }
+      ]
+    },
+    "sweet-bonanza": {
+      "score": 8.1,
+      "read": "2026-10-09",
+      "featureSource": "https://www.pragmaticplay.com/en/games/sweet-bonanza-slot/",
+      "verdict": "The original pay-anywhere tumble slot from Pragmatic: eight or more matching symbols anywhere pay, multiplier symbols up to 100× in the free spins, a 21,100× ceiling and a published return of 96.48%.",
+      "sections": [
+        {
+          "title": "Why it is on the list",
+          "body": "Sweet Bonanza is the base game the 1000 edition was built from, and it still holds its own on the list. By Pragmatic's own description, you land 8 to 12 or more matching symbols anywhere on the tumbling reels to win, and a matching group of that size pays up to 50×. Winning symbols clear, new ones fall into the gaps, and a single spin can keep paying as long as fresh wins form. It is a simple rule, and it is the one the 1000 edition is built on."
+        },
+        {
+          "title": "How it plays",
+          "body": "From the studio's own game page: four to six scatters trigger the bonus game with 10 free spins, and the scatters themselves award up to 100×. During the feature, multiplier symbols with values from 2× to 100× can land, and at the end of the tumbling sequence the values of all multiplier symbols on screen are added together and applied to the win. That end-of-sequence sum is where the large results come from, so a long tumble chain in the free spins is the moment to watch. The base game is there to reach the scatters."
+        },
+        {
+          "title": "The maths",
+          "body": "Pragmatic's game page publishes one return for this title: 96.48%. The studio does not say on that page whether lower configurations are licensed, so the paytable inside the game is the only confirmation of the build you are on. Volatility is rated high, and the max win is 21,100× the bet. Neither of those last two figures is shown on the studio's game page, which lists the RTP alone, so the in-game rules are the place to check them before you settle on a stake size."
+        },
+        {
+          "title": "Who it is for",
+          "body": "Players who want the tumble format in its plainest form, with the multipliers saved for the bonus rather than spread across every spin. If you want the same engine with a higher ceiling, Sweet Bonanza 1000, also on this list, carries a 25,000× max win and a published return of 96.53%. The choice between the two comes down to how much of the result you want riding on the free spins."
+        }
+      ]
+    },
+    "fire-in-the-hole-2": {
+      "score": 8.0,
+      "read": "2026-10-09",
+      "featureSource": "https://nolimitcity.com/games/fire-in-the-hole-2",
+      "verdict": "Nolimit City's mining sequel, a collapsing 6×6 grid that opens a row with every collapse, with xBomb wilds, buried features and a coin-collecting bonus behind a 65,000× ceiling at 96.07%.",
+      "sections": [
+        {
+          "title": "Why it is on the list",
+          "body": "Fire in the Hole 2 is a grid that grows as it pays. From Nolimit's own page: the reel area is 6×6, each spin starts with 3 active rows, and every collapse opens another, up to 6. A collapse comes from a win, an xBomb Wild explosion or Wild Mining. xBomb Wilds substitute, remove adjacent symbols when they explode and raise the win multiplier for the next collapse. Wild Mining turns 3 to 6 aligned symbols with no win into 1 to 4 Wilds. Released 22 February 2024."
+        },
+        {
+          "title": "How it plays",
+          "body": "Dirt blocks in the base game can hide Wild, Split or Bonus symbols, inactive until the dirt is cleared, and xSplit doubles the symbols on its row. Three, four or five Bonus symbols open Lucky Wagon Spins with 2, 3 or 4 rows open, three spins that reset whenever a coin lands. The top row reveals enhancers each spin: coin values, multipliers, Dynamite, Beer or the Dwarf, who collects every value on the board. Upgrade Crystals on a seventh reel make those enhancers persist."
+        },
+        {
+          "title": "The maths",
+          "body": "One published return on Nolimit's game page: 96.07%, with no statement on lower builds. Volatility is extreme. Max win is 65,000× the bet; the page says the round ends when a win passes it. Bets run from €0.20 to €100. xBet costs 250% of the base bet, guarantees at least one Bonus symbol on the last inactive row and clears the dirt. Bonus buys run from 70× to 600× the bet for the three Lucky Wagon entries and 3,600× for a guaranteed persistent Dwarf, where markets allow them."
+        },
+        {
+          "title": "Who it is for",
+          "body": "Players who like a board that changes under them, where the base game has its own escalation before the bonus arrives. The coin-collecting bonus rewards patience, as each persistent enhancer builds on the last. If you want a similar ceiling with a different engine, Mental tops out at 66,666×. If you want the studio's biggest number, San Quentin xWays goes to 150,000×."
+        }
+      ]
+    },
+    "gates-of-olympus": {
+      "score": 8.0,
+      "read": "2026-10-09",
+      "featureSource": "https://www.pragmaticplay.com/en/games/gates-of-olympus/",
+      "verdict": "Pragmatic's original Zeus tumble slot: pay-anywhere wins across six tumbling reels, multiplier symbols up to 500× in both the base game and the free spins, a 5,000× ceiling and a published return of 96.50%.",
+      "sections": [
+        {
+          "title": "Why it is on the list",
+          "body": "Gates of Olympus is the title the 1000 and 2500 editions grew from, and the one with the most modest ceiling of the three. Symbols pay anywhere on the screen across six tumbling reels: by the studio's own description, landing 8 to 30 matching symbols wins up to 50×, and winning symbols clear so new ones can fall in. What sets it apart from Sweet Bonanza is that multiplier symbols, worth up to 500×, can land in the base game as well as in the free spins, so an ordinary spin has a top end of its own."
+        },
+        {
+          "title": "How it plays",
+          "body": "From Pragmatic's game page: four or more scatter symbols trigger the bonus game with 15 free spins. During the feature, whenever a multiplier symbol lands on a winning spin its value is added to a running total multiplier, and that total is applied to the win. Because the total carries through the round, the later free spins are worth more than the early ones when multipliers have already landed. The base game plays the same tumbles without the running total, which keeps it quick and gives every spin a chance at a multiplied win."
+        },
+        {
+          "title": "The maths",
+          "body": "One published return on Pragmatic's game page: 96.50%. The studio does not state there whether lower configurations are licensed, so the paytable in the game is the only check on the build you are playing. Volatility is rated very high, and the max win is 5,000× the bet; the studio's game page lists the RTP but not those two figures, so the in-game rules are where to confirm them. Very high volatility against a 5,000× cap means the dry runs are long relative to the ceiling."
+        },
+        {
+          "title": "Who it is for",
+          "body": "Players who want the classic version of the format and accept that the ceiling is the lowest of the family. If 5,000× feels short for the variance, Gates of Olympus 1000, also on this list, is the same studio's sequel with a 15,000× max win at the same published 96.5% return. For the pure tumble experience without the base-game multipliers, Sweet Bonanza is the alternative."
+        }
+      ]
+    },
+    "san-quentin-xways": {
+      "score": 7.9,
+      "read": "2026-10-09",
+      "featureSource": "https://nolimitcity.com/games/san-quentin",
+      "verdict": "Nolimit City's prison slot and the joint-highest ceiling on this list: Enhancer Cells above and below every reel, Jumping Wilds whose multipliers double up to 512×, and 150,000× the bet at 96.03%.",
+      "sections": [
+        {
+          "title": "Why it is on the list",
+          "body": "San Quentin xWays is on the list for its ceiling, 150,000× the bet, and for the way it gets there. From Nolimit's own page: every reel has a locked Enhancer Cell at the top and the bottom. Opened, a cell reveals one of the top five paying symbols, a Wild, a Razor Split or an xWays symbol. Razor Split doubles every regular position on the reel, twice if it lands top and bottom, and xWays symbols reveal the same regular symbol stacked at 4. Released 12 January 2021."
+        },
+        {
+          "title": "How it plays",
+          "body": "Landing one or two Bonus symbols opens the Enhancer Cell on that reel and turns the Bonus into a Wild. In the base game, Split Wilds split every regular symbol on their reel. Three, four or five Bonus symbols trigger Lockdown Spins with one, two or three Jumping Wilds. The Enhancer reels stay open for the whole feature, and more Bonus symbols add Jumping Wilds and spins. Jumping Wilds move each spin, and one landing on a Razor Split reel doubles its multiplier, to a maximum of 512×."
+        },
+        {
+          "title": "The maths",
+          "body": "Nolimit publishes one return on the game page: 96.03%, with no statement on lower builds. The page attributes 58.74% of it to the base game. Volatility is extreme. Max win is 150,000× the bet, the Psycho Manhunt in the studio's terms, and Lockdown Spins end when a win passes it. Bets run from €0.20 to €32. The feature buy enters Lockdown Spins with three, four or five Bonus symbols at 100×, 400× or 2,000× the bet, and the studio notes it may be removed in some regulated markets."
+        },
+        {
+          "title": "Who it is for",
+          "body": "Players who want the biggest published number from Nolimit and understand what extreme volatility means at that height. The Jumping Wild multipliers are the whole story, so this is a bonus-first game. Money Train 4 shares the same 150,000× ceiling from Relax Gaming. If you want Nolimit with far less exposure, Outsourced stops at 5,000× on a 4×4 grid, and Mental sits between the two at 66,666×."
+        }
+      ]
+    },
+    "big-bass-bonanza": {
+      "score": 7.9,
+      "read": "2026-10-09",
+      "featureSource": "https://www.pragmaticplay.com/en/games/big-bass-bonanza/",
+      "verdict": "Reel Kingdom's fishing slot, distributed by Pragmatic: a free spins round where wilds collect money symbols worth up to 2,000×, retrigger multipliers up to 10×, a 2,100× ceiling, and a published return of 96.71%.",
+      "sections": [
+        {
+          "title": "Why it is on the list",
+          "body": "Big Bass Bonanza is built by Reel Kingdom and distributed by Pragmatic Play, whose game page is the one we read. It is on the list because it is the clearest medium-volatility design here, and its whole game is one idea: in the bonus round, money symbols carry cash values, and wilds collect them. Pragmatic's page says money symbols with values of up to 2,000× can land in the bonus game. The base game exists to land scatters, and the free spins are where the collecting happens."
+        },
+        {
+          "title": "How it plays",
+          "body": "From the studio's game page: three, four and five scatters trigger the feature with 10, 15 and 20 free spins respectively. During the feature, wilds collect all visible money symbols. Every fourth wild collected retriggers the feature with 10 more spins, first with a 2× multiplier, then 3×, and a 10× multiplier on the third retrigger. The round therefore builds as it goes: the longer it runs and the more wilds land, the larger the multiplier applied to each collection. A round that reaches the third retrigger is the outcome the ceiling depends on."
+        },
+        {
+          "title": "The maths",
+          "body": "Pragmatic's game page publishes one return for this title: 96.71%. The page does not say whether lower configurations are licensed, so the in-game paytable is the check on the build you are playing. Volatility is rated medium, and the max win is 2,100× the bet; neither figure is stated on the studio's game page, so confirm them in the in-game rules. A medium rating against a 2,100× cap points to a steadier ride than the tumble slots on this list."
+        },
+        {
+          "title": "Who it is for",
+          "body": "Players who want a calmer session than the high-volatility titles on this list, and who like a bonus round that visibly builds. The 2,100× cap is the trade-off. If you want more variance on a Pragmatic title with a single published return, Gates of Olympus, also on this list, offers a 5,000× max win at very high volatility and 96.5%."
+        }
+      ]
+    },
+    "bonanza-megaways": {
+      "score": 7.8,
+      "read": "2026-10-09",
+      "featureSource": "https://www.bigtimegaming.com/games/bonanza",
+      "verdict": "Big Time Gaming's gold-mine slot, its own Megaways reel set paired with cascading symbols: up to 117,649 ways, a published 96.00% return and a 26,000× ceiling.",
+      "sections": [
+        {
+          "title": "Why it is on the list",
+          "body": "Bonanza is Big Time Gaming's pairing of Megaways with cascading symbols, which the studio's page calls another world-first innovation. Big Time Gaming's own page describes it as building on the studio's patented Megaways system, giving each spin up to 117,649 ways to win, combined with cascading symbols. That pairing is the reason it is still on the list: a variable reel set where every win clears space for another chance in the same spin."
+        },
+        {
+          "title": "How it plays",
+          "body": "Big Time Gaming's page is short on rules. It confirms the Megaways reel set, the 117,649-way maximum, cascading symbols and a Wild West gold-mine theme, and it lists the game for mobile and desktop in HTML5. It does not set out the free spins, multipliers or special symbols, so we do not describe them here; the studio's own demo, linked from the same page, shows the full feature set before you stake anything."
+        },
+        {
+          "title": "The maths",
+          "body": "Big Time Gaming publishes one return on its game page: 96.00%, with no statement on lower builds, so the paytable inside the game is the place to confirm yours. Max win is 26,000× the bet, the highest ceiling in this batch. The studio does not publish a volatility rating, so we print none either; the upside depends on long cascade chains across a reel set that changes size on every spin."
+        },
+        {
+          "title": "Who it is for",
+          "body": "Players who want the original version of a format they may already know from its imitators, and who are comfortable with long quiet stretches between the spins that matter. If you want a cascading Megaways game with a multiplier you can watch climb, Gonzo's Quest Megaways, on this list, runs to 15× in its Free Fall round at a 20,972× cap."
+        }
+      ]
+    },
+    "gonzo-s-quest-megaways": {
+      "score": 7.8,
+      "read": "2026-10-09",
+      "featureSource": "https://redtiger.com/games/gonzos-quest-megaways",
+      "verdict": "Red Tiger's Megaways rebuild of the original avalanche slot: up to 117,649 ways, a multiplier that climbs with each avalanche to 15× in Free Fall, and a 20,972× ceiling at a single published return of 95.77%.",
+      "sections": [
+        {
+          "title": "Why it is on the list",
+          "body": "Gonzo's Quest Megaways takes the avalanche mechanic, where symbols fall into place instead of spinning, and puts it on a Megaways reel set. Red Tiger's page lists six reels of up to seven symbols each, for a maximum of 117,649 ways to win. Winning symbols explode, new ones fall in, and avalanches continue until no wins remain. Released on 23 July 2020, it keeps the explorer theme and the falling-symbol pace, and adds a reel set that changes size on every drop."
+        },
+        {
+          "title": "How it plays",
+          "body": "The Avalanche Multiplier carries the game. In the base game, Red Tiger says the first win in a spin raises it to 2×, the second to 3× and the third to 5×, where it stays until the spin ends. Free Fall, triggered by three Free Fall symbols on a way or two plus a Wild, awards three free spins per symbol and runs the multiplier at 3×, 6×, 9× and 15×. A random Earthquake can destroy all low-paying symbols, and Wilds do not break when they take part in a win, with no more than two on the reels at once."
+        },
+        {
+          "title": "The maths",
+          "body": "Red Tiger publishes one return on its game page: 95.77%, the lowest in this batch, with no statement on other builds, so the in-game paytable is the check. The page lists a maximum payout of 20,972× the bet and a bet range of €0.10 to €50. Red Tiger leaves the volatility field on its page blank, so we print none either; the top end depends on long avalanche chains inside Free Fall."
+        },
+        {
+          "title": "Who it is for",
+          "body": "Players who like a multiplier they can see building over a single spin and a bonus where that build starts higher. The base game pays in short bursts and saves its real weight for Free Fall. If you want the other cascading Megaways title on this list, Bonanza Megaways has the same 117,649-way ceiling at a published 96.00% return and a 26,000× cap."
+        }
+      ]
+    },
+    "jammin-jars": {
+      "score": 7.7,
+      "read": "2026-10-09",
+      "featureSource": "https://www.pushgaming.com/games/jammin-jars.html",
+      "verdict": "Push Gaming's cascading cluster slot, where the wild is also the scatter and carries its own multiplier: an 8×8 grid, two published builds, and a listed ceiling of 20,000×.",
+      "sections": [
+        {
+          "title": "Why it is on the list",
+          "body": "Jammin' Jars earns its place on the strength of one symbol. The game is an 8×8 cascading grid where five or more matching fruits form a win. The Jam Jar, per Push's own page, is both a wild and a scatter, and each jar carries a multiplier that starts at 1× and applies to every win the jar contributes to. One symbol doing three jobs is what gives a quiet-looking screen its upside: a jar that lands next to a cluster turns an ordinary win into a multiplied one."
+        },
+        {
+          "title": "How it plays",
+          "body": "Fruits and jars cascade onto the grid, and wins clear to make room for more. Three or more Jam Jars anywhere on the reels trigger the free games, where Push says the jars move around the grid and multipliers join in; that round is where the game's ceiling lives. A Rainbow feature triggers at random in the base game and drops oversized fruits onto the grid, which can break into wins. Push lists a Bonus Buy as available, so the free games can be bought directly where the casino offers it."
+        },
+        {
+          "title": "The maths",
+          "body": "Push publishes two returns for Jammin' Jars on its own game page: 96.83% and 94.25%, about two and a half points apart. The studio states that RTPs may vary per casino and that the figure appears in the user panel and on the game's loading screen, which is where to check your build. Volatility is high. Push does not publish a max-win cap for this title; we list it at 20,000× the bet, and the studio's page gives a highest observed win of 19,998.5×."
+        },
+        {
+          "title": "Who it is for",
+          "body": "Players who like grid games where the multiplier sits on a symbol they can watch rather than on a meter. The base game can be slow between jar landings, so it suits patience over pace. If you want the cluster format with a lower ceiling and more going on in the base game, Reactoonz, on this list, is a 7×7 grid at a 4,570× cap with five licensed returns to check."
+        }
+      ]
+    },
+    "reactoonz": {
+      "score": 7.7,
+      "read": "2026-10-09",
+      "featureSource": "https://www.playngo.com/games/reactoonz",
+      "verdict": "Play'n GO's alien cluster slot and the template for its grid series: a 7×7 board, a charging Gargantoon that sets off features, a 4,570× ceiling, and five licensed returns with a twelve-point spread.",
+      "sections": [
+        {
+          "title": "Why it is on the list",
+          "body": "Reactoonz is the game Play'n GO built a whole series on, and it still plays as the clearest version of the idea. Aliens drop onto a 7×7 grid, and a cluster of five or more matching aliens pays. Winning aliens are teleported away and replaced from above, so a single spin can pay several times. Released on 23 October 2017, it is one of the older titles on this list, and the studio's own page still lists it under a Reactoonz category of its own."
+        },
+        {
+          "title": "How it plays",
+          "body": "From Play'n GO's own page: flux capacitors are the wild symbols, and oversized aliens multiply the prize when they join a winning cluster. Every winning cluster also feeds energy to the Gargantoon, who waits beside the grid. When he is fully charged he makes a Quantum Leap onto the middle of the grid, goes wild, and sets off a chain of up to five features to produce more clusters. That charge meter is the game's tension: each small win moves you toward the big event."
+        },
+        {
+          "title": "The maths",
+          "body": "Play'n GO licenses five returns for Reactoonz: 96.51%, 94.51%, 91.49%, 87.50% and 84.51%. That is a twelve-point spread between the best and worst build, the widest of any slot in this batch, and the lobby will not tell you which one is loaded; the paytable inside the game will. Volatility is high. Max win is 4,570× the bet, a modest ceiling by the standard of this list, which is the trade for a game that pays in frequent small clusters."
+        },
+        {
+          "title": "Who it is for",
+          "body": "Players who want something happening on most spins and a feature meter to work toward, rather than one rare bonus. The wide spread of licensed returns makes checking the paytable more important here than on almost any other title we list. If you want the cluster format with a far higher ceiling, Jammin' Jars, also on this list, is an 8×8 grid at 20,000× with two published builds."
+        }
+      ]
+    },
+    "divine-fortune": {
+      "score": 7.6,
+      "read": "2026-10-09",
+      "featureSource": "https://netent.com/games/divine-fortune",
+      "verdict": "NetEnt's Greek-myth jackpot slot: a 5×3, 20-line game with falling wilds, a coin-collect jackpot round and medium volatility, at a single published return of 96.59% and a 1,000× maximum payout.",
+      "sections": [
+        {
+          "title": "Why it is on the list",
+          "body": "Divine Fortune is the steady option on this list. It is a 5-reel, 3-row slot with 20 paylines, released on 24 January 2017, and NetEnt rates it medium volatility on its own page. What sets it apart is the Jackpot Bonus Game: three or more Bonus symbols in the main game or during Falling Wilds respins start it, each Bonus symbol carries a coin value of 10× to 200× the bet, and filling one, two or all three rows with Golden Coins wins the Minor, Major or Mega Jackpot."
+        },
+        {
+          "title": "How it plays",
+          "body": "Per NetEnt's page, a Falling Wild slides down one position and awards a respin each time, in the main game and in the free spins, and those respins can bring in Free Spins scatters and Bonus symbols. Wild on Wild fires when an Overlay Wild lands on an existing Wild: it expands to cover the reel. Three, four or five scatters award 5, 8 or 12 free spins, and in that round every Wild becomes a Wild on Wild covering its reel."
+        },
+        {
+          "title": "The maths",
+          "body": "NetEnt publishes one return on its game page: 96.59%, with no statement on lower builds, so the in-game paytable is the check. Volatility is rated medium. The page lists a maximum payout of 1,000× the bet, the lowest ceiling in this batch, and a bet range of €0.20 to €100 across the fixed 20 lines. The Mega Jackpot is described as progressively growing, so its value at any moment is set by the casino's pool, not by the paytable."
+        },
+        {
+          "title": "Who it is for",
+          "body": "Players who want a classic reel set, wins that land often enough to keep a session going, and a jackpot round as the event to wait for, rather than a single high-variance bonus. It also suits smaller budgets, with a €0.20 minimum stake. If you want another medium-volatility title with a little more top end, Big Bass Bonanza, on this list, is rated medium at a 2,100× cap."
+        }
+      ]
+    },
+    "gates-of-olympus-1000": {
+      "score": 7.6,
+      "read": "2026-10-09",
+      "featureSource": "https://www.pragmaticplay.com/en/games/gates-of-olympus-1000/",
+      "verdict": "The Zeus tumble slot with its multipliers stretched to 1,000×: a 6×5 pay-anywhere grid, a 100× bonus buy, a 15,000× ceiling, and the published 96.5% return confirmed at every casino we read.",
+      "sections": [
+        {
+          "title": "Why it is on the list",
+          "body": "Gates of Olympus 1000 keeps the original's rules and raises the numbers that matter. It is set on a 6×5 grid, and by Pragmatic's own description you need at least eight matching symbols, anywhere on the screen, to win. A tumble feature removes winning combinations and drops new symbols in from the top. Multiplier symbols sit on all reels and can hit during both spins and tumbles, each taking a random value from 2× to 1,000×; the values are combined at the end of a tumble sequence and applied to the win. That 1,000× upper value is the change from the original."
+        },
+        {
+          "title": "How it plays",
+          "body": "From the studio's game page: four or more scatters in the base game trigger the free spins with 15 free games, and three or more scatters during the round award five more. In the bonus, every multiplier symbol that hits is added to the round's total multiplier, which is then applied to wins as the round continues, so a large early multiplier keeps paying. If you would rather not wait for the scatters, the free spins can be bought from the base game for 100× the bet. The buy is the shortest route to the part of the game the ceiling depends on."
+        },
+        {
+          "title": "The maths",
+          "body": "Pragmatic publishes one return for this title, 96.5%, and does not say on its game page whether lower builds are licensed. We checked: on 18 September 2026 we read 96.5% at Razed, Stake, Rainbet, Gamdom and BC.Game on each casino's game page, and at Roobet in the in-client paytable. Every one showed the published figure. Volatility is rated high, and the max win is 15,000× the bet; those two figures are not on the studio's game page, so confirm them in the in-game rules."
+        },
+        {
+          "title": "Who it is for",
+          "body": "Players who like the Gates of Olympus engine and want more headroom than the original's 5,000× cap. Because every casino we read carries the published 96.5% build, where you play it matters less here than on most titles. If you want the highest ceiling the series offers, Gates of Olympus 2500, on this list, takes the max win to 25,000× with a published return of 96.52%."
+        }
+      ]
+    },
+    "stormforged": {
+      "score": 7.5,
+      "read": "2026-10-09",
+      "verdict": "A high-volatility Hacksaw title whose own paytable states 96.41%, a figure we confirmed at six of seven crypto casinos; BC.Game's game page shows 96% instead.",
+      "sections": [
+        {
+          "title": "Why it is on the list",
+          "body": "Stormforged is here for a reason that has nothing to do with its theme: it is one of the few titles on this list where we read the return at the casinos themselves, and the readings did not all agree. Hacksaw has no game page for it on its own site, only a tile in its games grid that launches the demo, so this review sticks to the figures. The mechanics, features and bonus rounds are best seen in the studio's own demo, which you can open from that tile before you stake anything."
+        },
+        {
+          "title": "How it plays",
+          "body": "We cannot describe the features from a studio source, so we will not describe them from anywhere else. Open Hacksaw's demo from the games grid on hacksawgaming.com and the game shows its own rules and paytable, which is the right place to learn what triggers a bonus and what any buy option costs. Treat it as a high-volatility title when you set your stake: long runs without a meaningful return are expected, and the results that make the game worth playing arrive rarely rather than often."
+        },
+        {
+          "title": "The maths",
+          "body": "The return the game's own paytable states is 96.41%. On 18 September 2026 we read it at Roobet and Shuffle in the in-client paytable, both 96.41%, and on the game pages at Razed, Stake, Rainbet and Gamdom, all 96.41%. BC.Game's game page shows 96%, the one reading that differs; the in-game paytable is the check on what is actually loaded there. Volatility is rated high. Hacksaw does not publish a max win for Stormforged on its site, so we do not state one; the game's rules carry it."
+        },
+        {
+          "title": "Who it is for",
+          "body": "Players who already like Hacksaw's high-volatility titles and want to play one where the casino matters. Since six of the seven casinos we read show the 96.41% figure, any of those six showed the full 96.41% build when we read it. If you want a Hacksaw title with a published ceiling, Wanted Dead or a Wild, also on this list, has a 12,500× max win and a 96.38% best build."
         }
       ]
     }
