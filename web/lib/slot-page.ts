@@ -763,14 +763,22 @@ export function studioStats(studioName: string): {
  */
 const HERO_STUDIOS = ["Pragmatic Play", "Hacksaw Gaming", "Play'n GO", "Nolimit City", "Push Gaming", "Relax Gaming", "NetEnt", "Red Tiger", "Big Time Gaming", "ELK Studios"];
 export function heroArtTiles(n = 48): string[] {
-  const out: string[] = [];
-  const per = Math.ceil(n / HERO_STUDIOS.length);
+  // The titles people know lead: our picks and reviewed slots (Sweet Bonanza,
+  // Gates of Olympus, Wanted Dead or a Wild), then the big studios' catalogue.
+  const known: string[] = [];
+  for (const slug of [...topSlotRows().map((p) => p.slug), ...siteData.slots.map((s) => s.slug)]) {
+    const art = slotArtBySlug(slug);
+    if (art?.startsWith("/assets/games/")) known.push(art.replace("/assets/games/", "/assets/games/t/"));
+  }
+  const out: string[] = [...new Set(known)];
+  if (out.length >= n) return out.slice(0, n);
+  const per = Math.ceil((n - out.length) / HERO_STUDIOS.length);
   for (const studio of HERO_STUDIOS) {
     let k = 0;
     for (const g of PAGES.values()) {
       if (k >= per) break;
       const rec = g.slug ? ART[g.slug] : undefined;
-      if (g.provider === studio && rec?.file) {
+      if (g.provider === studio && rec?.file && !out.includes(`/assets/games/t/${rec.file}`)) {
         out.push(`/assets/games/t/${rec.file}`);
         k++;
       }

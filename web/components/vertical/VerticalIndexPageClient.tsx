@@ -3,6 +3,7 @@
 import type React from "react";
 import Link from "next/link";
 import type { VerticalKind, VerticalPage, VerticalRow } from "@/lib/vertical-view";
+import { thumbOf } from "@/lib/thumb";
 import { CountUp } from "@/components/ui/CountUp";
 import { GuideCover } from "@/components/guides/GuideCover";
 import { BrandMark } from "@/components/ui/BrandMark";
@@ -236,7 +237,7 @@ function Row({ r, first, cols, labels, hasStat }: { r: VerticalRow; first: boole
           // A game tile, 4:3 like the art, so the title is not cropped off it.
           <span style={{ width: 52, height: 39, flex: "none", borderRadius: 8, overflow: "hidden", background: "#0E1316" }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={r.image} alt="" width={52} height={39} loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+            <img src={thumbOf(r.image)} alt="" width={52} height={39} loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
           </span>
         ) : r.cover ? (
           <span style={{ width: 64, height: 36, flex: "none", borderRadius: 8, overflow: "hidden", border: "1px solid rgba(255,255,255,.08)" }}>

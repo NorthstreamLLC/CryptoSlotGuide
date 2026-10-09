@@ -172,7 +172,7 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
           }),
           ...slots
             .filter((s) => !picked.has(s.slug))
-            .map((s) => {
+            .map((s, i) => {
               // What a review leaves unpublished, the catalogue fills — the
               // same figures the database page prints for the title.
               const fb = catalogueFallback(s.slug, s.provider, s.name);
@@ -182,7 +182,8 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
                 name: s.name,
                 mono: s.mono,
                 tint: s.tint,
-                note: "",
+                // The ranking carries on past the picks, in the list's own order.
+                note: `Our #${picks.length + i + 1} pick`,
                 image: slotArtBySlug(s.slug) ?? undefined,
                 m1: s.provider,
                 m2: hasRtp(s) ? rtpLabel(s) : fb.rtp ?? "Not published",

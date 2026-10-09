@@ -33576,6 +33576,61 @@
       "provider": "PG Soft",
       "fetched": "2026-10-07",
       "via": "PG Soft's own game page"
+    },
+    "mental": {
+      "file": "mental.webp",
+      "bytes": 29192,
+      "type": "image/webp",
+      "sourceUrl": "https://fan-cdn.nolimitcity.com/mental_meta_image_06f5394518.png",
+      "sourceHost": "fan-cdn.nolimitcity.com",
+      "page": "https://nolimitcity.com/games/mental",
+      "provider": "Nolimit City",
+      "fetched": "2026-10-09",
+      "via": "Nolimit City's own game page"
+    },
+    "fire-in-the-hole-2": {
+      "file": "fire-in-the-hole-2.webp",
+      "bytes": 37398,
+      "type": "image/webp",
+      "sourceUrl": "https://fan-cdn.nolimitcity.com/fith_2_share_img_db234472f3.png",
+      "sourceHost": "fan-cdn.nolimitcity.com",
+      "page": "https://nolimitcity.com/games/fire-in-the-hole-2",
+      "provider": "Nolimit City",
+      "fetched": "2026-10-09",
+      "via": "Nolimit City's own game page"
+    },
+    "gonzo-s-quest-megaways": {
+      "file": "gonzo-s-quest-megaways.webp",
+      "bytes": 17334,
+      "type": "image/webp",
+      "sourceUrl": "https://fan-cdn.nolimitcity.com/medium_gonzo_s_quest_megaways_rt_splashpost_2560x820px_cc4ea36815.png",
+      "sourceHost": "fan-cdn.nolimitcity.com",
+      "page": "https://redtiger.com/games/gonzos-quest-megaways",
+      "provider": "Red Tiger",
+      "fetched": "2026-10-09",
+      "via": "Red Tiger's own game page"
+    },
+    "san-quentin-xways": {
+      "file": "san-quentin-xways.webp",
+      "bytes": 47428,
+      "type": "image/webp",
+      "sourceUrl": "https://fan-cdn.nolimitcity.com/san_quentin_xways_share_628bb8edeb.jpg",
+      "sourceHost": "fan-cdn.nolimitcity.com",
+      "page": "https://nolimitcity.com/games/san-quentin",
+      "provider": "Nolimit City",
+      "fetched": "2026-10-09",
+      "via": "Nolimit City's own game page"
+    },
+    "bonanza-megaways": {
+      "file": "bonanza-megaways.webp",
+      "bytes": 17168,
+      "type": "image/webp",
+      "sourceUrl": "https://static1.squarespace.com/static/60aedd95a74c4c4033f9d064/t/60d3ec0f0ec2676bea7aedb0/1624501263384/Bonanza_Rectangular_1600x755.jpg?format=1500w",
+      "sourceHost": "static1.squarespace.com",
+      "page": "https://www.bigtimegaming.com/games/bonanza",
+      "provider": "Big Time Gaming",
+      "fetched": "2026-10-09",
+      "via": "Big Time Gaming's own game page"
     }
   },
   "heldPendingRights": {
