@@ -17,6 +17,18 @@ import { CoinIcon } from "@/components/ui/CoinIcon";
  * Split out of app/coins/page.tsx so that file can be a server component
  * exporting real per-page metadata — a "use client" page can't do that.
  */
+/** Where each coin sits in the hero cluster (percent of the cluster box), big ones first so they overlap. */
+const COIN_SPOTS = [
+  { x: 30, y: 30, size: 112, z: 8 },
+  { x: 58, y: 18, size: 92, z: 7 },
+  { x: 72, y: 56, size: 100, z: 9 },
+  { x: 12, y: 62, size: 80, z: 6 },
+  { x: 44, y: 66, size: 86, z: 10 },
+  { x: 84, y: 14, size: 66, z: 5 },
+  { x: 4, y: 14, size: 62, z: 4 },
+  { x: 88, y: 80, size: 60, z: 3 },
+];
+
 export function CoinsPage() {
   const { coinDefs, ops, coinsBy } = siteData;
   const [sel, setSel] = useState<string>("all");
@@ -46,24 +58,67 @@ export function CoinsPage() {
         </div>
       </div>
 
-      <section style={{ maxWidth: 1400, margin: "0 auto", padding: "46px 40px 0" }}>
-        <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 32, flexWrap: "wrap", marginBottom: 24 }}>
-          <div>
+      {/* The hero: the copy on the left, the coins themselves on the right as
+          an overlapping cluster. Each coin is a button for its own view and
+          carries how many casinos take it; the selected one comes forward. */}
+      <section style={{ position: "relative", overflow: "hidden", borderBottom: "1px solid rgba(255,255,255,.07)", background: "radial-gradient(70% 120% at 85% 30%, rgba(0,194,204,.10), transparent 60%), #0B0F12" }}>
+        <div className="csg-coin-hero" style={{ position: "relative", maxWidth: 1400, margin: "0 auto", padding: "46px 40px 44px" }}>
+          <div style={{ minWidth: 0 }}>
             <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 12 }}>
               Cryptocurrencies · {sel === "all" ? "ALL" : sel}
             </div>
-            <h1 style={{ margin: "0 0 10px", fontSize: 40, lineHeight: 1.04, letterSpacing: "-.035em", fontWeight: 800, fontStretch: "114%", color: "#fff" }}>
+            <h1 style={{ margin: "0 0 12px", fontSize: 44, lineHeight: 1.04, letterSpacing: "-.035em", fontWeight: 800, fontStretch: "114%", color: "#fff" }}>
               Deposit and withdraw, coin by coin
             </h1>
-            <p style={{ margin: 0, maxWidth: "74ch", fontSize: 16, lineHeight: 1.6, color: "#93A3AC", textWrap: "pretty" }}>
+            <p style={{ margin: "0 0 18px", maxWidth: "62ch", fontSize: 16, lineHeight: 1.6, color: "#93A3AC", textWrap: "pretty" }}>
               Which coins the casinos on our index accept, and how each network confirms and charges for a transfer, from the network's own documentation. Casinos set their own confirmation requirements on top, so check the cashier before you send.
             </p>
+            <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+              <span style={{ padding: "8px 13px", borderRadius: 100, background: "rgba(255,255,255,.045)", border: "1px solid rgba(255,255,255,.08)", fontSize: 13, color: "#A8B6BE" }}>
+                <strong style={{ color: "#fff", fontWeight: 800 }}>{coinDefs.length}</strong> coins
+              </span>
+              <span style={{ padding: "8px 13px", borderRadius: 100, background: "rgba(255,255,255,.045)", border: "1px solid rgba(255,255,255,.08)", fontSize: 13, color: "#A8B6BE" }}>
+                <strong style={{ color: "#fff", fontWeight: 800 }}>{siteCounts.casinos}</strong> casinos
+              </span>
+            </div>
           </div>
-          <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#77858E", whiteSpace: "nowrap" }}>
-            {coinDefs.length} coins · {siteCounts.casinos} operators
+
+          <div className="csg-coin-cluster" aria-label="Pick a coin">
+            {coinDefs.map((c, i) => {
+              const spot = COIN_SPOTS[i % COIN_SPOTS.length];
+              const active = sel === c.ticker;
+              const n = coinOps(c.ticker).length;
+              return (
+                <button
+                  key={c.ticker}
+                  type="button"
+                  onClick={() => setSel(active ? "all" : c.ticker)}
+                  aria-pressed={active}
+                  title={`${c.ticker}: accepted at ${n} casinos`}
+                  className="csg-coin-bubble"
+                  style={{
+                    left: `${spot.x}%`,
+                    top: `${spot.y}%`,
+                    zIndex: active ? 20 : spot.z,
+                    ["--s" as string]: `${spot.size * (active ? 1.15 : 1)}px`,
+                    ["--d" as string]: `${i * -1.3}s`,
+                    opacity: sel === "all" || active ? 1 : 0.55,
+                  }}
+                >
+                  <span className="csg-coin-in">
+                    <CoinIcon ticker={String(c.ticker)} size={Math.round(spot.size * (active ? 1.15 : 1))} />
+                  </span>
+                  <span className="csg-coin-tag">
+                    {c.ticker} · {n}
+                  </span>
+                </button>
+              );
+            })}
           </div>
         </div>
+      </section>
 
+      <section style={{ maxWidth: 1400, margin: "0 auto", padding: "28px 40px 0" }}>
         <div role="table" style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 14, overflowX: "auto", background: "#0C1013", boxShadow: "0 12px 40px rgba(0,0,0,.35)" }}>
           <div role="row" style={{ display: "grid", minWidth: 1120, gridTemplateColumns: "minmax(240px,1.2fr) 110px 150px 190px minmax(200px,1fr) 168px", background: "#101519", borderBottom: "1px solid rgba(255,255,255,.07)" }}>
             {["Coin", "Accepted at", "Block time", "Finality", "How fees work", ""].map((h) => (
