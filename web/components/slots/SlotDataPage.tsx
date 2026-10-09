@@ -4,7 +4,7 @@ import Image from "next/image";
 import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
 import { thumbOf } from "@/lib/thumb";
 import { EmailSignup } from "@/components/ui/EmailSignup";
-import { SlotPerks } from "@/components/slots/SlotPerks";
+import { VipFloat } from "@/components/slots/VipFloat";
 import { NextSteps } from "@/components/layout/NextSteps";
 import { publishableArt, rtpSpread, rtpVersions, singleRtp, rtpSource, slotSpecs, type CatalogueSlotPage } from "@/lib/slot-page";
 import { isTopSlot } from "@/lib/top-slots";
@@ -136,11 +136,15 @@ export function SlotDataPage({ g, review }: { g: CatalogueSlotPage; review?: Rea
             </>
           )}
         </p>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))", gap: 12 }}>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 12, alignItems: "stretch" }}>
+        <div style={{ flex: "1 1 360px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))", gap: 12, alignContent: versions.length > 1 ? "start" : "stretch" }}>
           {(versions.length ? versions : only !== null ? [only] : []).map((v, i) => (
             <div
               key={v}
               style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
                 padding: "18px 18px 16px",
                 borderRadius: 14,
                 background: i === 0 ? "rgba(95,227,232,.07)" : "#0E1316",
@@ -154,6 +158,18 @@ export function SlotDataPage({ g, review }: { g: CatalogueSlotPage; review?: Rea
             </div>
           ))}
         </div>
+        {/* The weekly email, beside the figure it is about. Same list; the source tags the slot. */}
+        <div id="signup" style={{ flex: "1 1 340px", scrollMarginTop: 120 }}>
+          <EmailSignup
+            compact
+            source={`rtp:${g.slug ?? ""}`.slice(0, 40)}
+            eyebrow="RTP alerts"
+            title={versions.length > 1 ? `Know which ${g.name} build you're playing` : `Hear if ${g.name}'s RTP changes`}
+            sub={versions.length > 1 ? `${versions.length} builds are licensed. When RTP Watch records which one a casino runs, it's in our weekly email.` : `When a studio changes a published return or RTP Watch reads a casino's build, it's in our weekly email.`}
+            button="Get RTP updates"
+          />
+        </div>
+        </div>
         {versions.length > 1 && (
         <p style={{ margin: "14px 0 0", maxWidth: "70ch", fontSize: 13.5, lineHeight: 1.6, color: "#8DA0AA" }}>
           On a {versions[0]}% build the house keeps {(100 - versions[0]).toFixed(2)}% of turnover. On the{" "}
@@ -163,26 +179,11 @@ export function SlotDataPage({ g, review }: { g: CatalogueSlotPage; review?: Rea
         )}
       </section>
 
-      {/* A slot sold in several RTP builds is the one where knowing which
-          build a casino ships matters, so the sign-up sits here, on those
-          pages only. Same weekly email; the source tags the slot. */}
-      {versions.length > 1 && (
-        <section id="signup" style={{ maxWidth: 1100, margin: "0 auto", padding: "28px 40px 0", scrollMarginTop: 120 }}>
-          <EmailSignup
-            source={`rtp:${g.slug ?? ""}`.slice(0, 40)}
-            eyebrow="RTP Watch"
-            title={`Know which ${g.name} build you're playing`}
-            sub={`${g.name} ships in ${versions.length} RTP builds. When RTP Watch records which build a casino runs, or a studio changes its published figures, it's in our weekly email, along with the week's biggest races. One email a week, unsubscribe any time.`}
-            button="Get RTP updates"
-          />
-        </section>
-      )}
-
       {/* Right after the returns, where most readers still are — not only at
           the foot of the page. Same partners, same geo rules. */}
       <section className="csg-partner-slot" style={{ maxWidth: 1100, margin: "0 auto", padding: "8px 40px 0" }}>
-        <SlotPerks slot={g.name} signupHref={versions.length > 1 ? "#signup" : "#signup-band"} />
-        <FeaturedPartner context={{ kind: "slots" }} exclude="roobet" count={2} heading="More casinos we recommend" />
+        <FeaturedPartner context={{ kind: "slots" }} />
+        <VipFloat />
       </section>
 
       {specs.length > 0 && (

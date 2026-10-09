@@ -15,7 +15,7 @@ import { BrandMark } from "@/components/ui/BrandMark";
 import { GlanceCard } from "./GlanceCard";
 import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
 import { EmailSignup } from "@/components/ui/EmailSignup";
-import { SlotPerks } from "@/components/slots/SlotPerks";
+import { VipFloat } from "@/components/slots/VipFloat";
 import { TitlesPager } from "@/components/studios/TitlesTable";
 import { TITLES_PER_PAGE } from "@/lib/titles";
 import { thumbOf } from "@/lib/thumb";
@@ -404,7 +404,7 @@ export function EntityReviewPageClient({ e, review, chrome }: { e: EntityView; r
         </div>
 
         {review}
-        {e.type === "slot" && <SlotPerks slot={e.name} signupHref="#signup" />}
+        {e.type === "slot" && <VipFloat />}
         {e.type === "slot" && (
           <div id="signup" style={{ marginTop: 32, scrollMarginTop: 120 }}>
             <EmailSignup
@@ -416,8 +416,7 @@ export function EntityReviewPageClient({ e, review, chrome }: { e: EntityView; r
             />
           </div>
         )}
-        {/* On a slot page Roobet is in the perks block above, so the panel shows the next two. */}
-        {!isCasino && <FeaturedPartner context={e.type === "slot" ? { kind: "slots" } : e.type === "market" ? { kind: "sports" } : { kind: "wallet" }} {...(e.type === "slot" ? { exclude: "roobet", count: 2, heading: "More casinos we recommend" } : {})} />}
+        {!isCasino && <FeaturedPartner context={e.type === "slot" ? { kind: "slots" } : e.type === "market" ? { kind: "sports" } : { kind: "wallet" }} />}
         <ReportIssue subject={e.name} />
         <NextSteps steps={chrome.next} />
       </div>

@@ -479,3 +479,14 @@ body:has([data-signup]:not([data-signup="site"])) .csg-nl-band { display: none; 
 /* Crypto casinos hero: view shortcuts beside the featured card, two across. */
 .csg-shortcuts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; max-width: 620px; }
 @media (max-width: 560px) { .csg-shortcuts { grid-template-columns: 1fr; } }
+
+/* CasinoPerks on slot pages (components/slots/VipFloat.tsx): a rail card in the right margin
+   where there is room for one, a corner pill everywhere else. */
+.csg-vip-rail { position: fixed; z-index: 50; right: 18px; top: 50%; transform: translateY(-50%); width: 168px; padding: 14px; border-radius: 14px;
+  background: radial-gradient(120% 120% at 100% 0%, rgba(34,158,217,.22), transparent 60%), #0E1418; border: 1px solid rgba(34,158,217,.45); box-shadow: 0 18px 40px rgba(0,0,0,.5); }
+.csg-vip-x { position: absolute; top: 6px; right: 8px; border: 0; background: transparent; color: #8E9CA5; font-size: 16px; line-height: 1; cursor: pointer; }
+.csg-vip-pill { display: none; position: fixed; z-index: 50; right: 14px; bottom: 14px; align-items: center; gap: 2px; border-radius: 100px;
+  background: #0E1418; border: 1px solid rgba(34,158,217,.5); box-shadow: 0 12px 30px rgba(0,0,0,.5); }
+.csg-vip-pill a { padding: 9px 4px 9px 14px; font-size: 12.5px; font-weight: 800; color: #fff; white-space: nowrap; }
+.csg-vip-pill button { border: 0; background: transparent; color: #8E9CA5; font-size: 15px; padding: 6px 12px 6px 6px; cursor: pointer; }
+@media (max-width: 1499px) { .csg-vip-rail { display: none; } .csg-vip-pill { display: flex; } }
