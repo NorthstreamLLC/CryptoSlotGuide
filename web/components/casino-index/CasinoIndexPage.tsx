@@ -25,6 +25,9 @@ import { raceFor } from "@/lib/races";
 import { casinoFacts } from "@/lib/casino-facts";
 import { NextSteps } from "@/components/layout/NextSteps";
 import { CoinIcon } from "@/components/ui/CoinIcon";
+import { HeroDrift } from "@/components/ui/HeroDrift";
+import { CountUp } from "@/components/ui/CountUp";
+import { inHouseOrder } from "@/lib/house-order";
 
 const btcFaqData = [
   { q: "How many confirmations before I can play?", a: "It depends on the casino and the coin. Operators set their own confirmation requirements and most show them in the cashier, so check there before you send. Bitcoin blocks come roughly every ten minutes, so each extra confirmation adds waiting time." },
@@ -75,7 +78,9 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
   // which the kicker says — so the page has a spine before the full grid.
   // Only on the unfiltered page: a fact-sorted view already leads with its
   // own "top of this list" card, and a filtered one is the ranking.
-  const picks = filter === "all" && coinSel === "all" ? sortOps(filtered, "featured", "asc").slice(0, 5) : [];
+  // The spotlight casino is left out of `filtered` (the hero card shows it),
+  // but it still heads the picks: the strip is the house order, top to bottom.
+  const picks = filter === "all" && coinSel === "all" ? sortOps(spotlight && roobet ? [roobet, ...filtered] : filtered, "featured", "asc").slice(0, 5) : [];
   const tableAll = btcTop ? sorted.slice(1) : sorted;
   const posOffset = btcTop ? 1 : 0;
   const rows = showAll ? tableAll : tableAll.slice(0, 20);
@@ -84,6 +89,19 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
     ...c,
     count: c.t === "all" ? ops.length : ops.filter((o) => (coinsBy[o.slug] ?? []).map(String).includes(c.t)).length,
   }));
+
+  // Shortcuts in the hero: each filtered view with its count and the figure
+  // that leads it, so the space beside the featured card answers "which one
+  // for me?" before the reader scrolls.
+  const shortcuts = [
+    { key: "fast" as const, label: "Fastest payouts", href: "/fastest-payouts", sort: "payout" as SortKey, fact: (o: Operator) => `${o.name}: ${payoutView(o).label}` },
+    { key: "nokyc" as const, label: "No-KYC", href: "/crypto-casinos/no-kyc", sort: "featured" as SortKey, fact: () => "Listed as paying without documents" },
+    { key: "lowwager" as const, label: "Lowest wagering", href: "/lowest-wagering", sort: "wager" as SortKey, fact: (o: Operator) => `${o.name}: ${wagerView(o).label}` },
+    { key: "sports" as const, label: "With a sportsbook", href: "/casino-sportsbooks", sort: "featured" as SortKey, fact: () => "Casino and sportsbook on one balance" },
+  ].map((v) => {
+    const list = sortOps(ops.filter(filterFns[v.key]), v.sort, "asc");
+    return { ...v, count: list.length, top: list.slice(0, 3), line: list[0] ? v.fact(list[0]) : "" };
+  });
 
   function toggleSort(key: SortKey) {
     setSortDir((d) => (sortKey === key && d === "asc" ? "desc" : "asc"));
@@ -96,7 +114,8 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
   return (
     <main style={{ background: "#07090B", color: "#E8EDF0" }}>
       <section style={{ position: "relative", overflow: "hidden", background: "radial-gradient(120% 100% at 78% 0%, rgba(0,194,204,.09), transparent 58%),#0B0F12", borderBottom: "1px solid rgba(255,255,255,.07)" }}>
-        <div style={{ maxWidth: 1400, margin: "0 auto", padding: "26px 40px 72px" }}>
+        {spotlight && <HeroDrift logos={inHouseOrder(ops).map((o) => o.slug)} />}
+        <div className={spotlight ? "csg-hero-pad" : undefined} style={{ position: "relative", maxWidth: 1400, margin: "0 auto", padding: "26px 40px 72px" }}>
           <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#83919A", marginBottom: 34 }}>
             <Link href="/" style={{ color: "#83919A" }}>Home</Link> / <Link href="/crypto-casinos" style={{ color: "#83919A" }}>Casinos</Link> /{" "}
             <span style={{ color: "#A8B6BE" }}>{view.crumb}</span>
@@ -123,6 +142,31 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
                   <Link href={`/casinos/${roobet.slug}`} style={{ display: "inline-flex", alignItems: "center", gap: 10, padding: "15px 24px", borderRadius: 9, background: "#00C2CC", color: "#04191B", fontSize: 14.5, fontWeight: 700, boxShadow: "0 8px 26px rgba(0,194,204,.24)", whiteSpace: "nowrap" }}>
                     View {roobet.name}&apos;s offer <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 13 }}>→</span>
                   </Link>
+                </div>
+                {/* Desktop only: on a phone these would push the featured card
+                    a screen down, and the browse bar below carries the same views. */}
+                <div className="csg-desktop-only">
+                <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#83919A", marginBottom: 10 }}>Shortcuts</div>
+                <div className="csg-shortcuts">
+                  {shortcuts.map((v) => (
+                    <Link key={v.key} href={v.href} className="csg-lift" style={{ display: "flex", flexDirection: "column", gap: 8, padding: "14px 16px", borderRadius: 13, background: "rgba(12,16,19,.82)", border: "1px solid rgba(255,255,255,.08)", backdropFilter: "blur(8px)", WebkitBackdropFilter: "blur(8px)", minWidth: 0 }}>
+                      <span style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                        <span style={{ fontSize: 15, fontWeight: 800, color: "#fff" }}>{v.label}</span>
+                        <span style={{ marginLeft: "auto", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#5FE3E8" }}>{v.count} →</span>
+                      </span>
+                      <span style={{ display: "flex", alignItems: "center", gap: 10, minWidth: 0 }}>
+                        <span style={{ display: "flex", flex: "none" }}>
+                          {v.top.map((o) => (
+                            <span key={o.slug} style={{ width: 24, height: 24, marginRight: -6, borderRadius: 7, overflow: "hidden", boxShadow: "0 0 0 2px #0C1013" }}>
+                              <BrandMark slug={o.slug} mono={o.mono} tint={tintFor(o.slug)} radius={7} fontSize={8} />
+                            </span>
+                          ))}
+                        </span>
+                        <span style={{ marginLeft: 6, fontSize: 12.5, color: "#93A3AC", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{v.line}</span>
+                      </span>
+                    </Link>
+                  ))}
+                </div>
                 </div>
               </div>
               <div style={{ maxWidth: 440, width: "100%", justifySelf: "end" }}>
@@ -163,7 +207,7 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
 
           <div style={{ display: "flex", gap: 32, flexWrap: "wrap", marginTop: 34, paddingTop: 26, borderTop: "1px solid rgba(255,255,255,.07)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, color: "#83919A" }}>
             {stats.map((s) => (
-              <span key={s.l}><strong style={{ color: "#DCE5E9", fontWeight: 500 }}>{s.v}</strong> {s.l}</span>
+              <span key={s.l} style={{ display: "inline-flex", alignItems: "baseline", gap: 8 }}><strong style={{ fontFamily: "var(--font-archivo), system-ui", fontSize: 26, fontWeight: 800, letterSpacing: "-.02em", color: "#fff" }}><CountUp value={Number(s.v)} ms={1100} /></strong> {s.l}</span>
             ))}
           </div>
 
