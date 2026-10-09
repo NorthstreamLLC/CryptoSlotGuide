@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
 import { EmailSignup } from "@/components/ui/EmailSignup";
+import { SlotPerks } from "@/components/slots/SlotPerks";
 import { NextSteps } from "@/components/layout/NextSteps";
 import { publishableArt, rtpSpread, rtpVersions, singleRtp, rtpSource, slotSpecs, type CatalogueSlotPage } from "@/lib/slot-page";
 import { isTopSlot } from "@/lib/top-slots";
@@ -157,7 +158,7 @@ export function SlotDataPage({ g, review }: { g: CatalogueSlotPage; review?: Rea
           build a casino ships matters, so the sign-up sits here, on those
           pages only. Same weekly email; the source tags the slot. */}
       {versions.length > 1 && (
-        <section style={{ maxWidth: 1100, margin: "0 auto", padding: "28px 40px 0" }}>
+        <section id="signup" style={{ maxWidth: 1100, margin: "0 auto", padding: "28px 40px 0", scrollMarginTop: 120 }}>
           <EmailSignup
             source={`rtp:${g.slug ?? ""}`.slice(0, 40)}
             eyebrow="RTP Watch"
@@ -171,7 +172,8 @@ export function SlotDataPage({ g, review }: { g: CatalogueSlotPage; review?: Rea
       {/* Right after the returns, where most readers still are — not only at
           the foot of the page. Same partners, same geo rules. */}
       <section className="csg-partner-slot" style={{ maxWidth: 1100, margin: "0 auto", padding: "8px 40px 0" }}>
-        <FeaturedPartner context={{ kind: "slots" }} />
+        <SlotPerks slot={g.name} signupHref={versions.length > 1 ? "#signup" : "#signup-band"} />
+        <FeaturedPartner context={{ kind: "slots" }} exclude="roobet" count={2} heading="More casinos we recommend" />
       </section>
 
       {specs.length > 0 && (
