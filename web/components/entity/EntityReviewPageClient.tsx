@@ -130,14 +130,28 @@ export function EntityReviewPageClient({ e, review, chrome }: { e: EntityView; r
                   rel="nofollow sponsored noopener"
                   style={{ display: "block", textAlign: "center", padding: 14, borderRadius: 9, background: "#00C2CC", color: "#04191B", fontSize: 14, fontWeight: 700, marginBottom: 9 }}
                 >
-                  {e.playAtName ? `Play it at ${e.playAtName}` : chrome.cta}
+                  {e.playAtName ? (
+                    <>
+                      Play at our recommended casino
+                      <span style={{ display: "block", marginTop: 2, fontSize: 11.5, fontWeight: 600, opacity: 0.75 }}>{e.playAtName}</span>
+                    </>
+                  ) : (
+                    chrome.cta
+                  )}
                 </a>
               ) : e.ctaHref ? (
                 <Link
                   href={e.ctaHref}
                   style={{ display: "block", textAlign: "center", padding: 14, borderRadius: 9, background: "#00C2CC", color: "#04191B", fontSize: 14, fontWeight: 700, marginBottom: 9 }}
                 >
-                  {e.playAtName ? `Play it at ${e.playAtName}` : chrome.cta}
+                  {e.playAtName ? (
+                    <>
+                      Play at our recommended casino
+                      <span style={{ display: "block", marginTop: 2, fontSize: 11.5, fontWeight: 600, opacity: 0.75 }}>{e.playAtName}</span>
+                    </>
+                  ) : (
+                    chrome.cta
+                  )}
                 </Link>
               ) : (
                 <span style={{ display: "block", textAlign: "center", padding: 14, borderRadius: 9, background: "rgba(255,255,255,.07)", color: "#8DA0AA", fontSize: 14, fontWeight: 700, marginBottom: 9 }}>
