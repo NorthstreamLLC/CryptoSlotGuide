@@ -45,8 +45,8 @@ export function VipFloat() {
       <div className="csg-vip-rail">
         <button type="button" onClick={close} aria-label="Close" className="csg-vip-x">×</button>
         <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 9, letterSpacing: ".08em", textTransform: "uppercase", color: "#7CC8EE", marginBottom: 6 }}>{vip.name}</div>
-        <div style={{ fontSize: 14, fontWeight: 800, color: "#fff", lineHeight: 1.3, marginBottom: 6 }}>Looking for an exclusive VIP host?</div>
-        <p style={{ margin: "0 0 10px", fontSize: 11.5, lineHeight: 1.45, color: "#A8B6BE" }}>Our own VIP team, for players who join Roobet through us.</p>
+        <div style={{ fontSize: 14, fontWeight: 800, color: "#fff", lineHeight: 1.3, marginBottom: 6 }}>Our exclusive VIP team</div>
+        <p style={{ margin: "0 0 10px", fontSize: 11.5, lineHeight: 1.45, color: "#A8B6BE" }}>For players looking for exclusive rewards at Roobet.</p>
         <a href={telegram} target="_blank" rel="noopener noreferrer" style={{ display: "block", textAlign: "center", padding: "8px 10px", borderRadius: 9, background: "#229ED9", color: "#fff", fontSize: 12.5, fontWeight: 800 }}>
           Telegram →
         </a>
@@ -54,7 +54,7 @@ export function VipFloat() {
       {/* Narrower screens: a small pill in the corner. */}
       <div className="csg-vip-pill">
         <a href={telegram} target="_blank" rel="noopener noreferrer">
-          <span style={{ color: "#7CC8EE" }}>VIP host?</span> Message {vip.name} →
+          <span style={{ color: "#7CC8EE" }}>Exclusive rewards?</span> Message {vip.name} →
         </a>
         <button type="button" onClick={close} aria-label="Close">×</button>
       </div>
