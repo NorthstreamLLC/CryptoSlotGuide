@@ -7,7 +7,6 @@ import { allVersionsListedStudios, selfCustodyWallets } from "@/lib/derived";
 import { tintFor } from "@/lib/logo";
 import { CryptoTicker } from "@/components/home/CryptoTicker";
 import { LogoColumns } from "@/components/home/LogoColumns";
-import { SlotsPreviewTable } from "@/components/home/SlotsPreviewTable";
 import { topSlotRows, studioCatalogue, slotArtBySlug } from "@/lib/slot-page";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { filterFns } from "@/lib/casino-index";
@@ -47,6 +46,8 @@ import { inHouseOrder } from "@/lib/house-order";
 import { CountUp } from "@/components/ui/CountUp";
 import { LogoStrip } from "@/components/home/LogoStrip";
 import { reviewPath } from "@/lib/outbound";
+import { coinHref } from "@/lib/coins";
+import vip from "@/data/vip.json";
 
 /**
  * Ported from the HOME section of CryptoSlotGuide.dc.html (hero through
@@ -228,7 +229,7 @@ export default function HomePage() {
               {c.total} products indexed · {c.casinos} crypto casinos
             </div>
             <h1 style={{ margin: "0 0 22px", fontSize: 62, lineHeight: 1.02, letterSpacing: "-.035em", fontWeight: 800, fontStretch: "118%", color: "#fff", textWrap: "balance" }}>
-              Sourced, not
+              Crypto casinos
               <br />
               <span
                 style={{
@@ -241,38 +242,22 @@ export default function HomePage() {
                   animation: "csg-sweep 11s linear infinite",
                 }}
               >
-                marketed.
+                worth your deposit.
               </span>
             </h1>
             <p style={{ margin: "0 0 30px", maxWidth: 530, fontSize: 17.5, lineHeight: 1.6, color: "#9AAAB3", textWrap: "pretty" }}>
-              Crypto casinos, sportsbooks, wallets and exchanges reviewed against their own terms and public records,
-              with every fact linked to its source. Slots and studios from their published paytables. Start with a
-              number, not a banner.
+              Bonuses, payout times and coins read from each casino&apos;s own terms, and slot RTPs from the studio&apos;s
+              own game page, every fact linked to its source. Pick a casino on the numbers, not the banner.
             </p>
 
-            <Link
-              href="/search"
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: 12,
-                padding: "7px 7px 7px 18px",
-                borderRadius: 11,
-                background: "rgba(14,18,21,.92)",
-                border: "1px solid rgba(255,255,255,.12)",
-                boxShadow: "0 14px 40px rgba(0,0,0,.45)",
-                maxWidth: 520,
-                marginBottom: 16,
-              }}
-            >
-              <span style={{ color: "#77858E", fontFamily: "var(--font-jetbrains-mono), monospace" }}>⌕</span>
-              <span style={{ flex: 1, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 13, color: "#83919A", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
-                casinos, slots, sportsbooks, wallets, coins…
-              </span>
-              <span style={{ padding: "11px 18px", borderRadius: 8, border: 0, background: "#00C2CC", color: "#04191B", fontSize: 13, fontWeight: 700, whiteSpace: "nowrap" }}>
-                Search
-              </span>
-            </Link>
+            <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginBottom: 18 }}>
+              <a href="#top-offers" className="csg-lift" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "14px 22px", borderRadius: 12, background: "#FFC531", color: "#0A0D0F", fontSize: 15, fontWeight: 800, boxShadow: "0 14px 34px rgba(255,197,49,.22)" }}>
+                See the top casinos <span aria-hidden>↓</span>
+              </a>
+              <Link href="/slots" className="csg-lift" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "14px 20px", borderRadius: 12, border: "1px solid rgba(255,255,255,.16)", background: "rgba(255,255,255,.04)", color: "#E8EDF0", fontSize: 15, fontWeight: 700 }}>
+                Top slots by RTP <span aria-hidden style={{ color: "#00C2CC" }}>→</span>
+              </Link>
+            </div>
 
             <div style={{ display: "flex", gap: 7, flexWrap: "wrap", marginBottom: 26 }}>
               {quickChips.map((chip) => (
@@ -363,7 +348,7 @@ export default function HomePage() {
       <LogoStrip label="Casinos, studios and wallets we cover" items={stripItems} />
 
       {/* Top offers */}
-      <section data-reveal style={{ maxWidth: 1400, margin: "0 auto", padding: "68px 40px 0" }}>
+      <section id="top-offers" data-reveal style={{ maxWidth: 1400, margin: "0 auto", padding: "68px 40px 0", scrollMarginTop: 120 }}>
         <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 32, flexWrap: "wrap", marginBottom: 22 }}>
           <div>
             <h2 style={{ margin: "0 0 8px", fontSize: 32, letterSpacing: "-.03em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Top casino offers</h2>
@@ -376,6 +361,33 @@ export default function HomePage() {
         <CasinoOfferList ops={topOffers} />
       </section>
 
+      {/* Our VIP team for Roobet players. */}
+      {vip.telegram && (
+        <section data-reveal style={{ maxWidth: 1400, margin: "0 auto", padding: "28px 40px 0" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 22, flexWrap: "wrap", padding: "22px 26px", borderRadius: 16, background: "radial-gradient(90% 140% at 0% 50%, rgba(34,158,217,.2), transparent 60%), radial-gradient(70% 140% at 100% 50%, rgba(255,197,49,.1), transparent 60%), #0C1114", border: "1px solid rgba(34,158,217,.32)" }}>
+            <span style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 54, height: 54, flex: "none", borderRadius: 15, background: "linear-gradient(140deg, #3FB6F0, #1B7FC0)", boxShadow: "0 10px 24px rgba(34,158,217,.35)" }}>
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinejoin="round" aria-hidden>
+                <path d="M6 3h12l4 6-10 12L2 9z" />
+                <path d="M2 9h20M9 3l3 18 3-18" strokeOpacity=".7" />
+              </svg>
+            </span>
+            <div style={{ flex: "1 1 320px", minWidth: 0 }}>
+              <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".1em", textTransform: "uppercase", color: "#7CC8EE", marginBottom: 5 }}>{vip.name} · VIP</div>
+              <div style={{ fontSize: 22, fontWeight: 800, letterSpacing: "-.02em", color: "#fff", marginBottom: 4 }}>Our exclusive VIP team</div>
+              <div style={{ fontSize: 14.5, lineHeight: 1.5, color: "#B7C4CB" }}>For players looking for exclusive rewards. Join Roobet through us and our hosts look after you.</div>
+            </div>
+            <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+              <a href={vip.telegram} target="_blank" rel="noopener noreferrer" className="csg-lift" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "13px 20px", borderRadius: 12, background: "#229ED9", color: "#fff", fontSize: 14.5, fontWeight: 800, whiteSpace: "nowrap", boxShadow: "0 10px 24px rgba(34,158,217,.3)" }}>
+                Message on Telegram
+              </a>
+              <Link href="/casinos/roobet" style={{ display: "inline-flex", alignItems: "center", padding: "13px 18px", borderRadius: 12, border: "1px solid rgba(255,255,255,.16)", color: "#E8EDF0", fontSize: 14, fontWeight: 700, whiteSpace: "nowrap" }}>
+                Roobet review
+              </Link>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Biggest races */}
       <section data-reveal style={{ maxWidth: 1400, margin: "0 auto", padding: "56px 40px 0" }}>
         <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 32, flexWrap: "wrap", marginBottom: 18 }}>
@@ -387,8 +399,8 @@ export default function HomePage() {
             All races →
           </Link>
         </div>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))", gap: 12 }}>
-          {raceSlugs().slice(0, 4).map((s) => {
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5" style={{ gap: 12 }}>
+          {["roobet", ...raceSlugs().filter((x) => x !== "roobet")].slice(0, 5).map((s) => {
             const op = ops.find((x) => x.slug === s)!;
             return (
               <Link key={s} href={`/casinos/${s}`} style={{ display: "flex", flexDirection: "column", gap: 10, padding: 18, borderRadius: 16, background: "radial-gradient(120% 90% at 100% 0%, rgba(214,182,92,.12), transparent 60%), #0C1013", border: "1px solid rgba(214,182,92,.2)" }}>
@@ -403,6 +415,44 @@ export default function HomePage() {
               </Link>
             );
           })}
+        </div>
+      </section>
+
+      {/* Slots */}
+      <section data-reveal style={{ maxWidth: 1400, margin: "0 auto", padding: "58px 40px 0" }}>
+        <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 32, flexWrap: "wrap", marginBottom: 22 }}>
+          <div>
+            <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 12 }}>Slots</div>
+            <h2 style={{ margin: "0 0 9px", fontSize: 32, letterSpacing: "-.03em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Slots worth the volatility</h2>
+            <p style={{ margin: 0, fontSize: 15, color: "#8DA0AA", maxWidth: "70ch", textWrap: "pretty" }}>
+              RTP is configurable: a casino can ship the same game at 96.5% or 94%. Each figure below is the return the studio publishes, and every slot has a full review.
+            </p>
+          </div>
+          <Link href="/slots" style={{ fontSize: 14, fontWeight: 600, color: "#00C2CC", whiteSpace: "nowrap" }}>
+            All {topSlotRows().length} top slots →
+          </Link>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-4" style={{ minWidth: 0, gap: 12 }}>
+          {topSlotRows().slice(0, 8).map((r) => (
+            <Link key={r.slug} href={`/slots/${r.slug}`} className="csg-lift group" style={{ display: "flex", flexDirection: "column", borderRadius: 14, overflow: "hidden", background: "#0C1013", border: "1px solid rgba(255,255,255,.08)" }}>
+              <span style={{ position: "relative", display: "block", aspectRatio: "16 / 10", background: "#11161A", overflow: "hidden" }}>
+                {r.image && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={r.image} alt={r.name} loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform .4s ease" }} className="group-hover:scale-[1.04]" />
+                )}
+                <span style={{ position: "absolute", top: 10, right: 10, padding: "4px 8px", borderRadius: 7, background: "rgba(7,9,11,.78)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, fontWeight: 700, color: r.rank <= 3 ? "#FFC531" : "#DCE5E9" }}>#{r.rank}</span>
+              </span>
+              <span style={{ display: "flex", flexDirection: "column", gap: 4, padding: "14px 16px 16px" }}>
+                <span style={{ fontSize: 15.5, fontWeight: 800, color: "#fff", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{r.name}</span>
+                <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#83919A" }}>{r.provider}</span>
+                <span style={{ display: "flex", gap: 6, flexWrap: "wrap", marginTop: 8, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11 }}>
+                  <span style={{ padding: "3px 7px", borderRadius: 6, background: "rgba(87,227,154,.1)", color: "#57E39A" }}>{r.rtp} RTP</span>
+                  <span style={{ padding: "3px 7px", borderRadius: 6, background: "rgba(255,255,255,.05)", color: "#C3CFD5" }}>{r.maxWin} max</span>
+                  <span style={{ padding: "3px 7px", borderRadius: 6, background: "rgba(255,255,255,.05)", color: "#C3CFD5" }}>{r.volatility}</span>
+                </span>
+              </span>
+            </Link>
+          ))}
         </div>
       </section>
 
@@ -421,7 +471,7 @@ export default function HomePage() {
             All {c.total} listings →
           </Link>
         </div>
-        <div style={{ display: "grid", minWidth: 0, gridTemplateColumns: "repeat(auto-fit,minmax(232px,1fr))", gap: 12 }}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" style={{ minWidth: 0, gap: 12 }}>
           {featured.map((f) => (
             <Link
               key={f.slug}
@@ -451,60 +501,6 @@ export default function HomePage() {
             </Link>
           ))}
         </div>
-      </section>
-
-      {/* Start here — the tools and maps, which otherwise only live in the menu.
-          Sits below the reviews, not above them. It used to break the run of
-          commercial sections (offers → races → reviews) three sections in,
-          sending a reader who had just seen ten offers off to a calculator
-          instead of to the prize pools and the reviews that follow. Tools are
-          worth having on the page; they are not worth interrupting that. */}
-      <section data-reveal style={{ maxWidth: 1400, margin: "0 auto", padding: "56px 40px 0" }}>
-        <div style={{ marginBottom: 20 }}>
-          <h2 style={{ margin: "0 0 8px", fontSize: 32, letterSpacing: "-.03em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Start here</h2>
-          <p style={{ margin: 0, fontSize: 15, color: "#8DA0AA" }}>Answer the question you actually came with — where you can play, what an offer is worth, and which build of a slot a casino ships.</p>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-4" style={{ gap: 12 }}>
-          {[
-            { href: "/find-my-casino", label: "Find my casino", hint: "Three questions, matched against each casino's own terms." },
-            { href: "/bonuses", label: "Every bonus", hint: "Welcome offers and rewards with the wagering each carries." },
-            { href: "/vip-calculator", label: "VIP calculator", hint: "What rank your wager reaches at each published ladder." },
-            { href: "/rtp-watch", label: "RTP Watch", hint: "Which casinos ship a cut build of the same slot." },
-            { href: "/legal", label: "Gambling laws", hint: "45 countries and all 50 US states, from their regulators." },
-            { href: "/sweepstakes-casinos", label: "US sweepstakes", hint: "The legal US route, with each casino's excluded states." },
-            { href: "/compare", label: "Head to head", hint: "Two casinos, the same rows, the better figure marked." },
-            { href: "/fastest-payouts", label: "Fastest payouts", hint: "Ranked on the withdrawal time each operator states." },
-          ].map((t) => (
-            <Link
-              key={t.href}
-              href={t.href}
-              className="transition-colors hover:border-white/20 hover:bg-white/[0.04]"
-              style={{ display: "flex", flexDirection: "column", gap: 7, padding: "18px 20px", borderRadius: 15, background: "rgba(255,255,255,.025)", border: "1px solid rgba(255,255,255,.08)" }}
-            >
-              <span style={{ fontSize: 16, fontWeight: 800, letterSpacing: "-.018em", color: "#fff" }}>
-                {t.label} <span aria-hidden style={{ color: "#00C2CC" }}>→</span>
-              </span>
-              <span style={{ fontSize: 13, lineHeight: 1.5, color: "#8DA0AA" }}>{t.hint}</span>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      {/* Slots */}
-      <section data-reveal style={{ maxWidth: 1400, margin: "0 auto", padding: "58px 40px 0" }}>
-        <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 32, flexWrap: "wrap", marginBottom: 22 }}>
-          <div>
-            <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 12 }}>Slots</div>
-            <h2 style={{ margin: "0 0 9px", fontSize: 32, letterSpacing: "-.03em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Slots worth the volatility</h2>
-            <p style={{ margin: 0, fontSize: 15, color: "#8DA0AA", maxWidth: "70ch", textWrap: "pretty" }}>
-              RTP is configurable — operators can ship the same game at 96.5% or 94%. Published return shown below; once we field-test a build in a specific operator&apos;s account, the slot&apos;s own review names the operator that cut it.
-            </p>
-          </div>
-          <Link href="/slots" style={{ fontSize: 14, fontWeight: 600, color: "#00C2CC", whiteSpace: "nowrap" }}>
-            All {topSlotRows().length} top slots →
-          </Link>
-        </div>
-        <SlotsPreviewTable slots={topSlotRows().slice(0, 8)} />
       </section>
 
       {/* Providers */}
@@ -545,6 +541,43 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Start here — the tools and maps, which otherwise only live in the menu.
+          Sits below the reviews, not above them. It used to break the run of
+          commercial sections (offers → races → reviews) three sections in,
+          sending a reader who had just seen ten offers off to a calculator
+          instead of to the prize pools and the reviews that follow. Tools are
+          worth having on the page; they are not worth interrupting that. */}
+      <section data-reveal style={{ maxWidth: 1400, margin: "0 auto", padding: "56px 40px 0" }}>
+        <div style={{ marginBottom: 20 }}>
+          <h2 style={{ margin: "0 0 8px", fontSize: 32, letterSpacing: "-.03em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Start here</h2>
+          <p style={{ margin: 0, fontSize: 15, color: "#8DA0AA" }}>Answer the question you actually came with — where you can play, what an offer is worth, and which build of a slot a casino ships.</p>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-4" style={{ gap: 12 }}>
+          {[
+            { href: "/find-my-casino", label: "Find my casino", hint: "Three questions, matched against each casino's own terms." },
+            { href: "/bonuses", label: "Every bonus", hint: "Welcome offers and rewards with the wagering each carries." },
+            { href: "/vip-calculator", label: "VIP calculator", hint: "What rank your wager reaches at each published ladder." },
+            { href: "/rtp-watch", label: "RTP Watch", hint: "Which casinos ship a cut build of the same slot." },
+            { href: "/legal", label: "Gambling laws", hint: "45 countries and all 50 US states, from their regulators." },
+            { href: "/sweepstakes-casinos", label: "US sweepstakes", hint: "The legal US route, with each casino's excluded states." },
+            { href: "/compare", label: "Head to head", hint: "Two casinos, the same rows, the better figure marked." },
+            { href: "/fastest-payouts", label: "Fastest payouts", hint: "Ranked on the withdrawal time each operator states." },
+          ].map((t) => (
+            <Link
+              key={t.href}
+              href={t.href}
+              className="transition-colors hover:border-white/20 hover:bg-white/[0.04]"
+              style={{ display: "flex", flexDirection: "column", gap: 7, padding: "18px 20px", borderRadius: 15, background: "rgba(255,255,255,.025)", border: "1px solid rgba(255,255,255,.08)" }}
+            >
+              <span style={{ fontSize: 16, fontWeight: 800, letterSpacing: "-.018em", color: "#fff" }}>
+                {t.label} <span aria-hidden style={{ color: "#00C2CC" }}>→</span>
+              </span>
+              <span style={{ fontSize: 13, lineHeight: 1.5, color: "#8DA0AA" }}>{t.hint}</span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       {/* Where you can play. The map is the site's most distinctive tool and
           was buried two clicks deep; it earns its place on the homepage by
           answering the first question a reader actually has. */}
@@ -579,16 +612,16 @@ export default function HomePage() {
       <section data-reveal style={{ maxWidth: 1400, margin: "0 auto", padding: "58px 40px 0" }}>
         <h2 style={{ margin: "0 0 8px", fontSize: 26, letterSpacing: "-.025em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Casinos by coin</h2>
         <p style={{ margin: "0 0 20px", fontSize: 15, color: "#8DA0AA" }}>Deposit rails differ per chain. These pages compare confirmation counts, minimums, and who pays the network fee.</p>
-        <div style={{ display: "grid", minWidth: 0, gridTemplateColumns: "repeat(auto-fit,minmax(178px,1fr))", gap: 12 }}>
+        <div className="grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-8" style={{ minWidth: 0, gap: 12 }}>
           {coinTiles.map((coin) => (
-            <Link key={coin.ticker} href="/coins" className="hover:!border-accent hover:!bg-[#111619]" style={{ display: "block", padding: 20, borderRadius: 13, background: "rgba(14,18,21,.72)", border: "1px solid rgba(255,255,255,.06)" }}>
+            <Link key={coin.ticker} href={coinHref(coin)} className="hover:!border-accent hover:!bg-[#111619]" style={{ display: "block", padding: 20, borderRadius: 13, background: "rgba(14,18,21,.72)", border: "1px solid rgba(255,255,255,.06)" }}>
               {/* The coin's own mark, not its ticker set in type — CoinIcon
                   carries the brand assets and falls back to the glyph. */}
               <span style={{ display: "block", marginBottom: 14 }}>
                 <CoinIcon ticker={coin.ticker} size={34} />
               </span>
-              <div style={{ fontSize: 14, fontWeight: 600, color: "#E8EDF0", marginBottom: 4 }}>{coin.name} casinos</div>
-              <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#83919A" }}>{coin.count} operators</div>
+              <div style={{ fontSize: 15, fontWeight: 700, color: "#E8EDF0", marginBottom: 4 }}>{coin.name}</div>
+              <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#83919A" }}>{coin.count} casinos →</div>
             </Link>
           ))}
         </div>
