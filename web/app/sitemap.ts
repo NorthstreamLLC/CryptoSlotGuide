@@ -1,3 +1,4 @@
+import { coinSlug } from "@/lib/coins";
 import type { MetadataRoute } from "next";
 import { fiatMarkets } from "@/lib/fiat";
 import { allVenues } from "@/lib/prediction-markets";
@@ -54,6 +55,7 @@ const STATIC_ROUTES = [
   "/wallets",
   "/exchanges",
   "/coins",
+  ...siteData.coinDefs.map((c) => `/coins/${coinSlug(c)}`),
   "/guides",
   "/rtp-watch",
   "/compare",

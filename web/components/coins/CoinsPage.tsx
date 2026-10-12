@@ -1,7 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { fetchCoinPrices, type CoinPriceMap } from "@/lib/coingecko";
+import { coinHref } from "@/lib/coins";
 import { siteData, siteCounts } from "@/lib/site-data";
 import { tintFor } from "@/lib/logo";
 import { payoutView } from "@/lib/payout";
@@ -17,6 +19,16 @@ import { CoinIcon } from "@/components/ui/CoinIcon";
  * Split out of app/coins/page.tsx so that file can be a server component
  * exporting real per-page metadata — a "use client" page can't do that.
  */
+const COLS = "minmax(220px,1.1fr) 116px 106px 130px 170px minmax(190px,1fr) 196px";
+
+const usd = (n: number) => n.toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: n < 1 ? 4 : 2 });
+
+/** 24-hour change, green up, red down, from CoinGecko. */
+function Change({ v }: { v: number }) {
+  const up = v >= 0;
+  return <span style={{ color: up ? "#57E39A" : "#F07B7B", fontWeight: 600 }}>{up ? "▲" : "▼"} {Math.abs(v).toFixed(1)}%</span>;
+}
+
 /** Where each coin sits in the hero cluster (percent of the cluster box), big ones first so they overlap. */
 const COIN_SPOTS = [
   { x: 30, y: 30, size: 112, z: 8 },
@@ -29,9 +41,29 @@ const COIN_SPOTS = [
   { x: 88, y: 80, size: 60, z: 3 },
 ];
 
-export function CoinsPage() {
+export function CoinsPage({ coin }: { coin?: string }) {
   const { coinDefs, ops, coinsBy } = siteData;
-  const [sel, setSel] = useState<string>("all");
+  // One coin's page (/coins/bitcoin) or the overview (/coins). Each view is
+  // its own address, so the tabs, the cluster and "Detail" are plain links
+  // and the browser's back button works as expected.
+  const sel = coin ?? "all";
+  const [prices, setPrices] = useState<CoinPriceMap | null>(null);
+  useEffect(() => {
+    let live = true;
+    fetchCoinPrices(coinDefs.map((c) => String(c.ticker)))
+      .then((p) => live && setPrices(p))
+      .catch(() => {
+        /* price is a convenience; the page reads fine without it */
+      });
+    return () => {
+      live = false;
+    };
+  }, [coinDefs]);
+  const hrefFor = (t: string) => {
+    const d = coinDefs.find((c) => c.ticker === t);
+    return t === "all" || !d ? "/coins" : coinHref(d);
+  };
+  const def = coinDefs.find((c) => c.ticker === sel);
 
   const coinOps = (t: string) => ops.filter((o) => (coinsBy[o.slug] ?? []).map(String).includes(t));
   const rows = coinDefs.filter((c) => sel === "all" || c.ticker === sel);
@@ -45,14 +77,14 @@ export function CoinsPage() {
           {([{ ticker: "all", label: "All" }, ...coinDefs.map((c) => ({ ticker: c.ticker as string, label: c.ticker }))]).map((c) => {
             const active = sel === c.ticker;
             return (
-              <button
+              <Link
                 key={c.ticker}
-                type="button"
-                onClick={() => setSel(c.ticker)}
-                style={{ padding: "16px 0", border: 0, borderBottom: `2px solid ${active ? "#00C2CC" : "transparent"}`, background: "transparent", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, letterSpacing: ".08em", color: active ? "#fff" : "#8DA0AA", fontWeight: active ? 700 : 500, whiteSpace: "nowrap" }}
+                href={hrefFor(c.ticker)}
+                aria-current={active ? "page" : undefined}
+                style={{ display: "block", padding: "16px 0", border: 0, borderBottom: `2px solid ${active ? "#00C2CC" : "transparent"}`, background: "transparent", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, letterSpacing: ".08em", color: active ? "#fff" : "#8DA0AA", fontWeight: active ? 700 : 500, whiteSpace: "nowrap" }}
               >
                 {c.label}
-              </button>
+              </Link>
             );
           })}
         </div>
@@ -68,15 +100,30 @@ export function CoinsPage() {
               Cryptocurrencies · {sel === "all" ? "ALL" : sel}
             </div>
             <h1 style={{ margin: "0 0 12px", fontSize: 44, lineHeight: 1.04, letterSpacing: "-.035em", fontWeight: 800, fontStretch: "114%", color: "#fff" }}>
-              Deposit and withdraw, coin by coin
+              {def ? `${def.name} casinos: deposit and withdraw with ${def.ticker}` : "Deposit and withdraw, coin by coin"}
             </h1>
             <p style={{ margin: "0 0 18px", maxWidth: "62ch", fontSize: 16, lineHeight: 1.6, color: "#93A3AC", textWrap: "pretty" }}>
-              Which coins the casinos on our index accept, and how each network confirms and charges for a transfer, from the network's own documentation. Casinos set their own confirmation requirements on top, so check the cashier before you send.
+              {def
+                ? `${coinOps(String(def.ticker)).length} of the ${ops.length} casinos on our index accept ${def.name}. How the network confirms and charges for a transfer, from its own documentation, then every casino that takes it. Casinos set their own confirmation requirements on top, so check the cashier before you send.`
+                : "Which coins the casinos on our index accept, and how each network confirms and charges for a transfer, from the network's own documentation. Casinos set their own confirmation requirements on top, so check the cashier before you send."}
             </p>
             <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-              <span style={{ padding: "8px 13px", borderRadius: 100, background: "rgba(255,255,255,.045)", border: "1px solid rgba(255,255,255,.08)", fontSize: 13, color: "#A8B6BE" }}>
-                <strong style={{ color: "#fff", fontWeight: 800 }}>{coinDefs.length}</strong> coins
-              </span>
+              {def ? (
+                <>
+                  <Link href="/coins" style={{ padding: "8px 13px", borderRadius: 100, border: "1px solid rgba(0,194,204,.4)", background: "rgba(0,194,204,.08)", fontSize: 13, fontWeight: 700, color: "#5FE3E8" }}>
+                    ← All coins
+                  </Link>
+                  {prices?.[String(def.ticker)] && (
+                    <span style={{ padding: "8px 13px", borderRadius: 100, background: "rgba(255,255,255,.045)", border: "1px solid rgba(255,255,255,.08)", fontSize: 13, color: "#A8B6BE" }}>
+                      <strong style={{ color: "#fff", fontWeight: 800 }}>{usd(prices[String(def.ticker)].usd)}</strong> <Change v={prices[String(def.ticker)].usd_24h_change} /> 24h
+                    </span>
+                  )}
+                </>
+              ) : (
+                <span style={{ padding: "8px 13px", borderRadius: 100, background: "rgba(255,255,255,.045)", border: "1px solid rgba(255,255,255,.08)", fontSize: 13, color: "#A8B6BE" }}>
+                  <strong style={{ color: "#fff", fontWeight: 800 }}>{coinDefs.length}</strong> coins
+                </span>
+              )}
               <span style={{ padding: "8px 13px", borderRadius: 100, background: "rgba(255,255,255,.045)", border: "1px solid rgba(255,255,255,.08)", fontSize: 13, color: "#A8B6BE" }}>
                 <strong style={{ color: "#fff", fontWeight: 800 }}>{siteCounts.casinos}</strong> casinos
               </span>
@@ -89,11 +136,10 @@ export function CoinsPage() {
               const active = sel === c.ticker;
               const n = coinOps(c.ticker).length;
               return (
-                <button
+                <Link
                   key={c.ticker}
-                  type="button"
-                  onClick={() => setSel(active ? "all" : c.ticker)}
-                  aria-pressed={active}
+                  href={active ? "/coins" : hrefFor(String(c.ticker))}
+                  aria-current={active ? "page" : undefined}
                   title={`${c.ticker}: accepted at ${n} casinos`}
                   className="csg-coin-bubble"
                   style={{
@@ -111,7 +157,7 @@ export function CoinsPage() {
                   <span className="csg-coin-tag">
                     {c.ticker} · {n}
                   </span>
-                </button>
+                </Link>
               );
             })}
           </div>
@@ -120,8 +166,8 @@ export function CoinsPage() {
 
       <section style={{ maxWidth: 1400, margin: "0 auto", padding: "28px 40px 0" }}>
         <div role="table" style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 14, overflowX: "auto", background: "#0C1013", boxShadow: "0 12px 40px rgba(0,0,0,.35)" }}>
-          <div role="row" style={{ display: "grid", minWidth: 1120, gridTemplateColumns: "minmax(240px,1.2fr) 110px 150px 190px minmax(200px,1fr) 168px", background: "#101519", borderBottom: "1px solid rgba(255,255,255,.07)" }}>
-            {["Coin", "Accepted at", "Block time", "Finality", "How fees work", ""].map((h) => (
+          <div role="row" style={{ display: "grid", minWidth: 1240, gridTemplateColumns: COLS, background: "#101519", borderBottom: "1px solid rgba(255,255,255,.07)" }}>
+            {["Coin", "Price (USD)", "Accepted at", "Block time", "Finality", "How fees work", ""].map((h) => (
               <div key={h} role="columnheader" style={{ padding: "14px 12px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".07em", textTransform: "uppercase", color: "#83919A" }}>{h}</div>
             ))}
           </div>
@@ -129,13 +175,23 @@ export function CoinsPage() {
             const opsForCoin = coinOps(c.ticker);
             const pct = ops.length ? Math.round((opsForCoin.length / ops.length) * 100) : 0;
             return (
-              <div key={c.ticker} role="row" style={{ display: "grid", minWidth: 1120, gridTemplateColumns: "minmax(240px,1.2fr) 110px 150px 190px minmax(200px,1fr) 168px", alignItems: "center", borderBottom: "1px solid rgba(255,255,255,.05)" }}>
+              <div key={c.ticker} role="row" style={{ display: "grid", minWidth: 1240, gridTemplateColumns: COLS, alignItems: "center", borderBottom: "1px solid rgba(255,255,255,.05)" }}>
                 <div role="cell" style={{ padding: "14px 18px", display: "flex", alignItems: "center", gap: 13, minWidth: 0 }}>
                   <CoinIcon ticker={c.ticker} size={34} />
                   <div style={{ minWidth: 0 }}>
-                    <button type="button" onClick={() => setSel(c.ticker)} style={{ display: "block", fontSize: 14.5, fontWeight: 600, color: "#E8EDF0", textAlign: "left" }}>{c.name}</button>
+                    <Link href={hrefFor(String(c.ticker))} style={{ display: "block", fontSize: 14.5, fontWeight: 600, color: "#E8EDF0", textAlign: "left" }}>{c.name}</Link>
                     <div style={{ fontSize: 12, color: "#8E9CA5", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", marginTop: 2 }}>{c.note}</div>
                   </div>
+                </div>
+                <div role="cell" style={{ padding: "14px 12px", fontFamily: "var(--font-jetbrains-mono), monospace" }}>
+                  {prices?.[String(c.ticker)] ? (
+                    <>
+                      <div style={{ fontSize: 14, fontWeight: 600, color: "#fff" }}>{usd(prices[String(c.ticker)].usd)}</div>
+                      <div style={{ fontSize: 11, marginTop: 2 }}><Change v={prices[String(c.ticker)].usd_24h_change} /></div>
+                    </>
+                  ) : (
+                    <div style={{ fontSize: 12, color: "#5D6B73" }}>—</div>
+                  )}
                 </div>
                 <div role="cell" style={{ padding: "14px 12px" }}>
                   <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 15, fontWeight: 500, color: "#fff" }}>{opsForCoin.length}</div>
@@ -148,9 +204,9 @@ export function CoinsPage() {
                   <Link href={`/crypto-casinos?coin=${c.ticker}`} className="hover:!border-accent hover:!text-[#5FE3E8]" style={{ flex: 1, textAlign: "center", padding: 9, borderRadius: 7, border: "1px solid rgba(255,255,255,.16)", color: "#DCE5E9", fontSize: 12.5, fontWeight: 700, whiteSpace: "nowrap" }}>
                     Casinos
                   </Link>
-                  <button type="button" onClick={() => setSel(c.ticker)} style={{ padding: "9px 12px", borderRadius: 7, border: "1px solid rgba(255,255,255,.10)", color: "#8DA0AA", fontSize: 12.5, fontWeight: 600, whiteSpace: "nowrap" }}>
-                    Detail
-                  </button>
+                  <Link href={sel === c.ticker ? "/coins" : hrefFor(String(c.ticker))} style={{ padding: "9px 12px", borderRadius: 7, border: "1px solid rgba(255,255,255,.10)", color: "#8DA0AA", fontSize: 12.5, fontWeight: 600, whiteSpace: "nowrap" }}>
+                    {sel === c.ticker ? "All coins" : "Detail"}
+                  </Link>
                 </div>
               </div>
             );
