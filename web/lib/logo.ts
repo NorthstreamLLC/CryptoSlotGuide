@@ -72,6 +72,7 @@ const LOGOS: Record<string, string> = {
   "housebets": "/assets/logos/housebets.png",
   "igt": "/assets/logos/igt.png",
   "jackpotbet": "/assets/logos/jackpotbet.png",
+  "kalshi": "/assets/logos/kalshi.png",
   "kraken": "/assets/logos/kraken.png",
   "kucoin": "/assets/logos/kucoin.png",
   "ledger": "/assets/logos/ledger.png",

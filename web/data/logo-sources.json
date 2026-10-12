@@ -205,6 +205,11 @@
       "url": "https://cdn1.predictit.org/static/1857c6b80fc925696a64/icons/apple-touch-icon-152x152.png",
       "size": "180x180",
       "fetchedAt": "2026-10-05"
+    },
+    "kalshi": {
+      "url": "https://help.kalshi.com/assets/favicon",
+      "size": "192x192",
+      "fetchedAt": "2026-10-12"
     }
   },
   "coins": {

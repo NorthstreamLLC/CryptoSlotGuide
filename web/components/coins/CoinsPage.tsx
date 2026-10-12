@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { fetchCoinPrices, type CoinPriceMap } from "@/lib/coingecko";
 import { coinHref } from "@/lib/coins";
+import { getSpecFact } from "@/lib/spec-sheet";
 import { siteData, siteCounts } from "@/lib/site-data";
 import { tintFor } from "@/lib/logo";
 import { payoutView } from "@/lib/payout";
@@ -214,6 +215,8 @@ export function CoinsPage({ coin }: { coin?: string }) {
         </div>
       </section>
 
+      {sel !== "all" && <TopCoinPicks ticker={sel} coinName={def?.name ?? sel} />}
+
       {sel !== "all" ? (
         <section style={{ maxWidth: 1400, margin: "0 auto", padding: "38px 40px 84px" }}>
           <CoinFacts ticker={sel} />
@@ -270,6 +273,106 @@ export function CoinsPage({ coin }: { coin?: string }) {
         />
       </section>
     </main>
+  );
+}
+
+/** Our recommended casinos, in this order, wherever each accepts the coin. */
+const COIN_PICKS = ["roobet", "stake", "shuffle", "razed", "rainbet"];
+
+/**
+ * Why each pick, in our words, each line resting on a fact in that casino's
+ * spec sheet (read from its own pages, source URL stored there). A line shows
+ * only while the fact it rests on is still in the sheet.
+ */
+const PICK_WHY: Record<string, { group: string; label: string; text: string }[]> = {
+  roobet: [
+    { group: "Payouts & fees", label: "Withdrawal fees", text: "No Roobet fee on crypto withdrawals, network fees only" },
+    { group: "Payouts & fees", label: "Stated withdrawal time", text: "Withdrawals sent instantly on request" },
+    { group: "Coins & deposit limits", label: "Minimum deposit", text: "No minimum on crypto deposits" },
+  ],
+  stake: [
+    { group: "Payouts & fees", label: "Stated withdrawal time", text: "Crypto withdrawals processed immediately" },
+    { group: "Coins & deposit limits", label: "Minimum deposit", text: "No minimum on crypto deposits" },
+    { group: "Coins & deposit limits", label: "Deposit limits", text: "No maximum deposit" },
+  ],
+  shuffle: [
+    { group: "Coins & deposit limits", label: "Minimum deposit", text: "Deposits from $0.01 on every supported coin" },
+    { group: "Payouts & fees", label: "Stated withdrawal time", text: "Advertises instant withdrawals" },
+  ],
+  razed: [
+    { group: "Payouts & fees", label: "Stated withdrawal time", text: "Instant crypto deposits and withdrawals" },
+    { group: "Payouts & fees", label: "Withdrawal fees", text: "Each coin's fee is shown before you confirm" },
+  ],
+  rainbet: [
+    { group: "Payouts & fees", label: "Withdrawal fees", text: "No Rainbet transaction fees, network fees only" },
+    { group: "Payouts & fees", label: "Stated withdrawal time", text: "Withdrawals typically processed in 5–15 minutes" },
+    { group: "Compliance", label: "KYC policy", text: "No KYC for crypto play and withdrawals" },
+  ],
+};
+
+/**
+ * "Our top picks for <coin>": the recommended casinos that accept it, each
+ * with why — withdrawal speed, what it charges and the minimum deposit,
+ * every line from the casino's own pages (its spec sheet), plus Bitcoin over
+ * Lightning where the casino supports it.
+ */
+function TopCoinPicks({ ticker, coinName }: { ticker: string; coinName: string }) {
+  const { ops, coinsBy } = siteData;
+  const picks = COIN_PICKS.map((slug) => ops.find((o) => o.slug === slug))
+    .filter((o): o is NonNullable<typeof o> => !!o && (coinsBy[o.slug] ?? []).map(String).includes(ticker));
+  if (!picks.length) return null;
+  return (
+    <section style={{ maxWidth: 1400, margin: "0 auto", padding: "34px 40px 0" }}>
+      <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 16, flexWrap: "wrap", marginBottom: 14 }}>
+        <div>
+          <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#FFC531", marginBottom: 6 }}>Our recommendations</div>
+          <h2 style={{ margin: 0, fontSize: 26, letterSpacing: "-.028em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Top casinos for {coinName}</h2>
+        </div>
+        <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#7F8D96" }}>Each reason from the casino&apos;s own pages · Affiliate links · 18+</span>
+      </div>
+      <div style={{ display: "grid", minWidth: 0, gridTemplateColumns: "repeat(auto-fit,minmax(230px,1fr))", gap: 12 }}>
+        {picks.map((o, i) => {
+          const why = [
+            ticker === "BTC" && o.ln ? "Takes Bitcoin over Lightning" : null,
+            ...(PICK_WHY[o.slug] ?? []).filter((w) => getSpecFact(o.slug, w.group, w.label)).map((w) => w.text),
+          ].filter((x): x is string => !!x).slice(0, 3);
+          const lead1 = i === 0;
+          return (
+            <div key={o.slug} data-reveal className="csg-lift" style={{ ["--reveal-delay" as string]: `${i * 50}ms`, display: "flex", flexDirection: "column", gap: 12, padding: 18, borderRadius: 14, background: lead1 ? "radial-gradient(120% 100% at 100% 0%, rgba(255,197,49,.12), transparent 55%), #0C1013" : "#0C1013", border: `1px solid ${lead1 ? "rgba(255,197,49,.4)" : "rgba(255,255,255,.08)"}` }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 11 }}>
+                <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, fontWeight: 700, color: lead1 ? "#FFC531" : "#83919A" }}>#{i + 1}</span>
+                <div style={{ width: 34, height: 34, flex: "none" }}>
+                  <BrandMark slug={o.slug} mono={o.mono} tint={tintFor(o.slug)} fontSize={11} />
+                </div>
+                <div style={{ minWidth: 0 }}>
+                  <div style={{ fontSize: 15.5, fontWeight: 800, color: "#fff" }}>{o.name}</div>
+                  <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#83919A" }}>{o.licence} licence</div>
+                </div>
+              </div>
+              {o.bonusShort && <div style={{ fontSize: 13.5, fontWeight: 700, lineHeight: 1.4, color: "#E8EDF0" }}>{o.bonusShort}</div>}
+              <ul style={{ margin: 0, padding: 0, listStyle: "none", display: "flex", flexDirection: "column", gap: 6 }}>
+                {why.map((w) => (
+                  <li key={w} style={{ display: "flex", gap: 7, fontSize: 12.5, lineHeight: 1.45, color: "#A8B6BE" }}>
+                    <span style={{ color: "#57E39A", flex: "none" }}>✓</span>
+                    {w}
+                  </li>
+                ))}
+              </ul>
+              <div style={{ display: "flex", gap: 8, marginTop: "auto", paddingTop: 4 }}>
+                {o.signupUrl ? (
+                  <a href={o.signupUrl} target="_blank" rel="noopener sponsored nofollow" style={{ flex: 1, textAlign: "center", padding: "10px 12px", borderRadius: 10, background: lead1 ? "#FFC531" : "#00C2CC", color: "#0A0D0F", fontSize: 13.5, fontWeight: 800 }}>
+                    Visit {o.name}
+                  </a>
+                ) : null}
+                <Link href={`/casinos/${o.slug}`} style={{ padding: "10px 12px", borderRadius: 10, border: "1px solid rgba(255,255,255,.14)", color: "#DCE5E9", fontSize: 13, fontWeight: 700 }}>
+                  Review
+                </Link>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </section>
   );
 }
 

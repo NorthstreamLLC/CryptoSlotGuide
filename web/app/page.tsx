@@ -8,7 +8,7 @@ import { tintFor } from "@/lib/logo";
 import { CryptoTicker } from "@/components/home/CryptoTicker";
 import { LogoColumns } from "@/components/home/LogoColumns";
 import { SlotsPreviewTable } from "@/components/home/SlotsPreviewTable";
-import { topSlotRows, studioCatalogue } from "@/lib/slot-page";
+import { topSlotRows, studioCatalogue, slotArtBySlug } from "@/lib/slot-page";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { filterFns } from "@/lib/casino-index";
 import { casinoFacts } from "@/lib/casino-facts";
@@ -431,7 +431,12 @@ export default function HomePage() {
             >
               <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
                 <div style={{ width: 54, height: 40, flex: "none", borderRadius: 7, overflow: "hidden" }}>
-                  <BrandMark slug={f.slug} mono={f.mono} tint={tintFor(f.slug)} radius={7} fontSize={12} />
+                  {f.cat === "Slot" && slotArtBySlug(f.slug) ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={slotArtBySlug(f.slug)!} alt="" loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+                  ) : (
+                    <BrandMark slug={f.slug} mono={f.mono} tint={tintFor(f.slug)} radius={7} fontSize={12} />
+                  )}
                 </div>
                 <div style={{ minWidth: 0 }}>
                   <div style={{ fontSize: 14.5, fontWeight: 600, color: "#E8EDF0", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{f.name}</div>
