@@ -20,6 +20,38 @@ import { fiatMarkets, fiatMarketFor, fiatHref, EUROPE_FIAT, regionMarkets } from
 
 /** The countries the Europe map draws, for the Europe column. */
 const EUROPE_CODES = new Set(EUROPE_SHAPES.map((sh) => sh.code).filter((c): c is string => !!c));
+
+type Op = (typeof siteData.ops)[number];
+
+/** A casino as a menu pick: our recommendation for a country section. */
+const casinoFeature = (o: Op | undefined, kicker: string): NavFeature | undefined =>
+  o ? { brand: o.slug, kicker, title: o.name, sub: o.bonusShort ?? o.bonus, href: `/casinos/${o.slug}`, cta: "Read the review" } : undefined;
+
+/** The first five, as a column of marks. */
+const casinoLinks = (ops: Op[]): NavLink[] => ops.slice(0, 5).map((o) => ({ label: o.name, href: `/casinos/${o.slug}`, brand: o.slug }));
+
+/** Casinos in house order that accept players from a country, by their own terms. */
+const acceptingIn = (code: string): Op[] => inHouseOrder(casinosForCountry(code).accepts);
+
+/**
+ * Casinos for Europe as a whole: those whose terms accept at least half of the
+ * European countries we cover, in house order. No single country stands in
+ * for the continent, and most of the big names refuse the UK, France and the
+ * Netherlands.
+ */
+const acceptingEurope = (): Op[] => {
+  const codes = [...countryPages()].map(({ c }) => c.code).filter((c) => EUROPE_CODES.has(c));
+  const n = new Map<string, number>();
+  for (const code of codes) for (const o of casinosForCountry(code).accepts) n.set(o.slug, (n.get(o.slug) ?? 0) + 1);
+  return inHouseOrder(siteData.ops.filter((o) => (n.get(o.slug) ?? 0) * 2 >= codes.length));
+};
+
+/** US players: no crypto casino on our list accepts them, so the pick is a sweepstakes casino. */
+const sweepsFeature = (kicker: string): NavFeature | undefined => {
+  const sw = sweepsSorted()[0];
+  return sw ? { brand: sw.slug, kicker, title: sw.name, sub: sw.offer, href: `/sweepstakes-casinos/${sw.slug}`, cta: "Read the review" } : undefined;
+};
+const sweepsLinks = (): NavLink[] => sweepsSorted().slice(0, 5).map((x) => ({ label: x.name, href: `/sweepstakes-casinos/${x.slug}`, brand: x.slug }));
 import { flagSrc } from "./flags";
 import { sportsOffers, sportsOnlyRaces, sportsBoosts, sportsbookHref, sportsPick } from "./sports";
 import { rankedBrands } from "./us-brands";
@@ -288,7 +320,9 @@ function rawNavTabs(c: SiteCounts): NavTab[] {
           label: "Worldwide",
           tint: "#7BE0B8",
           href: "/legal",
+          feature: casinoFeature(inHouseOrder(siteData.ops)[0], "Our top casino"),
           columns: [
+            { title: "Top crypto casinos", links: casinoLinks(inHouseOrder(siteData.ops)) },
             {
               // Countries where the most crypto casinos say, in their own
               // terms, that they will take you. Counted, not chosen — except
@@ -317,7 +351,9 @@ function rawNavTabs(c: SiteCounts): NavTab[] {
           label: "Europe",
           tint: "#7BB8E0",
           href: "/legal/europe",
+          feature: casinoFeature(acceptingEurope()[0], "Our top pick for Europe"),
           columns: [
+            { title: "Top casinos for Europe", links: casinoLinks(acceptingEurope()) },
             {
               title: "Most crypto casinos accept",
               links: [...countryPages()]
@@ -341,7 +377,9 @@ function rawNavTabs(c: SiteCounts): NavTab[] {
           label: "Canada",
           tint: "#E07B7B",
           href: "/crypto-casinos/in/ca",
+          feature: casinoFeature(acceptingIn("CA")[0], "Our top pick for Canada"),
           columns: [
+            { title: "Top casinos for Canada", links: casinoLinks(acceptingIn("CA")) },
             {
               title: "Crypto casinos",
               links: [{ label: `${casinosForCountry("CA").accepts.length} accept Canada`, href: "/crypto-casinos/in/ca", image: flagSrc("CA") ?? undefined }],
@@ -361,7 +399,9 @@ function rawNavTabs(c: SiteCounts): NavTab[] {
           label: "United States",
           tint: "#7BE0B8",
           href: "/legal/us",
+          feature: sweepsFeature("Our top pick for the US"),
           columns: [
+            { title: "Top sweepstakes casinos", links: sweepsLinks() },
             {
               // Most crypto casinos refuse US players in their own terms; the
               // count says so rather than leaving the section looking empty.
@@ -617,6 +657,7 @@ function rawNavTabs(c: SiteCounts): NavTab[] {
           label: "All markets",
           tint: "#5FE3E8",
           href: "/licensed-casinos",
+          feature: casinoFeature(inHouseOrder(siteData.ops)[0], "Our top crypto casino"),
           columns: [
             {
               title: "North America",
@@ -653,6 +694,7 @@ function rawNavTabs(c: SiteCounts): NavTab[] {
           label: "US regulated",
           tint: "#7BE0B8",
           href: "/us-casinos",
+          feature: sweepsFeature("Our top pick for the US"),
           columns: [
             {
               title: "Browse",
@@ -683,6 +725,7 @@ function rawNavTabs(c: SiteCounts): NavTab[] {
           label: "US sweepstakes",
           tint: "#C9A227",
           href: "/sweepstakes-casinos",
+          feature: sweepsFeature("Our top sweepstakes casino"),
           columns: [
             {
               title: "Browse",
@@ -703,6 +746,8 @@ function rawNavTabs(c: SiteCounts): NavTab[] {
           label: "Ontario",
           tint: "#E07B7B",
           href: fiatHref("CA-ON"),
+          // No crypto-casino pick here: Ontario allows only iGaming Ontario
+          // operators to market to its residents.
           columns: [
             {
               title: "Licensed in Ontario",
@@ -752,6 +797,7 @@ function rawNavTabs(c: SiteCounts): NavTab[] {
           label: "Europe",
           tint: "#7BB8E0",
           href: "/licensed-casinos#europe",
+          feature: casinoFeature(acceptingEurope()[0], "Our top pick for Europe"),
           // Three columns of eight: the European registers on file, in region order.
           columns: [0, 8, 16].map((from, i) => ({
             title: i === 0 ? "Licensed brands by country" : " ",
