@@ -478,5 +478,18 @@
     "tint": "#E0C77B",
     "rtpVersions": "96.22 / 94.27 / 92.32 / 88.02",
     "sourceUrl": "https://www.hacksawgaming.com/"
+  },
+  {
+    "slug": "chaos-crew-3",
+    "name": "Chaos Crew 3",
+    "mono": "CC3",
+    "provider": "Hacksaw Gaming",
+    "rtp": 96.18,
+    "vol": "high",
+    "maxWin": "30,000x",
+    "bestAt": "Roobet",
+    "tint": "#E07B9B",
+    "rtpVersions": "96.18 / 94.17 / 92.27 / 86.19",
+    "sourceUrl": "https://www.hacksawgaming.com/games/chaos-crew-3"
   }
 ]
