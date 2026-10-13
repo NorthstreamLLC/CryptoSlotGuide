@@ -49,7 +49,7 @@ export default function Page() {
           },
           {
             t: "Commercial ties",
-            b: `Lars runs ${vip.name}, a VIP team that looks after players at Roobet, including VIP transfers from other casinos, and the site earns affiliate commission from some of the casinos it lists, Roobet included. Those ties are disclosed on every page with an affiliate link. They decide which casinos we feature, never what a review reports.`,
+            b: `The site earns affiliate commission from some of the casinos it lists, Roobet included, and works with ${vip.name}, the VIP team we partner with for Roobet players. Those ties are disclosed on every page with an affiliate link. They decide which casinos we feature, never what a review reports.`,
           },
           {
             t: "Why a pen name",
