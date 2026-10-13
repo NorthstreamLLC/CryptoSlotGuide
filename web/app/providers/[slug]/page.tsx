@@ -15,6 +15,7 @@ import { ReportIssue } from "@/components/ui/ReportIssue";
 import { catalogueOnlyStudio } from "@/lib/studio-pages";
 import { CatalogueStudioPage } from "@/components/studios/CatalogueStudioPage";
 import { ProviderLead, ProviderAlternatives } from "@/components/studios/ProviderExtras";
+import { ProviderHero } from "@/components/studios/ProviderHero";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -55,7 +56,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
     return (
       <>
         <JsonLd data={[entityBreadcrumbSchema(view.kicker, backLink("provider").href, view.name, `/providers/${slug}`), faqSchema(view.faqs)]} />
-        <EntityReviewPage e={view} lead={<ProviderLead name={view.name} />} />
+        <EntityReviewPage e={view} lead={<ProviderLead name={view.name} />} heroExtra={<ProviderHero slug={slug} name={view.name} verdict={view.verdict} />} />
         {studio && <StudioLicences studio={studio} />}
         <ProviderAlternatives slug={slug} name={view.name} />
       </>

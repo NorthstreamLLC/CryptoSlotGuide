@@ -36,7 +36,7 @@ export interface EntityChrome {
   next: { href: string; label: string; hint: string }[];
 }
 
-export function EntityReviewPageClient({ e, review, lead, chrome }: { e: EntityView; review?: React.ReactNode; lead?: React.ReactNode; chrome: EntityChrome }) {
+export function EntityReviewPageClient({ e, review, lead, heroExtra, chrome }: { e: EntityView; review?: React.ReactNode; lead?: React.ReactNode; heroExtra?: React.ReactNode; chrome: EntityChrome }) {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const back = chrome.back;
   const take = chrome.take;
@@ -123,6 +123,7 @@ export function EntityReviewPageClient({ e, review, lead, chrome }: { e: EntityV
               <div style={{ marginTop: 22 }}>
                 <AuthorByline updated={e.updated} />
               </div>
+              {heroExtra}
             </div>
 
             <div style={{ padding: 26, borderRadius: 16, background: "#12181C", border: "1px solid rgba(255,255,255,.09)", boxShadow: "0 20px 60px rgba(0,0,0,.5)" }}>
@@ -202,7 +203,7 @@ export function EntityReviewPageClient({ e, review, lead, chrome }: { e: EntityV
             this box shows the separate computed verdict so nothing repeats.
             When there's no take, the verdict IS the hero lead already, so
             this box is skipped rather than showing the same sentence twice. */}
-        {take && (
+        {take && !heroExtra && (
           <div style={{ padding: 28, borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)", marginBottom: 38 }}>
             <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 12 }}>
               Verdict
