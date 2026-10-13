@@ -92,7 +92,7 @@ export interface Operator {
    * commission back). Shown as "Only with code X". Set it only while it is
    * really being paid; `since` is when it started.
    */
-  codePerk?: { text: string; since: string };
+  codePerk?: { text: string; since: string; /** Where the terms come from, when not the casino's public pages (e.g. our affiliate deal). */ source?: string };
   /** Confirmations required before a deposit/withdrawal clears. */
   conf: number;
   absorbsFee: boolean;

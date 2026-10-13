@@ -5,6 +5,7 @@ import Link from "next/link";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { CoinStack } from "@/components/ui/CoinIcon";
 import { Icon, type IconName } from "@/components/ui/Icon";
+import { CodeChip } from "@/components/ui/CodeChip";
 
 const MONO = "var(--font-jetbrains-mono), monospace";
 
@@ -170,6 +171,14 @@ export function TopPicks({ picks }: { picks: Pick[] }) {
           </div>
         )}
 
+        {p.code && p.perk && (
+          <div style={{ display: "flex", flexDirection: "column", gap: 7, marginBottom: 14, padding: "11px 13px", borderRadius: 11, background: "linear-gradient(90deg, rgba(255,197,49,.14), rgba(255,197,49,.04))", border: "1px solid rgba(255,197,49,.35)" }}>
+            <span style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", fontSize: 12.5, fontWeight: 700, color: "#FFE08A" }}>
+              Sign up with code <CodeChip code={p.code} tint="#FFC531" size="sm" bare />
+            </span>
+            <span style={{ fontSize: 12.5, lineHeight: 1.45, color: "#E8EDF0" }}>{p.perk}</span>
+          </div>
+        )}
 
         <div style={{ display: "flex", gap: 9, flexWrap: "wrap" }}>
           {p.signupUrl ? (

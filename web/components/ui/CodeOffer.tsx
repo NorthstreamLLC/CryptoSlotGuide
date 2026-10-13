@@ -41,7 +41,7 @@ export function CodeOffer({ code, offer, casino, perk, tint = "#57E39A", compact
     {/* Whose offer it is, and what the link is: the casino sets the bonus;
         we earn a commission on the sign-up. Both said plainly, every time. */}
     {!quiet && <div style={{ marginTop: 5, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: compact ? 9.5 : 10.5, lineHeight: 1.5, color: "#7F8D96" }}>
-      {casino}&apos;s own offer, set by {casino}, not by us{perk ? "; the extra is ours, paid by us" : ""} · Affiliate link: we may earn a commission, which never changes what we report · 18+
+      {casino}&apos;s own offer, set by {casino}, not by us{perk ? `; the code ${code} package comes through our affiliate deal with ${casino}` : ""} · Affiliate link: we may earn a commission, which never changes what we report · 18+
     </div>}
     </div>
   );

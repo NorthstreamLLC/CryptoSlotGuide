@@ -23,9 +23,14 @@
     "featured": true,
     "bonusShort": "Instant rakeback + a $100,000 weekly raffle",
     "affiliate": true,
-    "promoCode": "elite",
+    "promoCode": "ELITE",
     "payoutObserved": "Instant",
-    "payoutObservedMins": 0
+    "payoutObservedMins": 0,
+    "codePerk": {
+      "text": "Welcome package: 20% deposit match up to $500, then 100 free spins at $10,000 wagered and 500 more at $50,000",
+      "since": "2026-10-13",
+      "source": "Roobet's welcome package for code ELITE, from our affiliate deal with Roobet (terms supplied by Roobet's affiliate programme, 13 Oct 2026)"
+    }
   },
   {
     "slug": "stake",
