@@ -175,8 +175,8 @@ export default function Page() {
           <div style={{ display: "flex", alignItems: "center", gap: 18, flexWrap: "wrap", padding: "20px 24px", borderRadius: 16, background: "radial-gradient(90% 140% at 0% 50%, rgba(34,158,217,.2), transparent 60%), #0C1114", border: "1px solid rgba(34,158,217,.32)" }}>
             <div style={{ flex: "1 1 320px" }}>
               <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".1em", textTransform: "uppercase", color: "#7CC8EE", marginBottom: 4 }}>{vip.name} · VIP</div>
-              <div style={{ fontSize: 20, fontWeight: 800, color: "#fff" }}>Signed up with {code}? Meet our VIP team</div>
-              <div style={{ fontSize: 14, color: "#B7C4CB", marginTop: 4 }}>For players looking for exclusive rewards, our hosts look after Roobet players who join through us.</div>
+              <div style={{ fontSize: 20, fontWeight: 800, color: "#fff" }}>Our exclusive VIP team</div>
+              <div style={{ fontSize: 14, color: "#B7C4CB", marginTop: 4 }}>For players looking for exclusive rewards. Already VIP at another casino? Our hosts can transfer your VIP status to Roobet.</div>
             </div>
             <a href={vip.telegram} target="_blank" rel="noopener noreferrer" style={{ padding: "13px 20px", borderRadius: 12, background: "#229ED9", color: "#fff", fontSize: 14.5, fontWeight: 800 }}>Message on Telegram</a>
           </div>
