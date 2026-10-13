@@ -91,8 +91,8 @@ export function Footer() {
             <span style={{ color: "#00C2CC" }}>Guide</span>
           </div>
           <p style={{ margin: "0 0 18px", fontSize: 13, lineHeight: 1.6, color: "#8E9CA5", maxWidth: "34ch" }}>
-            Independent crypto gambling and Web3 product reviews. We field-test what we can fund by hand and disclose
-            exactly which reviews that covers — see{" "}
+            Independent crypto casino, slot and sportsbook reviews. Every figure is read from the operator&apos;s,
+            studio&apos;s or regulator&apos;s own pages and linked to its source — see{" "}
             <Link href="/how-we-rate" style={{ color: "#8DA0AA" }}>how we source information</Link>.
           </p>
           <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>

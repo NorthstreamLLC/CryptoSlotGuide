@@ -63,6 +63,26 @@ export default function Page() {
       </section>
 
       <section style={{ maxWidth: 1280, margin: "0 auto", padding: "28px 24px 80px" }}>
+        {/* Our pick, above the ranking; the table below stays sorted by prize money. */}
+        {(() => {
+          const o = siteData.ops.find((x) => x.featured && raceFor(x.slug));
+          if (!o) return null;
+          return (
+            <div style={{ display: "flex", alignItems: "center", gap: 18, flexWrap: "wrap", marginBottom: 16, padding: "18px 20px", borderRadius: 18, border: "1px solid rgba(255,197,49,.38)", background: "radial-gradient(90% 140% at 0% 50%, rgba(255,197,49,.13), transparent 60%), #0D1114" }}>
+              <span style={{ width: 48, height: 48, flex: "none", borderRadius: 12, overflow: "hidden" }}>
+                <BrandMark slug={o.slug} mono={o.mono} tint={brandFor(o.slug)} radius={12} fontSize={13} />
+              </span>
+              <div style={{ flex: "1 1 280px", minWidth: 0 }}>
+                <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".1em", textTransform: "uppercase", color: "#FFC531", marginBottom: 4 }}>Our pick · {o.name}</div>
+                <div style={{ fontSize: 20, fontWeight: 800, letterSpacing: "-.02em", color: "#fff" }}>{raceFor(o.slug)!.label}</div>
+                <div style={{ fontSize: 13.5, color: "#A8B6BE", marginTop: 3 }}>{casinoFacts(o).headline}</div>
+              </div>
+              <div style={{ display: "flex", flex: "0 1 300px", minWidth: 220 }}>
+                <OfferCta o={o} />
+              </div>
+            </div>
+          );
+        })()}
         <div style={{ borderRadius: 20, border: "1px solid rgba(255,255,255,.08)", background: "linear-gradient(180deg,#0E1317,#0A0E11)", overflow: "hidden" }}>
           <div className={`hidden md:grid ${COLS} items-center gap-4`} style={{ padding: "12px 20px", borderBottom: "1px solid rgba(255,255,255,.07)", fontFamily: MONO, fontSize: 10, letterSpacing: ".08em", textTransform: "uppercase", color: "#8E9CA5" }}>
             <span>#</span>

@@ -104,7 +104,7 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
     return {
       kicker: "Slots",
       title: "Slot RTP index",
-      sub: "Every RTP below is the studio's published return. Once we field-test a title's build in a specific operator's account, the slot's own review names the operator that cut it — see how we source information for what's checked so far.",
+      sub: "Every RTP below is the return the studio publishes on its own game page. A casino can ship a lower build of the same game, so check the RTP in the game's info screen before you spin. Every slot on the list has a full review.",
       /**
        * Counted off what exists, not off this page's row list, which used to
        * say "21 slots tracked" while the catalogue held 8,721 and the page
