@@ -376,7 +376,7 @@ export default function HomePage() {
             <div style={{ flex: "1 1 320px", minWidth: 0 }}>
               <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".1em", textTransform: "uppercase", color: "#7CC8EE", marginBottom: 5 }}>{vip.name} · VIP</div>
               <div style={{ fontSize: 22, fontWeight: 800, letterSpacing: "-.02em", color: "#fff", marginBottom: 4 }}>Our exclusive VIP team</div>
-              <div style={{ fontSize: 14.5, lineHeight: 1.5, color: "#B7C4CB" }}>For players looking for exclusive rewards. Already VIP at another casino? Our hosts can transfer your VIP status to Roobet. New to Roobet? Join with code <CodeChip code={vip.code ?? "ELITE"} tint="#3FB6F0" size="sm" bare /> for a 20% deposit match up to $500 and up to 600 free spins.</div>
+              <div style={{ fontSize: 14.5, lineHeight: 1.5, color: "#B7C4CB" }}>For players looking for exclusive rewards. Already VIP at another casino? Our hosts can transfer your VIP status to Roobet. New to Roobet? Join with code <CodeChip code={vip.code ?? "ELITE"} tint="#3FB6F0" size="sm" bare /> for a 20% deposit match up to $500 and up to 600 free spins, then message us on Telegram to claim it.</div>
             </div>
             <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
               <a href={vip.telegram} target="_blank" rel="noopener noreferrer" className="csg-lift" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "13px 20px", borderRadius: 12, background: "#229ED9", color: "#fff", fontSize: 14.5, fontWeight: 800, whiteSpace: "nowrap", boxShadow: "0 10px 24px rgba(34,158,217,.3)" }}>

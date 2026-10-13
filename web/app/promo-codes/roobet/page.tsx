@@ -10,6 +10,7 @@ import { CodeChip } from "@/components/ui/CodeChip";
 import { AuthorByline, AuthorBox } from "@/components/ui/AuthorBox";
 import { NextSteps } from "@/components/layout/NextSteps";
 import vip from "@/data/vip.json";
+import { VipClaim } from "@/components/ui/VipClaim";
 
 const SLUG = "roobet";
 const MONO = "var(--font-jetbrains-mono), monospace";
@@ -58,7 +59,8 @@ export default function Page() {
   const hasBoost = typeof boost?.value === "string" && /\+20% for 72 hours from an affiliate code/.test(boost.value);
 
   const faqs = [
-    { q: `What is the Roobet promo code?`, a: `${code}. Sign up at Roobet with code ${code} to claim the welcome package: a 20% deposit match up to $500, 100 free spins once you reach $10,000 wagered, and 500 more once you reach $50,000.` },
+    { q: `What is the Roobet promo code?`, a: `${code}. Sign up at Roobet with code ${code}, then message ${vip.name}, our VIP team, on Telegram to claim the welcome package: a 20% deposit match up to $500, 100 free spins once you reach $10,000 wagered, and 500 more once you reach $50,000.` },
+    { q: "How do I claim the welcome package?", a: `Only through our VIP team. After signing up with code ${code}, message ${vip.name} on Telegram (${vip.telegram}) and they set the package up on your account. Signing up with the code alone does not pay it.` },
     { q: `Where do I enter code ${code}?`, a: `Our link opens Roobet with the code attached. If you need to enter it yourself, Roobet's help centre says a code can be entered through the promo tab or in your account's general settings under "Referrer".` },
     { q: "Can I withdraw straight after depositing?", a: "Roobet's help centre says deposits must be wagered 100% before you withdraw, an anti-money-laundering rule, so wager what you deposit at least once first." },
     { q: "What do I get at Roobet without a code?", a: "Roobet's standing rewards: Instant Rakeback you can claim every 30 minutes, which never expires, daily and weekly bonuses, and a $100,000 weekly raffle where every wager earns tickets. Its VIP Club is invite-only." },
@@ -121,8 +123,12 @@ export default function Page() {
               )}
             </div>
             <a href={visit} target="_blank" rel="nofollow sponsored noopener" data-copy-code={code} className="transition-transform hover:-translate-y-px" style={{ display: "block", textAlign: "center", padding: "16px 18px", borderRadius: 13, background: "linear-gradient(180deg,#FFD866,#FFC531)", color: "#141007", fontSize: 16, fontWeight: 800, boxShadow: "0 12px 30px rgba(255,197,49,.25)" }}>
-              Claim at Roobet ↗
+              1. Sign up at Roobet ↗
             </a>
+            <div style={{ display: "flex", flexDirection: "column", marginTop: 10 }}>
+              <VipClaim label={`2. Claim the package with ${vip.name}`} />
+            </div>
+            <p style={{ margin: "10px 0 0", fontSize: 12.5, lineHeight: 1.5, color: "#B7C4CB" }}>The package is claimed through our VIP team on Telegram: signing up with the code alone does not pay it.</p>
             <p style={{ margin: "12px 0 0", fontFamily: MONO, fontSize: 10.5, lineHeight: 1.6, color: "#7F8D96" }}>
               Through our affiliate deal with Roobet; we may earn a commission, which never changes what we report. 18+ · T&amp;Cs apply · Play responsibly.
             </p>
@@ -132,11 +138,12 @@ export default function Page() {
 
       <section style={{ maxWidth: 1180, margin: "0 auto", padding: "48px 24px 0" }}>
         <h2 style={{ margin: "0 0 18px", fontSize: 28, letterSpacing: "-.03em", fontWeight: 800, color: "#fff" }}>How to claim it</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3" style={{ gap: 12 }}>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" style={{ gap: 12 }}>
           {[
-            { n: 1, t: "Open Roobet through our link", d: `The "Claim at Roobet" button opens Roobet with code ${code} attached.` },
+            { n: 1, t: "Open Roobet through our link", d: `The "Sign up at Roobet" button opens Roobet with code ${code} attached.` },
             { n: 2, t: `Sign up with code ${code}`, d: `If the code isn't filled in, Roobet's help centre says you can enter it in the promo tab or under "Referrer" in your general settings.`, src: REFERRALS },
-            { n: 3, t: "Deposit and play", d: "The 20% match is paid on your deposit; the free spins unlock at $10,000 and $50,000 wagered." },
+            { n: 3, t: `Message ${vip.name} on Telegram`, d: "Our VIP team sets up the package on your account. This is the only way to claim it.", tg: true },
+            { n: 4, t: "Deposit and play", d: "The 20% match is paid on your deposit; the free spins unlock at $10,000 and $50,000 wagered." },
           ].map((s) => (
             <div key={s.n} style={{ padding: 20, borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.08)" }}>
               <div style={{ width: 34, height: 34, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", background: GOLD, color: "#141007", fontWeight: 800, marginBottom: 12 }}>{s.n}</div>
@@ -145,6 +152,11 @@ export default function Page() {
                 {s.d}{" "}
                 {s.src && <a href={s.src} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: MONO, fontSize: 10.5, color: "#5FE3E8" }}>help.roobet.com ↗</a>}
               </p>
+              {"tg" in s && s.tg && (
+                <div style={{ marginTop: 12 }}>
+                  <VipClaim compact label="Message on Telegram" />
+                </div>
+              )}
             </div>
           ))}
         </div>

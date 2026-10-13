@@ -44,7 +44,7 @@ export function buildNotifications(): Notif[] {
       kind: "offer",
       tag: "Our pick",
       title: race ? `${race.label} at ${pick.name}` : `${pick.name}: ${pick.bonusShort ?? pick.bonus}`,
-      sub: pick.promoCode && pick.codePerk?.short ? `Code ${pick.promoCode}: ${pick.codePerk.short}` : pick.bonusShort ?? pick.bonus,
+      sub: pick.promoCode && pick.codePerk?.short ? `Code ${pick.promoCode}: ${pick.codePerk.short}, claimed through our VIP team on Telegram` : pick.bonusShort ?? pick.bonus,
       href: pick.slug === "roobet" && pick.promoCode ? "/promo-codes/roobet" : `/casinos/${pick.slug}`,
       date: pick.codePerk?.since,
       pinned: true,

@@ -17,6 +17,7 @@ import { raceFor, partnerFor, dropFor } from "@/lib/races";
 import { rtpSummary } from "@/lib/rtp-watch-view";
 import { ReportUpdates } from "@/components/casino/ReportUpdates";
 import { NextSteps } from "@/components/layout/NextSteps";
+import { VipClaim, CLAIM_NOTE } from "@/components/ui/VipClaim";
 import { AuthorBox, AuthorByline } from "@/components/ui/AuthorBox";
 import { StickyOffer } from "@/components/casino/StickyOffer";
 import { rivalPairs } from "@/lib/versus";
@@ -319,11 +320,15 @@ export function CasinoReport({ e }: { e: EntityView }) {
               {o.signupUrl && o.promoCode && (
                 <div style={{ marginBottom: 12, maxWidth: 560 }}>
                   <CodeOffer code={o.promoCode} offer={o.bonusShort ?? o.bonus} casino={o.name} perk={o.codePerk?.text} tint={brand} />
-                  {o.slug === "roobet" && (
-                    <Link href="/promo-codes/roobet" style={{ display: "inline-block", marginTop: 8, fontSize: 13, fontWeight: 700, color: brand }}>
-                      How to claim code {o.promoCode} →
-                    </Link>
+                  {o.slug === "roobet" && o.codePerk && (
+                    <div style={{ display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap", marginTop: 10 }}>
+                      <VipClaim compact />
+                      <Link href="/promo-codes/roobet" style={{ fontSize: 13, fontWeight: 700, color: brand }}>
+                        How to claim code {o.promoCode} →
+                      </Link>
+                    </div>
                   )}
+                  {o.slug === "roobet" && o.codePerk && <p style={{ margin: "8px 0 0", fontSize: 12.5, lineHeight: 1.5, color: "#B7C4CB" }}>{CLAIM_NOTE}</p>}
                 </div>
               )}
               <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 12 }}>

@@ -8,7 +8,7 @@ import { AuthorBadge } from "@/components/ui/AuthorBox";
 
 export const metadata = pageMetadata(
   `${author.name}, ${author.role}`,
-  `${author.name} runs ${SITE_NAME} and edits every review and guide on it. What the job involves, how the site is sourced, and its commercial ties.`,
+  `${author.name} runs ${SITE_NAME} and edits every review and guide on it, after working in the casino industry and an affiliate network. Background, what the job involves and the site's commercial ties.`,
   `/authors/${author.slug}`
 );
 
@@ -41,6 +41,16 @@ export default function Page() {
           </div>
         </div>
         <p style={{ margin: "0 0 28px", fontSize: 17, lineHeight: 1.65, color: "#C3CFD5" }}>{author.bio}</p>
+
+        <h2 style={{ margin: "8px 0 14px", fontSize: 24, fontWeight: 800, color: "#fff" }}>Background</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3" style={{ gap: 12, marginBottom: 30 }}>
+          {author.background.map((b) => (
+            <div key={b.t} style={{ padding: 18, borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,197,49,.2)" }}>
+              <div style={{ fontSize: 16, fontWeight: 800, color: "#FFD36B", marginBottom: 8 }}>{b.t}</div>
+              <p style={{ margin: 0, fontSize: 14, lineHeight: 1.6, color: "#A8B6BE" }}>{b.d}</p>
+            </div>
+          ))}
+        </div>
 
         {[
           {

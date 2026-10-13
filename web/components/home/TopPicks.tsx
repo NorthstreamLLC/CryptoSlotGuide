@@ -6,6 +6,7 @@ import { BrandMark } from "@/components/ui/BrandMark";
 import { CoinStack } from "@/components/ui/CoinIcon";
 import { Icon, type IconName } from "@/components/ui/Icon";
 import { CodeChip } from "@/components/ui/CodeChip";
+import { VipClaim } from "@/components/ui/VipClaim";
 
 const MONO = "var(--font-jetbrains-mono), monospace";
 
@@ -177,6 +178,9 @@ export function TopPicks({ picks }: { picks: Pick[] }) {
               Sign up with code <CodeChip code={p.code} tint="#FFC531" size="sm" bare />
             </span>
             <span style={{ fontSize: 12.5, lineHeight: 1.45, color: "#E8EDF0" }}>{p.perk}</span>
+            <span style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", fontSize: 11.5, color: "#B7C4CB" }}>
+              <VipClaim compact label="Claim via our VIP team" /> the only way to get it
+            </span>
           </div>
         )}
 

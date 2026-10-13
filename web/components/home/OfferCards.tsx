@@ -4,6 +4,7 @@ import { casinoFacts, brandFor, licenceLabel } from "@/lib/casino-facts";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { CoinStack } from "@/components/ui/CoinIcon";
 import { CodeChip } from "@/components/ui/CodeChip";
+import { VipClaim } from "@/components/ui/VipClaim";
 import { reviewPath } from "@/lib/outbound";
 
 const MONO = "var(--font-jetbrains-mono), monospace";
@@ -55,6 +56,9 @@ export function OfferCards({ ops }: { ops: Operator[] }) {
                 <div style={{ display: "flex", alignItems: "center", gap: 7, flexWrap: "wrap", marginBottom: 6, fontSize: 12, color: "#E8EDF0" }}>
                   <CodeChip code={o.promoCode} tint="#FFC531" size="sm" bare />
                   <span>{o.codePerk.short ?? o.codePerk.text}</span>
+                  <span style={{ flexBasis: "100%", marginTop: 4 }}>
+                    <VipClaim compact label="Claim via our VIP team" />
+                  </span>
                 </div>
               )}
               <div style={{ fontFamily: MONO, fontSize: 10, color: "#6E7A82", marginBottom: 14 }}>18+ · T&amp;Cs apply</div>

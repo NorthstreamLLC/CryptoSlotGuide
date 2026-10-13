@@ -55,7 +55,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { guideRows } = siteData;
   const g = guideRows.find((r) => r.slug === slug);
   if (!g) return {};
-  return pageMetadata(g.title, fill(g.standfirst, siteData), `/guides/${slug}`);
+  // A one-line standfirst is too thin for a search snippet; add the first key point.
+  const lead = fill(g.standfirst, siteData);
+  const first = (siteData.guideBodies as Record<string, { key?: string[] }>)[slug]?.key?.[0];
+  const desc = lead.length < 90 && first ? `${lead.replace(/[.\s]*$/, "")}. ${first}` : lead;
+  return pageMetadata(g.title, desc.length > 300 ? `${desc.slice(0, 297).replace(/\s+\S*$/, "")}…` : desc, `/guides/${slug}`);
 }
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {

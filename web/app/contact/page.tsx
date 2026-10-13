@@ -9,7 +9,7 @@ import { breadcrumbSchema } from "@/lib/schema";
  */
 export const metadata = pageMetadata(
   "Contact",
-  "Get in touch with CryptoSlotGuide.",
+  "Contact CryptoSlotGuide: report a wrong figure on a review, ask about a casino, or reach us about partnerships and press. Corrections go straight to the editor.",
   "/contact"
 );
 

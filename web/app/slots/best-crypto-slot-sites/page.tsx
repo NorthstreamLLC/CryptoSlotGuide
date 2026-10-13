@@ -14,6 +14,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { CoinStack } from "@/components/ui/CoinIcon";
 import { CodeChip } from "@/components/ui/CodeChip";
+import { VipClaim } from "@/components/ui/VipClaim";
 import { OfferCta } from "@/components/ui/OfferCta";
 import { AuthorBox, AuthorByline } from "@/components/ui/AuthorBox";
 import { SlotArtCards } from "@/components/home/SlotArtCards";
@@ -244,6 +245,7 @@ export default function Page() {
                         <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#A8B6BE", marginBottom: 4 }}>Offer available</div>
                         <div style={{ fontSize: 17, fontWeight: 800, color: "#fff" }}>{f.headline}</div>
                         {o.promoCode && o.codePerk?.short && <div style={{ marginTop: 4, fontSize: 13, color: "#FFE08A" }}>With code {o.promoCode}: {o.codePerk.short}</div>}
+                        {o.promoCode && o.codePerk?.short && <div style={{ marginTop: 10 }}><VipClaim compact label="Claim the package via our VIP team" /></div>}
                       </div>
                       <div style={{ display: "flex", flex: "0 1 280px", minWidth: 220 }}>
                         <OfferCta o={o} />

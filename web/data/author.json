@@ -3,6 +3,20 @@
   "initials": "LP",
   "slug": "lars-p",
   "role": "Founder & editor",
-  "bio": "Lars runs CryptoSlotGuide and edits every review and guide on the site. One rule for all of them: every figure comes from the casino's, studio's or regulator's own pages, with the source linked.",
-  "note": "Lars P. is a pen name used by the site's founder, a real person. The bio must only ever say what is true of them."
+  "bio": "Lars runs CryptoSlotGuide and edits every review and guide on the site. Before this, Lars worked inside the casino industry and on the affiliate-network side, and has tried most of the crypto casinos we cover as a player. One rule for every page: each figure comes from the casino's, studio's or regulator's own pages, with the source linked.",
+  "note": "Lars P. is a pen name used by the site's founder, a real person. The bio must only ever say what is true of them.",
+  "background": [
+    {
+      "t": "Inside the casino industry",
+      "d": "Lars has worked within the casino industry, and reads casino terms the way the industry writes them: what a bonus, a VIP programme or a cashier rule actually means once real money is on the line."
+    },
+    {
+      "t": "The affiliate side",
+      "d": "Lars has also worked in an affiliate network, the business that sends players to casinos for a commission. That is why this site says plainly which links are affiliate links and keeps the commission away from what a review reports."
+    },
+    {
+      "t": "As a player",
+      "d": "Lars has tried most of the crypto casinos on this site as a player. That is where the questions our reviews answer come from: how fast is the withdrawal, what does the bonus really cost, and what do the terms leave out."
+    }
+  ]
 }

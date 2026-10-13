@@ -10,7 +10,7 @@ import { breadcrumbSchema } from "@/lib/schema";
  */
 export const metadata = pageMetadata(
   "Terms of Service",
-  "The terms that govern using CryptoSlotGuide.",
+  "The terms for using CryptoSlotGuide: what the site is and is not, how affiliate links work, the 18+ rule, and the limits of the information we publish.",
   "/terms"
 );
 
