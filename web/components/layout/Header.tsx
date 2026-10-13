@@ -6,6 +6,8 @@ import type { NavTab } from "@/lib/nav";
 import type { SiteCounts } from "@/lib/derived";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { tintFor } from "@/lib/logo";
+import type { Notif } from "@/lib/notifications";
+import { NotifBell } from "@/components/layout/NotifBell";
 
 /**
  * Ported from the `<header>` block in CryptoSlotGuide.dc.html (search that
@@ -19,7 +21,10 @@ import { tintFor } from "@/lib/logo";
  * image URLs we hold back — to every visitor. The layout builds it on the
  * server and passes only the finished tabs.
  */
-export function Header({ counts, navTabs }: { counts: SiteCounts; navTabs: NavTab[] }) {
+/** Menu labels read as plain names: "Finland · 32" and "Canada · 4/4" lose the trailing count. */
+const cleanLabel = (s: string) => s.replace(/\s+·\s+[\d,/]+$/, "");
+
+export function Header({ counts, navTabs, notifs = [] }: { counts: SiteCounts; navTabs: NavTab[]; notifs?: Notif[] }) {
   const [menu, setMenu] = useState<string | null>(null);
   const [rail, setRail] = useState(0);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -166,6 +171,7 @@ export function Header({ counts, navTabs }: { counts: SiteCounts; navTabs: NavTa
             <span style={{ color: "#77858E" }}>⌕</span>
             <span>search</span>
           </Link>
+          <NotifBell items={notifs} />
           <span
             style={{
               padding: "5px 9px",
@@ -280,9 +286,9 @@ export function Header({ counts, navTabs }: { counts: SiteCounts; navTabs: NavTa
           <div
             style={{
               width: "100%",
-              maxWidth: 1120,
+              maxWidth: activeSection.feature ? 1240 : 1120,
               display: "grid",
-              gridTemplateColumns: "264px 1fr",
+              gridTemplateColumns: activeSection.feature ? "250px 1fr 300px" : "250px 1fr",
               background: "#0B0F12",
               border: "1px solid rgba(255,255,255,.09)",
               borderRadius: 14,
@@ -342,7 +348,7 @@ export function Header({ counts, navTabs }: { counts: SiteCounts; navTabs: NavTa
                           section.mono
                         )}
                     </span>
-                    <span style={{ fontSize: 13.5, fontWeight: 600, letterSpacing: "-.012em" }}>
+                    <span style={{ fontSize: 14.5, fontWeight: 600, letterSpacing: "-.01em" }}>
                       {section.label}
                     </span>
                     <span style={{ marginLeft: "auto", fontSize: 12, color: isActive ? "#00C2CC" : "#39454C" }}>
@@ -367,28 +373,6 @@ export function Header({ counts, navTabs }: { counts: SiteCounts; navTabs: NavTa
                   See all {counts.total} listings →
                 </Link>
               </div>
-              {activeSection.feature && (
-                // Our pick for this section, in the rail under the section list.
-                <Link
-                  href={activeSection.feature.href}
-                  onClick={closeMenu}
-                  className="csg-nav-feature"
-                  style={{ display: "flex", flexDirection: "column", gap: 8, margin: "16px 2px 0", padding: "14px 14px 13px", borderRadius: 14, background: "radial-gradient(120% 100% at 0% 0%, rgba(255,197,49,.14), transparent 60%), #10161A", border: "1px solid rgba(255,197,49,.3)" }}
-                >
-                  <span style={{ display: "flex", alignItems: "center", gap: 6, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 9.5, letterSpacing: ".1em", textTransform: "uppercase", color: "#FFC531" }}>
-                    <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#57E39A", boxShadow: "0 0 0 3px rgba(87,227,154,.18)" }} />
-                    {activeSection.feature.kicker}
-                  </span>
-                  <span style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                    <span style={{ width: 34, height: 34, flex: "none", borderRadius: 9, overflow: "hidden" }}>
-                      <BrandMark slug={activeSection.feature.brand} mono={activeSection.feature.title.slice(0, 2).toUpperCase()} tint={tintFor(activeSection.feature.brand)} radius={9} fontSize={11} />
-                    </span>
-                    <span style={{ fontSize: 16, fontWeight: 800, lineHeight: 1.2, letterSpacing: "-.015em", color: "#fff" }}>{activeSection.feature.title}</span>
-                  </span>
-                  <span style={{ fontSize: 12.5, lineHeight: 1.45, color: "#A8B6BE" }}>{activeSection.feature.sub}</span>
-                  <span style={{ marginTop: 2, fontSize: 12.5, fontWeight: 800, color: "#FFC531" }}>{activeSection.feature.cta} →</span>
-                </Link>
-              )}
             </div>
 
             {/* A 64px gap fitted two columns; sections now run to four, which at
@@ -399,18 +383,18 @@ export function Header({ counts, navTabs }: { counts: SiteCounts; navTabs: NavTa
                 // 150px lets four columns sit across the panel; at 170px the
                 // fourth wrapped under the first and the menu read as a pile.
                 <div key={col.title + i} style={{ flex: "1 1 150px", minWidth: 0, maxWidth: 250 }}>
-                  <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 12 }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 10, minHeight: 14 }}>
                     <span
                       style={{
-                        fontFamily: "var(--font-jetbrains-mono), monospace",
-                        fontSize: 9.5,
-                        letterSpacing: ".11em",
+                        fontSize: 11,
+                        fontWeight: 600,
+                        letterSpacing: ".08em",
                         textTransform: "uppercase",
-                        color: "#83919A",
+                        color: "#7F8D96",
                         whiteSpace: "nowrap",
                       }}
                     >
-                      {col.title}
+                      {col.title.trim()}
                     </span>
                     <span style={{ flex: 1, height: 1, background: "rgba(255,255,255,.08)" }} />
                   </div>
@@ -425,11 +409,12 @@ export function Header({ counts, navTabs }: { counts: SiteCounts; navTabs: NavTa
                           display: "flex",
                           alignItems: "center",
                           gap: 8,
-                          padding: "7px 0",
-                          fontSize: 14,
+                          padding: "8px 0",
+                          fontSize: 15,
                           fontWeight: 500,
-                          letterSpacing: "-.012em",
-                          color: "#C3CFD5",
+                          lineHeight: 1.3,
+                          letterSpacing: "-.01em",
+                          color: "#E3EAEE",
                         }}
                       >
                         {link.image ? (
@@ -444,7 +429,7 @@ export function Header({ counts, navTabs }: { counts: SiteCounts; navTabs: NavTa
                             <BrandMark slug={link.brand} mono={link.label.slice(0, 2).toUpperCase()} tint={tintFor(link.brand)} radius={6} fontSize={8} />
                           </span>
                         ) : null}
-                        {link.label}
+                        {cleanLabel(link.label)}
                         {link.dot && (
                           <span
                             style={{
@@ -462,6 +447,41 @@ export function Header({ counts, navTabs }: { counts: SiteCounts; navTabs: NavTa
                 </div>
               ))}
             </div>
+            {activeSection.feature && (
+              <div style={{ display: "flex", flexDirection: "column", gap: 12, padding: "22px 22px 20px", background: "#080B0E", borderLeft: "1px solid rgba(255,255,255,.07)" }}>
+                <div style={{ display: "flex", flexDirection: "column", gap: 14, padding: 18, borderRadius: 14, background: "radial-gradient(120% 90% at 0% 0%, rgba(255,197,49,.14), transparent 60%), #10161A", border: "1px solid rgba(255,197,49,.3)" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                    <span style={{ width: 54, height: 54, flex: "none", borderRadius: 13, overflow: "hidden" }}>
+                      <BrandMark slug={activeSection.feature.brand} mono={activeSection.feature.title.slice(0, 2).toUpperCase()} tint={tintFor(activeSection.feature.brand)} radius={13} fontSize={14} />
+                    </span>
+                    <span style={{ minWidth: 0 }}>
+                      <span style={{ display: "block", fontSize: 11, fontWeight: 700, letterSpacing: ".07em", textTransform: "uppercase", color: "#FFC531", marginBottom: 2 }}>{activeSection.feature.kicker}</span>
+                      <span style={{ display: "block", fontSize: 20, fontWeight: 800, lineHeight: 1.15, letterSpacing: "-.02em", color: "#fff" }}>{activeSection.feature.title}</span>
+                    </span>
+                  </div>
+                  <span style={{ fontSize: 13.5, lineHeight: 1.5, color: "#C3CFD5" }}>{activeSection.feature.sub}</span>
+                  {activeSection.feature.visit && (
+                    <a
+                      href={activeSection.feature.visit}
+                      target="_blank"
+                      rel="nofollow sponsored noopener"
+                      onClick={closeMenu}
+                      className="transition-transform hover:-translate-y-px"
+                      style={{ textAlign: "center", padding: "12px 14px", borderRadius: 11, background: "#FFC531", color: "#141007", fontSize: 14.5, fontWeight: 800 }}
+                    >
+                      Visit {activeSection.feature.name ?? activeSection.feature.title} ↗
+                    </a>
+                  )}
+                  <Link href={activeSection.feature.href} onClick={closeMenu} className="hover:!text-white" style={{ textAlign: "center", fontSize: 14, fontWeight: 700, color: "#FFD36B" }}>
+                    {activeSection.feature.name ? `Full ${activeSection.feature.name} review` : activeSection.feature.cta}
+                  </Link>
+                </div>
+                <p style={{ margin: 0, fontSize: 11.5, lineHeight: 1.55, color: "#77858E" }}>
+                  <strong style={{ color: "#8E9CA5" }}>Disclosure:</strong> we may earn an affiliate commission when you sign up through our links. It never changes what a review says.{" "}
+                  <Link href="/how-we-rate" onClick={closeMenu} style={{ color: "#8E9CA5", textDecoration: "underline" }}>Learn more</Link>
+                </p>
+              </div>
+            )}
           </div>
         </div>
       )}

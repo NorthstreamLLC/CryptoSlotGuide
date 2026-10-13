@@ -31,7 +31,7 @@ const topCasinoFeature = (kicker: string): NavFeature | undefined => casinoFeatu
 
 /** A casino as a menu pick: our recommendation for a country section. */
 const casinoFeature = (o: Op | undefined, kicker: string): NavFeature | undefined =>
-  o ? { brand: o.slug, kicker, title: o.name, sub: o.bonusShort ?? o.bonus, href: `/casinos/${o.slug}`, cta: "Read the review" } : undefined;
+  o ? { brand: o.slug, kicker, title: o.name, name: o.name, sub: o.bonusShort ?? o.bonus, href: `/casinos/${o.slug}`, cta: "Read the review", visit: o.affiliate && o.signupUrl ? o.signupUrl : undefined } : undefined;
 
 /** The first five, as a column of marks. */
 const casinoLinks = (ops: Op[]): NavLink[] => ops.slice(0, 5).map((o) => ({ label: o.name, href: `/casinos/${o.slug}`, brand: o.slug }));
@@ -55,7 +55,7 @@ const acceptingEurope = (): Op[] => {
 /** US players: no crypto casino on our list accepts them, so the pick is a sweepstakes casino. */
 const sweepsFeature = (kicker: string): NavFeature | undefined => {
   const sw = sweepsSorted()[0];
-  return sw ? { brand: sw.slug, kicker, title: sw.name, sub: sw.offer, href: `/sweepstakes-casinos/${sw.slug}`, cta: "Read the review" } : undefined;
+  return sw ? { brand: sw.slug, kicker, title: sw.name, name: sw.name, sub: sw.offer, href: `/sweepstakes-casinos/${sw.slug}`, cta: "Read the review", visit: sw.affiliate && sw.signupUrl ? sw.signupUrl : undefined } : undefined;
 };
 const sweepsLinks = (): NavLink[] => sweepsSorted().slice(0, 5).map((x) => ({ label: x.name, href: `/sweepstakes-casinos/${x.slug}`, brand: x.slug }));
 import { flagSrc } from "./flags";
@@ -126,6 +126,10 @@ export interface NavFeature {
   sub: string;
   href: string;
   cta: string;
+  /** Affiliate sign-up link, where we hold one: the card's "Visit" button. */
+  visit?: string;
+  /** Brand name for the buttons ("Visit Roobet", "Full Roobet review"). */
+  name?: string;
 }
 
 export interface NavColumn {
@@ -153,8 +157,7 @@ function rawNavTabs(c: SiteCounts): NavTab[] {
           tint: "#5FE3E8",
           href: "/crypto-casinos",
           feature: (() => {
-            const o = siteData.ops.find((x) => x.featured);
-            return o ? { brand: o.slug, kicker: "Our top casino", title: o.name, sub: o.bonusShort ?? o.bonus, href: `/casinos/${o.slug}`, cta: "Read the review" } : undefined;
+            return casinoFeature(siteData.ops.find((x) => x.featured), "Our top casino");
           })(),
           columns: [
             {
@@ -163,7 +166,7 @@ function rawNavTabs(c: SiteCounts): NavTab[] {
                 { label: `All ${c.casinos} crypto casinos`, href: "/crypto-casinos" },
                 { label: "No-KYC casinos", href: "/crypto-casinos/no-kyc" },
                 { label: "Fastest payouts", href: "/fastest-payouts" },
-                { label: "Easiest bonuses to cash out", href: "/lowest-wagering" },
+                { label: "Lowest wagering bonuses", href: "/lowest-wagering" },
                 { label: "Compare side by side", href: "/compare" },
                 { label: "Find my casino", href: "/find-my-casino" },
                 { label: "VIP calculator", href: "/vip-calculator" },
@@ -208,7 +211,7 @@ function rawNavTabs(c: SiteCounts): NavTab[] {
               title: "Slots",
               links: [
                 { label: "Our top slots", href: "/slots" },
-                { label: "Slot database · every game we hold", href: "/slots/database" },
+                { label: "Slot database", href: "/slots/database" },
                 { label: "Slots by studio", href: "/providers" },
                 { label: "How casino RTP versions work", href: "/guides/how-casino-rtp-versions-work" },
               ],
@@ -351,7 +354,7 @@ function rawNavTabs(c: SiteCounts): NavTab[] {
               title: "The law",
               links: [
                 { label: "Gambling law, every country", href: "/legal" },
-                { label: "Crypto casinos, all of them", href: "/crypto-casinos" },
+                { label: "All crypto casinos", href: "/crypto-casinos" },
                 { label: "By coin", href: "/crypto-casinos/accepting/bitcoin" },
               ],
             },
@@ -443,7 +446,7 @@ function rawNavTabs(c: SiteCounts): NavTab[] {
           feature: (() => {
             const p = sportsPick();
             return p
-              ? { brand: p.slug, kicker: "Our sports pick", title: `${p.name} sportsbook`, sub: p.promos ?? "Rotating sports promotions instead of one fixed welcome offer", href: sportsbookHref(p.slug), cta: "View sportsbook" }
+              ? { brand: p.slug, kicker: "Our sports pick", title: `${p.name} sportsbook`, name: p.name, sub: p.promos ?? "Rotating sports promotions instead of one fixed welcome offer", href: sportsbookHref(p.slug), cta: "View sportsbook", visit: p.signupUrl }
               : undefined;
           })(),
           columns: [
@@ -845,7 +848,7 @@ function slug(name: string): string {
  */
 /** The licensed-register entries, named for what they hold once they share a tab with the crypto-casino countries. */
 const LICENSED_LABEL: Record<string, string> = {
-  "All markets": "Licensed sites, every market",
+  "All markets": "All licensed sites",
   "US regulated": "US state-licensed sites",
   "US sweepstakes": "US sweepstakes sites",
   Ontario: "Ontario-licensed sites",

@@ -1,3 +1,4 @@
+import { buildNotifications } from "@/lib/notifications";
 import type { Metadata } from "next";
 import { buildNavTabs } from "@/lib/nav";
 import { RevealObserver } from "@/components/motion/RevealObserver";
@@ -56,7 +57,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-page text-text-primary">
         <JsonLd data={[organizationSchema(), websiteSchema()]} />
         <a href="#main" className="csg-skip">Skip to content</a>
-        <Header counts={siteCounts} navTabs={buildNavTabs(siteCounts)} />
+        <Header counts={siteCounts} navTabs={buildNavTabs(siteCounts)} notifs={buildNotifications()} />
         <RevealObserver />
         <div id="main" className="flex-1">{children}</div>
         <NewsletterBand />
