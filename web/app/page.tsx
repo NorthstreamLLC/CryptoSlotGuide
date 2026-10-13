@@ -5,7 +5,7 @@ import { rtpSortValue } from "@/lib/slot-facts";
 import { siteData, siteCounts } from "@/lib/site-data";
 import { allVersionsListedStudios, selfCustodyWallets } from "@/lib/derived";
 import { tintFor } from "@/lib/logo";
-import { CryptoTicker } from "@/components/home/CryptoTicker";
+import { DisclosureStrip } from "@/components/layout/DisclosureStrip";
 import { LogoColumns } from "@/components/home/LogoColumns";
 import { topSlotRows, studioCatalogue, slotArtBySlug } from "@/lib/slot-page";
 import { BrandMark } from "@/components/ui/BrandMark";
@@ -342,7 +342,7 @@ export default function HomePage() {
             withdrawal cleared in 3m 58s") that read as fabricated activity
             logging once nothing behind it was real. */}
         <div style={{ position: "relative", maxWidth: 1400, margin: "0 auto", padding: "0 40px 26px" }}>
-          <CryptoTicker coins={siteData.coinDefs} />
+          <DisclosureStrip />
         </div>
       </section>
 

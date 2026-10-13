@@ -319,6 +319,11 @@ export function CasinoReport({ e }: { e: EntityView }) {
               {o.signupUrl && o.promoCode && (
                 <div style={{ marginBottom: 12, maxWidth: 560 }}>
                   <CodeOffer code={o.promoCode} offer={o.bonusShort ?? o.bonus} casino={o.name} perk={o.codePerk?.text} tint={brand} />
+                  {o.slug === "roobet" && (
+                    <Link href="/promo-codes/roobet" style={{ display: "inline-block", marginTop: 8, fontSize: 13, fontWeight: 700, color: brand }}>
+                      How to claim code {o.promoCode} →
+                    </Link>
+                  )}
                 </div>
               )}
               <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 12 }}>

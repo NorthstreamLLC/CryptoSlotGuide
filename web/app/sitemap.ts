@@ -68,6 +68,7 @@ const STATIC_ROUTES = [
   "/editorial-standards",
   "/contact",
   "/authors/lars-p",
+  "/promo-codes/roobet",
 ];
 
 function slugPath(base: string, slug: string): string {

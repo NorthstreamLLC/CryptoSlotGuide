@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { DisclosureStrip } from "@/components/layout/DisclosureStrip";
 
 /**
  * Ported from `<footer>` in CryptoSlotGuide.dc.html (search for
@@ -63,6 +64,9 @@ const footerCols = [
 export function Footer() {
   return (
     <footer style={{ background: "#07090B", borderTop: "1px solid rgba(255,255,255,.07)" }}>
+      <div style={{ maxWidth: 1400, margin: "0 auto", padding: "16px 40px", borderBottom: "1px solid rgba(255,255,255,.06)" }}>
+        <DisclosureStrip align="left" />
+      </div>
       <div
         style={{
           maxWidth: 1400,

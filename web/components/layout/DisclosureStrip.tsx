@@ -1,12 +1,28 @@
-export function DisclosureStrip() {
+import Link from "next/link";
+
+/**
+ * The advertiser disclosure, as one quiet line. It used to sit in a band
+ * under the header on every page; it now closes the homepage hero and opens
+ * the footer, and every affiliate button still carries its own note.
+ */
+export function DisclosureStrip({ align = "center" }: { align?: "center" | "left" }) {
   return (
-    <div className="bg-section border-b border-border">
-      <p className="mx-auto max-w-[1400px] px-4 md:px-10 py-1.5 text-[11px] font-mono tracking-[0.02em] text-text-dim">
-        Advertiser disclosure — we may earn a commission from operators listed here. It never changes what a review says.{" "}
-        <a href="/how-we-rate" className="text-text-dim-2 underline underline-offset-2 hover:text-accent">
-          how we source information
-        </a>
-      </p>
-    </div>
+    <p
+      style={{
+        margin: 0,
+        textAlign: align,
+        fontFamily: "var(--font-jetbrains-mono), monospace",
+        fontSize: 11,
+        lineHeight: 1.6,
+        letterSpacing: ".02em",
+        color: "#6E7F86",
+      }}
+    >
+      <strong style={{ color: "#7FA9AE", fontWeight: 700 }}>Advertiser disclosure</strong> · We earn commission from some operators listed here. It never changes what a review says —{" "}
+      <Link href="/how-we-rate" style={{ color: "#9FD9DD", textDecoration: "underline", textUnderlineOffset: 2 }}>
+        how we source information
+      </Link>
+      .
+    </p>
   );
 }

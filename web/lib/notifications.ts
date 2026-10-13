@@ -45,7 +45,7 @@ export function buildNotifications(): Notif[] {
       tag: "Our pick",
       title: race ? `${race.label} at ${pick.name}` : `${pick.name}: ${pick.bonusShort ?? pick.bonus}`,
       sub: pick.promoCode && pick.codePerk?.short ? `Code ${pick.promoCode}: ${pick.codePerk.short}` : pick.bonusShort ?? pick.bonus,
-      href: `/casinos/${pick.slug}`,
+      href: pick.slug === "roobet" && pick.promoCode ? "/promo-codes/roobet" : `/casinos/${pick.slug}`,
       date: pick.codePerk?.since,
       pinned: true,
       brand: pick.slug,
