@@ -144,6 +144,8 @@ const MARKET_NAMES: Record<string, string> = {
   AR: "Buenos Aires province",
   "AR-C": "City of Buenos Aires",
   "AU-NT": "Australia",
+  HR: "Croatia",
+  PE: "Peru",
 };
 
 function marketOf(code: string, m: CountryMarket): FiatMarket {
