@@ -211,6 +211,7 @@ function rawNavTabs(c: SiteCounts): NavTab[] {
               title: "Slots",
               links: [
                 { label: "Our top slots", href: "/slots" },
+                { label: "Best crypto slot sites", href: "/slots/best-crypto-slot-sites" },
                 { label: "Slot database", href: "/slots/database" },
                 { label: "Slots by studio", href: "/providers" },
                 { label: "How casino RTP versions work", href: "/guides/how-casino-rtp-versions-work" },
