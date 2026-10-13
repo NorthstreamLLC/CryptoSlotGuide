@@ -6,6 +6,7 @@ import { pageMetadata } from "@/lib/seo";
 import { articleSchema, breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { NextSteps } from "@/components/layout/NextSteps";
+import { AuthorBox } from "@/components/ui/AuthorBox";
 import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
 import { EmailSignup } from "@/components/ui/EmailSignup";
 import { GuideCover } from "@/components/guides/GuideCover";
@@ -167,6 +168,9 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           )}
         </div>
         {!body.noPartners && <FeaturedPartner context={{ kind: "general" }} />}
+        <div style={{ margin: "32px 0" }}>
+          <AuthorBox />
+        </div>
         <NextSteps
           steps={body.next ?? [
             { href: "/guides", label: "All guides", hint: "The operational detail behind the reviews, kept current." },

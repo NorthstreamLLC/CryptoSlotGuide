@@ -15,6 +15,7 @@ import { BrandMark } from "@/components/ui/BrandMark";
 import { GlanceCard } from "./GlanceCard";
 import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
 import { EmailSignup } from "@/components/ui/EmailSignup";
+import { AuthorBox, EditedBy } from "@/components/ui/AuthorBox";
 import { VipFloat } from "@/components/slots/VipFloat";
 import { TitlesPager } from "@/components/studios/TitlesTable";
 import { TITLES_PER_PAGE } from "@/lib/titles";
@@ -117,7 +118,7 @@ export function EntityReviewPageClient({ e, review, chrome }: { e: EntityView; r
                 >
                   {TIER_LABEL[tier]}
                 </Link>}
-                <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11.5, color: "#83919A" }}>{e.byline}</div>
+                <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11.5, color: "#83919A" }}>{e.byline} · <EditedBy /></div>
               </div>
             </div>
 
@@ -418,6 +419,9 @@ export function EntityReviewPageClient({ e, review, chrome }: { e: EntityView; r
         </div>
 
         {review}
+        <div style={{ marginTop: 32 }}>
+          <AuthorBox />
+        </div>
         {e.type === "slot" && <VipFloat />}
         {e.type === "slot" && (
           <div id="signup" style={{ marginTop: 32, scrollMarginTop: 120 }}>

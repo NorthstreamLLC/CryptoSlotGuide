@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import type { SlotReview as Review } from "@/lib/slot-reviews";
 import { REVIEW_BYLINE, reviewDate } from "@/lib/slot-reviews";
+import { EditedBy } from "@/components/ui/AuthorBox";
 import type { SlotReviewFacts } from "@/lib/slot-page";
 
 /**
@@ -56,7 +57,7 @@ export function SlotReview({ slug, review, facts }: { slug: string; review: Revi
             <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap", marginBottom: 8 }}>
               <span style={{ fontFamily: MONO, fontSize: 10, letterSpacing: ".09em", textTransform: "uppercase", color: "#FFC531" }}>Our review</span>
               <span style={{ fontFamily: MONO, fontSize: 10, letterSpacing: ".05em", color: "#6E7A82" }}>
-                {REVIEW_BYLINE} · read {reviewDate(review.read)}
+                {REVIEW_BYLINE} · <EditedBy color="#8E9CA5" /> · read {reviewDate(review.read)}
               </span>
             </div>
             <h2 style={{ margin: "0 0 10px", fontSize: 26, lineHeight: 1.15, letterSpacing: "-.03em", fontWeight: 800, color: "#fff", textWrap: "balance" }}>

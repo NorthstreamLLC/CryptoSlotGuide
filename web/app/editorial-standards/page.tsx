@@ -42,7 +42,7 @@ const SECTIONS: { title: string; body: string[] }[] = [
   {
     title: "Author and reviewer identity",
     body: [
-      "Reviews that carry real field-testing are attributed to the person who did the work. Reviews sourced from operators' own pages and public registries are attributed to the desk that assembled them, since no single person is claiming to have personally verified the figures.",
+      "Reviews sourced from operators' own pages and public registries are attributed to the desk that assembled them. Every review and guide is then edited by the site's founder, who writes as Lars P., a pen name for a real person; the editor's page says what that role covers and the commercial ties that come with it. Any review that carries real field-testing will be attributed to the person who did the work.",
     ],
   },
   {

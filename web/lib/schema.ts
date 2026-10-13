@@ -1,3 +1,4 @@
+import author from "@/data/author.json";
 /**
  * schema.org JSON-LD helpers. Not part of the original prototype — a
  * design mockup was never a page Google crawled. Scoped deliberately
@@ -155,6 +156,7 @@ export function reviewSchema(opts: { name: string; path: string; studio: string 
       ...(opts.studio ? { author: { "@type": "Organization", name: opts.studio } } : {}),
     },
     author: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
+    editor: { "@type": "Person", name: author.name, url: `${SITE_URL}/authors/${author.slug}` },
     publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
     reviewRating: { "@type": "Rating", ratingValue: opts.score, bestRating: 10, worstRating: 1 },
     reviewBody: opts.body,
