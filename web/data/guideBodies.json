@@ -280,5 +280,53 @@
         "hint": "What each country's own regulator allows."
       }
     ]
+  },
+  "roo-jackpots-explained": {
+    "published": "2026-10-13",
+    "key": [
+      "Roo Jackpots is an opt-in side bet at Roobet: you add $0.10, $1 or $5 to every bet you place, on top of the bet itself.",
+      "Each $0.10 is one attempt at four jackpots. They start at $200 (Mini), $5,000 (Minor), $75,000 (Major) and $250,000 (Mega), and every contribution is split equally between them.",
+      "Roobet's own jackpot window says the jackpots average an RTP of 80%. On average, every $1 you contribute returns about 80 cents.",
+      "Jackpot wins land in your balance with no wagering requirement. The promotion page runs it from 12 October to 31 December 2026."
+    ],
+    "body": [
+      "Roobet launched Roo Jackpots on 12 October 2026. Its promotion page says that within the first 24 hours more than 400 winners landed over $530,000 in jackpot prizes, and that the top jackpot is worth over $1,000,000. Everything below comes from Roobet's own promotion page and its Roo Jackpots terms.",
+      "## How it works",
+      "You opt in once, in a game or the casino lobby, and choose how much to add to each bet: $0.10, $1.00 or $5.00. From then on that amount is added to every bet and taken from your balance. Bet $1 with a $0.10 contribution and you are charged $1.10. You stay opted in until you opt out, and you can change the amount at any time.",
+      "Each $0.10 counts as one attempt. A $1 contribution is ten attempts with a single bet, and $5 is fifty. A jackpot can trigger at random on any of them, and the winner is picked at random.",
+      "Contributions count on every game and bet except Roobet's prediction markets, free spins and free bets, bonus-wallet funds, and mid-round side bets such as a blackjack split or double down, where only the first bet carries the contribution. If your balance can't cover the contribution, the bet goes ahead without it.",
+      "## The four jackpots",
+      "Every contribution is split equally between four jackpots, and each one starts from a fixed seed: Mini at $200, Minor at $5,000, Major at $75,000 and Mega at $250,000. They grow as contributions come in, and the live totals sit on Roobet's site. Roobet describes the Mini as triggering often and the Mega as huge but rare.",
+      "## What it costs",
+      "Roobet's own jackpot window says the jackpots \"offer a highly volatile experience with huge prizes, averaging to a RTP of 80%\". That is the figure to keep in mind. On average, $1 contributed returns about $0.80, so the side bet costs about 20 cents per dollar over the long run, before the game you are playing takes its own edge.",
+      "At the smallest setting the cost adds up fast. A $0.10 contribution on a $1 spin raises that spin's cost by 10%. Over 1,000 spins you contribute $100, and at 80% you would expect around $80 back from jackpots, spread very unevenly: most players win little or nothing and a few win big. For comparison, the slots on our list publish returns around 96%.",
+      "## Worth it?",
+      "As entertainment, maybe, as long as you treat it as what it is: an extra bet with a lower average return than the games themselves. If you would rather your money work harder, leave it off and rely on Roobet's standing rewards, such as rakeback, which pays back part of every bet instead of taking more. You can opt out at any time.",
+      "## The fine print",
+      "Jackpot wins are added to your balance automatically and carry no wagering requirement. Roobet may run extra checks on winners and keeps a prize if a winner won't cooperate. Errors lead to cancelled payouts, and anyone exploiting the jackpots is disqualified. Roobet can pause or end Roo Jackpots without notice; if it does, contributions already made roll into a future jackpot."
+    ],
+    "sources": [
+      {
+        "label": "Roobet: Roo Jackpots promotion page (12 October to 31 December 2026), and the Roo Jackpots General Terms & Conditions in its jackpot window",
+        "url": "https://roobet.com/promotions/roo-jackpots"
+      }
+    ],
+    "next": [
+      {
+        "href": "/casinos/roobet",
+        "label": "Full Roobet review",
+        "hint": "Rakeback, withdrawals and coins, each from Roobet's own pages."
+      },
+      {
+        "href": "/promo-codes/roobet",
+        "label": "Roobet code ELITE",
+        "hint": "The welcome package and how to claim it."
+      },
+      {
+        "href": "/guides/how-casino-rtp-versions-work",
+        "label": "How casino RTP versions work",
+        "hint": "Why the same slot can return less at one casino."
+      }
+    ]
   }
 }
