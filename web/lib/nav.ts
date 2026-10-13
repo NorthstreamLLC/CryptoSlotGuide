@@ -23,6 +23,12 @@ const EUROPE_CODES = new Set(EUROPE_SHAPES.map((sh) => sh.code).filter((c): c is
 
 type Op = (typeof siteData.ops)[number];
 
+/** Each coin's own mark, where we ship one (public/assets/coins). */
+const COIN_MARKS: Record<string, string> = { BTC: "/assets/coins/btc.png", DOGE: "/assets/coins/doge.png", ETH: "/assets/coins/eth.svg", LTC: "/assets/coins/ltc.svg", SOL: "/assets/coins/sol.png", TRX: "/assets/coins/trx.svg", USDT: "/assets/coins/usdt.svg", XRP: "/assets/coins/xrp.svg" };
+
+/** Our top casino, for sections whose reader is choosing where to play. */
+const topCasinoFeature = (kicker: string): NavFeature | undefined => casinoFeature(inHouseOrder(siteData.ops)[0], kicker);
+
 /** A casino as a menu pick: our recommendation for a country section. */
 const casinoFeature = (o: Op | undefined, kicker: string): NavFeature | undefined =>
   o ? { brand: o.slug, kicker, title: o.name, sub: o.bonusShort ?? o.bonus, href: `/casinos/${o.slug}`, cta: "Read the review" } : undefined;
@@ -53,6 +59,7 @@ const sweepsFeature = (kicker: string): NavFeature | undefined => {
 };
 const sweepsLinks = (): NavLink[] => sweepsSorted().slice(0, 5).map((x) => ({ label: x.name, href: `/sweepstakes-casinos/${x.slug}`, brand: x.slug }));
 import { flagSrc } from "./flags";
+import { coinHref } from "./coins";
 import { sportsOffers, sportsOnlyRaces, sportsBoosts, sportsbookHref, sportsPick } from "./sports";
 import { rankedBrands } from "./us-brands";
 
@@ -193,6 +200,7 @@ function rawNavTabs(c: SiteCounts): NavTab[] {
         {
           mono: "🎰",
           label: "Slots & RTP",
+          feature: topCasinoFeature("Where we play slots"),
           tint: "#DA9877",
           href: "/slots",
           columns: [
@@ -221,6 +229,7 @@ function rawNavTabs(c: SiteCounts): NavTab[] {
         {
           mono: "🎮",
           label: "Game providers",
+          feature: topCasinoFeature("Where we play slots"),
           tint: "#8FA5C9",
           href: "/providers",
           columns: [
@@ -244,6 +253,7 @@ function rawNavTabs(c: SiteCounts): NavTab[] {
         {
           mono: "🎲",
           label: "House games",
+          feature: topCasinoFeature("Our top casino"),
           tint: "#7BE0B8",
           href: "/house-games",
           columns: [
@@ -268,6 +278,7 @@ function rawNavTabs(c: SiteCounts): NavTab[] {
         {
           mono: "🎁",
           label: "Bonuses",
+          feature: topCasinoFeature("Our top bonus"),
           tint: "#C7A45C",
           href: "/bonuses",
           columns: [
@@ -292,6 +303,7 @@ function rawNavTabs(c: SiteCounts): NavTab[] {
         {
           mono: "📘",
           label: "Guides",
+          feature: topCasinoFeature("Our top casino"),
           tint: "#9AAE5E",
           href: "/guides",
           columns: [
@@ -624,7 +636,12 @@ function rawNavTabs(c: SiteCounts): NavTab[] {
           label: "Coins",
           tint: "#C7A45C",
           href: "/coins",
+          feature: topCasinoFeature("Our top crypto casino"),
           columns: [
+            {
+              title: "Casinos by coin",
+              links: siteData.coinDefs.map((cd) => ({ label: `${cd.name} casinos`, href: coinHref(cd), image: COIN_MARKS[String(cd.ticker)] })),
+            },
             {
               title: "Coin support",
               links: [
