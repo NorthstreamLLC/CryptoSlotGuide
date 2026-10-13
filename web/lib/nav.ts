@@ -12,7 +12,7 @@ import { sweepsSorted } from "./sweeps";
 import { inHouseOrder } from "./house-order";
 import { houseThumb } from "./house-thumbs";
 import { venuesInOrder, venueHref, openCount, predCountryHref, countryNameOf } from "./prediction-markets";
-import { raceSlugs } from "./races";
+import { raceSlugs, raceFor } from "./races";
 import { countryPages, casinosForCountry } from "./landing";
 import { TOP_STUDIOS } from "./top-studios";
 import { US_STATES, EUROPE_SHAPES, toneOf } from "./legal";
@@ -103,6 +103,8 @@ export interface NavLink {
    * recognises in a column of five names.
    */
   image?: string;
+  /** A short second line under the label, e.g. the race a casino runs. */
+  note?: string;
 }
 
 export interface NavSection {
@@ -196,7 +198,7 @@ function rawNavTabs(c: SiteCounts): NavTab[] {
                 .slice(0, 5)
                 .map((slug) => siteData.ops.find((o) => o.slug === slug))
                 .filter((o): o is NonNullable<typeof o> => !!o)
-                .map((o) => ({ label: o.name, href: `/races#${o.slug}`, brand: o.slug })),
+                .map((o) => ({ label: o.name, href: `/races#${o.slug}`, brand: o.slug, note: raceFor(o.slug)?.label })),
             },
           ],
         },

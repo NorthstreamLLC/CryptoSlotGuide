@@ -429,7 +429,14 @@ export function Header({ counts, navTabs, notifs = [] }: { counts: SiteCounts; n
                             <BrandMark slug={link.brand} mono={link.label.slice(0, 2).toUpperCase()} tint={tintFor(link.brand)} radius={6} fontSize={8} />
                           </span>
                         ) : null}
-                        {cleanLabel(link.label)}
+                        {link.note ? (
+                          <span style={{ display: "flex", flexDirection: "column", minWidth: 0 }}>
+                            <span>{cleanLabel(link.label)}</span>
+                            <span style={{ fontSize: 12, fontWeight: 600, color: "#FFC531", lineHeight: 1.3 }}>{link.note}</span>
+                          </span>
+                        ) : (
+                          cleanLabel(link.label)
+                        )}
                         {link.dot && (
                           <span
                             style={{
