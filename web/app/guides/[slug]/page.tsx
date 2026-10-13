@@ -6,7 +6,7 @@ import { pageMetadata } from "@/lib/seo";
 import { articleSchema, breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { NextSteps } from "@/components/layout/NextSteps";
-import { AuthorBox } from "@/components/ui/AuthorBox";
+import { AuthorBox, AuthorByline } from "@/components/ui/AuthorBox";
 import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
 import { EmailSignup } from "@/components/ui/EmailSignup";
 import { GuideCover } from "@/components/guides/GuideCover";
@@ -93,9 +93,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         <h1 style={{ margin: "0 0 18px", fontSize: 44, lineHeight: 1.06, letterSpacing: "-.035em", fontWeight: 800, fontStretch: "114%", color: "#fff", textWrap: "balance" }}>{g.title}</h1>
         <p style={{ margin: "0 0 26px", fontSize: 19, lineHeight: 1.6, color: "#B7C4CB", textWrap: "pretty" }}>{fill(g.standfirst, siteData)}</p>
         <div style={{ display: "flex", alignItems: "center", gap: 14, padding: "14px 0", borderTop: "1px solid rgba(255,255,255,.07)", borderBottom: "1px solid rgba(255,255,255,.07)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#83919A", marginBottom: 32 }}>
-          <span style={{ width: 26, height: 26, flex: "none", borderRadius: "50%", background: "#1B2226", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 9, color: "#8DA0AA" }}>CS</span>
-          <span>CryptoSlotGuide editorial desk</span>
-          {updated && <span style={{ marginLeft: "auto" }}>Updated <time dateTime={updated}>{g.updated} 2026</time></span>}
+          <AuthorByline updated={updated} />
         </div>
 
         <div style={{ padding: "24px 28px", borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)", marginBottom: 32 }}>

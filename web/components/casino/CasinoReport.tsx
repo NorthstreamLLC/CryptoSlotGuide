@@ -17,6 +17,7 @@ import { raceFor, partnerFor, dropFor } from "@/lib/races";
 import { rtpSummary } from "@/lib/rtp-watch-view";
 import { ReportUpdates } from "@/components/casino/ReportUpdates";
 import { NextSteps } from "@/components/layout/NextSteps";
+import { AuthorBox, AuthorByline } from "@/components/ui/AuthorBox";
 import { StickyOffer } from "@/components/casino/StickyOffer";
 import { rivalPairs } from "@/lib/versus";
 import type { SpecFact } from "@/lib/types";
@@ -297,6 +298,9 @@ export function CasinoReport({ e }: { e: EntityView }) {
               <p style={{ margin: "0 0 24px", maxWidth: "56ch", fontSize: 16, lineHeight: 1.6, color: "#A8B6BE", textWrap: "pretty" }}>
                 {take ?? offer?.value ?? bonusWithWager(o)}
               </p>
+              <div style={{ margin: "-6px 0 24px" }}>
+                <AuthorByline updated={e.updated} />
+              </div>
 
               <ul style={{ listStyle: "none", margin: "0 0 30px", padding: 0, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))", gap: 10 }}>
                 {perks.map((p) => (
@@ -605,6 +609,9 @@ export function CasinoReport({ e }: { e: EntityView }) {
         {/* Not on the featured operator's own profile, which would be a page
             advertising itself. */}
         <FeaturedPartner context={{ kind: "general" }} heading="Casinos we also recommend" exclude={o.slug} count={2} />
+        <div style={{ margin: "32px 0" }}>
+          <AuthorBox />
+        </div>
         <ReportIssue subject={o.name} />
         <NextSteps
           steps={[

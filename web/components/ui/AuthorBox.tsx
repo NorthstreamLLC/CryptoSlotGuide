@@ -61,3 +61,32 @@ export function AuthorBox() {
     </aside>
   );
 }
+
+const fmt = (iso: string) => {
+  const d = new Date(`${iso.slice(0, 10)}T00:00:00Z`);
+  return Number.isNaN(d.getTime()) ? iso : d.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
+};
+
+/** The hero byline: who edits the page, and when its facts were last read. */
+export function AuthorByline({ updated }: { updated?: string | null }) {
+  return (
+    <div style={{ display: "flex", alignItems: "center", gap: 22, flexWrap: "wrap" }}>
+      <Link href={AUTHOR_HREF} style={{ display: "inline-flex", alignItems: "center", gap: 10 }}>
+        <AuthorBadge size={36} />
+        <span>
+          <span style={{ display: "block", fontSize: 13.5, fontWeight: 700, color: "#E8EDF0" }}>{author.name}</span>
+          <span style={{ display: "block", fontFamily: MONO, fontSize: 10, color: "#FFC531" }}>{author.role}</span>
+        </span>
+      </Link>
+      {updated && (
+        <span style={{ display: "inline-flex", alignItems: "center", gap: 9 }}>
+          <span aria-hidden style={{ width: 30, height: 30, borderRadius: 9, display: "inline-flex", alignItems: "center", justifyContent: "center", background: "rgba(87,227,154,.12)", color: "#57E39A", fontSize: 15 }}>↻</span>
+          <span>
+            <time dateTime={updated.slice(0, 10)} style={{ display: "block", fontSize: 13.5, fontWeight: 700, color: "#E8EDF0" }}>{fmt(updated)}</time>
+            <span style={{ display: "block", fontFamily: MONO, fontSize: 10, color: "#57E39A" }}>Last updated</span>
+          </span>
+        </span>
+      )}
+    </div>
+  );
+}

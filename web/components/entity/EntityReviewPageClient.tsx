@@ -15,7 +15,7 @@ import { BrandMark } from "@/components/ui/BrandMark";
 import { GlanceCard } from "./GlanceCard";
 import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
 import { EmailSignup } from "@/components/ui/EmailSignup";
-import { AuthorBox, EditedBy } from "@/components/ui/AuthorBox";
+import { AuthorBox, AuthorByline } from "@/components/ui/AuthorBox";
 import { VipFloat } from "@/components/slots/VipFloat";
 import { TitlesPager } from "@/components/studios/TitlesTable";
 import { TITLES_PER_PAGE } from "@/lib/titles";
@@ -36,7 +36,7 @@ export interface EntityChrome {
   next: { href: string; label: string; hint: string }[];
 }
 
-export function EntityReviewPageClient({ e, review, chrome }: { e: EntityView; review?: React.ReactNode; chrome: EntityChrome }) {
+export function EntityReviewPageClient({ e, review, lead, chrome }: { e: EntityView; review?: React.ReactNode; lead?: React.ReactNode; chrome: EntityChrome }) {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const back = chrome.back;
   const take = chrome.take;
@@ -118,7 +118,10 @@ export function EntityReviewPageClient({ e, review, chrome }: { e: EntityView; r
                 >
                   {TIER_LABEL[tier]}
                 </Link>}
-                <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11.5, color: "#83919A" }}>{e.byline} · <EditedBy /></div>
+                <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11.5, color: "#83919A" }}>{e.byline}</div>
+              </div>
+              <div style={{ marginTop: 22 }}>
+                <AuthorByline updated={e.updated} />
               </div>
             </div>
 
@@ -207,6 +210,8 @@ export function EntityReviewPageClient({ e, review, chrome }: { e: EntityView; r
             <p style={{ margin: 0, maxWidth: "88ch", fontSize: 18, lineHeight: 1.6, color: "#DCE5E9", textWrap: "pretty" }}>{e.verdict}</p>
           </div>
         )}
+
+        {lead}
 
         <SectionHeading
           id="key-figures"

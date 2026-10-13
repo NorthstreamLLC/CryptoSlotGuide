@@ -10,6 +10,7 @@
  * provider, market (sports/esports betting markets — /betting/[slug]).
  */
 import { siteData } from "./site-data";
+import { slotReview } from "./slot-reviews";
 import { flag } from "./scoring";
 import { isStaleReading } from "./derived";
 import { payoutView } from "./payout";
@@ -67,6 +68,8 @@ export interface EntityView {
   standfirst: string;
   tags: string[];
   byline: string;
+  /** When the page's facts were last read (ISO date), for the "Updated" line. */
+  updated?: string;
   verdict: string;
   /** The hero fact panel — see components/entity/GlanceCard.tsx. */
   glance: GlanceRow[];
@@ -361,6 +364,7 @@ export function getEntityView(type: EntityType, slug: string, opts: { fullTable?
         hasVol(s) ? `${s.vol.toUpperCase()} VOLATILITY` : "VOLATILITY NOT PUBLISHED",
         ...(anyChecked ? ["CHECKED IN-CLIENT"] : []),
       ],
+      updated: slotReview(s.slug)?.read,
       byline: anyChecked
         ? `Read by the games desk · ${s.provider} · verified in ${cuts.length} operator ${cuts.length === 1 ? "build" : "builds"}`
         : `${s.provider}'s own game page`,
@@ -696,6 +700,7 @@ export function getEntityView(type: EntityType, slug: string, opts: { fullTable?
     tags: checked
       ? ["FIELD-TESTED", "WITHDRAWALS TIMED"]
       : [pv.kind === "stated" ? `${pv.label.toUpperCase()} WITHDRAWALS` : "CRYPTO CASINO", ...(coinsFact ? [`${coinCount} COINS`] : []), ...(o.sports ? ["SPORTSBOOK"] : [])],
+    updated: (getCasinoSpecSheet(o.slug)?.groups ?? []).flatMap((g) => g.facts.map((f) => f.asOf ?? "")).filter(Boolean).sort().pop(),
     byline: checked
       ? "Field-tested on our own funded account"
       : hasSheet

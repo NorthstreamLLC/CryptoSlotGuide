@@ -9,11 +9,12 @@ import { EntityReviewPageClient } from "@/components/entity/EntityReviewPageClie
  * sources; computing them here keeps that data out of the browser bundle,
  * where it had been shipping 7 MB to every review page.
  */
-export function EntityReviewPage({ e, review }: { e: EntityView; review?: React.ReactNode }) {
+export function EntityReviewPage({ e, review, lead }: { e: EntityView; review?: React.ReactNode; /** Server-rendered sections shown right after the verdict. */ lead?: React.ReactNode }) {
   return (
     <EntityReviewPageClient
       e={e}
       review={review}
+      lead={lead}
       chrome={{ back: backLink(e.type), take: editorialTake(e.type, e.slug), cta: ctaLabel(e.type, e.name), next: nextStepsFor(e.type) }}
     />
   );
