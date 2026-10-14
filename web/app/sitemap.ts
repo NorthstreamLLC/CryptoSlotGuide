@@ -70,6 +70,7 @@ const STATIC_ROUTES = [
   "/authors/lars-p",
   "/promo-codes/roobet",
   "/slots/best-crypto-slot-sites",
+  "/how-to/blackjack",
 ];
 
 function slugPath(base: string, slug: string): string {

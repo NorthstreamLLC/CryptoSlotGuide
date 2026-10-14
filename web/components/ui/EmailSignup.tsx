@@ -66,6 +66,12 @@ export function EmailSignup({
       const data = (await res.json().catch(() => ({}))) as { error?: string };
       if (res.ok) {
         setState("done");
+        // Remembered so the newsletter pop-up never asks someone who has joined.
+        try {
+          localStorage.setItem("csg-news-joined", "1");
+        } catch {
+          /* storage blocked */
+        }
       } else {
         setError(data.error ?? "That didn't go through. Check the address and try again.");
         setState("error");

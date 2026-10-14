@@ -314,6 +314,13 @@ function rawNavTabs(c: SiteCounts): NavTab[] {
           href: "/guides",
           columns: [
             {
+              title: "How to play",
+              links: [
+                { label: "How to play blackjack", href: "/how-to/blackjack" },
+                { label: "Provably fair originals", href: "/house-games" },
+              ],
+            },
+            {
               title: "Most read",
               links: siteData.guideRows.slice(0, 4).map((g) => ({ label: g.title, href: `/guides/${g.slug}` })),
             },

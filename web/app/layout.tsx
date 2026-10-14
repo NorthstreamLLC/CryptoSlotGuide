@@ -1,3 +1,4 @@
+import { NewsletterPopup } from "@/components/layout/NewsletterPopup";
 import { buildNotifications } from "@/lib/notifications";
 import type { Metadata } from "next";
 import { buildNavTabs } from "@/lib/nav";
@@ -64,6 +65,7 @@ export default function RootLayout({
         <Footer />
         <CodeCopier />
         <AgeGate />
+        <NewsletterPopup />
         <Analytics />
         <SpeedInsights />
       </body>
