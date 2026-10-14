@@ -317,6 +317,8 @@ function rawNavTabs(c: SiteCounts): NavTab[] {
               title: "How to play",
               links: [
                 { label: "How to play blackjack", href: "/how-to/blackjack" },
+                { label: "How to play roulette", href: "/how-to/roulette" },
+                { label: "How to play baccarat", href: "/how-to/baccarat" },
                 { label: "Provably fair originals", href: "/house-games" },
               ],
             },

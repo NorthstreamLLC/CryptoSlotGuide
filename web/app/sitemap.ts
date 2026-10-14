@@ -71,6 +71,8 @@ const STATIC_ROUTES = [
   "/promo-codes/roobet",
   "/slots/best-crypto-slot-sites",
   "/how-to/blackjack",
+  "/how-to/roulette",
+  "/how-to/baccarat",
 ];
 
 function slugPath(base: string, slug: string): string {

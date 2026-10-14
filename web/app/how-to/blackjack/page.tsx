@@ -225,8 +225,8 @@ export default function Page() {
         </div>
         <NextSteps
           steps={[
-            { href: "/house-games", label: "Provably fair originals", hint: "Dice, crash, plinko and the rest, and how to check a result." },
-            { href: "/slots/best-crypto-slot-sites", label: "Best crypto slot sites", hint: "Where to play, compared on withdrawals and fees." },
+            { href: "/how-to/roulette", label: "How to play roulette", hint: "Every bet, what it pays, and which wheel to pick." },
+            { href: "/how-to/baccarat", label: "How to play baccarat", hint: "Banker, player or tie, and the bet to avoid." },
             { href: "/guides", label: "All guides", hint: "The operational detail behind the reviews." },
           ]}
         />
