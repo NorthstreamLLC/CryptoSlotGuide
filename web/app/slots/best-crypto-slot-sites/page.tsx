@@ -1,3 +1,4 @@
+import vip from "@/data/vip.json";
 import Link from "next/link";
 import type { Operator } from "@/lib/types";
 import { siteData } from "@/lib/site-data";
@@ -245,7 +246,7 @@ export default function Page() {
                         <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#A8B6BE", marginBottom: 4 }}>Offer available</div>
                         <div style={{ fontSize: 17, fontWeight: 800, color: "#fff" }}>{f.headline}</div>
                         {o.promoCode && o.codePerk?.short && <div style={{ marginTop: 4, fontSize: 13, color: "#FFE08A" }}>With code {o.promoCode}: {o.codePerk.short}</div>}
-                        {o.promoCode && o.codePerk?.short && <div style={{ marginTop: 10 }}><VipClaim compact label="Claim the package via our VIP team" /></div>}
+                        {o.promoCode && o.codePerk?.short && <div style={{ marginTop: 10 }}><VipClaim compact label={`Claim via ${vip.name}`} /></div>}
                       </div>
                       <div style={{ display: "flex", flex: "0 1 280px", minWidth: 220 }}>
                         <OfferCta o={o} />

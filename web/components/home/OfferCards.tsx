@@ -1,3 +1,4 @@
+import vip from "@/data/vip.json";
 import Link from "next/link";
 import type { Operator } from "@/lib/types";
 import { casinoFacts, brandFor, licenceLabel } from "@/lib/casino-facts";
@@ -57,7 +58,7 @@ export function OfferCards({ ops }: { ops: Operator[] }) {
                   <CodeChip code={o.promoCode} tint="#FFC531" size="sm" bare />
                   <span>{o.codePerk.short ?? o.codePerk.text}</span>
                   <span style={{ flexBasis: "100%", marginTop: 4 }}>
-                    <VipClaim compact label="Claim via our VIP team" />
+                    <VipClaim compact label={`Claim via ${vip.name}`} />
                   </span>
                 </div>
               )}

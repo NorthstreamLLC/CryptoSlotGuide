@@ -43,4 +43,4 @@ export function VipClaim({ compact = false, label }: { compact?: boolean; label?
 }
 
 /** The one-line rule, said wherever the package is. */
-export const CLAIM_NOTE = `Sign up with the code, then message ${vip.name}, our VIP team, on Telegram to claim the package.`;
+export const CLAIM_NOTE = `Sign up with the code, then message ${vip.name}, the exclusive casino VIP team, on Telegram to claim the package.`;

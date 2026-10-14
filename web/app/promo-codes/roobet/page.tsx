@@ -59,8 +59,8 @@ export default function Page() {
   const hasBoost = typeof boost?.value === "string" && /\+20% for 72 hours from an affiliate code/.test(boost.value);
 
   const faqs = [
-    { q: `What is the Roobet promo code?`, a: `${code}. Sign up at Roobet with code ${code}, then message ${vip.name}, our VIP team, on Telegram to claim the welcome package: a 20% deposit match up to $500, 100 free spins once you reach $10,000 wagered, and 500 more once you reach $50,000.` },
-    { q: "How do I claim the welcome package?", a: `Only through our VIP team. After signing up with code ${code}, message ${vip.name} on Telegram (${vip.telegram}) and they set the package up on your account. Signing up with the code alone does not pay it.` },
+    { q: `What is the Roobet promo code?`, a: `${code}. Sign up at Roobet with code ${code}, then message ${vip.name}, the exclusive casino VIP team, on Telegram to claim the welcome package: a 20% deposit match up to $500, 100 free spins once you reach $10,000 wagered, and 500 more once you reach $50,000.` },
+    { q: "How do I claim the welcome package?", a: `Only through CasinoPerks, the exclusive casino VIP team. After signing up with code ${code}, message ${vip.name} on Telegram (${vip.telegram}) and they set the package up on your account. Signing up with the code alone does not pay it.` },
     { q: `Where do I enter code ${code}?`, a: `Our link opens Roobet with the code attached. If you need to enter it yourself, Roobet's help centre says a code can be entered through the promo tab or in your account's general settings under "Referrer".` },
     { q: "Can I withdraw straight after depositing?", a: "Roobet's help centre says deposits must be wagered 100% before you withdraw, an anti-money-laundering rule, so wager what you deposit at least once first." },
     { q: "What do I get at Roobet without a code?", a: "Roobet's standing rewards: Instant Rakeback you can claim every 30 minutes, which never expires, daily and weekly bonuses, and a $100,000 weekly raffle where every wager earns tickets. Its VIP Club is invite-only." },
@@ -128,7 +128,7 @@ export default function Page() {
             <div style={{ display: "flex", flexDirection: "column", marginTop: 10 }}>
               <VipClaim label={`2. Claim the package with ${vip.name}`} />
             </div>
-            <p style={{ margin: "10px 0 0", fontSize: 12.5, lineHeight: 1.5, color: "#B7C4CB" }}>The package is claimed through our VIP team on Telegram: signing up with the code alone does not pay it.</p>
+            <p style={{ margin: "10px 0 0", fontSize: 12.5, lineHeight: 1.5, color: "#B7C4CB" }}>The package is claimed through CasinoPerks on Telegram: signing up with the code alone does not pay it.</p>
             <p style={{ margin: "12px 0 0", fontFamily: MONO, fontSize: 10.5, lineHeight: 1.6, color: "#7F8D96" }}>
               Through our affiliate deal with Roobet; we may earn a commission, which never changes what we report. 18+ · T&amp;Cs apply · Play responsibly.
             </p>
@@ -187,7 +187,7 @@ export default function Page() {
           <div style={{ display: "flex", alignItems: "center", gap: 18, flexWrap: "wrap", padding: "20px 24px", borderRadius: 16, background: "radial-gradient(90% 140% at 0% 50%, rgba(34,158,217,.2), transparent 60%), #0C1114", border: "1px solid rgba(34,158,217,.32)" }}>
             <div style={{ flex: "1 1 320px" }}>
               <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".1em", textTransform: "uppercase", color: "#7CC8EE", marginBottom: 4 }}>{vip.name} · VIP</div>
-              <div style={{ fontSize: 20, fontWeight: 800, color: "#fff" }}>Our exclusive VIP team</div>
+              <div style={{ fontSize: 20, fontWeight: 800, color: "#fff" }}>Exclusive casino VIP team</div>
               <div style={{ fontSize: 14, color: "#B7C4CB", marginTop: 4 }}>For players looking for exclusive rewards. Already VIP at another casino? Our hosts can transfer your VIP status to Roobet.</div>
             </div>
             <a href={vip.telegram} target="_blank" rel="noopener noreferrer" style={{ padding: "13px 20px", borderRadius: 12, background: "#229ED9", color: "#fff", fontSize: 14.5, fontWeight: 800 }}>Message on Telegram</a>

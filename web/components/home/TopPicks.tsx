@@ -1,5 +1,6 @@
 "use client";
 
+import vip from "@/data/vip.json";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { BrandMark } from "@/components/ui/BrandMark";
@@ -179,7 +180,7 @@ export function TopPicks({ picks }: { picks: Pick[] }) {
             </span>
             <span style={{ fontSize: 12.5, lineHeight: 1.45, color: "#E8EDF0" }}>{p.perk}</span>
             <span style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap", fontSize: 11.5, color: "#B7C4CB" }}>
-              <VipClaim compact label="Claim via our VIP team" /> the only way to get it
+              <VipClaim compact label={`Claim via ${vip.name}`} /> the only way to claim the package
             </span>
           </div>
         )}
