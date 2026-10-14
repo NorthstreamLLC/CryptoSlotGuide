@@ -188,7 +188,7 @@ export default function Page() {
             <div style={{ flex: "1 1 320px" }}>
               <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".1em", textTransform: "uppercase", color: "#7CC8EE", marginBottom: 4 }}>{vip.name} · VIP</div>
               <div style={{ fontSize: 20, fontWeight: 800, color: "#fff" }}>Exclusive casino VIP team</div>
-              <div style={{ fontSize: 14, color: "#B7C4CB", marginTop: 4 }}>For players looking for exclusive rewards. Already VIP at another casino? CasinoPerks hosts can transfer your VIP status to Roobet.</div>
+              <div style={{ fontSize: 14, color: "#B7C4CB", marginTop: 4 }}>Already VIP at another casino? CasinoPerks will move your status over to Roobet, and they&apos;re the ones who set up your code {code} package. One message on Telegram and you&apos;re sorted.</div>
             </div>
             <a href={vip.telegram} target="_blank" rel="noopener noreferrer" style={{ padding: "13px 20px", borderRadius: 12, background: "#229ED9", color: "#fff", fontSize: 14.5, fontWeight: 800 }}>Message on Telegram</a>
           </div>

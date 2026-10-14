@@ -62,7 +62,7 @@ export function VipFloat() {
         </span>
         <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".1em", textTransform: "uppercase", color: "#7CC8EE", marginBottom: 6 }}>{vip.name} · VIP</div>
         <div style={{ fontSize: 19, fontWeight: 800, color: "#fff", lineHeight: 1.2, letterSpacing: "-.02em", marginBottom: 8 }}>Exclusive casino VIP team</div>
-        <p style={{ margin: "0 0 14px", fontSize: 13.5, lineHeight: 1.5, color: "#B7C4CB" }}>For players looking for exclusive rewards. Already VIP somewhere else? CasinoPerks hosts can transfer your VIP status to Roobet. New to Roobet? Join with code {vip.code ?? "ELITE"} and claim the welcome package through CasinoPerks.</p>
+        <p style={{ margin: "0 0 14px", fontSize: 13.5, lineHeight: 1.5, color: "#B7C4CB" }}>Chasing better rewards? Already VIP somewhere else? CasinoPerks will move your status over to Roobet. New to Roobet? Sign up with code {vip.code ?? "ELITE"} and they&apos;ll sort out your welcome package.</p>
         <div style={{ display: "flex", alignItems: "center", gap: 8, padding: "8px 10px", marginBottom: 14, borderRadius: 10, background: "rgba(255,255,255,.04)", border: "1px solid rgba(255,255,255,.08)" }}>
           <span style={{ width: 24, height: 24, flex: "none", borderRadius: 7, overflow: "hidden" }}>
             <BrandMark slug={vip.partner} mono="RB" tint="#FFC531" radius={7} fontSize={9} />
