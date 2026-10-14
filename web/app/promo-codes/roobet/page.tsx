@@ -11,6 +11,7 @@ import { AuthorByline, AuthorBox } from "@/components/ui/AuthorBox";
 import { NextSteps } from "@/components/layout/NextSteps";
 import vip from "@/data/vip.json";
 import { VipClaim } from "@/components/ui/VipClaim";
+import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
 
 const SLUG = "roobet";
 const MONO = "var(--font-jetbrains-mono), monospace";
@@ -125,6 +126,7 @@ export default function Page() {
             <a href={visit} target="_blank" rel="nofollow sponsored noopener" data-copy-code={code} className="transition-transform hover:-translate-y-px" style={{ display: "block", textAlign: "center", padding: "16px 18px", borderRadius: 13, background: "linear-gradient(180deg,#FFD866,#FFC531)", color: "#141007", fontSize: 16, fontWeight: 800, boxShadow: "0 12px 30px rgba(255,197,49,.25)" }}>
               1. Sign up at Roobet ↗
             </a>
+            <GeoBlockNote slug={SLUG} name={o.name} />
             <div style={{ display: "flex", flexDirection: "column", marginTop: 10 }}>
               <VipClaim label={`2. Claim the package with ${vip.name}`} />
             </div>

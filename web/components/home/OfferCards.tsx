@@ -5,6 +5,7 @@ import { casinoFacts, brandFor, licenceLabel } from "@/lib/casino-facts";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { CoinStack } from "@/components/ui/CoinIcon";
 import { CodeChip } from "@/components/ui/CodeChip";
+import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
 import { VipClaim } from "@/components/ui/VipClaim";
 import { reviewPath } from "@/lib/outbound";
 
@@ -78,6 +79,7 @@ export function OfferCards({ ops }: { ops: Operator[] }) {
               </div>
 
               <div style={{ marginTop: "auto", display: "flex", flexDirection: "column", alignItems: "stretch", gap: 10 }}>
+                {outbound && <GeoBlockNote slug={o.slug} name={o.name} compact />}
                 {outbound ? (
                   <a href={o.signupUrl} target="_blank" rel="nofollow sponsored noopener" data-copy-code={o.promoCode} className="transition-transform hover:-translate-y-px" style={{ textAlign: "center", padding: "15px 16px", borderRadius: 12, background: "linear-gradient(180deg,#FFD866,#FFC531)", color: "#141007", fontSize: 15.5, fontWeight: 800, letterSpacing: ".02em", boxShadow: "0 10px 26px rgba(255,197,49,.22)" }}>
                     PLAY NOW

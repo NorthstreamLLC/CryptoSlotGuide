@@ -17,6 +17,7 @@ import { raceFor, partnerFor, dropFor } from "@/lib/races";
 import { rtpSummary } from "@/lib/rtp-watch-view";
 import { ReportUpdates } from "@/components/casino/ReportUpdates";
 import { NextSteps } from "@/components/layout/NextSteps";
+import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
 import { VipClaim, CLAIM_NOTE } from "@/components/ui/VipClaim";
 import { AuthorBox, AuthorByline } from "@/components/ui/AuthorBox";
 import { StickyOffer } from "@/components/casino/StickyOffer";
@@ -329,6 +330,11 @@ export function CasinoReport({ e }: { e: EntityView }) {
                     </div>
                   )}
                   {o.slug === "roobet" && o.codePerk && <p style={{ margin: "8px 0 0", fontSize: 12.5, lineHeight: 1.5, color: "#B7C4CB" }}>{CLAIM_NOTE}</p>}
+                </div>
+              )}
+              {o.signupUrl && (
+                <div style={{ maxWidth: 560, marginBottom: 12 }}>
+                  <GeoBlockNote slug={o.slug} name={o.name} />
                 </div>
               )}
               <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 12 }}>

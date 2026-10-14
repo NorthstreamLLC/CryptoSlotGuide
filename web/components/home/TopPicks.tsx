@@ -7,6 +7,7 @@ import { BrandMark } from "@/components/ui/BrandMark";
 import { CoinStack } from "@/components/ui/CoinIcon";
 import { Icon, type IconName } from "@/components/ui/Icon";
 import { CodeChip } from "@/components/ui/CodeChip";
+import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
 import { VipClaim } from "@/components/ui/VipClaim";
 
 const MONO = "var(--font-jetbrains-mono), monospace";
@@ -185,6 +186,11 @@ export function TopPicks({ picks }: { picks: Pick[] }) {
           </div>
         )}
 
+        {p.signupUrl && (
+          <div style={{ marginBottom: 12 }}>
+            <GeoBlockNote slug={p.slug} name={p.name} compact />
+          </div>
+        )}
         <div style={{ display: "flex", gap: 9, flexWrap: "wrap" }}>
           {p.signupUrl ? (
             <a
