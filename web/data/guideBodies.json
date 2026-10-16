@@ -328,5 +328,52 @@
         "hint": "Why the same slot can return less at one casino."
       }
     ]
+  },
+  "gamdom-offline-security-incident-october-2026": {
+    "published": "2026-10-16",
+    "key": [
+      "Gamdom says it detected a potential disk failure on one of its servers, then found an unauthorised connection on one of its automation servers while investigating.",
+      "As a precaution it took all of its systems offline. Gamdom says user funds are safe.",
+      "Gamdom is back online. Its post apologises for the downtime and lists compensation for all players, including a 20% deposit bonus for existing users.",
+      "If you play at Gamdom: check your balance and recent transactions, and turn on two-factor authentication if it isn't on already."
+    ],
+    "body": [
+      "Gamdom, one of the crypto casinos we track, went offline in October 2026. Everything below is from Gamdom's own posts on its X account, read on 16 October 2026; we have not seen any other account of the incident from Gamdom or from its regulator.",
+      "## What Gamdom said happened",
+      "In a post on 13 October 2026, Gamdom said that about 24 hours earlier it had detected a potential disk failure on one of its servers. While investigating, it identified an unauthorised connection on one of its automation servers, which prompted a wider investigation.",
+      "\"As a precautionary measure, we made the difficult decision to take all of our systems offline in order to fully assess the situation and protect our users,\" the post said. Gamdom stated that user funds are safe and that it was working to restore services \"as quickly and securely as possible\". It did not say what the unauthorised connection was able to reach, and we have no information beyond its posts.",
+      "## Back online",
+      "Gamdom's pinned post now says the site is back online. It apologises for the downtime, thanks its users, and lists compensation for all players: a $45k daily leaderboard, a reload restart, a 20% deposit bonus for existing users and a $45k daily King of the Hill for the week, plus a $50k giveaway on X itself. These are short-term offers tied to the outage; check Gamdom's own promotions page for what is still running and the terms of each.",
+      "## What to check on your account",
+      "Gamdom says funds are safe. Even so, after any security incident at a site that holds your money, a few minutes of checking is worth it:",
+      "**Check your balance and history.** Compare your balance and recent deposits, bets and withdrawals with what you expect. Contact Gamdom's support if anything looks wrong.",
+      "**Turn on two-factor authentication** in your account settings if it isn't on, and use a password you don't use anywhere else.",
+      "**Keep only what you're playing with on the site.** A casino balance is held by the casino, not in your own wallet. Withdrawing what you are not using keeps it under your control; see our guide to bankroll separation.",
+      "## Where Gamdom stands on our index",
+      "Gamdom's profile on this site lists its licence, withdrawal times and rewards, each from its own pages. The incident is recorded there too, with the date and source, and we will update both if Gamdom publishes more."
+    ],
+    "sources": [
+      {
+        "label": "Gamdom on X (@gamdom): outage notice of 13 October 2026 and pinned back-online post, read 16 October 2026",
+        "url": "https://x.com/gamdom"
+      }
+    ],
+    "next": [
+      {
+        "href": "/casinos/gamdom",
+        "label": "Gamdom review",
+        "hint": "Licence, withdrawals and rewards, each from Gamdom's own pages."
+      },
+      {
+        "href": "/guides/bankroll-separation",
+        "label": "Bankroll separation",
+        "hint": "Hot wallet, cold wallet, and what stays on-site."
+      },
+      {
+        "href": "/crypto-casinos",
+        "label": "All crypto casinos",
+        "hint": "Compare every casino we track."
+      }
+    ]
   }
 }

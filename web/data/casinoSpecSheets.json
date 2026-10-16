@@ -6166,6 +6166,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://www.dafc.co.uk/",
             "asOf": "2026-09-18"
+          },
+          {
+            "label": "Security incident",
+            "value": "In October 2026 Gamdom took all of its systems offline after finding an unauthorised connection on one of its automation servers, while investigating a potential disk failure. It said user funds were safe, and has since announced it is back online.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://x.com/gamdom",
+            "asOf": "2026-10-16"
           }
         ]
       }
