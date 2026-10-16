@@ -4,7 +4,8 @@ import { breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { NextSteps } from "@/components/layout/NextSteps";
 import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
-import { querySlots, studioFacets, volatilityFacets, catalogueTotals, catalogueAsOf, PER_PAGE, type SlotQuery, releaseDate } from "@/lib/slot-db";
+import { querySlots, studioFacets, volatilityFacets, catalogueTotals, catalogueAsOf, PER_PAGE, type SlotQuery, type SlotRank, releaseDate } from "@/lib/slot-db";
+import { TOP_SLOTS } from "@/lib/top-slots";
 import { cataloguePageSlugs, slotArtBySlug } from "@/lib/slot-page";
 import { slotEssentialsLink, slotEssentialsLabel, slotEssentialsStudio } from "@/lib/slotessentials";
 import { studioHref } from "@/lib/studio-pages";
@@ -60,6 +61,28 @@ const chip = (active: boolean) => ({
 const PAGE_SLUGS = new Set<string>([...siteData.slots.map((s) => s.slug), ...cataloguePageSlugs()]);
 const hasPage = (slug: string | null): slug is string => !!slug && PAGE_SLUGS.has(slug);
 
+/** Our own reviewed slots, by slug: their RTP fills a gap in the catalogue row. */
+const REVIEWED = new Map(siteData.slots.map((x) => [x.slug, x]));
+const TODAY = new Date().toISOString().slice(0, 10);
+/** Flagged upcoming in the catalogue, but only while its release date is still ahead. */
+const notOutYet = (g: { upcoming: boolean; released: string | null }) => g.upcoming && (!g.released || g.released > TODAY);
+
+/** The default "Popular" order: our top slots in list order, then titles with art and a page, then art only, then the rest. */
+const TOP_RANK = new Map(TOP_SLOTS.map((slug, i) => [slug, i]));
+const ART = new Map<string, boolean>();
+const hasArt = (slug: string | null) => {
+  if (!slug) return false;
+  if (!ART.has(slug)) ART.set(slug, !!slotArtBySlug(slug));
+  return ART.get(slug)!;
+};
+const popularRank: SlotRank = (g) => {
+  const top = g.slug ? TOP_RANK.get(g.slug) : undefined;
+  if (top !== undefined) return top;
+  if (hasArt(g.slug) && hasPage(g.slug)) return 1000;
+  if (hasArt(g.slug)) return 2000;
+  return 3000;
+};
+
 export default async function Page({ searchParams }: { searchParams: Promise<Record<string, string | undefined>> }) {
   const sp = await searchParams;
   const q: SlotQuery = {
@@ -72,7 +95,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<Rec
     sort: sp.sort,
     page: sp.page ? Number(sp.page) : 1,
   };
-  const res = querySlots(q);
+  const res = querySlots(q, popularRank);
   const studios = studioFacets();
   const vols = volatilityFacets();
   const filtered = !!(q.q || q.studio || q.vol || q.rtp || q.versions || q.demo);
@@ -162,8 +185,8 @@ export default async function Page({ searchParams }: { searchParams: Promise<Rec
             {filtered && <> · <Link href="/slots/database" style={{ color: "#5FE3E8" }}>clear filters</Link></>}
           </p>
           <div style={{ display: "flex", gap: 7, flexWrap: "wrap" }}>
-            {[["rtp", "RTP high"], ["rtp-low", "RTP low"], ["maxwin", "Max win"], ["new", "Newest"], ["name", "A–Z"]].map(([k, label]) => (
-              <Link key={k} href={href(q, { sort: k, page: 1 })} style={chip((q.sort ?? "rtp") === k)}>{label}</Link>
+            {[["popular", "Popular"], ["rtp", "RTP high"], ["rtp-low", "RTP low"], ["maxwin", "Max win"], ["new", "Newest"], ["name", "A–Z"]].map(([k, label]) => (
+              <Link key={k} href={href(q, { sort: k === "popular" ? undefined : k, page: 1 })} style={chip((q.sort ?? "popular") === k)}>{label}</Link>
             ))}
           </div>
         </div>
@@ -195,9 +218,14 @@ export default async function Page({ searchParams }: { searchParams: Promise<Rec
               <span style={{ fontSize: 14.5, fontWeight: 700, color: "#E8EDF0", overflowWrap: "anywhere", display: "flex", alignItems: "center", gap: 10 }}>
                 {/* The tile, where we hold art we may serve; the catalogue's
                     own image URLs are not ours to hotlink. */}
-                {g.slug && slotArtBySlug(g.slug) && (
+                {hasArt(g.slug) ? (
                   // eslint-disable-next-line @next/next/no-img-element
-                  <img src={slotArtBySlug(g.slug) as string} alt="" width={48} height={29} loading="lazy" style={{ width: 48, height: 29, objectFit: "cover", borderRadius: 6, border: "1px solid rgba(255,255,255,.08)", flex: "0 0 auto" }} />
+                  <img src={slotArtBySlug(g.slug!) as string} alt="" width={48} height={29} loading="lazy" style={{ width: 48, height: 29, objectFit: "cover", borderRadius: 6, border: "1px solid rgba(255,255,255,.08)", flex: "0 0 auto" }} />
+                ) : (
+                  // No art we may serve: a tile in the row's place, so names stay aligned.
+                  <span aria-hidden style={{ width: 48, height: 29, flex: "0 0 auto", borderRadius: 6, border: "1px solid rgba(255,255,255,.08)", background: "linear-gradient(135deg,#1A2228,#10161A)", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: MONO, fontSize: 10, fontWeight: 700, color: "#5F7079" }}>
+                    {g.name.replace(/[^A-Za-z0-9 ]/g, "").split(/\s+/).filter(Boolean).slice(0, 2).map((w) => w[0]).join("").toUpperCase()}
+                  </span>
                 )}
                 <span style={{ minWidth: 0 }}>
                 {/* Link the name wherever a page exists for it. Without this
@@ -212,7 +240,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<Rec
                 ) : (
                   g.name
                 )}
-                {g.upcoming && <span style={{ marginLeft: 8, fontFamily: MONO, fontSize: 9, color: "#C7A45C" }}>NOT OUT YET</span>}
+                {notOutYet(g) && <span style={{ marginLeft: 8, fontFamily: MONO, fontSize: 9, color: "#C7A45C" }}>NOT OUT YET</span>}
                 {/* The studio's own demo. rel="nofollow" because it is a
                     reference, not an endorsement, and no commission rides on it. */}
                 {g.demoUrl && (
@@ -231,8 +259,11 @@ export default async function Page({ searchParams }: { searchParams: Promise<Rec
               <span style={{ fontSize: 13, color: "#8DA0AA", overflowWrap: "anywhere" }}>
                 {studioHref(g.provider) ? <Link href={studioHref(g.provider) as string} className="hover:!text-accent" style={{ color: "#9FD9DD" }}>{g.provider}</Link> : g.provider ?? "—"}
               </span>
-              <span style={{ fontFamily: MONO, fontSize: 13.5, fontWeight: 700, color: g.rtp === null ? "#77858E" : g.rtp >= 96 ? "#7BE0B8" : "#E8EDF0" }}>
-                {g.rtp === null ? "—" : `${g.rtp.toFixed(2)}%`}
+              {(() => {
+                const rtp: number | null = g.rtp ?? (g.slug ? REVIEWED.get(g.slug)?.rtp ?? null : null);
+                return (
+              <span style={{ fontFamily: MONO, fontSize: 13.5, fontWeight: 700, color: rtp === null ? "#77858E" : rtp >= 96 ? "#7BE0B8" : "#E8EDF0" }}>
+                {rtp === null ? "—" : `${rtp.toFixed(2)}%`}
                 {/* The spread is the point: an operator may ship any of these
                     and the lobby will not say which. */}
                 {g.rtpVariants && g.rtpVariants.length > 1 && (
@@ -241,6 +272,8 @@ export default async function Page({ searchParams }: { searchParams: Promise<Rec
                   </span>
                 )}
               </span>
+                );
+              })()}
               <span style={{ fontSize: 13, color: "#A9B8C0" }}>{g.volatility ?? "—"}</span>
               <span style={{ fontFamily: MONO, fontSize: 12.5, color: "#A9B8C0" }}>{g.maxWinMultiplier ? `${g.maxWinMultiplier.toLocaleString()}x` : "—"}</span>
               <span style={{ fontFamily: MONO, fontSize: 12, color: "#8E9CA5" }}>{releaseDate(g) ?? "—"}</span>
@@ -248,7 +281,11 @@ export default async function Page({ searchParams }: { searchParams: Promise<Rec
                   ordinary editorial link, followed. The label says whether it
                   is one of the studios SlotEssentials reviews in full. */}
               <span style={{ fontFamily: MONO, fontSize: 11 }}>
-                {slotEssentialsLink(g.slug) ? (
+                {g.slug && REVIEWED.has(g.slug) ? (
+                  <Link href={`/slots/${g.slug}`} className="hover:!text-white" style={{ color: "#FFC531", fontWeight: 700, whiteSpace: "nowrap" }}>
+                    Our full review →
+                  </Link>
+                ) : slotEssentialsLink(g.slug) ? (
                   <a href={slotEssentialsLink(g.slug) as string} target="_blank" rel="noopener" className="hover:!text-accent" style={{ color: "#9FD9DD", whiteSpace: "nowrap" }}>
                     {slotEssentialsLabel(g.provider)} ↗
                   </a>

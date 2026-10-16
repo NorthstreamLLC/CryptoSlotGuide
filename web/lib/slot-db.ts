@@ -52,7 +52,18 @@ const DB = catalogue as unknown as Catalogue;
 const SHEET_META = (sheetMeta as { games: Record<string, { released?: string; volatility?: string; studio?: string }> }).games;
 
 /** Slots only. Table and house games live in their own sections of the site. */
-const SLOTS: CatalogueGame[] = DB.games.filter((g) => g.kind === "slot");
+/**
+ * The catalogue files some table games and video poker under "slot" (Punto
+ * Banco, Deuces Wild, Jacks or Better). Those, and dice, mines, scratch, keno
+ * and crash games with no reels, are left out of a slot database.
+ */
+const TABLE_GAME = /\b(baccarat|punto banco|blackjack|roulette|poker|deuces wild|jacks or better|keno|bingo|craps|sic bo|draw hi-?lo|teen patti|andar bahar|dragon tiger|casino war|red dog)\b/i;
+const MINI_GAME = /\b(dice|mines|scratch|plinko|crash|hi-?lo)\b/i;
+const MINI_GAME_EXEMPT = /cash or crash/i;
+const isRealSlot = (g: CatalogueGame) =>
+  g.kind === "slot" && !TABLE_GAME.test(g.name) && !(MINI_GAME.test(g.name) && !MINI_GAME_EXEMPT.test(g.name) && (g.reels === null || g.reels <= 1));
+
+const SLOTS: CatalogueGame[] = DB.games.filter(isRealSlot);
 
 /**
  * Dates the feed stamps on a whole batch rather than on a game.
@@ -155,7 +166,15 @@ const RTP_BANDS: Record<string, (v: number) => boolean> = {
   low: (v) => v < 94,
 };
 
-export function querySlots(query: SlotQuery) {
+/**
+ * querySlots' default order. The page supplies the rank (lower first): our
+ * top slots, then titles with art and a page of their own, then the rest; RTP
+ * breaks ties. Kept as a parameter so this module stays free of the art and
+ * page lookups.
+ */
+export type SlotRank = (g: CatalogueGame) => number;
+
+export function querySlots(query: SlotQuery, rank?: SlotRank) {
   const q = (query.q ?? "").trim().toLowerCase();
   let rows = SLOTS;
 
@@ -183,8 +202,12 @@ export function querySlots(query: SlotQuery) {
     case "name":
       sorted.sort((a, b) => a.name.localeCompare(b.name));
       break;
-    default: // "rtp" — the figure most people came to compare.
+    case "rtp":
       sorted.sort((a, b) => last(b.rtp) - last(a.rtp) || a.name.localeCompare(b.name));
+      break;
+    default: // "popular": the slots people know first, each with its art.
+      if (rank) sorted.sort((a, b) => rank(a) - rank(b) || last(b.rtp) - last(a.rtp) || a.name.localeCompare(b.name));
+      else sorted.sort((a, b) => last(b.rtp) - last(a.rtp) || a.name.localeCompare(b.name));
   }
 
   const page = Math.max(1, query.page ?? 1);
