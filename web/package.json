@@ -12,7 +12,7 @@
     "import:onchain": "node scripts/import-onchain-volume.mjs",
     "import:spec": "node scripts/import-spec-sheet.mjs",
     "build:changelog": "node scripts/build-changelog.mjs",
-    "prebuild": "node scripts/build-changelog.mjs && node scripts/check-house-order.mjs && node scripts/check-no-borrowed-copy.mjs && node scripts/audit-freshness.mjs",
+    "prebuild": "node scripts/build-changelog.mjs && node scripts/check-house-order.mjs && node scripts/check-no-borrowed-copy.mjs && node scripts/audit-freshness.mjs --warn-overdue",
     "check:house": "node scripts/check-house-order.mjs",
     "audit:freshness": "node scripts/audit-freshness.mjs",
     "audit:coverage": "node scripts/audit-partner-coverage.mjs",

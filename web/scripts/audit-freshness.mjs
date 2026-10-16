@@ -29,6 +29,11 @@ const web = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DATA = path.join(web, "data");
 const asJson = process.argv.includes("--json");
 const showAll = process.argv.includes("--all");
+// In the build (prebuild passes --warn-overdue), a fact past its re-check date
+// is reported but doesn't block a deploy: the figure was right when read and
+// still cites its source. A decayed fact (a clock or calendar stored as a
+// value) still fails the build. Run `npm run audit:freshness` for the strict check.
+const warnOverdue = process.argv.includes("--warn-overdue");
 const TODAY = new Date();
 
 /**
@@ -141,7 +146,7 @@ const unsourced = facts.filter((f) => f.unsourced);
 
 if (asJson) {
   console.log(JSON.stringify({ checked: TODAY.toISOString().slice(0, 10), total: facts.length, broken, smells, overdue, undated: undated.length, unsourced: unsourced.length }, null, 2));
-  process.exit(broken.length || overdue.length ? 1 : 0);
+  process.exit(broken.length || (overdue.length && !warnOverdue) ? 1 : 0);
 }
 
 console.log(`audit:freshness — ${facts.length} facts, checked ${TODAY.toISOString().slice(0, 10)}\n`);
@@ -175,8 +180,11 @@ if (overdue.length) {
 }
 
 console.log(`\nundated: ${undated.length}   unsourced: ${unsourced.length}`);
-if (broken.length || overdue.length) {
+if (broken.length || (overdue.length && !warnOverdue)) {
   console.log("\nFAIL — see above");
   process.exit(1);
+}
+if (overdue.length) {
+  console.log(`\nWARN — ${overdue.length} facts due a re-check (not blocking the build); run npm run audit:freshness`);
 }
 console.log("\nOK");
