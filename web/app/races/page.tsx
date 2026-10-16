@@ -13,6 +13,7 @@ import { HeroDrift } from "@/components/ui/HeroDrift";
 import { CountUp } from "@/components/ui/CountUp";
 import { OfferCta } from "@/components/ui/OfferCta";
 import { logoFor } from "@/lib/logo";
+import { RooJackpotsCard } from "@/components/casino/RooJackpotsCard";
 
 export const metadata = pageMetadata(
   "Biggest crypto casino races and raffles",
@@ -83,6 +84,9 @@ export default function Page() {
             </div>
           );
         })()}
+        <div style={{ marginBottom: 16 }}>
+          <RooJackpotsCard />
+        </div>
         <div style={{ borderRadius: 20, border: "1px solid rgba(255,255,255,.08)", background: "linear-gradient(180deg,#0E1317,#0A0E11)", overflow: "hidden" }}>
           <div className={`hidden md:grid ${COLS} items-center gap-4`} style={{ padding: "12px 20px", borderBottom: "1px solid rgba(255,255,255,.07)", fontFamily: MONO, fontSize: 10, letterSpacing: ".08em", textTransform: "uppercase", color: "#8E9CA5" }}>
             <span>#</span>

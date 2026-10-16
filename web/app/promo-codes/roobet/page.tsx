@@ -11,6 +11,7 @@ import { AuthorByline, AuthorBox } from "@/components/ui/AuthorBox";
 import { NextSteps } from "@/components/layout/NextSteps";
 import vip from "@/data/vip.json";
 import { VipClaim } from "@/components/ui/VipClaim";
+import { RooJackpotsCard } from "@/components/casino/RooJackpotsCard";
 import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
 
 const SLUG = "roobet";
@@ -165,6 +166,9 @@ export default function Page() {
       </section>
 
       <section style={{ maxWidth: 1180, margin: "0 auto", padding: "48px 24px 0" }}>
+        <div style={{ marginBottom: 32 }}>
+          <RooJackpotsCard />
+        </div>
         <h2 style={{ margin: "0 0 6px", fontSize: 28, letterSpacing: "-.03em", fontWeight: 800, color: "#fff" }}>Roobet&apos;s standing rewards</h2>
         <p style={{ margin: "0 0 18px", fontSize: 15, color: "#8DA0AA" }}>On top of the code&apos;s package, these run for every player, each from Roobet&apos;s own pages.</p>
         <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: 12 }}>

@@ -17,6 +17,7 @@ import { raceFor, partnerFor, dropFor } from "@/lib/races";
 import { rtpSummary } from "@/lib/rtp-watch-view";
 import { ReportUpdates } from "@/components/casino/ReportUpdates";
 import { NextSteps } from "@/components/layout/NextSteps";
+import { RooJackpotsCard } from "@/components/casino/RooJackpotsCard";
 import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
 import { VipClaim, CLAIM_NOTE } from "@/components/ui/VipClaim";
 import { AuthorBox, AuthorByline } from "@/components/ui/AuthorBox";
@@ -624,6 +625,11 @@ export function CasinoReport({ e }: { e: EntityView }) {
 
         {/* Not on the featured operator's own profile, which would be a page
             advertising itself. */}
+        {o.slug === "roobet" && (
+          <div style={{ margin: "0 0 28px" }}>
+            <RooJackpotsCard />
+          </div>
+        )}
         <FeaturedPartner context={{ kind: "general" }} heading="Casinos we also recommend" exclude={o.slug} count={2} />
         <div style={{ margin: "32px 0" }}>
           <AuthorBox />
