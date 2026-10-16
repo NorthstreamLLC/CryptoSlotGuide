@@ -36,39 +36,9 @@
             "value": "$1,000 wagered"
           }
         ],
-        "asOf": "2026-09-14",
+        "asOf": "2026-10-16",
         "sourceUrl": "https://bc.game/promotions/weekly-raffle",
         "sourceNote": "Operator's own in-account Promotions view, screenshot-verified — bc.game/promotions/weekly-raffle didn't return real content to an automated fetch"
-      },
-      {
-        "title": "Harpelnas Golden Raffle",
-        "category": "Raffle · site-wide",
-        "headline": "10G Gold",
-        "subCopy": "Prize pool paid in gold, per the operator's own promotions grid.",
-        "asOf": "2026-09-14",
-        "endsLabel": "Ends 30 Sep 2026",
-        "sourceUrl": "https://bc.game/promotions",
-        "sourceNote": "Operator's own Promotions grid, screenshot-verified"
-      },
-      {
-        "title": "100x Multiplier Challenge",
-        "category": "Challenge · slots",
-        "headline": "$13,300",
-        "subCopy": "Shared prize pool for the highest multiplier hits on slots, per the operator's own promotions grid.",
-        "asOf": "2026-09-14",
-        "endsLabel": "Ends 15 Sep 2026",
-        "sourceUrl": "https://bc.game/promotions",
-        "sourceNote": "Operator's own Promotions grid, screenshot-verified"
-      },
-      {
-        "title": "Free Spins Giveaway",
-        "category": "Giveaway · slots",
-        "headline": "20 Spins",
-        "subCopy": "Free spins giveaway, per the operator's own promotions grid.",
-        "asOf": "2026-09-14",
-        "endsLabel": "Ends 16 Sep 2026",
-        "sourceUrl": "https://bc.game/promotions",
-        "sourceNote": "Operator's own Promotions grid, screenshot-verified"
       },
       {
         "title": "Daily Contest",
@@ -499,8 +469,8 @@
             "value": "$20"
           }
         ],
-        "asOf": "2026-09-15",
-        "sourceUrl": "https://www.degen.com/promotions",
+        "asOf": "2026-10-16",
+        "sourceUrl": "https://degen.com/promotions/welcome-bonus",
         "sourceNote": "Degen’s own promotions page and help centre"
       },
       {
@@ -518,9 +488,9 @@
             "value": "Weekly"
           }
         ],
-        "asOf": "2026-09-15",
+        "asOf": "2026-10-16",
         "endsLabel": "Resets weekly",
-        "sourceUrl": "https://www.degen.com/promotions",
+        "sourceUrl": "https://degen.com/promotions/weekly-race",
         "sourceNote": "Degen’s own promotions page"
       },
       {
@@ -538,7 +508,7 @@
             "value": "1st"
           }
         ],
-        "asOf": "2026-09-15",
+        "asOf": "2026-10-16",
         "sourceUrl": "https://help.degen.com/en/articles/12570521-rakeback",
         "sourceNote": "Degen’s own help centre"
       }
@@ -624,7 +594,7 @@
             "value": "$30,000"
           }
         ],
-        "asOf": "2026-09-15",
+        "asOf": "2026-10-16",
         "endsLabel": "Resets monthly",
         "sourceUrl": "https://duel.com/casino#leaderboard",
         "sourceNote": "Duel’s own casino leaderboard"
@@ -644,7 +614,7 @@
             "value": "Every 24 hours"
           }
         ],
-        "asOf": "2026-09-15",
+        "asOf": "2026-10-16",
         "endsLabel": "Resets daily",
         "sourceUrl": "https://duel.com/casino#leaderboard",
         "sourceNote": "Duel’s own casino leaderboard"
@@ -654,7 +624,7 @@
         "category": "Policy · all players",
         "headline": "None",
         "subCopy": "Duel publishes a page arguing against deposit bonuses and runs none. Instead it says it returns 50% of the house edge you pay on slots as instant rakeback, and runs the leaderboards above.",
-        "asOf": "2026-09-15",
+        "asOf": "2026-10-16",
         "sourceUrl": "https://duel.com/about/why-bonuses-suck",
         "sourceNote": "Duel’s own Why Bonuses Suck page"
       }
@@ -678,7 +648,7 @@
             "value": "40× bonus"
           }
         ],
-        "asOf": "2026-09-15",
+        "asOf": "2026-10-16",
         "sourceUrl": "https://wager.com/",
         "sourceNote": "Wager.com’s own site page and bonus policy"
       },
@@ -687,8 +657,8 @@
         "category": "Promotion · switching casinos",
         "headline": "Status match",
         "subCopy": "Matches a VIP status held at another casino so you skip the early levels, handled by a transfer team. It says it will beat the rewards you get elsewhere, but publishes no rates.",
-        "asOf": "2026-09-15",
-        "sourceUrl": "https://wager.com/",
+        "asOf": "2026-10-16",
+        "sourceUrl": "https://wager.com/promotions/vip-transfer/",
         "sourceNote": "Wager.com’s own VIP Transfer page"
       },
       {

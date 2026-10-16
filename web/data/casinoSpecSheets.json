@@ -1122,7 +1122,7 @@
             "value": "Balances left in Vault Pro earn 10% a year on BCD and 5% a year on other currencies",
             "sourcing": "editorial",
             "sourceUrl": "https://help.bc.support/en/articles/10702437-a-guide-to-your-wallet-features",
-            "asOf": "2026-09-15"
+            "asOf": "2026-10-16"
           },
           {
             "label": "Wagering rules",
@@ -2710,7 +2710,7 @@
             "value": "No rollovers on rewards",
             "sourcing": "editorial",
             "sourceUrl": "https://www.cloudbet.com/en/promotions/general/welcome-package",
-            "asOf": "2026-09-14"
+            "asOf": "2026-10-16"
           },
           {
             "label": "Expiry",
@@ -3349,13 +3349,6 @@
         "title": "Bonus terms",
         "facts": [
           {
-            "label": "Standing offer",
-            "value": "100% Welcome Bonus on the first deposit (listed for 1 June – 1 October 2026)",
-            "sourcing": "editorial",
-            "sourceUrl": "https://cybet.com/promotions/details/DepositBonusCode",
-            "asOf": "2026-09-15"
-          },
-          {
             "label": "Wagering",
             "value": "A base target of 40× effective wagering, applied to deposit plus bonus in its worked example; with game weighting the real wagering runs from 40× to 400×. The page's own example has arithmetic errors",
             "sourcing": "editorial",
@@ -3641,7 +3634,7 @@
             "value": "100% first deposit match up to $1,500 (first deposit only, minimum $20, and the account must be registered under an eligible referral code), plus rakeback from 3% rising to 8% by VIP rank",
             "sourcing": "editorial",
             "sourceUrl": "https://help.degen.com/en/articles/15558569-unlock-up-to-1-500-on-your-first-deposit",
-            "asOf": "2026-09-15"
+            "asOf": "2026-10-16"
           },
           {
             "label": "Wagering",
@@ -3655,35 +3648,35 @@
             "value": "Maximum $10 per wager while clearing the rollover; challenges, accumulator games and slot bonus buys don't count",
             "sourcing": "editorial",
             "sourceUrl": "https://help.degen.com/en/articles/15558569-unlock-up-to-1-500-on-your-first-deposit",
-            "asOf": "2026-09-15"
+            "asOf": "2026-10-16"
           },
           {
             "label": "Recurring bonuses",
             "value": "Weekly bonus every Monday and monthly bonus on the 1st, both from Bronze VIP and up; neither stacks, so an unclaimed one expires when the next is issued. Rank-up bonuses do stack",
             "sourcing": "editorial",
             "sourceUrl": "https://help.degen.com/en/articles/12570453-weekly-bonus",
-            "asOf": "2026-09-15"
+            "asOf": "2026-10-16"
           },
           {
             "label": "Rollover contribution",
             "value": "Each wager counts as stake × (game house edge ÷ 0.04), so a $5 bet on a 1% edge game contributes $1.25; sports bets need odds of 1.30 or better",
             "sourcing": "editorial",
-            "sourceUrl": "https://www.degen.com/promotions",
-            "asOf": "2026-09-15"
+            "sourceUrl": "https://degen.com/promotions/welcome-bonus",
+            "asOf": "2026-10-16"
           },
           {
             "label": "During rollover",
             "value": "Withdrawals, vault transfers and tips in the bonus currency are blocked until the rollover is finished or forfeited; the bonus can only be forfeited before any qualifying play",
             "sourcing": "editorial",
-            "sourceUrl": "https://www.degen.com/promotions",
-            "asOf": "2026-09-15"
+            "sourceUrl": "https://degen.com/promotions/welcome-bonus",
+            "asOf": "2026-10-16"
           },
           {
             "label": "Bonus eligibility",
             "value": "One account per player, household, IP address and payment method; claiming the welcome bonus may rule out other welcome or deposit offers",
             "sourcing": "editorial",
-            "sourceUrl": "https://www.degen.com/promotions",
-            "asOf": "2026-09-15"
+            "sourceUrl": "https://degen.com/promotions/welcome-bonus",
+            "asOf": "2026-10-16"
           },
           {
             "label": "Leaderboards",
@@ -3986,14 +3979,14 @@
             "value": "VIP starts at Hustler (250,000–700,000 XP); Card Shark (1M–3M XP) adds a bonus increase and a VIP host; Pitboss (5M–15M XP) adds bespoke rewards and exclusive access; Ace (22M–100M XP) adds event invitations",
             "sourcing": "editorial",
             "sourceUrl": "https://help.degencity.com/en/articles/13885358-how-do-i-become-a-vip",
-            "asOf": "2026-09-15"
+            "asOf": "2026-10-16"
           },
           {
             "label": "VIP transfer",
             "value": "Matches VIP status from another casino: you email a screen recording showing your tier, total wagered and account email, and it takes up to 48 hours to review; the tier granted is at its discretion",
             "sourcing": "editorial",
             "sourceUrl": "https://help.degencity.com/en/articles/13885383-is-vip-transfer-supported",
-            "asOf": "2026-09-15"
+            "asOf": "2026-10-16"
           },
           {
             "label": "Game contribution",
@@ -4440,29 +4433,29 @@
             "label": "House edge claim",
             "value": "Says its house games run at 99.9% RTP, with a stated goal of reaching 100%, and compares that to the 99% it says is standard elsewhere. We haven't verified those figures",
             "sourcing": "editorial",
-            "sourceUrl": "https://duel.com/about/why-duel",
-            "asOf": "2026-09-15"
+            "sourceUrl": "https://duel.com/wtf-duel",
+            "asOf": "2026-10-16"
           },
           {
             "label": "Referrals",
             "value": "Its referral system is described as an early version with manual payouts roughly every 1 to 7 days and no committed commission rates",
             "sourcing": "editorial",
-            "sourceUrl": "https://duel.com/about/why-duel",
-            "asOf": "2026-09-15"
+            "sourceUrl": "https://duel.com/wtf-duel",
+            "asOf": "2026-10-16"
           },
           {
             "label": "Leaderboards",
             "value": "Two wager leaderboards run on the casino page: a $3,000,000 monthly race and a $25,000 daily race, both paying at least 50 places",
             "sourcing": "editorial",
             "sourceUrl": "https://duel.com/casino#leaderboard",
-            "asOf": "2026-09-15"
+            "asOf": "2026-10-16"
           },
           {
             "label": "Leaderboard prizes",
             "value": "Monthly: $1,500,000 for 1st, $345,000 for 2nd, $225,000 for 3rd, $30,000 at 10th. Daily: $12,500, $3,750, $1,875, down to $250 at 10th",
             "sourcing": "editorial",
             "sourceUrl": "https://duel.com/casino#leaderboard",
-            "asOf": "2026-09-15"
+            "asOf": "2026-10-16"
           },
           {
             "label": "VIP levels",
@@ -5999,7 +5992,7 @@
             "value": "New-account boost valid 7 days once activated",
             "sourcing": "editorial",
             "sourceUrl": "https://help.gamdom.com/en/articles/10290516-gamdom-rewards",
-            "asOf": "2026-09-14"
+            "asOf": "2026-10-16"
           },
           {
             "label": "Wagering rules",
@@ -6474,14 +6467,14 @@
             "value": "0× on regular rakeback; deposits need 1× playthrough",
             "sourcing": "editorial",
             "sourceUrl": "https://help.housebets.com/en/articles/822162-do-bonuses-have-wagering-requirements-or-an-expiry",
-            "asOf": "2026-09-15"
+            "asOf": "2026-10-16"
           },
           {
             "label": "Expiry",
             "value": "Unclaimed bonuses may be cancelled after the claim period or 60 days, whichever is shorter",
             "sourcing": "editorial",
             "sourceUrl": "https://help.housebets.com/en/articles/822162-do-bonuses-have-wagering-requirements-or-an-expiry",
-            "asOf": "2026-09-15"
+            "asOf": "2026-10-16"
           },
           {
             "label": "Rakeback",
@@ -7499,7 +7492,7 @@
             "value": "Some MetaMax rewards expire if not claimed in time",
             "sourcing": "editorial",
             "sourceUrl": "https://metawin.com/faq/",
-            "asOf": "2026-09-15"
+            "asOf": "2026-10-16"
           },
           {
             "label": "Deposit bonus",
@@ -7863,7 +7856,7 @@
             "value": "Cashback up to 40% twice a week; rakeback up to 15%",
             "sourcing": "editorial",
             "sourceUrl": "https://qzino.ai/vip-club",
-            "asOf": "2026-09-15"
+            "asOf": "2026-10-16"
           },
           {
             "label": "Deposit bonus",
@@ -9095,28 +9088,28 @@
             "value": "Rakeback — Instant, Daily, Weekly and Monthly — tied to a 30-level system",
             "sourcing": "editorial",
             "sourceUrl": "https://roobet.com/bonus-and-promotion-policy",
-            "asOf": "2026-09-14"
+            "asOf": "2026-10-16"
           },
           {
             "label": "Wagering",
             "value": "No multiplier stated for rakeback; deposits must be wagered 100% before withdrawal (anti-money-laundering rule)",
             "sourcing": "editorial",
             "sourceUrl": "https://help.roobet.com/en/articles/13239839-wagering-requirements",
-            "asOf": "2026-09-14"
+            "asOf": "2026-10-16"
           },
           {
             "label": "Expiry",
             "value": "Instant Rakeback never expires; Weekly lapses when the next week's is available; Vault releases expire after 24 hours",
             "sourcing": "editorial",
             "sourceUrl": "https://roobet.com/bonus-and-promotion-policy",
-            "asOf": "2026-09-14"
+            "asOf": "2026-10-16"
           },
           {
             "label": "Restricted countries",
             "value": "Aruba, Australia, Bonaire, Cuba, Curaçao, Cyprus, Gibraltar, Haiti, Iran, Iraq, Malta, Myanmar, Netherlands, Nicaragua, North Korea, Saba, Saint Maarten, Saint Martin, South Sudan, Statia, Syria, United States, United Kingdom, Yemen, Zimbabwe",
             "sourcing": "editorial",
             "sourceUrl": "https://roobet.com/terms-and-conditions",
-            "asOf": "2026-09-14"
+            "asOf": "2026-10-16"
           },
           {
             "label": "Weekly raffle",
@@ -9934,14 +9927,14 @@
             "value": "USDB unlocks gradually at 1‰ of the amount wagered",
             "sourcing": "editorial",
             "sourceUrl": "https://docs.solcasino.io/calendar-bonuses-and-rewards/360-deposit-bonus",
-            "asOf": "2026-09-15"
+            "asOf": "2026-10-16"
           },
           {
             "label": "Max cashout",
             "value": "Up to 20,000 / 40,000 / 60,000 / 100,000 USDB per deposit tier",
             "sourcing": "editorial",
             "sourceUrl": "https://docs.solcasino.io/calendar-bonuses-and-rewards/360-deposit-bonus",
-            "asOf": "2026-09-15"
+            "asOf": "2026-10-16"
           },
           {
             "label": "Wagering rules",
@@ -10198,14 +10191,14 @@
             "value": "None — credited as real cash",
             "sourcing": "editorial",
             "sourceUrl": "https://spartans.com/promotions",
-            "asOf": "2026-09-15"
+            "asOf": "2026-10-16"
           },
           {
             "label": "Expiry",
             "value": "Claim within 24 hours to avoid expiry",
             "sourcing": "editorial",
             "sourceUrl": "https://spartans.com/how-cashrake-works",
-            "asOf": "2026-09-15"
+            "asOf": "2026-10-16"
           },
           {
             "label": "Rakeback",
@@ -10808,14 +10801,14 @@
             "value": "Weekly Bonus is free to withdraw once above the minimum limit",
             "sourcing": "editorial",
             "sourceUrl": "https://help.stake.com/en/articles/9946687-do-i-have-to-wager-my-weekly-bonus",
-            "asOf": "2026-09-14"
+            "asOf": "2026-10-16"
           },
           {
             "label": "Expiry",
             "value": "Earned rakeback can be claimed at any time",
             "sourcing": "editorial",
             "sourceUrl": "https://help.stake.com/en/articles/4821738-what-is-rakeback",
-            "asOf": "2026-09-14"
+            "asOf": "2026-10-16"
           },
           {
             "label": "Rakeback",
@@ -11059,14 +11052,14 @@
             "value": "Thrill Rewards: Instant Rakeback plus weekly and monthly bonuses",
             "sourcing": "editorial",
             "sourceUrl": "https://intercom.help/thrill/en/articles/11882893-what-are-the-rewards-levels-and-benefits-at-thrill",
-            "asOf": "2026-09-14"
+            "asOf": "2026-10-16"
           },
           {
             "label": "Expiry",
             "value": "Weekly Bonus expires if unclaimed when the next one drops",
             "sourcing": "editorial",
             "sourceUrl": "https://intercom.help/thrill/en/articles/13544510-where-is-the-weekly-bonus-posted-and-how-do-i-claim-it",
-            "asOf": "2026-09-14"
+            "asOf": "2026-10-16"
           },
           {
             "label": "Deposit bonus",
@@ -12061,14 +12054,14 @@
             "value": "One bonus per user, household, IP address, device, wallet address or payment method unless a promotion says otherwise; rakeback and cashback can be switched off while a deposit bonus is being cleared",
             "sourcing": "editorial",
             "sourceUrl": "https://wager.com/policy/bonus-terms-and-conditions/",
-            "asOf": "2026-09-15"
+            "asOf": "2026-10-16"
           },
           {
             "label": "Bonus restrictions",
             "value": "It can exclude games, providers, bet types or odds ranges from wagering, rakeback and VIP progression at any time, without notice, and says wagers on excluded games don't count even if you didn't know",
             "sourcing": "editorial",
             "sourceUrl": "https://wager.com/policy/bonus-terms-and-conditions/",
-            "asOf": "2026-09-15"
+            "asOf": "2026-10-16"
           },
           {
             "label": "VIP transfer",
@@ -12519,7 +12512,7 @@
             "value": "VIP Program: Instant Rakeback, claimable every 7 minutes",
             "sourcing": "editorial",
             "sourceUrl": "https://help.winna.com/en/articles/10431169-the-winna-vip-program",
-            "asOf": "2026-09-14"
+            "asOf": "2026-10-16"
           },
           {
             "label": "Deposit bonus",
