@@ -62,7 +62,6 @@ const STATIC_ROUTES = [
   "/bonuses",
   "/house-games",
   "/how-we-rate",
-  "/search",
   "/privacy",
   "/terms",
   "/editorial-standards",
