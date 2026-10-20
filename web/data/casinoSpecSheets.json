@@ -2770,10 +2770,10 @@
           },
           {
             "label": "Referral program",
-            "value": "Referrers earn 2.5% rakeback on every eligible bet their referrals place, for life, plus cash rewards each time a referral levels up. Referrals must be brand-new Cloudbet accounts, there is no minimum bet, and earnings are based on settled bets and tracked per referral in the Referrals dashboard.",
+            "value": "Referrers earn 2.5% rakeback on every eligible bet their referrals place, for life, plus cash rewards each time a referral levels up. Referrals must be brand-new Cloudbet accounts, there is no minimum bet, and earnings are based on settled bets and tracked per referral in the Referrals dashboard. Cloudbet's rewards pages add tier milestone bonuses for referrers \"worth up to $2M\".",
             "sourcing": "editorial",
             "sourceUrl": "https://www.cloudbet.com/en/support/articles/103138-how-to-share-your-referral-link-and-track-your-referrals",
-            "asOf": "2026-09-19"
+            "asOf": "2026-10-20"
           },
           {
             "label": "VIP transfer",
@@ -3245,7 +3245,7 @@
         "facts": [
           {
             "label": "Licence",
-            "value": "No licence number or seal shown on its site; its terms name Gaming Services Provider N.V. as its licensing body for complaints",
+            "value": "No licence number or seal shown on its site. Its terms name Gaming Services Provider N.V. as its licensing body for complaints, a name that is not on the Curaçao Gaming Authority's licence register (see Register check).",
             "sourcing": "editorial",
             "sourceUrl": "https://www.coincasino.com/",
             "asOf": "2026-09-15"
@@ -6030,6 +6030,13 @@
             "asOf": "2026-09-17"
           },
           {
+            "label": "Rakeback reload",
+            "value": "Instant rakeback can be claimed in full at any time, or converted into a Reload that adds a 25% bonus, paid out over seven days.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://gamdom.com/promotions",
+            "asOf": "2026-10-20"
+          },
+          {
             "label": "Leaderboards",
             "value": "King of the Hill runs on two permanent cycles. The daily leaderboard pays $30,000 across the top 200 players and resets at 00:00 CET. The bi-weekly leaderboard pays $500,000 to the top 1,000, running 1st to mid-month and mid-month to month-end — two tournaments a month, so $1,000,000 in prizes every month. Ranking is by points earned from wagers, only the top 3 players' points are visible, prizes are claimed manually from the Rewards page, need no extra wagering and do not expire. · Gamdom's own promotions listing confirms the current King of the Hill format on its live page: the monthly edition was replaced from midnight on 15 April by two bi-weekly tournaments of $500,000 each.",
             "sourcing": "editorial",
@@ -6059,10 +6066,10 @@
           },
           {
             "label": "VIP transfer",
-            "value": "Bring your VIP status from another casino: contact live support, verify your tier, wager history and deposits, then make a first deposit of at least $5,000 and your matched tier goes live immediately. You get 30 days of premium transfer benefits, a dedicated VIP team, instant rakeback, weekly and monthly rewards with an option to boost them through reloads, a Royalty Up reward as you climb tiers, and 24/7 priority support. New customers only",
+            "value": "Bring your VIP status from another casino: contact live support, verify your tier, wager history and deposits, then make a first deposit of at least $5,000 and your matched tier goes live immediately. You get 30 days of premium transfer benefits, a dedicated VIP team, instant rakeback, weekly and monthly rewards with an option to boost them through reloads, a Royalty Up reward as you climb tiers, and 24/7 priority support. New customers only. The programme page shows an end date of 1 January 2027.",
             "sourcing": "editorial",
-            "sourceUrl": "https://gamdom.com/promotions",
-            "asOf": "2026-09-18"
+            "sourceUrl": "https://gamdom.com/promotions/gamdom-vip-transfer-program",
+            "asOf": "2026-10-20"
           },
           {
             "label": "Perks by level",
@@ -7482,10 +7489,10 @@
         "facts": [
           {
             "label": "Standing offer",
-            "value": "No welcome or sign-up bonus. The standing offer is 30% of every deposit credited as Prize Funds, which can only be used toward competition (prize draw) entries. They are used only when your real balance cannot cover the entry, and any remaining Prize Funds reset to $0 when you withdraw. MetaMax loyalty rewards run alongside it. The FAQ lists the maximum Rank Up prize as $1,000,000, for reaching Elite.",
+            "value": "No welcome or sign-up bonus. The standing offer is 30% of every deposit credited as Prize Funds (its promotion page now shows an end date of 1 January 2027), which can only be used toward competition (prize draw) entries. They are used only when your real balance cannot cover the entry, and any remaining Prize Funds reset to $0 when you withdraw. MetaMax loyalty rewards run alongside it. The FAQ lists the maximum Rank Up prize as $1,000,000, for reaching Elite.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.metawin.com/en/articles/13827349-prize-funds",
-            "asOf": "2026-09-18"
+            "asOf": "2026-10-20"
           },
           {
             "label": "Expiry",
@@ -7496,10 +7503,10 @@
           },
           {
             "label": "Deposit bonus",
-            "value": "None: its deposit-linked offer is 30% back as Prize Funds, usable only to enter the $2k Daily Drop, with no wagering stated",
+            "value": "None: its deposit-linked offer is 30% back as Prize Funds, usable only to enter the $2k Daily Drop, with no wagering stated. The promotion page shows it ending 1 January 2027.",
             "sourcing": "editorial",
             "sourceUrl": "https://metawin.com/promotions/prize-funds/",
-            "asOf": "2026-09-16"
+            "asOf": "2026-10-20"
           },
           {
             "label": "VIP levels",
@@ -8232,10 +8239,10 @@
           },
           {
             "label": "Leaderboards",
-            "value": "Daily Race, headlined \"25k daily races\" in the help centre. The leaderboard resets every day and sportsbook bets count 3x toward leaderboard rank; prizes are credited automatically after the reset. Live board at rainbet.com/daily-race. · Weekly Race, headlined \"100k Weekly Races\" in the help centre. Sportsbook bets count 3x more than other wagers; top players are paid at the end of each week and prizes are distributed automatically. Live board at rainbet.com/weekly-race. · Monthly Race, headlined \"500k Monthly Races\" in the help centre. Sportsbook bets count 3x; top players are paid at the end of the month. Live board at rainbet.com/monthly-race.",
+            "value": "Daily Race, headlined \"25k daily races\" in the help centre. The leaderboard resets every day and sportsbook bets count 3x toward leaderboard rank; prizes are credited automatically after the reset. Live board at rainbet.com/daily-race. · Weekly Race, headlined \"100k Weekly Races\" in the help centre. Sportsbook bets count 3x more than other wagers; top players are paid at the end of each week and prizes are distributed automatically. Live board at rainbet.com/weekly-race. · Monthly Race, now headlined \"$1M Monthly Race\" on Rainbet's own race page: 1st $100,000, 2nd $62,000, 3rd $42,000, still paying $1,600 at 100th. Sportsbook bets count 3x; top players are paid at the end of the month.",
             "sourcing": "editorial",
-            "sourceUrl": "https://help.rainbet.com/en/articles/15254351-daily-races",
-            "asOf": "2026-09-17"
+            "sourceUrl": "https://rainbet.com/monthly-race",
+            "asOf": "2026-10-20"
           },
           {
             "label": "Weekly raffle",
@@ -10812,10 +10819,17 @@
           },
           {
             "label": "Rakeback",
-            "value": "Rakeback returns 3.5% of the house edge as cash on all casino games — slots, table games and live dealer. Poker pays 3.5% of the rake; sportsbook pays 3.5% of the theoretical value of bets using a default 3% house edge. Voided and cashed-out sports bets are excluded. Rakeback starts once total wagers reach $10,000, which is the Bronze VIP threshold, and the accumulated balance can be claimed at any time from the rakeback tab on the VIP page.",
+            "value": "Rakeback returns 3.5% of the house edge as cash on all casino games — slots, table games and live dealer. Poker pays 3.5% of the rake; sportsbook pays 3.5% of the theoretical value of bets using a default 3% house edge. Voided and cashed-out sports bets are excluded. Rakeback normally starts once total wagers reach $10,000, the Bronze VIP threshold (Stake's welcome offer unlocks it straight away, see below), and the accumulated balance can be claimed at any time from the rakeback tab on the VIP page.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.stake.com/en/articles/4821738-what-is-rakeback",
-            "asOf": "2026-09-17"
+            "asOf": "2026-10-20"
+          },
+          {
+            "label": "Welcome offer",
+            "value": "Entering a valid affiliate or referral code within 24 hours of opening the account unlocks the 3.5% rakeback straight away, instead of only from Bronze ($10,000 wagered). The code is entered from the account settings page and can no longer be added after 24 hours.",
+            "sourcing": "editorial",
+            "sourceUrl": "https://help.stake.com/en/articles/5091363-how-to-get-my-welcome-offer",
+            "asOf": "2026-10-20"
           },
           {
             "label": "VIP levels",
@@ -11077,10 +11091,10 @@
           },
           {
             "label": "Leaderboards",
-            "value": "Recurring $75,000 Weekly Race: a live XP-based leaderboard across casino and sportsbook running Wednesday 2pm UTC to the following Wednesday 2pm UTC, no opt-in, prize pool split among the top 350 finishers (1st $20,000, 2nd $10,000, 3rd $6,000, down to $8 for 301st-350th), paid into the player's USDT wallet. Thrill's own llms.txt additionally lists a \"$10,000 Daily Race\" among active promotions, which the help centre does not document. Weekly race",
+            "value": "Recurring $50,000 Weekly Race: a live XP-based leaderboard across casino and sportsbook running Wednesday 2pm UTC to the following Wednesday 2pm UTC, no opt-in, prize pool split among the top 350 finishers (1st $15,000, 2nd $6,500, 3rd $4,000, 4th $2,500, down to $10 for 301st-350th), paid into the player's USDT wallet.",
             "sourcing": "editorial",
             "sourceUrl": "https://intercom.help/thrill/en/articles/13159968-75-000-weekly-race",
-            "asOf": "2026-09-17"
+            "asOf": "2026-10-20"
           },
           {
             "label": "VIP levels",

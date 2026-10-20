@@ -1,5 +1,15 @@
 [
   {
+    "slug": "curacao-regulator-data-breach-october-2026",
+    "title": "Curaçao's casino regulator was breached. What it means for players",
+    "mono": "CW",
+    "tint": "#6FB7FF",
+    "standfirst": "The Curaçao Gaming Authority says someone got into its licensing portal for about ten months and published licence holders' data. It has shut that portal for good and is moving the licence register and footer seals to a new system. What the regulator said, and how to check a casino's licence meanwhile.",
+    "category": "News",
+    "readMins": 4,
+    "updated": "20 Oct"
+  },
+  {
     "slug": "gamdom-offline-security-incident-october-2026",
     "title": "Gamdom went offline after a security scare. Here is what it said",
     "mono": "GD",
@@ -27,7 +37,7 @@
     "standfirst": "Two weeks after Provisional Measure 1.394, we read the restricted list of every crypto casino we track. Most still leave Brazil off. One says Brazilian players are welcome.",
     "category": "Law",
     "readMins": 4,
-    "updated": "8 Oct"
+    "updated": "20 Oct"
   },
   {
     "slug": "brazil-bans-sports-betting-and-online-casinos",

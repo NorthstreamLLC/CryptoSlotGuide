@@ -242,11 +242,13 @@
       "**8 casinos name Brazil.** Four of those pages were re-read on 8 October (BitStarz, mBit, Yeet and Spartans); the other four (Stake, Bitcasino.io, Housebets and Toshibet) sit behind bot checks, so their rows carry our earlier reading.",
       "**25 publish a full list without Brazil.** We re-read 12 of them on 8 October, among them Roobet, Shuffle, BC.Game, Cloudbet and MetaWin; Brazil was not on any. Two needed a closer look: Roobet's page mentions Brazil only in its language menu (Português do Brasil), and 7Bit names Brazil only under restrictions for specific live games and slots, not in its casino-wide list.",
       "**One says Brazil is welcome.** Gamba's page lists the countries it refuses and then says its services are available to users from all other countries, \"including … Brazil\".",
+      "**Since then, Shuffle has published a Pix guide.** A page on Shuffle's own blog, dated 6 October 2026 (the day the licensed sites went offline) and updated 16 October, calls Shuffle \"a Pix casino and sportsbook\" where you \"deposit and withdraw in Brazilian reais (BRL)\", with a R$30 minimum deposit. Brazil was not on Shuffle's restricted list when we re-read it on 8 October. The Ministry of Finance says the ban covers operators based abroad that serve people in Brazil.",
       "**12 do not publish a complete list**, so whether they accept Brazil cannot be read from their terms.",
       "## Why a missing name matters",
       "For a player in Brazil, a casino's restricted list is not the law. The measure prohibits offering these games to people in Brazil whoever the operator is, so a casino that leaves Brazil off its list is not thereby lawful to play at from Brazil. Our Brazil country pages lead with the ban for that reason and show no casino offers.",
       "The lists matter because they are the casinos' own statement of where they operate. Two weeks in, most of them have not changed it.",
       "## What happens next",
+      "On 9 October the Ministry of Justice reported that, since the measure, 16,627 illegal betting-advertising sites had been identified and sent for blocking, and, citing the Ministry of Finance, that R$1.24 billion was waiting to be refunded to 26.3 million bettors who still had balances on the licensed sites.",
       "A provisional measure has the force of law from the day it is published, and lapses unless Congress converts it into law within 60 days, extendable once by another 60. We will re-read these lists each month while the measure stands, and when Congress acts."
     ],
     "sources": [
@@ -261,6 +263,14 @@
       {
         "label": "Constitution of Brazil, Article 62 (provisional measures)",
         "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicao.htm"
+      },
+      {
+        "label": "Shuffle blog: How to deposit and withdraw with Pix on Shuffle (dated 6 October 2026, updated 16 October 2026)",
+        "url": "https://shuffle.com/blog/how-to-deposit-and-withdraw-with-pix-on-shuffle"
+      },
+      {
+        "label": "Ministry of Justice (Senasp): Informe Senasp, 9 October 2026",
+        "url": "https://www.gov.br/mj/pt-br/assuntos/sua-seguranca/seguranca-publica/informe-senasp/Informe%20Senasp%2009.10.26"
       }
     ],
     "next": [
@@ -373,6 +383,64 @@
         "href": "/crypto-casinos",
         "label": "All crypto casinos",
         "hint": "Compare every casino we track."
+      }
+    ]
+  },
+  "curacao-regulator-data-breach-october-2026": {
+    "published": "2026-10-20",
+    "key": [
+      "The Curaçao Gaming Authority (CGA) says a security researcher from Germany got into its online licensing portal without permission and published licence holders' data and confidential information. The access ran from December 2025 until the CGA found it on 17 September 2026.",
+      "On 7 October the CGA said the portal will not come back, and that the digital seal Curaçao casinos show in their footers \"will be affected\".",
+      "A temporary portal, with the licence register and the digital seal system, was scheduled to launch on 19 October 2026.",
+      "The CGA says existing licences remain valid. If a casino's footer seal does not load right now, that alone does not mean its licence is gone; check the register once it is back."
+    ],
+    "body": [
+      "Curaçao licenses more of the crypto casinos we track than any other regulator except Anjouan: 17 of them, among them Stake, Roobet, Shuffle, Rollbit, Cloudbet and Duelbits. In October 2026 its regulator, the Curaçao Gaming Authority (CGA), said its online licensing portal had been breached. Everything below is from the CGA's own announcements of 2, 7 and 19 October 2026.",
+      "## What the regulator said happened",
+      "In a release dated 19 October, the CGA says that on 17 September it discovered that \"a digital security researcher from Germany had gained access to its online gambling licensing portal without proper permission in December 2025\", and that this person \"accessed and published data and confidential information belonging to online gambling license holders\". It says the unlawful access ran from December 2025 to September 2026, and affected the portal and its database, which an external company managed.",
+      "The CGA says it has filed complaints with authorities in Curaçao, Germany and the Netherlands, hired specialist companies to get the published information taken down, commissioned an independent technical investigation, and is considering civil action.",
+      "The data at stake is licence holders' data, that is, the companies running casinos and the documents they filed to get a licence. The CGA does not say that player accounts or player funds were part of the portal, and we have no information beyond its releases.",
+      "## The portal is gone for good",
+      "The CGA first took the portal offline. A notice filed on 2 October told operators not to email portal submissions instead, and postponed deadlines for submitting documents through the portal until it returns.",
+      "On 7 October it went further: the portal \"will not be returned to service\", and the CGA is ending the service arrangements behind it. The same notice says: \"Given that the availability of the current digital seal will be affected, the CGA will shortly introduce an alternative mechanism through which operators can demonstrate that a domain is licensed by the CGA.\"",
+      "The 19 October release says a temporary portal was scheduled to launch that Monday, 19 October, with the licence register and the digital seal system scheduled to become available with it. The CGA plans to build and run a new portal itself after that.",
+      "## Licences still stand",
+      "All three announcements say the same thing: closing the portal does not affect the validity of existing licences, and licensed operators must keep meeting their obligations.",
+      "## What this means if you play at a Curaçao casino",
+      "**A broken seal is not proof of a lost licence, for now.** Curaçao casinos show a clickable seal in their footer that opens the regulator's licence check. While the CGA moves that system, a seal may not load or may show nothing. That is the changeover the CGA describes, not by itself a sign the casino lost its licence.",
+      "**Check the register when it is back.** The CGA's licence register lists licensed companies. Our casino profiles name the licence and operating company each casino states, with a link to the casino's own page, so you can compare the two.",
+      "**Nothing here changes how to protect your balance.** A casino balance is held by the casino. Keep only what you are playing with on-site, turn on two-factor authentication, and withdraw what you are not using.",
+      "We will update this page when the CGA publishes more, and when the register and seals are working again."
+    ],
+    "sources": [
+      {
+        "label": "Curaçao Gaming Authority: \"Data breach at CGA: from investigation to action\", 19 October 2026 (PDF)",
+        "url": "https://gamingcontrol.spin-cdn.com/media/general_publications/20261019_pb_databreach_at_cga_20261018.pdf"
+      },
+      {
+        "label": "Curaçao Gaming Authority: \"CGA to Transition to a New Regulatory Platform\", 7 October 2026 (PDF)",
+        "url": "https://gamingcontrol.spin-cdn.com/media/general_publications/20261007_261007_announcement_transition_to_new_platform_cga.pdf"
+      },
+      {
+        "label": "Curaçao Gaming Authority: announcement regarding the CGA online gaming portal, filed 2 October 2026 (PDF)",
+        "url": "https://gamingcontrol.spin-cdn.com/media/general_publications/20261002_announcement_re_online_gaming_portal.pdf"
+      }
+    ],
+    "next": [
+      {
+        "href": "/crypto-casinos",
+        "label": "All crypto casinos",
+        "hint": "Each casino's stated licence, from its own pages."
+      },
+      {
+        "href": "/guides/bankroll-separation",
+        "label": "Bankroll separation",
+        "hint": "Hot wallet, cold wallet, and what stays on-site."
+      },
+      {
+        "href": "/guides/gamdom-offline-security-incident-october-2026",
+        "label": "Gamdom's October outage",
+        "hint": "What Gamdom said, in its own words."
       }
     ]
   }

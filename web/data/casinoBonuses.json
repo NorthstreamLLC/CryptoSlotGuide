@@ -5,21 +5,21 @@
       {
         "title": "Monthly Deposit Bonus",
         "category": "Deposit bonus · new users",
-        "headline": "500%",
-        "subCopy": "Cumulative across 4 deposits, unlocked as you wager. Starts at a 220% first tier.",
+        "headline": "Up to 360%",
+        "subCopy": "Four deposit stages each month: 180% ($5 min), 240% ($10), 300% ($20) and 360% ($30). Resets on the 1st at 00:00 UTC.",
         "stats": [
           {
-            "label": "First tier",
-            "value": "220%"
+            "label": "First stage",
+            "value": "180%"
           },
           {
             "label": "Cycle",
             "value": "Resets monthly"
           }
         ],
-        "asOf": "2026-09-14",
-        "sourceUrl": "https://bc.game/promotions",
-        "sourceNote": "Operator's own in-account Promotions view, screenshot-verified — bc.game/promotions didn't return real content to an automated fetch"
+        "asOf": "2026-10-20",
+        "sourceUrl": "https://help.bc.support/en/articles/15839846-monthly-4-deposit-bonus",
+        "sourceNote": "BC.Game's own help-centre article"
       },
       {
         "title": "Weekly Raffle",
@@ -54,11 +54,11 @@
         "title": "BC Engine",
         "category": "Platform token · all players",
         "headline": "Ongoing",
-        "subCopy": "Wager to earn BC Engine platform-token rewards, per the operator's own promotions grid.",
-        "asOf": "2026-09-14",
+        "subCopy": "Wager to earn BC platform-token rewards. From 20 October 2026, BC.Game says Instant BC rewards are mined first and bought back afterwards.",
+        "asOf": "2026-10-20",
         "endsLabel": "Runs through 1 Jan",
-        "sourceUrl": "https://bc.game/promotions",
-        "sourceNote": "Operator's own Promotions grid, screenshot-verified"
+        "sourceUrl": "https://blog.bc.game/announcement-bc-game-instant-bc-rewards-adjustment-mining-mechanism/",
+        "sourceNote": "BC.Game's own announcement"
       }
     ]
   },
