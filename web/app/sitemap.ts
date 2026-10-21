@@ -1,3 +1,4 @@
+import { watchEntries } from "@/lib/casino-changewatch";
 import { coinSlug } from "@/lib/coins";
 import type { MetadataRoute } from "next";
 import { fiatMarkets } from "@/lib/fiat";
@@ -28,6 +29,8 @@ const STATIC_ROUTES = [
   "/lowest-wagering",
   "/races",
   "/vip-calculator",
+  "/bonus-terms-decoder",
+  ...(watchEntries.length ? ["/casino-changewatch"] : []),
   "/find-my-casino",
   "/blog",
   "/sweepstakes-casinos",

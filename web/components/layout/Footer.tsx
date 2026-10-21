@@ -16,6 +16,8 @@ const footerCols = [
       { l: "Fastest payouts", href: "/fastest-payouts" },
       { l: "Bonuses tracked", href: "/bonuses" },
       { l: "Races & raffles", href: "/races" },
+      { l: "Bonus Terms Decoder", href: "/bonus-terms-decoder" },
+      { l: "Casino ChangeWatch", href: "/casino-changewatch" },
       { l: "VIP calculator", href: "/vip-calculator" },
       { l: "Find my casino", href: "/find-my-casino" },
       { l: "US sweepstakes casinos", href: "/sweepstakes-casinos" },

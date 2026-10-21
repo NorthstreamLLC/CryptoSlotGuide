@@ -171,6 +171,8 @@ function rawNavTabs(c: SiteCounts): NavTab[] {
                 { label: "Lowest wagering bonuses", href: "/lowest-wagering" },
                 { label: "Compare side by side", href: "/compare" },
                 { label: "Find my casino", href: "/find-my-casino" },
+                { label: "Bonus Terms Decoder", href: "/bonus-terms-decoder" },
+                { label: "Casino ChangeWatch", href: "/casino-changewatch" },
                 { label: "VIP calculator", href: "/vip-calculator" },
               ],
             },
