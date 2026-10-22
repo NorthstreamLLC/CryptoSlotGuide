@@ -6,6 +6,23 @@ import type { NextConfig } from "next";
  * app/[legacy]) so nothing that ranks today is lost.
  */
 const nextConfig: NextConfig = {
+  // Standard security headers on every response. No full script/style CSP:
+  // the site uses inline styles and remote slot art, so the policy only covers
+  // framing, plugins and <base>, which nothing here relies on.
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), payment=(), usb=()" },
+          { key: "Content-Security-Policy", value: "frame-ancestors 'self'; base-uri 'self'; object-src 'none'" },
+        ],
+      },
+    ];
+  },
   async redirects() {
     return [
       { source: "/roobet-casino", destination: "/casinos/roobet", permanent: true },

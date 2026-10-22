@@ -32,6 +32,8 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+  // Bing Webmaster Tools ownership check; must stay after verification.
+  verification: { other: { "msvalidate.01": "834A5A7DDD9FF6EC9294E283B70E3189" } },
   title: {
     default: "CryptoSlotGuide — crypto casino, slot and wallet information",
     template: `%s | ${SITE_NAME}`,
