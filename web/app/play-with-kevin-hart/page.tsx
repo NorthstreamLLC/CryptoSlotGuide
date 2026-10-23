@@ -14,12 +14,17 @@ export const revalidate = 3600;
 
 const MONO = "var(--font-jetbrains-mono), monospace";
 const GOLD = "#FFC531";
-const PRAGMATIC = "https://www.pragmaticplay.com/en/";
+const NEWS = "https://www.pragmaticplay.com/en/news/";
+const RELEASES = [
+  { label: "Pragmatic Play partners with Kevin Hart (2 Sep 2026)", url: `${NEWS}pragmatic-play-partners-with-kevin-hart-for-unforgettable-live-casino-experience/` },
+  { label: "Pragmatic Play builds up to Kevin Hart Live (29 Sep 2026)", url: `${NEWS}pragmatic-play-builds-up-to-kevin-hart-live-with-massive-promotion/` },
+  { label: "Pragmatic Play counts down to Kevin Hart (19 Oct 2026)", url: `${NEWS}pragmatic-play-counts-down-to-kevin-hart/` },
+];
 
 export function generateMetadata() {
   return pageMetadata(
-    "Play with Kevin Hart: Pragmatic Play's $1.25M prize pool",
-    "Pragmatic Play x Kevin Hart, 19 October to 7 November 2026: collect PLAY or KEVIN for Free Chips, then bet with Kevin live on 6-7 November. How it works, the prizes, and where to play.",
+    "Kevin Hart x Pragmatic Play: live casino takeover and $1.25M prize pool",
+    "Kevin Hart hosts Pragmatic Play live casino games on 6-7 November 2026, with a $1.25M prize pool from 19 October. How it works, the prizes, and where to play.",
     KEVIN_PATH
   );
 }
@@ -40,8 +45,8 @@ const STAGES = [
   {
     name: "Kevin Makes It Rain",
     dates: "6 – 7 Nov",
-    how: "Kevin Hart co-hosts the live tables. Chips won now are played straight away, within 48 hours. 1 prize per player.",
-    prizes: ["500 × 5 chips of $0.20 (win up to $20)"],
+    how: "Kevin Hart hosts Pragmatic's live tables across four sessions. Pragmatic says more than 30,000 prizes drop during the shows, including random cash prizes.",
+    prizes: ["30,000+ prizes, Pragmatic says", "Including 500 × 5 chips of $0.20 (win up to $20)"],
   },
 ];
 
@@ -50,6 +55,7 @@ const faqs = [
   { q: "What are the Free Chips worth?", a: "Chips are $0.20, $0.50 or $1 each depending on the stage, played on the six Kevin's Picks live games. Winnings are capped per prize ($20 to $50 in Bet with Kevin) and paid as cash with no wagering." },
   { q: "Which games count?", a: `Live casino: ${KEVIN_GAMES.join(", ")}. During Play with Kevin, any Pragmatic Play slot also drops K-E-V-I-N letters where the casino runs the slot side.` },
   { q: "Where is it not available?", a: "Pragmatic excludes the UK, Ontario, Alberta, Germany, the Netherlands, Spain, Italy, Denmark, Norway, Sweden, Switzerland, Austria, Belgium, Portugal, Greece, the Czech Republic, Slovakia, Croatia, Bulgaria, Romania, Latvia, Lithuania, Ukraine, the Bahamas, Venezuela and Buenos Aires City. Online casinos are also banned in Brazil, and each casino's own restricted list applies on top: Roobet, for example, refuses the US, Australia, Malta, Cyprus, the Netherlands and the UK." },
+  { q: "When is Kevin Hart live?", a: "On 6 and 7 November 2026, across four sessions in Pragmatic Play's live casino studio. Pragmatic reveals which games he hosts on each day and posts the broadcast schedule on its official channels." },
   { q: "Does it change a game's RTP?", a: "No. Pragmatic's terms say the promotion does not alter any game's RTP or chance of winning." },
 ];
 
@@ -147,6 +153,24 @@ export default function Page() {
       </section>
 
       <section style={{ maxWidth: 1180, margin: "0 auto", padding: "44px 24px 0" }}>
+        <h2 style={{ margin: "0 0 10px", fontSize: 28, letterSpacing: "-.02em", fontWeight: 800, color: "#fff" }}>The live event: Kevin Hart takes over the studio</h2>
+        <p style={{ margin: "0 0 14px", maxWidth: "75ch", fontSize: 15.5, lineHeight: 1.65, color: "#B7C4CB" }}>
+          On 6 and 7 November, Kevin Hart steps onto Pragmatic Play&apos;s live casino studio floor to host some of its most popular live games across four sessions. Pragmatic is keeping the exact tables secret until each day. The Free Chips from the build-up promotions are played in those games, and Pragmatic says random cash prizes will drop while Hart is hosting.
+        </p>
+        <div style={{ display: "grid", gap: 14, gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))" }}>
+          <blockquote style={{ margin: 0, padding: "16px 18px", borderRadius: 14, background: "#0C1013", borderLeft: `3px solid ${GOLD}`, fontSize: 14.5, lineHeight: 1.6, color: "#E8EDF0" }}>
+            &ldquo;I&apos;ve seen what they&apos;ve got planned and let me tell you; they don&apos;t do things small. I&apos;m bringing the Kevin energy to Pragmatic Play.&rdquo;
+            <footer style={{ marginTop: 8, fontSize: 12.5, color: "#8DA0AA" }}>Kevin Hart, in Pragmatic Play&apos;s announcement</footer>
+          </blockquote>
+          <blockquote style={{ margin: 0, padding: "16px 18px", borderRadius: 14, background: "#0C1013", borderLeft: `3px solid ${GOLD}`, fontSize: 14.5, lineHeight: 1.6, color: "#E8EDF0" }}>
+            &ldquo;A total prize pool of €1,250,000 can be unlocked by both live casino and slots players as we prepare for an unmissable two days of live action with Kevin.&rdquo;
+            <footer style={{ marginTop: 8, fontSize: 12.5, color: "#8DA0AA" }}>Irina Cornides, COO, Pragmatic Play</footer>
+          </blockquote>
+        </div>
+        <p style={{ margin: "12px 0 0", fontSize: 13, color: "#8DA0AA" }}>Pragmatic says the event is not available in the UK or the US, and may be restricted elsewhere. The broadcast schedule goes up on its official channels on the day.</p>
+      </section>
+
+      <section style={{ maxWidth: 1180, margin: "0 auto", padding: "44px 24px 0" }}>
         <h2 style={{ margin: "0 0 16px", fontSize: 28, letterSpacing: "-.02em", fontWeight: 800, color: "#fff" }}>Questions</h2>
         {faqs.map((f) => (
           <details key={f.q} style={{ padding: "14px 0", borderBottom: "1px solid rgba(255,255,255,.08)" }}>
@@ -158,8 +182,12 @@ export default function Page() {
 
       <section style={{ maxWidth: 1180, margin: "0 auto", padding: "36px 24px 70px" }}>
         <p style={{ margin: 0, fontFamily: MONO, fontSize: 11, lineHeight: 1.7, color: "#7F8D96" }}>
-          Sources: Pragmatic Play&apos;s promotion terms for Play with Kevin and Bet with Kevin (shown in its games), and each casino&apos;s own promotions page linked above.{" "}
-          <a href={PRAGMATIC} target="_blank" rel="noopener noreferrer nofollow" style={{ color: "#5FE3E8" }}>pragmaticplay.com ↗</a>
+          Sources: Pragmatic Play&apos;s announcements, its promotion terms for Play with Kevin and Bet with Kevin (shown in its games), and each casino&apos;s own promotions page linked above.
+          {RELEASES.map((x) => (
+            <span key={x.url} style={{ display: "block" }}>
+              <a href={x.url} target="_blank" rel="noopener noreferrer nofollow" style={{ color: "#5FE3E8" }}>{x.label} ↗</a>
+            </span>
+          ))}
         </p>
       </section>
     </main>
