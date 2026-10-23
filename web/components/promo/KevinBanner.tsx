@@ -10,7 +10,7 @@ import { kevinBlocked, kevinLive, KEVIN_PATH } from "@/lib/kevin-promo";
  * page HTML for everyone, then removed in the browser where the promotion is
  * not offered, and after it ends, so a stale build never keeps it up.
  */
-export function KevinBanner({ visit }: { visit: string }) {
+export function KevinBanner() {
   const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
@@ -18,7 +18,7 @@ export function KevinBanner({ visit }: { visit: string }) {
     let live = true;
     getGeo().then((g) => {
       const r = g as (typeof g & { region?: string | null }) | null;
-      if (live && r?.detected && kevinBlocked(r.country, r.region, r.casinos?.restrictedSlugs)) setHidden(true);
+      if (live && r?.detected && kevinBlocked(r.country, r.region)) setHidden(true);
     });
     return () => {
       live = false;
@@ -39,16 +39,13 @@ export function KevinBanner({ visit }: { visit: string }) {
           <strong style={{ color: "#fff" }}>Over 500,000 Free Chip prizes</strong> in Pragmatic Play games until 7 November. Nothing to opt into, and chip winnings are paid as cash with no wagering.
         </p>
         <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-          <a href={visit} target="_blank" rel="nofollow sponsored noopener" style={{ padding: "11px 18px", borderRadius: 11, background: "linear-gradient(180deg,#FFD866,#FFC531)", color: "#141007", fontSize: 14, fontWeight: 800 }}>
-            Play at Roobet ↗
-          </a>
-          <Link href={KEVIN_PATH} style={{ padding: "11px 18px", borderRadius: 11, border: "1px solid rgba(255,255,255,.18)", color: "#fff", fontSize: 14, fontWeight: 700 }}>
-            How it works
+          <Link href={KEVIN_PATH} style={{ padding: "11px 18px", borderRadius: 11, background: "linear-gradient(180deg,#FFD866,#FFC531)", color: "#141007", fontSize: 14, fontWeight: 800 }}>
+            How it works and where to play →
           </Link>
         </div>
       </div>
       <p style={{ margin: "8px 0 0", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#7F8D96" }}>
-        Ad · Affiliate link: we may earn a commission. Not available in the UK, US, Ontario and other excluded markets. 18+ · T&amp;Cs apply.
+        Ad · Pragmatic Play promotion. Not available in the UK, US, Ontario and other excluded markets. 18+ · T&amp;Cs apply.
       </p>
     </section>
   );

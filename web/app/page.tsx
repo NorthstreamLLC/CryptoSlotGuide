@@ -352,7 +352,7 @@ export default function HomePage() {
       <LogoStrip label="Casinos, studios and wallets we cover" items={stripItems} />
 
       {/* Pragmatic Play x Kevin Hart, until 7 November 2026; hidden in excluded markets and after the end. */}
-      {kevinLive() && <KevinBanner visit={siteData.ops.find((o) => o.slug === "roobet")?.signupUrl ?? "/casinos/roobet"} />}
+      {kevinLive() && <KevinBanner />}
 
       {/* Top offers */}
       <section id="top-offers" data-reveal style={{ maxWidth: 1400, margin: "0 auto", padding: "68px 40px 0", scrollMarginTop: 120 }}>

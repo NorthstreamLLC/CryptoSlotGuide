@@ -61,7 +61,7 @@ export function buildNotifications(): Notif[] {
 
   // Pragmatic Play x Kevin Hart, pinned while it runs.
   if (kevinLive()) {
-    out.push({ id: "pin-kevin-hart-2026-10", kind: "offer", tag: "Live promo", title: "Play with Kevin Hart: 500,000+ Free Chip prizes", sub: "Pragmatic Play, until 7 November. No opt-in, cash winnings", href: KEVIN_PATH, date: "2026-10-23", pinned: true, brand: "roobet" });
+    out.push({ id: "pin-kevin-hart-2026-10", kind: "offer", tag: "Live promo", title: "Play with Kevin Hart: 500,000+ Free Chip prizes", sub: "Pragmatic Play, until 7 November. No opt-in, cash winnings", href: KEVIN_PATH, date: "2026-10-23", pinned: true, image: "/assets/promos/play-with-kevin-mobile.webp" });
   }
 
   // The newest guides, by the date each was last passed.

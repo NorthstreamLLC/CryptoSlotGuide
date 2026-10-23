@@ -49,7 +49,7 @@ const faqs = [
   { q: "How do I join Play with Kevin?", a: "Play Pragmatic Play games at a participating casino. There is no opt-in and no code: letters and Free Chips drop at random inside the games while you play, at any stake." },
   { q: "What are the Free Chips worth?", a: "Chips are $0.20, $0.50 or $1 each depending on the stage, played on the six Kevin's Picks live games. Winnings are capped per prize ($20 to $50 in Bet with Kevin) and paid as cash with no wagering." },
   { q: "Which games count?", a: `Live casino: ${KEVIN_GAMES.join(", ")}. During Play with Kevin, any Pragmatic Play slot also drops K-E-V-I-N letters where the casino runs the slot side.` },
-  { q: "Where is it not available?", a: "Pragmatic excludes the UK, Ontario, Alberta, Germany, the Netherlands, Spain, Italy, Denmark, Norway, Sweden, Switzerland, Austria, Belgium, Portugal, Greece, the Czech Republic, Slovakia, Croatia, Bulgaria, Romania, Latvia, Lithuania, Ukraine, the Bahamas, Venezuela and Buenos Aires City. Online casinos are also banned in Brazil, and each casino's own restricted list applies on top: Roobet, for example, refuses the US, Australia, Malta, Cyprus, the Netherlands and the UK." },
+  { q: "Where is it not available?", a: "Pragmatic excludes the UK, Ontario, Alberta, Germany, the Netherlands, Spain, Italy, Denmark, Norway, Sweden, Switzerland, Austria, Belgium, Portugal, Greece, the Czech Republic, Slovakia, Croatia, Bulgaria, Romania, Latvia, Lithuania, Ukraine, the Bahamas, Venezuela and Buenos Aires City. Online casinos are also banned in Brazil, and each casino's own restricted list applies on top: check it before you sign up." },
   { q: "Does it change a game's RTP?", a: "No. Pragmatic's terms say the promotion does not alter any game's RTP or chance of winning." },
 ];
 
@@ -90,15 +90,14 @@ export default function Page() {
           <h2 style={{ margin: "0 0 6px", fontSize: 28, letterSpacing: "-.02em", fontWeight: 800, color: "#fff" }}>Where to play it</h2>
           <p style={{ margin: "0 0 18px", fontSize: 14.5, color: "#8DA0AA" }}>Casinos whose own promotions page shows the campaign. Sign up with our code and you are in automatically.</p>
           <div style={{ display: "grid", gap: 16, gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))" }}>
-            {cards.map(({ slug, sourceUrl, o }, i) => (
-              <div key={slug} style={{ padding: 20, borderRadius: 16, background: i === 0 ? "radial-gradient(120% 90% at 50% 0%, rgba(255,197,49,.14), transparent 60%), #0F1418" : "#0C1013", border: `1px solid ${i === 0 ? "rgba(255,197,49,.4)" : "rgba(255,255,255,.08)"}` }}>
+            {cards.map(({ slug, sourceUrl, o }) => (
+              <div key={slug} style={{ padding: 20, borderRadius: 16, background: "#0C1013", border: "1px solid rgba(255,255,255,.08)" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 12 }}>
                   <span style={{ width: 44, height: 44, borderRadius: 12, overflow: "hidden" }}>
                     <BrandMark slug={slug} mono={o!.mono} tint={GOLD} radius={12} fontSize={13} />
                   </span>
                   <span>
                     <span style={{ display: "block", fontSize: 18, fontWeight: 800, color: "#fff" }}>{o!.name}</span>
-                    {i === 0 && <span style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: GOLD }}>Our pick</span>}
                   </span>
                 </div>
                 {o!.promoCode && (
@@ -107,7 +106,7 @@ export default function Page() {
                   </div>
                 )}
                 {o!.signupUrl && (
-                  <a href={o!.signupUrl} target="_blank" rel="nofollow sponsored noopener" data-copy-code={o!.promoCode ?? undefined} style={{ display: "block", textAlign: "center", padding: "13px 16px", borderRadius: 12, background: i === 0 ? "linear-gradient(180deg,#FFD866,#FFC531)" : "rgba(255,255,255,.08)", color: i === 0 ? "#141007" : "#fff", fontSize: 15, fontWeight: 800 }}>
+                  <a href={o!.signupUrl} target="_blank" rel="nofollow sponsored noopener" data-copy-code={o!.promoCode ?? undefined} style={{ display: "block", textAlign: "center", padding: "13px 16px", borderRadius: 12, background: "linear-gradient(180deg,#FFD866,#FFC531)", color: "#141007", fontSize: 15, fontWeight: 800 }}>
                     Play at {o!.name} ↗
                   </a>
                 )}
