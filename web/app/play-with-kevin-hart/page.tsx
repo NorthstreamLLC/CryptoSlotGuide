@@ -33,19 +33,19 @@ const STAGES = [
   {
     name: "Play with Kevin",
     dates: "19 Oct – 2 Nov",
-    how: "Letters drop at random as you play: spell P-L-A-Y in the six Kevin's Picks live games, or K-E-V-I-N in any Pragmatic slot. A full word opens a chest of Free Chips.",
+    how: "Earn: letters drop at random as you play. Spell P-L-A-Y in a Kevin's Picks live game, or K-E-V-I-N in any Pragmatic slot, and pick a chest. The chips are ready straight away, on a countdown timer (24 hours in Pragmatic's example).",
     prizes: ["400,000 chests of 10 × $0.20 Free Chips", "25,000 chests of 50 × $0.20 Free Chips"],
   },
   {
     name: "Bet with Kevin",
     dates: "2 – 5 Nov",
-    how: "Any real-money bet on a Kevin's Picks live game can drop Free Chips, played from 6 November for 48 hours. Up to 2 prizes per player.",
+    how: "Earn for the show: any real-money bet on a Kevin's Picks game can drop Free Chips. The game saves them for Kevin's live event: they unlock on 6 November and must be used within 48 hours. Up to 2 prizes per player.",
     prizes: ["60,000 × 5 chips of $0.50 (win up to $25)", "15,000 × 5 chips of $1 (win up to $50)"],
   },
   {
     name: "Kevin Makes It Rain",
     dates: "6 – 7 Nov",
-    how: "Kevin Hart hosts Pragmatic's live tables across four sessions. Pragmatic says more than 30,000 prizes drop during the shows, including random cash prizes.",
+    how: "Redeem: Kevin Hart hosts Pragmatic's live tables across four sessions, and saved chips are played then. Pragmatic says more than 30,000 more prizes drop during the shows, including random cash prizes.",
     prizes: ["30,000+ prizes, Pragmatic says", "Including 500 × 5 chips of $0.20 (win up to $20)"],
   },
 ];
@@ -53,6 +53,7 @@ const STAGES = [
 const faqs = [
   { q: "How do I join Play with Kevin?", a: "Play Pragmatic Play games at a participating casino. There is no opt-in and no code: letters and Free Chips drop at random inside the games while you play, at any stake." },
   { q: "What are the Free Chips worth?", a: "Chips are $0.20, $0.50 or $1 each depending on the stage, played on the six Kevin's Picks live games. Winnings are capped per prize ($20 to $50 in Bet with Kevin) and paid as cash with no wagering." },
+  { q: "Where can I use my Free Chips?", a: `Only on the six Kevin's Picks live games: ${KEVIN_GAMES.join(", ")}. That holds even for chips earned on a slot. Chips from Play with Kevin can be used straight away; chips from Bet with Kevin are saved until Kevin's live event and unlock on 6 November. Unused chips expire when the in-game timer ends.` },
   { q: "Which games count?", a: `Live casino: ${KEVIN_GAMES.join(", ")}. During Play with Kevin, any Pragmatic Play slot also drops K-E-V-I-N letters where the casino runs the slot side.` },
   { q: "Where is it not available?", a: "Pragmatic excludes the UK, Ontario, Alberta, Germany, the Netherlands, Spain, Italy, Denmark, Norway, Sweden, Switzerland, Austria, Belgium, Portugal, Greece, the Czech Republic, Slovakia, Croatia, Bulgaria, Romania, Latvia, Lithuania, Ukraine, the Bahamas, Venezuela and Buenos Aires City. Online casinos are also banned in Brazil, and each casino's own restricted list applies on top: Roobet, for example, refuses the US, Australia, Malta, Cyprus, the Netherlands and the UK." },
   { q: "When is Kevin Hart live?", a: "On 6 and 7 November 2026, across four sessions in Pragmatic Play's live casino studio. Pragmatic reveals which games he hosts on each day and posts the broadcast schedule on its official channels." },
@@ -84,7 +85,7 @@ export default function Page() {
           </h1>
           <p style={{ margin: "0 0 18px", maxWidth: "64ch", fontSize: 17, lineHeight: 1.6, color: "#B7C4CB" }}>
             {live
-              ? "Pragmatic Play's $1.25 million campaign with Kevin Hart runs inside its games at participating casinos until 7 November 2026. There is nothing to opt into: play, collect, and Free Chip winnings are paid as cash with no wagering."
+              ? "Pragmatic Play's $1.25 million campaign with Kevin Hart runs inside its games at participating casinos until 7 November 2026. It works in two steps: you earn Free Chips while you play, then use them on six \"Kevin's Picks\" live games, and what they win is paid as cash with no wagering. There is nothing to opt into."
               : "Pragmatic Play's $1.25 million campaign with Kevin Hart ran from 19 October to 7 November 2026 and has now ended."}
           </p>
           <AuthorByline updated="2026-10-23" />
@@ -135,6 +136,21 @@ export default function Page() {
 
       <section style={{ maxWidth: 1180, margin: "0 auto", padding: "44px 24px 0" }}>
         <h2 style={{ margin: "0 0 16px", fontSize: 28, letterSpacing: "-.02em", fontWeight: 800, color: "#fff" }}>How it works</h2>
+        <div style={{ display: "grid", gap: 12, gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", marginBottom: 18 }}>
+          {[
+            { n: "1", t: "Earn Free Chips", d: "Play Pragmatic slots or Kevin's Picks live games. Letters and chips drop at random, at any stake." },
+            { n: "2", t: "Use them on Kevin's Picks", d: "Chips only play on the six Kevin's Picks live games, before the in-game timer ends." },
+            { n: "3", t: "Keep the winnings", d: "What your chips win is paid as cash, with no wagering, up to each prize's cap." },
+          ].map((x) => (
+            <div key={x.n} style={{ display: "flex", gap: 12, alignItems: "flex-start", padding: "14px 16px", borderRadius: 14, background: "rgba(255,197,49,.06)", border: "1px solid rgba(255,197,49,.25)" }}>
+              <span style={{ width: 28, height: 28, flex: "none", borderRadius: "50%", background: GOLD, color: "#141007", fontWeight: 800, display: "flex", alignItems: "center", justifyContent: "center" }}>{x.n}</span>
+              <span>
+                <span style={{ display: "block", fontSize: 15.5, fontWeight: 800, color: "#fff" }}>{x.t}</span>
+                <span style={{ display: "block", fontSize: 13.5, lineHeight: 1.5, color: "#A8B6BE" }}>{x.d}</span>
+              </span>
+            </div>
+          ))}
+        </div>
         <div style={{ display: "grid", gap: 16, gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))" }}>
           {STAGES.map((s) => (
             <div key={s.name} style={{ padding: 20, borderRadius: 16, background: "#0C1013", border: "1px solid rgba(255,255,255,.08)" }}>
