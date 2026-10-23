@@ -18,7 +18,7 @@ const PRAGMATIC = "https://www.pragmaticplay.com/en/";
 
 export function generateMetadata() {
   return pageMetadata(
-    "Play with Kevin Hart: Pragmatic Play's $1.25M Free Chips promo",
+    "Play with Kevin Hart: Pragmatic Play's $1.25M prize pool",
     "Pragmatic Play x Kevin Hart, 19 October to 7 November 2026: collect PLAY or KEVIN for Free Chips, then bet with Kevin live on 6-7 November. How it works, the prizes, and where to play.",
     KEVIN_PATH
   );
@@ -74,7 +74,7 @@ export default function Page() {
             </picture>
           </div>
           <h1 style={{ margin: "0 0 12px", fontSize: "clamp(32px, 4.2vw, 50px)", lineHeight: 1.04, letterSpacing: "-.035em", fontWeight: 800, color: "#fff" }}>
-            Play with Kevin Hart: <span style={{ color: GOLD }}>500,000+ Free Chip prizes</span>
+            Play with Kevin Hart: <span style={{ color: GOLD }}>$1.25M prize pool</span>
           </h1>
           <p style={{ margin: "0 0 18px", maxWidth: "64ch", fontSize: 17, lineHeight: 1.6, color: "#B7C4CB" }}>
             {live

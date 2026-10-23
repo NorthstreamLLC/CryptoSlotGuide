@@ -28,7 +28,7 @@ export function KevinBanner({ visit }: { visit: string }) {
   if (hidden) return null;
   return (
     <section style={{ maxWidth: 1400, margin: "0 auto", padding: "40px 40px 0" }} className="csg-kevin">
-      <Link href={KEVIN_PATH} aria-label="Play with Kevin: Pragmatic Play x Kevin Hart, $1,250,000 in Free Chip prizes" style={{ display: "block", borderRadius: 18, overflow: "hidden", border: "1px solid rgba(255,197,49,.35)", boxShadow: "0 24px 60px rgba(0,0,0,.45)" }}>
+      <Link href={KEVIN_PATH} aria-label="Play with Kevin: Pragmatic Play x Kevin Hart, $1,250,000 prize pool" style={{ display: "block", borderRadius: 18, overflow: "hidden", border: "1px solid rgba(255,197,49,.35)", boxShadow: "0 24px 60px rgba(0,0,0,.45)" }}>
         <picture>
           <source media="(max-width: 700px)" srcSet="/assets/promos/play-with-kevin-mobile.webp" />
           <img src="/assets/promos/play-with-kevin-1920x600.webp" alt="Pragmatic Play x Kevin Hart: Play with Kevin, 19 October to 7 November 2026, $1,250,000" width={1920} height={600} style={{ display: "block", width: "100%", height: "auto" }} />
@@ -36,7 +36,7 @@ export function KevinBanner({ visit }: { visit: string }) {
       </Link>
       <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 12, justifyContent: "space-between", marginTop: 12 }}>
         <p style={{ margin: 0, fontSize: 14, color: "#B7C4CB", maxWidth: "70ch" }}>
-          <strong style={{ color: "#fff" }}>Over 500,000 Free Chip prizes</strong> in Pragmatic Play games until 7 November. Nothing to opt into, and chip winnings are paid as cash with no wagering.
+          <strong style={{ color: "#fff" }}>$1.25M prize pool</strong> in Pragmatic Play games until 7 November. Nothing to opt into, and chip winnings are paid as cash with no wagering.
         </p>
         <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
           <a href={visit} target="_blank" rel="nofollow sponsored noopener" style={{ padding: "11px 18px", borderRadius: 11, background: "linear-gradient(180deg,#FFD866,#FFC531)", color: "#141007", fontSize: 14, fontWeight: 800 }}>
