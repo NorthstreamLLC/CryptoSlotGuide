@@ -21,17 +21,17 @@ const BANNED = new Set(["BR"]);
 
 /**
  * Where the promotion is not offered, where online casinos are banned, or
- * where none of the casinos we list for it accepts players (the US: Roobet,
- * Stake and Gamdom all refuse it). Each casino card also carries its own geo note.
+ * where the casino the banner sends players to (Roobet) refuses them; the
+ * last comes from Roobet's restricted list via /api/geo.
  */
-export function kevinBlocked(country?: string | null, region?: string | null): boolean {
+export function kevinBlocked(country?: string | null, region?: string | null, restrictedSlugs: string[] = []): boolean {
   if (!country) return false;
   const c = country.toUpperCase();
-  if (c === "US" || EXCLUDED_COUNTRIES.has(c) || BANNED.has(c)) return true;
+  if (c === "US" || EXCLUDED_COUNTRIES.has(c) || BANNED.has(c) || restrictedSlugs.includes("roobet")) return true;
   return !!region && EXCLUDED_REGIONS.has(`${c}-${region.toUpperCase()}`);
 }
 
-/** Casinos whose own promotions page shows the campaign. */
+/** Casinos whose own promotions page shows the campaign, our pick first. */
 export const KEVIN_CASINOS: { slug: string; sourceUrl: string }[] = [
   { slug: "roobet", sourceUrl: "https://roobet.com/promotions/kevin-hart-takes-over-roobet" },
   { slug: "stake", sourceUrl: "https://stake.com/promotions/category/casino" },
