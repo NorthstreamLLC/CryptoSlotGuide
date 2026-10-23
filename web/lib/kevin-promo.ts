@@ -16,14 +16,18 @@ export const KEVIN_PATH = "/play-with-kevin-hart";
 const EXCLUDED_COUNTRIES = new Set(["AT", "BS", "BE", "BG", "HR", "CZ", "DK", "DE", "GR", "IT", "LV", "LT", "NL", "NO", "PT", "RO", "SK", "ES", "SE", "CH", "UA", "GB", "VE"]);
 const EXCLUDED_REGIONS = new Set(["CA-AB", "CA-ON", "AR-C"]);
 
+/** Online casino play is banned outright (Brazil: Provisional Measure 1.394, from 6 October 2026). */
+const BANNED = new Set(["BR"]);
+
 /**
- * Where the promotion is not offered, or where none of the casinos we send
- * players to accepts them (the US: Roobet, Stake and Gamdom all refuse it).
+ * Where the promotion is not offered, where online casinos are banned, or
+ * where the casino the banner sends players to (Roobet) refuses them; the
+ * last comes from Roobet's restricted list via /api/geo.
  */
-export function kevinBlocked(country?: string | null, region?: string | null): boolean {
+export function kevinBlocked(country?: string | null, region?: string | null, restrictedSlugs: string[] = []): boolean {
   if (!country) return false;
   const c = country.toUpperCase();
-  if (c === "US" || EXCLUDED_COUNTRIES.has(c)) return true;
+  if (c === "US" || EXCLUDED_COUNTRIES.has(c) || BANNED.has(c) || restrictedSlugs.includes("roobet")) return true;
   return !!region && EXCLUDED_REGIONS.has(`${c}-${region.toUpperCase()}`);
 }
 

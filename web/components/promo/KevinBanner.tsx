@@ -18,7 +18,7 @@ export function KevinBanner({ visit }: { visit: string }) {
     let live = true;
     getGeo().then((g) => {
       const r = g as (typeof g & { region?: string | null }) | null;
-      if (live && r?.detected && kevinBlocked(r.country, r.region)) setHidden(true);
+      if (live && r?.detected && kevinBlocked(r.country, r.region, r.casinos?.restrictedSlugs)) setHidden(true);
     });
     return () => {
       live = false;

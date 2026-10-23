@@ -49,7 +49,7 @@ const faqs = [
   { q: "How do I join Play with Kevin?", a: "Play Pragmatic Play games at a participating casino. There is no opt-in and no code: letters and Free Chips drop at random inside the games while you play, at any stake." },
   { q: "What are the Free Chips worth?", a: "Chips are $0.20, $0.50 or $1 each depending on the stage, played on the six Kevin's Picks live games. Winnings are capped per prize ($20 to $50 in Bet with Kevin) and paid as cash with no wagering." },
   { q: "Which games count?", a: `Live casino: ${KEVIN_GAMES.join(", ")}. During Play with Kevin, any Pragmatic Play slot also drops K-E-V-I-N letters where the casino runs the slot side.` },
-  { q: "Where is it not available?", a: "Pragmatic excludes the UK, Ontario, Alberta, Germany, the Netherlands, Spain, Italy, Denmark, Norway, Sweden, Switzerland, Austria, Belgium, Portugal, Greece, the Czech Republic, Slovakia, Croatia, Bulgaria, Romania, Latvia, Lithuania, Ukraine, the Bahamas, Venezuela and Buenos Aires City. Each casino's own country rules apply on top." },
+  { q: "Where is it not available?", a: "Pragmatic excludes the UK, Ontario, Alberta, Germany, the Netherlands, Spain, Italy, Denmark, Norway, Sweden, Switzerland, Austria, Belgium, Portugal, Greece, the Czech Republic, Slovakia, Croatia, Bulgaria, Romania, Latvia, Lithuania, Ukraine, the Bahamas, Venezuela and Buenos Aires City. Online casinos are also banned in Brazil, and each casino's own restricted list applies on top: Roobet, for example, refuses the US, Australia, Malta, Cyprus, the Netherlands and the UK." },
   { q: "Does it change a game's RTP?", a: "No. Pragmatic's terms say the promotion does not alter any game's RTP or chance of winning." },
 ];
 
