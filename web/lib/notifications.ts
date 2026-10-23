@@ -2,6 +2,7 @@ import { siteData } from "./site-data";
 import { getSpecFact } from "./spec-sheet";
 import { raceFor } from "./races";
 import { slotArtBySlug } from "./slot-page";
+import { kevinLive, KEVIN_PATH } from "./kevin-promo";
 import reviewsFile from "@/data/slot-reviews.json";
 
 /**
@@ -56,6 +57,11 @@ export function buildNotifications(): Notif[] {
   // New at our pick: Roo Jackpots, while the fact is on Roobet's sheet.
   if (getSpecFact("roobet", "Bonus terms", "Roo Jackpots")) {
     out.push({ id: "pin-roo-jackpots-2026-10", kind: "offer", tag: "New at Roobet", title: "Roo Jackpots: four jackpots, the top one over $1 million", sub: "How the side bet works and what it costs", href: "/guides/roo-jackpots-explained", date: "2026-10-13", pinned: true, brand: "roobet" });
+  }
+
+  // Pragmatic Play x Kevin Hart, pinned while it runs.
+  if (kevinLive()) {
+    out.push({ id: "pin-kevin-hart-2026-10", kind: "offer", tag: "Live promo", title: "Play with Kevin Hart: 500,000+ Free Chip prizes", sub: "Pragmatic Play, until 7 November. No opt-in, cash winnings", href: KEVIN_PATH, date: "2026-10-23", pinned: true, brand: "roobet" });
   }
 
   // The newest guides, by the date each was last passed.

@@ -50,6 +50,8 @@ import { reviewPath } from "@/lib/outbound";
 import { coinHref } from "@/lib/coins";
 import vip from "@/data/vip.json";
 import { CodeChip } from "@/components/ui/CodeChip";
+import { KevinBanner } from "@/components/promo/KevinBanner";
+import { kevinLive } from "@/lib/kevin-promo";
 
 /**
  * Ported from the HOME section of CryptoSlotGuide.dc.html (hero through
@@ -348,6 +350,9 @@ export default function HomePage() {
 
       {/* What the site covers, gliding past: casinos, studios, wallets, interleaved. */}
       <LogoStrip label="Casinos, studios and wallets we cover" items={stripItems} />
+
+      {/* Pragmatic Play x Kevin Hart, until 7 November 2026; hidden in excluded markets and after the end. */}
+      {kevinLive() && <KevinBanner visit={siteData.ops.find((o) => o.slug === "roobet")?.signupUrl ?? "/casinos/roobet"} />}
 
       {/* Top offers */}
       <section id="top-offers" data-reveal style={{ maxWidth: 1400, margin: "0 auto", padding: "68px 40px 0", scrollMarginTop: 120 }}>
