@@ -1,20 +1,19 @@
 import Link from "next/link";
 import { ogCardPath } from "@/lib/og";
-import { sportsFacts, booksForTitle } from "@/lib/sports";
-import { rtpSortValue } from "@/lib/slot-facts";
 import { siteData, siteCounts } from "@/lib/site-data";
-import { allVersionsListedStudios, selfCustodyWallets } from "@/lib/derived";
-import { tintFor } from "@/lib/logo";
-import { DisclosureStrip } from "@/components/layout/DisclosureStrip";
-import { LogoColumns } from "@/components/home/LogoColumns";
-import { topSlotRows, studioCatalogue, slotArtBySlug } from "@/lib/slot-page";
-import { BrandMark } from "@/components/ui/BrandMark";
-import { filterFns } from "@/lib/casino-index";
 import { casinoFacts } from "@/lib/casino-facts";
-import { CasinoCard } from "@/components/casino/CasinoCard";
+import { inHouseOrder } from "@/lib/house-order";
+import { topSlotRows } from "@/lib/slot-page";
+import { raceFor, raceSlugs } from "@/lib/races";
 import { SITE_URL, SITE_NAME } from "@/lib/seo";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { itemListSchema } from "@/lib/schema";
+import { OfferCards } from "@/components/home/OfferCards";
+import { SlotArtCards } from "@/components/home/SlotArtCards";
+import { CodeChip } from "@/components/ui/CodeChip";
+import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
+import { KevinCard } from "@/components/promo/KevinCard";
+import { kevinLive } from "@/lib/kevin-promo";
 
 /**
  * The home page is the one page not built through pageMetadata(), so it was
@@ -34,677 +33,172 @@ export const metadata = {
   },
   twitter: { card: "summary_large_image" as const },
 };
-import { OfferCards } from "@/components/home/OfferCards";
-import { SlotArtCards } from "@/components/home/SlotArtCards";
-import { raceFor, raceSlugs } from "@/lib/races";
-import { TopPicks } from "@/components/home/TopPicks";
-import { topPicks } from "@/lib/top-picks";
-import { CoinIcon } from "@/components/ui/CoinIcon";
-import { COUNTRIES } from "@/lib/legal";
-import { LazyLegalMap } from "@/components/home/LazyLegalMap";
-import { slotPageCount } from "@/lib/slot-page";
-import { inHouseOrder } from "@/lib/house-order";
-import { CountUp } from "@/components/ui/CountUp";
-import { LogoStrip } from "@/components/home/LogoStrip";
-import { reviewPath } from "@/lib/outbound";
-import { coinHref } from "@/lib/coins";
-import vip from "@/data/vip.json";
-import { CodeChip } from "@/components/ui/CodeChip";
-import { KevinBanner } from "@/components/promo/KevinBanner";
-import { kevinLive } from "@/lib/kevin-promo";
+
+const MONO = "var(--font-jetbrains-mono), monospace";
+const GOLD = "#FFC531";
 
 /**
- * Ported from the HOME section of CryptoSlotGuide.dc.html (hero through
- * the featured-reviews grid — search that file for `<!-- HERO -->` and
- * `FEATURED REVIEWS`). Structure/spacing/colors are the real ones; the
- * casino index table below it is this app's own addition (the prototype
- * doesn't have one on the homepage), kept because it's genuinely useful.
+ * Homepage motion. Everything here is decoration on top of a page that reads
+ * the same without it, and the sitewide prefers-reduced-motion rule in
+ * globals.css stops all of it for anyone who has asked for less motion.
  */
-
-const quickChips = [
-  { label: "Bitcoin casinos", href: "/crypto-casinos" },
-  { label: "No-KYC", href: "/crypto-casinos/no-kyc" },
-  { label: "Biggest races", href: "/races" },
-  { label: "Provably fair games", href: "/house-games" },
-  { label: "High RTP slots", href: "/slots" },
-  { label: "Esports betting", href: "/sportsbooks?tab=2" },
-  { label: "Hardware wallets", href: "/wallets" },
-];
-
-/**
- * Featured cards. Every metric is read from siteData; the one-line
- * copy only states what those records (or published terms) show. No
- * per-card dates — nothing here has a real re-test date behind it.
- */
-function buildFeatured() {
-  const { ops, slots, providers, walletRows, exchangeRows, coinsBy, coinDefs } = siteData;
-  const op = (s: string) => ops.find((x) => x.slug === s);
-  const slot = (s: string) => slots.find((x) => x.slug === s);
-  const prov = (s: string) => providers.find((x) => x.slug === s);
-  const wal = (s: string) => walletRows.find((x) => x.slug === s);
-  const exch = (s: string) => exchangeRows.find((x) => x.slug === s);
-
-  const sb = slot("sweet-bonanza");
-  const kr = exch("kraken");
-  const ph = wal("phantom");
-  const hg = prov("hacksaw-gaming");
-  const books = ops.filter((o) => o.sports).length;
-  const lg = wal("ledger");
-
-  const rb = op("roobet");
-  return [
-    { name: "Roobet", mono: "RB", slug: "roobet", cat: "Featured", line: "Roobet says withdrawals are sent instantly on request, charges no fee on crypto withdrawals, and pays rakeback with no wagering multiplier.", metric: rb ? `${casinoFacts(rb).coins.length} coins accepted` : "—", cta: "Profile →", href: "/casinos/roobet" },
-    { name: "Sweet Bonanza", mono: "SWB", slug: "sweet-bonanza", cat: "Slot", line: `Published at ${sb ? `${sb.rtp.toFixed(2)}%` : "its studio RTP"}, but operators can licence a lower build. Check the RTP in the game's info screen before you spin.`, metric: sb ? `${sb.provider} game page` : "—", cta: "Slot review →", href: "/slots/sweet-bonanza" },
-    { name: "Kraken", mono: "KR", slug: "kraken", cat: "Exchange", line: "MiCA-licensed, FCA-registered and publishes proof of reserves — its entry-tier Pro fees are the highest of the five.", metric: `${kr?.m1 ?? "—"} entry taker fee`, cta: "Review →", href: "/exchanges/kraken" },
-    { name: "Stake", mono: "ST", slug: "stake", cat: "Casino", line: `Stake says crypto withdrawals are processed immediately, with no maximum withdrawal. It lists ${casinoFacts(op("stake")!).coins.length} coins on its cashier.`, metric: `${casinoFacts(op("stake")!).coins.length} coins accepted`, cta: "Review →", href: "/casinos/stake" },
-    { name: "Phantom", mono: "PH", slug: "phantom", cat: "Wallet", line: "Solana-first self-custody wallet with transaction previews before you approve, audited by Kudelski and Least Authority.", metric: ph?.m2 ?? "—", cta: "Review →", href: "/wallets/phantom" },
-    { name: "Hacksaw Gaming", mono: "HG", slug: "hacksaw-gaming", cat: "Provider", line: "Lists every RTP version it licenses on each game page, so you can see how low a casino's build could go. Volatility is not for everyone.", metric: hg?.rtp ?? "—", cta: "Studio profile →", href: "/providers/hacksaw-gaming" },
-    { name: "Cloudbet", mono: "CB", slug: "cloudbet", cat: "Sportsbook", line: "Sportsbook and casino on one balance. Its welcome package covers both, paid as cash drops and rakeback over the first 30 days.", metric: `${books} sportsbooks listed`, cta: "Sportsbooks →", href: "/sportsbooks" },
-    { name: "Ledger", mono: "LG", slug: "ledger", cat: "Wallet", line: "Hardware wallet with keys in a Secure Element and a Transaction Check before you sign.", metric: `${lg?.m2 ?? "—"}`, cta: "Review →", href: "/wallets/ledger" },
-  ];
+const MOTION = `
+.csg-path { animation: csg-rise .6s cubic-bezier(.2,.7,.2,1) both; position: relative; overflow: hidden; }
+.csg-path::after { content: ""; position: absolute; inset: 0; background: linear-gradient(115deg, transparent 35%, rgba(255,255,255,.07) 50%, transparent 65%); transform: translateX(-120%); transition: transform .7s ease; pointer-events: none; }
+.csg-path:hover::after { transform: translateX(120%); }
+.csg-path-icon { display: inline-block; transition: transform .35s cubic-bezier(.3,1.6,.5,1); }
+.csg-path:hover .csg-path-icon { transform: translateY(-5px) rotate(-8deg) scale(1.08); }
+.csg-path:hover { border-color: var(--tint) !important; box-shadow: 0 22px 50px rgba(0,0,0,.45), 0 0 0 1px var(--tint), 0 0 34px -8px var(--tint) !important; }
+.csg-home-card .csg-zoom { transition: transform .6s ease; }
+.csg-home-card:hover .csg-zoom { transform: scale(1.04); }
+.csg-shine { position: relative; overflow: hidden; }
+.csg-shine::after { content: ""; position: absolute; top: 0; bottom: 0; width: 40%; left: -60%; background: linear-gradient(100deg, transparent, rgba(255,255,255,.55), transparent); animation: csg-shine 3.8s ease-in-out infinite; }
+@keyframes csg-shine { 0%, 55% { left: -60%; } 100% { left: 130%; } }
+@media (max-width: 640px) {
+  .csg-paths { grid-template-columns: 1fr 1fr !important; gap: 10px !important; }
+  .csg-path { padding: 16px 14px !important; }
+  .csg-path-line { display: none !important; }
+  .csg-path-title { font-size: 17px !important; }
 }
-
-/** The studios the homepage shows: the best-known names; the rest are on /providers. */
-const TOP_STUDIOS = ["pragmatic-play", "hacksaw-gaming", "play-n-go", "nolimit-city", "push-gaming", "relax-gaming"];
+`;
 
 export default function HomePage() {
-  const { ops, slots, houseGames, providers, walletRows, exchangeRows, coinDefs, coinsBy, esportsTitles, criteria } = siteData;
+  const { ops } = siteData;
   const c = siteCounts;
-  const featured = buildFeatured();
-  const featuredOp = ops.find((o) => o.featured);
-  const picks = topPicks();
-  const countryCount = COUNTRIES.length;
-  // Featured placements first, then the fastest stated withdrawals among casinos with a cited offer.
-  /**
-   * The homepage offer list, in the site-wide house order.
-   *
-   * This had its own sort — featured, then stated payout speed, then A-Z — so
-   * the most-seen list on the site ignored the placement order every other list
-   * follows. Stake came seventh, and Shuffle, Rainbet, Gamdom, BC.Game,
-   * Duelbits and 500 Casino were absent entirely: the filter dropped any
-   * casino whose wagering reads "See terms", which is most of them.
-   *
-   * The filter now only asks that a row has something to show, so a casino is
-   * never excluded from the homepage for publishing its terms as prose rather
-   * than a number.
-   */
-  const topOffers = inHouseOrder(ops.filter((o) => !!casinoFacts(o).offer && !/^advertised/i.test(casinoFacts(o).headline))).slice(0, 10);
-  const stripCasinos = inHouseOrder(ops).slice(0, 16).map((o) => ({ slug: o.slug, name: o.name, href: reviewPath(o.slug), kind: "Casino" }));
-  const stripStudios = TOP_STUDIOS.map((sl) => providers.find((p) => p.slug === sl)).filter((p): p is NonNullable<typeof p> => !!p).map((p) => ({ slug: p.slug, name: p.name, href: `/providers/${p.slug}`, kind: "Studio" }));
-  const stripWallets = walletRows.slice(0, 6).map((w) => ({ slug: w.slug, name: w.name, href: `/wallets/${w.slug}`, kind: "Wallet" }));
-  const stripItems = stripCasinos.flatMap((c, i) => [c, ...(i % 2 === 1 ? [stripStudios[(i - 1) / 2], stripWallets[(i - 1) / 2]] : [])]).filter((x): x is NonNullable<typeof x> => !!x);
+  const offers = inHouseOrder(ops.filter((o) => !!casinoFacts(o).offer && !/^advertised/i.test(casinoFacts(o).headline))).slice(0, 4);
+  const roobet = ops.find((o) => o.slug === "roobet");
+  // Our pick's race first, then the biggest by prize money.
+  const races = ["roobet", ...raceSlugs().filter((s) => s !== "roobet")]
+    .map((s) => ({ s, r: raceFor(s), o: ops.find((o) => o.slug === s) }))
+    .filter((x) => x.r && x.o)
+    .slice(0, 4);
 
-  // Highest studio-published RTP — a factual sort, not a rating.
-  const topSlot = [...slots].sort((a, b) => rtpSortValue(b) - rtpSortValue(a))[0];
-
-  const categoryHub = {
-    kicker: "By category",
-    title: "How you want to play",
-    blurb: "Filtered by the operational detail that actually differs — verification, payout speed, and bonus terms.",
-    items: [
-      { label: "No-KYC casinos", href: "/crypto-casinos/no-kyc", filter: "nokyc" as const },
-      { label: "Fastest payouts", href: "/fastest-payouts", filter: "fast" as const },
-      { label: "Lowest wagering", href: "/lowest-wagering", filter: "lowwager" as const },
-      { label: "Casino + sportsbook", href: "/casino-sportsbooks", filter: "sports" as const },
-    ].map((it, i) => {
-      const n = ops.filter(filterFns[it.filter]).length;
-      return { n: String(i + 1).padStart(2, "0"), label: it.label, href: it.href, top: `${n} casinos`, topColor: "#83919A" };
-    }),
-  };
-  const sportsHub = {
-    kicker: "Sportsbooks",
-    title: "Betting with crypto",
-    blurb: "Cash-out, bet builder and payout caps, from each book's own betting rules.",
-    items: [
-      { label: "All sportsbooks", href: "/sportsbooks", n: ops.filter((o) => o.sports).length },
-      { label: "Casinos with esports", href: "/esports-casinos", n: ops.filter((o) => o.esports).length },
-      { label: "State a payout cap", href: "/sportsbooks", n: ops.filter((o) => sportsFacts(o.slug).maxPayout).length },
-      { label: "Offer cash-out", href: "/sportsbooks", n: ops.filter((o) => sportsFacts(o.slug).cashout).length },
-    ].map((it, i) => ({ n: String(i + 1).padStart(2, "0"), label: it.label, href: it.href, top: `${it.n} casinos`, topColor: "#83919A" })),
-  };
-  const esportsHub = {
-    kicker: "Esports",
-    title: "Which books take which titles",
-    blurb: "The casinos that name each title on their own sportsbook pages.",
-    items: esportsTitles.slice(0, 4).map((t, i) => ({
-      n: String(i + 1).padStart(2, "0"),
-      label: t.name,
-      href: `/betting/${slug(t.name)}`,
-      top: `${booksForTitle(t.name).length} books`,
-      topColor: "#83919A",
-    })),
-  };
-  const hubs = [categoryHub, sportsHub, esportsHub];
-
-  const toolLists = [
-    { kicker: "Wallets", title: "Where the bankroll lives", blurb: "Custody model, chain coverage, and how each handles gas.", href: "/wallets", items: [...walletRows].sort((a, b) => a.name.localeCompare(b.name)) },
-    { kicker: "Exchanges", title: "Getting on and off chain", blurb: "Entry fees, fiat rails and withdrawal limits, from each exchange's own pages.", href: "/exchanges", items: [...exchangeRows].sort((a, b) => a.name.localeCompare(b.name)) },
-  ];
-
-  const coinTiles = coinDefs.map((coin) => ({
-    ...coin,
-    count: ops.filter((o) => (coinsBy[o.slug] ?? []).map(String).includes(coin.ticker)).length,
-  }));
-
-  const verticals = [
-    { icon: "♠️", title: "Crypto casinos", tint: "#00C2CC", count: c.casinos, factLabel: "No-KYC", factValue: String(ops.filter((o) => o.kyc === "none").length), href: "/crypto-casinos" },
-    { icon: "🎲", title: "House games", tint: "#FF7EB6", count: houseGames.length, factLabel: "Game types", factValue: String(houseGames.length), href: "/house-games" },
-    { icon: "🎰", title: "Slots & RTP", tint: "#FFB347", count: slotPageCount(), factLabel: topSlot?.name ?? "—", factValue: topSlot ? `${topSlot.rtp.toFixed(1)}%` : "—", href: "/slots" },
-    { icon: "🎮", title: "Game studios", tint: "#B284FF", count: c.providers, factLabel: "All RTPs listed", factValue: String(allVersionsListedStudios(providers)), href: "/providers" },
-    { icon: "⚽", title: "Sportsbooks", tint: "#57E39A", count: c.books, factLabel: "With esports", factValue: String(ops.filter((o) => o.esports).length), href: "/sportsbooks" },
-    { icon: "👛", title: "Wallets", tint: "#6BC7FF", count: c.wallets, factLabel: "Self-custody", factValue: String(selfCustodyWallets(walletRows)), href: "/wallets" },
+  const paths = [
+    { icon: "🎰", title: "Find a casino", line: `The best of ${c.casinos} crypto casinos, by payout speed, bonus and coins.`, href: "/crypto-casinos", cta: "Compare casinos", tint: "#00C2CC" },
+    { icon: "🎁", title: "Get a bonus", line: "Promo codes and welcome offers, with the wagering spelled out.", href: "/bonuses", cta: "See the best offers", tint: GOLD },
+    { icon: "🎮", title: "Find a slot", line: "Top slots with the studio's published RTP, and where to play them.", href: "/slots", cta: "Browse top slots", tint: "#FF7EB6" },
+    { icon: "🌍", title: "Can I play here?", line: "What's legal in your country, and which casinos accept you.", href: "/legal", cta: "Check your country", tint: "#57E39A" },
   ];
 
   return (
     <>
-      {/* Organization and WebSite are sitewide in layout.tsx. What the home
-          page adds is the list it actually leads with — the same operators,
-          in the same order, that CasinoOfferList renders below. No breadcrumb:
-          this is the root. */}
-      <JsonLd
-        data={[
-          itemListSchema(
-            "Crypto casinos we recommend",
-            topOffers.map((o) => ({ name: o.name, path: `/casinos/${o.slug}` }))
-          ),
-        ]}
-      />
-    <main
-      style={{
-        backgroundColor: "#07090B",
-        backgroundImage:
-          "radial-gradient(62% 32% at 90% 11%, rgba(178,132,255,.20), transparent 64%), radial-gradient(56% 28% at 2% 27%, rgba(0,194,204,.19), transparent 66%), radial-gradient(58% 30% at 98% 45%, rgba(255,179,71,.15), transparent 66%), radial-gradient(56% 28% at 0% 61%, rgba(255,126,182,.17), transparent 66%), radial-gradient(64% 32% at 82% 79%, rgba(87,227,154,.14), transparent 66%), radial-gradient(54% 26% at 8% 94%, rgba(107,199,255,.14), transparent 66%)",
-      }}
-    >
-      {/* HERO */}
-      <section style={{ position: "relative", overflow: "hidden", borderBottom: "1px solid rgba(255,255,255,.07)", background: "#090C0F" }}>
-        <LogoColumns />
-        <div style={{ position: "absolute", inset: "-25% -12% -10% -12%", pointerEvents: "none" }} aria-hidden>
-          <span style={{ position: "absolute", top: "2%", left: "4%", width: 440, height: 440, borderRadius: "50%", background: "radial-gradient(circle,rgba(0,194,204,.34),transparent 66%)", animation: "csg-drift 18s ease-in-out infinite" }} />
-          <span style={{ position: "absolute", top: "30%", left: "40%", width: 400, height: 400, borderRadius: "50%", background: "radial-gradient(circle,rgba(178,132,255,.26),transparent 66%)", animation: "csg-drift 23s ease-in-out infinite reverse" }} />
-          <span style={{ position: "absolute", top: 0, right: 0, width: 520, height: 520, borderRadius: "50%", background: "radial-gradient(circle,rgba(255,179,71,.20),transparent 66%)", animation: "csg-drift2 26s ease-in-out infinite" }} />
-          <span style={{ position: "absolute", bottom: "-10%", right: "28%", width: 360, height: 360, borderRadius: "50%", background: "radial-gradient(circle,rgba(255,126,182,.18),transparent 66%)", animation: "csg-drift 30s ease-in-out infinite" }} />
-        </div>
-
-        <div style={{ position: "relative", display: "grid", gridTemplateColumns: "1.02fr .98fr", gap: 64, alignItems: "center", maxWidth: 1400, margin: "0 auto", padding: "78px 40px 30px" }}>
-          <div>
-            <div style={{ display: "inline-flex", alignItems: "center", gap: 9, padding: "6px 13px", border: "1px solid rgba(0,194,204,.32)", borderRadius: 100, background: "rgba(0,194,204,.09)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".06em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 26 }}>
-              <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#00C2CC", animation: "csg-pulse 2.4s ease-in-out infinite" }} />
-              {c.total} products indexed · {c.casinos} crypto casinos
-            </div>
-            <h1 style={{ margin: "0 0 22px", fontSize: 62, lineHeight: 1.02, letterSpacing: "-.035em", fontWeight: 800, fontStretch: "118%", color: "#fff", textWrap: "balance" }}>
-              Crypto casinos
-              <br />
-              <span
-                style={{
-                  backgroundImage: "linear-gradient(96deg,#00C2CC,#7BE0B8,#FFB347,#FF7EB6,#B284FF,#00C2CC)",
-                  backgroundSize: "280% 100%",
-                  WebkitBackgroundClip: "text",
-                  backgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  color: "transparent",
-                  animation: "csg-sweep 11s linear infinite",
-                }}
-              >
+      {/* Organization and WebSite are sitewide in layout.tsx; the home page
+          adds the casino list it leads with, in the same order. */}
+      <JsonLd data={[itemListSchema("Crypto casinos we recommend", offers.map((o) => ({ name: o.name, path: `/casinos/${o.slug}` })))]} />
+      <style>{MOTION}</style>
+      <main style={{ background: "#07090B" }}>
+        {/* 1. One question, four paths */}
+        <section style={{ position: "relative", overflow: "hidden", borderBottom: "1px solid rgba(255,255,255,.07)", background: "#090C0F" }}>
+          <div style={{ position: "absolute", inset: "-25% -12% -10% -12%", pointerEvents: "none" }} aria-hidden>
+            <span style={{ position: "absolute", top: "2%", left: "4%", width: 440, height: 440, borderRadius: "50%", background: "radial-gradient(circle,rgba(0,194,204,.30),transparent 66%)", animation: "csg-drift 18s ease-in-out infinite" }} />
+            <span style={{ position: "absolute", top: "35%", left: "42%", width: 400, height: 400, borderRadius: "50%", background: "radial-gradient(circle,rgba(178,132,255,.22),transparent 66%)", animation: "csg-drift 23s ease-in-out infinite reverse" }} />
+            <span style={{ position: "absolute", top: 0, right: 0, width: 520, height: 520, borderRadius: "50%", background: "radial-gradient(circle,rgba(255,179,71,.18),transparent 66%)", animation: "csg-drift2 26s ease-in-out infinite" }} />
+            <span style={{ position: "absolute", bottom: "-10%", right: "28%", width: 360, height: 360, borderRadius: "50%", background: "radial-gradient(circle,rgba(255,126,182,.16),transparent 66%)", animation: "csg-drift 30s ease-in-out infinite" }} />
+          </div>
+          <div style={{ position: "relative", maxWidth: 1180, margin: "0 auto", padding: "64px 24px 56px", textAlign: "center" }}>
+            <h1 style={{ margin: "0 0 14px", fontSize: "clamp(36px, 5vw, 60px)", lineHeight: 1.04, letterSpacing: "-.035em", fontWeight: 800, color: "#fff", textWrap: "balance" }}>
+              Crypto casinos{" "}
+              <span style={{ backgroundImage: "linear-gradient(96deg,#00C2CC,#7BE0B8,#FFB347,#FF7EB6,#B284FF,#00C2CC)", backgroundSize: "280% 100%", WebkitBackgroundClip: "text", backgroundClip: "text", WebkitTextFillColor: "transparent", color: "transparent", animation: "csg-sweep 11s linear infinite" }}>
                 worth your deposit.
               </span>
             </h1>
-            <p style={{ margin: "0 0 30px", maxWidth: 530, fontSize: 17.5, lineHeight: 1.6, color: "#9AAAB3", textWrap: "pretty" }}>
-              Bonuses, payout times and coins read from each casino&apos;s own terms, and slot RTPs from the studio&apos;s
-              own game page, every fact linked to its source. Pick a casino on the numbers, not the banner.
+            <p style={{ margin: "0 auto 40px", maxWidth: "56ch", fontSize: 17.5, lineHeight: 1.6, color: "#9AAAB3" }}>
+              Every bonus, payout time and RTP is checked against the casino&apos;s or studio&apos;s own page. What are you looking for?
             </p>
-
-            <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginBottom: 18 }}>
-              <a href="#top-offers" className="csg-lift" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "14px 22px", borderRadius: 12, background: "#FFC531", color: "#0A0D0F", fontSize: 15, fontWeight: 800, boxShadow: "0 14px 34px rgba(255,197,49,.22)" }}>
-                See the top casinos <span aria-hidden>↓</span>
-              </a>
-              <Link href="/slots" className="csg-lift" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "14px 20px", borderRadius: 12, border: "1px solid rgba(255,255,255,.16)", background: "rgba(255,255,255,.04)", color: "#E8EDF0", fontSize: 15, fontWeight: 700 }}>
-                Top slots by RTP <span aria-hidden style={{ color: "#00C2CC" }}>→</span>
-              </Link>
-            </div>
-
-            <div style={{ display: "flex", gap: 7, flexWrap: "wrap", marginBottom: 26 }}>
-              {quickChips.map((chip) => (
-                <Link
-                  key={chip.label}
-                  href={chip.href}
-                  className="hover:!border-accent hover:!text-accent hover:!bg-accent-wash"
-                  style={{
-                    padding: "7px 13px",
-                    borderRadius: 100,
-                    border: "1px solid rgba(255,255,255,.12)",
-                    background: "rgba(255,255,255,.03)",
-                    fontFamily: "var(--font-jetbrains-mono), monospace",
-                    fontSize: 11,
-                    color: "#A8B6BE",
-                  }}
-                >
-                  {chip.label}
+            <div className="csg-paths" data-keep-grid style={{ display: "grid", gap: 16, gridTemplateColumns: "repeat(4, minmax(0, 1fr))", textAlign: "left" }}>
+              {paths.map((p, i) => (
+                <Link key={p.title} href={p.href} className="csg-lift csg-path" style={{ ["--tint" as string]: p.tint, animationDelay: `${120 + i * 90}ms`, display: "flex", flexDirection: "column", gap: 10, padding: "24px 22px", borderRadius: 18, background: "rgba(15,20,24,.85)", backdropFilter: "blur(6px)", border: `1px solid ${p.tint}55`, boxShadow: "0 18px 40px rgba(0,0,0,.35)", transition: "border-color .25s, box-shadow .25s, transform .25s" }}>
+                  <span className="csg-path-icon" style={{ fontSize: 34, lineHeight: 1 }} aria-hidden>{p.icon}</span>
+                  <span className="csg-path-title" style={{ fontSize: 21, fontWeight: 800, color: "#fff", letterSpacing: "-.01em" }}>{p.title}</span>
+                  <span className="csg-path-line" style={{ fontSize: 14.5, lineHeight: 1.5, color: "#A8B6BE", flex: 1 }}>{p.line}</span>
+                  <span style={{ fontSize: 14.5, fontWeight: 700, color: p.tint }}>{p.cta} →</span>
                 </Link>
               ))}
             </div>
-
-            <div style={{ display: "flex", gap: 32, flexWrap: "wrap", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, color: "#83919A" }}>
-              <span><strong style={{ color: "#DCE5E9", fontWeight: 500 }}><CountUp value={c.casinos} /></strong> crypto casinos listed</span>
-              <span><strong style={{ color: "#DCE5E9", fontWeight: 500 }}><CountUp value={slotPageCount()} /></strong> slots with published RTPs</span>
-              <span><strong style={{ color: "#DCE5E9", fontWeight: 500 }}><CountUp value={c.providers} /></strong> game studios profiled</span>
-            </div>
-          </div>
-
-          {/* Featured pick, rotating one per vertical. The casino is first on
-              load, so the card a first visit sees is unchanged. */}
-          {picks.length > 0 && (
-            <div style={{ alignSelf: "center", width: "100%", maxWidth: 460, justifySelf: "end", animation: "csg-rise .5s ease both" }}>
-              <TopPicks picks={picks} />
-            </div>
-          )}
-        </div>
-
-        {/* Vertical strip */}
-        <div style={{ position: "relative", maxWidth: 1400, margin: "0 auto", padding: "0 40px 8px" }}>
-          <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-6" style={{ minWidth: 0, gap: 12 }}>
-            {verticals.map((v) => (
-              <Link
-                key={v.title}
-                href={v.href}
-                className="group"
-                style={{
-                  position: "relative",
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: 11,
-                  padding: "20px 22px",
-                  borderRadius: 15,
-                  background: "rgba(255,255,255,.025)",
-                  border: "1px solid rgba(255,255,255,.08)",
-                  overflow: "hidden",
-                  transition: "transform .18s ease, border-color .18s ease, background .18s ease",
-                }}
-              >
-                <span style={{ position: "absolute", top: 0, left: 0, right: 0, height: 2, background: `linear-gradient(90deg,${v.tint},transparent)` }} />
-                <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                  <span style={{ fontSize: 19, lineHeight: 1 }}>{v.icon}</span>
-                  <span style={{ fontSize: 17, fontWeight: 700, letterSpacing: "-.022em", color: "#fff" }}>{v.title}</span>
-                </div>
-                <div style={{ display: "flex", alignItems: "baseline", gap: 8, flexWrap: "wrap", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, letterSpacing: ".05em", color: "#83919A" }}>
-                  <span style={{ color: v.tint }}><CountUp value={v.count} ms={1100} /></span>
-                  <span>listed</span>
-                </div>
-                <div style={{ display: "flex", alignItems: "baseline", gap: 7, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12.5, letterSpacing: ".04em", color: "#9AAAB3", minWidth: 0 }}>
-                  <span style={{ overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{v.factLabel}</span>
-                  <span style={{ color: "#fff" }}>{v.factValue}</span>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-
-        {/* Live crypto price ticker — replaced the tickerFacts strip (static
-            hand-authored copy claiming specific measured events like "Roobet
-            withdrawal cleared in 3m 58s") that read as fabricated activity
-            logging once nothing behind it was real. */}
-        <div style={{ position: "relative", maxWidth: 1400, margin: "0 auto", padding: "0 40px 26px" }}>
-          <DisclosureStrip />
-        </div>
-      </section>
-
-      {/* What the site covers, gliding past: casinos, studios, wallets, interleaved. */}
-      <LogoStrip label="Casinos, studios and wallets we cover" items={stripItems} />
-
-      {/* Pragmatic Play x Kevin Hart, until 7 November 2026; hidden in excluded markets and after the end. */}
-      {kevinLive() && <KevinBanner visit={siteData.ops.find((o) => o.slug === "roobet")?.signupUrl ?? "/casinos/roobet"} />}
-
-      {/* Top offers */}
-      <section id="top-offers" data-reveal style={{ maxWidth: 1400, margin: "0 auto", padding: "68px 40px 0", scrollMarginTop: 120 }}>
-        <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 32, flexWrap: "wrap", marginBottom: 22 }}>
-          <div>
-            <h2 style={{ margin: "0 0 8px", fontSize: 32, letterSpacing: "-.03em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Top casino offers</h2>
-            <p style={{ margin: 0, fontSize: 15, color: "#8DA0AA" }}>Welcome offers, withdrawal speed and coins at a glance, each backed by the casino&apos;s own terms.</p>
-          </div>
-          <Link href="/crypto-casinos" style={{ fontSize: 14, fontWeight: 600, color: "#00C2CC", whiteSpace: "nowrap" }}>
-            All {c.casinos} casinos →
-          </Link>
-        </div>
-        <OfferCards ops={topOffers.slice(0, 8)} />
-      </section>
-
-      {/* Our VIP team: any player, VIP transfers welcome. */}
-      {vip.telegram && (
-        <section data-reveal style={{ maxWidth: 1400, margin: "0 auto", padding: "28px 40px 0" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 22, flexWrap: "wrap", padding: "22px 26px", borderRadius: 16, background: "radial-gradient(90% 140% at 0% 50%, rgba(34,158,217,.2), transparent 60%), radial-gradient(70% 140% at 100% 50%, rgba(255,197,49,.1), transparent 60%), #0C1114", border: "1px solid rgba(34,158,217,.32)" }}>
-            <span style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 54, height: 54, flex: "none", borderRadius: 15, background: "linear-gradient(140deg, #3FB6F0, #1B7FC0)", boxShadow: "0 10px 24px rgba(34,158,217,.35)" }}>
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2" strokeLinejoin="round" aria-hidden>
-                <path d="M6 3h12l4 6-10 12L2 9z" />
-                <path d="M2 9h20M9 3l3 18 3-18" strokeOpacity=".7" />
-              </svg>
-            </span>
-            <div style={{ flex: "1 1 320px", minWidth: 0 }}>
-              <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".1em", textTransform: "uppercase", color: "#7CC8EE", marginBottom: 5 }}>{vip.name} · VIP</div>
-              <div style={{ fontSize: 22, fontWeight: 800, letterSpacing: "-.02em", color: "#fff", marginBottom: 4 }}>Exclusive casino VIP team</div>
-              <div style={{ fontSize: 14.5, lineHeight: 1.5, color: "#B7C4CB" }}>Chasing better rewards? CasinoPerks looks after players at Roobet. Already VIP at another casino? They&apos;ll move your status over to Roobet. New to Roobet? Sign up with code <CodeChip code={vip.code ?? "ELITE"} tint="#3FB6F0" size="sm" bare /> and they&apos;ll set you up with a 20% deposit match up to $500 plus up to 600 free spins. Just message them on Telegram.</div>
-            </div>
-            <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-              <a href={vip.telegram} target="_blank" rel="noopener noreferrer" className="csg-lift" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "13px 20px", borderRadius: 12, background: "#229ED9", color: "#fff", fontSize: 14.5, fontWeight: 800, whiteSpace: "nowrap", boxShadow: "0 10px 24px rgba(34,158,217,.3)" }}>
-                Message on Telegram
-              </a>
-              <Link href="/casinos/roobet" style={{ display: "inline-flex", alignItems: "center", padding: "13px 18px", borderRadius: 12, border: "1px solid rgba(255,255,255,.16)", color: "#E8EDF0", fontSize: 14, fontWeight: 700, whiteSpace: "nowrap" }}>
-                Roobet review
-              </Link>
-            </div>
+            <p style={{ margin: "22px 0 0", fontSize: 13.5, color: "#7F8D96" }}>
+              Also: <Link href="/sportsbooks" style={{ color: "#A8B6BE" }}>Sportsbooks</Link> · <Link href="/prediction-markets" style={{ color: "#A8B6BE" }}>Prediction markets</Link> · <Link href="/wallets" style={{ color: "#A8B6BE" }}>Wallets</Link> · <Link href="/guides" style={{ color: "#A8B6BE" }}>Guides</Link>
+            </p>
           </div>
         </section>
-      )}
 
-      {/* Biggest races */}
-      <section data-reveal style={{ maxWidth: 1400, margin: "0 auto", padding: "56px 40px 0" }}>
-        <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 32, flexWrap: "wrap", marginBottom: 18 }}>
-          <div>
-            <h2 style={{ margin: "0 0 8px", fontSize: 32, letterSpacing: "-.03em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Biggest races & raffles</h2>
-            <p style={{ margin: 0, fontSize: 15, color: "#8DA0AA" }}>Daily, weekly and monthly prize pools you enter just by playing.</p>
-          </div>
-          <Link href="/races" style={{ fontSize: 14, fontWeight: 600, color: "#00C2CC", whiteSpace: "nowrap" }}>
-            All races →
-          </Link>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5" style={{ gap: 12 }}>
-          {["roobet", ...raceSlugs().filter((x) => x !== "roobet")].slice(0, 5).map((s) => {
-            const op = ops.find((x) => x.slug === s)!;
-            return (
-              <Link key={s} href={`/casinos/${s}`} style={{ display: "flex", flexDirection: "column", gap: 10, padding: 18, borderRadius: 16, background: "radial-gradient(120% 90% at 100% 0%, rgba(214,182,92,.12), transparent 60%), #0C1013", border: "1px solid rgba(214,182,92,.2)" }}>
-                <span style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                  <span style={{ width: 30, height: 30, flex: "none", borderRadius: 8, overflow: "hidden" }}>
-                    <BrandMark slug={s} mono={op.mono} tint={tintFor(s)} radius={8} fontSize={10} />
-                  </span>
-                  <span style={{ fontSize: 15, fontWeight: 800, color: "#fff" }}>{op.name}</span>
-                </span>
-                <span style={{ fontSize: 17, lineHeight: 1.25, fontWeight: 800, color: "#fff" }}>{raceFor(s)!.label}</span>
-                <span style={{ fontSize: 13, fontWeight: 700, color: "#D6B65C" }}>View offer →</span>
-              </Link>
-            );
-          })}
-        </div>
-      </section>
-
-      {/* Slots */}
-      <section data-reveal style={{ maxWidth: 1400, margin: "0 auto", padding: "58px 40px 0" }}>
-        <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 32, flexWrap: "wrap", marginBottom: 22 }}>
-          <div>
-            <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 12 }}>Slots</div>
-            <h2 style={{ margin: "0 0 9px", fontSize: 32, letterSpacing: "-.03em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Slots worth the volatility</h2>
-            <p style={{ margin: 0, fontSize: 15, color: "#8DA0AA", maxWidth: "70ch", textWrap: "pretty" }}>
-              RTP is configurable: a casino can ship the same game at 96.5% or 94%. Each figure below is the return the studio publishes, and every slot has a full review.
-            </p>
-          </div>
-          <Link href="/slots" style={{ fontSize: 14, fontWeight: 600, color: "#00C2CC", whiteSpace: "nowrap" }}>
-            All {topSlotRows().length} top slots →
-          </Link>
-        </div>
-        <SlotArtCards rows={topSlotRows().slice(0, 8)} />
-      </section>
-
-      {/* Featured reviews */}
-      <section data-reveal style={{ maxWidth: 1400, margin: "0 auto", padding: "68px 40px 0" }}>
-        <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 32, flexWrap: "wrap", marginBottom: 22 }}>
-          <div>
-            <h2 style={{ margin: "0 0 8px", fontSize: 32, letterSpacing: "-.03em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>
-              Latest reviews
-            </h2>
-            <p style={{ margin: 0, fontSize: 15, color: "#8DA0AA" }}>
-              Across every vertical we cover. Figures come from the index; each review says what was checked and how.
-            </p>
-          </div>
-          <Link href="/search" style={{ fontSize: 14, fontWeight: 600, color: "#00C2CC", whiteSpace: "nowrap" }}>
-            All {c.total} listings →
-          </Link>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" style={{ minWidth: 0, gap: 12 }}>
-          {featured.map((f) => (
-            <Link
-              key={f.slug}
-              href={f.href}
-              className="hover:!border-white/18 hover:!bg-[#0F1417]"
-              style={{ display: "flex", flexDirection: "column", padding: 20, borderRadius: 13, background: "rgba(12,16,19,.66)", border: "1px solid rgba(255,255,255,.06)" }}
-            >
-              <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
-                <div style={{ width: 54, height: 40, flex: "none", borderRadius: 7, overflow: "hidden" }}>
-                  {f.cat === "Slot" && slotArtBySlug(f.slug) ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img src={slotArtBySlug(f.slug)!} alt="" loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
-                  ) : (
-                    <BrandMark slug={f.slug} mono={f.mono} tint={tintFor(f.slug)} radius={7} fontSize={12} />
-                  )}
-                </div>
-                <div style={{ minWidth: 0 }}>
-                  <div style={{ fontSize: 14.5, fontWeight: 600, color: "#E8EDF0", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{f.name}</div>
-                  <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".06em", textTransform: "uppercase", color: "#00C2CC", marginTop: 2 }}>{f.cat}</div>
-                </div>
-              </div>
-              <p style={{ margin: "0 0 16px", fontSize: 13, lineHeight: 1.55, color: "#8DA0AA", textWrap: "pretty" }}>{f.line}</p>
-              <div style={{ marginTop: "auto", paddingTop: 14, borderTop: "1px solid rgba(255,255,255,.06)", display: "flex", justifyContent: "space-between", gap: 10, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#77858E" }}>
-                <span>{f.metric}</span>
-                <span style={{ color: "#00C2CC" }}>{f.cta}</span>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      {/* Providers */}
-      <section data-reveal style={{ maxWidth: 1400, margin: "0 auto", padding: "58px 40px 0" }}>
-        <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 16, flexWrap: "wrap", marginBottom: 20 }}>
-          <div>
-            <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 12 }}>Providers</div>
-            <h2 style={{ margin: "0 0 9px", fontSize: 32, letterSpacing: "-.03em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Who actually makes the games</h2>
-            <p style={{ margin: 0, fontSize: 15, color: "#8DA0AA", maxWidth: "70ch" }}>The studios behind the slots crypto players reach for most, with the RTPs each one publishes.</p>
-          </div>
-          <Link href="/providers" style={{ fontSize: 14, fontWeight: 600, color: "#00C2CC", whiteSpace: "nowrap" }}>All {providers.length} studios →</Link>
-        </div>
-        {/* One row of the best-known studios; every profile is a click away
-            on /providers rather than a wall of 24 cards on the homepage. */}
-        <div style={{ display: "grid", minWidth: 0, gridTemplateColumns: "repeat(auto-fit,minmax(178px,1fr))", gap: 12 }}>
-          {TOP_STUDIOS.map((s) => providers.find((p) => p.slug === s)).filter((p): p is NonNullable<typeof p> => !!p).map((p) => (
-            <Link key={p.slug} href={`/providers/${p.slug}`} className="hover:!border-accent hover:!bg-[#111619]" style={{ display: "block", padding: 20, borderRadius: 13, background: "rgba(14,18,21,.72)", border: "1px solid rgba(255,255,255,.06)" }}>
-              <div style={{ width: 40, height: 40, marginBottom: 16 }}>
-                <BrandMark slug={p.slug} mono={p.mono} tint={p.tint} fontSize={12} />
-              </div>
-              <div style={{ fontSize: 14.5, fontWeight: 600, color: "#E8EDF0", marginBottom: 5 }}>{p.name}</div>
-              <div style={{ fontSize: 12, lineHeight: 1.5, color: "#7B8A93", marginBottom: 14, display: "-webkit-box", WebkitLineClamp: 3, WebkitBoxOrient: "vertical", overflow: "hidden" }}>{p.note}</div>
-              <div style={{ display: "flex", flexDirection: "column", gap: 6, paddingTop: 12, borderTop: "1px solid rgba(255,255,255,.07)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#83919A" }}>
-                <div style={{ display: "flex", justifyContent: "space-between", gap: 8 }}><span>rtp</span><span style={{ color: "#C3CFD5", textAlign: "right" }}>{p.rtp}</span></div>
-                {/* The slots we hold for the studio, not the studio's own stated
-                    catalogue size, which most do not publish ("not stated" on
-                    every card read as a gap in our data). */}
-                <div style={{ display: "flex", justifyContent: "space-between", gap: 8 }}><span>slots</span><span style={{ color: "#C3CFD5", textAlign: "right" }}>{studioCatalogue(p.name).titles ? studioCatalogue(p.name).titles.toLocaleString("en-GB") : p.titlesStated ?? "—"}</span></div>
-                
-              </div>
-            </Link>
-          ))}
-        </div>
-        <div style={{ marginTop: 16, textAlign: "center" }}>
-          <Link href="/providers" className="transition-colors hover:!border-white/25" style={{ display: "inline-flex", padding: "11px 18px", borderRadius: 10, border: "1px solid rgba(255,255,255,.14)", fontSize: 14, fontWeight: 700, color: "#DCE5E9" }}>
-            Read about all {providers.length} studios →
-          </Link>
-        </div>
-      </section>
-
-      {/* Start here — the tools and maps, which otherwise only live in the menu.
-          Sits below the reviews, not above them. It used to break the run of
-          commercial sections (offers → races → reviews) three sections in,
-          sending a reader who had just seen ten offers off to a calculator
-          instead of to the prize pools and the reviews that follow. Tools are
-          worth having on the page; they are not worth interrupting that. */}
-      <section data-reveal style={{ maxWidth: 1400, margin: "0 auto", padding: "56px 40px 0" }}>
-        <div style={{ marginBottom: 20 }}>
-          <h2 style={{ margin: "0 0 8px", fontSize: 32, letterSpacing: "-.03em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Start here</h2>
-          <p style={{ margin: 0, fontSize: 15, color: "#8DA0AA" }}>Answer the question you actually came with — where you can play, what an offer is worth, and which build of a slot a casino ships.</p>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-4" style={{ gap: 12 }}>
-          {[
-            { href: "/find-my-casino", label: "Find my casino", hint: "Three questions, matched against each casino's own terms." },
-            { href: "/bonuses", label: "Every bonus", hint: "Welcome offers and rewards with the wagering each carries." },
-            { href: "/vip-calculator", label: "VIP calculator", hint: "What rank your wager reaches at each published ladder." },
-            { href: "/rtp-watch", label: "RTP Watch", hint: "Which casinos ship a cut build of the same slot." },
-            { href: "/legal", label: "Gambling laws", hint: "45 countries and all 50 US states, from their regulators." },
-            { href: "/sweepstakes-casinos", label: "US sweepstakes", hint: "The legal US route, with each casino's excluded states." },
-            { href: "/compare", label: "Head to head", hint: "Two casinos, the same rows, the better figure marked." },
-            { href: "/fastest-payouts", label: "Fastest payouts", hint: "Ranked on the withdrawal time each operator states." },
-          ].map((t) => (
-            <Link
-              key={t.href}
-              href={t.href}
-              className="transition-colors hover:border-white/20 hover:bg-white/[0.04]"
-              style={{ display: "flex", flexDirection: "column", gap: 7, padding: "18px 20px", borderRadius: 15, background: "rgba(255,255,255,.025)", border: "1px solid rgba(255,255,255,.08)" }}
-            >
-              <span style={{ fontSize: 16, fontWeight: 800, letterSpacing: "-.018em", color: "#fff" }}>
-                {t.label} <span aria-hidden style={{ color: "#00C2CC" }}>→</span>
-              </span>
-              <span style={{ fontSize: 13, lineHeight: 1.5, color: "#8DA0AA" }}>{t.hint}</span>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      {/* Where you can play. The map is the site's most distinctive tool and
-          was buried two clicks deep; it earns its place on the homepage by
-          answering the first question a reader actually has. */}
-      <section data-reveal style={{ maxWidth: 1400, margin: "0 auto", padding: "58px 40px 0" }}>
-        <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 16, flexWrap: "wrap", marginBottom: 8 }}>
-          <h2 style={{ margin: 0, fontSize: 26, letterSpacing: "-.025em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Where you can play</h2>
-          <Link href="/legal" className="hover:!text-accent" style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11.5, letterSpacing: ".05em", color: "#00C2CC" }}>
-            Open the full map →
-          </Link>
-        </div>
-        <p style={{ margin: "0 0 20px", maxWidth: "70ch", fontSize: 15, lineHeight: 1.6, color: "#8DA0AA" }}>
-          Online casino law in {countryCount} countries and every US state, each status taken from the regulator&apos;s or government&apos;s own pages. Hover a country, or
-          click through for who licenses it, the minimum age and what the legislature is doing about it.
-        </p>
-        <div style={{ padding: 18, borderRadius: 20, background: "#0B0F12", border: "1px solid rgba(255,255,255,.07)" }}>
-          <LazyLegalMap />
-        </div>
-        <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginTop: 14 }}>
-          <Link href="/legal/us" className="hover:!border-accent" style={{ padding: "9px 14px", borderRadius: 100, border: "1px solid rgba(255,255,255,.14)", fontSize: 13, color: "#C6D1D7" }}>
-            US state by state →
-          </Link>
-          <Link href="/legal/europe" className="hover:!border-accent" style={{ padding: "9px 14px", borderRadius: 100, border: "1px solid rgba(255,255,255,.14)", fontSize: 13, color: "#C6D1D7" }}>
-            Europe →
-          </Link>
-          <Link href="/sweepstakes-casinos" className="hover:!border-accent" style={{ padding: "9px 14px", borderRadius: 100, border: "1px solid rgba(255,255,255,.14)", fontSize: 13, color: "#C6D1D7" }}>
-            US sweepstakes casinos →
-          </Link>
-        </div>
-      </section>
-
-      {/* By coin */}
-      <section data-reveal style={{ maxWidth: 1400, margin: "0 auto", padding: "58px 40px 0" }}>
-        <h2 style={{ margin: "0 0 8px", fontSize: 26, letterSpacing: "-.025em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Casinos by coin</h2>
-        <p style={{ margin: "0 0 20px", fontSize: 15, color: "#8DA0AA" }}>Deposit rails differ per chain. These pages compare confirmation counts, minimums, and who pays the network fee.</p>
-        <div className="grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-8" style={{ minWidth: 0, gap: 12 }}>
-          {coinTiles.map((coin) => (
-            <Link key={coin.ticker} href={coinHref(coin)} className="hover:!border-accent hover:!bg-[#111619]" style={{ display: "block", padding: 20, borderRadius: 13, background: "rgba(14,18,21,.72)", border: "1px solid rgba(255,255,255,.06)" }}>
-              {/* The coin's own mark, not its ticker set in type — CoinIcon
-                  carries the brand assets and falls back to the glyph. */}
-              <span style={{ display: "block", marginBottom: 14 }}>
-                <CoinIcon ticker={coin.ticker} size={34} />
-              </span>
-              <div style={{ fontSize: 15, fontWeight: 700, color: "#E8EDF0", marginBottom: 4 }}>{coin.name}</div>
-              <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#83919A" }}>{coin.count} casinos →</div>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      {/* Category / sports / esports hubs */}
-      <section data-reveal style={{ maxWidth: 1400, margin: "0 auto", padding: "56px 40px 0" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))", gap: 14 }}>
-          {hubs.map((h) => (
-            <div key={h.kicker} style={{ padding: 26, borderRadius: 14, background: "rgba(12,16,19,.66)", border: "1px solid rgba(255,255,255,.06)" }}>
-              <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 16 }}>{h.kicker}</div>
-              <h3 style={{ margin: "0 0 6px", fontSize: 20, letterSpacing: "-.02em", fontWeight: 700, color: "#fff" }}>{h.title}</h3>
-              <p style={{ margin: "0 0 20px", fontSize: 13.5, lineHeight: 1.55, color: "#8DA0AA" }}>{h.blurb}</p>
-              <div style={{ display: "flex", flexDirection: "column", gap: 1, background: "rgba(255,255,255,.06)", borderRadius: 9, overflow: "hidden" }}>
-                {h.items.map((it) => (
-                  <Link key={it.label} href={it.href} className="hover:!bg-[#141A1E] hover:!text-white" style={{ display: "flex", alignItems: "center", gap: 10, padding: "11px 14px", background: "#0F1417", fontSize: 13, color: "#C3CFD5" }}>
-                    <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#77858E", width: 14 }}>{it.n}</span>
-                    <span style={{ flex: 1 }}>{it.label}</span>
-                    <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: it.topColor, whiteSpace: "nowrap" }}>{it.top}</span>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Wallets & exchanges */}
-      <section data-reveal style={{ maxWidth: 1400, margin: "0 auto", padding: "56px 40px 0" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(340px,1fr))", gap: 14 }}>
-          {toolLists.map((t) => (
-            <div key={t.kicker} style={{ padding: 26, borderRadius: 14, background: "rgba(12,16,19,.66)", border: "1px solid rgba(255,255,255,.06)" }}>
-              <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 16, marginBottom: 18 }}>
-                <div>
-                  <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 10 }}>{t.kicker}</div>
-                  <h3 style={{ margin: "0 0 5px", fontSize: 21, letterSpacing: "-.02em", fontWeight: 700, color: "#fff" }}>{t.title}</h3>
-                  <p style={{ margin: 0, fontSize: 13.5, color: "#8DA0AA" }}>{t.blurb}</p>
-                </div>
-                <Link href={t.href} style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#00C2CC", whiteSpace: "nowrap" }}>
-                  view all →
+        {/* 2. This week */}
+        <section data-reveal style={{ maxWidth: 1180, margin: "0 auto", padding: "56px 24px 0" }}>
+          <div style={{ fontFamily: MONO, fontSize: 11, letterSpacing: ".09em", textTransform: "uppercase", color: GOLD, marginBottom: 10 }}>This week</div>
+          <h2 style={{ margin: "0 0 20px", fontSize: 30, letterSpacing: "-.025em", fontWeight: 800, color: "#fff" }}>The offers worth your time</h2>
+          <div style={{ display: "grid", gap: 16, gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))" }}>
+            {roobet?.promoCode && (
+              <div className="csg-lift" style={{ display: "flex", flexDirection: "column", gap: 12, padding: 24, borderRadius: 18, background: "radial-gradient(120% 90% at 50% 0%, rgba(255,197,49,.14), transparent 60%), #0F1418", border: "1px solid rgba(255,197,49,.4)" }}>
+                <span style={{ fontFamily: MONO, fontSize: 11, color: GOLD }}>OUR PICK · ROOBET</span>
+                <span style={{ fontSize: 22, fontWeight: 800, color: "#fff" }}>20% up to $500 + up to 600 free spins</span>
+                <span style={{ fontSize: 14.5, lineHeight: 1.5, color: "#A8B6BE" }}>Sign up with the code, then claim the package through CasinoPerks, the exclusive casino VIP team, on Telegram.</span>
+                <CodeChip code={roobet.promoCode} tint={GOLD} />
+                <Link href="/promo-codes/roobet" className="csg-shine" style={{ marginTop: 4, textAlign: "center", padding: "13px 16px", borderRadius: 12, background: "linear-gradient(180deg,#FFD866,#FFC531)", color: "#141007", fontSize: 15, fontWeight: 800 }}>
+                  Get the Roobet offer →
                 </Link>
+                <GeoBlockNote slug="roobet" name={roobet.name} compact />
               </div>
-              <div style={{ display: "flex", flexDirection: "column", gap: 1, background: "rgba(255,255,255,.06)", borderRadius: 10, overflow: "hidden" }}>
-                {t.items.map((it) => (
-                  <Link
-                    key={it.slug}
-                    href={`${t.href}/${it.slug}`}
-                    className="hover:!bg-[#141A1E]"
-                    style={{ display: "grid", gridTemplateColumns: "56px minmax(90px,1fr) minmax(110px,1.4fr)", alignItems: "center", gap: 12, padding: "12px 14px", background: "#0F1417" }}
-                  >
-                    <div style={{ width: 30, height: 30 }}>
-                      <BrandMark slug={it.slug} mono={it.mono} tint={t.kicker === "Wallets" ? "#9B8FC4" : "#5FE3E8"} fontSize={10} />
-                    </div>
-                    <span style={{ fontSize: 13.5, fontWeight: 600, color: "#E8EDF0", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{it.name}</span>
-                    <span style={{ fontSize: 12, color: "#7B8A93", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{it.note}</span>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Methodology teaser */}
-      <section data-reveal style={{ maxWidth: 1400, margin: "0 auto", padding: "60px 40px 80px" }}>
-        <div style={{ padding: 44, borderRadius: 16, background: "linear-gradient(150deg,#0E1417,#0A0E10)", border: "1px solid rgba(255,255,255,.07)" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "minmax(260px,.85fr) minmax(300px,1.15fr)", gap: 56, alignItems: "start" }}>
-            <div>
-              <h2 style={{ margin: "0 0 14px", fontSize: 30, letterSpacing: "-.03em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Six criteria. No paid placement in a review.</h2>
-              <p style={{ margin: "0 0 22px", fontSize: 15, lineHeight: 1.65, color: "#8DA0AA", textWrap: "pretty" }}>
-                Crypto casinos, wallets and exchanges are reviewed against their own published terms, and every fact in a review is cited. Slots and providers are assessed from published paytables and the studios&apos; stated RTPs. Commercial relationships are disclosed on every page and never change what a review says.
-              </p>
-              <Link href="/how-we-rate" style={{ display: "inline-flex", alignItems: "center", gap: 8, fontSize: 14, fontWeight: 600, color: "#00C2CC" }}>
-                Read the full methodology <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace" }}>→</span>
-              </Link>
-            </div>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(220px,1fr))", gap: 1, background: "rgba(255,255,255,.07)", borderRadius: 12, overflow: "hidden" }}>
-              {criteria.map((cr) => (
-                <div key={cr.name} style={{ padding: "18px 20px", background: "rgba(12,16,19,.66)" }}>
-                  <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 10, marginBottom: 8 }}>
-                    <span style={{ fontSize: 13.5, fontWeight: 600, color: "#E8EDF0" }}>{cr.name}</span>
-                  </div>
-                  <div style={{ fontSize: 12, lineHeight: 1.5, color: "#75858E" }}>{cr.desc}</div>
-                </div>
-              ))}
-            </div>
+            )}
+            {kevinLive() && <KevinCard />}
           </div>
-        </div>
-      </section>
-    </main>
-  </>
-  );
-}
 
-function slug(name: string): string {
-  return name
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/(^-|-$)/g, "");
+          {/* Races line */}
+          {races.length > 0 && (
+            <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "8px 14px", marginTop: 16, padding: "14px 18px", borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.08)", fontSize: 14 }}>
+              <span style={{ display: "inline-flex", alignItems: "center", gap: 8, fontWeight: 800, color: "#fff" }}>
+                <span style={{ width: 8, height: 8, borderRadius: "50%", background: "#57E39A", animation: "csg-pulse 2.4s ease-in-out infinite" }} aria-hidden />
+                🏁 Races &amp; raffles
+              </span>
+              {races.map(({ s, r, o }) => (
+                <Link key={s} href={`/casinos/${s}`} style={{ color: "#A8B6BE" }}>
+                  <strong style={{ color: "#E8EDF0" }}>{o!.name}</strong> {r!.label}
+                </Link>
+              ))}
+              <Link href="/races" style={{ marginLeft: "auto", fontWeight: 700, color: "#57E39A" }}>All races →</Link>
+            </div>
+          )}
+        </section>
+
+        {/* 3. Top casinos */}
+        <section data-reveal id="top-offers" style={{ maxWidth: 1180, margin: "0 auto", padding: "60px 24px 0", scrollMarginTop: 120 }}>
+          <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 16, flexWrap: "wrap", marginBottom: 20 }}>
+            <div>
+              <div style={{ fontFamily: MONO, fontSize: 11, letterSpacing: ".09em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 10 }}>Casinos</div>
+              <h2 style={{ margin: 0, fontSize: 30, letterSpacing: "-.025em", fontWeight: 800, color: "#fff" }}>Our top 4 crypto casinos</h2>
+            </div>
+            <Link href="/crypto-casinos" style={{ fontSize: 15, fontWeight: 700, color: "#00C2CC" }}>Compare all {c.casinos} →</Link>
+          </div>
+          <OfferCards ops={offers} />
+        </section>
+
+        {/* 4. Top slots */}
+        <section data-reveal style={{ maxWidth: 1180, margin: "0 auto", padding: "60px 24px 0" }}>
+          <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 16, flexWrap: "wrap", marginBottom: 20 }}>
+            <div>
+              <div style={{ fontFamily: MONO, fontSize: 11, letterSpacing: ".09em", textTransform: "uppercase", color: "#FF7EB6", marginBottom: 10 }}>Slots</div>
+              <h2 style={{ margin: 0, fontSize: 30, letterSpacing: "-.025em", fontWeight: 800, color: "#fff" }}>Top slots right now</h2>
+            </div>
+            <Link href="/slots" style={{ fontSize: 15, fontWeight: 700, color: "#FF7EB6" }}>All top slots →</Link>
+          </div>
+          <SlotArtCards rows={topSlotRows().slice(0, 4)} />
+        </section>
+
+        {/* 5. Why trust us */}
+        <section data-reveal style={{ maxWidth: 1180, margin: "0 auto", padding: "64px 24px 80px" }}>
+          <div style={{ display: "grid", gap: 16, gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", padding: "26px 28px", borderRadius: 18, background: "#0C1013", border: "1px solid rgba(255,255,255,.08)" }}>
+            {[
+              { t: "Sourced, not copied", d: "Every fact links to the casino's, studio's or regulator's own page." },
+              { t: "Re-checked on a schedule", d: "Bonuses and payout terms are re-read, and changes are logged." },
+              { t: "Paid links, clearly marked", d: "We earn from some links. It never changes what a review says." },
+            ].map((x) => (
+              <div key={x.t}>
+                <div style={{ fontSize: 16, fontWeight: 800, color: "#fff", marginBottom: 6 }}>✓ {x.t}</div>
+                <div style={{ fontSize: 14, lineHeight: 1.5, color: "#A8B6BE" }}>{x.d}</div>
+              </div>
+            ))}
+            <Link href="/how-we-rate" style={{ alignSelf: "center", fontSize: 14.5, fontWeight: 700, color: "#00C2CC" }}>How we rate →</Link>
+          </div>
+        </section>
+      </main>
+    </>
+  );
 }
