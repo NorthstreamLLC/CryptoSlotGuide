@@ -68,7 +68,7 @@ export default function PreviewCasinos() {
                   <span>
                     <span style={{ display: "block", fontFamily: MONO, fontSize: 11, color: GOLD }}>OUR #1 PICK</span>
                     <span style={{ display: "block", fontSize: 24, fontWeight: 800, color: "#fff" }}>{top.name}</span>
-                    <span style={{ display: "block", fontFamily: MONO, fontSize: 11, color: "#83919A" }}>{[tf.licence && `${tf.licence} licence`, tf.kyc].filter(Boolean).join(" · ")}</span>
+                    <span style={{ display: "block", fontFamily: MONO, fontSize: 11, color: "#83919A" }}>{[tf.licence, tf.kyc].filter(Boolean).join(" · ")}</span>
                   </span>
                 </div>
                 <div style={{ fontSize: 18, fontWeight: 800, color: GOLD, marginBottom: 12 }}>{tf.headline}</div>
