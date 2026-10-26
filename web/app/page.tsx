@@ -14,6 +14,8 @@ import { CodeChip } from "@/components/ui/CodeChip";
 import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
 import { KevinCard } from "@/components/promo/KevinCard";
 import { kevinLive } from "@/lib/kevin-promo";
+import { BrandMark } from "@/components/ui/BrandMark";
+import { getSpecFact } from "@/lib/spec-sheet";
 
 /**
  * The home page is the one page not built through pageMetadata(), so it was
@@ -73,6 +75,31 @@ export default function HomePage() {
     .filter((x) => x.r && x.o)
     .slice(0, 4);
 
+  // Roobet's Roo Jackpots, while the fact is on its sheet: the card that stands in for a live promo.
+  const rooJackpots = !!getSpecFact("roobet", "Bonus terms", "Roo Jackpots");
+  const jackpotCard = rooJackpots ? (
+    <Link href="/guides/roo-jackpots-explained" className="csg-lift" style={{ display: "flex", flexDirection: "column", gap: 12, padding: 24, borderRadius: 18, background: "radial-gradient(120% 90% at 100% 0%, rgba(178,132,255,.18), transparent 60%), radial-gradient(90% 70% at 0% 100%, rgba(255,197,49,.10), transparent 60%), #0F1418", border: "1px solid rgba(178,132,255,.35)" }}>
+      <span style={{ fontFamily: MONO, fontSize: 11, color: "#C9A8FF" }}>NEW AT ROOBET · ROO JACKPOTS</span>
+      <span style={{ fontSize: 22, fontWeight: 800, color: "#fff" }}>Four jackpots that grow from $250,000 at the top</span>
+      <span style={{ fontSize: 14.5, lineHeight: 1.5, color: "#A8B6BE" }}>Add $0.10, $1 or $5 to a bet for a shot at four jackpots, with no wagering on wins. Here is how it works and what it costs.</span>
+      <span style={{ display: "grid", gridTemplateColumns: "repeat(4, minmax(0, 1fr))", gap: 8 }} data-keep-grid>
+        {[
+          { n: "Mini", v: "$200", c: "#57E39A" },
+          { n: "Minor", v: "$5K", c: "#00C2CC" },
+          { n: "Major", v: "$75K", c: "#FF7EB6" },
+          { n: "Mega", v: "$250K", c: GOLD },
+        ].map((j) => (
+          <span key={j.n} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 2, padding: "10px 4px", borderRadius: 12, background: "rgba(255,255,255,.04)", border: `1px solid ${j.c}55` }}>
+            <span style={{ fontFamily: MONO, fontSize: 10, letterSpacing: ".06em", textTransform: "uppercase", color: j.c }}>{j.n}</span>
+            <span style={{ fontSize: 16, fontWeight: 800, color: "#fff" }}>{j.v}</span>
+            <span style={{ fontSize: 10.5, color: "#7F8D96" }}>starts at</span>
+          </span>
+        ))}
+      </span>
+      <span style={{ fontSize: 14.5, fontWeight: 700, color: "#C9A8FF" }}>How Roo Jackpots work →</span>
+    </Link>
+  ) : null;
+
   const paths = [
     { icon: "🎰", title: "Find a casino", line: `The best of ${c.casinos} crypto casinos, by payout speed, bonus and coins.`, href: "/crypto-casinos", cta: "Compare casinos", tint: "#00C2CC" },
     { icon: "🎁", title: "Get a bonus", line: "Promo codes and welcome offers, with the wagering spelled out.", href: "/bonuses", cta: "See the best offers", tint: GOLD },
@@ -128,8 +155,28 @@ export default function HomePage() {
           <div style={{ display: "grid", gap: 16, gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))" }}>
             {roobet?.promoCode && (
               <div className="csg-lift" style={{ display: "flex", flexDirection: "column", gap: 12, padding: 24, borderRadius: 18, background: "radial-gradient(120% 90% at 50% 0%, rgba(255,197,49,.14), transparent 60%), #0F1418", border: "1px solid rgba(255,197,49,.4)" }}>
-                <span style={{ fontFamily: MONO, fontSize: 11, color: GOLD }}>OUR PICK · ROOBET</span>
+                <span style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                  <span style={{ width: 44, height: 44, borderRadius: 12, overflow: "hidden", flex: "none" }}>
+                    <BrandMark slug="roobet" mono={roobet.mono} tint={GOLD} radius={12} fontSize={13} />
+                  </span>
+                  <span>
+                    <span style={{ display: "block", fontFamily: MONO, fontSize: 11, color: GOLD }}>OUR PICK · ROOBET</span>
+                    <span style={{ display: "block", fontSize: 13, color: "#A8B6BE" }}>Welcome package with code {roobet.promoCode}</span>
+                  </span>
+                </span>
                 <span style={{ fontSize: 22, fontWeight: 800, color: "#fff" }}>20% up to $500 + up to 600 free spins</span>
+                <span style={{ display: "grid", gridTemplateColumns: "repeat(3, minmax(0, 1fr))", gap: 8 }} data-keep-grid>
+                  {[
+                    { t: "20%", d: "deposit match up to $500" },
+                    { t: "100 spins", d: "at $10,000 wagered" },
+                    { t: "500 spins", d: "at $50,000 wagered" },
+                  ].map((x) => (
+                    <span key={x.t} style={{ display: "flex", flexDirection: "column", gap: 2, padding: "10px 10px", borderRadius: 12, background: "rgba(255,197,49,.06)", border: "1px solid rgba(255,197,49,.22)" }}>
+                      <span style={{ fontSize: 16, fontWeight: 800, color: GOLD }}>{x.t}</span>
+                      <span style={{ fontSize: 11.5, lineHeight: 1.35, color: "#A8B6BE" }}>{x.d}</span>
+                    </span>
+                  ))}
+                </span>
                 <span style={{ fontSize: 14.5, lineHeight: 1.5, color: "#A8B6BE" }}>Sign up with the code, then claim the package through CasinoPerks, the exclusive casino VIP team, on Telegram.</span>
                 <CodeChip code={roobet.promoCode} tint={GOLD} />
                 <Link href="/promo-codes/roobet" className="csg-shine" style={{ marginTop: 4, textAlign: "center", padding: "13px 16px", borderRadius: 12, background: "linear-gradient(180deg,#FFD866,#FFC531)", color: "#141007", fontSize: 15, fontWeight: 800 }}>
@@ -138,7 +185,7 @@ export default function HomePage() {
                 <GeoBlockNote slug="roobet" name={roobet.name} compact />
               </div>
             )}
-            {kevinLive() && <KevinCard />}
+            {kevinLive() ? <KevinCard fallback={jackpotCard} /> : jackpotCard}
           </div>
 
           {/* Races line */}

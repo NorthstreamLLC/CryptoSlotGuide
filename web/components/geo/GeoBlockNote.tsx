@@ -25,8 +25,14 @@ export function GeoBlockNote({ slug, name, compact = false }: { slug: string; na
   const raw = geo.countryName ?? geo.country ?? "your country";
   const where = /^(United |Netherlands|Philippines|Czech Republic)/.test(raw) ? `the ${raw}` : raw;
   const isUS = geo.country === "US";
+  const sweeps = geo.alternatives?.sweepstakes;
+  const region = (geo as GeoAnswer & { region?: string | null; regionName?: string | null }).region;
+  const regionName = (geo as GeoAnswer & { regionName?: string | null }).regionName;
+  // A state that bars sweepstakes casinos too gets its own law page, not "0 sweepstakes casinos".
   const alt = isUS
-    ? { href: "/sweepstakes-casinos", label: `See the ${geo.alternatives?.sweepstakes ?? ""} sweepstakes casinos open in the US`.replace("  ", " ") }
+    ? sweeps === 0
+      ? { href: region ? `/legal/us/${region.toLowerCase()}` : "/legal", label: `See what's legal in ${regionName ?? "your state"}` }
+      : { href: "/sweepstakes-casinos", label: sweeps ? `See the ${sweeps} sweepstakes casinos open in the US` : "See the sweepstakes casinos open in the US" }
     : geo.casinos.acceptsSlugs.length
     ? { href: `/crypto-casinos/in/${(geo.country ?? "").toLowerCase()}`, label: geo.casinos.acceptsSlugs.length === 1 ? `See the one crypto casino that accepts ${where}` : `See the ${geo.casinos.acceptsSlugs.length} crypto casinos that accept ${where}` }
     : { href: "/legal", label: `See what's legal in ${where}` };

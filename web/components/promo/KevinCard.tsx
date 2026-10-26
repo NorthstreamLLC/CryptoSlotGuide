@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import Link from "next/link";
 import { getGeo } from "@/lib/geo-client";
 import { kevinBlocked, kevinLive, KEVIN_PATH } from "@/lib/kevin-promo";
@@ -8,9 +8,10 @@ import { kevinBlocked, kevinLive, KEVIN_PATH } from "@/lib/kevin-promo";
 /**
  * The Kevin Hart promotion as a homepage card. Same rules as KevinBanner:
  * in the HTML for everyone, then removed where the promotion or Roobet is
- * not available, and after the campaign ends.
+ * not available, and after the campaign ends. Where it is hidden, `fallback`
+ * takes its place, so the row it sits in never loses a card.
  */
-export function KevinCard() {
+export function KevinCard({ fallback = null }: { fallback?: ReactNode }) {
   const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
@@ -25,7 +26,7 @@ export function KevinCard() {
     };
   }, []);
 
-  if (hidden) return null;
+  if (hidden) return <>{fallback}</>;
   return (
     <Link href={KEVIN_PATH} className="csg-lift csg-home-card" style={{ display: "flex", flexDirection: "column", borderRadius: 18, overflow: "hidden", background: "#0F1418", border: "1px solid rgba(255,255,255,.1)" }}>
       <span style={{ display: "block", overflow: "hidden" }}>
