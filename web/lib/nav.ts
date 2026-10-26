@@ -62,6 +62,7 @@ import { flagSrc } from "./flags";
 import { coinHref } from "./coins";
 import { sportsOffers, sportsOnlyRaces, sportsBoosts, sportsbookHref, sportsPick } from "./sports";
 import { rankedBrands } from "./us-brands";
+import { kevinLive, KEVIN_PATH } from "./kevin-promo";
 
 const slotCatLabels = siteData.slotCatDefs.map((d) => ({ tag: d.tag, label: d.label }));
 
@@ -140,7 +141,7 @@ export interface NavColumn {
 }
 
 export interface NavTab {
-  key: "gambling" | "where" | "licensed" | "casinos" | "slots" | "countries" | "sports" | "predict" | "crypto";
+  key: "gambling" | "where" | "licensed" | "casinos" | "bonuses" | "slots" | "countries" | "legal" | "sports" | "predict" | "crypto" | "more";
   label: string;
   sections: NavSection[];
   /** The tab's own page: clicking the label goes there; hovering opens the menu. */
@@ -853,12 +854,12 @@ function slug(name: string): string {
 }
 
 /**
- * The menu as readers use it. "Gambling" held casinos, slots, studios, house
- * games, bonuses and guides — slots, the biggest section of the site, sat one
- * level down under a label that names none of it — and countries were split
- * across "Crypto casinos by country" and "Licensed casinos". Regrouped here
- * rather than rewritten above, so every column keeps its data and links:
- *   Casinos · Slots · Countries · Sports · Predictions · Crypto
+ * The menu follows the homepage's four paths, so a reader who picked a path
+ * there finds the same words here:
+ *   Casinos · Bonuses · Slots · Is it legal? · More
+ * Sections are regrouped rather than rewritten, so every column keeps its data
+ * and links; sports, prediction markets, crypto, guides and the tools sit
+ * under More.
  */
 /** The licensed-register entries, named for what they hold once they share a tab with the crypto-casino countries. */
 const LICENSED_LABEL: Record<string, string> = {
@@ -870,18 +871,93 @@ const LICENSED_LABEL: Record<string, string> = {
   Europe: "Europe-licensed sites",
 };
 
+/** Links that are tools rather than lists; they live under More → Tools. */
+const TOOL_HREFS = new Set(["/compare", "/find-my-casino", "/bonus-terms-decoder", "/casino-changewatch", "/vip-calculator"]);
+
 export function buildNavTabs(c: SiteCounts): NavTab[] {
   const raw = rawNavTabs(c);
   const tab = (key: string) => raw.find((t) => t.key === key);
   const gambling = tab("gambling")?.sections ?? [];
-  const pick = (labels: string[]) => labels.map((l) => gambling.find((s) => s.label === l)).filter((s): s is NavSection => !!s);
-  const out: NavTab[] = [
-    { key: "casinos", label: "Casinos", href: "/crypto-casinos", sections: pick(["Crypto casinos", "Bonuses", "House games", "Guides"]) },
-    { key: "slots", label: "Slots", href: "/slots", sections: pick(["Slots & RTP", "Game providers"]) },
-    { key: "countries", label: "Countries", href: "/legal", sections: [...(tab("where")?.sections ?? []), ...(tab("licensed")?.sections ?? []).map((s) => ({ ...s, label: LICENSED_LABEL[s.label] ?? `Licensed: ${s.label}` }))] },
-    { ...(tab("sports") as NavTab), label: "Sports", href: "/sportsbooks" },
-    { ...(tab("predict") as NavTab), label: "Predictions", href: "/prediction-markets" },
-    { ...(tab("crypto") as NavTab), label: "Crypto", href: "/coins" },
+  const sec = (label: string) => gambling.find((s) => s.label === label);
+  const casinos = sec("Crypto casinos");
+  const bonuses = sec("Bonuses");
+  const col = (s: NavSection | undefined, title: string) => s?.columns.find((x) => x.title === title);
+
+  // Casinos: the lists to browse and the top profiles; races and bonuses move to Bonuses, tools to More.
+  const casinoSection: NavSection | undefined = casinos && {
+    ...casinos,
+    columns: [
+      { title: "Browse", links: (col(casinos, "Browse")?.links ?? []).filter((l) => !TOOL_HREFS.has(l.href) && l.href !== "/lowest-wagering") },
+      ...(col(casinos, "Top casino profiles") ? [col(casinos, "Top casino profiles")!] : []),
+    ],
+  };
+  const toolsSection: NavSection = {
+    mono: "🧰",
+    label: "Tools",
+    tint: "#6BC7FF",
+    href: "/find-my-casino",
+    columns: [{ title: "Tools", links: (col(casinos, "Browse")?.links ?? []).filter((l) => TOOL_HREFS.has(l.href)) }],
+  };
+
+  // Bonuses: offers, codes, races and live promotions in one place.
+  // Only codes a reader can type: a referral hash like "97ecknzbtm" is a link parameter, not a promo code.
+  const coded = inHouseOrder(siteData.ops.filter((o) => o.promoCode && o.signupUrl && /^[A-Za-z]{3,14}$/.test(o.promoCode))).slice(0, 6);
+  const bonusSection: NavSection | undefined = bonuses && {
+    ...bonuses,
+    columns: [
+      ...(col(casinos, "Best casino bonuses") ? [col(casinos, "Best casino bonuses")!] : []),
+      ...bonuses.columns,
+    ],
+  };
+  const codesSection: NavSection = {
+    mono: "🏷️",
+    label: "Promo codes",
+    tint: "#FFC531",
+    href: "/promo-codes/roobet",
+    feature: bonuses?.feature,
+    columns: [
+      {
+        title: "Codes we hold",
+        links: coded.map((o) => ({ label: o.name, href: o.slug === "roobet" ? "/promo-codes/roobet" : `/casinos/${o.slug}`, brand: o.slug, note: `Code ${o.promoCode}` })),
+      },
+    ],
+  };
+  const racesSection: NavSection = {
+    mono: "🏁",
+    label: "Races & raffles",
+    tint: "#57E39A",
+    href: "/races",
+    feature: casinos?.feature,
+    columns: [
+      { title: "Biggest races", links: col(casinos, "Biggest races")?.links ?? [] },
+      { title: "See them all", links: [{ label: "All races & raffles", href: "/races" }, { label: "Roo Jackpots, explained", href: "/guides/roo-jackpots-explained" }] },
+    ],
+  };
+  const liveSection: NavSection | null = kevinLive()
+    ? {
+        mono: "🎤",
+        label: "Live promos",
+        tint: "#FF7EB6",
+        href: KEVIN_PATH,
+        columns: [{ title: "Running now", links: [{ label: "Play with Kevin Hart: $1.25M prize pool", href: KEVIN_PATH, note: "Pragmatic Play, until 7 November" }] }],
+      }
+    : null;
+
+  const legal = [...(tab("where")?.sections ?? []), ...(tab("licensed")?.sections ?? []).map((s) => ({ ...s, label: LICENSED_LABEL[s.label] ?? `Licensed: ${s.label}` }))];
+  const more = [
+    ...(tab("sports")?.sections ?? []),
+    ...(tab("predict")?.sections ?? []),
+    ...(tab("crypto")?.sections ?? []),
+    ...[sec("Guides")].filter((s): s is NavSection => !!s),
+    toolsSection,
   ];
-  return out.filter((t) => t && t.sections.length);
+
+  const out: NavTab[] = [
+    { key: "casinos", label: "Casinos", href: "/crypto-casinos", sections: [casinoSection, sec("House games")].filter((s): s is NavSection => !!s) },
+    { key: "bonuses", label: "Bonuses", href: "/bonuses", sections: [bonusSection, codesSection, racesSection, liveSection].filter((s): s is NavSection => !!s) },
+    { key: "slots", label: "Slots", href: "/slots", sections: [sec("Slots & RTP"), sec("Game providers")].filter((s): s is NavSection => !!s) },
+    { key: "legal", label: "Is it legal?", href: "/legal", sections: legal },
+    { key: "more", label: "More", sections: more },
+  ];
+  return out.filter((t) => t.sections.length);
 }
