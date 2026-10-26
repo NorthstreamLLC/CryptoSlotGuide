@@ -939,6 +939,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
         label: "Live promos",
         tint: "#FF7EB6",
         href: KEVIN_PATH,
+        feature: { brand: "pragmatic-play", kicker: "Live promo · until 7 Nov", title: "Play with Kevin Hart", sub: "$1.25M prize pool in Pragmatic Play games. Earn Free Chips, then play them on Kevin's Picks while he's live on 6–7 November.", href: KEVIN_PATH, cta: "How it works →" },
         columns: [{ title: "Running now", links: [{ label: "Play with Kevin Hart: $1.25M prize pool", href: KEVIN_PATH, note: "Pragmatic Play, until 7 November" }] }],
       }
     : null;
