@@ -36,7 +36,12 @@ const btcFaqData = [
   { q: "Is a Bitcoin-only casino safer?", a: "No. Coin support tells you nothing about licensing, segregation of player funds, or whether the operator honours its own terms. Judge those separately." },
 ];
 
-export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
+/**
+ * `embedded` renders only the filterable list (no hero, no "Where to start",
+ * no next steps) and every row from the start: the /crypto-casinos hub folds
+ * it under its own top 10, and a folded list still has to be whole in the HTML.
+ */
+export function CasinoIndexPage({ filter, embedded = false }: { filter: BtcFilterKey; embedded?: boolean }) {
   const { ops, coinsBy, coinDefs } = siteData;
   // Speed and wagering views are about one fact, so they open sorted on it and
   // the first row genuinely is the fastest or the lowest. Everything else opens
@@ -45,7 +50,7 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
   const [sortKey, setSortKey] = useState<SortKey>(filter === "fast" ? "payout" : filter === "lowwager" ? "wager" : "featured");
   const [sortDir, setSortDir] = useState<SortDir>("asc");
   const [coinSel, setCoinSel] = useState<string>("all");
-  const [showAll, setShowAll] = useState(false);
+  const [showAll, setShowAll] = useState(embedded);
   const [faqOpen, setFaqOpen] = useState<number | null>(null);
 
   const view = btcViews[filter];
@@ -53,7 +58,7 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
   const coinOk = (o: Operator) => coinSel === "all" || (coinsBy[o.slug] ?? []).map(String).includes(coinSel);
 
   const roobet = ops.find((o) => o.featured);
-  const spotlight = !!roobet && btcFn(roobet);
+  const spotlight = !embedded && !!roobet && btcFn(roobet);
 
   const filtered = useMemo(
     () => ops.filter((o) => btcFn(o) && coinOk(o) && !(spotlight && o.featured)),
@@ -80,7 +85,7 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
   // own "top of this list" card, and a filtered one is the ranking.
   // The spotlight casino is left out of `filtered` (the hero card shows it),
   // but it still heads the picks: the strip is the house order, top to bottom.
-  const picks = filter === "all" && coinSel === "all" ? sortOps(spotlight && roobet ? [roobet, ...filtered] : filtered, "featured", "asc").slice(0, 5) : [];
+  const picks = !embedded && filter === "all" && coinSel === "all" ? sortOps(spotlight && roobet ? [roobet, ...filtered] : filtered, "featured", "asc").slice(0, 5) : [];
   const tableAll = btcTop ? sorted.slice(1) : sorted;
   const posOffset = btcTop ? 1 : 0;
   const rows = showAll ? tableAll : tableAll.slice(0, 20);
@@ -111,8 +116,11 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
     return sortKey !== key ? "" : sortDir === "asc" ? "↓" : "↑";
   }
 
+  const Wrap = embedded ? "div" : "main";
   return (
-    <main style={{ background: "#07090B", color: "#E8EDF0" }}>
+    <Wrap style={{ background: "#07090B", color: "#E8EDF0" }}>
+      {!embedded && (
+      <>
       <section style={{ position: "relative", overflow: "hidden", background: "radial-gradient(120% 100% at 78% 0%, rgba(0,194,204,.09), transparent 58%),#0B0F12", borderBottom: "1px solid rgba(255,255,255,.07)" }}>
         {spotlight && <HeroDrift logos={inHouseOrder(ops).map((o) => o.slug)} />}
         <div className={spotlight ? "csg-hero-pad" : undefined} style={{ position: "relative", maxWidth: 1400, margin: "0 auto", padding: "26px 40px 72px" }}>
@@ -215,6 +223,8 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
       </section>
 
       <BrowseNav />
+      </>
+      )}
 
       <div style={{ maxWidth: 1180, margin: "0 auto", padding: "44px 40px 80px" }}>
         {picks.length > 0 && (
@@ -392,6 +402,7 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
           </div>
         </div>
       </div>
+      {!embedded && (
       <section style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px 56px" }}>
         <NextSteps
           steps={[
@@ -402,7 +413,8 @@ export function CasinoIndexPage({ filter }: { filter: BtcFilterKey }) {
           ]}
         />
       </section>
-    </main>
+      )}
+    </Wrap>
   );
 }
 

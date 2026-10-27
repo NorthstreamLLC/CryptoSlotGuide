@@ -1,4 +1,5 @@
 import { CasinoIndexPage } from "@/components/casino-index/CasinoIndexPage";
+import { CasinosHub } from "@/components/casino-index/CasinosHub";
 import { btcViews, defaultIndexList } from "@/lib/casino-index";
 import { pageMetadata } from "@/lib/seo";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -24,7 +25,7 @@ export default function Page() {
           itemListSchema(view.h1, list),
         ]}
       />
-      <CasinoIndexPage filter={FILTER} />
+      <CasinosHub allList={<CasinoIndexPage filter={FILTER} embedded />} />
     </>
   );
 }

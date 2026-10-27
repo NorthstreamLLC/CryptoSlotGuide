@@ -1,5 +1,6 @@
 import Link from "next/link";
-import type { Metadata } from "next";
+import type { ReactNode } from "react";
+import { FoldedList } from "@/components/casino-index/FoldedList";
 import { siteData, siteCounts } from "@/lib/site-data";
 import { casinoFacts } from "@/lib/casino-facts";
 import { inHouseOrder } from "@/lib/house-order";
@@ -11,17 +12,16 @@ import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
 import { tintFor } from "@/lib/logo";
 
 /**
- * Mock-up of the casinos hub in the four-path pattern: the answer first, a
- * short ranked list, ways to narrow it down, then one next step. Not linked
- * and not indexed.
+ * The casinos hub in the four-path pattern: the answer first, a short ranked
+ * list, ways to narrow it down, then one next step. The full filterable list
+ * of every casino is passed in as `allList` and sits folded under the top 10.
  */
-export const metadata: Metadata = { title: "Crypto casinos hub preview", robots: { index: false, follow: false } };
 
 const MONO = "var(--font-jetbrains-mono), monospace";
 const GOLD = "#FFC531";
 const CYAN = "#00C2CC";
 
-export default function PreviewCasinos() {
+export function CasinosHub({ allList }: { allList: ReactNode }) {
   const { ops } = siteData;
   const c = siteCounts;
   const ranked = inHouseOrder(ops).slice(0, 10);
@@ -38,7 +38,7 @@ export default function PreviewCasinos() {
   ];
 
   return (
-    <main style={{ background: "#07090B" }}>
+    <main style={{ background: "#07090B", color: "#E8EDF0" }}>
       {/* 1. The answer first */}
       <section style={{ borderBottom: "1px solid rgba(255,255,255,.07)", background: "radial-gradient(70% 90% at 85% 0%, rgba(255,197,49,.10), transparent 60%), radial-gradient(60% 80% at 0% 0%, rgba(0,194,204,.10), transparent 60%), #090C0F" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "34px 24px 44px" }}>
@@ -142,6 +142,11 @@ export default function PreviewCasinos() {
           })}
         </div>
         <p style={{ margin: "10px 0 0", fontFamily: MONO, fontSize: 10.5, color: "#7F8D96" }}>Play links are affiliate links: we may earn a commission, which never changes what a review says. 18+ · T&amp;Cs apply.</p>
+        <div style={{ marginTop: 18 }}>
+          <FoldedList hashes={["all-list", "all-casinos"]} summary={<>Show all {c.casinos} casinos, with filters and sorting <span aria-hidden>↓</span></>}>
+            {allList}
+          </FoldedList>
+        </div>
       </section>
 
       {/* 3. Narrow it down */}
@@ -158,7 +163,7 @@ export default function PreviewCasinos() {
           ))}
         </div>
         <div style={{ display: "flex", gap: 18, flexWrap: "wrap", marginTop: 16, fontSize: 14.5 }}>
-          <Link href="/crypto-casinos#all-casinos" style={{ fontWeight: 700, color: CYAN }}>See all {c.casinos} with filters →</Link>
+          <a href="#all-list" style={{ fontWeight: 700, color: CYAN }}>See all {c.casinos} with filters →</a>
           <Link href="/compare" style={{ fontWeight: 700, color: "#A8B6BE" }}>Compare two side by side →</Link>
         </div>
       </section>
