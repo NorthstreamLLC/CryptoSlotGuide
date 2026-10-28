@@ -137,7 +137,7 @@ export default function PreviewSlots() {
       <section style={{ maxWidth: 1180, margin: "0 auto", padding: "52px 24px 0" }}>
         <h2 style={{ margin: "0 0 6px", fontSize: 26, letterSpacing: "-.02em", fontWeight: 800, color: "#fff" }}>How do you like to play?</h2>
         <p style={{ margin: "0 0 16px", fontSize: 15, color: "#8DA0AA" }}>Every list is built from the studios&apos; own game pages.</p>
-        <div style={{ display: "grid", gap: 12, gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))" }}>
+        <div className="csg-ways" data-keep-grid style={{ display: "grid", gap: 12, gridTemplateColumns: "repeat(4, minmax(0, 1fr))" }}>
           {ways.map((w) => (
             <Link key={w.label} href={w.href} className="csg-lift" style={{ display: "flex", flexDirection: "column", gap: 6, padding: "16px 16px", borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.09)" }}>
               <span style={{ fontSize: 24 }} aria-hidden>{w.icon}</span>
@@ -153,7 +153,7 @@ export default function PreviewSlots() {
         <Link href="/slots/best-crypto-slot-sites" className="csg-lift" style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 16, padding: "24px 28px", borderRadius: 18, background: "radial-gradient(80% 140% at 0% 50%, rgba(255,197,49,.14), transparent 60%), #0F1418", border: "1px solid rgba(255,197,49,.3)" }}>
           <span>
             <span style={{ display: "block", fontFamily: MONO, fontSize: 11, color: GOLD, marginBottom: 6 }}>NEXT STEP</span>
-            <span style={{ display: "block", fontSize: 22, fontWeight: 800, color: "#fff" }}>Found a slot? Play it where the RTP is best.</span>
+            <span style={{ display: "block", fontSize: 22, fontWeight: 800, color: "#fff" }}>Found a slot? Play it at a top crypto slot site.</span>
             <span style={{ display: "block", fontSize: 14.5, color: "#A8B6BE", marginTop: 4 }}>The best crypto slot sites: big game libraries, fast withdrawals, and the bonus that fits slots.</span>
           </span>
           <span style={{ padding: "13px 20px", borderRadius: 12, background: "linear-gradient(180deg,#FFD866,#FFC531)", color: "#141007", fontSize: 15, fontWeight: 800 }}>Best crypto slot sites →</span>
@@ -164,6 +164,7 @@ export default function PreviewSlots() {
         .csg-slotrow{grid-template-columns:48px minmax(0,1fr) auto !important}
         .csg-slotrow-x{display:none !important}
         .csg-slotrow > span:last-child{display:none !important}
+        .csg-ways{grid-template-columns:1fr 1fr !important}
       }`}</style>
     </main>
   );
