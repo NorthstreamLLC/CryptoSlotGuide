@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { GuideNextStep } from "@/components/ui/NextStep";
 import { notFound } from "next/navigation";
 import { siteData } from "@/lib/site-data";
 import { fill } from "@/lib/derived";
@@ -169,6 +170,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             />
           )}
         </div>
+        <GuideNextStep category={g.category} />
         {!body.noPartners && <FeaturedPartner context={{ kind: "general" }} />}
         <div style={{ margin: "32px 0" }}>
           <AuthorBox />

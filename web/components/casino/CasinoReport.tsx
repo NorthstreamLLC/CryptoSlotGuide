@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { CasinoNextStep } from "@/components/ui/NextStep";
 import type { ReactNode } from "react";
 import { siteData } from "@/lib/site-data";
 import { getCasinoSpecSheet, getSpecFact } from "@/lib/spec-sheet";
@@ -630,6 +631,7 @@ export function CasinoReport({ e }: { e: EntityView }) {
             <RooJackpotsCard />
           </div>
         )}
+        <CasinoNextStep slug={o.slug} />
         <FeaturedPartner context={{ kind: "general" }} heading="Casinos we also recommend" exclude={o.slug} count={2} />
         <div style={{ margin: "32px 0" }}>
           <AuthorBox />

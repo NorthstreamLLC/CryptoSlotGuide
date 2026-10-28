@@ -1,4 +1,5 @@
 import type React from "react";
+import { SlotNextStep } from "@/components/ui/NextStep";
 import Link from "next/link";
 import Image from "next/image";
 import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
@@ -254,6 +255,7 @@ export function SlotDataPage({ g, review }: { g: CatalogueSlotPage; review?: Rea
       {review}
 
       <section style={{ maxWidth: 1100, margin: "0 auto", padding: "36px 40px 80px" }}>
+        {!review && <SlotNextStep name={g.name} />}
         <NextSteps
           steps={[
             {

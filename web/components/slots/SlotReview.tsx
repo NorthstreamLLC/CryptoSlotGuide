@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SlotNextStep } from "@/components/ui/NextStep";
 import Image from "next/image";
 import type { SlotReview as Review } from "@/lib/slot-reviews";
 import { REVIEW_BYLINE, reviewDate } from "@/lib/slot-reviews";
@@ -167,6 +168,7 @@ export function SlotReview({ slug, review, facts }: { slug: string; review: Revi
           </Link>
           <span hidden data-slug={slug} />
         </div>
+        <SlotNextStep name={facts.name} />
       </div>
     </section>
   );
