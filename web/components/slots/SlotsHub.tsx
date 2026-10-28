@@ -1,5 +1,4 @@
 import Link from "next/link";
-import type { Metadata } from "next";
 import { siteData } from "@/lib/site-data";
 import { topSlotRows, slotArtBySlug } from "@/lib/slot-page";
 import { catalogueTotals } from "@/lib/slot-db";
@@ -10,18 +9,17 @@ import { BrandMark } from "@/components/ui/BrandMark";
 import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
 
 /**
- * Mock-up of the slots hub in the four-path pattern: our #1 slot first, the
- * top picks as art, ways to narrow it down, every reviewed slot folded, then
- * one next step. Not linked and not indexed.
+ * The slots hub in the four-path pattern: our #1 slot first, the top picks as
+ * art, every reviewed slot folded (whole in the HTML), ways to narrow it
+ * down, then one next step.
  */
-export const metadata: Metadata = { title: "Slots hub preview", robots: { index: false, follow: false } };
 
 const MONO = "var(--font-jetbrains-mono), monospace";
 const PINK = "#FF7EB6";
 const GOLD = "#FFC531";
 const VOL: Record<string, string> = { low: "Low", medium: "Medium", high: "High", "very-high": "Very high", extreme: "Extreme" };
 
-export default function PreviewSlots() {
+export function SlotsHub() {
   const rows = topSlotRows();
   const top = rows[0];
   const art = top ? slotArtBySlug(top.slug) : null;

@@ -1,4 +1,4 @@
-import { VerticalIndexPage } from "@/components/vertical/VerticalIndexPage";
+import { SlotsHub } from "@/components/slots/SlotsHub";
 import { getVerticalPage } from "@/lib/vertical-view";
 import { pageMetadata } from "@/lib/seo";
 import { breadcrumbSchema, collectionPageSchema, itemListSchema } from "@/lib/schema";
@@ -28,7 +28,7 @@ export default function Page() {
           ),
         ]}
       />
-      <VerticalIndexPage kind="slots" />
+      <SlotsHub />
     </>
   );
 }
