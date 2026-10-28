@@ -222,9 +222,9 @@
     "payoutStatedMaxMins": 30,
     "noDepositBonus": true,
     "bonusShort": "25% rakeback, paid instant to monthly",
-    "signupUrl": "https://duelbits.com/?a=essentials",
+    "signupUrl": "https://duelbits.com/?a=SLOTGUIDE",
     "affiliate": true,
-    "promoCode": "essentials",
+    "promoCode": "SLOTGUIDE",
     "payoutObserved": "Instant",
     "payoutObservedMins": 0
   },
@@ -502,9 +502,9 @@
     "hasCustomReview": false,
     "noDepositBonus": true,
     "bonusShort": "$3M monthly race + zero-edge originals",
-    "signupUrl": "https://duel.com/r/SpinKeep",
+    "signupUrl": "https://duel.com/r/SLOTGUIDE",
     "affiliate": true,
-    "promoCode": "SpinKeep"
+    "promoCode": "SLOTGUIDE"
   },
   {
     "slug": "goated",
