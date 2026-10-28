@@ -456,9 +456,9 @@
     "payoutStatedMaxMins": 0,
     "noDepositBonus": true,
     "bonusShort": "Instant rakeback + a $50,000 weekly race",
-    "signupUrl": "https://winna.com/?r=SpinKeep",
+    "signupUrl": "https://winna.com/?r=SLOTGUIDE",
     "affiliate": true,
-    "promoCode": "SpinKeep"
+    "promoCode": "SLOTGUIDE"
   },
   {
     "slug": "thrill",
@@ -480,9 +480,9 @@
     "payoutStatedMaxMins": 0,
     "noDepositBonus": true,
     "bonusShort": "$50,000 weekly race + instant rakeback",
-    "signupUrl": "https://thrill.com/?r=SpinKeep",
+    "signupUrl": "https://thrill.com/?r=SLOTGUIDE",
     "affiliate": true,
-    "promoCode": "SpinKeep"
+    "promoCode": "SLOTGUIDE"
   },
   {
     "slug": "duel",

@@ -63,6 +63,7 @@ import { coinHref } from "./coins";
 import { sportsOffers, sportsOnlyRaces, sportsBoosts, sportsbookHref, sportsPick } from "./sports";
 import { rankedBrands } from "./us-brands";
 import { kevinLive, KEVIN_PATH } from "./kevin-promo";
+import { promoHref } from "./promo-pages";
 
 const slotCatLabels = siteData.slotCatDefs.map((d) => ({ tag: d.tag, label: d.label }));
 
@@ -918,7 +919,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
     columns: [
       {
         title: "Codes we hold",
-        links: coded.map((o) => ({ label: o.name, href: o.slug === "roobet" ? "/promo-codes/roobet" : `/casinos/${o.slug}`, brand: o.slug, note: `Code ${o.promoCode}` })),
+        links: coded.map((o) => ({ label: o.name, href: promoHref(o.slug), brand: o.slug, note: `Code ${o.promoCode}` })),
       },
     ],
   };

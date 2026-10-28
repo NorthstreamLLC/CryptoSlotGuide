@@ -2,6 +2,7 @@ import Link from "next/link";
 import { siteData } from "@/lib/site-data";
 import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
 import { CodeChip } from "@/components/ui/CodeChip";
+import { hasPromoPage } from "@/lib/promo-pages";
 
 const MONO = "var(--font-jetbrains-mono), monospace";
 const GOLD = "#FFC531";
@@ -93,7 +94,7 @@ export function CasinoNextStep({ slug }: { slug: string }) {
         code={readable ? o.promoCode : null}
         geoSlug={o.slug}
         geoName={o.name}
-        secondary={o.slug === "roobet" ? { label: "How to claim the full package →", href: "/promo-codes/roobet" } : { label: "Or compare our top crypto casinos →", href: "/crypto-casinos" }}
+        secondary={o.slug === "roobet" ? { label: "How to claim the full package →", href: "/promo-codes/roobet" } : hasPromoPage(o.slug) ? { label: `How to use code ${o.promoCode} →`, href: `/promo-codes/${o.slug}` } : { label: "Or compare our top crypto casinos →", href: "/crypto-casinos" }}
       />
     );
   }
