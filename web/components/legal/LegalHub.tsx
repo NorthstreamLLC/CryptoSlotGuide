@@ -1,5 +1,4 @@
 import Link from "next/link";
-import type { Metadata } from "next";
 import { COUNTRIES, US_STATES, WORLD_SHAPES, countryBy, toneOf } from "@/lib/legal";
 import { countryHoverInfo } from "@/lib/legal-hover";
 import { countryPages } from "@/lib/landing";
@@ -9,18 +8,18 @@ import { RegionGrid, Disclaimer } from "@/components/legal/LegalUI";
 import { FoldedList } from "@/components/casino-index/FoldedList";
 import { YourPlace, type PlaceInfo } from "@/components/legal/YourPlace";
 import { flagSrc } from "@/lib/flags";
+import { HelpBox } from "@/components/legal/HelpBox";
 
 /**
- * Mock-up of the legal hub in the four-path pattern: the visitor's own
- * country first, the map, the big regions, every country folded, then one
- * next step. Not linked and not indexed.
+ * The legal hub in the four-path pattern: the visitor's own country or state
+ * first, the world map, the big regions, every country folded (whole in the
+ * HTML), help, then one next step.
  */
-export const metadata: Metadata = { title: "Legal hub preview", robots: { index: false, follow: false } };
 
 const MONO = "var(--font-jetbrains-mono), monospace";
 const GREEN = "#57E39A";
 
-export default function PreviewLegal() {
+export function LegalHub() {
   const covered = [...COUNTRIES].sort((a, b) => a.name.localeCompare(b.name));
   const info = countryHoverInfo(WORLD_SHAPES);
   const href = (code: string) => (code === "US" ? "/legal/us" : code === "CA" ? "/legal/canada" : `/legal/${code.toLowerCase()}`);
@@ -92,6 +91,7 @@ export default function PreviewLegal() {
             <RegionGrid items={covered.map((c) => ({ href: href(c.code), name: c.name, status: c.onlineCasino, flag: flagSrc(c.code) }))} />
           </FoldedList>
         </div>
+        <HelpBox />
         <div style={{ marginTop: 24 }}>
           <Disclaimer />
         </div>
