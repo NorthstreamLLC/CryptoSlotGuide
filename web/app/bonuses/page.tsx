@@ -1,4 +1,4 @@
-import { BonusesPage } from "@/components/bonuses/BonusesPage";
+import { BonusesHub } from "@/components/bonuses/BonusesHub";
 import { pageMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -13,7 +13,7 @@ export default function Page() {
   return (
     <>
       <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Bonuses", path: "/bonuses" }])} />
-      <BonusesPage />
+      <BonusesHub />
     </>
   );
 }

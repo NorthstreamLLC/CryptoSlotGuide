@@ -1,5 +1,4 @@
 import Link from "next/link";
-import type { Metadata } from "next";
 import { siteData } from "@/lib/site-data";
 import { inHouseOrder } from "@/lib/house-order";
 import { isWelcomeOffer } from "@/lib/casino-bonuses";
@@ -16,11 +15,10 @@ import { kevinLive, KEVIN_PATH } from "@/lib/kevin-promo";
 import vip from "@/data/vip.json";
 
 /**
- * Mock-up of the bonuses hub in the four-path pattern: the best offer first,
- * the top offers with their codes and the catch, ways to narrow it down, the
- * full tables folded, then one next step. Not linked and not indexed.
+ * The bonuses hub in the four-path pattern: the best offer first, the top
+ * offers with their codes and the catch, the full welcome and rewards tables
+ * folded (whole in the HTML), ways to narrow it down, then one next step.
  */
-export const metadata: Metadata = { title: "Bonuses hub preview", robots: { index: false, follow: false } };
 
 const MONO = "var(--font-jetbrains-mono), monospace";
 const GOLD = "#FFC531";
@@ -28,7 +26,7 @@ const CYAN = "#00C2CC";
 /** A code a reader can type; a referral hash is a link parameter, not a code. */
 const readable = (code?: string | null) => !!code && /^[A-Za-z]{3,14}$/.test(code);
 
-export default function PreviewBonuses() {
+export function BonusesHub() {
   const { ops } = siteData;
   const roobet = ops.find((o) => o.slug === "roobet");
   const top = inHouseOrder(ops.filter((o) => o.affiliate && o.signupUrl && o.slug !== "roobet")).slice(0, 8);
@@ -36,8 +34,8 @@ export default function PreviewBonuses() {
   const lowWager = ops.filter((o) => { const w = wagerView(o); return w.kind === "none" || (w.mult !== null && w.mult <= 1); });
 
   const types = [
-    { icon: "🎁", label: "Welcome bonuses", href: "#all-bonuses", n: `${welcome.length} offers` },
-    { icon: "♻️", label: "Rakeback & cashback", href: "#all-bonuses", n: `${ops.length - welcome.length} casinos` },
+    { icon: "🎁", label: "Welcome bonuses", href: "#welcome", n: `${welcome.length} offers` },
+    { icon: "♻️", label: "Rakeback & cashback", href: "#rewards", n: `${ops.length - welcome.length} casinos` },
     { icon: "🎯", label: "Lowest wagering", href: "/lowest-wagering", n: `${lowWager.length} casinos` },
     { icon: "🏁", label: "Races & raffles", href: "/races", n: `${raceSlugs().length} casinos` },
     { icon: "🏷️", label: "Roobet code ELITE", href: "/promo-codes/roobet", n: "Welcome package" },
