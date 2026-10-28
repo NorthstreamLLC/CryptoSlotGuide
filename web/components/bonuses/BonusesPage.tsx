@@ -45,7 +45,7 @@ function matchPct(o: Operator): number {
   return all.length ? Math.max(...all) : 0;
 }
 
-function toWithdraw(o: Operator): { text: string; color: string } {
+export function toWithdraw(o: Operator): { text: string; color: string } {
   const wv = wagerView(o);
   const m = wv.mult;
   if (wv.kind === "none" || m === 0) return { text: "No wagering", color: "#7BE0B8" };
@@ -107,7 +107,11 @@ function paidWhen(o: Operator): string | null {
   return s.charAt(0).toUpperCase() + s.slice(1);
 }
 
-export function BonusesPage() {
+/**
+ * `embedded` renders only the welcome and rewards tables and the how-to-read
+ * notes: the /bonuses hub folds them under its own top offers.
+ */
+export function BonusesPage({ embedded = false }: { embedded?: boolean } = {}) {
   const { ops } = siteData;
   const welcome = ops.filter(isWelcomeOffer).sort((a, b) => byHouse(a, b) || compareWager(a, b));
   const rewards = ops.filter((o) => !isWelcomeOffer(o)).sort((a, b) => Number(!!b.featured) - Number(!!a.featured) || (raceFor(b.slug)?.monthly ?? 0) - (raceFor(a.slug)?.monthly ?? 0));
@@ -125,8 +129,10 @@ export function BonusesPage() {
   // Partners with a live link and a code, in house order (Roobet first).
   const partners = inHouseOrder(ops.filter((o) => o.affiliate && o.signupUrl)).slice(0, 6);
 
+  const Wrap = embedded ? "div" : "main";
   return (
-    <main style={{ background: "#07090B" }}>
+    <Wrap style={{ background: "#07090B" }}>
+      {!embedded && (
       <section style={{ borderBottom: "1px solid rgba(255,255,255,.07)", background: "radial-gradient(80% 120% at 85% 0%, rgba(255,204,0,.08), transparent 55%), radial-gradient(60% 80% at 0% 100%, rgba(0,194,204,.07), transparent 60%), #0A0D10" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "48px 24px 40px" }}>
           <div style={{ fontFamily: MONO, fontSize: 11, letterSpacing: ".1em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 14 }}>Casino bonuses</div>
@@ -143,12 +149,14 @@ export function BonusesPage() {
         </div>
       </section>
 
-      <section style={{ maxWidth: 1280, margin: "0 auto", padding: "28px 24px 80px" }}>
+      )}
+
+      <section style={{ maxWidth: 1280, margin: "0 auto", padding: embedded ? "24px 0 24px" : "28px 24px 80px" }}>
         {/* The partners' sign-up offers first, in house order: what each casino
             gives a new player, one tap to claim. Codes live on each casino's
             own review, not here. The offers are the casinos' own; the line
             under the grid says so. */}
-        {partners.length > 0 && (
+        {!embedded && partners.length > 0 && (
           <div style={{ marginBottom: 40 }}>
             <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 12, flexWrap: "wrap", marginBottom: 12 }}>
               <h2 style={{ margin: 0, fontSize: 24, letterSpacing: "-.025em", fontWeight: 800, color: "#fff" }}>Top sign-up offers</h2>
@@ -264,6 +272,7 @@ export function BonusesPage() {
           </Link>
         </div>
       </section>
+      {!embedded && (
       <section style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px 56px" }}>
         <NextSteps
           steps={[
@@ -274,7 +283,8 @@ export function BonusesPage() {
           ]}
         />
       </section>
-    </main>
+      )}
+    </Wrap>
   );
 }
 
