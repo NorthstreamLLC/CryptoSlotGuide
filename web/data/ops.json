@@ -43,7 +43,7 @@
     "kyc": "tiered",
     "bonus": "VIP rakeback (3.5% of house edge) + weekly bonus",
     "wager": 1,
-    "signupUrl": "https://stake.com/?c=essentials",
+    "signupUrl": "https://stake.com/?c=SLOTGUIDE",
     "conf": 1,
     "absorbsFee": true,
     "ln": true,
@@ -56,7 +56,7 @@
     "payoutStatedMaxMins": 0,
     "bonusShort": "3.5% rakeback from day one with a code + weekly bonuses",
     "affiliate": true,
-    "promoCode": "essentials",
+    "promoCode": "SLOTGUIDE",
     "payoutObserved": "Instant",
     "payoutObservedMins": 0
   },
