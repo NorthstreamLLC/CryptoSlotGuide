@@ -269,7 +269,40 @@ export function Header({ counts, navTabs, notifs = [] }: { counts: SiteCounts; n
         </nav>
       )}
 
-      {activeTab && activeSection && (
+      {/* More: every section at once as tiles, rather than a rail you hover
+          through one at a time. Ten sections behind one label were the hardest
+          part of the menu to read. */}
+      {activeTab && activeTab.key === "more" && (
+        <div className="csg-desktop-only" style={{ position: "absolute", left: 0, right: 0, top: "100%", zIndex: 60, display: "flex", justifyContent: "center", padding: "10px 40px 0" }}>
+          <div style={{ width: "100%", maxWidth: 1240, display: "grid", gridTemplateColumns: "repeat(5, minmax(0, 1fr))", gap: 12, padding: 16, background: "#0B0F12", border: "1px solid rgba(255,255,255,.09)", borderRadius: 14, boxShadow: "0 30px 80px rgba(0,0,0,.62)", animation: "csg-rise .14s ease both" }}>
+            {activeTab.sections.map((section) => {
+              const links = section.columns.flatMap((c) => c.links).filter((l) => !l.brand && !l.image).slice(0, 4);
+              return (
+                <div key={section.label} style={{ display: "flex", flexDirection: "column", gap: 8, padding: "14px 14px 12px", borderRadius: 12, background: "#0F1418", border: `1px solid ${section.tint}33` }}>
+                  <Link href={section.href} onClick={closeMenu} className="hover:!text-white" style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 16, fontWeight: 800, color: "#fff" }}>
+                    <span style={{ width: 34, height: 34, flex: "none", borderRadius: 9, display: "flex", alignItems: "center", justifyContent: "center", background: `${section.tint}22`, fontSize: 18 }} aria-hidden>
+                      {section.icon ? <img src={section.icon} alt="" width={20} height={14} style={{ borderRadius: 2 }} /> : section.mono}
+                    </span>
+                    {section.label}
+                  </Link>
+                  <span style={{ display: "flex", flexDirection: "column", gap: 2 }}>
+                    {links.map((l) => (
+                      <Link key={l.href + l.label} href={l.href} onClick={closeMenu} className="hover:!text-white" style={{ padding: "4px 0", fontSize: 13.5, lineHeight: 1.3, color: "#A8B6BE" }}>
+                        {l.label}
+                      </Link>
+                    ))}
+                  </span>
+                  <Link href={section.href} onClick={closeMenu} style={{ marginTop: "auto", fontSize: 12.5, fontWeight: 700, color: section.tint }}>
+                    Open {section.label.toLowerCase()} →
+                  </Link>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
+
+      {activeTab && activeTab.key !== "more" && activeSection && (
         <div
           className="csg-desktop-only"
           style={{

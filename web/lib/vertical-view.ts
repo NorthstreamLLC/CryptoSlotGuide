@@ -280,7 +280,7 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
     }
     return {
       ...base,
-      offers: [sportsPick(), ...sportsOffers()].filter((x): x is SportsOffer => !!x),
+      offers: [sportsPick(), ...sportsOffers().filter((x) => x.slug !== sportsPick()?.slug)].filter((x): x is SportsOffer => !!x),
       // Standing-offer books first (lib/sports.ts), then the index order.
       rows: sportsbookOrder().map((o) => {
         const s = sportsFacts(o.slug);

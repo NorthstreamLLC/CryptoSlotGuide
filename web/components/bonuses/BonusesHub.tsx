@@ -29,7 +29,9 @@ const readable = (code?: string | null) => !!code && /^[A-Za-z]{3,14}$/.test(cod
 export function BonusesHub() {
   const { ops } = siteData;
   const roobet = ops.find((o) => o.slug === "roobet");
-  const top = inHouseOrder(ops.filter((o) => o.affiliate && o.signupUrl && o.slug !== "roobet")).slice(0, 8);
+  // Casinos whose code we would rather not show on the hub (500 Casino's code belongs to another project).
+  const HIDE = new Set(["roobet", "500-casino"]);
+  const top = inHouseOrder(ops.filter((o) => o.affiliate && o.signupUrl && !HIDE.has(o.slug))).slice(0, 8);
   const welcome = ops.filter(isWelcomeOffer);
   const lowWager = ops.filter((o) => { const w = wagerView(o); return w.kind === "none" || (w.mult !== null && w.mult <= 1); });
 
@@ -127,7 +129,7 @@ export function BonusesHub() {
                     <span style={{ display: "block", fontSize: 16, fontWeight: 800, color: "#fff", lineHeight: 1.3 }}>{o.bonusShort ?? o.bonus}</span>
                     {race && <span style={{ display: "block", fontSize: 12, color: "#57E39A" }}>🏁 {race.label}</span>}
                   </span>
-                  <span className="csg-bonusrow-code">{readable(o.promoCode) ? <CodeChip code={o.promoCode!} tint={GOLD} size="sm" /> : <span style={{ fontSize: 12.5, color: "#7F8D96" }}>No code needed</span>}</span>
+                  <span className="csg-bonusrow-code">{readable(o.promoCode) ? <CodeChip code={o.promoCode!} tint={GOLD} size="sm" /> : <span style={{ fontSize: 12.5, color: "#A8B6BE" }}>{o.promoCode ? "Code added by our link" : "No code needed"}</span>}</span>
                   <span className="csg-bonusrow-wager" style={{ fontSize: 13 }}>
                     <span style={{ display: "block", fontFamily: MONO, fontSize: 9.5, color: "#7F8D96", textTransform: "uppercase" }}>Wager to withdraw</span>
                     <span style={{ fontWeight: 700, color: w.color }}>{w.text}</span>

@@ -89,9 +89,9 @@ export function SportsbooksIndex() {
   const books = sportsbookOrder();
   const ops = new Map(books.map((o) => [o.slug, o]));
   const offers = sportsOffers();
-  // Our pick leads the cards even without a fixed welcome offer; its card says so.
+  // Our pick leads the cards; it is not repeated below.
   const pick = sportsPick();
-  const cards = pick ? [pick, ...offers] : offers;
+  const cards = pick ? [pick, ...offers.filter((x) => x.slug !== pick.slug)] : offers;
   const races = sportsOnlyRaces();
   const shared = sharedRaces();
   const boosts = sportsBoosts();

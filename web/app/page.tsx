@@ -142,9 +142,20 @@ export default function HomePage() {
                 </Link>
               ))}
             </div>
-            <p style={{ margin: "22px 0 0", fontSize: 13.5, color: "#7F8D96" }}>
-              Also: <Link href="/sportsbooks" style={{ color: "#A8B6BE" }}>Sportsbooks</Link> · <Link href="/prediction-markets" style={{ color: "#A8B6BE" }}>Prediction markets</Link> · <Link href="/wallets" style={{ color: "#A8B6BE" }}>Wallets</Link> · <Link href="/guides" style={{ color: "#A8B6BE" }}>Guides</Link>
-            </p>
+            <div className="csg-more-paths" style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 10, marginTop: 20 }}>
+              {[
+                { icon: "⚽", label: "Sportsbooks", href: "/sportsbooks" },
+                { icon: "📈", label: "Prediction markets", href: "/prediction-markets" },
+                { icon: "👛", label: "Wallets", href: "/wallets" },
+                { icon: "🏁", label: "Races & raffles", href: "/races" },
+                { icon: "📘", label: "Guides", href: "/guides" },
+              ].map((x) => (
+                <Link key={x.label} href={x.href} className="csg-lift" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "11px 18px", borderRadius: 100, background: "rgba(255,255,255,.05)", border: "1px solid rgba(255,255,255,.14)", color: "#E8EDF0", fontSize: 14.5, fontWeight: 700 }}>
+                  <span aria-hidden>{x.icon}</span>
+                  {x.label}
+                </Link>
+              ))}
+            </div>
           </div>
         </section>
 

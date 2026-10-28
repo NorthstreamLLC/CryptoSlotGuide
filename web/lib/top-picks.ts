@@ -191,7 +191,7 @@ function exchangePick(slug: string): Pick | null {
 export function topPicks(): Pick[] {
   return [
     operatorPick("roobet", "Crypto casino", "Visit Roobet"),
-    operatorPick("sportsbet-io", "Sportsbook", "See the offer"),
+    operatorPick("razed", "Sportsbook", "See the offer"),
     predictionPick("Polymarket"),
     exchangePick("coinbase"),
   ].filter((p): p is Pick => p !== null);

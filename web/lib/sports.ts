@@ -81,40 +81,22 @@ export const SPORTS_OFFER_ORDER: string[] = ["razed", "sportsbet-io", "vave", "d
 /** Sportsbooks in index order, with the standing-offer books lifted to the top in SPORTS_OFFER_ORDER. */
 export function sportsbookOrder(): Operator[] {
   const all = sportsbookOps();
-  const order = [SPORTS_PICK, ...SPORTS_OFFER_ORDER];
+  const order = [...new Set([SPORTS_PICK, ...SPORTS_OFFER_ORDER])];
   const lead = order.map((slug) => all.find((o) => o.slug === slug)).filter((o): o is Operator => !!o);
   return [...lead, ...all.filter((o) => !order.includes(o.slug))];
 }
 
 /** Our sports pick, placed first (house order). It need not run a fixed welcome offer. */
-export const SPORTS_PICK = "roobet";
+export const SPORTS_PICK = "razed";
 
 /**
- * The pick as an offer card. Roobet publishes no fixed sports welcome offer:
- * its own terms describe rotating promotions instead, so the card says that,
- * then what the sportsbook does have, every line from its spec sheet.
+ * The pick as an offer card: Razed's own sports welcome offer, the same card
+ * the offer list builds from its spec sheet, with a visit button.
  */
 export function sportsPick(): SportsOffer | null {
+  const card = sportsOffers().find((x) => x.slug === SPORTS_PICK);
   const o = sportsbookOps().find((x) => x.slug === SPORTS_PICK);
-  const offer = getSpecFact(SPORTS_PICK, "Sports bonus terms", "Offer");
-  if (!o || !offer?.value) return null;
-  const has = (label: string) => /^yes/i.test(String(getSpecFact(SPORTS_PICK, "Sportsbook", label)?.value ?? ""));
-  const features = [has("Bet builder") && "bet builder", has("Cash-out") && "cash-out", getSpecFact(SPORTS_PICK, "Sportsbook", "Prediction markets")?.value && "Polymarket prediction markets on the same balance"].filter(Boolean);
-  return {
-    slug: SPORTS_PICK,
-    name: o.name,
-    mono: o.mono,
-    headline: "No fixed welcome offer: rotating sports promotions such as combo insurance, late-goal insurance and early payouts",
-    wagering: null,
-    minOdds: null,
-    race: raceFor(SPORTS_PICK)?.label ?? null,
-    sportsRace: null,
-    promos: features.length ? `${features.join(", ")[0].toUpperCase()}${features.join(", ").slice(1)}` : null,
-    sourceUrl: offer.sourceUrl ?? null,
-    href: `/sportsbooks/${SPORTS_PICK}`,
-    signupUrl: o.affiliate && o.signupUrl ? o.signupUrl : undefined,
-    cta: `Visit ${o.name}`,
-  };
+  return card && o ? { ...card, cta: `Visit ${o.name}` } : null;
 }
 
 export interface SportsOffer {

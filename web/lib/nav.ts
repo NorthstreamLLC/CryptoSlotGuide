@@ -461,7 +461,7 @@ function rawNavTabs(c: SiteCounts): NavTab[] {
           feature: (() => {
             const p = sportsPick();
             return p
-              ? { brand: p.slug, kicker: "Our sports pick", title: `${p.name} sportsbook`, name: p.name, sub: p.promos ?? "Rotating sports promotions instead of one fixed welcome offer", href: sportsbookHref(p.slug), cta: "View sportsbook", visit: p.signupUrl }
+              ? { brand: p.slug, kicker: "Our sports pick", title: `${p.name} sportsbook`, name: p.name, sub: p.headline, href: sportsbookHref(p.slug), cta: "View sportsbook", visit: p.signupUrl }
               : undefined;
           })(),
           columns: [
