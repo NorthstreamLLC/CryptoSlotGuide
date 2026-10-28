@@ -552,7 +552,8 @@
     "bonusShort": "100% up to $1,000 + rakeback to 10%",
     "wagerBasis": "deposit + bonus",
     "signupUrl": "https://yeet.com/register?aff=slotguide",
-    "affiliate": true
+    "affiliate": true,
+    "promoCode": "slotguide"
   },
   {
     "slug": "razed",
