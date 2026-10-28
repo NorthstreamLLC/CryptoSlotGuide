@@ -491,5 +491,166 @@
     "tint": "#E07B9B",
     "rtpVersions": "96.18 / 94.17 / 92.27 / 86.19",
     "sourceUrl": "https://www.hacksawgaming.com/games/chaos-crew-3"
+  },
+  {
+    "slug": "six-feet-under",
+    "name": "Six Feet Under",
+    "mono": "SF",
+    "provider": "Nolimit City",
+    "rtp": 96.05,
+    "vol": "high",
+    "maxWin": "30,000x",
+    "bestAt": "",
+    "tint": "#A07A4F",
+    "sourceUrl": "https://www.nolimitcity.com/games/six-feet-under",
+    "unpublished": [
+      "vol"
+    ]
+  },
+  {
+    "slug": "mental-2",
+    "name": "Mental 2",
+    "mono": "M2",
+    "provider": "Nolimit City",
+    "rtp": 96.06,
+    "vol": "extreme",
+    "maxWin": "99,999x",
+    "bestAt": "",
+    "tint": "#9FB4C9",
+    "rtpVersions": "96.06 / 95.23 / 94.04 / 92.02",
+    "sourceUrl": "https://www.nolimitcity.com/games/mental-2"
+  },
+  {
+    "slug": "tombstone-rip",
+    "name": "Tombstone RIP",
+    "mono": "TR",
+    "provider": "Nolimit City",
+    "rtp": 96.08,
+    "vol": "extreme",
+    "maxWin": "300,000x",
+    "bestAt": "",
+    "tint": "#C9A15A",
+    "rtpVersions": "96.08 / 94.08",
+    "sourceUrl": "https://www.nolimitcity.com/games/tombstone-rip"
+  },
+  {
+    "slug": "fire-in-the-hole-3",
+    "name": "Fire in the Hole 3",
+    "mono": "F3",
+    "provider": "Nolimit City",
+    "rtp": 96.05,
+    "vol": "high",
+    "maxWin": "70,000x",
+    "bestAt": "",
+    "tint": "#E0703A",
+    "sourceUrl": "https://www.nolimitcity.com/games/fire-in-the-hole-3",
+    "unpublished": [
+      "vol"
+    ]
+  },
+  {
+    "slug": "the-dog-house-megaways",
+    "name": "The Dog House Megaways",
+    "mono": "DH",
+    "provider": "Pragmatic Play",
+    "rtp": 96.55,
+    "vol": "high",
+    "maxWin": "12,305x",
+    "bestAt": "",
+    "tint": "#E8A53C",
+    "sourceUrl": "https://www.pragmaticplay.com/en/games/the-dog-house-megaways-slot/",
+    "unpublished": [
+      "vol"
+    ]
+  },
+  {
+    "slug": "big-bass-splash",
+    "name": "Big Bass Splash",
+    "mono": "BS",
+    "provider": "Pragmatic Play",
+    "rtp": 96.71,
+    "vol": "high",
+    "maxWin": "5,000x",
+    "bestAt": "",
+    "tint": "#3BA7D9",
+    "sourceUrl": "https://www.pragmaticplay.com/en/games/big-bass-splash/",
+    "unpublished": [
+      "vol"
+    ]
+  },
+  {
+    "slug": "wild-west-gold",
+    "name": "Wild West Gold",
+    "mono": "WW",
+    "provider": "Pragmatic Play",
+    "rtp": 96.51,
+    "vol": "high",
+    "maxWin": "10,000x",
+    "bestAt": "",
+    "tint": "#D9A441",
+    "sourceUrl": "https://www.pragmaticplay.com/en/games/wild-west-gold-slot/",
+    "unpublished": [
+      "vol"
+    ]
+  },
+  {
+    "slug": "madame-destiny-megaways",
+    "name": "Madame Destiny Megaways",
+    "mono": "MD",
+    "provider": "Pragmatic Play",
+    "rtp": 96.56,
+    "vol": "high",
+    "maxWin": "",
+    "bestAt": "",
+    "tint": "#8E5BD6",
+    "sourceUrl": "https://www.pragmaticplay.com/en/games/madame-destiny-megaways/",
+    "unpublished": [
+      "maxWin"
+    ]
+  },
+  {
+    "slug": "xways-hoarder-xsplit",
+    "name": "xWays Hoarder xSplit",
+    "mono": "XH",
+    "provider": "Nolimit City",
+    "rtp": 96.14,
+    "vol": "high",
+    "maxWin": "11,030x",
+    "bestAt": "",
+    "tint": "#7FA35B",
+    "sourceUrl": "https://www.nolimitcity.com/games/xways-hoarder"
+  },
+  {
+    "slug": "book-of-dead",
+    "name": "Book of Dead",
+    "mono": "BD",
+    "provider": "Play'n GO",
+    "rtp": 96.21,
+    "vol": "high",
+    "maxWin": "",
+    "bestAt": "",
+    "tint": "#C9A44A",
+    "sourceUrl": "https://www.playngo.com/games/book-of-dead",
+    "unpublished": [
+      "rtp",
+      "vol",
+      "maxWin"
+    ]
+  },
+  {
+    "slug": "jammin-jars-2",
+    "name": "Jammin' Jars 2",
+    "mono": "J2",
+    "provider": "Push Gaming",
+    "rtp": 96.4,
+    "vol": "high",
+    "maxWin": "",
+    "bestAt": "",
+    "tint": "#E25A9B",
+    "rtpVersions": "96.40 / 94.40",
+    "sourceUrl": "https://www.pushgaming.com/games/jammin-jars-2.html",
+    "unpublished": [
+      "maxWin"
+    ]
   }
 ]
