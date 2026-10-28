@@ -4128,12 +4128,13 @@
     },
     "dork-unit": {
       "file": "dork-unit.webp",
-      "bytes": 39424,
+      "bytes": 42924,
       "type": "image/webp",
-      "sourceUrl": "https://api.slotessentials.com/public/files/slots/87faffe7-b711-4b14-a4f2-3979058dbe91.webp",
-      "sourceHost": "api.slotessentials.com",
+      "sourceUrl": null,
+      "sourceHost": "owner-supplied",
       "provider": "Hacksaw Gaming",
-      "fetched": "2026-09-29"
+      "fetched": "2026-10-28",
+      "note": "Clean art supplied by the site owner; do not re-fetch over it."
     },
     "duel-at-dawn": {
       "file": "duel-at-dawn.webp",
@@ -4164,12 +4165,13 @@
     },
     "le-bandit": {
       "file": "le-bandit.webp",
-      "bytes": 297708,
+      "bytes": 39610,
       "type": "image/webp",
-      "sourceUrl": "https://api.slotessentials.com/public/files/slots/5e1a6c87-7dc3-4f7e-893c-56c6401af59a.webp",
-      "sourceHost": "api.slotessentials.com",
+      "sourceUrl": null,
+      "sourceHost": "owner-supplied",
       "provider": "Hacksaw Gaming",
-      "fetched": "2026-09-29"
+      "fetched": "2026-10-28",
+      "note": "Clean art supplied by the site owner; do not re-fetch over it."
     },
     "outsourced": {
       "file": "outsourced.webp",
@@ -4200,21 +4202,23 @@
     },
     "sweet-bonanza-1000": {
       "file": "sweet-bonanza-1000.webp",
-      "bytes": 589540,
+      "bytes": 50074,
       "type": "image/webp",
-      "sourceUrl": "https://api.slotessentials.com/public/files/slots/6a2152ac-f4e0-4fce-9276-e5bb1adde88d.webp",
-      "sourceHost": "api.slotessentials.com",
+      "sourceUrl": null,
+      "sourceHost": "owner-supplied",
       "provider": "Pragmatic Play",
-      "fetched": "2026-09-29"
+      "fetched": "2026-10-28",
+      "note": "Clean art supplied by the site owner; do not re-fetch over it."
     },
     "wanted-dead-or-a-wild": {
       "file": "wanted-dead-or-a-wild.webp",
-      "bytes": 392742,
+      "bytes": 68702,
       "type": "image/webp",
-      "sourceUrl": "https://api.slotessentials.com/public/files/slots/ff13aef5-a571-45b8-9af4-fc8d1de892a9.webp",
-      "sourceHost": "api.slotessentials.com",
+      "sourceUrl": null,
+      "sourceHost": "owner-supplied",
       "provider": "Hacksaw Gaming",
-      "fetched": "2026-09-29"
+      "fetched": "2026-10-28",
+      "note": "Clean art supplied by the site owner; do not re-fetch over it."
     },
     "10-flaming-bisons": {
       "file": "10-flaming-bisons.webp",
