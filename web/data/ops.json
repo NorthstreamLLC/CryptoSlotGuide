@@ -70,7 +70,7 @@
     "kyc": "tiered",
     "bonus": "Monthly 4-deposit bonus: 180%, 240%, 300% and 360%, resetting every month",
     "wager": 40,
-    "signupUrl": "https://bc.game/i-97ecknzbtm-n/",
+    "signupUrl": "https://bc.game/i-97ehmbcf9e-n/",
     "conf": 2,
     "absorbsFee": false,
     "ln": false,
@@ -83,7 +83,7 @@
     "payoutObserved": "Instant",
     "payoutObservedMins": 0,
     "affiliate": true,
-    "promoCode": "97ecknzbtm"
+    "promoCode": "97ehmbcf9e"
   },
   {
     "slug": "shuffle",
@@ -248,9 +248,9 @@
     "payoutStatedMaxMins": 15,
     "bonusShort": "First deposit bonus (40× wager lock)",
     "wagerBasis": "deposit + bonus",
-    "signupUrl": "https://rainbet.com/?r=essentials",
+    "signupUrl": "https://rainbet.com/?r=slotguide",
     "affiliate": true,
-    "promoCode": "essentials",
+    "promoCode": "slotguide",
     "payoutObserved": "Instant",
     "payoutObservedMins": 0
   },
@@ -576,9 +576,9 @@
     "wagerBasis": "deposit + bonus",
     "bonusExpiry": "7 days to complete wagering",
     "cashoutCap": "Max withdrawable $3,000",
-    "signupUrl": "https://www.razed.com/signup/?raf=elite",
+    "signupUrl": "https://www.razed.com/signup/?raf=SLOTGUIDE",
     "affiliate": true,
-    "promoCode": "elite",
+    "promoCode": "SLOTGUIDE",
     "payoutObserved": "Instant",
     "payoutObservedMins": 0
   },
