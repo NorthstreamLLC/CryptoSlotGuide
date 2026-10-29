@@ -386,6 +386,8 @@ p {
 /* Cards lift a touch on hover; links in them already change colour. */
 .csg-lift { transition: transform .22s cubic-bezier(.2, .7, .2, 1), border-color .22s, box-shadow .22s; }
 .csg-lift:hover { transform: translateY(-3px); border-color: rgba(255,255,255,.16) !important; box-shadow: 0 14px 34px -18px rgba(0,0,0,.7); }
+.csg-more-tile:hover { transform: translateY(-2px); border-color: var(--tint) !important; box-shadow: 0 16px 36px -20px var(--tint); }
+@media (prefers-reduced-motion: reduce) { .csg-more-tile:hover { transform: none; } }
 
 @media (prefers-reduced-motion: reduce) {
   [data-reveal] { opacity: 1; transform: none; transition: none; }

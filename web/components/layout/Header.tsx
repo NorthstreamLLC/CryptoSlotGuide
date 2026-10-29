@@ -5,7 +5,7 @@ import { useState } from "react";
 import type { NavTab } from "@/lib/nav";
 import type { SiteCounts } from "@/lib/derived";
 import { BrandMark } from "@/components/ui/BrandMark";
-import { tintFor } from "@/lib/logo";
+import { logoFor, tintFor } from "@/lib/logo";
 import type { Notif } from "@/lib/notifications";
 import { NotifBell } from "@/components/layout/NotifBell";
 
@@ -276,23 +276,42 @@ export function Header({ counts, navTabs, notifs = [] }: { counts: SiteCounts; n
         <div className="csg-desktop-only" style={{ position: "absolute", left: 0, right: 0, top: "100%", zIndex: 60, display: "flex", justifyContent: "center", padding: "10px 40px 0" }}>
           <div style={{ width: "100%", maxWidth: 1240, display: "grid", gridTemplateColumns: "repeat(5, minmax(0, 1fr))", gap: 12, padding: 16, background: "#0B0F12", border: "1px solid rgba(255,255,255,.09)", borderRadius: 14, boxShadow: "0 30px 80px rgba(0,0,0,.62)", animation: "csg-rise .14s ease both" }}>
             {activeTab.sections.map((section) => {
-              const links = section.columns.flatMap((c) => c.links).filter((l) => !l.brand && !l.image).slice(0, 4);
+              const all = section.columns.flatMap((c) => c.links);
+              const links = all.filter((l) => !l.brand && !l.image).slice(0, 4);
+              // The brands (or coin and flag art) the section covers, as a strip of
+              // overlapping marks under its title: what a reader recognises first.
+              const marks = all.filter((l) => (l.brand && logoFor(l.brand)) || l.image).filter((l, i, arr) => arr.findIndex((x) => (x.brand ?? x.image) === (l.brand ?? l.image)) === i).slice(0, 5);
               return (
-                <div key={section.label} style={{ display: "flex", flexDirection: "column", gap: 8, padding: "14px 14px 12px", borderRadius: 12, background: "#0F1418", border: `1px solid ${section.tint}33` }}>
+                <div key={section.label} className="csg-more-tile" style={{ ["--tint" as string]: section.tint, display: "flex", flexDirection: "column", gap: 8, padding: "14px 14px 12px", borderRadius: 12, background: `radial-gradient(120% 70% at 0% 0%, ${section.tint}26, transparent 60%), #0F1418`, border: `1px solid ${section.tint}40`, borderTop: `2px solid ${section.tint}`, transition: "transform .2s, border-color .2s, box-shadow .2s" }}>
                   <Link href={section.href} onClick={closeMenu} className="hover:!text-white" style={{ display: "flex", alignItems: "center", gap: 10, fontSize: 16, fontWeight: 800, color: "#fff" }}>
-                    <span style={{ width: 34, height: 34, flex: "none", borderRadius: 9, display: "flex", alignItems: "center", justifyContent: "center", background: `${section.tint}22`, fontSize: 18 }} aria-hidden>
+                    <span style={{ width: 36, height: 36, flex: "none", borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", background: `linear-gradient(140deg, ${section.tint}55, ${section.tint}18)`, border: `1px solid ${section.tint}66`, fontSize: 18, boxShadow: `0 6px 18px ${section.tint}22` }} aria-hidden>
                       {section.icon ? <img src={section.icon} alt="" width={20} height={14} style={{ borderRadius: 2 }} /> : section.mono}
                     </span>
                     {section.label}
                   </Link>
+                  {marks.length > 0 && (
+                    <span aria-hidden style={{ display: "flex", margin: "2px 0 2px" }}>
+                      {marks.map((l, i) => (
+                        <span key={l.brand ?? l.image} style={{ width: 26, height: 26, marginLeft: i ? -7 : 0, borderRadius: "50%", overflow: "hidden", border: "2px solid #0F1418", background: "#0F1418", zIndex: marks.length - i, flex: "none" }}>
+                          {l.brand ? (
+                            <BrandMark slug={l.brand} mono={l.brand.slice(0, 2).toUpperCase()} radius={13} fontSize={9} />
+                          ) : (
+                            // eslint-disable-next-line @next/next/no-img-element
+                            <img src={l.image} alt="" width={26} height={26} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                          )}
+                        </span>
+                      ))}
+                    </span>
+                  )}
                   <span style={{ display: "flex", flexDirection: "column", gap: 2 }}>
                     {links.map((l) => (
-                      <Link key={l.href + l.label} href={l.href} onClick={closeMenu} className="hover:!text-white" style={{ padding: "4px 0", fontSize: 13.5, lineHeight: 1.3, color: "#A8B6BE" }}>
+                      <Link key={l.href + l.label} href={l.href} onClick={closeMenu} className="hover:!text-white" style={{ display: "flex", alignItems: "center", gap: 8, padding: "4px 0", fontSize: 13.5, lineHeight: 1.3, color: "#A8B6BE" }}>
+                        <span aria-hidden style={{ width: 5, height: 5, flex: "none", borderRadius: "50%", background: section.tint, opacity: 0.8 }} />
                         {l.label}
                       </Link>
                     ))}
                   </span>
-                  <Link href={section.href} onClick={closeMenu} style={{ marginTop: "auto", fontSize: 12.5, fontWeight: 700, color: section.tint }}>
+                  <Link href={section.href} onClick={closeMenu} style={{ marginTop: "auto", alignSelf: "flex-start", padding: "6px 12px", borderRadius: 100, background: `${section.tint}1f`, border: `1px solid ${section.tint}55`, fontSize: 12.5, fontWeight: 700, color: section.tint }}>
                     Open {section.label.toLowerCase()} →
                   </Link>
                 </div>
