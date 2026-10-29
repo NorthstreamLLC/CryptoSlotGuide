@@ -1,5 +1,6 @@
 "use client";
 
+import { useNowAfterMount } from "@/components/ui/Until";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import type { Notif } from "@/lib/notifications";
@@ -53,7 +54,10 @@ function BellIcon() {
  * their own browser (localStorage), so the red count is theirs alone; nothing
  * is sent anywhere and there are no push notifications.
  */
-export function NotifBell({ items }: { items: Notif[] }) {
+export function NotifBell({ items: all }: { items: Notif[] }) {
+  // Time-limited items (a promotion) drop out at their deadline, checked in the browser.
+  const now = useNowAfterMount(Math.min(...all.map((i) => i.until ?? Infinity)));
+  const items = now ? all.filter((i) => !i.until || now < i.until) : all;
   const [open, setOpen] = useState(false);
   const [tab, setTab] = useState<TabKey>("all");
   const [seen, setSeen] = useState<Set<string> | null>(null);

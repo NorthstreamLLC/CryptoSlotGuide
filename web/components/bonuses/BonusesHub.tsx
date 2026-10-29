@@ -12,7 +12,8 @@ import { VipClaim } from "@/components/ui/VipClaim";
 import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
 import { BonusesPage, toWithdraw } from "@/components/bonuses/BonusesPage";
 import { FoldedList } from "@/components/casino-index/FoldedList";
-import { kevinLive, KEVIN_PATH } from "@/lib/kevin-promo";
+import { kevinLive, KEVIN_PATH, KEVIN_END } from "@/lib/kevin-promo";
+import { Until } from "@/components/ui/Until";
 import vip from "@/data/vip.json";
 
 /**
@@ -42,7 +43,7 @@ export function BonusesHub() {
     { icon: "🎯", label: "Lowest wagering", href: "/lowest-wagering", n: `${lowWager.length} casinos` },
     { icon: "🏁", label: "Races & raffles", href: "/races", n: `${raceSlugs().length} casinos` },
     { icon: "🏷️", label: "Promo codes", href: "/promo-codes", n: `${PROMO_PAGES.length} codes` },
-    ...(kevinLive() ? [{ icon: "🎤", label: "Kevin Hart promo", href: KEVIN_PATH, n: "Until 7 Nov" }] : [{ icon: "📈", label: "VIP calculator", href: "/vip-calculator", n: "What your play earns" }]),
+    { icon: "📈", label: "VIP calculator", href: "/vip-calculator", n: "What your play earns" },
   ];
 
   return (
@@ -158,13 +159,23 @@ export function BonusesHub() {
         <h2 style={{ margin: "0 0 6px", fontSize: 26, letterSpacing: "-.02em", fontWeight: 800, color: "#fff" }}>What kind of bonus are you after?</h2>
         <p style={{ margin: "0 0 16px", fontSize: 15, color: "#8DA0AA" }}>A welcome bonus is paid up front and has to be wagered. Rakeback, cashback and races are earned as you play.</p>
         <div style={{ display: "grid", gap: 12, gridTemplateColumns: "repeat(auto-fit, minmax(170px, 1fr))" }}>
-          {types.map((t) => (
-            <a key={t.label} href={t.href} className="csg-lift" style={{ display: "flex", flexDirection: "column", gap: 6, padding: "16px 16px", borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.09)" }}>
-              <span style={{ fontSize: 24 }} aria-hidden>{t.icon}</span>
-              <span style={{ fontSize: 15.5, fontWeight: 800, color: "#fff" }}>{t.label}</span>
-              <span style={{ fontSize: 12.5, color: CYAN }}>{t.n} →</span>
-            </a>
-          ))}
+          {types.map((t, i) => {
+            const tile = (x: typeof t) => (
+              <a key={x.label} href={x.href} className="csg-lift" style={{ display: "flex", flexDirection: "column", gap: 6, padding: "16px 16px", borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.09)" }}>
+                <span style={{ fontSize: 24 }} aria-hidden>{x.icon}</span>
+                <span style={{ fontSize: 15.5, fontWeight: 800, color: "#fff" }}>{x.label}</span>
+                <span style={{ fontSize: 12.5, color: CYAN }}>{x.n} →</span>
+              </a>
+            );
+            // The last tile is the Kevin Hart promo while it runs, then the VIP calculator, switched in the browser.
+            return i === types.length - 1 && kevinLive() ? (
+              <Until key={t.label} until={KEVIN_END} after={tile(t)}>
+                {tile({ icon: "🎤", label: "Kevin Hart promo", href: KEVIN_PATH, n: "Until 7 Nov" })}
+              </Until>
+            ) : (
+              tile(t)
+            );
+          })}
         </div>
       </section>
 

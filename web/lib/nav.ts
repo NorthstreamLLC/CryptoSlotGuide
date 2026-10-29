@@ -62,7 +62,7 @@ import { flagSrc } from "./flags";
 import { coinHref } from "./coins";
 import { sportsOffers, sportsOnlyRaces, sportsBoosts, sportsbookHref, sportsPick } from "./sports";
 import { rankedBrands } from "./us-brands";
-import { kevinLive, KEVIN_PATH } from "./kevin-promo";
+import { kevinLive, KEVIN_PATH, KEVIN_END } from "./kevin-promo";
 
 /** Esports titles with their own mark in public/assets/logos/esports (sources in data/logo-sources.json). */
 const ESPORTS_ICONS = new Set(["cs2", "dota-2", "league-of-legends", "valorant"]);
@@ -122,6 +122,8 @@ export interface NavSection {
   columns: NavColumn[];
   /** A pick shown as a small card before the columns: our recommendation for this section. */
   feature?: NavFeature;
+  /** Epoch ms after which the section is dropped in the browser (a time-limited promotion). */
+  until?: number;
 }
 
 export interface NavFeature {
@@ -942,6 +944,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
     ? {
         mono: "🎤",
         label: "Live promos",
+        until: KEVIN_END,
         tint: "#FF7EB6",
         href: KEVIN_PATH,
         feature: { brand: "pragmatic-play", kicker: "Live promo · until 7 Nov", title: "Play with Kevin Hart", sub: "$1.25M prize pool in Pragmatic Play games. Earn Free Chips, then play them on Kevin's Picks while he's live on 6–7 November.", href: KEVIN_PATH, cta: "How it works →" },

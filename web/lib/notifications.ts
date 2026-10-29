@@ -2,7 +2,7 @@ import { siteData } from "./site-data";
 import { getSpecFact } from "./spec-sheet";
 import { raceFor } from "./races";
 import { slotArtBySlug } from "./slot-page";
-import { kevinLive, KEVIN_PATH } from "./kevin-promo";
+import { kevinLive, KEVIN_PATH, KEVIN_END } from "./kevin-promo";
 import reviewsFile from "@/data/slot-reviews.json";
 
 /**
@@ -25,6 +25,8 @@ export interface Notif {
   /** Operator slug for a logo, or an art tile for a slot. */
   brand?: string;
   image?: string;
+  /** Epoch ms after which the bell drops it in the browser (a time-limited promotion). */
+  until?: number;
 }
 
 /** guideRows.json's "updated" ("16 Sep") as an ISO date; every guide was last passed in 2026. */
@@ -61,7 +63,7 @@ export function buildNotifications(): Notif[] {
 
   // Pragmatic Play x Kevin Hart, pinned while it runs.
   if (kevinLive()) {
-    out.push({ id: "pin-kevin-hart-2026-10", kind: "offer", tag: "Live promo", title: "Play with Kevin Hart: $1.25M prize pool", sub: "Pragmatic Play, until 7 November. No opt-in, cash winnings", href: KEVIN_PATH, date: "2026-10-23", pinned: true, brand: "pragmatic-play" });
+    out.push({ id: "pin-kevin-hart-2026-10", kind: "offer", tag: "Live promo", title: "Play with Kevin Hart: $1.25M prize pool", sub: "Pragmatic Play, until 7 November. No opt-in, cash winnings", href: KEVIN_PATH, date: "2026-10-23", pinned: true, brand: "pragmatic-play", until: KEVIN_END });
   }
 
   // The newest guides, by the date each was last passed.

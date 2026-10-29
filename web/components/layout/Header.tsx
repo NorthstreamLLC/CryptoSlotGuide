@@ -8,6 +8,7 @@ import { BrandMark } from "@/components/ui/BrandMark";
 import { logoFor, tintFor } from "@/lib/logo";
 import type { Notif } from "@/lib/notifications";
 import { NotifBell } from "@/components/layout/NotifBell";
+import { useNowAfterMount } from "@/components/ui/Until";
 
 /**
  * Ported from the `<header>` block in CryptoSlotGuide.dc.html (search that
@@ -30,7 +31,10 @@ export function Header({ counts, navTabs, notifs = [] }: { counts: SiteCounts; n
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileTab, setMobileTab] = useState<string | null>(null);
 
-  const activeTab: NavTab | undefined = navTabs.find((t) => t.key === menu);
+  // Time-limited sections (a promotion) drop out at their deadline, checked in the browser.
+  const now = useNowAfterMount(Math.min(...navTabs.flatMap((t) => t.sections.map((s) => s.until ?? Infinity))));
+  const tabs = now ? navTabs.map((t) => ({ ...t, sections: t.sections.filter((s) => !s.until || now < s.until) })) : navTabs;
+  const activeTab: NavTab | undefined = tabs.find((t) => t.key === menu);
   const activeSection = activeTab?.sections[Math.min(rail, activeTab.sections.length - 1)];
 
   function closeMenu() {
@@ -101,7 +105,7 @@ export function Header({ counts, navTabs, notifs = [] }: { counts: SiteCounts; n
             whiteSpace: "nowrap",
           }}
         >
-          {navTabs.map((tab) => {
+          {tabs.map((tab) => {
             const active = menu === tab.key;
             return (
               // A link to the tab's own page; hovering (or focusing) opens its menu.
@@ -222,7 +226,7 @@ export function Header({ counts, navTabs, notifs = [] }: { counts: SiteCounts; n
             borderTop: "1px solid rgba(255,255,255,.07)",
           }}
         >
-          {navTabs.map((tab) => {
+          {tabs.map((tab) => {
             const open = mobileTab === tab.key;
             return (
               <div key={tab.key} style={{ borderBottom: "1px solid rgba(255,255,255,.06)" }}>
