@@ -132,7 +132,7 @@ export default function Page() {
         <NextSteps
           steps={[
             { href: "/bonuses", label: "Every bonus, side by side", hint: "Welcome offers and rewards with the wagering each carries." },
-            { href: "/lowest-wagering", label: "Lowest wagering", hint: "Casinos where your deposit is free to withdraw soonest." },
+            { href: "/casinos/facts", label: "10 facts about each casino", hint: "Who runs it, its licence and the rules that catch players out." },
             { href: "/races", label: "Races and raffles", hint: "Daily, weekly and monthly races, side by side." },
           ]}
         />

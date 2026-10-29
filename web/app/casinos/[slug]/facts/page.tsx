@@ -54,7 +54,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
     <main style={{ background: "#07090B" }}>
       <JsonLd
         data={[
-          breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Casinos", path: "/crypto-casinos" }, { name: o.name, path: `/casinos/${slug}` }, { name: "Facts", path }]),
+          breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Casinos", path: "/crypto-casinos" }, { name: "Facts", path: "/casinos/facts" }, { name: o.name, path }]),
           articleSchema(title, a.intro, path, a.published, updated),
         ]}
       />
@@ -62,7 +62,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       <section style={{ borderBottom: "1px solid rgba(255,255,255,.07)", background: `radial-gradient(70% 120% at 85% 0%, ${tint}1f, transparent 60%), radial-gradient(60% 90% at 0% 100%, rgba(255,197,49,.07), transparent 60%), #0A0D10` }}>
         <div style={{ maxWidth: 900, margin: "0 auto", padding: "34px 24px 40px" }}>
           <div style={{ fontFamily: MONO, fontSize: 11, color: "#83919A", marginBottom: 22 }}>
-            <Link href="/" style={{ color: "#83919A" }}>Home</Link> / <Link href="/crypto-casinos" style={{ color: "#83919A" }}>Casinos</Link> / <Link href={`/casinos/${slug}`} style={{ color: "#83919A" }}>{o.name}</Link> / <span style={{ color: "#A8B6BE" }}>Facts</span>
+            <Link href="/" style={{ color: "#83919A" }}>Home</Link> / <Link href="/crypto-casinos" style={{ color: "#83919A" }}>Casinos</Link> / <Link href="/casinos/facts" style={{ color: "#83919A" }}>Facts</Link> / <span style={{ color: "#A8B6BE" }}>{o.name}</span>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 18 }}>
             <span style={{ width: 52, height: 52, borderRadius: 14, overflow: "hidden", boxShadow: `0 10px 30px ${tint}33` }}>
@@ -133,7 +133,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           steps={[
             { href: `/casinos/${slug}`, label: `Full ${o.name} review`, hint: "Withdrawals, coins, licence and sportsbook, each linked to its own pages." },
             ...(hasPromoPage(slug) ? [{ href: `/promo-codes/${slug}`, label: `${o.name} promo code`, hint: "What the code gets you and how to claim it." }] : []),
-            { href: "/crypto-casinos", label: "Compare crypto casinos", hint: "Payout speed, bonus and coins side by side." },
+            { href: "/casinos/facts", label: "Facts about other casinos", hint: "Ten sourced facts about each of the casinos we hold codes for." },
           ]}
         />
       </section>
