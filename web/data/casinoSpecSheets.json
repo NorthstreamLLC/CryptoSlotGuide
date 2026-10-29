@@ -9034,7 +9034,7 @@
           },
           {
             "label": "Withdrawal limits",
-            "value": "Deposits must be wagered 100% before withdrawal. Roobet sets the minimum withdrawal and shows it on site, and card withdrawals must exceed $15. Fiat withdrawals carry a 2% fee from the 10th in a rolling 30-day period, and several pending withdrawals may be rejected and replaced by one combined request. The Terms of Service set no maximum withdrawal amount.",
+            "value": "Deposits must be wagered 100% before withdrawal. Roobet sets the minimum withdrawal and shows it on site, and card withdrawals must exceed $15. Several pending withdrawals may be rejected and replaced by one combined request. The Terms of Service set no maximum withdrawal amount.",
             "sourcing": "editorial",
             "sourceUrl": "https://roobet.com/terms-and-conditions",
             "asOf": "2026-09-18"
@@ -9248,6 +9248,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://roobet.com/",
             "asOf": "2026-09-17"
+          },
+          {
+            "label": "Register check",
+            "value": "Raw Entertainment B.V. is on the Curaçao Gaming Authority's online gaming licence register: OGL/2024/687/0427 (B2C), company number 157205, the same as Roobet's footer. Issued 24 Dec 2025, it has no expiry date and its status reads Indefinite, as it does for 209 of the 666 licences listed (register dated 20 Oct 2026).",
+            "sourcing": "editorial",
+            "sourceUrl": "https://gamingcontrol.spin-cdn.com/media/license_registry/20261020_20261020_ogl_registry.pdf",
+            "asOf": "2026-10-29"
           },
           {
             "label": "Company",
@@ -9831,6 +9838,13 @@
             "sourcing": "editorial",
             "sourceUrl": "https://shuffle.com/info/license",
             "asOf": "2026-09-14"
+          },
+          {
+            "label": "Register check",
+            "value": "Natural Nine B.V. is on the Curaçao Gaming Authority's online gaming licence register: OGL/2024/1337/0628 (B2C), company number 160998, the same as Shuffle's licence page. Issued 24 Dec 2025, it has no expiry date and its status reads Indefinite, as it does for 209 of the 666 licences listed (register dated 20 Oct 2026).",
+            "sourcing": "editorial",
+            "sourceUrl": "https://gamingcontrol.spin-cdn.com/media/license_registry/20261020_20261020_ogl_registry.pdf",
+            "asOf": "2026-10-29"
           },
           {
             "label": "Company",

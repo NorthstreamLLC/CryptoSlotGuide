@@ -334,9 +334,9 @@ export function CasinoReport({ e }: { e: EntityView }) {
                     </div>
                   )}
                   {o.slug === "roobet" && o.codePerk && <p style={{ margin: "8px 0 0", fontSize: 12.5, lineHeight: 1.5, color: "#B7C4CB" }}>{CLAIM_NOTE}</p>}
-                  {o.slug !== "roobet" && (hasPromoPage(o.slug) || hasFactArticle(o.slug)) && (
+                  {((o.slug !== "roobet" && hasPromoPage(o.slug)) || hasFactArticle(o.slug)) && (
                     <div style={{ display: "flex", gap: 16, flexWrap: "wrap", marginTop: 10 }}>
-                      {hasPromoPage(o.slug) && (
+                      {o.slug !== "roobet" && hasPromoPage(o.slug) && (
                         <Link href={`/promo-codes/${o.slug}`} style={{ fontSize: 13, fontWeight: 700, color: brand }}>
                           How code {o.promoCode} works →
                         </Link>
