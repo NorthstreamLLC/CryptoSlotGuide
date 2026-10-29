@@ -71,14 +71,14 @@ export default function Page() {
 
   return (
     <main style={{ background: "#07090B" }}>
-      <JsonLd data={[breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Roobet", path: "/casinos/roobet" }, { name: "Promo code", path: "/promo-codes/roobet" }]), faqSchema(faqs)]} />
+      <JsonLd data={[breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Promo codes", path: "/promo-codes" }, { name: "Roobet", path: "/promo-codes/roobet" }]), faqSchema(faqs)]} />
 
       {/* Hero */}
       <section style={{ borderBottom: "1px solid rgba(255,255,255,.07)", background: "radial-gradient(70% 120% at 85% 0%, rgba(255,197,49,.14), transparent 60%), radial-gradient(60% 90% at 0% 100%, rgba(0,194,204,.07), transparent 60%), #0A0D10" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "34px 24px 44px", display: "grid", gap: 40, gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", alignItems: "center" }}>
           <div>
             <div style={{ fontFamily: MONO, fontSize: 11, color: "#83919A", marginBottom: 22 }}>
-              <Link href="/" style={{ color: "#83919A" }}>Home</Link> / <Link href="/casinos/roobet" style={{ color: "#83919A" }}>Roobet</Link> / <span style={{ color: "#A8B6BE" }}>Promo code</span>
+              <Link href="/" style={{ color: "#83919A" }}>Home</Link> / <Link href="/promo-codes" style={{ color: "#83919A" }}>Promo codes</Link> / <span style={{ color: "#A8B6BE" }}>Roobet</span>
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
               <span style={{ width: 52, height: 52, borderRadius: 14, overflow: "hidden" }}>

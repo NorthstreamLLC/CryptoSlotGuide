@@ -914,7 +914,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
     mono: "🏷️",
     label: "Promo codes",
     tint: "#FFC531",
-    href: "/promo-codes/roobet",
+    href: "/promo-codes",
     feature: bonuses?.feature,
     columns: [
       {

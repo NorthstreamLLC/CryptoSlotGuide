@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { PROMO_PAGES } from "@/lib/promo-pages";
 import { siteData } from "@/lib/site-data";
 import { inHouseOrder } from "@/lib/house-order";
 import { isWelcomeOffer } from "@/lib/casino-bonuses";
@@ -40,7 +41,7 @@ export function BonusesHub() {
     { icon: "♻️", label: "Rakeback & cashback", href: "#rewards", n: `${ops.length - welcome.length} casinos` },
     { icon: "🎯", label: "Lowest wagering", href: "/lowest-wagering", n: `${lowWager.length} casinos` },
     { icon: "🏁", label: "Races & raffles", href: "/races", n: `${raceSlugs().length} casinos` },
-    { icon: "🏷️", label: "Roobet code ELITE", href: "/promo-codes/roobet", n: "Welcome package" },
+    { icon: "🏷️", label: "Promo codes", href: "/promo-codes", n: `${PROMO_PAGES.length} codes` },
     ...(kevinLive() ? [{ icon: "🎤", label: "Kevin Hart promo", href: KEVIN_PATH, n: "Until 7 Nov" }] : [{ icon: "📈", label: "VIP calculator", href: "/vip-calculator", n: "What your play earns" }]),
   ];
 

@@ -70,6 +70,7 @@ const STATIC_ROUTES = [
   "/editorial-standards",
   "/contact",
   "/authors/lars-p",
+  "/promo-codes",
   "/promo-codes/roobet",
   "/promo-codes/stake",
   "/promo-codes/shuffle",
