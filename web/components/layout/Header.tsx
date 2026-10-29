@@ -142,7 +142,7 @@ export function Header({ counts, navTabs, notifs = [] }: { counts: SiteCounts; n
           })}
         </nav>
 
-        <div style={{ display: "flex", alignItems: "center", gap: 12, flex: "none", marginLeft: "auto" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 10, flex: "none", marginLeft: "auto" }}>
           {/* The page most readers come for, one click from anywhere. */}
           <Link
             href="/bonuses"
