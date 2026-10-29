@@ -67,7 +67,7 @@ const MOTION = `
   .csg-path-line { display: none !important; }
   .csg-path-title { font-size: 17px !important; }
   /* The top four as a swipe row rather than four full-height cards stacked. */
-  .csg-offer-row { display: flex !important; overflow-x: auto; scroll-snap-type: x mandatory; margin: 0 -24px; padding: 14px 24px 10px; scrollbar-width: none; }
+  .csg-offer-row { display: flex !important; overflow-x: auto; scroll-snap-type: x mandatory; margin: 0 calc(50% - 50vw); padding: 14px 16px 10px; scroll-padding: 0 16px; scrollbar-width: none; }
   .csg-offer-row::-webkit-scrollbar { display: none; }
   .csg-offer-row > * { flex: 0 0 84%; scroll-snap-align: center; }
 }
