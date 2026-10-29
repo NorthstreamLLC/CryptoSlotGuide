@@ -25,6 +25,15 @@ function articles() {
   });
 }
 
+/**
+ * The three facts a card previews: company and licence details make every card
+ * read the same, so lead with the rest and fall back to them only if needed.
+ */
+const PLAIN = new Set(["Company", "Licence"]);
+function preview<T extends { label: string }>(facts: T[]): T[] {
+  return [...facts.filter((f) => !PLAIN.has(f.label)), ...facts.filter((f) => PLAIN.has(f.label))].slice(0, 3);
+}
+
 export function generateMetadata() {
   const n = articles().length;
   return pageMetadata(
@@ -82,7 +91,7 @@ export default function Page() {
                   </span>
                 </span>
                 <span style={{ display: "flex", flexDirection: "column", gap: 9 }}>
-                  {facts.slice(0, 3).map((f) => (
+                  {preview(facts).map((f) => (
                     <span key={f.title} style={{ display: "flex", gap: 10, alignItems: "flex-start", fontSize: 14, lineHeight: 1.4, color: "#C9D4DA" }}>
                       <span aria-hidden style={{ width: 26, height: 26, flex: "none", borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 14, background: `${tint}18`, border: `1px solid ${tint}33` }}>{f.icon}</span>
                       <span style={{ paddingTop: 3 }}>{f.title}</span>
