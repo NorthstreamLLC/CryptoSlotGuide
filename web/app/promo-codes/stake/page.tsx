@@ -10,6 +10,7 @@ import { CodeChip } from "@/components/ui/CodeChip";
 import { AuthorByline, AuthorBox } from "@/components/ui/AuthorBox";
 import { NextSteps } from "@/components/layout/NextSteps";
 import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
+import { SpecFactCard } from "@/components/promo/SourcedCard";
 
 const SLUG = "stake";
 const MONO = "var(--font-jetbrains-mono), monospace";
@@ -27,20 +28,7 @@ export function generateMetadata() {
   );
 }
 
-/** One cited fact from Stake's spec sheet, with its source; nothing renders if the fact is gone. */
-function Fact({ label, group, sub }: { label: string; group: string; sub?: string }) {
-  const f = getSpecFact(SLUG, group, label);
-  if (!f || typeof f.value !== "string" || !f.sourceUrl) return null;
-  return (
-    <div style={{ padding: "16px 18px", borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.08)" }}>
-      <div style={{ fontSize: 15, fontWeight: 800, color: "#fff", marginBottom: 6 }}>{sub ?? label}</div>
-      <p style={{ margin: "0 0 8px", fontSize: 13.5, lineHeight: 1.55, color: "#A8B6BE" }}>{f.value}</p>
-      <a href={f.sourceUrl} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: MONO, fontSize: 10.5, color: "#5FE3E8" }}>
-        {new URL(f.sourceUrl).hostname.replace(/^www\./, "")} ↗
-      </a>
-    </div>
-  );
-}
+const Fact = (p: { label: string; group: string; sub?: string }) => <SpecFactCard slug={SLUG} {...p} />;
 
 export default function Page() {
   const o = op();

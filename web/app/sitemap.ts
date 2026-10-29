@@ -72,6 +72,7 @@ const STATIC_ROUTES = [
   "/authors/lars-p",
   "/promo-codes/roobet",
   "/promo-codes/stake",
+  "/promo-codes/shuffle",
   "/play-with-kevin-hart",
   "/slots/best-crypto-slot-sites",
   "/how-to/blackjack",
