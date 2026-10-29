@@ -10,6 +10,8 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { itemListSchema } from "@/lib/schema";
 import { OfferCards } from "@/components/home/OfferCards";
 import { SlotArtCards } from "@/components/home/SlotArtCards";
+import { CodesBand } from "@/components/home/CodesBand";
+import { FactsStrip } from "@/components/home/FactsStrip";
 import { CodeChip } from "@/components/ui/CodeChip";
 import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
 import { KevinCard } from "@/components/promo/KevinCard";
@@ -246,6 +248,9 @@ export default function HomePage() {
           <OfferCards ops={offers} />
         </section>
 
+        {/* 3b. Codes and head-to-heads */}
+        <CodesBand />
+
         {/* 4. Top slots */}
         <section data-reveal style={{ maxWidth: 1180, margin: "0 auto", padding: "60px 24px 0" }}>
           <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 16, flexWrap: "wrap", marginBottom: 20 }}>
@@ -257,6 +262,9 @@ export default function HomePage() {
           </div>
           <SlotArtCards rows={topSlotRows().slice(0, 4)} />
         </section>
+
+        {/* 4b. Facts most players don't know */}
+        <FactsStrip />
 
         {/* 5. Why trust us */}
         <section data-reveal style={{ maxWidth: 1180, margin: "0 auto", padding: "64px 24px 80px" }}>
