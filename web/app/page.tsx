@@ -66,6 +66,10 @@ const MOTION = `
   .csg-path { padding: 16px 14px !important; }
   .csg-path-line { display: none !important; }
   .csg-path-title { font-size: 17px !important; }
+  /* The top four as a swipe row rather than four full-height cards stacked. */
+  .csg-offer-row { display: flex !important; overflow-x: auto; scroll-snap-type: x mandatory; margin: 0 -24px; padding: 14px 24px 10px; scrollbar-width: none; }
+  .csg-offer-row::-webkit-scrollbar { display: none; }
+  .csg-offer-row > * { flex: 0 0 84%; scroll-snap-align: center; }
 }
 `;
 
@@ -143,7 +147,7 @@ export default function HomePage() {
                   <span className="csg-path-icon" style={{ fontSize: 34, lineHeight: 1 }} aria-hidden>{p.icon}</span>
                   <span className="csg-path-title" style={{ fontSize: 21, fontWeight: 800, color: "#fff", letterSpacing: "-.01em" }}>{p.title}</span>
                   <span className="csg-path-line" style={{ fontSize: 14.5, lineHeight: 1.5, color: "#A8B6BE", flex: 1 }}>{p.line}</span>
-                  <span style={{ fontSize: 14.5, fontWeight: 700, color: p.tint }}>{p.cta} →</span>
+                  <span style={{ fontSize: 14.5, fontWeight: 700, color: p.tint, whiteSpace: "nowrap" }}>{p.cta} →</span>
                 </Link>
               ))}
             </div>

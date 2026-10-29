@@ -21,7 +21,7 @@ const MONO = "var(--font-jetbrains-mono), monospace";
 export function OfferCards({ ops }: { ops: Operator[] }) {
   return (
     <div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" style={{ gap: 14 }}>
+      <div className="csg-offer-row grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" style={{ gap: 14 }}>
         {ops.map((o, i) => {
           const f = casinoFacts(o);
           const tint = brandFor(o.slug);
