@@ -1413,35 +1413,35 @@
             "value": "The Casino Welcome Pack contains three welcome bonuses activated with three separate deposits, each with three deposit ranges and each pairing a deposit match with free spins, totalling up to $10,500 (590%) in deposit bonus plus 225 free spins across all stages. Typical terms are 7 days to activate and 14 days to complete wagering; wager multiplier 0.2 for BetFury Originals and 1.0 for slots and live games; bets capped at 10 USD while any bonus is active; maximum payout to the main balance is x1.2 of the accrued deposit bonus and x1.5 of the accrued free spins amount.",
             "sourcing": "editorial",
             "sourceUrl": "https://docs.betfury.com/betfury/bonus-system/deposit-bonuses-and-free-spins.md",
-            "asOf": "2026-09-17"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Wagering",
             "value": "40× on slots and live games. The Welcome Pack terms say each bonus has its own multiplier (shown in the bonus details pop-up), and that slots and live games count at 1.0 while BetFury Originals count at 0.2. Each bet is split between your main and bonus balances according to how much is in each. The terms still don't say whether the multiplier applies to the bonus alone or to deposit + bonus.",
             "sourcing": "editorial",
-            "sourceUrl": "https://docs.betfury.com/betfury/bonus-system/welcome-pack-terms-and-conditions",
-            "asOf": "2026-09-16"
+            "sourceUrl": "https://docs.betfury.com/betfury/bonus-system/welcome-pack-terms-and-conditions.md",
+            "asOf": "2026-10-29"
           },
           {
             "label": "Expiry",
             "value": "The first bonus must be activated within 7 days of registering and each later one within 7 days of the previous; each bonus and its free spins must be wagered within 14 days",
             "sourcing": "editorial",
             "sourceUrl": "https://betfury.com/promo/welcome-pack-bonus",
-            "asOf": "2026-09-16"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Max cashout",
             "value": "No cap stated on the deposit bonus; free-spin winnings across the pack are capped at $550",
             "sourcing": "editorial",
             "sourceUrl": "https://betfury.com/promo/welcome-pack-bonus",
-            "asOf": "2026-09-16"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Game contribution",
             "value": "Slots, live games and BetFury Originals in the Bonus Wagering category count, with Originals at a 0.2 coefficient",
             "sourcing": "editorial",
             "sourceUrl": "https://betfury.com/promo/welcome-pack-bonus",
-            "asOf": "2026-09-16"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Minimum deposit",
@@ -1454,43 +1454,43 @@
             "label": "Max bet",
             "value": "$10 per bet in any game while a deposit bonus or free spins are active (bets from $0.10 to $10 count toward wagering).",
             "sourcing": "editorial",
-            "sourceUrl": "https://docs.betfury.com/betfury/bonus-system/welcome-pack-terms-and-conditions",
-            "asOf": "2026-09-16"
+            "sourceUrl": "https://docs.betfury.com/betfury/bonus-system/welcome-pack-terms-and-conditions.md",
+            "asOf": "2026-10-29"
           },
           {
             "label": "Rakeback",
             "value": "Rakeback returns 10% for every bet, is available to all players, never expires and is calculated as Wager x House Edge in % x 10%. It can be withdrawn once every 20 minutes and expires if left unclaimed for 90 consecutive days. It can be doubled with a Rakeback Boost, activated when claiming Cashback, the Weekly or Monthly Bonus or calendar funds, and Super VIP users can activate a boost once a day. On claim, ranks 1-10 get 50% to balance and 50% spread over 3 calendar days; VIPs get 70% to balance and 30% over 2 days.",
             "sourcing": "editorial",
             "sourceUrl": "https://docs.betfury.com/betfury/bonus-system/rakeback.md",
-            "asOf": "2026-09-17"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Cashback",
             "value": "Cashback is available to everyone from the start and is calculated twice a week, on Tuesday and Friday, on deposit funds lost between accrual periods, with the percentage depending on player Rank and game category. BetFury's own page disagrees with itself on the ceiling: the page summary says \"get up to 20% back on your bets\" while the body says it \"allows you to regain up to 25% of deposit funds lost between accrual periods\". On claim, ranks 1-5 get 50% to balance and 50% over 3 calendar days, ranks 6-10 get 75% and 25% over 3 days, and VIPs receive 100% to balance. Unclaimed cashback expires at the next accrual.",
             "sourcing": "editorial",
             "sourceUrl": "https://docs.betfury.com/betfury/bonus-system/cashback.md",
-            "asOf": "2026-09-17"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Reload bonuses",
             "value": "Weekly Bonus is calculated every Saturday on activity from Saturday to Friday, based on wager and lost deposit funds, and disappears if not claimed by the end of the following week; on claim ranks 1-10 get 25% to balance and 75% over 7 calendar days, VIPs 30% and 70% over 5 days. Monthly Bonus is calculated on the first day of the month on the previous month's wager and lost deposits, and can be increased up to x3 via the Telegram bot; on claim ranks 1-10 get 25% to balance and 75% over 30 days, with shorter calendars when the bot is connected. A Weekly Sport Bonus pays free bets for top sports events every week on completing wager requirements.",
             "sourcing": "editorial",
             "sourceUrl": "https://docs.betfury.com/betfury/bonus-system/weekly-bonus.md",
-            "asOf": "2026-09-17"
+            "asOf": "2026-10-29"
           },
           {
             "label": "VIP levels",
             "value": "A Rank VIP system with a BetFury VIP Club offering higher cashback, VIP bonuses and a personal manager, and a Super VIP Club unlocked at Rank 15 with double rakeback, top payout conditions, a Super VIP Concierge and branded VIP merch. A VIP Transfer Program carries across status from another platform, and a VIP Bounty Bonus is based on total activity during the previous week.",
             "sourcing": "editorial",
             "sourceUrl": "https://docs.betfury.com/betfury/betfury-vip-club/super-vip-club.md",
-            "asOf": "2026-09-17"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Leaderboards",
-            "value": "$20,000 Daily Battles every day: 1,000 winners share the pool, with $6,000 for 1st, counting bets on Original games, slots and sports. Rotating Sports Battles (up to $10,000), Provider Battles (up to $20,000) and Thematic Battles (up to $20,000) run alongside and take priority over the Daily Battle for their games. Rewards pay in BFG and USDT as soon as each Battle ends.",
+            "value": "$20,000 Daily Battles. Rotating Sports Battles (now up to $30,000), Provider Battles (up to $20,000) and Thematic Battles (up to $20,000) run alongside and take priority over the Daily Battle for their games, plus VIP & High Rollers Battles up to $100,000. Most Battles join automatically; some are opt-in, where only bets after joining count. Rewards pay in BFG and USDT as soon as each Battle ends.",
             "sourcing": "editorial",
             "sourceUrl": "https://docs.betfury.com/betfury/battles-and-tournaments/fight-and-share-up-to-usd100-000.md",
-            "asOf": "2026-09-18"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Perks by level",
@@ -3641,7 +3641,7 @@
             "value": "30× the deposit plus the bonus, so $100 + $100 needs $6,000 of wagering",
             "sourcing": "editorial",
             "sourceUrl": "https://help.degen.com/en/articles/15558569-unlock-up-to-1-500-on-your-first-deposit",
-            "asOf": "2026-09-16"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Bonus play rules",
@@ -3655,7 +3655,7 @@
             "value": "Weekly bonus every Monday and monthly bonus on the 1st, both from Bronze VIP and up; neither stacks, so an unclaimed one expires when the next is issued. Rank-up bonuses do stack",
             "sourcing": "editorial",
             "sourceUrl": "https://help.degen.com/en/articles/12570453-weekly-bonus",
-            "asOf": "2026-10-16"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Rollover contribution",
@@ -3669,42 +3669,42 @@
             "value": "Withdrawals, vault transfers and tips in the bonus currency are blocked until the rollover is finished or forfeited; the bonus can only be forfeited before any qualifying play",
             "sourcing": "editorial",
             "sourceUrl": "https://degen.com/promotions/welcome-bonus",
-            "asOf": "2026-10-16"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Bonus eligibility",
             "value": "One account per player, household, IP address and payment method; claiming the welcome bonus may rule out other welcome or deposit offers",
             "sourcing": "editorial",
             "sourceUrl": "https://degen.com/promotions/welcome-bonus",
-            "asOf": "2026-10-16"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Leaderboards",
             "value": "A $25,000 Weekly Race that resets every week, open to house games, live casino, slots and sports betting. The top 20 share the pool, from $10,000 for first down to $100, paid automatically each week",
             "sourcing": "editorial",
             "sourceUrl": "https://api.degen.com/v1/promo/weekly-race-content",
-            "asOf": "2026-09-17"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Expiry",
             "value": "No time limit to finish the rollover; the bonus must be activated in the Wallet before the qualifying deposit",
             "sourcing": "editorial",
             "sourceUrl": "https://help.degen.com/en/articles/15558569-unlock-up-to-1-500-on-your-first-deposit",
-            "asOf": "2026-09-16"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Max bet",
             "value": "$10 per wager while the rollover is active, unless stated otherwise",
             "sourcing": "editorial",
             "sourceUrl": "https://help.degen.com/en/articles/15558569-unlock-up-to-1-500-on-your-first-deposit",
-            "asOf": "2026-09-16"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Game contribution",
             "value": "Each bet counts by the game's house edge (wager × edge ÷ 0.04). Sports bets count once settled at odds of 1.30 or higher; challenges, accumulator games and slot bonus buys aren't allowed",
             "sourcing": "editorial",
             "sourceUrl": "https://help.degen.com/en/articles/15558569-unlock-up-to-1-500-on-your-first-deposit",
-            "asOf": "2026-09-16"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Minimum deposit",
@@ -3718,28 +3718,28 @@
             "value": "Rakeback accrues on every wager and can be claimed at any time from the Rewards panel. The rate rises with VIP rank from 3% at Bronze I to 8% at the top Degen rank, and sports wagers earn a theoretical 3% credited once bets settle. Unclaimed rakeback accumulates and can be redeemed together",
             "sourcing": "editorial",
             "sourceUrl": "https://help.degen.com/en/articles/12570521-rakeback",
-            "asOf": "2026-09-17"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Reload bonuses",
             "value": "A daily reload for Platinum rank and above, claimable once every 24 hours for 7 days in a row. The amount is set by your wagering, VIP tier and activity and is managed by your VIP host. Reloads don't stack and a missed 24-hour window expires",
             "sourcing": "editorial",
             "sourceUrl": "https://help.degen.com/en/articles/12570409-reloads",
-            "asOf": "2026-09-17"
+            "asOf": "2026-10-29"
           },
           {
             "label": "VIP levels",
             "value": "27 levels from Unranked to Degen, through Bronze, Silver, Gold, Platinum, Sapphire, Ruby and Diamond. Wagering requirements run from $10,000 at Bronze I to $1bn at Degen. Each level carries its own rakeback rate (3% to 8%), a level-up bonus ($10 at Bronze I up to $100,000 at Degen), rank-up bonuses, a weekly bonus at 5% and a monthly bonus scaling 5% to 12%. VIP tiers begin at Platinum I. Weekly bonuses are issued each Monday and monthly bonuses on the 1st; neither stacks and both expire when the next is issued",
             "sourcing": "editorial",
             "sourceUrl": "https://api.degen.com/v1/bonus/vip-tiers",
-            "asOf": "2026-09-17"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Perks by level",
             "value": "Every level pays a level-up bonus, from $10 at Bronze I to $100,000 at Degen, and the first level of each new rank adds a rank-up bonus (Bronze I $10, Silver I $15, Gold I $50, Platinum I $100, Sapphire I $900, Ruby I $5,000, Diamond I $20,000, Degen $60,000). Rakeback rises from 3% at Bronze I to 8% at Degen, the monthly bonus from 5% to 12%, and the weekly bonus stays at 5%. VIP tiers start at Platinum I ($300,000 wagered), which adds daily reloads managed by a VIP host.",
             "sourcing": "editorial",
             "sourceUrl": "https://api.degen.com/v1/bonus/vip-tiers",
-            "asOf": "2026-09-19"
+            "asOf": "2026-10-29"
           }
         ]
       },
@@ -5999,7 +5999,7 @@
             "value": "Gamdom’s own help pages disagree. Its deposit bonus guide says a deposit bonus must be wagered a multiple of the deposit, set by the offer each player sees. Its FAQ says Gamdom doesn’t offer traditional bonuses. Either way, deposits and free-spin winnings must be wagered at least once before withdrawal, and no fixed multiplier is published. The current welcome offer is instant rakeback, boosted to 15% for your first week.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.gamdom.com/en/articles/13256297-frequently-asked-questions",
-            "asOf": "2026-09-16"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Max bet",
@@ -6027,21 +6027,21 @@
             "value": "Rakeback is paid in real time and adjusts as play happens, factoring in RTP and house edge rather than total wagers alone. The minimum claimable amount is $0.10, it credits instantly once reached, and it never expires. Weekly and Monthly Rewards run alongside instant rakeback and are calculated from bet sizes, RTP and house edge; their formulas are not published, and each must be claimed within its period or it expires.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.gamdom.com/en/articles/9595436-what-is-rakeback-how-it-works-and-how-to-get-it",
-            "asOf": "2026-09-17"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Rakeback reload",
-            "value": "Instant rakeback can be claimed in full at any time, or converted into a Reload that adds a 25% bonus, paid out over seven days.",
+            "value": "Weekly and Monthly Rewards can be claimed in full at once, or taken as a 7-day Reload that adds a 25% bonus, paid in daily portions.",
             "sourcing": "editorial",
-            "sourceUrl": "https://gamdom.com/promotions",
-            "asOf": "2026-10-20"
+            "sourceUrl": "https://help.gamdom.com/en/articles/10290516-gamdom-rewards",
+            "asOf": "2026-10-29"
           },
           {
             "label": "Leaderboards",
             "value": "King of the Hill runs on two permanent cycles. The daily leaderboard pays $30,000 across the top 200 players and resets at 00:00 CET. The bi-weekly leaderboard pays $500,000 to the top 1,000, running 1st to mid-month and mid-month to month-end — two tournaments a month, so $1,000,000 in prizes every month. Ranking is by points earned from wagers, only the top 3 players' points are visible, prizes are claimed manually from the Rewards page, need no extra wagering and do not expire. · Gamdom's own promotions listing confirms the current King of the Hill format on its live page: the monthly edition was replaced from midnight on 15 April by two bi-weekly tournaments of $500,000 each.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.gamdom.com/en/articles/9721638-what-is-king-of-the-hill-and-how-does-it-work",
-            "asOf": "2026-09-17"
+            "asOf": "2026-10-29"
           },
           {
             "label": "VIP levels",
@@ -6076,7 +6076,7 @@
             "value": "Royalty Up has 24 levels across 8 tiers (Bronze, Silver, Gold, Emerald, Sapphire, Ruby, Diamond, Opal), three levels each. Every rank-up pays a reward that builds as you progress, is revealed when the rank completes, must be claimed manually from the Rewards page and never expires. Progress is shown as a percentage because the wager needed depends on game RTP. The separate VIP programme is invitation-only and adds a dedicated VIP team, VIP-only reloads and promotions, fee-free withdrawals and a VIP Telegram channel.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.gamdom.com/en/articles/10290516-gamdom-rewards",
-            "asOf": "2026-09-19"
+            "asOf": "2026-10-29"
           }
         ]
       },
@@ -6141,17 +6141,17 @@
         "facts": [
           {
             "label": "Licence",
-            "value": "Anjouan Gaming Authority, licence ALSI-152406043-FI (the same article also refers to Curaçao)",
+            "value": "Anjouan Gaming Authority, licence ALSI-152406043-FI, held by operator Moon Revolution Limitada (Costa Rica)",
             "sourcing": "editorial",
             "sourceUrl": "https://help.gamdom.com/en/articles/8511042-is-gamdom-a-legit-casino",
-            "asOf": "2026-09-14"
+            "asOf": "2026-10-29"
           },
           {
             "label": "KYC policy",
             "value": "Not required to deposit, play or withdraw unless specifically requested",
             "sourcing": "editorial",
             "sourceUrl": "https://help.gamdom.com/en/articles/13250444-how-and-when-to-verify-your-account",
-            "asOf": "2026-09-14"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Company",
@@ -6234,52 +6234,52 @@
         "facts": [
           {
             "label": "Standing offer",
-            "value": "Goated states it does not run a traditional welcome or deposit bonus, compensating instead through ongoing promotions, VIP rewards and its token ecosystem. Recurring promotions it names alongside the two races are Pragmatic Drops & Wins ($2,000,000 in monthly random drops and tournaments on Pragmatic slots) and G3's Challenge, a weekly multiplier challenge with $1,500 in shared prizes, minimum bet $0.20 and unlimited winners.",
+            "value": "Goated now offers new players a 100% First Deposit Bonus up to $1,000: minimum deposit $20, 35x (deposit + bonus) rollover, $10 max bet, sports bets don't count, and VIP rewards and affiliate commission are halved while it is active. Recurring promotions alongside the two races include Pragmatic Drops & Wins ($2,000,000 in monthly random drops and tournaments on Pragmatic slots) and G3's Challenge, a weekly multiplier challenge with $1,500 in shared prizes, minimum bet $0.20 and unlimited winners.",
             "sourcing": "editorial",
-            "sourceUrl": "https://www.goated.com/llms-full.txt",
-            "asOf": "2026-09-17"
+            "sourceUrl": "https://www.goated.com/help/article/16424322-100-first-deposit-bonus-up-to-1-000-usd",
+            "asOf": "2026-10-29"
           },
           {
             "label": "Leaderboards",
             "value": "Two standing races. The $25,000 Weekly Race is a wagering leaderboard paying the top 20 (1st $5,000, 2nd $2,500, 3rd $2,000, down to $50 for 20th), credited to VIP rewards at the end of each weekly period; the live promotions page shows it as LIVE. The $2,500 Daily Race is a 24-hour competition exclusively on Goated Originals running 00:00 to 00:00 UTC, with the top 10 sharing the pool and payouts made instantly after each race.",
             "sourcing": "editorial",
-            "sourceUrl": "https://www.goated.com/weekly-race",
-            "asOf": "2026-09-17"
+            "sourceUrl": "https://www.goated.com/llms-full.txt",
+            "asOf": "2026-10-29"
           },
           {
             "label": "VIP levels",
             "value": "9 tiers of 5 levels each, from Copper to Diamond by amount wagered: Bronze 1 at $1,000, Silver 1 at $10,000, Gold 1 at $100,000, Platinum 1 at $450,000, Pearl 1 at $1.3M, Sapphire 1 at $3M, Emerald 1 at $7M and Diamond 1 at $20M, up to Diamond 5 at $40M. Every level pays a level-up bonus based on your level and the house edge of games played, from about $0.60 at Bronze to about $4,800 per level at Diamond (at a 1.2% edge), plus Tier-Up Reloads on reaching each new tier, from $5.40 at Silver to $7,800 at Diamond",
             "sourcing": "editorial",
             "sourceUrl": "https://www.goated.com/help/article/9788115-goated-level-up-bonus",
-            "asOf": "2026-09-18"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Rakeback",
             "value": "Instant cashback on every bet with no wagering strings, available from Bronze tier upward. Players wagering the $GOATED token receive enhanced rakeback rates compared with other currencies.",
             "sourcing": "editorial",
             "sourceUrl": "https://www.goated.com/llms-full.txt",
-            "asOf": "2026-09-17"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Cashback",
             "value": "Lossback is available from Platinum 1 onward, calculated on negative PnL since the last claim using the formula PNL = Wager_PNL + Bonuses (excluding commissions) + Net Loan. A one-time lossback is also available at Gold level.",
             "sourcing": "editorial",
             "sourceUrl": "https://www.goated.com/llms-full.txt",
-            "asOf": "2026-09-17"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Reload bonuses",
             "value": "Weekly Reloads are awarded automatically every Tuesday at 00:10 UTC based on your past week's wagering, profit and VIP level, split into 168 hourly claims that each stay open for 12 hours (missed claims expire). They replaced support-requested VIP reloads on 4 August 2026. Separately, Tier-Up Reloads pay a one-time bonus on reaching each new VIP tier from Silver upward.",
             "sourcing": "editorial",
             "sourceUrl": "https://www.goated.com/help/article/16192691-what-is-weekly-reloads",
-            "asOf": "2026-09-18"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Perks by level",
-            "value": "From Bronze: instant rakeback, level-up bonus, birthday bonus and weekly bonus. Silver adds the monthly bonus and a bonus increase; Gold unlocks lossback (Platinum onward in full) and Platinum a referral increase. Sapphire adds VIP reloads, a VIP host and loans against future rewards; Emerald adds partial level-up bonuses; Diamond adds Goated event invitations",
+            "value": "From Bronze: instant rakeback, weekly bonus and birthday bonus (needs Level 2 verification), plus a level-up bonus at every level and tier-up reloads at each new tier. Silver adds the monthly bonus; Gold a one-time lossback (request within 7 days); Platinum lossback on request and increased referral commission. Sapphire adds partial level-up bonuses and loans arranged by a VIP host. Event invites, a VIP host and gifts come at higher tiers",
             "sourcing": "editorial",
-            "sourceUrl": "https://www.goated.com/help/article/9788115-goated-level-up-bonus",
-            "asOf": "2026-09-18"
+            "sourceUrl": "https://www.goated.com/help/article/9449782-vip-program-overview",
+            "asOf": "2026-10-29"
           },
           {
             "label": "Referral program",
@@ -6369,7 +6369,7 @@
             "value": "Anjouan, licence ALSI-202411063-FI2",
             "sourcing": "editorial",
             "sourceUrl": "https://www.goated.com/",
-            "asOf": "2026-09-15"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Company",
@@ -6383,7 +6383,7 @@
             "value": "Level 0 (email or wallet) at signup; Level 1 (name, date of birth, address) to bet and withdraw; Level 2 government ID and Level 3 proof of address for higher transaction limits. Withdrawals also need 100% of each deposit wagered",
             "sourcing": "editorial",
             "sourceUrl": "https://www.goated.com/",
-            "asOf": "2026-09-18"
+            "asOf": "2026-10-29"
           }
         ]
       }
@@ -9020,10 +9020,10 @@
           },
           {
             "label": "Withdrawal fees",
-            "value": "No Roobet fee on crypto withdrawals, network fees only. Fiat: 2% per withdrawal from the 10th in a 30-day period",
+            "value": "No Roobet fee on crypto withdrawals, network fees only. Card withdrawals may carry a fee depending on method, bank and region, shown in the cashier before you confirm",
             "sourcing": "editorial",
             "sourceUrl": "https://help.roobet.com/en/articles/4797515-does-roobet-charge-withdrawal-fees",
-            "asOf": "2026-09-14"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Minimum withdrawal",
@@ -9102,7 +9102,7 @@
             "value": "No multiplier stated for rakeback; deposits must be wagered 100% before withdrawal (anti-money-laundering rule)",
             "sourcing": "editorial",
             "sourceUrl": "https://help.roobet.com/en/articles/13239839-wagering-requirements",
-            "asOf": "2026-10-16"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Expiry",
@@ -9116,28 +9116,28 @@
             "value": "Aruba, Australia, Bonaire, Cuba, Curaçao, Cyprus, Gibraltar, Haiti, Iran, Iraq, Malta, Myanmar, Netherlands, Nicaragua, North Korea, Saba, Saint Maarten, Saint Martin, South Sudan, Statia, Syria, United States, United Kingdom, Yemen, Zimbabwe",
             "sourcing": "editorial",
             "sourceUrl": "https://roobet.com/terms-and-conditions",
-            "asOf": "2026-10-16"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Weekly raffle",
             "value": "A $100,000 weekly raffle runs continuously; every wager earns tickets each week, with one ticket per $1,000 of qualified wagers (some games award 2 tickets per $1,000). The prize pool is usually $100,000 split among 100 winners. The live promotions card and the homepage counter both show 100 raffle winners. · Roobet's own help centre describes the raffle mechanics: the pool is usually $100,000 split among 100 winners, and ticket count rises automatically with every $1,000 in qualified wagers.",
             "sourcing": "editorial",
             "sourceUrl": "https://roobet.com/promotions",
-            "asOf": "2026-09-17"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Rakeback",
             "value": "Instant Rakeback pays a percentage of the wagered amount, claimable every 30 minutes, and never expires. Rakeboosts temporarily lift the rate: +10% for 24 hours at signup, +10% for 60 minutes on rank up, +10% for 60 minutes on each daily/weekly/monthly claim, +15% for 60 minutes from the Vault Calendar and +20% for 72 hours from an affiliate code. Boosts do not stack — only the highest applies.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.roobet.com/en/articles/9546773-rewards-explained",
-            "asOf": "2026-09-17"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Reload bonuses",
             "value": "Recurring bonus schedule: a Daily Bonus that accumulates up to 72 hours and is claimable every 24 hours at midnight UTC; a Weekly Bonus released every Saturday at 7 PM EST / midnight UTC; a Monthly Bonus released on the 1st of each month at midnight UTC; and the Vault, available three times a day every 8 hours from 12:00 AM UTC with rewards expiring in 24 hours. Level-up bonuses are paid for wagering and levelling up.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.roobet.com/en/articles/9546773-rewards-explained",
-            "asOf": "2026-09-17"
+            "asOf": "2026-10-29"
           },
           {
             "label": "VIP levels",
@@ -9621,22 +9621,22 @@
             "label": "Wagering rules",
             "value": "Unless a promotion says otherwise, the requirement is (eligible deposit + bonus) × a multiplier shown on each promotion; its terms give no fixed figure beyond a 35× worked example",
             "sourcing": "editorial",
-            "sourceUrl": "https://shuffle.com/info/terms",
-            "asOf": "2026-09-16"
+            "sourceUrl": "https://shuffle.com/info/deposit-bonus-tcs",
+            "asOf": "2026-10-29"
           },
           {
             "label": "Expiry",
             "value": "30 days from the bonus being credited unless a promotion says otherwise; an unclaimed bonus may be cancelled after its claim period or 60 days",
             "sourcing": "editorial",
-            "sourceUrl": "https://shuffle.com/info/terms",
-            "asOf": "2026-09-16"
+            "sourceUrl": "https://shuffle.com/info/deposit-bonus-tcs",
+            "asOf": "2026-10-29"
           },
           {
             "label": "Max bet",
             "value": "$10 equivalent per wager while wagering is active, unless a promotion says otherwise",
             "sourcing": "editorial",
-            "sourceUrl": "https://shuffle.com/info/terms",
-            "asOf": "2026-09-16"
+            "sourceUrl": "https://shuffle.com/info/deposit-bonus-tcs",
+            "asOf": "2026-10-29"
           },
           {
             "label": "Max cashout",
@@ -9649,36 +9649,36 @@
             "label": "Game contribution",
             "value": "Progress = wager × (game house edge ÷ 4%); accumulator games, Challenges, slot bonus buys and restricted games are excluded, and sports bets need odds of 1.30 or more",
             "sourcing": "editorial",
-            "sourceUrl": "https://shuffle.com/info/terms",
-            "asOf": "2026-09-16"
+            "sourceUrl": "https://shuffle.com/info/deposit-bonus-tcs",
+            "asOf": "2026-10-29"
           },
           {
             "label": "Leaderboards",
             "value": "A $100,000 leaderboard resets every week, running Sunday 07:00 UTC to Sunday 07:00 UTC with a new leaderboard starting each week. Prizes go to the top 1,000 players, although only the top 20 are publicly tracked. Ranking is by total wagered across casino and sports; SHFL Lottery activity does not count.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.shuffle.com/en/articles/10397850-weekly-100-000-leaderboard-promotion",
-            "asOf": "2026-10-20"
+            "asOf": "2026-10-29"
           },
           {
             "label": "VIP levels",
             "value": "Ranks by total wagered: Wood $500; Bronze 1-5 $1,000-$5,000; Silver 1-5 $10,000-$50,000; Gold 1-5 $100,000-$300,000; Platinum 1-5 $450,000-$1,050,000; Jade 1-5 $1.2M-$1.8M; Sapphire 1-5 $2.3M-$4.3M; Ruby 1-5 $5.8M-$11.8M; Diamond 1-5 $17M-$37M. Every rank pays an automatic level-up bonus in the VIP panel, from about $0.90 per Bronze rank up to about $9,360 at Diamond 1. With the Level Up promotion, the combined rewards come to about $25 at Silver 1, $210 at Gold 1, $720 at Platinum 1 and $1,500 at Jade 1, with a personalised bonus at Sapphire 1. Players generally get a VIP host at Sapphire; hosted players with Level 2 verification receive birthday bonuses.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.shuffle.com/en/articles/8528228-shuffle-level-up-bonus",
-            "asOf": "2026-09-18"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Rakeback",
             "value": "Three layers of rakeback, calculated as a percentage of the rake with the rate set by your VIP level and amount wagered: instant rakeback credited straight after each bet, plus weekly and monthly rakeback. All of it can be played or withdrawn right away, and reloads are issued on reaching each new VIP rank",
             "sourcing": "editorial",
             "sourceUrl": "https://shuffle.com/vip-program",
-            "asOf": "2026-09-18"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Reload bonuses",
             "value": "Reloads are issued on reaching Silver 1, Gold 1, Platinum 1, Jade 1 and Sapphire, sized on recent wagering and profit and claimed at set intervals from the VIP page; a missed claim expires. From Sapphire, weekly reloads are arranged through a VIP host with a choice of 8-hour or 24-hour intervals. Alongside them: a Daily Bonus from Bronze at 12:00 AM UTC, a Weekly Bonus from Silver every Thursday at 11:00 AM UTC, a Monthly Bonus based on wagering, house edge and profit since the last one, a Pre-Monthly Bonus sent ahead of it, and bonus drop codes posted at random times each day in Shuffle's Telegram channels.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.shuffle.com/en/articles/10020491-what-is-the-shuffle-reload-bonus",
-            "asOf": "2026-09-18"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Weekly raffle",
@@ -9692,7 +9692,7 @@
             "value": "Casino Challenges: the first player to hit a target multiplier on a listed game at the minimum bet wins that challenge's prize, one winner per challenge. Claiming needs at least Wood rank ($500 wagered), and prizes are claimed from the VIP panel.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.shuffle.com/en/articles/8117078-challenges-terms-conditions",
-            "asOf": "2026-09-18"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Referral program",
@@ -10749,7 +10749,7 @@
             "value": "No maximum withdrawal: the whole available balance can be withdrawn. Minimums vary by cryptocurrency, from 0.00002504 BTC up to 78,795.08659 SHIB. No daily or monthly cap is stated.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.stake.com/en/articles/4793601-crypto-what-are-the-withdrawal-limits",
-            "asOf": "2026-09-17"
+            "asOf": "2026-10-29"
           }
         ]
       },
@@ -10808,7 +10808,7 @@
             "value": "Weekly Bonus is free to withdraw once above the minimum limit",
             "sourcing": "editorial",
             "sourceUrl": "https://help.stake.com/en/articles/9946687-do-i-have-to-wager-my-weekly-bonus",
-            "asOf": "2026-10-16"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Expiry",
@@ -10822,28 +10822,28 @@
             "value": "Rakeback returns 3.5% of the house edge as cash on all casino games — slots, table games and live dealer. Poker pays 3.5% of the rake; sportsbook pays 3.5% of the theoretical value of bets using a default 3% house edge. Voided and cashed-out sports bets are excluded. Rakeback normally starts once total wagers reach $10,000, the Bronze VIP threshold (Stake's welcome offer unlocks it straight away, see below), and the accumulated balance can be claimed at any time from the rakeback tab on the VIP page.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.stake.com/en/articles/4821738-what-is-rakeback",
-            "asOf": "2026-10-20"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Welcome offer",
-            "value": "Entering a valid affiliate or referral code within 24 hours of opening the account unlocks the 3.5% rakeback straight away, instead of only from Bronze ($10,000 wagered). The code is entered from the account settings page and can no longer be added after 24 hours.",
+            "value": "Entering a valid affiliate or referral code within 24 hours of opening the account unlocks the 3.5% rakeback straight away, instead of only from Bronze ($10,000 wagered). The code is entered on the offers page under your account and can no longer be added after 24 hours.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.stake.com/en/articles/5091363-how-to-get-my-welcome-offer",
-            "asOf": "2026-10-20"
+            "asOf": "2026-10-29"
           },
           {
             "label": "VIP levels",
             "value": "Fifteen VIP levels by points wagered: Bronze 10,000; Silver 50,000; Gold 100,000; Platinum I 250,000; Platinum II 500,000; Platinum III 1,000,000; Platinum IV 2,500,000; Platinum V 5,000,000; Platinum VI 10,000,000; Diamond I 25,000,000; Diamond II 50,000,000; Diamond III 100,000,000; Diamond IV 250,000,000; Diamond V 500,000,000; Obsidian 1,000,000,000. Monthly bonuses, level-up bonuses, rakeback and weekly bonuses run from Bronze up; bonus growth from Silver; daily bonuses from Platinum; custom benefits at Diamond. Dedicated VIP hosts may be available at high levels.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.stake.com/en/articles/9968893-what-are-the-stake-vip-levels-benefits",
-            "asOf": "2026-09-17"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Weekly raffle",
             "value": "$75,000 Weekly Raffle: one ticket for every $1,000 wagered across the casino and sportsbook, and the more you wager the more tickets you get",
             "sourcing": "editorial",
             "sourceUrl": "https://stake.com/vip-club",
-            "asOf": "2026-10-20"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Leaderboards",
@@ -11054,7 +11054,7 @@
             "value": "No minimum and no maximum deposit for any supported cryptocurrency",
             "sourcing": "editorial",
             "sourceUrl": "https://intercom.help/thrill/en/articles/10110969-crypto-how-to-make-a-deposit-faqs",
-            "asOf": "2026-09-18"
+            "asOf": "2026-10-29"
           }
         ]
       },
@@ -11073,49 +11073,49 @@
             "value": "Weekly Bonus expires if unclaimed when the next one drops",
             "sourcing": "editorial",
             "sourceUrl": "https://intercom.help/thrill/en/articles/13544510-where-is-the-weekly-bonus-posted-and-how-do-i-claim-it",
-            "asOf": "2026-10-16"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Deposit bonus",
             "value": "None: its rewards come from rakeback paid out as weekly, monthly and level-up bonuses, with no deposit-bonus article in its help centre",
             "sourcing": "editorial",
             "sourceUrl": "https://intercom.help/thrill/en/articles/13545285-what-is-rakeback",
-            "asOf": "2026-09-16"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Rakeback",
             "value": "Rakeback returns a percentage of the house edge on eligible Thrill casino gameplay, paid whether the player wins or loses and calculated from wager size and each game's house edge. It accrues automatically and is awarded through the platform's other bonuses. Instant Rakeback is available from the entry Base level upward.",
             "sourcing": "editorial",
             "sourceUrl": "https://intercom.help/thrill/en/articles/13545285-what-is-rakeback",
-            "asOf": "2026-09-17"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Leaderboards",
-            "value": "Recurring $50,000 Weekly Race: a live XP-based leaderboard across casino and sportsbook running Wednesday 2pm UTC to the following Wednesday 2pm UTC, no opt-in, prize pool split among the top 350 finishers (1st $15,000, 2nd $6,500, 3rd $4,000, 4th $2,500, down to $10 for 301st-350th), paid into the player's USDT wallet.",
+            "value": "Recurring $50,000 Weekly Race: a live XP-based leaderboard across casino and sportsbook running Wednesday 2pm UTC to the following Wednesday 2pm UTC, no opt-in, prize pool split among the top 350 finishers (1st $15,000, 2nd $6,500, 3rd $4,000, 4th $2,500, down to $8 for 301st-350th), paid into the player's USDT wallet.",
             "sourcing": "editorial",
             "sourceUrl": "https://intercom.help/thrill/en/articles/13159968-75-000-weekly-race",
-            "asOf": "2026-10-20"
+            "asOf": "2026-10-29"
           },
           {
             "label": "VIP levels",
-            "value": "Thrill Rewards Program has 16 XP-based progression levels from Base (0 XP) through Bronze 10,000, Silver 50,000, Gold 100,000, Platinum I-III, Emerald I-III, Diamond I-V, to Obsidian at 1,000,000,000 XP. Sports betting earns 3 XP per $1 wagered above minimum odds of 1.10; casino games earn 0.5 to 1.5 XP per $1 depending on house edge. Instant Rakeback, Weekly and Monthly bonuses are available from Base; Thrill Telegram and Level Up from Bronze; Weekly Increase from Silver; Monthly Increase, Vault X and Level Up Reloads from Gold.",
+            "value": "Thrill Rewards Program has 16 XP-based progression levels from Base (0 XP) through Bronze 10,000, Silver 50,000, Gold 100,000, Platinum I-III, Emerald I-III, Diamond I-V, to Obsidian at 1,000,000,000 XP. Sports betting earns 3 XP per $1 wagered above minimum odds of 1.10; casino games earn 0.5 to 1.5 XP per $1 depending on house edge. Instant Rakeback, Weekly and Monthly bonuses are available from Base; Thrill Telegram and Level Up from Bronze; Weekly Increase from Silver; Monthly Increase and Vault X from Gold; Level Up Reloads from Platinum I.",
             "sourcing": "editorial",
             "sourceUrl": "https://intercom.help/thrill/en/articles/11882893-what-are-the-rewards-levels-and-benefits-at-thrill",
-            "asOf": "2026-09-17"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Perks by level",
             "value": "Instant Rakeback, Weekly and Monthly bonuses from Base. Bronze adds the Thrill Telegram and level-up bonuses ($15 at Bronze rising to $12,800 at Diamond I); Silver adds the Weekly Increase; Gold adds the Monthly Increase and Vault X; Platinum I-III add level-up reloads; Platinum III adds partial level-ups; Emerald adds a VIP host, the High Rollers Telegram and host reloads; Diamond adds custom benefits.",
             "sourcing": "editorial",
             "sourceUrl": "https://intercom.help/thrill/en/articles/11882893-what-are-the-rewards-levels-and-benefits-at-thrill",
-            "asOf": "2026-09-19"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Reload bonuses",
             "value": "Level-up reloads are paid at Platinum I (14-day reload), Platinum II (28-day reload) and Platinum III (42-day reload), with the amount, duration and claim limits shown when the reload becomes available. Host reloads are added from Emerald.",
             "sourcing": "editorial",
             "sourceUrl": "https://intercom.help/thrill/en/articles/11882961-what-are-the-level-up-bonuses",
-            "asOf": "2026-09-19"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Referral program",
@@ -11230,7 +11230,7 @@
             "value": "Anjouan, licence ALSI-202506019-FI1",
             "sourcing": "editorial",
             "sourceUrl": "https://thrill.com/",
-            "asOf": "2026-09-14"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Company",
@@ -12533,21 +12533,21 @@
             "value": "None found: its help centre's Rewards & Bonuses section lists only VIP rewards (rakeback, reloads, lossback, free spins, monthly and quarterly bonuses)",
             "sourcing": "editorial",
             "sourceUrl": "https://help.winna.com/en/collections/11549842-rewards-bonuses",
-            "asOf": "2026-09-16"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Rakeback",
             "value": "Instant Rakeback returns a portion of every wager and becomes claimable every 7 minutes from the VIP Center; the claimable percentage scales with VIP level and wagering activity.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.winna.com/en/articles/10495172-what-is-instant-rakeback-and-how-do-i-claim-it",
-            "asOf": "2026-09-17"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Leaderboards",
             "value": "Recurring $10,000 Daily Race: a wagering leaderboard that resets each day, automatic entry with no opt-in, points weighted by game type (Originals about 1.0x, sports about 3.0x, slots about 4.0x on average), prizes credited to player balances when the race locks. · Recurring $50,000 Weekly Races: a wagering leaderboard running across the week with automatic entry and no opt-in, using the same point multipliers as the daily race (Originals about 1.0x, sports about 3.0x, slots about 4.0x on average).",
             "sourcing": "editorial",
             "sourceUrl": "https://winna.com/races/daily",
-            "asOf": "2026-09-17"
+            "asOf": "2026-10-29"
           },
           {
             "label": "VIP levels",
@@ -12561,14 +12561,14 @@
             "value": "Reload Bonuses unlock at Platinum VIP level and above, run for 7 consecutive days, are sized on recent betting activity, and must be claimed manually each day - a missed day is permanently lost.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.winna.com/en/articles/13287757-what-are-reload-bonuses-and-how-do-i-claim-them",
-            "asOf": "2026-09-17"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Cashback",
             "value": "Lossback of up to 25% of losses, returned as a bonus, available from Platinum VIP level and above. The Monthly Bonus is also described as partly rakeback and partly lossback/cashback, available from Bronze 1 on the 1st of each month and claimable within 30 days.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.winna.com/en/articles/10431169-the-winna-vip-program",
-            "asOf": "2026-09-17"
+            "asOf": "2026-10-29"
           },
           {
             "label": "VIP transfer",
@@ -12589,14 +12589,14 @@
             "value": "Challenges: the first player to hit a target multiplier (such as 2,000x-10,000x) on a listed game at the minimum base bet wins that challenge's reward. Only base-game bets count; bonus buys do not qualify.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.winna.com/en/articles/15054381-how-to-use-challenges",
-            "asOf": "2026-09-18"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Perks by level",
             "value": "From Bronze 1: Instant Rakeback every 7 minutes, the Monthly Bonus on the 1st and the Pre-Monthly Bonus on the 25th. Silver 1 adds the Friday Weekly Boost, the Quarterly Bonus and chat Rain. Gold adds Wednesday free spins and a monthly free bet on the 16th. Platinum adds lossback of up to 25% (reviewed on request through support), 7-day reload bonuses, a personal VIP host and host bonuses. Every level-up also unlocks a spin on the Winna Slide.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.winna.com/en/articles/10431169-the-winna-vip-program",
-            "asOf": "2026-09-19"
+            "asOf": "2026-10-29"
           }
         ]
       },
@@ -12670,7 +12670,7 @@
             "value": "Tobique Gaming Commission (licence number not stated). The commission's licence-holder register lists GG Gaming S.R.L with a B2C licence that expires on 8 May 2027. Winna's About page says to search the register for that name. Winna's footer and terms name the operator as GG Gaming LLC.",
             "sourcing": "editorial",
             "sourceUrl": "https://thetgc.ca/license-holders/",
-            "asOf": "2026-09-16"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Company",
@@ -12683,8 +12683,8 @@
             "label": "KYC policy",
             "value": "Due diligence within 30 days of first deposit, before first withdrawal, or before wagering EUR 2,000",
             "sourcing": "editorial",
-            "sourceUrl": "https://winna.com/aml-kyc",
-            "asOf": "2026-09-14"
+            "sourceUrl": "https://winna.com/legals/en/AML%26KYCPolicy.tobique.md",
+            "asOf": "2026-10-29"
           }
         ]
       }
@@ -12769,70 +12769,70 @@
             "value": "90 days from when the bonus is credited, after which the bonus and its winnings are removed",
             "sourcing": "editorial",
             "sourceUrl": "https://help.yeet.com/en/articles/13464278-deposit-bonus-faqs",
-            "asOf": "2026-09-16"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Wagering",
             "value": "35× the deposit plus the bonus, so a $100 deposit with a $100 bonus needs $7,000 of wagering",
             "sourcing": "editorial",
             "sourceUrl": "https://help.yeet.com/en/articles/13464278-deposit-bonus-faqs",
-            "asOf": "2026-09-16"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Max bet",
             "value": "$10 or crypto equivalent per bet or spin while a bonus is active, unless a promotion says otherwise",
             "sourcing": "editorial",
             "sourceUrl": "https://help.yeet.com/en/articles/13464278-deposit-bonus-faqs",
-            "asOf": "2026-09-16"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Max cashout",
             "value": "No cap: Yeet says there's no maximum win or cashout on the first deposit bonus, only the $1,000 bonus limit",
             "sourcing": "editorial",
             "sourceUrl": "https://help.yeet.com/en/articles/13464278-deposit-bonus-faqs",
-            "asOf": "2026-09-16"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Game contribution",
             "value": "Each bet counts as wager × (game edge ÷ 0.04), so lower-edge games count less; sports bets don't count",
             "sourcing": "editorial",
             "sourceUrl": "https://help.yeet.com/en/articles/13464278-deposit-bonus-faqs",
-            "asOf": "2026-09-16"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Rakeback",
             "value": "Instant Rakeback returns a percentage of the house edge generated by casino wagers, accrues automatically, is claimable immediately from the Rewards page and never expires. It starts at Bronze VIP level and is 5% for Bronze, Silver, Gold, Platinum, Jade, Diamond, Aether, The Void and Eternal, rising to 10% at Chairman. Sports wagers do not contribute.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.yeet.com/en/articles/14046420-instant-rakeback",
-            "asOf": "2026-09-17"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Leaderboards",
             "value": "Recurring $50K Weekly Chairman's Cup, in which the top 25 performers share a $50,000 prize pool. Yeet also runs a general Leaderboard that ranks top-performing players by activity across game types for exclusive rewards.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.yeet.com/en/articles/12052425-offers-vip-program",
-            "asOf": "2026-09-17"
+            "asOf": "2026-10-29"
           },
           {
             "label": "VIP levels",
             "value": "Reward tiers run Copper, Bronze, Silver, Gold, Platinum, Jade, Diamond, Aether, The Void, Eternal, Chairman - the page says ten tiers but lists eleven. A VIP Host is unlocked at Diamond; Chairman is invite-only with access to the founding team. Level-Up Bonuses pay on each level gained and Tier-Up Bonuses on each tier gained, and neither expires.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.yeet.com/en/articles/12052425-offers-vip-program",
-            "asOf": "2026-09-17"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Reload bonuses",
             "value": "Daily Reload calculated on the previous day's wagering, released daily at 12:30 am GMT and expiring 24 hours later. Weekly Bonus based on the previous week's wagering, released every Thursday at 12:30 am GMT, expiring 7 days after release. Monthly Bonus based on the previous month's wagering, released on the second Thursday of each month at 12:30 am GMT, expiring one month after release. None can be recovered once expired.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.yeet.com/en/articles/12052425-offers-vip-program",
-            "asOf": "2026-09-17"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Perks by level",
             "value": "Tiers by total wagered: Copper $100, Bronze $1,000, Silver $10,000, Gold $50,000, Platinum $250,000, Jade $1,000,000, Diamond $5,000,000, Aether $10,000,000, The Void $50,000,000, Eternal $250,000,000, and Chairman by invitation. Each level pays a level-up bonus and each new tier a tier-up bonus, neither of which expires. Instant rakeback starts at Bronze (5%, 10% at Chairman), a personal VIP host is available from Diamond, and Chairman members get access to the founding team.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.yeet.com/en/articles/12052425-offers-vip-program",
-            "asOf": "2026-09-19"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Referral program",
@@ -12846,7 +12846,7 @@
             "value": "VIP Tier Match Bonus: players with active VIP status at another crypto casino and at least $250,000 historical wager, plus a $100 minimum deposit, verify through support and pick one casino-only wager target to hit within 45 days: $250,000 for $1,500, $500,000 for $3,000, $1,000,000 for $8,000, $2,500,000 for $15,000, $5,000,000 for $30,000, $10,000,000 for $60,000 or $25,000,000 for $150,000. Wagers count at amount x (house edge / 0.04), and the match is available once per player.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.yeet.com/en/articles/14837668-yeet-vip-tier-match-bonus-terms-and-conditions",
-            "asOf": "2026-09-19"
+            "asOf": "2026-10-29"
           }
         ]
       },
@@ -12917,7 +12917,7 @@
             "value": "Level 1 KYC required to deposit; further KYC may be requested on any withdrawal",
             "sourcing": "editorial",
             "sourceUrl": "https://help.yeet.com/en/articles/12052341-deposits-withdrawals",
-            "asOf": "2026-09-15"
+            "asOf": "2026-10-29"
           }
         ]
       }

@@ -44,7 +44,7 @@ export default function Page() {
 
   const faqs = [
     { q: "What is the Stake promo code?", a: `${code}. Enter it within 24 hours of opening your Stake account and Stake's welcome offer unlocks its 3.5% rakeback straight away, rather than only once you reach Bronze at $10,000 wagered.` },
-    { q: `Where do I enter code ${code}?`, a: "Our link opens Stake with the code attached. If you need to add it yourself, Stake's help centre says the code is entered from your account settings page, and only within 24 hours of creating the account." },
+    { q: `Where do I enter code ${code}?`, a: "Our link opens Stake with the code attached. If you need to add it yourself, Stake's help centre says the code is entered on the offers page under your account, and only within 24 hours of creating the account." },
     { q: "Does Stake have a deposit bonus?", a: "No fixed deposit match. Stake's offer is rakeback plus recurring bonuses: a weekly boost, a monthly bonus, level-up bonuses and reloads from Platinum, each described on its own help pages." },
     { q: "When can I claim the rakeback?", a: "Stake's help centre says earned rakeback can be claimed at any time, from the rakeback tab on the VIP page." },
     { q: `Who gives code ${code}?`, a: "It is our affiliate code. We earn a commission when you sign up with it, which never changes what our Stake review reports." },
@@ -107,7 +107,7 @@ export default function Page() {
         <div className="grid grid-cols-1 sm:grid-cols-3" style={{ gap: 12 }}>
           {[
             { n: 1, t: "Open Stake through our link", d: `The sign-up button opens Stake with code ${code} attached.` },
-            { n: 2, t: "Check the code within 24 hours", d: "If it isn't filled in, Stake's help centre says to add it from your account settings page. After 24 hours it can no longer be added.", src: WELCOME },
+            { n: 2, t: "Check the code within 24 hours", d: "If it isn't filled in, Stake's help centre says to add it on the offers page under your account. After 24 hours it can no longer be added.", src: WELCOME },
             { n: 3, t: "Play: rakeback starts now", d: "3.5% of the house edge comes back on every casino bet, claimable any time from the rakeback tab on the VIP page." },
           ].map((s) => (
             <div key={s.n} style={{ padding: 20, borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.08)" }}>

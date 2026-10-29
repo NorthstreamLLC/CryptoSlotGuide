@@ -31,7 +31,7 @@ const RAZED_PROMOS = "https://www.razed.com/promotions/";
 const DUEL_TOS = "https://duel.com/policies/tos";
 const DEGEN_BONUS = "https://help.degen.com/en/articles/15558569-unlock-up-to-1-500-on-your-first-deposit";
 const YEET_BONUS = "https://help.yeet.com/en/articles/13464278-deposit-bonus-faqs";
-const GOATED_LEVELS = "https://www.goated.com/help/article/9788115-goated-level-up-bonus";
+const GOATED_FDB = "https://www.goated.com/help/article/16424322-100-first-deposit-bonus-up-to-1-000-usd";
 const BETFURY_PACK = "https://betfury.com/promo/welcome-pack-bonus";
 const BETFURY_TERMS = "https://docs.betfury.com/betfury/bonus-system/welcome-pack-terms-and-conditions";
 const THRILL_REF = "https://intercom.help/thrill/en/articles/11736577-refer-a-friend-and-earn-as-they-play";
@@ -50,13 +50,13 @@ export const PROMO_CONFIGS: Record<string, PromoConfig> = {
     steps: (c) => [
       { t: "Open Gamdom through our link", d: `The sign-up button opens Gamdom with code ${c} attached.` },
       { t: "Activate the code within 6 hours", d: `If it isn't on your account, go to Rewards, open Special Rewards, click Activate and enter ${c}. Once added it can't be changed.`, src: GAMDOM_CODE },
-      { t: "Play: rakeback is paid in real time", d: "Claim from $0.10 and it never expires, or turn it into a Reload that adds 25%, paid over seven days.", src: "https://help.gamdom.com/en/articles/9595436-what-is-rakeback-how-it-works-and-how-to-get-it" },
+      { t: "Play: rakeback is paid in real time", d: "Claim it from $0.10 and it never expires. Weekly and monthly rewards can also be taken as a 7-day Reload that adds 25%.", src: "https://help.gamdom.com/en/articles/10290516-gamdom-rewards" },
     ],
     rewardsTitle: "What the code unlocks, and what runs for everyone",
     rewards: [
       { title: "The code boost: 15% for 7 days", body: "Gamdom's help centre says using any affiliate code boosts your Instant Rakeback to 15% for your first 7 days. Codes can only be added within 6 hours of registering, from Special Rewards on the Rewards page, and can't be changed once added.", href: GAMDOM_CODE },
       { group: "Bonus terms", label: "Rakeback" },
-      { group: "Bonus terms", label: "Rakeback reload", sub: "Turn rakeback into a 25% reload" },
+      { group: "Bonus terms", label: "Rakeback reload", sub: "Take rewards as a 25% reload" },
       { group: "Bonus terms", label: "Leaderboards", sub: "King of the Hill leaderboards" },
       { group: "Bonus terms", label: "Perks by level", sub: "Royalty Up levels and VIP" },
       { group: "Bonus terms", label: "Reload bonuses", sub: "Weekly promotions" },
@@ -260,18 +260,18 @@ export const PROMO_CONFIGS: Record<string, PromoConfig> = {
   },
 
   degen: {
-    title: (c) => `Degen promo code ${c}: 100% first deposit bonus up to $1,500`,
-    description: (c) => `Sign up at Degen with code ${c} and claim its 100% first deposit match up to $1,500, with 30x wagering and no time limit. How to activate it, plus Degen's 3-8% rakeback and $25,000 weekly race, from its own pages.`,
-    lead: (c) => `Sign up with code ${c}, activate the bonus in your Wallet, then deposit $20 or more: Degen matches your first deposit 100% up to $1,500. Wagering is 30x deposit plus bonus, with no time limit.`,
+    title: (c) => `Degen promo code ${c}: a 3% rakeback boost and a $25,000 weekly race`,
+    description: (c) => `Sign up at Degen with code ${c}: a 3% rakeback boost for your first 24 hours, then 3% to 8% rakeback by VIP rank, a $25,000 weekly race and weekly and monthly bonuses, from Degen's own pages.`,
+    lead: (c) => `Sign up with code ${c} and your new account starts with a 3% rakeback boost for 24 hours. After that Degen pays 3% to 8% rakeback by VIP rank, plus a $25,000 race every week.`,
     perks: [
-      { t: "100% match up to $1,500", d: "On your first deposit, from $20" },
-      { t: "No time limit on the rollover", d: "30x deposit plus bonus" },
-      { t: "$25,000 weekly race", d: "Top 20 paid, $10,000 to first" },
+      { t: "3% rakeback boost for 24 hours", d: "On a new account, under Rewards → Rakeback" },
+      { t: "3% to 8% rakeback", d: "Rising with your VIP rank, claim any time" },
+      { t: "$25,000 weekly race", d: "Paid automatically every week" },
     ],
     steps: (c) => [
-      { t: "Sign up through our link", d: `Degen's bonus needs the account registered under an eligible referral code; our link attaches ${c}.`, src: DEGEN_BONUS },
-      { t: "Activate the bonus in your Wallet", d: "Switch it on before you deposit, then deposit at least $20.", src: DEGEN_BONUS },
-      { t: "Clear 30x at up to $10 a bet", d: "No time limit. Challenges, accumulator games and slot bonus buys don't count.", src: DEGEN_BONUS },
+      { t: "Open Degen through our link", d: `The sign-up button opens Degen with code ${c} attached.` },
+      { t: "Check the boost under Rewards", d: "Open Rewards, then Rakeback: the 24-hour boost shows there with a countdown." },
+      { t: "Claim rakeback any time", d: "It builds on every wager and can be claimed from the Rewards panel whenever you like.", src: "https://help.degen.com/en/articles/12570521-rakeback" },
     ],
     rewardsTitle: "What Degen pays back as you play",
     rewards: [
@@ -282,20 +282,17 @@ export const PROMO_CONFIGS: Record<string, PromoConfig> = {
       { group: "Bonus terms", label: "Leaderboards", sub: "$25,000 weekly race" },
       { group: "Bonus terms", label: "VIP levels" },
     ],
-    termsTitle: "Welcome bonus terms",
+    termsTitle: "Terms worth knowing",
     terms: [
-      { group: "Bonus terms", label: "Wagering" },
-      { group: "Bonus terms", label: "Max bet" },
-      { group: "Bonus terms", label: "Game contribution", sub: "What counts toward wagering" },
-      { group: "Bonus terms", label: "During rollover", sub: "While the rollover is active" },
-      { group: "Bonus terms", label: "Expiry", sub: "Time limit" },
-      { group: "Bonus terms", label: "Bonus eligibility", sub: "Who can claim it" },
+      { group: "Bonus terms", label: "Standing offer", sub: "Degen's first deposit bonus" },
+      { group: "Compliance", label: "KYC policy", sub: "ID checks" },
+      { group: "Compliance", label: "Licence" },
     ],
     faqs: (c) => [
       { q: "What is the Degen promo code?", a: `${c}. Our sign-up link opens Degen with it attached.` },
-      { q: "What is Degen's welcome bonus?", a: "A 100% match on your first deposit up to $1,500. The deposit must be at least $20, the bonus must be activated in your Wallet before you deposit, and the account must be registered under an eligible referral code." },
-      { q: "What are the wagering terms?", a: "30x the deposit plus the bonus, so $100 + $100 needs $6,000 of wagering, with no time limit. Max bet is $10 while the rollover is active, and each bet counts by the game's house edge (wager x edge / 0.04)." },
-      { q: "What if the bonus doesn't show up?", a: "Degen asks you to contact its support team as soon as possible after making your deposit." },
+      { q: `What does code ${c} get me?`, a: "A new account we opened with it on 29 October 2026 started with a 3% rakeback boost for 24 hours, shown with a countdown under Rewards, then Rakeback. After that you're on Degen's standard rakeback, 3% at Bronze I rising to 8% at the top rank." },
+      { q: `Does code ${c} get Degen's 100% first deposit bonus?`, a: "No. Degen ties its 100% first deposit bonus (up to $1,500, 30x wagering) to eligible referral codes, and the bonus wasn't offered on the account we opened with this code. That also means your deposit isn't locked behind a rollover." },
+      { q: "How does Degen's rakeback work?", a: "It accrues on every wager and can be claimed at any time from the Rewards panel. The rate rises with VIP rank from 3% at Bronze I to 8% at Degen, and sports wagers earn a theoretical 3% once they settle." },
       ours("Degen")(c),
     ],
     next: [
@@ -352,18 +349,18 @@ export const PROMO_CONFIGS: Record<string, PromoConfig> = {
   },
 
   goated: {
-    title: (c) => `Goated promo code ${c}: $25,000 weekly race and instant rakeback`,
-    description: (c) => `Sign up at Goated with code ${c}. Goated runs no deposit bonus; it pays back through instant rakeback from Bronze, a $25,000 weekly race, a $2,500 daily race and level-up bonuses. From Goated's own pages.`,
-    lead: (c) => `Goated doesn't run a welcome bonus. Sign up with code ${c} and you're in for what it pays instead: instant rakeback from Bronze ($1,000 wagered), a $25,000 weekly race and a bonus at every level.`,
+    title: (c) => `Goated promo code ${c}: 100% first deposit bonus up to $1,000`,
+    description: (c) => `Sign up at Goated with code ${c} and claim its new 100% first deposit bonus up to $1,000, with 35x wagering. The terms, plus Goated's instant rakeback, $25,000 weekly race and level-up bonuses, from Goated's own pages.`,
+    lead: (c) => `Sign up with code ${c} and Goated matches your first deposit 100% up to $1,000, from $20. Wagering is 35x deposit plus bonus, and the $25,000 weekly race and level-up bonuses run alongside.`,
     perks: [
+      { t: "100% match up to $1,000", d: "On your first deposit, from $20" },
       { t: "$25,000 weekly race", d: "Top 20 paid, $5,000 to first" },
-      { t: "$2,500 daily race", d: "On Goated Originals, paid instantly" },
       { t: "Instant rakeback", d: "From Bronze, with no wagering strings" },
     ],
     steps: (c) => [
       { t: "Open Goated through our link", d: `The sign-up button opens Goated with code ${c} attached.` },
-      { t: "Add your details to play", d: "Sign-up needs only an email or wallet; name, date of birth and address are needed to bet and withdraw.", src: "https://www.goated.com/" },
-      { t: "Wager $1,000 to reach Bronze", d: "Instant rakeback, level-up bonuses and the weekly bonus start there.", src: GOATED_LEVELS },
+      { t: "Make your first deposit of $20+", d: "The match applies to your first deposit only, up to a $1,000 bonus.", src: GOATED_FDB },
+      { t: "Clear 35x at up to $10 a bet", d: "Only Originals, slots and live games count; sports bets, challenges and bonus buys don't.", src: GOATED_FDB },
     ],
     rewardsTitle: "What Goated pays you back",
     rewards: [
@@ -374,17 +371,20 @@ export const PROMO_CONFIGS: Record<string, PromoConfig> = {
       { group: "Bonus terms", label: "Reload bonuses", sub: "Weekly reloads" },
       { group: "Bonus terms", label: "Cashback", sub: "Lossback" },
     ],
-    termsTitle: "Terms worth knowing",
+    termsTitle: "First deposit bonus terms",
     terms: [
-      { group: "Bonus terms", label: "Standing offer", sub: "No welcome bonus" },
+      { group: "Bonus terms", label: "Standing offer", sub: "The first deposit bonus" },
+      { title: "Wagering", body: "35x the deposit plus the bonus, so a $1,000 deposit with a $1,000 bonus needs $70,000 of wagering. Each bet counts as wager x (game edge / 0.04), and sportsbook wagers don't count.", href: GOATED_FDB },
+      { title: "Max bet and games", body: "$10 per wager while the rollover is active. Challenges, accumulator games and slot bonus buys aren't allowed; only Goated Originals, slots and live games can be played.", href: GOATED_FDB },
+      { title: "While the bonus is active", body: "Withdrawals, vaulting and tipping are locked for your whole balance until the bonus ends, and VIP rewards and affiliate commissions are halved. It can be forfeited only before you start playing.", href: GOATED_FDB },
       { group: "Compliance", label: "KYC policy", sub: "Verification and deposits" },
       { group: "Compliance", label: "Licence" },
     ],
     faqs: (c) => [
       { q: "What is the Goated promo code?", a: `${c}. Our sign-up link opens Goated with it attached.` },
-      { q: "Does Goated have a welcome bonus?", a: "No. Goated says it doesn't run a traditional welcome or deposit bonus, and rewards players through rakeback, races, VIP rewards and its token instead." },
-      { q: "When does rakeback start?", a: "From Bronze 1, at $1,000 wagered. It is instant cashback on every bet with no wagering strings." },
-      { q: "Do I have to wager my deposit before withdrawing?", a: "Yes. Goated requires 100% of each deposit to be wagered before withdrawal." },
+      { q: "What is Goated's welcome bonus?", a: "A 100% match on your first deposit up to $1,000, from a $20 deposit. Goated added it in late October 2026; before that it ran no welcome bonus." },
+      { q: "What are the wagering terms?", a: "35x the deposit plus the bonus, at up to $10 a bet. Bets count by the game's house edge, sports bets don't count, and withdrawals are locked until the rollover is done." },
+      { q: "Can I skip the bonus?", a: "Goated lets you forfeit it before you start playing, and your deposit is kept. Once you've played with the balance it can no longer be forfeited." },
       ours("Goated")(c),
     ],
     next: [
@@ -401,7 +401,7 @@ export const PROMO_CONFIGS: Record<string, PromoConfig> = {
     perks: [
       { t: "Up to 590% + 225 free spins", d: "Across your first three deposits" },
       { t: "10% rakeback", d: "Of the house edge, for every player" },
-      { t: "$20,000 Daily Battles", d: "1,000 winners every day" },
+      { t: "$20,000 Daily Battles", d: "Plus Sports, Provider and VIP Battles" },
     ],
     steps: (c) => [
       { t: "Open BetFury through our link", d: `The sign-up button opens BetFury with code ${c} attached.` },
