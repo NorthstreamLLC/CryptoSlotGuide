@@ -4420,21 +4420,21 @@
             "value": "Duel Originals are in-house games built to 100% RTP with zero house edge, and Duel Original Slots are presented as provably fair slots at 100% RTP. Duel positions itself against bonuses rather than offering them, with a dedicated \"Why Bonuses Suck\" page.",
             "sourcing": "editorial",
             "sourceUrl": "https://duel.com/llms.txt",
-            "asOf": "2026-09-17"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Rakeback",
             "value": "Third-party slots: 50% of the house edge paid comes back instantly, turning a 4% edge into an effective 2%. Duel Originals carry a 0.1% base edge, and while you are inside your daily zero-edge allowance every bet gets a matching 0.1% instant rakeback, so the net edge is zero. The allowance resets daily. Duel's original slots run at 100% RTP and carry no rakeback.",
             "sourcing": "editorial",
             "sourceUrl": "https://duel.com/zero-edge-faq",
-            "asOf": "2026-09-18"
+            "asOf": "2026-10-29"
           },
           {
             "label": "House edge claim",
             "value": "Says its house games run at 99.9% RTP, with a stated goal of reaching 100%, and compares that to the 99% it says is standard elsewhere. We haven't verified those figures",
             "sourcing": "editorial",
             "sourceUrl": "https://duel.com/wtf-duel",
-            "asOf": "2026-10-16"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Referrals",
@@ -4462,7 +4462,7 @@
             "value": "No VIP ladder or level-up rewards. Duel rejects daily, weekly and monthly level-up bonuses as retention tricks and returns value through instant rakeback instead.",
             "sourcing": "editorial",
             "sourceUrl": "https://duel.com/wtf-duel",
-            "asOf": "2026-09-18"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Referral program",
@@ -4562,7 +4562,7 @@
             "value": "Anjouan, licence ALSI-202411026-FI1",
             "sourcing": "editorial",
             "sourceUrl": "https://duel.com/",
-            "asOf": "2026-09-15"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Company",
@@ -4576,7 +4576,7 @@
             "value": "Reserves the right to request KYC before processing a withdrawal, and says it isn't liable if funds stay locked when documents aren't provided; ID documents are handled through Checkin.com",
             "sourcing": "editorial",
             "sourceUrl": "https://duel.com/policies/tos",
-            "asOf": "2026-09-15"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Restricted countries",
@@ -4713,7 +4713,7 @@
             "value": "No minimum on BTC, ETH, LTC, SOL, DOGE, XRP, BNB, TRX, TRUMP and USDT on TRC-20; $1 for USDC on Solana; $10 for SHIB, DAI, USDC on ERC-20 and USDT on BSC; $50 for USDT on ERC-20.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.duelbits.com/en/articles/16798784-duelbits-fees-limits-processing-times",
-            "asOf": "2026-09-18"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Deposit limits",
@@ -4739,42 +4739,42 @@
             "value": "Unclaimed rakeback resets: daily at 00:00 UTC, weekly on Monday, monthly on the 1st",
             "sourcing": "editorial",
             "sourceUrl": "https://help.duelbits.com/en/articles/12547694-rakeback-bits-at-duelbits",
-            "asOf": "2026-09-14"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Deposit bonus",
             "value": "None: its help centre lists weekly promos, VIP rakeback, giveaways and ACE's Rewards, with no deposit bonus",
             "sourcing": "editorial",
             "sourceUrl": "https://help.duelbits.com/en/articles/6758643-duelbits-promotions-and-bonuses",
-            "asOf": "2026-09-16"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Rakeback",
             "value": "Rakeback (\"Bits\") pays fixed percentages of the house edge, not of the bet: 10% Instant claimable any time, 5% Daily, 5% Weekly ready every Monday, and 5% Monthly — 25% in total. Level-Up rewards in Ace's Lounge add up to 12.5% on top, taking the ceiling to 37.5%, and referrals add up to 10% of the house edge from invited players' wagers for a 47.5% total potential. Sports wagers carry a 1% house edge and pay back the same 25% split, so a $10,000 wager produces a $100 house edge and $25 total rakeback over time. Unclaimed rakeback resets: daily at 00:00 UTC, weekly every Monday at 00:00 UTC, monthly on the 1st at 00:00 UTC. Page written 9 October 2025.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.duelbits.com/en/articles/12547694-rakeback-bits-at-duelbits",
-            "asOf": "2026-09-17"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Leaderboards",
             "value": "Two permanent leaderboards. The daily leaderboard has a $10,000 prize pool paying the top 100 (raised from $5,000 and top 5). The weekly leaderboard has a $30,000 prize pool paying the top 250 (raised from $20,000 and top 5) — 350 winners every week and $100,000 in weekly prize pools. Points use Wager × Inverse RTP (1 − RTP), so $100 on a 96% RTP slot scores 400 points while $100 on 99.29% RTP blackjack scores 71. Page written 11 December 2025.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.duelbits.com/en/articles/5351385-leaderboard-explained",
-            "asOf": "2026-09-17"
+            "asOf": "2026-10-29"
           },
           {
             "label": "VIP levels",
             "value": "Levels sit in Ace's Lounge, and every wager moves a player toward the next tier; each level boosts rakeback, unlocking extra bonuses of up to 12.5% on top of Bits. Milestones between levels allow partial bonuses to be claimed early. Tier names and wager thresholds are not published; the VIP team reviews accounts and contacts players who qualify.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.duelbits.com/en/articles/12547694-rakeback-bits-at-duelbits",
-            "asOf": "2026-09-17"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Reload bonuses",
             "value": "Weekly VIP perks run every Tuesday, when selected VIP players can collect extra rakeback from casino or sportsbook. Weekly promos run continuously for both casino and sportsbook, one-click community giveaways run on Discord, and Ace's Rewards covers the instant, daily, weekly and monthly Bits plus level-ups. Page written 4 September 2025.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.duelbits.com/en/articles/6758643-duelbits-promotions-and-bonuses",
-            "asOf": "2026-09-17"
+            "asOf": "2026-10-29"
           },
           {
             "label": "VIP Club",
@@ -4863,7 +4863,7 @@
             "value": "Curaçao Gaming Authority, licence OGL/2024/1507/0838",
             "sourcing": "editorial",
             "sourceUrl": "https://help.duelbits.com/en/articles/16335255-is-duelbits-legit-licence-security-trust",
-            "asOf": "2026-09-14"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Company",
@@ -8207,28 +8207,28 @@
             "value": "Rainbet's help centre states there is one first-deposit promotion, the 40x Wager Locked bonus: deposit and bonus funds go to a promotional balance that must be turned over 40x (deposit $100 -> $200 in play funds -> $8,000 of wagering), with free spins on Sweet Bonanza and games over 97.4% RTP disabled while it is active. Rainbet's own Deposit Promotion Terms page disagrees: it lists two variants, the Wager Lock Promotion and a No Wager Lock Promotion whose bonus unlocks as wager amount x 1% x 20%.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.rainbet.com/en/articles/15268657-first-deposit-promotion",
-            "asOf": "2026-09-17"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Wagering",
             "value": "40× the combined deposit and bonus, so $100 + $100 needs $8,000 of wagering",
             "sourcing": "editorial",
             "sourceUrl": "https://help.rainbet.com/en/articles/15268657-first-deposit-promotion",
-            "asOf": "2026-09-16"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Max bet",
             "value": "1% of the deposit amount per bet while the rollover is active, unless stated otherwise",
             "sourcing": "editorial",
             "sourceUrl": "https://help.rainbet.com/en/articles/9831951-deposit-bonus-terms-and-conditions",
-            "asOf": "2026-09-16"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Game contribution",
             "value": "Games above 97.4% RTP are disabled while the promotion is active; no other contribution rates are given",
             "sourcing": "editorial",
             "sourceUrl": "https://help.rainbet.com/en/articles/15268657-first-deposit-promotion",
-            "asOf": "2026-09-16"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Max cashout",
@@ -8256,14 +8256,14 @@
             "value": "Rakeback is claimable every 15 minutes and is based on total wagered; part of it automatically feeds the Daily Reload. RakeBoosts temporarily raise it (Daily Reload +15% for 60 minutes, Daily Bonus +10% for 60 minutes).",
             "sourcing": "editorial",
             "sourceUrl": "https://help.rainbet.com/en/articles/9171035-rewards-overview",
-            "asOf": "2026-09-17"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Reload bonuses",
             "value": "Calendar rewards on a fixed cycle (UTC): Daily Reward at 00:00 daily, Weekly Reward at 00:00 every Monday, Pre-Monthly Reward on the 16th of each month, Monthly Reward at 00:00 on the 1st. On top of these, the Daily Reload is claimable three times a day in equal parts every 8 hours and expires within 24 hours. Amounts are sized to each account's Expected Value and boosted when the player is not in profit for the period; unclaimed rewards expire when the next cycle starts.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.rainbet.com/en/articles/15253793-calendar-rewards",
-            "asOf": "2026-09-17"
+            "asOf": "2026-10-29"
           },
           {
             "label": "VIP levels",
@@ -8277,7 +8277,7 @@
             "value": "Casino Challenges set targets on listed slots and Rainbet Originals, such as hitting a set multiplier at a minimum bet, with the prize going to the first player to complete each one. A verified account is required, several challenges can be played at once, and rewards are credited automatically.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.rainbet.com/en/articles/10331015-challenges",
-            "asOf": "2026-09-18"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Perks by level",
@@ -8438,7 +8438,7 @@
             "value": "$20 at Bronze 1 ($10,000 wagered), $100 at Gold 1 ($200K), $250 at Platinum 1 ($750K), $15,000 at Diamond ($25M), up to $500,000 at Onyx ($1B)",
             "sourcing": "editorial",
             "sourceUrl": "https://www.razed.com/vip-program/",
-            "asOf": "2026-09-15"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Perks by rank",
@@ -8536,21 +8536,21 @@
             "value": "Rakeback is available from the entry Starter rank and returns a percentage of the house edge from every bet placed, win or lose.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.razed.com/en/articles/9079076-razed-com-vip-program-overview",
-            "asOf": "2026-09-17"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Reload bonuses",
             "value": "Daily Reload from Gold I, sized on the last 7 days of gameplay and total wager, paid every day. Weekly Bonus from Bronze I, sized on weekly gameplay and total wager. Monthly Bonus from Starter, sized on both total wager and losses and including an element of lossback.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.razed.com/en/articles/9079076-razed-com-vip-program-overview",
-            "asOf": "2026-09-17"
+            "asOf": "2026-10-29"
           },
           {
             "label": "Cashback",
             "value": "Lossback is delivered through the Monthly Bonus, which is available from the Starter rank and is calculated on both total wager and losses.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.razed.com/en/articles/9079076-razed-com-vip-program-overview",
-            "asOf": "2026-09-17"
+            "asOf": "2026-10-29"
           }
         ]
       },
