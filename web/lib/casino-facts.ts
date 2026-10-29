@@ -130,7 +130,7 @@ const MAX_LIMITS: Record<string, [string | null, string | null]> = {
   yeet: ["No max", "No max stated"],
   thrill: ["No max", "No max"],
   stake: ["No max", "No max"],
-  roobet: [null, "$5,000 per card deposit"],
+  roobet: ["No max", "$5,000 per card deposit"],
   winna: ["$10,000 a day, higher for VIPs", null],
   bitstarz: ["1 BTC per withdrawal", "No max"],
   cloudbet: ["No max once verified", "No max once verified"],
