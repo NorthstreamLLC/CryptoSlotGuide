@@ -63,6 +63,9 @@ import { coinHref } from "./coins";
 import { sportsOffers, sportsOnlyRaces, sportsBoosts, sportsbookHref, sportsPick } from "./sports";
 import { rankedBrands } from "./us-brands";
 import { kevinLive, KEVIN_PATH } from "./kevin-promo";
+
+/** Esports titles with their own mark in public/assets/logos/esports (sources in data/logo-sources.json). */
+const ESPORTS_ICONS = new Set(["cs2", "dota-2", "league-of-legends", "valorant"]);
 import { promoHref } from "./promo-pages";
 
 const slotCatLabels = siteData.slotCatDefs.map((d) => ({ tag: d.tag, label: d.label }));
@@ -511,7 +514,7 @@ function rawNavTabs(c: SiteCounts): NavTab[] {
           columns: [
             {
               title: "By title",
-              links: siteData.esportsTitles.slice(0, 4).map((t) => ({ label: t.name, href: `/betting/${slug(t.name)}` })),
+              links: siteData.esportsTitles.slice(0, 4).map((t) => ({ label: t.name, href: `/betting/${slug(t.name)}`, image: ESPORTS_ICONS.has(slug(t.name)) ? `/assets/logos/esports/${slug(t.name)}.png` : undefined })),
             },
             {
               title: "Where to bet it",

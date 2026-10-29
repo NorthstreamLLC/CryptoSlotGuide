@@ -219,5 +219,28 @@
       "fetchedAt": "2026-09-25"
     }
   },
-  "coinsNote": "Coin marks in public/assets/coins, each from the project's own site. XRP has no entry: the only mark fetchable was Ripple's, and Ripple is a company rather than the asset, so the chip falls back to the XRP glyph instead."
+  "coinsNote": "Coin marks in public/assets/coins, each from the project's own site. XRP has no entry: the only mark fetchable was Ripple's, and Ripple is a company rather than the asset, so the chip falls back to the XRP glyph instead.",
+  "esports": {
+    "cs2": {
+      "url": "https://www.counter-strike.net/favicon.ico",
+      "size": "256x256",
+      "fetchedAt": "2026-10-29"
+    },
+    "dota-2": {
+      "url": "https://cdn.cloudflare.steamstatic.com/apps/dota2/images/dota_react/global/dota2_logo_symbol.png",
+      "size": "634x591",
+      "fetchedAt": "2026-10-29"
+    },
+    "league-of-legends": {
+      "url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/d3b7bd9decb1e1672dcb80be4f8bc1aa05490dc1-110x70.svg",
+      "size": "svg",
+      "fetchedAt": "2026-10-29"
+    },
+    "valorant": {
+      "url": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/cbf4460132cdfeb2a97fad5f9dd25ba0bc058f76-128x128.png",
+      "size": "128x128",
+      "fetchedAt": "2026-10-29"
+    }
+  },
+  "esportsNote": "Esports title marks in public/assets/logos/esports: each game's own site icon (counter-strike.net, Valve's Dota 2 CDN, the League of Legends and VALORANT sites' Riot CDN), set on a 128px square of the game's own background colour."
 }
