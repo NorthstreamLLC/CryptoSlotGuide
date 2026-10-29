@@ -15,6 +15,9 @@ import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
 import { KevinCard } from "@/components/promo/KevinCard";
 import { kevinLive } from "@/lib/kevin-promo";
 import { BrandMark } from "@/components/ui/BrandMark";
+import { logoFor } from "@/lib/logo";
+import { sportsbookOrder } from "@/lib/sports";
+import { venuesInOrder } from "@/lib/prediction-markets";
 import { getSpecFact } from "@/lib/spec-sheet";
 
 /**
@@ -144,17 +147,32 @@ export default function HomePage() {
             </div>
             <div className="csg-more-paths" style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 10, marginTop: 20 }}>
               {[
-                { icon: "⚽", label: "Sportsbooks", href: "/sportsbooks" },
-                { icon: "📈", label: "Prediction markets", href: "/prediction-markets" },
-                { icon: "👛", label: "Wallets", href: "/wallets" },
-                { icon: "🏁", label: "Races & raffles", href: "/races" },
-                { icon: "📘", label: "Guides", href: "/guides" },
-              ].map((x) => (
-                <Link key={x.label} href={x.href} className="csg-lift" style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "11px 18px", borderRadius: 100, background: "rgba(255,255,255,.05)", border: "1px solid rgba(255,255,255,.14)", color: "#E8EDF0", fontSize: 14.5, fontWeight: 700 }}>
-                  <span aria-hidden>{x.icon}</span>
-                  {x.label}
-                </Link>
-              ))}
+                { icon: "⚽", label: "Sportsbooks", href: "/sportsbooks", logos: sportsbookOrder().map((o) => o.slug) },
+                { icon: "📈", label: "Prediction markets", href: "/prediction-markets", logos: [...venuesInOrder("crypto"), ...venuesInOrder("fiat")].map((v) => v.slug) },
+                { icon: "👛", label: "Wallets", href: "/wallets", logos: ["metamask", "phantom", "ledger", "trust-wallet"] },
+                { icon: "🏁", label: "Races & raffles", href: "/races", logos: raceSlugs() },
+                { icon: "📘", label: "Guides", href: "/guides", logos: [] },
+              ].map((x) => {
+                // The first few brands each page covers, as a row of overlapping logos under the label.
+                const logos = x.logos.filter((slug) => logoFor(slug)).slice(0, 4);
+                return (
+                  <Link key={x.label} href={x.href} className="csg-lift" style={{ display: "inline-flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 8, minHeight: 74, padding: "11px 18px", borderRadius: 18, background: "rgba(255,255,255,.05)", border: "1px solid rgba(255,255,255,.14)", color: "#E8EDF0", fontSize: 14.5, fontWeight: 700 }}>
+                    <span style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
+                      <span aria-hidden>{x.icon}</span>
+                      {x.label}
+                    </span>
+                    {logos.length > 0 && (
+                      <span aria-hidden style={{ display: "flex" }}>
+                        {logos.map((slug, i) => (
+                          <span key={slug} style={{ width: 24, height: 24, marginLeft: i ? -7 : 0, borderRadius: "50%", overflow: "hidden", border: "2px solid #0F1418", background: "#0F1418", zIndex: logos.length - i }}>
+                            <BrandMark slug={slug} mono={slug.slice(0, 2).toUpperCase()} radius={12} fontSize={9} />
+                          </span>
+                        ))}
+                      </span>
+                    )}
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </section>
