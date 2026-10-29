@@ -28,6 +28,14 @@ const GAMDOM_CODE = "https://help.gamdom.com/en/articles/13334652-how-to-add-an-
 const DUELBITS_REF = "https://help.duelbits.com/en/articles/5351626-affiliates-explained";
 const RAINBET_TERMS = "https://rainbet.com/deposit-promotion-terms";
 const RAZED_PROMOS = "https://www.razed.com/promotions/";
+const DUEL_TOS = "https://duel.com/policies/tos";
+const DEGEN_BONUS = "https://help.degen.com/en/articles/15558569-unlock-up-to-1-500-on-your-first-deposit";
+const YEET_BONUS = "https://help.yeet.com/en/articles/13464278-deposit-bonus-faqs";
+const GOATED_LEVELS = "https://www.goated.com/help/article/9788115-goated-level-up-bonus";
+const BETFURY_PACK = "https://betfury.com/promo/welcome-pack-bonus";
+const BETFURY_TERMS = "https://docs.betfury.com/betfury/bonus-system/welcome-pack-terms-and-conditions";
+const THRILL_REF = "https://intercom.help/thrill/en/articles/11736577-refer-a-friend-and-earn-as-they-play";
+const THRILL_LEVELS = "https://intercom.help/thrill/en/articles/11882893-what-are-the-rewards-levels-and-benefits-at-thrill";
 
 export const PROMO_CONFIGS: Record<string, PromoConfig> = {
   gamdom: {
@@ -204,6 +212,316 @@ export const PROMO_CONFIGS: Record<string, PromoConfig> = {
     next: [
       { href: "/casinos/razed", label: "Full Razed review", hint: "Withdrawals, coins, licence and sportsbook, each linked to Razed's own pages." },
       { href: "/sportsbooks", label: "Crypto sportsbooks", hint: "Razed is our sportsbook pick; see how it compares." },
+      BONUSES_NEXT,
+    ],
+  },
+
+  duel: {
+    title: (c) => `Duel promo code ${c}: a $3M monthly race and 50% instant rakeback on slots`,
+    description: (c) => `Sign up at Duel with code ${c}. Duel runs no deposit bonuses by design; instead it pays 50% of the house edge back instantly on slots, runs zero-edge Originals and a $3,000,000 monthly race. All from Duel's own pages.`,
+    lead: (c) => `Duel doesn't do deposit bonuses. Sign up with code ${c} and you get what it gives instead: half the house edge back instantly on third-party slots, zero-edge Originals within a daily allowance, and a $3M monthly race.`,
+    perks: [
+      { t: "$3,000,000 monthly race", d: "$1.5M to first, at least 50 places paid" },
+      { t: "50% instant rakeback on slots", d: "Turns a 4% house edge into an effective 2%" },
+      { t: "Zero-edge Originals", d: "Within a daily allowance that resets every day" },
+    ],
+    steps: (c) => [
+      { t: "Open Duel through our link", d: `The sign-up button opens Duel with code ${c} attached.` },
+      { t: "Check Duel takes your country", d: "Its terms exclude the UK, the USA, Australia, France, Germany, Spain, the Netherlands and others.", src: DUEL_TOS },
+      { t: "Play: rakeback comes back instantly", d: "No VIP ladder or level-up bonuses; the value is returned on every bet instead.", src: "https://duel.com/zero-edge-faq" },
+    ],
+    rewardsTitle: "What Duel gives back instead of a bonus",
+    rewards: [
+      { group: "Bonus terms", label: "Rakeback", sub: "Instant rakeback and zero edge" },
+      { group: "Bonus terms", label: "Leaderboards", sub: "$3M monthly and $25K daily races" },
+      { group: "Bonus terms", label: "Leaderboard prizes" },
+      { group: "Bonus terms", label: "Standing offer", sub: "Why there's no bonus" },
+      { group: "Bonus terms", label: "VIP levels", sub: "No VIP ladder" },
+      { group: "Bonus terms", label: "House edge claim", sub: "99.9% RTP house games" },
+    ],
+    termsTitle: "Terms worth knowing",
+    terms: [
+      { group: "Compliance", label: "Restricted countries" },
+      { group: "Compliance", label: "KYC policy", sub: "ID checks" },
+      { group: "Compliance", label: "Licence" },
+    ],
+    faqs: (c) => [
+      { q: "What is the Duel promo code?", a: `${c}. Our sign-up link opens Duel with it attached.` },
+      { q: "Does Duel have a welcome bonus?", a: "No, by design. Duel argues against deposit bonuses and returns value through instant rakeback and zero-edge house games instead, so there is no wagering lock on your deposit." },
+      { q: "How does Duel's rakeback work?", a: "On third-party slots, 50% of the house edge comes back instantly, so a 4% edge becomes an effective 2%. Duel Originals carry a 0.1% edge that is refunded as rakeback within your daily zero-edge allowance." },
+      { q: "Which countries can't play at Duel?", a: "Its terms list, among others, the UK, the USA and its territories, Australia, France, Germany, Spain, the Netherlands (including Curaçao), Lithuania, Slovakia and the UAE." },
+      ours("Duel")(c),
+    ],
+    next: [
+      { href: "/casinos/duel", label: "Full Duel review", hint: "Withdrawals, coins, licence and games, each linked to Duel's own pages." },
+      { href: "/races", label: "Every casino race", hint: "Daily, weekly and monthly races and raffles, side by side." },
+      BONUSES_NEXT,
+    ],
+  },
+
+  degen: {
+    title: (c) => `Degen promo code ${c}: 100% first deposit bonus up to $1,500`,
+    description: (c) => `Sign up at Degen with code ${c} and claim its 100% first deposit match up to $1,500, with 30x wagering and no time limit. How to activate it, plus Degen's 3-8% rakeback and $25,000 weekly race, from its own pages.`,
+    lead: (c) => `Sign up with code ${c}, activate the bonus in your Wallet, then deposit $20 or more: Degen matches your first deposit 100% up to $1,500. Wagering is 30x deposit plus bonus, with no time limit.`,
+    perks: [
+      { t: "100% match up to $1,500", d: "On your first deposit, from $20" },
+      { t: "No time limit on the rollover", d: "30x deposit plus bonus" },
+      { t: "$25,000 weekly race", d: "Top 20 paid, $10,000 to first" },
+    ],
+    steps: (c) => [
+      { t: "Sign up through our link", d: `Degen's bonus needs the account registered under an eligible referral code; our link attaches ${c}.`, src: DEGEN_BONUS },
+      { t: "Activate the bonus in your Wallet", d: "Switch it on before you deposit, then deposit at least $20.", src: DEGEN_BONUS },
+      { t: "Clear 30x at up to $10 a bet", d: "No time limit. Challenges, accumulator games and slot bonus buys don't count.", src: DEGEN_BONUS },
+    ],
+    rewardsTitle: "What Degen pays back as you play",
+    rewards: [
+      { group: "Bonus terms", label: "Rakeback", sub: "3% to 8% rakeback" },
+      { group: "Bonus terms", label: "Recurring bonuses", sub: "Weekly and monthly bonuses" },
+      { group: "Bonus terms", label: "Perks by level", sub: "Level-up and rank-up bonuses" },
+      { group: "Bonus terms", label: "Reload bonuses", sub: "Daily reloads from Platinum" },
+      { group: "Bonus terms", label: "Leaderboards", sub: "$25,000 weekly race" },
+      { group: "Bonus terms", label: "VIP levels" },
+    ],
+    termsTitle: "Welcome bonus terms",
+    terms: [
+      { group: "Bonus terms", label: "Wagering" },
+      { group: "Bonus terms", label: "Max bet" },
+      { group: "Bonus terms", label: "Game contribution", sub: "What counts toward wagering" },
+      { group: "Bonus terms", label: "During rollover", sub: "While the rollover is active" },
+      { group: "Bonus terms", label: "Expiry", sub: "Time limit" },
+      { group: "Bonus terms", label: "Bonus eligibility", sub: "Who can claim it" },
+    ],
+    faqs: (c) => [
+      { q: "What is the Degen promo code?", a: `${c}. Our sign-up link opens Degen with it attached.` },
+      { q: "What is Degen's welcome bonus?", a: "A 100% match on your first deposit up to $1,500. The deposit must be at least $20, the bonus must be activated in your Wallet before you deposit, and the account must be registered under an eligible referral code." },
+      { q: "What are the wagering terms?", a: "30x the deposit plus the bonus, so $100 + $100 needs $6,000 of wagering, with no time limit. Max bet is $10 while the rollover is active, and each bet counts by the game's house edge (wager x edge / 0.04)." },
+      { q: "What if the bonus doesn't show up?", a: "Degen asks you to contact its support team as soon as possible after making your deposit." },
+      ours("Degen")(c),
+    ],
+    next: [
+      { href: "/casinos/degen", label: "Full Degen review", hint: "Withdrawals, coins, licence and games, each linked to Degen's own pages." },
+      STAKE_NEXT,
+      BONUSES_NEXT,
+    ],
+  },
+
+  yeet: {
+    title: (c) => `Yeet promo code ${c}: 100% up to $1,000 with no cashout cap`,
+    description: (c) => `Sign up at Yeet with code ${c} and claim a 100% first deposit bonus up to $1,000: 35x wagering, 90 days to clear it and no maximum cashout. Plus instant rakeback and the $50K weekly Chairman's Cup, from Yeet's own pages.`,
+    lead: (c) => `Sign up with code ${c} and Yeet matches your first deposit 100% up to $1,000. Wagering is 35x deposit plus bonus over 90 days, and Yeet sets no cap on what you can cash out.`,
+    perks: [
+      { t: "100% match up to $1,000", d: "On your first deposit" },
+      { t: "No max cashout", d: "Only the $1,000 bonus limit" },
+      { t: "5% instant rakeback", d: "From Bronze, 10% at Chairman" },
+    ],
+    steps: (c) => [
+      { t: "Open Yeet through our link", d: `The sign-up button opens Yeet with code ${c} attached.` },
+      { t: "Pass Level 1 KYC and deposit", d: "Yeet needs Level 1 KYC before you can deposit; each coin's minimum is shown on the deposit page.", src: "https://help.yeet.com/en/articles/12052341-deposits-withdrawals" },
+      { t: "Clear 35x within 90 days", d: "Max $10 per bet or spin, sports bets don't count, and you can cancel the bonus at any time.", src: YEET_BONUS },
+    ],
+    rewardsTitle: "What Yeet pays back as you play",
+    rewards: [
+      { group: "Bonus terms", label: "Rakeback" },
+      { group: "Bonus terms", label: "Reload bonuses", sub: "Daily, weekly and monthly bonuses" },
+      { group: "Bonus terms", label: "Leaderboards", sub: "$50K weekly Chairman's Cup" },
+      { group: "Bonus terms", label: "Perks by level", sub: "VIP tiers" },
+      { group: "Bonus terms", label: "VIP levels", sub: "Level-up and tier-up bonuses" },
+      { group: "Bonus terms", label: "VIP transfer", sub: "VIP Tier Match" },
+    ],
+    termsTitle: "Welcome bonus terms",
+    terms: [
+      { group: "Bonus terms", label: "Wagering" },
+      { group: "Bonus terms", label: "Expiry" },
+      { group: "Bonus terms", label: "Max bet" },
+      { group: "Bonus terms", label: "Max cashout" },
+      { group: "Bonus terms", label: "Game contribution", sub: "What counts toward wagering" },
+      { group: "Compliance", label: "KYC policy", sub: "ID checks" },
+    ],
+    faqs: (c) => [
+      { q: "What is the Yeet promo code?", a: `${c}. Our sign-up link opens Yeet with it attached.` },
+      { q: "What is Yeet's welcome bonus?", a: "A 100% first deposit bonus up to $1,000. Deposit plus bonus must be wagered 35x within 90 days, so $100 + $100 needs $7,000 of wagering. Yeet says there is no maximum win or cashout on it." },
+      { q: "Can I cancel the bonus?", a: "Yes. Yeet's bonus FAQ says the bonus can be cancelled at any time." },
+      { q: "Do sports bets count toward the wagering?", a: "No. Sports bets don't count, and casino bets count by the game's edge (wager x edge / 0.04)." },
+      ours("Yeet")(c),
+    ],
+    next: [
+      { href: "/casinos/yeet", label: "Full Yeet review", hint: "Withdrawals, coins, licence and sportsbook, each linked to Yeet's own pages." },
+      STAKE_NEXT,
+      BONUSES_NEXT,
+    ],
+  },
+
+  goated: {
+    title: (c) => `Goated promo code ${c}: $25,000 weekly race and instant rakeback`,
+    description: (c) => `Sign up at Goated with code ${c}. Goated runs no deposit bonus; it pays back through instant rakeback from Bronze, a $25,000 weekly race, a $2,500 daily race and level-up bonuses. From Goated's own pages.`,
+    lead: (c) => `Goated doesn't run a welcome bonus. Sign up with code ${c} and you're in for what it pays instead: instant rakeback from Bronze ($1,000 wagered), a $25,000 weekly race and a bonus at every level.`,
+    perks: [
+      { t: "$25,000 weekly race", d: "Top 20 paid, $5,000 to first" },
+      { t: "$2,500 daily race", d: "On Goated Originals, paid instantly" },
+      { t: "Instant rakeback", d: "From Bronze, with no wagering strings" },
+    ],
+    steps: (c) => [
+      { t: "Open Goated through our link", d: `The sign-up button opens Goated with code ${c} attached.` },
+      { t: "Add your details to play", d: "Sign-up needs only an email or wallet; name, date of birth and address are needed to bet and withdraw.", src: "https://www.goated.com/" },
+      { t: "Wager $1,000 to reach Bronze", d: "Instant rakeback, level-up bonuses and the weekly bonus start there.", src: GOATED_LEVELS },
+    ],
+    rewardsTitle: "What Goated pays you back",
+    rewards: [
+      { group: "Bonus terms", label: "Rakeback" },
+      { group: "Bonus terms", label: "Leaderboards", sub: "Weekly and daily races" },
+      { group: "Bonus terms", label: "Perks by level" },
+      { group: "Bonus terms", label: "VIP levels", sub: "Level-up bonuses" },
+      { group: "Bonus terms", label: "Reload bonuses", sub: "Weekly reloads" },
+      { group: "Bonus terms", label: "Cashback", sub: "Lossback" },
+    ],
+    termsTitle: "Terms worth knowing",
+    terms: [
+      { group: "Bonus terms", label: "Standing offer", sub: "No welcome bonus" },
+      { group: "Compliance", label: "KYC policy", sub: "Verification and deposits" },
+      { group: "Compliance", label: "Licence" },
+    ],
+    faqs: (c) => [
+      { q: "What is the Goated promo code?", a: `${c}. Our sign-up link opens Goated with it attached.` },
+      { q: "Does Goated have a welcome bonus?", a: "No. Goated says it doesn't run a traditional welcome or deposit bonus, and rewards players through rakeback, races, VIP rewards and its token instead." },
+      { q: "When does rakeback start?", a: "From Bronze 1, at $1,000 wagered. It is instant cashback on every bet with no wagering strings." },
+      { q: "Do I have to wager my deposit before withdrawing?", a: "Yes. Goated requires 100% of each deposit to be wagered before withdrawal." },
+      ours("Goated")(c),
+    ],
+    next: [
+      { href: "/casinos/goated", label: "Full Goated review", hint: "Withdrawals, coins, licence and games, each linked to Goated's own pages." },
+      { href: "/races", label: "Every casino race", hint: "Daily, weekly and monthly races and raffles, side by side." },
+      BONUSES_NEXT,
+    ],
+  },
+
+  betfury: {
+    title: (c) => `BetFury promo code ${c}: up to 590% + 225 free spins over 3 deposits`,
+    description: (c) => `Sign up at BetFury with code ${c} and claim its Welcome Pack: up to 590% in deposit bonuses plus 225 free spins across three deposits, from $5. The 40x terms, deadlines and caps, plus 10% rakeback, from BetFury's own pages.`,
+    lead: (c) => `Sign up with code ${c} and BetFury's Welcome Pack spreads up to 590% in deposit bonuses and 225 free spins across your first three deposits, from $5. Each bonus has to be wagered within 14 days.`,
+    perks: [
+      { t: "Up to 590% + 225 free spins", d: "Across your first three deposits" },
+      { t: "10% rakeback", d: "Of the house edge, for every player" },
+      { t: "$20,000 Daily Battles", d: "1,000 winners every day" },
+    ],
+    steps: (c) => [
+      { t: "Open BetFury through our link", d: `The sign-up button opens BetFury with code ${c} attached.` },
+      { t: "Activate the first bonus within 7 days", d: "Each later bonus within 7 days of the previous one; deposits start at $5.", src: BETFURY_PACK },
+      { t: "Wager each bonus within 14 days", d: "40x on slots and live games, BetFury Originals count 0.2, and bets are capped at $10.", src: BETFURY_TERMS },
+    ],
+    rewardsTitle: "What BetFury pays back as you play",
+    rewards: [
+      { group: "Bonus terms", label: "Rakeback" },
+      { group: "Bonus terms", label: "Cashback" },
+      { group: "Bonus terms", label: "Reload bonuses", sub: "Weekly and monthly bonuses" },
+      { group: "Bonus terms", label: "Leaderboards", sub: "Daily Battles" },
+      { group: "Bonus terms", label: "Perks by level", sub: "20 ranks" },
+      { group: "Bonus terms", label: "VIP levels", sub: "VIP and Super VIP Club" },
+    ],
+    termsTitle: "Welcome Pack terms",
+    terms: [
+      { group: "Bonus terms", label: "Standing offer", sub: "The Welcome Pack" },
+      { group: "Bonus terms", label: "Wagering" },
+      { group: "Bonus terms", label: "Expiry" },
+      { group: "Bonus terms", label: "Max bet" },
+      { group: "Bonus terms", label: "Max cashout" },
+      { group: "Bonus terms", label: "Game contribution", sub: "What counts toward wagering" },
+    ],
+    faqs: (c) => [
+      { q: "What is the BetFury promo code?", a: `${c}. Our sign-up link opens BetFury with it attached.` },
+      { q: "What is BetFury's Welcome Pack?", a: "Three welcome bonuses, each activated with its own deposit and each pairing a deposit match with free spins: up to 590% and 225 free spins in total. Deposits start at $5." },
+      { q: "What are the wagering terms?", a: "40x on slots and live games, with BetFury Originals counting 0.2. Each bonus must be wagered within 14 days, bets are capped at $10, and free-spin winnings across the pack are capped at $550. BetFury's terms don't say whether the multiplier applies to the bonus alone or to deposit plus bonus." },
+      { q: "How does the rakeback work?", a: "Every player gets 10% of the house edge back on each bet (wager x house edge x 10%), withdrawable once every 20 minutes. It expires if left unclaimed for 90 days." },
+      ours("BetFury")(c),
+    ],
+    next: [
+      { href: "/casinos/betfury", label: "Full BetFury review", hint: "Withdrawals, coins, licence and sportsbook, each linked to BetFury's own pages." },
+      STAKE_NEXT,
+      BONUSES_NEXT,
+    ],
+  },
+
+  winna: {
+    title: (c) => `Winna promo code ${c}: instant rakeback every 7 minutes and a $50K weekly race`,
+    description: (c) => `Sign up at Winna with code ${c}. Winna runs no deposit bonus; it pays back through instant rakeback every 7 minutes, $10,000 daily and $50,000 weekly races, and VIP perks up to 25% lossback. From Winna's own pages.`,
+    lead: (c) => `Winna has no deposit bonus to wager off. Sign up with code ${c} and its VIP rewards start at Bronze ($1,000 wagered) with instant rakeback every 7 minutes, while the daily and weekly races are open to everyone.`,
+    perks: [
+      { t: "Instant rakeback every 7 minutes", d: "Claimed from the VIP Center" },
+      { t: "$50,000 weekly race", d: "Automatic entry, no opt-in" },
+      { t: "$10,000 daily race", d: "Resets every day" },
+    ],
+    steps: (c) => [
+      { t: "Open Winna through our link", d: `The sign-up button opens Winna with code ${c} attached.` },
+      { t: "Deposit $5 or more", d: "Smaller transfers may not be credited.", src: "https://help.winna.com/en/articles/15960277-deposit-via-wallet-or-exchange" },
+      { t: "Claim rakeback from the VIP Center", d: "Every 7 minutes; the percentage scales with your VIP level and wagering.", src: "https://help.winna.com/en/articles/10495172-what-is-instant-rakeback-and-how-do-i-claim-it" },
+    ],
+    rewardsTitle: "What Winna pays you back",
+    rewards: [
+      { group: "Bonus terms", label: "Rakeback" },
+      { group: "Bonus terms", label: "Leaderboards", sub: "Daily and weekly races" },
+      { group: "Bonus terms", label: "Perks by level" },
+      { group: "Bonus terms", label: "Cashback", sub: "Lossback and the monthly bonus" },
+      { group: "Bonus terms", label: "Reload bonuses", sub: "7-day reloads" },
+      { group: "Bonus terms", label: "Missions", sub: "Challenges" },
+    ],
+    termsTitle: "Terms worth knowing",
+    terms: [
+      { group: "Bonus terms", label: "Deposit bonus", sub: "No deposit bonus" },
+      { group: "Compliance", label: "KYC policy", sub: "Verification" },
+      { group: "Compliance", label: "Licence" },
+    ],
+    faqs: (c) => [
+      { q: "What is the Winna promo code?", a: `${c}. Our sign-up link opens Winna with it attached.` },
+      { q: "Does Winna have a deposit bonus?", a: "No deposit bonus is listed: Winna's help centre covers only VIP rewards (rakeback, reloads, lossback, free spins, and monthly and quarterly bonuses)." },
+      { q: "How often can I claim rakeback?", a: "Every 7 minutes, from the VIP Center. The percentage scales with your VIP level and wagering activity." },
+      { q: "When does lossback start?", a: "Lossback of up to 25% of losses is available from Platinum VIP level, reviewed on request through support." },
+      ours("Winna")(c),
+    ],
+    next: [
+      { href: "/casinos/winna", label: "Full Winna review", hint: "Withdrawals, coins, licence and sportsbook, each linked to Winna's own pages." },
+      { href: "/races", label: "Every casino race", hint: "Daily, weekly and monthly races and raffles, side by side." },
+      BONUSES_NEXT,
+    ],
+  },
+
+  thrill: {
+    title: (c) => `Thrill promo code ${c}: a $50,000 weekly race and instant rakeback from day one`,
+    description: (c) => `Sign up at Thrill with code ${c}: instant rakeback and weekly and monthly bonuses from the entry level, a $50,000 weekly race paying 350 places, and no deposit minimum. How to apply the code, from Thrill's own pages.`,
+    lead: (c) => `Sign up with code ${c} and Thrill's rewards start at the entry Base level: instant rakeback plus weekly and monthly bonuses, and a $50,000 race every week. There's no deposit bonus, so nothing to wager off.`,
+    perks: [
+      { t: "Instant rakeback from Base", d: "No wagering threshold before it starts" },
+      { t: "$50,000 weekly race", d: "350 places paid, $15,000 to first" },
+      { t: "Weekly and monthly bonuses", d: "From the entry level" },
+    ],
+    steps: (c) => [
+      { t: "Open Thrill through our link", d: `The sign-up button opens Thrill with code ${c} attached.` },
+      { t: "Apply the code before your first deposit", d: `If it isn't on, open the account menu or page footer, choose Referral code and enter ${c}. It only works within 24 hours of signing up and before your first deposit or bet.`, src: THRILL_REF },
+      { t: "Play: XP moves you up the levels", d: "Sports earns 3 XP per $1 wagered; casino games 0.5 to 1.5 XP per $1 depending on house edge.", src: THRILL_LEVELS },
+    ],
+    rewardsTitle: "What Thrill pays you back",
+    rewards: [
+      { group: "Bonus terms", label: "Rakeback" },
+      { group: "Bonus terms", label: "Leaderboards", sub: "$50,000 weekly race" },
+      { group: "Bonus terms", label: "VIP levels", sub: "Rewards levels" },
+      { group: "Bonus terms", label: "Perks by level" },
+      { group: "Bonus terms", label: "Reload bonuses", sub: "Level-up reloads" },
+      { group: "Bonus terms", label: "Expiry", sub: "Weekly bonus timing" },
+    ],
+    termsTitle: "Terms worth knowing",
+    terms: [
+      { group: "Bonus terms", label: "Deposit bonus", sub: "No deposit bonus" },
+      { group: "Coins & deposit limits", label: "Deposit limits" },
+      { group: "Compliance", label: "Licence" },
+    ],
+    faqs: (c) => [
+      { q: "What is the Thrill promo code?", a: `${c}. Our sign-up link opens Thrill with it attached.` },
+      { q: `Where do I enter code ${c}?`, a: "Open the account menu or the page footer and choose Referral code. Thrill says a code can only be applied within 24 hours of signing up, and before your first deposit or real-money bet." },
+      { q: "Does Thrill have a deposit bonus?", a: "No. Its rewards come from rakeback paid out as weekly, monthly and level-up bonuses, with no deposit bonus in its help centre." },
+      { q: "When does rakeback start?", a: "From the entry Base level, so from your first bet." },
+      ours("Thrill")(c),
+    ],
+    next: [
+      { href: "/casinos/thrill", label: "Full Thrill review", hint: "Withdrawals, coins, licence and sportsbook, each linked to Thrill's own pages." },
+      { href: "/races", label: "Every casino race", hint: "Daily, weekly and monthly races and raffles, side by side." },
       BONUSES_NEXT,
     ],
   },
