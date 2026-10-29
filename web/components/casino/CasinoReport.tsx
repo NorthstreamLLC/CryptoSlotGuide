@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { hasPromoPage } from "@/lib/promo-pages";
+import { hasFactArticle } from "@/lib/fact-articles";
 import { CasinoNextStep } from "@/components/ui/NextStep";
 import type { ReactNode } from "react";
 import { siteData } from "@/lib/site-data";
@@ -332,6 +334,20 @@ export function CasinoReport({ e }: { e: EntityView }) {
                     </div>
                   )}
                   {o.slug === "roobet" && o.codePerk && <p style={{ margin: "8px 0 0", fontSize: 12.5, lineHeight: 1.5, color: "#B7C4CB" }}>{CLAIM_NOTE}</p>}
+                  {o.slug !== "roobet" && (hasPromoPage(o.slug) || hasFactArticle(o.slug)) && (
+                    <div style={{ display: "flex", gap: 16, flexWrap: "wrap", marginTop: 10 }}>
+                      {hasPromoPage(o.slug) && (
+                        <Link href={`/promo-codes/${o.slug}`} style={{ fontSize: 13, fontWeight: 700, color: brand }}>
+                          How code {o.promoCode} works →
+                        </Link>
+                      )}
+                      {hasFactArticle(o.slug) && (
+                        <Link href={`/casinos/${o.slug}/facts`} style={{ fontSize: 13, fontWeight: 700, color: "#E8EDF0" }}>
+                          10 facts about {o.name} →
+                        </Link>
+                      )}
+                    </div>
+                  )}
                 </div>
               )}
               {o.signupUrl && (
