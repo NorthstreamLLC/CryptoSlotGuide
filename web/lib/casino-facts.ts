@@ -8,7 +8,7 @@ import { wagerView } from "./wager";
 import { tintFor } from "./logo";
 import type { Operator, SpecFact } from "./types";
 
-export const BRAND: Record<string, string> = { roobet: "#FFCC00", stake: "#1FFF20", "bc-game": "#24EE89", shuffle: "#896CFF", gamdom: "#2FE37F", duelbits: "#33C16C", razed: "#0096FF", goated: "#D7FF00" };
+export const BRAND: Record<string, string> = { roobet: "#FFCC00", stake: "#1FFF20", "bc-game": "#24EE89", shuffle: "#896CFF", gamdom: "#2FE37F", duelbits: "#33C16C", razed: "#0096FF", goated: "#D7FF00", betfury: "#FC1E4D", winna: "#3B8FD9", thrill: "#7B74F0" };
 export const brandFor = (slug: string) => BRAND[slug] ?? tintFor(slug);
 
 type Fact = SpecFact | undefined;
