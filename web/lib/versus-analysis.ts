@@ -16,7 +16,7 @@ export type VersusAnalysis = {
   published: string;
 };
 
-export const VERSUS_ANALYSIS: Record<string, VersusAnalysis> = {
+const WRITTEN: Record<string, VersusAnalysis> = {
   "roobet-vs-stake": {
     verdict: "Roobet if you want a welcome package and a weekly raffle; Stake if you want rakeback from your first bet and a daily race that pays 5,000 places.",
     published: "2026-10-29",
@@ -408,3 +408,127 @@ export const VERSUS_ANALYSIS: Record<string, VersusAnalysis> = {
     ],
   },
 };
+
+/**
+ * One sourced paragraph per casino and topic. Pairs without a hand-written
+ * entry above are composed from these: each section puts the two casinos'
+ * paragraphs side by side, so every sentence is still one cited fact.
+ */
+type Block = { text: string; cite: [string, string][] };
+type CasinoBlocks = { verdictIf: string; pickIf: string[]; code: Block; licence: Block; rewards: Block; vip: Block; cash: Block };
+
+const B = "Bonus terms", C = "Compliance", P = "Payouts & fees", K = "Coins & deposit limits", S = "Sportsbook";
+
+const BLOCKS: Record<string, CasinoBlocks> = {
+  roobet: {
+    verdictIf: "you want a welcome package and a weekly raffle",
+    pickIf: WRITTEN["roobet-vs-stake"].pickIf.roobet,
+    code: { text: "At Roobet, code ELITE unlocks a welcome package of a 20% deposit match up to $500, then 100 free spins at $10,000 wagered and 500 more at $50,000, claimed through CasinoPerks on Telegram, and joining with an affiliate code boosts its rakeback by 20% for 72 hours.", cite: [[B, "Rakeback"]] },
+    licence: { text: "Roobet is run by Raw Entertainment B.V., whose Curaçao licence is listed as \"Indefinite\", with no expiry, on the Curaçao Gaming Authority's register dated 20 October 2026.", cite: [[C, "Register check"]] },
+    rewards: { text: "Roobet pays instant rakeback claimable every 30 minutes and runs a $100,000 weekly raffle with 100 winners, one ticket per $1,000 wagered.", cite: [[B, "Rakeback"], [B, "Weekly raffle"]] },
+    vip: { text: "Roobet's VIP Club is invite-only, with no way to apply.", cite: [[B, "VIP levels"]] },
+    cash: { text: "Roobet's terms set no maximum withdrawal, but deposits must be wagered once before you withdraw, and it may ask for ID at any time.", cite: [[P, "Withdrawal limits"], [C, "KYC policy"]] },
+  },
+  stake: {
+    verdictIf: "you want rakeback from your first bet and a daily race that pays 5,000 places",
+    pickIf: WRITTEN["roobet-vs-stake"].pickIf.stake,
+    code: { text: "At Stake, code SLOTGUIDE entered within 24 hours of signing up switches on its 3.5% rakeback straight away, instead of only once you reach Bronze at $10,000 wagered.", cite: [[B, "Welcome offer"]] },
+    licence: { text: "Stake is run by Medium Rare N.V., whose Curaçao licence shows an expiry of 9 June 2026 and the status \"Assessment in progress\" on the Curaçao Gaming Authority's register dated 20 October 2026, as do 297 of the 666 licences listed.", cite: [[C, "Register check"]] },
+    rewards: { text: "Stake pays 3.5% of the house edge as rakeback and runs a $100,000 Daily Race paying the top 5,000.", cite: [[B, "Rakeback"], [B, "Leaderboards"]] },
+    vip: { text: "Stake publishes 15 VIP levels, from Bronze at 10,000 to Obsidian at a billion, and counts sports wagers three times faster toward them.", cite: [[B, "VIP levels"], [B, "Perks by level"]] },
+    cash: { text: "Stake sets no maximum withdrawal and says crypto withdrawals should be processed immediately.", cite: [[P, "Withdrawal limits"], [P, "Stated withdrawal time"]] },
+  },
+  shuffle: {
+    verdictIf: "you want a $100,000 weekly race that pays 1,000 places and deposits from a cent",
+    pickIf: WRITTEN["roobet-vs-shuffle"].pickIf.shuffle,
+    code: { text: "Shuffle's code carries no bonus of its own; its deposit bonus applies to the first deposit only, with the amount shown inside your account.", cite: [[B, "Deposit bonus"]] },
+    licence: { text: "Shuffle is run by Natural Nine B.V., whose Curaçao licence is listed as \"Indefinite\", with no expiry, on the Curaçao Gaming Authority's register dated 20 October 2026.", cite: [[C, "Register check"]] },
+    rewards: { text: "Shuffle pays rakeback instantly after each bet plus weekly and monthly, all withdrawable straight away, and runs a $100,000 weekly race paying the top 1,000.", cite: [[B, "Rakeback"], [B, "Leaderboards"]] },
+    vip: { text: "Shuffle's ranks run from Wood at $500 wagered to Diamond, and every rank pays an automatic level-up bonus.", cite: [[B, "VIP levels"]] },
+    cash: { text: "Shuffle takes deposits from $0.01, and deposits must be wagered once before withdrawal unless the money goes back to the same wallet on the same network.", cite: [[K, "Minimum deposit"], [P, "Withdrawal limits"]] },
+  },
+  gamdom: {
+    verdictIf: "you want 15% rakeback for your first week and no ID check unless asked",
+    pickIf: WRITTEN["roobet-vs-gamdom"].pickIf.gamdom,
+    code: { text: "At Gamdom, new accounts get instant rewards boosted to as much as 15%, activated within the first 6 hours after registering and valid for 7 days.", cite: [[B, "Standing offer"]] },
+    licence: { text: "Gamdom is licensed in Anjouan under a licence held by Moon Revolution Limitada of Costa Rica, and in October 2026 took its systems offline after finding an unauthorised connection on a server; it said user funds were safe and is back online.", cite: [[C, "Licence"], [C, "Security incident"]] },
+    rewards: { text: "Gamdom pays rakeback in real time, claimable from $0.10 and never expiring, and its King of the Hill pays $30,000 a day across the top 200 plus two $500,000 tournaments a month.", cite: [[B, "Rakeback"], [B, "Leaderboards"]] },
+    vip: { text: "Gamdom's Royalty Up has 24 levels across eight tiers, with rank-up rewards you claim yourself and an invite-only VIP programme on top.", cite: [[B, "Perks by level"]] },
+    cash: { text: "Gamdom sets no withdrawal limits and doesn't ask for ID unless it needs to, though deposits must be wagered once.", cite: [[P, "Withdrawal limits"], [C, "KYC policy"]] },
+  },
+  duel: {
+    verdictIf: "you want half the slot house edge back instantly and a $3 million monthly race",
+    pickIf: [
+      "You'd rather have no bonus strings: Duel returns 50% of the slot house edge instantly instead",
+      "You chase big races: $3,000,000 a month, $1.5 million to first",
+      "You play house games: Duel Originals run at zero edge within a daily allowance",
+    ],
+    code: { text: "Duel runs no deposit bonuses by design, so there's no package to claim; instead, 50% of the house edge you pay on third-party slots comes back instantly.", cite: [[B, "Standing offer"], [B, "Rakeback"]] },
+    licence: { text: "Duel is licensed in Anjouan; its own about page says it's run by the operator known as Monarch, who previously ran CSGOEmpire, and its company, Immortal Snail LLC, is registered in Nevis.", cite: [[C, "Licence"], [C, "Operator"], [C, "Company"]] },
+    rewards: { text: "Duel's $3,000,000 monthly race pays $1,500,000 to first, with a $25,000 daily race alongside, and its Originals run at zero edge within a daily allowance.", cite: [[B, "Leaderboard prizes"], [B, "Rakeback"]] },
+    vip: { text: "Duel has no VIP ladder or level-up rewards; it returns value through instant rakeback instead.", cite: [[B, "VIP levels"]] },
+    cash: { text: "Duel may ask for KYC before processing a withdrawal, and its terms bar 30 countries, including the US, the UK, Australia, France, Germany and Spain.", cite: [[C, "KYC policy"], [C, "Restricted countries"]] },
+  },
+  rainbet: {
+    verdictIf: "you want a $1 million monthly race and no ID check for crypto",
+    pickIf: [
+      "You chase big races: a $1M monthly race, $100,000 to first",
+      "You'd rather not send ID: crypto play and withdrawals need no KYC",
+      "You like frequent payouts: rakeback claimable every 15 minutes",
+    ],
+    code: { text: "Rainbet's first deposit bonus puts a $30 to $700 deposit and its match into a promotional balance that must be wagered 40x, with games above 97.4% RTP switched off while it's active.", cite: [[B, "Standing offer"]] },
+    licence: { text: "Rainbet is run by RBGAMING N.V. under Anjouan licence ALSI-152406029-FI2, which the Anjouan validator linked from its footer shows as VALID.", cite: [[C, "Licence"]] },
+    rewards: { text: "Rainbet's rakeback is claimable every 15 minutes, and it runs daily and weekly races, a $1M monthly race paying $100,000 to first, and a $20,000 weekly raffle.", cite: [[B, "Rakeback"], [B, "Leaderboards"], [B, "Weekly raffle"]] },
+    vip: { text: "Rainbet's 25 ranks start at Bronze I at $4,000 wagered, with a rank-up bonus at each and weekly free spins from Gold.", cite: [[B, "Perks by level"]] },
+    cash: { text: "Rainbet says crypto play and withdrawals need no KYC and withdrawals take 5 to 15 minutes, though it offers no deposit limits, pointing players to loss limits instead.", cite: [[C, "KYC policy"], [P, "Stated withdrawal time"], [K, "Deposit limits"]] },
+  },
+  razed: {
+    verdictIf: "you want a 100% welcome bonus with free spins and a VIP ladder with cars as prizes",
+    pickIf: [
+      "You want a welcome bonus: 100% up to $300 plus up to 150 free spins",
+      "You like climbing: rank-up rewards up to $500,000, and a car for the first to the top ranks",
+      "You bet sports: sports turnover counts three times toward VIP",
+    ],
+    code: { text: "At Razed, new players get a 100% match on the first deposit up to $300 plus up to 150 free spins on Sugar Rush 1000, opted into on the deposit screen, with 40x wagering on one balance holding deposit and bonus.", cite: [[B, "Standing offer"], [B, "Wagering"]] },
+    licence: { text: "Razed is licensed in Anjouan and run by Wild Technology Ltd. of Costa Rica.", cite: [[C, "Licence"], [C, "Company"]] },
+    rewards: { text: "Razed pays rakeback from the entry Starter rank, builds lossback into its monthly bonus, and runs a $100,000 monthly race with $30,000 for first.", cite: [[B, "Rakeback"], [B, "Cashback"], [B, "Leaderboards"]] },
+    vip: { text: "Razed pays cash rank-up rewards from $20 at Bronze 1 to $500,000 at Onyx, gives a car to the first players to reach its top three ranks, and counts sports turnover three times toward VIP.", cite: [[B, "Rank-up rewards"], [B, "Milestone prizes"], [S, "Sportsbook"]] },
+    cash: { text: "Razed sets no maximum crypto withdrawal; it calls itself no-KYC, though its AML policy says ID is requested when you withdraw.", cite: [[P, "Withdrawal limits"], [C, "KYC policy"]] },
+  },
+};
+
+const TOPICS: [keyof Omit<CasinoBlocks, "verdictIf" | "pickIf">, string][] = [
+  ["code", "What each code gets you"],
+  ["licence", "Licence and who runs them"],
+  ["rewards", "Rakeback and races"],
+  ["vip", "VIP"],
+  ["cash", "Withdrawals and ID checks"],
+];
+
+/** Pairs composed from the blocks: our top four codes against Duel, Rainbet and Razed. */
+const COMPOSED_PAIRS: [string, string][] = ["roobet", "stake", "shuffle", "gamdom"].flatMap((a) => ["rainbet", "razed", "duel"].map((b) => [a, b] as [string, string]));
+
+function compose(a: string, b: string): VersusAnalysis {
+  const A = BLOCKS[a], Bk = BLOCKS[b];
+  const name = (slug: string) => slug.charAt(0).toUpperCase() + slug.slice(1);
+  return {
+    verdict: `${name(a)} if ${A.verdictIf}; ${name(b)} if ${Bk.verdictIf}.`,
+    published: "2026-10-30",
+    pickIf: { [a]: A.pickIf, [b]: Bk.pickIf },
+    sections: TOPICS.map(([k, title]) => ({
+      title,
+      body: `${A[k].text} ${Bk[k].text}`,
+      cite: [...A[k].cite.map(([group, label]) => ({ slug: a, group, label })), ...Bk[k].cite.map(([group, label]) => ({ slug: b, group, label }))],
+    })),
+  };
+}
+
+/** Every pair with written analysis, keyed by its canonical pair slug (versus.ts order). */
+export const VERSUS_ANALYSIS: Record<string, VersusAnalysis> = (() => {
+  const out: Record<string, VersusAnalysis> = { ...WRITTEN };
+  for (const [a, b] of COMPOSED_PAIRS) {
+    const key = `${a}-vs-${b}`;
+    if (!out[key]) out[key] = compose(a, b);
+  }
+  return out;
+})();

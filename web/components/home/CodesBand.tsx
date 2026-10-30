@@ -20,7 +20,8 @@ export function CodesBand() {
   const codes = inHouseOrder(siteData.ops.filter((o) => PROMO_PAGES.includes(o.slug) && PROMO_HUB[o.slug] && o.promoCode && o.signupUrl))
     .sort((a, b) => rank[PROMO_HUB[a.slug].kind] - rank[PROMO_HUB[b.slug].kind])
     .slice(0, 6);
-  const pairs = Object.keys(VERSUS_ANALYSIS).flatMap((k) => {
+  // The hand-written pairs among the top codes come first; six fit the panel.
+  const pairs = Object.keys(VERSUS_ANALYSIS).slice(0, 6).flatMap((k) => {
     const p = parsePair(k);
     return p ? [{ k, a: p[0], b: p[1] }] : [];
   });
