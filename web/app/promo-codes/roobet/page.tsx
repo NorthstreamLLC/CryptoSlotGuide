@@ -13,6 +13,7 @@ import vip from "@/data/vip.json";
 import { VipClaim } from "@/components/ui/VipClaim";
 import { RooJackpotsCard } from "@/components/casino/RooJackpotsCard";
 import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
+import { VersusStrip } from "@/components/compare/VersusStrip";
 
 const SLUG = "roobet";
 const MONO = "var(--font-jetbrains-mono), monospace";
@@ -212,6 +213,8 @@ export default function Page() {
         <div style={{ margin: "36px 0" }}>
           <AuthorBox />
         </div>
+        <VersusStrip slug={SLUG} />
+        <div style={{ height: 8 }} />
         <NextSteps
           steps={[
             { href: "/casinos/roobet", label: "Full Roobet review", hint: "Withdrawals, coins, licence and sportsbook, each linked to Roobet's own pages." },

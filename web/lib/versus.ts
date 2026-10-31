@@ -4,6 +4,7 @@ import { getSpecFact } from "@/lib/spec-sheet";
 import { raceFor, partnerFor, dropFor } from "@/lib/races";
 import { rtpSummary } from "@/lib/rtp-watch-view";
 import type { Operator } from "@/lib/types";
+import { VERSUS_ANALYSIS } from "@/lib/versus-analysis";
 
 /** The casinos we build head-to-head pages for: the ones players compare most. */
 export const VERSUS_SLUGS = ["roobet", "stake", "bc-game", "shuffle", "rollbit", "gamdom", "duelbits", "rainbet", "razed", "winna", "thrill", "duel", "goated", "500-casino", "bitstarz"];
@@ -25,8 +26,11 @@ export const pairSlug = (a: string, b: string) => `${a}-vs-${b}`;
  * casinos players compare most come first. Empty for a casino with no pair page.
  */
 export function rivalPairs(slug: string, limit = 3): { rival: Operator; href: string }[] {
+  // Pairs with written analysis (indexed, with a verdict) come first.
+  const analysed = (a: string, b: string) => (VERSUS_ANALYSIS[pairSlug(a, b)] ? 0 : 1);
   return versusPairs()
     .filter(([a, b]) => a === slug || b === slug)
+    .sort(([a, b], [c, d]) => analysed(a, b) - analysed(c, d))
     .map(([a, b]) => ({ rival: op(a === slug ? b : a)!, href: `/compare/${pairSlug(a, b)}` }))
     .slice(0, limit);
 }
@@ -76,4 +80,11 @@ export function versusRows(a: Operator, b: Operator): VersusRow[] {
     { label: "Licence", a: fa.licence, b: fb.licence },
     { label: "Official partners", a: partnerFor(a.slug), b: partnerFor(b.slug) },
   ];
+}
+
+/** The analysed head-to-heads a casino appears in: the pages with a verdict, which are the ones indexed. */
+export function analysedRivals(slug: string): { rival: Operator; href: string; verdict: string }[] {
+  return versusPairs()
+    .filter(([a, b]) => (a === slug || b === slug) && VERSUS_ANALYSIS[pairSlug(a, b)])
+    .map(([a, b]) => ({ rival: op(a === slug ? b : a)!, href: `/compare/${pairSlug(a, b)}`, verdict: VERSUS_ANALYSIS[pairSlug(a, b)].verdict }));
 }

@@ -12,6 +12,7 @@ import { AuthorByline, AuthorBox } from "@/components/ui/AuthorBox";
 import { NextSteps } from "@/components/layout/NextSteps";
 import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
 import { SourcedCard, SpecFactCard } from "@/components/promo/SourcedCard";
+import { VersusStrip } from "@/components/compare/VersusStrip";
 
 /**
  * Promo code pages driven by lib/promo-configs.ts. Roobet, Stake and Shuffle
@@ -147,6 +148,8 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         <div style={{ margin: "36px 0" }}>
           <AuthorBox />
         </div>
+        <VersusStrip slug={slug} />
+        <div style={{ height: 8 }} />
         <NextSteps steps={cfg.next} />
       </section>
     </main>

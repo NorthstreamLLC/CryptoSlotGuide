@@ -11,6 +11,7 @@ import { AuthorByline, AuthorBox } from "@/components/ui/AuthorBox";
 import { NextSteps } from "@/components/layout/NextSteps";
 import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
 import { SpecFactCard } from "@/components/promo/SourcedCard";
+import { VersusStrip } from "@/components/compare/VersusStrip";
 
 const SLUG = "stake";
 const MONO = "var(--font-jetbrains-mono), monospace";
@@ -155,6 +156,8 @@ export default function Page() {
         <div style={{ margin: "36px 0" }}>
           <AuthorBox />
         </div>
+        <VersusStrip slug={SLUG} />
+        <div style={{ height: 8 }} />
         <NextSteps
           steps={[
             { href: "/casinos/stake", label: "Full Stake review", hint: "Withdrawals, coins, licence and sportsbook, each linked to Stake's own pages." },

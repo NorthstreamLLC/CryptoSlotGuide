@@ -31,6 +31,7 @@ import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
 import { ReportIssue } from "@/components/ui/ReportIssue";
 import { CodeOffer } from "@/components/ui/CodeOffer";
 import { PaymentPartners } from "@/components/ui/PaymentPartners";
+import { VersusStrip } from "@/components/compare/VersusStrip";
 
 /**
  * The casino player report: what a player compares (offer, rewards, money
@@ -252,7 +253,7 @@ export function CasinoReport({ e }: { e: EntityView }) {
     o.sports ? { icon: "ball" as const, title: "Sportsbook & esports", sub: sp.titles.length ? `${sp.titles.length} esports titles` : "Sports and esports betting" } : null,
   ].filter(Boolean).slice(0, 4) as { icon: IconName; title: string; sub: string; coins?: string[] }[];
 
-  const rivals = rivalPairs(o.slug);
+  const rivals = rivalPairs(o.slug, 6);
 
   const nav = [
     ["bonuses", "Bonuses & rewards"],
@@ -334,6 +335,7 @@ export function CasinoReport({ e }: { e: EntityView }) {
                     </div>
                   )}
                   {o.slug === "roobet" && o.codePerk && <p style={{ margin: "8px 0 0", fontSize: 12.5, lineHeight: 1.5, color: "#B7C4CB" }}>{CLAIM_NOTE}</p>}
+                  <VersusStrip slug={o.slug} compact />
                   {((o.slug !== "roobet" && hasPromoPage(o.slug)) || hasFactArticle(o.slug)) && (
                     <div style={{ display: "flex", gap: 16, flexWrap: "wrap", marginTop: 10 }}>
                       {o.slug !== "roobet" && hasPromoPage(o.slug) && (

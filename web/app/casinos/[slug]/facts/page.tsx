@@ -13,6 +13,7 @@ import { CodeChip } from "@/components/ui/CodeChip";
 import { AuthorByline, AuthorBox } from "@/components/ui/AuthorBox";
 import { NextSteps } from "@/components/layout/NextSteps";
 import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
+import { VersusStrip } from "@/components/compare/VersusStrip";
 
 const MONO = "var(--font-jetbrains-mono), monospace";
 const GOLD = "#FFC531";
@@ -129,6 +130,8 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         <div style={{ margin: "36px 0" }}>
           <AuthorBox />
         </div>
+        <VersusStrip slug={slug} />
+        <div style={{ height: 8 }} />
         <NextSteps
           steps={[
             { href: `/casinos/${slug}`, label: `Full ${o.name} review`, hint: "Withdrawals, coins, licence and sportsbook, each linked to its own pages." },
