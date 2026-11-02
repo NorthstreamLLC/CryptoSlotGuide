@@ -495,6 +495,45 @@ const BLOCKS: Record<string, CasinoBlocks> = {
     vip: { text: "Razed pays cash rank-up rewards from $20 at Bronze 1 to $500,000 at Onyx, gives a car to the first players to reach its top three ranks, and counts sports turnover three times toward VIP.", cite: [[B, "Rank-up rewards"], [B, "Milestone prizes"], [S, "Sportsbook"]] },
     cash: { text: "Razed sets no maximum crypto withdrawal; it calls itself no-KYC, though its AML policy says ID is requested when you withdraw.", cite: [[P, "Withdrawal limits"], [C, "KYC policy"]] },
   },
+  duelbits: {
+    verdictIf: "you want 25% rakeback with no deposit bonus to wager off",
+    pickIf: [
+      "You want rakeback with nothing to wager off: 25% of the house edge, 10% of it instantly",
+      "You play slots: its leaderboards score lower-RTP games highest",
+      "You want prediction markets: Duelbits Predict covers sports, crypto and politics",
+    ],
+    code: { text: "Duelbits runs no deposit bonus; every player gets 25% of the house edge back as rakeback, 10% instantly and 5% each daily, weekly and monthly, and a referral code has to be set within 24 hours of registering.", cite: [[B, "Deposit bonus"], [B, "Rakeback"], [B, "Referral program"]] },
+    licence: { text: "Duelbits is run by Liquid Entertainment N.V., whose Curaçao licence shows an expiry of 24 December 2025 and the status \"Assessment in progress\" on the Curaçao Gaming Authority's register dated 20 October 2026.", cite: [[C, "Register check"]] },
+    rewards: { text: "Duelbits' leaderboards score wager × (1 − RTP), so $100 on a 96% slot earns 400 points against 71 on blackjack; a $10,000 daily board pays the top 100 and a $30,000 weekly board the top 250.", cite: [[B, "Leaderboards"]] },
+    vip: { text: "Duelbits' Ace's Lounge levels add up to 12.5% rakeback on top of the base 25%, and selected VIPs get extra rakeback every Tuesday.", cite: [[B, "VIP levels"], [B, "Reload bonuses"]] },
+    cash: { text: "Duelbits sets no withdrawal cap and charges no platform fee, but at least 10% of a deposit must be wagered before you withdraw, and access can be restricted until documents are verified.", cite: [[P, "Withdrawal limits"], [C, "KYC policy"]] },
+  },
+  goated: {
+    verdictIf: "you want a 100% first deposit bonus up to $1,000 and a $25,000 weekly race",
+    pickIf: [
+      "You want a welcome bonus: 100% up to $1,000 from a $20 deposit",
+      "You like reloads: weekly reloads arrive as 168 hourly claims",
+      "You'd rather start light on ID: sign-up needs only an email or a wallet",
+    ],
+    code: { text: "Goated's 100% first deposit bonus goes up to $1,000 from a $20 deposit, with 35x wagering on deposit plus bonus and VIP rewards halved while it's active.", cite: [[B, "Standing offer"]] },
+    licence: { text: "Goated is licensed in Anjouan and run by Mirai Kaze Ltd, registered there.", cite: [[C, "Licence"], [C, "Company"]] },
+    rewards: { text: "Goated pays instant rakeback from Bronze with no wagering strings, at better rates on its own $GOATED token, and runs a $25,000 weekly race for the top 20 and a $2,500 daily race on its Originals.", cite: [[B, "Rakeback"], [B, "Leaderboards"]] },
+    vip: { text: "Goated has 45 VIP levels across nine tiers, each paying a level-up bonus, and weekly reloads split into 168 hourly claims.", cite: [[B, "VIP levels"], [B, "Reload bonuses"]] },
+    cash: { text: "Goated says most withdrawals reach the blockchain in a minute or two, with the network fee added on top of the amount, and every deposit must be wagered once first; sign-up needs only an email or a wallet.", cite: [[P, "Stated withdrawal time"], [P, "Withdrawal fees"], [C, "KYC policy"]] },
+  },
+  yeet: {
+    verdictIf: "you want a 100% welcome bonus up to $1,000 with no cashout cap",
+    pickIf: [
+      "You want a welcome bonus with no cashout cap: 100% up to $1,000",
+      "You bet sports multis: YEET Boost adds up to 20% to winning multis of 12 legs",
+      "You'd like time to clear it: 90 days for the 35x wagering",
+    ],
+    code: { text: "Yeet's 100% first deposit bonus goes up to $1,000 with 35x wagering on deposit plus bonus over 90 days, and Yeet sets no maximum cashout on it.", cite: [[B, "Standing offer"], [B, "Max cashout"]] },
+    licence: { text: "Yeet holds Anjouan licence ALSI-20251036-FI2, and its complaints policy names Pacific Edge Ltd as its operator reference.", cite: [[C, "Licence"], [C, "Company"]] },
+    rewards: { text: "Yeet pays 5% instant rakeback from Bronze to Eternal and 10% at the invite-only Chairman tier, and runs a $50,000 weekly Chairman's Cup for the top 25.", cite: [[B, "Rakeback"], [B, "Leaderboards"]] },
+    vip: { text: "Yeet's tiers run from Copper at $100 wagered to Eternal at $250 million, each level paying a bonus that never expires, with a VIP host from Diamond.", cite: [[B, "Perks by level"]] },
+    cash: { text: "Yeet sets no withdrawal limits and pays out in crypto only, but needs Level 1 KYC before you can deposit.", cite: [[P, "Withdrawal limits"], [C, "KYC policy"]] },
+  },
 };
 
 const TOPICS: [keyof Omit<CasinoBlocks, "verdictIf" | "pickIf">, string][] = [
@@ -505,8 +544,15 @@ const TOPICS: [keyof Omit<CasinoBlocks, "verdictIf" | "pickIf">, string][] = [
   ["cash", "Withdrawals and ID checks"],
 ];
 
-/** Pairs composed from the blocks: our top four codes against Duel, Rainbet and Razed. */
-const COMPOSED_PAIRS: [string, string][] = ["roobet", "stake", "shuffle", "gamdom"].flatMap((a) => ["rainbet", "razed", "duel"].map((b) => [a, b] as [string, string]));
+/** Pairs composed from the blocks: our top four codes against the rest, and the newer three against each other. */
+// In versus.ts order (VERSUS_SLUGS), so each key is the pair's canonical URL.
+const TOP = ["roobet", "stake", "shuffle", "gamdom"];
+const COMPOSED_PAIRS: [string, string][] = [
+  ...TOP.flatMap((a) => ["duelbits", "rainbet", "razed", "duel", "goated", "yeet"].map((b) => [a, b] as [string, string])),
+  ["duelbits", "goated"],
+  ["duelbits", "yeet"],
+  ["goated", "yeet"],
+];
 
 function compose(a: string, b: string): VersusAnalysis {
   const A = BLOCKS[a], Bk = BLOCKS[b];
