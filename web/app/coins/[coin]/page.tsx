@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
 import { CoinsPage } from "@/components/coins/CoinsPage";
 import { pageMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
@@ -29,7 +30,7 @@ export default async function Page({ params }: { params: Promise<{ coin: string 
   return (
     <>
       <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Coins", path: "/coins" }, { name: c.name, path: `/coins/${coin}` }])} />
-      <CoinsPage coin={String(c.ticker)} />
+      <CoinsPage coin={String(c.ticker)}  partner={<FeaturedPartner context={{ kind: "general" }} />} />
     </>
   );
 }

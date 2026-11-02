@@ -1,17 +1,20 @@
 "use client";
+import type React from "react";
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { fetchCoinPrices, type CoinPriceMap } from "@/lib/coingecko";
 import { coinHref } from "@/lib/coins";
-import { getSpecFact } from "@/lib/spec-sheet";
-import { siteData, siteCounts } from "@/lib/site-data";
+import { hasSpecFact } from "@/lib/spec-lite";
+import { liteOps, liteCoinDefs, liteCoinsBy } from "@/lib/site-lite";
+
+const siteData = { ops: liteOps, coinDefs: liteCoinDefs, coinsBy: liteCoinsBy };
+const siteCounts = { casinos: liteOps.length };
 import { tintFor } from "@/lib/logo";
 import { payoutView } from "@/lib/payout";
 import { bonusWithWager } from "@/lib/wager";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { NextSteps } from "@/components/layout/NextSteps";
-import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
 import { CoinIcon } from "@/components/ui/CoinIcon";
 
 /**
@@ -42,7 +45,7 @@ const COIN_SPOTS = [
   { x: 88, y: 80, size: 60, z: 3 },
 ];
 
-export function CoinsPage({ coin }: { coin?: string }) {
+export function CoinsPage({ coin, partner }: { coin?: string; /** FeaturedPartner, rendered on the server. */ partner?: React.ReactNode }) {
   const { coinDefs, ops, coinsBy } = siteData;
   // One coin's page (/coins/bitcoin) or the overview (/coins). Each view is
   // its own address, so the tabs, the cluster and "Detail" are plain links
@@ -263,7 +266,7 @@ export function CoinsPage({ coin }: { coin?: string }) {
         </section>
       )}
       <section style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px 56px" }}>
-        <FeaturedPartner context={{ kind: "general" }} />
+        {partner}
         <NextSteps
           steps={[
             { href: "/wallets", label: "Wallets", hint: "Where the bankroll lives: custody, chains and swap fees." },
@@ -334,7 +337,7 @@ function TopCoinPicks({ ticker, coinName }: { ticker: string; coinName: string }
         {picks.map((o, i) => {
           const why = [
             ticker === "BTC" && o.ln ? "Takes Bitcoin over Lightning" : null,
-            ...(PICK_WHY[o.slug] ?? []).filter((w) => getSpecFact(o.slug, w.group, w.label)).map((w) => w.text),
+            ...(PICK_WHY[o.slug] ?? []).filter((w) => hasSpecFact(o.slug, w.group, w.label)).map((w) => w.text),
           ].filter((x): x is string => !!x).slice(0, 3);
           const lead1 = i === 0;
           return (

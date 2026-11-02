@@ -24,10 +24,12 @@
  *  - the slot review page's per-operator "RTP by casino build" table
  *  - casino/wallet/exchange review bylines and standfirst claims
  */
-import { siteData } from "./site-data";
+// The JSON lists directly, not siteData: payoutView runs in client components.
+import fieldTested from "@/data/fieldTestedOperators.json";
+import audited from "@/data/editoriallyAuditedOperators.json";
 
 export function isFieldTestedOperator(slug: string): boolean {
-  return siteData.fieldTestedOperators.includes(slug);
+  return (fieldTested as string[]).includes(slug);
 }
 
 /**
@@ -44,5 +46,5 @@ export function isFieldTestedOperator(slug: string): boolean {
  * desk research is done and the slug is added by hand.
  */
 export function isEditoriallyAudited(slug: string): boolean {
-  return siteData.editoriallyAuditedOperators.includes(slug);
+  return (audited as string[]).includes(slug);
 }

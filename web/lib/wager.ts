@@ -5,7 +5,8 @@
  * that confirm they run no deposit bonus say so instead, and bonuses that
  * unlock gradually show the operator's own unlock rule (ops.wagerNote).
  */
-import { getSpecFact } from "./spec-sheet";
+// The slim lookup, not lib/spec-sheet: this runs in client tables.
+import { hasSpecFact, wageringFact } from "./spec-lite";
 import type { Operator } from "./types";
 
 export type WagerView =
@@ -20,7 +21,7 @@ export function wagerView(o: Operator): WagerView {
     // before withdrawal." Returning "No wagering" there hid a condition the
     // player actually hits, so a cited multiplier that names deposits is shown
     // with what it applies to.
-    const f = getSpecFact(o.slug, "Bonus terms", "Wagering");
+    const f = { value: wageringFact(o.slug) };
     // A 1x playthrough on the DEPOSIT is an anti-money-laundering rule, not a
     // bonus condition: 11 of the 33 operators whose wagering term we cite have
     // one, so it is a category norm rather than a catch specific to this
@@ -36,7 +37,7 @@ export function wagerView(o: Operator): WagerView {
     return { kind: "none", mult: null, label: "No deposit bonus" };
   }
   if (o.wagerNote) return { kind: "note", mult: null, label: o.wagerNote };
-  if (getSpecFact(o.slug, "Bonus terms", "Wagering")) return { kind: "cited", mult: o.wager, label: o.wager === 0 ? "No wagering" : `${o.wager}×${o.wagerBasis ? ` ${o.wagerBasis}` : ""}` };
+  if (hasSpecFact(o.slug, "Bonus terms", "Wagering")) return { kind: "cited", mult: o.wager, label: o.wager === 0 ? "No wagering" : `${o.wager}×${o.wagerBasis ? ` ${o.wagerBasis}` : ""}` };
   return { kind: "unknown", mult: null, label: "Not stated" };
 }
 

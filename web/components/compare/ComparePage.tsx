@@ -2,7 +2,9 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { siteData } from "@/lib/site-data";
+import { liteOps, liteCoinsBy } from "@/lib/site-lite";
+
+const siteData = { ops: liteOps, coinsBy: liteCoinsBy };
 import { getCompareRows } from "@/lib/compare-view";
 import { inHouseOrder } from "@/lib/house-order";
 import { defaultIndexList } from "@/lib/casino-index";

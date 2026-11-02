@@ -1,4 +1,5 @@
 import { CoinsPage } from "@/components/coins/CoinsPage";
+import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
 import { pageMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -13,7 +14,7 @@ export default function Page() {
   return (
     <>
       <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Coins", path: "/coins" }])} />
-      <CoinsPage />
+      <CoinsPage  partner={<FeaturedPartner context={{ kind: "general" }} />} />
     </>
   );
 }

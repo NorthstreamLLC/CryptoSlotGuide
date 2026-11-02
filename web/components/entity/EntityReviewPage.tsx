@@ -2,6 +2,7 @@ import type React from "react";
 import type { EntityView } from "@/lib/entity-view";
 import { backLink, ctaLabel, editorialTake, nextStepsFor } from "@/lib/entity-view";
 import { EntityReviewPageClient } from "@/components/entity/EntityReviewPageClient";
+import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
 
 /**
  * Server half of the review page. The labels and links it needs come from
@@ -16,6 +17,7 @@ export function EntityReviewPage({ e, review, lead, heroExtra }: { e: EntityView
       review={review}
       lead={lead}
       heroExtra={heroExtra}
+      partner={e.type === "casino" ? null : <FeaturedPartner context={e.type === "slot" ? { kind: "slots" } : e.type === "market" ? { kind: "sports" } : { kind: "wallet" }} />}
       chrome={{ back: backLink(e.type), take: editorialTake(e.type, e.slug), cta: ctaLabel(e.type, e.name), next: nextStepsFor(e.type) }}
     />
   );

@@ -2,6 +2,7 @@ import type React from "react";
 import type { VerticalKind } from "@/lib/vertical-view";
 import { getVerticalPage } from "@/lib/vertical-view";
 import { VerticalIndexPageClient } from "@/components/vertical/VerticalIndexPageClient";
+import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
 import { HeroDrift } from "@/components/ui/HeroDrift";
 import { heroArtTiles } from "@/lib/slot-page";
 import { siteData } from "@/lib/site-data";
@@ -29,5 +30,5 @@ function heroVisual(kind: VerticalKind): React.ReactNode {
  * catalogue, and only the finished rows go to the browser.
  */
 export function VerticalIndexPage({ kind, tabIdx = 0, after }: { kind: VerticalKind; tabIdx?: number; after?: React.ReactNode }) {
-  return <VerticalIndexPageClient kind={kind} tabIdx={tabIdx} vp={getVerticalPage(kind, tabIdx)} after={after} heroVisual={heroVisual(kind)} />;
+  return <VerticalIndexPageClient kind={kind} tabIdx={tabIdx} vp={getVerticalPage(kind, tabIdx)} after={after} heroVisual={heroVisual(kind)} partner={<FeaturedPartner context={kind === "providers" || kind === "slots" ? { kind: "slots" } : kind === "sportsbooks" ? { kind: "sports" } : kind === "guides" ? { kind: "general" } : { kind: "wallet" }} />} />;
 }

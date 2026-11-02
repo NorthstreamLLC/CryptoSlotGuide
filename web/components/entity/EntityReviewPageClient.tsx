@@ -13,7 +13,6 @@ import { CasinoSpecSheet } from "./CasinoSpecSheet";
 import { CasinoBonuses } from "./CasinoBonuses";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { GlanceCard } from "./GlanceCard";
-import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
 import { EmailSignup } from "@/components/ui/EmailSignup";
 import { AuthorBox, AuthorByline } from "@/components/ui/AuthorBox";
 import { VipFloat } from "@/components/slots/VipFloat";
@@ -36,7 +35,7 @@ export interface EntityChrome {
   next: { href: string; label: string; hint: string }[];
 }
 
-export function EntityReviewPageClient({ e, review, lead, heroExtra, chrome }: { e: EntityView; review?: React.ReactNode; lead?: React.ReactNode; heroExtra?: React.ReactNode; chrome: EntityChrome }) {
+export function EntityReviewPageClient({ e, review, lead, heroExtra, partner, chrome }: { e: EntityView; review?: React.ReactNode; lead?: React.ReactNode; heroExtra?: React.ReactNode; /** FeaturedPartner, rendered on the server so its data stays out of the bundle. */ partner?: React.ReactNode; chrome: EntityChrome }) {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const back = chrome.back;
   const take = chrome.take;
@@ -440,7 +439,7 @@ export function EntityReviewPageClient({ e, review, lead, heroExtra, chrome }: {
             />
           </div>
         )}
-        {!isCasino && <FeaturedPartner context={e.type === "slot" ? { kind: "slots" } : e.type === "market" ? { kind: "sports" } : { kind: "wallet" }} />}
+        {!isCasino && partner}
         <ReportIssue subject={e.name} />
         <NextSteps steps={chrome.next} />
       </div>

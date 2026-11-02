@@ -9,8 +9,10 @@
  * figures have actually been checked against a live source — never
  * placeholder numbers, per the same discipline as fieldTestedOperators.json.
  */
-import { siteData } from "./site-data";
+// The JSON directly, not siteData: this runs in the review page's client bundle.
+import onChainVolume from "@/data/onChainVolume.json";
+import type { OnChainVolumeEntry } from "./types";
 
 export function getOnChainVolume(slug: string) {
-  return siteData.onChainVolume.find((e) => e.operatorSlug === slug);
+  return (onChainVolume as OnChainVolumeEntry[]).find((e) => e.operatorSlug === slug);
 }

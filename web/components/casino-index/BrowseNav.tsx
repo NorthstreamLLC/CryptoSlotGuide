@@ -3,7 +3,9 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { siteData } from "@/lib/site-data";
+import { liteOps } from "@/lib/site-lite";
+
+const siteData = { ops: liteOps };
 import { filterFns, type BtcFilterKey } from "@/lib/casino-index";
 
 /**

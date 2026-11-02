@@ -4,8 +4,7 @@ import legalUS from "@/data/legal-us.json";
 import legalWorld from "@/data/legal-world.json";
 import geoWorld from "@/data/geo-world.json";
 import geoUS from "@/data/geo-us.json";
-import { siteData } from "@/lib/site-data";
-import { getSpecFact } from "@/lib/spec-sheet";
+import ops from "@/data/ops.json";
 import { SWEEPS, sweepsFact } from "@/lib/sweeps";
 import { inHouseOrder } from "@/lib/house-order";
 
@@ -86,18 +85,6 @@ export const TONE: Record<Tone, { fill: string; label: string }> = {
   none: { fill: "#2A3439", label: "Not yet covered" },
 };
 
-/** Casinos on the site whose own restricted-country list names this country. */
-export function casinosRestricting(countryName: string, aliases: string[] = []): { slug: string; name: string; url?: string }[] {
-  const names = [countryName, ...aliases].map((n) => n.toLowerCase());
-  return siteData.ops
-    .map((o) => ({ o, f: getSpecFact(o.slug, "Compliance", "Restricted countries") }))
-    .filter(({ f }) => {
-      const text = (f?.value ?? f?.chips?.join(", ") ?? "").toLowerCase();
-      return text && names.some((n) => new RegExp(`\\b${n.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`).test(text));
-    })
-    .map(({ o, f }) => ({ slug: o.slug, name: o.name, url: f?.sourceUrl }));
-}
-
 /** Sweepstakes casinos whose own restricted-state list does not name this state. */
 export function sweepsAvailableIn(stateName: string, code: string) {
   return inHouseOrder(SWEEPS.filter((s) => s.facts.length)).map((s) => {
@@ -159,7 +146,8 @@ export function exceptIn(slug: string, code: string): string[] {
 
 export function casinosByAccess(code: string) {
   const out: Record<Access, { slug: string; name: string; mono: string; except: string[] }[]> = { accepts: [], restricted: [], partial: [] };
-  for (const o of siteData.ops) {
+  // ops.json directly, not siteData: this runs in the homepage map's client chunk.
+  for (const o of ops as { slug: string; name: string; mono: string }[]) {
     const a = accessIn(o.slug, code);
     if (a) out[a].push({ slug: o.slug, name: o.name, mono: o.mono, except: a === "restricted" ? [] : exceptIn(o.slug, code) });
   }

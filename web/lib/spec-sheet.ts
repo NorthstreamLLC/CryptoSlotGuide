@@ -7,11 +7,15 @@
  * need a FairGambling citation once actually checked, not the clean
  * editorial/FairGambling split the first mockup assumed).
  */
-import { siteData } from "./site-data";
-import type { SpecFact, SpecGroup } from "./types";
+// The JSON directly, not siteData, so client code that reads a fact doesn't
+// also ship every slot, guide and provider in its bundle.
+import sheets from "@/data/casinoSpecSheets.json";
+import type { CasinoSpecSheet, SpecFact, SpecGroup } from "./types";
+
+const SHEETS = sheets as CasinoSpecSheet[];
 
 export function getCasinoSpecSheet(slug: string) {
-  return siteData.casinoSpecSheets.find((e) => e.operatorSlug === slug);
+  return SHEETS.find((e) => e.operatorSlug === slug);
 }
 
 /**

@@ -9,7 +9,6 @@ import { GuideCover } from "@/components/guides/GuideCover";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { Icon } from "@/components/ui/Icon";
 import { NextSteps } from "@/components/layout/NextSteps";
-import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
 
 /**
  * One list page for /slots, /providers, /sportsbooks, /wallets, /exchanges
@@ -51,7 +50,7 @@ const INDEX_NEXT: Record<VerticalKind, { href: string; label: string; hint: stri
   ],
 };
 
-export function VerticalIndexPageClient({ kind, tabIdx, vp, after, heroVisual }: { kind: VerticalKind; tabIdx: number; vp: VerticalPage; after?: React.ReactNode; heroVisual?: React.ReactNode }) {
+export function VerticalIndexPageClient({ kind, tabIdx, vp, after, heroVisual, partner }: { kind: VerticalKind; tabIdx: number; vp: VerticalPage; after?: React.ReactNode; heroVisual?: React.ReactNode; /** FeaturedPartner, rendered on the server. */ partner?: React.ReactNode }) {
   const hasStat = vp.statLabel !== "";
   const cols = hasStat
     ? "md:grid-cols-[minmax(220px,1.5fr)_minmax(110px,1fr)_minmax(110px,1fr)_minmax(110px,1fr)_90px_130px]"
@@ -215,7 +214,7 @@ export function VerticalIndexPageClient({ kind, tabIdx, vp, after, heroVisual }:
             </div>
           </Link>
         </div>
-        <FeaturedPartner context={kind === "providers" || kind === "slots" ? { kind: "slots" } : kind === "sportsbooks" ? { kind: "sports" } : kind === "guides" ? { kind: "general" } : { kind: "wallet" }} />
+        {partner}
         <NextSteps steps={INDEX_NEXT[kind]} />
       </section>
     </main>
