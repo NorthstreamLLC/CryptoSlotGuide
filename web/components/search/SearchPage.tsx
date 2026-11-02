@@ -3,7 +3,7 @@
 import { bonusWithWager } from "@/lib/wager";
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import { siteData } from "@/lib/site-data";
+import { liteData as siteData } from "@/lib/site-lite";
 import { payoutView } from "@/lib/payout";
 
 /**

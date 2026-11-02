@@ -116,14 +116,8 @@ export function splitBuilds(readings: RtpReading[]): number {
  * lib/rtp-watch-view.ts's matrix, lib/entity-view.ts's slot branch, and
  * splitBuilds above.
  */
-export const STALE_READING_DAYS = 30;
-
-export function isStaleReading(checkedAt: string): boolean {
-  const checked = new Date(checkedAt).getTime();
-  if (Number.isNaN(checked)) return true;
-  const ageDays = (Date.now() - checked) / (1000 * 60 * 60 * 24);
-  return ageDays > STALE_READING_DAYS;
-}
+export { STALE_READING_DAYS, isStaleReading } from "./stale";
+import { isStaleReading } from "./stale";
 
 export function medianReadMins(guides: GuideRow[]): number {
   return median(guides.map((g) => g.readMins));

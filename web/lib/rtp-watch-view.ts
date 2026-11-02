@@ -26,9 +26,9 @@
  * than shown as a stale confirmation — "prefer hiding a stale cell to
  * showing an unverified one."
  */
-import { siteData } from "./site-data";
+import { liteData as siteData } from "./site-lite";
 import { rtpLabel } from "./slot-facts";
-import { isStaleReading } from "./derived";
+import { isStaleReading } from "./stale";
 
 export interface WatchCell {
   label: string;

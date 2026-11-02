@@ -5,7 +5,7 @@
  * shows as "Not published" instead of a number from a slot database.
  */
 import type { Slot } from "./types";
-import { siteData } from "./site-data";
+import { liteData as siteData } from "./site-lite";
 
 export const hasRtp = (s: Slot) => !s.unpublished?.includes("rtp");
 export const hasVol = (s: Slot) => !s.unpublished?.includes("vol");

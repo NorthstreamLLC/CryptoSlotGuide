@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { siteData } from "@/lib/site-data";
+import { liteData as siteData } from "@/lib/site-lite";
 import { getWatchRows, watchStats, getHouseEdgeRows } from "@/lib/rtp-watch-view";
 import { NextSteps } from "@/components/layout/NextSteps";
 

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { siteData } from "@/lib/site-data";
+import { liteData as siteData } from "@/lib/site-lite";
 import { venuesInOrder, venueCta, venueHref } from "@/lib/prediction-markets";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { HeroDrift } from "@/components/ui/HeroDrift";

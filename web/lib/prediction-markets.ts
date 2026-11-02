@@ -1,4 +1,4 @@
-import { siteData } from "./site-data";
+import { liteData as siteData } from "./site-lite";
 import { inHouseOrder } from "./house-order";
 import type { PredictionMarket } from "./types";
 import avail from "@/data/predAvailability.json";
