@@ -355,7 +355,8 @@ export function CasinoIndexPage({ filter, embedded = false }: { filter: BtcFilte
 
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 14 }}>
           {rows.map((o) => (
-            <CasinoCard key={o.slug} o={o} />
+            // Embedded in the hub's folded list: four coins and "+N" keep 40-odd cards light.
+            <CasinoCard key={o.slug} o={o} coinMax={embedded ? 4 : 7} />
           ))}
         </div>
 

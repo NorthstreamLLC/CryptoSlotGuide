@@ -93,6 +93,8 @@ export function CoinIcon({ ticker, size = 22 }: { ticker: string; size?: number 
         <img
           src={`/assets/coins/${art.file}`}
           alt=""
+          loading="lazy"
+          decoding="async"
           width={art.bleed ? size : Math.round(size * 0.6)}
           height={art.bleed ? size : Math.round(size * 0.6)}
           style={{

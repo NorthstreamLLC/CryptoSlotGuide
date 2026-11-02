@@ -32,6 +32,12 @@ export function BrandMark({
       <img
         src={logo}
         alt=""
+        // Square marks: the attributes fix the aspect ratio before the file
+        // arrives, so nothing shifts; the style still sizes it to its box.
+        width={128}
+        height={128}
+        loading="lazy"
+        decoding="async"
         style={{
           width: "100%",
           height: "100%",

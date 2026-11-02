@@ -13,7 +13,7 @@ const MONO = "var(--font-jetbrains-mono), monospace";
  * Offer-led casino card: headline offer, three key numbers, coins, and a
  * clear action. Used on the homepage and the casino list.
  */
-export function CasinoCard({ o, rank }: { o: Operator; rank?: number }) {
+export function CasinoCard({ o, rank, coinMax = 7 }: { o: Operator; rank?: number; coinMax?: number }) {
   const brand = brandFor(o.slug);
   const c = casinoFacts(o);
   const href = `/casinos/${o.slug}`;
@@ -78,7 +78,7 @@ export function CasinoCard({ o, rank }: { o: Operator; rank?: number }) {
       </div>
 
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10, minHeight: 22 }}>
-        {c.coins.length ? <CoinStack tickers={c.coins} max={7} size={20} /> : <span style={{ fontSize: 12, color: "#77858E" }}>Coins not listed</span>}
+        {c.coins.length ? <CoinStack tickers={c.coins} max={coinMax} size={20} /> : <span style={{ fontSize: 12, color: "#77858E" }}>Coins not listed</span>}
         {c.fee === "Free" && (
           <span style={{ display: "inline-flex", alignItems: "center", gap: 5, fontSize: 11.5, fontWeight: 600, color: "#7BE0B8" }}>
             <Icon name="percent" size={13} /> Free withdrawals
