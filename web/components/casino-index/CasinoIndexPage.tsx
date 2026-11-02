@@ -4,8 +4,7 @@ import { wagerView, bonusWithWager } from "@/lib/wager";
 import { BrowseNav } from "./BrowseNav";
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import { siteData } from "@/lib/site-data";
-import { fill } from "@/lib/derived";
+import { liteOps, liteCoinsBy, liteCoinDefs } from "@/lib/site-lite";
 import { tintFor } from "@/lib/logo";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { CasinoCard } from "@/components/casino/CasinoCard";
@@ -42,7 +41,7 @@ const btcFaqData = [
  * it under its own top 10, and a folded list still has to be whole in the HTML.
  */
 export function CasinoIndexPage({ filter, embedded = false }: { filter: BtcFilterKey; embedded?: boolean }) {
-  const { ops, coinsBy, coinDefs } = siteData;
+  const ops = liteOps, coinsBy = liteCoinsBy, coinDefs = liteCoinDefs;
   // Speed and wagering views are about one fact, so they open sorted on it and
   // the first row genuinely is the fastest or the lowest. Everything else opens
   // in house placement order, which is a commercial order and not a ranking —
@@ -395,7 +394,7 @@ export function CasinoIndexPage({ filter, embedded = false }: { filter: BtcFilte
                     <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", color: "#00C2CC" }}>{faqOpen === i ? "−" : "+"}</span>
                   </button>
                   {faqOpen === i && (
-                    <div style={{ padding: "0 0 14px", fontSize: 14, lineHeight: 1.65, color: "#93A3AC" }}>{fill(f.a, siteData)}</div>
+                    <div style={{ padding: "0 0 14px", fontSize: 14, lineHeight: 1.65, color: "#93A3AC" }}>{f.a}</div>
                   )}
                 </div>
               ))}

@@ -9,8 +9,6 @@ import { NextSteps } from "@/components/layout/NextSteps";
 import { reviewTierFor, TIER_LABEL, TIER_TINT } from "@/lib/review-tier";
 import { isEditoriallyAudited } from "@/lib/field-tested";
 import { OnChainActivity } from "./OnChainActivity";
-import { CasinoSpecSheet } from "./CasinoSpecSheet";
-import { CasinoBonuses } from "./CasinoBonuses";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { GlanceCard } from "./GlanceCard";
 import { EmailSignup } from "@/components/ui/EmailSignup";
@@ -35,7 +33,7 @@ export interface EntityChrome {
   next: { href: string; label: string; hint: string }[];
 }
 
-export function EntityReviewPageClient({ e, review, lead, heroExtra, partner, chrome }: { e: EntityView; review?: React.ReactNode; lead?: React.ReactNode; heroExtra?: React.ReactNode; /** FeaturedPartner, rendered on the server so its data stays out of the bundle. */ partner?: React.ReactNode; chrome: EntityChrome }) {
+export function EntityReviewPageClient({ e, review, lead, heroExtra, partner, bonuses, specSheet, chrome }: { e: EntityView; review?: React.ReactNode; lead?: React.ReactNode; heroExtra?: React.ReactNode; /** FeaturedPartner, rendered on the server so its data stays out of the bundle. */ partner?: React.ReactNode; /** CasinoBonuses and CasinoSpecSheet, server-rendered: they read the 690KB spec sheets. */ bonuses?: React.ReactNode; specSheet?: React.ReactNode; chrome: EntityChrome }) {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const back = chrome.back;
   const take = chrome.take;
@@ -242,9 +240,9 @@ export function EntityReviewPageClient({ e, review, lead, heroExtra, partner, ch
           ))}
         </div>
 
-        {isCasino && <CasinoBonuses slug={e.slug} />}
+        {isCasino && bonuses}
         {isCasino && <OnChainActivity slug={e.slug} />}
-        {(isCasino || e.type === "wallet" || e.type === "exchange") && <CasinoSpecSheet slug={e.slug} kind={e.type === "wallet" ? "wallet" : e.type === "exchange" ? "exchange" : "casino"} />}
+        {specSheet}
 
         {e.chips.length > 0 && <div style={{ padding: "20px 24px", borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)", marginBottom: 38 }}>
           <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 13 }}>

@@ -10,7 +10,8 @@ import { wagerView, compareWager } from "./wager";
 import type { Operator } from "./types";
 import { comparePayout, payoutView } from "./payout";
 import { byHouse } from "./house-order";
-import { siteData } from "./site-data";
+// liteOps (ops.json), not siteData: this module runs in client components.
+import { liteOps } from "./site-lite";
 
 export type BtcFilterKey = "all" | "nokyc" | "fast" | "lowwager" | "sports" | "esports";
 
@@ -121,7 +122,7 @@ export function defaultSortKey(filter: BtcFilterKey): SortKey {
  * re-sorts on click, but structured data describes the default view.
  */
 export function defaultIndexList(filter: BtcFilterKey): Operator[] {
-  const ops = siteData.ops;
+  const ops = liteOps;
   const fn = filterFns[filter];
   const featured = ops.find((o) => o.featured);
   const spotlight = !!featured && fn(featured);
