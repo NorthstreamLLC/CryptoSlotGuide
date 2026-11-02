@@ -2,13 +2,13 @@ import { VERSUS_ANALYSIS } from "@/lib/versus-analysis";
 import { NEWS } from "@/lib/news";
 import { watchEntries } from "@/lib/casino-changewatch";
 import { coinSlug } from "@/lib/coins";
-import type { MetadataRoute } from "next";
 import { fiatMarkets } from "@/lib/fiat";
 import { allVenues } from "@/lib/prediction-markets";
 import { sportsbookOps } from "@/lib/sports";
 import { catalogueStudios } from "@/lib/studio-pages";
 import { siteData } from "@/lib/site-data";
-import { SITE_URL } from "@/lib/seo";
+import { getCasinoSpecSheet } from "@/lib/spec-sheet";
+import { FACT_ARTICLES } from "@/lib/fact-articles";
 import { sweepsSorted } from "@/lib/sweeps";
 import { US_STATES, COUNTRIES } from "@/lib/legal";
 import { STUDIOS } from "@/lib/studios";
@@ -115,7 +115,8 @@ function slugPath(base: string, slug: string): string {
   return `${base}/${slug}`;
 }
 
-export default function sitemap(): MetadataRoute.Sitemap {
+/** Every indexable path. */
+export function sitemapPaths(): string[] {
   const { ops, slots, providers, walletRows, exchangeRows, esportsTitles, guideRows, houseGames } = siteData;
 
   const dynamicPaths = [
@@ -155,14 +156,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...COUNTRIES.filter((c) => c.code !== "US").map((c) => slugPath("/legal", c.code.toLowerCase())),
   ];
 
-  const allPaths = [...STATIC_ROUTES, ...dynamicPaths];
-
-  return allPaths.map((path) => ({
-    url: `${SITE_URL}${path}`,
-    lastModified: new Date(),
-    changeFrequency: path === "/" ? ("daily" as const) : ("weekly" as const),
-    priority: path === "/" ? 1 : STATIC_ROUTES.includes(path) ? 0.7 : 0.6,
-  }));
+  return [...new Set([...STATIC_ROUTES, ...dynamicPaths])];
 }
 
 function slug(name: string): string {
@@ -170,4 +164,49 @@ function slug(name: string): string {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)/g, "");
+}
+
+/**
+ * The sitemap sections, each served as /sitemaps/<id>.xml and listed in the
+ * /sitemap.xml index. First match wins, so the jurisdiction pages under
+ * /crypto-casinos/in and /us-casinos/in land in "legal", not "casinos".
+ */
+export const SITEMAP_SECTIONS = ["core", "casinos", "slots", "providers", "comparisons", "legal"] as const;
+export type SitemapSection = (typeof SITEMAP_SECTIONS)[number];
+
+const RULES: [SitemapSection, RegExp][] = [
+  ["comparisons", /^\/compare\//],
+  ["legal", /^\/(legal|licensed-casinos)(\/|$)|^\/(crypto-casinos|us-casinos|prediction-markets)\/in\//],
+  ["slots", /^\/slots(\/|$)/],
+  ["providers", /^\/providers\//],
+  ["casinos", /^\/(casinos|promo-codes|sportsbooks|us-casinos|sweepstakes-casinos|wallets|exchanges|prediction-markets)\/|^\/crypto-casinos\/accepting\//],
+];
+
+export const sectionOf = (path: string): SitemapSection => RULES.find(([, re]) => re.test(path))?.[0] ?? "core";
+
+/**
+ * The date a page's content was last checked or edited, where a record holds
+ * one; undefined otherwise. Never the deploy time: a lastmod that changes on
+ * every deploy tells crawlers nothing.
+ */
+export function lastModifiedOf(path: string): string | undefined {
+  const newest = (dates: (string | undefined)[]) => dates.filter((d): d is string => !!d && /^\d{4}-\d{2}-\d{2}$/.test(d)).sort().pop();
+  const sheetDate = (slug: string) => newest(getCasinoSpecSheet(slug)?.groups.flatMap((g) => g.facts.map((f) => f.asOf)) ?? []);
+  let m: RegExpMatchArray | null;
+  if ((m = path.match(/^\/casinos\/([^/]+)\/facts$/))) {
+    const a = FACT_ARTICLES[m[1]];
+    return a ? newest([a.published, ...a.facts.map((f) => getCasinoSpecSheet(m![1])?.groups.find((g) => g.title === f.group)?.facts.find((x) => x.label === f.label)?.asOf)]) : undefined;
+  }
+  if ((m = path.match(/^\/(?:casinos|promo-codes)\/([^/]+)$/))) return sheetDate(m[1]);
+  if ((m = path.match(/^\/compare\/(.+)$/))) {
+    // A pair page changes when the facts it cites do, not only when it was written.
+    const an = VERSUS_ANALYSIS[m[1]];
+    const factDate = (c: { slug: string; group: string; label: string }) => getCasinoSpecSheet(c.slug)?.groups.find((g) => g.title === c.group)?.facts.find((f) => f.label === c.label)?.asOf;
+    return an ? newest([an.published, ...an.sections.flatMap((x) => x.cite.map(factDate))]) : undefined;
+  }
+  if ((m = path.match(/^\/news\/(.+)$/))) return NEWS.find((n) => n.month === m![1])?.published;
+  if (path === "/news") return NEWS[0]?.published;
+  const legacy = LEGACY_ITEMS.find((i) => `/${i.slug}` === path);
+  if (legacy) return newest([legacy.modified, legacy.date]);
+  return undefined;
 }

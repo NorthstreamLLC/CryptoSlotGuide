@@ -26,6 +26,11 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       { source: "/roobet-casino", destination: "/casinos/roobet", permanent: true },
+      // Three old posts whose bodies were CDL betting copy under casino titles:
+      // retired, each pointing at the article that covers its topic.
+      { source: "/anonymous-crypto-gambling-which-casinos-dont-require-kyc", destination: "/crypto-casinos/no-kyc", permanent: true },
+      { source: "/crypto-casino-withdrawal-times-what-to-expect-and-how-to-speed-them-up", destination: "/crypto-casino-withdrawals-explained", permanent: true },
+      { source: "/best-crypto-casino-welcome-bonuses-in-2026-what-to-actually-look-for", destination: "/best-crypto-casino-welcome-bonuses-2026-what-to-look-for-and-avoid", permanent: true },
       // The six hand-checked UK brands gave way to the whole Gambling
       // Commission register on the licensed-casinos page.
       { source: "/uk-casinos", destination: "/licensed-casinos/gb", permanent: true },

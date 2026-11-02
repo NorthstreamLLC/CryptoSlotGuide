@@ -32,7 +32,7 @@ export function pageMetadata(title: string, description: string, path: string, i
     description,
     alternates: { canonical: path },
     // Pages kept for visitors but out of the index until they carry enough of
-    // their own content (see app/sitemap.ts, which leaves them out too).
+    // their own content (see lib/sitemap-entries.ts, which leaves them out too).
     ...(opts.noindex ? { robots: { index: false, follow: true } } : {}),
     openGraph: {
       title,
