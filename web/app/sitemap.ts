@@ -75,6 +75,7 @@ const STATIC_ROUTES = [
   "/promo-codes",
   "/casinos/facts",
   "/news",
+  "/rakeback-casinos",
   "/casinos/stake/facts",
   "/casinos/roobet/facts",
   "/casinos/shuffle/facts",

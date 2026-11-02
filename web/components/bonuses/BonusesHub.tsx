@@ -39,7 +39,7 @@ export function BonusesHub() {
 
   const types = [
     { icon: "🎁", label: "Welcome bonuses", href: "#welcome", n: `${welcome.length} offers` },
-    { icon: "♻️", label: "Rakeback & cashback", href: "#rewards", n: `${ops.length - welcome.length} casinos` },
+    { icon: "♻️", label: "Best rakeback", href: "/rakeback-casinos", n: "14 compared" },
     { icon: "🎯", label: "Lowest wagering", href: "/lowest-wagering", n: `${lowWager.length} casinos` },
     { icon: "🏁", label: "Races & raffles", href: "/races", n: `${raceSlugs().length} casinos` },
     { icon: "🏷️", label: "Promo codes", href: "/promo-codes", n: `${PROMO_PAGES.length} codes` },

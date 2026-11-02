@@ -132,6 +132,7 @@ export default function Page() {
         <NextSteps
           steps={[
             { href: "/bonuses", label: "Every bonus, side by side", hint: "Welcome offers and rewards with the wagering each carries." },
+            { href: "/rakeback-casinos", label: "Best rakeback casinos", hint: "Rates, claim times and what each code adds, side by side." },
             { href: "/casinos/facts", label: "10 facts about each casino", hint: "Who runs it, its licence and the rules that catch players out." },
             { href: "/races", label: "Races and raffles", hint: "Daily, weekly and monthly races, side by side." },
           ]}
