@@ -158,15 +158,15 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
               source={`guide:${g.slug}`.slice(0, 40)}
               eyebrow="Law changes"
               title="Hear when the rules change"
-              sub="Bans, new licences and casinos leaving a country: when a law we cover changes, it's at the top of our weekly email, with the source. One email a week, unsubscribe any time."
+              sub="Bans, new licences and casinos leaving a country: when a law we cover changes, it's at the top of our monthly email, with the source. One email a month, unsubscribe any time."
               button="Get law updates"
             />
           ) : (
             <EmailSignup
               source={`guide:${g.slug}`.slice(0, 40)}
-              eyebrow="Weekly email"
-              title="Guides like this, once a week"
-              sub="New guides, what changed at each casino this week and the week's biggest races. One email a week, unsubscribe any time."
+              eyebrow="Monthly email"
+              title="Guides like this, once a month"
+              sub="New guides, what changed at each casino this month and the month's biggest races. One email a month, unsubscribe any time."
             />
           )}
         </div>

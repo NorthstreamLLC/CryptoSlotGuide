@@ -12,6 +12,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { AuthorByline, AuthorBox } from "@/components/ui/AuthorBox";
 import { NextSteps } from "@/components/layout/NextSteps";
+import { EmailSignup } from "@/components/ui/EmailSignup";
 
 const MONO = "var(--font-jetbrains-mono), monospace";
 
@@ -115,6 +116,16 @@ export default async function Page({ params }: { params: Promise<{ month: string
 
         <div style={{ margin: "36px 0" }}>
           <AuthorBox />
+        </div>
+        <div style={{ margin: "28px 0 8px" }}>
+          <EmailSignup
+            compact
+            source={`news:${month}`}
+            eyebrow="Monthly email"
+            title={"Get next month's changes by email"}
+            sub={"This page in your inbox once a month: new bonuses, fee and rule changes and licence updates at the casinos we cover, each with its source. Unsubscribe any time."}
+            button={"Email me next month's changes"}
+          />
         </div>
         <NextSteps
           steps={[

@@ -14,6 +14,7 @@ import { VipClaim } from "@/components/ui/VipClaim";
 import { RooJackpotsCard } from "@/components/casino/RooJackpotsCard";
 import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
 import { VersusStrip } from "@/components/compare/VersusStrip";
+import { EmailSignup } from "@/components/ui/EmailSignup";
 
 const SLUG = "roobet";
 const MONO = "var(--font-jetbrains-mono), monospace";
@@ -215,6 +216,16 @@ export default function Page() {
         </div>
         <VersusStrip slug={SLUG} />
         <div style={{ height: 8 }} />
+        <div style={{ margin: "28px 0 8px" }}>
+          <EmailSignup
+            compact
+            source={"code:roobet"}
+            eyebrow="Monthly email"
+            title={"Hear if Roobet's code or bonus changes"}
+            sub={`If what code ${code} gets you changes, or Roobet adds or drops a bonus, it's in our monthly email with the source. One email a month, unsubscribe any time.`}
+            button={"Get the monthly email"}
+          />
+        </div>
         <NextSteps
           steps={[
             { href: "/casinos/roobet", label: "Full Roobet review", hint: "Withdrawals, coins, licence and sportsbook, each linked to Roobet's own pages." },

@@ -14,6 +14,7 @@ import { AuthorByline, AuthorBox } from "@/components/ui/AuthorBox";
 import { NextSteps } from "@/components/layout/NextSteps";
 import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
 import { VersusStrip } from "@/components/compare/VersusStrip";
+import { EmailSignup } from "@/components/ui/EmailSignup";
 
 const MONO = "var(--font-jetbrains-mono), monospace";
 const GOLD = "#FFC531";
@@ -132,6 +133,16 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         </div>
         <VersusStrip slug={slug} />
         <div style={{ height: 8 }} />
+        <div style={{ margin: "28px 0 8px" }}>
+          <EmailSignup
+            compact
+            source={`facts:${slug}`.slice(0, 40)}
+            eyebrow="Monthly email"
+            title={`Hear when ${o.name}'s terms change`}
+            sub={`When a fact on this page moves, it's in our monthly email with the source, alongside the month's other casino changes. One email a month, unsubscribe any time.`}
+            button={"Get the monthly email"}
+          />
+        </div>
         <NextSteps
           steps={[
             { href: `/casinos/${slug}`, label: `Full ${o.name} review`, hint: "Withdrawals, coins, licence and sportsbook, each linked to its own pages." },

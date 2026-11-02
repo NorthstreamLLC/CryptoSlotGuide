@@ -5,7 +5,7 @@ import { useState } from "react";
 const MONO = "var(--font-jetbrains-mono), monospace";
 
 /**
- * Weekly digest sign-up. Posts to our own /api/newsletter, which adds the
+ * Monthly email sign-up. Posts to our own /api/newsletter, which adds the
  * address to the SendGrid list server-side — the API key never reaches the
  * browser and no third-party script runs on the page. Until
  * NEXT_PUBLIC_NEWSLETTER_ON is "1" the form shows but says sign-ups open at
@@ -23,19 +23,20 @@ const isValidEmail = (v: string) => {
 };
 
 /**
- * Every placement signs up to the same weekly email; `source` (stored as
+ * Every placement signs up to the same monthly email; `source` (stored as
  * signup_source in SendGrid, 40 chars max) records which page and topic
  * brought the reader — "rtp:sweet-bonanza", "races", "guide:…" — so the list
  * can be segmented and each reader's email can lead with what they came for.
- * A placement's wording must only promise what the weekly email carries.
+ * A placement's wording must only promise what the monthly email carries:
+ * that month's news issue (lib/news.ts) plus the month's races and codes.
  */
 export function EmailSignup({
   source,
-  title = "Join the weekly bonus & races newsletter",
-  sub = "The best affiliate casino bonuses, the biggest races, raffles, leaderboards and what changed at each casino this week. One email a week, no spam, unsubscribe any time.",
-  eyebrow = "Free weekly updates",
+  title = "What changed at your casinos, once a month",
+  sub = "New bonuses, fee and rule changes, licence updates and the month's biggest races at the casinos we cover, each with its source. One email a month, no spam, unsubscribe any time.",
+  eyebrow = "Free monthly email",
   button = "Join newsletter",
-  done = "You're on the list — the next digest will land in your inbox.",
+  done = "You're on the list. The next monthly email will land in your inbox.",
   compact = false,
 }: { source: string; title?: string; sub?: string; eyebrow?: string; button?: string; done?: string; /** Tighter, for sitting inside another panel. */ compact?: boolean }) {
   const live = process.env.NEXT_PUBLIC_NEWSLETTER_ON === "1";
@@ -134,7 +135,7 @@ export function EmailSignup({
           </div>
           <label style={{ display: "flex", alignItems: "flex-start", gap: 8, fontSize: 12.5, lineHeight: 1.5, color: "#8DA0AA" }}>
             <input type="checkbox" checked={agree} onChange={(e) => setAgree(e.target.checked)} style={{ marginTop: 3 }} />
-            I&apos;m 18 or older and agree to receive the weekly email. Unsubscribe any time.
+            I&apos;m 18 or older and agree to receive the monthly email. Unsubscribe any time.
           </label>
           {touched && email !== "" && !emailOk && state !== "error" && (
             <div style={{ fontSize: 13, color: "#F0A77F" }}>That doesn&apos;t look like a complete email address.</div>

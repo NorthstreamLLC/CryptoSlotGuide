@@ -13,6 +13,7 @@ import { CodeChip } from "@/components/ui/CodeChip";
 import { AuthorByline, AuthorBox } from "@/components/ui/AuthorBox";
 import { NextSteps } from "@/components/layout/NextSteps";
 import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
+import { EmailSignup } from "@/components/ui/EmailSignup";
 
 const MONO = "var(--font-jetbrains-mono), monospace";
 const GOLD = "#FFC531";
@@ -179,6 +180,16 @@ export default function Page() {
         ))}
         <div style={{ margin: "36px 0" }}>
           <AuthorBox />
+        </div>
+        <div style={{ margin: "28px 0 8px" }}>
+          <EmailSignup
+            compact
+            source={"rakeback"}
+            eyebrow="Monthly email"
+            title={"Hear when rakeback rates change"}
+            sub={"When a casino changes its rakeback, a code boost or how often you can claim, it's in our monthly email with the source. One email a month, unsubscribe any time."}
+            button={"Get the monthly email"}
+          />
         </div>
         <NextSteps
           steps={[

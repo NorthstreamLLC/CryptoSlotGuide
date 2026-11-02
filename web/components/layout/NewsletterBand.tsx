@@ -7,8 +7,8 @@ export function NewsletterBand() {
       <div style={{ maxWidth: 1180, margin: "0 auto", padding: "44px 24px" }}>
         <EmailSignup
           source="site"
-          title="For the best casino bonuses, join our newsletter"
-          sub="The best affiliate casino bonuses, the biggest races, raffles, leaderboards and what changed at each casino this week. One email a week, no spam, unsubscribe any time."
+          title="What changed at your casinos, once a month"
+          sub="New bonuses, fee and rule changes, licence updates and the month's biggest races at the casinos we cover, each with its source. One email a month, no spam, unsubscribe any time."
         />
       </div>
     </section>

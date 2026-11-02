@@ -159,14 +159,14 @@ export function SlotDataPage({ g, review }: { g: CatalogueSlotPage; review?: Rea
             </div>
           ))}
         </div>
-        {/* The weekly email, beside the figure it is about. Same list; the source tags the slot. */}
+        {/* The monthly email, beside the figure it is about. Same list; the source tags the slot. */}
         <div id="signup" style={{ flex: "1 1 340px", scrollMarginTop: 120 }}>
           <EmailSignup
             compact
             source={`rtp:${g.slug ?? ""}`.slice(0, 40)}
             eyebrow="RTP alerts"
             title={versions.length > 1 ? `Know which ${g.name} build you're playing` : `Hear if ${g.name}'s RTP changes`}
-            sub={versions.length > 1 ? `${versions.length} builds are licensed. When RTP Watch records which one a casino runs, it's in our weekly email.` : `When a studio changes a published return or RTP Watch reads a casino's build, it's in our weekly email.`}
+            sub={versions.length > 1 ? `${versions.length} builds are licensed. When RTP Watch records which one a casino runs, it's in our monthly email.` : `When a studio changes a published return or RTP Watch reads a casino's build, it's in our monthly email.`}
             button="Get RTP updates"
           />
         </div>

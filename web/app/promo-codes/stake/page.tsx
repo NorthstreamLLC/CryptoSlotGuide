@@ -12,6 +12,7 @@ import { NextSteps } from "@/components/layout/NextSteps";
 import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
 import { SpecFactCard } from "@/components/promo/SourcedCard";
 import { VersusStrip } from "@/components/compare/VersusStrip";
+import { EmailSignup } from "@/components/ui/EmailSignup";
 
 const SLUG = "stake";
 const MONO = "var(--font-jetbrains-mono), monospace";
@@ -158,6 +159,16 @@ export default function Page() {
         </div>
         <VersusStrip slug={SLUG} />
         <div style={{ height: 8 }} />
+        <div style={{ margin: "28px 0 8px" }}>
+          <EmailSignup
+            compact
+            source={"code:stake"}
+            eyebrow="Monthly email"
+            title={"Hear if Stake's code or bonus changes"}
+            sub={`If what code ${code} gets you changes, or Stake adds or drops a bonus, it's in our monthly email with the source. One email a month, unsubscribe any time.`}
+            button={"Get the monthly email"}
+          />
+        </div>
         <NextSteps
           steps={[
             { href: "/casinos/stake", label: "Full Stake review", hint: "Withdrawals, coins, licence and sportsbook, each linked to Stake's own pages." },

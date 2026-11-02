@@ -17,6 +17,7 @@ import { hasFactArticle } from "@/lib/fact-articles";
 import { CodeChip } from "@/components/ui/CodeChip";
 import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
 import { articleSchema } from "@/lib/schema";
+import { EmailSignup } from "@/components/ui/EmailSignup";
 
 const MONO = "var(--font-jetbrains-mono), monospace";
 
@@ -147,6 +148,18 @@ export default async function Page({ params }: { params: Promise<{ pair: string 
           </>
         )}
 
+        {an && (
+          <div style={{ margin: "28px 0 8px" }}>
+            <EmailSignup
+              compact
+              source={`compare:${pair}`.slice(0, 40)}
+              eyebrow="Monthly email"
+              title={`Hear when ${a.name} or ${b.name} change their terms`}
+              sub="When a bonus, fee, race or licence on this page moves, it's in our monthly email with the source, alongside the month's other casino changes. One email a month, unsubscribe any time."
+              button="Get the monthly email"
+            />
+          </div>
+        )}
         <NextSteps
           steps={[
             { href: `/casinos/${a.slug}`, label: `The full ${a.name} report`, hint: "Bonus terms, payout limits and licence, each linked to its source." },

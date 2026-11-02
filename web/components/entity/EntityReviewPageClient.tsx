@@ -435,7 +435,7 @@ export function EntityReviewPageClient({ e, review, lead, heroExtra, chrome }: {
               source={`rtp:${e.slug}`.slice(0, 40)}
               eyebrow="RTP Watch"
               title={`Know which ${e.name} build you're playing`}
-              sub={`When RTP Watch records which build a casino runs for ${e.name}, or the studio changes its published figures, it's in our weekly email, along with the week's biggest races. One email a week, unsubscribe any time.`}
+              sub={`When RTP Watch records which build a casino runs for ${e.name}, or the studio changes its published figures, it's in our monthly email, along with the month's biggest races. One email a month, unsubscribe any time.`}
               button="Get RTP updates"
             />
           </div>

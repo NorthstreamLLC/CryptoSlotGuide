@@ -13,6 +13,7 @@ import { NextSteps } from "@/components/layout/NextSteps";
 import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
 import { SourcedCard, SpecFactCard } from "@/components/promo/SourcedCard";
 import { VersusStrip } from "@/components/compare/VersusStrip";
+import { EmailSignup } from "@/components/ui/EmailSignup";
 
 /**
  * Promo code pages driven by lib/promo-configs.ts. Roobet, Stake and Shuffle
@@ -150,6 +151,16 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         </div>
         <VersusStrip slug={slug} />
         <div style={{ height: 8 }} />
+        <div style={{ margin: "28px 0 8px" }}>
+          <EmailSignup
+            compact
+            source={`code:${slug}`.slice(0, 40)}
+            eyebrow="Monthly email"
+            title={`Hear if ${o.name}'s code or bonus changes`}
+            sub={`If what code ${code} gets you changes, or ${o.name} adds or drops a bonus, it's in our monthly email with the source. One email a month, unsubscribe any time.`}
+            button={"Get the monthly email"}
+          />
+        </div>
         <NextSteps steps={cfg.next} />
       </section>
     </main>

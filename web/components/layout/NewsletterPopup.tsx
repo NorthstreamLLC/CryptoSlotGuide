@@ -71,10 +71,10 @@ export function NewsletterPopup() {
       <EmailSignup
         source="popup"
         compact
-        eyebrow="Free weekly email"
-        title="The best bonuses and races, every week"
-        sub="The biggest races and raffles, the best casino bonuses and what changed at each casino. One email a week, unsubscribe any time."
-        button="Send me the weekly email"
+        eyebrow="Free monthly email"
+        title="What changed at your casinos this month"
+        sub="New bonuses, fee and rule changes and licence updates at the casinos we cover, plus the month's biggest races. One email a month, unsubscribe any time."
+        button="Send me the monthly email"
       />
     </div>
   );

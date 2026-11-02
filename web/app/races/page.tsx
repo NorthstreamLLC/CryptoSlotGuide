@@ -140,9 +140,9 @@ export default function Page() {
         <div style={{ marginTop: 32 }}>
           <EmailSignup
             source="races"
-            eyebrow="Races, weekly"
-            title="This week's biggest races, in one email"
-            sub="New races, prize pools that went up or down, and raffles worth entering — taken from each casino's own pages, like the table above. One email a week, unsubscribe any time."
+            eyebrow="Races, monthly"
+            title="The month's biggest races, in one email"
+            sub="New races, prize pools that went up or down, and raffles worth entering, taken from each casino's own pages like the table above. One email a month, unsubscribe any time."
             button="Get the races email"
           />
         </div>
