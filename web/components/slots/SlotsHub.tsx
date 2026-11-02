@@ -6,6 +6,7 @@ import { topSlotRank } from "@/lib/top-slots";
 import { SlotArtCards } from "@/components/home/SlotArtCards";
 import { FoldedList } from "@/components/casino-index/FoldedList";
 import { BrandMark } from "@/components/ui/BrandMark";
+import { thumbOf } from "@/lib/thumb";
 import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
 
 /**
@@ -64,7 +65,7 @@ export function SlotsHub() {
               <div style={{ borderRadius: 20, overflow: "hidden", background: "#0F1418", border: `1px solid ${PINK}66`, boxShadow: "0 30px 70px rgba(0,0,0,.45)" }}>
                 {art && (
                   <Link href={`/slots/${top.slug}`} style={{ display: "block", aspectRatio: "16 / 8", background: "#11161A", overflow: "hidden" }}>
-                    <img src={art} alt={top.name} style={{ display: "block", width: "100%", height: "100%", objectFit: "cover" }} />
+                    <img src={art} alt={top.name} width={640} height={320} style={{ display: "block", width: "100%", height: "100%", objectFit: "cover" }} />
                   </Link>
                 )}
                 <div style={{ padding: 22 }}>
@@ -113,7 +114,7 @@ export function SlotsHub() {
                 return (
                   <Link key={s.slug} href={`/slots/${s.slug}`} className="csg-slotrow" style={{ display: "grid", gridTemplateColumns: "56px minmax(0,1.6fr) minmax(0,.7fr) minmax(0,.8fr) minmax(0,.8fr) auto", gap: 14, alignItems: "center", padding: "10px 14px", background: i % 2 ? "#0A0E11" : "#0C1013", borderTop: i ? "1px solid rgba(255,255,255,.05)" : 0 }} data-keep-grid>
                     <span style={{ width: 56, height: 36, borderRadius: 8, overflow: "hidden", background: "#11161A" }}>
-                      {img ? <img src={img} alt="" loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover" }} /> : <BrandMark slug={s.slug} mono={s.mono} tint={s.tint} radius={8} fontSize={10} />}
+                      {img ? <img src={thumbOf(img)} alt="" width={56} height={36} loading="lazy" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover" }} /> : <BrandMark slug={s.slug} mono={s.mono} tint={s.tint} radius={8} fontSize={10} />}
                     </span>
                     <span style={{ minWidth: 0 }}>
                       <span style={{ display: "block", fontSize: 14.5, fontWeight: 700, color: "#fff" }}>{s.name}</span>

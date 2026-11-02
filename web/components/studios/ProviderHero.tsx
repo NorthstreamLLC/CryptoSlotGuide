@@ -44,7 +44,7 @@ export function ProviderHero({ slug, name, verdict }: { slug: string; name: stri
             {thumbs.map((t) => (
               <Link key={t.href} href={t.href} className="csg-lift group" style={{ display: "block", borderRadius: 10, overflow: "hidden", border: "1px solid rgba(255,255,255,.08)", background: "#11161A" }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={t.src} alt={t.name} loading="lazy" style={{ width: "100%", aspectRatio: "4 / 3", objectFit: "cover", display: "block" }} />
+                <img src={t.src} alt={t.name} width={240} height={180} loading="lazy" decoding="async" style={{ width: "100%", aspectRatio: "4 / 3", objectFit: "cover", display: "block" }} />
                 <span style={{ display: "block", padding: "6px 8px", fontSize: 11.5, fontWeight: 700, color: "#E8EDF0", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{t.name}</span>
               </Link>
             ))}

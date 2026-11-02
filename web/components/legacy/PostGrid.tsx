@@ -11,7 +11,7 @@ export function PostGrid({ posts, readingMinutes }: { posts: LegacyItem[]; readi
         <Link key={p.slug} href={`/${p.slug}`} style={{ display: "flex", flexDirection: "column", borderRadius: 16, overflow: "hidden", background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
           {p.image ? (
             // eslint-disable-next-line @next/next/no-img-element
-            <img src={p.image} alt="" style={{ width: "100%", aspectRatio: "16 / 9", objectFit: "cover" }} />
+            <img src={p.image} alt="" width={640} height={360} loading="lazy" decoding="async" style={{ width: "100%", aspectRatio: "16 / 9", objectFit: "cover" }} />
           ) : (
             <span style={{ width: "100%", aspectRatio: "16 / 9", background: "linear-gradient(135deg,#101820,#0B0F12)" }} />
           )}

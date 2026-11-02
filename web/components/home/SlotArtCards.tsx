@@ -13,7 +13,7 @@ export function SlotArtCards({ rows, showRank = true }: { rows: Row[]; showRank?
           <span style={{ position: "relative", display: "block", aspectRatio: "16 / 10", background: "#11161A", overflow: "hidden" }}>
             {r.image && (
               // eslint-disable-next-line @next/next/no-img-element
-              <img src={r.image} alt={r.name} loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform .4s ease" }} className="group-hover:scale-[1.04]" />
+              <img src={r.image} alt={r.name} width={320} height={200} loading="lazy" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform .4s ease" }} className="group-hover:scale-[1.04]" />
             )}
             {showRank && (
               <span style={{ position: "absolute", top: 10, right: 10, padding: "4px 8px", borderRadius: 7, background: "rgba(7,9,11,.78)", fontFamily: MONO, fontSize: 11, fontWeight: 700, color: r.rank <= 3 ? "#FFC531" : "#DCE5E9" }}>#{r.rank}</span>
