@@ -37,7 +37,7 @@ export const FACT_ARTICLES: Record<string, FactArticle> = {
       {
         icon: "🏛️",
         title: "Its licence reads \"assessment in progress\"",
-        body: "Medium Rare N.V. holds licence OGL/2024/1451/0918 on the Curaçao Gaming Authority's register dated 20 October 2026. The listed expiry, 9 June 2026, has passed and the status reads \"Assessment in progress\", the same as 297 of the 666 licences on the list. Stake's own footer shows no licence number.",
+        body: "Medium Rare N.V. holds licence OGL/2024/1451/0918 on the Curaçao Gaming Authority's register dated 30 October 2026. The listed expiry, 9 June 2026, has passed and the status reads \"Assessment in progress\", the same as 296 of the 666 licences on the list. Stake's own footer shows no licence number.",
         group: "Compliance",
         label: "Register check",
       },
@@ -119,7 +119,7 @@ export const FACT_ARTICLES: Record<string, FactArticle> = {
       {
         icon: "🏛️",
         title: "Its Curaçao licence has no expiry date",
-        body: "Raw Entertainment B.V. holds licence OGL/2024/687/0427, issued 24 December 2025. On the Curaçao Gaming Authority's register dated 20 October 2026 it has no expiry and its status reads \"Indefinite\", as it does for 209 of the 666 licences listed.",
+        body: "Raw Entertainment B.V. holds licence OGL/2024/687/0427, issued 24 December 2025. On the Curaçao Gaming Authority's register dated 30 October 2026 it has no expiry and its status reads \"Indefinite\", as it does for 209 of the 666 licences listed.",
         group: "Compliance",
         label: "Register check",
       },
@@ -201,7 +201,7 @@ export const FACT_ARTICLES: Record<string, FactArticle> = {
       {
         icon: "🏛️",
         title: "Its Curaçao licence has no expiry date",
-        body: "On the Curaçao Gaming Authority's register dated 20 October 2026, Natural Nine B.V.'s licence, issued 24 December 2025, has no expiry and its status reads \"Indefinite\", as it does for 209 of the 666 licences listed.",
+        body: "On the Curaçao Gaming Authority's register dated 30 October 2026, Natural Nine B.V.'s licence, issued 24 December 2025, has no expiry and its status reads \"Indefinite\", as it does for 209 of the 666 licences listed.",
         group: "Compliance",
         label: "Register check",
       },
@@ -243,7 +243,7 @@ export const FACT_ARTICLES: Record<string, FactArticle> = {
       {
         icon: "🪙",
         title: "You can deposit from one cent",
-        body: "The minimum deposit is $0.01 or the crypto equivalent on every supported coin. Claiming a deposit bonus takes at least $20, unless the offer says otherwise.",
+        body: "The minimum deposit is $0.01 or the crypto equivalent on every supported coin.",
         group: "Coins & deposit limits",
         label: "Minimum deposit",
       },
@@ -270,7 +270,7 @@ export const FACT_ARTICLES: Record<string, FactArticle> = {
       { k: "Licence", v: "Anjouan" },
       { k: "Code boost", v: "15% for 7 days" },
       { k: "ID check", v: "Only if asked" },
-      { k: "Withdrawal limit", v: "None" },
+      { k: "Withdrawal limit", v: "High, no figure" },
     ],
     facts: [
       {
@@ -331,8 +331,8 @@ export const FACT_ARTICLES: Record<string, FactArticle> = {
       },
       {
         icon: "💸",
-        title: "There are no withdrawal limits",
-        body: "Gamdom says there are no withdrawal limits on fiat or crypto. Deposits must be wagered once first, and withdrawals go out in the same coin you deposited.",
+        title: "It promises high withdrawal limits, but names no figure",
+        body: "Gamdom describes \"high withdrawal limits\" on fiat and crypto without publishing a number. Deposits must be wagered once first, and withdrawals go out in the same coin you deposited.",
         group: "Payouts & fees",
         label: "Withdrawal limits",
       },
@@ -447,7 +447,7 @@ export const FACT_ARTICLES: Record<string, FactArticle> = {
       {
         icon: "🏛️",
         title: "Its Curaçao licence reads \"assessment in progress\"",
-        body: "Liquid Entertainment N.V. holds licence OGL/2024/1507/0838. On the Curaçao Gaming Authority's register dated 20 October 2026, its listed expiry of 24 December 2025 has passed and the status reads \"Assessment in progress\", as it does for 297 of the 666 licences listed.",
+        body: "Liquid Entertainment N.V. holds licence OGL/2024/1507/0838. On the Curaçao Gaming Authority's register dated 30 October 2026, its listed expiry of 24 December 2025 has passed and the status reads \"Assessment in progress\", as it does for 296 of the 666 licences listed.",
         group: "Compliance",
         label: "Register check",
       },
@@ -521,7 +521,7 @@ export const FACT_ARTICLES: Record<string, FactArticle> = {
     facts: [
       {
         icon: "🏢",
-        title: "Rainbet is run by RBGAMING N.V.",
+        title: "Its terms name RBGAMING N.V.",
         body: "Its terms name RBGAMING N.V., registration 16077, as the company behind Rainbet.",
         group: "Compliance",
         label: "Company",
@@ -529,7 +529,7 @@ export const FACT_ARTICLES: Record<string, FactArticle> = {
       {
         icon: "🏛️",
         title: "Its Anjouan licence checks out as valid",
-        body: "RBGAMING N.V. holds Anjouan licence ALSI-152406029-FI2, and the Anjouan Gaming validator linked from Rainbet's footer seal shows it as VALID.",
+        body: "Rainbet's Anjouan licence, ALSI-152406029-FI2, shows as VALID on the Anjouan Gaming validator linked from its footer seal, which names the holder as Rain Group Ltd.",
         group: "Compliance",
         label: "Licence",
       },
@@ -939,7 +939,7 @@ export const FACT_ARTICLES: Record<string, FactArticle> = {
       {
         icon: "🏛️",
         title: "Its Curaçao licence reads \"assessment in progress\"",
-        body: "Universe B Games B.V. holds licence OGL/2024/1494/0942. On the Curaçao Gaming Authority's register dated 20 October 2026, its listed expiry of 31 July 2026 has passed and the status reads \"Assessment in progress\", as it does for 297 of the 666 licences listed.",
+        body: "Universe B Games B.V. holds licence OGL/2024/1494/0942. On the Curaçao Gaming Authority's register dated 30 October 2026, its listed expiry of 31 July 2026 has passed and the status reads \"Assessment in progress\", as it does for 296 of the 666 licences listed.",
         group: "Compliance",
         label: "Register check",
       },

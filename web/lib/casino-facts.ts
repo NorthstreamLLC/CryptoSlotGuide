@@ -134,7 +134,7 @@ const MAX_LIMITS: Record<string, [string | null, string | null]> = {
   winna: ["$10,000 a day, higher for VIPs", null],
   bitstarz: ["1 BTC per withdrawal", "No max"],
   cloudbet: ["No max once verified", "No max once verified"],
-  gamdom: ["No max", "No max stated"],
+  gamdom: ["High, no figure", "No max stated"],
   duelbits: ["No max", "No max"],
   rainbet: ["No max", "$700 on the bonus deposit"],
   "bitcasino-io": ["No max (crypto)", "No max stated"],

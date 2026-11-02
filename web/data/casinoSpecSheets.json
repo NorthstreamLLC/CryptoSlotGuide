@@ -1596,10 +1596,10 @@
           },
           {
             "label": "Register check",
-            "value": "Universe B Games B.V. is on the Curaçao Gaming Authority's online gaming licence register: OGL/2024/1494/0942 (B2C), company number 155126, the same as BetFury's terms. Issued 31 Jan 2026 with an expiry of 31 Jul 2026, its status reads Assessment in progress, as it does for 297 of the 666 licences listed (register dated 20 Oct 2026).",
+            "value": "Universe B Games B.V. is on the Curaçao Gaming Authority's online gaming licence register: OGL/2024/1494/0942 (B2C), company number 155126, the same as BetFury's terms. Issued 31 Jan 2026 with an expiry of 31 Jul 2026, its status reads Assessment in progress, as it does for 296 of the 666 licences listed (register dated 30 Oct 2026).",
             "sourcing": "editorial",
-            "sourceUrl": "https://gamingcontrol.spin-cdn.com/media/license_registry/20261020_20261020_ogl_registry.pdf",
-            "asOf": "2026-10-29"
+            "sourceUrl": "https://gamingcontrol.spin-cdn.com/media/license_registry/20261030_20261030_ogl_registry.pdf",
+            "asOf": "2026-11-02"
           },
           {
             "label": "Company",
@@ -4610,8 +4610,8 @@
             "label": "Operator",
             "value": "Its own about page says Duel is run by the operator known as Monarch, who previously ran the CS skin casino CSGOEmpire, and that the team is around 100 people",
             "sourcing": "editorial",
-            "sourceUrl": "https://duel.com/about/why-duel",
-            "asOf": "2026-09-15"
+            "sourceUrl": "https://duel.com/wtf-duel",
+            "asOf": "2026-11-02"
           }
         ]
       },
@@ -4874,10 +4874,10 @@
           },
           {
             "label": "Register check",
-            "value": "Liquid Entertainment N.V. is on the Curaçao Gaming Authority's online gaming licence register: OGL/2024/1507/0838 (B2C), company number 153298, the same as Duelbits' help centre. Issued 24 Jun 2025 with an expiry of 24 Dec 2025, its status reads Assessment in progress, as it does for 297 of the 666 licences listed (register dated 20 Oct 2026).",
+            "value": "Liquid Entertainment N.V. is on the Curaçao Gaming Authority's online gaming licence register: OGL/2024/1507/0838 (B2C), company number 153298, the same as Duelbits' help centre. Issued 24 Jun 2025 with an expiry of 24 Dec 2025, its status reads Assessment in progress, as it does for 296 of the 666 licences listed (register dated 30 Oct 2026).",
             "sourcing": "editorial",
-            "sourceUrl": "https://gamingcontrol.spin-cdn.com/media/license_registry/20261020_20261020_ogl_registry.pdf",
-            "asOf": "2026-10-29"
+            "sourceUrl": "https://gamingcontrol.spin-cdn.com/media/license_registry/20261030_20261030_ogl_registry.pdf",
+            "asOf": "2026-11-02"
           },
           {
             "label": "Company",
@@ -5956,10 +5956,10 @@
           },
           {
             "label": "Withdrawal limits",
-            "value": "No withdrawal limits, on fiat (USD, EUR, JPY) or crypto. Deposits and free-spin winnings must be wagered once before withdrawal, minimums vary by coin with network fees, and withdrawals go out in the same coin that was deposited. VIPs get fee-free withdrawals.",
+            "value": "Gamdom describes \"high withdrawal limits\" on fiat (USD, EUR, JPY) and crypto without publishing a figure. Deposits and free-spin winnings must be wagered once before withdrawal, minimums vary by coin with network fees, and withdrawals go out in the same coin that was deposited. VIPs get fee-free withdrawals.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.gamdom.com/en/articles/13239748-getting-started-at-gamdom",
-            "asOf": "2026-09-18"
+            "asOf": "2026-11-02"
           }
         ]
       },
@@ -6304,10 +6304,10 @@
           },
           {
             "label": "VIP transfer",
-            "value": "Players with higher VIP status at Stake, Thrill, Roobet, Shuffle, Duel, Gamdom, BC.Game, Rainbet, Winna, Gamba or Rollbit can request a transfer through support, then must hit a casino-only wager target in their first 30 days: $10,000 for Gold 1, $50,000 for Platinum 1, $120,000 for Pearl 1, $250,000 for Sapphire 1, $500,000 for Emerald 1 or $1,000,000 for Diamond 1. The cash bonus is wager x game edge x 0.375. Only accounts with existing Goated wagering below 10% of the target qualify ($2,500 for Gold 1), and it is limited to one transfer per person.",
+            "value": "Players with higher VIP status at Stake, Thrill, Roobet, Shuffle, Duel, Gamdom, BC.Game, Rainbet, Winna, Gamba, Rollbit, Chips.gg, Razed, Yeet or 500 Casino can request a transfer through support, then must hit a casino-only wager target in their first 30 days: $10,000 for Gold 1, $50,000 for Platinum 1, $120,000 for Pearl 1, $250,000 for Sapphire 1, $500,000 for Emerald 1 or $1,000,000 for Diamond 1. The cash bonus is wager x game edge x 0.375. Only accounts with existing Goated wagering below 10% of the target qualify ($2,500 for Gold 1), and it is limited to one transfer per person.",
             "sourcing": "editorial",
             "sourceUrl": "https://www.goated.com/help/article/9671083-vip-transfer",
-            "asOf": "2026-09-19"
+            "asOf": "2026-11-02"
           }
         ]
       },
@@ -8371,10 +8371,10 @@
         "facts": [
           {
             "label": "Licence",
-            "value": "Anjouan, licence no. ALSI-152406029-FI2, held by RBGAMING N.V. and shown as VALID on the Anjouan Gaming validator linked from Rainbet's footer seal",
+            "value": "Anjouan, licence no. ALSI-152406029-FI2, shown as VALID on the Anjouan Gaming validator linked from Rainbet's footer seal, which names the licence holder as Rain Group Ltd (Rainbet's terms name RBGAMING N.V.)",
             "sourcing": "editorial",
             "sourceUrl": "https://verification.anjouangamingboard.org/validate?domain=rainbet.com&seal_id=bb1e239badc7447877a76594d7ae6858a8f9822770ab5f171f95c6004550f72a3b73a0497133eaab2c6af36e3fd68090&stamp=e561d596bdee644d17216071bcf9b0b2",
-            "asOf": "2026-09-16"
+            "asOf": "2026-11-02"
           },
           {
             "label": "Company",
@@ -9034,10 +9034,10 @@
           },
           {
             "label": "Withdrawal fees",
-            "value": "No Roobet fee on crypto withdrawals, network fees only. Card withdrawals may carry a fee depending on method, bank and region, shown in the cashier before you confirm",
+            "value": "No Roobet fee on crypto withdrawals, network fees only, per its help centre. Its terms add a 2% fee on fiat withdrawals from the 10th in a rolling 30 days.",
             "sourcing": "editorial",
             "sourceUrl": "https://help.roobet.com/en/articles/4797515-does-roobet-charge-withdrawal-fees",
-            "asOf": "2026-10-29"
+            "asOf": "2026-11-02"
           },
           {
             "label": "Minimum withdrawal",
@@ -9048,10 +9048,10 @@
           },
           {
             "label": "Withdrawal limits",
-            "value": "Deposits must be wagered 100% before withdrawal. Roobet sets the minimum withdrawal and shows it on site, and card withdrawals must exceed $15. Several pending withdrawals may be rejected and replaced by one combined request. The Terms of Service set no maximum withdrawal amount.",
+            "value": "Deposits must be wagered 100% before withdrawal, and the Terms of Service set no maximum withdrawal amount. Fiat deposits carry a 1% fee, and from the 10th fiat withdrawal in a rolling 30 days each withdrawal carries a 2% fee. Several pending withdrawals may be rejected and replaced by one combined request.",
             "sourcing": "editorial",
             "sourceUrl": "https://roobet.com/terms-and-conditions",
-            "asOf": "2026-09-18"
+            "asOf": "2026-11-02"
           }
         ]
       },
@@ -9265,10 +9265,10 @@
           },
           {
             "label": "Register check",
-            "value": "Raw Entertainment B.V. is on the Curaçao Gaming Authority's online gaming licence register: OGL/2024/687/0427 (B2C), company number 157205, the same as Roobet's footer. Issued 24 Dec 2025, it has no expiry date and its status reads Indefinite, as it does for 209 of the 666 licences listed (register dated 20 Oct 2026).",
+            "value": "Raw Entertainment B.V. is on the Curaçao Gaming Authority's online gaming licence register: OGL/2024/687/0427 (B2C), company number 157205, the same as Roobet's footer. Issued 24 Dec 2025, it has no expiry date and its status reads Indefinite, as it does for 209 of the 666 licences listed (register dated 30 Oct 2026).",
             "sourcing": "editorial",
-            "sourceUrl": "https://gamingcontrol.spin-cdn.com/media/license_registry/20261020_20261020_ogl_registry.pdf",
-            "asOf": "2026-10-29"
+            "sourceUrl": "https://gamingcontrol.spin-cdn.com/media/license_registry/20261030_20261030_ogl_registry.pdf",
+            "asOf": "2026-11-02"
           },
           {
             "label": "Company",
@@ -9607,10 +9607,10 @@
           },
           {
             "label": "Minimum deposit",
-            "value": "$0.01 or the crypto equivalent on all supported coins; the wallet shows the exact figure for each coin and network. You need to deposit at least $20 to claim a deposit bonus, unless the offer says otherwise.",
+            "value": "$0.01 or the crypto equivalent on all supported coins; the wallet shows the exact figure for each coin and network.",
             "sourcing": "editorial",
             "sourceUrl": "https://shuffle.com/blog/payment-methods",
-            "asOf": "2026-09-16"
+            "asOf": "2026-11-02"
           },
           {
             "label": "Deposit limits",
@@ -9855,10 +9855,10 @@
           },
           {
             "label": "Register check",
-            "value": "Natural Nine B.V. is on the Curaçao Gaming Authority's online gaming licence register: OGL/2024/1337/0628 (B2C), company number 160998, the same as Shuffle's licence page. Issued 24 Dec 2025, it has no expiry date and its status reads Indefinite, as it does for 209 of the 666 licences listed (register dated 20 Oct 2026).",
+            "value": "Natural Nine B.V. is on the Curaçao Gaming Authority's online gaming licence register: OGL/2024/1337/0628 (B2C), company number 160998, the same as Shuffle's licence page. Issued 24 Dec 2025, it has no expiry date and its status reads Indefinite, as it does for 209 of the 666 licences listed (register dated 30 Oct 2026).",
             "sourcing": "editorial",
-            "sourceUrl": "https://gamingcontrol.spin-cdn.com/media/license_registry/20261020_20261020_ogl_registry.pdf",
-            "asOf": "2026-10-29"
+            "sourceUrl": "https://gamingcontrol.spin-cdn.com/media/license_registry/20261030_20261030_ogl_registry.pdf",
+            "asOf": "2026-11-02"
           },
           {
             "label": "Company",
@@ -10828,8 +10828,8 @@
             "label": "Standing offer",
             "value": "Recurring bonus programme beyond rakeback: a Monthly Bonus paid to all eligible players once a month; a Weekly Boost posted every Saturday at 12:30pm GMT in the VIP-only Telegram group; Drop Bonuses redeemed with a unique code; Level Up Bonuses granted on reaching a new VIP level; and a Birthday Bonus. A separate Monthly Subscription Bonus is a recurring promotion where eligible players get an email each month setting one requirement, such as a minimum bet on a featured market; players who have never deposited are not eligible and the requirement changes every month.",
             "sourcing": "editorial",
-            "sourceUrl": "https://help.stake.com/en/articles/16183581-what-is-the-monthly-subscription-bonus",
-            "asOf": "2026-09-17"
+            "sourceUrl": "https://help.stake.com/en/articles/4942138",
+            "asOf": "2026-11-02"
           },
           {
             "label": "Wagering",
@@ -10999,10 +10999,10 @@
           },
           {
             "label": "Register check",
-            "value": "Medium Rare N.V. is on the Curaçao Gaming Authority's online gaming licence register: OGL/2024/1451/0918 (B2C), company number 145353, the same number as Stake's footer. Issued 9 Dec 2025 with an expiry of 9 Jun 2026, its status reads Assessment in progress, as it does for 297 of the 666 licences listed (register dated 20 Oct 2026).",
+            "value": "Medium Rare N.V. is on the Curaçao Gaming Authority's online gaming licence register: OGL/2024/1451/0918 (B2C), company number 145353, the same number as Stake's footer. Issued 9 Dec 2025 with an expiry of 9 Jun 2026, its status reads Assessment in progress, as it does for 296 of the 666 licences listed (register dated 30 Oct 2026).",
             "sourcing": "editorial",
-            "sourceUrl": "https://gamingcontrol.spin-cdn.com/media/license_registry/20261020_20261020_ogl_registry.pdf",
-            "asOf": "2026-10-29"
+            "sourceUrl": "https://gamingcontrol.spin-cdn.com/media/license_registry/20261030_20261030_ogl_registry.pdf",
+            "asOf": "2026-11-02"
           },
           {
             "label": "Partners",

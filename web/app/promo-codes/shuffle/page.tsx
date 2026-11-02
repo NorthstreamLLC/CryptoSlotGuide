@@ -51,7 +51,7 @@ export default function Page() {
     { q: "What is the Shuffle promo code?", a: `${code}. Our link fills it in for you, or you can type it in the referral field when you register.` },
     { q: `Does code ${code} come with its own bonus?`, a: "Shuffle's help centre lists no extra bonus tied to a referral code. What every new player gets is Shuffle's standard programme: 5% of the house edge back as rakeback once you reach Bronze at $1,000 wagered, a $100,000 weekly leaderboard, and daily, weekly and monthly bonuses as you climb the VIP levels." },
     { q: "I forgot to enter the code. Can I add it later?", a: "Shuffle's help centre says support can add a code to an account no older than 7 days with under $10,000 wagered. An account that already has a code can't be changed." },
-    { q: "Does Shuffle have a deposit bonus?", a: "Its promotions page says a deposit bonus applies to the first deposit only, and the amount and wagering multiplier only show inside your account. You need to deposit at least $20 to claim one unless the offer says otherwise, and the max bet while wagering is $10." },
+    { q: "Does Shuffle have a deposit bonus?", a: "Its promotions page says a deposit bonus applies to the first deposit only, and the amount and wagering multiplier only show inside your account. The max bet while wagering is $10." },
     { q: "Does rakeback count sports bets?", a: "No. Shuffle's help centre says rakeback applies to casino games only (slots, table games and live dealer), not sports bets." },
     { q: `Who gives code ${code}?`, a: "It is our affiliate code. We earn a commission when you sign up with it, which never changes what our Shuffle review reports." },
   ];
