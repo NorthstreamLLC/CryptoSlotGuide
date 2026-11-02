@@ -1,4 +1,5 @@
 import { VERSUS_ANALYSIS } from "@/lib/versus-analysis";
+import { NEWS } from "@/lib/news";
 import { watchEntries } from "@/lib/casino-changewatch";
 import { coinSlug } from "@/lib/coins";
 import type { MetadataRoute } from "next";
@@ -73,6 +74,7 @@ const STATIC_ROUTES = [
   "/authors/lars-p",
   "/promo-codes",
   "/casinos/facts",
+  "/news",
   "/casinos/stake/facts",
   "/casinos/roobet/facts",
   "/casinos/shuffle/facts",
@@ -146,6 +148,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...COIN_PAGES.filter((c) => casinosForCoin(c.ticker).length >= 3).map((c) => slugPath("/crypto-casinos/accepting", c.slug)),
     // Casino-vs-casino pages are noindex until they carry their own analysis; these have it.
     ...Object.keys(VERSUS_ANALYSIS).map((pair) => `/compare/${pair}`),
+    ...NEWS.map((n) => `/news/${n.month}`),
     ...sweepsSorted().map((w) => slugPath("/sweepstakes-casinos", w.slug)),
     ...US_STATES.map((st) => slugPath("/legal/us", st.code.toLowerCase())),
     ...COUNTRIES.filter((c) => c.code !== "US").map((c) => slugPath("/legal", c.code.toLowerCase())),

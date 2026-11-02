@@ -3,6 +3,7 @@ import { siteData } from "@/lib/site-data";
 import { brandFor } from "@/lib/casino-facts";
 import { getSpecFact } from "@/lib/spec-sheet";
 import { FACT_ARTICLES } from "@/lib/fact-articles";
+import { NEWS, newsPath } from "@/lib/news";
 import { BrandMark } from "@/components/ui/BrandMark";
 
 const MONO = "var(--font-jetbrains-mono), monospace";
@@ -31,7 +32,10 @@ export function FactsStrip() {
           <div style={{ fontFamily: MONO, fontSize: 11, letterSpacing: ".09em", textTransform: "uppercase", color: "#5FE3E8", marginBottom: 10 }}>Know the casino</div>
           <h2 style={{ margin: 0, fontSize: 30, letterSpacing: "-.025em", fontWeight: 800, color: "#fff" }}>Things most players don&apos;t know</h2>
         </div>
-        <Link href="/casinos/facts" style={{ fontSize: 14.5, fontWeight: 700, color: "#5FE3E8" }}>{total} facts on {Object.keys(FACT_ARTICLES).length} casinos →</Link>
+        <span style={{ display: "flex", gap: 18, flexWrap: "wrap" }}>
+          {NEWS[0] && <Link href={newsPath(NEWS[0].month)} style={{ fontSize: 14.5, fontWeight: 700, color: "#FF9CC6" }}>What changed this month →</Link>}
+          <Link href="/casinos/facts" style={{ fontSize: 14.5, fontWeight: 700, color: "#5FE3E8" }}>{total} facts on {Object.keys(FACT_ARTICLES).length} casinos →</Link>
+        </span>
       </div>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 14 }}>
         {cards.map(({ o, f, n }) => {

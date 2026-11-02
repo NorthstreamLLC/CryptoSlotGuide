@@ -32,6 +32,7 @@ import { ReportIssue } from "@/components/ui/ReportIssue";
 import { CodeOffer } from "@/components/ui/CodeOffer";
 import { PaymentPartners } from "@/components/ui/PaymentPartners";
 import { VersusStrip } from "@/components/compare/VersusStrip";
+import { latestNewsFor, newsPath } from "@/lib/news";
 
 /**
  * The casino player report: what a player compares (offer, rewards, money
@@ -254,6 +255,7 @@ export function CasinoReport({ e }: { e: EntityView }) {
   ].filter(Boolean).slice(0, 4) as { icon: IconName; title: string; sub: string; coins?: string[] }[];
 
   const rivals = rivalPairs(o.slug, 6);
+  const news = latestNewsFor(o.slug);
 
   const nav = [
     ["bonuses", "Bonuses & rewards"],
@@ -336,6 +338,12 @@ export function CasinoReport({ e }: { e: EntityView }) {
                   )}
                   {o.slug === "roobet" && o.codePerk && <p style={{ margin: "8px 0 0", fontSize: 12.5, lineHeight: 1.5, color: "#B7C4CB" }}>{CLAIM_NOTE}</p>}
                   <VersusStrip slug={o.slug} compact />
+                  {news && (
+                    <Link href={`${newsPath(news.issue.month)}#item-${news.issue.items.indexOf(news.items[0]) + 1}`} style={{ display: "flex", alignItems: "center", gap: 8, marginTop: 12, padding: "9px 12px", borderRadius: 10, background: "rgba(255,126,182,.08)", border: "1px solid rgba(255,126,182,.3)", fontSize: 13.5, lineHeight: 1.4, color: "#F2D5E2" }}>
+                      <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".08em", color: "#FF9CC6", flex: "none" }}>NEWS</span>
+                      <span style={{ minWidth: 0 }}>{news.items[0].headline}{news.items.length > 1 ? ` (+${news.items.length - 1} more)` : ""} →</span>
+                    </Link>
+                  )}
                   {((o.slug !== "roobet" && hasPromoPage(o.slug)) || hasFactArticle(o.slug)) && (
                     <div style={{ display: "flex", gap: 16, flexWrap: "wrap", marginTop: 10 }}>
                       {o.slug !== "roobet" && hasPromoPage(o.slug) && (
