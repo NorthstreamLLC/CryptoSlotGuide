@@ -58,7 +58,10 @@ const footerCols = [
       { l: "Exchanges", href: "/exchanges" },
       { l: "Coins we track", href: "/coins" },
       { l: "Search the index", href: "/search" },
-      { l: "Responsible gambling", href: "/guides/kyc-thresholds-explained" },
+      { l: "About us", href: "/about" },
+      { l: "Affiliate disclosure", href: "/affiliate-disclosure" },
+      { l: "Corrections", href: "/corrections" },
+      { l: "Responsible gambling", href: "/responsible-gambling" },
     ],
   },
 ];
@@ -197,6 +200,7 @@ export function Footer() {
               { label: "Privacy", href: "/privacy" },
               { label: "Terms", href: "/terms" },
               { label: "Editorial standards", href: "/editorial-standards" },
+              { label: "Responsible gambling", href: "/responsible-gambling" },
               { label: "Contact", href: "/contact" },
             ].map((l) => (
               <Link key={l.href} href={l.href} className="hover:!text-white" style={{ color: "#77858E" }}>

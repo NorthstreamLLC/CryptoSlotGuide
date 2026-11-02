@@ -21,6 +21,10 @@ export function DisclosureStrip({ align = "center" }: { align?: "center" | "left
       <strong style={{ color: "#7FA9AE", fontWeight: 700 }}>Advertiser disclosure</strong> · We earn commission from some operators listed here. It never changes what a review says —{" "}
       <Link href="/how-we-rate" style={{ color: "#9FD9DD", textDecoration: "underline", textUnderlineOffset: 2 }}>
         how we source information
+      </Link>{" "}
+      ·{" "}
+      <Link href="/affiliate-disclosure" style={{ color: "#9FD9DD", textDecoration: "underline", textUnderlineOffset: 2 }}>
+        affiliate disclosure
       </Link>
       .
     </p>

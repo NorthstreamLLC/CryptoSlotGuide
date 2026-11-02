@@ -36,7 +36,7 @@ const SECTIONS: { title: string; body: string[] }[] = [
     title: "Corrections",
     body: [
       "If something on this site is wrong, we want to know before a reader acts on it. Reader-reported inaccuracies that we can reproduce trigger a re-check, and the page is updated with a new date rather than a silent edit — we don't quietly change a number and pretend it was always right.",
-      "Significant corrections (a materially wrong figure, a reversed recommendation) are treated as newsworthy in their own right, not buried in a changelog.",
+      "Significant corrections (a materially wrong figure, a reversed recommendation) are treated as newsworthy in their own right, not buried in a changelog. Each one is dated and listed on our corrections page.",
     ],
   },
   {
@@ -97,7 +97,7 @@ export default function Page() {
 
         <div style={{ marginTop: 44, padding: "24px 28px", borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
           <p style={{ margin: 0, fontSize: 14, lineHeight: 1.65, color: "#8DA0AA" }}>
-            Spotted something wrong, or a conflict we haven&apos;t disclosed? <a href="mailto:hello@cryptoslotguide.com" style={{ color: "#00C2CC" }}>hello@cryptoslotguide.com</a>
+            Spotted something wrong, or a conflict we haven&apos;t disclosed? <a href="mailto:hello@cryptoslotguide.com" style={{ color: "#00C2CC" }}>hello@cryptoslotguide.com</a>. Past fixes are in our <Link href="/corrections" style={{ color: "#00C2CC" }}>corrections log</Link>.
           </p>
         </div>
       </section>
