@@ -2,7 +2,8 @@
  * Shared, display-ready casino facts (report hero, casino cards, homepage).
  * Every value comes from a cited fact in data/casinoSpecSheets.json.
  */
-import { getSpecFact } from "./spec-sheet";
+// The slim card values, not lib/spec-sheet: casino cards render in client lists.
+import { cardFact } from "./spec-lite";
 import { payoutView } from "./payout";
 import { wagerView } from "./wager";
 import { tintFor } from "./logo";
@@ -59,7 +60,7 @@ function wagerLabel(wv: ReturnType<typeof wagerView>, heading: string): string |
 }
 
 export function casinoFacts(o: Operator) {
-  const f = (g: string, l: string) => getSpecFact(o.slug, g, l);
+  const f = (g: string, l: string) => cardFact(o.slug, g, l);
   const pv = payoutView(o);
   const wv = wagerView(o);
   const wdTime = f("Payouts & fees", "Stated withdrawal time");
