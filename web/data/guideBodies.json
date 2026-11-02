@@ -99,6 +99,28 @@
       "Most crypto casinos run tiered verification: you can deposit, play and withdraw small amounts unverified, and a document request appears once cumulative volume crosses a threshold. The threshold is rarely published, and an operator can move it without notice.",
       "Withdrawal is the worst moment to discover it. A cash-out routed to verification is one of the most common reasons a payout takes a day instead of minutes.",
       "If you intend to play at any size, verify on a quiet day. It takes a few minutes and removes a common source of withdrawal delay."
+    ],
+    "sources": [
+      {
+        "label": "Winna (checks within 30 days of first deposit, before first withdrawal or before EUR 2,000 wagered): its own verification policy",
+        "url": "https://winna.com/legals/en/AML%26KYCPolicy.tobique.md"
+      },
+      {
+        "label": "Goated (tiered levels 0 to 3): its own verification policy",
+        "url": "https://www.goated.com/"
+      },
+      {
+        "label": "Yeet (Level 1 before deposit): its own verification policy",
+        "url": "https://help.yeet.com/en/articles/12052341-deposits-withdrawals"
+      },
+      {
+        "label": "Stake (documents can be requested at any time): its own verification policy",
+        "url": "https://help.stake.com/en/articles/5886574-proof-of-identity-acceptable-documentation"
+      },
+      {
+        "label": "Rainbet (none for crypto unless activity is flagged): its own verification policy",
+        "url": "https://help.rainbet.com/en/articles/15264824-kyc"
+      }
     ]
   },
   "depositing-over-lightning": {

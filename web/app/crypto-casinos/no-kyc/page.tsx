@@ -1,4 +1,5 @@
 import { CasinoIndexPage } from "@/components/casino-index/CasinoIndexPage";
+import { NoKycSources } from "@/components/casino-index/NoKycSources";
 import { btcViews, defaultIndexList } from "@/lib/casino-index";
 import { pageMetadata } from "@/lib/seo";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -25,6 +26,7 @@ export default function Page() {
         ]}
       />
       <CasinoIndexPage filter={FILTER} />
+      <NoKycSources />
     </>
   );
 }
