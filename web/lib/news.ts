@@ -3,6 +3,10 @@
  * fact re-check when its report is applied. Each item points at the
  * spec-sheet fact it changed (group + label), which supplies the source link
  * and date, so an item can't cite something the records don't hold.
+ *
+ * After adding an issue, build its newsletter email with
+ * `npx tsx --tsconfig tsconfig.json scripts/news-email.ts <yyyy-mm>`
+ * (writes docs/email-news-<yyyy-mm>.html, ready for a SendGrid single send).
  */
 export type NewsKind = "offer" | "terms" | "fees" | "licence" | "security";
 
