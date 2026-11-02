@@ -7,7 +7,7 @@ import type { Operator } from "@/lib/types";
 import { VERSUS_ANALYSIS } from "@/lib/versus-analysis";
 
 /** The casinos we build head-to-head pages for: the ones players compare most. */
-export const VERSUS_SLUGS = ["roobet", "stake", "bc-game", "shuffle", "rollbit", "gamdom", "duelbits", "rainbet", "razed", "winna", "thrill", "duel", "goated", "500-casino", "bitstarz", "yeet"];
+export const VERSUS_SLUGS = ["roobet", "stake", "bc-game", "shuffle", "rollbit", "gamdom", "duelbits", "rainbet", "razed", "winna", "thrill", "duel", "goated", "500-casino", "bitstarz", "yeet", "degen", "betfury"];
 
 const op = (slug: string) => siteData.ops.find((o) => o.slug === slug) ?? null;
 

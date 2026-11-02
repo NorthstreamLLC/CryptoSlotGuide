@@ -521,6 +521,58 @@ const BLOCKS: Record<string, CasinoBlocks> = {
     vip: { text: "Goated has 45 VIP levels across nine tiers, each paying a level-up bonus, and weekly reloads split into 168 hourly claims.", cite: [[B, "VIP levels"], [B, "Reload bonuses"]] },
     cash: { text: "Goated says most withdrawals reach the blockchain in a minute or two, with the network fee added on top of the amount, and every deposit must be wagered once first; sign-up needs only an email or a wallet.", cite: [[P, "Stated withdrawal time"], [P, "Withdrawal fees"], [C, "KYC policy"]] },
   },
+  degen: {
+    verdictIf: "you want rakeback that climbs to 8% and a $25,000 weekly race",
+    pickIf: [
+      "You want rakeback that grows: from 3% at Bronze I up to 8% at the top rank",
+      "You like level-up bonuses: from $10 up to $100,000 at the Degen rank",
+      "You make big withdrawals: per-coin limits of about $1 million in crypto",
+    ],
+    code: { text: "Degen's 100% first deposit match goes only to accounts registered under an eligible referral code, so check it's offered before you deposit; its rakeback runs from 3% at Bronze I to 8% at the top rank, claimable any time.", cite: [[B, "Standing offer"], [B, "Rakeback"]] },
+    licence: { text: "Degen is licensed in Anjouan and run by Degen Legend Limitada of Costa Rica; its payouts policy still names its dispute body with a placeholder.", cite: [[C, "Licence"], [C, "Company"], [C, "Dispute body"]] },
+    rewards: { text: "Degen runs a $25,000 weekly race for the top 20, $10,000 to first, and pays weekly and monthly bonuses from Bronze.", cite: [[B, "Leaderboards"], [B, "Recurring bonuses"]] },
+    vip: { text: "Degen's 27 levels pay level-up bonuses from $10 at Bronze I to $100,000 at the Degen rank, with daily reloads from Platinum.", cite: [[B, "VIP levels"], [B, "Reload bonuses"]] },
+    cash: { text: "Degen's per-coin withdrawal limits run to about $1 million in crypto, but deposits must come from a method in your own name, and deposits from mixers can freeze an account.", cite: [[P, "Withdrawal limits"], [K, "Deposit rules"]] },
+  },
+  betfury: {
+    verdictIf: "you want a welcome pack over three deposits and 10% rakeback for every player",
+    pickIf: [
+      "You want a big welcome pack: up to 590% plus 225 free spins over three deposits",
+      "You want rakeback from day one: 10% of the house edge for every player",
+      "You like battles: $20,000 Daily Battles, up to $100,000 for VIPs",
+    ],
+    code: { text: "BetFury's Welcome Pack spreads up to 590% in deposit bonuses and 225 free spins across three deposits, each to be wagered within 14 days with bets capped at $10.", cite: [[B, "Standing offer"]] },
+    licence: { text: "BetFury is run by Universe B Games B.V., whose Curaçao licence shows an expiry of 31 July 2026 and the status \"Assessment in progress\" on the Curaçao Gaming Authority's register dated 30 October 2026.", cite: [[C, "Register check"]] },
+    rewards: { text: "BetFury pays every player 10% of the house edge as rakeback, withdrawable every 20 minutes, works out cashback twice a week, and runs $20,000 Daily Battles.", cite: [[B, "Rakeback"], [B, "Cashback"], [B, "Leaderboards"]] },
+    vip: { text: "BetFury's VIP Club adds higher cashback and a personal manager, and its Super VIP Club, from Rank 15, doubles rakeback.", cite: [[B, "VIP levels"]] },
+    cash: { text: "BetFury caps what it pays on any single bet or spin at $300,000, and anything deposited below a coin's minimum is lost.", cite: [[P, "Withdrawal limits"], [K, "Deposit limits"]] },
+  },
+  winna: {
+    verdictIf: "you want rakeback every 7 minutes and a $50,000 weekly race",
+    pickIf: [
+      "You claim often: instant rakeback every 7 minutes",
+      "You chase races: $50,000 weekly and $10,000 daily, entered automatically",
+      "You'd like a regulator other than Curaçao or Anjouan: the Tobique Gaming Commission",
+    ],
+    code: { text: "Winna runs no deposit bonus; its rewards are VIP-based, starting with instant rakeback claimable every 7 minutes from the VIP Center.", cite: [[B, "Deposit bonus"], [B, "Rakeback"]] },
+    licence: { text: "Winna is licensed by the Tobique Gaming Commission, whose register lists GG Gaming S.R.L with a licence running to 8 May 2027, while Winna's terms name GG Gaming LLC in Costa Rica.", cite: [[C, "Licence"], [C, "Company"]] },
+    rewards: { text: "Winna runs a $10,000 daily race and a $50,000 weekly race with automatic entry, where slots score about four times Originals, and pays lossback of up to 25% from Platinum.", cite: [[B, "Leaderboards"], [B, "Cashback"]] },
+    vip: { text: "Winna's six VIP bands of five levels run from Bronze 1 at $1,000 wagered to Nebula 5 at a billion.", cite: [[B, "VIP levels"]] },
+    cash: { text: "Winna caps withdrawals at $10,000 per 24 hours, which a VIP host can raise, with a $20 minimum, and runs due diligence within 30 days of your first deposit.", cite: [[P, "Withdrawal limits"], [C, "KYC policy"]] },
+  },
+  thrill: {
+    verdictIf: "you want rakeback from your very first bet and a $50,000 weekly race that pays 350 places",
+    pickIf: [
+      "You want rakeback from the start: instant rakeback from the entry Base level",
+      "You chase deep races: $50,000 a week, paid to 350 places",
+      "You bet sports: sports earn 3 XP per $1, the fastest way up its levels",
+    ],
+    code: { text: "Thrill runs no deposit bonus; instant rakeback and weekly and monthly bonuses start at the entry Base level, so they apply from your first bet.", cite: [[B, "Deposit bonus"], [B, "VIP levels"]] },
+    licence: { text: "Thrill is licensed in Anjouan and run by Gravity Unleashed Limitada.", cite: [[C, "Licence"], [C, "Company"]] },
+    rewards: { text: "Thrill's $50,000 weekly race runs Wednesday to Wednesday across casino and sportsbook and pays the top 350, with $15,000 to first.", cite: [[B, "Leaderboards"]] },
+    vip: { text: "Thrill's level-up bonuses go from $15 at Bronze to $12,800 at Diamond I, and its Platinum ranks unlock reloads of up to 42 days.", cite: [[B, "Perks by level"], [B, "Reload bonuses"]] },
+    cash: { text: "Thrill sets no minimum or maximum crypto deposit and no maximum withdrawal, and asks for no KYC to register.", cite: [[K, "Deposit limits"], [P, "Withdrawal limits"], [C, "KYC policy"]] },
+  },
   yeet: {
     verdictIf: "you want a 100% welcome bonus up to $1,000 with no cashout cap",
     pickIf: [
@@ -552,6 +604,13 @@ const COMPOSED_PAIRS: [string, string][] = [
   ["duelbits", "goated"],
   ["duelbits", "yeet"],
   ["goated", "yeet"],
+  ...TOP.flatMap((a) => ["winna", "thrill", "degen", "betfury"].map((b) => [a, b] as [string, string])),
+  ["winna", "thrill"],
+  ["winna", "degen"],
+  ["winna", "betfury"],
+  ["thrill", "degen"],
+  ["thrill", "betfury"],
+  ["degen", "betfury"],
 ];
 
 function compose(a: string, b: string): VersusAnalysis {
