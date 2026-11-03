@@ -70,7 +70,10 @@ const CSS = `
 .h-btn-line:hover { border-color: rgba(255,255,255,.32); }
 
 /* Hero */
-.h-hero { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 56px; align-items: center; padding: 72px 0 64px; }
+.h-hero { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); grid-template-areas: "intro pick" "paths pick"; column-gap: 56px; align-items: center; padding: 72px 0 64px; }
+.h-intro { grid-area: intro; align-self: end; }
+.h-paths-wrap { grid-area: paths; align-self: start; }
+.h-pick { grid-area: pick; }
 .h-h1 { margin: 0 0 18px; font-size: clamp(38px, 5vw, 58px); line-height: 1.04; letter-spacing: -.04em; font-weight: 700; color: #F7F9FA; text-wrap: balance; }
 .h-lead { margin: 0 0 30px; max-width: 50ch; font-size: 18px; line-height: 1.6; color: #98A6AE; }
 .h-ctas { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 40px; }
@@ -162,7 +165,8 @@ a.h-li:hover b, .h-li-main:hover b { color: #fff; text-decoration: underline; te
 .h-trust p { margin: 0; font-size: 14px; line-height: 1.55; color: #8A98A0; }
 
 @media (max-width: 960px) {
-  .h-hero { grid-template-columns: 1fr; gap: 40px; padding: 48px 0 40px; }
+  .h-hero { grid-template-columns: 1fr; grid-template-areas: "intro" "pick" "paths"; row-gap: 32px; padding: 48px 0 40px; }
+  .h-ctas { margin-bottom: 0; }
   .h-two { grid-template-columns: 1fr; }
   .h-slots { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .h-facts, .h-trust { grid-template-columns: 1fr; gap: 14px; }
@@ -183,7 +187,6 @@ a.h-li:hover b, .h-li-main:hover b { color: #fff; text-decoration: underline; te
   .h-pick { padding: 20px; }
   .h-li { padding: 12px 16px; }
   .h-sub { padding: 14px 16px; }
-  .h-li .csg-code-chip { display: none; }
 }
 `;
 
@@ -241,13 +244,15 @@ export default function HomePage() {
         <div style={{ borderBottom: "1px solid rgba(255,255,255,.06)", background: "radial-gradient(60% 80% at 15% 0%, rgba(0,194,204,.07), transparent 70%), #0A0D10" }}>
           <div className="h-wrap">
             <section className="h-hero">
-              <div>
+              <div className="h-intro">
                 <h1 className="h-h1">Crypto casinos, checked against their own terms.</h1>
                 <p className="h-lead">Bonuses, payout times and RTP from each casino&apos;s and studio&apos;s own pages, with the source linked beside every figure.</p>
                 <div className="h-ctas">
                   <Link href="/crypto-casinos" className="h-btn h-btn-light">Compare casinos</Link>
                   <Link href="/promo-codes" className="h-btn h-btn-line">Promo codes</Link>
                 </div>
+              </div>
+              <div className="h-paths-wrap">
                 <nav aria-label="Start here" className="h-paths">
                   {paths.map((p) => (
                     <Link key={p.href} href={p.href} className="h-path">
