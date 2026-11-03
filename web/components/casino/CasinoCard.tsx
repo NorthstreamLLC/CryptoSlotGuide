@@ -5,13 +5,12 @@ import { BrandMark } from "@/components/ui/BrandMark";
 import { CoinStack } from "@/components/ui/CoinIcon";
 import { Icon } from "@/components/ui/Icon";
 import { raceFor, partnerFor, dropFor } from "@/lib/races";
-import { OfferCta } from "@/components/ui/OfferCta";
-
-const MONO = "var(--font-jetbrains-mono), monospace";
+import { reviewPath } from "@/lib/outbound";
 
 /**
- * Offer-led casino card: headline offer, three key numbers, coins, and a
- * clear action. Used on the homepage and the casino list.
+ * Offer-led casino card: headline offer, three key numbers, coins, and
+ * "Read review" as the main action (Visit, the affiliate link, is secondary).
+ * Flat surface with a thin brand-coloured top edge; no glows or mono labels.
  */
 export function CasinoCard({ o, rank, coinMax = 7 }: { o: Operator; rank?: number; coinMax?: number }) {
   const brand = brandFor(o.slug);
@@ -28,17 +27,17 @@ export function CasinoCard({ o, rank, coinMax = 7 }: { o: Operator; rank?: numbe
   return (
     <article
       data-reveal
-      className="csg-lift"
+      className="csg-card"
       style={{
         position: "relative",
         display: "flex",
         flexDirection: "column",
         gap: 16,
         padding: 20,
-        borderRadius: 20,
-        background: `radial-gradient(120% 70% at 100% 0%, ${brand}1c, transparent 55%), linear-gradient(180deg, #10161A, #0B0F12)`,
-        border: `1px solid ${o.featured ? `${brand}55` : "rgba(255,255,255,.08)"}`,
-        boxShadow: "0 18px 40px rgba(0,0,0,.35)",
+        borderRadius: 16,
+        background: "#0D1114",
+        border: "1px solid rgba(255,255,255,.08)",
+        boxShadow: `inset 0 2px 0 ${brand}`,
         minWidth: 0,
       }}
     >
@@ -47,32 +46,32 @@ export function CasinoCard({ o, rank, coinMax = 7 }: { o: Operator; rank?: numbe
           <BrandMark slug={o.slug} mono={o.mono} tint={brand} radius={11} fontSize={12} />
         </div>
         <div style={{ minWidth: 0, flex: 1 }}>
-          <Link href={href} style={{ display: "block", fontSize: 16.5, fontWeight: 800, letterSpacing: "-.015em", color: "#fff" }}>
+          <Link href={href} style={{ display: "block", fontSize: 16.5, fontWeight: 700, letterSpacing: "-.015em", color: "#F2F5F7" }}>
             {o.name}
           </Link>
-          <div style={{ fontFamily: MONO, fontSize: 10, letterSpacing: ".06em", color: "#8E9CA5", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+          <div style={{ fontSize: 12.5, color: "#75828A", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
             {[c.licence, c.kyc].filter(Boolean).join(" · ") || "Crypto casino"}
           </div>
         </div>
         {o.featured ? (
-          <span style={{ padding: "4px 9px", borderRadius: 100, background: `${brand}1f`, border: `1px solid ${brand}55`, fontFamily: MONO, fontSize: 9.5, fontWeight: 700, letterSpacing: ".06em", color: brand }}>FEATURED</span>
+          <span style={{ padding: "3px 8px", borderRadius: 6, background: "rgba(255,197,49,.12)", fontSize: 11.5, fontWeight: 700, color: "#FFC531" }}>Featured</span>
         ) : rank ? (
-          <span style={{ fontFamily: MONO, fontSize: 11, color: "#77858E" }}>{String(rank).padStart(2, "0")}</span>
+          <span style={{ fontSize: 13, fontWeight: 600, color: "#5E6B73" }}>{rank}</span>
         ) : null}
       </div>
 
       <div>
-        <div style={{ fontFamily: MONO, fontSize: 9.5, letterSpacing: ".1em", textTransform: "uppercase", color: brand, marginBottom: 6 }}>{o.noDepositBonus ? "Rewards" : "Welcome offer"}</div>
-        <Link href={href} style={{ display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden", fontSize: 19, lineHeight: 1.2, fontWeight: 800, letterSpacing: "-.02em", color: "#fff", minHeight: 46 }}>
+        <div style={{ fontSize: 12.5, fontWeight: 600, color: brand, marginBottom: 6 }}>{o.noDepositBonus ? "Rewards" : "Welcome offer"}</div>
+        <Link href={href} style={{ display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden", fontSize: 18, lineHeight: 1.25, fontWeight: 700, letterSpacing: "-.02em", color: "#F2F5F7", minHeight: 45 }}>
           {c.headline}
         </Link>
       </div>
 
-      <div data-keep-grid style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 8 }}>
-        {stats.map(([label, value]) => (
-          <div key={label} style={{ padding: "10px 10px 9px", borderRadius: 12, background: "rgba(255,255,255,.035)", border: "1px solid rgba(255,255,255,.06)", minWidth: 0 }}>
-            <div style={{ fontFamily: MONO, fontSize: 8.5, letterSpacing: ".07em", textTransform: "uppercase", color: "#8E9CA5", marginBottom: 4 }}>{label}</div>
-            <div style={{ fontSize: 13.5, lineHeight: 1.2, fontWeight: 800, color: value ? "#fff" : "#77858E", overflowWrap: "anywhere" }}>{value ?? "—"}</div>
+      <div data-keep-grid style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", border: "1px solid rgba(255,255,255,.07)", borderRadius: 12 }}>
+        {stats.map(([label, value], i) => (
+          <div key={label} style={{ padding: "10px 11px", minWidth: 0, borderLeft: i ? "1px solid rgba(255,255,255,.07)" : 0 }}>
+            <div style={{ fontSize: 11.5, color: "#75828A", marginBottom: 3 }}>{label}</div>
+            <div style={{ fontSize: 13.5, lineHeight: 1.25, fontWeight: 700, color: value ? "#F2F5F7" : "#67747C", overflowWrap: "anywhere" }}>{value ?? "—"}</div>
           </div>
         ))}
       </div>
@@ -89,13 +88,13 @@ export function CasinoCard({ o, rank, coinMax = 7 }: { o: Operator; rank?: numbe
       {(race || partner || drop) && (
         <div style={{ display: "flex", flexDirection: "column", gap: 6, paddingTop: 12, borderTop: "1px solid rgba(255,255,255,.06)" }}>
           {race && (
-            <span style={{ display: "flex", alignItems: "center", gap: 7, fontSize: 12.5, fontWeight: 700, color: "#E8EDF0" }}>
+            <span style={{ display: "flex", alignItems: "center", gap: 7, fontSize: 12.5, fontWeight: 600, color: "#DCE3E7" }}>
               <span style={{ color: brand, display: "inline-flex" }}><Icon name="trophy" size={14} /></span>
               {race.label}
             </span>
           )}
           {drop && (
-            <span style={{ display: "flex", alignItems: "center", gap: 7, fontSize: 12.5, fontWeight: 700, color: "#E8EDF0" }}>
+            <span style={{ display: "flex", alignItems: "center", gap: 7, fontSize: 12.5, fontWeight: 600, color: "#DCE3E7" }}>
               <span style={{ color: "#7BE0B8", display: "inline-flex" }}><Icon name="clock" size={14} /></span>
               {drop}
             </span>
@@ -109,8 +108,15 @@ export function CasinoCard({ o, rank, coinMax = 7 }: { o: Operator; rank?: numbe
         </div>
       )}
 
-      <div style={{ marginTop: "auto", display: "flex" }}>
-        <OfferCta o={o} />
+      <div style={{ marginTop: "auto", display: "flex", alignItems: "center", gap: 14 }}>
+        <Link href={reviewPath(o.slug)} className="csg-card-btn" style={{ flex: 1, textAlign: "center", padding: "12px 16px", borderRadius: 11, background: "#FFC531", color: "#141007", fontSize: 14.5, fontWeight: 700 }}>
+          Read review
+        </Link>
+        {o.affiliate && o.signupUrl && (
+          <a href={o.signupUrl} target="_blank" rel="nofollow sponsored noopener" data-copy-code={o.promoCode} style={{ fontSize: 13.5, color: "#93A1A9", whiteSpace: "nowrap" }}>
+            Visit ↗
+          </a>
+        )}
       </div>
     </article>
   );

@@ -1,25 +1,81 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { FoldedList } from "@/components/casino-index/FoldedList";
+import { CasinoRankList } from "@/components/casino-index/CasinoRankList";
 import { siteData, siteCounts } from "@/lib/site-data";
-import { casinoFacts } from "@/lib/casino-facts";
+import { brandFor, casinoFacts } from "@/lib/casino-facts";
 import { inHouseOrder } from "@/lib/house-order";
 import { filterFns } from "@/lib/casino-index";
 import { raceFor } from "@/lib/races";
+import { reviewPath } from "@/lib/outbound";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { CodeChip } from "@/components/ui/CodeChip";
 import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
-import { tintFor } from "@/lib/logo";
+import { LineIcon, type IconName } from "@/components/ui/LineIcon";
 
 /**
- * The casinos hub in the four-path pattern: the answer first, a short ranked
- * list, ways to narrow it down, then one next step. The full filterable list
- * of every casino is passed in as `allList` and sits folded under the top 10.
+ * The casinos hub: our pick, a short ranked list that leads into each review,
+ * ways to narrow it down, then one next step. The full filterable list of
+ * every casino is passed in as `allList` and sits folded under the top 10.
+ * Same visual system as the homepage: one surface, hairlines, gold only on
+ * buttons, a colour per tile instead of emoji.
  */
-
-const MONO = "var(--font-jetbrains-mono), monospace";
-const GOLD = "#FFC531";
-const CYAN = "#00C2CC";
+const CSS = `
+.ch-wrap { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+.ch-crumb { font-size: 13px; color: #6F7C84; margin-bottom: 26px; }
+.ch-crumb a { color: #8E9CA4; }
+.ch-crumb a:hover { color: #fff; }
+.ch-hero { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 56px; align-items: center; padding: 40px 0 64px; }
+.ch-h1 { margin: 0 0 18px; font-size: clamp(36px, 4.6vw, 54px); line-height: 1.04; letter-spacing: -.04em; font-weight: 700; color: #F7F9FA; text-wrap: balance; }
+.ch-lead { margin: 0 0 28px; max-width: 50ch; font-size: 17.5px; line-height: 1.6; color: #98A6AE; }
+.ch-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+.ch-btn { display: inline-flex; align-items: center; justify-content: center; padding: 13px 20px; border-radius: 11px; font-size: 15px; font-weight: 700; white-space: nowrap; transition: background .15s, border-color .15s, transform .15s; }
+.ch-btn:hover { transform: translateY(-1px); }
+.ch-light { background: #F2F5F7; color: #0A0D0F; }
+.ch-light:hover { background: #fff; }
+.ch-line { border: 1px solid rgba(255,255,255,.16); color: #E8EDF0; }
+.ch-line:hover { border-color: rgba(255,255,255,.32); }
+.ch-gold { background: #FFC531; color: #141007; }
+.ch-gold:hover { background: #FFD45E; }
+.ch-pick { padding: 26px; border: 1px solid rgba(255,197,49,.28); border-radius: 18px; background: #0F1316; }
+.ch-pick-top { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+.ch-tag { display: inline-block; padding: 3px 8px; border-radius: 6px; background: rgba(255,197,49,.12); color: #FFC531; font-size: 11.5px; font-weight: 700; }
+.ch-pick-title { margin: 0 0 18px; font-size: 22px; line-height: 1.25; letter-spacing: -.02em; font-weight: 700; color: #fff; }
+.ch-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0 0 20px; border: 1px solid rgba(255,255,255,.07); border-radius: 12px; }
+.ch-facts div { padding: 11px 12px; min-width: 0; }
+.ch-facts div + div { border-left: 1px solid rgba(255,255,255,.07); }
+.ch-facts small { display: block; font-size: 11.5px; color: #75828A; }
+.ch-facts b { display: block; margin-top: 2px; font-size: 14.5px; font-weight: 700; color: #F2F5F7; }
+.ch-pick-actions { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: center; margin-top: 12px; }
+.ch-sec { padding-top: 80px; }
+.ch-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 22px; }
+.ch-h2 { margin: 0; font-size: 26px; letter-spacing: -.025em; font-weight: 700; color: #F2F5F7; }
+.ch-muted { font-size: 13.5px; color: #75828A; }
+.ch-muted a { color: #AEBAC1; text-decoration: underline; text-underline-offset: 3px; }
+.ch-needs { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; }
+.ch-need { display: flex; flex-direction: column; gap: 12px; padding: 18px; border: 1px solid rgba(255,255,255,.08); border-radius: 14px; background: #0D1114; transition: border-color .15s, background .15s; }
+.ch-need:hover { border-color: color-mix(in srgb, var(--tint) 55%, transparent); background: color-mix(in srgb, var(--tint) 5%, #0D1114); }
+.ch-need-ico { display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 10px; background: color-mix(in srgb, var(--tint) 14%, transparent); border: 1px solid color-mix(in srgb, var(--tint) 35%, transparent); color: var(--tint); }
+.ch-need b { font-size: 15px; font-weight: 600; color: #F2F5F7; }
+.ch-need small { margin-top: -6px; font-size: 13px; color: #8E9CA4; }
+.ch-links { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 18px; font-size: 14.5px; font-weight: 600; }
+.ch-links a { color: #C9D3D8; }
+.ch-links a:hover { color: #fff; }
+.ch-next { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 26px; border: 1px solid rgba(255,255,255,.08); border-radius: 16px; background: #0D1114; transition: border-color .15s; }
+.ch-next:hover { border-color: rgba(255,197,49,.4); }
+.ch-next b { display: block; font-size: 19px; font-weight: 700; color: #F2F5F7; }
+.ch-next small { display: block; margin-top: 4px; font-size: 14.5px; color: #8E9CA4; }
+@media (max-width: 960px) {
+  .ch-hero { grid-template-columns: 1fr; gap: 36px; padding: 28px 0 48px; }
+  .ch-needs { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  .ch-wrap { padding: 0 16px; }
+  .ch-sec { padding-top: 60px; }
+  .ch-needs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ch-pick { padding: 20px; }
+}
+`;
 
 export function CasinosHub({ allList }: { allList: ReactNode }) {
   const { ops } = siteData;
@@ -28,163 +84,115 @@ export function CasinosHub({ allList }: { allList: ReactNode }) {
   const top = ranked[0];
   const tf = top ? casinoFacts(top) : null;
 
-  const needs = [
-    { icon: "⚡", label: "Fastest payouts", href: "/fastest-payouts", n: ops.filter(filterFns.fast).length },
-    { icon: "🕶️", label: "No KYC", href: "/crypto-casinos/no-kyc", n: ops.filter(filterFns.nokyc).length },
-    { icon: "🎯", label: "Low wagering", href: "/lowest-wagering", n: ops.filter(filterFns.lowwager).length },
-    { icon: "⚽", label: "Casino + sportsbook", href: "/casino-sportsbooks", n: ops.filter(filterFns.sports).length },
-    { icon: "₿", label: "By coin", href: "/coins", n: null },
-    { icon: "🌍", label: "By country", href: "/legal", n: null },
+  const needs: { icon: IconName; label: string; href: string; n: number | null; tint: string }[] = [
+    { icon: "bolt", label: "Fastest payouts", href: "/fastest-payouts", n: ops.filter(filterFns.fast).length, tint: "#2FD3DA" },
+    { icon: "eyeOff", label: "No KYC", href: "/crypto-casinos/no-kyc", n: ops.filter(filterFns.nokyc).length, tint: "#B284FF" },
+    { icon: "target", label: "Low wagering", href: "/lowest-wagering", n: ops.filter(filterFns.lowwager).length, tint: "#FF7EB6" },
+    { icon: "ball", label: "Casino + sportsbook", href: "/casino-sportsbooks", n: ops.filter(filterFns.sports).length, tint: "#57E39A" },
+    { icon: "coin", label: "By coin", href: "/coins", n: null, tint: "#FF9A5C" },
+    { icon: "globe", label: "By country", href: "/legal", n: null, tint: "#5FA8FF" },
   ];
 
   return (
-    <main style={{ background: "#07090B", color: "#E8EDF0" }}>
-      {/* 1. The answer first */}
-      <section style={{ borderBottom: "1px solid rgba(255,255,255,.07)", background: "radial-gradient(70% 90% at 85% 0%, rgba(255,197,49,.10), transparent 60%), radial-gradient(60% 80% at 0% 0%, rgba(0,194,204,.10), transparent 60%), #090C0F" }}>
-        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "34px 24px 44px" }}>
-          <div style={{ fontFamily: MONO, fontSize: 11, color: "#83919A", marginBottom: 18 }}>
-            <Link href="/" style={{ color: "#83919A" }}>Home</Link> / <span style={{ color: "#A8B6BE" }}>Crypto casinos</span>
+    <main style={{ background: "#080B0D", color: "#E8EDF0", paddingBottom: 96 }}>
+      <style>{CSS}</style>
+      <div style={{ borderBottom: "1px solid rgba(255,255,255,.06)", background: "radial-gradient(60% 80% at 15% 0%, rgba(0,194,204,.07), transparent 70%), #0A0D10" }}>
+        <div className="ch-wrap" style={{ paddingTop: 30 }}>
+          <div className="ch-crumb">
+            <Link href="/">Home</Link> / <span style={{ color: "#AEBAC1" }}>Crypto casinos</span>
           </div>
-          <div style={{ display: "grid", gap: 36, gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", alignItems: "center" }}>
+          <section className="ch-hero">
             <div>
-              <h1 style={{ margin: "0 0 14px", fontSize: "clamp(34px, 4.4vw, 52px)", lineHeight: 1.04, letterSpacing: "-.035em", fontWeight: 800, color: "#fff" }}>
-                The best crypto casinos, <span style={{ color: GOLD }}>picked for you</span>
+              <h1 className="ch-h1">
+                The best crypto casinos, <span style={{ color: "#FFC531" }}>picked for you</span>
               </h1>
-              <p style={{ margin: "0 0 22px", maxWidth: "52ch", fontSize: 17, lineHeight: 1.6, color: "#9AAAB3" }}>
-                We track {c.casinos} crypto casinos and check every bonus, payout time and licence against the casino&apos;s own pages. Start with our pick, or narrow it down below.
-              </p>
-              <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-                <a href="#top-10" style={{ padding: "13px 20px", borderRadius: 12, background: "rgba(255,255,255,.06)", border: "1px solid rgba(255,255,255,.14)", color: "#fff", fontSize: 15, fontWeight: 700 }}>See the top 10 ↓</a>
-                <Link href="/find-my-casino" style={{ padding: "13px 20px", borderRadius: 12, color: CYAN, fontSize: 15, fontWeight: 700 }}>Not sure? 3 questions →</Link>
+              <p className="ch-lead">We track {c.casinos} crypto casinos and check every bonus, payout time and licence against the casino&apos;s own pages. Start with our pick, or narrow it down below.</p>
+              <div className="ch-btns">
+                <a href="#top-10" className="ch-btn ch-light">See the top 10</a>
+                <Link href="/find-my-casino" className="ch-btn ch-line">Not sure? Answer 3 questions</Link>
               </div>
             </div>
 
             {top && tf && (
-              <div style={{ padding: 24, borderRadius: 20, background: "radial-gradient(120% 90% at 50% 0%, rgba(255,197,49,.16), transparent 60%), #0F1418", border: "1px solid rgba(255,197,49,.42)", boxShadow: "0 30px 70px rgba(0,0,0,.45)" }}>
-                <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 14 }}>
-                  <span style={{ width: 56, height: 56, borderRadius: 14, overflow: "hidden", flex: "none" }}>
-                    <BrandMark slug={top.slug} mono={top.mono} tint={GOLD} radius={14} fontSize={15} />
-                  </span>
-                  <span>
-                    <span style={{ display: "block", fontFamily: MONO, fontSize: 11, color: GOLD }}>OUR #1 PICK</span>
-                    <span style={{ display: "block", fontSize: 24, fontWeight: 800, color: "#fff" }}>{top.name}</span>
-                    <span style={{ display: "block", fontFamily: MONO, fontSize: 11, color: "#83919A" }}>{[tf.licence, tf.kyc].filter(Boolean).join(" · ")}</span>
-                  </span>
-                </div>
-                <div style={{ fontSize: 18, fontWeight: 800, color: GOLD, marginBottom: 12 }}>{tf.headline}</div>
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(3, minmax(0, 1fr))", gap: 8, marginBottom: 14 }} data-keep-grid>
-                  {[
-                    { k: "Withdrawals", v: tf.withdrawals ?? "See terms" },
-                    { k: "Min deposit", v: tf.minDeposit ?? "See terms" },
-                    { k: "Race", v: raceFor(top.slug)?.label.replace(/ weekly raffle/, " raffle") ?? "—" },
-                  ].map((x) => (
-                    <span key={x.k} style={{ padding: "9px 10px", borderRadius: 10, background: "rgba(255,255,255,.04)", border: "1px solid rgba(255,255,255,.07)" }}>
-                      <span style={{ display: "block", fontFamily: MONO, fontSize: 9.5, color: "#7F8D96", textTransform: "uppercase" }}>{x.k}</span>
-                      <span style={{ display: "block", fontSize: 13.5, fontWeight: 700, color: "#E8EDF0" }}>{x.v}</span>
-                    </span>
-                  ))}
-                </div>
-                {top.promoCode && (
-                  <div style={{ marginBottom: 12 }}>
-                    <CodeChip code={top.promoCode} tint={GOLD} />
-                  </div>
-                )}
-                <div style={{ display: "grid", gridTemplateColumns: "1fr auto", gap: 10 }} data-keep-grid>
-                  {top.signupUrl && (
-                    <a href={top.signupUrl} target="_blank" rel="nofollow sponsored noopener" data-copy-code={top.promoCode ?? undefined} style={{ textAlign: "center", padding: "14px 16px", borderRadius: 12, background: "linear-gradient(180deg,#FFD866,#FFC531)", color: "#141007", fontSize: 15.5, fontWeight: 800 }}>
-                      Play at {top.name} ↗
-                    </a>
-                  )}
-                  <Link href={`/casinos/${top.slug}`} style={{ padding: "14px 16px", borderRadius: 12, border: "1px solid rgba(255,255,255,.16)", color: "#fff", fontSize: 15, fontWeight: 700 }}>Review</Link>
-                </div>
-                <GeoBlockNote slug={top.slug} name={top.name} compact />
-              </div>
-            )}
-          </div>
-        </div>
-      </section>
-
-      {/* 2. Short ranked list */}
-      <section id="top-10" style={{ maxWidth: 1180, margin: "0 auto", padding: "52px 24px 0", scrollMarginTop: 100 }}>
-        <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 16, flexWrap: "wrap", marginBottom: 16 }}>
-          <h2 style={{ margin: 0, fontSize: 30, letterSpacing: "-.025em", fontWeight: 800, color: "#fff" }}>Our top 10</h2>
-          <span style={{ fontSize: 13, color: "#7F8D96" }}>Placement order includes our commercial deals. <Link href="/how-we-rate" style={{ color: "#A8B6BE", textDecoration: "underline" }}>How we rate</Link></span>
-        </div>
-        <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-          {ranked.map((o, i) => {
-            const f = casinoFacts(o);
-            return (
-              <div key={o.slug} style={{ padding: "14px 18px", borderRadius: 16, background: i === 0 ? "rgba(255,197,49,.05)" : "#0C1013", border: `1px solid ${i === 0 ? "rgba(255,197,49,.3)" : "rgba(255,255,255,.08)"}` }}>
-                <div className="csg-hubrow" style={{ display: "grid", gridTemplateColumns: "28px 48px minmax(0,1.3fr) minmax(0,1.6fr) minmax(0,.9fr) auto", gap: 14, alignItems: "center" }} data-keep-grid>
-                  <span style={{ fontFamily: MONO, fontSize: 15, fontWeight: 700, color: i === 0 ? GOLD : "#7F8D96" }}>{i + 1}</span>
-                  <span style={{ width: 48, height: 48, borderRadius: 12, overflow: "hidden" }}>
-                    <BrandMark slug={o.slug} mono={o.mono} tint={tintFor(o.slug)} radius={12} fontSize={13} />
+              <aside className="ch-pick" aria-label="Our pick">
+                <div className="ch-pick-top">
+                  <span style={{ width: 48, height: 48, borderRadius: 12, overflow: "hidden", flex: "none" }}>
+                    <BrandMark slug={top.slug} mono={top.mono} tint={brandFor(top.slug)} radius={12} fontSize={14} />
                   </span>
                   <span style={{ minWidth: 0 }}>
-                    <span style={{ display: "block", fontSize: 16.5, fontWeight: 800, color: "#fff" }}>{o.name}</span>
-                    <span style={{ display: "block", fontFamily: MONO, fontSize: 10.5, color: "#7F8D96" }}>{[f.licence, f.kyc].filter(Boolean).join(" · ")}</span>
-                  </span>
-                  <span className="csg-hubrow-offer" style={{ fontSize: 14, fontWeight: 700, color: "#E8EDF0", lineHeight: 1.35 }}>{f.headline}</span>
-                  <span className="csg-hubrow-wd" style={{ fontSize: 13, color: "#A8B6BE" }}>
-                    <span style={{ display: "block", fontFamily: MONO, fontSize: 9.5, color: "#7F8D96", textTransform: "uppercase" }}>Withdrawals</span>
-                    {f.withdrawals ?? "See terms"}
-                  </span>
-                  <span style={{ display: "flex", gap: 8 }}>
-                    {o.signupUrl && o.affiliate ? (
-                      <a href={o.signupUrl} target="_blank" rel="nofollow sponsored noopener" style={{ padding: "10px 16px", borderRadius: 10, background: "linear-gradient(180deg,#FFD866,#FFC531)", color: "#141007", fontSize: 14, fontWeight: 800, whiteSpace: "nowrap" }}>Play ↗</a>
-                    ) : null}
-                    <Link href={`/casinos/${o.slug}`} style={{ padding: "10px 14px", borderRadius: 10, border: "1px solid rgba(255,255,255,.14)", color: "#E8EDF0", fontSize: 14, fontWeight: 700 }}>Review</Link>
+                    <span style={{ display: "block", fontSize: 17, fontWeight: 700, color: "#F2F5F7" }}>{top.name}</span>
+                    <span className="ch-tag">Our #1 pick</span>
                   </span>
                 </div>
-                <GeoBlockNote slug={o.slug} name={o.name} compact />
-              </div>
-            );
-          })}
+                <p className="ch-pick-title">{tf.headline}</p>
+                <div className="ch-facts" data-keep-grid>
+                  <div><small>Withdrawals</small><b>{tf.withdrawals ?? "See terms"}</b></div>
+                  <div><small>Min deposit</small><b>{tf.minDeposit ?? "See terms"}</b></div>
+                  <div><small>Race</small><b>{raceFor(top.slug)?.label.replace(/ weekly raffle/, " raffle") ?? "None"}</b></div>
+                </div>
+                {top.promoCode && <CodeChip code={top.promoCode} tint="#FFC531" />}
+                <div className="ch-pick-actions" data-keep-grid>
+                  <Link href={reviewPath(top.slug)} className="ch-btn ch-gold">Read the {top.name} review</Link>
+                  {top.signupUrl && top.affiliate && (
+                    <a href={top.signupUrl} target="_blank" rel="nofollow sponsored noopener" data-copy-code={top.promoCode ?? undefined} className="ch-btn ch-line">
+                      Visit ↗
+                    </a>
+                  )}
+                </div>
+                <GeoBlockNote slug={top.slug} name={top.name} compact />
+                <p style={{ margin: "12px 0 0", fontSize: 11.5, color: "#67747C" }}>18+ · T&amp;Cs apply · Affiliate link: we may earn a commission.</p>
+              </aside>
+            )}
+          </section>
         </div>
-        <p style={{ margin: "10px 0 0", fontFamily: MONO, fontSize: 10.5, color: "#7F8D96" }}>Play links are affiliate links: we may earn a commission, which never changes what a review says. 18+ · T&amp;Cs apply.</p>
-        <div style={{ marginTop: 18 }}>
-          <FoldedList hashes={["all-list", "all-casinos"]} summary={<>Show all {c.casinos} casinos, with filters and sorting <span aria-hidden>↓</span></>}>
-            {allList}
-          </FoldedList>
-        </div>
-      </section>
+      </div>
 
-      {/* 3. Narrow it down */}
-      <section style={{ maxWidth: 1180, margin: "0 auto", padding: "52px 24px 0" }}>
-        <h2 style={{ margin: "0 0 6px", fontSize: 26, letterSpacing: "-.02em", fontWeight: 800, color: "#fff" }}>What matters most to you?</h2>
-        <p style={{ margin: "0 0 16px", fontSize: 15, color: "#8DA0AA" }}>Each list is built from the casinos&apos; own terms.</p>
-        <div style={{ display: "grid", gap: 12, gridTemplateColumns: "repeat(auto-fit, minmax(170px, 1fr))" }}>
-          {needs.map((n) => (
-            <Link key={n.label} href={n.href} className="csg-lift" style={{ display: "flex", flexDirection: "column", gap: 6, padding: "16px 16px", borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.09)" }}>
-              <span style={{ fontSize: 24 }} aria-hidden>{n.icon}</span>
-              <span style={{ fontSize: 15.5, fontWeight: 800, color: "#fff" }}>{n.label}</span>
-              <span style={{ fontSize: 12.5, color: CYAN }}>{n.n !== null ? `${n.n} casinos →` : "Browse →"}</span>
-            </Link>
-          ))}
-        </div>
-        <div style={{ display: "flex", gap: 18, flexWrap: "wrap", marginTop: 16, fontSize: 14.5 }}>
-          <a href="#all-list" style={{ fontWeight: 700, color: CYAN }}>See all {c.casinos} with filters →</a>
-          <Link href="/compare" style={{ fontWeight: 700, color: "#A8B6BE" }}>Compare two side by side →</Link>
-        </div>
-      </section>
+      <div className="ch-wrap">
+        <section id="top-10" className="ch-sec" style={{ scrollMarginTop: 100 }}>
+          <div className="ch-head">
+            <h2 className="ch-h2">Our top 10</h2>
+            <span className="ch-muted">
+              Placement order includes our commercial deals. <Link href="/how-we-rate">How we rate</Link>
+            </span>
+          </div>
+          <CasinoRankList ops={ranked} />
+          <div style={{ marginTop: 18 }}>
+            <FoldedList hashes={["all-list", "all-casinos"]} summary={<>Show all {c.casinos} casinos, with filters and sorting <span aria-hidden>↓</span></>}>
+              {allList}
+            </FoldedList>
+          </div>
+        </section>
 
-      {/* 4. One next step */}
-      <section style={{ maxWidth: 1180, margin: "0 auto", padding: "56px 24px 80px" }}>
-        <Link href="/bonuses" className="csg-lift" style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 16, padding: "24px 28px", borderRadius: 18, background: "radial-gradient(80% 140% at 0% 50%, rgba(255,197,49,.14), transparent 60%), #0F1418", border: "1px solid rgba(255,197,49,.3)" }}>
-          <span>
-            <span style={{ display: "block", fontFamily: MONO, fontSize: 11, color: GOLD, marginBottom: 6 }}>NEXT STEP</span>
-            <span style={{ display: "block", fontSize: 22, fontWeight: 800, color: "#fff" }}>Picked a casino? Get its best code first.</span>
-            <span style={{ display: "block", fontSize: 14.5, color: "#A8B6BE", marginTop: 4 }}>Welcome offers and promo codes, with the wagering spelled out.</span>
-          </span>
-          <span style={{ padding: "13px 20px", borderRadius: 12, background: "linear-gradient(180deg,#FFD866,#FFC531)", color: "#141007", fontSize: 15, fontWeight: 800 }}>See the best bonuses →</span>
-        </Link>
-      </section>
+        <section className="ch-sec">
+          <div className="ch-head">
+            <h2 className="ch-h2">What matters most to you?</h2>
+            <span className="ch-muted">Each list is built from the casinos&apos; own terms.</span>
+          </div>
+          <div className="ch-needs">
+            {needs.map((n) => (
+              <Link key={n.label} href={n.href} className="ch-need" style={{ ["--tint" as string]: n.tint }}>
+                <span className="ch-need-ico"><LineIcon name={n.icon} /></span>
+                <b>{n.label}</b>
+                <small>{n.n !== null ? `${n.n} casinos` : "Browse"} →</small>
+              </Link>
+            ))}
+          </div>
+          <div className="ch-links">
+            <a href="#all-list">See all {c.casinos} with filters →</a>
+            <Link href="/compare">Compare two side by side →</Link>
+          </div>
+        </section>
 
-      <style>{`@media (max-width: 760px){
-        .csg-hubrow{grid-template-columns:24px 44px minmax(0,1fr) auto !important;row-gap:8px !important}
-        .csg-hubrow-offer{grid-column:3 / -1;font-size:13.5px !important}
-        .csg-hubrow-wd{display:none !important}
-      }`}</style>
+        <section className="ch-sec">
+          <Link href="/promo-codes" className="ch-next">
+            <span>
+              <b>Picked a casino? Check its code first.</b>
+              <small>What each code gets you, and the wagering on every welcome offer.</small>
+            </span>
+            <span className="ch-btn ch-line">See the promo codes →</span>
+          </Link>
+        </section>
+      </div>
     </main>
   );
 }

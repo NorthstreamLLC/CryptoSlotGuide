@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ogCardPath } from "@/lib/og";
 import { siteData, siteCounts } from "@/lib/site-data";
-import { brandFor, casinoFacts, licenceLabel } from "@/lib/casino-facts";
+import { brandFor, casinoFacts } from "@/lib/casino-facts";
 import { inHouseOrder } from "@/lib/house-order";
 import { topSlotRows } from "@/lib/slot-page";
 import { SITE_URL, SITE_NAME } from "@/lib/seo";
@@ -9,11 +9,11 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { itemListSchema } from "@/lib/schema";
 import { CodeChip } from "@/components/ui/CodeChip";
 import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
-import { GeoListNote } from "@/components/geo/GeoListNote";
+import { CasinoRankList } from "@/components/casino-index/CasinoRankList";
+import { LineIcon } from "@/components/ui/LineIcon";
 import { KevinStrip } from "@/components/promo/KevinStrip";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { getSpecFact } from "@/lib/spec-sheet";
-import { reviewPath } from "@/lib/outbound";
 import { PROMO_HUB, PROMO_PAGES } from "@/lib/promo-pages";
 import { VERSUS_ANALYSIS } from "@/lib/versus-analysis";
 import { parsePair } from "@/lib/versus";
@@ -125,23 +125,6 @@ const CSS = `
 .csg-strip-text { flex: 1 1 320px; }
 .csg-strip-cta { font-weight: 600; color: #E8EDF0; white-space: nowrap; }
 
-/* Casino list */
-.h-row { display: grid; grid-template-columns: 22px minmax(0, 1.2fr) minmax(0, 1.6fr) minmax(0, .7fr) minmax(0, .7fr) auto; gap: 20px; align-items: center; padding: 16px 20px; transition: background .15s; }
-.h-row:hover { background: rgba(255,255,255,.02); }
-.h-row + .h-row { border-top: 1px solid rgba(255,255,255,.06); }
-.h-rank { font-size: 13px; font-weight: 600; color: #5E6B73; font-variant-numeric: tabular-nums; }
-.h-name { display: flex; align-items: center; gap: 12px; min-width: 0; }
-.h-name b { display: block; font-size: 16px; font-weight: 700; color: #F2F5F7; }
-.h-name small { display: block; margin-top: 1px; font-size: 12.5px; color: #75828A; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.h-offer b { display: block; font-size: 15px; line-height: 1.35; font-weight: 600; color: #E8EDF0; }
-.h-stat small { display: block; font-size: 12px; color: #6F7C84; }
-.h-stat b { display: block; margin-top: 2px; font-size: 14.5px; font-weight: 600; color: #E8EDF0; }
-.h-act { display: flex; align-items: center; gap: 14px; }
-.h-act .h-btn { padding: 10px 18px; font-size: 14px; }
-.h-act a.h-link { font-size: 13.5px; color: #93A1A9; white-space: nowrap; }
-.h-act a.h-link:hover { color: #fff; }
-.h-note { margin: 12px 0 0; font-size: 12px; line-height: 1.55; color: #67747C; }
-
 /* Codes + comparisons */
 .h-two { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 20px; }
 .h-sub { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 16px 20px; border-bottom: 1px solid rgba(255,255,255,.06); }
@@ -186,13 +169,6 @@ a.h-li:hover b, .h-li-main:hover b { color: #fff; text-decoration: underline; te
   .h-slots { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .h-facts, .h-trust { grid-template-columns: 1fr; gap: 14px; }
   .h-trust { gap: 22px; }
-  .h-row { grid-template-columns: 18px minmax(0, 1fr) auto; grid-template-areas: "r n a" "r o o"; row-gap: 10px; gap: 14px; padding: 16px; }
-  .h-rank { grid-area: r; align-self: start; padding-top: 10px; }
-  .h-name { grid-area: n; }
-  .h-offer { grid-area: o; }
-  .h-stat { display: none; }
-  .h-act { grid-area: a; }
-  .h-act a.h-link { display: none; }
 }
 @media (max-width: 560px) {
   .h-wrap { padding: 0 16px; }
@@ -205,20 +181,6 @@ a.h-li:hover b, .h-li-main:hover b { color: #fff; text-decoration: underline; te
   .h-sub { padding: 14px 16px; }
 }
 `;
-
-const ic = (d: string, size = 18) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-    <path d={d} />
-  </svg>
-);
-/** Line icons for the quick links, drawn in each link's colour. */
-const ICONS = {
-  casino: ic("M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm0 4a5 5 0 1 0 0 10 5 5 0 0 0 0-10ZM12 3v4M12 17v4M3 12h4M17 12h4"),
-  gift: ic("M4 11h16v9H4zM3 7h18v4H3zM12 7v13M12 7c-1.5-3-5-3-5-1s3 1 5 1Zm0 0c1.5-3 5-3 5-1s-3 1-5 1Z"),
-  slots: ic("M4 5h16v14H4zM9.3 5v14M14.7 5v14M5.8 10.5h1.8l-1.2 3M11.1 10.5h1.8l-1.2 3M16.4 10.5h1.8l-1.2 3"),
-  globe: ic("M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18ZM3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"),
-  book: ic("M5 4h9a4 4 0 0 1 4 4v12H9a4 4 0 0 1-4-4V4ZM5 16a4 4 0 0 1 4-4h9", 12),
-};
 
 /** A row of overlapping round logos (or slot art, or flags). */
 function Stack({ imgs }: { imgs: string[] }) {
@@ -277,10 +239,10 @@ export default function HomePage() {
   const codeImgs = codes.filter((o) => !top.slice(0, 3).includes(o)).slice(0, 3).flatMap((o) => (logo(o.slug) ? [logo(o.slug)!] : []));
   const slotImgs = topSlotRows().slice(0, 3).flatMap((r) => (r.image ? [thumbOf(r.image)] : []));
   const paths = [
-    { t: "Find a casino", d: `${c.casinos} casinos compared`, href: "/crypto-casinos", tint: "#2FD3DA", icon: ICONS.casino, imgs: casinoImgs },
-    { t: "Bonuses & codes", d: "Wagering spelled out", href: "/bonuses", tint: "#FFC531", icon: ICONS.gift, imgs: codeImgs },
-    { t: "Top slots", d: "RTP and where to play", href: "/slots", tint: "#FF7EB6", icon: ICONS.slots, imgs: slotImgs },
-    { t: "Can I play here?", d: "The law where you live", href: "/legal", tint: "#57E39A", icon: ICONS.globe, imgs: ["gb", "ca", "br"].map((f) => `/assets/flags/${f}.svg`) },
+    { t: "Find a casino", d: `${c.casinos} casinos compared`, href: "/crypto-casinos", tint: "#2FD3DA", icon: <LineIcon name="casino" />, imgs: casinoImgs },
+    { t: "Bonuses & codes", d: "Wagering spelled out", href: "/bonuses", tint: "#FFC531", icon: <LineIcon name="gift" />, imgs: codeImgs },
+    { t: "Top slots", d: "RTP and where to play", href: "/slots", tint: "#FF7EB6", icon: <LineIcon name="slots" />, imgs: slotImgs },
+    { t: "Can I play here?", d: "The law where you live", href: "/legal", tint: "#57E39A", icon: <LineIcon name="globe" />, imgs: ["gb", "ca", "br"].map((f) => `/assets/flags/${f}.svg`) },
   ];
   const stackOf = (slugs: string[], n: number) => slugs.flatMap((s) => (logo(s) ? [logo(s)!] : [])).slice(0, n);
   const also = [
@@ -326,7 +288,7 @@ export default function HomePage() {
                 <div className="h-also">
                   {also.map((x) => (
                     <Link key={x.href} href={x.href} className="h-chip" style={{ ["--tint" as string]: x.tint }}>
-                      {x.imgs.length ? <Stack imgs={x.imgs} /> : <span className="h-chip-dot" aria-hidden>{ICONS.book}</span>}
+                      {x.imgs.length ? <Stack imgs={x.imgs} /> : <span className="h-chip-dot" aria-hidden><LineIcon name="book" size={12} /></span>}
                       {x.t}
                     </Link>
                   ))}
@@ -374,47 +336,7 @@ export default function HomePage() {
               <h2 className="h-h2">Top crypto casinos</h2>
               <Link href="/crypto-casinos" className="h-more">Compare all {c.casinos} →</Link>
             </div>
-            <div className="h-box">
-              <GeoListNote casinos={top.map((o) => ({ slug: o.slug, name: o.name }))} />
-              {top.map((o, i) => {
-                const f = casinoFacts(o);
-                const outbound = !!(o.affiliate && o.signupUrl);
-                return (
-                  <div key={o.slug} className="h-row">
-                    <span className="h-rank">{i + 1}</span>
-                    <Link href={reviewPath(o.slug)} className="h-name">
-                      <span style={{ width: 40, height: 40, flex: "none", borderRadius: 10, overflow: "hidden" }}>
-                        <BrandMark slug={o.slug} mono={o.mono} tint={brandFor(o.slug)} radius={10} fontSize={12} />
-                      </span>
-                      <span style={{ minWidth: 0 }}>
-                        <b>{o.name}</b>
-                        <small>{licenceLabel(o.licence)}</small>
-                      </span>
-                    </Link>
-                    <Link href={reviewPath(o.slug)} className="h-offer">
-                      <b>{f.headline}</b>
-                    </Link>
-                    <div className="h-stat">
-                      <small>Withdrawals</small>
-                      <b>{f.withdrawals ?? "See terms"}</b>
-                    </div>
-                    <div className="h-stat">
-                      <small>Min deposit</small>
-                      <b>{f.minDeposit ?? "See terms"}</b>
-                    </div>
-                    <div className="h-act">
-                      <Link href={reviewPath(o.slug)} className="h-btn h-btn-gold">Read review</Link>
-                      {outbound && (
-                        <a href={o.signupUrl} target="_blank" rel="nofollow sponsored noopener" data-copy-code={o.promoCode} className="h-link">
-                          Visit ↗
-                        </a>
-                      )}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-            <p className="h-note">Offers are the casinos&apos; own, from their terms. Each review links every figure to its source. Visit links are affiliate links: we may earn a commission, which never changes what a review says. 18+, play responsibly.</p>
+            <CasinoRankList ops={top} />
           </section>
 
           {/* Codes and comparisons */}

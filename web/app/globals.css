@@ -541,3 +541,9 @@ body:has([data-signup]:not([data-signup="site"])) .csg-nl-band { display: none; 
     width: auto;
   }
 }
+
+/* Flat casino cards (CasinoCard): a hairline that brightens on hover, no lift or glow. */
+.csg-card { transition: border-color .15s; }
+.csg-card:hover { border-color: rgba(255,255,255,.18) !important; }
+.csg-card-btn { transition: background .15s; }
+.csg-card-btn:hover { background: #FFD45E !important; }
