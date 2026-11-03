@@ -31,7 +31,6 @@ import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
 import { ReportIssue } from "@/components/ui/ReportIssue";
 import { CodeOffer } from "@/components/ui/CodeOffer";
 import { PaymentPartners } from "@/components/ui/PaymentPartners";
-import { VersusStrip } from "@/components/compare/VersusStrip";
 import { latestNewsFor, newsPath } from "@/lib/news";
 
 /**
@@ -40,7 +39,9 @@ import { latestNewsFor, newsPath } from "@/lib/news";
  * The full fact table sits at the foot as "Every fact and its source".
  */
 
-const MONO = "var(--font-jetbrains-mono), monospace";
+const GOLD = "#FFC531";
+/** Small plain label used above values (replaces the old mono small-caps). */
+const LABEL = { fontSize: 12, fontWeight: 500, color: "#75828A" } as const;
 const BRAND: Record<string, string> = { roobet: "#FFCC00", stake: "#1FFF20", "bc-game": "#24EE89", shuffle: "#896CFF" };
 
 const REWARD_LABELS = ["Rakeback", "Cashback", "Weekly raffle", "Leaderboards", "VIP levels", "VIP ranks", "VIP Club", "VIP club", "Perks by level", "Missions", "VIP transfer", "Wagering-triggered rewards", "Reload bonuses", "Prize draws", "Lootboxes", "Referral program"];
@@ -71,17 +72,16 @@ function shortAmount(f: Fact): string | null {
 function Source({ f }: { f: Fact }) {
   if (!f?.sourceUrl) return null;
   return (
-    <a href={f.sourceUrl} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: MONO, fontSize: 10.5, color: "#5FE3E8", whiteSpace: "nowrap" }}>
+    <a href={f.sourceUrl} target="_blank" rel="noopener noreferrer nofollow" style={{ fontSize: 12, color: "#5FE3E8", whiteSpace: "nowrap" }}>
       {host(f.sourceUrl)} ↗
     </a>
   );
 }
 
-function Section({ id, eyebrow, title, children }: { id: string; eyebrow: string; title: string; children: ReactNode }) {
+function Section({ id, title, children }: { id: string; eyebrow?: string; title: string; children: ReactNode }) {
   return (
-    <section id={id} style={{ scrollMarginTop: 156, marginBottom: 56 }}>
-      <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".1em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 8 }}>{eyebrow}</div>
-      <h2 style={{ margin: "0 0 20px", fontSize: 30, lineHeight: 1.1, letterSpacing: "-.03em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>{title}</h2>
+    <section id={id} style={{ scrollMarginTop: 156, marginBottom: 64 }}>
+      <h2 style={{ margin: "0 0 20px", fontSize: 26, lineHeight: 1.15, letterSpacing: "-.025em", fontWeight: 700, color: "#F2F5F7" }}>{title}</h2>
       {children}
     </section>
   );
@@ -91,9 +91,9 @@ function Section({ id, eyebrow, title, children }: { id: string; eyebrow: string
 function Tile({ label, value, f, accent }: { label: string; value: string | null; f: Fact; accent?: string }) {
   const known = !!f;
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: 8, padding: "18px 18px 16px", borderRadius: 14, background: "#0E1316", border: "1px solid rgba(255,255,255,.07)", minWidth: 0 }}>
-      <div style={{ fontFamily: MONO, fontSize: 10, letterSpacing: ".08em", textTransform: "uppercase", color: "#8E9CA5" }}>{label}</div>
-      <div style={{ fontSize: 24, fontWeight: 800, letterSpacing: "-.02em", lineHeight: 1.1, color: known ? accent ?? "#fff" : "#77858E" }}>{known ? value ?? "See terms" : "Not stated"}</div>
+    <div style={{ display: "flex", flexDirection: "column", gap: 8, padding: "18px 18px 16px", borderRadius: 14, background: "#0D1114", border: "1px solid rgba(255,255,255,.08)", minWidth: 0 }}>
+      <div style={LABEL}>{label}</div>
+      <div style={{ fontSize: 22, fontWeight: 700, letterSpacing: "-.02em", lineHeight: 1.15, color: known ? accent ?? "#F2F5F7" : "#67747C" }}>{known ? value ?? "See terms" : "Not stated"}</div>
       {f?.value && (
         <div style={{ fontSize: 12.5, lineHeight: 1.5, color: "#8DA0AA", textWrap: "pretty" }}>
           <More f={f} max={90} />
@@ -113,7 +113,7 @@ function Chips({ items, tint = "#B7C4CB" }: { items: string[]; tint?: string }) 
   return (
     <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
       {items.map((c) => (
-        <span key={c} style={{ padding: "4px 9px", borderRadius: 100, background: "rgba(255,255,255,.05)", border: "1px solid rgba(255,255,255,.08)", fontFamily: MONO, fontSize: 10.5, color: tint }}>
+        <span key={c} style={{ padding: "4px 10px", borderRadius: 100, background: "rgba(255,255,255,.04)", border: "1px solid rgba(255,255,255,.08)", fontSize: 12.5, color: tint }}>
           {c}
         </span>
       ))}
@@ -164,7 +164,7 @@ function Rows({ rows }: { rows: { k: string; f: Fact }[] }) {
     <div style={{ display: "flex", flexDirection: "column" }}>
       {shown.map(({ k, f }) => (
         <div key={k} style={{ display: "grid", gridTemplateColumns: "minmax(110px, 160px) 1fr", gap: 14, padding: "12px 0", borderTop: "1px solid rgba(255,255,255,.06)" }}>
-          <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".06em", textTransform: "uppercase", color: "#8E9CA5", paddingTop: 2 }}>{k}</div>
+          <div style={{ ...LABEL, fontSize: 13, paddingTop: 1 }}>{k}</div>
           <div style={{ fontSize: 13.5, lineHeight: 1.55, color: "#C6D1D7" }}>{f!.chips ? <><Chips items={f!.chips} /> <Source f={f} /></> : <More f={f} />}</div>
         </div>
       ))}
@@ -178,8 +178,8 @@ function RewardGrid({ items, brand }: { items: { k: string; f: Fact }[]; brand: 
   return (
     <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 12 }}>
       {items.map(({ k, f }) => (
-        <div key={k} style={{ display: "flex", flexDirection: "column", gap: 8, padding: "18px 18px 16px", borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 15, fontWeight: 800, color: "#fff" }}>
+        <div key={k} style={{ display: "flex", flexDirection: "column", gap: 8, padding: "18px 18px 16px", borderRadius: 14, background: "#0D1114", border: "1px solid rgba(255,255,255,.08)" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 15, fontWeight: 700, color: "#F2F5F7" }}>
             <span style={{ width: 8, height: 8, borderRadius: 100, background: brand, flex: "none" }} />
             {k}
           </div>
@@ -192,9 +192,10 @@ function RewardGrid({ items, brand }: { items: { k: string; f: Fact }[]; brand: 
   );
 }
 
+/** A flat panel; `glow` now only draws a thin brand-coloured top edge. */
 function Card({ children, glow }: { children: ReactNode; glow?: string }) {
   return (
-    <div style={{ padding: 24, borderRadius: 18, background: glow ? `radial-gradient(120% 90% at 0% 0%, ${glow}1f, transparent 55%), #0C1013` : "#0C1013", border: `1px solid ${glow ? `${glow}33` : "rgba(255,255,255,.07)"}`, minWidth: 0 }}>
+    <div style={{ padding: 24, borderRadius: 16, background: "#0D1114", border: "1px solid rgba(255,255,255,.08)", boxShadow: glow ? `inset 0 2px 0 ${glow}` : undefined, minWidth: 0 }}>
       {children}
     </div>
   );
@@ -268,10 +269,10 @@ export function CasinoReport({ e }: { e: EntityView }) {
   return (
     <main style={{ background: "#07090B", color: "#E8EDF0" }}>
       {/* HERO */}
-      <section style={{ position: "relative", overflow: "hidden", borderBottom: "1px solid rgba(255,255,255,.07)", background: `radial-gradient(80% 120% at 85% 0%, ${brand}26, transparent 55%), radial-gradient(60% 80% at 0% 100%, rgba(0,194,204,.08), transparent 60%), #0A0D10` }}>
+      <section style={{ position: "relative", overflow: "hidden", borderBottom: "1px solid rgba(255,255,255,.07)", background: `radial-gradient(60% 90% at 85% 0%, ${brand}14, transparent 65%), #0A0D10` }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "24px 24px 44px" }}>
-          <div style={{ fontFamily: MONO, fontSize: 11, color: "#83919A", marginBottom: 28 }}>
-            <Link href="/" style={{ color: "#83919A" }}>Home</Link> / <Link href="/crypto-casinos" style={{ color: "#83919A" }}>Crypto casinos</Link> / <span style={{ color: "#A8B6BE" }}>{o.name}</span>
+          <div style={{ fontSize: 13, color: "#6F7C84", marginBottom: 28 }}>
+            <Link href="/" style={{ color: "#8E9CA4" }}>Home</Link> / <Link href="/crypto-casinos" style={{ color: "#8E9CA4" }}>Crypto casinos</Link> / <span style={{ color: "#AEBAC1" }}>{o.name}</span>
           </div>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 40, alignItems: "center" }}>
@@ -281,9 +282,9 @@ export function CasinoReport({ e }: { e: EntityView }) {
                   <BrandMark slug={o.slug} mono={o.mono} tint={brand} radius={10} fontSize={13} />
                 </div>
                 <div>
-                  <div style={{ fontSize: 20, fontWeight: 800, letterSpacing: "-.02em", color: "#fff" }}>{o.name}</div>
-                  <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".06em", color: "#8E9CA5" }}>
-                    {licence ? `${o.licence.toUpperCase()} LICENCE` : "CRYPTO CASINO"}{o.featured ? " · FEATURED" : ""}
+                  <div style={{ fontSize: 20, fontWeight: 700, letterSpacing: "-.02em", color: "#F2F5F7" }}>{o.name}</div>
+                  <div style={{ fontSize: 13, color: "#8E9CA4" }}>
+                    {licence ? `${o.licence} licence` : "Crypto casino"}{o.featured ? " · Featured" : ""}
                   </div>
                   {partnerFor(o.slug) && (
                     <div style={{ display: "flex", alignItems: "center", gap: 6, marginTop: 4, fontSize: 12.5, fontWeight: 600, color: "#C6D1D7" }}>
@@ -300,8 +301,8 @@ export function CasinoReport({ e }: { e: EntityView }) {
                 </div>
               </div>
 
-              <div style={{ fontFamily: MONO, fontSize: 11, letterSpacing: ".1em", textTransform: "uppercase", color: brand, marginBottom: 10 }}>{o.noDepositBonus ? "Rewards" : "Welcome offer"}</div>
-              <h1 style={{ margin: "0 0 12px", fontSize: "clamp(34px, 4.4vw, 52px)", lineHeight: 1.02, letterSpacing: "-.035em", fontWeight: 800, fontStretch: "114%", color: "#fff", textWrap: "balance" }}>
+              <div style={{ fontSize: 13.5, fontWeight: 600, color: brand, marginBottom: 10 }}>{o.noDepositBonus ? "Rewards" : "Welcome offer"}</div>
+              <h1 style={{ margin: "0 0 14px", fontSize: "clamp(34px, 4.4vw, 50px)", lineHeight: 1.05, letterSpacing: "-.04em", fontWeight: 700, color: "#F7F9FA", textWrap: "balance" }}>
                 {o.bonusShort ?? o.bonus}
               </h1>
               <p style={{ margin: "0 0 24px", maxWidth: "56ch", fontSize: 16, lineHeight: 1.6, color: "#A8B6BE", textWrap: "pretty" }}>
@@ -313,12 +314,12 @@ export function CasinoReport({ e }: { e: EntityView }) {
 
               <ul style={{ listStyle: "none", margin: "0 0 30px", padding: 0, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))", gap: 10 }}>
                 {perks.map((p) => (
-                  <li key={p.title} style={{ display: "flex", alignItems: "center", gap: 14, padding: "14px 16px", borderRadius: 16, background: "linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.02))", border: "1px solid rgba(255,255,255,.08)", minWidth: 0 }}>
-                    <span style={{ width: 40, height: 40, flex: "none", borderRadius: 12, display: "inline-flex", alignItems: "center", justifyContent: "center", background: `${brand}1a`, color: brand, boxShadow: `inset 0 0 0 1px ${brand}33` }}>
+                  <li key={p.title} style={{ display: "flex", alignItems: "center", gap: 14, padding: "14px 16px", borderRadius: 14, background: "#0D1114", border: "1px solid rgba(255,255,255,.08)", minWidth: 0 }}>
+                    <span style={{ width: 38, height: 38, flex: "none", borderRadius: 10, display: "inline-flex", alignItems: "center", justifyContent: "center", background: `${brand}1a`, color: brand, border: `1px solid ${brand}40` }}>
                       <Icon name={p.icon} size={20} />
                     </span>
                     <span style={{ minWidth: 0, display: "flex", flexDirection: "column", gap: 4 }}>
-                      <span style={{ fontSize: 14.5, fontWeight: 700, letterSpacing: "-.01em", color: "#fff" }}>{p.title}</span>
+                      <span style={{ fontSize: 14.5, fontWeight: 600, letterSpacing: "-.01em", color: "#F2F5F7" }}>{p.title}</span>
                       {p.coins ? <CoinStack tickers={p.coins} max={6} size={18} /> : p.sub ? <span style={{ fontSize: 12.5, lineHeight: 1.35, color: "#8DA0AA" }}>{p.sub}</span> : null}
                     </span>
                   </li>
@@ -327,32 +328,31 @@ export function CasinoReport({ e }: { e: EntityView }) {
 
               {o.signupUrl && o.promoCode && (
                 <div style={{ marginBottom: 12, maxWidth: 560 }}>
-                  <CodeOffer code={o.promoCode} offer={o.bonusShort ?? o.bonus} casino={o.name} perk={o.codePerk?.text} tint={brand} />
+                  <CodeOffer code={o.promoCode} offer={o.bonusShort ?? o.bonus} casino={o.name} perk={o.codePerk?.text} tint={GOLD} />
                   {o.slug === "roobet" && o.codePerk && (
                     <div style={{ display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap", marginTop: 10 }}>
                       <VipClaim compact />
-                      <Link href="/promo-codes/roobet" style={{ fontSize: 13, fontWeight: 700, color: brand }}>
+                      <Link href="/promo-codes/roobet" style={{ fontSize: 13.5, fontWeight: 600, color: "#E8EDF0" }}>
                         How to claim code {o.promoCode} →
                       </Link>
                     </div>
                   )}
                   {o.slug === "roobet" && o.codePerk && <p style={{ margin: "8px 0 0", fontSize: 12.5, lineHeight: 1.5, color: "#B7C4CB" }}>{CLAIM_NOTE}</p>}
-                  <VersusStrip slug={o.slug} compact />
                   {news && (
-                    <Link href={`${newsPath(news.issue.month)}#item-${news.issue.items.indexOf(news.items[0]) + 1}`} style={{ display: "flex", alignItems: "center", gap: 8, marginTop: 12, padding: "9px 12px", borderRadius: 10, background: "rgba(255,126,182,.08)", border: "1px solid rgba(255,126,182,.3)", fontSize: 13.5, lineHeight: 1.4, color: "#F2D5E2" }}>
-                      <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".08em", color: "#FF9CC6", flex: "none" }}>NEWS</span>
+                    <Link href={`${newsPath(news.issue.month)}#item-${news.issue.items.indexOf(news.items[0]) + 1}`} style={{ display: "flex", alignItems: "center", gap: 10, marginTop: 12, padding: "9px 12px", borderRadius: 10, background: "#0D1114", border: "1px solid rgba(255,255,255,.08)", fontSize: 13.5, lineHeight: 1.4, color: "#DCE3E7" }}>
+                      <span style={{ padding: "2px 7px", borderRadius: 6, background: "rgba(255,126,182,.12)", fontSize: 11.5, fontWeight: 700, color: "#FF9CC6", flex: "none" }}>News</span>
                       <span style={{ minWidth: 0 }}>{news.items[0].headline}{news.items.length > 1 ? ` (+${news.items.length - 1} more)` : ""} →</span>
                     </Link>
                   )}
                   {((o.slug !== "roobet" && hasPromoPage(o.slug)) || hasFactArticle(o.slug)) && (
                     <div style={{ display: "flex", gap: 16, flexWrap: "wrap", marginTop: 10 }}>
                       {o.slug !== "roobet" && hasPromoPage(o.slug) && (
-                        <Link href={`/promo-codes/${o.slug}`} style={{ fontSize: 13, fontWeight: 700, color: brand }}>
+                        <Link href={`/promo-codes/${o.slug}`} style={{ fontSize: 13.5, fontWeight: 600, color: "#E8EDF0" }}>
                           How code {o.promoCode} works →
                         </Link>
                       )}
                       {hasFactArticle(o.slug) && (
-                        <Link href={`/casinos/${o.slug}/facts`} style={{ fontSize: 13, fontWeight: 700, color: "#E8EDF0" }}>
+                        <Link href={`/casinos/${o.slug}/facts`} style={{ fontSize: 13.5, fontWeight: 600, color: "#E8EDF0" }}>
                           10 facts about {o.name} →
                         </Link>
                       )}
@@ -367,38 +367,38 @@ export function CasinoReport({ e }: { e: EntityView }) {
               )}
               <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 12 }}>
                 {o.signupUrl ? (
-                  <a href={o.signupUrl} target="_blank" rel="nofollow sponsored noopener" data-copy-code={o.promoCode} style={{ display: "inline-flex", alignItems: "center", gap: 10, padding: "15px 26px", borderRadius: 11, background: brand, color: "#0A0D0F", fontSize: 15, fontWeight: 800, boxShadow: `0 10px 30px ${brand}40` }}>
-                    Claim offer at {o.name} <span aria-hidden>→</span>
+                  <a href={o.signupUrl} target="_blank" rel="nofollow sponsored noopener" data-copy-code={o.promoCode} className="csg-card-btn" style={{ display: "inline-flex", alignItems: "center", gap: 10, padding: "14px 24px", borderRadius: 11, background: GOLD, color: "#141007", fontSize: 15, fontWeight: 700 }}>
+                    Claim offer at {o.name} <span aria-hidden>↗</span>
                   </a>
                 ) : null}
                 <a href="#bonuses" style={{ padding: "15px 20px", borderRadius: 11, border: "1px solid rgba(255,255,255,.16)", color: "#DCE5E9", fontSize: 14.5, fontWeight: 600 }}>
                   See the terms
                 </a>
               </div>
-              <div style={{ marginTop: 14, fontFamily: MONO, fontSize: 10.5, color: "#83919A" }}>
+              <div style={{ marginTop: 14, fontSize: 12, color: "#67747C" }}>
                 18+ · T&amp;Cs apply{o.affiliate ? " · Affiliate link" : ""} · Facts from {host(offer?.sourceUrl ?? sheet?.groups[0]?.facts[0]?.sourceUrl) || `${o.name}'s own pages`}
               </div>
             </div>
 
             {/* Key numbers */}
-            <div style={{ padding: 22, borderRadius: 22, background: "rgba(12,16,19,.85)", border: `1px solid ${brand}33`, boxShadow: "0 30px 80px rgba(0,0,0,.45)", backdropFilter: "blur(6px)" }}>
-              <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".1em", textTransform: "uppercase", color: "#8E9CA5", marginBottom: 14 }}>Key numbers</div>
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }} data-keep-grid>
+            <div style={{ padding: 22, borderRadius: 18, background: "#0F1316", border: "1px solid rgba(255,255,255,.09)", boxShadow: `inset 0 2px 0 ${brand}` }}>
+              <div style={{ fontSize: 15, fontWeight: 700, color: "#F2F5F7", marginBottom: 14 }}>Key numbers</div>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", border: "1px solid rgba(255,255,255,.07)", borderRadius: 12, overflow: "hidden" }} data-keep-grid>
                 {[
                   ["Withdrawals", pv.label !== "Not stated" ? pv.label : null, wdTime],
                   ["Withdrawal fee", shortAmount(wdFee) === "None" ? "Free" : shortAmount(wdFee) ?? (wdFee ? "Network fee" : null), wdFee],
                   ["Min deposit", shortAmount(minDep), minDep],
                   ["Min withdrawal", shortAmount(minWd), minWd],
-                ].map(([label, value, fact]) => (
-                  <div key={label as string} style={{ padding: "16px 16px 14px", borderRadius: 14, background: "#0F1519", border: "1px solid rgba(255,255,255,.06)" }}>
-                    <div style={{ fontFamily: MONO, fontSize: 9.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#8E9CA5", marginBottom: 6 }}>{label as string}</div>
-                    <div style={{ fontSize: 22, fontWeight: 800, letterSpacing: "-.02em", color: fact ? "#fff" : "#77858E" }}>{fact ? (value as string) ?? "See terms" : "Not stated"}</div>
+                ].map(([label, value, fact], i) => (
+                  <div key={label as string} style={{ padding: "14px 16px", borderLeft: i % 2 ? "1px solid rgba(255,255,255,.07)" : 0, borderTop: i > 1 ? "1px solid rgba(255,255,255,.07)" : 0 }}>
+                    <div style={{ ...LABEL, marginBottom: 4 }}>{label as string}</div>
+                    <div style={{ fontSize: 20, fontWeight: 700, letterSpacing: "-.02em", color: fact ? "#F2F5F7" : "#67747C" }}>{fact ? (value as string) ?? "See terms" : "Not stated"}</div>
                   </div>
                 ))}
               </div>
               {coinList.length > 0 && (
                 <div style={{ marginTop: 16 }}>
-                  <div style={{ fontFamily: MONO, fontSize: 9.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#8E9CA5", marginBottom: 8 }}>{coinList.length} coins</div>
+                  <div style={{ ...LABEL, marginBottom: 8 }}>{coinList.length} coins accepted</div>
                   <CoinList tickers={coinList} />
                 </div>
               )}
@@ -429,12 +429,12 @@ export function CasinoReport({ e }: { e: EntityView }) {
           <Card glow={brand}>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 28 }}>
               <div>
-                <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: brand, marginBottom: 8 }}>{o.noDepositBonus ? "Rewards" : "Welcome offer"}</div>
-                <div style={{ fontSize: 26, lineHeight: 1.15, fontWeight: 800, letterSpacing: "-.02em", color: "#fff", marginBottom: 10 }}>{o.bonusShort ?? o.bonus}</div>
+                <div style={{ fontSize: 13, fontWeight: 600, color: brand, marginBottom: 8 }}>{o.noDepositBonus ? "Rewards" : "Welcome offer"}</div>
+                <div style={{ fontSize: 24, lineHeight: 1.2, fontWeight: 700, letterSpacing: "-.02em", color: "#F2F5F7", marginBottom: 10 }}>{o.bonusShort ?? o.bonus}</div>
                 <div style={{ fontSize: 14, lineHeight: 1.6, color: "#A8B6BE", marginBottom: 14 }}>
                   <More f={offer} max={170} />
                 </div>
-                <span style={{ display: "inline-block", padding: "6px 11px", borderRadius: 100, background: `${brand}1f`, color: brand, fontFamily: MONO, fontSize: 11.5, fontWeight: 700 }}>
+                <span style={{ display: "inline-block", padding: "5px 10px", borderRadius: 7, background: `${brand}1a`, color: brand, fontSize: 12.5, fontWeight: 600 }}>
                   {wv.kind === "none" ? "No wagering on rewards" : `Wagering: ${wv.label}`}
                 </span>
               </div>
@@ -452,19 +452,19 @@ export function CasinoReport({ e }: { e: EntityView }) {
           </Card>
           {rewards.length > 0 && (
             <>
-              <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#00C2CC", margin: "26px 0 12px" }}>Ongoing rewards</div>
+              <h3 style={{ margin: "32px 0 12px", fontSize: 17, fontWeight: 700, color: "#F2F5F7" }}>Ongoing rewards</h3>
               <RewardGrid items={rewards} brand={brand} />
             </>
           )}
           {bonuses.length > 0 && (
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 12, marginTop: 16 }}>
               {bonuses.map((b) => (
-                <div key={b.title} style={{ padding: 20, borderRadius: 16, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
-                  <div style={{ fontFamily: MONO, fontSize: 10, letterSpacing: ".07em", textTransform: "uppercase", color: "#8E9CA5", marginBottom: 6 }}>{b.category}</div>
-                  <div style={{ fontSize: 15, fontWeight: 700, color: "#fff", marginBottom: 8 }}>{b.title}</div>
-                  <div style={{ fontSize: 28, fontWeight: 800, letterSpacing: "-.02em", color: brand, marginBottom: 6 }}>{b.headline}</div>
+                <div key={b.title} style={{ padding: 20, borderRadius: 14, background: "#0D1114", border: "1px solid rgba(255,255,255,.08)" }}>
+                  <div style={{ ...LABEL, marginBottom: 6 }}>{b.category}</div>
+                  <div style={{ fontSize: 15, fontWeight: 700, color: "#F2F5F7", marginBottom: 8 }}>{b.title}</div>
+                  <div style={{ fontSize: 26, fontWeight: 700, letterSpacing: "-.02em", color: brand, marginBottom: 6 }}>{b.headline}</div>
                   <div style={{ fontSize: 12.5, lineHeight: 1.5, color: "#8DA0AA", marginBottom: 10 }}>{b.subCopy}</div>
-                  <a href={b.sourceUrl} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: MONO, fontSize: 10.5, color: "#5FE3E8" }}>{host(b.sourceUrl)} ↗</a>
+                  <a href={b.sourceUrl} target="_blank" rel="noopener noreferrer nofollow" style={{ fontSize: 12, color: "#5FE3E8" }}>{host(b.sourceUrl)} ↗</a>
                 </div>
               ))}
             </div>
@@ -483,7 +483,7 @@ export function CasinoReport({ e }: { e: EntityView }) {
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", gap: 16, marginTop: 16 }}>
             <Card>
-              <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 12 }}>
+              <div style={{ fontSize: 15, fontWeight: 700, color: "#F2F5F7", marginBottom: 12 }}>
                 {coinList.length ? `${coinList.length} coins accepted` : "Coins"}
               </div>
               {coinList.length ? <CoinList tickers={coinList} /> : <div style={{ color: "#8DA0AA", fontSize: 14 }}>Not stated</div>}
@@ -492,7 +492,7 @@ export function CasinoReport({ e }: { e: EntityView }) {
               </div>
             </Card>
             {payRows.some((r) => r.f) && <Card>
-              <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 4 }}>Payment</div>
+              <div style={{ fontSize: 15, fontWeight: 700, color: "#F2F5F7", marginBottom: 4 }}>Payment</div>
               {/* The marks first: whether your rail is there is the question
                   this card exists to answer, and it was buried in a sentence.
                   The operator's own wording stays below with its source. */}
@@ -523,14 +523,14 @@ export function CasinoReport({ e }: { e: EntityView }) {
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", gap: 16, alignItems: "start" }}>
               <Card>
-                <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 12 }}>
+                <div style={{ fontSize: 15, fontWeight: 700, color: "#F2F5F7", marginBottom: 12 }}>
                   {sp.titles.length ? `${sp.titles.length} esports titles` : "Coverage"}
                 </div>
                 {sp.titles.length > 0 && <Chips items={sp.titles} tint="#E8EDF0" />}
                 <Rows rows={[{ k: "Sports", f: sp.sportsbook }, { k: "Racing", f: f("Sportsbook", "Racing") }, { k: "Provider", f: sp.provider }]} />
               </Card>
               <Card>
-                <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 4 }}>Sports bonus</div>
+                <div style={{ fontSize: 15, fontWeight: 700, color: "#F2F5F7", marginBottom: 4 }}>Sports bonus</div>
                 <Rows
                   rows={[
                     { k: "Offer", f: sp.offer },
@@ -573,8 +573,8 @@ export function CasinoReport({ e }: { e: EntityView }) {
           <Section id="faq" eyebrow="Quick answers" title={`${o.name} FAQ`}>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
               {e.faqs.map((q) => (
-                <details key={q.q} style={{ padding: "16px 20px", borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
-                  <summary style={{ cursor: "pointer", fontSize: 15, fontWeight: 700, color: "#E8EDF0" }}>{q.q}</summary>
+                <details key={q.q} style={{ padding: "16px 20px", borderRadius: 14, background: "#0D1114", border: "1px solid rgba(255,255,255,.08)" }}>
+                  <summary style={{ cursor: "pointer", fontSize: 15, fontWeight: 600, color: "#F2F5F7" }}>{q.q}</summary>
                   <p style={{ margin: "10px 0 0", fontSize: 14, lineHeight: 1.65, color: "#A8B6BE" }}>{q.a}</p>
                   {q.href && (
                     <Link href={q.href} style={{ display: "inline-block", marginTop: 8, fontSize: 13.5, fontWeight: 600, color: "#5FE3E8" }}>
@@ -590,7 +590,7 @@ export function CasinoReport({ e }: { e: EntityView }) {
         {/* ALL FACTS */}
         <section id="sources" style={{ scrollMarginTop: 156 }}>
           <details>
-            <summary style={{ cursor: "pointer", padding: "18px 22px", borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)", fontSize: 15, fontWeight: 700, color: "#E8EDF0" }}>
+            <summary style={{ cursor: "pointer", padding: "18px 22px", borderRadius: 14, background: "#0D1114", border: "1px solid rgba(255,255,255,.08)", fontSize: 15, fontWeight: 600, color: "#F2F5F7" }}>
               Every fact and its source ({sheet?.groups.reduce((n, g) => n + g.facts.length, 0) ?? 0})
             </summary>
             <div style={{ marginTop: 16 }}>
@@ -599,39 +599,18 @@ export function CasinoReport({ e }: { e: EntityView }) {
           </details>
         </section>
 
-        {/* CLOSING OFFER — the reader has finished the report; repeat the offer once. */}
-        {o.signupUrl && (
-          <section style={{ marginTop: 44, padding: "30px 32px", borderRadius: 20, background: `radial-gradient(110% 140% at 100% 0%, ${brand}1f, transparent 60%), #0C1013`, border: `1px solid ${brand}3d` }}>
-            <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 20 }}>
-              <div style={{ minWidth: 0, maxWidth: "58ch" }}>
-                <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: brand, marginBottom: 8 }}>
-                  {o.noDepositBonus ? "Rewards" : "Welcome offer"}
-                </div>
-                <div style={{ fontSize: 24, lineHeight: 1.2, fontWeight: 800, letterSpacing: "-.02em", color: "#fff", marginBottom: 8 }}>{o.bonusShort ?? o.bonus}</div>
-                <p style={{ margin: 0, fontSize: 13.5, lineHeight: 1.6, color: "#8DA0AA" }}>
-                  {wv.kind === "none" ? "No wagering on rewards" : `Wagering: ${wv.label}`}
-                  {o.promoCode ? ` · Code ${o.promoCode}` : ""} · 18+, play responsibly
-                </p>
-              </div>
-              <a href={o.signupUrl} target="_blank" rel="nofollow sponsored noopener" data-copy-code={o.promoCode} style={{ display: "inline-flex", alignItems: "center", gap: 10, padding: "15px 26px", borderRadius: 11, background: brand, color: "#0A0D0F", fontSize: 15, fontWeight: 800, whiteSpace: "nowrap", boxShadow: `0 10px 30px ${brand}40` }}>
-                Claim offer at {o.name} <span aria-hidden>→</span>
-              </a>
-            </div>
-          </section>
-        )}
-
         {/* SIDE BY SIDE — the comparisons a reader of this report tends to want next. */}
         {rivals.length > 0 && (
           <section style={{ marginTop: 40 }}>
-            <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".1em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 12 }}>Compare {o.name}</div>
+            <h2 style={{ margin: "0 0 14px", fontSize: 22, letterSpacing: "-.02em", fontWeight: 700, color: "#F2F5F7" }}>Compare {o.name}</h2>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(230px, 1fr))", gap: 12 }}>
               {rivals.map(({ rival, href }) => (
-                <Link key={href} href={href} className="transition-colors hover:border-white/20 hover:bg-white/[0.03]" style={{ display: "flex", alignItems: "center", gap: 12, padding: "14px 16px", borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
+                <Link key={href} href={href} className="transition-colors hover:border-white/20 hover:bg-white/[0.03]" style={{ display: "flex", alignItems: "center", gap: 12, padding: "14px 16px", borderRadius: 14, background: "#0D1114", border: "1px solid rgba(255,255,255,.08)" }}>
                   <span style={{ width: 30, height: 30, flex: "none", borderRadius: 9, overflow: "hidden" }}>
                     <BrandMark slug={rival.slug} mono={rival.mono} tint={tintFor(rival.slug)} radius={9} fontSize={10} />
                   </span>
-                  <span style={{ minWidth: 0, fontSize: 14.5, fontWeight: 700, color: "#E8EDF0" }}>
-                    {o.name} vs {rival.name}
+                  <span style={{ minWidth: 0, fontSize: 14.5, fontWeight: 600, color: "#E8EDF0" }}>
+                    {o.name} <span style={{ color: "#6F7C84", fontWeight: 500 }}>vs</span> {rival.name}
                   </span>
                 </Link>
               ))}

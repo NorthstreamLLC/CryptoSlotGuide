@@ -4,7 +4,6 @@ import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
 import { CodeChip } from "@/components/ui/CodeChip";
 import { hasPromoPage } from "@/lib/promo-pages";
 
-const MONO = "var(--font-jetbrains-mono), monospace";
 const GOLD = "#FFC531";
 
 /**
@@ -24,14 +23,16 @@ function Block({ kicker, title, sub, cta, href, external, code, geoSlug, geoName
   geoName?: string;
   secondary?: { label: string; href: string };
 }) {
-  const button = { padding: "14px 22px", borderRadius: 12, background: "linear-gradient(180deg,#FFD866,#FFC531)", color: "#141007", fontSize: 15.5, fontWeight: 800, whiteSpace: "nowrap" as const };
+  const button = { padding: "13px 22px", borderRadius: 11, background: GOLD, color: "#141007", fontSize: 15, fontWeight: 700, whiteSpace: "nowrap" as const };
+  // Kickers are written in capitals at the call sites; shown in sentence case.
+  const label = kicker.charAt(0) + kicker.slice(1).toLowerCase();
   return (
-    <section aria-label="Next step" style={{ margin: "36px 0", padding: "24px 26px", borderRadius: 18, background: "radial-gradient(80% 140% at 0% 50%, rgba(255,197,49,.14), transparent 60%), #0F1418", border: "1px solid rgba(255,197,49,.32)" }}>
+    <section aria-label="Next step" style={{ margin: "36px 0", padding: "24px 26px", borderRadius: 16, background: "#0F1316", border: "1px solid rgba(255,197,49,.28)" }}>
       <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 18 }}>
         <div style={{ minWidth: 0, flex: "1 1 320px" }}>
-          <div style={{ fontFamily: MONO, fontSize: 11, letterSpacing: ".08em", color: GOLD, marginBottom: 6 }}>{kicker}</div>
-          <div style={{ fontSize: 22, fontWeight: 800, lineHeight: 1.2, color: "#fff" }}>{title}</div>
-          <div style={{ marginTop: 6, fontSize: 14.5, lineHeight: 1.5, color: "#A8B6BE" }}>{sub}</div>
+          <div style={{ fontSize: 13, fontWeight: 600, color: GOLD, marginBottom: 6 }}>{label}</div>
+          <div style={{ fontSize: 21, fontWeight: 700, lineHeight: 1.25, letterSpacing: "-.02em", color: "#F2F5F7" }}>{title}</div>
+          <div style={{ marginTop: 6, fontSize: 14.5, lineHeight: 1.5, color: "#98A6AE" }}>{sub}</div>
           {code && (
             <div style={{ marginTop: 12 }}>
               <CodeChip code={code} tint={GOLD} />
@@ -40,17 +41,17 @@ function Block({ kicker, title, sub, cta, href, external, code, geoSlug, geoName
         </div>
         <div style={{ display: "flex", flexDirection: "column", alignItems: "stretch", gap: 8 }}>
           {external ? (
-            <a href={href} target="_blank" rel="nofollow sponsored noopener" data-copy-code={code ?? undefined} style={{ ...button, textAlign: "center" }}>{cta} ↗</a>
+            <a href={href} target="_blank" rel="nofollow sponsored noopener" data-copy-code={code ?? undefined} className="csg-card-btn" style={{ ...button, textAlign: "center" }}>{cta} ↗</a>
           ) : (
-            <Link href={href} style={{ ...button, textAlign: "center" }}>{cta} →</Link>
+            <Link href={href} className="csg-card-btn" style={{ ...button, textAlign: "center" }}>{cta} →</Link>
           )}
           {secondary && (
-            <Link href={secondary.href} style={{ textAlign: "center", fontSize: 13.5, fontWeight: 700, color: "#FFD36B" }}>{secondary.label}</Link>
+            <Link href={secondary.href} style={{ textAlign: "center", fontSize: 13.5, fontWeight: 600, color: "#C9D3D8" }}>{secondary.label}</Link>
           )}
         </div>
       </div>
       {geoSlug && geoName && <GeoBlockNote slug={geoSlug} name={geoName} compact />}
-      {external && <p style={{ margin: "12px 0 0", fontFamily: MONO, fontSize: 10.5, color: "#7F8D96" }}>Affiliate link: we may earn a commission, which never changes what we report. 18+ · T&amp;Cs apply.</p>}
+      {external && <p style={{ margin: "12px 0 0", fontSize: 12, color: "#67747C" }}>Affiliate link: we may earn a commission, which never changes what we report. 18+ · T&amp;Cs apply.</p>}
     </section>
   );
 }

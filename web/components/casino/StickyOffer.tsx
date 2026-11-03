@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 
-const MONO = "var(--font-jetbrains-mono), monospace";
 
 /**
  * The phone-only claim bar on a report. A report runs several thousand
@@ -10,7 +9,7 @@ const MONO = "var(--font-jetbrains-mono), monospace";
  * so the offer comes back as a bar once the reader is past the hero — and
  * only then, so it never covers the button it is repeating.
  */
-export function StickyOffer({ name, href, offer, note, brand, code }: { name: string; href: string; offer: string; note?: string; brand: string; code?: string }) {
+export function StickyOffer({ name, href, offer, note, code }: { name: string; href: string; offer: string; note?: string; /** No longer drawn: the button is gold sitewide. */ brand?: string; code?: string }) {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
@@ -42,8 +41,8 @@ export function StickyOffer({ name, href, offer, note, brand, code }: { name: st
       }}
     >
       <span style={{ minWidth: 0, flex: 1 }}>
-        <span style={{ display: "block", fontSize: 13.5, fontWeight: 800, color: "#fff", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{offer}</span>
-        <span style={{ display: "block", fontFamily: MONO, fontSize: 10, color: "#8E9CA5", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+        <span style={{ display: "block", fontSize: 13.5, fontWeight: 700, color: "#F2F5F7", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{offer}</span>
+        <span style={{ display: "block", fontSize: 12, color: "#8E9CA4", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
           {name}
           {code ? ` · Code ${code}` : note ? ` · ${note}` : ""}
         </span>
@@ -54,7 +53,7 @@ export function StickyOffer({ name, href, offer, note, brand, code }: { name: st
         rel="nofollow sponsored noopener"
         tabIndex={show ? 0 : -1}
         data-copy-code={code}
-        style={{ flex: "none", padding: "12px 18px", borderRadius: 10, background: brand, color: "#0A0D0F", fontSize: 14, fontWeight: 800, whiteSpace: "nowrap" }}
+        style={{ flex: "none", padding: "12px 18px", borderRadius: 10, background: "#FFC531", color: "#141007", fontSize: 14, fontWeight: 700, whiteSpace: "nowrap" }}
       >
         Claim offer
       </a>

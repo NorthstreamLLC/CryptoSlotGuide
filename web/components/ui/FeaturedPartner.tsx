@@ -10,7 +10,6 @@ import { wagerView } from "@/lib/wager";
 import type { Operator } from "@/lib/types";
 import { inHouseOrder } from "@/lib/house-order";
 
-const MONO = "var(--font-jetbrains-mono), monospace";
 
 /**
  * The top partners (three by default, in house order), placed on pages that
@@ -187,7 +186,7 @@ export function FeaturedPartner({
   return (
     <aside style={{ marginTop: 44, padding: "18px 20px", borderRadius: 16, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
       <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
-        <span style={{ fontFamily: MONO, fontSize: 10, letterSpacing: ".1em", textTransform: "uppercase", color: "#C7A45C" }}>{title}</span>
+        <span style={{ fontSize: 17, fontWeight: 700, letterSpacing: "-.015em", color: "#F2F5F7" }}>{title}</span>
       </div>
       {rows.map(({ o, pitch }, i) => {
         const tint = brandFor(o.slug);
@@ -202,17 +201,17 @@ export function FeaturedPartner({
           >
             {/* Number, mark and text stay on one line; only the buttons wrap. */}
             <div style={{ display: "flex", alignItems: "center", gap: 14, flex: "1 1 300px", minWidth: 0 }}>
-            <span style={{ fontFamily: MONO, fontSize: 11, color: "#5C6A72", width: 12, flex: "none" }}>{i + 1}</span>
+            <span style={{ fontSize: 13, fontWeight: 600, color: "#5E6B73", width: 12, flex: "none" }}>{i + 1}</span>
             <span style={{ width: 44, height: 44, flex: "none", borderRadius: 12, overflow: "hidden", border: `1px solid ${tint}55` }}>
               <BrandMark slug={o.slug} mono={o.mono} tint={tint} radius={12} fontSize={15} />
             </span>
 
             <div style={{ flex: "1 1 auto", minWidth: 0 }}>
               <div style={{ display: "flex", alignItems: "baseline", gap: 9, flexWrap: "wrap" }}>
-                <Link href={`/casinos/${o.slug}`} className="hover:!text-accent" style={{ fontSize: 16, fontWeight: 800, letterSpacing: "-.015em", color: "#fff" }}>
+                <Link href={`/casinos/${o.slug}`} className="hover:!text-accent" style={{ fontSize: 16, fontWeight: 700, letterSpacing: "-.015em", color: "#F2F5F7" }}>
                   {o.name}
                 </Link>
-                <span style={{ fontFamily: MONO, fontSize: 11, color: "#8E9CA5" }}>{o.licence} licence</span>
+                <span style={{ fontSize: 12.5, color: "#75828A" }}>{o.licence} licence</span>
               </div>
               <p style={{ margin: "4px 0 0", maxWidth: "72ch", fontSize: 13.5, lineHeight: 1.55, color: "#A9B8C0", textWrap: "pretty" }}>
                 <strong style={{ color: "#E8EDF0" }}>{o.bonusShort ?? o.bonus}</strong>
@@ -234,7 +233,7 @@ export function FeaturedPartner({
                 target="_blank"
                 rel="noopener sponsored nofollow"
                 className="transition-transform hover:-translate-y-px"
-                style={{ padding: "10px 17px", borderRadius: 9, background: i === 0 ? "#FFC531" : "#00C2CC", color: i === 0 ? "#141007" : "#04191B", fontSize: 13.5, fontWeight: 700, whiteSpace: "nowrap" }}
+                style={{ padding: "10px 17px", borderRadius: 9, background: "#FFC531", color: "#141007", fontSize: 13.5, fontWeight: 700, whiteSpace: "nowrap" }}
               >
                 Visit {o.name} →
               </a>
