@@ -19,6 +19,11 @@ import { VERSUS_ANALYSIS } from "@/lib/versus-analysis";
 import { parsePair } from "@/lib/versus";
 import { FACT_ARTICLES } from "@/lib/fact-articles";
 import { NEWS, newsPath } from "@/lib/news";
+import { logoFor } from "@/lib/logo";
+import { thumbOf } from "@/lib/thumb";
+import { sportsbookOrder } from "@/lib/sports";
+import { venuesInOrder } from "@/lib/prediction-markets";
+import { raceSlugs } from "@/lib/races";
 
 /**
  * The home page is the one page not built through pageMetadata(), so it was
@@ -78,16 +83,26 @@ const CSS = `
 .h-lead { margin: 0 0 30px; max-width: 50ch; font-size: 18px; line-height: 1.6; color: #98A6AE; }
 .h-ctas { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 40px; }
 .h-paths { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid rgba(255,255,255,.08); }
-.h-path { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 15px 4px; border-bottom: 1px solid rgba(255,255,255,.08); }
+.h-path { position: relative; display: flex; align-items: center; gap: 12px; padding: 15px 4px; border-bottom: 1px solid rgba(255,255,255,.08); transition: background .2s; }
+.h-path:hover { background: linear-gradient(90deg, color-mix(in srgb, var(--tint) 9%, transparent), transparent 80%); }
+.h-path-ico { display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; flex: none; border-radius: 10px; background: color-mix(in srgb, var(--tint) 14%, transparent); border: 1px solid color-mix(in srgb, var(--tint) 35%, transparent); color: var(--tint); }
+.h-path-txt { flex: 1; min-width: 0; }
+.h-stack { display: flex; flex: none; }
+.h-stack > span { width: 24px; height: 24px; border-radius: 50%; overflow: hidden; border: 2px solid #0A0D10; background: #0A0D10; }
+.h-stack > span + span { margin-left: -8px; }
+.h-stack img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .h-path:nth-child(odd) { padding-right: 20px; }
 .h-path:nth-child(even) { padding-left: 20px; border-left: 1px solid rgba(255,255,255,.08); }
 .h-path b { display: block; font-size: 15.5px; font-weight: 600; color: #EEF2F4; }
 .h-path small { display: block; margin-top: 2px; font-size: 13px; color: #7E8C94; }
 .h-path i { font-style: normal; color: #5E6B73; transition: transform .15s, color .15s; }
-.h-path:hover i { transform: translateX(3px); color: #fff; }
-.h-also { margin-top: 18px; font-size: 13.5px; color: #6F7C84; }
-.h-also a { color: #AEBAC1; }
-.h-also a:hover { color: #fff; }
+.h-path:hover i { transform: translateX(3px); color: var(--tint); }
+.h-path:hover b { color: #fff; }
+.h-also { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.h-chip { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px 6px 7px; border-radius: 100px; border: 1px solid rgba(255,255,255,.1); background: rgba(255,255,255,.03); font-size: 13.5px; font-weight: 500; color: #C9D3D8; transition: border-color .15s, color .15s; }
+.h-chip:hover { border-color: color-mix(in srgb, var(--tint) 60%, transparent); color: #fff; }
+.h-chip .h-stack > span { width: 20px; height: 20px; }
+.h-chip-dot { width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: color-mix(in srgb, var(--tint) 16%, transparent); color: var(--tint); }
 
 .h-pick { padding: 26px; border: 1px solid rgba(255,197,49,.28); border-radius: 18px; background: #0F1316; }
 .h-pick-top { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
@@ -111,19 +126,19 @@ const CSS = `
 .csg-strip-cta { font-weight: 600; color: #E8EDF0; white-space: nowrap; }
 
 /* Casino list */
-.h-row { display: grid; grid-template-columns: 22px minmax(0, 1.25fr) minmax(0, 1.7fr) minmax(0, .8fr) auto; gap: 20px; align-items: center; padding: 16px 20px; }
+.h-row { display: grid; grid-template-columns: 22px minmax(0, 1.2fr) minmax(0, 1.6fr) minmax(0, .7fr) minmax(0, .7fr) auto; gap: 20px; align-items: center; padding: 16px 20px; transition: background .15s; }
+.h-row:hover { background: rgba(255,255,255,.02); }
 .h-row + .h-row { border-top: 1px solid rgba(255,255,255,.06); }
 .h-rank { font-size: 13px; font-weight: 600; color: #5E6B73; font-variant-numeric: tabular-nums; }
 .h-name { display: flex; align-items: center; gap: 12px; min-width: 0; }
 .h-name b { display: block; font-size: 16px; font-weight: 700; color: #F2F5F7; }
 .h-name small { display: block; margin-top: 1px; font-size: 12.5px; color: #75828A; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .h-offer b { display: block; font-size: 15px; line-height: 1.35; font-weight: 600; color: #E8EDF0; }
-.h-offer span { display: inline-flex; margin-top: 7px; }
 .h-stat small { display: block; font-size: 12px; color: #6F7C84; }
 .h-stat b { display: block; margin-top: 2px; font-size: 14.5px; font-weight: 600; color: #E8EDF0; }
 .h-act { display: flex; align-items: center; gap: 14px; }
 .h-act .h-btn { padding: 10px 18px; font-size: 14px; }
-.h-act a.h-link { font-size: 13.5px; color: #93A1A9; }
+.h-act a.h-link { font-size: 13.5px; color: #93A1A9; white-space: nowrap; }
 .h-act a.h-link:hover { color: #fff; }
 .h-note { margin: 12px 0 0; font-size: 12px; line-height: 1.55; color: #67747C; }
 
@@ -184,11 +199,41 @@ a.h-li:hover b, .h-li-main:hover b { color: #fff; text-decoration: underline; te
   .h-sec { padding-top: 64px; }
   .h-paths { grid-template-columns: 1fr; }
   .h-path:nth-child(odd), .h-path:nth-child(even) { padding: 14px 2px; border-left: 0; }
+  .h-path .h-stack { display: none; }
   .h-pick { padding: 20px; }
   .h-li { padding: 12px 16px; }
   .h-sub { padding: 14px 16px; }
 }
 `;
+
+const ic = (d: string, size = 18) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+    <path d={d} />
+  </svg>
+);
+/** Line icons for the quick links, drawn in each link's colour. */
+const ICONS = {
+  casino: ic("M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm0 4a5 5 0 1 0 0 10 5 5 0 0 0 0-10ZM12 3v4M12 17v4M3 12h4M17 12h4"),
+  gift: ic("M4 11h16v9H4zM3 7h18v4H3zM12 7v13M12 7c-1.5-3-5-3-5-1s3 1 5 1Zm0 0c1.5-3 5-3 5-1s-3 1-5 1Z"),
+  slots: ic("M4 5h16v14H4zM9.3 5v14M14.7 5v14M5.8 10.5h1.8l-1.2 3M11.1 10.5h1.8l-1.2 3M16.4 10.5h1.8l-1.2 3"),
+  globe: ic("M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18ZM3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"),
+  book: ic("M5 4h9a4 4 0 0 1 4 4v12H9a4 4 0 0 1-4-4V4ZM5 16a4 4 0 0 1 4-4h9", 12),
+};
+
+/** A row of overlapping round logos (or slot art, or flags). */
+function Stack({ imgs }: { imgs: string[] }) {
+  if (!imgs.length) return null;
+  return (
+    <span className="h-stack" aria-hidden>
+      {imgs.map((src, i) => (
+        <span key={src} style={{ zIndex: imgs.length - i }}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={src} alt="" width={24} height={24} loading="lazy" decoding="async" />
+        </span>
+      ))}
+    </span>
+  );
+}
 
 export default function HomePage() {
   const { ops } = siteData;
@@ -227,11 +272,23 @@ export default function HomePage() {
   });
   const factTotal = Object.values(FACT_ARTICLES).reduce((n, a) => n + a.facts.length, 0);
 
+  const logo = (slug: string) => logoFor(slug);
+  const casinoImgs = top.slice(0, 3).flatMap((o) => (logo(o.slug) ? [logo(o.slug)!] : []));
+  const codeImgs = codes.filter((o) => !top.slice(0, 3).includes(o)).slice(0, 3).flatMap((o) => (logo(o.slug) ? [logo(o.slug)!] : []));
+  const slotImgs = topSlotRows().slice(0, 3).flatMap((r) => (r.image ? [thumbOf(r.image)] : []));
   const paths = [
-    { t: "Find a casino", d: `${c.casinos} crypto casinos, compared`, href: "/crypto-casinos" },
-    { t: "Bonuses & codes", d: "Wagering spelled out", href: "/bonuses" },
-    { t: "Top slots", d: "Published RTP and where to play", href: "/slots" },
-    { t: "Can I play here?", d: "The law where you live", href: "/legal" },
+    { t: "Find a casino", d: `${c.casinos} casinos compared`, href: "/crypto-casinos", tint: "#2FD3DA", icon: ICONS.casino, imgs: casinoImgs },
+    { t: "Bonuses & codes", d: "Wagering spelled out", href: "/bonuses", tint: "#FFC531", icon: ICONS.gift, imgs: codeImgs },
+    { t: "Top slots", d: "RTP and where to play", href: "/slots", tint: "#FF7EB6", icon: ICONS.slots, imgs: slotImgs },
+    { t: "Can I play here?", d: "The law where you live", href: "/legal", tint: "#57E39A", icon: ICONS.globe, imgs: ["gb", "ca", "br"].map((f) => `/assets/flags/${f}.svg`) },
+  ];
+  const stackOf = (slugs: string[], n: number) => slugs.flatMap((s) => (logo(s) ? [logo(s)!] : [])).slice(0, n);
+  const also = [
+    { t: "Sportsbooks", href: "/sportsbooks", tint: "#57E39A", imgs: stackOf(sportsbookOrder().map((o) => o.slug), 3) },
+    { t: "Prediction markets", href: "/prediction-markets", tint: "#B284FF", imgs: stackOf([...venuesInOrder("crypto"), ...venuesInOrder("fiat")].map((v) => v.slug), 3) },
+    { t: "Wallets", href: "/wallets", tint: "#5FA8FF", imgs: stackOf(["metamask", "phantom", "ledger", "trust-wallet"], 3) },
+    { t: "Races", href: "/races", tint: "#FF9A5C", imgs: stackOf(raceSlugs(), 3) },
+    { t: "Guides", href: "/guides", tint: "#2FD3DA", imgs: [] as string[] },
   ];
 
   return (
@@ -255,17 +312,24 @@ export default function HomePage() {
               <div className="h-paths-wrap">
                 <nav aria-label="Start here" className="h-paths">
                   {paths.map((p) => (
-                    <Link key={p.href} href={p.href} className="h-path">
-                      <span>
+                    <Link key={p.href} href={p.href} className="h-path" style={{ ["--tint" as string]: p.tint }}>
+                      <span className="h-path-ico" aria-hidden>{p.icon}</span>
+                      <span className="h-path-txt">
                         <b>{p.t}</b>
                         <small>{p.d}</small>
                       </span>
+                      <Stack imgs={p.imgs} />
                       <i aria-hidden>→</i>
                     </Link>
                   ))}
                 </nav>
                 <div className="h-also">
-                  Also: <Link href="/sportsbooks">Sportsbooks</Link> · <Link href="/prediction-markets">Prediction markets</Link> · <Link href="/wallets">Wallets</Link> · <Link href="/races">Races</Link> · <Link href="/guides">Guides</Link>
+                  {also.map((x) => (
+                    <Link key={x.href} href={x.href} className="h-chip" style={{ ["--tint" as string]: x.tint }}>
+                      {x.imgs.length ? <Stack imgs={x.imgs} /> : <span className="h-chip-dot" aria-hidden>{ICONS.book}</span>}
+                      {x.t}
+                    </Link>
+                  ))}
                 </div>
               </div>
 
@@ -327,33 +391,30 @@ export default function HomePage() {
                         <small>{licenceLabel(o.licence)}</small>
                       </span>
                     </Link>
-                    <div className="h-offer">
+                    <Link href={reviewPath(o.slug)} className="h-offer">
                       <b>{f.headline}</b>
-                      {o.promoCode && outbound && (
-                        <span>
-                          <CodeChip code={o.promoCode} tint="#FFC531" size="sm" />
-                        </span>
-                      )}
-                    </div>
+                    </Link>
                     <div className="h-stat">
                       <small>Withdrawals</small>
                       <b>{f.withdrawals ?? "See terms"}</b>
                     </div>
+                    <div className="h-stat">
+                      <small>Min deposit</small>
+                      <b>{f.minDeposit ?? "See terms"}</b>
+                    </div>
                     <div className="h-act">
-                      {outbound ? (
-                        <a href={o.signupUrl} target="_blank" rel="nofollow sponsored noopener" data-copy-code={o.promoCode} className="h-btn h-btn-gold">
-                          Visit
+                      <Link href={reviewPath(o.slug)} className="h-btn h-btn-gold">Read review</Link>
+                      {outbound && (
+                        <a href={o.signupUrl} target="_blank" rel="nofollow sponsored noopener" data-copy-code={o.promoCode} className="h-link">
+                          Visit ↗
                         </a>
-                      ) : (
-                        <Link href={reviewPath(o.slug)} className="h-btn h-btn-line">Review</Link>
                       )}
-                      {outbound && <Link href={reviewPath(o.slug)} className="h-link">Review</Link>}
                     </div>
                   </div>
                 );
               })}
             </div>
-            <p className="h-note">Offers are the casinos&apos; own, from their terms. Visit links are affiliate links: we may earn a commission, which never changes what a review says. 18+, play responsibly.</p>
+            <p className="h-note">Offers are the casinos&apos; own, from their terms. Each review links every figure to its source. Visit links are affiliate links: we may earn a commission, which never changes what a review says. 18+, play responsibly.</p>
           </section>
 
           {/* Codes and comparisons */}
