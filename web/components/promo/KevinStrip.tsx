@@ -7,7 +7,7 @@ import { kevinBlocked, kevinLive, KEVIN_PATH } from "@/lib/kevin-promo";
 
 /**
  * The Kevin Hart promotion as a one-line homepage strip. Same rules as
- * KevinCard: removed where the promotion or Roobet isn't available and after
+ * the old homepage card: removed where the promotion or Roobet isn't available and after
  * the campaign ends, with `fallback` in its place.
  */
 export function KevinStrip({ fallback = null, className, style }: { fallback?: ReactNode; className?: string; style?: CSSProperties }) {

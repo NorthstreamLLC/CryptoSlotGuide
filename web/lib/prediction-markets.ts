@@ -2,7 +2,7 @@ import { liteData as siteData } from "./site-lite";
 import { inHouseOrder } from "./house-order";
 import type { PredictionMarket } from "./types";
 import avail from "@/data/predAvailability.json";
-import { COUNTRIES } from "./legal";
+import { COUNTRIES } from "./legal-world";
 
 export type PredictionTab = "crypto" | "fiat";
 

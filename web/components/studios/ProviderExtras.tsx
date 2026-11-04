@@ -3,18 +3,16 @@ import { siteData } from "@/lib/site-data";
 import { inHouseOrder } from "@/lib/house-order";
 import { topSlotRows } from "@/lib/slot-page";
 import { TOP_STUDIOS } from "@/lib/top-studios";
-import { OfferCards } from "@/components/home/OfferCards";
+import { CasinoRankList } from "@/components/casino-index/CasinoRankList";
 import { SlotArtCards } from "@/components/home/SlotArtCards";
 import { BrandMark } from "@/components/ui/BrandMark";
 
-const MONO = "var(--font-jetbrains-mono), monospace";
 
-function Heading({ kicker, title, sub }: { kicker: string; title: string; sub: string }) {
+function Heading({ title, sub }: { kicker?: string; title: string; sub: string }) {
   return (
     <div style={{ marginBottom: 18 }}>
-      <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#FFC531", marginBottom: 8 }}>{kicker}</div>
-      <h2 style={{ margin: "0 0 6px", fontSize: 26, letterSpacing: "-.028em", fontWeight: 800, color: "#fff" }}>{title}</h2>
-      <p style={{ margin: 0, maxWidth: "70ch", fontSize: 14.5, lineHeight: 1.6, color: "#8DA0AA" }}>{sub}</p>
+      <h2 style={{ margin: "0 0 6px", fontSize: 24, letterSpacing: "-.025em", fontWeight: 700, color: "#F2F5F7" }}>{title}</h2>
+      <p style={{ margin: 0, maxWidth: "70ch", fontSize: 14.5, lineHeight: 1.6, color: "#8E9CA4" }}>{sub}</p>
     </div>
   );
 }
@@ -32,7 +30,7 @@ export function ProviderLead({ name }: { name: string }) {
       {casinos.length > 0 && (
         <section>
           <Heading kicker="Where to play" title={`Our top casinos for ${name} slots`} sub={`The casinos we recommend to slot players. Each one names its studios in its own lobby, so search it for ${name} before you deposit.`} />
-          <OfferCards ops={casinos} />
+          <CasinoRankList ops={casinos} />
         </section>
       )}
       {slots.length > 0 && (
@@ -64,9 +62,9 @@ export function ProviderAlternatives({ slug, name }: { slug: string; name: strin
             <span style={{ width: 44, height: 44, borderRadius: 11, overflow: "hidden" }}>
               <BrandMark slug={p.slug} mono={p.mono} tint={p.tint} radius={11} fontSize={12} />
             </span>
-            <span style={{ fontSize: 15.5, fontWeight: 800, color: "#fff" }}>{p.name}</span>
+            <span style={{ fontSize: 15.5, fontWeight: 700, color: "#fff" }}>{p.name}</span>
             <span style={{ fontSize: 12.5, lineHeight: 1.5, color: "#8DA0AA", display: "-webkit-box", WebkitLineClamp: 3, WebkitBoxOrient: "vertical", overflow: "hidden" }}>{p.note}</span>
-            <span style={{ marginTop: "auto", fontFamily: MONO, fontSize: 11, color: "#00C2CC" }}>Studio profile →</span>
+            <span style={{ marginTop: "auto", fontSize: 11, color: "#00C2CC" }}>Studio profile →</span>
           </Link>
         ))}
       </div>

@@ -1,7 +1,6 @@
 import restricted from "@/data/restricted.json";
 import geoEurope from "@/data/geo-europe.json";
 import legalUS from "@/data/legal-us.json";
-import legalWorld from "@/data/legal-world.json";
 import geoWorld from "@/data/geo-world.json";
 import geoUS from "@/data/geo-us.json";
 import ops from "@/data/ops.json";
@@ -14,55 +13,16 @@ import { inHouseOrder } from "@/lib/house-order";
  * precomputed SVG paths (world-atlas 110m, Natural Earth projection; us-atlas
  * Albers), so the map ships as plain markup with no mapping library.
  */
-export interface Source {
-  label: string;
-  url: string;
-}
-
-export interface USState {
-  code: string;
-  name: string;
-  onlineCasino: string;
-  sportsBetting: string;
-  sweepstakes: string;
-  /** Whether a sweepstakes ban comes from a law or regulator action, with the bill or chapter and date. */
-  sweepstakesDetail?: string;
-  pokerOnline?: string;
-  minAge?: string;
-  regulator?: { name: string; url: string };
-  licensedOnlineCasinos?: string[];
-  licensedListUrl?: string;
-  note?: string;
-  sources: Source[];
-}
-
-export interface Country {
-  code: string;
-  name: string;
-  onlineCasino: string;
-  sportsBetting: string;
-  regulator?: { name: string; url: string } | null;
-  minAge?: string;
-  crypto?: string;
-  licensing?: string;
-  note?: string;
-  sources: Source[];
-}
-
-export interface Shape {
-  code: string | null;
-  name: string;
-  d: string;
-  c?: number[];
-}
+export type { Source, USState, Country, Shape } from "./legal-types";
+import type { USState, Shape } from "./legal-types";
+export { COUNTRIES, countryBy } from "./legal-world";
+import { COUNTRIES } from "./legal-world";
 
 export const US_STATES = legalUS as USState[];
-export const COUNTRIES = legalWorld as Country[];
 export const WORLD_SHAPES = geoWorld as Shape[];
 export const US_SHAPES = geoUS as Shape[];
 
 export const stateBy = (code: string) => US_STATES.find((s) => s.code.toLowerCase() === code.toLowerCase()) ?? null;
-export const countryBy = (code: string) => COUNTRIES.find((c) => c.code.toLowerCase() === code.toLowerCase()) ?? null;
 
 export type Tone = "legal" | "partial" | "grey" | "banned" | "none";
 
