@@ -342,7 +342,11 @@ export function getEntityView(type: EntityType, slug: string, opts: { fullTable?
     // them. Four slots currently take this path: Gates of Olympus and Gonzo's
     // Quest Megaways named BC.Game, Big Bass Bonanza and Divine Fortune named
     // Cloudbet, and we hold an affiliate link for neither.
-    const playAt = named?.affiliate && named.signupUrl ? named : siteData.ops.find((o) => o.featured) ?? named;
+    // Every slot page now points at our featured pick (Roobet), the casino the
+    // rest of the slots section recommends; the slot's own named casino is the
+    // fallback only if the featured operator has no live link.
+    const featured = siteData.ops.find((o) => o.featured && o.affiliate && o.signupUrl);
+    const playAt = featured ?? named;
     return {
       type,
       kicker: "Slot profile",
