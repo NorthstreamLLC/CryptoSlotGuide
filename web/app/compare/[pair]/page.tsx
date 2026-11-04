@@ -19,7 +19,6 @@ import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
 import { articleSchema } from "@/lib/schema";
 import { EmailSignup } from "@/components/ui/EmailSignup";
 
-const MONO = "var(--font-jetbrains-mono), monospace";
 
 export function generateStaticParams() {
   return versusPairs().map(([a, b]) => ({ pair: pairSlug(a, b) }));
@@ -64,17 +63,17 @@ export default async function Page({ params }: { params: Promise<{ pair: string 
           ...(an ? [articleSchema(`${a.name} vs ${b.name}`, an.verdict, `/compare/${pair}`, an.published, an.published)] : []),
         ]}
       />
-      <section style={{ borderBottom: "1px solid rgba(255,255,255,.07)", background: `radial-gradient(60% 120% at 0% 0%, ${brandFor(a.slug)}22, transparent 60%), radial-gradient(60% 120% at 100% 0%, ${brandFor(b.slug)}22, transparent 60%), #0A0D10` }}>
+      <section style={{ borderBottom: "1px solid rgba(255,255,255,.07)", background: "#0A0D10" }}>
         <div style={{ maxWidth: 1100, margin: "0 auto", padding: "34px 24px 36px" }}>
-          <div style={{ fontFamily: MONO, fontSize: 11, color: "#83919A", marginBottom: 20 }}>
+          <div style={{ fontSize: 11, color: "#83919A", marginBottom: 20 }}>
             <Link href="/" style={{ color: "#83919A" }}>Home</Link> / <Link href="/compare" style={{ color: "#83919A" }}>Compare</Link> / <span style={{ color: "#A8B6BE" }}>{a.name} vs {b.name}</span>
           </div>
-          <h1 style={{ margin: "0 0 12px", fontSize: "clamp(32px, 4.4vw, 52px)", lineHeight: 1.04, letterSpacing: "-.035em", fontWeight: 800, fontStretch: "114%", color: "#fff", textWrap: "balance" }}>
+          <h1 style={{ margin: "0 0 12px", fontSize: "clamp(32px, 4.4vw, 52px)", lineHeight: 1.04, letterSpacing: "-.035em", fontWeight: 700, color: "#fff", textWrap: "balance" }}>
             {a.name} vs {b.name}
           </h1>
           {an ? (
             <p style={{ margin: 0, maxWidth: "64ch", fontSize: 18, lineHeight: 1.55, color: "#DCE5E9" }}>
-              <span style={{ fontFamily: MONO, fontSize: 11, letterSpacing: ".08em", color: "#FFC531", marginRight: 8 }}>VERDICT</span>
+              <span style={{ fontSize: 13, fontWeight: 600, color: "#FFC531", marginRight: 8 }}>Verdict</span>
               {an.verdict}
             </p>
           ) : (
@@ -93,18 +92,18 @@ export default async function Page({ params }: { params: Promise<{ pair: string 
         </div>
 
         <div style={{ borderRadius: 18, border: "1px solid rgba(255,255,255,.08)", background: "#0C1013", overflow: "hidden" }}>
-          <div className="grid grid-cols-[minmax(110px,.8fr)_1fr_1fr]" style={{ padding: "12px 18px", borderBottom: "1px solid rgba(255,255,255,.07)", fontFamily: MONO, fontSize: 10, letterSpacing: ".08em", textTransform: "uppercase", color: "#8E9CA5", gap: 14 }}>
+          <div className="grid grid-cols-[minmax(110px,.8fr)_1fr_1fr]" style={{ padding: "12px 18px", borderBottom: "1px solid rgba(255,255,255,.07)", fontSize: 12.5, fontWeight: 600, color: "#8E9CA5", gap: 14 }}>
             <span />
             <span>{a.name}</span>
             <span>{b.name}</span>
           </div>
           {rows.map((r, i) => (
             <div key={r.label} className="grid grid-cols-[minmax(110px,.8fr)_1fr_1fr]" style={{ gap: 14, padding: "13px 18px", borderTop: i ? "1px solid rgba(255,255,255,.05)" : undefined, alignItems: "center" }}>
-              <span style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".05em", textTransform: "uppercase", color: "#8DA0AA" }}>{r.label}</span>
+              <span style={{ fontSize: 12.5, fontWeight: 600, color: "#8DA0AA" }}>{r.label}</span>
               {(["a", "b"] as const).map((k) => (
                 <span key={k} style={{ fontSize: 14, lineHeight: 1.4, fontWeight: r.edge === k ? 800 : 600, color: r[k] ? (r.edge === k ? "#7BE0B8" : "#E8EDF0") : "#77858E" }}>
                   {r[k] ?? "—"}
-                  {r.edge === k && <span style={{ marginLeft: 6, fontFamily: MONO, fontSize: 9.5, color: "#2FB67A" }}>BETTER</span>}
+                  {r.edge === k && <span style={{ marginLeft: 6, fontSize: 12, color: "#2FB67A" }}>BETTER</span>}
                 </span>
               ))}
             </div>
@@ -115,14 +114,14 @@ export default async function Page({ params }: { params: Promise<{ pair: string 
           <>
             {an.sections.map((sec) => (
               <section key={sec.title} style={{ marginTop: 30 }}>
-                <h2 style={{ margin: "0 0 10px", fontSize: 22, fontWeight: 800, letterSpacing: "-.02em", color: "#fff" }}>{sec.title}</h2>
+                <h2 style={{ margin: "0 0 10px", fontSize: 22, fontWeight: 700, letterSpacing: "-.02em", color: "#fff" }}>{sec.title}</h2>
                 <p style={{ margin: "0 0 10px", maxWidth: "75ch", fontSize: 15.5, lineHeight: 1.7, color: "#B7C4CB" }}>{sec.body}</p>
                 <span style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
                   {sec.cite.flatMap((c) => {
                     const f = getSpecFact(c.slug, c.group, c.label);
                     return f?.sourceUrl ? [{ c, href: f.sourceUrl }] : [];
                   }).map(({ c, href }) => (
-                    <a key={c.slug + c.label} href={href} target="_blank" rel="noopener noreferrer nofollow" style={{ padding: "4px 10px", borderRadius: 100, border: `1px solid ${brandFor(c.slug)}44`, fontFamily: MONO, fontSize: 10.5, color: "#5FE3E8" }}>
+                    <a key={c.slug + c.label} href={href} target="_blank" rel="noopener noreferrer nofollow" style={{ padding: "4px 10px", borderRadius: 100, border: `1px solid ${brandFor(c.slug)}44`, fontSize: 10.5, color: "#5FE3E8" }}>
                       {nameOf(c.slug)} · {c.label.toLowerCase()} ↗
                     </a>
                   ))}
@@ -137,7 +136,7 @@ export default async function Page({ params }: { params: Promise<{ pair: string 
 
         {others.length > 0 && (
           <>
-            <h2 style={{ margin: "34px 0 12px", fontSize: 22, fontWeight: 800, letterSpacing: "-.02em", color: "#fff" }}>More comparisons</h2>
+            <h2 style={{ margin: "34px 0 12px", fontSize: 22, fontWeight: 700, letterSpacing: "-.02em", color: "#fff" }}>More comparisons</h2>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
               {others.map(([x, y]) => (
                 <Link key={pairSlug(x, y)} href={`/compare/${pairSlug(x, y)}`} style={{ padding: "8px 13px", borderRadius: 100, background: "#0C1013", border: "1px solid rgba(255,255,255,.08)", fontSize: 13, fontWeight: 600, color: "#C6D1D7" }}>
@@ -179,20 +178,20 @@ const nameOf = (slug: string) => siteData.ops.find((o) => o.slug === slug)?.name
 function Side({ o, wins, pickIf }: { o: Operator; wins: string[]; pickIf?: string[] }) {
   const brand = brandFor(o.slug);
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: 12, padding: 20, borderRadius: 16, background: `radial-gradient(120% 90% at 100% 0%, ${brand}1a, transparent 60%), #0C1013`, border: `1px solid ${brand}40` }}>
+    <div style={{ display: "flex", flexDirection: "column", gap: 12, padding: 20, borderRadius: 16, background: "#0C1013", border: `1px solid ${brand}40` }}>
       <span style={{ display: "flex", alignItems: "center", gap: 12 }}>
         <span style={{ width: 40, height: 40, flex: "none", borderRadius: 10, overflow: "hidden" }}>
           <BrandMark slug={o.slug} mono={o.mono} tint={brand} radius={10} fontSize={12} />
         </span>
-        <span style={{ fontSize: 20, fontWeight: 800, color: "#fff" }}>{o.name}</span>
+        <span style={{ fontSize: 20, fontWeight: 700, color: "#fff" }}>{o.name}</span>
       </span>
-      <span style={{ fontSize: 15.5, lineHeight: 1.3, fontWeight: 800, color: "#fff" }}>{o.bonusShort ?? o.bonus}</span>
+      <span style={{ fontSize: 15.5, lineHeight: 1.3, fontWeight: 700, color: "#fff" }}>{o.bonusShort ?? o.bonus}</span>
       {pickIf ? (
         <span style={{ display: "flex", flexDirection: "column", gap: 7 }}>
-          <span style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".08em", color: brand }}>PICK {o.name.toUpperCase()} IF</span>
+          <span style={{ fontSize: 12.5, fontWeight: 600, color: brand }}>Pick {o.name} if</span>
           {pickIf.map((t) => (
             <span key={t} style={{ display: "flex", gap: 8, fontSize: 14, lineHeight: 1.45, color: "#DCE5E9" }}>
-              <span aria-hidden style={{ color: brand, fontWeight: 800 }}>✓</span>
+              <span aria-hidden style={{ color: brand, fontWeight: 700 }}>✓</span>
               {t}
             </span>
           ))}
@@ -200,8 +199,8 @@ function Side({ o, wins, pickIf }: { o: Operator; wins: string[]; pickIf?: strin
       ) : (
         <span style={{ fontSize: 13, color: "#8DA0AA" }}>{wins.length ? `Better on: ${wins.join(", ").toLowerCase()}` : "Level on the measurable rows"}</span>
       )}
-      <Link href={`/casinos/${o.slug}`} style={{ marginTop: "auto", display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 6, padding: "11px 14px", borderRadius: 10, background: o.featured ? brand : "#00C2CC", color: "#0A0D0F", fontSize: 13.5, fontWeight: 800 }}>
-        View {o.name} offer <Icon name="arrow" size={14} />
+      <Link href={`/casinos/${o.slug}`} style={{ marginTop: "auto", display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 6, padding: "11px 14px", borderRadius: 10, background: "#FFC531", color: "#141007", fontSize: 13.5, fontWeight: 700 }}>
+        Read the {o.name} review <Icon name="arrow" size={14} />
       </Link>
     </div>
   );
@@ -209,16 +208,15 @@ function Side({ o, wins, pickIf }: { o: Operator; wins: string[]; pickIf?: strin
 
 /** The sign-up box for one side of an analysed pair: its code, the claim link and its code page. */
 function Claim({ o }: { o: Operator }) {
-  const brand = brandFor(o.slug);
   const code = o.affiliate && o.signupUrl ? o.promoCode : null;
   if (!code) return null;
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: 12, padding: "20px 22px", borderRadius: 16, background: `radial-gradient(90% 120% at 0% 0%, ${brand}1c, transparent 60%), #0F1418`, border: "1px solid rgba(255,197,49,.3)" }}>
-      <span style={{ fontSize: 18, fontWeight: 800, color: "#fff" }}>Sign up at {o.name} with {code}</span>
+    <div style={{ display: "flex", flexDirection: "column", gap: 12, padding: "20px 22px", borderRadius: 16, background: "#0F1418", border: "1px solid rgba(255,197,49,.3)" }}>
+      <span style={{ fontSize: 18, fontWeight: 700, color: "#fff" }}>Sign up at {o.name} with {code}</span>
       <span style={{ fontSize: 14, lineHeight: 1.5, color: "#A8B6BE" }}>{o.codePerk?.short ?? o.bonusShort ?? o.bonus}</span>
       <CodeChip code={code} tint="#FFC531" />
       <span style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 14 }}>
-        <a href={o.signupUrl!} target="_blank" rel="nofollow sponsored noopener" data-copy-code={code} style={{ padding: "12px 18px", borderRadius: 11, background: "linear-gradient(180deg,#FFD866,#FFC531)", color: "#141007", fontSize: 14.5, fontWeight: 800 }}>Claim at {o.name} ↗</a>
+        <a href={o.signupUrl!} target="_blank" rel="nofollow sponsored noopener" data-copy-code={code} style={{ padding: "12px 18px", borderRadius: 11, background: "#FFC531", color: "#141007", fontSize: 14.5, fontWeight: 700 }}>Claim at {o.name} ↗</a>
         {hasPromoPage(o.slug) && <Link href={`/promo-codes/${o.slug}`} style={{ fontSize: 13.5, fontWeight: 700, color: "#FFD36B" }}>How the code works →</Link>}
       </span>
       <GeoBlockNote slug={o.slug} name={o.name} compact />

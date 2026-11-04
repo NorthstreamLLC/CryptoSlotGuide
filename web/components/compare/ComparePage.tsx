@@ -33,19 +33,19 @@ export function ComparePage() {
 
   return (
     <main>
-      <section style={{ borderBottom: "1px solid rgba(255,255,255,.07)", background: "radial-gradient(110% 100% at 20% 0%, rgba(0,194,204,.09), transparent 58%), #090C0F" }}>
+      <section style={{ borderBottom: "1px solid rgba(255,255,255,.07)", background: "#090C0F" }}>
         <div style={{ maxWidth: 1400, margin: "0 auto", padding: "48px 40px 36px" }}>
-          <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 16 }}>
+          <div style={{ fontSize: 12.5, fontWeight: 600, color: "#00C2CC", marginBottom: 16 }}>
             Compare builder
           </div>
-          <h1 style={{ margin: "0 0 14px", fontSize: 50, lineHeight: 1.02, letterSpacing: "-.038em", fontWeight: 800, fontStretch: "116%", color: "#fff" }}>
+          <h1 style={{ margin: "0 0 14px", fontSize: 50, lineHeight: 1.02, letterSpacing: "-.038em", fontWeight: 700, color: "#fff" }}>
             Build your own head to head
           </h1>
           <p style={{ margin: "0 0 26px", maxWidth: "70ch", fontSize: 16.5, lineHeight: 1.65, color: "#93A3AC", textWrap: "pretty" }}>
             Pick up to four operators and we&apos;ll generate the comparison from the same figures every review uses. Winners are marked per row; ties are marked as ties rather than resolved.
           </p>
           <div style={{ display: "flex", alignItems: "center", gap: 12, flexWrap: "wrap", marginBottom: 14 }}>
-            <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".06em", textTransform: "uppercase", color: "#83919A" }}>{picked.length} of 4 selected</span>
+            <span style={{ fontSize: 12.5, fontWeight: 600, color: "#83919A" }}>{picked.length} of 4 selected</span>
             {/* Presets: our picks in house order, and the three measured
                 cuts the index pages use, four each. The reader can still
                 toggle any chip after. */}
@@ -62,7 +62,7 @@ export function ComparePage() {
                 type="button"
                 onClick={() => setPicked(list.map((o) => o.slug))}
                 className="hover:!border-white/30 hover:!text-white"
-                style={{ padding: "6px 12px", borderRadius: 6, border: "1px solid rgba(0,194,204,.35)", background: "rgba(0,194,204,.08)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#5FE3E8", cursor: "pointer" }}
+                style={{ padding: "6px 12px", borderRadius: 6, border: "1px solid rgba(0,194,204,.35)", background: "rgba(0,194,204,.08)", fontSize: 11, color: "#5FE3E8", cursor: "pointer" }}
               >
                 {label}
               </button>
@@ -71,7 +71,7 @@ export function ComparePage() {
               type="button"
               onClick={() => setPicked(["roobet", "stake"])}
               className="hover:!border-white/30 hover:!text-white"
-              style={{ padding: "6px 12px", borderRadius: 6, border: "1px solid rgba(255,255,255,.12)", background: "transparent", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".05em", textTransform: "uppercase", color: "#A8B6BE" }}
+              style={{ padding: "6px 12px", borderRadius: 6, border: "1px solid rgba(255,255,255,.12)", background: "transparent", fontSize: 12.5, fontWeight: 600, color: "#A8B6BE" }}
             >
               reset
             </button>
@@ -104,7 +104,7 @@ export function ComparePage() {
           <>
             <div style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 14, overflowX: "auto", background: "#0C1013", boxShadow: "0 12px 40px rgba(0,0,0,.35)" }}>
               <div style={{ display: "flex", minWidth: 760, borderBottom: "1px solid rgba(255,255,255,.07)", background: "#101519" }}>
-                <div style={{ width: 230, flex: "none", padding: "16px 18px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".07em", textTransform: "uppercase", color: "#83919A" }}>
+                <div style={{ width: 230, flex: "none", padding: "16px 18px", fontSize: 12.5, fontWeight: 600, color: "#83919A" }}>
                   Criterion
                 </div>
                 {cmpOps.map((o) => (
@@ -115,7 +115,7 @@ export function ComparePage() {
                     <Link href={o.hasCustomReview ? "/casinos/roobet" : `/casinos/${o.slug}`} className="hover:!text-accent" style={{ display: "block", fontSize: 14, fontWeight: 700, color: "#fff" }}>
                       {o.name}
                     </Link>
-                    <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#83919A", marginTop: 2 }}>{o.licence}</div>
+                    <div style={{ fontSize: 11, color: "#83919A", marginTop: 2 }}>{o.licence}</div>
                   </div>
                 ))}
               </div>
@@ -123,7 +123,7 @@ export function ComparePage() {
                 <div key={r.label} style={{ display: "flex", minWidth: 760, borderBottom: "1px solid rgba(255,255,255,.05)" }}>
                   <div style={{ width: 230, flex: "none", padding: "15px 18px", fontSize: 13.5, fontWeight: 600, color: "#B7C4CB" }}>{r.label}</div>
                   {r.cells.map((c, i) => (
-                    <div key={i} style={{ flex: 1, minWidth: 150, padding: "15px 18px", borderLeft: "1px solid rgba(255,255,255,.05)", background: c.bg, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12.5, color: c.color, fontWeight: Number(c.weight) }}>
+                    <div key={i} style={{ flex: 1, minWidth: 150, padding: "15px 18px", borderLeft: "1px solid rgba(255,255,255,.05)", background: c.bg, fontSize: 12.5, color: c.color, fontWeight: Number(c.weight) }}>
                       {c.v}
                     </div>
                   ))}
