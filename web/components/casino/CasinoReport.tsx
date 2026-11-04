@@ -353,7 +353,7 @@ export function CasinoReport({ e }: { e: EntityView }) {
                       )}
                       {hasFactArticle(o.slug) && (
                         <Link href={`/casinos/${o.slug}/facts`} style={{ fontSize: 13.5, fontWeight: 600, color: "#E8EDF0" }}>
-                          10 facts about {o.name} →
+                          Facts about {o.name} →
                         </Link>
                       )}
                     </div>
@@ -644,6 +644,7 @@ export function CasinoReport({ e }: { e: EntityView }) {
         <ReportIssue subject={o.name} />
         <NextSteps
           steps={[
+            ...(hasFactArticle(o.slug) ? [{ href: `/casinos/${o.slug}/facts`, label: `Facts about ${o.name}`, hint: "Who runs it, its licence and the rules that catch players out, each with its source." }] : []),
             { href: "/crypto-casinos", label: "All crypto casinos", hint: `Filter ${siteData.ops.length} casinos by payout speed, KYC, wagering and sportsbook.` },
             { href: "/bonuses", label: "Every bonus, side by side", hint: "Welcome offers and ongoing rewards with the wagering each one carries." },
             ...(raceFor(o.slug) ? [{ href: "/races", label: "Races & raffles", hint: "The recurring prize pools running at each casino, and what they pay." }] : []),

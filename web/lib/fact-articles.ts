@@ -1165,6 +1165,2993 @@ export const FACT_ARTICLES: Record<string, FactArticle> = {
       },
     ],
   },
+  "1win": {
+    "intro": "1win runs a large casino and sportsbook, but its own pages and its terms don't always tell the same story. Here are ten things worth knowing before you sign up, each checked against 1win's own pages or its regulator's register.",
+    "published": "2026-11-04",
+    "glance": [
+      {
+        "k": "Licence",
+        "v": "Curaçao"
+      },
+      {
+        "k": "Wagering",
+        "v": "30× bonus"
+      },
+      {
+        "k": "Max bonus",
+        "v": "$500"
+      },
+      {
+        "k": "ID check",
+        "v": "Over $500"
+      }
+    ],
+    "facts": [
+      {
+        "icon": "🏛️",
+        "title": "Its Curaçao licence reads \"assessment in progress\"",
+        "body": "1Win N.V. holds licence OGL/2024/587/0621 on the Curaçao Gaming Authority's register dated 14 Sep 2026. It was issued on 6 Sep 2025, the listed expiry of 6 Mar 2026 has passed, and the status reads \"Assessment in progress\". 1win's own pages don't name 1Win N.V.",
+        "group": "Compliance",
+        "label": "Register check"
+      },
+      {
+        "icon": "🔍",
+        "title": "Its own pages name no licence or regulator",
+        "body": "Neither its terms nor its footer give a licence number or a regulator. The footer shows a Gamecheck Trust Seal, and its FAQ says only that it operates under an international licence.",
+        "group": "Compliance",
+        "label": "Licence"
+      },
+      {
+        "icon": "🎁",
+        "title": "The first-deposit bonus carries 30× wagering",
+        "body": "Its bonus card shows a 100% first-deposit bonus with 30× wagering, and its terms say the requirement applies to the bonus amount only.",
+        "group": "Bonus terms",
+        "label": "Wagering"
+      },
+      {
+        "icon": "🔒",
+        "title": "The first-deposit bonus is capped at $500",
+        "body": "Its bonus card lists a maximum bonus of $500 and a maximum withdrawal of ×1.",
+        "group": "Bonus terms",
+        "label": "Max cashout"
+      },
+      {
+        "icon": "⚠️",
+        "title": "Withdrawing while a bonus is active cancels it",
+        "body": "Bonus funds sit in a separate balance and are only used once your real balance drops below $0.50 with no open bets. Withdrawing while a bonus is active or pending cancels it, and so does activating a queued bonus.",
+        "group": "Bonus terms",
+        "label": "Bonus rules"
+      },
+      {
+        "icon": "💰",
+        "title": "Rakeback only starts at Bronze 2",
+        "body": "From Bronze 2, rakeback is credited win or lose on slots, live, table and 1win games, with crypto bets earning a higher percentage. It is worked out from your stake and the game's house edge, and carries x1 wagering before you can withdraw it.",
+        "group": "Bonus terms",
+        "label": "Rakeback"
+      },
+      {
+        "icon": "👑",
+        "title": "Its VIP programme has 20 levels",
+        "body": "You start at Bronze 1 and climb by lifetime turnover, from US$5,000 for Bronze 2 to US$5,000,000,000 for Black 5. 1win says exclusive privileges start at Gold 3, which takes US$1,000,000.",
+        "group": "Bonus terms",
+        "label": "VIP levels"
+      },
+      {
+        "icon": "⏱️",
+        "title": "Its guide says 3 minutes, its terms say up to 5 days",
+        "body": "Its crypto withdrawal guide says payouts usually confirm in about 3 minutes on TRC-20, BEP-20 and TON. Its terms allow 1 to 60 minutes for up to $50, and up to 5 days above that, with up to 3 more business days possible.",
+        "group": "Payouts & fees",
+        "label": "Stated withdrawal time"
+      },
+      {
+        "icon": "🪪",
+        "title": "ID can be requested once withdrawals pass $500",
+        "body": "Its crypto guide says KYC isn't mandatory on every withdrawal, but its terms let it ask for ID once total withdrawals pass $500, and for ID, proof of address or a bank statement at any time.",
+        "group": "Compliance",
+        "label": "KYC policy"
+      },
+      {
+        "icon": "🌍",
+        "title": "It isn't open in the US, the UK or Australia",
+        "body": "Its restricted list includes the United States, the United Kingdom, Australia, France, Germany, Spain, Italy, the Netherlands and Curaçao among many others, and VPNs are prohibited.",
+        "group": "Compliance",
+        "label": "Restricted countries"
+      }
+    ]
+  },
+  "bc-game": {
+    "intro": "BC.Game is one of the longest-running crypto casinos, with a bonus system built around locked rakeback rather than wagering. Here are ten things worth knowing before you sign up, each checked against BC.Game's own pages.",
+    "published": "2026-11-04",
+    "glance": [
+      {
+        "k": "Licence",
+        "v": "Anjouan"
+      },
+      {
+        "k": "Deposit bonus",
+        "v": "Up to 360%"
+      },
+      {
+        "k": "Weekly raffle",
+        "v": "$20,000"
+      },
+      {
+        "k": "ID check",
+        "v": "ID + selfie"
+      }
+    ],
+    "facts": [
+      {
+        "icon": "🏛️",
+        "title": "It's licensed in Anjouan",
+        "body": "Its licence is ALSI-202410011-FI1 from Anjouan, in the Union of Comoros.",
+        "group": "Compliance",
+        "label": "Licence"
+      },
+      {
+        "icon": "🏢",
+        "title": "Its operator is registered in Belize",
+        "body": "BC.Game names Twocent Technology Limited, registration 000041939, on Sea Urchin Street in San Pedro, Ambergris Caye.",
+        "group": "Compliance",
+        "label": "Company"
+      },
+      {
+        "icon": "📜",
+        "title": "It holds separate permits in Nigeria and Mexico",
+        "body": "Its licences page lists bcbet.ng under a Nigerian National Sports Betting Permit (#2005793, to 31 Jul 2028) and bcgame.mx under Mexican permit DGAJS/SCEVF/P-06/2005-Ter.",
+        "group": "Compliance",
+        "label": "Other licences"
+      },
+      {
+        "icon": "🎁",
+        "title": "Its deposit bonus resets every month, up to 360%",
+        "body": "The Monthly 4-Deposit Bonus pays 180%, 240%, 300% and then 360% across four deposits, claimed in order and reset on the 1st at 00:00 UTC. Each bonus is added as locked rakeback rather than bonus cash.",
+        "group": "Bonus terms",
+        "label": "Standing offer"
+      },
+      {
+        "icon": "🔓",
+        "title": "The bonus unlocks as you play, not by a multiplier",
+        "body": "There's no wagering multiplier: each bonus sits as locked rakeback and is released at amount wagered × house edge × 1%, at a rate set by game type, house edge and turnover.",
+        "group": "Bonus terms",
+        "label": "Wagering rules"
+      },
+      {
+        "icon": "🛡️",
+        "title": "New players get 20% of net losses back, up to $5,000",
+        "body": "A Welcome Shield covers 20% of net losses up to $5,000 for a limited time after joining. Eligible VIPs can also request lossback in real money through support, with no wagering and no expiry once issued.",
+        "group": "Bonus terms",
+        "label": "Cashback"
+      },
+      {
+        "icon": "🎟️",
+        "title": "A $20,000 raffle pays 150 players every week",
+        "body": "Wager $100 in a day for a ticket, then earn one more per $1,000 wagered, up to 100 a week. The draw runs every Monday at 12:00 UTC, paying $5,000 for first place down to $20 for 51st to 150th.",
+        "group": "Bonus terms",
+        "label": "Weekly raffle"
+      },
+      {
+        "icon": "🔐",
+        "title": "Changing your password freezes withdrawals for 24 hours",
+        "body": "Withdrawals are suspended for 24 hours after any password change.",
+        "group": "Payouts & fees",
+        "label": "Withdrawal holds"
+      },
+      {
+        "icon": "🪪",
+        "title": "Its basic ID check needs a selfie from five angles",
+        "body": "Basic KYC is a government photo ID, front and back, plus a selfie from five angles. Advanced KYC, if requested, adds proof of address from the last 3 months.",
+        "group": "Compliance",
+        "label": "KYC policy"
+      },
+      {
+        "icon": "🤝",
+        "title": "Leicester City is on its partner list",
+        "body": "BC.Game became Official Principal Partner of Leicester City Football Club in 2024, and its Sponsorships menu also lists Jason Derulo, Lil Pump, Colby Covington, the Abu Dhabi T10 League and its own BC Game Esports team.",
+        "group": "Compliance",
+        "label": "Partners"
+      }
+    ]
+  },
+  "500-casino": {
+    "intro": "500 Casino grew out of CS2 and Rust skin gambling, and it still pays out in skins as well as crypto. Here are ten things worth knowing before you sign up, each checked against 500 Casino's own pages.",
+    "published": "2026-11-04",
+    "glance": [
+      {
+        "k": "Licence",
+        "v": "Curaçao"
+      },
+      {
+        "k": "Welcome",
+        "v": "300% boost"
+      },
+      {
+        "k": "Bonus wagering",
+        "v": "40×"
+      },
+      {
+        "k": "Max bet",
+        "v": "$100"
+      }
+    ],
+    "facts": [
+      {
+        "icon": "🏢",
+        "title": "It is run by Perfect Storm B.V. in Curaçao",
+        "body": "Its operator is Perfect Storm B.V., Curaçao registration 150536.",
+        "group": "Compliance",
+        "label": "Company"
+      },
+      {
+        "icon": "🏛️",
+        "title": "It holds a Curaçao licence",
+        "body": "Its licence is OGL/2024/1354/0882 from the Curaçao Gaming Control Board.",
+        "group": "Compliance",
+        "label": "Licence"
+      },
+      {
+        "icon": "🎁",
+        "title": "Its 300% welcome bonus is a rakeback boost, not cash",
+        "body": "A first eligible deposit over $25 adds 300% of the deposit, up to $15,000, as a rakeback boost plus 50 free spins. The most you can withdraw from the offer is 3x the rakeback boost plus $1,000 from the free spins.",
+        "group": "Bonus terms",
+        "label": "Standing offer"
+      },
+      {
+        "icon": "🐢",
+        "title": "The boost unlocks $1 for every $400 wagered",
+        "body": "The rakeback boost releases $1 per $400 you wager, and the free-spin bonus balance carries 40× wagering on casino games.",
+        "group": "Bonus terms",
+        "label": "Wagering"
+      },
+      {
+        "icon": "⏳",
+        "title": "You have 7 days to make the qualifying deposit",
+        "body": "Deposit within 7 days of registering. The rakeback boost then lasts 90 days, free spins must be claimed within 48 hours, and unclaimed bonus balance is lost after 14 days.",
+        "group": "Bonus terms",
+        "label": "Expiry"
+      },
+      {
+        "icon": "🎯",
+        "title": "Bonus-balance bets are capped at $100",
+        "body": "Each bet made with bonus balance is limited to $100.",
+        "group": "Bonus terms",
+        "label": "Max bet"
+      },
+      {
+        "icon": "⌚",
+        "title": "Reaching level 1200 pays a Rolex",
+        "body": "VIP starts at Level 500 and runs through 12 tiers of 100 levels each, from Silver to Supernova. A direct VIP host starts at Sapphire, and reaching level 1200 (Obsidian) pays a Rolex watch.",
+        "group": "Bonus terms",
+        "label": "Perks by level"
+      },
+      {
+        "icon": "🎮",
+        "title": "You can cash out in crypto or in CS2 and Rust skins",
+        "body": "500 Casino doesn't offer direct real-money withdrawals: payouts go out in crypto or as P2P items for CS2 and Rust via a connected Steam account. You need to be at least Level 1 with a previous deposit, and no maximum withdrawal figure is published.",
+        "group": "Payouts & fees",
+        "label": "Withdrawal limits"
+      },
+      {
+        "icon": "🏁",
+        "title": "Its own pages disagree on how often its leaderboards run",
+        "body": "The rewards overview, dated 21 July 2026, describes Weekly and Daily Royales, while the Royales article describes Monthly Royales in which the top 100 share a $250,000 pool with a $100,000 top prize.",
+        "group": "Bonus terms",
+        "label": "Leaderboards"
+      },
+      {
+        "icon": "🪪",
+        "title": "You get 7 days to send KYC documents",
+        "body": "The casino may request any KYC documentation, which has to be provided within 7 calendar days.",
+        "group": "Compliance",
+        "label": "KYC policy"
+      }
+    ]
+  },
+  "sportsbet-io": {
+    "intro": "Sportsbet.io is a crypto sportsbook first, with a casino alongside and two Premier League clubs on its partner list. Here are ten things worth knowing before you sign up, each checked against Sportsbet.io's own pages.",
+    "published": "2026-11-04",
+    "glance": [
+      {
+        "k": "Licence",
+        "v": "Curaçao"
+      },
+      {
+        "k": "Welcome",
+        "v": "100% to 300 USDT"
+      },
+      {
+        "k": "Max cashout",
+        "v": "3,000 USDT"
+      },
+      {
+        "k": "Crypto fee",
+        "v": "Covered"
+      }
+    ],
+    "facts": [
+      {
+        "icon": "🏢",
+        "title": "Sportsbet.io is run by mBet Solutions N.V. in Curaçao",
+        "body": "Its operator is mBet Solutions N.V., number 129230, at Schout Bij Nacht Doormanweg 40, with some payments handled by its subsidiary mProcessing Solutions Ltd in Nicosia, Cyprus.",
+        "group": "Compliance",
+        "label": "Company"
+      },
+      {
+        "icon": "🏛️",
+        "title": "It holds a Curaçao Gaming Authority licence",
+        "body": "Licence OGL/2023/110/0072 was issued on 22 July 2024 and extended under the LOK.",
+        "group": "Compliance",
+        "label": "Licence"
+      },
+      {
+        "icon": "🎁",
+        "title": "The welcome bonus is 100% up to 300 USDT",
+        "body": "The Champions Welcome Bonus matches a deposit of at least 10 USDT and can be used on sports or casino. You opt in via the Rewards or Promotions tab, with a 72-hour window after activation.",
+        "group": "Bonus terms",
+        "label": "Standing offer"
+      },
+      {
+        "icon": "🔒",
+        "title": "Your whole deposit stays locked while you wager the bonus",
+        "body": "Wagering is 25× on sports or 40× on casino games, and the deposit stays locked until the bonus is wagered or forfeited. The terms don't say whether the multiplier covers the deposit too.",
+        "group": "Bonus terms",
+        "label": "Wagering"
+      },
+      {
+        "icon": "💵",
+        "title": "Bonus winnings are capped at 3,000 USDT",
+        "body": "The maximum cashout is 10× the maximum bonus amount, which works out at 3,000 USDT.",
+        "group": "Bonus terms",
+        "label": "Max cashout"
+      },
+      {
+        "icon": "🎰",
+        "title": "Live table games count just 10% toward casino wagering",
+        "body": "Slots count 100%, live game shows 20%, and live baccarat, roulette and blackjack, table and RNG games 10%. Some games are excluded entirely.",
+        "group": "Bonus terms",
+        "label": "Game contribution"
+      },
+      {
+        "icon": "⛽",
+        "title": "It covers the crypto network fee on withdrawals",
+        "body": "Sportsbet.io says it pays the crypto transaction fee, so the amount you withdraw is what arrives, though its general terms still reserve the right to deduct fees.",
+        "group": "Payouts & fees",
+        "label": "Withdrawal fees"
+      },
+      {
+        "icon": "🪪",
+        "title": "Withdrawals over €2,500 may need extra checks",
+        "body": "Additional KYC may apply to withdrawals over €2,500, or to smaller ones.",
+        "group": "Compliance",
+        "label": "KYC policy"
+      },
+      {
+        "icon": "⚽",
+        "title": "Top football wins are capped at €1,000,000 a bet",
+        "body": "Maximum winnings are set per sport in any 24-hour period and exclude stake: €1,000,000 per single bet on top football, tennis Grand Slams and the Super Bowl, €500,000 on the NBA and €100,000 on top esports. On a multiple, the lowest limit applies.",
+        "group": "Sportsbook",
+        "label": "Max payout"
+      },
+      {
+        "icon": "🤝",
+        "title": "Tottenham and Aston Villa are on its partner list",
+        "body": "Tottenham Hotspur named Sportsbet.io its Official North America & Africa Betting Partner in a three-year deal from the 2026/27 season, and Aston Villa named it the club's Official Crypto Betting Partner.",
+        "group": "Compliance",
+        "label": "Partners"
+      }
+    ]
+  },
+  jackpotbet: {
+    "intro": "JackpotBet pairs a 100% deposit bonus with flat 6% rakeback, but its terms carry caps that aren't on the front page. Here are ten things worth knowing before you sign up, each checked against JackpotBet's own pages.",
+    "published": "2026-11-04",
+    "glance": [
+      {
+        "k": "Licence",
+        "v": "Anjouan"
+      },
+      {
+        "k": "Wagering",
+        "v": "35× dep + bonus"
+      },
+      {
+        "k": "Rakeback",
+        "v": "6% of edge"
+      },
+      {
+        "k": "Daily win cap",
+        "v": "EUR 100,000"
+      }
+    ],
+    "facts": [
+      {
+        "icon": "🏛️",
+        "title": "It's licensed in Anjouan",
+        "body": "Take The Crown LLC holds Internet Gaming Licence ALSI-202409051-FI2, issued by the Offshore Finance Authority of the State of Anjouan and shown as valid on the Anjouan validator.",
+        "group": "Compliance",
+        "label": "Licence"
+      },
+      {
+        "icon": "🏢",
+        "title": "Its operator is registered in St Vincent & the Grenadines",
+        "body": "Take The Crown LLC, registration 3701 LLC 2024, is based at Euro House, Richmond Hill Road, Kingstown.",
+        "group": "Compliance",
+        "label": "Company"
+      },
+      {
+        "icon": "🎁",
+        "title": "Its 100% bonus needs 35× the deposit plus the bonus",
+        "body": "Wagering on the regular 100% up to $1,000 offer is 35× the deposit plus the bonus, and the same page says all its deposit bonuses carry either a 35× or a 40× rollover.",
+        "group": "Bonus terms",
+        "label": "Wagering"
+      },
+      {
+        "icon": "🎯",
+        "title": "Bets are capped at 5% while you clear the bonus",
+        "body": "On the regular offer the maximum bet is 5% of the deposit plus the bonus, with a $5 floor if that works out lower.",
+        "group": "Bonus terms",
+        "label": "Max bet"
+      },
+      {
+        "icon": "🎰",
+        "title": "Table games count only 10% toward wagering",
+        "body": "Most slots count 100%, table games 10%, and blackjack, roulette, video poker, arcade and craps 5%. Covering 24 or more roulette numbers voids winnings.",
+        "group": "Bonus terms",
+        "label": "Wagering rules"
+      },
+      {
+        "icon": "💰",
+        "title": "Rakeback is 6% of the house edge, claimable from $10,000 wagered",
+        "body": "Instant rakeback returns 6% of the house edge on every bet. It builds up from your first bet but only becomes claimable at Bronze, after $10,000 wagered.",
+        "group": "Bonus terms",
+        "label": "Rakeback"
+      },
+      {
+        "icon": "🔁",
+        "title": "VIPs from other casinos get 30 days to match their rank",
+        "body": "Hit a wager target of 10% of what you wagered elsewhere within 30 days and JackpotBet matches your rank and pays a cash bonus, from $105 for Gold up to $26,250 for Apex. Players who have already wagered $2,500 or taken another welcome offer aren't eligible.",
+        "group": "Bonus terms",
+        "label": "VIP transfer"
+      },
+      {
+        "icon": "🪪",
+        "title": "It asks for a selfie with your ID on deposits and withdrawals",
+        "body": "Its AML policy asks for proof of identity and address plus a selfie holding the ID both when any deposit is made and when a withdrawal is requested.",
+        "group": "Compliance",
+        "label": "KYC policy"
+      },
+      {
+        "icon": "💸",
+        "title": "Daily winnings are capped at EUR 100,000",
+        "body": "Wins over EUR 50,000 can be paid in monthly instalments of up to EUR 50,000, with progressive jackpots paid in full, and daily winnings are capped at EUR 100,000 unless the casino agrees otherwise.",
+        "group": "Payouts & fees",
+        "label": "Payout caps"
+      },
+      {
+        "icon": "⚽",
+        "title": "You can't bet on sports with an active bonus",
+        "body": "There's no sports bonus, and the sportsbook can't be used with a currency that has an active deposit-bonus rollover.",
+        "group": "Sports bonus terms",
+        "label": "Offer"
+      }
+    ]
+  },
+  vave: {
+    "intro": "Vave offers one of the bigger BTC welcome packages, but the terms that decide what you can withdraw sit deep in its bonus rules. Here are ten things worth knowing before you sign up, each checked against Vave's own pages.",
+    "published": "2026-11-04",
+    "glance": [
+      {
+        "k": "Licence",
+        "v": "Curaçao"
+      },
+      {
+        "k": "Welcome",
+        "v": "Up to 4 BTC"
+      },
+      {
+        "k": "Bonus win cap",
+        "v": "10,000 USDT"
+      },
+      {
+        "k": "Weekly cashback",
+        "v": "Up to 7%"
+      }
+    ],
+    "facts": [
+      {
+        "icon": "🏛️",
+        "title": "Its licence number isn't confirmed on the Curaçao register",
+        "body": "Vave's help centre says TechOptions Group B.V. holds a licence from the Curaçao gaming authority, and a November 2024 blog post gives the number as GLH-OCCHKTW0702282021. That number is not confirmed on the Curaçao Gaming Authority register.",
+        "group": "Compliance",
+        "label": "Licence"
+      },
+      {
+        "icon": "🎁",
+        "title": "Its welcome package runs to 4 BTC plus 100 free spins",
+        "body": "It is spread over four deposits: 150% up to 1.5 BTC with 100 free spins, then 100% up to 1 BTC, 50% up to 1 BTC and 25% up to 0.5 BTC. The minimum deposit for the standard bonuses is $20.",
+        "group": "Bonus terms",
+        "label": "Standing offer"
+      },
+      {
+        "icon": "🔍",
+        "title": "The wagering multiplier is only shown on the bonus card",
+        "body": "Deposit bonuses must be wagered the number of times set in each bonus's terms, and the welcome bonus is paid in instalments as you go. The multiplier itself only appears in the info tab on the bonus card.",
+        "group": "Bonus terms",
+        "label": "Wagering rules"
+      },
+      {
+        "icon": "⚖️",
+        "title": "Its terms disagree on the maximum bet",
+        "body": "The welcome bonus terms say there's no maximum bet while wagering it, free spins excluded, but its general bonus terms set 5 USDT with an active casino bonus unless a bonus's own terms say otherwise.",
+        "group": "Bonus terms",
+        "label": "Max bet"
+      },
+      {
+        "icon": "🔒",
+        "title": "Bonus winnings are capped at 10,000 USDT",
+        "body": "Winnings from any deposit, cashback, VIP, weekly, tournament or Vave points bonus are capped at 10,000 USDT, with the excess forfeited. Winnings from no-deposit bonuses or free spins are capped at 50 USDT.",
+        "group": "Bonus terms",
+        "label": "Max cashout"
+      },
+      {
+        "icon": "🎰",
+        "title": "Table and live dealer games don't count toward wagering",
+        "body": "Slots count 100%, except a long list of excluded titles including Dead or Alive 2, Book of Shadows and jackpot games. Table and live dealer games don't count at all.",
+        "group": "Bonus terms",
+        "label": "Game contribution"
+      },
+      {
+        "icon": "💰",
+        "title": "VIP players get up to 7% of losses back every week",
+        "body": "Weekly Cashback pays up to 7% of net losses every Monday from VIP level 1. Football Cashback and Bundesliga Cashback also pay 5% on all football bets each week.",
+        "group": "Bonus terms",
+        "label": "Cashback"
+      },
+      {
+        "icon": "💸",
+        "title": "Large withdrawals can be paid in instalments",
+        "body": "Its help centre says there are no withdrawal restrictions, in an article last updated 18/09/2023. Its terms add that requests over a payment system's limit are paid in instalments, and some options take up to 3 days.",
+        "group": "Payouts & fees",
+        "label": "Withdrawal limits"
+      },
+      {
+        "icon": "🪪",
+        "title": "You generally don't need to send documents",
+        "body": "Vave says documents generally aren't needed, though it may ask for ID or a selfie if issues arise.",
+        "group": "Compliance",
+        "label": "KYC policy"
+      },
+      {
+        "icon": "🎱",
+        "title": "Snooker player Judd Trump is its brand ambassador",
+        "body": "Vave announced Judd Trump MBE as its global brand ambassador on its news blog on 9 February 2023, covering international marketing campaigns and social media giveaways.",
+        "group": "Compliance",
+        "label": "Partners"
+      }
+    ]
+  },
+  "wager-com": {
+    "intro": "Wager.com is a crypto-only casino and sportsbook that currently runs no welcome bonus, and its withdrawal terms are tighter than most. Here are ten things worth knowing before you sign up, each checked against Wager.com's own pages.",
+    "published": "2026-11-04",
+    "glance": [
+      {
+        "k": "Licence",
+        "v": "Anjouan"
+      },
+      {
+        "k": "Welcome bonus",
+        "v": "None live"
+      },
+      {
+        "k": "Withdrawals",
+        "v": "€10,000 a month"
+      },
+      {
+        "k": "Unwagered fee",
+        "v": "8%"
+      }
+    ],
+    "facts": [
+      {
+        "icon": "🏛️",
+        "title": "It's licensed in Anjouan",
+        "body": "Its footer shows Anjouan licence ALSI-2025 01037-FI2, as written, under the Computer Gaming Licensing Act 007 of 2005, with a seal that links to a validator.",
+        "group": "Compliance",
+        "label": "Licence"
+      },
+      {
+        "icon": "🏢",
+        "title": "Its operator is based in Anjouan",
+        "body": "Wager.com is run by Scivias Ltd, registration 15923, at Hamchako, Mutsamudu, on the Autonomous Island of Anjouan.",
+        "group": "Compliance",
+        "label": "Company"
+      },
+      {
+        "icon": "🚫",
+        "title": "There's no welcome bonus right now",
+        "body": "Its live promotions panel lists only Refer a Friend and VIP Transfer. A 150% up to $3,000 deposit offer survives only on an expired page still branded with its former name.",
+        "group": "Bonus terms",
+        "label": "Standing offer"
+      },
+      {
+        "icon": "💸",
+        "title": "Withdrawals are capped at €10,000 a month",
+        "body": "The cap drops to €5,000 a month if your balance is at least 10 times your total deposits, and withdrawals over USD 50,000 can be paid in instalments capped at USD 50,000 a month.",
+        "group": "Payouts & fees",
+        "label": "Monthly withdrawal caps"
+      },
+      {
+        "icon": "⛽",
+        "title": "Withdrawing an unwagered deposit costs 8%",
+        "body": "There's no commission if the deposit has been wagered at least once; otherwise an 8% fee applies, with a €4 minimum. The network fee comes off every withdrawal, and a chargeback carries a €50 administration fee.",
+        "group": "Payouts & fees",
+        "label": "Withdrawal fees"
+      },
+      {
+        "icon": "🪙",
+        "title": "It doesn't swap between crypto and fiat",
+        "body": "Crypto transactions are only allowed if your first deposit was in crypto, later transactions must use that same cryptocurrency, and Wager doesn't exchange crypto for fiat or back.",
+        "group": "Payouts & fees",
+        "label": "Currency rule"
+      },
+      {
+        "icon": "⚠️",
+        "title": "It can exclude games from wagering without notice",
+        "body": "Wager can exclude games, providers, bet types or odds ranges from wagering, rakeback and VIP progression at any time, and says wagers on excluded games don't count even if you didn't know.",
+        "group": "Bonus terms",
+        "label": "Bonus restrictions"
+      },
+      {
+        "icon": "👑",
+        "title": "Sports bets earn three times the VIP XP of casino play",
+        "body": "You earn 1 XP per $1 on casino and live casino and 3 XP per $1 on sports, across levels from Rock at 1,000 XP to Adamantium at 10,000,000, plus invite-only Void Stone. Every new level pays a level-up bonus.",
+        "group": "Bonus terms",
+        "label": "Perks by level"
+      },
+      {
+        "icon": "🪪",
+        "title": "Its AML policy and help centre disagree on ID checks",
+        "body": "The AML policy lists ID and proof of address among what players provide at registration, with checks again on withdrawals and at EUR 2,000 of cumulative withdrawals. The help centre describes four risk-based tiers and says not all withdrawals need verification.",
+        "group": "Compliance",
+        "label": "KYC policy"
+      },
+      {
+        "icon": "🌍",
+        "title": "It isn't open in the US or the UK",
+        "body": "Its restricted list covers Austria, France, Germany, the Netherlands, Spain, the Union of Comoros, the United Kingdom, the USA and their territories, plus all FATF-blacklisted countries. VPNs are prohibited.",
+        "group": "Compliance",
+        "label": "Restricted countries"
+      }
+    ]
+  },
+  dicey: {
+    "intro": "Dicey is a newer crypto casino and sportsbook built by Magic Eden, with a welcome bonus that only works on sports. Here are ten things worth knowing before you sign up, each checked against Dicey's own pages.",
+    "published": "2026-11-04",
+    "glance": [
+      {
+        "k": "Licence",
+        "v": "Anjouan"
+      },
+      {
+        "k": "Sports welcome",
+        "v": "100% to $1,000"
+      },
+      {
+        "k": "Wagering",
+        "v": "15× dep + bonus"
+      },
+      {
+        "k": "Weekly race",
+        "v": "$35,000"
+      }
+    ],
+    "facts": [
+      {
+        "icon": "🏛️",
+        "title": "It's licensed in Anjouan",
+        "body": "Dicey holds Anjouan licence ALSI-202511054-FI2.",
+        "group": "Compliance",
+        "label": "Licence"
+      },
+      {
+        "icon": "🤝",
+        "title": "It's built by Magic Eden and names no sports sponsors",
+        "body": "Dicey names no sports team, esports team, sponsorship or ambassador. Its footer credits Magic Eden, and its VIP Transfer page lists Sequoia, Greylock and Paradigm as backers. It is operated by 3-102-943011 S.R.L.",
+        "group": "Compliance",
+        "label": "Partners"
+      },
+      {
+        "icon": "🎁",
+        "title": "Its welcome bonus is for sports only",
+        "body": "New players opt in at sign-up to a 100% match on the first qualifying deposit, from $20 up to a $1,000 bonus. It works on sports markets only, at minimum odds of 1.5.",
+        "group": "Bonus terms",
+        "label": "Standing offer"
+      },
+      {
+        "icon": "🔁",
+        "title": "Wagering is 15× the deposit plus the bonus",
+        "body": "The Sports Welcome Bonus needs 15× the deposit plus the bonus, and the deposit itself must also be wagered once. The page also calls it a multiple of the bonus, but its examples use deposit plus bonus.",
+        "group": "Bonus terms",
+        "label": "Wagering"
+      },
+      {
+        "icon": "⚽",
+        "title": "Each bet counts for no more than the bonus amount",
+        "body": "Only settled or cashed-out sports bets at odds of 1.5 or higher count, each for no more than the bonus amount. Casino play and pushed bets count 0%, and bonus funds can't be used on casino games.",
+        "group": "Bonus terms",
+        "label": "Game contribution"
+      },
+      {
+        "icon": "💰",
+        "title": "Rakeback is paid on every Originals and casino bet",
+        "body": "Instant rakeback runs win or lose, at a rate based on each game's house edge, so higher-edge games return more. There's a 15-minute cooldown between claims, and it keeps building while a welcome bonus is active.",
+        "group": "Bonus terms",
+        "label": "Rakeback"
+      },
+      {
+        "icon": "🏁",
+        "title": "A $35,000 race pays 75 players every week",
+        "body": "The Weekly Wager Race pays $8,750 for first place down to $100 for places 51 to 75, credited in USDC. Every $1 wagered on Originals, slots or sports earns a point, but wagers funded by bonus credit don't count.",
+        "group": "Bonus terms",
+        "label": "Leaderboards"
+      },
+      {
+        "icon": "🌧️",
+        "title": "Rain drops a prize pool every 30 minutes",
+        "body": "Dicey seeds each pool with $25 and the community can add from $0.50. When the timer hits zero, 10 winners are drawn from that round's joiners. You need rank Bronze I plus a minimum wager to take part.",
+        "group": "Bonus terms",
+        "label": "Weekly raffle"
+      },
+      {
+        "icon": "💸",
+        "title": "No withdrawal cap is stated, but wins per bet are capped",
+        "body": "Dicey publishes only minimums: $1 per token, or $2.50 for USDT on Tron. Its help centre caps the win per bet instead, at $300,000 on Coinflip, Dice, Limbo, Mines and Plinko, and $100,000 to $3,000,000 on third-party games depending on the provider.",
+        "group": "Payouts & fees",
+        "label": "Withdrawal limits"
+      },
+      {
+        "icon": "🔁",
+        "title": "You can bring your VIP rank over from another casino",
+        "body": "Players with VIP status elsewhere, Stake for example, can upload proof of status and wager to be matched to a rank. Requests are usually reviewed within 24 to 72 hours and answered on Telegram; balances and wager history don't carry over.",
+        "group": "Bonus terms",
+        "label": "VIP transfer"
+      }
+    ]
+  },
+  cloudbet: {
+    "intro": "Cloudbet skips the wagering requirement and pays its welcome package as cash over the first 30 days. Here are ten things worth knowing before you sign up, each checked against Cloudbet's own pages.",
+    "published": "2026-11-04",
+    "glance": [
+      {
+        "k": "Licence",
+        "v": "Curaçao"
+      },
+      {
+        "k": "Welcome",
+        "v": "Up to $2,500 cash"
+      },
+      {
+        "k": "Wagering",
+        "v": "None"
+      },
+      {
+        "k": "Unverified cap",
+        "v": "$2,200 a day"
+      }
+    ],
+    "facts": [
+      {
+        "icon": "🏢",
+        "title": "Cloudbet is run by Halcyon Super Holdings B.V.",
+        "body": "The company behind Cloudbet is Halcyon Super Holdings B.V., company number 148526.",
+        "group": "Compliance",
+        "label": "Company"
+      },
+      {
+        "icon": "🏛️",
+        "title": "It holds a Curaçao Gaming Authority licence",
+        "body": "Cloudbet lists licence OGL/2024/328/0599 from the Curaçao Gaming Authority.",
+        "group": "Compliance",
+        "label": "Licence"
+      },
+      {
+        "icon": "🎁",
+        "title": "The welcome package pays up to $2,500 in cash",
+        "body": "Instead of a deposit match, new players get up to $2,500 in cash plus 10% rakeback from day one and daily cash drops. The package ends 30 days after your first deposit or when you hit the $2,500 cap, whichever comes first.",
+        "group": "Bonus terms",
+        "label": "Standing offer"
+      },
+      {
+        "icon": "✅",
+        "title": "There's no wagering on the welcome package",
+        "body": "The package pays cash, made up of 10% rakeback of the house edge plus daily and weekly cash drops, with no wagering requirements.",
+        "group": "Bonus terms",
+        "label": "Wagering rules"
+      },
+      {
+        "icon": "💵",
+        "title": "Any deposit amount activates the welcome package",
+        "body": "Cloudbet sets no minimum deposit for the Welcome Package.",
+        "group": "Bonus terms",
+        "label": "Minimum deposit"
+      },
+      {
+        "icon": "👑",
+        "title": "Rakeback can reach 25% at the top tier",
+        "body": "Base rakeback is 5% from Bronze to Ruby and 10% at Diamond and Blue Diamond. Boosted rakeback rises from 10% at Bronze through Emerald to 25% at Blue Diamond, and the VIP page frames the combined ceiling as up to 80% back on the house edge.",
+        "group": "Bonus terms",
+        "label": "Rakeback"
+      },
+      {
+        "icon": "🪪",
+        "title": "Unverified accounts are capped at $2,200 a day",
+        "body": "Unverified and Level 1 accounts have a $2,200 daily withdrawal limit. Completing Level 2 verification removes it, so any amount can be withdrawn on any day.",
+        "group": "Payouts & fees",
+        "label": "Withdrawal limits"
+      },
+      {
+        "icon": "💸",
+        "title": "Its help centre and terms disagree on fees",
+        "body": "The help centre says there are no fees beyond the network fee, but the terms reserve a handling charge of up to 5%.",
+        "group": "Payouts & fees",
+        "label": "Withdrawal fees"
+      },
+      {
+        "icon": "📈",
+        "title": "It says there are no limits on wins",
+        "body": "No maximum-win figure is stated, and Cloudbet's no-limits page says there are no limits on wins. Each click still has a maximum stake, and limits depend on market liquidity.",
+        "group": "Sportsbook",
+        "label": "Max payout"
+      },
+      {
+        "icon": "🥊",
+        "title": "It sponsors the PFL and Karate Combat",
+        "body": "Cloudbet says it sponsors the Professional Fighters League and Karate Combat, and names UFC heavyweight champion Tom Aspinall as a partner.",
+        "group": "Compliance",
+        "label": "Partners"
+      }
+    ]
+  },
+  toshibet: {
+    "intro": "Toshibet says it will never ask for ID and unlocks its deposit bonus as you wager rather than up front. Here are ten things worth knowing before you sign up, each checked against Toshibet's own pages.",
+    "published": "2026-11-04",
+    "glance": [
+      {
+        "k": "Licence",
+        "v": "Anjouan"
+      },
+      {
+        "k": "ID check",
+        "v": "Never"
+      },
+      {
+        "k": "Min withdrawal",
+        "v": "$5"
+      },
+      {
+        "k": "Withdrawal fee",
+        "v": "None"
+      }
+    ],
+    "facts": [
+      {
+        "icon": "🏢",
+        "title": "It's run from St Vincent and the Grenadines",
+        "body": "The company named is BowToYourSensei Ltd, at Suite 305, Griffith Corporate Centre, Kingstown, St Vincent and the Grenadines.",
+        "group": "Compliance",
+        "label": "Company"
+      },
+      {
+        "icon": "🏛️",
+        "title": "Its Anjouan licence showed as valid, under a different domain",
+        "body": "Licence ALSI-202601015-FI1 showed Operating status VALID on the validator linked from its site on 16 Sep 2026. The registered website is toshibet.com, while the casino runs on toshi.bet.",
+        "group": "Compliance",
+        "label": "Licence"
+      },
+      {
+        "icon": "🌍",
+        "title": "The licence doesn't cover several big markets",
+        "body": "The Anjouan licence excludes Australia, Comoros, France, the Netherlands, Spain, the United Kingdom and the USA, plus FATF-blacklisted and sanctioned countries. Complaints from players there fall outside the regulator's scope.",
+        "group": "Compliance",
+        "label": "Licence exclusions"
+      },
+      {
+        "icon": "🪪",
+        "title": "It says it will never ask for ID",
+        "body": "Its help centre says it will never KYC you, whatever the amount.",
+        "group": "Compliance",
+        "label": "KYC policy"
+      },
+      {
+        "icon": "🎁",
+        "title": "The bonus unlocks at $1 per $250 wagered",
+        "body": "The first three deposits get 200%, 150% and 100%, but the bonus isn't paid up front. It unlocks at $1 for every $250 wagered, tracked on the rewards page. This comes from its help centre, as its live site sat behind a challenge.",
+        "group": "Bonus terms",
+        "label": "Standing offer"
+      },
+      {
+        "icon": "🔒",
+        "title": "The deposit bonus is capped at $60,000",
+        "body": "The most that can be claimed from the deposit bonus is $60,000.",
+        "group": "Bonus terms",
+        "label": "Max cashout"
+      },
+      {
+        "icon": "🎟️",
+        "title": "Sports bets earn three times the raffle tickets",
+        "body": "The $25,000 weekly raffle gives 1 ticket per $100 wagered on casino and 3 per $100 on sports. Each week 100 tickets are drawn, with $2,500 for first.",
+        "group": "Bonus terms",
+        "label": "Weekly raffle"
+      },
+      {
+        "icon": "💸",
+        "title": "Withdrawals start at $5",
+        "body": "The minimum withdrawal is $5.",
+        "group": "Payouts & fees",
+        "label": "Minimum withdrawal"
+      },
+      {
+        "icon": "🚫",
+        "title": "The UK, US and much of Europe are blocked",
+        "body": "Its restricted list includes the United Kingdom, the United States, Australia, Germany, France, Spain, Italy and Ontario, among others. Using a VPN to get around this breaches its terms.",
+        "group": "Compliance",
+        "label": "Restricted countries"
+      },
+      {
+        "icon": "⚖️",
+        "title": "Its liability for any claim is capped at €100",
+        "body": "Its user agreement caps its total liability for any claim at €100.",
+        "group": "Compliance",
+        "label": "Liability cap"
+      }
+    ]
+  },
+  qzino: {
+    "intro": "Qzino has no deposit match and leans on cashback, rakeback and a 77-level VIP ladder instead. Here are ten things worth knowing before you sign up, each checked against Qzino's own pages.",
+    "published": "2026-11-04",
+    "glance": [
+      {
+        "k": "Licence",
+        "v": "Anjouan"
+      },
+      {
+        "k": "Cashback",
+        "v": "Up to 40%"
+      },
+      {
+        "k": "Max win",
+        "v": "$300,000"
+      },
+      {
+        "k": "Withdrawals",
+        "v": "Up to 7 days"
+      }
+    ],
+    "facts": [
+      {
+        "icon": "🏢",
+        "title": "Qzino is run by CG Universe in Costa Rica",
+        "body": "The company named is CG Universe, Costa Rica, registration 3-102-919306.",
+        "group": "Compliance",
+        "label": "Company"
+      },
+      {
+        "icon": "🏛️",
+        "title": "It holds an Anjouan licence",
+        "body": "Qzino lists Anjouan licence ALSI-202503015-FI1.",
+        "group": "Compliance",
+        "label": "Licence"
+      },
+      {
+        "icon": "🎁",
+        "title": "There's no deposit match",
+        "body": "Its Bonus Hub lists cashback, rakeback, weekly and monthly bonuses, a Wheel of Luck and VIP-only bonuses, with no deposit-match offer.",
+        "group": "Bonus terms",
+        "label": "Deposit bonus"
+      },
+      {
+        "icon": "💰",
+        "title": "Casino cashback is paid twice a week, up to 40%",
+        "body": "Casino cashback rises with rank to 40% of losses, stated with no limit. Sports cashback runs separately at up to 20%, and it's forfeited if you don't claim it before the next period starts.",
+        "group": "Bonus terms",
+        "label": "Cashback"
+      },
+      {
+        "icon": "⏱️",
+        "title": "Rakeback can be claimed every 30 minutes",
+        "body": "Rakeback accrues on betting volume and scales with rank up to 15%. Sports bets need odds of 1.20 or higher, and free bets and cashed-out bets don't count.",
+        "group": "Bonus terms",
+        "label": "Rakeback"
+      },
+      {
+        "icon": "👑",
+        "title": "The VIP ladder has 77 levels",
+        "body": "Levels run from Level 1 at $250 wagered to Level 77 (Blue Diamond) at $2,777,777,777, and ranks never go down. VIP perks start at Level 30 and Super VIP perks at Level 57.",
+        "group": "Bonus terms",
+        "label": "Perks by level"
+      },
+      {
+        "icon": "🏁",
+        "title": "Sports bets earn 40 times the race points of slots",
+        "body": "The $20,000 Weekly Race pays the top 200. Each $1 wagered gives 0.75 points on originals, 1 point on slots and 40 points on sports.",
+        "group": "Bonus terms",
+        "label": "Leaderboards"
+      },
+      {
+        "icon": "🔒",
+        "title": "Winnings are capped at $300,000",
+        "body": "There's no per-transaction or daily withdrawal cap, but payable winnings from any bet, spin or bonus round can't exceed $300,000. Wins of $50,000 or more may in exceptional cases be paid in instalments over up to 30 days.",
+        "group": "Payouts & fees",
+        "label": "Withdrawal limits"
+      },
+      {
+        "icon": "🐢",
+        "title": "Withdrawals can take up to seven days",
+        "body": "Qzino says processing can take up to seven days or longer.",
+        "group": "Payouts & fees",
+        "label": "Stated withdrawal time"
+      },
+      {
+        "icon": "🔁",
+        "title": "Each deposit must be wagered before withdrawing",
+        "body": "Every deposit must be wagered in full before you can withdraw, unless you're at level 15 or above.",
+        "group": "Payouts & fees",
+        "label": "Withdrawal conditions"
+      }
+    ]
+  },
+  fortunejack: {
+    "intro": "FortuneJack spreads a 500% casino welcome bonus over four missions. Here are ten things worth knowing before you sign up, each checked against FortuneJack's own pages.",
+    "published": "2026-11-04",
+    "glance": [
+      {
+        "k": "Licence",
+        "v": "Anjouan"
+      },
+      {
+        "k": "Max bet",
+        "v": "$10 on bonus"
+      },
+      {
+        "k": "ID check",
+        "v": "From $10,000"
+      },
+      {
+        "k": "Withdrawals",
+        "v": "Within 30 min"
+      }
+    ],
+    "facts": [
+      {
+        "icon": "🏢",
+        "title": "FortuneJack is run by PlayWave SRL in Costa Rica",
+        "body": "The company named is PlayWave SRL, Costa Rica, registration 3-102-914970.",
+        "group": "Compliance",
+        "label": "Company"
+      },
+      {
+        "icon": "🏛️",
+        "title": "It holds an Anjouan licence",
+        "body": "FortuneJack lists Anjouan licence ALSI-202411021-FI1.",
+        "group": "Compliance",
+        "label": "Licence"
+      },
+      {
+        "icon": "🎁",
+        "title": "The casino welcome bonus is 500% over four missions",
+        "body": "The four missions pay 100%, 150%, 100% and 150% + 15 Bonus Rounds, each unlocked by wagering 10x in Slots or Aviator. Sports players can instead take a 100% freebet up to 200 USD after wagering 3x in Sports.",
+        "group": "Bonus terms",
+        "label": "Standing offer"
+      },
+      {
+        "icon": "❓",
+        "title": "The missions don't say 10x of what",
+        "body": "Each welcome mission says to wager 10× in slots or Aviator without saying 10× of what. Its general bonus terms default to 30× the bonus unless an offer says otherwise.",
+        "group": "Bonus terms",
+        "label": "Wagering rules"
+      },
+      {
+        "icon": "🔒",
+        "title": "Bonus winnings are capped at 5x the bonus",
+        "body": "Winnings from a wagering bonus are capped at 5× the original bonus, and anything above is forfeited.",
+        "group": "Bonus terms",
+        "label": "Max cashout"
+      },
+      {
+        "icon": "🛑",
+        "title": "Bets are capped at $10 while a bonus is active",
+        "body": "The max bet is 10 USD or equivalent per bet while a bonus is pending or active.",
+        "group": "Bonus terms",
+        "label": "Max bet"
+      },
+      {
+        "icon": "💰",
+        "title": "Monthly cashback climbs from 2% to 15%",
+        "body": "Cashback is based on the previous month's net losses and scales from 2% at Bronze 1 to 15% at Legend, with no wagering. To qualify, net losses must reach 40%-80% of deposits depending on level, and it expires if not claimed within 10 days.",
+        "group": "Bonus terms",
+        "label": "Cashback"
+      },
+      {
+        "icon": "💶",
+        "title": "Fiat withdrawals are capped at €2,000 each",
+        "body": "Fiat withdrawals run from EUR 20 to EUR 2,000 per transaction. FortuneJack also reserves the right to pay withdrawals in instalments, decided case by case.",
+        "group": "Payouts & fees",
+        "label": "Withdrawal limits"
+      },
+      {
+        "icon": "⚡",
+        "title": "Crypto withdrawals usually take under 30 minutes",
+        "body": "Crypto withdrawals usually arrive within 30 minutes, and its USDC page says around three minutes on average.",
+        "group": "Payouts & fees",
+        "label": "Stated withdrawal time"
+      },
+      {
+        "icon": "🪪",
+        "title": "ID is needed once deposits reach $10,000",
+        "body": "FortuneJack asks for ID and proof of address once total deposits reach $10,000, or on suspicious activity.",
+        "group": "Compliance",
+        "label": "KYC policy"
+      }
+    ]
+  },
+  coincasino: {
+    "intro": "CoinCasino advertises a 200% welcome bonus up to $30,000, but the terms behind it are steep. Here are ten things worth knowing before you sign up, each checked against CoinCasino's own pages or its regulator's register.",
+    "published": "2026-11-04",
+    "glance": [
+      {
+        "k": "Licence",
+        "v": "Not on register"
+      },
+      {
+        "k": "Welcome",
+        "v": "200% to $30,000"
+      },
+      {
+        "k": "Wagering",
+        "v": "60× deposit"
+      },
+      {
+        "k": "Min deposit",
+        "v": "$10"
+      }
+    ],
+    "facts": [
+      {
+        "icon": "🏢",
+        "title": "Its withdrawal terms name Deep Sea Tech Ventures",
+        "body": "Deep Sea Tech Ventures is the company named in CoinCasino's withdrawal terms.",
+        "group": "Compliance",
+        "label": "Company"
+      },
+      {
+        "icon": "🏛️",
+        "title": "It isn't on the Curaçao licence register",
+        "body": "CoinCasino wasn't found on the Curaçao Gaming Authority's online gaming licence register dated 14 Sep 2026, searched under CoinCasino, Deep Sea Tech Ventures and Gaming Services Provider N.V.",
+        "group": "Compliance",
+        "label": "Register check"
+      },
+      {
+        "icon": "🎁",
+        "title": "The welcome bonus is 200% up to $30,000",
+        "body": "It's first deposit only, with free spins on Wanted Dead or a Wild scaled by deposit size, up to 50 Super Spins at $4 for deposits of $1,000 or more.",
+        "group": "Bonus terms",
+        "label": "Standing offer"
+      },
+      {
+        "icon": "🔄",
+        "title": "Wagering is 60x the deposit",
+        "body": "A $100 deposit needs $6,000 of bets to unlock the $200 bonus, released in 10% instalments. Bonuses above $10,000 carry 75× and are credited in one go at the end of the 14 days.",
+        "group": "Bonus terms",
+        "label": "Wagering"
+      },
+      {
+        "icon": "⏳",
+        "title": "You get 14 days to finish the wagering",
+        "body": "The first deposit must be made within 7 days of registering, then there are 14 days to finish the wagering, and any unreleased bonus is forfeited. Its terms also say this period is included in the 7 days.",
+        "group": "Bonus terms",
+        "label": "Expiry"
+      },
+      {
+        "icon": "🎰",
+        "title": "Bonus bets are capped at $20 a round",
+        "body": "Bonus funds carry a $/€20 max bet per round, no feature buys, and can't be used on live casino or table games. Slots count 100%, while dice, arcade and crash count 0%.",
+        "group": "Bonus terms",
+        "label": "Bonus play rules"
+      },
+      {
+        "icon": "💸",
+        "title": "Withdrawing unwagered deposits costs 8%",
+        "body": "There's no fee if the deposit has been wagered at least 1×. Otherwise an 8% fee applies, with a minimum of €4.",
+        "group": "Payouts & fees",
+        "label": "Withdrawal fees"
+      },
+      {
+        "icon": "🏦",
+        "title": "Crypto withdrawals are capped at €150,000 a month",
+        "body": "That's the default for crypto, with higher limits for VIPs at its discretion. Fiat is limited to €4,000 a day, €10,000 a week and €20,000 a month.",
+        "group": "Payouts & fees",
+        "label": "Withdrawal limits"
+      },
+      {
+        "icon": "😴",
+        "title": "Inactive accounts can be charged 10% a month",
+        "body": "After 180 days with no bets, a fee of 10% of the balance per month may be deducted until it falls to €10, after 30 days' notice.",
+        "group": "Payouts & fees",
+        "label": "Inactive accounts"
+      },
+      {
+        "icon": "🚫",
+        "title": "The US and UK are restricted",
+        "body": "The restricted list includes the USA and its territories, the United Kingdom, Bulgaria, Malta, Lithuania, Curaçao, Aruba, Sint Maarten and French overseas territories, among others.",
+        "group": "Compliance",
+        "label": "Restricted countries"
+      }
+    ]
+  },
+  bluff: {
+    "intro": "Bluff is built around prediction markets, with a casino and sportsbook on the same balance. Here are nine things worth knowing before you sign up, each checked against Bluff's own pages.",
+    "published": "2026-11-04",
+    "glance": [
+      {
+        "k": "Licence",
+        "v": "Anjouan"
+      },
+      {
+        "k": "Min withdrawal",
+        "v": "$20"
+      },
+      {
+        "k": "Max withdrawal",
+        "v": "$250,000/month"
+      },
+      {
+        "k": "ID check",
+        "v": "Usually not"
+      }
+    ],
+    "facts": [
+      {
+        "icon": "🏢",
+        "title": "Bluff is run by Wink Wink Ltd",
+        "body": "The company named is Wink Wink Ltd, registered in Anjouan under number 16036.",
+        "group": "Compliance",
+        "label": "Company"
+      },
+      {
+        "icon": "🏛️",
+        "title": "It holds an Anjouan licence",
+        "body": "Bluff lists Anjouan licence ALSI-202506028-FI1.",
+        "group": "Compliance",
+        "label": "Licence"
+      },
+      {
+        "icon": "🔮",
+        "title": "Its main product is prediction markets",
+        "body": "Players trade on real-world outcomes such as elections, finals, award shows and launches. Predictions share one account and balance with Bluff's Packs, Battles and UpDowns games.",
+        "group": "Sportsbook",
+        "label": "Prediction markets"
+      },
+      {
+        "icon": "🎁",
+        "title": "Its promotions page shows no welcome offer",
+        "body": "The live promotions page lists five items and no first-deposit offer. Two help articles from August 2026 still describe a first-deposit match, and they disagree with each other on the size.",
+        "group": "Bonus terms",
+        "label": "Standing offer"
+      },
+      {
+        "icon": "🎲",
+        "title": "Originals and live casino count 10% toward wagering",
+        "body": "Slots count 100%, while originals, game shows, live casino, table games and instant-win games such as Crash, Mines and Plinko count 10%. The sportsbook is excluded.",
+        "group": "Bonus terms",
+        "label": "Game contribution"
+      },
+      {
+        "icon": "🤝",
+        "title": "It will match your VIP tier from another casino",
+        "body": "Send screenshots of your tier and lifetime wager history through live chat and, if approved, you're placed in a provisional tier with a VIP host. The match is reviewed after a 30-day introductory period, and Bluff says it responds within 48 hours.",
+        "group": "Bonus terms",
+        "label": "VIP transfer"
+      },
+      {
+        "icon": "🏦",
+        "title": "Withdrawals are capped at $250,000 a month",
+        "body": "The minimum is USD 20 per transaction and the maximum USD 250,000 per month. A withdrawal can only be requested once the deposit has been wagered at least once.",
+        "group": "Payouts & fees",
+        "label": "Withdrawal limits"
+      },
+      {
+        "icon": "💸",
+        "title": "It publishes no fixed withdrawal fee",
+        "body": "Fees may apply, and the withdrawal form shows the fee in your coin before you confirm, but Bluff publishes no fixed fee or percentage.",
+        "group": "Payouts & fees",
+        "label": "Withdrawal fees"
+      },
+      {
+        "icon": "🪪",
+        "title": "ID is usually only needed if you take a bonus",
+        "body": "KYC is usually not needed to withdraw, but it's required if you opt into a bonus.",
+        "group": "Compliance",
+        "label": "KYC policy"
+      }
+    ]
+  },
+  betplay: {
+    "intro": "Betplay states no gaming licence on its site and doesn't ask players to verify their ID. Here are ten things worth knowing before you sign up, each checked against Betplay's own pages.",
+    "published": "2026-11-04",
+    "glance": [
+      {
+        "k": "Licence",
+        "v": "None stated"
+      },
+      {
+        "k": "Wagering",
+        "v": "60× deposit"
+      },
+      {
+        "k": "Daily limit",
+        "v": "$8,000"
+      },
+      {
+        "k": "Cashback",
+        "v": "10% weekly"
+      }
+    ],
+    "facts": [
+      {
+        "icon": "🏛️",
+        "title": "No gaming licence is stated on its site",
+        "body": "Betplay's site states no gaming licence, and its terms are governed by Costa Rican law.",
+        "group": "Compliance",
+        "label": "Licence"
+      },
+      {
+        "icon": "🏢",
+        "title": "It's run by LAMA TECH, LIMITADA in Costa Rica",
+        "body": "The company named is LAMA TECH, LIMITADA, Costa Rica, corporate ID 3-102-857685.",
+        "group": "Compliance",
+        "label": "Company"
+      },
+      {
+        "icon": "🪪",
+        "title": "Its terms set no ID requirement",
+        "body": "Betplay's terms have no verification requirement, and the personal data it lists collecting is your email address and usage data.",
+        "group": "Compliance",
+        "label": "KYC policy"
+      },
+      {
+        "icon": "🎁",
+        "title": "The welcome bonus is 250% up to 5,000 USDT",
+        "body": "It's spread over the first 3 deposits: 100% up to 1,000 USDT, 50% up to 2,000 USDT, then 100% up to 2,000 USDT.",
+        "group": "Bonus terms",
+        "label": "Standing offer"
+      },
+      {
+        "icon": "🔄",
+        "title": "Wagering is 60x the deposit, and the bonus comes after",
+        "body": "You wager 60× the total deposit amount. The bonus is only paid once that's done, and can then be withdrawn straight away.",
+        "group": "Bonus terms",
+        "label": "Wagering"
+      },
+      {
+        "icon": "💰",
+        "title": "Weekly cashback is 10% from the first VIP level",
+        "body": "Cashback on losses is paid automatically every Thursday from VIP Bronze I, up to $20,000 a week. Sportsbook and live dealer bets are excluded.",
+        "group": "Bonus terms",
+        "label": "Cashback"
+      },
+      {
+        "icon": "🏦",
+        "title": "Withdrawals are capped at $8,000 a day",
+        "body": "You can withdraw up to $8,000 of crypto every 24 hours, plus whatever you deposited the same day. Higher VIP levels can raise the limit.",
+        "group": "Payouts & fees",
+        "label": "Withdrawal limits"
+      },
+      {
+        "icon": "⚡",
+        "title": "Betplay charges no withdrawal fee",
+        "body": "You only pay the blockchain network fee, and Betplay suggests Lightning or Liquid to avoid Bitcoin fees.",
+        "group": "Payouts & fees",
+        "label": "Withdrawal fees"
+      },
+      {
+        "icon": "😴",
+        "title": "Balances are deducted after 6 months of inactivity",
+        "body": "After 6 months with no activity the balance is deducted, with 14 days' email notice first and 10 days to appeal.",
+        "group": "Payouts & fees",
+        "label": "Inactive accounts"
+      },
+      {
+        "icon": "🚫",
+        "title": "The US, UK and Spain are restricted",
+        "body": "Its restricted list also includes Austria, Hungary, Japan, Poland, Turkey, Slovakia, Curaçao and several overseas territories.",
+        "group": "Compliance",
+        "label": "Restricted countries"
+      }
+    ]
+  },
+  solcasino: {
+    "intro": "Solcasino spreads a four-part deposit bonus over a token that unlocks slowly as you wager. Here are ten things worth knowing before you sign up, each checked against Solcasino's own pages.",
+    "published": "2026-11-04",
+    "glance": [
+      {
+        "k": "Licence",
+        "v": "Tobique"
+      },
+      {
+        "k": "Rakeback",
+        "v": "5% of edge"
+      },
+      {
+        "k": "Min deposit",
+        "v": "$10"
+      },
+      {
+        "k": "Withdrawals",
+        "v": "Within 1 hour"
+      }
+    ],
+    "facts": [
+      {
+        "icon": "🏢",
+        "title": "It's run by Three Gaming Limitada in Costa Rica",
+        "body": "The company named is Three Gaming Limitada, Costa Rica, registration 3-102-910242.",
+        "group": "Compliance",
+        "label": "Company"
+      },
+      {
+        "icon": "🏛️",
+        "title": "It's licensed by the Tobique Gaming Commission",
+        "body": "Solcasino names the Tobique Gaming Commission as its licensing body, but doesn't state a licence number.",
+        "group": "Compliance",
+        "label": "Licence"
+      },
+      {
+        "icon": "🎁",
+        "title": "Four deposit bonuses run from 180% to 360%",
+        "body": "The 1st deposit gets 180% up to 20,000.00 USDB and the 4th gets 360% up to 100,000.00 USDB, paid in USDB, a reward denominated in USDT. Withdrawing before it unlocks cancels the bonus.",
+        "group": "Bonus terms",
+        "label": "Standing offer"
+      },
+      {
+        "icon": "🐢",
+        "title": "The bonus unlocks at 1 USDB per $1,000 wagered",
+        "body": "Each wager unlocks 0.1% of its amount. At least 5 USDB must be unlocked before you can claim, and withdrawing at any time cancels the rest of the bonus.",
+        "group": "Bonus terms",
+        "label": "Wagering rules"
+      },
+      {
+        "icon": "💵",
+        "title": "Each bonus has its own minimum deposit",
+        "body": "You need $10 for the 1st deposit bonus, $50 for the 2nd, $100 for the 3rd and $200 for the 4th.",
+        "group": "Bonus terms",
+        "label": "Minimum deposit"
+      },
+      {
+        "icon": "⏱️",
+        "title": "Rakeback is 5% and only half is paid at once",
+        "body": "A 5% rakeback based on the house edge applies to all bets and can be collected every 30 minutes. Half is added instantly and the other half is split over three days on the Rewards Calendar.",
+        "group": "Bonus terms",
+        "label": "Rakeback"
+      },
+      {
+        "icon": "🏁",
+        "title": "A $25,000 weekly race pays the top 100",
+        "body": "All casino and sports bets count, and prizes are credited in USDC when the race ends, with $6,250 for 1st down to $25 for 91st-100th.",
+        "group": "Bonus terms",
+        "label": "Leaderboards"
+      },
+      {
+        "icon": "🔁",
+        "title": "You must wager $10 before your first withdrawal",
+        "body": "New accounts must deposit and wager at least $10 before withdrawals are enabled, and poker and trading don't count. Core tokens have a default limit of $10,000 a day.",
+        "group": "Payouts & fees",
+        "label": "Withdrawal conditions"
+      },
+      {
+        "icon": "⚡",
+        "title": "It aims to pay out within an hour",
+        "body": "Solcasino aims to pay out within 1 hour, and its terms also cite a 10-minute average.",
+        "group": "Payouts & fees",
+        "label": "Stated withdrawal time"
+      },
+      {
+        "icon": "🪪",
+        "title": "Users agree to KYC checks through Sumsub",
+        "body": "Signing up means agreeing to KYC checks via Sumsub, and a selfie with ID may be required.",
+        "group": "Compliance",
+        "label": "KYC policy"
+      }
+    ]
+  },
+  gamba: {
+    "intro": "Gamba skips ID checks for play and pays rakeback that rises to 10% with VIP rank. Here are ten things worth knowing before you sign up, each checked against Gamba's own pages.",
+    "published": "2026-11-04",
+    "glance": [
+      {
+        "k": "Licence",
+        "v": "Anjouan"
+      },
+      {
+        "k": "KYC",
+        "v": "Not to play"
+      },
+      {
+        "k": "Max withdrawal",
+        "v": "No cap"
+      },
+      {
+        "k": "Rakeback",
+        "v": "Up to 10%"
+      }
+    ],
+    "facts": [
+      {
+        "icon": "🏢",
+        "title": "Gamba is run by Gamba Gaming N.V.",
+        "body": "The operator is named as Gamba Gaming N.V., registration 162205.",
+        "group": "Compliance",
+        "label": "Company"
+      },
+      {
+        "icon": "🏛️",
+        "title": "It's licensed in Anjouan",
+        "body": "Gamba lists an Anjouan licence, number ALSI-152512013-F13.",
+        "group": "Compliance",
+        "label": "Licence"
+      },
+      {
+        "icon": "🪪",
+        "title": "You don't need KYC to play",
+        "body": "Gamba doesn't require identity verification to play. It offers four optional verification levels instead.",
+        "group": "Compliance",
+        "label": "KYC policy"
+      },
+      {
+        "icon": "💸",
+        "title": "There's no maximum or daily withdrawal limit",
+        "body": "The only floor is a minimum of 1.5x the current network transaction fee, which updates every 10 seconds with network conditions. That fee is deducted from the amount you withdraw.",
+        "group": "Payouts & fees",
+        "label": "Withdrawal limits"
+      },
+      {
+        "icon": "⚡",
+        "title": "Over 90% of withdrawals are processed instantly",
+        "body": "The rest go through a manual review, which Gamba says averages under 3 minutes.",
+        "group": "Payouts & fees",
+        "label": "Stated withdrawal time"
+      },
+      {
+        "icon": "💰",
+        "title": "Rakeback rises to 10% and never expires",
+        "body": "It pays back a portion of every bet, win or lose, worked out on your total wager against each game's house edge (typically around 3%). You can claim it at will with a 2-minute cooldown, and it's paid in the currency you bet in.",
+        "group": "Bonus terms",
+        "label": "Rakeback"
+      },
+      {
+        "icon": "🔁",
+        "title": "Bonus rollover counts your deposit as well as the bonus",
+        "body": "Each deposit bonus sets its own multiplier, shown under View Details, and the rollover applies to the deposit plus the bonus. Gamba's own worked example uses 20×.",
+        "group": "Bonus terms",
+        "label": "Wagering rules"
+      },
+      {
+        "icon": "🎟️",
+        "title": "A weekly lottery starts with a $10,000 jackpot",
+        "body": "It's drawn every Saturday at 15:00 UTC and the jackpot rolls over if nobody wins. You get 1 free ticket per $100 wagered, and extra tickets cost $0.10.",
+        "group": "Bonus terms",
+        "label": "Weekly raffle"
+      },
+      {
+        "icon": "👑",
+        "title": "Rank-up bonuses run from $7.50 to $220,000",
+        "body": "Each rank pays a fixed bonus in USDT, from $7.50 at Bronze 1 to $220,000 at Immortal 3. Incremental Mode splits each one into four claims at 25% progress steps.",
+        "group": "Bonus terms",
+        "label": "Perks by level"
+      },
+      {
+        "icon": "🛟",
+        "title": "VIP lossback of 10-20% is arranged through a host",
+        "body": "Players with $1,000+ in losses can ask live support for custom lossback. Hosts are hand-picked on wager volume, profit and loss, deposits and activity rather than assigned automatically.",
+        "group": "Bonus terms",
+        "label": "Cashback"
+      }
+    ]
+  },
+  flush: {
+    "intro": "Flush advertises fast, fee-free withdrawals, but its terms set daily, weekly and monthly caps. Here are ten things worth knowing before you sign up, each checked against Flush's own pages.",
+    "published": "2026-11-04",
+    "glance": [
+      {
+        "k": "Licence",
+        "v": "Anjouan"
+      },
+      {
+        "k": "Welcome bonus",
+        "v": "275% to $3,000"
+      },
+      {
+        "k": "Daily withdrawal",
+        "v": "$2,500 cap"
+      },
+      {
+        "k": "Weekly race",
+        "v": "$10,000"
+      }
+    ],
+    "facts": [
+      {
+        "icon": "🏢",
+        "title": "Flush is run by Fordegens Limitada in Costa Rica",
+        "body": "The operator is named as Fordegens Limitada, registration 3102928865, in Costa Rica.",
+        "group": "Compliance",
+        "label": "Company"
+      },
+      {
+        "icon": "🏛️",
+        "title": "It's licensed in Anjouan",
+        "body": "Flush lists an Anjouan licence, number ALSI-202509008-FI1.",
+        "group": "Compliance",
+        "label": "Licence"
+      },
+      {
+        "icon": "🚧",
+        "title": "Its terms cap withdrawals at $2,500 a day",
+        "body": "Clause 9.6 of the Terms of Service sets rolling caps of $2,500 a day, $5,000 a week and $10,000 a month, unless you have a special agreement or a VIP level that allows more. Its transparency page says there are no daily caps.",
+        "group": "Payouts & fees",
+        "label": "Withdrawal limits"
+      },
+      {
+        "icon": "🔢",
+        "title": "Its terms and FAQ give different minimum withdrawals",
+        "body": "The terms say $10 per transaction. The FAQ says $1 for most coins, $10 for ETH and $30 for BTC.",
+        "group": "Payouts & fees",
+        "label": "Minimum withdrawal"
+      },
+      {
+        "icon": "🎁",
+        "title": "The welcome bonus is 275% up to $3,000 over three deposits",
+        "body": "A first deposit of $10-$200 gets 100% up to $200 at 30x wagering, or $200-$1,000 gets 150% up to $1,500 at 35x. The second deposit gets 75% up to $750 and the third 50% up to $750, and you must click Accept on the deposit page before each one or the bonus doesn't apply.",
+        "group": "Bonus terms",
+        "label": "Standing offer"
+      },
+      {
+        "icon": "🎯",
+        "title": "Only bets of $5 or less count toward wagering",
+        "body": "Repeated bigger bets while a bonus is active can void it.",
+        "group": "Bonus terms",
+        "label": "Max bet"
+      },
+      {
+        "icon": "🎲",
+        "title": "Flush originals count just 5% toward wagering",
+        "body": "Slots count 100%, live casino and table games 10%, and Flush originals such as Crash, Dice and Plinko 5%. Some games are restricted.",
+        "group": "Bonus terms",
+        "label": "Game contribution"
+      },
+      {
+        "icon": "💰",
+        "title": "Rakeback is released as cash every 30 minutes",
+        "body": "It builds up in 30-minute windows and is released automatically once a window reaches $5, with anything less carried forward. It has no wagering requirement, rises with each VIP tier and is earned on every game, including sportsbook bets.",
+        "group": "Bonus terms",
+        "label": "Rakeback"
+      },
+      {
+        "icon": "🏁",
+        "title": "A $10,000 weekly race pays the top 15",
+        "body": "First place takes $2,000 and fifteenth $100, and bets need a minimum of $0.20 to count. Half of a prize is credited when you claim it and the other half over 14 consecutive days.",
+        "group": "Bonus terms",
+        "label": "Leaderboards"
+      },
+      {
+        "icon": "🪪",
+        "title": "Lifetime deposits of $10,000 trigger full KYC",
+        "body": "Its AML and KYC policies set a $10,000 cumulative lifetime deposit threshold for compulsory full KYC. No maximum deposit is stated, and Flush takes crypto only, with no fiat deposits.",
+        "group": "Coins & deposit limits",
+        "label": "Deposit limits"
+      }
+    ]
+  },
+  "bitcasino-io": {
+    "intro": "Bitcasino.io is licensed in Curaçao and takes fiat alongside crypto, but its bonus pages don't agree with each other. Here are ten things worth knowing before you sign up, each checked against Bitcasino's own pages.",
+    "published": "2026-11-04",
+    "glance": [
+      {
+        "k": "Licence",
+        "v": "Curaçao"
+      },
+      {
+        "k": "Welcome",
+        "v": "Up to 5,000 USDT"
+      },
+      {
+        "k": "Wagering",
+        "v": "30×"
+      },
+      {
+        "k": "Rakeback cap",
+        "v": "2,000 USDT/week"
+      }
+    ],
+    "facts": [
+      {
+        "icon": "🏢",
+        "title": "Bitcasino is run by Moon Technologies B.V. in Curaçao",
+        "body": "The operator is named as Moon Technologies B.V., at Schout Bij Nacht Doormanweg 40 in Curaçao.",
+        "group": "Compliance",
+        "label": "Company"
+      },
+      {
+        "icon": "🏛️",
+        "title": "It holds a Curaçao licence first issued by the GCB",
+        "body": "Its licence, OGL/2023/111/0069, was issued by the GCB and extended by the CGA.",
+        "group": "Compliance",
+        "label": "Licence"
+      },
+      {
+        "icon": "🎁",
+        "title": "Its welcome bonus and its reward terms contradict each other",
+        "body": "The welcome offer promises up to 5,000 USDT over three deposits: 100% up to 1,500 USDT, then 50% up to 2,000 USDT, then 100% up to 1,500 USDT, with a 50 USDT minimum deposit and 30x wagering. Bitcasino's own Reward Terms & Conditions page says it offers no deposit or welcome rewards.",
+        "group": "Bonus terms",
+        "label": "Standing offer"
+      },
+      {
+        "icon": "⏳",
+        "title": "Withdrawing early removes the reward and its winnings",
+        "body": "With a deposit reward, the deposit can't be withdrawn until wagering is met. Rewards must be used within 72 hours unless their terms say otherwise, and there's one per person, household, IP address or shared device.",
+        "group": "Bonus terms",
+        "label": "Bonus play rules"
+      },
+      {
+        "icon": "💰",
+        "title": "Weekly rakeback is capped at 2,000 USDT",
+        "body": "Selected slots pay 3% for 1,000-49,999 wagered in a week and 5% for 50,000 or more, worked out as wager x house edge x rate. It's credited in USDT every Monday by 15:00 GMT.",
+        "group": "Bonus terms",
+        "label": "Rakeback"
+      },
+      {
+        "icon": "👑",
+        "title": "Loyalty milestone rewards carry no wagering",
+        "body": "Real-money bets earn 5 loyalty points per 1 USDT across seven levels, and the points multiplier climbs from 1x up to Expert to 3x at Hero. Milestone rewards are free spins, free chips or cashback, paid as real money.",
+        "group": "Bonus terms",
+        "label": "Perks by level"
+      },
+      {
+        "icon": "🏦",
+        "title": "Very large withdrawals can be paid at 1 million USDT a week",
+        "body": "Your email must be verified and a deposit needs 3 blockchain confirmations before it can be withdrawn. Bitcasino may require the deposit to be wagered once, or 5× if it suspects the account is used as a mixer.",
+        "group": "Payouts & fees",
+        "label": "Withdrawal rules"
+      },
+      {
+        "icon": "💤",
+        "title": "Dormant accounts can be charged 5% a month",
+        "body": "After 3 months without using a positive balance you get a notice, and the balance can be removed a month later, though its safety team can recover it. After 12 months inactive, a 5% monthly administration fee can be deducted.",
+        "group": "Payouts & fees",
+        "label": "Inactive accounts"
+      },
+      {
+        "icon": "🪪",
+        "title": "Withdrawals over €2,500 may need extra KYC",
+        "body": "Bitcasino says additional KYC may apply to withdrawals over €2,500, or to smaller ones.",
+        "group": "Compliance",
+        "label": "KYC policy"
+      },
+      {
+        "icon": "🌍",
+        "title": "Playing from Japan is prohibited",
+        "body": "Players in its restricted jurisdictions can't register, and Japan is named specifically. The full list is in its help centre.",
+        "group": "Compliance",
+        "label": "Restricted countries"
+      }
+    ]
+  },
+  metawin: {
+    "intro": "MetaWin has no welcome bonus and puts prize draws at the centre of its rewards. Here are ten things worth knowing before you sign up, each checked against MetaWin's own pages.",
+    "published": "2026-11-04",
+    "glance": [
+      {
+        "k": "Licence",
+        "v": "Anjouan"
+      },
+      {
+        "k": "Welcome bonus",
+        "v": "None"
+      },
+      {
+        "k": "Withdrawal fee",
+        "v": "$2.50"
+      },
+      {
+        "k": "Sports cap",
+        "v": "$100,000 a day"
+      }
+    ],
+    "facts": [
+      {
+        "icon": "🏢",
+        "title": "MetaWin is run by Rivolo Limited in Nevis",
+        "body": "The operator is named as Rivolo Limited, Nevis, company number C62588.",
+        "group": "Compliance",
+        "label": "Company"
+      },
+      {
+        "icon": "🏛️",
+        "title": "It's licensed in Anjouan",
+        "body": "MetaWin lists an Anjouan licence, number ALSI-202602025-FI1.",
+        "group": "Compliance",
+        "label": "Licence"
+      },
+      {
+        "icon": "🪪",
+        "title": "It asks for photo ID and a selfie",
+        "body": "MetaWin identifies players at onboarding and on an ongoing basis, using photo ID and a selfie.",
+        "group": "Compliance",
+        "label": "KYC policy"
+      },
+      {
+        "icon": "🎁",
+        "title": "There's no welcome bonus, only Prize Funds",
+        "body": "30% of every deposit is credited as Prize Funds, which can only be used on prize draw entries when your real balance can't cover them. Any left reset to $0 when you withdraw, and the promotion page shows an end date of 1 January 2027.",
+        "group": "Bonus terms",
+        "label": "Standing offer"
+      },
+      {
+        "icon": "🚧",
+        "title": "Your 24-hour withdrawal limit depends on your tier",
+        "body": "One FAQ answer lists $10,000 for Unranked up to $500,000 for Red Room, while another gives different figures, and the terms cap swaps out at 5 ETH per 24 hours. The minimum withdrawal is $20 and every withdrawal carries a $2.50 fee.",
+        "group": "Payouts & fees",
+        "label": "Withdrawal limits"
+      },
+      {
+        "icon": "🔁",
+        "title": "Every deposit must be wagered once before withdrawal",
+        "body": "There's no maximum deposit, and minimums depend on the coin, such as 0.0001 BTC or 0.002 ETH. Deposits below the minimum are not credited and cannot be recovered.",
+        "group": "Coins & deposit limits",
+        "label": "Deposit limits"
+      },
+      {
+        "icon": "⏱️",
+        "title": "Instant WinBack must be claimed within 30 minutes",
+        "body": "The Instant Bonus pays a share of the house edge on your last 30 minutes of wagering and is recalculated every 30 minutes. Zero House Edge games earn nothing, and games over 98% RTP count at 25%.",
+        "group": "Bonus terms",
+        "label": "Rakeback"
+      },
+      {
+        "icon": "🎟️",
+        "title": "A monthly $250,000 prize draw has a $100,000 top prize",
+        "body": "You get 1 free entry per $100 wagered on casino, up to 15,000, and 3 per 24 hours for depositing $20+. At least one deposit in the month is required, and prizes are paid in USDT with 1x wagering.",
+        "group": "Bonus terms",
+        "label": "Prize draws"
+      },
+      {
+        "icon": "⚽",
+        "title": "Sports winnings are capped at $100,000 a day",
+        "body": "The cap applies per customer per calendar day, across all sports, markets and bet types. Separately, the maximum win on any single wager is $1,500,000.",
+        "group": "Sportsbook",
+        "label": "Max payout"
+      },
+      {
+        "icon": "👑",
+        "title": "Its own pages disagree on wagering for rank-up rewards",
+        "body": "The help centre says Rank Up Rewards carry 1x wagering, while MetaWin Hub guides say 0x. Tiers run from Unranked to Platinum, then the invite-only Red Room, and ranks never decay.",
+        "group": "Bonus terms",
+        "label": "VIP levels"
+      }
+    ]
+  },
+  cybet: {
+    "intro": "Cybet pairs a 20% rakeback deal for Pioneer Tier players with a VIP status match from other casinos. Here are eight things worth knowing before you sign up, each checked against Cybet's own pages.",
+    "published": "2026-11-04",
+    "glance": [
+      {
+        "k": "Licence",
+        "v": "Anjouan"
+      },
+      {
+        "k": "Rakeback",
+        "v": "20% at Pioneer"
+      },
+      {
+        "k": "Max single win",
+        "v": "$100,000"
+      },
+      {
+        "k": "VIP match",
+        "v": "Up to Plat 43"
+      }
+    ],
+    "facts": [
+      {
+        "icon": "🏢",
+        "title": "Cybet is run by Eskimo Adventures Ltd in Belize",
+        "body": "The operator is named as Eskimo Adventures Ltd, Belize registration 000043034.",
+        "group": "Compliance",
+        "label": "Company"
+      },
+      {
+        "icon": "🏛️",
+        "title": "It's licensed in Anjouan",
+        "body": "Cybet lists an Anjouan licence, number ALSI-202409034-FI2.",
+        "group": "Compliance",
+        "label": "Licence"
+      },
+      {
+        "icon": "🪪",
+        "title": "Full KYC only when it's needed",
+        "body": "Cybet's KYC is risk-based, with full verification only when needed for security or compliance.",
+        "group": "Compliance",
+        "label": "KYC policy"
+      },
+      {
+        "icon": "🎰",
+        "title": "Live casino and sports can't be played with bonus coins",
+        "body": "Slots count 25% to 100% depending on RTP, with higher-RTP slots counting less, and Originals 10%. Live casino, game shows and sports don't count at all.",
+        "group": "Bonus terms",
+        "label": "Game contribution"
+      },
+      {
+        "icon": "📅",
+        "title": "The welcome promotion was dated to end on 1 October 2026",
+        "body": "The promotion was listed as running from 1 June to 1 October 2026. Once activated, a bonus has 14 days before it's cancelled automatically.",
+        "group": "Bonus terms",
+        "label": "Expiry"
+      },
+      {
+        "icon": "💰",
+        "title": "20% rakeback needs the Pioneer Tier",
+        "body": "It's based on an implied 1% house edge, so Cybet's own example returns $2 on $1,000 wagered. Rakeback is credited automatically once it reaches $1 and covers casino wagers only.",
+        "group": "Bonus terms",
+        "label": "Rakeback"
+      },
+      {
+        "icon": "🚧",
+        "title": "Its KYC page caps a single winning at $100,000",
+        "body": "That cap is per transaction, while the fast-payout page says there is no upper cap. The bonus withdrawal cap also differs between pages: 5x the initial deposit in the bonus FAQ, 10x deposit plus bonus in the guidebook.",
+        "group": "Payouts & fees",
+        "label": "Withdrawal limits"
+      },
+      {
+        "icon": "🔀",
+        "title": "VIPs from other casinos can get a status match up to Plat 43",
+        "body": "You apply through its Telegram bot with proof of your level, and reviews take 24 to 72 hours. Approved players then pick a 30-day VIP Mission worth up to $7,000 in total.",
+        "group": "Bonus terms",
+        "label": "VIP transfer"
+      }
+    ]
+  },
+  spartans: {
+    "intro": "Spartans builds its rewards around CashRake, a rakeback and cashback scheme that pays more on lower-RTP games. Here are ten things worth knowing before you sign up, each checked against Spartans' own pages.",
+    "published": "2026-11-04",
+    "glance": [
+      {
+        "k": "Licence",
+        "v": "Anjouan"
+      },
+      {
+        "k": "CashRake",
+        "v": "Up to 33%"
+      },
+      {
+        "k": "Daily withdrawal",
+        "v": "6,000 BRL cap"
+      },
+      {
+        "k": "KYC",
+        "v": "Before withdrawal"
+      }
+    ],
+    "facts": [
+      {
+        "icon": "🏢",
+        "title": "Spartans is run by Nexus International Entertainment Ltd in Belize",
+        "body": "The operator is named as Nexus International Entertainment Ltd, Belize registration 000043488.",
+        "group": "Compliance",
+        "label": "Company"
+      },
+      {
+        "icon": "🏛️",
+        "title": "It's licensed in Anjouan",
+        "body": "Spartans lists an Anjouan licence, number ALSI-202409038-FI2.",
+        "group": "Compliance",
+        "label": "Licence"
+      },
+      {
+        "icon": "🪪",
+        "title": "You must verify your ID before your first withdrawal",
+        "body": "Spartans requires ID verification before the first withdrawal.",
+        "group": "Compliance",
+        "label": "KYC policy"
+      },
+      {
+        "icon": "🎁",
+        "title": "CashRake is \"up to 33%\", not a flat 33%",
+        "body": "The 33% is a limit sized by your deposits: a $100 deposit gives a $33 CashRake limit and a further $100 raises it to $66. Accrued CashRake must be claimed within 24 hours of your last claim or it resets to zero.",
+        "group": "Bonus terms",
+        "label": "Standing offer"
+      },
+      {
+        "icon": "📉",
+        "title": "The lower a game's RTP, the higher the rakeback",
+        "body": "Spartans publishes its rate card by RTP: a 94.00% RTP game pays 33% rakeback, falling to 5% at 99.50%. The sportsbook is benchmarked at an RTP of 98.",
+        "group": "Bonus terms",
+        "label": "Rakeback"
+      },
+      {
+        "icon": "🚧",
+        "title": "Daily withdrawals are capped at 6,000 BRL",
+        "body": "The cap is in BRL even though the same document lists Brazil as a restricted country. Deposits must be wagered at least 1.3x, and transactions of $10,000 or more trigger enhanced due diligence.",
+        "group": "Payouts & fees",
+        "label": "Withdrawal limits"
+      },
+      {
+        "icon": "🇧🇷",
+        "title": "Its only deposit bonus is a 200% Pix offer in BRL",
+        "body": "The 200% first-deposit bonus is for Pix deposits, with a maximum bonus of BRL 10,000 and 60x bonus wagering. Only slot games count toward it, and there's no sports welcome offer.",
+        "group": "Sports bonus terms",
+        "label": "Offer"
+      },
+      {
+        "icon": "👑",
+        "title": "Four VIP levels can be bought with a deposit",
+        "body": "The first level of Bronze, Silver, Gold and Platinum can be bought with a single deposit at up to $5K, $25K, $150K and $1M, with the price falling as you wager. Elite is earned only.",
+        "group": "Bonus terms",
+        "label": "Perks by level"
+      },
+      {
+        "icon": "🤝",
+        "title": "Conor Benn and Era Istrefi are its headline partners",
+        "body": "Official partnership pages cover boxer Conor Benn, UFC lightweight Arman Tsarukyan and brand ambassador Era Istrefi. No sports team partnership is live, and its roadmap lists one as planned.",
+        "group": "Compliance",
+        "label": "Partners"
+      },
+      {
+        "icon": "🏁",
+        "title": "Its leaderboard page says \"Coming soon\"",
+        "body": "The leaderboard page shows an empty table with no prizes, while the promotions page advertises an Era Istrefi monthly leaderboard as live. No prize pool, schedule or standings are published anywhere.",
+        "group": "Bonus terms",
+        "label": "Leaderboards"
+      }
+    ]
+  },
+  housebets: {
+    "intro": "Housebets lets you choose how your rewards split between rakeback and lossback, and ranks its leaderboards by XP rather than wager. Here are ten things worth knowing before you sign up, each checked against Housebets' own pages.",
+    "published": "2026-11-04",
+    "glance": [
+      {
+        "k": "Licence",
+        "v": "Curaçao"
+      },
+      {
+        "k": "Deposit playthrough",
+        "v": "1×"
+      },
+      {
+        "k": "Rakeback",
+        "v": "Casino only"
+      },
+      {
+        "k": "VIP levels",
+        "v": "43"
+      }
+    ],
+    "facts": [
+      {
+        "icon": "🏢",
+        "title": "Housebets is run by Bridge Technologies B.V.",
+        "body": "The operator is named as Bridge Technologies B.V., registration 160264(0).",
+        "group": "Compliance",
+        "label": "Company"
+      },
+      {
+        "icon": "🏛️",
+        "title": "It holds a Curaçao Gaming Control Board licence",
+        "body": "Housebets lists licence OGL/2024/431/0231 from the Curaçao Gaming Control Board.",
+        "group": "Compliance",
+        "label": "Licence"
+      },
+      {
+        "icon": "🔁",
+        "title": "Every deposit must be wagered once before withdrawal",
+        "body": "There's no single minimum or maximum withdrawal: limits and fees are set per coin, network and method and shown in the wallet. Withdrawals need completed verification, are normally automatic within minutes, and some need manual approval.",
+        "group": "Payouts & fees",
+        "label": "Withdrawal limits"
+      },
+      {
+        "icon": "🎚️",
+        "title": "A slider splits your rewards between rakeback and lossback",
+        "body": "Rakeback is a share of every wager, while lossback only pays if you finish the period down. Weekly and monthly are set separately, changes apply from the next cycle, and the default is 50% each.",
+        "group": "Bonus terms",
+        "label": "Cashback"
+      },
+      {
+        "icon": "💰",
+        "title": "Sports bets earn no rakeback",
+        "body": "Instant rakeback accrues on real-money casino bets from Bronze 1, and daily rakeback is generated at 15:00 UTC the next day. Claims carry 0x wagering, but Housebets doesn't publish the payout rates.",
+        "group": "Bonus terms",
+        "label": "Rakeback"
+      },
+      {
+        "icon": "📆",
+        "title": "The weekly reload starts at Silver 1",
+        "body": "It's generated every Thursday at 15:00 UTC from Silver 1 (10,000 XP), and the monthly bonus from Gold 1 (100,000 XP). Sports play doesn't count toward either.",
+        "group": "Bonus terms",
+        "label": "Reload bonuses"
+      },
+      {
+        "icon": "👑",
+        "title": "There are 43 levels, up to 500 million XP",
+        "body": "Levels run from Bronze at 200 XP to Castle 3, and $1 wagered at a 1% house edge earns 1 XP. A dedicated VIP host is available from Platinum 3 (1 million XP), and level-up bonuses reach $60,000 each across Palladium and Castle.",
+        "group": "Bonus terms",
+        "label": "Perks by level"
+      },
+      {
+        "icon": "🏁",
+        "title": "Leaderboards rank XP, not amount wagered",
+        "body": "Weekly and monthly boards rank players by XP earned in the period, weighted by each game's house edge. Casino and sports bets both count.",
+        "group": "Bonus terms",
+        "label": "Leaderboards"
+      },
+      {
+        "icon": "⏳",
+        "title": "Unclaimed bonuses can be cancelled after 60 days",
+        "body": "Bonuses may be cancelled after their claim period or 60 days, whichever is shorter.",
+        "group": "Bonus terms",
+        "label": "Expiry"
+      },
+      {
+        "icon": "🔀",
+        "title": "A VIP transfer needs a $1,000 deposit",
+        "body": "To move VIP status over from another casino, you need a single real-money deposit of at least $1,000 made in the last 30 days.",
+        "group": "Bonus terms",
+        "label": "VIP levels"
+      }
+    ]
+  },
+  dustbit: {
+    "intro": "Dustbit skips ID checks for play and withdrawals and pays rakeback from 21% at its first VIP tier. Here are ten things worth knowing before you sign up, each checked against Dustbit's own pages.",
+    "published": "2026-11-04",
+    "glance": [
+      {
+        "k": "Licence",
+        "v": "Anjouan"
+      },
+      {
+        "k": "KYC",
+        "v": "Not required"
+      },
+      {
+        "k": "Rakeback",
+        "v": "21% to 50%"
+      },
+      {
+        "k": "Withdrawals",
+        "v": "5–10 minutes"
+      }
+    ],
+    "facts": [
+      {
+        "icon": "🏢",
+        "title": "Dustbit is run by Oxilium Limited in Belize",
+        "body": "The operator is named as Oxilium Limited, Belize registration 000047923.",
+        "group": "Compliance",
+        "label": "Company"
+      },
+      {
+        "icon": "🏛️",
+        "title": "It's licensed in Anjouan",
+        "body": "Dustbit lists an Anjouan licence, number ALSI-202509012-FI1.",
+        "group": "Compliance",
+        "label": "Licence"
+      },
+      {
+        "icon": "🪪",
+        "title": "No KYC is required to play or withdraw",
+        "body": "Dustbit doesn't require verification as standard, though it may ask for ID or proof of source of funds.",
+        "group": "Compliance",
+        "label": "KYC policy"
+      },
+      {
+        "icon": "⚡",
+        "title": "Crypto withdrawals usually take 5–10 minutes",
+        "body": "Some withdrawals are briefly reviewed, and Dustbit says most of those still finish within minutes.",
+        "group": "Payouts & fees",
+        "label": "Stated withdrawal time"
+      },
+      {
+        "icon": "💸",
+        "title": "No maximum withdrawal is published",
+        "body": "There's no stated per-day or per-month payout cap either. Its terms say only that limits appear on the website, that withdrawals go back to the deposit method where possible, and that extra verification may be applied.",
+        "group": "Payouts & fees",
+        "label": "Withdrawal limits"
+      },
+      {
+        "icon": "👑",
+        "title": "Rakeback runs from 21% to 50% by VIP tier",
+        "body": "NewComer pays 21% from $1,000 wagered, rising through seven tiers to 50% for Immortal Whale at $1 billion. XP is earned at 100 per $1 on casino and 50 per $1 on sports.",
+        "group": "Bonus terms",
+        "label": "Perks by level"
+      },
+      {
+        "icon": "🔁",
+        "title": "Its help centre gives wagering only as an example",
+        "body": "Bonus funds move to your main balance once wagering is complete, but the help centre only uses 10× the bonus as an example. Eligible games are shown under My Profile › Promotions.",
+        "group": "Bonus terms",
+        "label": "Wagering rules"
+      },
+      {
+        "icon": "⚽",
+        "title": "Football bets pay out when your team goes two goals ahead",
+        "body": "Pre-match 1X2 bets on listed competitions, including the Premier League and Champions League, are settled as won at a two-goal lead even if your team later loses. There's no opt-in, and cash-outs and in-play bets don't qualify.",
+        "group": "Bonus terms",
+        "label": "Early payout"
+      },
+      {
+        "icon": "🔀",
+        "title": "VIP status from another casino can be transferred",
+        "body": "You send support a screenshot of your VIP level and stats, the wallet address you used there, and the betslip link for a $0.01 bet on an Originals game to prove ownership. Dustbit then grants an equivalent or adjusted status.",
+        "group": "Bonus terms",
+        "label": "VIP transfer"
+      },
+      {
+        "icon": "💳",
+        "title": "It takes cards and e-wallets as well as crypto",
+        "body": "Fiat deposits go through card, Apple Pay, Revolut Pay, Google Pay, Skrill and Neteller. No maximum deposit is published, and you can set your own daily, monthly or yearly deposit and loss limits.",
+        "group": "Coins & deposit limits",
+        "label": "Deposit limits"
+      }
+    ]
+  },
+  "whale-io": {
+    "intro": "Whale.io pays daily cashback that climbs with every level and promotes 90-second withdrawals. Here are ten things worth knowing before you sign up, each checked against Whale.io's own pages.",
+    "published": "2026-11-04",
+    "glance": [
+      {
+        "k": "Licence",
+        "v": "Anjouan"
+      },
+      {
+        "k": "Min deposit",
+        "v": "$1"
+      },
+      {
+        "k": "Daily cashback",
+        "v": "Up to 25%"
+      },
+      {
+        "k": "Withdrawals",
+        "v": "90 seconds"
+      }
+    ],
+    "facts": [
+      {
+        "icon": "🏢",
+        "title": "Whale.io is run by Whale Operations Ltd. in the Seychelles",
+        "body": "Its terms name Whale Operations Ltd., a Seychelles company, as the operator.",
+        "group": "Compliance",
+        "label": "Company"
+      },
+      {
+        "icon": "🏛️",
+        "title": "It holds an Anjouan licence",
+        "body": "Whale.io lists licence ALSI-202503012-FI1 from Anjouan.",
+        "group": "Compliance",
+        "label": "Licence"
+      },
+      {
+        "icon": "🎁",
+        "title": "The 200% deposit bonus unlocks bit by bit",
+        "body": "On your first qualifying deposit, 200% of the deposit goes into a Bonus Balance. It unlocks a little each time you claim Daily Cashback, the Weekly Bonus or the Monthly Bonus, and what unlocks becomes withdrawable cash with no extra wagering.",
+        "group": "Bonus terms",
+        "label": "Wagering rules"
+      },
+      {
+        "icon": "💸",
+        "title": "Daily cashback climbs from 1% to 25%",
+        "body": "Cashback on the previous day's net loss starts at 1% at Bronze 1 and rises 1% per level to 24% at Emerald 4 and 25% at Whale. It's paid as real cash with 1x wagering and can be claimed from 07:00 UTC, within 24 hours.",
+        "group": "Bonus terms",
+        "label": "Cashback"
+      },
+      {
+        "icon": "💰",
+        "title": "Weekly and monthly bonuses pay 2% and 1.5% of your wager",
+        "body": "A weekly bonus of 2% of your adjusted wager is paid in cash every Monday, and a monthly bonus of 1.5% of the month's adjusted wager on the 1st. Neither carries wagering after you claim it.",
+        "group": "Bonus terms",
+        "label": "Rakeback"
+      },
+      {
+        "icon": "👑",
+        "title": "There are 25 levels and they never reset",
+        "body": "The 25 levels run across seven ranks from Bronze to Whale, and each one lifts daily cashback by one point. Levels are permanent and earned only by playing.",
+        "group": "Bonus terms",
+        "label": "Perks by level"
+      },
+      {
+        "icon": "🎰",
+        "title": "Its lootboxes include a $150,000 Lamborghini box",
+        "body": "Lootboxes always pay a prize you can claim or sell straight back, from free spins packs at $3 and merch boxes at $1.50 to slot booster packs from $20. They're open to all players and shipped globally.",
+        "group": "Bonus terms",
+        "label": "Lootboxes"
+      },
+      {
+        "icon": "⚡",
+        "title": "It promotes 90-second withdrawals",
+        "body": "Its homepage advertises 90-second withdrawals alongside instant, gas-free crypto withdrawals.",
+        "group": "Payouts & fees",
+        "label": "Stated withdrawal time"
+      },
+      {
+        "icon": "🏦",
+        "title": "Withdrawals above 50,000 USDT may come in instalments",
+        "body": "No maximum withdrawal is stated and the minimum is $5. Requests above the equivalent of 50,000 USDT may be paid in instalments with extra verification, and you need Level 2 verification and to have wagered your first deposit before withdrawing.",
+        "group": "Payouts & fees",
+        "label": "Withdrawal limits"
+      },
+      {
+        "icon": "🪙",
+        "title": "You can deposit from $1",
+        "body": "The minimum deposit is the equivalent of $1 at the exchange rate when you deposit.",
+        "group": "Coins & deposit limits",
+        "label": "Minimum deposit"
+      }
+    ]
+  },
+  shock: {
+    "intro": "Shock keeps its welcome match off its promotions page and pays rakeback you can claim every half hour. Here are ten things worth knowing before you sign up, each checked against Shock's own pages.",
+    "published": "2026-11-04",
+    "glance": [
+      {
+        "k": "Licence",
+        "v": "Curaçao"
+      },
+      {
+        "k": "Wagering",
+        "v": "35× dep + bonus"
+      },
+      {
+        "k": "Max bet",
+        "v": "$10"
+      },
+      {
+        "k": "Crypto payouts",
+        "v": "1–5 min"
+      }
+    ],
+    "facts": [
+      {
+        "icon": "🏢",
+        "title": "Shock is run by PR Entertainment N.V.",
+        "body": "Its terms name PR Entertainment N.V., registration 163398, as the company behind Shock.",
+        "group": "Compliance",
+        "label": "Company"
+      },
+      {
+        "icon": "🏛️",
+        "title": "It operates under a Curaçao licence",
+        "body": "Shock states that it holds a Government of Curaçao gaming licence.",
+        "group": "Compliance",
+        "label": "Licence"
+      },
+      {
+        "icon": "🎁",
+        "title": "Its 100% welcome match isn't on the promotions page",
+        "body": "A 100% first-deposit match, capped on a $1,500 deposit, is set out on its bonus terms page, but the promotions page doesn't advertise it. You claim it by contacting support after depositing, and a $10 maximum bet applies while rollover is active.",
+        "group": "Bonus terms",
+        "label": "Standing offer"
+      },
+      {
+        "icon": "🔁",
+        "title": "Rollover is 35x the deposit plus the bonus",
+        "body": "Shock's standard wagering is 35× the deposit plus the bonus, unless an offer says otherwise.",
+        "group": "Bonus terms",
+        "label": "Wagering"
+      },
+      {
+        "icon": "🎲",
+        "title": "Bets count by house edge against a 4% base",
+        "body": "Each bet counts toward rollover as wager × edge ÷ 0.04, so a game's house edge decides how much of the bet counts. Many individual games are blocked and marked in the app.",
+        "group": "Bonus terms",
+        "label": "Game contribution"
+      },
+      {
+        "icon": "💰",
+        "title": "Rakeback can be claimed every 30 minutes",
+        "body": "Instant rakeback builds up in a separate rewards balance on every wager and can be claimed every 30 minutes. Rewards never expire, and no rank is needed to start earning.",
+        "group": "Bonus terms",
+        "label": "Rakeback"
+      },
+      {
+        "icon": "👑",
+        "title": "Its own pages disagree on where VIP starts",
+        "body": "The wager-based ladder runs from Bronze at $10,000 to Elite at $500m and never resets. Its Rewards 3.0 blog (June 2026) says VIP begins at Platinum 4, while its help centre (March 2025) marks Platinum 2.",
+        "group": "Bonus terms",
+        "label": "VIP levels"
+      },
+      {
+        "icon": "⚡",
+        "title": "Crypto withdrawals mostly take 1 to 5 minutes",
+        "body": "Shock says most withdrawals are processed within a few minutes, and crypto mostly within 1–5 minutes.",
+        "group": "Payouts & fees",
+        "label": "Stated withdrawal time"
+      },
+      {
+        "icon": "🏦",
+        "title": "You can only have one pending withdrawal per method",
+        "body": "No maximum withdrawal is published. Its terms allow one pending withdrawal per method and, depending on the method, one request per 24 hours, with processing within two banking days.",
+        "group": "Payouts & fees",
+        "label": "Withdrawal limits"
+      },
+      {
+        "icon": "🪪",
+        "title": "You need to share your occupation to deposit",
+        "body": "Email, name, address, occupation and date of birth are required to deposit or withdraw, and ID checks are at Shock's discretion.",
+        "group": "Compliance",
+        "label": "KYC policy"
+      }
+    ]
+  },
+  rollbit: {
+    "intro": "Rollbit pays 5% rakeback on every bet and sits a crypto trading platform alongside its casino. Here are ten things worth knowing before you sign up, each checked against Rollbit's own pages.",
+    "published": "2026-11-04",
+    "glance": [
+      {
+        "k": "Licence",
+        "v": "Curaçao"
+      },
+      {
+        "k": "Rakeback",
+        "v": "5% on all bets"
+      },
+      {
+        "k": "Daily race",
+        "v": "$25,000"
+      },
+      {
+        "k": "First withdrawal",
+        "v": "$10 dep + wager"
+      }
+    ],
+    "facts": [
+      {
+        "icon": "🏢",
+        "title": "Rollbit is run by Bull Gaming N.V.",
+        "body": "Its terms name Bull Gaming N.V., a Curaçao company with registration 157086.",
+        "group": "Compliance",
+        "label": "Company"
+      },
+      {
+        "icon": "🏛️",
+        "title": "It holds Curaçao licence OGL/2024/1260/0494",
+        "body": "Rollbit lists licence OGL/2024/1260/0494 from the Curaçao Gaming Authority.",
+        "group": "Compliance",
+        "label": "Licence"
+      },
+      {
+        "icon": "📈",
+        "title": "Its crypto trading isn't covered by the gaming licence",
+        "body": "Crypto trading and an NFT marketplace sit alongside the casino, and Rollbit says crypto trading isn't covered by its gaming licence.",
+        "group": "Compliance",
+        "label": "Licence scope"
+      },
+      {
+        "icon": "💰",
+        "title": "Rakeback is 5% on all bets",
+        "body": "It can be claimed every 30 minutes. Each Rewards Calendar claim, available at midnight, 8am and 4pm UTC, also adds one hour of +15% Rakeboost.",
+        "group": "Bonus terms",
+        "label": "Rakeback"
+      },
+      {
+        "icon": "⏳",
+        "title": "Most rewards are paid out in instalments",
+        "body": "Rakeback pays 50% now and 50% over 3 days. Daily and weekly bonuses pay 20% now and 80% over 7 days, rank-up bonuses 80% over 21 days and monthly bonuses 80% over 30 days.",
+        "group": "Bonus terms",
+        "label": "How rewards pay out"
+      },
+      {
+        "icon": "🏁",
+        "title": "Its Daily Race pays out $25,000",
+        "body": "The race resets every 24 hours and pays from $10,000 for 1st down to $200 for 11th. Wagers on every Rollbit product count, including sports, casino and crypto futures.",
+        "group": "Bonus terms",
+        "label": "Leaderboards"
+      },
+      {
+        "icon": "⚽",
+        "title": "Football bets can pay out early at two goals up",
+        "body": "Its 2 Up Early Payout settles pre-match 1x2 bets as winners once your team goes two goals up, in leagues including the Premier League, Champions League and La Liga. Free bets and cashed-out bets are excluded.",
+        "group": "Sports bonus terms",
+        "label": "Offer"
+      },
+      {
+        "icon": "🏦",
+        "title": "New accounts must deposit and wager $10 before withdrawing",
+        "body": "After that first $10 deposit and $10 wagered, Rollbit says there are no limits on withdrawals.",
+        "group": "Payouts & fees",
+        "label": "Withdrawal requirements"
+      },
+      {
+        "icon": "🪪",
+        "title": "Verification can run to 5 levels",
+        "body": "Rollbit uses full KYC, with up to 5 verification levels including ID and a camera check, depending on the account.",
+        "group": "Compliance",
+        "label": "KYC policy"
+      },
+      {
+        "icon": "🤝",
+        "title": "It's FaZe Clan's Counter-Strike partner",
+        "body": "Rollbit is the official Counter-Strike gaming partner of FaZe Clan, with Rollbit or RLB on the collarbone of the team jersey during matches.",
+        "group": "Compliance",
+        "label": "Partners"
+      }
+    ]
+  },
+  degencity: {
+    "intro": "Degencity lets most players withdraw without KYC and will match your VIP status from another casino. Here are ten things worth knowing before you sign up, each checked against Degencity's own pages.",
+    "published": "2026-11-04",
+    "glance": [
+      {
+        "k": "Licence",
+        "v": "Anjouan"
+      },
+      {
+        "k": "KYC",
+        "v": "Email to withdraw"
+      },
+      {
+        "k": "New-player cashback",
+        "v": "10% for 7 days"
+      },
+      {
+        "k": "Withdrawals",
+        "v": "Within 1 hour"
+      }
+    ],
+    "facts": [
+      {
+        "icon": "🏢",
+        "title": "Degencity is run by a Costa Rican company",
+        "body": "Its terms name 3-102-939867 LIMITADA, registration 3-102-939867, based in Escazú, San José, Costa Rica.",
+        "group": "Compliance",
+        "label": "Company"
+      },
+      {
+        "icon": "🏛️",
+        "title": "Its Anjouan licence showed as valid",
+        "body": "Degencity holds Anjouan licence ALSI-202601025-FI1. The validator linked from its footer showed Operating status VALID on 16 Sep 2026, with degencity.com as the registered website.",
+        "group": "Compliance",
+        "label": "Licence"
+      },
+      {
+        "icon": "🌍",
+        "title": "The licence doesn't cover the UK, the USA or Australia",
+        "body": "It also excludes Comoros, France, the Netherlands, Spain and FATF-blacklisted and sanctioned countries, and complaints from players there fall outside the regulator's scope.",
+        "group": "Compliance",
+        "label": "Licence exclusions"
+      },
+      {
+        "icon": "🪪",
+        "title": "You can usually withdraw without KYC",
+        "body": "Degencity says you can generally deposit, play and withdraw without KYC, though a verified email address is required to withdraw.",
+        "group": "Compliance",
+        "label": "KYC policy"
+      },
+      {
+        "icon": "🎁",
+        "title": "New players get 10% of slot losses back for 7 days",
+        "body": "The cashback covers net slot losses in your first 7 days after registering and is credited automatically once you've made at least one deposit. Instant rakeback starts from the first bet.",
+        "group": "Bonus terms",
+        "label": "Standing offer"
+      },
+      {
+        "icon": "🎰",
+        "title": "Only slot losses count toward that cashback",
+        "body": "Live casino, game shows and bonus buys are excluded, and wins on other games don't offset slot losses.",
+        "group": "Bonus terms",
+        "label": "Game contribution"
+      },
+      {
+        "icon": "🔄",
+        "title": "It will match your VIP status from another casino",
+        "body": "Email a screen recording showing your tier, total wagered and account email, and it takes up to 48 hours to review. The tier granted is at its discretion.",
+        "group": "Bonus terms",
+        "label": "VIP transfer"
+      },
+      {
+        "icon": "👑",
+        "title": "A dedicated VIP host comes at 1,000,000 XP",
+        "body": "VIP status starts automatically at Hustler (250,000 XP). Card Shark (1,000,000 XP) adds a bonus increase and a dedicated host, Pitboss (5,000,000 XP) bespoke rewards and exclusive access, and Ace (22,000,000 XP) event invitations.",
+        "group": "Bonus terms",
+        "label": "Perks by level"
+      },
+      {
+        "icon": "⚡",
+        "title": "Withdrawals should arrive within an hour",
+        "body": "Degencity says withdrawals are usually processed instantly, with blockchain confirmations taking a few minutes and funds arriving within up to 1 hour.",
+        "group": "Payouts & fees",
+        "label": "Stated withdrawal time"
+      },
+      {
+        "icon": "🪙",
+        "title": "USDT on Tron needs a $20 deposit",
+        "body": "Minimums run per coin and network: $5 for BTC, ETH, USDC and USDT on ERC-20, $20 for USDT on Tron and $1 for LTC and TRX. Its help centre says these can change.",
+        "group": "Coins & deposit limits",
+        "label": "Minimum deposit"
+      }
+    ]
+  },
+  acebet: {
+    "intro": "Acebet's rakeback climbs to 25% of the house edge, but its own pages don't agree on the welcome bonus. Here are ten things worth knowing before you sign up, each checked against Acebet's own pages.",
+    "published": "2026-11-04",
+    "glance": [
+      {
+        "k": "Licence",
+        "v": "Anjouan"
+      },
+      {
+        "k": "Rakeback",
+        "v": "5–25% of edge"
+      },
+      {
+        "k": "Daily win cap",
+        "v": "EUR 100,000"
+      },
+      {
+        "k": "Withdrawals",
+        "v": "5–15 min (FAQ)"
+      }
+    ],
+    "facts": [
+      {
+        "icon": "🏢",
+        "title": "Acebet is run by Golden Frog Inc.",
+        "body": "Its terms name Golden Frog Inc., registered in Anjouan under number 15831.",
+        "group": "Compliance",
+        "label": "Company"
+      },
+      {
+        "icon": "🏛️",
+        "title": "Its licence number doubles as a company registration",
+        "body": "Acebet's FAQ cites Anjouan Offshore Financial Authority licence no. 15831, while its footer calls the same number a company registration.",
+        "group": "Compliance",
+        "label": "Licence"
+      },
+      {
+        "icon": "🎁",
+        "title": "Its own pages give different welcome offers",
+        "body": "The welcome page offers 20 free spins at sign-up with no deposit needed and a 100% match up to $1,000 on your first deposit. Its about page says a 1% deposit match, and a homepage tile advertises a free $10 plus 200% on deposits up to $10.",
+        "group": "Bonus terms",
+        "label": "Standing offer"
+      },
+      {
+        "icon": "🔒",
+        "title": "The wagering multiplier is only shown at sign-up",
+        "body": "Bonus funds must meet its standard playthrough before withdrawal, but the multiplier and game contribution rates appear only in the bonus terms at sign-up.",
+        "group": "Bonus terms",
+        "label": "Wagering rules"
+      },
+      {
+        "icon": "💰",
+        "title": "Rakeback rises from 5% to 25% of the house edge",
+        "body": "The share grows with rank, from 5% at Bronze I to 25% at Apex. It's split into instant, daily, weekly and monthly pots, and the daily pot must be claimed within 24 hours.",
+        "group": "Bonus terms",
+        "label": "Rakeback"
+      },
+      {
+        "icon": "👑",
+        "title": "There are 27 ranks, topping out at $1B wagered",
+        "body": "They run from Bronze I at $0 to Sapphire at $500M and Apex at $1B, raising the share of edge returned at each step.",
+        "group": "Bonus terms",
+        "label": "VIP ranks"
+      },
+      {
+        "icon": "🎯",
+        "title": "15 missions pay about $21 in total",
+        "body": "Missions are completed in order for cash rewards of $0.10 to $5.00, such as depositing $10, wagering $200 or enabling 2FA. Two involve referring other players.",
+        "group": "Bonus terms",
+        "label": "Missions"
+      },
+      {
+        "icon": "🏦",
+        "title": "Daily winnings are capped at EUR 100,000",
+        "body": "A customer's winnings can't exceed EUR 100,000 per day, counted from 00:00 to 23:59 GMT. A deposit must be wagered at least once before you can withdraw.",
+        "group": "Payouts & fees",
+        "label": "Withdrawal limits"
+      },
+      {
+        "icon": "⏱️",
+        "title": "Its FAQ and terms give different withdrawal times",
+        "body": "The FAQ says withdrawals typically take 5–15 minutes, while the terms say within two banking days.",
+        "group": "Payouts & fees",
+        "label": "Stated withdrawal time"
+      },
+      {
+        "icon": "💳",
+        "title": "Payments go through a company in Cyprus",
+        "body": "Acebet's payments are handled by 51 Plus One Ltd, based in Strovolos, Nicosia.",
+        "group": "Compliance",
+        "label": "Payment processor"
+      }
+    ]
+  },
+  mbit: {
+    "intro": "mBit spreads a 325% welcome bonus over three deposits, but gives you a single day to clear it. Here are ten things worth knowing before you sign up, each checked against mBit's own pages.",
+    "published": "2026-11-04",
+    "glance": [
+      {
+        "k": "Licence",
+        "v": "Curaçao"
+      },
+      {
+        "k": "Wagering",
+        "v": "40× bonus"
+      },
+      {
+        "k": "Min deposit",
+        "v": "30 USDT"
+      },
+      {
+        "k": "Weekly cap",
+        "v": "3 BTC"
+      }
+    ],
+    "facts": [
+      {
+        "icon": "🏢",
+        "title": "mBit is run by Scores55 Tech B.V.",
+        "body": "Its terms name Scores55 Tech B.V., a Curaçao company with registration 162990.",
+        "group": "Compliance",
+        "label": "Company"
+      },
+      {
+        "icon": "🏛️",
+        "title": "It holds Curaçao licence OGL/2024/1307/0748",
+        "body": "mBit lists licence OGL/2024/1307/0748 from the Curaçao Gaming Control Board.",
+        "group": "Compliance",
+        "label": "Licence"
+      },
+      {
+        "icon": "🎁",
+        "title": "The welcome bonus is 325% up to 4 BTC over three deposits",
+        "body": "It splits into 100% up to 1 BTC plus 100 free spins, 100% up to 1.5 BTC plus 100 free spins, and 125% up to 1.5 BTC plus 125 free spins, each with a 30 USDT minimum deposit.",
+        "group": "Bonus terms",
+        "label": "Standing offer"
+      },
+      {
+        "icon": "🔁",
+        "title": "Wagering is 40x the bonus",
+        "body": "Your deposit, bonus and winnings stay locked until it's met, and free-spin winnings carry 40× too.",
+        "group": "Bonus terms",
+        "label": "Wagering"
+      },
+      {
+        "icon": "⏳",
+        "title": "Bonuses expire after 1 day",
+        "body": "Deposit bonuses, free spins and their winnings are valid for 1 day unless a promotion says otherwise.",
+        "group": "Bonus terms",
+        "label": "Expiry"
+      },
+      {
+        "icon": "🎰",
+        "title": "Free-spin winnings are capped at 50 USDT",
+        "body": "In any welcome package, free-spin winnings are capped at 50 USDT or 0.00048 BTC. No cap is stated on the match bonus.",
+        "group": "Bonus terms",
+        "label": "Max cashout"
+      },
+      {
+        "icon": "🃏",
+        "title": "Table games and live casino count 0%",
+        "body": "Slots and other games count 100%, while video poker, table games and live blackjack, roulette and baccarat count 0%. Bonus funds work on slots only.",
+        "group": "Bonus terms",
+        "label": "Game contribution"
+      },
+      {
+        "icon": "💸",
+        "title": "Daily MoneyBack runs from 2% to 10%",
+        "body": "It's paid by Stellar Club level on daily net deposit losses, and needs a qualifying deposit on the same day as the losses.",
+        "group": "Bonus terms",
+        "label": "Cashback"
+      },
+      {
+        "icon": "🏦",
+        "title": "Withdrawals are capped at 3 BTC a week",
+        "body": "The limit is 3 BTC within 7 days and 10 BTC within 30 days, unless a promotion says otherwise. Wins of 10 BTC or more may be paid at 10% a month for 10 months.",
+        "group": "Payouts & fees",
+        "label": "Withdrawal limits"
+      },
+      {
+        "icon": "🪪",
+        "title": "Payouts above 1 BTC bring extra checks",
+        "body": "mBit may check your identity before paying out, with extra checks above 1 BTC.",
+        "group": "Compliance",
+        "label": "KYC policy"
+      }
+    ]
+  },
+  "7bit": {
+    "intro": "7Bit offers a 325% welcome pack over four deposits, with a weekly withdrawal cap to match. Here are ten things worth knowing before you sign up, each checked against 7Bit's own pages.",
+    "published": "2026-11-04",
+    "glance": [
+      {
+        "k": "Licence",
+        "v": "Curaçao"
+      },
+      {
+        "k": "Welcome",
+        "v": "325% to 5.25 BTC"
+      },
+      {
+        "k": "Weekly cap",
+        "v": "0.13 BTC"
+      },
+      {
+        "k": "Max bet",
+        "v": "13 μBTC"
+      }
+    ],
+    "facts": [
+      {
+        "icon": "🏢",
+        "title": "Its operator is Scores55 Tech B.V.",
+        "body": "Its terms name Scores55 Tech B.V., a Curaçao company with registration 162990.",
+        "group": "Compliance",
+        "label": "Company"
+      },
+      {
+        "icon": "🏛️",
+        "title": "It holds Curaçao licence OGL/2024/1307/0748",
+        "body": "The casino lists licence OGL/2024/1307/0748 from the Curaçao Gaming Authority.",
+        "group": "Compliance",
+        "label": "Licence"
+      },
+      {
+        "icon": "🎁",
+        "title": "The welcome pack is 325% up to 5.25 BTC",
+        "body": "It covers your first four deposits and adds 250 free spins. The first-deposit bonus needs no code, while deposits two to four are claimed with sign-up bonus codes.",
+        "group": "Bonus terms",
+        "label": "Standing offer"
+      },
+      {
+        "icon": "🔁",
+        "title": "Its pages disagree on wagering",
+        "body": "Its bonus terms say welcome-package bonuses and free-spin winnings must be wagered 35×, while its bonuses page says most bonuses need 40–45×. Both apply the multiplier to the bonus.",
+        "group": "Bonus terms",
+        "label": "Wagering"
+      },
+      {
+        "icon": "🎯",
+        "title": "The max bet is 13 μBTC per spin",
+        "body": "That limit applies while you're wagering any welcome-package bonus.",
+        "group": "Bonus terms",
+        "label": "Max bet"
+      },
+      {
+        "icon": "🃏",
+        "title": "Live casino counts 0% toward wagering",
+        "body": "Video slots count 100% and all other games 5%. Bonus money and free spins can't be used on progressive jackpot slots.",
+        "group": "Bonus terms",
+        "label": "Game contribution"
+      },
+      {
+        "icon": "🏦",
+        "title": "Withdrawals are capped at 0.13 BTC a week",
+        "body": "The cap is 0.13 BTC per week and 0.52 BTC per month. A balance above 0.52 BTC may be paid in monthly instalments, though progressive jackpot wins are paid in full.",
+        "group": "Payouts & fees",
+        "label": "Withdrawal limits"
+      },
+      {
+        "icon": "🔒",
+        "title": "Every deposit carries 3x wagering",
+        "body": "Deposited funds must be wagered 3x, or 10x on table and live games, before they can be withdrawn.",
+        "group": "Coins & deposit limits",
+        "label": "Deposit limits"
+      },
+      {
+        "icon": "💸",
+        "title": "Weekly cashback reaches 20% at Level 12",
+        "body": "The rate is set by loyalty level, from 5% at Levels 1-5 with x35 cashback wagering up to 20% at Level 12 with x1.",
+        "group": "Bonus terms",
+        "label": "Cashback"
+      },
+      {
+        "icon": "🪪",
+        "title": "Withdrawals unlock after verification",
+        "body": "You need to provide ID, address and payment proof before withdrawals unlock.",
+        "group": "Compliance",
+        "label": "KYC policy"
+      }
+    ]
+  },
+  bitstarz: {
+    "intro": "BitStarz offers a 5 BTC welcome package, but its terms don't say exactly what the 40x wagering applies to. Here are ten things worth knowing before you sign up, each checked against BitStarz's own pages.",
+    "published": "2026-11-04",
+    "glance": [
+      {
+        "k": "Licence",
+        "v": "Curaçao"
+      },
+      {
+        "k": "Wagering",
+        "v": "40×"
+      },
+      {
+        "k": "Max bet",
+        "v": "5 EUR/USD/USDT"
+      },
+      {
+        "k": "BTC withdrawal",
+        "v": "Max 1 BTC per tx"
+      }
+    ],
+    "facts": [
+      {
+        "icon": "🏢",
+        "title": "BitStarz is run by Gareton B.V.",
+        "body": "Its terms name Gareton B.V., a Curaçao company with registration 160656.",
+        "group": "Compliance",
+        "label": "Company"
+      },
+      {
+        "icon": "🏛️",
+        "title": "It holds Curaçao licence OGL/2024/165/0185",
+        "body": "BitStarz lists licence OGL/2024/165/0185 from the Curaçao Gaming Authority.",
+        "group": "Compliance",
+        "label": "Licence"
+      },
+      {
+        "icon": "🎁",
+        "title": "The welcome package is 5 BTC plus 180 free spins",
+        "body": "It opens with 100% up to 1 BTC and 180 free spins on your first deposit, with further bonuses on deposits two to four.",
+        "group": "Bonus terms",
+        "label": "Standing offer"
+      },
+      {
+        "icon": "🔁",
+        "title": "Wagering is 40x, but the terms don't say on what",
+        "body": "40× applies to all bonuses unless stated otherwise. For deposit bonuses, the terms don't say whether that means the bonus alone or the deposit plus the bonus.",
+        "group": "Bonus terms",
+        "label": "Wagering"
+      },
+      {
+        "icon": "⏳",
+        "title": "Welcome bonuses last 7 days",
+        "body": "To get the welcome free spins you must wager the deposit once within 24 hours, and free spins must be opened within 1 day.",
+        "group": "Bonus terms",
+        "label": "Expiry"
+      },
+      {
+        "icon": "🎯",
+        "title": "Bets are capped at 5 EUR/USD/USDT while wagering",
+        "body": "The limit, or 0.00006 BTC, applies per bet until wagering is complete, including double-ups and bonus buys.",
+        "group": "Bonus terms",
+        "label": "Max bet"
+      },
+      {
+        "icon": "🎰",
+        "title": "No-deposit winnings are capped at 100 EUR/USD/USDT",
+        "body": "The cap is 150 in CAD, AUD or NZD, and anything above it is forfeited. No cap is stated for the deposit welcome bonus.",
+        "group": "Bonus terms",
+        "label": "Max cashout"
+      },
+      {
+        "icon": "📅",
+        "title": "Reloads need four prior deposits",
+        "body": "Reload Monday pays 50% on the first deposit of the day, up to $300, and Wednesday gives up to 200 free spins. Both require four prior deposits to qualify.",
+        "group": "Bonus terms",
+        "label": "Reload bonuses"
+      },
+      {
+        "icon": "🏦",
+        "title": "Bitcoin withdrawals are capped at 1 BTC per transaction",
+        "body": "They carry a 0% fee and process instantly. No daily, weekly or monthly payout cap is published.",
+        "group": "Payouts & fees",
+        "label": "Withdrawal limits"
+      },
+      {
+        "icon": "🪪",
+        "title": "You need KYC documents to get paid",
+        "body": "BitStarz requires KYC documents to receive payments, and extra checks are possible at withdrawal.",
+        "group": "Compliance",
+        "label": "KYC policy"
+      }
+    ]
+  },
 };
 
 export const hasFactArticle = (slug: string) => slug in FACT_ARTICLES;

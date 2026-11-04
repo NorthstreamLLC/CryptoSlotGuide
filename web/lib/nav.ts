@@ -175,7 +175,7 @@ function rawNavTabs(c: SiteCounts): NavTab[] {
                 { label: `All ${c.casinos} crypto casinos`, href: "/crypto-casinos" },
                 { label: "No-KYC casinos", href: "/crypto-casinos/no-kyc" },
                 { label: "Fastest payouts", href: "/fastest-payouts" },
-                { label: "10 facts about each casino", href: "/casinos/facts" },
+                { label: "Facts about each casino", href: "/casinos/facts" },
                 { label: "What changed this month", href: "/news" },
                 { label: "Lowest wagering bonuses", href: "/lowest-wagering" },
                 { label: "Compare side by side", href: "/compare" },

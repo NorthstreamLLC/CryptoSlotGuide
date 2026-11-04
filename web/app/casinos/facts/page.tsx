@@ -35,8 +35,8 @@ function preview<T extends { label: string }>(facts: T[]): T[] {
 export function generateMetadata() {
   const n = articles().length;
   return pageMetadata(
-    `Crypto casino facts: 10 things to know about ${n} casinos`,
-    `Who runs each crypto casino, its licence, rakeback, races and withdrawal rules: ten facts about each of ${n} casinos, every one checked against the casino's own pages or its regulator's register.`,
+    `Crypto casino facts: what to know about ${n} casinos`,
+    `Who runs each crypto casino, its licence, rakeback, races and withdrawal rules: up to ten facts about each of ${n} casinos, every one checked against the casino's own pages or its regulator's register.`,
     "/casinos/facts"
   );
 }
@@ -54,7 +54,7 @@ export default function Page() {
       <JsonLd
         data={[
           breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Casinos", path: "/crypto-casinos" }, { name: "Facts", path: "/casinos/facts" }]),
-          itemListSchema("Crypto casino facts", all.map(({ o }) => ({ name: `10 facts about ${o.name}`, path: `/casinos/${o.slug}/facts` }))),
+          itemListSchema("Crypto casino facts", all.map(({ o, facts }) => ({ name: `${facts.length} facts about ${o.name}`, path: `/casinos/${o.slug}/facts` }))),
         ]}
       />
 
@@ -70,7 +70,7 @@ export default function Page() {
             Know the casino <span style={{ color: "#5FE3E8" }}>before you sign up</span>
           </h1>
           <p style={{ margin: "0 0 22px", maxWidth: "64ch", fontSize: 17, lineHeight: 1.6, color: "#B7C4CB" }}>
-            Who really runs each crypto casino, what its licence says, how its rakeback and races work, and the rules that catch players out. Ten facts per casino, each linked to the casino&apos;s own pages or its regulator&apos;s register.
+            Who really runs each crypto casino, what its licence says, how its rakeback and races work, and the rules that catch players out. Up to ten facts per casino, each linked to the casino&apos;s own pages or its regulator&apos;s register.
           </p>
           <AuthorByline updated={updated} />
         </div>
