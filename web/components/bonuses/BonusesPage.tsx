@@ -20,21 +20,16 @@ import { inHouseOrder } from "@/lib/house-order";
  * withdraw; rewards (rakeback, cashback, races) are earned by wagering and
  * then paid out. Terms come from each casino's own bonus pages.
  */
-const MONO = "var(--font-jetbrains-mono), monospace";
 /**
- * The last track is the CTA, and it was 130px — enough for the old button that
- * said "View offer", nowhere near enough for "Visit 500 Casino →" plus the
- * Review link beside it. The table clips its own overflow, so the button was
- * being cut off mid-word at the right edge rather than wrapping.
- *
- * 236px fits the longest affiliate label we have ("Visit 500 Casino", 10
- * characters) with both buttons; the middle tracks give back the room.
+ * The last track is the CTA: "Read review" plus a small "Visit ↗" (OfferCta),
+ * which fits in 176px whatever the casino's name, so the table no longer
+ * needs to scroll sideways at desktop widths.
  */
 /* Written out in full, not composed: Tailwind scans source for complete class
  * strings, so a track list built from a template literal generates no CSS at
  * all and the grid silently falls back to equal columns. Both end in 236px. */
-const WELCOME_COLS = "md:grid-cols-[minmax(150px,1fr)_minmax(210px,1.4fr)_96px_120px_84px_104px_236px]";
-const REWARD_COLS = "md:grid-cols-[minmax(150px,1fr)_minmax(200px,1.4fr)_132px_132px_minmax(130px,1fr)_236px]";
+const WELCOME_COLS = "md:grid-cols-[minmax(150px,1fr)_minmax(210px,1.4fr)_96px_120px_84px_104px_176px]";
+const REWARD_COLS = "md:grid-cols-[minmax(150px,1fr)_minmax(200px,1.4fr)_132px_132px_minmax(130px,1fr)_176px]";
 
 /** The largest match percentage in an offer headline, e.g. 360 from "Up to 360% on 4 deposits". */
 /** "no wagering" / "40× wagering", or nothing where the terms give no figure. */
@@ -135,7 +130,7 @@ export function BonusesPage({ embedded = false }: { embedded?: boolean } = {}) {
       {!embedded && (
       <section style={{ borderBottom: "1px solid rgba(255,255,255,.07)", background: "radial-gradient(80% 120% at 85% 0%, rgba(255,204,0,.08), transparent 55%), radial-gradient(60% 80% at 0% 100%, rgba(0,194,204,.07), transparent 60%), #0A0D10" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto", padding: "48px 24px 40px" }}>
-          <div style={{ fontFamily: MONO, fontSize: 11, letterSpacing: ".1em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 14 }}>Casino bonuses</div>
+          <div style={{ fontSize: 13.5, fontWeight: 600, color: "#2FD3DA", marginBottom: 14 }}>Casino bonuses</div>
           <h1 style={{ margin: "0 0 14px", fontSize: "clamp(36px, 4.6vw, 54px)", lineHeight: 1.02, letterSpacing: "-.035em", fontWeight: 800, fontStretch: "114%", color: "#fff", textWrap: "balance" }}>
             Compare the best casino bonuses
           </h1>
@@ -165,20 +160,20 @@ export function BonusesPage({ embedded = false }: { embedded?: boolean } = {}) {
               {partners.map((o, i) => {
                 const brand = brandFor(o.slug);
                 return (
-                  <div key={o.slug} style={{ display: "flex", flexDirection: "column", gap: 12, padding: 18, borderRadius: 16, background: `radial-gradient(120% 90% at 100% 0%, ${brand}1f, transparent 60%), #0C1013`, border: `1px solid ${i === 0 ? brand + "66" : brand + "33"}` }}>
+                  <div key={o.slug} className="csg-card" style={{ display: "flex", flexDirection: "column", gap: 12, padding: 18, borderRadius: 14, background: "#0D1114", border: "1px solid rgba(255,255,255,.08)", boxShadow: `inset 0 2px 0 ${brand}` }}>
                     <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
                       <span style={{ width: 36, height: 36, flex: "none", borderRadius: 10, overflow: "hidden" }}>
                         <BrandMark slug={o.slug} mono={o.mono} tint={brand} radius={10} fontSize={11} />
                       </span>
                       <span style={{ minWidth: 0, flex: 1 }}>
-                        <span style={{ display: "block", fontSize: 16, fontWeight: 800, color: "#fff" }}>{o.name}</span>
-                        <span style={{ display: "block", fontFamily: MONO, fontSize: 10, color: "#8E9CA5" }}>{[casinoFacts(o).licence ?? "Crypto casino", wagerNote(toWithdraw(o).text)].filter(Boolean).join(" · ")}</span>
+                        <span style={{ display: "block", fontSize: 16, fontWeight: 700, color: "#F2F5F7" }}>{o.name}</span>
+                        <span style={{ display: "block", fontSize: 12.5, color: "#75828A" }}>{[casinoFacts(o).licence ?? "Crypto casino", wagerNote(toWithdraw(o).text)].filter(Boolean).join(" · ")}</span>
                       </span>
-                      {i === 0 && <span style={{ padding: "2px 8px", borderRadius: 100, background: `${brand}24`, fontFamily: MONO, fontSize: 9, fontWeight: 700, letterSpacing: ".06em", color: brand }}>TOP PICK</span>}
+                      {i === 0 && <span style={{ padding: "3px 8px", borderRadius: 6, background: "rgba(255,197,49,.12)", fontSize: 11.5, fontWeight: 700, color: "#FFC531" }}>Top pick</span>}
                     </div>
-                    <div style={{ padding: "10px 12px", borderRadius: 10, background: `linear-gradient(90deg, ${brand}1a, ${brand}06)`, border: `1px solid ${brand}33` }}>
-                      <div style={{ fontFamily: MONO, fontSize: 9.5, letterSpacing: ".07em", textTransform: "uppercase", color: brand, marginBottom: 4 }}>{isWelcomeOffer(o) ? "Welcome offer" : "New-player rewards"}</div>
-                      <div style={{ fontSize: 15, lineHeight: 1.3, fontWeight: 800, color: "#fff" }}>{o.bonusShort ?? o.bonus}</div>
+                    <div style={{ padding: "10px 12px", borderRadius: 10, background: "rgba(255,255,255,.03)", border: "1px solid rgba(255,255,255,.07)" }}>
+                      <div style={{ fontSize: 12.5, fontWeight: 600, color: brand, marginBottom: 4 }}>{isWelcomeOffer(o) ? "Welcome offer" : "New-player rewards"}</div>
+                      <div style={{ fontSize: 15, lineHeight: 1.3, fontWeight: 600, color: "#F2F5F7" }}>{o.bonusShort ?? o.bonus}</div>
                     </div>
                     <div style={{ display: "flex", gap: 8, marginTop: "auto" }}>
                       <OfferCta o={o} size="sm" />
@@ -187,29 +182,29 @@ export function BonusesPage({ embedded = false }: { embedded?: boolean } = {}) {
                 );
               })}
             </div>
-            <p style={{ margin: "10px 0 0", fontFamily: MONO, fontSize: 10.5, lineHeight: 1.6, color: "#7F8D96" }}>
+            <p style={{ margin: "10px 0 0", fontSize: 12, lineHeight: 1.6, color: "#67747C" }}>
               Each offer is the casino&apos;s own, set by the casino, not by us, and quoted from its bonus terms. These are affiliate links: we may earn a commission when you sign up, which never changes what we report. 18+, play responsibly.
             </p>
           </div>
         )}
 
-        <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#8E9CA5", marginBottom: 12 }}>Best for</div>
+        <h2 style={{ margin: "0 0 14px", fontSize: 20, letterSpacing: "-.02em", fontWeight: 700, color: "#F2F5F7" }}>Best for</h2>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 12, marginBottom: 44 }}>
           {picks.map((pk) => {
             const brand = brandFor(pk.o.slug);
             return (
-              <Link key={pk.tag} href={`/casinos/${pk.o.slug}`} style={{ display: "flex", flexDirection: "column", gap: 10, padding: 18, borderRadius: 16, background: `radial-gradient(120% 90% at 100% 0%, ${brand}1a, transparent 60%), #0C1013`, border: `1px solid ${brand}33` }}>
-                <span style={{ display: "inline-flex", alignItems: "center", gap: 7, fontFamily: MONO, fontSize: 10, letterSpacing: ".07em", textTransform: "uppercase", color: brand }}>
+              <Link key={pk.tag} href={`/casinos/${pk.o.slug}`} className="csg-card" style={{ display: "flex", flexDirection: "column", gap: 10, padding: 18, borderRadius: 14, background: "#0D1114", border: "1px solid rgba(255,255,255,.08)", boxShadow: `inset 0 2px 0 ${brand}` }}>
+                <span style={{ display: "inline-flex", alignItems: "center", gap: 7, fontSize: 12.5, fontWeight: 600, color: brand }}>
                   <Icon name={pk.icon} size={14} /> {pk.tag}
                 </span>
                 <span style={{ display: "flex", alignItems: "center", gap: 10 }}>
                   <span style={{ width: 30, height: 30, flex: "none", borderRadius: 8, overflow: "hidden" }}>
                     <BrandMark slug={pk.o.slug} mono={pk.o.mono} tint={brand} radius={8} fontSize={10} />
                   </span>
-                  <span style={{ fontSize: 15, fontWeight: 800, color: "#fff" }}>{pk.o.name}</span>
+                  <span style={{ fontSize: 15, fontWeight: 700, color: "#F2F5F7" }}>{pk.o.name}</span>
                 </span>
-                <span style={{ fontSize: 15.5, lineHeight: 1.3, fontWeight: 800, color: "#fff" }}>{pk.line}</span>
-                <span style={{ marginTop: "auto", display: "inline-flex", alignItems: "center", gap: 6, fontSize: 13, fontWeight: 700, color: "#00C2CC" }}>
+                <span style={{ fontSize: 15.5, lineHeight: 1.3, fontWeight: 600, color: "#F2F5F7" }}>{pk.line}</span>
+                <span style={{ marginTop: "auto", display: "inline-flex", alignItems: "center", gap: 6, fontSize: 13.5, fontWeight: 600, color: "#C9D3D8" }}>
                   Read the review <Icon name="arrow" size={14} />
                 </span>
               </Link>
@@ -259,7 +254,7 @@ export function BonusesPage({ embedded = false }: { embedded?: boolean } = {}) {
 
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 14, marginTop: 14 }}>
           <div style={{ padding: "26px 28px", borderRadius: 18, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
-            <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 10 }}>How to read this</div>
+            <div style={{ fontSize: 13, fontWeight: 600, color: "#2FD3DA", marginBottom: 10 }}>How to read this</div>
             <p style={{ margin: 0, fontSize: 15, lineHeight: 1.7, color: "#A8B6BE" }}>
               &ldquo;Wager to withdraw&rdquo; applies to welcome bonuses: the bonus stays locked until you have bet it that many times. &ldquo;Bets on $100 + $100&rdquo; prices every offer on the same stake, a $100 deposit with a $100 bonus, so a multiplier on the bonus, the deposit or both can be compared directly. Rewards work the other way round: the betting comes first, and what you earn is paid out afterwards. Most casinos also ask you to bet each deposit once before withdrawing; that is a standard deposit rule, not a bonus requirement.
             </p>
@@ -291,12 +286,11 @@ export function BonusesPage({ embedded = false }: { embedded?: boolean } = {}) {
 const chip = { display: "inline-flex", alignItems: "center", gap: 9, padding: "9px 14px", borderRadius: 100, background: "rgba(255,255,255,.045)", border: "1px solid rgba(255,255,255,.08)", fontSize: 13.5, fontWeight: 600, color: "#E8EDF0" } as const;
 const chipIcon = { color: "#00C2CC", display: "inline-flex" } as const;
 
-function Heading({ id, eyebrow, title, children }: { id: string; eyebrow: string; title: string; children: ReactNode }) {
+function Heading({ id, title, children }: { id: string; eyebrow?: string; title: string; children: ReactNode }) {
   return (
     <div id={id} style={{ scrollMarginTop: 120, marginBottom: 16 }}>
-      <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 8 }}>{eyebrow}</div>
-      <h2 style={{ margin: "0 0 8px", fontSize: 30, lineHeight: 1.1, letterSpacing: "-.03em", fontWeight: 800, color: "#fff" }}>{title}</h2>
-      <p style={{ margin: 0, maxWidth: "72ch", fontSize: 15, lineHeight: 1.6, color: "#A8B6BE" }}>{children}</p>
+      <h2 style={{ margin: "0 0 8px", fontSize: 26, lineHeight: 1.15, letterSpacing: "-.025em", fontWeight: 700, color: "#F2F5F7" }}>{title}</h2>
+      <p style={{ margin: 0, maxWidth: "72ch", fontSize: 15, lineHeight: 1.6, color: "#98A6AE" }}>{children}</p>
     </div>
   );
 }
@@ -313,10 +307,10 @@ function Heading({ id, eyebrow, title, children }: { id: string; eyebrow: string
  */
 function Table({ cols, head, children }: { cols: string; head: string[]; children: ReactNode }) {
   return (
-    <div style={{ borderRadius: 20, border: "1px solid rgba(255,255,255,.08)", background: "linear-gradient(180deg,#0E1317,#0A0E11)", overflow: "hidden" }}>
+    <div style={{ borderRadius: 16, border: "1px solid rgba(255,255,255,.08)", background: "#0D1114", overflow: "hidden" }}>
       <div className="md:overflow-x-auto">
-        <div className="md:min-w-[1130px]">
-          <div className={`hidden md:grid ${cols} items-center gap-4`} style={{ padding: "12px 20px", borderBottom: "1px solid rgba(255,255,255,.07)", fontFamily: MONO, fontSize: 10, letterSpacing: ".08em", textTransform: "uppercase", color: "#8E9CA5" }}>
+        <div className="md:min-w-[1040px]">
+          <div className={`hidden md:grid ${cols} items-center gap-4`} style={{ padding: "12px 20px", borderBottom: "1px solid rgba(255,255,255,.07)", fontSize: 12, fontWeight: 500, color: "#75828A" }}>
             {head.map((h, i) => <span key={i}>{h}</span>)}
           </div>
           {children}
@@ -336,15 +330,15 @@ function Row({ o, i, cols, tag, children }: { o: Operator; i: number; cols: stri
       // elements with one id would land the reader on whichever came first.
       id={tag === "Welcome bonus" ? o.slug : undefined}
       className={`grid grid-cols-2 ${cols} items-center gap-x-4 gap-y-3 transition-colors hover:bg-white/[0.025]`}
-      style={{ padding: "16px 20px", borderTop: i ? "1px solid rgba(255,255,255,.05)" : undefined, background: o.featured ? `linear-gradient(90deg, ${brand}12, transparent 60%)` : undefined }}
+      style={{ padding: "16px 20px", borderTop: i ? "1px solid rgba(255,255,255,.05)" : undefined, background: o.featured ? "rgba(255,197,49,.04)" : undefined }}
     >
       <Link href={href} className="col-span-2 md:col-span-1" style={{ display: "flex", alignItems: "center", gap: 12, minWidth: 0 }}>
         <span style={{ width: 36, height: 36, flex: "none", borderRadius: 10, overflow: "hidden" }}>
           <BrandMark slug={o.slug} mono={o.mono} tint={brand} radius={10} fontSize={11} />
         </span>
         <span style={{ minWidth: 0 }}>
-          <span style={{ display: "block", fontSize: 15.5, fontWeight: 800, color: "#fff" }}>{o.name}</span>
-          <span style={{ display: "inline-block", marginTop: 3, padding: "2px 8px", borderRadius: 100, background: o.featured ? `${brand}1f` : "rgba(255,255,255,.05)", fontFamily: MONO, fontSize: 9, letterSpacing: ".05em", textTransform: "uppercase", color: o.featured ? brand : "#8DA0AA" }}>
+          <span style={{ display: "block", fontSize: 15.5, fontWeight: 700, color: "#F2F5F7" }}>{o.name}</span>
+          <span style={{ display: "inline-block", marginTop: 2, fontSize: 12, color: o.featured ? "#FFC531" : "#75828A" }}>
             {o.featured ? "Featured" : tag}
           </span>
         </span>
@@ -368,8 +362,8 @@ function Offer({ o }: { o: Operator }) {
 function Cell({ label, value, color = "#fff", small }: { label: string; value: string | null; color?: string; small?: boolean }) {
   return (
     <div style={{ minWidth: 0 }}>
-      <div className="md:hidden" style={{ fontFamily: MONO, fontSize: 9, letterSpacing: ".07em", textTransform: "uppercase", color: "#8E9CA5", marginBottom: 2 }}>{label}</div>
-      <div style={{ fontSize: small ? 12.5 : 14, lineHeight: 1.35, fontWeight: small ? 600 : 700, color: value ? color : "#77858E" }}>{value ?? "—"}</div>
+      <div className="md:hidden" style={{ fontSize: 12, color: "#75828A", marginBottom: 2 }}>{label}</div>
+      <div style={{ fontSize: small ? 12.5 : 14, lineHeight: 1.35, fontWeight: 600, color: value ? color : "#67747C" }}>{value ?? "—"}</div>
     </div>
   );
 }

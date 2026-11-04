@@ -10,6 +10,9 @@ import { BrandMark } from "@/components/ui/BrandMark";
 import { CodeChip } from "@/components/ui/CodeChip";
 import { VipClaim } from "@/components/ui/VipClaim";
 import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
+import { GeoListNote } from "@/components/geo/GeoListNote";
+import { LineIcon, type IconName } from "@/components/ui/LineIcon";
+import { reviewPath } from "@/lib/outbound";
 import { BonusesPage, toWithdraw } from "@/components/bonuses/BonusesPage";
 import { FoldedList } from "@/components/casino-index/FoldedList";
 import { kevinLive, KEVIN_PATH, KEVIN_END } from "@/lib/kevin-promo";
@@ -17,16 +20,86 @@ import { Until } from "@/components/ui/Until";
 import vip from "@/data/vip.json";
 
 /**
- * The bonuses hub in the four-path pattern: the best offer first, the top
- * offers with their codes and the catch, the full welcome and rewards tables
- * folded (whole in the HTML), ways to narrow it down, then one next step.
+ * The bonuses hub: the best offer first, the top offers with their codes and
+ * the catch, the full welcome and rewards tables folded (whole in the HTML),
+ * ways to narrow it down, then one next step. Same visual system as the
+ * homepage: flat panels, hairlines, gold only on buttons, one location note
+ * per list, a colour and line icon per tile instead of emoji.
  */
 
-const MONO = "var(--font-jetbrains-mono), monospace";
 const GOLD = "#FFC531";
-const CYAN = "#00C2CC";
 /** A code a reader can type; a referral hash is a link parameter, not a code. */
 const readable = (code?: string | null) => !!code && /^[A-Za-z]{3,14}$/.test(code);
+
+const CSS = `
+.bh-wrap { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+.bh-crumb { font-size: 13px; color: #6F7C84; margin-bottom: 26px; }
+.bh-crumb a { color: #8E9CA4; }
+.bh-crumb a:hover { color: #fff; }
+.bh-hero { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 56px; align-items: center; padding: 40px 0 64px; }
+.bh-h1 { margin: 0 0 18px; font-size: clamp(36px, 4.6vw, 54px); line-height: 1.04; letter-spacing: -.04em; font-weight: 700; color: #F7F9FA; text-wrap: balance; }
+.bh-lead { margin: 0 0 28px; max-width: 50ch; font-size: 17.5px; line-height: 1.6; color: #98A6AE; }
+.bh-btn { display: inline-flex; align-items: center; justify-content: center; padding: 13px 20px; border-radius: 11px; font-size: 15px; font-weight: 700; white-space: nowrap; transition: background .15s, border-color .15s, transform .15s; }
+.bh-btn:hover { transform: translateY(-1px); }
+.bh-light { background: #F2F5F7; color: #0A0D0F; }
+.bh-light:hover { background: #fff; }
+.bh-line { border: 1px solid rgba(255,255,255,.16); color: #E8EDF0; }
+.bh-line:hover { border-color: rgba(255,255,255,.32); }
+.bh-gold { background: #FFC531; color: #141007; }
+.bh-gold:hover { background: #FFD45E; }
+.bh-pick { padding: 26px; border: 1px solid rgba(255,197,49,.28); border-radius: 18px; background: #0F1316; }
+.bh-tag { display: inline-block; padding: 3px 8px; border-radius: 6px; background: rgba(255,197,49,.12); color: #FFC531; font-size: 11.5px; font-weight: 700; }
+.bh-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 0 0 18px; border: 1px solid rgba(255,255,255,.07); border-radius: 12px; }
+.bh-steps div { padding: 11px 12px; }
+.bh-steps div + div { border-left: 1px solid rgba(255,255,255,.07); }
+.bh-steps b { display: block; font-size: 15px; font-weight: 700; color: #F2F5F7; }
+.bh-steps small { display: block; margin-top: 2px; font-size: 11.5px; line-height: 1.35; color: #7E8C94; }
+.bh-sec { padding-top: 80px; scroll-margin-top: 100px; }
+.bh-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 22px; }
+.bh-h2 { margin: 0; font-size: 26px; letter-spacing: -.025em; font-weight: 700; color: #F2F5F7; }
+.bh-muted { font-size: 13.5px; color: #75828A; }
+.bh-box { border: 1px solid rgba(255,255,255,.08); border-radius: 16px; background: #0D1114; overflow: hidden; }
+.bh-row { display: grid; grid-template-columns: minmax(0, 1.9fr) minmax(0, .9fr) minmax(0, .8fr) auto; gap: 20px; align-items: center; padding: 15px 20px; transition: background .15s; }
+.bh-row + .bh-row { border-top: 1px solid rgba(255,255,255,.06); }
+.bh-row:hover { background: rgba(255,255,255,.02); }
+.bh-name { display: flex; align-items: center; gap: 13px; min-width: 0; }
+.bh-name small { display: block; font-size: 12.5px; color: #75828A; }
+.bh-name b { display: block; margin-top: 1px; font-size: 15.5px; line-height: 1.35; font-weight: 600; color: #F2F5F7; }
+.bh-race { display: flex; align-items: center; gap: 6px; margin-top: 3px; font-size: 12.5px; color: #8E9CA4; }
+.bh-stat small { display: block; font-size: 12px; color: #6F7C84; }
+.bh-stat b { display: block; margin-top: 2px; font-size: 14.5px; font-weight: 600; }
+.bh-act { display: flex; align-items: center; gap: 14px; }
+.bh-act .bh-btn { padding: 10px 18px; font-size: 14px; }
+.bh-claim { font-size: 13.5px; color: #93A1A9; white-space: nowrap; }
+.bh-claim:hover { color: #fff; }
+.bh-note { margin: 12px 0 0; font-size: 12px; line-height: 1.55; color: #67747C; }
+.bh-types { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; }
+.bh-type { display: flex; flex-direction: column; gap: 12px; padding: 18px; border: 1px solid rgba(255,255,255,.08); border-radius: 14px; background: #0D1114; transition: border-color .15s, background .15s; height: 100%; }
+.bh-type:hover { border-color: color-mix(in srgb, var(--tint) 55%, transparent); background: color-mix(in srgb, var(--tint) 5%, #0D1114); }
+.bh-ico { display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border-radius: 10px; background: color-mix(in srgb, var(--tint) 14%, transparent); border: 1px solid color-mix(in srgb, var(--tint) 35%, transparent); color: var(--tint); }
+.bh-type b { font-size: 15px; font-weight: 600; color: #F2F5F7; }
+.bh-type small { margin-top: -6px; font-size: 13px; color: #8E9CA4; }
+.bh-next { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 26px; border: 1px solid rgba(255,255,255,.08); border-radius: 16px; background: #0D1114; transition: border-color .15s; }
+.bh-next:hover { border-color: rgba(255,255,255,.2); }
+.bh-next b { display: block; font-size: 19px; font-weight: 700; color: #F2F5F7; }
+.bh-next small { display: block; margin-top: 4px; font-size: 14.5px; color: #8E9CA4; }
+@media (max-width: 960px) {
+  .bh-hero { grid-template-columns: 1fr; gap: 36px; padding: 28px 0 48px; }
+  .bh-types { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .bh-row { grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "n n" "c a"; row-gap: 12px; padding: 15px 16px; }
+  .bh-name { grid-area: n; }
+  .bh-code { grid-area: c; justify-self: start; }
+  .bh-stat { display: none; }
+  .bh-act { grid-area: a; }
+  .bh-claim { display: none; }
+}
+@media (max-width: 560px) {
+  .bh-wrap { padding: 0 16px; }
+  .bh-sec { padding-top: 60px; }
+  .bh-types { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .bh-pick { padding: 20px; }
+}
+`;
 
 export function BonusesHub() {
   const { ops } = siteData;
@@ -37,65 +110,61 @@ export function BonusesHub() {
   const welcome = ops.filter(isWelcomeOffer);
   const lowWager = ops.filter((o) => { const w = wagerView(o); return w.kind === "none" || (w.mult !== null && w.mult <= 1); });
 
-  const types = [
-    { icon: "🎁", label: "Welcome bonuses", href: "#welcome", n: `${welcome.length} offers` },
-    { icon: "♻️", label: "Best rakeback", href: "/rakeback-casinos", n: "14 compared" },
-    { icon: "🎯", label: "Lowest wagering", href: "/lowest-wagering", n: `${lowWager.length} casinos` },
-    { icon: "🏁", label: "Races & raffles", href: "/races", n: `${raceSlugs().length} casinos` },
-    { icon: "🏷️", label: "Promo codes", href: "/promo-codes", n: `${PROMO_PAGES.length} codes` },
-    { icon: "📈", label: "VIP calculator", href: "/vip-calculator", n: "What your play earns" },
+  const types: { icon: IconName; label: string; href: string; n: string; tint: string }[] = [
+    { icon: "gift", label: "Welcome bonuses", href: "#welcome", n: `${welcome.length} offers`, tint: "#57E39A" },
+    { icon: "coin", label: "Best rakeback", href: "/rakeback-casinos", n: "14 compared", tint: "#2FD3DA" },
+    { icon: "target", label: "Lowest wagering", href: "/lowest-wagering", n: `${lowWager.length} casinos`, tint: "#FF7EB6" },
+    { icon: "bolt", label: "Races & raffles", href: "/races", n: `${raceSlugs().length} casinos`, tint: "#FF9A5C" },
+    { icon: "sparkle", label: "Promo codes", href: "/promo-codes", n: `${PROMO_PAGES.length} codes`, tint: GOLD },
+    { icon: "scale", label: "VIP calculator", href: "/vip-calculator", n: "What your play earns", tint: "#B284FF" },
   ];
+  const tile = (x: (typeof types)[number]) => (
+    <a key={x.label} href={x.href} className="bh-type" style={{ ["--tint" as string]: x.tint }}>
+      <span className="bh-ico"><LineIcon name={x.icon} /></span>
+      <b>{x.label}</b>
+      <small>{x.n} →</small>
+    </a>
+  );
 
   return (
-    <main style={{ background: "#07090B", color: "#E8EDF0" }}>
-      {/* 1. The best offer first */}
-      <section style={{ borderBottom: "1px solid rgba(255,255,255,.07)", background: "radial-gradient(70% 90% at 85% 0%, rgba(255,197,49,.12), transparent 60%), radial-gradient(60% 80% at 0% 100%, rgba(0,194,204,.08), transparent 60%), #090C0F" }}>
-        <div style={{ maxWidth: 1180, margin: "0 auto", padding: "34px 24px 44px" }}>
-          <div style={{ fontFamily: MONO, fontSize: 11, color: "#83919A", marginBottom: 18 }}>
-            <Link href="/" style={{ color: "#83919A" }}>Home</Link> / <span style={{ color: "#A8B6BE" }}>Bonuses</span>
+    <main style={{ background: "#080B0D", color: "#E8EDF0", paddingBottom: 96 }}>
+      <style>{CSS}</style>
+      <div style={{ borderBottom: "1px solid rgba(255,255,255,.06)", background: "radial-gradient(60% 80% at 15% 0%, rgba(255,197,49,.06), transparent 70%), #0A0D10" }}>
+        <div className="bh-wrap" style={{ paddingTop: 30 }}>
+          <div className="bh-crumb">
+            <Link href="/">Home</Link> / <span style={{ color: "#AEBAC1" }}>Bonuses</span>
           </div>
-          <div style={{ display: "grid", gap: 36, gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", alignItems: "center" }}>
+          <section className="bh-hero">
             <div>
-              <h1 style={{ margin: "0 0 14px", fontSize: "clamp(34px, 4.4vw, 52px)", lineHeight: 1.04, letterSpacing: "-.035em", fontWeight: 800, color: "#fff" }}>
+              <h1 className="bh-h1">
                 The best crypto casino bonuses, <span style={{ color: GOLD }}>with the catch spelled out</span>
               </h1>
-              <p style={{ margin: "0 0 22px", maxWidth: "52ch", fontSize: 17, lineHeight: 1.6, color: "#9AAAB3" }}>
-                Codes, welcome offers and rewards from {ops.length} crypto casinos. Next to every offer: how much you have to bet before you can withdraw, from the casino&apos;s own terms.
-              </p>
+              <p className="bh-lead">Codes, welcome offers and rewards from {ops.length} crypto casinos. Next to every offer: how much you have to bet before you can withdraw, from the casino&apos;s own terms.</p>
               <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-                <a href="#top-offers" style={{ padding: "13px 20px", borderRadius: 12, background: "rgba(255,255,255,.06)", border: "1px solid rgba(255,255,255,.14)", color: "#fff", fontSize: 15, fontWeight: 700 }}>See the top offers ↓</a>
-                <Link href="/guides/reading-wagering-requirements" style={{ padding: "13px 20px", borderRadius: 12, color: CYAN, fontSize: 15, fontWeight: 700 }}>What is wagering? →</Link>
+                <a href="#top-offers" className="bh-btn bh-light">See the top offers</a>
+                <Link href="/guides/reading-wagering-requirements" className="bh-btn bh-line">What is wagering?</Link>
               </div>
             </div>
 
             {roobet?.promoCode && (
-              <div style={{ padding: 24, borderRadius: 20, background: "radial-gradient(120% 90% at 50% 0%, rgba(255,197,49,.16), transparent 60%), #0F1418", border: "1px solid rgba(255,197,49,.42)", boxShadow: "0 30px 70px rgba(0,0,0,.45)" }}>
-                <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 14 }}>
-                  <span style={{ width: 56, height: 56, borderRadius: 14, overflow: "hidden", flex: "none" }}>
-                    <BrandMark slug="roobet" mono={roobet.mono} tint={GOLD} radius={14} fontSize={15} />
+              <aside className="bh-pick" aria-label="Best offer this week">
+                <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 18 }}>
+                  <span style={{ width: 48, height: 48, borderRadius: 12, overflow: "hidden", flex: "none" }}>
+                    <BrandMark slug="roobet" mono={roobet.mono} tint={brandFor("roobet")} radius={12} fontSize={14} />
                   </span>
                   <span>
-                    <span style={{ display: "block", fontFamily: MONO, fontSize: 11, color: GOLD }}>BEST OFFER THIS WEEK</span>
-                    <span style={{ display: "block", fontSize: 24, fontWeight: 800, color: "#fff" }}>Roobet welcome package</span>
+                    <span style={{ display: "block", fontSize: 17, fontWeight: 700, color: "#F2F5F7" }}>Roobet welcome package</span>
+                    <span className="bh-tag">Best offer this week</span>
                   </span>
                 </div>
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(3, minmax(0, 1fr))", gap: 8, marginBottom: 14 }} data-keep-grid>
-                  {[
-                    { t: "20%", d: "deposit match up to $500" },
-                    { t: "100 spins", d: "at $10,000 wagered" },
-                    { t: "500 spins", d: "at $50,000 wagered" },
-                  ].map((x) => (
-                    <span key={x.t} style={{ padding: "10px 10px", borderRadius: 12, background: "rgba(255,197,49,.06)", border: "1px solid rgba(255,197,49,.22)" }}>
-                      <span style={{ display: "block", fontSize: 17, fontWeight: 800, color: GOLD }}>{x.t}</span>
-                      <span style={{ display: "block", fontSize: 11.5, lineHeight: 1.35, color: "#A8B6BE" }}>{x.d}</span>
-                    </span>
-                  ))}
+                <div className="bh-steps" data-keep-grid>
+                  <div><b>20%</b><small>deposit match to $500</small></div>
+                  <div><b>100 spins</b><small>at $10,000 wagered</small></div>
+                  <div><b>500 spins</b><small>at $50,000 wagered</small></div>
                 </div>
-                <div style={{ marginBottom: 12 }}>
-                  <CodeChip code={roobet.promoCode} tint={GOLD} />
-                </div>
+                <CodeChip code={roobet.promoCode} tint={GOLD} />
                 {roobet.signupUrl && (
-                  <a href={roobet.signupUrl} target="_blank" rel="nofollow sponsored noopener" data-copy-code={roobet.promoCode} style={{ display: "block", textAlign: "center", padding: "14px 16px", borderRadius: 12, background: "linear-gradient(180deg,#FFD866,#FFC531)", color: "#141007", fontSize: 15.5, fontWeight: 800 }}>
+                  <a href={roobet.signupUrl} target="_blank" rel="nofollow sponsored noopener" data-copy-code={roobet.promoCode} className="bh-btn bh-gold" style={{ display: "flex", marginTop: 12 }}>
                     1. Sign up with code {roobet.promoCode} ↗
                   </a>
                 )}
@@ -103,100 +172,91 @@ export function BonusesHub() {
                   <VipClaim label={`2. Claim it with ${vip.name}`} />
                 </div>
                 <GeoBlockNote slug="roobet" name={roobet.name} compact />
-                <Link href="/promo-codes/roobet" style={{ display: "block", marginTop: 12, textAlign: "center", fontSize: 13.5, fontWeight: 700, color: "#FFD36B" }}>Full terms and how to claim →</Link>
-              </div>
+                <Link href="/promo-codes/roobet" style={{ display: "block", marginTop: 14, textAlign: "center", fontSize: 13.5, fontWeight: 600, color: "#C9D3D8" }}>Full terms and how to claim →</Link>
+              </aside>
             )}
-          </div>
+          </section>
         </div>
-      </section>
+      </div>
 
-      {/* 2. Top offers with the catch */}
-      <section id="top-offers" style={{ maxWidth: 1180, margin: "0 auto", padding: "52px 24px 0", scrollMarginTop: 100 }}>
-        <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", gap: 16, flexWrap: "wrap", marginBottom: 16 }}>
-          <h2 style={{ margin: 0, fontSize: 30, letterSpacing: "-.025em", fontWeight: 800, color: "#fff" }}>More top offers</h2>
-          <span style={{ fontSize: 13, color: "#7F8D96" }}>Offers and codes are the casinos&apos; own. Placement includes our commercial deals.</span>
-        </div>
-        <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-          {top.map((o) => {
-            const w = toWithdraw(o);
-            const race = raceFor(o.slug);
-            return (
-              <div key={o.slug} style={{ padding: "14px 18px", borderRadius: 16, background: "#0C1013", border: "1px solid rgba(255,255,255,.08)" }}>
-                <div className="csg-bonusrow" style={{ display: "grid", gridTemplateColumns: "48px minmax(0,1.9fr) minmax(0,1fr) minmax(0,.9fr) auto", gap: 14, alignItems: "center" }} data-keep-grid>
-                  <span style={{ width: 48, height: 48, borderRadius: 12, overflow: "hidden" }}>
-                    <BrandMark slug={o.slug} mono={o.mono} tint={brandFor(o.slug)} radius={12} fontSize={13} />
+      <div className="bh-wrap">
+        <section id="top-offers" className="bh-sec">
+          <div className="bh-head">
+            <h2 className="bh-h2">More top offers</h2>
+            <span className="bh-muted">Offers and codes are the casinos&apos; own. Placement includes our commercial deals.</span>
+          </div>
+          <div className="bh-box">
+            <GeoListNote casinos={top.map((o) => ({ slug: o.slug, name: o.name }))} />
+            {top.map((o) => {
+              const w = toWithdraw(o);
+              const race = raceFor(o.slug);
+              return (
+                <div key={o.slug} className="bh-row">
+                  <Link href={reviewPath(o.slug)} className="bh-name">
+                    <span style={{ width: 42, height: 42, flex: "none", borderRadius: 11, overflow: "hidden" }}>
+                      <BrandMark slug={o.slug} mono={o.mono} tint={brandFor(o.slug)} radius={11} fontSize={12} />
+                    </span>
+                    <span style={{ minWidth: 0 }}>
+                      <small>{o.name} · {isWelcomeOffer(o) ? "Welcome offer" : "Rewards"}</small>
+                      <b>{o.bonusShort ?? o.bonus}</b>
+                      {race && (
+                        <span className="bh-race">
+                          <span style={{ color: brandFor(o.slug), display: "inline-flex" }}><LineIcon name="bolt" size={13} /></span>
+                          {race.label}
+                        </span>
+                      )}
+                    </span>
+                  </Link>
+                  <span className="bh-code">{readable(o.promoCode) ? <CodeChip code={o.promoCode!} tint={GOLD} size="sm" /> : <span style={{ fontSize: 12.5, color: "#8E9CA4" }}>{o.promoCode ? "Code added by our link" : "No code needed"}</span>}</span>
+                  <span className="bh-stat">
+                    <small>Wager to withdraw</small>
+                    <b style={{ color: w.color }}>{w.text}</b>
                   </span>
-                  <span style={{ minWidth: 0 }}>
-                    <span style={{ display: "block", fontSize: 13, fontWeight: 700, color: "#A8B6BE" }}>{o.name} · {isWelcomeOffer(o) ? "Welcome offer" : "Rewards"}</span>
-                    <span style={{ display: "block", fontSize: 16, fontWeight: 800, color: "#fff", lineHeight: 1.3 }}>{o.bonusShort ?? o.bonus}</span>
-                    {race && <span style={{ display: "block", fontSize: 12, color: "#57E39A" }}>🏁 {race.label}</span>}
-                  </span>
-                  <span className="csg-bonusrow-code">{readable(o.promoCode) ? <CodeChip code={o.promoCode!} tint={GOLD} size="sm" /> : <span style={{ fontSize: 12.5, color: "#A8B6BE" }}>{o.promoCode ? "Code added by our link" : "No code needed"}</span>}</span>
-                  <span className="csg-bonusrow-wager" style={{ fontSize: 13 }}>
-                    <span style={{ display: "block", fontFamily: MONO, fontSize: 9.5, color: "#7F8D96", textTransform: "uppercase" }}>Wager to withdraw</span>
-                    <span style={{ fontWeight: 700, color: w.color }}>{w.text}</span>
-                  </span>
-                  <span style={{ display: "flex", gap: 8 }}>
-                    <a href={o.signupUrl!} target="_blank" rel="nofollow sponsored noopener" data-copy-code={readable(o.promoCode) ? o.promoCode! : undefined} style={{ padding: "10px 16px", borderRadius: 10, background: "linear-gradient(180deg,#FFD866,#FFC531)", color: "#141007", fontSize: 14, fontWeight: 800, whiteSpace: "nowrap" }}>Claim ↗</a>
-                    <Link href={`/casinos/${o.slug}`} style={{ padding: "10px 14px", borderRadius: 10, border: "1px solid rgba(255,255,255,.14)", color: "#E8EDF0", fontSize: 14, fontWeight: 700 }}>Review</Link>
+                  <span className="bh-act">
+                    <Link href={reviewPath(o.slug)} className="bh-btn bh-gold">Read review</Link>
+                    <a href={o.signupUrl!} target="_blank" rel="nofollow sponsored noopener" data-copy-code={readable(o.promoCode) ? o.promoCode! : undefined} className="bh-claim">Claim ↗</a>
                   </span>
                 </div>
-                <GeoBlockNote slug={o.slug} name={o.name} compact />
-              </div>
-            );
-          })}
-        </div>
-        <p style={{ margin: "10px 0 0", fontFamily: MONO, fontSize: 10.5, color: "#7F8D96" }}>Claim links are affiliate links: we may earn a commission, which never changes what a review says. 18+ · T&amp;Cs apply.</p>
-        <div style={{ marginTop: 18 }}>
-          <FoldedList hashes={["all-bonuses", "welcome", "rewards"]} summary={<>Show every bonus from all {ops.length} casinos, with the full terms <span aria-hidden>↓</span></>}>
-            <BonusesPage embedded />
-          </FoldedList>
-        </div>
-      </section>
+              );
+            })}
+          </div>
+          <p className="bh-note">Claim links are affiliate links: we may earn a commission, which never changes what a review says. 18+ · T&amp;Cs apply.</p>
+          <div style={{ marginTop: 18 }}>
+            <FoldedList hashes={["all-bonuses", "welcome", "rewards"]} summary={<>Show every bonus from all {ops.length} casinos, with the full terms <span aria-hidden>↓</span></>}>
+              <BonusesPage embedded />
+            </FoldedList>
+          </div>
+        </section>
 
-      {/* 3. By type */}
-      <section style={{ maxWidth: 1180, margin: "0 auto", padding: "52px 24px 0" }}>
-        <h2 style={{ margin: "0 0 6px", fontSize: 26, letterSpacing: "-.02em", fontWeight: 800, color: "#fff" }}>What kind of bonus are you after?</h2>
-        <p style={{ margin: "0 0 16px", fontSize: 15, color: "#8DA0AA" }}>A welcome bonus is paid up front and has to be wagered. Rakeback, cashback and races are earned as you play.</p>
-        <div style={{ display: "grid", gap: 12, gridTemplateColumns: "repeat(auto-fit, minmax(170px, 1fr))" }}>
-          {types.map((t, i) => {
-            const tile = (x: typeof t) => (
-              <a key={x.label} href={x.href} className="csg-lift" style={{ display: "flex", flexDirection: "column", gap: 6, padding: "16px 16px", borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.09)" }}>
-                <span style={{ fontSize: 24 }} aria-hidden>{x.icon}</span>
-                <span style={{ fontSize: 15.5, fontWeight: 800, color: "#fff" }}>{x.label}</span>
-                <span style={{ fontSize: 12.5, color: CYAN }}>{x.n} →</span>
-              </a>
-            );
-            // The last tile is the Kevin Hart promo while it runs, then the VIP calculator, switched in the browser.
-            return i === types.length - 1 && kevinLive() ? (
-              <Until key={t.label} until={KEVIN_END} after={tile(t)}>
-                {tile({ icon: "🎤", label: "Kevin Hart promo", href: KEVIN_PATH, n: "Until 7 Nov" })}
-              </Until>
-            ) : (
-              tile(t)
-            );
-          })}
-        </div>
-      </section>
+        <section className="bh-sec">
+          <div className="bh-head">
+            <h2 className="bh-h2">What kind of bonus are you after?</h2>
+            <span className="bh-muted">A welcome bonus is paid up front and has to be wagered. Rakeback, cashback and races are earned as you play.</span>
+          </div>
+          <div className="bh-types">
+            {types.map((t, i) =>
+              // The last tile is the Kevin Hart promo while it runs, then the VIP calculator, switched in the browser.
+              i === types.length - 1 && kevinLive() ? (
+                <Until key={t.label} until={KEVIN_END} after={tile(t)}>
+                  {tile({ icon: "sparkle", label: "Kevin Hart promo", href: KEVIN_PATH, n: "Until 7 Nov", tint: GOLD })}
+                </Until>
+              ) : (
+                tile(t)
+              )
+            )}
+          </div>
+        </section>
 
-      {/* 4. One next step */}
-      <section style={{ maxWidth: 1180, margin: "0 auto", padding: "56px 24px 80px" }}>
-        <Link href="/guides/reading-wagering-requirements" className="csg-lift" style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 16, padding: "24px 28px", borderRadius: 18, background: "radial-gradient(80% 140% at 0% 50%, rgba(0,194,204,.14), transparent 60%), #0F1418", border: "1px solid rgba(0,194,204,.3)" }}>
-          <span>
-            <span style={{ display: "block", fontFamily: MONO, fontSize: 11, color: CYAN, marginBottom: 6 }}>BEFORE YOU CLAIM</span>
-            <span style={{ display: "block", fontSize: 22, fontWeight: 800, color: "#fff" }}>Know what &ldquo;40× wagering&rdquo; really costs</span>
-            <span style={{ display: "block", fontSize: 14.5, color: "#A8B6BE", marginTop: 4 }}>A two-minute guide to reading any bonus&apos;s terms, so a big number doesn&apos;t fool you.</span>
-          </span>
-          <span style={{ padding: "13px 20px", borderRadius: 12, background: CYAN, color: "#04201F", fontSize: 15, fontWeight: 800 }}>Read the guide →</span>
-        </Link>
-      </section>
-
-      <style>{`@media (max-width: 760px){
-        .csg-bonusrow{grid-template-columns:44px minmax(0,1fr) !important;row-gap:10px !important}
-        .csg-bonusrow > span:last-child{grid-column:1 / -1}
-        .csg-bonusrow-wager{grid-column:2}
-        .csg-bonusrow-code{grid-column:2}
-      }`}</style>
+        <section className="bh-sec">
+          <Link href="/guides/reading-wagering-requirements" className="bh-next">
+            <span>
+              <b>Know what &ldquo;40× wagering&rdquo; really costs</b>
+              <small>A two-minute guide to reading any bonus&apos;s terms, so a big number doesn&apos;t fool you.</small>
+            </span>
+            <span className="bh-btn bh-line">Read the guide →</span>
+          </Link>
+        </section>
+      </div>
     </main>
   );
 }
