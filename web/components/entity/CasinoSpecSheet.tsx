@@ -18,7 +18,7 @@ export function CasinoSpecSheet({ slug, kind = "casino" }: { slug: string; kind?
 
   return (
     <div style={{ marginBottom: 38 }}>
-      <h2 style={{ margin: "0 0 8px", fontSize: 28, letterSpacing: "-.028em", fontWeight: 800, fontStretch: "112%", color: "#E8EDF0" }}>
+      <h2 style={{ margin: "0 0 8px", fontSize: 28, letterSpacing: "-.028em", fontWeight: 700, color: "#E8EDF0" }}>
         The full spec sheet
       </h2>
       <p style={{ margin: "0 0 20px", maxWidth: "84ch", fontSize: 15, color: "#8DA0AA", textWrap: "pretty" }}>
@@ -56,7 +56,7 @@ function Group({ group, first }: { group: SpecGroup; first: boolean }) {
           borderBottom: "1px solid rgba(255,255,255,.07)",
         }}
       >
-        <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#00C2CC" }}>
+        <span style={{ fontSize: 12.5, fontWeight: 600, color: "#00C2CC" }}>
           {group.title}
         </span>
         {uniform && <GroupCitation fact={uniform} />}
@@ -67,7 +67,7 @@ function Group({ group, first }: { group: SpecGroup; first: boolean }) {
           {group.facts.map((f) => (
             <div key={f.label} style={{ padding: "13px 20px", background: "#0C1013", display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 10 }}>
               <FactLabel fact={f} showCite={!uniform} rtpStyle />
-              <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 13, color: "#5FE3E8" }}>{f.value}</span>
+              <span style={{ fontSize: 13, color: "#5FE3E8" }}>{f.value}</span>
             </div>
           ))}
         </div>
@@ -97,14 +97,14 @@ function FactRow({ fact, first, showCite }: { fact: SpecFact; first: boolean; sh
         borderTop: first ? "none" : "1px solid rgba(255,255,255,.05)",
       }}
     >
-      <div style={{ padding: "13px 20px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".04em", textTransform: "uppercase", color: "#83919A" }}>
+      <div style={{ padding: "13px 20px", fontSize: 12.5, fontWeight: 600, color: "#83919A" }}>
         {fact.label}
       </div>
       <div style={{ padding: "13px 20px" }}>
         {fact.chips ? (
           <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
             {fact.chips.map((c) => (
-              <span key={c} style={{ display: "inline-flex", alignItems: "center", padding: "3px 9px", borderRadius: 100, background: "rgba(255,255,255,.05)", border: "1px solid rgba(255,255,255,.10)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#B7C4CB" }}>
+              <span key={c} style={{ display: "inline-flex", alignItems: "center", padding: "3px 9px", borderRadius: 100, background: "rgba(255,255,255,.05)", border: "1px solid rgba(255,255,255,.10)", fontSize: 10.5, color: "#B7C4CB" }}>
                 {c}
               </span>
             ))}
@@ -124,8 +124,7 @@ function FactRow({ fact, first, showCite }: { fact: SpecFact; first: boolean; sh
         {fact.flag && (
           <span
             style={{
-              fontFamily: "var(--font-jetbrains-mono), monospace",
-              fontSize: 10,
+              fontSize: 12,
               letterSpacing: ".05em",
               padding: "3px 8px",
               borderRadius: 4,
@@ -147,7 +146,7 @@ function FactLabel({ fact, showCite }: { fact: SpecFact; showCite: boolean; rtpS
     <div>
       <div style={{ fontSize: 13.5, color: "#B7C4CB" }}>{fact.label}</div>
       {showCite && fact.sourcing !== "site-data" && (
-        <div style={{ fontSize: 9.5, color: "#77858E", marginTop: 2 }}>
+        <div style={{ fontSize: 12, color: "#77858E", marginTop: 2 }}>
           <a href={fact.sourceUrl} target="_blank" rel="noopener noreferrer nofollow" style={{ color: "#5FE3E8" }}>{citeLabel(fact.sourceUrl)} ↗</a>
         </div>
       )}

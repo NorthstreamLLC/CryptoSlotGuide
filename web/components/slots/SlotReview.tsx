@@ -16,7 +16,6 @@ import type { SlotReviewFacts } from "@/lib/slot-page";
  * not a person. A review that describes mechanics names the studio page they
  * are described from, and a review without one does not describe them.
  */
-const MONO = "var(--font-jetbrains-mono), monospace";
 
 function Score({ value }: { value: number }) {
   // A ring for the score, the arc proportional to it. 9.4 reads as 9.4 — the
@@ -31,8 +30,8 @@ function Score({ value }: { value: number }) {
         <circle cx="46" cy="46" r={r} fill="none" stroke="#FFC531" strokeWidth="6" strokeLinecap="round" strokeDasharray={`${c * frac} ${c}`} />
       </svg>
       <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
-        <span style={{ fontSize: 26, fontWeight: 800, letterSpacing: "-.04em", color: "#fff", lineHeight: 1, fontVariantNumeric: "tabular-nums" }}>{value.toFixed(1)}</span>
-        <span style={{ fontFamily: MONO, fontSize: 9.5, letterSpacing: ".08em", color: "#8E9CA5", marginTop: 3 }}>/ 10</span>
+        <span style={{ fontSize: 26, fontWeight: 700, letterSpacing: "-.04em", color: "#fff", lineHeight: 1, fontVariantNumeric: "tabular-nums" }}>{value.toFixed(1)}</span>
+        <span style={{ fontSize: 12, letterSpacing: ".08em", color: "#8E9CA5", marginTop: 3 }}>/ 10</span>
       </div>
     </div>
   );
@@ -50,18 +49,18 @@ export function SlotReview({ slug, review, facts }: { slug: string; review: Revi
 
   return (
     <section id="review" style={{ scrollMarginTop: 110, maxWidth: 1100, margin: "0 auto", padding: "44px 40px 0" }}>
-      <div data-reveal style={{ borderRadius: 18, border: "1px solid rgba(255,197,49,.22)", background: "radial-gradient(90% 70% at 0% 0%, rgba(255,197,49,.08), transparent 60%), #0C1013", overflow: "hidden" }}>
+      <div data-reveal style={{ borderRadius: 18, border: "1px solid rgba(255,255,255,.08)", background: "#0D1114", boxShadow: "inset 0 2px 0 #FFC531", overflow: "hidden" }}>
         {/* header: score + verdict */}
         <div style={{ display: "flex", gap: 24, alignItems: "flex-start", flexWrap: "wrap", padding: "28px 30px 24px", borderBottom: "1px solid rgba(255,255,255,.06)" }}>
           <Score value={review.score} />
           <div style={{ flex: "1 1 420px", minWidth: 0 }}>
             <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap", marginBottom: 8 }}>
-              <span style={{ fontFamily: MONO, fontSize: 10, letterSpacing: ".09em", textTransform: "uppercase", color: "#FFC531" }}>Our review</span>
-              <span style={{ fontFamily: MONO, fontSize: 10, letterSpacing: ".05em", color: "#6E7A82" }}>
+              <span style={{ fontSize: 12.5, fontWeight: 600, color: "#FFC531" }}>Our review</span>
+              <span style={{ fontSize: 12, letterSpacing: ".05em", color: "#6E7A82" }}>
                 {REVIEW_BYLINE} · <EditedBy color="#8E9CA5" /> · read {reviewDate(review.read)}
               </span>
             </div>
-            <h2 style={{ margin: "0 0 10px", fontSize: 26, lineHeight: 1.15, letterSpacing: "-.03em", fontWeight: 800, color: "#fff", textWrap: "balance" }}>
+            <h2 style={{ margin: "0 0 10px", fontSize: 26, lineHeight: 1.15, letterSpacing: "-.03em", fontWeight: 700, color: "#fff", textWrap: "balance" }}>
               {facts.name}: our verdict
             </h2>
             <p style={{ margin: 0, fontSize: 16.5, lineHeight: 1.6, color: "#C9D3D9", maxWidth: "70ch", textWrap: "pretty" }}>{review.verdict}</p>
@@ -87,7 +86,7 @@ export function SlotReview({ slug, review, facts }: { slug: string; review: Revi
             <div style={{ padding: "22px 30px", borderBottom: "1px solid rgba(255,255,255,.06)", display: "flex", flexDirection: "column", gap: 20 }}>
               {rtp && (
                 <div>
-                  <div style={{ fontFamily: MONO, fontSize: 10, letterSpacing: ".08em", textTransform: "uppercase", color: "#8E9CA5", marginBottom: 9 }}>{rtp.k}</div>
+                  <div style={{ fontSize: 12.5, fontWeight: 600, color: "#8E9CA5", marginBottom: 9 }}>{rtp.k}</div>
                   <div style={{ display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
                     {builds.map((b, i) => (
                       <span
@@ -95,7 +94,6 @@ export function SlotReview({ slug, review, facts }: { slug: string; review: Revi
                         style={{
                           padding: "7px 13px",
                           borderRadius: 100,
-                          fontFamily: MONO,
                           fontSize: i === 0 ? 15 : 13,
                           fontWeight: 700,
                           fontVariantNumeric: "tabular-nums",
@@ -115,8 +113,8 @@ export function SlotReview({ slug, review, facts }: { slug: string; review: Revi
                 <div style={{ display: "flex", flexWrap: "wrap", gap: "16px 0" }}>
                   {rest.map((x, i) => (
                     <div key={x.k} style={{ display: "flex", flexDirection: "column", gap: 4, padding: i === 0 ? "0 26px 0 0" : "0 26px", borderLeft: i === 0 ? "none" : "1px solid rgba(255,255,255,.08)", minWidth: 0 }}>
-                      <span style={{ fontFamily: MONO, fontSize: 10, letterSpacing: ".08em", textTransform: "uppercase", color: "#8E9CA5", whiteSpace: "nowrap" }}>{x.k}</span>
-                      <span style={{ fontSize: 16, fontWeight: 800, letterSpacing: "-.01em", color: "#fff", fontVariantNumeric: "tabular-nums", whiteSpace: "nowrap" }}>{x.v}</span>
+                      <span style={{ fontSize: 12.5, fontWeight: 600, color: "#8E9CA5", whiteSpace: "nowrap" }}>{x.k}</span>
+                      <span style={{ fontSize: 16, fontWeight: 700, letterSpacing: "-.01em", color: "#fff", fontVariantNumeric: "tabular-nums", whiteSpace: "nowrap" }}>{x.v}</span>
                     </div>
                   ))}
                 </div>
@@ -129,7 +127,7 @@ export function SlotReview({ slug, review, facts }: { slug: string; review: Revi
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 14, padding: "24px 30px 26px" }}>
           {review.sections.map((sec, i) => (
             <div key={sec.title} data-reveal style={{ ["--reveal-delay" as string]: `${i * 60}ms`, minWidth: 0, padding: "18px 20px", borderRadius: 14, background: "rgba(255,255,255,.025)", border: "1px solid rgba(255,255,255,.06)" }}>
-              <h3 style={{ display: "flex", alignItems: "center", gap: 10, margin: "0 0 10px", fontFamily: MONO, fontSize: 11, fontWeight: 700, letterSpacing: ".09em", textTransform: "uppercase", color: "#FFC531" }}>
+              <h3 style={{ display: "flex", alignItems: "center", gap: 10, margin: "0 0 10px", fontSize: 12.5, fontWeight: 600, color: "#FFC531" }}>
                 <span style={{ width: 18, height: 2, borderRadius: 2, background: "#FFC531", flex: "none" }} />
                 {sec.title}
               </h3>
@@ -140,7 +138,7 @@ export function SlotReview({ slug, review, facts }: { slug: string; review: Revi
 
         {/* where it came from, where to go */}
         <div style={{ display: "flex", gap: "10px 12px", flexWrap: "wrap", alignItems: "center", padding: "16px 30px 18px", borderTop: "1px solid rgba(255,255,255,.06)", background: "rgba(0,0,0,.18)" }}>
-          <span style={{ flex: "1 1 320px", fontFamily: MONO, fontSize: 10.5, lineHeight: 1.6, letterSpacing: ".03em", color: "#6E7A82" }}>
+          <span style={{ flex: "1 1 320px", fontSize: 10.5, lineHeight: 1.6, letterSpacing: ".03em", color: "#6E7A82" }}>
             {review.featureSource && host ? (
               <>
                 Mechanics from{" "}
@@ -154,16 +152,16 @@ export function SlotReview({ slug, review, facts }: { slug: string; review: Revi
             )}
           </span>
           {facts.demoUrl && (
-            <a href={facts.demoUrl} target="_blank" rel="noopener noreferrer nofollow" style={{ padding: "8px 14px", borderRadius: 100, border: "1px solid rgba(95,227,232,.35)", color: "#5FE3E8", fontFamily: MONO, fontSize: 11, letterSpacing: ".04em" }}>
+            <a href={facts.demoUrl} target="_blank" rel="noopener noreferrer nofollow" style={{ padding: "8px 14px", borderRadius: 100, border: "1px solid rgba(95,227,232,.35)", color: "#5FE3E8", fontSize: 11, letterSpacing: ".04em" }}>
               Studio demo ↗
             </a>
           )}
           {facts.seLink && (
-            <a href={facts.seLink} target="_blank" rel="noopener noreferrer" style={{ padding: "8px 14px", borderRadius: 100, border: "1px solid rgba(255,255,255,.12)", color: "#A8B6BE", fontFamily: MONO, fontSize: 11, letterSpacing: ".04em" }}>
+            <a href={facts.seLink} target="_blank" rel="noopener noreferrer" style={{ padding: "8px 14px", borderRadius: 100, border: "1px solid rgba(255,255,255,.12)", color: "#A8B6BE", fontSize: 11, letterSpacing: ".04em" }}>
               {facts.seLabel} ↗
             </a>
           )}
-          <Link href="/slots" style={{ padding: "8px 14px", borderRadius: 100, border: "1px solid rgba(255,197,49,.3)", background: "rgba(255,197,49,.08)", color: "#FFC531", fontFamily: MONO, fontSize: 11, letterSpacing: ".04em" }}>
+          <Link href="/slots" style={{ padding: "8px 14px", borderRadius: 100, border: "1px solid rgba(255,197,49,.3)", background: "rgba(255,197,49,.08)", color: "#FFC531", fontSize: 11, letterSpacing: ".04em" }}>
             Every slot on our list →
           </Link>
           <span hidden data-slug={slug} />

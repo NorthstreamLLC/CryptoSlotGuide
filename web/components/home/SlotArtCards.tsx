@@ -2,34 +2,47 @@ import Link from "next/link";
 import type { topSlotRows } from "@/lib/slot-page";
 
 type Row = ReturnType<typeof topSlotRows>[number];
-const MONO = "var(--font-jetbrains-mono), monospace";
 
-/** Slots as art cards: the tile, our rank, and the studio's published figures. */
+/**
+ * Slot tiles: the game's art, its name, studio and published RTP. Flat, no
+ * badges or chips; a small rank sits on the art where the list is ranked.
+ * Same look as the homepage's top slots.
+ */
+const CSS = `
+.sa-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; min-width: 0; }
+.sa-card { display: block; min-width: 0; }
+.sa-art { position: relative; display: block; aspect-ratio: 16 / 10; border-radius: 12px; overflow: hidden; background: #11161A; border: 1px solid rgba(255,255,255,.06); }
+.sa-art img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+.sa-card:hover .sa-art img { transform: scale(1.03); }
+.sa-rank { position: absolute; top: 8px; left: 8px; padding: 2px 7px; border-radius: 6px; background: rgba(8,11,13,.8); font-size: 12px; font-weight: 700; color: #F2F5F7; }
+.sa-card b { display: block; margin-top: 12px; font-size: 15px; font-weight: 600; color: #EEF2F4; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sa-card:hover b { color: #fff; }
+.sa-card small { display: block; margin-top: 2px; font-size: 13px; color: #75828A; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sa-card small em { font-style: normal; color: #57E39A; }
+@media (max-width: 960px) { .sa-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; } }
+`;
+
 export function SlotArtCards({ rows, showRank = true }: { rows: Row[]; showRank?: boolean }) {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4" style={{ minWidth: 0, gap: 12 }}>
-      {rows.map((r) => (
-        <Link key={r.slug} href={`/slots/${r.slug}`} className="csg-lift group" style={{ display: "flex", flexDirection: "column", borderRadius: 14, overflow: "hidden", background: "#0C1013", border: "1px solid rgba(255,255,255,.08)" }}>
-          <span style={{ position: "relative", display: "block", aspectRatio: "16 / 10", background: "#11161A", overflow: "hidden" }}>
-            {r.image && (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={r.image} alt={r.name} width={320} height={200} loading="lazy" decoding="async" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block", transition: "transform .4s ease" }} className="group-hover:scale-[1.04]" />
-            )}
-            {showRank && (
-              <span style={{ position: "absolute", top: 10, right: 10, padding: "4px 8px", borderRadius: 7, background: "rgba(7,9,11,.78)", fontFamily: MONO, fontSize: 11, fontWeight: 700, color: r.rank <= 3 ? "#FFC531" : "#DCE5E9" }}>#{r.rank}</span>
-            )}
-          </span>
-          <span style={{ display: "flex", flexDirection: "column", gap: 4, padding: "14px 16px 16px" }}>
-            <span style={{ fontSize: 15.5, fontWeight: 800, color: "#fff", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{r.name}</span>
-            <span style={{ fontFamily: MONO, fontSize: 10.5, color: "#83919A" }}>{r.provider}</span>
-            <span style={{ display: "flex", gap: 6, flexWrap: "wrap", marginTop: 8, fontFamily: MONO, fontSize: 11 }}>
-              <span style={{ padding: "3px 7px", borderRadius: 6, background: "rgba(87,227,154,.1)", color: "#57E39A" }}>{r.rtp} RTP</span>
-              <span style={{ padding: "3px 7px", borderRadius: 6, background: "rgba(255,255,255,.05)", color: "#C3CFD5" }}>{r.maxWin} max</span>
-              <span style={{ padding: "3px 7px", borderRadius: 6, background: "rgba(255,255,255,.05)", color: "#C3CFD5" }}>{r.volatility}</span>
+    <>
+      <style>{CSS}</style>
+      <div className="sa-grid">
+        {rows.map((r) => (
+          <Link key={r.slug} href={`/slots/${r.slug}`} className="sa-card">
+            <span className="sa-art">
+              {r.image && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={r.image} alt={r.name} width={320} height={200} loading="lazy" decoding="async" />
+              )}
+              {showRank && <span className="sa-rank">{r.rank}</span>}
             </span>
-          </span>
-        </Link>
-      ))}
-    </div>
+            <b>{r.name}</b>
+            <small>
+              {r.provider} · <em>{r.rtp}</em> RTP · {r.maxWin} max
+            </small>
+          </Link>
+        ))}
+      </div>
+    </>
   );
 }

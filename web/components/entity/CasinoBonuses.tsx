@@ -21,7 +21,7 @@ export function CasinoBonuses({ slug }: { slug: string }) {
 
   return (
     <div style={{ marginBottom: 38 }}>
-      <h2 style={{ margin: "0 0 8px", fontSize: 28, letterSpacing: "-.028em", fontWeight: 800, fontStretch: "112%", color: "#E8EDF0" }}>
+      <h2 style={{ margin: "0 0 8px", fontSize: 28, letterSpacing: "-.028em", fontWeight: 700, color: "#E8EDF0" }}>
         Current bonuses
       </h2>
       <p style={{ margin: "0 0 20px", maxWidth: "84ch", fontSize: 15, color: "#8DA0AA", textWrap: "pretty" }}>
@@ -43,14 +43,14 @@ function BonusCard({ bonus, name, signupUrl }: { bonus: CasinoBonus; name: strin
     <div style={{ display: "flex", flexDirection: "column", padding: 24, borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
       <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 16 }}>
         <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#00C2CC", flex: "none" }} />
-        <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".07em", textTransform: "uppercase", color: "#83919A" }}>
+        <span style={{ fontSize: 12.5, fontWeight: 600, color: "#83919A" }}>
           {bonus.category}
         </span>
       </div>
 
       <div style={{ fontSize: 17, fontWeight: 700, letterSpacing: "-.015em", color: "#fff", marginBottom: 18 }}>{bonus.title}</div>
 
-      <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 36, fontWeight: 700, letterSpacing: "-.03em", color: "#E8EDF0", marginBottom: 4 }}>
+      <div style={{ fontSize: 36, fontWeight: 700, letterSpacing: "-.03em", color: "#E8EDF0", marginBottom: 4 }}>
         {bonus.headline}
       </div>
       <div style={{ fontSize: 12.5, lineHeight: 1.5, color: "#7B8A93", marginBottom: bonus.stats ? 20 : 16 }}>{bonus.subCopy}</div>
@@ -59,7 +59,7 @@ function BonusCard({ bonus, name, signupUrl }: { bonus: CasinoBonus; name: strin
         <div data-keep-grid style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8, marginBottom: 20 }}>
           {bonus.stats.map((s) => (
             <div key={s.label} style={{ padding: "12px 14px", background: "#101519", borderRadius: 9 }}>
-              <div style={{ fontSize: 10, letterSpacing: ".06em", textTransform: "uppercase", color: "#83919A", marginBottom: 5 }}>{s.label}</div>
+              <div style={{ fontSize: 12, color: "#83919A", marginBottom: 5 }}>{s.label}</div>
               <div style={{ fontSize: 14, fontWeight: 500, color: "#E8EDF0" }}>{s.value}</div>
             </div>
           ))}

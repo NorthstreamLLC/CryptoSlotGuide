@@ -18,7 +18,6 @@ export interface SectionNavItem {
   label: string;
 }
 
-const MONO = "var(--font-jetbrains-mono), monospace";
 
 export function SectionNav({ items }: { items: SectionNavItem[] }) {
   const [top, setTop] = useState(64);
@@ -81,7 +80,6 @@ export function SectionNav({ items }: { items: SectionNavItem[] }) {
                 borderRadius: 100,
                 border: `1px solid ${on ? "rgba(0,194,204,.5)" : "rgba(255,255,255,.1)"}`,
                 background: on ? "rgba(0,194,204,.12)" : "transparent",
-                fontFamily: MONO,
                 fontSize: 11,
                 letterSpacing: ".04em",
                 color: on ? "#5FE3E8" : "#A8B6BE",

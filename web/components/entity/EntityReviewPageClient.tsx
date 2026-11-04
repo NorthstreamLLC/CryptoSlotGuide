@@ -63,7 +63,7 @@ export function EntityReviewPageClient({ e, review, lead, heroExtra, partner, bo
           </div>
         )}
         <div style={{ position: "relative", maxWidth: 1180, margin: "0 auto", padding: "26px 40px 48px" }}>
-          <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#83919A", marginBottom: 26 }}>
+          <div style={{ fontSize: 11, color: "#83919A", marginBottom: 26 }}>
             <Link href="/" style={{ color: "#83919A" }}>Home</Link> / <Link href={back.href} style={{ color: "#83919A" }}>{e.kicker}</Link> /{" "}
             <span style={{ color: "#A8B6BE" }}>{e.name}</span>
           </div>
@@ -79,11 +79,11 @@ export function EntityReviewPageClient({ e, review, lead, heroExtra, partner, bo
                     <BrandMark slug={e.slug} mono={e.mono} tint={e.tint} radius={9} />
                   </div>
                 )}
-                <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".09em", textTransform: "uppercase", color: "#00C2CC" }}>
+                <span style={{ fontSize: 12.5, fontWeight: 600, color: "#00C2CC" }}>
                   {e.kicker}
                 </span>
               </div>
-              <h1 style={{ margin: "0 0 16px", fontSize: 44, lineHeight: 1.06, letterSpacing: "-.035em", fontWeight: 800, fontStretch: "114%", color: "#fff", textWrap: "balance" }}>
+              <h1 style={{ margin: "0 0 16px", fontSize: 44, lineHeight: 1.06, letterSpacing: "-.035em", fontWeight: 700, color: "#fff", textWrap: "balance" }}>
                 {e.headline}
               </h1>
               <div style={{ display: "flex", gap: 16, marginBottom: 24 }}>
@@ -92,7 +92,7 @@ export function EntityReviewPageClient({ e, review, lead, heroExtra, partner, bo
               </div>
               <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 24 }}>
                 {e.tags.map((t) => (
-                  <span key={t} style={{ padding: "5px 10px", borderRadius: 5, background: "rgba(255,255,255,.04)", border: "1px solid rgba(255,255,255,.09)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".05em", color: "#A8B6BE" }}>
+                  <span key={t} style={{ padding: "5px 10px", borderRadius: 5, background: "rgba(255,255,255,.04)", border: "1px solid rgba(255,255,255,.09)", fontSize: 10.5, letterSpacing: ".05em", color: "#A8B6BE" }}>
                     {t}
                   </span>
                 ))}
@@ -105,17 +105,15 @@ export function EntityReviewPageClient({ e, review, lead, heroExtra, partner, bo
                     borderRadius: 4,
                     border: `1px solid ${TIER_TINT[tier]}55`,
                     background: `${TIER_TINT[tier]}18`,
-                    fontFamily: "var(--font-jetbrains-mono), monospace",
-                    fontSize: 9.5,
+                    fontSize: 12,
                     fontWeight: 700,
                     letterSpacing: ".06em",
-                    textTransform: "uppercase",
                     color: TIER_TINT[tier],
                   }}
                 >
                   {TIER_LABEL[tier]}
                 </Link>}
-                <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11.5, color: "#83919A" }}>{e.byline}</div>
+                <div style={{ fontSize: 11.5, color: "#83919A" }}>{e.byline}</div>
               </div>
               <div style={{ marginTop: 22 }}>
                 <AuthorByline updated={e.updated} />
@@ -130,7 +128,7 @@ export function EntityReviewPageClient({ e, review, lead, heroExtra, partner, bo
                   href={e.signupUrl}
                   target="_blank"
                   rel="nofollow sponsored noopener"
-                  style={{ display: "block", textAlign: "center", padding: 14, borderRadius: 9, background: "#00C2CC", color: "#04191B", fontSize: 14, fontWeight: 700, marginBottom: 9 }}
+                  style={{ display: "block", textAlign: "center", padding: 14, borderRadius: 9, background: "#FFC531", color: "#141007", fontSize: 14, fontWeight: 700, marginBottom: 9 }}
                 >
                   {e.playAtName ? (
                     <>
@@ -144,7 +142,7 @@ export function EntityReviewPageClient({ e, review, lead, heroExtra, partner, bo
               ) : e.ctaHref ? (
                 <Link
                   href={e.ctaHref}
-                  style={{ display: "block", textAlign: "center", padding: 14, borderRadius: 9, background: "#00C2CC", color: "#04191B", fontSize: 14, fontWeight: 700, marginBottom: 9 }}
+                  style={{ display: "block", textAlign: "center", padding: 14, borderRadius: 9, background: "#FFC531", color: "#141007", fontSize: 14, fontWeight: 700, marginBottom: 9 }}
                 >
                   {e.playAtName ? (
                     <>
@@ -170,7 +168,7 @@ export function EntityReviewPageClient({ e, review, lead, heroExtra, partner, bo
                   {e.sister.label} ↗
                 </a>
               )}
-              <div style={{ marginTop: 14, fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, lineHeight: 1.5, color: "#77858E" }}>
+              <div style={{ marginTop: 14, fontSize: 12, lineHeight: 1.5, color: "#77858E" }}>
                 {isCasino
                   ? e.signupUrl && e.affiliate
                     ? "Affiliate link. 18+. T&Cs apply. Play within your limits."
@@ -202,7 +200,7 @@ export function EntityReviewPageClient({ e, review, lead, heroExtra, partner, bo
             this box is skipped rather than showing the same sentence twice. */}
         {take && !heroExtra && (
           <div style={{ padding: 28, borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)", marginBottom: 38 }}>
-            <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 12 }}>
+            <div style={{ fontSize: 12.5, fontWeight: 600, color: "#00C2CC", marginBottom: 12 }}>
               Verdict
             </div>
             <p style={{ margin: 0, maxWidth: "88ch", fontSize: 18, lineHeight: 1.6, color: "#DCE5E9", textWrap: "pretty" }}>{e.verdict}</p>
@@ -229,10 +227,10 @@ export function EntityReviewPageClient({ e, review, lead, heroExtra, partner, bo
               // count never leaves a bare gap-colored cell.
               style={{ padding: "20px 22px", background: "#0C1013", gridColumn: i === e.stats.length - 1 ? `span ${statCols - (i % statCols)}` : undefined }}
             >
-              <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".07em", textTransform: "uppercase", color: "#83919A", marginBottom: 8 }}>
+              <div style={{ fontSize: 12.5, fontWeight: 600, color: "#83919A", marginBottom: 8 }}>
                 {m.label}
               </div>
-              <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: m.value.length > 16 ? 15 : 22, lineHeight: 1.35, fontWeight: 500, color: "#E8EDF0", letterSpacing: "-.02em", marginBottom: 5 }}>
+              <div style={{ fontSize: m.value.length > 16 ? 15 : 22, lineHeight: 1.35, fontWeight: 500, color: "#E8EDF0", letterSpacing: "-.02em", marginBottom: 5 }}>
                 {m.value}
               </div>
               <div style={{ fontSize: 12.5, lineHeight: 1.45, color: "#7B8A93", textWrap: "pretty" }}>{m.note}</div>
@@ -245,13 +243,13 @@ export function EntityReviewPageClient({ e, review, lead, heroExtra, partner, bo
         {specSheet}
 
         {e.chips.length > 0 && <div style={{ padding: "20px 24px", borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)", marginBottom: 38 }}>
-          <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 13 }}>
+          <div style={{ fontSize: 12.5, fontWeight: 600, color: "#00C2CC", marginBottom: 13 }}>
             {e.chipLabel}
           </div>
           {e.chips.length > 0 ? (
             <div style={{ display: "flex", gap: 7, flexWrap: "wrap" }}>
               {e.chips.map((c) => (
-                <span key={c.t} style={{ display: "flex", alignItems: "center", gap: 7, padding: "6px 11px", borderRadius: 100, background: "rgba(255,255,255,.04)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".04em", color: "#B7C4CB" }}>
+                <span key={c.t} style={{ display: "flex", alignItems: "center", gap: 7, padding: "6px 11px", borderRadius: 100, background: "rgba(255,255,255,.04)", fontSize: 11, letterSpacing: ".04em", color: "#B7C4CB" }}>
                   <span style={{ width: 8, height: 8, borderRadius: "50%", background: c.tint }} />
                   {c.t}
                 </span>
@@ -265,13 +263,13 @@ export function EntityReviewPageClient({ e, review, lead, heroExtra, partner, bo
         <div id="verdict" data-reveal style={{ scrollMarginTop: 110, display: "grid", gridTemplateColumns: e.cons.length && e.pros.length ? "1fr 1fr" : "1fr", gap: 14, marginBottom: 38 }}>
           {e.pros.length > 0 && (
           <div style={{ padding: 24, borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
-            <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 14 }}>
+            <div style={{ fontSize: 12.5, fontWeight: 600, color: "#00C2CC", marginBottom: 14 }}>
               Holds up
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: 11 }}>
               {e.pros.map((p) => (
                 <div key={p} style={{ display: "flex", gap: 11, fontSize: 14, lineHeight: 1.5, color: "#B7C4CB" }}>
-                  <span style={{ color: "#00C2CC", fontFamily: "var(--font-jetbrains-mono), monospace", flex: "none" }}>+</span>
+                  <span style={{ color: "#00C2CC", flex: "none" }}>+</span>
                   <span>{p}</span>
                 </div>
               ))}
@@ -280,13 +278,13 @@ export function EntityReviewPageClient({ e, review, lead, heroExtra, partner, bo
           )}
           {e.cons.length > 0 && (
           <div style={{ padding: 24, borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
-            <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#DA9877", marginBottom: 14 }}>
+            <div style={{ fontSize: 12.5, fontWeight: 600, color: "#DA9877", marginBottom: 14 }}>
               Falls short
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: 11 }}>
               {e.cons.map((c) => (
                 <div key={c} style={{ display: "flex", gap: 11, fontSize: 14, lineHeight: 1.5, color: "#B7C4CB" }}>
-                  <span style={{ color: "#DA9877", fontFamily: "var(--font-jetbrains-mono), monospace", flex: "none" }}>−</span>
+                  <span style={{ color: "#DA9877", flex: "none" }}>−</span>
                   <span>{c}</span>
                 </div>
               ))}
@@ -297,7 +295,7 @@ export function EntityReviewPageClient({ e, review, lead, heroExtra, partner, bo
 
         {e.spec.length > 0 && <SectionHeading id="terms" title={e.specTitle} sub={e.specSub} maxWidth="80ch" />}
         {e.spec.length > 0 && e.specSource && (
-          <div style={{ margin: "-6px 0 14px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11 }}>
+          <div style={{ margin: "-6px 0 14px", fontSize: 11 }}>
             <a href={e.specSource} target="_blank" rel="noopener noreferrer nofollow" style={{ color: "#5FE3E8" }}>
               Source: {new URL(e.specSource).hostname.replace(/^www./, "")} ↗
             </a>
@@ -307,10 +305,10 @@ export function EntityReviewPageClient({ e, review, lead, heroExtra, partner, bo
         <div style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 13, overflow: "hidden", background: "#0C1013", marginBottom: 38 }}>
           {e.spec.map((row) => (
             <div key={row.k} style={{ display: "grid", gridTemplateColumns: "210px 1fr 150px", borderBottom: "1px solid rgba(255,255,255,.05)" }}>
-              <div style={{ padding: "14px 18px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".05em", textTransform: "uppercase", color: "#83919A" }}>{row.k}</div>
+              <div style={{ padding: "14px 18px", fontSize: 12.5, fontWeight: 600, color: "#83919A" }}>{row.k}</div>
               <div style={{ padding: "14px 18px", fontSize: 13.5, lineHeight: 1.5, color: "#B7C4CB" }}>{row.v}</div>
               <div style={{ padding: "14px 18px" }}>
-                <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".05em", padding: "3px 7px", borderRadius: 4, background: row.background, color: row.color, whiteSpace: "nowrap" }}>
+                <span style={{ fontSize: 12, letterSpacing: ".05em", padding: "3px 7px", borderRadius: 4, background: row.background, color: row.color, whiteSpace: "nowrap" }}>
                   {row.label}
                 </span>
               </div>
@@ -325,10 +323,10 @@ export function EntityReviewPageClient({ e, review, lead, heroExtra, partner, bo
             <div style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 13, overflow: "hidden", background: "#0C1013", marginBottom: 38 }}>
               {block.rows.map((row) => (
                 <div key={row.k} style={{ display: "grid", gridTemplateColumns: "210px 1fr 150px", borderBottom: "1px solid rgba(255,255,255,.05)" }}>
-                  <div style={{ padding: "14px 18px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".05em", textTransform: "uppercase", color: "#83919A" }}>{row.k}</div>
+                  <div style={{ padding: "14px 18px", fontSize: 12.5, fontWeight: 600, color: "#83919A" }}>{row.k}</div>
                   <div style={{ padding: "14px 18px", fontSize: 13.5, lineHeight: 1.5, color: "#B7C4CB" }}>{row.v}</div>
                   <div style={{ padding: "14px 18px" }}>
-                    <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".05em", padding: "3px 7px", borderRadius: 4, background: row.background, color: row.color, whiteSpace: "nowrap" }}>{row.label}</span>
+                    <span style={{ fontSize: 12, letterSpacing: ".05em", padding: "3px 7px", borderRadius: 4, background: row.background, color: row.color, whiteSpace: "nowrap" }}>{row.label}</span>
                   </div>
                 </div>
               ))}
@@ -341,7 +339,7 @@ export function EntityReviewPageClient({ e, review, lead, heroExtra, partner, bo
         <div style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 13, overflowX: "auto", background: "#0C1013", marginBottom: 14 }}>
           <div style={{ display: "grid", gridTemplateColumns: "minmax(240px,1.5fr) 130px 150px 130px", minWidth: 650, background: "#101519", borderBottom: "1px solid rgba(255,255,255,.07)" }}>
             {["Item", ...e.tableCols].map((h) => (
-              <div key={h} style={{ padding: "13px 18px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".07em", textTransform: "uppercase", color: "#83919A" }}>
+              <div key={h} style={{ padding: "13px 18px", fontSize: 12.5, fontWeight: 600, color: "#83919A" }}>
                 {h}
               </div>
             ))}
@@ -400,7 +398,7 @@ export function EntityReviewPageClient({ e, review, lead, heroExtra, partner, bo
                     style={{ display: "flex", alignItems: "center", gap: 12, width: "100%", padding: "15px 0", border: 0, background: "transparent", textAlign: "left", fontSize: 14.5, fontWeight: 600, color: "#E8EDF0" }}
                   >
                     <span style={{ flex: 1 }}>{q.q}</span>
-                    <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", color: "#00C2CC" }}>{openFaq === i ? "−" : "+"}</span>
+                    <span style={{ color: "#00C2CC" }}>{openFaq === i ? "−" : "+"}</span>
                   </button>
                   {openFaq === i && (
                     <div style={{ padding: "0 0 15px", maxWidth: "82ch", fontSize: 14, lineHeight: 1.7, color: "#93A3AC", textWrap: "pretty" }}>{q.a}</div>
@@ -412,11 +410,11 @@ export function EntityReviewPageClient({ e, review, lead, heroExtra, partner, bo
           <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
             <Link href={back.href} style={{ display: "flex", flexDirection: "column", gap: 14, padding: 24, borderRadius: 13, background: "#101519", border: "1px solid rgba(255,255,255,.07)" }}>
               <span style={{ fontSize: 15.5, fontWeight: 700, color: "#fff", letterSpacing: "-.015em" }}>{back.label}</span>
-              <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".05em", color: "#5FE3E8" }}>Same facts, side by side →</span>
+              <span style={{ fontSize: 11, letterSpacing: ".05em", color: "#5FE3E8" }}>Same facts, side by side →</span>
             </Link>
             <Link href="/how-we-rate" style={{ display: "flex", flexDirection: "column", gap: 14, padding: 24, borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
               <span style={{ fontSize: 15.5, fontWeight: 700, color: "#E8EDF0", letterSpacing: "-.015em" }}>How we source information</span>
-              <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".05em", color: "#00C2CC" }}>Where each fact comes from →</span>
+              <span style={{ fontSize: 11, letterSpacing: ".05em", color: "#00C2CC" }}>Where each fact comes from →</span>
             </Link>
           </div>
         </div>
@@ -448,7 +446,7 @@ export function EntityReviewPageClient({ e, review, lead, heroExtra, partner, bo
 function SectionHeading({ title, sub, maxWidth, id }: { title: string; sub: string; maxWidth?: string; id?: string }) {
   return (
     <>
-      <h2 id={id} data-reveal="left" style={{ scrollMarginTop: 110, margin: "0 0 8px", fontSize: 28, letterSpacing: "-.028em", fontWeight: 800, fontStretch: "112%", color: "#E8EDF0" }}>{title}</h2>
+      <h2 id={id} data-reveal="left" style={{ scrollMarginTop: 110, margin: "0 0 8px", fontSize: 28, letterSpacing: "-.028em", fontWeight: 700, color: "#E8EDF0" }}>{title}</h2>
       <p style={{ margin: "0 0 20px", fontSize: 15, color: "#8DA0AA", maxWidth, textWrap: "pretty" }}>{sub}</p>
     </>
   );

@@ -24,13 +24,12 @@ import { studioHref } from "@/lib/studio-pages";
  * read the same on all 410 of these.
  */
 
-const MONO = "var(--font-jetbrains-mono), monospace";
 
 function Spec({ k, v }: { k: string; v: string }) {
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 5, padding: "14px 16px", borderRadius: 12, background: "#0E1316", border: "1px solid rgba(255,255,255,.07)", minWidth: 0 }}>
-      <span style={{ fontFamily: MONO, fontSize: 10, letterSpacing: ".08em", textTransform: "uppercase", color: "#8E9CA5" }}>{k}</span>
-      <span style={{ fontSize: 17, fontWeight: 800, letterSpacing: "-.01em", color: "#fff" }}>{v}</span>
+      <span style={{ fontSize: 12.5, fontWeight: 600, color: "#8E9CA5" }}>{k}</span>
+      <span style={{ fontSize: 17, fontWeight: 700, letterSpacing: "-.01em", color: "#fff" }}>{v}</span>
     </div>
   );
 }
@@ -58,7 +57,7 @@ export function SlotDataPage({ g, review }: { g: CatalogueSlotPage; review?: Rea
           </div>
         )}
         <div style={{ position: "relative", maxWidth: 1100, margin: "0 auto", padding: "40px 40px 44px" }}>
-          <nav style={{ fontFamily: MONO, fontSize: 11, color: "#83919A", marginBottom: 22 }}>
+          <nav style={{ fontSize: 11, color: "#83919A", marginBottom: 22 }}>
             <Link href="/slots" style={{ color: "#83919A" }}>Slots</Link>
             <span style={{ margin: "0 8px" }}>/</span>
             {studioHref(g.provider) ? (
@@ -94,11 +93,11 @@ export function SlotDataPage({ g, review }: { g: CatalogueSlotPage; review?: Rea
             )}
             <div style={{ flex: "1 1 340px", minWidth: 0 }}>
               {pick && (
-                <div style={{ display: "inline-block", marginBottom: 10, padding: "4px 10px", borderRadius: 100, background: "rgba(255,197,49,.12)", border: "1px solid rgba(255,197,49,.3)", fontFamily: MONO, fontSize: 10, letterSpacing: ".07em", textTransform: "uppercase", color: "#FFC531" }}>
+                <div style={{ display: "inline-block", marginBottom: 10, padding: "4px 10px", borderRadius: 100, background: "rgba(255,197,49,.12)", border: "1px solid rgba(255,197,49,.3)", fontSize: 12.5, fontWeight: 600, color: "#FFC531" }}>
                   One of our top slots
                 </div>
               )}
-              <h1 style={{ margin: "0 0 12px", fontSize: 40, lineHeight: 1.05, letterSpacing: "-.035em", fontWeight: 800, color: "#fff", textWrap: "balance" }}>
+              <h1 style={{ margin: "0 0 12px", fontSize: 40, lineHeight: 1.05, letterSpacing: "-.035em", fontWeight: 700, color: "#fff", textWrap: "balance" }}>
                 {g.name} RTP
               </h1>
               <p style={{ margin: 0, maxWidth: "62ch", fontSize: 16, lineHeight: 1.6, color: "#A8B6BE" }}>
@@ -121,7 +120,7 @@ export function SlotDataPage({ g, review }: { g: CatalogueSlotPage; review?: Rea
       </section>
 
       <section style={{ maxWidth: 1100, margin: "0 auto", padding: "40px 40px 0" }}>
-        <h2 style={{ margin: "0 0 4px", fontSize: 22, fontWeight: 800, letterSpacing: "-.02em", color: "#fff" }}>
+        <h2 style={{ margin: "0 0 4px", fontSize: 22, fontWeight: 700, letterSpacing: "-.02em", color: "#fff" }}>
           {versions.length > 1 ? "Published configurations" : "Published return"}
         </h2>
         <p style={{ margin: "0 0 18px", maxWidth: "70ch", fontSize: 14, lineHeight: 1.6, color: "#8DA0AA" }}>
@@ -152,10 +151,10 @@ export function SlotDataPage({ g, review }: { g: CatalogueSlotPage; review?: Rea
                 border: `1px solid ${i === 0 ? "rgba(95,227,232,.3)" : "rgba(255,255,255,.07)"}`,
               }}
             >
-              <div style={{ fontFamily: MONO, fontSize: 10, letterSpacing: ".08em", textTransform: "uppercase", color: i === 0 ? "#5FE3E8" : "#8E9CA5", marginBottom: 6 }}>
+              <div style={{ fontSize: 12.5, fontWeight: 600, color: i === 0 ? "#5FE3E8" : "#8E9CA5", marginBottom: 6 }}>
                 {i === 0 ? "Best published" : versions.length === 2 ? "Also licensed" : `Version ${i + 1}`}
               </div>
-              <div style={{ fontSize: 32, fontWeight: 800, letterSpacing: "-.03em", color: i === 0 ? "#5FE3E8" : "#fff" }}>{v}%</div>
+              <div style={{ fontSize: 32, fontWeight: 700, letterSpacing: "-.03em", color: i === 0 ? "#5FE3E8" : "#fff" }}>{v}%</div>
             </div>
           ))}
         </div>
@@ -189,7 +188,7 @@ export function SlotDataPage({ g, review }: { g: CatalogueSlotPage; review?: Rea
 
       {specs.length > 0 && (
         <section style={{ maxWidth: 1100, margin: "0 auto", padding: "36px 40px 0" }}>
-          <h2 style={{ margin: "0 0 14px", fontSize: 22, fontWeight: 800, letterSpacing: "-.02em", color: "#fff" }}>Specs</h2>
+          <h2 style={{ margin: "0 0 14px", fontSize: 22, fontWeight: 700, letterSpacing: "-.02em", color: "#fff" }}>Specs</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))", gap: 12 }}>
             {specs.map((s) => (
               <Spec key={s.k} k={s.k} v={s.v} />
@@ -202,7 +201,7 @@ export function SlotDataPage({ g, review }: { g: CatalogueSlotPage; review?: Rea
         <section style={{ maxWidth: 1100, margin: "0 auto", padding: "36px 40px 0" }}>
           <div style={{ display: "flex", gap: 16, alignItems: "center", flexWrap: "wrap", padding: "20px 22px", borderRadius: 16, background: "#0E1316", border: "1px solid rgba(255,255,255,.07)" }}>
             <div style={{ flex: "1 1 320px", minWidth: 0 }}>
-              <div style={{ fontSize: 16, fontWeight: 800, color: "#fff", marginBottom: 4 }}>Play it free on {g.demoHost ?? "the studio's site"}</div>
+              <div style={{ fontSize: 16, fontWeight: 700, color: "#fff", marginBottom: 4 }}>Play it free on {g.demoHost ?? "the studio's site"}</div>
               <p style={{ margin: 0, fontSize: 13.5, lineHeight: 1.55, color: "#8DA0AA" }}>
                 {studio}&rsquo;s own demo, on their domain — no account, no deposit. Demo builds run at the studio default, so treat it as the game, not as
                 the return your casino will serve.
@@ -222,7 +221,7 @@ export function SlotDataPage({ g, review }: { g: CatalogueSlotPage; review?: Rea
 
       {approvals && (
         <section style={{ maxWidth: 1100, margin: "0 auto", padding: "36px 40px 0" }}>
-          <h2 style={{ margin: "0 0 6px", fontSize: 22, fontWeight: 800, letterSpacing: "-.02em", color: "#fff" }}>Where this game is approved</h2>
+          <h2 style={{ margin: "0 0 6px", fontSize: 22, fontWeight: 700, letterSpacing: "-.02em", color: "#fff" }}>Where this game is approved</h2>
           <p style={{ margin: "0 0 16px", maxWidth: "70ch", fontSize: 13.5, lineHeight: 1.6, color: "#8DA0AA" }}>
             From {approvals.studio}&rsquo;s own game sheet. A regulated market licenses the game as well as the casino, so an operator can be live in a
             province while a particular slot is not.
@@ -240,7 +239,7 @@ export function SlotDataPage({ g, review }: { g: CatalogueSlotPage; review?: Rea
                   style={{ display: "inline-flex", alignItems: "center", gap: 6, padding: "5px 10px", borderRadius: 100, background: tint.bg, border: `1px solid ${tint.br}`, fontSize: 12.5, color: tint.fg }}
                 >
                   {r.name}
-                  {r.state === "unstated" && <span style={{ fontFamily: MONO, fontSize: 10 }}>{r.raw}</span>}
+                  {r.state === "unstated" && <span style={{ fontSize: 10 }}>{r.raw}</span>}
                 </span>
               );
             })}
