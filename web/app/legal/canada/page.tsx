@@ -15,7 +15,6 @@ import {
   operatorsBlocking,
 } from "@/lib/legal-canada";
 
-const MONO = "var(--font-jetbrains-mono), monospace";
 const TITLE = "Online casinos in Canada, province by province";
 const SUB =
   "Canada has no national answer. The Criminal Code lets each province run or license its own online gambling, and seven of the casinos we track name a Canadian province in their own terms as one they will not serve.";
@@ -57,20 +56,20 @@ export default function Page() {
         ]}
       />
       <main style={{ background: "#07090B", color: "#E8EDF0" }}>
-        <section style={{ borderBottom: "1px solid rgba(255,255,255,.07)", background: "radial-gradient(100% 100% at 20% 0%, rgba(0,194,204,.07), transparent 60%), #0B0F12" }}>
+        <section style={{ borderBottom: "1px solid rgba(255,255,255,.07)", background: "#0B0F12" }}>
           <div style={{ maxWidth: 1200, margin: "0 auto", padding: "40px 40px 44px" }}>
-            <nav style={{ fontFamily: MONO, fontSize: 11, color: "#83919A", marginBottom: 18 }}>
+            <nav style={{ fontSize: 11, color: "#83919A", marginBottom: 18 }}>
               <Link href="/legal" style={{ color: "#83919A" }}>Gambling law</Link>
               <span style={{ margin: "0 8px" }}>/</span>
               <span>Canada</span>
             </nav>
-            <h1 style={{ margin: "0 0 12px", fontSize: 42, lineHeight: 1.05, letterSpacing: "-.035em", fontWeight: 800, color: "#fff", textWrap: "balance" }}>
+            <h1 style={{ margin: "0 0 12px", fontSize: 42, lineHeight: 1.05, letterSpacing: "-.035em", fontWeight: 700, color: "#fff", textWrap: "balance" }}>
               {TITLE}
             </h1>
             <p style={{ margin: 0, maxWidth: "70ch", fontSize: 16.5, lineHeight: 1.6, color: "#A8B6BE" }}>{CA_FEDERAL.summary}</p>
             <div style={{ marginTop: 10, display: "flex", gap: 14, flexWrap: "wrap" }}>
               {CA_FEDERAL.sources.map((s) => (
-                <a key={s.url} href={s.url} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: MONO, fontSize: 10.5, color: "#5FE3E8" }}>
+                <a key={s.url} href={s.url} target="_blank" rel="noopener noreferrer nofollow" style={{ fontSize: 10.5, color: "#5FE3E8" }}>
                   {s.label} ↗
                 </a>
               ))}
@@ -91,7 +90,7 @@ export default function Page() {
         </section>
 
         <section style={{ maxWidth: 1200, margin: "0 auto", padding: "34px 40px 0" }}>
-          <h2 style={{ margin: "0 0 6px", fontSize: 26, fontWeight: 800, letterSpacing: "-.025em", color: "#fff" }}>Who will not take you</h2>
+          <h2 style={{ margin: "0 0 6px", fontSize: 26, fontWeight: 700, letterSpacing: "-.025em", color: "#fff" }}>Who will not take you</h2>
           <p style={{ margin: "0 0 16px", maxWidth: "72ch", fontSize: 14.5, lineHeight: 1.6, color: "#8DA0AA" }}>
             Straight from each casino&rsquo;s own restricted-regions page or terms. This is the part that decides whether you can actually sign up, and it
             does not track the law — an operator may refuse a province that licenses gambling, usually because it has not registered there.
@@ -100,8 +99,8 @@ export default function Page() {
             {blocked.map((b) => (
               <div key={b.code} style={{ padding: "16px 18px", borderRadius: 14, background: "#0E1316", border: "1px solid rgba(255,255,255,.07)" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 10, marginBottom: 10 }}>
-                  <span style={{ fontSize: 16.5, fontWeight: 800, color: "#fff" }}>{b.name}</span>
-                  <span style={{ fontFamily: MONO, fontSize: 11, color: "#C4653A" }}>{b.n} refuse</span>
+                  <span style={{ fontSize: 16.5, fontWeight: 700, color: "#fff" }}>{b.name}</span>
+                  <span style={{ fontSize: 11, color: "#C4653A" }}>{b.n} refuse</span>
                 </div>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
                   {operatorsBlocking(b.code).map((o) => (
@@ -128,7 +127,7 @@ export default function Page() {
         {/* Game-level approval, which the operator data cannot reach. A casino
             can be live in Ontario while a given slot is not licensed there. */}
         <section style={{ maxWidth: 1200, margin: "0 auto", padding: "34px 40px 0" }}>
-          <h2 style={{ margin: "0 0 6px", fontSize: 26, fontWeight: 800, letterSpacing: "-.025em", color: "#fff" }}>Which games are approved</h2>
+          <h2 style={{ margin: "0 0 6px", fontSize: 26, fontWeight: 700, letterSpacing: "-.025em", color: "#fff" }}>Which games are approved</h2>
           <p style={{ margin: "0 0 16px", maxWidth: "72ch", fontSize: 14.5, lineHeight: 1.6, color: "#8DA0AA" }}>
             A licensed province approves the game as well as the operator, so a casino being live in your province does not mean every slot in its lobby
             is. Counts are from Hacksaw Gaming&rsquo;s and Play&rsquo;n GO&rsquo;s own game sheets — the only two studios that publish this, and between
@@ -141,10 +140,10 @@ export default function Page() {
               const pctApproved = Math.round((c.approved / c.of) * 100);
               return (
                 <div key={key} style={{ padding: "16px 18px", borderRadius: 14, background: "#0E1316", border: "1px solid rgba(255,255,255,.07)" }}>
-                  <div style={{ fontFamily: MONO, fontSize: 10, letterSpacing: ".08em", textTransform: "uppercase", color: "#8E9CA5", marginBottom: 6 }}>
+                  <div style={{ fontSize: 12.5, fontWeight: 600, color: "#8E9CA5", marginBottom: 6 }}>
                     {label}
                   </div>
-                  <div style={{ fontSize: 28, fontWeight: 800, letterSpacing: "-.03em", color: pctApproved > 50 ? "#7BE0B8" : "#C7A45C" }}>
+                  <div style={{ fontSize: 28, fontWeight: 700, letterSpacing: "-.03em", color: pctApproved > 50 ? "#7BE0B8" : "#C7A45C" }}>
                     {c.approved}
                     <span style={{ fontSize: 15, fontWeight: 600, color: "#8DA0AA" }}> of {c.of}</span>
                   </div>
@@ -158,7 +157,7 @@ export default function Page() {
         </section>
 
         <section style={{ maxWidth: 1200, margin: "0 auto", padding: "34px 40px 0" }}>
-          <h2 style={{ margin: "0 0 16px", fontSize: 26, fontWeight: 800, letterSpacing: "-.025em", color: "#fff" }}>How each province runs it</h2>
+          <h2 style={{ margin: "0 0 16px", fontSize: 26, fontWeight: 700, letterSpacing: "-.025em", color: "#fff" }}>How each province runs it</h2>
           <div style={{ borderRadius: 16, border: "1px solid rgba(255,255,255,.08)", background: "#0C1013", overflow: "hidden" }}>
             {CA_PROVINCES.map((p, i) => (
               <div
@@ -167,13 +166,13 @@ export default function Page() {
                 style={{ gap: 12, padding: "13px 18px", alignItems: "baseline", borderTop: i ? "1px solid rgba(255,255,255,.05)" : undefined }}
               >
                 <span style={{ fontSize: 15, fontWeight: 700, color: "#E8EDF0" }}>{p.name}</span>
-                <span style={{ fontFamily: MONO, fontSize: 11.5, color: MODEL_FILL[p.model] ?? "#8DA0AA" }}>{p.model}</span>
+                <span style={{ fontSize: 11.5, color: MODEL_FILL[p.model] ?? "#8DA0AA" }}>{p.model}</span>
                 <span style={{ fontSize: 13, lineHeight: 1.55, color: p.sourced ? "#8DA0AA" : "#5F6B72" }}>
                   {p.summary ?? "Provincial detail not yet read from this province's own regulator — the model above follows from the Criminal Code, the specifics do not."}
                   {p.regulator?.url && (
                     <>
                       {" "}
-                      <a href={p.regulator.url} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: MONO, fontSize: 10.5, color: "#5FE3E8", whiteSpace: "nowrap" }}>
+                      <a href={p.regulator.url} target="_blank" rel="noopener noreferrer nofollow" style={{ fontSize: 10.5, color: "#5FE3E8", whiteSpace: "nowrap" }}>
                         {p.regulator.name.split(" ")[0]} ↗
                       </a>
                     </>
@@ -182,7 +181,7 @@ export default function Page() {
               </div>
             ))}
           </div>
-          <p style={{ margin: "12px 0 0", fontFamily: MONO, fontSize: 11, color: "#77858E" }}>
+          <p style={{ margin: "12px 0 0", fontSize: 11, color: "#77858E" }}>
             {sourced.length} of {CA_PROVINCES.length} provinces sourced to their own regulator so far.
           </p>
         </section>

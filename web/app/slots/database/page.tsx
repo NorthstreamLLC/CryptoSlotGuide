@@ -142,7 +142,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<Rec
           {q.versions && <input type="hidden" name="versions" value={q.versions} />}
           {q.demo && <input type="hidden" name="demo" value={q.demo} />}
           {q.sort && <input type="hidden" name="sort" value={q.sort} />}
-          <button type="submit" style={{ padding: "11px 20px", borderRadius: 10, border: 0, background: "#00C2CC", color: "#04191B", fontSize: 14, fontWeight: 700, cursor: "pointer" }}>
+          <button type="submit" style={{ padding: "11px 20px", borderRadius: 10, border: 0, background: "#FFC531", color: "#141007", fontSize: 14, fontWeight: 700, cursor: "pointer" }}>
             Search
           </button>
         </form>

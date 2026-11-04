@@ -146,7 +146,7 @@ export function CasinoIndexPage({ filter, embedded = false }: { filter: BtcFilte
                 <h1 style={{ margin: "0 0 20px", fontSize: 54, lineHeight: 1.02, letterSpacing: "-.038em", fontWeight: 800, fontStretch: "116%", color: "#fff", textWrap: "balance" }}>{view.h1}</h1>
                 <p style={{ margin: "0 0 30px", maxWidth: 560, fontSize: 17, lineHeight: 1.62, color: "#93A3AC", textWrap: "pretty" }}>{view.p}</p>
                 <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginBottom: 28 }}>
-                  <Link href={`/casinos/${roobet.slug}`} style={{ display: "inline-flex", alignItems: "center", gap: 10, padding: "15px 24px", borderRadius: 9, background: "#00C2CC", color: "#04191B", fontSize: 14.5, fontWeight: 700, boxShadow: "0 8px 26px rgba(0,194,204,.24)", whiteSpace: "nowrap" }}>
+                  <Link href={`/casinos/${roobet.slug}`} style={{ display: "inline-flex", alignItems: "center", gap: 10, padding: "15px 24px", borderRadius: 9, background: "#FFC531", color: "#141007", fontSize: 14.5, fontWeight: 700, boxShadow: "0 8px 26px rgba(0,194,204,.24)", whiteSpace: "nowrap" }}>
                     View {roobet.name}&apos;s offer <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 13 }}>→</span>
                   </Link>
                 </div>
@@ -281,7 +281,7 @@ export function CasinoIndexPage({ filter, embedded = false }: { filter: BtcFilte
                       <div style={{ fontSize: 13.5, fontWeight: 600, color: "#DCE5E9", lineHeight: 1.35 }}>{race ?? "—"}</div>
                     </div>
                     {o.affiliate && o.signupUrl ? (
-                      <a href={o.signupUrl} target="_blank" rel="noopener noreferrer sponsored" style={{ padding: "10px 16px", borderRadius: 9, background: "#00C2CC", color: "#04191B", fontSize: 13.5, fontWeight: 800, whiteSpace: "nowrap" }}>
+                      <a href={o.signupUrl} target="_blank" rel="noopener noreferrer sponsored" style={{ padding: "10px 16px", borderRadius: 9, background: "#FFC531", color: "#141007", fontSize: 13.5, fontWeight: 800, whiteSpace: "nowrap" }}>
                         Visit {o.name}
                       </a>
                     ) : (

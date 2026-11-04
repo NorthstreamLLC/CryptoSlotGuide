@@ -206,7 +206,7 @@ export function TopPicks({ picks }: { picks: Pick[] }) {
             <Link
               href={p.href}
               className="transition-transform hover:-translate-y-px"
-              style={{ flex: "1 1 180px", display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 8, padding: "13px 18px", borderRadius: 11, background: "#00C2CC", color: "#04191B", fontSize: 14.5, fontWeight: 800, whiteSpace: "nowrap" }}
+              style={{ flex: "1 1 180px", display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 8, padding: "13px 18px", borderRadius: 11, background: "#FFC531", color: "#141007", fontSize: 14.5, fontWeight: 800, whiteSpace: "nowrap" }}
             >
               {p.cta} <Icon name="arrow" size={15} />
             </Link>

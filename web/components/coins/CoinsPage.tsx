@@ -85,7 +85,7 @@ export function CoinsPage({ coin, partner }: { coin?: string; /** FeaturedPartne
                 key={c.ticker}
                 href={hrefFor(c.ticker)}
                 aria-current={active ? "page" : undefined}
-                style={{ display: "block", padding: "16px 0", border: 0, borderBottom: `2px solid ${active ? "#00C2CC" : "transparent"}`, background: "transparent", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, letterSpacing: ".08em", color: active ? "#fff" : "#8DA0AA", fontWeight: active ? 700 : 500, whiteSpace: "nowrap" }}
+                style={{ display: "block", padding: "16px 0", border: 0, borderBottom: `2px solid ${active ? "#00C2CC" : "transparent"}`, background: "transparent", fontSize: 12, letterSpacing: ".08em", color: active ? "#fff" : "#8DA0AA", fontWeight: active ? 700 : 500, whiteSpace: "nowrap" }}
               >
                 {c.label}
               </Link>
@@ -97,13 +97,13 @@ export function CoinsPage({ coin, partner }: { coin?: string; /** FeaturedPartne
       {/* The hero: the copy on the left, the coins themselves on the right as
           an overlapping cluster. Each coin is a button for its own view and
           carries how many casinos take it; the selected one comes forward. */}
-      <section style={{ position: "relative", overflow: "hidden", borderBottom: "1px solid rgba(255,255,255,.07)", background: "radial-gradient(70% 120% at 85% 30%, rgba(0,194,204,.10), transparent 60%), #0B0F12" }}>
+      <section style={{ position: "relative", overflow: "hidden", borderBottom: "1px solid rgba(255,255,255,.07)", background: "#0B0F12" }}>
         <div className="csg-coin-hero" style={{ position: "relative", maxWidth: 1400, margin: "0 auto", padding: "46px 40px 44px" }}>
           <div style={{ minWidth: 0 }}>
-            <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 12 }}>
+            <div style={{ fontSize: 12.5, fontWeight: 600, color: "#00C2CC", marginBottom: 12 }}>
               Cryptocurrencies · {sel === "all" ? "ALL" : sel}
             </div>
-            <h1 style={{ margin: "0 0 12px", fontSize: 44, lineHeight: 1.04, letterSpacing: "-.035em", fontWeight: 800, fontStretch: "114%", color: "#fff" }}>
+            <h1 style={{ margin: "0 0 12px", fontSize: 44, lineHeight: 1.04, letterSpacing: "-.035em", fontWeight: 700, color: "#fff" }}>
               {def ? `${def.name} casinos: deposit and withdraw with ${def.ticker}` : "Deposit and withdraw, coin by coin"}
             </h1>
             <p style={{ margin: "0 0 18px", maxWidth: "62ch", fontSize: 16, lineHeight: 1.6, color: "#93A3AC", textWrap: "pretty" }}>
@@ -119,17 +119,17 @@ export function CoinsPage({ coin, partner }: { coin?: string; /** FeaturedPartne
                   </Link>
                   {prices?.[String(def.ticker)] && (
                     <span style={{ padding: "8px 13px", borderRadius: 100, background: "rgba(255,255,255,.045)", border: "1px solid rgba(255,255,255,.08)", fontSize: 13, color: "#A8B6BE" }}>
-                      <strong style={{ color: "#fff", fontWeight: 800 }}>{usd(prices[String(def.ticker)].usd)}</strong> <Change v={prices[String(def.ticker)].usd_24h_change} /> 24h
+                      <strong style={{ color: "#fff", fontWeight: 700 }}>{usd(prices[String(def.ticker)].usd)}</strong> <Change v={prices[String(def.ticker)].usd_24h_change} /> 24h
                     </span>
                   )}
                 </>
               ) : (
                 <span style={{ padding: "8px 13px", borderRadius: 100, background: "rgba(255,255,255,.045)", border: "1px solid rgba(255,255,255,.08)", fontSize: 13, color: "#A8B6BE" }}>
-                  <strong style={{ color: "#fff", fontWeight: 800 }}>{coinDefs.length}</strong> coins
+                  <strong style={{ color: "#fff", fontWeight: 700 }}>{coinDefs.length}</strong> coins
                 </span>
               )}
               <span style={{ padding: "8px 13px", borderRadius: 100, background: "rgba(255,255,255,.045)", border: "1px solid rgba(255,255,255,.08)", fontSize: 13, color: "#A8B6BE" }}>
-                <strong style={{ color: "#fff", fontWeight: 800 }}>{siteCounts.casinos}</strong> casinos
+                <strong style={{ color: "#fff", fontWeight: 700 }}>{siteCounts.casinos}</strong> casinos
               </span>
             </div>
           </div>
@@ -172,7 +172,7 @@ export function CoinsPage({ coin, partner }: { coin?: string; /** FeaturedPartne
         <div role="table" style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 14, overflowX: "auto", background: "#0C1013", boxShadow: "0 12px 40px rgba(0,0,0,.35)" }}>
           <div role="row" style={{ display: "grid", minWidth: 1240, gridTemplateColumns: COLS, background: "#101519", borderBottom: "1px solid rgba(255,255,255,.07)" }}>
             {["Coin", "Price (USD)", "Accepted at", "Block time", "Finality", "How fees work", ""].map((h) => (
-              <div key={h} role="columnheader" style={{ padding: "14px 12px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".07em", textTransform: "uppercase", color: "#83919A" }}>{h}</div>
+              <div key={h} role="columnheader" style={{ padding: "14px 12px", fontSize: 12.5, fontWeight: 600, color: "#83919A" }}>{h}</div>
             ))}
           </div>
           {rows.map((c) => {
@@ -187,7 +187,7 @@ export function CoinsPage({ coin, partner }: { coin?: string; /** FeaturedPartne
                     <div style={{ fontSize: 12, color: "#8E9CA5", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", marginTop: 2 }}>{c.note}</div>
                   </div>
                 </div>
-                <div role="cell" style={{ padding: "14px 12px", fontFamily: "var(--font-jetbrains-mono), monospace" }}>
+                <div role="cell" style={{ padding: "14px 12px" }}>
                   {prices?.[String(c.ticker)] ? (
                     <>
                       <div style={{ fontSize: 14, fontWeight: 600, color: "#fff" }}>{usd(prices[String(c.ticker)].usd)}</div>
@@ -198,12 +198,12 @@ export function CoinsPage({ coin, partner }: { coin?: string; /** FeaturedPartne
                   )}
                 </div>
                 <div role="cell" style={{ padding: "14px 12px" }}>
-                  <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 15, fontWeight: 500, color: "#fff" }}>{opsForCoin.length}</div>
-                  <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#83919A", marginTop: 2 }}>{pct}% of index</div>
+                  <div style={{ fontSize: 15, fontWeight: 500, color: "#fff" }}>{opsForCoin.length}</div>
+                  <div style={{ fontSize: 12, color: "#83919A", marginTop: 2 }}>{pct}% of index</div>
                 </div>
-                <div role="cell" style={{ padding: "14px 12px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12.5, color: "#B7C4CB" }}>{c.blockTime}</div>
-                <div role="cell" style={{ padding: "14px 12px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, color: "#B7C4CB" }}>{c.finality}</div>
-                <div role="cell" style={{ padding: "14px 12px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, color: "#B7C4CB" }}>{c.feeModel}</div>
+                <div role="cell" style={{ padding: "14px 12px", fontSize: 12.5, color: "#B7C4CB" }}>{c.blockTime}</div>
+                <div role="cell" style={{ padding: "14px 12px", fontSize: 12, color: "#B7C4CB" }}>{c.finality}</div>
+                <div role="cell" style={{ padding: "14px 12px", fontSize: 12, color: "#B7C4CB" }}>{c.feeModel}</div>
                 <div role="cell" style={{ padding: "12px 18px", display: "flex", gap: 8 }}>
                   <Link href={`/crypto-casinos?coin=${c.ticker}`} className="hover:!border-accent hover:!text-[#5FE3E8]" style={{ flex: 1, textAlign: "center", padding: 9, borderRadius: 7, border: "1px solid rgba(255,255,255,.16)", color: "#DCE5E9", fontSize: 12.5, fontWeight: 700, whiteSpace: "nowrap" }}>
                     Casinos
@@ -224,7 +224,7 @@ export function CoinsPage({ coin, partner }: { coin?: string; /** FeaturedPartne
         <section style={{ maxWidth: 1400, margin: "0 auto", padding: "38px 40px 84px" }}>
           <CoinFacts ticker={sel} />
           <div style={{ marginBottom: 18 }}>
-            <h2 style={{ margin: "0 0 7px", fontSize: 26, letterSpacing: "-.028em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>
+            <h2 style={{ margin: "0 0 7px", fontSize: 26, letterSpacing: "-.028em", fontWeight: 700, color: "#fff" }}>
               Casinos that credit {coinDefs.find((c) => c.ticker === sel)?.name ?? sel}
             </h2>
             <p style={{ margin: 0, fontSize: 14.5, color: "#8DA0AA" }}>{detail.length} casinos, listed A–Z. Payout time is the operator&apos;s listed figure, not one we have timed.</p>
@@ -238,10 +238,10 @@ export function CoinsPage({ coin, partner }: { coin?: string; /** FeaturedPartne
                   </div>
                   <div style={{ minWidth: 0 }}>
                     <div style={{ fontSize: 14.5, fontWeight: 600, color: "#E8EDF0", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{o.name}</div>
-                    <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#83919A", marginTop: 2 }}>{o.licence} licence</div>
+                    <div style={{ fontSize: 12, color: "#83919A", marginTop: 2 }}>{o.licence} licence</div>
                   </div>
                 </div>
-                <div style={{ display: "flex", gap: 7, flexWrap: "wrap", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".04em" }}>
+                <div style={{ display: "flex", gap: 7, flexWrap: "wrap", fontSize: 12, letterSpacing: ".04em" }}>
                   <span style={{ padding: "4px 8px", borderRadius: 4, background: "rgba(255,255,255,.05)", color: "#B7C4CB" }}>{payoutView(o).label}</span>
                 </div>
                 <div style={{ fontSize: 12.5, lineHeight: 1.5, color: "#7B8A93", textWrap: "pretty" }}>{bonusWithWager(o)}</div>
@@ -253,14 +253,14 @@ export function CoinsPage({ coin, partner }: { coin?: string; /** FeaturedPartne
         <section style={{ maxWidth: 1400, margin: "0 auto", padding: "38px 40px 84px" }}>
           <div style={{ display: "grid", gridTemplateColumns: "1.4fr .6fr", gap: 14 }}>
             <div style={{ padding: "28px 32px", borderRadius: 14, background: "linear-gradient(150deg,#0E1417,#0A0E10)", border: "1px solid rgba(255,255,255,.07)" }}>
-              <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 12 }}>Where these figures come from</div>
+              <div style={{ fontSize: 12.5, fontWeight: 600, color: "#00C2CC", marginBottom: 12 }}>Where these figures come from</div>
               <p style={{ margin: 0, maxWidth: "78ch", fontSize: 15, lineHeight: 1.7, color: "#93A3AC", textWrap: "pretty" }}>
                 Block times, finality and fee rules come from each network&apos;s own documentation, and USDT&apos;s networks from Tether. Pick a ticker above to read the source wording and links. How long a deposit takes to show in your balance also depends on how many confirmations the casino waits for, which each casino sets itself.
               </p>
             </div>
             <Link href="/crypto-casinos" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", gap: 20, padding: "28px 32px", borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
               <div style={{ fontSize: 16, fontWeight: 700, color: "#fff", letterSpacing: "-.015em" }}>Filter the casino index by coin</div>
-              <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".05em", color: "#00C2CC" }}>{siteCounts.casinos} operators, {coinDefs.length} coins →</div>
+              <div style={{ fontSize: 11, letterSpacing: ".05em", color: "#00C2CC" }}>{siteCounts.casinos} operators, {coinDefs.length} coins →</div>
             </Link>
           </div>
         </section>
@@ -328,10 +328,10 @@ function TopCoinPicks({ ticker, coinName }: { ticker: string; coinName: string }
     <section style={{ maxWidth: 1400, margin: "0 auto", padding: "34px 40px 0" }}>
       <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 16, flexWrap: "wrap", marginBottom: 14 }}>
         <div>
-          <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#FFC531", marginBottom: 6 }}>Our recommendations</div>
-          <h2 style={{ margin: 0, fontSize: 26, letterSpacing: "-.028em", fontWeight: 800, fontStretch: "112%", color: "#fff" }}>Top casinos for {coinName}</h2>
+          <div style={{ fontSize: 12.5, fontWeight: 600, color: "#FFC531", marginBottom: 6 }}>Our recommendations</div>
+          <h2 style={{ margin: 0, fontSize: 26, letterSpacing: "-.028em", fontWeight: 700, color: "#fff" }}>Top casinos for {coinName}</h2>
         </div>
-        <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, color: "#7F8D96" }}>Each reason from the casino&apos;s own pages · Affiliate links · 18+</span>
+        <span style={{ fontSize: 10.5, color: "#7F8D96" }}>Each reason from the casino&apos;s own pages · Affiliate links · 18+</span>
       </div>
       <div style={{ display: "grid", minWidth: 0, gridTemplateColumns: "repeat(auto-fit,minmax(230px,1fr))", gap: 12 }}>
         {picks.map((o, i) => {
@@ -343,13 +343,13 @@ function TopCoinPicks({ ticker, coinName }: { ticker: string; coinName: string }
           return (
             <div key={o.slug} data-reveal className="csg-lift" style={{ ["--reveal-delay" as string]: `${i * 50}ms`, display: "flex", flexDirection: "column", gap: 12, padding: 18, borderRadius: 14, background: lead1 ? "radial-gradient(120% 100% at 100% 0%, rgba(255,197,49,.12), transparent 55%), #0C1013" : "#0C1013", border: `1px solid ${lead1 ? "rgba(255,197,49,.4)" : "rgba(255,255,255,.08)"}` }}>
               <div style={{ display: "flex", alignItems: "center", gap: 11 }}>
-                <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 12, fontWeight: 700, color: lead1 ? "#FFC531" : "#83919A" }}>#{i + 1}</span>
+                <span style={{ fontSize: 12, fontWeight: 700, color: lead1 ? "#FFC531" : "#83919A" }}>#{i + 1}</span>
                 <div style={{ width: 34, height: 34, flex: "none" }}>
                   <BrandMark slug={o.slug} mono={o.mono} tint={tintFor(o.slug)} fontSize={11} />
                 </div>
                 <div style={{ minWidth: 0 }}>
-                  <div style={{ fontSize: 15.5, fontWeight: 800, color: "#fff" }}>{o.name}</div>
-                  <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, color: "#83919A" }}>{o.licence} licence</div>
+                  <div style={{ fontSize: 15.5, fontWeight: 700, color: "#fff" }}>{o.name}</div>
+                  <div style={{ fontSize: 12, color: "#83919A" }}>{o.licence} licence</div>
                 </div>
               </div>
               {o.bonusShort && <div style={{ fontSize: 13.5, fontWeight: 700, lineHeight: 1.4, color: "#E8EDF0" }}>{o.bonusShort}</div>}
@@ -363,7 +363,7 @@ function TopCoinPicks({ ticker, coinName }: { ticker: string; coinName: string }
               </ul>
               <div style={{ display: "flex", gap: 8, marginTop: "auto", paddingTop: 4 }}>
                 {o.signupUrl ? (
-                  <a href={o.signupUrl} target="_blank" rel="noopener sponsored nofollow" style={{ flex: 1, textAlign: "center", padding: "10px 12px", borderRadius: 10, background: lead1 ? "#FFC531" : "#00C2CC", color: "#0A0D0F", fontSize: 13.5, fontWeight: 800 }}>
+                  <a href={o.signupUrl} target="_blank" rel="noopener sponsored nofollow" style={{ flex: 1, textAlign: "center", padding: "10px 12px", borderRadius: 10, background: lead1 ? "#FFC531" : "#00C2CC", color: "#0A0D0F", fontSize: 13.5, fontWeight: 700 }}>
                     Visit {o.name}
                   </a>
                 ) : null}
@@ -386,10 +386,10 @@ function CoinFacts({ ticker }: { ticker: string }) {
     <div style={{ border: "1px solid rgba(255,255,255,.07)", borderRadius: 13, overflow: "hidden", background: "#0C1013", marginBottom: 34 }}>
       {c.facts.map((f) => (
         <div key={f.label} style={{ display: "grid", gridTemplateColumns: "190px 1fr", borderBottom: "1px solid rgba(255,255,255,.05)" }}>
-          <div style={{ padding: "14px 18px", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, letterSpacing: ".05em", textTransform: "uppercase", color: "#83919A" }}>{f.label}</div>
+          <div style={{ padding: "14px 18px", fontSize: 12.5, fontWeight: 600, color: "#83919A" }}>{f.label}</div>
           <div style={{ padding: "14px 18px", fontSize: 13.5, lineHeight: 1.55, color: "#B7C4CB" }}>
             {f.text}{" "}
-            <a href={f.url} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#5FE3E8", whiteSpace: "nowrap" }}>
+            <a href={f.url} target="_blank" rel="noopener noreferrer nofollow" style={{ fontSize: 11, color: "#5FE3E8", whiteSpace: "nowrap" }}>
               {new URL(f.url).hostname.replace(/^www./, "")} ↗
             </a>
           </div>

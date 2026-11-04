@@ -36,7 +36,7 @@ export default function NotFound() {
           aria-label="Search the site"
           style={{ flex: 1, minWidth: 0, padding: "13px 16px", borderRadius: 11, border: "1px solid rgba(255,255,255,.12)", background: "#0C1013", color: "#fff", fontSize: 15 }}
         />
-        <button type="submit" style={{ padding: "13px 20px", borderRadius: 11, border: 0, background: "#00C2CC", color: "#04191B", fontSize: 14.5, fontWeight: 800, cursor: "pointer" }}>
+        <button type="submit" style={{ padding: "13px 20px", borderRadius: 11, border: 0, background: "#FFC531", color: "#141007", fontSize: 14.5, fontWeight: 800, cursor: "pointer" }}>
           Search
         </button>
       </form>

@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 
-const MONO = "var(--font-jetbrains-mono), monospace";
 
 /**
  * Monthly email sign-up. Posts to our own /api/newsletter, which adds the
@@ -84,9 +83,9 @@ export function EmailSignup({
   }
 
   return (
-    <section data-signup={source} style={{ padding: compact ? "18px 20px" : "26px 28px", borderRadius: compact ? 14 : 18, height: compact ? "100%" : undefined, background: "radial-gradient(120% 120% at 100% 0%, rgba(0,194,204,.12), transparent 55%), #0C1013", border: "1px solid rgba(0,194,204,.22)" }}>
-      <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".09em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 8 }}>{eyebrow}</div>
-      <h2 style={{ margin: "0 0 6px", fontSize: compact ? 17 : 22, fontWeight: 800, letterSpacing: "-.02em", color: "#fff" }}>{title}</h2>
+    <section data-signup={source} style={{ padding: compact ? "18px 20px" : "26px 28px", borderRadius: compact ? 14 : 18, height: compact ? "100%" : undefined, background: "#0C1013", border: "1px solid rgba(0,194,204,.22)" }}>
+      <div style={{ fontSize: 12.5, fontWeight: 600, color: "#00C2CC", marginBottom: 8 }}>{eyebrow}</div>
+      <h2 style={{ margin: "0 0 6px", fontSize: compact ? 17 : 22, fontWeight: 700, letterSpacing: "-.02em", color: "#fff" }}>{title}</h2>
       <p style={{ margin: compact ? "0 0 12px" : "0 0 16px", maxWidth: "60ch", fontSize: compact ? 13 : 14, lineHeight: 1.6, color: "#A8B6BE" }}>{sub}</p>
       {state === "done" ? (
         <div style={{ fontSize: 15, fontWeight: 700, color: "#7BE0B8" }}>{done}</div>
@@ -128,7 +127,7 @@ export function EmailSignup({
             <button
               type="submit"
               disabled={!canSubmit}
-              style={{ padding: "12px 20px", borderRadius: 10, border: 0, background: canSubmit ? "#00C2CC" : "#2A3439", color: canSubmit ? "#0A0D0F" : "#7B8A93", fontSize: 14, fontWeight: 800, cursor: canSubmit ? "pointer" : "not-allowed" }}
+              style={{ padding: "12px 20px", borderRadius: 10, border: 0, background: canSubmit ? "#00C2CC" : "#2A3439", color: canSubmit ? "#0A0D0F" : "#7B8A93", fontSize: 14, fontWeight: 700, cursor: canSubmit ? "pointer" : "not-allowed" }}
             >
               {state === "sending" ? "Joining…" : live ? button : "Opens at launch"}
             </button>

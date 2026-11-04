@@ -45,7 +45,7 @@ export function LegalMap({
         {labels &&
           shapes.map((s) =>
             s.c && s.code && !["DC", "DE", "RI", "MD"].includes(s.code) ? (
-              <text key={`t-${s.code}`} x={s.c[0]} y={s.c[1]} textAnchor="middle" dominantBaseline="middle" style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, fontWeight: 700, fill: "#07090B", pointerEvents: "none" }}>
+              <text key={`t-${s.code}`} x={s.c[0]} y={s.c[1]} textAnchor="middle" dominantBaseline="middle" style={{ fontSize: 12, fontWeight: 700, fill: "#07090B", pointerEvents: "none" }}>
                 {s.code}
               </text>
             ) : null

@@ -71,7 +71,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<{ l
         </div>
         {covered.length > 0 && (
           <>
-            <h2 style={{ margin: "36px 0 14px", fontSize: 24, fontWeight: 800, letterSpacing: "-.02em", color: "#fff" }}>European countries</h2>
+            <h2 style={{ margin: "36px 0 14px", fontSize: 24, fontWeight: 700, letterSpacing: "-.02em", color: "#fff" }}>European countries</h2>
             <RegionGrid items={covered.map((c) => ({ href: `/legal/${c!.code.toLowerCase()}`, name: c!.name, status: c!.onlineCasino, flag: flagSrc(c!.code) }))} />
           </>
         )}

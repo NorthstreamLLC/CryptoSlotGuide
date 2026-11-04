@@ -9,7 +9,7 @@ import { CountryMarketBlock } from "@/components/legal/CountryMarket";
 import { worldMarket, unreadableRegister } from "@/lib/world-market";
 import { fiatMarketFor, fiatHref } from "@/lib/fiat";
 import { countryPages } from "@/lib/landing";
-import { LegalHero, StatusTile, Sources, Disclaimer, JumpList, MONO } from "@/components/legal/LegalUI";
+import { LegalHero, StatusTile, Sources, Disclaimer, JumpList } from "@/components/legal/LegalUI";
 import { HelpBox } from "@/components/legal/HelpBox";
 import { NextSteps } from "@/components/layout/NextSteps";
 
@@ -51,7 +51,7 @@ export default async function Page({ params }: { params: Promise<{ code: string 
         <div style={{ padding: "8px 24px", borderRadius: 18, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
           {rows.filter(([, v]) => v).map(([k, v], i) => (
             <div key={k} style={{ display: "grid", gridTemplateColumns: "minmax(120px, 170px) 1fr", gap: 14, padding: "13px 0", borderTop: i ? "1px solid rgba(255,255,255,.06)" : undefined }}>
-              <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".06em", textTransform: "uppercase", color: "#8E9CA5", paddingTop: 2 }}>{k}</div>
+              <div style={{ fontSize: 12.5, fontWeight: 600, color: "#8E9CA5", paddingTop: 2 }}>{k}</div>
               <div style={{ fontSize: 14, lineHeight: 1.6, color: "#C6D1D7" }}>
                 {k === "Regulator" && c.regulator?.url ? <a href={c.regulator.url} target="_blank" rel="noopener noreferrer nofollow" style={{ color: "#5FE3E8" }}>{v} ↗</a> : v}
               </div>
@@ -72,13 +72,13 @@ export default async function Page({ params }: { params: Promise<{ code: string 
         {hasCountryPage && (
           <Link
             href={`/crypto-casinos/in/${code}`}
-            style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 16, marginTop: 20, padding: "22px 26px", borderRadius: 18, background: "radial-gradient(120% 130% at 100% 0%, rgba(0,194,204,.14), transparent 60%), #0C1013", border: "1px solid rgba(0,194,204,.28)" }}
+            style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 16, marginTop: 20, padding: "22px 26px", borderRadius: 18, background: "#0C1013", border: "1px solid rgba(0,194,204,.28)" }}
           >
             <span style={{ maxWidth: "58ch" }}>
-              <span style={{ display: "block", fontSize: 19, fontWeight: 800, color: "#fff", marginBottom: 5 }}>Compare the best crypto casinos in {c.name}</span>
+              <span style={{ display: "block", fontSize: 19, fontWeight: 700, color: "#fff", marginBottom: 5 }}>Compare the best crypto casinos in {c.name}</span>
               <span style={{ display: "block", fontSize: 14.5, lineHeight: 1.6, color: "#A8B6BE" }}>The casinos that accept {c.name} players, with the coins, payout times and welcome offers each one publishes.</span>
             </span>
-            <span style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "13px 20px", borderRadius: 11, background: "#00C2CC", color: "#0A0D0F", fontSize: 14.5, fontWeight: 800, whiteSpace: "nowrap" }}>
+            <span style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "13px 20px", borderRadius: 11, background: "#00C2CC", color: "#0A0D0F", fontSize: 14.5, fontWeight: 700, whiteSpace: "nowrap" }}>
               See the list <span aria-hidden>→</span>
             </span>
           </Link>

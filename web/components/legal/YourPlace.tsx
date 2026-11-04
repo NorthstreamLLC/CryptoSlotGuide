@@ -48,16 +48,16 @@ export function YourPlace({ countries, states, picker, inPages }: { countries: R
   const accepts = !pick && geo?.detected && geo.casinos ? geo.casinos.acceptsSlugs.length : null;
 
   return (
-    <div style={{ padding: 24, borderRadius: 20, background: "radial-gradient(120% 90% at 50% 0%, rgba(87,227,154,.12), transparent 60%), #0F1418", border: "1px solid rgba(87,227,154,.38)", boxShadow: "0 30px 70px rgba(0,0,0,.45)" }}>
+    <div style={{ padding: 24, borderRadius: 20, background: "#0F1418", border: "1px solid rgba(87,227,154,.38)", boxShadow: "0 30px 70px rgba(0,0,0,.45)" }}>
       {place && tone ? (
         <>
           <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 14 }}>
             {place.flag && <img src={place.flag} alt="" width={44} height={30} style={{ borderRadius: 5, objectFit: "cover" }} />}
             <span>
-              <span style={{ display: "block", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#57E39A" }}>{pick ? "YOU PICKED" : "YOU APPEAR TO BE IN"}</span>
-              <span style={{ display: "block", fontSize: 24, fontWeight: 800, color: "#fff" }}>{place.name}</span>
+              <span style={{ display: "block", fontSize: 11, color: "#57E39A" }}>{pick ? "YOU PICKED" : "YOU APPEAR TO BE IN"}</span>
+              <span style={{ display: "block", fontSize: 24, fontWeight: 700, color: "#fff" }}>{place.name}</span>
             </span>
-            <span style={{ marginLeft: "auto", padding: "5px 11px", borderRadius: 100, background: `${tone.c}22`, border: `1px solid ${tone.c}66`, color: tone.c, fontSize: 12.5, fontWeight: 800, whiteSpace: "nowrap" }}>{tone.label}</span>
+            <span style={{ marginLeft: "auto", padding: "5px 11px", borderRadius: 100, background: `${tone.c}22`, border: `1px solid ${tone.c}66`, color: tone.c, fontSize: 12.5, fontWeight: 700, whiteSpace: "nowrap" }}>{tone.label}</span>
           </div>
           <div style={{ display: "grid", gap: 8, marginBottom: 16 }}>
             {[
@@ -75,7 +75,7 @@ export function YourPlace({ countries, states, picker, inPages }: { countries: R
               ))}
           </div>
           <div style={{ display: "grid", gap: 10 }}>
-            <Link href={place.href} style={{ textAlign: "center", padding: "13px 16px", borderRadius: 12, background: "#57E39A", color: "#04170D", fontSize: 15, fontWeight: 800 }}>
+            <Link href={place.href} style={{ textAlign: "center", padding: "13px 16px", borderRadius: 12, background: "#57E39A", color: "#04170D", fontSize: 15, fontWeight: 700 }}>
               The full {place.name} guide →
             </Link>
             {accepts !== null && place.tone !== "banned" && (
@@ -87,8 +87,8 @@ export function YourPlace({ countries, states, picker, inPages }: { countries: R
         </>
       ) : (
         <div style={{ marginBottom: 14 }}>
-          <span style={{ display: "block", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#57E39A" }}>CHECK YOUR COUNTRY</span>
-          <span style={{ display: "block", fontSize: 22, fontWeight: 800, color: "#fff" }}>{geo === null ? "Finding where you are…" : "Pick your country"}</span>
+          <span style={{ display: "block", fontSize: 11, color: "#57E39A" }}>CHECK YOUR COUNTRY</span>
+          <span style={{ display: "block", fontSize: 22, fontWeight: 700, color: "#fff" }}>{geo === null ? "Finding where you are…" : "Pick your country"}</span>
         </div>
       )}
       <label style={{ display: "block", marginTop: 14, fontSize: 12.5, color: "#8DA0AA" }}>

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { kycByTier, kycCounts, kycTierDescription, KYC_TIER_LABEL } from "@/lib/kyc";
 
-const MONO = "var(--font-jetbrains-mono), monospace";
 const TINT: Record<string, string> = {
   required: "#C4653A",
   threshold: "#C7A45C",
@@ -21,7 +20,7 @@ export function KycTiersTable() {
   const total = Object.values(counts).reduce((a, b) => a + b, 0);
   return (
     <section style={{ marginTop: 36 }}>
-      <h2 style={{ margin: "0 0 6px", fontSize: 24, fontWeight: 800, letterSpacing: "-.025em", color: "#fff" }}>Every operator, by what its policy does</h2>
+      <h2 style={{ margin: "0 0 6px", fontSize: 24, fontWeight: 700, letterSpacing: "-.025em", color: "#fff" }}>Every operator, by what its policy does</h2>
       <p style={{ margin: "0 0 20px", maxWidth: "70ch", fontSize: 14, lineHeight: 1.6, color: "#8DA0AA" }}>
         Read from each casino&rsquo;s own verification page or terms. Where an operator&rsquo;s marketing and its policy disagree, the policy is what is
         recorded here.
@@ -30,8 +29,8 @@ export function KycTiersTable() {
         <div key={g.tier} style={{ marginBottom: 26 }}>
           <div style={{ display: "flex", alignItems: "baseline", gap: 10, marginBottom: 4, flexWrap: "wrap" }}>
             <span style={{ width: 8, height: 8, borderRadius: 2, background: TINT[g.tier], flex: "none" }} />
-            <h3 style={{ margin: 0, fontSize: 17, fontWeight: 800, color: "#fff" }}>{KYC_TIER_LABEL[g.tier]}</h3>
-            <span style={{ fontFamily: MONO, fontSize: 11, color: "#8E9CA5" }}>
+            <h3 style={{ margin: 0, fontSize: 17, fontWeight: 700, color: "#fff" }}>{KYC_TIER_LABEL[g.tier]}</h3>
+            <span style={{ fontSize: 11, color: "#8E9CA5" }}>
               {counts[g.tier]} of {total}
             </span>
           </div>
@@ -48,7 +47,7 @@ export function KycTiersTable() {
                 </Link>
                 <span style={{ fontSize: 13, lineHeight: 1.5, color: "#8DA0AA" }}>{r.policy ?? r.why}</span>
                 {r.sourceUrl && (
-                  <a href={r.sourceUrl} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: MONO, fontSize: 10, color: "#5FE3E8", whiteSpace: "nowrap" }}>
+                  <a href={r.sourceUrl} target="_blank" rel="noopener noreferrer nofollow" style={{ fontSize: 12, color: "#5FE3E8", whiteSpace: "nowrap" }}>
                     source ↗
                   </a>
                 )}

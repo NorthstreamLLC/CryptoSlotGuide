@@ -26,7 +26,6 @@ import type { Operator } from "@/lib/types";
  * early payouts — then every book with its sportsbook in a line. Everything
  * links to the book's sportsbook page, never to the casino review.
  */
-const MONO = "var(--font-jetbrains-mono), monospace";
 const GREEN = "#57B98C";
 const GOLD = "#FFC531";
 
@@ -36,7 +35,7 @@ const firstClause = (v: string) => v.split(/(?<=[a-z0-9)])[.;](?=\s|$)/i)[0].tri
 function BetCta({ o, label }: { o: Pick<Operator, "name" | "affiliate" | "signupUrl"> & { slug: string }; label?: string }) {
   if (o.affiliate && o.signupUrl) {
     return (
-      <a href={o.signupUrl} target="_blank" rel="noopener noreferrer sponsored" className="transition-transform hover:-translate-y-px" style={{ padding: "10px 15px", borderRadius: 10, background: GOLD, color: "#141007", fontSize: 13.5, fontWeight: 800, whiteSpace: "nowrap" }}>
+      <a href={o.signupUrl} target="_blank" rel="noopener noreferrer sponsored" className="transition-transform hover:-translate-y-px" style={{ padding: "10px 15px", borderRadius: 10, background: GOLD, color: "#141007", fontSize: 13.5, fontWeight: 700, whiteSpace: "nowrap" }}>
         {label ?? `Bet at ${o.name}`}
       </a>
     );
@@ -47,8 +46,8 @@ function BetCta({ o, label }: { o: Pick<Operator, "name" | "affiliate" | "signup
 function Section({ id, kicker, title, sub, children }: { id: string; kicker: string; title: string; sub: string; children: React.ReactNode }) {
   return (
     <section id={id} style={{ marginBottom: 44, scrollMarginTop: 110 }}>
-      <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".1em", textTransform: "uppercase", color: GREEN, marginBottom: 6 }}>{kicker}</div>
-      <h2 style={{ margin: "0 0 6px", fontSize: 26, fontWeight: 800, letterSpacing: "-.028em", color: "#fff" }}>{title}</h2>
+      <div style={{ fontSize: 12.5, fontWeight: 600, color: GREEN, marginBottom: 6 }}>{kicker}</div>
+      <h2 style={{ margin: "0 0 6px", fontSize: 26, fontWeight: 700, letterSpacing: "-.028em", color: "#fff" }}>{title}</h2>
       <p style={{ margin: "0 0 18px", maxWidth: "76ch", fontSize: 14.5, lineHeight: 1.6, color: "#8DA0AA" }}>{sub}</p>
       {children}
     </section>
@@ -64,11 +63,11 @@ function HighlightCard({ h, rank, accent, ops }: { h: SportsHighlight; rank: num
           <BrandMark slug={h.slug} mono={h.mono} tint={tintFor(h.slug)} radius={10} fontSize={11} />
         </div>
         <div style={{ minWidth: 0 }}>
-          <div style={{ fontSize: 15.5, fontWeight: 800, color: "#fff" }}>{h.name}</div>
-          <div style={{ fontFamily: MONO, fontSize: 9.5, letterSpacing: ".08em", textTransform: "uppercase", color: accent }}>{h.tag}</div>
+          <div style={{ fontSize: 15.5, fontWeight: 700, color: "#fff" }}>{h.name}</div>
+          <div style={{ fontSize: 12.5, fontWeight: 600, color: accent }}>{h.tag}</div>
         </div>
       </div>
-      <div style={{ fontSize: 18, fontWeight: 800, letterSpacing: "-.015em", color: "#fff" }}>{h.headline}</div>
+      <div style={{ fontSize: 18, fontWeight: 700, letterSpacing: "-.015em", color: "#fff" }}>{h.headline}</div>
       <p style={{ margin: 0, fontSize: 13, lineHeight: 1.55, color: "#A8B6BE" }}>{cap(h.detail)}</p>
       <div style={{ display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap", marginTop: "auto", paddingTop: 6 }}>
         <Link href={sportsbookHref(h.slug)} style={{ padding: "10px 15px", borderRadius: 10, border: "1px solid rgba(255,255,255,.16)", color: "#E8EDF0", fontSize: 13.5, fontWeight: 700 }}>
@@ -76,7 +75,7 @@ function HighlightCard({ h, rank, accent, ops }: { h: SportsHighlight; rank: num
         </Link>
         {o && <BetCta o={o} />}
         {h.sourceUrl && (
-          <a href={h.sourceUrl} target="_blank" rel="noopener noreferrer nofollow" style={{ marginLeft: "auto", fontFamily: MONO, fontSize: 10.5, color: "#5FE3E8" }}>
+          <a href={h.sourceUrl} target="_blank" rel="noopener noreferrer nofollow" style={{ marginLeft: "auto", fontSize: 10.5, color: "#5FE3E8" }}>
             source ↗
           </a>
         )}
@@ -103,11 +102,11 @@ export function SportsbooksIndex() {
         <SportsAura />
         <SportsLogoDrift />
         <div style={{ position: "relative", maxWidth: 1280, margin: "0 auto", padding: "34px 24px 40px" }}>
-          <div style={{ fontFamily: MONO, fontSize: 11, color: "#83919A", marginBottom: 22 }}>
+          <div style={{ fontSize: 11, color: "#83919A", marginBottom: 22 }}>
             <Link href="/" style={{ color: "#83919A" }}>Home</Link> / <span style={{ color: "#A8B6BE" }}>Sportsbooks</span>
           </div>
-          <div style={{ fontFamily: MONO, fontSize: 11, letterSpacing: ".1em", textTransform: "uppercase", color: GREEN, marginBottom: 12 }}>Crypto sportsbooks</div>
-          <h1 style={{ margin: "0 0 14px", maxWidth: "20ch", fontSize: "clamp(36px, 4.8vw, 58px)", lineHeight: 1.02, letterSpacing: "-.038em", fontWeight: 800, color: "#fff", textWrap: "balance" }}>
+          <div style={{ fontSize: 12.5, fontWeight: 600, color: GREEN, marginBottom: 12 }}>Crypto sportsbooks</div>
+          <h1 style={{ margin: "0 0 14px", maxWidth: "20ch", fontSize: "clamp(36px, 4.8vw, 58px)", lineHeight: 1.02, letterSpacing: "-.038em", fontWeight: 700, color: "#fff", textWrap: "balance" }}>
             The best sports welcome offers, races and boosts
           </h1>
           <p style={{ margin: "0 0 24px", maxWidth: "62ch", fontSize: 16.5, lineHeight: 1.6, color: "#A8B6BE", textWrap: "pretty" }}>
@@ -123,7 +122,7 @@ export function SportsbooksIndex() {
               [String(esportsMax), "esports titles at the widest book"],
             ].map(([v, l]) => (
               <span key={l} style={{ display: "inline-flex", alignItems: "baseline", gap: 8, padding: "9px 14px", borderRadius: 100, background: "rgba(9,13,12,.7)", border: "1px solid rgba(255,255,255,.1)", backdropFilter: "blur(6px)", fontSize: 13.5, color: "#A8B6BE" }}>
-                <strong style={{ fontSize: 15, fontWeight: 800, color: "#fff" }}>{v}</strong>
+                <strong style={{ fontSize: 15, fontWeight: 700, color: "#fff" }}>{v}</strong>
                 {l}
               </span>
             ))}
@@ -154,11 +153,11 @@ export function SportsbooksIndex() {
                     <BrandMark slug={x.slug} mono={x.mono} tint={tintFor(x.slug)} radius={10} fontSize={11} />
                   </div>
                   <div>
-                    <div style={{ fontSize: 15.5, fontWeight: 800, color: "#fff" }}>{x.name}</div>
-                    <div style={{ fontFamily: MONO, fontSize: 9.5, letterSpacing: ".08em", textTransform: "uppercase", color: i === 0 ? GOLD : "#8E9CA5" }}>{i === 0 ? "Our top sports pick" : `#${i + 1} sports offer`}</div>
+                    <div style={{ fontSize: 15.5, fontWeight: 700, color: "#fff" }}>{x.name}</div>
+                    <div style={{ fontSize: 12.5, fontWeight: 600, color: i === 0 ? GOLD : "#8E9CA5" }}>{i === 0 ? "Our top sports pick" : `#${i + 1} sports offer`}</div>
                   </div>
                 </div>
-                <div style={{ fontSize: 16, lineHeight: 1.4, fontWeight: 800, color: "#fff", textWrap: "pretty" }}>{x.headline}</div>
+                <div style={{ fontSize: 16, lineHeight: 1.4, fontWeight: 700, color: "#fff", textWrap: "pretty" }}>{x.headline}</div>
                 <div style={{ display: "flex", flexDirection: "column", gap: 3, fontSize: 12.5, lineHeight: 1.5, color: "#A8B6BE" }}>
                   {x.wagering && <div><span style={{ color: "#8E9CA5" }}>Wagering · </span>{x.wagering}</div>}
                   {x.minOdds && <div><span style={{ color: "#8E9CA5" }}>Minimum odds · </span>{x.minOdds}</div>}
@@ -186,7 +185,7 @@ export function SportsbooksIndex() {
             </div>
             {shared.length > 0 && (
               <div style={{ marginTop: 22 }}>
-                <h3 style={{ margin: "0 0 4px", fontSize: 17, fontWeight: 800, color: "#E8EDF0" }}>Casino races that count sports bets</h3>
+                <h3 style={{ margin: "0 0 4px", fontSize: 17, fontWeight: 700, color: "#E8EDF0" }}>Casino races that count sports bets</h3>
                 <p style={{ margin: "0 0 12px", maxWidth: "76ch", fontSize: 13.5, lineHeight: 1.6, color: "#8DA0AA" }}>
                   Not sports races: these are casino-wide leaderboards and raffles, but sports bets earn places or tickets in them alongside casino play.
                 </p>
@@ -233,10 +232,10 @@ export function SportsbooksIndex() {
                     <BrandMark slug={o.slug} mono={o.mono} tint={tintFor(o.slug)} radius={10} fontSize={11} />
                   </Link>
                   <div style={{ minWidth: 0 }}>
-                    <Link href={sportsbookHref(o.slug)} className="hover:!text-accent" style={{ fontSize: 15.5, fontWeight: 800, color: "#fff" }}>{o.name}</Link>
+                    <Link href={sportsbookHref(o.slug)} className="hover:!text-accent" style={{ fontSize: 15.5, fontWeight: 700, color: "#fff" }}>{o.name}</Link>
                     <div style={{ fontSize: 13.5, lineHeight: 1.45, color: offer && !/^(rotating|no )/i.test(offer) ? "#DCE5E9" : "#8DA0AA", marginTop: 2 }}>{offer ?? "No sports offer recorded"}</div>
                     {promo && !/^(rotating|no )/i.test(promo) && <div style={{ fontSize: 12.5, lineHeight: 1.45, color: "#BDE8D2", marginTop: 2 }}>{promo.replace(/^(Rotating sports promotions|No sports welcome offer) · /, "")}</div>}
-                    {facts.length > 0 && <div style={{ fontFamily: MONO, fontSize: 10.5, color: "#83919A", marginTop: 5 }}>{facts.join(" · ")}</div>}
+                    {facts.length > 0 && <div style={{ fontSize: 10.5, color: "#83919A", marginTop: 5 }}>{facts.join(" · ")}</div>}
                   </div>
                   <div className="col-span-2 md:col-span-1" style={{ display: "flex", gap: 8, flexWrap: "wrap", justifyContent: "flex-end" }}>
                     <Link href={sportsbookHref(o.slug)} style={{ padding: "10px 14px", borderRadius: 10, border: "1px solid rgba(255,255,255,.16)", color: "#DCE5E9", fontSize: 13, fontWeight: 700, whiteSpace: "nowrap" }}>

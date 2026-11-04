@@ -4,7 +4,7 @@ import { pageMetadata } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { US_STATES, stateBy, sweepsAvailableIn, toneOf } from "@/lib/legal";
-import { LegalHero, StatusTile, Sources, Disclaimer, JumpList, MONO } from "@/components/legal/LegalUI";
+import { LegalHero, StatusTile, Sources, Disclaimer, JumpList } from "@/components/legal/LegalUI";
 import { HelpBox } from "@/components/legal/HelpBox";
 import { NextSteps } from "@/components/layout/NextSteps";
 import { StateMarketBlock } from "@/components/legal/StateMarket";
@@ -61,7 +61,7 @@ export default async function Page({ params }: { params: Promise<{ state: string
             .filter(([k, v]) => v || (k === "Licensed online casinos" && s.licensedOnlineCasinos?.length))
             .map(([k, v, url], i) => (
               <div key={k} style={{ display: "grid", gridTemplateColumns: "minmax(120px, 190px) 1fr", gap: 14, padding: "13px 0", borderTop: i ? "1px solid rgba(255,255,255,.06)" : undefined }}>
-                <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".06em", textTransform: "uppercase", color: "#8E9CA5", paddingTop: 2 }}>{k}</div>
+                <div style={{ fontSize: 12.5, fontWeight: 600, color: "#8E9CA5", paddingTop: 2 }}>{k}</div>
                 <div style={{ fontSize: 14, lineHeight: 1.6, color: "#C6D1D7" }}>
                   {v}
                   {k === "Licensed online casinos" && !market?.casinos?.operators.length && (
@@ -71,7 +71,7 @@ export default async function Page({ params }: { params: Promise<{ state: string
                       ))}
                     </span>
                   )}
-                  {url && <a href={url} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: MONO, fontSize: 10.5, color: "#5FE3E8" }}> source ↗</a>}
+                  {url && <a href={url} target="_blank" rel="noopener noreferrer nofollow" style={{ fontSize: 10.5, color: "#5FE3E8" }}> source ↗</a>}
                 </div>
               </div>
             ))}
@@ -86,7 +86,7 @@ export default async function Page({ params }: { params: Promise<{ state: string
         )}
         {!sweepsBanned && (open.length > 0 || closed.length > 0) && (
           <>
-            <h2 style={{ margin: "34px 0 6px", fontSize: 24, fontWeight: 800, letterSpacing: "-.02em", color: "#fff" }}>Sweepstakes casinos in {s.name}</h2>
+            <h2 style={{ margin: "34px 0 6px", fontSize: 24, fontWeight: 700, letterSpacing: "-.02em", color: "#fff" }}>Sweepstakes casinos in {s.name}</h2>
             <p style={{ margin: "0 0 14px", fontSize: 14, color: "#8DA0AA" }}>Based on each casino&apos;s own restricted-states list.</p>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: 8 }}>
               {[...open.map((x) => ({ ...x, ok: true })), ...closed.map((x) => ({ ...x, ok: false }))].map(({ s: c, ok }) => (
@@ -96,7 +96,7 @@ export default async function Page({ params }: { params: Promise<{ state: string
                   </span>
                   <span style={{ minWidth: 0 }}>
                     {c.name}
-                    <span style={{ display: "block", fontFamily: MONO, fontSize: 9.5, fontWeight: 600, color: ok ? "#7BE0B8" : "#DA9877" }}>{ok ? "Available" : "Not available"}</span>
+                    <span style={{ display: "block", fontSize: 12, fontWeight: 600, color: ok ? "#7BE0B8" : "#DA9877" }}>{ok ? "Available" : "Not available"}</span>
                   </span>
                 </Link>
               ))}

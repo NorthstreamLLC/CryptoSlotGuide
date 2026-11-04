@@ -86,27 +86,27 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         ]}
       />
       <article style={{ maxWidth: 820, margin: "0 auto", padding: "52px 40px 40px" }}>
-        <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#83919A", marginBottom: 26 }}>
+        <div style={{ fontSize: 11, color: "#83919A", marginBottom: 26 }}>
           <Link href="/" style={{ color: "#83919A" }}>Index</Link> / <Link href="/guides" style={{ color: "#83919A" }}>Guides</Link> / <span style={{ color: "#A8B6BE" }}>{g.category}</span>
         </div>
         <div className="csg-guide-cover" style={{ position: "relative", aspectRatio: "16 / 6", borderRadius: 16, overflow: "hidden", border: "1px solid rgba(255,255,255,.08)", marginBottom: 24 }}>
           <GuideCover category={g.category} tint={g.tint} label={false} rounded={0} />
         </div>
         <div style={{ marginBottom: 14 }}>
-          <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#00C2CC" }}>{g.category} · {g.readMins} min read</span>
+          <span style={{ fontSize: 12.5, fontWeight: 600, color: "#00C2CC" }}>{g.category} · {g.readMins} min read</span>
         </div>
-        <h1 style={{ margin: "0 0 18px", fontSize: 44, lineHeight: 1.06, letterSpacing: "-.035em", fontWeight: 800, fontStretch: "114%", color: "#fff", textWrap: "balance" }}>{g.title}</h1>
+        <h1 style={{ margin: "0 0 18px", fontSize: 44, lineHeight: 1.06, letterSpacing: "-.035em", fontWeight: 700, color: "#fff", textWrap: "balance" }}>{g.title}</h1>
         <p style={{ margin: "0 0 26px", fontSize: 19, lineHeight: 1.6, color: "#B7C4CB", textWrap: "pretty" }}>{fill(g.standfirst, siteData)}</p>
-        <div style={{ display: "flex", alignItems: "center", gap: 14, padding: "14px 0", borderTop: "1px solid rgba(255,255,255,.07)", borderBottom: "1px solid rgba(255,255,255,.07)", fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 11, color: "#83919A", marginBottom: 32 }}>
+        <div style={{ display: "flex", alignItems: "center", gap: 14, padding: "14px 0", borderTop: "1px solid rgba(255,255,255,.07)", borderBottom: "1px solid rgba(255,255,255,.07)", fontSize: 11, color: "#83919A", marginBottom: 32 }}>
           <AuthorByline updated={updated} />
         </div>
 
         <div style={{ padding: "24px 28px", borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)", marginBottom: 32 }}>
-          <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 14 }}>The short version</div>
+          <div style={{ fontSize: 12.5, fontWeight: 600, color: "#00C2CC", marginBottom: 14 }}>The short version</div>
           <div style={{ display: "flex", flexDirection: "column", gap: 11 }}>
             {body.key.map((k) => (
               <div key={k} style={{ display: "flex", gap: 12, fontSize: 15, lineHeight: 1.55, color: "#DCE5E9" }}>
-                <span style={{ color: "#00C2CC", fontFamily: "var(--font-jetbrains-mono), monospace", flex: "none" }}>→</span>
+                <span style={{ color: "#00C2CC", flex: "none" }}>→</span>
                 <span>{fill(k, siteData)}</span>
               </div>
             ))}
@@ -117,7 +117,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           {/* "## " starts a section heading; everything else is a paragraph. */}
           {body.body.map((p) =>
             p.startsWith("## ") ? (
-              <h2 key={p} style={{ margin: "12px 0 -6px", fontSize: 24, lineHeight: 1.2, letterSpacing: "-.022em", fontWeight: 800, color: "#fff", textWrap: "balance" }}>
+              <h2 key={p} style={{ margin: "12px 0 -6px", fontSize: 24, lineHeight: 1.2, letterSpacing: "-.022em", fontWeight: 700, color: "#fff", textWrap: "balance" }}>
                 {p.slice(3)}
               </h2>
             ) : (
@@ -131,7 +131,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 
         {body.sources && body.sources.length > 0 && (
           <section style={{ marginBottom: 38, padding: "20px 24px", borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
-            <div style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 12 }}>Sources</div>
+            <div style={{ fontSize: 12.5, fontWeight: 600, color: "#00C2CC", marginBottom: 12 }}>Sources</div>
             <ol style={{ margin: 0, paddingLeft: 20, display: "flex", flexDirection: "column", gap: 8 }}>
               {body.sources.map((s) => (
                 <li key={s.url} style={{ fontSize: 14, lineHeight: 1.5, color: "#B0BEC5" }}>
@@ -147,7 +147,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
           {related.map((r) => (
             <Link key={r.slug} href={`/guides/${r.slug}`} style={{ display: "flex", flexDirection: "column", gap: 10, padding: 20, borderRadius: 13, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
-              <span style={{ fontFamily: "var(--font-jetbrains-mono), monospace", fontSize: 10, letterSpacing: ".07em", textTransform: "uppercase", color: "#83919A" }}>{r.category} · {r.readMins} min</span>
+              <span style={{ fontSize: 12.5, fontWeight: 600, color: "#83919A" }}>{r.category} · {r.readMins} min</span>
               <span style={{ fontSize: 15, fontWeight: 600, color: "#E8EDF0", lineHeight: 1.35, textWrap: "pretty" }}>{r.title}</span>
             </Link>
           ))}

@@ -11,7 +11,6 @@ export function DisclosureStrip({ align = "center" }: { align?: "center" | "left
       style={{
         margin: 0,
         textAlign: align,
-        fontFamily: "var(--font-jetbrains-mono), monospace",
         fontSize: 11,
         lineHeight: 1.6,
         letterSpacing: ".02em",

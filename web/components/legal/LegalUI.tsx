@@ -6,9 +6,9 @@ export const MONO = "var(--font-jetbrains-mono), monospace";
 
 export function LegalHero({ crumbs, eyebrow, title, children }: { crumbs: { label: string; href?: string }[]; eyebrow: string; title: string; children?: ReactNode }) {
   return (
-    <section style={{ borderBottom: "1px solid rgba(255,255,255,.07)", background: "radial-gradient(80% 120% at 85% 0%, rgba(47,182,122,.10), transparent 55%), radial-gradient(60% 80% at 0% 100%, rgba(0,194,204,.07), transparent 60%), #0A0D10" }}>
+    <section style={{ borderBottom: "1px solid rgba(255,255,255,.07)", background: "#0A0D10" }}>
       <div style={{ maxWidth: 1180, margin: "0 auto", padding: "36px 24px 34px" }}>
-        <div style={{ fontFamily: MONO, fontSize: 11, color: "#83919A", marginBottom: 20 }}>
+        <div style={{ fontSize: 11, color: "#83919A", marginBottom: 20 }}>
           {crumbs.map((c, i) => (
             <span key={i}>
               {i > 0 && " / "}
@@ -16,8 +16,8 @@ export function LegalHero({ crumbs, eyebrow, title, children }: { crumbs: { labe
             </span>
           ))}
         </div>
-        <div style={{ fontFamily: MONO, fontSize: 11, letterSpacing: ".1em", textTransform: "uppercase", color: "#2FB67A", marginBottom: 12 }}>{eyebrow}</div>
-        <h1 style={{ margin: "0 0 14px", fontSize: "clamp(34px, 4.4vw, 52px)", lineHeight: 1.03, letterSpacing: "-.035em", fontWeight: 800, fontStretch: "114%", color: "#fff", textWrap: "balance" }}>{title}</h1>
+        <div style={{ fontSize: 12.5, fontWeight: 600, color: "#2FB67A", marginBottom: 12 }}>{eyebrow}</div>
+        <h1 style={{ margin: "0 0 14px", fontSize: "clamp(34px, 4.4vw, 52px)", lineHeight: 1.03, letterSpacing: "-.035em", fontWeight: 700, color: "#fff", textWrap: "balance" }}>{title}</h1>
         {children}
       </div>
     </section>
@@ -28,8 +28,8 @@ export function StatusTile({ label, status }: { label: string; status?: string }
   const t = toneOf(status);
   return (
     <div style={{ padding: "16px 18px", borderRadius: 14, background: "#0E1316", border: `1px solid ${TONE[t].fill}55` }}>
-      <div style={{ fontFamily: MONO, fontSize: 10, letterSpacing: ".08em", textTransform: "uppercase", color: "#8E9CA5", marginBottom: 6 }}>{label}</div>
-      <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 18, fontWeight: 800, color: "#fff", textTransform: "capitalize" }}>
+      <div style={{ fontSize: 12.5, fontWeight: 600, color: "#8E9CA5", marginBottom: 6 }}>{label}</div>
+      <div style={{ display: "flex", alignItems: "center", gap: 8, fontSize: 18, fontWeight: 700, color: "#fff", textTransform: "capitalize" }}>
         <span style={{ width: 10, height: 10, borderRadius: 100, background: TONE[t].fill, flex: "none" }} />
         {status ?? "Not covered"}
       </div>
@@ -41,7 +41,7 @@ export function Sources({ sources }: { sources: Source[] }) {
   if (!sources?.length) return null;
   return (
     <div style={{ marginTop: 22 }}>
-      <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".08em", textTransform: "uppercase", color: "#8E9CA5", marginBottom: 8 }}>Sources</div>
+      <div style={{ fontSize: 12.5, fontWeight: 600, color: "#8E9CA5", marginBottom: 8 }}>Sources</div>
       <ul style={{ margin: 0, paddingLeft: 18, display: "flex", flexDirection: "column", gap: 4 }}>
         {sources.map((s) => (
           <li key={s.url} style={{ fontSize: 13.5, color: "#A8B6BE" }}>

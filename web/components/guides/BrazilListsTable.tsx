@@ -2,7 +2,6 @@ import Link from "next/link";
 import data from "@/data/brazil-lists-2026-10.json";
 import { reviewPath } from "@/lib/outbound";
 
-const MONO = "var(--font-jetbrains-mono), monospace";
 
 const BRAZIL_CSV = "/data/brazil-crypto-casino-restricted-lists-2026-10.csv";
 
@@ -26,8 +25,8 @@ export function BrazilListsTable() {
   return (
     <section style={{ margin: "8px 0 36px" }}>
       <div style={{ display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: 12, flexWrap: "wrap", marginBottom: 12 }}>
-        <h2 style={{ margin: 0, fontSize: 22, fontWeight: 800, letterSpacing: "-.02em", color: "#fff" }}>All {rows.length} casinos, and what each list says</h2>
-        <a href={BRAZIL_CSV} download style={{ fontFamily: MONO, fontSize: 12, color: "#5FE3E8" }}>
+        <h2 style={{ margin: 0, fontSize: 22, fontWeight: 700, letterSpacing: "-.02em", color: "#fff" }}>All {rows.length} casinos, and what each list says</h2>
+        <a href={BRAZIL_CSV} download style={{ fontSize: 12, color: "#5FE3E8" }}>
           Download CSV ↓
         </a>
       </div>
@@ -43,8 +42,8 @@ export function BrazilListsTable() {
                 {st.label}
                 {r.note && <span style={{ display: "block", fontSize: 11.5, color: "#7F8D96" }}>{r.note}</span>}
               </span>
-              <span style={{ fontFamily: MONO, fontSize: 11, color: r.checked ? "#B7C4CB" : "#6F7E87" }}>{r.checked ? "Re-read 8 Oct" : "Earlier reading"}</span>
-              <a href={r.url} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: MONO, fontSize: 11, color: "#5FE3E8" }}>
+              <span style={{ fontSize: 11, color: r.checked ? "#B7C4CB" : "#6F7E87" }}>{r.checked ? "Re-read 8 Oct" : "Earlier reading"}</span>
+              <a href={r.url} target="_blank" rel="noopener noreferrer nofollow" style={{ fontSize: 11, color: "#5FE3E8" }}>
                 Source ↗
               </a>
             </div>

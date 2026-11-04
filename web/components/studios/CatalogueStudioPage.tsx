@@ -69,7 +69,7 @@ export function CatalogueStudioPage({ studio }: { studio: CatalogueStudio }) {
           </div>
           <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginTop: 22 }}>
             {se && (
-              <a href={se} target="_blank" rel="noopener" style={{ padding: "12px 18px", borderRadius: 10, background: "#00C2CC", color: "#04191B", fontSize: 14, fontWeight: 800 }}>
+              <a href={se} target="_blank" rel="noopener" style={{ padding: "12px 18px", borderRadius: 10, background: "#FFC531", color: "#141007", fontSize: 14, fontWeight: 800 }}>
                 {studio.name} on SlotEssentials ↗
               </a>
             )}

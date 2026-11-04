@@ -59,7 +59,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<{ l
               [String(onlineSports), "states with online sports betting"],
             ].map(([v, l]) => (
               <span key={l} style={{ display: "inline-flex", alignItems: "baseline", gap: 8, padding: "9px 14px", borderRadius: 100, background: "rgba(255,255,255,.045)", border: "1px solid rgba(255,255,255,.08)", fontSize: 13.5, color: "#A8B6BE" }}>
-                <strong style={{ fontSize: 15, fontWeight: 800, color: "#fff" }}>{v}</strong>
+                <strong style={{ fontSize: 15, fontWeight: 700, color: "#fff" }}>{v}</strong>
                 {l}
               </span>
             ))}
@@ -83,7 +83,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<{ l
         </div>
         {states.length > 0 && (
           <>
-            <h2 style={{ margin: "36px 0 14px", fontSize: 24, fontWeight: 800, letterSpacing: "-.02em", color: "#fff" }}>All states</h2>
+            <h2 style={{ margin: "36px 0 14px", fontSize: 24, fontWeight: 700, letterSpacing: "-.02em", color: "#fff" }}>All states</h2>
             <RegionGrid items={states.map((s) => ({ href: `/legal/us/${s.code.toLowerCase()}`, name: s.name, status: s.onlineCasino }))} />
           </>
         )}

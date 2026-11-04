@@ -220,22 +220,16 @@ export function FeaturedPartner({
             </div>
             </div>
 
-            <div style={{ display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 14, flexWrap: "wrap" }}>
               <Link
                 href={`/casinos/${o.slug}`}
-                className="transition-colors hover:!border-white/25"
-                style={{ padding: "10px 15px", borderRadius: 9, border: "1px solid rgba(255,255,255,.14)", fontSize: 13.5, fontWeight: 600, color: "#C6D1D7", whiteSpace: "nowrap" }}
+                className="csg-card-btn"
+                style={{ padding: "10px 17px", borderRadius: 10, background: "#FFC531", color: "#141007", fontSize: 13.5, fontWeight: 700, whiteSpace: "nowrap" }}
               >
-                Review
+                Read review
               </Link>
-              <a
-                href={o.signupUrl}
-                target="_blank"
-                rel="noopener sponsored nofollow"
-                className="transition-transform hover:-translate-y-px"
-                style={{ padding: "10px 17px", borderRadius: 9, background: "#FFC531", color: "#141007", fontSize: 13.5, fontWeight: 700, whiteSpace: "nowrap" }}
-              >
-                Visit {o.name} →
+              <a href={o.signupUrl} target="_blank" rel="noopener sponsored nofollow" data-copy-code={o.promoCode} className="csg-visit" style={{ fontSize: 13.5, color: "#93A1A9", whiteSpace: "nowrap" }}>
+                Visit ↗
               </a>
             </div>
           </div>

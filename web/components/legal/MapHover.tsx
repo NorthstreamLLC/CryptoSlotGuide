@@ -13,7 +13,6 @@ export interface HoverInfo {
   noLink?: boolean;
 }
 
-const MONO = "var(--font-jetbrains-mono), monospace";
 
 /**
  * Wraps a server-rendered map and shows a hover card for whichever region
@@ -49,7 +48,7 @@ export function MapHover({ info, children }: { info: Record<string, HoverInfo>; 
       {children}
       {it && hover && (
         <div role="status" style={{ position: "absolute", left, top: hover.y + 16, width: 280, zIndex: 20, pointerEvents: "none", padding: "14px 16px", borderRadius: 14, background: "rgba(10,13,16,.97)", border: "1px solid rgba(255,255,255,.14)", boxShadow: "0 18px 40px rgba(0,0,0,.55)" }}>
-          <div style={{ fontSize: 16, fontWeight: 800, color: "#fff", marginBottom: 8 }}>{it.name}</div>
+          <div style={{ fontSize: 16, fontWeight: 700, color: "#fff", marginBottom: 8 }}>{it.name}</div>
           <div style={{ display: "flex", flexDirection: "column", gap: 5 }}>
             {it.rows.map((r) => (
               <div key={r.label} style={{ display: "flex", justifyContent: "space-between", gap: 10, fontSize: 12.5 }}>
@@ -63,7 +62,7 @@ export function MapHover({ info, children }: { info: Record<string, HoverInfo>; 
           </div>
           {it.casinosTitle && (
             <div style={{ marginTop: 11, paddingTop: 10, borderTop: "1px solid rgba(255,255,255,.08)" }}>
-              <div style={{ fontFamily: MONO, fontSize: 9.5, letterSpacing: ".07em", textTransform: "uppercase", color: "#8E9CA5", marginBottom: 7 }}>{it.casinosTitle}</div>
+              <div style={{ fontSize: 12.5, fontWeight: 600, color: "#8E9CA5", marginBottom: 7 }}>{it.casinosTitle}</div>
               {it.casinos && it.casinos.length > 0 ? (
                 <div style={{ display: "flex", flexWrap: "wrap", gap: 5 }}>
                   {it.casinos.slice(0, 12).map((c) => (
