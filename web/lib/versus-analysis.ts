@@ -5,6 +5,8 @@
  * spec-sheet fact (or a code's terms in ops.json), listed in `cite` so the page
  * links each section to its sources.
  */
+import opsJson from "@/data/ops.json";
+
 export type Cite = { slug: string; group: string; label: string };
 
 export type VersusAnalysis = {
@@ -586,6 +588,33 @@ const BLOCKS: Record<string, CasinoBlocks> = {
     vip: { text: "Yeet's tiers run from Copper at $100 wagered to Eternal at $250 million, each level paying a bonus that never expires, with a VIP host from Diamond.", cite: [[B, "Perks by level"]] },
     cash: { text: "Yeet sets no withdrawal limits and pays out in crypto only, but needs Level 1 KYC before you can deposit.", cite: [[P, "Withdrawal limits"], [C, "KYC policy"]] },
   },
+  "bc-game": {
+    verdictIf: "you want a deposit bonus every month and a weekly raffle",
+    pickIf: ["A deposit bonus of up to 360% every month, with no wagering multiplier", "A $20,000 weekly raffle with 150 winners", "Every VIP level pays a bonus that never expires"],
+    code: { text: "At BC.Game there is no code to type: our link adds the referral. Its standing offer is a Monthly 4-Deposit Bonus, up to four deposit bonuses a month from 180% on a $5 deposit to 360% on $30, added as locked rakeback that unlocks as you wager, with no wagering multiplier and no expiry.", cite: [[B, "Standing offer"]] },
+    licence: { text: "BC.Game is run by Twocent Technology Limited in Belize and holds Anjouan licence ALSI-202410011-FI1.", cite: [[C, "Company"], [C, "Licence"]] },
+    rewards: { text: "BC.Game doesn't publish a rakeback percentage, but runs a $20,000 weekly raffle with 150 winners and a Daily Wager Contest for the ten biggest wagerers each day.", cite: [[B, "Rakeback"], [B, "Weekly raffle"], [B, "Leaderboards"]] },
+    vip: { text: "BC.Game has seven VIP tiers, from Beginner to Eternal, each split into Levels I to X, and every level pays a level-up bonus that never expires.", cite: [[B, "VIP levels"], [B, "Perks by level"]] },
+    cash: { text: "BC.Game's minimum withdrawal is the equivalent of 20 USDT on major coins, its help centre states no crypto withdrawal time, and its basic KYC is a photo ID plus a selfie from five angles.", cite: [[P, "Minimum withdrawal"], [P, "Stated withdrawal time"], [C, "KYC policy"]] },
+  },
+  rollbit: {
+    verdictIf: "you want 5% rakeback with nothing to unlock and a $25,000 daily race",
+    pickIf: ["5% rakeback on all bets, claimable every 30 minutes", "A $25,000 Daily Race where sports and crypto futures wagers count", "No withdrawal fees beyond on-chain gas"],
+    code: { text: "Rollbit has no code from us and no deposit bonus: its offer is the Rewards Calendar, 5% rakeback on all bets plus daily, weekly, monthly and rank-up bonuses.", cite: [[B, "Standing offer"]] },
+    licence: { text: "Rollbit is run by Bull Gaming N.V., which holds Curaçao licence OGL/2024/1260/0494.", cite: [[C, "Company"], [C, "Licence"]] },
+    rewards: { text: "Rollbit pays 5% rakeback on all bets, claimable every 30 minutes, and runs a $25,000 Daily Race with $10,000 for first place, where sports, casino and crypto futures wagers all count.", cite: [[B, "Rakeback"], [B, "Leaderboards"]] },
+    vip: { text: "Rollbit's daily, weekly and monthly bonuses pay 20% straight away and release the other 80% over the calendar period, with lossback built into the weekly and monthly ones.", cite: [[B, "Reload bonuses"], [B, "Cashback"]] },
+    cash: { text: "Rollbit charges no withdrawal fees beyond on-chain gas, says withdrawals are generally instant, from a few seconds to 60 minutes, and runs KYC in up to five levels.", cite: [[P, "Withdrawal fees"], [P, "Stated withdrawal time"], [C, "KYC policy"]] },
+  },
+  bitstarz: {
+    verdictIf: "you want a big welcome package and weekly slot tournaments",
+    pickIf: ["A 5 BTC + 180 free spins welcome package", "Weekly Slot Wars and Table Wars tournaments", "No withdrawal fees from BitStarz"],
+    code: { text: "BitStarz has no code from us; its welcome package is 5 BTC plus 180 free spins, opening with 100% up to 1 BTC and 180 free spins on the first deposit, and its terms set 40× wagering for all bonuses unless stated otherwise.", cite: [[B, "Standing offer"], [B, "Wagering"]] },
+    licence: { text: "BitStarz is run by Gareton B.V., which holds Curaçao licence OGL/2024/165/0185.", cite: [[C, "Company"], [C, "Licence"]] },
+    rewards: { text: "BitStarz runs two weekly tournaments, Slot Wars with €5,000 and 5,000 free spins split between the top 150 and Table Wars with a $10,000 pool, plus a 50% Reload Monday up to $300 once you've made four deposits.", cite: [[B, "Leaderboards"], [B, "Reload bonuses"]] },
+    vip: { text: "BitStarz's Level Up Adventure pays rewards from play alone, each time its progress bar fills.", cite: [[B, "VIP levels"]] },
+    cash: { text: "BitStarz charges no withdrawal fees and aims to pay within an hour, but caps Bitcoin withdrawals at 1 BTC per transaction, and needs KYC documents before it pays out.", cite: [[P, "Withdrawal fees"], [P, "Stated withdrawal time"], [P, "Withdrawal limits"], [C, "KYC policy"]] },
+  },
 };
 
 const TOPICS: [keyof Omit<CasinoBlocks, "verdictIf" | "pickIf">, string][] = [
@@ -599,6 +628,9 @@ const TOPICS: [keyof Omit<CasinoBlocks, "verdictIf" | "pickIf">, string][] = [
 /** Pairs composed from the blocks: our top four codes against the rest, and the newer three against each other. */
 // In versus.ts order (VERSUS_SLUGS), so each key is the pair's canonical URL.
 const TOP = ["roobet", "stake", "shuffle", "gamdom"];
+/** A pair in versus.ts order (VERSUS_SLUGS), so its key is the canonical URL. Kept in step with that list by hand: versus.ts imports this file. */
+const ORDER = ["roobet", "stake", "bc-game", "shuffle", "rollbit", "gamdom", "duelbits", "rainbet", "razed", "winna", "thrill", "duel", "goated", "500-casino", "bitstarz", "yeet", "degen", "betfury"];
+const ordered = (x: string, y: string): [string, string] => (ORDER.indexOf(x) < ORDER.indexOf(y) ? [x, y] : [y, x]);
 const COMPOSED_PAIRS: [string, string][] = [
   ...TOP.flatMap((a) => ["duelbits", "rainbet", "razed", "duel", "goated", "yeet"].map((b) => [a, b] as [string, string])),
   ["duelbits", "goated"],
@@ -611,14 +643,18 @@ const COMPOSED_PAIRS: [string, string][] = [
   ["thrill", "degen"],
   ["thrill", "betfury"],
   ["degen", "betfury"],
+  // November 2026: BC.Game, Rollbit and BitStarz against the top four and each other.
+  ...["bc-game", "rollbit", "bitstarz"].flatMap((x) => [...TOP, "bc-game", "rollbit", "bitstarz"].filter((y) => y !== x).map((y) => ordered(x, y))),
 ];
+
+const NEW = new Set(["bc-game", "rollbit", "bitstarz"]);
 
 function compose(a: string, b: string): VersusAnalysis {
   const A = BLOCKS[a], Bk = BLOCKS[b];
-  const name = (slug: string) => slug.charAt(0).toUpperCase() + slug.slice(1);
+  const name = (slug: string) => (opsJson as { slug: string; name: string }[]).find((o) => o.slug === slug)?.name ?? slug;
   return {
     verdict: `${name(a)} if ${A.verdictIf}; ${name(b)} if ${Bk.verdictIf}.`,
-    published: "2026-10-30",
+    published: NEW.has(a) || NEW.has(b) ? "2026-11-04" : "2026-10-30",
     pickIf: { [a]: A.pickIf, [b]: Bk.pickIf },
     sections: TOPICS.map(([k, title]) => ({
       title,
