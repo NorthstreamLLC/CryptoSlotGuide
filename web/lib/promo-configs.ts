@@ -35,6 +35,8 @@ const GOATED_FDB = "https://www.goated.com/help/article/16424322-100-first-depos
 const BETFURY_PACK = "https://betfury.com/promo/welcome-pack-bonus";
 const BETFURY_TERMS = "https://docs.betfury.com/betfury/bonus-system/welcome-pack-terms-and-conditions";
 const THRILL_REF = "https://intercom.help/thrill/en/articles/11736577-refer-a-friend-and-earn-as-they-play";
+const BCG_INVITE = "https://help.bc.support/en/articles/11598681-earn-1500-for-free-by-inviting-friends";
+const BCG_BONUS = "https://help.bc.support/en/articles/15839846-monthly-4-deposit-bonus";
 const THRILL_LEVELS = "https://intercom.help/thrill/en/articles/11882893-what-are-the-rewards-levels-and-benefits-at-thrill";
 
 export const PROMO_CONFIGS: Record<string, PromoConfig> = {
@@ -344,6 +346,52 @@ export const PROMO_CONFIGS: Record<string, PromoConfig> = {
     next: [
       { href: "/casinos/yeet", label: "Full Yeet review", hint: "Withdrawals, coins, licence and sportsbook, each linked to Yeet's own pages." },
       STAKE_NEXT,
+      BONUSES_NEXT,
+    ],
+  },
+
+  "bc-game": {
+    title: (c) => `BC.Game promo code ${c}: up to 360% on 4 deposits every month`,
+    description: (c) => `Sign up at BC.Game with referral code ${c} and claim its Monthly 4-Deposit Bonus: 180% to 360% across four deposits, every month, with no wagering multiplier. How it unlocks, plus BC.Game's raffle, VIP levels and withdrawals, from its own pages.`,
+    lead: (c) => `Sign up through our link, or enter referral code ${c} when you register, and BC.Game's Monthly 4-Deposit Bonus is yours: 180% on a $5 deposit up to 360% on $30, four stages a month, unlocked as you play with no wagering multiplier.`,
+    perks: [
+      { t: "Up to 360% every month", d: "Four deposit stages, from $5, resetting on the 1st" },
+      { t: "No wagering multiplier", d: "Bonus unlocks as locked rakeback while you play" },
+      { t: "$20,000 weekly raffle", d: "150 winners every Monday" },
+    ],
+    steps: (c) => [
+      { t: "Sign up with our link or code", d: `The sign-up button opens BC.Game with referral code ${c} attached; BC.Game also lets you type a code during sign-up.`, src: BCG_INVITE },
+      { t: "Deposit from $5 for stage 1", d: "Stage 1 pays 180% on $5, stage 2 240% on $10, stage 3 300% on $20 and stage 4 360% on $30, claimed in order.", src: BCG_BONUS },
+      { t: "Play non-PvP games to unlock it", d: "The bonus sits as locked rakeback and unlocks as you wager; only non-PvP games count. All four stages reset on the 1st at 00:00 UTC.", src: BCG_BONUS },
+    ],
+    rewardsTitle: "What BC.Game pays you back",
+    rewards: [
+      { group: "Bonus terms", label: "Weekly raffle" },
+      { group: "Bonus terms", label: "Leaderboards", sub: "Daily Wager Contest" },
+      { group: "Bonus terms", label: "Reload bonuses", sub: "Daily, weekly and monthly bonuses" },
+      { group: "Bonus terms", label: "Perks by level", sub: "Level-up bonuses" },
+      { group: "Bonus terms", label: "Rakeback" },
+      { group: "Bonus terms", label: "Prize draws", sub: "Lottery" },
+    ],
+    termsTitle: "Monthly 4-Deposit Bonus terms",
+    terms: [
+      { group: "Bonus terms", label: "Standing offer", sub: "The Monthly 4-Deposit Bonus" },
+      { group: "Bonus terms", label: "Wagering rules", sub: "How the bonus unlocks" },
+      { group: "Bonus terms", label: "Minimum deposit", sub: "Per stage" },
+      { group: "Bonus terms", label: "Expiry" },
+      { group: "Bonus terms", label: "Game contribution", sub: "What counts toward unlocking" },
+      { group: "Compliance", label: "KYC policy" },
+    ],
+    faqs: (c) => [
+      { q: "What is the BC.Game promo code?", a: `${c}. It's our referral code: our sign-up link opens BC.Game with it attached, or you can enter it when you register.` },
+      { q: "What is BC.Game's welcome bonus?", a: "The Monthly 4-Deposit Bonus: 180% on your first deposit of the month (from $5), 240% on the second ($10), 300% on the third ($20) and 360% on the fourth ($30). All four stages reset on the 1st of every month at 00:00 UTC." },
+      { q: "Is there a wagering requirement?", a: "No multiplier. Each bonus is added as locked rakeback that unlocks as you wager on non-PvP games, at a rate set by the game's house edge, and it has no expiry date." },
+      { q: "Can I claim it every month?", a: "Yes. The four deposit stages reset on the 1st of each month at 00:00 UTC, and they're claimed in order." },
+      ours("BC.Game")(c),
+    ],
+    next: [
+      { href: "/casinos/bc-game", label: "Full BC.Game review", hint: "Withdrawals, coins, licence and sportsbook, each linked to BC.Game's own pages." },
+      { href: "/compare/stake-vs-bc-game", label: "Stake vs BC.Game", hint: "Rakeback, races, VIP and withdrawals, side by side." },
       BONUSES_NEXT,
     ],
   },

@@ -10,7 +10,7 @@
  * provider, market (sports/esports betting markets — /betting/[slug]).
  */
 import { siteData } from "./site-data";
-import { hasPromoPage } from "./promo-pages";
+import { hasPromoPage, typeableCode } from "./promo-pages";
 import { slotReview } from "./slot-reviews";
 import { flag } from "./scoring";
 import { isStaleReading } from "./derived";
@@ -690,7 +690,7 @@ export function getEntityView(type: EntityType, slug: string, opts: { fullTable?
   const expiryFact = getSpecFact(o.slug, "Bonus terms", "Expiry");
   const limitsFact = getSpecFact(o.slug, "Payouts & fees", "Withdrawal limits");
   /** A code a reader can type (a referral hash is carried by the link, not typed). */
-  const typeCode = o.affiliate && o.signupUrl && o.promoCode && /^[A-Za-z]{3,14}$/.test(o.promoCode) ? o.promoCode : null;
+  const typeCode = o.affiliate && o.signupUrl ? typeableCode(o.slug, o.promoCode) : null;
   const onChain =
     siteData.onChainVolume.find((e) => e.operatorSlug === o.slug)?.sources.find((x) => x.source === "FairGambling" && x.metric === "30-day deposit volume") ??
     siteData.onChainVolume.find((e) => e.operatorSlug === o.slug)?.sources.find((x) => x.metric === "30-day deposit volume");

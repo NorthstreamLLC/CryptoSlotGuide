@@ -3,7 +3,7 @@ import { getEntityView, backLink } from "@/lib/entity-view";
 import { CasinoReport } from "@/components/casino/CasinoReport";
 import { pageMetadata } from "@/lib/seo";
 import { siteData } from "@/lib/site-data";
-import { hasPromoPage } from "@/lib/promo-pages";
+import { hasPromoPage, typeableCode } from "@/lib/promo-pages";
 import { entityBreadcrumbSchema, faqSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 
@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   // bonus, withdrawals and the code (Search Console, November 2026). The H1
   // and the rest of the page are unchanged.
   const o = siteData.ops.find((x) => x.slug === slug);
-  const code = o?.affiliate && o.signupUrl && o.promoCode && /^[A-Za-z]{3,14}$/.test(o.promoCode) && hasPromoPage(slug) ? o.promoCode : null;
+  const code = o?.affiliate && o.signupUrl && hasPromoPage(slug) ? typeableCode(slug, o.promoCode) : null;
   if (o && code) {
     return pageMetadata(
       `${o.name} review: bonus, withdrawals and code ${code}`,

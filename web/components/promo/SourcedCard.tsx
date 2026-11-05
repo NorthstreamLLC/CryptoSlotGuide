@@ -1,14 +1,13 @@
 import { getSpecFact } from "@/lib/spec-sheet";
 
-const MONO = "var(--font-jetbrains-mono), monospace";
 
 /** A titled fact with a link to the page it came from: the building block of the promo code pages. */
 export function SourcedCard({ title, body, href }: { title: string; body: string; href: string }) {
   return (
     <div style={{ padding: "16px 18px", borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.08)" }}>
-      <div style={{ fontSize: 15, fontWeight: 800, color: "#fff", marginBottom: 6 }}>{title}</div>
+      <div style={{ fontSize: 15, fontWeight: 700, color: "#fff", marginBottom: 6 }}>{title}</div>
       <p style={{ margin: "0 0 8px", fontSize: 13.5, lineHeight: 1.55, color: "#A8B6BE" }}>{body}</p>
-      <a href={href} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: MONO, fontSize: 10.5, color: "#5FE3E8" }}>
+      <a href={href} target="_blank" rel="noopener noreferrer nofollow" style={{ fontSize: 12, color: "#5FE3E8" }}>
         {new URL(href).hostname.replace(/^www\./, "")} ↗
       </a>
     </div>

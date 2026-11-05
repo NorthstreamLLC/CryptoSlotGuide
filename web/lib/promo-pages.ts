@@ -3,7 +3,7 @@
  * casino's code (the menu's Promo codes panel, the bonuses hub, the next-step
  * blocks) goes through promoHref so a new page is picked up everywhere at once.
  */
-export const PROMO_PAGES = ["roobet", "stake", "shuffle", "gamdom", "duelbits", "rainbet", "razed", "duel", "degen", "yeet", "goated", "betfury", "winna", "thrill"];
+export const PROMO_PAGES = ["roobet", "stake", "shuffle", "gamdom", "duelbits", "rainbet", "razed", "duel", "degen", "yeet", "goated", "betfury", "winna", "thrill", "bc-game"];
 
 export const hasPromoPage = (slug: string) => PROMO_PAGES.includes(slug);
 
@@ -32,4 +32,14 @@ export const PROMO_HUB: Record<string, { kind: PromoKind; line: string }> = {
   goated: { kind: "welcome", line: "100% first deposit up to $1,000 + a $25,000 weekly race" },
   winna: { kind: "rewards", line: "Rakeback every 7 minutes + a $50,000 weekly race" },
   thrill: { kind: "rewards", line: "Instant rakeback from your first bet + a $50,000 weekly race" },
+  "bc-game": { kind: "welcome", line: "Up to 360% on 4 deposits every month, no wagering multiplier" },
 };
+
+/**
+ * Whether a casino's code is one a reader can type. Letters-only codes always
+ * are; a code with digits (BC.Game's referral id) counts once its promo page
+ * exists, because that page cites the casino saying codes can be entered at
+ * sign-up. Anything else is a link parameter and is carried by our link only.
+ */
+export const typeableCode = (slug: string, code?: string | null): string | null =>
+  code && (/^[A-Za-z]{3,14}$/.test(code) || (hasPromoPage(slug) && /^[A-Za-z0-9]{3,14}$/.test(code))) ? code : null;

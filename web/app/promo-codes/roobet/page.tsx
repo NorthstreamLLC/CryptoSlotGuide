@@ -17,7 +17,6 @@ import { VersusStrip } from "@/components/compare/VersusStrip";
 import { EmailSignup } from "@/components/ui/EmailSignup";
 
 const SLUG = "roobet";
-const MONO = "var(--font-jetbrains-mono), monospace";
 const GOLD = "#FFC531";
 const REFERRALS = "https://help.roobet.com/en/articles/5017835-referrals-explained";
 
@@ -38,9 +37,9 @@ function Fact({ label, group, sub }: { label: string; group: string; sub?: strin
   if (!f || typeof f.value !== "string" || !f.sourceUrl) return null;
   return (
     <div style={{ padding: "16px 18px", borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.08)" }}>
-      <div style={{ fontSize: 15, fontWeight: 800, color: "#fff", marginBottom: 6 }}>{sub ?? label}</div>
+      <div style={{ fontSize: 15, fontWeight: 700, color: "#fff", marginBottom: 6 }}>{sub ?? label}</div>
       <p style={{ margin: "0 0 8px", fontSize: 13.5, lineHeight: 1.55, color: "#A8B6BE" }}>{f.value}</p>
-      <a href={f.sourceUrl} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: MONO, fontSize: 10.5, color: "#5FE3E8" }}>
+      <a href={f.sourceUrl} target="_blank" rel="noopener noreferrer nofollow" style={{ fontSize: 12, color: "#5FE3E8" }}>
         {new URL(f.sourceUrl).hostname.replace(/^www\./, "")} ↗
       </a>
     </div>
@@ -76,19 +75,19 @@ export default function Page() {
       <JsonLd data={[breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Promo codes", path: "/promo-codes" }, { name: "Roobet", path: "/promo-codes/roobet" }]), faqSchema(faqs)]} />
 
       {/* Hero */}
-      <section style={{ borderBottom: "1px solid rgba(255,255,255,.07)", background: "radial-gradient(70% 120% at 85% 0%, rgba(255,197,49,.14), transparent 60%), radial-gradient(60% 90% at 0% 100%, rgba(0,194,204,.07), transparent 60%), #0A0D10" }}>
+      <section style={{ borderBottom: "1px solid rgba(255,255,255,.07)", background: "#0A0D10" }}>
         <div style={{ maxWidth: 1180, margin: "0 auto", padding: "34px 24px 44px", display: "grid", gap: 40, gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", alignItems: "center" }}>
           <div>
-            <div style={{ fontFamily: MONO, fontSize: 11, color: "#83919A", marginBottom: 22 }}>
+            <div style={{ fontSize: 12, color: "#83919A", marginBottom: 22 }}>
               <Link href="/" style={{ color: "#83919A" }}>Home</Link> / <Link href="/promo-codes" style={{ color: "#83919A" }}>Promo codes</Link> / <span style={{ color: "#A8B6BE" }}>Roobet</span>
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
               <span style={{ width: 52, height: 52, borderRadius: 14, overflow: "hidden" }}>
                 <BrandMark slug={SLUG} mono={o.mono} tint={GOLD} radius={14} fontSize={14} />
               </span>
-              <span style={{ fontFamily: MONO, fontSize: 11, letterSpacing: ".1em", textTransform: "uppercase", color: GOLD }}>Roobet promo code</span>
+              <span style={{ fontSize: 12.5, fontWeight: 600, color: GOLD }}>Roobet promo code</span>
             </div>
-            <h1 style={{ margin: "0 0 14px", fontSize: "clamp(36px, 4.6vw, 56px)", lineHeight: 1.02, letterSpacing: "-.035em", fontWeight: 800, color: "#fff" }}>
+            <h1 style={{ margin: "0 0 14px", fontSize: "clamp(36px, 4.6vw, 56px)", lineHeight: 1.02, letterSpacing: "-.035em", fontWeight: 700, color: "#fff" }}>
               Use code <span style={{ color: GOLD }}>{code}</span> at Roobet
             </h1>
             <p style={{ margin: "0 0 24px", maxWidth: "52ch", fontSize: 17, lineHeight: 1.6, color: "#B7C4CB" }}>
@@ -98,7 +97,7 @@ export default function Page() {
           </div>
 
           {/* The code card */}
-          <div style={{ padding: 26, borderRadius: 20, background: "radial-gradient(120% 90% at 50% 0%, rgba(255,197,49,.16), transparent 60%), #0F1418", border: "1px solid rgba(255,197,49,.4)", boxShadow: "0 30px 80px rgba(0,0,0,.5)" }}>
+          <div style={{ padding: 26, borderRadius: 20, background: "#0F1418", border: "1px solid rgba(255,197,49,.4)", boxShadow: "0 30px 80px rgba(0,0,0,.5)" }}>
             <div style={{ fontSize: 13, color: "#A8B6BE", marginBottom: 10 }}>Your code, tap to copy</div>
             <div style={{ marginBottom: 20 }}>
               <CodeChip code={code} tint={GOLD} />
@@ -108,7 +107,7 @@ export default function Page() {
                 <div key={p.t} style={{ display: "flex", alignItems: "center", gap: 12, padding: "12px 14px", borderRadius: 12, background: "rgba(255,255,255,.04)", border: "1px solid rgba(255,255,255,.07)" }}>
                   <span style={{ width: 26, height: 26, flex: "none", borderRadius: "50%", background: "rgba(87,227,154,.14)", color: "#57E39A", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 14 }}>✓</span>
                   <span>
-                    <span style={{ display: "block", fontSize: 15.5, fontWeight: 800, color: "#fff" }}>{p.t}</span>
+                    <span style={{ display: "block", fontSize: 15.5, fontWeight: 700, color: "#fff" }}>{p.t}</span>
                     <span style={{ display: "block", fontSize: 13, color: "#A8B6BE" }}>{p.d}</span>
                   </span>
                 </div>
@@ -117,16 +116,16 @@ export default function Page() {
                 <div style={{ display: "flex", alignItems: "center", gap: 12, padding: "12px 14px", borderRadius: 12, background: "rgba(255,197,49,.07)", border: "1px solid rgba(255,197,49,.25)" }}>
                   <span style={{ width: 26, height: 26, flex: "none", borderRadius: "50%", background: "rgba(255,197,49,.16)", color: GOLD, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 14 }}>+</span>
                   <span>
-                    <span style={{ display: "block", fontSize: 15.5, fontWeight: 800, color: "#fff" }}>+20% Rakeboost for 72 hours</span>
+                    <span style={{ display: "block", fontSize: 15.5, fontWeight: 700, color: "#fff" }}>+20% Rakeboost for 72 hours</span>
                     <span style={{ display: "block", fontSize: 13, color: "#A8B6BE" }}>
                       Roobet&apos;s boost for signing up with an affiliate code ·{" "}
-                      <a href={boost!.sourceUrl} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: MONO, fontSize: 10.5, color: "#5FE3E8" }}>help.roobet.com ↗</a>
+                      <a href={boost!.sourceUrl} target="_blank" rel="noopener noreferrer nofollow" style={{ fontSize: 12, color: "#5FE3E8" }}>help.roobet.com ↗</a>
                     </span>
                   </span>
                 </div>
               )}
             </div>
-            <a href={visit} target="_blank" rel="nofollow sponsored noopener" data-copy-code={code} className="transition-transform hover:-translate-y-px" style={{ display: "block", textAlign: "center", padding: "16px 18px", borderRadius: 13, background: "linear-gradient(180deg,#FFD866,#FFC531)", color: "#141007", fontSize: 16, fontWeight: 800, boxShadow: "0 12px 30px rgba(255,197,49,.25)" }}>
+            <a href={visit} target="_blank" rel="nofollow sponsored noopener" data-copy-code={code} className="transition-transform hover:-translate-y-px" style={{ display: "block", textAlign: "center", padding: "16px 18px", borderRadius: 13, background: "#FFC531", color: "#141007", fontSize: 16, fontWeight: 700, boxShadow: "0 12px 30px rgba(255,197,49,.25)" }}>
               1. Sign up at Roobet ↗
             </a>
             <GeoBlockNote slug={SLUG} name={o.name} />
@@ -134,7 +133,7 @@ export default function Page() {
               <VipClaim label={`2. Claim the package with ${vip.name}`} />
             </div>
             <p style={{ margin: "10px 0 0", fontSize: 12.5, lineHeight: 1.5, color: "#B7C4CB" }}>The package is claimed through CasinoPerks on Telegram: signing up with the code alone does not pay it.</p>
-            <p style={{ margin: "12px 0 0", fontFamily: MONO, fontSize: 10.5, lineHeight: 1.6, color: "#7F8D96" }}>
+            <p style={{ margin: "12px 0 0", fontSize: 12, lineHeight: 1.6, color: "#7F8D96" }}>
               Through our affiliate deal with Roobet; we may earn a commission, which never changes what we report. 18+ · T&amp;Cs apply · Play responsibly.
             </p>
           </div>
@@ -142,7 +141,7 @@ export default function Page() {
       </section>
 
       <section style={{ maxWidth: 1180, margin: "0 auto", padding: "48px 24px 0" }}>
-        <h2 style={{ margin: "0 0 18px", fontSize: 28, letterSpacing: "-.03em", fontWeight: 800, color: "#fff" }}>How to claim it</h2>
+        <h2 style={{ margin: "0 0 18px", fontSize: 28, letterSpacing: "-.03em", fontWeight: 700, color: "#fff" }}>How to claim it</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" style={{ gap: 12 }}>
           {[
             { n: 1, t: "Open Roobet through our link", d: `The "Sign up at Roobet" button opens Roobet with code ${code} attached.` },
@@ -151,11 +150,11 @@ export default function Page() {
             { n: 4, t: "Deposit and play", d: "The 20% match is paid on your deposit; the free spins unlock at $10,000 and $50,000 wagered." },
           ].map((s) => (
             <div key={s.n} style={{ padding: 20, borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.08)" }}>
-              <div style={{ width: 34, height: 34, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", background: GOLD, color: "#141007", fontWeight: 800, marginBottom: 12 }}>{s.n}</div>
-              <div style={{ fontSize: 16.5, fontWeight: 800, color: "#fff", marginBottom: 6 }}>{s.t}</div>
+              <div style={{ width: 34, height: 34, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center", background: GOLD, color: "#141007", fontWeight: 700, marginBottom: 12 }}>{s.n}</div>
+              <div style={{ fontSize: 16.5, fontWeight: 700, color: "#fff", marginBottom: 6 }}>{s.t}</div>
               <p style={{ margin: 0, fontSize: 14, lineHeight: 1.55, color: "#A8B6BE" }}>
                 {s.d}{" "}
-                {s.src && <a href={s.src} target="_blank" rel="noopener noreferrer nofollow" style={{ fontFamily: MONO, fontSize: 10.5, color: "#5FE3E8" }}>help.roobet.com ↗</a>}
+                {s.src && <a href={s.src} target="_blank" rel="noopener noreferrer nofollow" style={{ fontSize: 12, color: "#5FE3E8" }}>help.roobet.com ↗</a>}
               </p>
               {"tg" in s && s.tg && (
                 <div style={{ marginTop: 12 }}>
@@ -171,7 +170,7 @@ export default function Page() {
         <div style={{ marginBottom: 32 }}>
           <RooJackpotsCard />
         </div>
-        <h2 style={{ margin: "0 0 6px", fontSize: 28, letterSpacing: "-.03em", fontWeight: 800, color: "#fff" }}>Roobet&apos;s standing rewards</h2>
+        <h2 style={{ margin: "0 0 6px", fontSize: 28, letterSpacing: "-.03em", fontWeight: 700, color: "#fff" }}>Roobet&apos;s standing rewards</h2>
         <p style={{ margin: "0 0 18px", fontSize: 15, color: "#8DA0AA" }}>On top of the code&apos;s package, these run for every player, each from Roobet&apos;s own pages.</p>
         <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: 12 }}>
           <Fact group="Bonus terms" label="Rakeback" />
@@ -182,7 +181,7 @@ export default function Page() {
       </section>
 
       <section style={{ maxWidth: 1180, margin: "0 auto", padding: "48px 24px 0" }}>
-        <h2 style={{ margin: "0 0 18px", fontSize: 28, letterSpacing: "-.03em", fontWeight: 800, color: "#fff" }}>Terms worth knowing</h2>
+        <h2 style={{ margin: "0 0 18px", fontSize: 28, letterSpacing: "-.03em", fontWeight: 700, color: "#fff" }}>Terms worth knowing</h2>
         <div className="grid grid-cols-1 md:grid-cols-3" style={{ gap: 12 }}>
           <Fact group="Bonus terms" label="Wagering" />
           <Fact group="Payouts & fees" label="Withdrawal fees" />
@@ -192,19 +191,19 @@ export default function Page() {
 
       {vip.telegram && (
         <section style={{ maxWidth: 1180, margin: "0 auto", padding: "40px 24px 0" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 18, flexWrap: "wrap", padding: "20px 24px", borderRadius: 16, background: "radial-gradient(90% 140% at 0% 50%, rgba(34,158,217,.2), transparent 60%), #0C1114", border: "1px solid rgba(34,158,217,.32)" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 18, flexWrap: "wrap", padding: "20px 24px", borderRadius: 16, background: "#0C1114", border: "1px solid rgba(34,158,217,.32)" }}>
             <div style={{ flex: "1 1 320px" }}>
-              <div style={{ fontFamily: MONO, fontSize: 10.5, letterSpacing: ".1em", textTransform: "uppercase", color: "#7CC8EE", marginBottom: 4 }}>{vip.name} · VIP</div>
-              <div style={{ fontSize: 20, fontWeight: 800, color: "#fff" }}>Exclusive casino VIP team</div>
+              <div style={{ fontSize: 12.5, fontWeight: 600, color: "#7CC8EE", marginBottom: 4 }}>{vip.name} · VIP</div>
+              <div style={{ fontSize: 20, fontWeight: 700, color: "#fff" }}>Exclusive casino VIP team</div>
               <div style={{ fontSize: 14, color: "#B7C4CB", marginTop: 4 }}>Already VIP at another casino? CasinoPerks will move your status over to Roobet, and they&apos;re the ones who set up your code {code} package. One message on Telegram and you&apos;re sorted.</div>
             </div>
-            <a href={vip.telegram} target="_blank" rel="noopener noreferrer" style={{ padding: "13px 20px", borderRadius: 12, background: "#229ED9", color: "#fff", fontSize: 14.5, fontWeight: 800 }}>Message on Telegram</a>
+            <a href={vip.telegram} target="_blank" rel="noopener noreferrer" style={{ padding: "13px 20px", borderRadius: 12, background: "#229ED9", color: "#fff", fontSize: 14.5, fontWeight: 700 }}>Message on Telegram</a>
           </div>
         </section>
       )}
 
       <section style={{ maxWidth: 820, margin: "0 auto", padding: "48px 24px 0" }}>
-        <h2 style={{ margin: "0 0 14px", fontSize: 28, letterSpacing: "-.03em", fontWeight: 800, color: "#fff" }}>Questions</h2>
+        <h2 style={{ margin: "0 0 14px", fontSize: 28, letterSpacing: "-.03em", fontWeight: 700, color: "#fff" }}>Questions</h2>
         {faqs.map((f) => (
           <details key={f.q} style={{ padding: "16px 0", borderTop: "1px solid rgba(255,255,255,.08)" }}>
             <summary style={{ cursor: "pointer", fontSize: 16, fontWeight: 700, color: "#fff" }}>{f.q}</summary>

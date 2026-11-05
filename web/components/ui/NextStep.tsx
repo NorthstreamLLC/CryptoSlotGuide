@@ -2,7 +2,7 @@ import Link from "next/link";
 import { siteData } from "@/lib/site-data";
 import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
 import { CodeChip } from "@/components/ui/CodeChip";
-import { hasPromoPage } from "@/lib/promo-pages";
+import { hasPromoPage, typeableCode } from "@/lib/promo-pages";
 
 const GOLD = "#FFC531";
 
@@ -83,7 +83,7 @@ export function CasinoNextStep({ slug }: { slug: string }) {
   const o = siteData.ops.find((x) => x.slug === slug);
   if (!o) return null;
   if (o.affiliate && o.signupUrl) {
-    const readable = !!o.promoCode && /^[A-Za-z]{3,14}$/.test(o.promoCode);
+    const readable = !!typeableCode(o.slug, o.promoCode);
     return (
       <Block
         kicker="NEXT STEP"

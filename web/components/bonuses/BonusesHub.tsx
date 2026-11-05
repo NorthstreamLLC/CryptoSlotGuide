@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { PROMO_PAGES } from "@/lib/promo-pages";
+import { PROMO_PAGES, typeableCode } from "@/lib/promo-pages";
 import { siteData } from "@/lib/site-data";
 import { inHouseOrder } from "@/lib/house-order";
 import { isWelcomeOffer } from "@/lib/casino-bonuses";
@@ -29,7 +29,7 @@ import vip from "@/data/vip.json";
 
 const GOLD = "#FFC531";
 /** A code a reader can type; a referral hash is a link parameter, not a code. */
-const readable = (code?: string | null) => !!code && /^[A-Za-z]{3,14}$/.test(code);
+const readable = (code: string | null | undefined, slug = "") => !!typeableCode(slug, code);
 
 const CSS = `
 .bh-wrap { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
@@ -207,14 +207,14 @@ export function BonusesHub() {
                       )}
                     </span>
                   </Link>
-                  <span className="bh-code">{readable(o.promoCode) ? <CodeChip code={o.promoCode!} tint={GOLD} size="sm" /> : <span style={{ fontSize: 12.5, color: "#8E9CA4" }}>{o.promoCode ? "Code added by our link" : "No code needed"}</span>}</span>
+                  <span className="bh-code">{readable(o.promoCode, o.slug) ? <CodeChip code={o.promoCode!} tint={GOLD} size="sm" /> : <span style={{ fontSize: 12.5, color: "#8E9CA4" }}>{o.promoCode ? "Code added by our link" : "No code needed"}</span>}</span>
                   <span className="bh-stat">
                     <small>Wager to withdraw</small>
                     <b style={{ color: w.color }}>{w.text}</b>
                   </span>
                   <span className="bh-act">
                     <Link href={reviewPath(o.slug)} className="bh-btn bh-gold">Read review</Link>
-                    <a href={o.signupUrl!} target="_blank" rel="nofollow sponsored noopener" data-copy-code={readable(o.promoCode) ? o.promoCode! : undefined} className="bh-claim">Claim ↗</a>
+                    <a href={o.signupUrl!} target="_blank" rel="nofollow sponsored noopener" data-copy-code={readable(o.promoCode, o.slug) ? o.promoCode! : undefined} className="bh-claim">Claim ↗</a>
                   </span>
                 </div>
               );

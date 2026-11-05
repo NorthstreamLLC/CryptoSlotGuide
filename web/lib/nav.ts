@@ -66,7 +66,7 @@ import { kevinLive, KEVIN_PATH, KEVIN_END } from "./kevin-promo";
 
 /** Esports titles with their own mark in public/assets/logos/esports (sources in data/logo-sources.json). */
 const ESPORTS_ICONS = new Set(["cs2", "dota-2", "league-of-legends", "valorant"]);
-import { promoHref } from "./promo-pages";
+import { promoHref, typeableCode } from "./promo-pages";
 
 const slotCatLabels = siteData.slotCatDefs.map((d) => ({ tag: d.tag, label: d.label }));
 
@@ -910,7 +910,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
 
   // Bonuses: offers, codes, races and live promotions in one place.
   // Only codes a reader can type: a referral hash like "97ecknzbtm" is a link parameter, not a promo code.
-  const coded = inHouseOrder(siteData.ops.filter((o) => o.promoCode && o.signupUrl && /^[A-Za-z]{3,14}$/.test(o.promoCode))).slice(0, 6);
+  const coded = inHouseOrder(siteData.ops.filter((o) => o.signupUrl && typeableCode(o.slug, o.promoCode))).slice(0, 6);
   const bonusSection: NavSection | undefined = bonuses && {
     ...bonuses,
     columns: [
