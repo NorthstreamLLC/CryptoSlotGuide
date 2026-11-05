@@ -6,7 +6,7 @@ import { LEGACY_ITEMS, legacyBySlug, legacyPosts } from "@/lib/legacy";
 import { Article } from "@/components/legacy/Article";
 
 /** Old posts rebuilt as their own pages at the same address; their route takes over. */
-const REBUILT = new Set(["crypto-casino-withdrawals-explained"]);
+const REBUILT = new Set(["crypto-casino-withdrawals-explained", "the-best-crypto-slots-with-high-rtp-in-2026", "top-crypto-slot-providers-compared"]);
 
 export function generateStaticParams() {
   return LEGACY_ITEMS.filter((i) => !REBUILT.has(i.slug)).map((i) => ({ legacy: i.slug }));
