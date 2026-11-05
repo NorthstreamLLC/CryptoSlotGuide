@@ -9,6 +9,7 @@ import { catalogueStudios } from "@/lib/studio-pages";
 import { siteData } from "@/lib/site-data";
 import { getCasinoSpecSheet } from "@/lib/spec-sheet";
 import { FACT_ARTICLES } from "@/lib/fact-articles";
+import { PROMO_PAGES } from "@/lib/promo-pages";
 import { sweepsSorted } from "@/lib/sweeps";
 import { US_STATES, COUNTRIES } from "@/lib/legal";
 import { STUDIOS } from "@/lib/studios";
@@ -80,20 +81,6 @@ const STATIC_ROUTES = [
   "/casinos/facts",
   "/news",
   "/rakeback-casinos",
-  "/promo-codes/roobet",
-  "/promo-codes/stake",
-  "/promo-codes/shuffle",
-  "/promo-codes/gamdom",
-  "/promo-codes/duelbits",
-  "/promo-codes/rainbet",
-  "/promo-codes/razed",
-  "/promo-codes/duel",
-  "/promo-codes/degen",
-  "/promo-codes/yeet",
-  "/promo-codes/goated",
-  "/promo-codes/betfury",
-  "/promo-codes/winna",
-  "/promo-codes/thrill",
   "/play-with-kevin-hart",
   "/slots/best-crypto-slot-sites",
   "/how-to/blackjack",
@@ -143,6 +130,8 @@ export function sitemapPaths(): string[] {
     ...NEWS.map((n) => `/news/${n.month}`),
     // Every facts article, from the articles themselves so a new one is listed the day it ships.
     ...Object.keys(FACT_ARTICLES).map((sl) => `/casinos/${sl}/facts`),
+    // Every promo code page, from PROMO_PAGES so a new one is listed the day it ships.
+    ...PROMO_PAGES.map((sl) => `/promo-codes/${sl}`),
     ...sweepsSorted().map((w) => slugPath("/sweepstakes-casinos", w.slug)),
     ...US_STATES.map((st) => slugPath("/legal/us", st.code.toLowerCase())),
     ...COUNTRIES.filter((c) => c.code !== "US").map((c) => slugPath("/legal", c.code.toLowerCase())),
