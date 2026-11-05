@@ -852,7 +852,7 @@ export function getEntityView(type: EntityType, slug: string, opts: { fullTable?
           ? `${/^instant/i.test(o.payoutObserved) ? "Instant" : o.payoutObserved} across the withdrawals we made on our own account.`
           : statedPayout
           ? `${o.name} says: "${statedPayout.value}".`
-          : `${o.name} doesn't publish a withdrawal time; it depends on the coin, network confirmations and your verification level.`) + (limitsFact?.value ? ` Limits: ${firstSentence(limitsFact.value)}` : "") },
+          : `${o.name} doesn't publish a withdrawal time; it depends on the coin, network confirmations and your verification level.`) + (limitsFact?.value ? ` Limits: ${firstSentence(limitsFact.value)}` : ""), href: "/crypto-casino-withdrawals-explained", hrefLabel: "Withdrawal times at every casino" },
       {
         q: `Is ${o.name} available in my country?`,
         a: `${o.name} restricts a list of jurisdictions under its ${o.licence} licence, and separately, your own country decides whether you may play at all. Check both: the restricted list in its terms, and the law where you live.`,

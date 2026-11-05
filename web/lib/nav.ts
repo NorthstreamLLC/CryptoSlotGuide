@@ -313,6 +313,7 @@ function rawNavTabs(c: SiteCounts): NavTab[] {
               links: [
                 { label: "Reading wagering requirements", href: "/guides/reading-wagering-requirements" },
                 { label: "KYC thresholds, explained", href: "/guides/kyc-thresholds-explained" },
+                { label: "How crypto withdrawals work", href: "/crypto-casino-withdrawals-explained" },
                 { label: "How we review", href: "/how-we-rate" },
               ],
             },

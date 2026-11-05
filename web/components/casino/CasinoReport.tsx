@@ -481,6 +481,10 @@ export function CasinoReport({ e }: { e: EntityView }) {
             <Tile label="Min deposit" value={shortAmount(minDep)} f={minDep} />
             <Tile label={maxDepositTile(o.slug).label} value={maxDepositTile(o.slug).value} f={maxDep} />
           </div>
+          <p style={{ margin: "12px 0 0", fontSize: 14, color: "#8E9CA4" }}>
+            How {o.name} compares:{" "}
+            <Link href="/crypto-casino-withdrawals-explained" style={{ fontWeight: 600, color: "#C9D3D8" }}>withdrawal times, limits and fees at every crypto casino →</Link>
+          </p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", gap: 16, marginTop: 16 }}>
             <Card>
               <div style={{ fontSize: 15, fontWeight: 700, color: "#F2F5F7", marginBottom: 12 }}>
