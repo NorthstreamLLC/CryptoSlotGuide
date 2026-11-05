@@ -10,6 +10,7 @@
  * provider, market (sports/esports betting markets — /betting/[slug]).
  */
 import { siteData } from "./site-data";
+import { hasPromoPage } from "./promo-pages";
 import { slotReview } from "./slot-reviews";
 import { flag } from "./scoring";
 import { isStaleReading } from "./derived";
@@ -158,6 +159,11 @@ function unconfirmed(k: string): SpecRow {
 
 
 /** `fullTable` returns every row of a studio's titles (for its numbered title pages) instead of the first page. */
+/** A cited value as a sentence: capitalised, ending in a full stop. */
+const sentence = (t: string) => { const x = t.trim().replace(/^./, (c) => c.toUpperCase()); return /[.!?)"]$/.test(x) ? x : `${x}.`; };
+/** The first sentence of a cited value (FAQ answers stay short; the full wording is in the fact table). */
+const firstSentence = (t: string) => sentence(t.split(/(?<=[.;])\s+(?=[A-Z])/)[0].replace(/;$/, ""));
+
 export function getEntityView(type: EntityType, slug: string, opts: { fullTable?: boolean } = {}): EntityView | null {
   const { ops, slots, walletRows, exchangeRows, providers, coinsBy, rtpWatch, watchOps } = siteData;
 
@@ -681,6 +687,10 @@ export function getEntityView(type: EntityType, slug: string, opts: { fullTable?
   // The operator's own full coin list when cited (can include coins beyond the 8 we track), else our tracked list.
   const coinCount = coinsFact?.chips?.length ?? coins.length;
   const kycFact = getSpecFact(o.slug, "Compliance", "KYC policy");
+  const expiryFact = getSpecFact(o.slug, "Bonus terms", "Expiry");
+  const limitsFact = getSpecFact(o.slug, "Payouts & fees", "Withdrawal limits");
+  /** A code a reader can type (a referral hash is carried by the link, not typed). */
+  const typeCode = o.affiliate && o.signupUrl && o.promoCode && /^[A-Za-z]{3,14}$/.test(o.promoCode) ? o.promoCode : null;
   const onChain =
     siteData.onChainVolume.find((e) => e.operatorSlug === o.slug)?.sources.find((x) => x.source === "FairGambling" && x.metric === "30-day deposit volume") ??
     siteData.onChainVolume.find((e) => e.operatorSlug === o.slug)?.sources.find((x) => x.metric === "30-day deposit volume");
@@ -807,6 +817,42 @@ export function getEntityView(type: EntityType, slug: string, opts: { fullTable?
       ...(!licenceFact ? ["No licence details published"] : /no gaming licence/i.test(licenceFact.value ?? "") ? ["No gaming licence stated on its own site"] : /no licence number/i.test(licenceFact.value ?? "") ? ["No licence number shown on its own site"] : []),
     ],
     faqs: [
+      // The questions people search for first: the welcome bonus, the code and
+      // withdrawal time (Search Console, November 2026). Every answer is the
+      // casino's own cited wording, so it moves when the fact sheet does.
+      ...(offerFact?.value
+        ? [o.noDepositBonus && typeCode && o.codePerk?.text
+            ? {
+                // A welcome package that only comes with a code (Roobet's ELITE): lead with it.
+                q: `What is the ${o.name} welcome bonus?`,
+                a: `With code ${typeCode}: ${sentence(o.codePerk.text)} Without a code, ${o.name} runs no deposit bonus; its standing rewards are: ${firstSentence(offerFact.value)}`,
+                ...(hasPromoPage(o.slug) ? { href: `/promo-codes/${o.slug}`, hrefLabel: "How to claim it" } : {}),
+              }
+            : o.noDepositBonus
+            ? {
+                q: `Does ${o.name} have a welcome bonus?`,
+                a: `No deposit bonus. Instead: ${firstSentence(offerFact.value)}`,
+                ...(hasPromoPage(o.slug) ? { href: `/promo-codes/${o.slug}`, hrefLabel: "What our code adds" } : {}),
+              }
+            : {
+                q: `What is the ${o.name} welcome bonus?`,
+                a: [firstSentence(offerFact.value), wagerFact?.value ? `Wagering: ${firstSentence(wagerFact.value)}` : null, expiryFact?.value ? `Time limit: ${firstSentence(expiryFact.value)}` : null].filter(Boolean).join(" "),
+                ...(hasPromoPage(o.slug) ? { href: `/promo-codes/${o.slug}`, hrefLabel: "How to claim it" } : {}),
+              }]
+        : []),
+      ...(typeCode && hasPromoPage(o.slug)
+        ? [{
+            q: `Is there a ${o.name} bonus code?`,
+            a: `Yes: ${typeCode}. Our sign-up link opens ${o.name} with it attached.${o.codePerk?.text && !o.noDepositBonus ? ` ${sentence(o.codePerk.text)}` : ""}`,
+            href: `/promo-codes/${o.slug}`,
+            hrefLabel: `How code ${typeCode} works`,
+          }]
+        : []),
+      { q: `How long do ${o.name} withdrawals take?`, a: (checked && o.payoutObserved
+          ? `${/^instant/i.test(o.payoutObserved) ? "Instant" : o.payoutObserved} across the withdrawals we made on our own account.`
+          : statedPayout
+          ? `${o.name} says: "${statedPayout.value}".`
+          : `${o.name} doesn't publish a withdrawal time; it depends on the coin, network confirmations and your verification level.`) + (limitsFact?.value ? ` Limits: ${firstSentence(limitsFact.value)}` : "") },
       {
         q: `Is ${o.name} available in my country?`,
         a: `${o.name} restricts a list of jurisdictions under its ${o.licence} licence, and separately, your own country decides whether you may play at all. Check both: the restricted list in its terms, and the law where you live.`,
@@ -818,11 +864,6 @@ export function getEntityView(type: EntityType, slug: string, opts: { fullTable?
       },
       { q: "Do I have to complete KYC?", a: kycFact ? `${o.name}'s terms: ${kycFact.value}.` : `${o.name} doesn't publish a KYC policy, so expect document checks before larger withdrawals.` },
       { q: "What does wagering actually mean?", a: wagerFact ? `${o.name}'s bonus terms say: ${wagerFact.value}. A 40× requirement on a $100 credit means $4,000 of bets before withdrawal; 1× means $100.` : "Wagering is how many times a bonus must be bet before it can be withdrawn — 40× on a $100 credit means $4,000 of bets. This operator doesn't publish a fixed figure." },
-      { q: "How fast are withdrawals really?", a: checked && o.payoutObserved
-          ? `${/^instant/i.test(o.payoutObserved) ? "Instant" : o.payoutObserved} across the withdrawals we made on our own account.`
-          : statedPayout
-          ? `${o.name} says: "${statedPayout.value}".`
-          : `${o.name} doesn't publish a withdrawal time; it depends on the coin, network confirmations and your verification level.` },
     ],
     signupUrl: o.signupUrl,
     affiliate: o.affiliate,
