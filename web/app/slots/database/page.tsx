@@ -14,11 +14,29 @@ import { siteData } from "@/lib/site-data";
 const MONO = "var(--font-jetbrains-mono), monospace";
 const t = catalogueTotals();
 
-export const metadata = pageMetadata(
-  "Slot database: RTP, volatility and max win for every slot we track",
-  `Published RTP, volatility and max-win ceiling for ${t.slots.toLocaleString()} slots from ${t.studios} studios, each figure as the studio publishes it. Filter by studio, RTP band or volatility.`,
-  "/slots/database"
-);
+const FILTERS = ["q", "studio", "vol", "rtp", "versions", "demo", "sort"] as const;
+
+/**
+ * Seven filters and 140-odd result pages make tens of thousands of URLs, and
+ * crawlers were working through them. Only the unfiltered list is indexed:
+ * page 1 at /slots/database and each later page at its own ?page=N (so every
+ * slot stays reachable). Any filtered or searched view is noindex and points
+ * at the main page; robots.ts also keeps crawlers out of those URLs, and the
+ * filter links below are nofollow.
+ */
+export async function generateMetadata({ searchParams }: { searchParams: Promise<Record<string, string | undefined>> }) {
+  const sp = await searchParams;
+  const filtered = FILTERS.some((k) => sp[k]);
+  const page = Number(sp.page) > 1 ? Math.floor(Number(sp.page)) : 1;
+  const base = pageMetadata(
+    page > 1 && !filtered ? `Slot database, page ${page}: RTP, volatility and max win` : "Slot database: RTP, volatility and max win for every slot we track",
+    `Published RTP, volatility and max-win ceiling for ${t.slots.toLocaleString()} slots from ${t.studios} studios, each figure as the studio publishes it. Filter by studio, RTP band or volatility.`,
+    filtered ? "/slots/database" : page > 1 ? `/slots/database?page=${page}` : "/slots/database",
+    undefined,
+    { noindex: filtered }
+  );
+  return base;
+}
 
 /** Rebuilds the current URL with one filter changed, so every control is a link. */
 function href(cur: SlotQuery, patch: Partial<SlotQuery>): string {
@@ -148,28 +166,28 @@ export default async function Page({ searchParams }: { searchParams: Promise<Rec
         </form>
 
         <div style={{ display: "flex", gap: 7, flexWrap: "wrap", marginBottom: 10 }}>
-          <Link href={href(q, { rtp: undefined, page: 1 })} style={chip(!q.rtp)}>All RTP</Link>
-          <Link href={href(q, { rtp: "high", page: 1 })} style={chip(q.rtp === "high")}>96%+</Link>
-          <Link href={href(q, { rtp: "mid", page: 1 })} style={chip(q.rtp === "mid")}>94–96%</Link>
-          <Link href={href(q, { rtp: "low", page: 1 })} style={chip(q.rtp === "low")}>Under 94%</Link>
-          <Link href={href(q, { versions: q.versions === "1" ? undefined : "1", page: 1 })} style={chip(q.versions === "1")}>
+          <Link rel="nofollow" href={href(q, { rtp: undefined, page: 1 })} style={chip(!q.rtp)}>All RTP</Link>
+          <Link rel="nofollow" href={href(q, { rtp: "high", page: 1 })} style={chip(q.rtp === "high")}>96%+</Link>
+          <Link rel="nofollow" href={href(q, { rtp: "mid", page: 1 })} style={chip(q.rtp === "mid")}>94–96%</Link>
+          <Link rel="nofollow" href={href(q, { rtp: "low", page: 1 })} style={chip(q.rtp === "low")}>Under 94%</Link>
+          <Link rel="nofollow" href={href(q, { versions: q.versions === "1" ? undefined : "1", page: 1 })} style={chip(q.versions === "1")}>
             Multiple RTP versions ({t.multiVersion.toLocaleString()})
           </Link>
-          <Link href={href(q, { demo: q.demo === "1" ? undefined : "1", page: 1 })} style={chip(q.demo === "1")}>
+          <Link rel="nofollow" href={href(q, { demo: q.demo === "1" ? undefined : "1", page: 1 })} style={chip(q.demo === "1")}>
             Playable demo ({t.withDemo.toLocaleString()})
           </Link>
           <span style={{ width: 12 }} />
           {vols.map((v) => (
-            <Link key={v.name} href={href(q, { vol: q.vol === v.name ? undefined : v.name, page: 1 })} style={chip(q.vol === v.name)}>
+            <Link rel="nofollow" key={v.name} href={href(q, { vol: q.vol === v.name ? undefined : v.name, page: 1 })} style={chip(q.vol === v.name)}>
               {v.name} ({v.count.toLocaleString()})
             </Link>
           ))}
         </div>
 
         <div style={{ display: "flex", gap: 7, flexWrap: "wrap", marginBottom: 18 }}>
-          <Link href={href(q, { studio: undefined, page: 1 })} style={chip(!q.studio)}>All studios</Link>
+          <Link rel="nofollow" href={href(q, { studio: undefined, page: 1 })} style={chip(!q.studio)}>All studios</Link>
           {studios.slice(0, 14).map((s) => (
-            <Link key={s.name} href={href(q, { studio: q.studio === s.name ? undefined : s.name, page: 1 })} style={chip(q.studio === s.name)}>
+            <Link rel="nofollow" key={s.name} href={href(q, { studio: q.studio === s.name ? undefined : s.name, page: 1 })} style={chip(q.studio === s.name)}>
               {s.name} ({s.count})
             </Link>
           ))}
@@ -186,7 +204,7 @@ export default async function Page({ searchParams }: { searchParams: Promise<Rec
           </p>
           <div style={{ display: "flex", gap: 7, flexWrap: "wrap" }}>
             {[["popular", "Popular"], ["rtp", "RTP high"], ["rtp-low", "RTP low"], ["maxwin", "Max win"], ["new", "Newest"], ["name", "A–Z"]].map(([k, label]) => (
-              <Link key={k} href={href(q, { sort: k === "popular" ? undefined : k, page: 1 })} style={chip((q.sort ?? "popular") === k)}>{label}</Link>
+              <Link rel="nofollow" key={k} href={href(q, { sort: k === "popular" ? undefined : k, page: 1 })} style={chip((q.sort ?? "popular") === k)}>{label}</Link>
             ))}
           </div>
         </div>
