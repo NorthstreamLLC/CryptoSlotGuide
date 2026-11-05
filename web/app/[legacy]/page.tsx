@@ -5,8 +5,11 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { LEGACY_ITEMS, legacyBySlug, legacyPosts } from "@/lib/legacy";
 import { Article } from "@/components/legacy/Article";
 
+/** Old posts rebuilt as their own pages at the same address; their route takes over. */
+const REBUILT = new Set(["crypto-casino-withdrawals-explained"]);
+
 export function generateStaticParams() {
-  return LEGACY_ITEMS.map((i) => ({ legacy: i.slug }));
+  return LEGACY_ITEMS.filter((i) => !REBUILT.has(i.slug)).map((i) => ({ legacy: i.slug }));
 }
 
 export const dynamicParams = false;
