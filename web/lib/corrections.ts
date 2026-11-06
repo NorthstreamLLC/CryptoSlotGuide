@@ -7,6 +7,13 @@ export type Correction = { date: string; page: string; href: string; wrong: stri
 
 export const CORRECTIONS: Correction[] = [
   {
+    date: "2026-11-06",
+    page: "Curaçao licence register counts",
+    href: "/legal/curacao-licence-tracker",
+    wrong: "We said 296 of the 666 licences on the Curaçao Gaming Authority's register dated 30 October 2026 read \"Assessment in progress\" (297 on the 20 October register). Our count missed rows the register spells \"Assessment In progress\".",
+    fixed: "The counts are 298 on the 30 October register and 299 on the 20 October one. The news issue, the Stake, Duelbits and BetFury pages and the comparisons now say so.",
+  },
+  {
     date: "2026-11-02",
     page: "Three older guides",
     href: "/blog",

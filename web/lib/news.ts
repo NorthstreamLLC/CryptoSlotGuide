@@ -109,9 +109,9 @@ export const NEWS: NewsIssue[] = [
       {
         slug: "stake",
         kind: "licence",
-        headline: "Curaçao's latest register: 296 licences still \"assessment in progress\"",
-        before: "The register of 20 October listed 297 of 666 licences as \"Assessment in progress\".",
-        after: "On the register of 30 October it's 296. Stake, Duelbits and BetFury are among them, each past its listed expiry date, while Roobet's and Shuffle's licences are listed as \"Indefinite\", with no expiry.",
+        headline: "Curaçao's latest register: 298 licences still \"assessment in progress\"",
+        before: "The register of 20 October listed 299 of 666 licences as \"Assessment in progress\".",
+        after: "On the register of 30 October it's 298. Stake, Duelbits and BetFury are among them, each past its listed expiry date, while Roobet's and Shuffle's licences are listed as \"Indefinite\", with no expiry.",
         group: "Compliance",
         label: "Register check",
       },

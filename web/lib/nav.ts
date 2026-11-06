@@ -379,6 +379,7 @@ function rawNavTabs(c: SiteCounts): NavTab[] {
               title: "The law",
               links: [
                 { label: "Gambling law, every country", href: "/legal" },
+                { label: "Curaçao licence tracker", href: "/legal/curacao-licence-tracker" },
                 { label: "All crypto casinos", href: "/crypto-casinos" },
                 { label: "By coin", href: "/crypto-casinos/accepting/bitcoin" },
               ],

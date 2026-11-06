@@ -37,7 +37,7 @@ export const FACT_ARTICLES: Record<string, FactArticle> = {
       {
         icon: "🏛️",
         title: "Its licence reads \"assessment in progress\"",
-        body: "Medium Rare N.V. holds licence OGL/2024/1451/0918 on the Curaçao Gaming Authority's register dated 30 October 2026. The listed expiry, 9 June 2026, has passed and the status reads \"Assessment in progress\", the same as 296 of the 666 licences on the list. Stake's own footer shows no licence number.",
+        body: "Medium Rare N.V. holds licence OGL/2024/1451/0918 on the Curaçao Gaming Authority's register dated 30 October 2026. The listed expiry, 9 June 2026, has passed and the status reads \"Assessment in progress\", the same as 298 of the 666 licences on the list. Stake's own footer shows no licence number.",
         group: "Compliance",
         label: "Register check",
       },
@@ -447,7 +447,7 @@ export const FACT_ARTICLES: Record<string, FactArticle> = {
       {
         icon: "🏛️",
         title: "Its Curaçao licence reads \"assessment in progress\"",
-        body: "Liquid Entertainment N.V. holds licence OGL/2024/1507/0838. On the Curaçao Gaming Authority's register dated 30 October 2026, its listed expiry of 24 December 2025 has passed and the status reads \"Assessment in progress\", as it does for 296 of the 666 licences listed.",
+        body: "Liquid Entertainment N.V. holds licence OGL/2024/1507/0838. On the Curaçao Gaming Authority's register dated 30 October 2026, its listed expiry of 24 December 2025 has passed and the status reads \"Assessment in progress\", as it does for 298 of the 666 licences listed.",
         group: "Compliance",
         label: "Register check",
       },
@@ -939,7 +939,7 @@ export const FACT_ARTICLES: Record<string, FactArticle> = {
       {
         icon: "🏛️",
         title: "Its Curaçao licence reads \"assessment in progress\"",
-        body: "Universe B Games B.V. holds licence OGL/2024/1494/0942. On the Curaçao Gaming Authority's register dated 30 October 2026, its listed expiry of 31 July 2026 has passed and the status reads \"Assessment in progress\", as it does for 296 of the 666 licences listed.",
+        body: "Universe B Games B.V. holds licence OGL/2024/1494/0942. On the Curaçao Gaming Authority's register dated 30 October 2026, its listed expiry of 31 July 2026 has passed and the status reads \"Assessment in progress\", as it does for 298 of the 666 licences listed.",
         group: "Compliance",
         label: "Register check",
       },
@@ -3619,10 +3619,10 @@ export const FACT_ARTICLES: Record<string, FactArticle> = {
       },
       {
         "icon": "🏛️",
-        "title": "It holds Curaçao licence OGL/2024/1260/0494",
-        "body": "Rollbit lists licence OGL/2024/1260/0494 from the Curaçao Gaming Authority.",
+        "title": "Its Curaçao licence is listed as expired, under appeal",
+        "body": "Rollbit lists licence OGL/2024/1260/0494, held by Bull Gaming N.V. On the Curaçao Gaming Authority's register dated 30 October 2026, its listed expiry of 23 May 2026 has passed and its status reads \"Expired. Re-evaluating in administrative appeal.\"",
         "group": "Compliance",
-        "label": "Licence"
+        "label": "Register check"
       },
       {
         "icon": "📈",

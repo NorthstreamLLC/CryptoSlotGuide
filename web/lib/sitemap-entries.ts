@@ -81,6 +81,7 @@ const STATIC_ROUTES = [
   "/casinos/facts",
   "/news",
   "/rakeback-casinos",
+  "/legal/curacao-licence-tracker",
   "/play-with-kevin-hart",
   "/slots/best-crypto-slot-sites",
   "/how-to/blackjack",
