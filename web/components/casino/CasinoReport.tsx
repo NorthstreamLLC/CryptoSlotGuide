@@ -32,6 +32,8 @@ import { ReportIssue } from "@/components/ui/ReportIssue";
 import { CodeOffer } from "@/components/ui/CodeOffer";
 import { PaymentPartners } from "@/components/ui/PaymentPartners";
 import { latestNewsFor, newsPath } from "@/lib/news";
+import { firstHandTest } from "@/lib/first-hand-tests";
+import { FirstHandTest } from "@/components/casino/FirstHandTest";
 
 /**
  * The casino player report: what a player compares (offer, rewards, money
@@ -257,10 +259,12 @@ export function CasinoReport({ e }: { e: EntityView }) {
 
   const rivals = rivalPairs(o.slug, 6);
   const news = latestNewsFor(o.slug);
+  const tested = firstHandTest(o.slug);
 
   const nav = [
     ["bonuses", "Bonuses & rewards"],
     ["banking", "Deposits & withdrawals"],
+    ...(tested ? [["tested", "Our test"]] : []),
     ...(o.sports ? [["sportsbook", "Sportsbook"]] : []),
     ["trust", "Licence & safety"],
     ["sources", "All facts"],
@@ -515,6 +519,8 @@ export function CasinoReport({ e }: { e: EntityView }) {
             </Card>}
           </div>
         </Section>
+
+        {tested && <FirstHandTest t={tested} name={o.name} brand={brand} />}
 
         {/* SPORTSBOOK */}
         {o.sports && (
