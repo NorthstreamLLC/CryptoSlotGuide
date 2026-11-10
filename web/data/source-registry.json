@@ -1,0 +1,51 @@
+{
+  "about": "Who owns which source hosts, for scripts/import-articles.mjs. Casino-owned hosts are derived from the sourceUrl hosts already cited in casinoSpecSheets.json, minus everything listed under excludedHosts, sharedHosts and the non-casino owners below. Add or change an entry only after checking who runs the site, in a reviewed commit (see docs/article-import.md).",
+  "discoveryHosts": [
+    "x.com",
+    "twitter.com",
+    "reddit.com",
+    "t.me",
+    "telegram.org",
+    "discord.com",
+    "discord.gg",
+    "youtube.com",
+    "facebook.com",
+    "instagram.com",
+    "tiktok.com",
+    "medium.com",
+    "substack.com",
+    "bitcointalk.org",
+    "trustpilot.com",
+    "slotessentials.com"
+  ],
+  "excludedHosts": [
+    "dafc.co.uk",
+    "bf1.io"
+  ],
+  "sharedHosts": [
+    "intercom.help",
+    "amazonaws.com",
+    "ctfassets.net",
+    "cloudfront.net",
+    "googleusercontent.com",
+    "github.io",
+    "notion.site",
+    "gitbook.io"
+  ],
+  "owners": [
+    { "id": "bluff", "kind": "casino", "name": "Bluff", "domains": [], "sharedPaths": [{ "host": "intercom.help", "prefix": "playlink" }] },
+    { "id": "thrill", "kind": "casino", "name": "Thrill", "domains": [], "sharedPaths": [{ "host": "intercom.help", "prefix": "thrill" }] },
+    { "id": "duelbits", "kind": "casino", "name": "Duelbits", "domains": [], "sharedPaths": [{ "host": "intercom.help", "prefix": "duelbits-help" }] },
+    { "id": "rainbet", "kind": "casino", "name": "Rainbet", "domains": [], "sharedPaths": [{ "host": "intercom.help", "prefix": "rainbet" }] },
+    { "id": "curacao-gaming-authority", "kind": "regulator", "name": "Curaçao Gaming Authority", "domains": ["cga.cw", "gamingcontrol.spin-cdn.com"], "sharedPaths": [] },
+    { "id": "anjouan-gaming-board", "kind": "regulator", "name": "Anjouan Gaming Board", "domains": ["anjouangamingboard.org"], "sharedPaths": [] },
+    { "id": "tobique-gaming-commission", "kind": "regulator", "name": "Tobique Gaming Commission", "domains": ["thetgc.ca"], "sharedPaths": [] },
+    { "id": "uk-gambling-commission", "kind": "regulator", "name": "UK Gambling Commission", "domains": ["gamblingcommission.gov.uk"], "sharedPaths": [] },
+    { "id": "malta-gaming-authority", "kind": "regulator", "name": "Malta Gaming Authority", "domains": ["mga.org.mt"], "sharedPaths": [] },
+    { "id": "pragmatic-play", "kind": "studio", "name": "Pragmatic Play", "domains": ["pragmaticplay.com"], "sharedPaths": [] },
+    { "id": "hacksaw-gaming", "kind": "studio", "name": "Hacksaw Gaming", "domains": ["hacksawgaming.com"], "sharedPaths": [] },
+    { "id": "nolimit-city", "kind": "studio", "name": "Nolimit City", "domains": ["nolimitcity.com"], "sharedPaths": [] },
+    { "id": "evolution", "kind": "studio", "name": "Evolution", "domains": ["evolution.com"], "sharedPaths": [] },
+    { "id": "playn-go", "kind": "studio", "name": "Play'n GO", "domains": ["playngo.com"], "sharedPaths": [] }
+  ]
+}

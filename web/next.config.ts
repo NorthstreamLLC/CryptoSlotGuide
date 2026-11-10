@@ -11,6 +11,11 @@ const nextConfig: NextConfig = {
   // framing, plugins and <base>, which nothing here relies on.
   async headers() {
     return [
+      // Vercel Preview builds (branch drafts) stay out of search indexes. Vercel
+      // already sends this on preview URLs; this is a backstop that never applies
+      // to production, where VERCEL_ENV is "production". noindex does not make a
+      // preview private: access protection is a Vercel project setting.
+      ...(process.env.VERCEL_ENV === "preview" ? [{ source: "/:path*", headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }] }] : []),
       {
         source: "/:path*",
         headers: [

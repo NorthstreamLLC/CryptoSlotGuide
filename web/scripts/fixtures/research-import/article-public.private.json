@@ -1,0 +1,9 @@
+{
+  "type": "article_private",
+  "storyId": "synthetic-fixture-public",
+  "revision": 1,
+  "editorialNotes": "PRIVATE: synthetic sidecar note.",
+  "x": {
+    "post": "Synthetic X draft from a sidecar."
+  }
+}

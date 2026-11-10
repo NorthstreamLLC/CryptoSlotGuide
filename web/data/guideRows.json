@@ -7,7 +7,7 @@
     "standfirst": "The Curaçao Gaming Authority says someone got into its licensing portal for about ten months and published licence holders' data. It has shut that portal for good and is moving the licence register and footer seals to a new system. What the regulator said, and how to check a casino's licence meanwhile.",
     "category": "News",
     "readMins": 4,
-    "updated": "20 Oct"
+    "updated": "2026-10-20"
   },
   {
     "slug": "gamdom-offline-security-incident-october-2026",
@@ -17,7 +17,7 @@
     "standfirst": "Gamdom took every system offline in October 2026 after finding an unauthorised connection on one of its servers, then came back with compensation offers. What Gamdom said, in its own words, and what to check on your account.",
     "category": "News",
     "readMins": 3,
-    "updated": "16 Oct"
+    "updated": "2026-10-16"
   },
   {
     "slug": "roo-jackpots-explained",
@@ -27,7 +27,7 @@
     "standfirst": "Roobet now lets you add $0.10 to $5 to every bet for a shot at four jackpots, the top one over $1 million. Its own terms say the side bet returns 80% on average. Here is what that means per bet.",
     "category": "Bonuses",
     "readMins": 4,
-    "updated": "13 Oct"
+    "updated": "2026-10-13"
   },
   {
     "slug": "brazil-ban-crypto-casino-restricted-lists",
@@ -37,7 +37,7 @@
     "standfirst": "Two weeks after Provisional Measure 1.394, we read the restricted list of every crypto casino we track. Most still leave Brazil off. One says Brazilian players are welcome.",
     "category": "Law",
     "readMins": 4,
-    "updated": "20 Oct"
+    "updated": "2026-10-20"
   },
   {
     "slug": "brazil-bans-sports-betting-and-online-casinos",
@@ -47,7 +47,7 @@
     "standfirst": "A provisional measure of 25 September 2026 prohibits fixed-odds betting nationwide. The licensed .bet.br sites went offline on 6 October. Here is what it covers, the timetable, and what it means for crypto casinos.",
     "category": "Law",
     "readMins": 4,
-    "updated": "5 Oct"
+    "updated": "2026-10-05"
   },
   {
     "slug": "how-to-deposit-crypto",
@@ -57,7 +57,7 @@
     "standfirst": "The network you pick matters more than the coin. Pick wrong and the money is gone.",
     "category": "Crypto",
     "readMins": 7,
-    "updated": "1 Oct"
+    "updated": "2026-10-01"
   },
   {
     "slug": "how-to-sign-up",
@@ -67,7 +67,7 @@
     "standfirst": "Four decisions made in the first two minutes, three of which you cannot undo.",
     "category": "Accounts",
     "readMins": 6,
-    "updated": "1 Oct"
+    "updated": "2026-10-01"
   },
   {
     "slug": "how-to-complete-kyc",
@@ -77,7 +77,7 @@
     "standfirst": "Check you are eligible first, then verify early — not at cash-out.",
     "category": "Accounts",
     "readMins": 7,
-    "updated": "1 Oct"
+    "updated": "2026-10-01"
   },
   {
     "slug": "what-is-kyc",
@@ -87,7 +87,7 @@
     "standfirst": "All {casinos} say something about verification. Only one says it never asks.",
     "category": "Accounts",
     "readMins": 6,
-    "updated": "30 Sep"
+    "updated": "2026-09-30"
   },
   {
     "slug": "how-casino-rtp-versions-work",
@@ -97,7 +97,7 @@
     "standfirst": "Why the same slot pays differently at two casinos",
     "category": "Slots",
     "readMins": 7,
-    "updated": "21 Aug"
+    "updated": "2026-08-21"
   },
   {
     "slug": "reading-wagering-requirements",
@@ -107,7 +107,7 @@
     "standfirst": "Turning a 40× headline into the number that matters",
     "category": "Bonuses",
     "readMins": 6,
-    "updated": "19 Aug"
+    "updated": "2026-08-19"
   },
   {
     "slug": "kyc-thresholds-explained",
@@ -117,7 +117,7 @@
     "standfirst": "What triggers a document request, and when",
     "category": "Accounts",
     "readMins": 5,
-    "updated": "18 Aug"
+    "updated": "2026-08-18"
   },
   {
     "slug": "depositing-over-lightning",
@@ -127,7 +127,7 @@
     "standfirst": "When channel capacity becomes the limit",
     "category": "Crypto",
     "readMins": 4,
-    "updated": "16 Sep"
+    "updated": "2026-09-16"
   },
   {
     "slug": "who-pays-the-network-fee",
@@ -137,7 +137,7 @@
     "standfirst": "Some operators cover it, others deduct it, and the chain matters more",
     "category": "Crypto",
     "readMins": 4,
-    "updated": "16 Sep"
+    "updated": "2026-09-16"
   },
   {
     "slug": "sportsbook-margin-explained",
@@ -147,7 +147,7 @@
     "standfirst": "How overround is computed, and why one market is not enough",
     "category": "Betting",
     "readMins": 8,
-    "updated": "16 Sep"
+    "updated": "2026-09-16"
   },
   {
     "slug": "bankroll-separation",
@@ -157,7 +157,7 @@
     "standfirst": "Hot wallet, cold wallet, and what stays on-site",
     "category": "Wallets",
     "readMins": 6,
-    "updated": "10 Aug"
+    "updated": "2026-08-10"
   },
   {
     "slug": "our-scoring-sheet",
@@ -167,6 +167,6 @@
     "standfirst": "The six areas every profile covers, and where each fact comes from",
     "category": "Method",
     "readMins": 9,
-    "updated": "16 Sep"
+    "updated": "2026-09-16"
   }
 ]
