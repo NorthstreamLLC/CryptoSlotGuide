@@ -1,4 +1,5 @@
 import { siteData } from "./site-data";
+import { guideIso as guideIsoOf } from "./guide-dates";
 import { getSpecFact } from "./spec-sheet";
 import { raceFor } from "./races";
 import { slotArtBySlug } from "./slot-page";
@@ -29,12 +30,7 @@ export interface Notif {
   until?: number;
 }
 
-/** guideRows.json's "updated" ("16 Sep") as an ISO date; every guide was last passed in 2026. */
-function guideIso(d: string): string | undefined {
-  const m = /^(\d{1,2}) ([A-Z][a-z]{2})$/.exec(d.trim());
-  const mon = m ? "JanFebMarAprMayJunJulAugSepOctNovDec".indexOf(m[2]) / 3 + 1 : 0;
-  return m && mon >= 1 ? `2026-${String(mon).padStart(2, "0")}-${m[1].padStart(2, "0")}` : undefined;
-}
+const guideIso = (d: string) => guideIsoOf(d) ?? undefined;
 
 export function buildNotifications(): Notif[] {
   const out: Notif[] = [];

@@ -302,6 +302,7 @@ export interface GuideRow {
   standfirst: string;
   category: string;
   readMins: number;
+  /** Last full pass: ISO "2026-11-10", or "16 Sep" on rows written in 2026 (read through lib/guide-dates.ts). */
   updated: string;
 }
 
@@ -323,6 +324,8 @@ export interface GuideBody {
   next?: { href: string; label: string; hint: string }[];
   /** No casino offers on this guide: one about a country's ban, say, which an offer would undercut. */
   noPartners?: boolean;
+  /** Straight reporting by default; "analysis" and "opinion" pieces are labelled above the headline. */
+  contentType?: "news" | "analysis" | "opinion";
 }
 /** Keyed by guide slug. */
 export type GuideBodies = Record<string, GuideBody>;

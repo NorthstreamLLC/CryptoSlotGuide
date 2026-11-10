@@ -1,4 +1,5 @@
 import { VERSUS_ANALYSIS } from "@/lib/versus-analysis";
+import { guideIso } from "@/lib/guide-dates";
 import { NEWS } from "@/lib/news";
 import { watchEntries } from "@/lib/casino-changewatch";
 import { coinSlug } from "@/lib/coins";
@@ -186,6 +187,10 @@ export function lastModifiedOf(path: string): string | undefined {
     const an = VERSUS_ANALYSIS[m[1]];
     const factDate = (c: { slug: string; group: string; label: string }) => getCasinoSpecSheet(c.slug)?.groups.find((g) => g.title === c.group)?.facts.find((f) => f.label === c.label)?.asOf;
     return an ? newest([an.published, ...an.sections.flatMap((x) => x.cite.map(factDate))]) : undefined;
+  }
+  if ((m = path.match(/^\/guides\/([^/]+)$/))) {
+    const g = siteData.guideRows.find((r) => r.slug === m![1]);
+    return g ? guideIso(g.updated) ?? undefined : undefined;
   }
   if ((m = path.match(/^\/news\/(.+)$/))) return NEWS.find((n) => n.month === m![1])?.published;
   if (path === "/news") return NEWS[0]?.published;

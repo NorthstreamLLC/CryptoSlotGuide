@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { siteData } from "@/lib/site-data";
 import { fill } from "@/lib/derived";
 import { pageMetadata } from "@/lib/seo";
+import { guideIso } from "@/lib/guide-dates";
 import { articleSchema, breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { NextSteps } from "@/components/layout/NextSteps";
@@ -44,12 +45,10 @@ function emphasise(text: string) {
   );
 }
 
-/** guideRows.json's "updated" ("16 Sep") as an ISO date; every guide was last passed in 2026. */
-function updatedIso(d: string): string | null {
-  const m = /^(\d{1,2}) ([A-Z][a-z]{2})$/.exec(d.trim());
-  const mon = m ? "JanFebMarAprMayJunJulAugSepOctNovDec".indexOf(m[2]) / 3 + 1 : 0;
-  return m && mon >= 1 ? `2026-${String(mon).padStart(2, "0")}-${m[1].padStart(2, "0")}` : null;
-}
+const updatedIso = guideIso;
+
+/** Shown above the headline on pieces that aren't straight reporting. */
+const TYPE_LABEL = { analysis: "Analysis", opinion: "Opinion" } as const;
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -93,6 +92,9 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           <GuideCover category={g.category} tint={g.tint} label={false} rounded={0} />
         </div>
         <div style={{ marginBottom: 14 }}>
+          {body.contentType && body.contentType !== "news" && (
+            <span style={{ display: "inline-block", marginRight: 10, padding: "2px 8px", borderRadius: 6, fontSize: 12, fontWeight: 700, letterSpacing: ".02em", color: "#FFC531", background: "rgba(255,197,49,.12)" }}>{TYPE_LABEL[body.contentType]}</span>
+          )}
           <span style={{ fontSize: 12.5, fontWeight: 600, color: "#00C2CC" }}>{g.category} · {g.readMins} min read</span>
         </div>
         <h1 style={{ margin: "0 0 18px", fontSize: 44, lineHeight: 1.06, letterSpacing: "-.035em", fontWeight: 700, color: "#fff", textWrap: "balance" }}>{g.title}</h1>

@@ -10,6 +10,7 @@
  * 2894-2900) are all exchanges now present in exchangeRows.json.
  */
 import { siteData } from "./site-data";
+import { guideLabel } from "./guide-dates";
 import { topSlotRows, slotArtBySlug, catalogueFallback, studioCatalogue, studioThumbs } from "./slot-page";
 import { slotEssentialsStudio } from "./slotessentials";
 import { topStudioRank } from "./top-studios";
@@ -402,7 +403,7 @@ export function getVerticalPage(kind: VerticalKind, tabIdx = 0): VerticalPage {
       note: fill(g.standfirst, siteData),
       m1: g.category,
       m2: `${g.readMins} min`,
-      m3: `${g.updated} 2026`,
+      m3: guideLabel(g.updated),
       stat: "—",
       cta: "Read guide",
       href: `/guides/${g.slug}`,
