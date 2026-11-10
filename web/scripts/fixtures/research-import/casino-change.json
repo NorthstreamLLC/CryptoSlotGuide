@@ -1,0 +1,12 @@
+{
+  "type": "casino_change",
+  "casino": "goated",
+  "topic": "welcome_offer",
+  "summary": "Synthetic summary: this fixture describes no real change.",
+  "after_quote": "Synthetic quoted wording.",
+  "source_url": "https://goated.com/synthetic-page",
+  "source_published": null,
+  "event_date": null,
+  "verified_at": "2026-11-10T12:00:00Z",
+  "confidence": "medium"
+}

@@ -1,7 +1,7 @@
 "use client";
 
 import { bonusWithWager } from "@/lib/wager";
-import { guideLabel } from "@/lib/guide-dates";
+import { guideShort } from "@/lib/guide-dates";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { liteData as siteData } from "@/lib/site-lite";
@@ -68,7 +68,7 @@ export function SearchPage({ initialQuery = "" }: { initialQuery?: string }) {
         label: "Guides",
         items: guideRows
           .filter((r) => hit(r.title) || hit(r.standfirst))
-          .map((r) => ({ name: r.title, note: `${r.category} · ${r.readMins} min read`, meta: guideLabel(r.updated), href: `/guides/${r.slug}` })),
+          .map((r) => ({ name: r.title, note: `${r.category} · ${r.readMins} min read`, meta: guideShort(r.updated), href: `/guides/${r.slug}` })),
       },
     ];
     return g.filter((grp) => grp.items.length);

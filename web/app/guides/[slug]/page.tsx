@@ -47,8 +47,15 @@ function emphasise(text: string) {
 
 const updatedIso = guideIso;
 
-/** Shown above the headline on pieces that aren't straight reporting. */
-const TYPE_LABEL = { analysis: "Analysis", opinion: "Opinion" } as const;
+/**
+ * What kind of piece it is, above the headline: imported articles always say,
+ * older guides (no contentType) show no label. Opinion and analysis stand out.
+ */
+const TYPE_LABEL = {
+  news: { text: "News", c: "#5FE3E8", bg: "rgba(95,227,232,.12)" },
+  analysis: { text: "Analysis", c: "#FFC531", bg: "rgba(255,197,49,.12)" },
+  opinion: { text: "Opinion", c: "#FF9F5A", bg: "rgba(255,159,90,.14)" },
+} as const;
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -92,10 +99,14 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           <GuideCover category={g.category} tint={g.tint} label={false} rounded={0} />
         </div>
         <div style={{ marginBottom: 14 }}>
-          {body.contentType && body.contentType !== "news" && (
-            <span style={{ display: "inline-block", marginRight: 10, padding: "2px 8px", borderRadius: 6, fontSize: 12, fontWeight: 700, letterSpacing: ".02em", color: "#FFC531", background: "rgba(255,197,49,.12)" }}>{TYPE_LABEL[body.contentType]}</span>
+          {body.contentType && TYPE_LABEL[body.contentType] && (
+            <span style={{ display: "inline-block", marginRight: 10, padding: "2px 8px", borderRadius: 6, fontSize: 12, fontWeight: 700, letterSpacing: ".02em", color: TYPE_LABEL[body.contentType].c, background: TYPE_LABEL[body.contentType].bg }}>{TYPE_LABEL[body.contentType].text}</span>
           )}
-          <span style={{ fontSize: 12.5, fontWeight: 600, color: "#00C2CC" }}>{g.category} · {g.readMins} min read</span>
+          <span style={{ fontSize: 12.5, fontWeight: 600, color: "#00C2CC" }}>
+            {/* "News · News" says nothing twice; drop the category when the label already says it. */}
+            {body.contentType && TYPE_LABEL[body.contentType]?.text === g.category ? "" : `${g.category} · `}
+            {g.readMins} min read
+          </span>
         </div>
         <h1 style={{ margin: "0 0 18px", fontSize: 44, lineHeight: 1.06, letterSpacing: "-.035em", fontWeight: 700, color: "#fff", textWrap: "balance" }}>{g.title}</h1>
         <p style={{ margin: "0 0 26px", fontSize: 19, lineHeight: 1.6, color: "#B7C4CB", textWrap: "pretty" }}>{fill(g.standfirst, siteData)}</p>

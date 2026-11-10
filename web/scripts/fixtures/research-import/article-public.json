@@ -1,0 +1,56 @@
+{
+  "schemaVersion": "1.0",
+  "storyId": "synthetic-fixture-public",
+  "revision": 1,
+  "status": "draft",
+  "contentType": "news",
+  "slug": "synthetic-fixture-public",
+  "headline": "Synthetic fixture: not a real article",
+  "excerpt": "A synthetic package for trying the importer with --dry-run. It describes no real event and must never be imported for real.",
+  "keyPoints": [
+    "This fixture exists only to exercise the importer."
+  ],
+  "body": [
+    "Synthetic opening paragraph.",
+    "## Synthetic subheading",
+    "Synthetic paragraph with **bold** text."
+  ],
+  "category": "News",
+  "tags": [
+    "synthetic"
+  ],
+  "cover": {
+    "mono": "SY",
+    "tint": "#6FB7FF"
+  },
+  "readMins": 2,
+  "dates": {
+    "published": "2026-11-10",
+    "events": [
+      {
+        "what": "Synthetic event with an unknown date",
+        "date": null
+      }
+    ]
+  },
+  "sources": [
+    {
+      "label": "Synthetic regulator document",
+      "url": "https://www.cga.cw/en/synthetic-document",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-10T12:00:00Z",
+      "primary": true
+    }
+  ],
+  "verification": {
+    "status": "verified",
+    "checkedAt": "2026-11-10T12:00:00Z"
+  },
+  "next": [
+    {
+      "href": "/legal/curacao-licence-tracker",
+      "label": "Curaçao licence tracker",
+      "hint": "The latest documented licence information."
+    }
+  ]
+}

@@ -302,7 +302,7 @@ export interface GuideRow {
   standfirst: string;
   category: string;
   readMins: number;
-  /** Last full pass: ISO "2026-11-10", or "16 Sep" on rows written in 2026 (read through lib/guide-dates.ts). */
+  /** Last full pass, as an ISO date ("2026-11-10"); display forms come from lib/guide-dates.ts. */
   updated: string;
 }
 

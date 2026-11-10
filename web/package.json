@@ -20,7 +20,9 @@
     "audit:geo": "node scripts/audit-partner-geo.mjs",
     "import:games": "node scripts/import-games.mjs",
     "watch:sources": "node scripts/watch-sources.mjs",
-    "check:copy": "node scripts/check-no-borrowed-copy.mjs"
+    "check:copy": "node scripts/check-no-borrowed-copy.mjs",
+    "import:articles": "node scripts/import-articles.mjs",
+    "test:import": "node --test scripts/test-import-articles.mjs"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
