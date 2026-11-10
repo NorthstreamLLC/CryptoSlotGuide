@@ -123,7 +123,7 @@ export function Header({ counts, navTabs, notifs = [] }: { counts: SiteCounts; n
                   setMenu(tab.key);
                   setRail(0);
                 }}
-                className="hover:!text-white"
+                className="hover:!text-white csg-nav-tab"
                 style={{
                   display: "flex",
                   alignItems: "center",

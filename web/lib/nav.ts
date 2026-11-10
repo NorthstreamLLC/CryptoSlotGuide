@@ -59,6 +59,9 @@ const sweepsFeature = (kicker: string): NavFeature | undefined => {
 };
 const sweepsLinks = (): NavLink[] => sweepsSorted().slice(0, 5).map((x) => ({ label: x.name, href: `/sweepstakes-casinos/${x.slug}`, brand: x.slug }));
 import { flagSrc } from "./flags";
+import { newsArticles } from "./news-articles";
+import { guideShort } from "./guide-dates";
+import { NEWS, newsPath } from "./news";
 import { coinHref } from "./coins";
 import { sportsOffers, sportsOnlyRaces, sportsBoosts, sportsbookHref, sportsPick } from "./sports";
 import { rankedBrands } from "./us-brands";
@@ -147,7 +150,7 @@ export interface NavColumn {
 }
 
 export interface NavTab {
-  key: "gambling" | "where" | "licensed" | "casinos" | "bonuses" | "slots" | "countries" | "legal" | "sports" | "predict" | "crypto" | "more";
+  key: "gambling" | "where" | "licensed" | "casinos" | "bonuses" | "slots" | "countries" | "legal" | "news" | "sports" | "predict" | "crypto" | "more";
   label: string;
   sections: NavSection[];
   /** The tab's own page: clicking the label goes there; hovering opens the menu. */
@@ -886,6 +889,29 @@ const LICENSED_LABEL: Record<string, string> = {
 /** Links that are tools rather than lists; they live under More → Tools. */
 const TOOL_HREFS = new Set(["/compare", "/find-my-casino", "/bonus-terms-decoder", "/casino-changewatch", "/vip-calculator"]);
 
+/** The News tab: the newest articles, then the monthly roundup and the trackers that update each month. */
+function newsSection(): NavSection {
+  const latest = newsArticles().slice(0, 5);
+  return {
+    mono: "📰",
+    label: "News",
+    tint: "#FF9CC6",
+    href: "/news",
+    columns: [
+      { title: "Latest", links: latest.map((g) => ({ label: g.title, href: `/guides/${g.slug}`, note: guideShort(g.updated) })) },
+      {
+        title: "Every month",
+        links: [
+          ...(NEWS[0] ? [{ label: "What changed this month", href: newsPath(NEWS[0].month), note: NEWS[0].title.replace(/^.*?:\s*/, "") }] : []),
+          { label: "All news", href: "/news" },
+          { label: "Curaçao licence tracker", href: "/legal/curacao-licence-tracker" },
+          { label: "Bonus true-cost index", href: "/bonuses/true-cost-index" },
+        ],
+      },
+    ],
+  };
+}
+
 export function buildNavTabs(c: SiteCounts): NavTab[] {
   const raw = rawNavTabs(c);
   const tab = (key: string) => raw.find((t) => t.key === key);
@@ -971,6 +997,7 @@ export function buildNavTabs(c: SiteCounts): NavTab[] {
     { key: "bonuses", label: "Bonuses", href: "/bonuses", sections: [bonusSection, codesSection, racesSection, liveSection].filter((s): s is NavSection => !!s) },
     { key: "slots", label: "Slots", href: "/slots", sections: [sec("Slots & RTP"), sec("Game providers")].filter((s): s is NavSection => !!s) },
     { key: "legal", label: "Is it legal?", href: "/legal", sections: legal },
+    { key: "news", label: "News", href: "/news", sections: [newsSection()] },
     { key: "more", label: "More", sections: more },
   ];
   return out.filter((t) => t.sections.length);
