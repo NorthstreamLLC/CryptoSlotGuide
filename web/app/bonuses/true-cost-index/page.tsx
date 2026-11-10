@@ -222,7 +222,7 @@ export default function Page() {
             })}
           </div>
           <p style={{ margin: "14px 0 0", fontSize: 13, lineHeight: 1.6, color: "#75828A" }}>
-            Assumes the full match on a ${DEPOSIT} first deposit and that you finish the wagering. The expected cost is an average: any single run can win or lose far more, and busting early ends the wagering for less. Game weighting, max-bet and max-cashout rules (in each row) can make a bonus worth less still.
+            Assumes the full match on a ${DEPOSIT} first deposit and that you finish the wagering. The expected cost is an average: any single run can win or lose far more, and busting early ends the wagering for less. Game weighting, max-bet and max-cashout rules (in each row) can make a bonus worth less still. To run your own deposit or RTP, use the <Link href="/bonus-terms-decoder" style={{ color: "#5FE3E8" }}>bonus terms decoder</Link>.
           </p>
         </section>
 
