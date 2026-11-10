@@ -305,6 +305,7 @@ function rawNavTabs(c: SiteCounts): NavTab[] {
                 { label: "All tracked bonuses", href: "/bonuses" },
                 { label: "Best rakeback casinos", href: "/rakeback-casinos" },
                 { label: "Casinos by lowest wagering", href: "/lowest-wagering" },
+                { label: "Bonus true-cost index", href: "/bonuses/true-cost-index" },
                 { label: "No-KYC casinos", href: "/crypto-casinos/no-kyc" },
               ],
             },
