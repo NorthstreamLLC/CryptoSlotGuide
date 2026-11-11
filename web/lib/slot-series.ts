@@ -94,6 +94,42 @@ export const SLOT_SERIES: SlotSeries[] = [
     tint: "#FF7EB6",
     hero: "sugar-rush",
   },
+  {
+    slug: "5-lions",
+    name: "5 Lions",
+    studio: "Pragmatic Play",
+    match: /^5 lions\b/i,
+    blurb: "Pragmatic Play's lion-dance series, with an East Asian festival theme and medium volatility throughout. In the original, the free spins let you trade fewer spins for bigger multipliers; the Megaways, Gold, Dance and Reborn editions rework the grid around the same lions.",
+    tint: "#FF6B6B",
+    hero: "5-lions",
+  },
+  {
+    slug: "floating-dragon",
+    name: "Floating Dragon",
+    studio: "Pragmatic Play",
+    match: /^floating dragon\b/i,
+    blurb: "Pragmatic Play's Chinese dragon series. The original pairs free spins with a Hold & Spin feature built on money symbols; later editions add Megaways grids and festival themes.",
+    tint: "#FFC531",
+    hero: "floating-dragon",
+  },
+  {
+    slug: "wolf-gold",
+    name: "Wolf Gold",
+    studio: "Pragmatic Play",
+    match: /^wolf gold\b/i,
+    blurb: "Pragmatic Play's desert-canyon series around the wolf. Its Money Respin collects moon symbols carrying cash values, with three fixed jackpots on top; the 4 Pack, Ultimate and 1 Million editions build on that.",
+    tint: "#5FA8FF",
+    hero: "wolf-gold",
+  },
+  {
+    slug: "money-train",
+    name: "Money Train",
+    studio: "Relax Gaming",
+    match: /^money train\b/i,
+    blurb: "Relax Gaming's Wild West train-heist series. Its Money Cart bonus round fills the reels with value symbols and character symbols that change them, and each sequel has raised the top prize.",
+    tint: "#C7A45C",
+    hero: "money-train",
+  },
 ];
 
 export const seriesPath = (s: SlotSeries) => `/slots/series/${s.slug}`;
