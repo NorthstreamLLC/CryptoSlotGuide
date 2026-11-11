@@ -12,6 +12,8 @@ import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
 import { CasinoRankList } from "@/components/casino-index/CasinoRankList";
 import { LineIcon } from "@/components/ui/LineIcon";
 import { KevinStrip } from "@/components/promo/KevinStrip";
+import { StakeWheelStrip } from "@/components/promo/StakeWheelStrip";
+import { wheelWarsLive } from "@/lib/stake-wheel-wars";
 import { kevinLive } from "@/lib/kevin-promo";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { getSpecFact } from "@/lib/spec-sheet";
@@ -329,6 +331,11 @@ export default function HomePage() {
         <div className="h-wrap">
           <div style={{ paddingTop: 28 }}>
             {kevinLive() ? <KevinStrip className="h-strip" fallback={jackpotStrip} /> : jackpotStrip}
+            {wheelWarsLive() && (
+              <div style={{ marginTop: 10 }}>
+                <StakeWheelStrip className="h-strip" />
+              </div>
+            )}
           </div>
 
           {/* Top casinos */}

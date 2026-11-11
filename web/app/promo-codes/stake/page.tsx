@@ -13,6 +13,7 @@ import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
 import { SpecFactCard } from "@/components/promo/SourcedCard";
 import { VersusStrip } from "@/components/compare/VersusStrip";
 import { EmailSignup } from "@/components/ui/EmailSignup";
+import { wheelWarsLive, WHEEL_DROPS, SATURDAY_TOURNAMENT, WHEEL_WARS_SOURCE } from "@/lib/stake-wheel-wars";
 
 const SLUG = "stake";
 const GOLD = "#FFC531";
@@ -122,6 +123,52 @@ export default function Page() {
           ))}
         </div>
       </section>
+
+      {wheelWarsLive() && (
+        <section id="wheel-wars" style={{ maxWidth: 1180, margin: "0 auto", padding: "48px 24px 0", scrollMarginTop: 120 }}>
+          <h2 style={{ margin: "0 0 6px", fontSize: 28, letterSpacing: "-.03em", fontWeight: 700, color: "#fff" }}>Stake Wheel Wars, until 2 January 2027</h2>
+          <p style={{ margin: "0 0 18px", maxWidth: "70ch", fontSize: 15.5, lineHeight: 1.6, color: "#A8B6BE" }}>
+            A Pragmatic Play promotion at Stake with what Stake describes as $150,000 in monthly prizes. It runs from 19 July 2026 at 00:01 UTC to 2 January 2027 at 23:59 UTC, and it is open to everyone at Stake, code or not.{" "}
+            <a href={WHEEL_WARS_SOURCE} target="_blank" rel="noopener noreferrer nofollow" style={{ fontSize: 13, color: "#5FE3E8" }}>stake.com ↗</a>
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2" style={{ gap: 12, marginBottom: 12 }}>
+            <div style={{ padding: 20, borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.08)" }}>
+              <div style={{ fontSize: 16.5, fontWeight: 700, color: "#fff", marginBottom: 6 }}>1. Play a participating game</div>
+              <p style={{ margin: 0, fontSize: 14, lineHeight: 1.55, color: "#A8B6BE" }}>Bet on any participating Pragmatic Play game; there is no minimum bet. The full list and terms are in Pragmatic Play&apos;s promotion lobby inside the games.</p>
+            </div>
+            <div style={{ padding: 20, borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.08)" }}>
+              <div style={{ fontSize: 16.5, fontWeight: 700, color: "#fff", marginBottom: 6 }}>2. Win a wheel drop, qualify for Saturday</div>
+              <p style={{ margin: 0, fontSize: 14, lineHeight: 1.55, color: "#A8B6BE" }}>Winning a Weekly Wheel Drop pays a multiple of your bet and makes you eligible for that week&apos;s Saturday Tournament.</p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2" style={{ gap: 12 }}>
+            {[
+              { title: "Weekly Wheel Drops", head: ["Prizes", "Prize"], rows: WHEEL_DROPS.map(([n, p]) => [n.toLocaleString("en-US"), `${p} your bet`]) },
+              { title: "Saturday Tournament", head: ["Position", "Prize"], rows: SATURDAY_TOURNAMENT.map(([pos, p]) => [pos, p]) },
+            ].map((t) => (
+              <div key={t.title} style={{ padding: "18px 20px", borderRadius: 14, background: "#0C1013", border: "1px solid rgba(255,255,255,.08)" }}>
+                <div style={{ fontSize: 16, fontWeight: 700, color: "#fff", marginBottom: 10 }}>{t.title}</div>
+                <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14, color: "#DCE3E7", fontVariantNumeric: "tabular-nums" }}>
+                  <thead>
+                    <tr>{t.head.map((h) => <th key={h} style={{ textAlign: "left", padding: "6px 0", fontSize: 12, fontWeight: 600, color: "#75828A", borderBottom: "1px solid rgba(255,255,255,.08)" }}>{h}</th>)}</tr>
+                  </thead>
+                  <tbody>
+                    {t.rows.map(([a, b]) => (
+                      <tr key={a}>
+                        <td style={{ padding: "6px 0", borderBottom: "1px solid rgba(255,255,255,.05)" }}>{a}</td>
+                        <td style={{ padding: "6px 0", borderBottom: "1px solid rgba(255,255,255,.05)" }}>{b}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            ))}
+          </div>
+          <p style={{ margin: "12px 0 0", fontSize: 13, lineHeight: 1.6, color: "#7F8D96" }}>
+            Stake and Pragmatic Play say they can amend, suspend or cancel the promotion at any time. Prize tables as Stake states them on its promotions page.
+          </p>
+        </section>
+      )}
 
       <section style={{ maxWidth: 1180, margin: "0 auto", padding: "48px 24px 0" }}>
         <h2 style={{ margin: "0 0 6px", fontSize: 28, letterSpacing: "-.03em", fontWeight: 700, color: "#fff" }}>What the code unlocks, and what runs for everyone</h2>
