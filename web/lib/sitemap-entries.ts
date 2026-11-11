@@ -1,4 +1,5 @@
 import { VERSUS_ANALYSIS } from "@/lib/versus-analysis";
+import { publishedSeries, seriesPath } from "@/lib/slot-series";
 import { guideIso } from "@/lib/guide-dates";
 import { NEWS } from "@/lib/news";
 import { watchEntries } from "@/lib/casino-changewatch";
@@ -49,6 +50,7 @@ const STATIC_ROUTES = [
   "/slots/database",
   "/slots/bonus-buy",
   "/slots/megaways",
+  "/slots/series",
   "/slots/jackpot",
   "/slots/cluster-pays",
   "/slots/high-volatility",
@@ -105,6 +107,8 @@ export function sitemapPaths(): string[] {
     // The catalogue titles that earn their own page — see lib/slot-page.ts for
     // the bar. Separate from `slots`, which is the hand-written reviews.
     ...cataloguePageSlugs().map((sl) => slugPath("/slots", sl)),
+    // Slot series with enough titles to stand as a page (lib/slot-series.ts).
+    ...publishedSeries().map(seriesPath),
     // US-regulated brands — only those a regulator actually lists, matching
     // the route's own generateStaticParams.
     ...rankedBrands().map(({ brand }) => slugPath("/us-casinos", brand.slug)),

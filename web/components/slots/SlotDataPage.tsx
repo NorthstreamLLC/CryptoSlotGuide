@@ -1,5 +1,6 @@
 import type React from "react";
 import { SlotNextStep } from "@/components/ui/NextStep";
+import { seriesForSlot, seriesPath } from "@/lib/slot-series";
 import Link from "next/link";
 import Image from "next/image";
 import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
@@ -41,6 +42,7 @@ export function SlotDataPage({ g, review }: { g: CatalogueSlotPage; review?: Rea
   const art = publishableArt(g);
   const specs = slotSpecs(g);
   const studio = g.provider ?? "the studio";
+  const series = g.provider ? seriesForSlot(g.name, g.provider) : null;
   const src = rtpSource(g);
   const approvals = approvalsFor(g.slug ?? "");
   const pick = isTopSlot(g.slug ?? "");
@@ -64,6 +66,12 @@ export function SlotDataPage({ g, review }: { g: CatalogueSlotPage; review?: Rea
               <Link href={studioHref(g.provider) as string} style={{ color: "#83919A" }}>{studio}</Link>
             ) : (
               <span>{studio}</span>
+            )}
+            {series && (
+              <>
+                <span style={{ margin: "0 8px" }}>/</span>
+                <Link href={seriesPath(series)} style={{ color: "#83919A" }}>{series.name} series</Link>
+              </>
             )}
             {slotEssentialsStudio(g.provider) && (
               <a href={slotEssentialsStudio(g.provider) as string} target="_blank" rel="noopener" style={{ marginLeft: 12, color: "#5FE3E8" }}>

@@ -96,6 +96,7 @@ export function SlotsHub() {
     { icon: "coin", label: "Jackpot slots", href: "/slots/jackpot", tint: "#57E39A" },
     { icon: "grid", label: "Cluster pays", href: "/slots/cluster-pays", tint: "#2FD3DA" },
     { icon: "lock", label: "Hold & Win", href: "/slots/hold-and-win", tint: "#FF7EB6" },
+    { icon: "sparkle", label: "By series", href: "/slots/series", tint: "#B79CFF" },
     { icon: "building", label: "By studio", href: "/providers", tint: "#5FA8FF" },
     { icon: "search", label: `All ${totals.slots.toLocaleString()} slots`, href: "/slots/database", tint: "#C9D3D8" },
   ];
@@ -192,8 +193,9 @@ export function SlotsHub() {
             <span className="sh-muted">Every list is built from the studios&apos; own game pages.</span>
           </div>
           <div className="sh-ways">
-            {ways.map((w) => (
-              <Link key={w.label} href={w.href} className="sh-way" style={{ ["--tint" as string]: w.tint }}>
+            {ways.map((w, i) => (
+              // The last tile ("All N slots") spans the row, so an odd count never leaves it stranded.
+              <Link key={w.label} href={w.href} className="sh-way" style={{ ["--tint" as string]: w.tint, ...(i === ways.length - 1 ? { gridColumn: "1 / -1" } : {}) }}>
                 <span className="sh-ico"><LineIcon name={w.icon} /></span>
                 <b>{w.label}</b>
                 <i aria-hidden>→</i>

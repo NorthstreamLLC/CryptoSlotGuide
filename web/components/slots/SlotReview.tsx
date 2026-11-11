@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { SlotNextStep } from "@/components/ui/NextStep";
+import { seriesForSlot, seriesPath } from "@/lib/slot-series";
 import Image from "next/image";
 import type { SlotReview as Review } from "@/lib/slot-reviews";
 import { REVIEW_BYLINE, reviewDate } from "@/lib/slot-reviews";
@@ -38,6 +39,7 @@ function Score({ value }: { value: number }) {
 }
 
 export function SlotReview({ slug, review, facts }: { slug: string; review: Review; facts: SlotReviewFacts }) {
+  const series = facts.studio ? seriesForSlot(facts.name, facts.studio) : null;
   const host = (() => {
     if (!review.featureSource) return null;
     try {
@@ -64,6 +66,11 @@ export function SlotReview({ slug, review, facts }: { slug: string; review: Revi
               {facts.name}: our verdict
             </h2>
             <p style={{ margin: 0, fontSize: 16.5, lineHeight: 1.6, color: "#C9D3D9", maxWidth: "70ch", textWrap: "pretty" }}>{review.verdict}</p>
+            {series && (
+              <p style={{ margin: "12px 0 0", fontSize: 14 }}>
+                <Link href={seriesPath(series)} style={{ fontWeight: 600, color: "#5FE3E8" }}>Every game in the {series.name} series →</Link>
+              </p>
+            )}
           </div>
           {facts.art && (
             <Image

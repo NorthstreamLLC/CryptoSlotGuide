@@ -230,6 +230,7 @@ function rawNavTabs(c: SiteCounts): NavTab[] {
                 { label: "Best crypto slot sites", href: "/slots/best-crypto-slot-sites" },
                 { label: "Slot database", href: "/slots/database" },
                 { label: "Slots by studio", href: "/providers" },
+                { label: "Slots by series", href: "/slots/series" },
                 { label: "How casino RTP versions work", href: "/guides/how-casino-rtp-versions-work" },
               ],
             },
