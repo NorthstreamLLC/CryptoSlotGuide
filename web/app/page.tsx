@@ -3,7 +3,8 @@ import { ogCardPath } from "@/lib/og";
 import { siteData, siteCounts } from "@/lib/site-data";
 import { brandFor, casinoFacts } from "@/lib/casino-facts";
 import { inHouseOrder } from "@/lib/house-order";
-import { topSlotRows } from "@/lib/slot-page";
+import { topSlotRows, slotArtBySlug } from "@/lib/slot-page";
+import { publishedSeries, seriesPath, seriesRows } from "@/lib/slot-series";
 import { SITE_URL, SITE_NAME } from "@/lib/seo";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { itemListSchema } from "@/lib/schema";
@@ -217,6 +218,12 @@ export default function HomePage() {
     </Link>
   ) : null;
 
+  // The four best-known series for the homepage row; the rest are one click away.
+  const homeSeries = ["gates-of-olympus", "big-bass", "sweet-bonanza", "le-series"]
+    .map((slug) => publishedSeries().find((x) => x.slug === slug))
+    .filter((x): x is NonNullable<typeof x> => !!x)
+    .map((x) => ({ s: x, art: slotArtBySlug(x.hero), count: seriesRows(x).length }));
+
   const rank = { perk: 0, welcome: 1, rewards: 2 } as const;
   const codes = inHouseOrder(ops.filter((o) => PROMO_PAGES.includes(o.slug) && PROMO_HUB[o.slug] && o.promoCode && o.signupUrl))
     .sort((a, b) => rank[PROMO_HUB[a.slug].kind] - rank[PROMO_HUB[b.slug].kind])
@@ -424,6 +431,32 @@ export default function HomePage() {
                 ))}
             </div>
           </section>
+
+          {/* Slot series */}
+          {homeSeries.length > 0 && (
+            <section className="h-sec">
+              <div className="h-head">
+                <h2 className="h-h2">Slot series</h2>
+                <Link href="/slots/series" className="h-more">All {publishedSeries().length} series →</Link>
+              </div>
+              <div className="h-slots">
+                {homeSeries.map(({ s, art, count }) => (
+                  <Link key={s.slug} href={seriesPath(s)} className="h-slot">
+                    <span className="h-slot-art">
+                      {art && (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img src={art} alt={`${s.name} game art`} width={320} height={200} loading="lazy" decoding="async" />
+                      )}
+                    </span>
+                    <b>{s.name}</b>
+                    <small>
+                      {s.studio} · {count} games
+                    </small>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
 
           {/* Facts */}
           {facts.length > 0 && (
