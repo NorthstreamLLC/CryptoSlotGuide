@@ -7,6 +7,7 @@ import { LandingShell } from "@/components/landing/LandingShell";
 import { TitlesTable } from "@/components/studios/TitlesTable";
 import { NextSteps } from "@/components/layout/NextSteps";
 import { publishedSeries, seriesBySlug, seriesRows, seriesStats, seriesPath, seriesTitle } from "@/lib/slot-series";
+import { slotArtBySlug } from "@/lib/slot-page";
 
 export function generateStaticParams() {
   return publishedSeries().map((s) => ({ slug: s.slug }));
@@ -35,6 +36,8 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   if (rows.length < 3) notFound();
   const st = seriesStats(rows);
   const others = publishedSeries().filter((x) => x.slug !== s.slug);
+  const art = slotArtBySlug(s.hero);
+  const heroName = rows.find((r) => r.slug === s.hero)?.name ?? s.name;
 
   return (
     <>
@@ -49,6 +52,14 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         eyebrow={`${s.studio} · slot series`}
         title={seriesTitle(s)}
         intro={s.blurb}
+        aside={
+          art ? (
+            <div style={{ position: "relative", borderRadius: 18, overflow: "hidden", border: `1px solid ${s.tint}55`, boxShadow: `0 30px 80px rgba(0,0,0,.5), 0 0 60px ${s.tint}22`, aspectRatio: "16 / 10", background: "#0C1013" }}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={art} alt={`${heroName} game art`} width={1000} height={625} fetchPriority="high" style={{ display: "block", width: "100%", height: "100%", objectFit: "cover" }} />
+            </div>
+          ) : undefined
+        }
       >
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 12, marginBottom: 22 }}>
           {[

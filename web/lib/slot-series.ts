@@ -25,6 +25,8 @@ export interface SlotSeries {
   /** Page heading, where "<name> slots" reads badly. */
   title?: string;
   tint: string;
+  /** The title whose art fronts the page. */
+  hero: string;
 }
 
 export const SLOT_SERIES: SlotSeries[] = [
@@ -35,6 +37,7 @@ export const SLOT_SERIES: SlotSeries[] = [
     match: /^gates of olympus\b/i,
     blurb: "Pragmatic Play's Greek-mythology series, with Zeus beside the grid. The editions share one formula: symbols pay anywhere on the screen, winning symbols tumble away so new ones drop in, and multiplier symbols add up before a win is paid. Later editions keep it and change the ceiling, the bet options or the format.",
     tint: "#B79CFF",
+    hero: "gates-of-olympus",
   },
   {
     slug: "sweet-bonanza",
@@ -43,6 +46,7 @@ export const SLOT_SERIES: SlotSeries[] = [
     match: /^sweet bonanza\b/i,
     blurb: "Pragmatic Play's candy-themed series. Symbols pay anywhere on the grid and tumble away after each win, and multiplier bombs in the free spins add up before the win is paid. The newer editions keep the candy and raise the top prize.",
     tint: "#FF7EB6",
+    hero: "sweet-bonanza",
   },
   {
     slug: "le-series",
@@ -52,6 +56,7 @@ export const SLOT_SERIES: SlotSeries[] = [
     match: /^le [a-z]/i,
     blurb: "Hacksaw Gaming's character series, each title named for its lead: Le Bandit, Le King, Le Pharaoh, Le Viking, Le Zeus and the rest. Different settings, one family resemblance, and Hacksaw's own volatility ratings on each.",
     tint: "#57E39A",
+    hero: "le-bandit",
   },
   {
     slug: "starlight-princess",
@@ -60,6 +65,7 @@ export const SLOT_SERIES: SlotSeries[] = [
     match: /^starlight princess\b/i,
     blurb: "Pragmatic Play's anime-styled series. It runs on the same pay-anywhere, tumbling, multiplier formula as Gates of Olympus, with a princess in place of Zeus.",
     tint: "#FFC531",
+    hero: "starlight-princess",
   },
   {
     slug: "big-bass",
@@ -68,6 +74,25 @@ export const SLOT_SERIES: SlotSeries[] = [
     match: /^big bass\b/i,
     blurb: "Pragmatic Play's fishing series and one of its largest: in the free spins a fisherman collects the cash values of fish symbols that land with him. Seasonal, Megaways, Hold & Spinner and 1000 editions build on that.",
     tint: "#5FE3E8",
+    hero: "big-bass-bonanza",
+  },
+  {
+    slug: "the-dog-house",
+    name: "The Dog House",
+    studio: "Pragmatic Play",
+    match: /^the dog house\b/i,
+    blurb: "Pragmatic Play's dog-themed series. In the original, wilds that land in the free spins stick in place and carry multipliers; the Megaways and spin-off editions build different features around the same kennel.",
+    tint: "#FF9A5C",
+    hero: "the-dog-house",
+  },
+  {
+    slug: "sugar-rush",
+    name: "Sugar Rush",
+    studio: "Pragmatic Play",
+    match: /^sugar rush\b/i,
+    blurb: "Pragmatic Play's sweets series on a cluster-pays grid: groups of matching symbols win and burst, and the spots where they burst become multipliers that grow each time a win lands on them again.",
+    tint: "#FF7EB6",
+    hero: "sugar-rush",
   },
 ];
 

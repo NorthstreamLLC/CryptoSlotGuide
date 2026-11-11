@@ -4,7 +4,8 @@ import type { ReactNode } from "react";
 const MONO = "var(--font-jetbrains-mono), monospace";
 
 /** Shared frame for the generated landing pages (by country, by coin). */
-export function LandingShell({ crumbs, eyebrow, title, intro, chips, children }: { crumbs: { label: string; href?: string }[]; eyebrow: string; title: string; intro: ReactNode; chips?: string[]; children: ReactNode }) {
+/** `aside` sits to the right of the heading on wide screens and below it on narrow ones (a series' key art, say). */
+export function LandingShell({ crumbs, eyebrow, title, intro, chips, aside, children }: { crumbs: { label: string; href?: string }[]; eyebrow: string; title: string; intro: ReactNode; chips?: string[]; aside?: ReactNode; children: ReactNode }) {
   return (
     <main style={{ background: "#07090B" }}>
       <section data-reveal style={{ borderBottom: "1px solid rgba(255,255,255,.07)", background: "radial-gradient(80% 120% at 85% 0%, rgba(0,194,204,.10), transparent 55%), radial-gradient(60% 80% at 0% 100%, rgba(214,182,92,.07), transparent 60%), #0A0D10" }}>
@@ -17,6 +18,8 @@ export function LandingShell({ crumbs, eyebrow, title, intro, chips, children }:
               </span>
             ))}
           </div>
+          <div style={aside ? { display: "flex", flexWrap: "wrap", alignItems: "center", gap: "28px 48px" } : undefined}>
+          <div style={aside ? { flex: "1 1 460px", minWidth: 0 } : undefined}>
           <div style={{ fontFamily: MONO, fontSize: 11, letterSpacing: ".1em", textTransform: "uppercase", color: "#00C2CC", marginBottom: 12 }}>{eyebrow}</div>
           <h1 style={{ margin: "0 0 14px", fontSize: "clamp(34px, 4.4vw, 52px)", lineHeight: 1.03, letterSpacing: "-.035em", fontWeight: 800, fontStretch: "114%", color: "#fff", textWrap: "balance" }}>{title}</h1>
           <p style={{ margin: 0, maxWidth: "66ch", fontSize: 16.5, lineHeight: 1.6, color: "#A8B6BE" }}>{intro}</p>
@@ -27,6 +30,9 @@ export function LandingShell({ crumbs, eyebrow, title, intro, chips, children }:
               ))}
             </div>
           )}
+          </div>
+          {aside && <div style={{ flex: "0 1 520px", minWidth: 0, width: "100%" }}>{aside}</div>}
+          </div>
         </div>
       </section>
       <section style={{ maxWidth: 1400, margin: "0 auto", padding: "28px 24px 72px" }}>{children}</section>

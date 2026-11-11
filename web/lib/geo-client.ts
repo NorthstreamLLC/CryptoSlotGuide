@@ -10,6 +10,8 @@ export interface GeoAnswer {
   country?: string;
   countryName?: string | null;
   casinos?: { acceptsSlugs: string[]; restrictedSlugs: string[] };
+  /** Casinos that take the country but name the visitor's province or state, e.g. Ontario. */
+  regionBlocked?: { slug: string; name: string }[];
   alternatives?: { sweepstakes: number | null };
 }
 

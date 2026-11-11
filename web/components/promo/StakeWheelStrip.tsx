@@ -7,8 +7,8 @@ import { wheelWarsLive, WHEEL_WARS_PATH } from "@/lib/stake-wheel-wars";
 
 /**
  * Stake Wheel Wars as a one-line homepage strip. Hidden once the promotion
- * ends, and where Stake turns players away (Stake's restricted list via
- * /api/geo), the same rules as the Kevin Hart strip.
+ * ends, and where Stake turns players away: its restricted countries and the
+ * regions it names inside a country it otherwise takes (Ontario), via /api/geo.
  */
 export function StakeWheelStrip({ className }: { className?: string }) {
   const [hidden, setHidden] = useState(false);
@@ -20,7 +20,7 @@ export function StakeWheelStrip({ className }: { className?: string }) {
       if (live && !wheelWarsLive()) setHidden(true);
     });
     getGeo().then((g) => {
-      if (live && g?.detected && g.casinos?.restrictedSlugs?.includes("stake")) setHidden(true);
+      if (live && g?.detected && (g.casinos?.restrictedSlugs?.includes("stake") || g.regionBlocked?.some((r) => r.slug === "stake"))) setHidden(true);
     });
     return () => {
       live = false;
