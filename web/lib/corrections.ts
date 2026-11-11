@@ -7,6 +7,13 @@ export type Correction = { date: string; page: string; href: string; wrong: stri
 
 export const CORRECTIONS: Correction[] = [
   {
+    date: "2026-11-11",
+    page: "Razed: KYC",
+    href: "/casinos/razed",
+    wrong: "Razed was listed among our no-KYC casinos and its review said KYC is not required. Razed describes itself as a No-KYC casino, but its own AML policy says ID documents are requested when you withdraw.",
+    fixed: "Razed is now shown as requiring verification at withdrawal, as its AML policy says, and is no longer on the no-KYC list.",
+  },
+  {
     date: "2026-11-06",
     page: "Curaçao licence register counts",
     href: "/legal/curacao-licence-tracker",

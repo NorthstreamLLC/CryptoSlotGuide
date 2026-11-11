@@ -30,6 +30,7 @@ const STATIC_ROUTES = [
   "/",
   "/crypto-casinos",
   "/crypto-casinos/no-kyc",
+  "/crypto-casinos/kyc-tracker",
   "/fastest-payouts",
   "/lowest-wagering",
   "/races",

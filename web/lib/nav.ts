@@ -177,6 +177,7 @@ function rawNavTabs(c: SiteCounts): NavTab[] {
               links: [
                 { label: `All ${c.casinos} crypto casinos`, href: "/crypto-casinos" },
                 { label: "No-KYC casinos", href: "/crypto-casinos/no-kyc" },
+                { label: "KYC tracker", href: "/crypto-casinos/kyc-tracker" },
                 { label: "Fastest payouts", href: "/fastest-payouts" },
                 { label: "Facts about each casino", href: "/casinos/facts" },
                 { label: "What changed this month", href: "/news" },

@@ -24,7 +24,8 @@ export function NoKycSources() {
         <p style={{ margin: "0 0 18px", fontSize: 15, lineHeight: 1.6, color: "#A8B6BE" }}>
           &quot;No-KYC&quot; is a marketing label, not a licence category: every casino here reserves the right to ask for documents, usually at a threshold or before a withdrawal. Here is each one&apos;s own wording, linked to the page it comes from. Licences are checked on the regulator&apos;s own register, such as{" "}
           <a href="https://www.cga.cw/en/133i348441001" target="_blank" rel="noopener noreferrer" style={{ color: "#5FE3E8", fontWeight: 600 }}>Curaçao&apos;s</a> or{" "}
-          <a href="https://verification.anjouangamingboard.org" target="_blank" rel="noopener noreferrer" style={{ color: "#5FE3E8", fontWeight: 600 }}>Anjouan&apos;s</a>.
+          <a href="https://verification.anjouangamingboard.org" target="_blank" rel="noopener noreferrer" style={{ color: "#5FE3E8", fontWeight: 600 }}>Anjouan&apos;s</a>. For all 46 casinos sorted by when they ask, see the{" "}
+          <Link href="/crypto-casinos/kyc-tracker" style={{ color: "#5FE3E8", fontWeight: 600 }}>KYC tracker</Link>.
         </p>
         <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
           {rows.map(({ o, f }) => (
