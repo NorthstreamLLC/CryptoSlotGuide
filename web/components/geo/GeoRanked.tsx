@@ -12,7 +12,7 @@ import { getGeo } from "@/lib/geo-client";
  * stay with `note` after them, as every list on the site does: shown, and the
  * reader told before they click.
  */
-export function GeoRanked({ items, count, note = null }: { items: { slug: string; node: ReactNode }[]; count: number; /** Shown after the list when every candidate is shut to the visitor. */ note?: ReactNode }) {
+export function GeoRanked({ items, count, note = null, instead }: { items: { slug: string; node: ReactNode }[]; count: number; /** Shown after the list when every candidate is shut to the visitor. */ note?: ReactNode; /** Shown in place of the list when every candidate is shut: for a single button, where a button that cannot be used is worse than a different one. */ instead?: ReactNode }) {
   const [blocked, setBlocked] = useState<string[] | null>(null);
 
   useEffect(() => {
@@ -34,6 +34,7 @@ export function GeoRanked({ items, count, note = null }: { items: { slug: string
 
   const allowed = blocked ? items.filter((i) => !blocked.includes(i.slug)) : items;
   const allBlocked = !allowed.length;
+  if (allBlocked && instead) return <>{instead}</>;
   const shown = (allBlocked ? items : allowed).slice(0, count);
   return (
     <>

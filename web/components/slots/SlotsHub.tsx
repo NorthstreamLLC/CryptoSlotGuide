@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { siteData } from "@/lib/site-data";
-import { demoFor } from "@/lib/slot-demos";
+import { demoFor, demoTiles } from "@/lib/slot-demos";
 import { DemoPlay } from "@/components/slots/DemoPlay";
 import { topSlotRows, slotArtBySlug } from "@/lib/slot-page";
 import { catalogueTotals } from "@/lib/slot-db";
@@ -29,6 +29,14 @@ const CSS = `
 .sh-hero { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 56px; align-items: center; padding: 40px 0 64px; }
 .sh-h1 { margin: 0 0 18px; font-size: clamp(36px, 4.6vw, 54px); line-height: 1.04; letter-spacing: -.04em; font-weight: 700; color: #F7F9FA; text-wrap: balance; }
 .sh-lead { margin: 0 0 28px; max-width: 50ch; font-size: 17.5px; line-height: 1.6; color: #98A6AE; }
+.sh-demos { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; padding: 16px 18px; border-radius: 14px; border: 1px solid rgba(255,197,49,.35); background: linear-gradient(90deg, rgba(255,197,49,.12), rgba(255,197,49,.02) 70%), #0D1114; transition: border-color .15s, transform .15s; }
+.sh-demos:hover { border-color: #FFC531; transform: translateY(-1px); }
+.sh-demos-play { display: flex; align-items: center; justify-content: center; flex: none; width: 44px; height: 44px; border-radius: 50%; background: #FFC531; color: #141007; font-size: 16px; padding-left: 3px; box-shadow: 0 0 0 6px rgba(255,197,49,.18); }
+.sh-demos b { display: block; font-size: 16px; font-weight: 700; color: #F2F5F7; }
+.sh-demos small { display: block; margin-top: 2px; font-size: 13px; color: #98A6AE; }
+.sh-demos i { margin-left: auto; font-style: normal; color: #FFC531; }
+.sh-ctas { display: grid; grid-template-columns: 1fr auto; gap: 10px; align-items: center; }
+@media (max-width: 560px) { .sh-ctas { grid-template-columns: 1fr; } }
 .sh-btn { display: inline-flex; align-items: center; justify-content: center; padding: 13px 20px; border-radius: 11px; font-size: 15px; font-weight: 700; white-space: nowrap; transition: background .15s, border-color .15s, transform .15s; }
 .sh-btn:hover { transform: translateY(-1px); }
 .sh-light { background: #F2F5F7; color: #0A0D0F; }
@@ -86,6 +94,7 @@ export function SlotsHub() {
   const rows = topSlotRows();
   const top = rows[0];
   const topDemo = demoFor(top?.slug);
+  const demoCount = demoTiles().length;
   const art = top ? slotArtBySlug(top.slug) : null;
   const totals = catalogueTotals();
   const reviewed = [...siteData.slots].sort((a, b) => topSlotRank(a.slug) - topSlotRank(b.slug) || a.name.localeCompare(b.name));
@@ -142,7 +151,7 @@ export function SlotsHub() {
                     <div><small>Max win</small><b>{top.maxWin}</b></div>
                     <div><small>Volatility</small><b>{top.volatility}</b></div>
                   </div>
-                  <div style={{ display: "grid", gridTemplateColumns: "1fr auto", gap: 10, alignItems: "center" }} data-keep-grid>
+                  <div className="sh-ctas">
                     <Link href={`/slots/${top.slug}`} className="sh-btn sh-gold">Read the review</Link>
                     {/* Not a casino's own link: those turn some visitors away (every
                         partner refuses the US). Our page of slot sites shows each
@@ -196,6 +205,14 @@ export function SlotsHub() {
             <h2 className="sh-h2">How do you like to play?</h2>
             <span className="sh-muted">Every list is built from the studios&apos; own game pages.</span>
           </div>
+          <Link href="/slots/free-demos" className="sh-demos">
+            <span className="sh-demos-play" aria-hidden>▶</span>
+            <span>
+              <b>Play {demoCount} slots free, right here</b>
+              <small>The studio&apos;s own demo: play money, no account, no deposit. Open to everyone.</small>
+            </span>
+            <i aria-hidden>→</i>
+          </Link>
           <div className="sh-ways">
             {ways.map((w, i) => (
               // The last tile ("All N slots") spans the row, so an odd count never leaves it stranded.

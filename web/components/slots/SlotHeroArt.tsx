@@ -5,7 +5,6 @@ import { typeableCode } from "@/lib/promo-pages";
 import { GeoRanked } from "@/components/geo/GeoRanked";
 import { DemoPlay } from "@/components/slots/DemoPlay";
 import { demoFor } from "@/lib/slot-demos";
-import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
 
 /**
  * The right half of a slot page's hero: the game's own art, large, with its
@@ -69,7 +68,14 @@ export function SlotHeroArt({
         {picks.length ? (
           <GeoRanked
             count={1}
-            note={<GeoBlockNote slug={picks[0].o.slug} name={picks[0].o.name} compact none allOf={picks.map((p) => p.o.slug)} />}
+            // Where no partner takes the visitor, a button they can use: our
+            // slot-sites page, which shows what is open where they are.
+            instead={
+              <div className="sha-play">
+                <Link href="/slots/best-crypto-slot-sites" className="sha-cta">Play for real money →</Link>
+                <span className="sha-note">Where you can play from where you are</span>
+              </div>
+            }
             items={picks.map(({ o }) => {
               const code = typeableCode(o.slug, o.promoCode) ? o.promoCode : null;
               return {

@@ -232,6 +232,7 @@ function rawNavTabs(c: SiteCounts): NavTab[] {
                 { label: "Slot database", href: "/slots/database" },
                 { label: "Slots by studio", href: "/providers" },
                 { label: "Slots by series", href: "/slots/series" },
+                { label: "Free slot demos", href: "/slots/free-demos" },
                 { label: "How casino RTP versions work", href: "/guides/how-casino-rtp-versions-work" },
               ],
             },
