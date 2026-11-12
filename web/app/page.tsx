@@ -14,6 +14,10 @@ import { CasinoRankList } from "@/components/casino-index/CasinoRankList";
 import { LineIcon } from "@/components/ui/LineIcon";
 import { KevinStrip } from "@/components/promo/KevinStrip";
 import { StakeWheelStrip } from "@/components/promo/StakeWheelStrip";
+import { RunningNow } from "@/components/promo/RunningNow";
+import { GuideCover } from "@/components/guides/GuideCover";
+import { CGA_REGISTER } from "@/lib/curacao-register";
+import { fill } from "@/lib/derived";
 import { wheelWarsLive } from "@/lib/stake-wheel-wars";
 import { kevinLive } from "@/lib/kevin-promo";
 import { BrandMark } from "@/components/ui/BrandMark";
@@ -108,20 +112,34 @@ const CSS = `
 .h-path:hover i { transform: translateX(3px); color: var(--tint); }
 .h-path:hover b { color: #fff; }
 
-/* Latest: news and data releases beside this month's casino changes */
-.h-latest { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); gap: 16px; }
-.h-news { display: flex; flex-direction: column; gap: 10px; }
-.h-story { display: flex; flex-direction: column; gap: 6px; padding: 16px 18px; border-radius: 14px; border: 1px solid rgba(255,255,255,.08); background: #0D1114; transition: border-color .15s, transform .15s; }
-.h-story:hover { border-color: rgba(255,255,255,.2); transform: translateY(-1px); }
+/* Latest: a lead story, four more, this month's casino changes, then live promotions */
+.h-live { display: inline-flex; align-items: center; gap: 7px; margin-left: 12px; vertical-align: middle; font-size: 12.5px; font-weight: 600; letter-spacing: 0; color: #8E9CA4; }
+.h-live i { width: 8px; height: 8px; border-radius: 50%; background: #57E39A; box-shadow: 0 0 0 4px rgba(87,227,154,.15); }
+.h-front { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 16px; }
+.h-lead-story { display: flex; flex-direction: column; border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,.09); background: #0D1114; transition: border-color .15s, transform .15s; }
+.h-lead-story:hover { border-color: rgba(255,255,255,.22); transform: translateY(-2px); }
+.h-lead-cover { display: block; aspect-ratio: 16 / 7; }
+.h-lead-body { display: flex; flex-direction: column; gap: 10px; padding: 20px 22px 22px; }
+.h-lead-body b { font-size: 24px; line-height: 1.22; letter-spacing: -.02em; font-weight: 700; color: #F7F9FA; text-wrap: balance; }
+.h-lead-sub { font-size: 15px; line-height: 1.6; color: #98A6AE; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.h-read { margin-top: 2px; font-size: 14px; font-weight: 700; color: #E8EDF0; }
+.h-minis { display: flex; flex-direction: column; gap: 12px; }
+.h-mini { flex: 1; display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 14px; align-items: center; padding: 10px; border-radius: 14px; border: 1px solid rgba(255,255,255,.08); background: #0D1114; transition: border-color .15s, transform .15s; }
+.h-mini:hover { border-color: rgba(255,255,255,.2); transform: translateY(-1px); }
+.h-mini-cover { display: block; aspect-ratio: 16 / 10; border-radius: 10px; overflow: hidden; }
+.h-mini-body { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.h-mini b { font-size: 15px; line-height: 1.35; font-weight: 600; color: #F2F5F7; }
 .h-story-meta { display: flex; align-items: center; gap: 10px; font-size: 12.5px; color: #75828A; }
 .h-ltag { display: inline-block; padding: 2px 8px; border-radius: 6px; font-size: 11.5px; font-weight: 700; letter-spacing: .02em; color: var(--tint); background: color-mix(in srgb, var(--tint) 13%, transparent); }
-.h-story b { font-size: 16.5px; line-height: 1.35; font-weight: 600; color: #F2F5F7; }
-.h-changes { display: flex; flex-direction: column; padding: 16px 18px; border-radius: 14px; border: 1px solid rgba(255,255,255,.08); background: #0D1114; }
-.h-changes h3 { margin: 0 0 4px; font-size: 15px; font-weight: 700; color: #F2F5F7; }
-.h-change { display: flex; gap: 10px; align-items: flex-start; padding: 11px 0; border-top: 1px solid rgba(255,255,255,.06); font-size: 14px; line-height: 1.45; color: #C9D3D8; }
-.h-change:first-of-type { border-top: 0; }
-.h-change:hover { color: #fff; }
-.h-change-mark { width: 26px; height: 26px; flex: none; border-radius: 7px; overflow: hidden; margin-top: 1px; }
+.h-month { margin-top: 28px; }
+.h-month-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+.h-month-head h3 { margin: 0; font-size: 17px; font-weight: 700; color: #F2F5F7; }
+.h-month-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
+.h-mcard { display: flex; flex-direction: column; gap: 10px; padding: 14px; border-radius: 14px; border: 1px solid rgba(255,255,255,.08); background: #0D1114; box-shadow: inset 0 2px 0 var(--tint); transition: border-color .15s, transform .15s; }
+.h-mcard:hover { border-color: color-mix(in srgb, var(--tint) 50%, transparent); transform: translateY(-1px); }
+.h-mcard-top { display: flex; align-items: center; gap: 8px; }
+.h-mcard-text { font-size: 14px; line-height: 1.45; color: #DCE3E7; }
+.h-change-mark { width: 26px; height: 26px; flex: none; border-radius: 7px; overflow: hidden; }
 
 .h-also { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
 .h-chip { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px 6px 7px; border-radius: 100px; border: 1px solid rgba(255,255,255,.1); background: rgba(255,255,255,.03); font-size: 13.5px; font-weight: 500; color: #C9D3D8; transition: border-color .15s, color .15s; }
@@ -147,7 +165,8 @@ const CSS = `
 .h-strip:hover { border-color: color-mix(in srgb, var(--tint, #ffffff) 55%, transparent); transform: translateY(-1px); }
 .h-strip .csg-strip-tag { background: color-mix(in srgb, var(--tint, #ffffff) 16%, transparent); color: var(--tint, #DCE3E7); }
 .h-strip .csg-strip-cta { color: var(--tint, #E8EDF0); }
-.h-running { display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+.h-running { display: flex; flex-direction: column; gap: 10px; margin-top: 28px; }
+.h-running-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 12px; }
 .h-running-label { font-size: 12.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #75828A; }
 .h-strip strong { color: #F2F5F7; font-weight: 600; }
 .csg-strip-tag { padding: 3px 8px; border-radius: 6px; background: rgba(255,255,255,.07); color: #DCE3E7; font-size: 11.5px; font-weight: 700; white-space: nowrap; }
@@ -195,7 +214,9 @@ a.h-li:hover b, .h-li-main:hover b { color: #fff; text-decoration: underline; te
   .h-hero { grid-template-columns: 1fr; grid-template-areas: "intro" "pick" "paths"; row-gap: 32px; padding: 48px 0 40px; }
   .h-ctas { margin-bottom: 0; }
   .h-two { grid-template-columns: 1fr; }
-  .h-latest { grid-template-columns: 1fr; }
+  .h-front { grid-template-columns: 1fr; }
+  .h-month-grid { grid-auto-flow: column; grid-template-columns: none; grid-auto-columns: minmax(220px, 70%); overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 6px; }
+  .h-mcard { scroll-snap-align: start; }
   .h-slots { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .h-facts, .h-trust { grid-template-columns: 1fr; gap: 14px; }
   .h-trust { gap: 22px; }
@@ -256,14 +277,16 @@ export default function HomePage() {
   // Latest: news articles plus the data releases readers can use, newest first.
   // The trackers' dates are when each was first published.
   const typeTag = { news: "News", analysis: "Analysis", opinion: "Opinion" } as const;
+  const assessCount = CGA_REGISTER.counts.find((x) => x.key === "assess")?.n;
   const latest = [
-    ...newsArticles().slice(0, 4).map((g) => ({ href: `/guides/${g.slug}`, tag: g.contentType ? typeTag[g.contentType] : "News", tint: g.contentType && g.contentType !== "news" ? "#FFC531" : "#5FE3E8", title: g.title, date: g.iso })),
-    { href: "/crypto-casinos/kyc-tracker", tag: "New tracker", tint: "#57E39A", title: "KYC tracker: when each of 46 crypto casinos asks for ID", date: "2026-11-11" },
-    { href: "/bonuses/true-cost-index", tag: "New index", tint: "#57E39A", title: "Bonus true-cost index: what each welcome bonus really costs per $100", date: "2026-11-10" },
-    { href: "/legal/curacao-licence-tracker", tag: "Tracker", tint: "#57E39A", title: "Curaçao licence tracker: where each crypto casino stands on the register", date: "2026-11-06" },
+    ...newsArticles().slice(0, 4).map((g) => ({ href: `/guides/${g.slug}`, tag: g.contentType ? typeTag[g.contentType] : "News", tint: g.contentType && g.contentType !== "news" ? "#FFC531" : "#5FE3E8", title: g.title, sub: fill(g.standfirst, siteData), date: g.iso, cover: { category: g.category, tint: g.tint } })),
+    { href: "/crypto-casinos/kyc-tracker", tag: "New tracker", tint: "#57E39A", title: "KYC tracker: when each of 46 crypto casinos asks for ID", sub: "All 46 casinos sorted by when their own terms say they'll ask for ID, with each one's wording and source.", date: "2026-11-11", cover: { category: "Accounts", tint: "#57E39A" } },
+    { href: "/bonuses/true-cost-index", tag: "New index", tint: "#57E39A", title: "Bonus true-cost index: what each welcome bonus really costs per $100", sub: "The bets each welcome bonus asks for on a $100 deposit, and what that betting costs on average, from each casino's own terms.", date: "2026-11-10", cover: { category: "Bonuses", tint: "#FFC531" } },
+    { href: "/legal/curacao-licence-tracker", tag: "Tracker", tint: "#57E39A", title: "Curaçao licence tracker: where each crypto casino stands on the register", sub: `${assessCount ?? "Hundreds"} of ${CGA_REGISTER.total} licences on the regulator's own register read "Assessment in progress". Where each casino we track stands.`, date: "2026-11-06", cover: { category: "Law", tint: "#9AAE5E" } },
   ]
     .sort((a, b) => b.date.localeCompare(a.date))
     .slice(0, 5);
+  const [leadStory, ...moreStories] = latest;
   const shortDate = (iso: string) => (iso ? new Date(iso + "T12:00:00Z").toLocaleDateString("en-GB", { day: "numeric", month: "short" }) : "");
   const issue = NEWS[0];
 
@@ -381,49 +404,73 @@ export default function HomePage() {
           {/* Latest */}
           <section style={{ paddingTop: 56 }}>
             <div className="h-head">
-              <h2 className="h-h2">Latest</h2>
+              <h2 className="h-h2">
+                Latest <span className="h-live"><i aria-hidden /> Updated {shortDate(leadStory?.date ?? "")}</span>
+              </h2>
               <Link href="/news" className="h-more">All news →</Link>
             </div>
-            <div className="h-latest">
-              <div className="h-news">
-                {latest.map((x) => (
-                  <Link key={x.href} href={x.href} className="h-story">
+            {leadStory && (
+              <div className="h-front">
+                <Link href={leadStory.href} className="h-lead-story">
+                  <span className="h-lead-cover"><GuideCover category={leadStory.cover.category} tint={leadStory.cover.tint} rounded={0} label={false} /></span>
+                  <span className="h-lead-body">
                     <span className="h-story-meta">
-                      <span className="h-ltag" style={{ ["--tint" as string]: x.tint }}>{x.tag}</span>
-                      {shortDate(x.date)}
+                      <span className="h-ltag" style={{ ["--tint" as string]: leadStory.tint }}>{leadStory.tag}</span>
+                      {shortDate(leadStory.date)}
                     </span>
-                    <b>{x.title}</b>
-                  </Link>
-                ))}
+                    <b>{leadStory.title}</b>
+                    <span className="h-lead-sub">{leadStory.sub}</span>
+                    <span className="h-read">Read it →</span>
+                  </span>
+                </Link>
+                <div className="h-minis">
+                  {moreStories.map((x) => (
+                    <Link key={x.href} href={x.href} className="h-mini">
+                      <span className="h-mini-cover"><GuideCover category={x.cover.category} tint={x.cover.tint} rounded={0} label={false} tile /></span>
+                      <span className="h-mini-body">
+                        <span className="h-story-meta">
+                          <span className="h-ltag" style={{ ["--tint" as string]: x.tint }}>{x.tag}</span>
+                          {shortDate(x.date)}
+                        </span>
+                        <b>{x.title}</b>
+                      </span>
+                    </Link>
+                  ))}
+                </div>
               </div>
-              {issue && (
-                <div className="h-changes">
+            )}
+            {issue && (
+              <div className="h-month">
+                <div className="h-month-head">
                   <h3>This month at the casinos</h3>
+                  <Link href={newsPath(issue.month)} className="h-more">All {issue.items.length} changes →</Link>
+                </div>
+                <div className="h-month-grid">
                   {issue.items.slice(0, 5).map((it, i) => {
                     const o = siteData.ops.find((x) => x.slug === it.slug);
                     return (
-                      <Link key={i} href={newsPath(issue.month)} className="h-change">
-                        {o && (
-                          <span className="h-change-mark">
-                            <BrandMark slug={o.slug} mono={o.mono} tint={brandFor(o.slug)} radius={7} fontSize={9} />
-                          </span>
-                        )}
-                        <span>
-                          <span className="h-ltag" style={{ ["--tint" as string]: NEWS_KIND[it.kind].tint, marginRight: 8 }}>{NEWS_KIND[it.kind].label}</span>
-                          {it.headline}
+                      <Link key={i} href={newsPath(issue.month)} className="h-mcard" style={{ ["--tint" as string]: NEWS_KIND[it.kind].tint }}>
+                        <span className="h-mcard-top">
+                          {o && (
+                            <span className="h-change-mark">
+                              <BrandMark slug={o.slug} mono={o.mono} tint={brandFor(o.slug)} radius={7} fontSize={9} />
+                            </span>
+                          )}
+                          <span className="h-ltag">{NEWS_KIND[it.kind].label}</span>
                         </span>
+                        <span className="h-mcard-text">{it.headline}</span>
                       </Link>
                     );
                   })}
-                  <Link href={newsPath(issue.month)} className="h-more" style={{ marginTop: 12 }}>All {issue.items.length} changes this month →</Link>
                 </div>
-              )}
-            </div>
-            <div className="h-running">
-              <span className="h-running-label">Running now</span>
-              {kevinLive() ? <KevinStrip className="h-strip" fallback={jackpotStrip} /> : jackpotStrip}
-              {wheelWarsLive() && <StakeWheelStrip className="h-strip" style={{ ["--tint" as string]: brandFor("stake") }} />}
-            </div>
+              </div>
+            )}
+            <RunningNow
+              items={[
+                { slug: "roobet", node: kevinLive() ? <KevinStrip className="h-strip" fallback={jackpotStrip} /> : jackpotStrip },
+                ...(wheelWarsLive() ? [{ slug: "stake", node: <StakeWheelStrip className="h-strip" style={{ ["--tint" as string]: brandFor("stake") }} /> }] : []),
+              ].filter((x) => !!x.node)}
+            />
           </section>
 
           {/* Top casinos */}
