@@ -12,6 +12,8 @@ import { CodeChip } from "@/components/ui/CodeChip";
 import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
 import { CasinoRankList } from "@/components/casino-index/CasinoRankList";
 import { LineIcon } from "@/components/ui/LineIcon";
+import { DemoPlay } from "@/components/slots/DemoPlay";
+import { demoTiles } from "@/lib/slot-demos";
 import { StoryThumb, thumbForNews, type ThumbSpec } from "@/components/home/StoryThumb";
 import { GeoSwap } from "@/components/promo/GeoSwap";
 import { CGA_REGISTER } from "@/lib/curacao-register";
@@ -187,6 +189,17 @@ a.h-li:hover b, .h-li-main:hover b { color: #fff; text-decoration: underline; te
 /* Slots */
 .h-slots { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
 .h-slot { display: block; }
+.h-demos { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 14px; }
+.h-demo { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.h-demo-art { position: relative; margin-bottom: 6px; }
+.h-demo-art .dp-disc { width: 50px; height: 50px; }
+.h-demo-art .dp-label { display: none; font-size: 12px; }
+.h-demo:hover .h-demo-art .dp-label { display: inline-block; }
+.h-demo-name { font-size: 14.5px; font-weight: 700; color: #F2F5F7; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+a.h-demo-name:hover { color: #FFC531; }
+.h-demo small { font-size: 12.5px; color: #8E9CA4; }
+.h-demo-sub { margin: 6px 0 0; font-size: 14px; color: #8E9CA4; }
+@media (max-width: 960px) { .h-demos { grid-auto-flow: column; grid-template-columns: none; grid-auto-columns: minmax(180px, 46%); overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 6px; } .h-demo { scroll-snap-align: start; } }
 .h-slot-art { display: block; aspect-ratio: 16 / 10; border-radius: 12px; overflow: hidden; background: #11161A; border: 1px solid rgba(255,255,255,.06); }
 .h-slot-art img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
 .h-slot:hover .h-slot-art img { transform: scale(1.03); }
@@ -275,6 +288,13 @@ export default function HomePage() {
   const rooJackpots = !!getSpecFact("roobet", "Bonus terms", "Roo Jackpots");
 
   // The four best-known series for the homepage row; the rest are one click away.
+  // Six famous games for the homepage's free-demo row, in this order where we hold their demo.
+  const allDemos = demoTiles();
+  const demoCount = allDemos.length;
+  const homeDemos = ["gates-of-olympus", "sweet-bonanza", "wanted-dead-or-a-wild", "book-of-dead", "big-bass-bonanza", "sugar-rush"]
+    .map((slug) => allDemos.find((t) => t.slug === slug))
+    .filter((t): t is NonNullable<typeof t> => !!t);
+
   const homeSeries = ["gates-of-olympus", "big-bass", "sweet-bonanza", "le-series"]
     .map((slug) => publishedSeries().find((x) => x.slug === slug))
     .filter((x): x is NonNullable<typeof x> => !!x)
@@ -338,7 +358,7 @@ export default function HomePage() {
   const paths = [
     { t: "Find a casino", d: `${c.casinos} casinos compared`, href: "/crypto-casinos", tint: "#2FD3DA", icon: <LineIcon name="casino" />, imgs: casinoImgs },
     { t: "Bonuses & codes", d: "Wagering spelled out", href: "/bonuses", tint: "#FFC531", icon: <LineIcon name="gift" />, imgs: codeImgs },
-    { t: "Top slots", d: "RTP and where to play", href: "/slots", tint: "#FF7EB6", icon: <LineIcon name="slots" />, imgs: slotImgs },
+    { t: "Top slots", d: "RTP and free demos", href: "/slots", tint: "#FF7EB6", icon: <LineIcon name="slots" />, imgs: slotImgs },
     { t: "Can I play here?", d: "The law where you live", href: "/legal", tint: "#57E39A", icon: <LineIcon name="globe" />, imgs: ["gb", "ca", "br"].map((f) => `/assets/flags/${f}.svg`) },
   ];
   const stackOf = (slugs: string[], n: number) => slugs.flatMap((s) => (logo(s) ? [logo(s)!] : [])).slice(0, n);
@@ -493,6 +513,34 @@ export default function HomePage() {
               </div>
             )}
           </section>
+
+          {/* Free demos: playable from the homepage itself */}
+          {homeDemos.length > 0 && (
+            <section className="h-sec">
+              <div className="h-head">
+                <div>
+                  <h2 className="h-h2">Play free, right here</h2>
+                  <p className="h-demo-sub">The studio&apos;s own demo: play money, no account, no deposit, open wherever you are.</p>
+                </div>
+                <Link href="/slots/free-demos" className="h-more">All {demoCount.toLocaleString("en-GB")} free demos →</Link>
+              </div>
+              <div className="h-demos">
+                {homeDemos.map((t) => (
+                  <div key={t.slug} className="h-demo">
+                    <span className="h-slot-art h-demo-art">
+                      {t.art && (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img src={t.art} alt={`${t.name} game art`} width={320} height={200} loading="lazy" decoding="async" />
+                      )}
+                      <DemoPlay url={t.url} name={t.name} studio={t.studio} slug={t.slug} />
+                    </span>
+                    {t.page ? <Link href={t.page} className="h-demo-name">{t.name}</Link> : <b className="h-demo-name">{t.name}</b>}
+                    <small>{t.studio}{t.rtp ? ` · RTP ${t.rtp.split(/\s*[–-]\s*/)[0]}` : ""}</small>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
 
           {/* Top casinos */}
           <section className="h-sec" id="top-offers" style={{ scrollMarginTop: 120 }}>
