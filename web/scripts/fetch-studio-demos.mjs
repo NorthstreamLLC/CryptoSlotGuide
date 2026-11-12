@@ -1,7 +1,7 @@
 /**
  * Adds free demos from studios that publish them on their own game pages to
  * data/slot-demos.json: Play'n GO, BGaming, ELK Studios, Habanero, Thunderkick,
- * Endorphina, Yggdrasil, Quickspin and Kalamba Games. (Wazdan's demo
+ * Endorphina, Yggdrasil, Quickspin, Kalamba Games, Betsoft and Microgaming. (Wazdan's demo
  * launcher redirects every visitor to wazdan.com, so it cannot be played here.) For each
  * studio, its own sitemap lists the game pages; each page carries the id its
  * "play demo" button opens. Only titles we hold a catalogue entry for are
@@ -25,6 +25,25 @@ const UA = { headers: { "User-Agent": "Mozilla/5.0 (compatible; CryptoSlotGuide 
 const get = async (u) => (await fetch(u, UA)).text();
 
 const STUDIOS = {
+  betsoft: {
+    provider: /^betsoft/i,
+    sitemaps: ["https://betsoft.com/games-sitemap1.xml", "https://betsoft.com/games-sitemap2.xml"],
+    page: /^https:\/\/betsoft\.com\/games\/[^/]+\/?$/,
+    // Two steps: the game page names its demo page, whose frame carries the game id.
+    id: async (html) => {
+      const demoPage = html.match(/play-demo\/?\?id=(\d+)/)?.[1];
+      if (!demoPage) return undefined;
+      return (await get(`https://betsoft.com/play-demo/?id=${demoPage}`)).match(/cwguestlogin\.do\?bankId=675(?:&amp;|&)(?:amp;)?CDN=AUTO(?:&amp;|&)(?:amp;)?gameId=(\d+)/)?.[1];
+    },
+  },
+  microgaming: {
+    provider: /^microgaming/i,
+    sitemaps: ["https://microgaming.io/game-sitemap1.xml", "https://microgaming.io/game-sitemap2.xml"],
+    page: /^https:\/\/microgaming\.io\/game\/[^/]+\/?$/,
+    // The page's post id; /demo/microgaming asks microgaming.io's own API for
+    // the demo link at play time, because its launch host changes.
+    id: (html) => html.match(/postId:\s*(\d+)/)?.[1],
+  },
   habanero: {
     provider: /^habanero$/i,
     sitemaps: ["https://habanerosystems.com/sitemap.xml"],

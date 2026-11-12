@@ -17,6 +17,18 @@ export async function GET(_req: NextRequest, ctx: { params: Promise<{ studio: st
   if (!cfg || !isKnownDemo(studio, id)) return new Response("Unknown demo", { status: 404 });
   if (cfg.url) return redirect(cfg.url(id), cfg.cache);
 
+  if (studio === "microgaming") {
+    try {
+      const r = await fetch(`https://microgaming.io/wp-json/games/v1/game-demo-url?post_id=${id}&lang=en`, { next: { revalidate: 3600 } });
+      const to = r.ok ? ((await r.json()) as { url?: string }).url : undefined;
+      // Only ever on to the studio's own launcher.
+      if (to && /^https:\/\/[a-z0-9-]+\.goplaylaunch\.com\//.test(to)) return redirect(to, cfg.cache);
+    } catch {
+      /* fall through */
+    }
+    return new Response("Demo unavailable right now", { status: 502 });
+  }
+
   let version: string | null = null;
   try {
     const r = await fetch(`https://static-live.hacksawgaming.com/${id}/version.json`, { next: { revalidate: 21600 } });

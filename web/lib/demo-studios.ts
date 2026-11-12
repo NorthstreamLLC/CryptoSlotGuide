@@ -74,6 +74,15 @@ export const DEMO_STUDIOS: Record<string, DemoStudio> = {
     url: (id) => `https://d1oij17g4yikkz.cloudfront.net/casino/quickspin/${id}/index.html?gameid=${id}&moneymode=fun&partnerid=quickspin`,
     cache: 86400,
   },
+  betsoft: {
+    name: "Betsoft",
+    idPattern: /^\d{1,6}$/,
+    url: (id) => `https://democasino.betsoftgaming.com/cwguestlogin.do?bankId=675&CDN=AUTO&gameId=${id}`,
+    cache: 86400,
+  },
+  // The id is microgaming.io's post id; the route asks its API for the demo
+  // link, whose host changes, at play time.
+  microgaming: { name: "Microgaming / Games Global", idPattern: /^\d{1,8}$/, cache: 3600 },
   kalamba: {
     name: "Kalamba Games",
     idPattern: /^[a-z0-9-]{2,80}$/,
