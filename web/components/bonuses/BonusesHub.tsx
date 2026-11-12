@@ -204,7 +204,7 @@ export function BonusesHub() {
             <aside aria-label="Top offers this week">
               <OfferStack
                 items={stack.map((o) => ({ slug: o.slug, name: o.name, tint: brandFor(o.slug), face: face(o), peek: peek(o) }))}
-                note={<GeoBlockNote slug={stack[0]?.slug ?? "roobet"} name="" none />}
+                note={<GeoBlockNote slug={stack[0]?.slug ?? "roobet"} name="" none allOf={stack.map((o) => o.slug)} />}
               />
             </aside>
           </section>

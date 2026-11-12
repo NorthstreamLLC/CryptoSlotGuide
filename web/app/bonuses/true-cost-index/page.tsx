@@ -5,6 +5,7 @@ import { brandFor } from "@/lib/casino-facts";
 import { reviewPath } from "@/lib/outbound";
 import { INDEX_ROWS, UNLOCK_ROWS, UNCLEAR_SLUGS, NO_WAGER_SLUGS, DEPOSIT, RTP, BASE_LABEL, cost, type IndexRow } from "@/lib/bonus-index";
 import { pageMetadata } from "@/lib/seo";
+import { storyCardFor } from "@/lib/og";
 import { articleSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { BrandMark } from "@/components/ui/BrandMark";
@@ -59,7 +60,8 @@ export function generateMetadata() {
   return pageMetadata(
     TITLE,
     `For a $${DEPOSIT} deposit, ${s.n} crypto casino welcome bonuses ask for between ${usd(Math.min(...r.map((x) => x.bets)))} and ${usd(Math.max(...r.map((x) => x.bets)))} of bets. At a ${pct(RTP)} RTP slot that costs ${usd(s.minCost)}–${usd(s.maxCost)} on average: more than the bonus in ${s.positive ? `${s.n - s.positive} of ${s.n}` : `all ${s.n}`}. From each casino's own terms.`,
-    PATH
+    PATH,
+    storyCardFor({ kind: "cost" }, TITLE, PATH)
   );
 }
 

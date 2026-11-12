@@ -1,4 +1,6 @@
 import { createHmac } from "node:crypto";
+import { logoFor } from "./logo";
+import { BADGES } from "./story-thumb";
 
 /**
  * The share card for a page with no picture of its own: /og?t=<title>&k=<kicker>&s=<sig>
@@ -29,8 +31,36 @@ const KICKERS: [RegExp, string][] = [
   [/^\/guides|^\/blog/, "Guide"],
 ];
 
+/** The kicker for a path; shared by both cards. */
+export function ogKicker(path: string): string {
+  return KICKERS.find(([re]) => re.test(path))?.[1] ?? "CryptoSlotGuide";
+}
+
 export function ogCardPath(title: string, path: string): string {
   const k = KICKERS.find(([re]) => re.test(path))?.[1] ?? "CryptoSlotGuide";
   const t = title.length > 110 ? `${title.slice(0, 107).trimEnd()}…` : title;
   return `/og?t=${encodeURIComponent(t)}&k=${encodeURIComponent(k)}&s=${ogSign(t, k)}`;
+}
+
+/**
+ * A share card with a picture drawn from the story's own data (app/og/story):
+ * the casino's logo, the KYC tiers, the bonus costs or the Curaçao register,
+ * beside the page's title. Same signing as the plain card, over every field,
+ * so the casino and the badge can't be swapped either.
+ */
+export function storyCardPath(spec: { kind: "casino" | "kyc" | "cost" | "register"; slug?: string; badge?: "incident" | "breach" }, title: string, path: string): string {
+  const k = KICKERS.find(([re]) => re.test(path))?.[1] ?? "CryptoSlotGuide";
+  const t = title.length > 110 ? `${title.slice(0, 107).trimEnd()}…` : title;
+  const c = spec.slug ?? "";
+  const b = spec.badge ?? "";
+  const s = ogSign(t, `${k}|${spec.kind}|${c}|${b}`);
+  return `/og/story?v=${spec.kind}${c ? `&c=${encodeURIComponent(c)}` : ""}${b ? `&b=${b}` : ""}&t=${encodeURIComponent(t)}&k=${encodeURIComponent(k)}&s=${s}`;
+}
+
+/** The story card for a ThumbSpec, or undefined where the story has no data picture. */
+export function storyCardFor(spec: import("./story-thumb").ThumbSpec, title: string, path: string): string | undefined {
+  if (spec.kind === "cover") return undefined;
+  if (spec.kind === "casino" && !logoFor(spec.slug)?.endsWith(".png")) return undefined;
+  const badge = "badge" in spec && spec.badge ? (spec.badge.text === BADGES.breach.text ? "breach" : "incident") : undefined;
+  return storyCardPath({ kind: spec.kind, slug: spec.kind === "casino" ? spec.slug : undefined, badge }, title, path);
 }

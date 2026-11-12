@@ -206,7 +206,9 @@ export function pickPartners({
   limit?: number;
 }): PartnerPick[] {
   const pool = inHouseOrder(siteData.ops.filter((o) => o.affiliate && o.signupUrl && !exclude.includes(o.slug))).filter(
-    (o) => !(country && accessIn(o.slug, country) === "restricted")
+    // On a page about one country, only partners whose own list is known to
+    // let it in; an unreadable or partial list is not a yes.
+    (o) => !country || accessIn(o.slug, country) === "accepts"
   );
   const key = seed ?? JSON.stringify(context);
   return pool

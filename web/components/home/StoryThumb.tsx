@@ -1,10 +1,10 @@
-import { siteData } from "@/lib/site-data";
 import { logoFor } from "@/lib/logo";
 import { brandFor } from "@/lib/casino-facts";
-import { kycRows, type KycTier } from "@/lib/kyc";
-import { INDEX_ROWS, cost } from "@/lib/bonus-index";
 import { CGA_REGISTER } from "@/lib/curacao-register";
+import { TONE, TIER_TINT, REGISTER_TONE, kycPicks, costPicks, registerParts, type ThumbSpec } from "@/lib/story-thumb";
 import { GuideCover } from "@/components/guides/GuideCover";
+
+export { thumbForNews, type ThumbSpec } from "@/lib/story-thumb";
 
 /**
  * Thumbnails for the homepage's Latest stories, drawn from the data each story
@@ -14,27 +14,7 @@ import { GuideCover } from "@/components/guides/GuideCover";
  * the Curaçao stories. Every figure on a thumbnail is one the story itself
  * shows, so the picture never says more than the page does.
  */
-export type ThumbSpec =
-  | { kind: "casino"; slug: string; badge?: Badge }
-  | { kind: "kyc" }
-  | { kind: "cost" }
-  | { kind: "register"; badge?: Badge }
-  | { kind: "cover"; category: string; tint: string };
-
-type Badge = { text: string; tone: "bad" | "watch" | "ok" };
 type Size = "lead" | "mini";
-
-const TONE: Record<Badge["tone"], string> = { bad: "#FF6B6B", watch: "#FFC531", ok: "#57E39A" };
-const TIER_TINT: Record<KycTier, string> = { never: "#57E39A", discretionary: "#9BE15D", threshold: "#FFC531", conflicting: "#B79CFF", required: "#FF6B6B" };
-
-/** Which thumbnail a news story gets, from its title: the casino it names, or the regulator. */
-export function thumbForNews(title: string, fallback: { category: string; tint: string }): ThumbSpec {
-  const incident = /offline|breach|hack|security|outage|scare/i.test(title);
-  if (/cura[cç]ao/i.test(title)) return { kind: "register", badge: incident ? { text: "Regulator breached", tone: "bad" } : undefined };
-  const op = siteData.ops.find((o) => logoFor(o.slug) && new RegExp(`\\b${o.name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`, "i").test(title));
-  if (op) return { kind: "casino", slug: op.slug, badge: incident ? { text: "Security incident", tone: "bad" } : undefined };
-  return { kind: "cover", ...fallback };
-}
 
 export function StoryThumb({ spec, size }: { spec: ThumbSpec; size: Size }) {
   if (spec.kind === "cover") return <GuideCover category={spec.category} tint={spec.tint} rounded={0} label={false} tile={size === "mini"} />;
@@ -76,15 +56,7 @@ function CasinoThumb({ slug, size }: { slug: string; size: Size }) {
 }
 
 function KycThumb({ size }: { size: Size }) {
-  const n = size === "lead" ? 18 : 6;
-  // A spread of tiers, not the first n alphabetically: round-robin over the tiers.
-  const rows = kycRows().filter((r) => logoFor(r.slug));
-  const byTier = new Map<KycTier, typeof rows>();
-  for (const r of rows) byTier.set(r.tier, [...(byTier.get(r.tier) ?? []), r]);
-  const picked: typeof rows = [];
-  while (picked.length < n && [...byTier.values()].some((v) => v.length)) {
-    for (const v of byTier.values()) if (v.length && picked.length < n) picked.push(v.shift()!);
-  }
+  const picked = kycPicks(size === "lead" ? 18 : 6);
   return (
     <span className="st-fill" style={{ background: "radial-gradient(80% 90% at 50% 30%, rgba(87,227,154,.16), transparent 70%), #0B0F12" }}>
       <span className="st-grid" aria-hidden />
@@ -108,10 +80,7 @@ function KycThumb({ size }: { size: Size }) {
 }
 
 function CostThumb({ size }: { size: Size }) {
-  const rows = INDEX_ROWS.filter((r) => logoFor(r.slug))
-    .map((r) => ({ slug: r.slug, c: cost(r).expectedCost }))
-    .sort((a, b) => a.c - b.c);
-  const pick = size === "lead" ? rows.slice(0, 5) : [rows[0], rows[Math.floor(rows.length / 2)], rows[rows.length - 1]].filter(Boolean);
+  const pick = costPicks(size === "lead" ? 5 : 3);
   const max = Math.max(...pick.map((r) => r.c), 1);
   return (
     <span className="st-fill" style={{ background: "radial-gradient(80% 90% at 30% 20%, rgba(255,197,49,.16), transparent 70%), #0B0F12" }}>
@@ -130,8 +99,8 @@ function CostThumb({ size }: { size: Size }) {
 }
 
 function RegisterThumb({ size }: { size: Size }) {
-  const tone = { watch: "#FFC531", ok: "#57E39A", plain: "#5FA8FF", bad: "#FF6B6B" } as const;
-  const parts = CGA_REGISTER.counts.filter((c) => c.n > 0);
+  const tone = REGISTER_TONE;
+  const parts = registerParts();
   return (
     <span className="st-fill" style={{ background: "radial-gradient(80% 90% at 50% 20%, rgba(154,174,94,.2), transparent 70%), #0B0F12" }}>
       <span className="st-grid" aria-hidden />

@@ -98,7 +98,7 @@ export function FeaturedPartner({
       </div>
       <GeoRanked
         count={count}
-        note={<GeoBlockNote slug={rows[0].o.slug} name={rows[0].o.name} none />}
+        note={<GeoBlockNote slug={rows[0].o.slug} name={rows[0].o.name} none allOf={rows.map((r) => r.o.slug)} />}
         items={rows.map(({ o, pitch }) => {
         const tint = brandFor(o.slug);
         return { slug: o.slug, node: (

@@ -8,8 +8,9 @@ export default function robots(): MetadataRoute.Robots {
       // The slot database's plain pages (?page=N) stay crawlable; filtered and
       // searched views are noindex and kept out here (the longer Allow wins).
       allow: ["/", "/slots/database?page="],
-      // Affiliate redirects (app/go/[slug]/route.ts): not pages.
-      disallow: ["/go/", "/slots/database?"],
+      // Affiliate redirects (app/go/[slug]/route.ts) and demo redirects
+      // (app/demo): not pages.
+      disallow: ["/go/", "/demo/", "/slots/database?"],
     },
     sitemap: `${SITE_URL}/sitemap.xml`,
   };

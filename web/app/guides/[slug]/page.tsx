@@ -4,6 +4,8 @@ import { notFound } from "next/navigation";
 import { siteData } from "@/lib/site-data";
 import { fill } from "@/lib/derived";
 import { pageMetadata } from "@/lib/seo";
+import { storyCardFor } from "@/lib/og";
+import { thumbForNews } from "@/lib/story-thumb";
 import { guideIso } from "@/lib/guide-dates";
 import { articleSchema, breadcrumbSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -66,7 +68,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const lead = fill(g.standfirst, siteData);
   const first = (siteData.guideBodies as Record<string, { key?: string[] }>)[slug]?.key?.[0];
   const desc = lead.length < 90 && first ? `${lead.replace(/[.\s]*$/, "")}. ${first}` : lead;
-  return pageMetadata(g.title, desc.length > 300 ? `${desc.slice(0, 297).replace(/\s+\S*$/, "")}…` : desc, `/guides/${slug}`);
+  // News gets a share card drawn from what it is about (the casino it names, or
+  // Curaçao's register), the same picture the homepage shows for it.
+  const isNews = g.category === "News" || !!(siteData.guideBodies as Record<string, { contentType?: string }>)[slug]?.contentType;
+  const card = isNews ? storyCardFor(thumbForNews(g.title, { category: g.category, tint: g.tint }), g.title, `/guides/${slug}`) : undefined;
+  return pageMetadata(g.title, desc.length > 300 ? `${desc.slice(0, 297).replace(/\s+\S*$/, "")}…` : desc, `/guides/${slug}`, card);
 }
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {

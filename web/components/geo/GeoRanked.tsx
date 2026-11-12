@@ -19,8 +19,13 @@ export function GeoRanked({ items, count, note = null }: { items: { slug: string
     let live = true;
     getGeo().then((g) => {
       if (!live || !g?.detected) return;
-      const out = new Set([...(g.casinos?.restrictedSlugs ?? []), ...(g.regionBlocked ?? []).map((r) => r.slug)]);
-      if (items.some((i) => out.has(i.slug))) setBlocked([...out]);
+      // Open only where the casino's own list is known to let this country
+      // in: a casino whose terms we could not read (Degen sends US visitors
+      // to a different site) is not promoted on a guess.
+      const ok = new Set(g.casinos?.acceptsSlugs ?? []);
+      for (const r of g.regionBlocked ?? []) ok.delete(r.slug);
+      const out = items.map((i) => i.slug).filter((s) => !ok.has(s));
+      if (out.length) setBlocked(out);
     });
     return () => {
       live = false;

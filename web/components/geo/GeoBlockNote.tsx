@@ -22,7 +22,8 @@ export function GeoBlockNote({ slug, name, compact = false, none = false, allOf 
   }, []);
 
   if (!geo?.detected || !geo.casinos) return null;
-  const shut = (x: string) => geo.casinos!.restrictedSlugs.includes(x) || !!geo.regionBlocked?.some((r) => r.slug === x);
+  // Shut unless the casino's own list is known to let this country in (and it names no region of the visitor's).
+  const shut = (x: string) => !geo.casinos!.acceptsSlugs.includes(x) || !!geo.regionBlocked?.some((r) => r.slug === x);
   if (allOf ? !allOf.every(shut) : !geo.casinos.restrictedSlugs.includes(slug)) return null;
   const raw = geo.countryName ?? geo.country ?? "your country";
   const where = /^(United |Netherlands|Philippines|Czech Republic)/.test(raw) ? `the ${raw}` : raw;

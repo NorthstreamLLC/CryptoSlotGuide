@@ -23,7 +23,7 @@ export function pageMetadata(title: string, description: string, path: string, i
   const url = `${SITE_URL}${path}`;
   // A page with no picture of its own still gets a card bearing its title,
   // so a shared link never shows as a blank box.
-  const images = [image ? { url: image } : { url: ogCardPath(title, path), width: 1200, height: 630, alt: title }];
+  const images = [image ? { url: image, ...(image.startsWith("/og/") ? { width: 1200, height: 630, alt: title } : {}) } : { url: ogCardPath(title, path), width: 1200, height: 630, alt: title }];
   return {
     // The layout appends " | CryptoSlotGuide" (18 characters). Search results
     // cut titles at about 60, so a long title goes out without it rather than

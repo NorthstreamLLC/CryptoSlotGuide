@@ -5,6 +5,7 @@ import { reviewPath } from "@/lib/outbound";
 import { siteData } from "@/lib/site-data";
 import { kycByTier, kycCounts, kycRows, kycTierDescription, KYC_TIER_LABEL, KYC_TIER_ORDER, type KycTier } from "@/lib/kyc";
 import { pageMetadata } from "@/lib/seo";
+import { storyCardFor } from "@/lib/og";
 import { articleSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { BrandMark } from "@/components/ui/BrandMark";
@@ -39,7 +40,8 @@ export function generateMetadata() {
   return pageMetadata(
     TITLE,
     `Of ${n} crypto casinos, ${c.required} make ID checks a step to play or withdraw, ${c.threshold} verify at a published trigger, ${c.discretionary} ask only at their discretion and ${c.never} says it never asks. Each with the casino's own wording and source.`,
-    PATH
+    PATH,
+    storyCardFor({ kind: "kyc" }, TITLE, PATH)
   );
 }
 

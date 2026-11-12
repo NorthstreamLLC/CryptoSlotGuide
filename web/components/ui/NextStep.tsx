@@ -72,7 +72,7 @@ export function SlotNextStep({ name, seed }: { name: string; seed?: string }) {
   return (
     <GeoRanked
       count={1}
-      note={<GeoBlockNote slug={picks[0].o.slug} name={picks[0].o.name} compact />}
+      note={<GeoBlockNote slug={picks[0].o.slug} name={picks[0].o.name} compact none allOf={picks.map((p) => p.o.slug)} />}
       items={picks.map(({ o, pitch }) => {
         const code = typeableCode(o.slug, o.promoCode) ? o.promoCode : null;
         return {

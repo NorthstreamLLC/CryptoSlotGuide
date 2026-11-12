@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { siteData } from "@/lib/site-data";
-import { pickPartners } from "@/lib/partner-fit";
-import { GeoRanked } from "@/components/geo/GeoRanked";
+import { demoFor } from "@/lib/slot-demos";
+import { DemoPlay } from "@/components/slots/DemoPlay";
 import { topSlotRows, slotArtBySlug } from "@/lib/slot-page";
 import { catalogueTotals } from "@/lib/slot-db";
 import { topSlotRank } from "@/lib/top-slots";
@@ -9,7 +9,6 @@ import { SlotArtCards } from "@/components/home/SlotArtCards";
 import { FoldedList } from "@/components/casino-index/FoldedList";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { thumbOf } from "@/lib/thumb";
-import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
 import { LineIcon, type IconName } from "@/components/ui/LineIcon";
 
 /**
@@ -86,10 +85,8 @@ const CSS = `
 export function SlotsHub() {
   const rows = topSlotRows();
   const top = rows[0];
+  const topDemo = demoFor(top?.slug);
   const art = top ? slotArtBySlug(top.slug) : null;
-  // The #1 slot's "play" button: the partner that fits it, swapped for the next
-  // fit where the visitor's location is shut to it (lib/partner-fit.ts).
-  const playAt = pickPartners({ context: { kind: "slots" }, seed: "slots-hub", limit: 4 });
   const totals = catalogueTotals();
   const reviewed = [...siteData.slots].sort((a, b) => topSlotRank(a.slug) - topSlotRank(b.slug) || a.name.localeCompare(b.name));
 
@@ -128,10 +125,13 @@ export function SlotsHub() {
             {top && (
               <aside className="sh-pick" aria-label="Our number one slot">
                 {art && (
-                  <Link href={`/slots/${top.slug}`} className="sh-pick-art">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={art} alt={top.name} width={640} height={320} />
-                  </Link>
+                  <div style={{ position: "relative" }}>
+                    <Link href={`/slots/${top.slug}`} className="sh-pick-art">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={art} alt={top.name} width={640} height={320} />
+                    </Link>
+                    {topDemo && <DemoPlay url={topDemo.url} name={top.name} studio={topDemo.studio} slug={top.slug} />}
+                  </div>
                 )}
                 <div style={{ padding: 22 }}>
                   <span className="sh-tag">Our #1 slot</span>
@@ -144,18 +144,11 @@ export function SlotsHub() {
                   </div>
                   <div style={{ display: "grid", gridTemplateColumns: "1fr auto", gap: 10, alignItems: "center" }} data-keep-grid>
                     <Link href={`/slots/${top.slug}`} className="sh-btn sh-gold">Read the review</Link>
-                    {playAt.length > 0 && (
-                      <GeoRanked
-                        count={1}
-                        note={null}
-                        items={playAt.map(({ o }) => ({
-                          slug: o.slug,
-                          node: <a href={o.signupUrl as string} target="_blank" rel="nofollow sponsored noopener" data-copy-code={o.promoCode ?? undefined} data-placement="slots-hero" className="sh-btn sh-line">Play at {o.name} ↗</a>,
-                        }))}
-                      />
-                    )}
+                    {/* Not a casino's own link: those turn some visitors away (every
+                        partner refuses the US). Our page of slot sites shows each
+                        visitor the casinos that take them. */}
+                    <Link href="/slots/best-crypto-slot-sites" className="sh-btn sh-line">Play for real money →</Link>
                   </div>
-                  {playAt[0] && <GeoBlockNote slug={playAt[0].o.slug} name="" none compact allOf={playAt.map((x) => x.o.slug)} />}
                 </div>
               </aside>
             )}

@@ -3,6 +3,8 @@ import Image from "next/image";
 import { pickPartners } from "@/lib/partner-fit";
 import { typeableCode } from "@/lib/promo-pages";
 import { GeoRanked } from "@/components/geo/GeoRanked";
+import { DemoPlay } from "@/components/slots/DemoPlay";
+import { demoFor } from "@/lib/slot-demos";
 import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
 
 /**
@@ -33,6 +35,7 @@ export function SlotHeroArt({
   tint?: string;
   back?: { href: string; label: string };
 }) {
+  const demo = demoFor(seed);
   const picks = pickPartners({ context: { kind: "slots" }, seed, limit: 4 });
   const shown = chips.filter((c) => c.value && !/not published/i.test(c.value)).slice(0, 3);
   const slotSites = (
@@ -48,6 +51,7 @@ export function SlotHeroArt({
         {/* priority: the largest thing above the fold, so it is the LCP. */}
         <Image src={art} alt={`${name} game art`} width={960} height={600} sizes="(max-width: 860px) 100vw, 480px" priority className="sha-img" />
         <div className="sha-shade" aria-hidden />
+        {demo && <DemoPlay url={demo.url} name={name} studio={demo.studio} slug={seed} />}
         {studio && <span className="sha-studio">{studio}</span>}
         {shown.length > 0 && (
           <dl className="sha-chips">
@@ -65,7 +69,7 @@ export function SlotHeroArt({
         {picks.length ? (
           <GeoRanked
             count={1}
-            note={<GeoBlockNote slug={picks[0].o.slug} name={picks[0].o.name} compact />}
+            note={<GeoBlockNote slug={picks[0].o.slug} name={picks[0].o.name} compact none allOf={picks.map((p) => p.o.slug)} />}
             items={picks.map(({ o }) => {
               const code = typeableCode(o.slug, o.promoCode) ? o.promoCode : null;
               return {

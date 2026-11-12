@@ -6,6 +6,7 @@ import { reviewPath } from "@/lib/outbound";
 import { hasFactArticle } from "@/lib/fact-articles";
 import { CGA_REGISTER } from "@/lib/curacao-register";
 import { pageMetadata } from "@/lib/seo";
+import { storyCardFor } from "@/lib/og";
 import { articleSchema, breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { BrandMark } from "@/components/ui/BrandMark";
@@ -57,7 +58,8 @@ export function generateMetadata() {
   return pageMetadata(
     TITLE,
     `On the Curaçao Gaming Authority's register dated ${fmtDate(CGA_REGISTER.date)}, ${assess} of ${CGA_REGISTER.total} online gaming licences read "Assessment in progress". Where Stake, Roobet, Rollbit, Shuffle and ${rows().length - 4} other crypto casinos stand, from the register itself.`,
-    PATH
+    PATH,
+    storyCardFor({ kind: "register" }, TITLE, PATH)
   );
 }
 
