@@ -1,4 +1,4 @@
-import demos from "@/data/slot-demos.json";
+import { DEMO_STUDIOS, DEMO_IDS } from "./demo-studios";
 import { studioAllTitles, slotArtBySlug, topSlotRows } from "./slot-page";
 import { siteData } from "./site-data";
 import { SLOT_SERIES } from "./slot-series";
@@ -9,25 +9,22 @@ import type { DemoTile } from "@/components/slots/DemoGrid";
  * account, no deposit). Anyone can play a demo, so it is the one "play"
  * button that works for every visitor, wherever they are.
  *
- * Pragmatic Play and Hacksaw Gaming so far. Only studio-hosted demos, never a casino's lobby: a casino link would be an
- * affiliate placement and would turn some visitors away. data/slot-demos.json
- * holds each title's game id, from the studio's own listing
- * (scripts/fetch-hacksaw-demos.mjs); /demo/<studio>/<id> resolves the current
- * build when someone presses play.
+ * Only studio-hosted demos, never a casino's lobby: a casino link would be an
+ * affiliate placement and would turn some visitors away. The studios and
+ * their URLs are in lib/demo-studios.ts; data/slot-demos.json holds each
+ * title's id, from the studio's own game pages.
  */
 export interface SlotDemo {
   url: string;
   studio: string;
 }
 
-const D = demos as { hacksaw?: Record<string, number>; pragmatic?: Record<string, string> };
-const HACKSAW = D.hacksaw ?? {};
-const PRAGMATIC = D.pragmatic ?? {};
-
 export function demoFor(slug: string | null | undefined): SlotDemo | null {
   if (!slug) return null;
-  if (HACKSAW[slug]) return { url: `/demo/hacksaw/${HACKSAW[slug]}`, studio: "Hacksaw Gaming" };
-  if (PRAGMATIC[slug]) return { url: `/demo/pragmatic/${PRAGMATIC[slug]}`, studio: "Pragmatic Play" };
+  for (const [key, cfg] of Object.entries(DEMO_STUDIOS)) {
+    const id = DEMO_IDS[key]?.[slug];
+    if (id !== undefined) return { url: `/demo/${key}/${id}`, studio: cfg.name };
+  }
   return null;
 }
 
@@ -49,5 +46,9 @@ export function demoTiles(): DemoTile[] {
       })
       .filter((t): t is DemoTile => !!t);
   };
-  return [...tilesFor("Pragmatic Play", PRAGMATIC, (id) => `/demo/pragmatic/${id}`), ...tilesFor("Hacksaw Gaming", HACKSAW, (id) => `/demo/hacksaw/${id}`)];
+  // One tile per title: a slug carried by two studios' lists keeps the first.
+  const seen = new Set<string>();
+  return Object.entries(DEMO_STUDIOS)
+    .flatMap(([key, cfg]) => tilesFor(cfg.name, DEMO_IDS[key] ?? {}, (id) => `/demo/${key}/${id}`))
+    .filter((t) => !seen.has(t.slug) && !!seen.add(t.slug));
 }

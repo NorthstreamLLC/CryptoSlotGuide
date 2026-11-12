@@ -8,11 +8,19 @@ import { demoTiles } from "@/lib/slot-demos";
 
 const PATH = "/slots/free-demos";
 
+/** "A, B and C", biggest studio first. */
+function studioList(tiles: { studio: string }[]) {
+  const n = new Map<string, number>();
+  for (const t of tiles) n.set(t.studio, (n.get(t.studio) ?? 0) + 1);
+  const names = [...n.entries()].sort((a, b) => b[1] - a[1]).map(([s]) => s);
+  return names.length > 1 ? `${names.slice(0, -1).join(", ")} and ${names.at(-1)}` : names[0] ?? "";
+}
+
 export function generateMetadata() {
   const n = demoTiles().length;
   return pageMetadata(
     `Free slot demos: play ${n} slots for free`,
-    `Play ${n} Pragmatic Play and Hacksaw Gaming slots free in the studio's own demo: Gates of Olympus, Sweet Bonanza, Big Bass, Wanted Dead or a Wild and more. Play money, no account, no deposit.`,
+    `Play ${n} slots free in the studio's own demo, from Pragmatic Play, Play'n GO, Hacksaw, BGaming, Wazdan and ELK: Gates of Olympus, Sweet Bonanza, Book of Dead, Wanted Dead or a Wild and more. Play money, no account, no deposit.`,
     PATH
   );
 }
@@ -26,7 +34,7 @@ export default function Page() {
         crumbs={[{ label: "Home", href: "/" }, { label: "Slots", href: "/slots" }, { label: "Free demos" }]}
         eyebrow="Play for free"
         title="Free slot demos"
-        intro={`${tiles.length} Pragmatic Play and Hacksaw Gaming slots you can play right here, in the studio's own demo player: play money only, no account, no deposit, open wherever you are. Try a game's bonus round and volatility before you ever stake real money.`}
+        intro={`${tiles.length} slots from ${studioList(tiles)} you can play right here, in the studio's own demo player: play money only, no account, no deposit, open wherever you are. Try a game's bonus round and volatility before you ever stake real money.`}
       >
         <DemoGrid tiles={tiles} />
         <p style={{ margin: "26px 0 0", maxWidth: "70ch", fontSize: 13.5, lineHeight: 1.6, color: "#8DA0AA" }}>
