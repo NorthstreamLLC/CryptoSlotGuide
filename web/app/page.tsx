@@ -303,7 +303,6 @@ export default function HomePage() {
     { t: "Prediction markets", href: "/prediction-markets", tint: "#B284FF", imgs: stackOf([...venuesInOrder("crypto"), ...venuesInOrder("fiat")].map((v) => v.slug), 3) },
     { t: "Wallets", href: "/wallets", tint: "#5FA8FF", imgs: stackOf(["metamask", "phantom", "ledger", "trust-wallet"], 3) },
     { t: "Races", href: "/races", tint: "#FF9A5C", imgs: stackOf(raceSlugs(), 3) },
-    { t: "Guides", href: "/guides", tint: "#2FD3DA", imgs: [] as string[] },
   ];
 
   return (
