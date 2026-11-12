@@ -80,15 +80,15 @@ const CSS = `
 .h-btn-line:hover { border-color: rgba(255,255,255,.32); }
 
 /* Hero */
-.h-hero { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); grid-template-areas: "intro pick" "paths pick"; column-gap: 56px; align-items: start; padding: 36px 0 44px; }
-.h-intro { grid-area: intro; }
+.h-hero { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); grid-template-areas: "intro pick" "paths pick"; column-gap: 56px; align-items: center; padding: 52px 0 56px; }
+.h-intro { grid-area: intro; align-self: end; }
 .h-paths-wrap { grid-area: paths; align-self: start; }
 .h-pick { grid-area: pick; }
-.h-h1 { margin: 0 0 14px; font-size: clamp(34px, 4.2vw, 50px); line-height: 1.04; letter-spacing: -.04em; font-weight: 700; color: #F7F9FA; text-wrap: balance; }
-.h-lead { margin: 0 0 22px; max-width: 52ch; font-size: 17px; line-height: 1.6; color: #98A6AE; }
-.h-ctas { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 26px; }
-.h-paths { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.h-path { position: relative; display: grid; grid-template-columns: auto 1fr auto; grid-template-areas: "ico . stack" "txt txt arrow"; align-items: center; row-gap: 10px; column-gap: 12px; padding: 15px 16px; border-radius: 14px; border: 1px solid rgba(255,255,255,.09); background: #0D1114; box-shadow: inset 0 2px 0 var(--tint); transition: border-color .2s, transform .2s; }
+.h-h1 { margin: 0 0 22px; font-size: clamp(38px, 5vw, 58px); line-height: 1.04; letter-spacing: -.04em; font-weight: 700; color: #F7F9FA; text-wrap: balance; }
+.h-lead { margin: 0 0 30px; max-width: 50ch; font-size: 18px; line-height: 1.6; color: #98A6AE; }
+.h-ctas { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 32px; }
+.h-paths { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.h-path { position: relative; display: grid; grid-template-columns: auto 1fr auto; grid-template-areas: "ico . stack" "txt txt arrow"; align-items: center; row-gap: 14px; column-gap: 12px; padding: 20px; border-radius: 14px; border: 1px solid rgba(255,255,255,.09); background: #0D1114; box-shadow: inset 0 2px 0 var(--tint); transition: border-color .2s, transform .2s; }
 .h-path:hover { transform: translateY(-2px); border-color: color-mix(in srgb, var(--tint) 55%, transparent); }
 .h-path-ico { display: flex; align-items: center; justify-content: center; width: 42px; height: 42px; flex: none; border-radius: 12px; background: color-mix(in srgb, var(--tint) 14%, transparent); border: 1px solid color-mix(in srgb, var(--tint) 35%, transparent); color: var(--tint); }
 .h-path-ico svg { width: 22px; height: 22px; }
@@ -123,7 +123,7 @@ const CSS = `
 .h-change:hover { color: #fff; }
 .h-change-mark { width: 26px; height: 26px; flex: none; border-radius: 7px; overflow: hidden; margin-top: 1px; }
 
-.h-also { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.h-also { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
 .h-chip { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px 6px 7px; border-radius: 100px; border: 1px solid rgba(255,255,255,.1); background: rgba(255,255,255,.03); font-size: 13.5px; font-weight: 500; color: #C9D3D8; transition: border-color .15s, color .15s; }
 .h-chip:hover { border-color: color-mix(in srgb, var(--tint) 60%, transparent); color: #fff; }
 .h-chip .h-stack > span { width: 20px; height: 20px; }
