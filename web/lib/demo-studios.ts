@@ -48,6 +48,38 @@ export const DEMO_STUDIOS: Record<string, DemoStudio> = {
     url: (id) => `https://gamelauncher-stage.contentmedia.eu/1.0/game/?gameid=${id}&operatorid=44&mode=demo&currency=EUR&device=desktop&token=EUR_1597926622061&language=en_gb`,
     cache: 86400,
   },
+  habanero: {
+    name: "Habanero",
+    idPattern: /^SG[A-Za-z0-9]{2,60}$/,
+    url: (id) => `https://app-test.insvr.com/games/?brandid=a9d542ac-c9bb-e311-93f6-80c16e0883f4&keyname=${id}&mode=fun&locale=en&nofunplaymessage=1&ifrm=1`,
+    cache: 86400,
+  },
+  thunderkick: {
+    name: "Thunderkick",
+    idPattern: /^[A-Za-z0-9-]{3,60}$/,
+    url: (id) => `https://forfun.thunderkick.com/gamelauncher/play/generic?device=desktop&gameId=${id}&operatorId=2&playMode=demo`,
+    cache: 86400,
+  },
+  // Endorphina's /play page starts a fresh demo session each time, so it is never cached for long.
+  endorphina: { name: "Endorphina", idPattern: /^[a-z0-9-]{2,80}$/, url: (id) => `https://endorphina.com/games/${id}/play`, cache: 300 },
+  yggdrasil: {
+    name: "Yggdrasil",
+    idPattern: /^\d{3,8}$/,
+    url: (id) => `https://staticdemo.yggdrasilgaming.com/init/launchClient.html?gameid=${id}&lang=en&currency=EUR&org=Demo&key=&fullscreen=yes`,
+    cache: 86400,
+  },
+  quickspin: {
+    name: "Quickspin",
+    idPattern: /^[a-z0-9]{2,60}$/,
+    url: (id) => `https://d1oij17g4yikkz.cloudfront.net/casino/quickspin/${id}/index.html?gameid=${id}&moneymode=fun&partnerid=quickspin`,
+    cache: 86400,
+  },
+  kalamba: {
+    name: "Kalamba Games",
+    idPattern: /^[a-z0-9-]{2,80}$/,
+    url: (id) => `https://kalamba-for-kl.integration.demo.kalambagames.com/games/url/?gameCode=${id}&cageCode=FUN&currency=EUR`,
+    cache: 86400,
+  },
 };
 
 /** slug -> id, per studio. */

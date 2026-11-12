@@ -1,6 +1,7 @@
 /**
  * Adds free demos from studios that publish them on their own game pages to
- * data/slot-demos.json: Play'n GO, BGaming and ELK Studios. (Wazdan's demo
+ * data/slot-demos.json: Play'n GO, BGaming, ELK Studios, Habanero, Thunderkick,
+ * Endorphina, Yggdrasil, Quickspin and Kalamba Games. (Wazdan's demo
  * launcher redirects every visitor to wazdan.com, so it cannot be played here.) For each
  * studio, its own sitemap lists the game pages; each page carries the id its
  * "play demo" button opens. Only titles we hold a catalogue entry for are
@@ -24,6 +25,45 @@ const UA = { headers: { "User-Agent": "Mozilla/5.0 (compatible; CryptoSlotGuide 
 const get = async (u) => (await fetch(u, UA)).text();
 
 const STUDIOS = {
+  habanero: {
+    provider: /^habanero$/i,
+    sitemaps: ["https://habanerosystems.com/sitemap.xml"],
+    page: /^https:\/\/(www\.)?habanerosystems\.com\/games\/SG[A-Za-z0-9]+\/?$/,
+    // The page's own key is the game name after "SG": SGBattleTheBeast.
+    name: (url) => url.replace(/\/$/, "").split("/").at(-1).replace(/^SG/, ""),
+    id: (html) => html.match(/data-game-launch="(SG[A-Za-z0-9]+)"/)?.[1],
+  },
+  thunderkick: {
+    provider: /^thunderkick$/i,
+    sitemaps: ["https://www.thunderkick.com/games-sitemap.xml"],
+    page: /^https:\/\/www\.thunderkick\.com\/games\/[^/]+\/?$/,
+    id: (html) => html.match(/gamelauncher\\?\/play\\?\/generic\?device=desktop(?:&amp;|&|\\u0026)(?:#038;|amp;)?gameId=([A-Za-z0-9-]+)/)?.[1],
+  },
+  endorphina: {
+    provider: /^endorphina$/i,
+    sitemaps: ["https://endorphina.com/sitemap.xml"],
+    page: /^https:\/\/endorphina\.com\/games\/[a-z0-9-]+\/?$/,
+    // The demo is the page's own /play address; keep the slug where the page links it.
+    id: (html) => html.match(/href="\/games\/([a-z0-9-]+)\/play"/)?.[1],
+  },
+  yggdrasil: {
+    provider: /^yggdrasil/i,
+    sitemaps: ["https://yggdrasilgaming.com/games-sitemap.xml"],
+    page: /^https:\/\/(www\.)?yggdrasilgaming\.com\/games\/[^/]+\/?$/,
+    id: (html) => html.match(/data-iframe-src="[^"]*gameid=(\d+)/)?.[1] ?? html.match(/data-iframe-src="[^"]*staticdemo[^"]*\/(\d+)\/index\.html/)?.[1],
+  },
+  quickspin: {
+    provider: /^quickspin$/i,
+    sitemaps: ["https://quickspin.com/games-sitemap.xml"],
+    page: /^https:\/\/(www\.)?quickspin\.com\/slots\/[^/]+\/?$/,
+    id: (html) => html.match(/cloudfront\.net\/casino\/quickspin\/([a-z0-9]+)\/index\.html/)?.[1],
+  },
+  kalamba: {
+    provider: /^kalamba/i,
+    sitemaps: ["https://kalambagames.com/project-sitemap.xml"],
+    page: /^https:\/\/kalambagames\.com\/[a-z0-9-]+_?\/?$/,
+    id: (html) => html.match(/demo\.kalambagames\.com\/games\/url\/\?gameCode=([a-z0-9-]+)/)?.[1],
+  },
   playngo: {
     provider: /^play'?n ?go$/i,
     sitemaps: ["https://www.playngo.com/sitemap.xml"],
@@ -69,7 +109,7 @@ for (const [studio, cfg] of Object.entries(STUDIOS)) {
   }
   const todo = [...pages]
     .map((url) => {
-      const last = url.replace(/\/$/, "").split("/").at(-1).replace(/-(slot|demo)$/, "");
+      const last = (cfg.name ? cfg.name(url) : url.replace(/\/$/, "").split("/").at(-1)).replace(/-(slot|demo)$/, "");
       return { url, k: key(last), slug: ours.get(key(last)) };
     })
     .filter((x) => x.slug);
