@@ -80,18 +80,18 @@ const CSS = `
 .h-btn-line:hover { border-color: rgba(255,255,255,.32); }
 
 /* Hero */
-.h-hero { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); grid-template-areas: "intro pick" "paths pick"; column-gap: 56px; align-items: center; padding: 72px 0 64px; }
-.h-intro { grid-area: intro; align-self: end; }
+.h-hero { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); grid-template-areas: "intro pick" "paths pick"; column-gap: 56px; align-items: start; padding: 36px 0 44px; }
+.h-intro { grid-area: intro; }
 .h-paths-wrap { grid-area: paths; align-self: start; }
 .h-pick { grid-area: pick; }
-.h-h1 { margin: 0 0 18px; font-size: clamp(38px, 5vw, 58px); line-height: 1.04; letter-spacing: -.04em; font-weight: 700; color: #F7F9FA; text-wrap: balance; }
-.h-lead { margin: 0 0 30px; max-width: 50ch; font-size: 18px; line-height: 1.6; color: #98A6AE; }
-.h-ctas { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 40px; }
+.h-h1 { margin: 0 0 14px; font-size: clamp(34px, 4.2vw, 50px); line-height: 1.04; letter-spacing: -.04em; font-weight: 700; color: #F7F9FA; text-wrap: balance; }
+.h-lead { margin: 0 0 22px; max-width: 52ch; font-size: 17px; line-height: 1.6; color: #98A6AE; }
+.h-ctas { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 26px; }
 .h-paths { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-.h-path { position: relative; display: grid; grid-template-columns: auto 1fr auto; grid-template-areas: "ico . stack" "txt txt arrow"; align-items: center; row-gap: 14px; column-gap: 12px; padding: 18px; border-radius: 14px; border: 1px solid rgba(255,255,255,.09); background: #0D1114; box-shadow: inset 0 2px 0 var(--tint); transition: border-color .2s, transform .2s; }
+.h-path { position: relative; display: grid; grid-template-columns: auto 1fr auto; grid-template-areas: "ico . stack" "txt txt arrow"; align-items: center; row-gap: 10px; column-gap: 12px; padding: 15px 16px; border-radius: 14px; border: 1px solid rgba(255,255,255,.09); background: #0D1114; box-shadow: inset 0 2px 0 var(--tint); transition: border-color .2s, transform .2s; }
 .h-path:hover { transform: translateY(-2px); border-color: color-mix(in srgb, var(--tint) 55%, transparent); }
-.h-path-ico { display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; flex: none; border-radius: 12px; background: color-mix(in srgb, var(--tint) 14%, transparent); border: 1px solid color-mix(in srgb, var(--tint) 35%, transparent); color: var(--tint); }
-.h-path-ico svg { width: 24px; height: 24px; }
+.h-path-ico { display: flex; align-items: center; justify-content: center; width: 42px; height: 42px; flex: none; border-radius: 12px; background: color-mix(in srgb, var(--tint) 14%, transparent); border: 1px solid color-mix(in srgb, var(--tint) 35%, transparent); color: var(--tint); }
+.h-path-ico svg { width: 22px; height: 22px; }
 .h-path-txt { grid-area: txt; min-width: 0; }
 .h-path-ico { grid-area: ico; }
 .h-path .h-stack { grid-area: stack; }
@@ -143,8 +143,12 @@ const CSS = `
 .h-fine { margin: 12px 0 0; font-size: 11.5px; line-height: 1.55; color: #67747C; }
 
 /* Promo strip */
-.h-strip { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; padding: 14px 18px; border: 1px solid rgba(255,255,255,.08); border-radius: 14px; background: #0D1114; font-size: 14.5px; color: #A9B5BC; transition: border-color .15s; }
-.h-strip:hover { border-color: rgba(255,255,255,.18); }
+.h-strip { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; padding: 14px 18px; border: 1px solid color-mix(in srgb, var(--tint, #ffffff) 22%, rgba(255,255,255,.06)); border-radius: 14px; background: color-mix(in srgb, var(--tint, #0D1114) 7%, #0D1114); box-shadow: inset 3px 0 0 var(--tint, rgba(255,255,255,.2)); font-size: 14.5px; color: #A9B5BC; transition: border-color .15s, transform .15s; }
+.h-strip:hover { border-color: color-mix(in srgb, var(--tint, #ffffff) 55%, transparent); transform: translateY(-1px); }
+.h-strip .csg-strip-tag { background: color-mix(in srgb, var(--tint, #ffffff) 16%, transparent); color: var(--tint, #DCE3E7); }
+.h-strip .csg-strip-cta { color: var(--tint, #E8EDF0); }
+.h-running { display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+.h-running-label { font-size: 12.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #75828A; }
 .h-strip strong { color: #F2F5F7; font-weight: 600; }
 .csg-strip-tag { padding: 3px 8px; border-radius: 6px; background: rgba(255,255,255,.07); color: #DCE3E7; font-size: 11.5px; font-weight: 700; white-space: nowrap; }
 .csg-strip-text { flex: 1 1 320px; }
@@ -234,7 +238,7 @@ export default function HomePage() {
 
   const rooJackpots = !!getSpecFact("roobet", "Bonus terms", "Roo Jackpots");
   const jackpotStrip = rooJackpots ? (
-    <Link href="/guides/roo-jackpots-explained" className="h-strip">
+    <Link href="/guides/roo-jackpots-explained" className="h-strip" style={{ ["--tint" as string]: brandFor("roobet") }}>
       <span className="csg-strip-tag">New at Roobet</span>
       <span className="csg-strip-text">
         <strong>Roo Jackpots</strong> — four jackpots, the biggest starting at $250,000, with no wagering on wins.
@@ -416,16 +420,12 @@ export default function HomePage() {
                 </div>
               )}
             </div>
+            <div className="h-running">
+              <span className="h-running-label">Running now</span>
+              {kevinLive() ? <KevinStrip className="h-strip" fallback={jackpotStrip} /> : jackpotStrip}
+              {wheelWarsLive() && <StakeWheelStrip className="h-strip" style={{ ["--tint" as string]: brandFor("stake") }} />}
+            </div>
           </section>
-
-          <div style={{ paddingTop: 28 }}>
-            {kevinLive() ? <KevinStrip className="h-strip" fallback={jackpotStrip} /> : jackpotStrip}
-            {wheelWarsLive() && (
-              <div style={{ marginTop: 10 }}>
-                <StakeWheelStrip className="h-strip" />
-              </div>
-            )}
-          </div>
 
           {/* Top casinos */}
           <section className="h-sec" id="top-offers" style={{ scrollMarginTop: 120 }}>
