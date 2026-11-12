@@ -12,14 +12,11 @@ import { CodeChip } from "@/components/ui/CodeChip";
 import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
 import { CasinoRankList } from "@/components/casino-index/CasinoRankList";
 import { LineIcon } from "@/components/ui/LineIcon";
-import { KevinStrip } from "@/components/promo/KevinStrip";
-import { StakeWheelStrip } from "@/components/promo/StakeWheelStrip";
-import { RunningNow } from "@/components/promo/RunningNow";
 import { GuideCover } from "@/components/guides/GuideCover";
+import { GeoSwap } from "@/components/promo/GeoSwap";
 import { CGA_REGISTER } from "@/lib/curacao-register";
 import { fill } from "@/lib/derived";
 import { wheelWarsLive } from "@/lib/stake-wheel-wars";
-import { kevinLive } from "@/lib/kevin-promo";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { getSpecFact } from "@/lib/spec-sheet";
 import { PROMO_HUB, PROMO_PAGES } from "@/lib/promo-pages";
@@ -127,6 +124,8 @@ const CSS = `
 .h-mini { flex: 1; display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 14px; align-items: center; padding: 10px; border-radius: 14px; border: 1px solid rgba(255,255,255,.08); background: #0D1114; transition: border-color .15s, transform .15s; }
 .h-mini:hover { border-color: rgba(255,255,255,.2); transform: translateY(-1px); }
 .h-mini-cover { display: block; aspect-ratio: 16 / 10; border-radius: 10px; overflow: hidden; }
+.h-mini-brand { display: flex; align-items: center; justify-content: center; background: color-mix(in srgb, var(--tint) 16%, #0C1013); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--tint) 35%, transparent); }
+.h-mini-mark { width: 44px; height: 44px; border-radius: 10px; overflow: hidden; }
 .h-mini-body { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
 .h-mini b { font-size: 15px; line-height: 1.35; font-weight: 600; color: #F2F5F7; }
 .h-story-meta { display: flex; align-items: center; gap: 10px; font-size: 12.5px; color: #75828A; }
@@ -165,9 +164,6 @@ const CSS = `
 .h-strip:hover { border-color: color-mix(in srgb, var(--tint, #ffffff) 55%, transparent); transform: translateY(-1px); }
 .h-strip .csg-strip-tag { background: color-mix(in srgb, var(--tint, #ffffff) 16%, transparent); color: var(--tint, #DCE3E7); }
 .h-strip .csg-strip-cta { color: var(--tint, #E8EDF0); }
-.h-running { display: flex; flex-direction: column; gap: 10px; margin-top: 28px; }
-.h-running-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 12px; }
-.h-running-label { font-size: 12.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #75828A; }
 .h-strip strong { color: #F2F5F7; font-weight: 600; }
 .csg-strip-tag { padding: 3px 8px; border-radius: 6px; background: rgba(255,255,255,.07); color: #DCE3E7; font-size: 11.5px; font-weight: 700; white-space: nowrap; }
 .csg-strip-text { flex: 1 1 320px; }
@@ -251,6 +247,25 @@ function Stack({ imgs }: { imgs: string[] }) {
   );
 }
 
+type MiniItem = { href: string; tag: string; tint: string; title: string; date: string; cover: { category: string; tint: string } };
+const miniDate = (iso: string) => (iso ? new Date(iso + "T12:00:00Z").toLocaleDateString("en-GB", { day: "numeric", month: "short" }) : "");
+
+/** A story in the Latest column: cover tile, tag and date, headline. */
+function MiniStory({ x }: { x: MiniItem }) {
+  return (
+    <Link href={x.href} className="h-mini">
+      <span className="h-mini-cover"><GuideCover category={x.cover.category} tint={x.cover.tint} rounded={0} label={false} tile /></span>
+      <span className="h-mini-body">
+        <span className="h-story-meta">
+          <span className="h-ltag" style={{ ["--tint" as string]: x.tint }}>{x.tag}</span>
+          {miniDate(x.date)}
+        </span>
+        <b>{x.title}</b>
+      </span>
+    </Link>
+  );
+}
+
 export default function HomePage() {
   const { ops } = siteData;
   const c = siteCounts;
@@ -258,15 +273,6 @@ export default function HomePage() {
   const roobet = ops.find((o) => o.slug === "roobet");
 
   const rooJackpots = !!getSpecFact("roobet", "Bonus terms", "Roo Jackpots");
-  const jackpotStrip = rooJackpots ? (
-    <Link href="/guides/roo-jackpots-explained" className="h-strip" style={{ ["--tint" as string]: brandFor("roobet") }}>
-      <span className="csg-strip-tag">New at Roobet</span>
-      <span className="csg-strip-text">
-        <strong>Roo Jackpots</strong> — four jackpots, the biggest starting at $250,000, with no wagering on wins.
-      </span>
-      <span className="csg-strip-cta">How they work →</span>
-    </Link>
-  ) : null;
 
   // The four best-known series for the homepage row; the rest are one click away.
   const homeSeries = ["gates-of-olympus", "big-bass", "sweet-bonanza", "le-series"]
@@ -287,6 +293,21 @@ export default function HomePage() {
     .sort((a, b) => b.date.localeCompare(a.date))
     .slice(0, 5);
   const [leadStory, ...moreStories] = latest;
+  // Live promotions take two of the four story slots; where the casino doesn't
+  // accept the visitor, the slot shows the next story instead (GeoSwap).
+  const promos = [
+    ...(rooJackpots ? [{ slug: "roobet", href: "/guides/roo-jackpots-explained", tag: "New at Roobet", tint: brandFor("roobet"), when: "Live now", title: "Roo Jackpots: four jackpots, the biggest from $250,000, with no wagering on wins" }] : []),
+    ...(wheelWarsLive() ? [{ slug: "stake", href: "/promo-codes/stake#wheel-wars", tag: "At Stake", tint: brandFor("stake"), when: "Until 2 Jan", title: "Stake Wheel Wars: $150,000 a month in Pragmatic Play prizes" }] : []),
+  ];
+  type Story = (typeof latest)[number];
+  const miniSlots: { story?: Story; promo?: (typeof promos)[number]; fallback?: Story }[] = (() => {
+    const out: { story?: Story; promo?: (typeof promos)[number]; fallback?: Story }[] = [];
+    const queue = [...moreStories];
+    const lead = Math.max(0, 4 - promos.length);
+    for (let i = 0; i < lead && queue.length; i++) out.push({ story: queue.shift() });
+    for (const p of promos) out.push({ promo: p, fallback: queue.shift() });
+    return out.slice(0, 4);
+  })();
   const shortDate = (iso: string) => (iso ? new Date(iso + "T12:00:00Z").toLocaleDateString("en-GB", { day: "numeric", month: "short" }) : "");
   const issue = NEWS[0];
 
@@ -424,18 +445,28 @@ export default function HomePage() {
                   </span>
                 </Link>
                 <div className="h-minis">
-                  {moreStories.map((x) => (
-                    <Link key={x.href} href={x.href} className="h-mini">
-                      <span className="h-mini-cover"><GuideCover category={x.cover.category} tint={x.cover.tint} rounded={0} label={false} tile /></span>
-                      <span className="h-mini-body">
-                        <span className="h-story-meta">
-                          <span className="h-ltag" style={{ ["--tint" as string]: x.tint }}>{x.tag}</span>
-                          {shortDate(x.date)}
-                        </span>
-                        <b>{x.title}</b>
-                      </span>
-                    </Link>
-                  ))}
+                  {miniSlots.map((slot, i) =>
+                    slot.promo ? (
+                      <GeoSwap key={slot.promo.href} slug={slot.promo.slug} fallback={slot.fallback ? <MiniStory x={slot.fallback} /> : null}>
+                        <Link href={slot.promo.href} className="h-mini">
+                          <span className="h-mini-cover h-mini-brand" style={{ ["--tint" as string]: slot.promo.tint }}>
+                            <span className="h-mini-mark">
+                              <BrandMark slug={slot.promo.slug} mono={siteData.ops.find((o) => o.slug === slot.promo!.slug)?.mono ?? ""} tint={slot.promo.tint} radius={10} fontSize={12} />
+                            </span>
+                          </span>
+                          <span className="h-mini-body">
+                            <span className="h-story-meta">
+                              <span className="h-ltag" style={{ ["--tint" as string]: slot.promo.tint }}>{slot.promo.tag}</span>
+                              {slot.promo.when}
+                            </span>
+                            <b>{slot.promo.title}</b>
+                          </span>
+                        </Link>
+                      </GeoSwap>
+                    ) : slot.story ? (
+                      <MiniStory key={slot.story.href + i} x={slot.story} />
+                    ) : null
+                  )}
                 </div>
               </div>
             )}
@@ -465,12 +496,6 @@ export default function HomePage() {
                 </div>
               </div>
             )}
-            <RunningNow
-              items={[
-                { slug: "roobet", node: kevinLive() ? <KevinStrip className="h-strip" fallback={jackpotStrip} /> : jackpotStrip },
-                ...(wheelWarsLive() ? [{ slug: "stake", node: <StakeWheelStrip className="h-strip" style={{ ["--tint" as string]: brandFor("stake") }} /> }] : []),
-              ].filter((x) => !!x.node)}
-            />
           </section>
 
           {/* Top casinos */}
