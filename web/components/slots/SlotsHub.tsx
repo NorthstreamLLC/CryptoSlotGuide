@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { siteData } from "@/lib/site-data";
+import { pickPartners } from "@/lib/partner-fit";
+import { GeoRanked } from "@/components/geo/GeoRanked";
 import { topSlotRows, slotArtBySlug } from "@/lib/slot-page";
 import { catalogueTotals } from "@/lib/slot-db";
 import { topSlotRank } from "@/lib/top-slots";
@@ -85,7 +87,9 @@ export function SlotsHub() {
   const rows = topSlotRows();
   const top = rows[0];
   const art = top ? slotArtBySlug(top.slug) : null;
-  const roobet = siteData.ops.find((o) => o.slug === "roobet");
+  // The #1 slot's "play" button: the partner that fits it, swapped for the next
+  // fit where the visitor's location is shut to it (lib/partner-fit.ts).
+  const playAt = pickPartners({ context: { kind: "slots" }, seed: "slots-hub", limit: 4 });
   const totals = catalogueTotals();
   const reviewed = [...siteData.slots].sort((a, b) => topSlotRank(a.slug) - topSlotRank(b.slug) || a.name.localeCompare(b.name));
 
@@ -140,11 +144,18 @@ export function SlotsHub() {
                   </div>
                   <div style={{ display: "grid", gridTemplateColumns: "1fr auto", gap: 10, alignItems: "center" }} data-keep-grid>
                     <Link href={`/slots/${top.slug}`} className="sh-btn sh-gold">Read the review</Link>
-                    {roobet?.signupUrl && (
-                      <a href={roobet.signupUrl} target="_blank" rel="nofollow sponsored noopener" className="sh-btn sh-line">Play at Roobet ↗</a>
+                    {playAt.length > 0 && (
+                      <GeoRanked
+                        count={1}
+                        note={null}
+                        items={playAt.map(({ o }) => ({
+                          slug: o.slug,
+                          node: <a href={o.signupUrl as string} target="_blank" rel="nofollow sponsored noopener" data-copy-code={o.promoCode ?? undefined} data-placement="slots-hero" className="sh-btn sh-line">Play at {o.name} ↗</a>,
+                        }))}
+                      />
                     )}
                   </div>
-                  {roobet && <GeoBlockNote slug="roobet" name={roobet.name} compact />}
+                  {playAt[0] && <GeoBlockNote slug={playAt[0].o.slug} name="" none compact allOf={playAt.map((x) => x.o.slug)} />}
                 </div>
               </aside>
             )}

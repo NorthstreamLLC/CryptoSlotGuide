@@ -371,7 +371,7 @@ export function CasinoReport({ e }: { e: EntityView }) {
               )}
               <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 12 }}>
                 {o.signupUrl ? (
-                  <a href={o.signupUrl} target="_blank" rel="nofollow sponsored noopener" data-copy-code={o.promoCode} className="csg-card-btn" style={{ display: "inline-flex", alignItems: "center", gap: 10, padding: "14px 24px", borderRadius: 11, background: GOLD, color: "#141007", fontSize: 15, fontWeight: 700 }}>
+                  <a href={o.signupUrl} target="_blank" rel="nofollow sponsored noopener" data-copy-code={o.promoCode} data-placement="review-hero" className="csg-card-btn" style={{ display: "inline-flex", alignItems: "center", gap: 10, padding: "14px 24px", borderRadius: 11, background: GOLD, color: "#141007", fontSize: 15, fontWeight: 700 }}>
                     Claim offer at {o.name} <span aria-hidden>↗</span>
                   </a>
                 ) : null}

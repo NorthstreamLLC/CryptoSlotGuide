@@ -10,8 +10,9 @@ import { affiliateTarget, reviewPath } from "@/lib/outbound";
  * event in Vercel Web Analytics (Analytics → Events, on plans that record
  * custom events) and as one JSON line in the function log (Logs, search
  * "affiliate_click"). Both carry the operator, the page the click came from
- * and the visitor's country — never an IP address or anything that names
- * the person.
+ * the visitor's country, and the block on the page it came from (placement,
+ * plus whether it was in the first screen) — never an IP address or anything
+ * that names the person.
  *
  * An unknown slug, or one without a live affiliate link, goes to our own
  * review page rather than a 404: an old link in someone's bookmarks should
@@ -32,9 +33,15 @@ export async function GET(req: NextRequest, ctx: { params: Promise<{ slug: strin
   } catch {
     /* no usable referrer */
   }
+  // Which block on the page the click came from, and whether it was in the
+  // first screen: set by the site's click listener (components/ui/CodeCopier).
+  const sp = req.nextUrl.searchParams;
+  const placement = /^[a-z0-9-]{1,32}$/.test(sp.get("p") ?? "") ? (sp.get("p") as string) : "untagged";
   const click = {
     slug,
     from: from || "(direct)",
+    placement,
+    fold: sp.get("f") === "1" ? "above" : "below",
     country: req.headers.get("x-vercel-ip-country") ?? "",
     live: Boolean(target),
   };

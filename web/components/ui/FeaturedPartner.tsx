@@ -92,13 +92,13 @@ export function FeaturedPartner({
   const title = heading ?? (rows.length > 1 ? "Casinos we recommend" : "Casino we recommend");
 
   return (
-    <aside style={{ marginTop: 44, padding: "18px 20px", borderRadius: 16, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
+    <aside data-placement={context.kind === "alternative" ? "alternatives" : "partners"} style={{ marginTop: 44, padding: "18px 20px", borderRadius: 16, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
       <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
         <span style={{ fontSize: 17, fontWeight: 700, letterSpacing: "-.015em", color: "#F2F5F7" }}>{title}</span>
       </div>
       <GeoRanked
         count={count}
-        fallback={<GeoBlockNote slug={rows[0].o.slug} name={rows[0].o.name} none />}
+        note={<GeoBlockNote slug={rows[0].o.slug} name={rows[0].o.name} none />}
         items={rows.map(({ o, pitch }) => {
         const tint = brandFor(o.slug);
         return { slug: o.slug, node: (

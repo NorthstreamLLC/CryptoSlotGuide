@@ -8,7 +8,11 @@ import { track } from "@vercel/analytics";
  *
  * Any element carrying data-copy-code — the code chips (CodeChip) and every
  * "Visit"/"Claim" button of a casino that has a code — copies that code when
- * clicked, and a toast says so. On a phone the code otherwise has to be
+ * clicked, and a toast says so.
+ *
+ * It also tags every /go/ click with where on the page it came from (see
+ * tagPlacement), so the click log can say which block earns, not only which
+ * page. On a phone the code otherwise has to be
  * remembered across a tab switch and typed into a sign-up form, which is
  * where it gets lost. A button still opens the casino as before: nothing here
  * prevents the click; a chip is a <button> and goes nowhere.
@@ -17,12 +21,39 @@ import { track } from "@vercel/analytics";
  * the server-rendered lists stay server-rendered. The same listener counts
  * clicks on casino review links (review_click) as a demand signal.
  */
+/**
+ * Adds ?p=<placement> to a /go/ link as it is clicked: the nearest
+ * data-placement on the page (slot-hero, next-step, partners, ...), else the
+ * nearest id or aria-label, else "other"; and f=1 when the button was in the
+ * first screen. Set on the link itself just before the browser follows it, so
+ * the server-rendered HTML and what crawlers see are unchanged.
+ */
+function tagPlacement(e: MouseEvent) {
+  const a = (e.target as HTMLElement | null)?.closest<HTMLAnchorElement>('a[href^="/go/"]');
+  if (!a) return;
+  const host = a.closest<HTMLElement>("[data-placement]");
+  const named = host ? null : a.closest<HTMLElement>("[id], [aria-label]");
+  const raw = host?.dataset.placement ?? named?.id ?? named?.getAttribute("aria-label") ?? "other";
+  const p = raw.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 32) || "other";
+  const top = a.getBoundingClientRect().top + window.scrollY;
+  try {
+    const u = new URL(a.href, location.origin);
+    u.searchParams.set("p", p);
+    if (top < window.innerHeight) u.searchParams.set("f", "1");
+    else u.searchParams.delete("f");
+    a.href = u.pathname + u.search;
+  } catch {
+    /* leave the link as it was */
+  }
+}
+
 export function CodeCopier() {
   const [toast, setToast] = useState<string | null>(null);
 
   useEffect(() => {
     let timer: ReturnType<typeof setTimeout> | undefined;
     const onClick = (e: MouseEvent) => {
+      tagPlacement(e);
       // Demand signal: which casino reviews readers open, and from where.
       // With /go/'s affiliate_click this shows the casinos people want that
       // carry no deal yet. Slug and page only — nothing about the reader.
@@ -49,8 +80,13 @@ export function CodeCopier() {
       else if (fallback(code)) done();
     };
     document.addEventListener("click", onClick);
+    // Middle-click and the context menu's "open in new tab" never fire click.
+    document.addEventListener("auxclick", tagPlacement);
+    document.addEventListener("contextmenu", tagPlacement);
     return () => {
       document.removeEventListener("click", onClick);
+      document.removeEventListener("auxclick", tagPlacement);
+      document.removeEventListener("contextmenu", tagPlacement);
       clearTimeout(timer);
     };
   }, []);

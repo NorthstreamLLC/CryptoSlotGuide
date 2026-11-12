@@ -129,6 +129,7 @@ export function EntityReviewPageClient({ e, review, lead, heroExtra, heroAside, 
                   href={e.signupUrl}
                   target="_blank"
                   rel="nofollow sponsored noopener"
+                  data-placement="review-hero"
                   style={{ display: "block", textAlign: "center", padding: 14, borderRadius: 9, background: "#FFC531", color: "#141007", fontSize: 14, fontWeight: 700, marginBottom: 9 }}
                 >
                   {e.playAtName ? (

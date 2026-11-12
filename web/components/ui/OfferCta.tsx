@@ -37,7 +37,7 @@ export function OfferCta({ o, size = "md" }: { o: Operator; size?: "sm" | "md" }
         Read review
       </Link>
       {outbound && (
-        <a href={o.signupUrl} target="_blank" rel="noopener sponsored nofollow" data-copy-code={o.promoCode} className="csg-visit" style={{ flex: "none", fontSize: sm ? 13 : 13.5, color: "#93A1A9", whiteSpace: "nowrap" }}>
+        <a href={o.signupUrl} target="_blank" rel="noopener sponsored nofollow" data-copy-code={o.promoCode} data-placement="offer-cta" className="csg-visit" style={{ flex: "none", fontSize: sm ? 13 : 13.5, color: "#93A1A9", whiteSpace: "nowrap" }}>
           Visit ↗
         </a>
       )}

@@ -8,9 +8,11 @@ import { getGeo } from "@/lib/geo-client";
  * that turn this visitor away (restricted country, or a region such as
  * Ontario, via /api/geo). The server sends a few spare candidates so a blocked
  * one is replaced by the next fit rather than leaving a gap. Crawlers and first
- * paint get the top `count`. Where every candidate is blocked, `fallback`.
+ * paint get the top `count`. Where every candidate is blocked, the top `count`
+ * stay with `note` after them, as every list on the site does: shown, and the
+ * reader told before they click.
  */
-export function GeoRanked({ items, count, fallback = null }: { items: { slug: string; node: ReactNode }[]; count: number; fallback?: ReactNode }) {
+export function GeoRanked({ items, count, note = null }: { items: { slug: string; node: ReactNode }[]; count: number; /** Shown after the list when every candidate is shut to the visitor. */ note?: ReactNode }) {
   const [blocked, setBlocked] = useState<string[] | null>(null);
 
   useEffect(() => {
@@ -25,8 +27,14 @@ export function GeoRanked({ items, count, fallback = null }: { items: { slug: st
     };
   }, [items]);
 
-  const shown = (blocked ? items.filter((i) => !blocked.includes(i.slug)) : items).slice(0, count);
-  if (!shown.length) return <>{fallback}</>;
-  return <>{shown.map((i) => <Fragment key={i.slug}>{i.node}</Fragment>)}</>;
+  const allowed = blocked ? items.filter((i) => !blocked.includes(i.slug)) : items;
+  const allBlocked = !allowed.length;
+  const shown = (allBlocked ? items : allowed).slice(0, count);
+  return (
+    <>
+      {shown.map((i) => <Fragment key={i.slug}>{i.node}</Fragment>)}
+      {allBlocked && <Fragment key="note">{note}</Fragment>}
+    </>
+  );
 }
 

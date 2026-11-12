@@ -7,10 +7,12 @@ import { getGeo } from "@/lib/geo-client";
  * The bonuses hero: the top offers as a stack of cards, one in front and the
  * others peeking out behind it. Clicking a card behind brings it to the
  * front. Cards for casinos that turn the visitor away (restricted country, or
- * a region such as Ontario) leave the stack; if none is left, `fallback`.
+ * a region such as Ontario) leave the stack. If that would leave none, the
+ * stack stays whole with `note` under it, as every list on the site does: the
+ * offers are shown, and the reader is told before they click.
  * Crawlers and first paint get the full stack in the server's order.
  */
-export function OfferStack({ items, fallback = null }: { items: { slug: string; name: string; tint: string; face: ReactNode; peek: ReactNode }[]; fallback?: ReactNode }) {
+export function OfferStack({ items, note = null }: { items: { slug: string; name: string; tint: string; face: ReactNode; peek: ReactNode }[]; /** Shown under the stack when every offer in it is shut to the visitor. */ note?: ReactNode }) {
   const [blocked, setBlocked] = useState<string[]>([]);
   const [front, setFront] = useState<string | null>(null);
 
@@ -26,13 +28,14 @@ export function OfferStack({ items, fallback = null }: { items: { slug: string; 
     };
   }, [items]);
 
-  const open = items.filter((i) => !blocked.includes(i.slug)).slice(0, 3);
-  if (!open.length) return <>{fallback}</>;
+  const allowed = items.filter((i) => !blocked.includes(i.slug));
+  const allBlocked = !allowed.length;
+  const open = (allBlocked ? items : allowed).slice(0, 3);
   const lead = open.find((i) => i.slug === front) ?? open[0];
   const behind = open.filter((i) => i !== lead).slice(0, 2);
 
   return (
-    <div className="os" style={{ paddingTop: behind.length * 34 }}>
+    <div className="os" data-placement="bonus-stack" style={{ paddingTop: behind.length * 34 }}>
       <style>{CSS}</style>
       {behind
         .slice()
@@ -55,6 +58,7 @@ export function OfferStack({ items, fallback = null }: { items: { slug: string; 
       <div key={lead.slug} className="os-front" style={{ ["--tint" as string]: lead.tint }}>
         {lead.face}
       </div>
+      {allBlocked && <div className="os-note">{note}</div>}
       {open.length > 1 && (
         <div className="os-dots" role="tablist" aria-label="Offers">
           {open.slice(0, 3).map((i) => (

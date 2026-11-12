@@ -117,7 +117,7 @@ export function BonusesHub() {
     const code = readable(o.promoCode, o.slug) ? o.promoCode : null;
     const wv = wagerView(o);
     return (
-      <>
+      <div>
         <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
           <span style={{ width: 52, height: 52, borderRadius: 13, overflow: "hidden", flex: "none", boxShadow: "0 8px 22px rgba(0,0,0,.4)" }}>
             <BrandMark slug={o.slug} mono={o.mono} tint={brandFor(o.slug)} radius={13} fontSize={15} />
@@ -151,7 +151,7 @@ export function BonusesHub() {
         <Link href={hasPromo(o.slug) ? `/promo-codes/${o.slug}` : reviewPath(o.slug)} style={{ display: "block", marginTop: 14, textAlign: "center", fontSize: 13.5, fontWeight: 600, color: "#C9D3D8" }}>
           {hasPromo(o.slug) ? "Full terms and how to claim →" : `Read our ${o.name} review →`}
         </Link>
-      </>
+      </div>
     );
   };
   const peek = (o: (typeof ops)[number]) => (
@@ -204,13 +204,7 @@ export function BonusesHub() {
             <aside aria-label="Top offers this week">
               <OfferStack
                 items={stack.map((o) => ({ slug: o.slug, name: o.name, tint: brandFor(o.slug), face: face(o), peek: peek(o) }))}
-                fallback={
-                  <div className="bh-pick">
-                    <span style={{ display: "block", fontSize: 19, fontWeight: 700, letterSpacing: "-.015em", color: "#F2F5F7" }}>This week&apos;s top offers aren&apos;t open where you are</span>
-                    <GeoBlockNote slug={stack[0]?.slug ?? "roobet"} name="" none />
-                    <a href="#top-offers" className="bh-btn bh-line" style={{ display: "flex", marginTop: 14 }}>Compare every offer and its terms ↓</a>
-                  </div>
-                }
+                note={<GeoBlockNote slug={stack[0]?.slug ?? "roobet"} name="" none />}
               />
             </aside>
           </section>
@@ -252,7 +246,7 @@ export function BonusesHub() {
                   </span>
                   <span className="bh-act">
                     <Link href={reviewPath(o.slug)} className="bh-btn bh-gold">Read review</Link>
-                    <a href={o.signupUrl!} target="_blank" rel="nofollow sponsored noopener" data-copy-code={readable(o.promoCode, o.slug) ? o.promoCode! : undefined} className="bh-claim">Claim ↗</a>
+                    <a href={o.signupUrl!} target="_blank" rel="nofollow sponsored noopener" data-copy-code={readable(o.promoCode, o.slug) ? o.promoCode! : undefined} data-placement="bonus-list" className="bh-claim">Claim ↗</a>
                   </span>
                 </div>
               );

@@ -134,7 +134,7 @@ export function CasinosHub({ allList }: { allList: ReactNode }) {
                 <div className="ch-pick-actions" data-keep-grid>
                   <Link href={reviewPath(top.slug)} className="ch-btn ch-gold">Read the {top.name} review</Link>
                   {top.signupUrl && top.affiliate && (
-                    <a href={top.signupUrl} target="_blank" rel="nofollow sponsored noopener" data-copy-code={top.promoCode ?? undefined} className="ch-btn ch-line">
+                    <a href={top.signupUrl} target="_blank" rel="nofollow sponsored noopener" data-copy-code={top.promoCode ?? undefined} data-placement="casinos-hero" className="ch-btn ch-line">
                       Visit ↗
                     </a>
                   )}

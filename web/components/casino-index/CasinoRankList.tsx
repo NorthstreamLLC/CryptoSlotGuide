@@ -76,7 +76,7 @@ export function CasinoRankList({ ops, note = true }: { ops: Operator[]; note?: b
               <div className="rl-act">
                 <Link href={reviewPath(o.slug)} className="rl-btn">Read review</Link>
                 {outbound && (
-                  <a href={o.signupUrl} target="_blank" rel="nofollow sponsored noopener" data-copy-code={o.promoCode} className="rl-visit">
+                  <a href={o.signupUrl} target="_blank" rel="nofollow sponsored noopener" data-copy-code={o.promoCode} data-placement="rank-list" className="rl-visit">
                     Visit ↗
                   </a>
                 )}

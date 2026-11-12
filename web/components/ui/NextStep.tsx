@@ -29,7 +29,7 @@ function Block({ kicker, title, sub, cta, href, external, code, geoSlug, geoName
   // Kickers are written in capitals at the call sites; shown in sentence case.
   const label = kicker.charAt(0) + kicker.slice(1).toLowerCase();
   return (
-    <section aria-label="Next step" style={{ margin: "36px 0", padding: "24px 26px", borderRadius: 16, background: "#0F1316", border: "1px solid rgba(255,197,49,.28)" }}>
+    <section aria-label="Next step" data-placement="next-step" style={{ margin: "36px 0", padding: "24px 26px", borderRadius: 16, background: "#0F1316", border: "1px solid rgba(255,197,49,.28)" }}>
       <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: 18 }}>
         <div style={{ minWidth: 0, flex: "1 1 320px" }}>
           <div style={{ fontSize: 13, fontWeight: 600, color: GOLD, marginBottom: 6 }}>{label}</div>
@@ -72,7 +72,7 @@ export function SlotNextStep({ name, seed }: { name: string; seed?: string }) {
   return (
     <GeoRanked
       count={1}
-      fallback={generic}
+      note={<GeoBlockNote slug={picks[0].o.slug} name={picks[0].o.name} compact />}
       items={picks.map(({ o, pitch }) => {
         const code = typeableCode(o.slug, o.promoCode) ? o.promoCode : null;
         return {

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { pickPartners } from "@/lib/partner-fit";
 import { typeableCode } from "@/lib/promo-pages";
 import { GeoRanked } from "@/components/geo/GeoRanked";
+import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
 
 /**
  * The right half of a slot page's hero: the game's own art, large, with its
@@ -41,7 +42,7 @@ export function SlotHeroArt({
   );
 
   return (
-    <div className="sha" style={{ ["--tint" as string]: tint }}>
+    <div className="sha" data-placement="slot-hero" style={{ ["--tint" as string]: tint }}>
       <style>{CSS}</style>
       <div className="sha-frame">
         {/* priority: the largest thing above the fold, so it is the LCP. */}
@@ -64,7 +65,7 @@ export function SlotHeroArt({
         {picks.length ? (
           <GeoRanked
             count={1}
-            fallback={slotSites}
+            note={<GeoBlockNote slug={picks[0].o.slug} name={picks[0].o.name} compact />}
             items={picks.map(({ o }) => {
               const code = typeableCode(o.slug, o.promoCode) ? o.promoCode : null;
               return {

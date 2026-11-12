@@ -10,7 +10,7 @@ import { getGeo, type GeoAnswer } from "@/lib/geo-client";
  * to them instead. Nothing is hidden and nothing renders for anyone else, so
  * the page reads the same to crawlers and to visitors the casino accepts.
  */
-export function GeoBlockNote({ slug, name, compact = false, none = false }: { slug: string; name: string; compact?: boolean; /** Under a list whose every casino is shut to the visitor: one note for all of them. */ none?: boolean }) {
+export function GeoBlockNote({ slug, name, compact = false, none = false, allOf }: { slug: string; name: string; compact?: boolean; /** Under a list whose every casino is shut to the visitor: one note for all of them. */ none?: boolean; /** With `none`: show only when every one of these is shut to the visitor. */ allOf?: string[] }) {
   const [geo, setGeo] = useState<GeoAnswer | null>(null);
 
   useEffect(() => {
@@ -21,7 +21,9 @@ export function GeoBlockNote({ slug, name, compact = false, none = false }: { sl
     };
   }, []);
 
-  if (!geo?.detected || !geo.casinos?.restrictedSlugs.includes(slug)) return null;
+  if (!geo?.detected || !geo.casinos) return null;
+  const shut = (x: string) => geo.casinos!.restrictedSlugs.includes(x) || !!geo.regionBlocked?.some((r) => r.slug === x);
+  if (allOf ? !allOf.every(shut) : !geo.casinos.restrictedSlugs.includes(slug)) return null;
   const raw = geo.countryName ?? geo.country ?? "your country";
   const where = /^(United |Netherlands|Philippines|Czech Republic)/.test(raw) ? `the ${raw}` : raw;
   const isUS = geo.country === "US";

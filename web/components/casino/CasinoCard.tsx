@@ -113,7 +113,7 @@ export function CasinoCard({ o, rank, coinMax = 7 }: { o: Operator; rank?: numbe
           Read review
         </Link>
         {o.affiliate && o.signupUrl && (
-          <a href={o.signupUrl} target="_blank" rel="nofollow sponsored noopener" data-copy-code={o.promoCode} style={{ fontSize: 13.5, color: "#93A1A9", whiteSpace: "nowrap" }}>
+          <a href={o.signupUrl} target="_blank" rel="nofollow sponsored noopener" data-copy-code={o.promoCode} data-placement="casino-card" style={{ fontSize: 13.5, color: "#93A1A9", whiteSpace: "nowrap" }}>
             Visit ↗
           </a>
         )}
