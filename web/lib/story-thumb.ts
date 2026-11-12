@@ -15,6 +15,8 @@ export type ThumbSpec =
   | { kind: "kyc" }
   | { kind: "cost" }
   | { kind: "register"; badge?: Badge }
+  /** Casinos we track that hold a Curaçao licence: for news about the regulator itself. */
+  | { kind: "licensees"; badge?: Badge }
   | { kind: "cover"; category: string; tint: string };
 
 export const TONE: Record<Badge["tone"], string> = { bad: "#FF6B6B", watch: "#FFC531", ok: "#57E39A" };
@@ -30,7 +32,9 @@ export const BADGES = {
 /** Which picture a news story gets, from its title: the regulator, or the casino it names. */
 export function thumbForNews(title: string, fallback: { category: string; tint: string }): ThumbSpec {
   const incident = /offline|breach|hack|security|outage|scare/i.test(title);
-  if (/cura[cç]ao/i.test(title)) return { kind: "register", badge: incident ? BADGES.breach : undefined };
+  // The register picture belongs to the licence tracker; news about the
+  // regulator shows the casinos it licenses, whose players the story is about.
+  if (/cura[cç]ao/i.test(title)) return incident ? { kind: "licensees", badge: BADGES.breach } : { kind: "register" };
   const op = siteData.ops.find((o) => logoFor(o.slug) && new RegExp(`\\b${o.name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`, "i").test(title));
   if (op) return { kind: "casino", slug: op.slug, badge: incident ? BADGES.incident : undefined };
   return { kind: "cover", ...fallback };
@@ -59,3 +63,12 @@ export function costPicks(n: number, onlyPng = false) {
 }
 
 export const registerParts = () => CGA_REGISTER.counts.filter((c) => c.n > 0);
+
+/** Casinos we track on a Curaçao licence, partners first, with a logo. */
+export function licenseePicks(n: number, onlyPng = false) {
+  return siteData.ops
+    .filter((o) => /cura/i.test(o.licence ?? "") && logoFor(o.slug) && (!onlyPng || logoFor(o.slug)!.endsWith(".png")))
+    .sort((a, b) => Number(!!b.affiliate) - Number(!!a.affiliate))
+    .slice(0, n)
+    .map((o) => o.slug);
+}

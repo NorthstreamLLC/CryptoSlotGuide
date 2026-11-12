@@ -71,7 +71,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   // News gets a share card drawn from what it is about (the casino it names, or
   // Curaçao's register), the same picture the homepage shows for it.
   const isNews = g.category === "News" || !!(siteData.guideBodies as Record<string, { contentType?: string }>)[slug]?.contentType;
-  const card = isNews ? storyCardFor(thumbForNews(g.title, { category: g.category, tint: g.tint }), g.title, `/guides/${slug}`) : undefined;
+  const card = isNews ? storyCardFor(thumbForNews(g.title, { category: g.category, tint: g.tint }), g.title, `/guides/${slug}`, "News") : undefined;
   return pageMetadata(g.title, desc.length > 300 ? `${desc.slice(0, 297).replace(/\s+\S*$/, "")}…` : desc, `/guides/${slug}`, card);
 }
 

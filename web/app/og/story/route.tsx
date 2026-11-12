@@ -5,7 +5,7 @@ import { logoFor } from "@/lib/logo";
 import { brandFor } from "@/lib/casino-facts";
 import { siteData } from "@/lib/site-data";
 import { CGA_REGISTER } from "@/lib/curacao-register";
-import { BADGES, TIER_TINT, REGISTER_TONE, kycPicks, costPicks, registerParts } from "@/lib/story-thumb";
+import { BADGES, TIER_TINT, REGISTER_TONE, kycPicks, costPicks, registerParts, licenseePicks } from "@/lib/story-thumb";
 
 /**
  * The share card (1200x630) for a story with a picture of its own: the title
@@ -14,7 +14,7 @@ import { BADGES, TIER_TINT, REGISTER_TONE, kycPicks, costPicks, registerParts } 
  * anything unsigned or altered gets a 400. Immutable, like the plain card:
  * changed text or data means a new URL.
  */
-const KINDS = new Set(["casino", "kyc", "cost", "register"]);
+const KINDS = new Set(["casino", "kyc", "cost", "register", "licensees"]);
 const hex = (c: string, a: number) => `${c}${Math.round(a * 255).toString(16).padStart(2, "0")}`;
 
 export async function GET(req: NextRequest) {
@@ -31,7 +31,7 @@ export async function GET(req: NextRequest) {
   const origin = req.nextUrl.origin;
   const abs = (p: string) => new URL(p, origin).href;
   const badge = b ? BADGES[b as keyof typeof BADGES] : null;
-  const tint = op ? brandFor(op.slug) : v === "kyc" ? "#57E39A" : v === "cost" ? "#FFC531" : "#9AAE5E";
+  const tint = op ? brandFor(op.slug) : v === "kyc" ? "#57E39A" : v === "cost" ? "#FFC531" : v === "licensees" ? "#FF6B6B" : "#9AAE5E";
   const size = t.length > 80 ? 46 : t.length > 50 ? 54 : 62;
 
   const Logo = ({ slug, px }: { slug: string; px: number }) => (
@@ -71,6 +71,18 @@ export async function GET(req: NextRequest) {
             </div>
           ))}
         </div>
+      </div>
+    );
+  } else if (v === "licensees") {
+    const slugs = licenseePicks(12, true);
+    picture = (
+      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", width: "100%", height: "100%", gap: 26 }}>
+        <div style={{ display: "flex", flexWrap: "wrap", width: 4 * 80 + 3 * 18, gap: 18 }}>
+          {slugs.map((s) => (
+            <Logo key={s} slug={s} px={80} />
+          ))}
+        </div>
+        <div style={{ display: "flex", fontSize: 19, color: "#A9B8C0" }}>Crypto casinos we track on a Curaçao licence</div>
       </div>
     );
   } else if (v === "cost") {

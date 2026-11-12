@@ -1,7 +1,7 @@
 import { logoFor } from "@/lib/logo";
 import { brandFor } from "@/lib/casino-facts";
 import { CGA_REGISTER } from "@/lib/curacao-register";
-import { TONE, TIER_TINT, REGISTER_TONE, kycPicks, costPicks, registerParts, type ThumbSpec } from "@/lib/story-thumb";
+import { TONE, TIER_TINT, REGISTER_TONE, kycPicks, costPicks, registerParts, licenseePicks, type ThumbSpec } from "@/lib/story-thumb";
 import { GuideCover } from "@/components/guides/GuideCover";
 
 export { thumbForNews, type ThumbSpec } from "@/lib/story-thumb";
@@ -25,6 +25,7 @@ export function StoryThumb({ spec, size }: { spec: ThumbSpec; size: Size }) {
       {spec.kind === "kyc" && <KycThumb size={size} />}
       {spec.kind === "cost" && <CostThumb size={size} />}
       {spec.kind === "register" && <RegisterThumb size={size} />}
+      {spec.kind === "licensees" && <LicenseesThumb size={size} />}
       {"badge" in spec && spec.badge && (
         <span className="st-badge" style={{ ["--tone" as string]: TONE[spec.badge.tone] }} title={spec.badge.text}>
           {size === "lead" ? spec.badge.text : "!"}
@@ -94,6 +95,23 @@ function CostThumb({ size }: { size: Size }) {
           </span>
         ))}
       </span>
+    </span>
+  );
+}
+
+function LicenseesThumb({ size }: { size: Size }) {
+  const slugs = licenseePicks(size === "lead" ? 12 : 6);
+  return (
+    <span className="st-fill" style={{ background: "radial-gradient(80% 90% at 50% 30%, rgba(255,107,107,.2), transparent 70%), #0B0F12" }}>
+      <span className="st-grid" aria-hidden />
+      <span className="st-mosaic" data-keep-grid style={{ gridTemplateColumns: `repeat(${size === "lead" ? 6 : 3}, auto)` }}>
+        {slugs.map((s) => (
+          <span key={s} className="st-cell">
+            <Logo slug={s} px={size === "lead" ? 50 : 22} />
+          </span>
+        ))}
+      </span>
+      {size === "lead" && <span className="st-legend">Crypto casinos we track on a Curaçao licence</span>}
     </span>
   );
 }

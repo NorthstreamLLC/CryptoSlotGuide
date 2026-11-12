@@ -48,8 +48,8 @@ export function ogCardPath(title: string, path: string): string {
  * beside the page's title. Same signing as the plain card, over every field,
  * so the casino and the badge can't be swapped either.
  */
-export function storyCardPath(spec: { kind: "casino" | "kyc" | "cost" | "register"; slug?: string; badge?: "incident" | "breach" }, title: string, path: string): string {
-  const k = KICKERS.find(([re]) => re.test(path))?.[1] ?? "CryptoSlotGuide";
+export function storyCardPath(spec: { kind: "casino" | "kyc" | "cost" | "register" | "licensees"; slug?: string; badge?: "incident" | "breach" }, title: string, path: string, kicker?: string): string {
+  const k = kicker ?? KICKERS.find(([re]) => re.test(path))?.[1] ?? "CryptoSlotGuide";
   const t = title.length > 110 ? `${title.slice(0, 107).trimEnd()}…` : title;
   const c = spec.slug ?? "";
   const b = spec.badge ?? "";
@@ -58,9 +58,9 @@ export function storyCardPath(spec: { kind: "casino" | "kyc" | "cost" | "registe
 }
 
 /** The story card for a ThumbSpec, or undefined where the story has no data picture. */
-export function storyCardFor(spec: import("./story-thumb").ThumbSpec, title: string, path: string): string | undefined {
+export function storyCardFor(spec: import("./story-thumb").ThumbSpec, title: string, path: string, kicker?: string): string | undefined {
   if (spec.kind === "cover") return undefined;
   if (spec.kind === "casino" && !logoFor(spec.slug)?.endsWith(".png")) return undefined;
   const badge = "badge" in spec && spec.badge ? (spec.badge.text === BADGES.breach.text ? "breach" : "incident") : undefined;
-  return storyCardPath({ kind: spec.kind, slug: spec.kind === "casino" ? spec.slug : undefined, badge }, title, path);
+  return storyCardPath({ kind: spec.kind, slug: spec.kind === "casino" ? spec.slug : undefined, badge }, title, path, kicker);
 }
