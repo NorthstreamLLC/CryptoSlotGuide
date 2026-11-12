@@ -22,7 +22,8 @@ import { PROMO_HUB, PROMO_PAGES } from "@/lib/promo-pages";
 import { VERSUS_ANALYSIS } from "@/lib/versus-analysis";
 import { parsePair } from "@/lib/versus";
 import { FACT_ARTICLES } from "@/lib/fact-articles";
-import { NEWS, newsPath } from "@/lib/news";
+import { NEWS, NEWS_KIND, newsPath } from "@/lib/news";
+import { newsArticles } from "@/lib/news-articles";
 import { logoFor } from "@/lib/logo";
 import { thumbOf } from "@/lib/thumb";
 import { sportsbookOrder } from "@/lib/sports";
@@ -86,22 +87,42 @@ const CSS = `
 .h-h1 { margin: 0 0 18px; font-size: clamp(38px, 5vw, 58px); line-height: 1.04; letter-spacing: -.04em; font-weight: 700; color: #F7F9FA; text-wrap: balance; }
 .h-lead { margin: 0 0 30px; max-width: 50ch; font-size: 18px; line-height: 1.6; color: #98A6AE; }
 .h-ctas { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 40px; }
-.h-paths { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid rgba(255,255,255,.08); }
-.h-path { position: relative; display: flex; align-items: center; gap: 12px; padding: 15px 4px; border-bottom: 1px solid rgba(255,255,255,.08); transition: background .2s; }
-.h-path:hover { background: linear-gradient(90deg, color-mix(in srgb, var(--tint) 9%, transparent), transparent 80%); }
-.h-path-ico { display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; flex: none; border-radius: 10px; background: color-mix(in srgb, var(--tint) 14%, transparent); border: 1px solid color-mix(in srgb, var(--tint) 35%, transparent); color: var(--tint); }
-.h-path-txt { flex: 1; min-width: 0; }
+.h-paths { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.h-path { position: relative; display: grid; grid-template-columns: auto 1fr auto; grid-template-areas: "ico . stack" "txt txt arrow"; align-items: center; row-gap: 14px; column-gap: 12px; padding: 18px; border-radius: 14px; border: 1px solid rgba(255,255,255,.09); background: #0D1114; box-shadow: inset 0 2px 0 var(--tint); transition: border-color .2s, transform .2s; }
+.h-path:hover { transform: translateY(-2px); border-color: color-mix(in srgb, var(--tint) 55%, transparent); }
+.h-path-ico { display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; flex: none; border-radius: 12px; background: color-mix(in srgb, var(--tint) 14%, transparent); border: 1px solid color-mix(in srgb, var(--tint) 35%, transparent); color: var(--tint); }
+.h-path-ico svg { width: 24px; height: 24px; }
+.h-path-txt { grid-area: txt; min-width: 0; }
+.h-path-ico { grid-area: ico; }
+.h-path .h-stack { grid-area: stack; }
+.h-path i { grid-area: arrow; align-self: end; }
 .h-stack { display: flex; flex: none; }
 .h-stack > span { width: 24px; height: 24px; border-radius: 50%; overflow: hidden; border: 2px solid #0A0D10; background: #0A0D10; }
 .h-stack > span + span { margin-left: -8px; }
 .h-stack img { display: block; width: 100%; height: 100%; object-fit: cover; }
-.h-path:nth-child(odd) { padding-right: 20px; }
-.h-path:nth-child(even) { padding-left: 20px; border-left: 1px solid rgba(255,255,255,.08); }
-.h-path b { display: block; font-size: 15.5px; font-weight: 600; color: #EEF2F4; }
-.h-path small { display: block; margin-top: 2px; font-size: 13px; color: #7E8C94; }
+.h-path .h-stack > span { width: 30px; height: 30px; border-color: #0D1114; }
+.h-path .h-stack > span + span { margin-left: -10px; }
+.h-path b { display: block; font-size: 18px; font-weight: 700; letter-spacing: -.01em; color: #F2F5F7; }
+.h-path small { display: block; margin-top: 3px; font-size: 13.5px; color: #8E9CA4; }
 .h-path i { font-style: normal; color: #5E6B73; transition: transform .15s, color .15s; }
 .h-path:hover i { transform: translateX(3px); color: var(--tint); }
 .h-path:hover b { color: #fff; }
+
+/* Latest: news and data releases beside this month's casino changes */
+.h-latest { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); gap: 16px; }
+.h-news { display: flex; flex-direction: column; gap: 10px; }
+.h-story { display: flex; flex-direction: column; gap: 6px; padding: 16px 18px; border-radius: 14px; border: 1px solid rgba(255,255,255,.08); background: #0D1114; transition: border-color .15s, transform .15s; }
+.h-story:hover { border-color: rgba(255,255,255,.2); transform: translateY(-1px); }
+.h-story-meta { display: flex; align-items: center; gap: 10px; font-size: 12.5px; color: #75828A; }
+.h-ltag { display: inline-block; padding: 2px 8px; border-radius: 6px; font-size: 11.5px; font-weight: 700; letter-spacing: .02em; color: var(--tint); background: color-mix(in srgb, var(--tint) 13%, transparent); }
+.h-story b { font-size: 16.5px; line-height: 1.35; font-weight: 600; color: #F2F5F7; }
+.h-changes { display: flex; flex-direction: column; padding: 16px 18px; border-radius: 14px; border: 1px solid rgba(255,255,255,.08); background: #0D1114; }
+.h-changes h3 { margin: 0 0 4px; font-size: 15px; font-weight: 700; color: #F2F5F7; }
+.h-change { display: flex; gap: 10px; align-items: flex-start; padding: 11px 0; border-top: 1px solid rgba(255,255,255,.06); font-size: 14px; line-height: 1.45; color: #C9D3D8; }
+.h-change:first-of-type { border-top: 0; }
+.h-change:hover { color: #fff; }
+.h-change-mark { width: 26px; height: 26px; flex: none; border-radius: 7px; overflow: hidden; margin-top: 1px; }
+
 .h-also { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
 .h-chip { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px 6px 7px; border-radius: 100px; border: 1px solid rgba(255,255,255,.1); background: rgba(255,255,255,.03); font-size: 13.5px; font-weight: 500; color: #C9D3D8; transition: border-color .15s, color .15s; }
 .h-chip:hover { border-color: color-mix(in srgb, var(--tint) 60%, transparent); color: #fff; }
@@ -170,6 +191,7 @@ a.h-li:hover b, .h-li-main:hover b { color: #fff; text-decoration: underline; te
   .h-hero { grid-template-columns: 1fr; grid-template-areas: "intro" "pick" "paths"; row-gap: 32px; padding: 48px 0 40px; }
   .h-ctas { margin-bottom: 0; }
   .h-two { grid-template-columns: 1fr; }
+  .h-latest { grid-template-columns: 1fr; }
   .h-slots { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .h-facts, .h-trust { grid-template-columns: 1fr; gap: 14px; }
   .h-trust { gap: 22px; }
@@ -177,8 +199,11 @@ a.h-li:hover b, .h-li-main:hover b { color: #fff; text-decoration: underline; te
 @media (max-width: 560px) {
   .h-wrap { padding: 0 16px; }
   .h-sec { padding-top: 64px; }
-  .h-paths { grid-template-columns: 1fr; }
-  .h-path:nth-child(odd), .h-path:nth-child(even) { padding: 14px 2px; border-left: 0; }
+  .h-paths { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .h-path { grid-template-areas: "ico ico ico" "txt txt txt"; row-gap: 10px; }
+  .h-path i { display: none; }
+  .h-path b { font-size: 16px; }
+  .h-path { padding: 15px; }
   .h-path .h-stack { display: none; }
   .h-pick { padding: 20px; }
   .h-li { padding: 12px 16px; }
@@ -223,6 +248,20 @@ export default function HomePage() {
     .map((slug) => publishedSeries().find((x) => x.slug === slug))
     .filter((x): x is NonNullable<typeof x> => !!x)
     .map((x) => ({ s: x, art: slotArtBySlug(x.hero), count: seriesRows(x).length }));
+
+  // Latest: news articles plus the data releases readers can use, newest first.
+  // The trackers' dates are when each was first published.
+  const typeTag = { news: "News", analysis: "Analysis", opinion: "Opinion" } as const;
+  const latest = [
+    ...newsArticles().slice(0, 4).map((g) => ({ href: `/guides/${g.slug}`, tag: g.contentType ? typeTag[g.contentType] : "News", tint: g.contentType && g.contentType !== "news" ? "#FFC531" : "#5FE3E8", title: g.title, date: g.iso })),
+    { href: "/crypto-casinos/kyc-tracker", tag: "New tracker", tint: "#57E39A", title: "KYC tracker: when each of 46 crypto casinos asks for ID", date: "2026-11-11" },
+    { href: "/bonuses/true-cost-index", tag: "New index", tint: "#57E39A", title: "Bonus true-cost index: what each welcome bonus really costs per $100", date: "2026-11-10" },
+    { href: "/legal/curacao-licence-tracker", tag: "Tracker", tint: "#57E39A", title: "Curaçao licence tracker: where each crypto casino stands on the register", date: "2026-11-06" },
+  ]
+    .sort((a, b) => b.date.localeCompare(a.date))
+    .slice(0, 5);
+  const shortDate = (iso: string) => (iso ? new Date(iso + "T12:00:00Z").toLocaleDateString("en-GB", { day: "numeric", month: "short" }) : "");
+  const issue = NEWS[0];
 
   const rank = { perk: 0, welcome: 1, rewards: 2 } as const;
   const codes = inHouseOrder(ops.filter((o) => PROMO_PAGES.includes(o.slug) && PROMO_HUB[o.slug] && o.promoCode && o.signupUrl))
@@ -336,6 +375,49 @@ export default function HomePage() {
         </div>
 
         <div className="h-wrap">
+          {/* Latest */}
+          <section style={{ paddingTop: 56 }}>
+            <div className="h-head">
+              <h2 className="h-h2">Latest</h2>
+              <Link href="/news" className="h-more">All news →</Link>
+            </div>
+            <div className="h-latest">
+              <div className="h-news">
+                {latest.map((x) => (
+                  <Link key={x.href} href={x.href} className="h-story">
+                    <span className="h-story-meta">
+                      <span className="h-ltag" style={{ ["--tint" as string]: x.tint }}>{x.tag}</span>
+                      {shortDate(x.date)}
+                    </span>
+                    <b>{x.title}</b>
+                  </Link>
+                ))}
+              </div>
+              {issue && (
+                <div className="h-changes">
+                  <h3>This month at the casinos</h3>
+                  {issue.items.slice(0, 5).map((it, i) => {
+                    const o = siteData.ops.find((x) => x.slug === it.slug);
+                    return (
+                      <Link key={i} href={newsPath(issue.month)} className="h-change">
+                        {o && (
+                          <span className="h-change-mark">
+                            <BrandMark slug={o.slug} mono={o.mono} tint={brandFor(o.slug)} radius={7} fontSize={9} />
+                          </span>
+                        )}
+                        <span>
+                          <span className="h-ltag" style={{ ["--tint" as string]: NEWS_KIND[it.kind].tint, marginRight: 8 }}>{NEWS_KIND[it.kind].label}</span>
+                          {it.headline}
+                        </span>
+                      </Link>
+                    );
+                  })}
+                  <Link href={newsPath(issue.month)} className="h-more" style={{ marginTop: 12 }}>All {issue.items.length} changes this month →</Link>
+                </div>
+              )}
+            </div>
+          </section>
+
           <div style={{ paddingTop: 28 }}>
             {kevinLive() ? <KevinStrip className="h-strip" fallback={jackpotStrip} /> : jackpotStrip}
             {wheelWarsLive() && (
