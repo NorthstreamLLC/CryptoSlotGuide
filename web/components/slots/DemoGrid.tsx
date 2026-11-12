@@ -15,10 +15,14 @@ export interface DemoTile {
   maxWin: string;
   /** Our page for the title, where we have one. */
   page: string | null;
+  /** Popularity bucket: 0 our reviewed picks, 1 a big series, 2 has our page, 3 the rest. */
+  rank: number;
 }
 
+const PAGE = 48;
 const num = (s: string) => Number(s.replace(/[^\d.]/g, "")) || 0;
 const SORTS = {
+  popular: { label: "Popular", fn: (a: DemoTile, b: DemoTile) => a.rank - b.rank || a.name.localeCompare(b.name) },
   az: { label: "A–Z", fn: (a: DemoTile, b: DemoTile) => a.name.localeCompare(b.name) },
   rtp: { label: "Highest RTP", fn: (a: DemoTile, b: DemoTile) => num(b.rtp) - num(a.rtp) },
   max: { label: "Biggest max win", fn: (a: DemoTile, b: DemoTile) => num(b.maxWin) - num(a.maxWin) },
@@ -27,24 +31,42 @@ const SORTS = {
 /** Every free demo we can launch, searchable, each playable in place. */
 export function DemoGrid({ tiles }: { tiles: DemoTile[] }) {
   const [q, setQ] = useState("");
-  const [sort, setSort] = useState<keyof typeof SORTS>("az");
-  const shown = useMemo(() => {
+  const [sort, setSort] = useState<keyof typeof SORTS>("popular");
+  const [studio, setStudio] = useState("all");
+  const [limit, setLimit] = useState(PAGE);
+  const studios = useMemo(() => [...new Set(tiles.map((t) => t.studio))], [tiles]);
+  const matching = useMemo(() => {
     const k = q.trim().toLowerCase();
-    return tiles.filter((t) => !k || t.name.toLowerCase().includes(k)).sort(SORTS[sort].fn);
-  }, [tiles, q, sort]);
+    return tiles.filter((t) => (studio === "all" || t.studio === studio) && (!k || t.name.toLowerCase().includes(k))).sort(SORTS[sort].fn);
+  }, [tiles, q, sort, studio]);
+  const shown = matching.slice(0, limit);
+  // A new search, filter or sort starts from the top of the list again.
+  const reset = <T,>(set: (v: T) => void) => (v: T) => {
+    set(v);
+    setLimit(PAGE);
+  };
 
   return (
     <div>
       <style>{CSS}</style>
       <div className="dg-bar">
-        <input className="dg-q" type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder={`Search ${tiles.length} free demos`} aria-label="Search the free demos" />
+        <input className="dg-q" type="search" value={q} onChange={(e) => reset(setQ)(e.target.value)} placeholder={`Search ${tiles.length} free demos`} aria-label="Search the free demos" />
         <div className="dg-sorts" role="group" aria-label="Sort">
           {(Object.keys(SORTS) as (keyof typeof SORTS)[]).map((s) => (
-            <button key={s} type="button" aria-pressed={sort === s} onClick={() => setSort(s)} className="dg-sort">{SORTS[s].label}</button>
+            <button key={s} type="button" aria-pressed={sort === s} onClick={() => reset(setSort)(s)} className="dg-sort">{SORTS[s].label}</button>
           ))}
         </div>
       </div>
-      {shown.length === 0 && <p className="dg-none">No demo matches &ldquo;{q}&rdquo;.</p>}
+      {studios.length > 1 && (
+        <div className="dg-sorts dg-studios" role="group" aria-label="Studio">
+          {["all", ...studios].map((s) => (
+            <button key={s} type="button" aria-pressed={studio === s} onClick={() => reset(setStudio)(s)} className="dg-sort">
+              {s === "all" ? `All studios (${tiles.length})` : `${s} (${tiles.filter((t) => t.studio === s).length})`}
+            </button>
+          ))}
+        </div>
+      )}
+      {matching.length === 0 && <p className="dg-none">No demo matches &ldquo;{q}&rdquo;.</p>}
       <div className="dg-grid">
         {shown.map((t) => (
           <div key={t.slug} className="dg-tile">
@@ -69,6 +91,11 @@ export function DemoGrid({ tiles }: { tiles: DemoTile[] }) {
           </div>
         ))}
       </div>
+      {matching.length > shown.length && (
+        <button type="button" className="dg-more" onClick={() => setLimit((n) => n + PAGE)}>
+          Show more ({matching.length - shown.length} left)
+        </button>
+      )}
     </div>
   );
 }
@@ -81,6 +108,9 @@ const CSS = `
 .dg-sort { padding: 9px 12px; border-radius: 100px; border: 1px solid rgba(255,255,255,.12); background: transparent; color: #C9D3D8; font-size: 13px; font-weight: 600; cursor: pointer; }
 .dg-sort[aria-pressed="true"] { background: #FFC531; border-color: #FFC531; color: #141007; }
 .dg-none { color: #8E9CA4; }
+.dg-studios { margin: -6px 0 18px; }
+.dg-more { display: block; margin: 22px auto 0; padding: 13px 22px; border-radius: 11px; border: 1px solid rgba(255,255,255,.16); background: transparent; color: #E8EDF0; font-size: 14.5px; font-weight: 700; cursor: pointer; }
+.dg-more:hover { border-color: #FFC531; color: #FFC531; }
 .dg-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 220px), 1fr)); gap: 14px; }
 .dg-tile { display: flex; flex-direction: column; border-radius: 14px; overflow: hidden; background: #0C1013; border: 1px solid rgba(255,255,255,.08); transition: border-color .15s, transform .15s; }
 .dg-tile:hover { border-color: rgba(255,197,49,.4); transform: translateY(-2px); }

@@ -2,16 +2,32 @@ import type { NextRequest } from "next/server";
 import demos from "@/data/slot-demos.json";
 
 /**
- * /demo/hacksaw/<gameid>: sends the demo player to the studio's free demo
+ * /demo/hacksaw/<gameid> and /demo/pragmatic/<code>: send the demo player to
+ * the studio's free demo. For Hacksaw, the studio's free demo
  * build for that game. The build number changes with each release, so it is
  * read from the studio's own version.json (cached for six hours) rather than
  * stored. Only game ids on file (data/slot-demos.json) are served, so this
  * can't be used to open arbitrary URLs from our domain.
  */
-const KNOWN = new Set(Object.values((demos as { hacksaw?: Record<string, number> }).hacksaw ?? {}).map(String));
+const D = demos as { hacksaw?: Record<string, number>; pragmatic?: Record<string, string> };
+const KNOWN = new Set(Object.values(D.hacksaw ?? {}).map(String));
+const PRAGMATIC = new Set(Object.values(D.pragmatic ?? {}));
 
 export async function GET(_req: NextRequest, ctx: { params: Promise<{ studio: string; id: string }> }) {
   const { studio, id } = await ctx.params;
+  // Pragmatic Play: its public demo server opens any title by game code.
+  if (studio === "pragmatic") {
+    if (!/^[a-z0-9]{3,40}$/.test(id) || !PRAGMATIC.has(id)) return new Response("Unknown demo", { status: 404 });
+    const site = "https%3A%2F%2Fwww.pragmaticplay.com";
+    return new Response(null, {
+      status: 302,
+      headers: {
+        Location: `https://demogamesfree.pragmaticplay.net/gs2c/openGame.do?gameSymbol=${id}&websiteUrl=${site}&jurisdiction=99&lobby_url=${site}&lang=EN&cur=USD`,
+        "Cache-Control": "public, max-age=86400",
+        "X-Robots-Tag": "noindex, nofollow",
+      },
+    });
+  }
   if (studio !== "hacksaw" || !/^\d{1,6}$/.test(id) || !KNOWN.has(id)) return new Response("Unknown demo", { status: 404 });
 
   let version: string | null = null;
