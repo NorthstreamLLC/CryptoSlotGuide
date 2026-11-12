@@ -10,7 +10,7 @@ import { track } from "@vercel/analytics";
  * only. The game loads only when the reader asks for it, so the page stays
  * light and crawlers never fetch the game.
  */
-export function DemoPlay({ url, name, studio, slug, variant = "overlay" }: { url: string; name: string; studio: string; slug: string; variant?: "overlay" | "button" }) {
+export function DemoPlay({ url, name, studio, slug, variant = "overlay" }: { url: string; name: string; studio: string; slug: string; variant?: "overlay" | "button" | "chip" }) {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -44,6 +44,8 @@ export function DemoPlay({ url, name, studio, slug, variant = "overlay" }: { url
           </span>
           <span className="dp-label">Play free demo</span>
         </button>
+      ) : variant === "chip" ? (
+        <button type="button" className="dp-chip" onClick={start} aria-label={`Play the free ${name} demo`}>▶ Demo</button>
       ) : (
         <button type="button" className="dp-btn" onClick={start}>▶ Play free demo</button>
       )}
@@ -75,6 +77,8 @@ const CSS = `
 .dp-over:hover .dp-disc { transform: scale(1.08); box-shadow: 0 0 0 12px rgba(255,197,49,.25), 0 14px 34px rgba(0,0,0,.5); }
 .dp-label { padding: 5px 12px; border-radius: 100px; background: rgba(7,9,11,.78); border: 1px solid rgba(255,255,255,.16); font-size: 13px; font-weight: 700; color: #fff; backdrop-filter: blur(6px); }
 .dp-btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 16px; border-radius: 11px; border: 1px solid rgba(255,197,49,.45); background: rgba(255,197,49,.1); color: #FFC531; font-size: 14px; font-weight: 700; cursor: pointer; }
+.dp-chip { flex: none; padding: 3px 8px; border-radius: 6px; border: 1px solid rgba(255,197,49,.45); background: rgba(255,197,49,.1); color: #FFC531; font-size: 11.5px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+.dp-chip:hover { background: #FFC531; color: #141007; }
 .dp-modal { position: fixed; inset: 0; z-index: 100; display: flex; align-items: center; justify-content: center; padding: 24px; background: rgba(3,5,6,.86); backdrop-filter: blur(4px); }
 .dp-panel { display: flex; flex-direction: column; width: min(1200px, 100%); height: min(760px, 100%); border-radius: 16px; overflow: hidden; background: #000; border: 1px solid rgba(255,255,255,.14); box-shadow: 0 30px 90px rgba(0,0,0,.6); }
 .dp-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 14px; background: #0D1114; font-size: 13px; color: #A9B8C0; }
@@ -83,5 +87,7 @@ const CSS = `
 .dp-tab { font-size: 12.5px; font-weight: 600; color: #C9D3D8; white-space: nowrap; }
 .dp-tab:hover { color: #fff; }
 .dp-frame { flex: 1; width: 100%; border: 0; background: #000; }
-@media (max-width: 640px) { .dp-modal { padding: 0; } .dp-panel { border-radius: 0; height: 100%; } }
+@media (max-width: 640px) { .dp-chip { flex: none; padding: 3px 8px; border-radius: 6px; border: 1px solid rgba(255,197,49,.45); background: rgba(255,197,49,.1); color: #FFC531; font-size: 11.5px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+.dp-chip:hover { background: #FFC531; color: #141007; }
+.dp-modal { padding: 0; } .dp-panel { border-radius: 0; height: 100%; } }
 `;

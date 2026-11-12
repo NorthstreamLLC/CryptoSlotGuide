@@ -14,6 +14,7 @@ import { GlanceCard } from "./GlanceCard";
 import { EmailSignup } from "@/components/ui/EmailSignup";
 import { AuthorBox, AuthorByline } from "@/components/ui/AuthorBox";
 import { VipFloat } from "@/components/slots/VipFloat";
+import { DemoPlay } from "@/components/slots/DemoPlay";
 import { TitlesPager } from "@/components/studios/TitlesTable";
 import { TITLES_PER_PAGE } from "@/lib/titles";
 import { thumbOf } from "@/lib/thumb";
@@ -370,6 +371,9 @@ export function EntityReviewPageClient({ e, review, lead, heroExtra, heroAside, 
                     <span className="csg-tc-tag">
                       {r.hrefLabel}{/^https?:\/\//.test(r.href) ? " \u2197" : " \u2192"}
                     </span>
+                  )}
+                  {r.demo && (
+                    <DemoPlay url={r.demo.url} name={r.name} studio={r.demo.studio} slug={r.name} variant="chip" />
                   )}
                 </div>
                 <div className="csg-tc-note">{r.note}</div>

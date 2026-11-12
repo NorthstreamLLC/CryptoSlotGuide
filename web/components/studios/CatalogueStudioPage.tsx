@@ -6,6 +6,7 @@ import { NextSteps } from "@/components/layout/NextSteps";
 import { tintFor } from "@/lib/logo";
 import { studioAllTitles, studioStats } from "@/lib/slot-page";
 import { slotEssentialsStudio } from "@/lib/slotessentials";
+import { withDemos } from "@/lib/slot-demos";
 import { TitlesTable, TitlesPager } from "@/components/studios/TitlesTable";
 import { TITLES_PER_PAGE } from "@/lib/titles";
 import type { CatalogueStudio } from "@/lib/studio-pages";
@@ -112,7 +113,7 @@ export function CatalogueStudioPage({ studio }: { studio: CatalogueStudio }) {
         <p style={{ margin: "0 0 16px", maxWidth: "80ch", fontSize: 14, lineHeight: 1.6, color: "#8DA0AA" }}>
           Titles with a page here link to it; the rest link to SlotEssentials, which has a page for nearly every one.
         </p>
-        <TitlesTable rows={rows.slice(0, TITLES_PER_PAGE)} />
+        <TitlesTable rows={withDemos(rows.slice(0, TITLES_PER_PAGE))} />
         <TitlesPager slug={studio.slug} total={rows.length} page={1} perPage={TITLES_PER_PAGE} />
       </section>
 

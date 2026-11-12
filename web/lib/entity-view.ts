@@ -47,6 +47,8 @@ export interface SpecRow extends Flag {
 
 export interface TableRow {
   name: string;
+  /** Our catalogue slug for the title, where it has one (used to attach its free demo). */
+  slug?: string | null;
   note: string;
   m1: string;
   m2: string;
@@ -57,6 +59,8 @@ export interface TableRow {
   hrefLabel?: string;
   /** The game's tile, where we hold art we may serve (see publishableArt). */
   image?: string;
+  /** The studio's free demo, where we can open one (lib/slot-demos.ts withDemos). */
+  demo?: { url: string; studio: string };
 }
 
 export interface EntityView {
@@ -492,6 +496,7 @@ export function getEntityView(type: EntityType, slug: string, opts: { fullTable?
           const fb = catalogueFallback(s.slug, s.provider, s.name);
           return {
             name: s.name,
+            slug: s.slug,
             note: s.rtpVersions ? `${s.rtpVersions.split("/").length} published RTP versions` : `${s.provider} game page`,
             m1: rtpLabel(s),
             m2: hasVol(s) ? s.vol : fb.vol ?? "Not published",
@@ -503,7 +508,7 @@ export function getEntityView(type: EntityType, slug: string, opts: { fullTable?
         }),
       ...fromCatalogue.rows
         .filter((r) => !(r.slug && reviewedSlugs.has(r.slug)) && !reviewedNames.has(nameKey(r.name)))
-        .map(({ name, note, m1, m2, m3, href, hrefLabel, image }) => ({ name, note, m1, m2, m3, href, hrefLabel, image })),
+        .map(({ name, slug, note, m1, m2, m3, href, hrefLabel, image }) => ({ name, slug, note, m1, m2, m3, href, hrefLabel, image })),
     ];
     const topMaxWin = titles.filter(hasMaxWin)[0]?.maxWin;
     const volCounts = titles.filter(hasVol).reduce<Record<string, number>>((acc, s) => ({ ...acc, [s.vol]: (acc[s.vol] ?? 0) + 1 }), {});

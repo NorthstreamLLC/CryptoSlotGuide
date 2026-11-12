@@ -6,6 +6,7 @@ import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
 import { CasinoSpecSheet } from "@/components/entity/CasinoSpecSheet";
 import { CasinoBonuses } from "@/components/entity/CasinoBonuses";
 import { SlotHeroArt } from "@/components/slots/SlotHeroArt";
+import { withDemos } from "@/lib/slot-demos";
 
 /**
  * Server half of the review page. The labels and links it needs come from
@@ -35,7 +36,8 @@ export function EntityReviewPage({ e, review, lead, heroExtra }: { e: EntityView
     ) : undefined;
   return (
     <EntityReviewPageClient
-      e={e}
+      // A studio's titles carry each game's free demo where we can open one.
+      e={e.type === "provider" ? { ...e, tableRows: withDemos(e.tableRows) } : e}
       review={review}
       lead={lead}
       heroExtra={heroExtra}

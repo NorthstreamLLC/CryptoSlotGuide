@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { thumbOf } from "@/lib/thumb";
 import type { TableRow } from "@/lib/entity-view";
+import { DemoPlay } from "@/components/slots/DemoPlay";
 
 const MONO = "var(--font-jetbrains-mono), monospace";
 
@@ -36,6 +37,7 @@ export function TitlesTable({ rows, cols = ["Slot", "RTP", "Volatility", "Max wi
                     {r.hrefLabel}{/^https?:\/\//.test(r.href) ? " ↗" : " →"}
                   </span>
                 )}
+                {r.demo && <DemoPlay url={r.demo.url} name={r.name} studio={r.demo.studio} slug={r.name} variant="chip" />}
               </div>
               <div className="csg-tc-note">{r.note}</div>
             </div>

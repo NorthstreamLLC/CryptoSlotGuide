@@ -4,6 +4,7 @@ import { pageMetadata } from "@/lib/seo";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { breadcrumbSchema, itemListSchema } from "@/lib/schema";
 import { LandingShell } from "@/components/landing/LandingShell";
+import { withDemos } from "@/lib/slot-demos";
 import { TitlesTable } from "@/components/studios/TitlesTable";
 import { NextSteps } from "@/components/layout/NextSteps";
 import { publishedSeries, seriesBySlug, seriesRows, seriesStats, seriesPath, seriesTitle } from "@/lib/slot-series";
@@ -74,7 +75,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             </div>
           ))}
         </div>
-        <TitlesTable rows={rows} />
+        <TitlesTable rows={withDemos(rows)} />
         <p style={{ margin: "12px 0 30px", fontSize: 13, lineHeight: 1.6, color: "#75828A" }}>
           Figures as on each game&apos;s row in {s.studio}&apos;s <Link href={studioPath(s.studio)} style={{ color: "#A8B6BE" }}>full title list</Link>: the studio&apos;s own published returns where we hold its sheet, labelled where a figure comes from the catalogue instead. Games with a page of ours are listed first. A casino can run any of the published returns, so check the figure in the game&apos;s info screen before you play.
         </p>

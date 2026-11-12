@@ -5,6 +5,7 @@ import { catalogueOnlyStudio } from "@/lib/studio-pages";
 import { studioAllTitles } from "@/lib/slot-page";
 import { pageMetadata } from "@/lib/seo";
 import { TITLES_PER_PAGE } from "@/lib/titles";
+import { withDemos } from "@/lib/slot-demos";
 import { TitlesTable, TitlesPager } from "@/components/studios/TitlesTable";
 import type { TableRow } from "@/lib/entity-view";
 
@@ -52,7 +53,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string;
         All {t.rows.length.toLocaleString("en-GB")} {t.name} titles we hold, in the same order as on{" "}
         <Link href={`/providers/${slug}`} style={{ color: "#5FE3E8" }}>the {t.name} review</Link>. Titles with a page here link to it; the rest link to SlotEssentials, our sister site.
       </p>
-      <TitlesTable rows={rows} />
+      <TitlesTable rows={withDemos(rows)} />
       <TitlesPager slug={slug} total={t.rows.length} page={page} perPage={TITLES_PER_PAGE} />
     </main>
   );

@@ -52,3 +52,11 @@ export function demoTiles(): DemoTile[] {
     .flatMap(([key, cfg]) => tilesFor(cfg.name, DEMO_IDS[key] ?? {}, (id) => `/demo/${key}/${id}`))
     .filter((t) => !seen.has(t.slug) && !!seen.add(t.slug));
 }
+
+/** Table rows with each title's free demo attached, where we hold one. */
+export function withDemos<T extends { slug?: string | null; name: string }>(rows: T[]): (T & { demo?: SlotDemo })[] {
+  return rows.map((r) => {
+    const d = demoFor(r.slug);
+    return d ? { ...r, demo: d } : r;
+  });
+}
