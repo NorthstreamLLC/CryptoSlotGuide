@@ -5,6 +5,8 @@ import { logoFor } from "@/lib/logo";
 import { brandFor } from "@/lib/casino-facts";
 import { siteData } from "@/lib/site-data";
 import { CGA_REGISTER } from "@/lib/curacao-register";
+import { demoFor } from "@/lib/slot-demos";
+import { slotArtBySlug } from "@/lib/slot-page";
 import { BADGES, TIER_TINT, REGISTER_TONE, kycPicks, costPicks, registerParts, licenseePicks } from "@/lib/story-thumb";
 
 /**
@@ -14,7 +16,7 @@ import { BADGES, TIER_TINT, REGISTER_TONE, kycPicks, costPicks, registerParts, l
  * anything unsigned or altered gets a 400. Immutable, like the plain card:
  * changed text or data means a new URL.
  */
-const KINDS = new Set(["casino", "kyc", "cost", "register", "licensees"]);
+const KINDS = new Set(["casino", "kyc", "cost", "register", "licensees", "demo"]);
 const hex = (c: string, a: number) => `${c}${Math.round(a * 255).toString(16).padStart(2, "0")}`;
 
 export async function GET(req: NextRequest) {
@@ -27,6 +29,7 @@ export async function GET(req: NextRequest) {
   const ok = KINDS.has(v) && t && t.length <= 120 && k.length <= 40 && (!b || b in BADGES) && q.get("s") === ogSign(t, `${k}|${v}|${c}|${b}`);
   const op = v === "casino" ? siteData.ops.find((o) => o.slug === c && logoFor(o.slug)?.endsWith(".png")) : null;
   if (!ok || (v === "casino" && !op)) return new Response("Bad card", { status: 400 });
+  if (v === "demo") return demoCard(req, c, t, k);
 
   const origin = req.nextUrl.origin;
   const abs = (p: string) => new URL(p, origin).href;
@@ -151,6 +154,70 @@ export async function GET(req: NextRequest) {
           {badge && (
             <div style={{ display: "flex", position: "absolute", top: 22, left: 22, padding: "8px 16px", borderRadius: 100, fontSize: 20, fontWeight: 700, color: "#FF6B6B", background: "rgba(255,107,107,.14)", border: "2px solid rgba(255,107,107,.5)" }}>{badge.text}</div>
           )}
+        </div>
+      </div>
+    ),
+    { width: 1200, height: 630, headers: { "Cache-Control": "public, max-age=31536000, immutable" } },
+  );
+}
+
+/**
+ * The share card for a slot with a free demo: the game's own art with a play
+ * button on it, and "Play <name> free". The art is WebP, which the card
+ * renderer cannot read, so it is converted to PNG on the way (sharp, which
+ * Next already installs); without it the card is drawn without the art.
+ */
+async function demoCard(req: NextRequest, slug: string, t: string, k: string) {
+  const demo = demoFor(slug);
+  const artPath = slotArtBySlug(slug);
+  if (!demo) return new Response("Bad card", { status: 400 });
+  const origin = req.nextUrl.origin;
+  let art: string | null = null;
+  if (artPath) {
+    try {
+      const res = await fetch(new URL(artPath, origin));
+      if (res.ok) {
+        const sharp = (await import("sharp")).default;
+        const png = await sharp(Buffer.from(await res.arrayBuffer())).resize(640, 400, { fit: "cover" }).png().toBuffer();
+        art = `data:image/png;base64,${png.toString("base64")}`;
+      }
+    } catch {
+      art = null;
+    }
+  }
+  const size = t.length > 60 ? 50 : 58;
+  return new ImageResponse(
+    (
+      <div style={{ width: "100%", height: "100%", display: "flex", padding: 48, gap: 40, background: "radial-gradient(circle at 92% 10%, #FFC53133 0%, #0B0F12 52%)", color: "#FFFFFF" }}>
+        <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", width: 500, padding: "16px 0 16px 16px" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={new URL("/assets/logo-256.png", origin).href} width={52} height={52} alt="" />
+            <div style={{ display: "flex", fontSize: 30, fontWeight: 700 }}>
+              <span>CryptoSlot</span>
+              <span style={{ color: "#00C2CC" }}>Guide</span>
+            </div>
+          </div>
+          <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+            <div style={{ display: "flex", fontSize: 22, letterSpacing: 3, textTransform: "uppercase", color: "#FFC531" }}>{k}</div>
+            <div style={{ display: "flex", fontSize: size, fontWeight: 700, lineHeight: 1.08 }}>{t}</div>
+            <div style={{ display: "flex", fontSize: 24, color: "#A9B8C0" }}>{demo.studio} · play money, no account</div>
+          </div>
+          <div style={{ display: "flex", alignItems: "center", gap: 12, fontSize: 20, color: "#9FB0B9" }}>
+            <div style={{ width: 44, height: 5, borderRadius: 3, background: "#FFC531" }} />
+            The studio&apos;s own demo · 18+
+          </div>
+        </div>
+        <div style={{ display: "flex", position: "relative", flex: 1, alignItems: "center", justifyContent: "center", borderRadius: 32, overflow: "hidden", border: "2px solid #FFC53166", background: "#0D1215", boxShadow: "0 0 120px #FFC53140" }}>
+          {art && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={art} width={620} height={534} alt="" style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%", objectFit: "cover" }} />
+          )}
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", width: 150, height: 150, borderRadius: 75, background: "#FFC531", boxShadow: "0 0 0 18px #FFC5313D, 0 20px 50px #00000080" }}>
+            <svg width="76" height="76" viewBox="0 0 24 24" style={{ marginLeft: 10 }}>
+              <path d="M7 4.5v15a1 1 0 0 0 1.53.85l12-7.5a1 1 0 0 0 0-1.7l-12-7.5A1 1 0 0 0 7 4.5z" fill="#141007" />
+            </svg>
+          </div>
         </div>
       </div>
     ),

@@ -7,6 +7,8 @@ import { cataloguePage, cataloguePageSlugs, rtpVersions, rtpSpread, singleRtp, p
 import { slotReview } from "@/lib/slot-reviews";
 import { SlotReview } from "@/components/slots/SlotReview";
 import { pageMetadata, SITE_URL } from "@/lib/seo";
+import { storyCardPath } from "@/lib/og";
+import { demoFor } from "@/lib/slot-demos";
 import { breadcrumbSchema, entityBreadcrumbSchema, faqSchema, reviewSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/JsonLd";
 
@@ -23,6 +25,11 @@ export function generateStaticParams() {
   // The catalogue pages only. The reviews already prerender through their own
   // data and are far fewer; listing both here would duplicate them.
   return cataloguePageSlugs().map((slug) => ({ slug }));
+}
+
+/** A slot with a free demo shares as one: its art with a play button and "Play <name> free". */
+function demoCard(slug: string, name: string) {
+  return demoFor(slug) ? storyCardPath({ kind: "demo", slug }, `Play ${name} free`, `/slots/${slug}`, "Free demo") : undefined;
 }
 
 function catalogueMeta(slug: string) {
@@ -48,13 +55,13 @@ function catalogueMeta(slug: string) {
     v.length > 1
       ? `${g.provider} licenses ${g.name} at ${v.length} returns${spread ? `, ${spread} percentage points apart` : ""}. The configurations, the specs and which build your casino ships.`
       : `${g.provider} publishes ${only !== null ? `${only}% ` : ""}for ${g.name}. The return, the specs and where to play it.`;
-  return pageMetadata(title, desc, `/slots/${slug}`);
+  return pageMetadata(title, desc, `/slots/${slug}`, demoCard(slug, g.name));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const view = getEntityView("slot", slug);
-  if (view) return pageMetadata(view.headline, view.standfirst, `/slots/${slug}`);
+  if (view) return pageMetadata(view.headline, view.standfirst, `/slots/${slug}`, demoCard(slug, view.name));
   return catalogueMeta(slug) ?? {};
 }
 

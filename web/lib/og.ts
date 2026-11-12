@@ -48,7 +48,7 @@ export function ogCardPath(title: string, path: string): string {
  * beside the page's title. Same signing as the plain card, over every field,
  * so the casino and the badge can't be swapped either.
  */
-export function storyCardPath(spec: { kind: "casino" | "kyc" | "cost" | "register" | "licensees"; slug?: string; badge?: "incident" | "breach" }, title: string, path: string, kicker?: string): string {
+export function storyCardPath(spec: { kind: "casino" | "kyc" | "cost" | "register" | "licensees" | "demo"; slug?: string; badge?: "incident" | "breach" }, title: string, path: string, kicker?: string): string {
   const k = kicker ?? KICKERS.find(([re]) => re.test(path))?.[1] ?? "CryptoSlotGuide";
   const t = title.length > 110 ? `${title.slice(0, 107).trimEnd()}…` : title;
   const c = spec.slug ?? "";

@@ -189,6 +189,12 @@ a.h-li:hover b, .h-li-main:hover b { color: #fff; text-decoration: underline; te
 /* Slots */
 .h-slots { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
 .h-slot { display: block; }
+.h-demo-badge { display: inline-flex; align-items: center; gap: 10px; margin: -14px 0 28px; padding: 7px 14px 7px 7px; border-radius: 100px; border: 1px solid rgba(255,197,49,.4); background: rgba(255,197,49,.08); font-size: 14px; color: #C9D3D8; transition: border-color .15s, background .15s; }
+.h-demo-badge:hover { border-color: #FFC531; background: rgba(255,197,49,.14); }
+.h-demo-badge b { color: #FFC531; font-weight: 700; }
+.h-demo-badge-play { display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; flex: none; border-radius: 50%; background: #FFC531; color: #141007; font-size: 11px; padding-left: 2px; }
+.h-demo-badge i { font-style: normal; color: #FFC531; }
+@media (max-width: 560px) { .h-demo-badge { margin: 14px 0 6px; font-size: 13px; } }
 .h-demos { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 14px; }
 .h-demo { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
 .h-demo-art { position: relative; margin-bottom: 6px; }
@@ -386,6 +392,13 @@ export default function HomePage() {
                   <Link href="/crypto-casinos" className="h-btn h-btn-light">Compare casinos</Link>
                   <Link href="/promo-codes" className="h-btn h-btn-line">Promo codes</Link>
                 </div>
+                <Link href="/slots/free-demos" className="h-demo-badge">
+                  <span className="h-demo-badge-play" aria-hidden>▶</span>
+                  <span>
+                    <b>Play {Math.floor(demoCount / 100) * 100}+ slots free</b> · right here, no account
+                  </span>
+                  <i aria-hidden>→</i>
+                </Link>
               </div>
               <div className="h-paths-wrap">
                 <nav aria-label="Start here" className="h-paths">
