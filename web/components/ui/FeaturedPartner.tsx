@@ -1,19 +1,18 @@
 import Link from "next/link";
 import { BrandMark } from "@/components/ui/BrandMark";
-import { siteData } from "@/lib/site-data";
-import { getSpecFact } from "@/lib/spec-sheet";
-import { accessIn, countryBy } from "@/lib/legal";
+import { countryBy } from "@/lib/legal";
 import { brandFor } from "@/lib/casino-facts";
-import coinsBy from "@/data/coinsBy.json";
-import { payoutView } from "@/lib/payout";
-import { wagerView } from "@/lib/wager";
-import type { Operator } from "@/lib/types";
-import { inHouseOrder } from "@/lib/house-order";
+import { pickPartners, type PartnerContext } from "@/lib/partner-fit";
+import { GeoRanked } from "@/components/geo/GeoRanked";
+import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
 
 
 /**
- * The top partners (three by default, in house order), placed on pages that
- * would otherwise end without a casino to go to.
+ * The partners that best fit the page (three by default; lib/partner-fit.ts
+ * ranks them), placed on pages that would otherwise end without a casino to
+ * go to. Not the same casino first everywhere: the page's subject and its own
+ * key decide the order, and the visitor's location drops any that would turn
+ * them away (GeoRanked).
  *
  * Three rules it enforces itself, rather than leaving to whoever adds it to a
  * page:
@@ -40,93 +39,7 @@ import { inHouseOrder } from "@/lib/house-order";
  * be present everywhere, not loud anywhere.
  */
 
-export type PartnerContext =
-  | { kind: "coin"; ticker: string }
-  | { kind: "sports" }
-  | { kind: "esports" }
-  | { kind: "slots" }
-  | { kind: "house" }
-  | { kind: "wallet" }
-  | { kind: "general" };
-
-const COINS = coinsBy as Record<string, string[]>;
-
-/** One true, cited line explaining why this operator belongs on this page. */
-function pitchFor(slug: string, ctx: PartnerContext): string | null {
-  const spec = (group: string, label: string) => getSpecFact(slug, group, label)?.value ?? null;
-
-  switch (ctx.kind) {
-    case "coin": {
-      // Only claim a coin the operator's own list actually names.
-      if (!(COINS[slug] ?? []).map(String).includes(ctx.ticker.toUpperCase())) return null;
-      return `Takes ${ctx.ticker.toUpperCase()} deposits and withdrawals, alongside ${(COINS[slug] ?? []).length - 1} other coins.`;
-    }
-    case "sports":
-      return spec("Sportsbook", "Sportsbook");
-    case "esports":
-      return spec("Sportsbook", "Esports titles") ?? spec("Sportsbook", "Esports");
-    case "slots":
-      // Withdrawal speed and wagering (defaultPitch) is what a slot player
-      // choosing a casino weighs. The "Game contribution" term used here
-      // before reads as a formula ("Progress = wager × (house edge ÷ 4%)")
-      // once more than one partner shows.
-      return null;
-    case "house": {
-      // What this casino publishes for its own originals — the edge figures
-      // on data/houseGames.json, each read from the casino's own page.
-      const own = siteData.houseGames
-        .map((g) => ({ name: g.name, edge: g.edges.find((e) => e.casino === slug)?.value }))
-        .filter((x): x is { name: string; edge: string } => !!x.edge)
-        .slice(0, 3);
-      if (!own.length) return null;
-      return `Publishes its own edge for ${own.map((x) => `${x.name} (${x.edge})`).join(", ")}.`;
-    }
-    case "wallet": {
-      const n = (COINS[slug] ?? []).length;
-      if (!n) return null;
-      const o = siteData.ops.find((x) => x.slug === slug);
-      return `Takes ${n} coins for deposits and withdrawals${o?.ln ? ", including Bitcoin over Lightning" : ""}.`;
-    }
-    case "general":
-    default:
-      return null;
-  }
-}
-
-/**
- * The fallback line: withdrawal speed and whether a bonus carries wagering.
- *
- * Built from payoutView and wagerView — the same helpers every table on the
- * site uses — rather than by clamping the raw spec-sheet sentence. Clamping
- * produced fragments that had lost their subject: "Sent instantly on request"
- * never says what is sent, and "No multiplier stated for rakeback" reads as a
- * complaint rather than the good news it is. These are full spec entries
- * written to be read in a table, under a heading that supplied the noun.
- */
-function defaultPitch(o: Operator): string | null {
-  const pv = payoutView(o);
-  const wv = wagerView(o);
-  const parts: string[] = [];
-  if (pv.kind !== "none") parts.push(`${pv.label} withdrawals`);
-  // wagerView already words this correctly, including the case where a deposit
-  // playthrough applies despite there being no deposit bonus.
-  if (wv.kind !== "unknown") parts.push(wv.label.toLowerCase());
-  if (!parts.length) return null;
-  const line = parts.join(" · ");
-  return line.charAt(0).toUpperCase() + line.slice(1);
-}
-
-/** The leading clause of a cited fact — the profile carries the rest verbatim. */
-const clause = (s: string, max: number): string => {
-  const cut = s.split(/(?<=\.)\s+|[;(]/)[0].trim();
-  return cut.length > max ? `${cut.slice(0, max - 1).replace(/[\s,;-]+$/, "")}…` : cut;
-};
-
-/** Trim a long cited fact to its first sentence — the profile carries the rest. */
-const firstSentence = (s: string, max = 190): string => {
-  const cut = s.split(/(?<=\.)\s+/)[0] ?? s;
-  return cut.length > max ? `${cut.slice(0, max - 1).replace(/[\s,;-]+$/, "")}…` : cut;
-};
+export type { PartnerContext };
 
 export function FeaturedPartner({
   context = { kind: "general" },
@@ -135,6 +48,7 @@ export function FeaturedPartner({
   heading,
   count = 3,
   exclude,
+  seed,
 }: {
   context?: PartnerContext;
   /** ISO code of the country this page is about, if it is about one. */
@@ -142,10 +56,12 @@ export function FeaturedPartner({
   /** US state code. Every partner restricts the whole US, so any value suppresses it. */
   state?: string;
   heading?: string;
-  /** How many partners to show, in house order (lib/house-order.ts). */
+  /** How many partners to show, best fit first. */
   count?: number;
-  /** A casino not to recommend — the one whose own page this is. */
-  exclude?: string;
+  /** Casinos not to recommend: the one whose own page this is, say. */
+  exclude?: string | string[];
+  /** The page's own key (its slug), so pages with the same subject rotate. */
+  seed?: string;
 }) {
   // Rule 1, before anything else is computed.
   if (state) return null;
@@ -168,17 +84,9 @@ export function FeaturedPartner({
    */
   if (country && /licensed market/i.test(countryBy(country)?.onlineCasino ?? "")) return null;
 
-  // Partners with a live link, in the site-wide placement order (Roobet
-  // first), each gated on its own restricted list: one partner blocking a
-  // country no longer hides the others, and none is shown where it is shut.
-  const rows = inHouseOrder(siteData.ops.filter((o) => o.affiliate && o.signupUrl && o.slug !== exclude))
-    .filter((o) => !(country && accessIn(o.slug, country) === "restricted"))
-    .map((o) => {
-      const raw = pitchFor(o.slug, context) ?? defaultPitch(o);
-      return raw ? { o, pitch: firstSentence(raw) } : null;
-    })
-    .filter((r): r is { o: Operator; pitch: string } => !!r)
-    .slice(0, count);
+  // Best fit first, each gated on its own restricted list for a page about one
+  // place; two spare candidates stand in for any the visitor's location shuts.
+  const rows = pickPartners({ context, seed, country, exclude: typeof exclude === "string" ? [exclude] : exclude ?? [], limit: count + 2 });
   if (!rows.length) return null;
 
   const title = heading ?? (rows.length > 1 ? "Casinos we recommend" : "Casino we recommend");
@@ -188,20 +96,22 @@ export function FeaturedPartner({
       <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
         <span style={{ fontSize: 17, fontWeight: 700, letterSpacing: "-.015em", color: "#F2F5F7" }}>{title}</span>
       </div>
-      {rows.map(({ o, pitch }, i) => {
+      <GeoRanked
+        count={count}
+        fallback={<GeoBlockNote slug={rows[0].o.slug} name={rows[0].o.name} none />}
+        items={rows.map(({ o, pitch }) => {
         const tint = brandFor(o.slug);
-        return (
+        return { slug: o.slug, node: (
           <div
-            key={o.slug}
+            className="csg-fp-row"
             // A stable hook for the placement audit (scripts/audit-partner-geo.mjs).
             // Matching on the visible copy does not work: React splits
             // `Visit {name}` into separate SSR text nodes.
             data-featured-partner={o.slug}
-            style={{ display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap", padding: "12px 0", borderTop: i ? "1px solid rgba(255,255,255,.06)" : undefined }}
+            style={{ display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap", padding: "12px 0" }}
           >
             {/* Number, mark and text stay on one line; only the buttons wrap. */}
             <div style={{ display: "flex", alignItems: "center", gap: 14, flex: "1 1 300px", minWidth: 0 }}>
-            <span style={{ fontSize: 13, fontWeight: 600, color: "#5E6B73", width: 12, flex: "none" }}>{i + 1}</span>
             <span style={{ width: 44, height: 44, flex: "none", borderRadius: 12, overflow: "hidden", border: `1px solid ${tint}55` }}>
               <BrandMark slug={o.slug} mono={o.mono} tint={tint} radius={12} fontSize={15} />
             </span>
@@ -233,8 +143,10 @@ export function FeaturedPartner({
               </a>
             </div>
           </div>
-        );
+        ) };
       })}
+      />
+      <style>{`.csg-fp-row + .csg-fp-row { border-top: 1px solid rgba(255,255,255,.06); }`}</style>
     </aside>
   );
 }

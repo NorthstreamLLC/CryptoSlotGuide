@@ -2,8 +2,8 @@ import type React from "react";
 import { SlotNextStep } from "@/components/ui/NextStep";
 import { seriesForSlot, seriesPath } from "@/lib/slot-series";
 import Link from "next/link";
-import Image from "next/image";
 import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
+import { SlotHeroArt } from "@/components/slots/SlotHeroArt";
 import { thumbOf } from "@/lib/thumb";
 import { EmailSignup } from "@/components/ui/EmailSignup";
 import { VipFloat } from "@/components/slots/VipFloat";
@@ -80,26 +80,8 @@ export function SlotDataPage({ g, review }: { g: CatalogueSlotPage; review?: Rea
             )}
           </nav>
 
-          <div style={{ display: "flex", gap: 26, alignItems: "flex-start", flexWrap: "wrap" }}>
-            {art && (
-              // next/image, not a bare img: the source files are 1000px wide
-              // and this draws at 240, so 393 pages would each ship about 40KB
-              // of art to paint a thumbnail.
-              //
-              // priority, because this is the largest element above the fold —
-              // lazy-loading it makes it the LCP and then defers it. The 5:3
-              // ratio is the art's own; a square would crop the title off it.
-              <Image
-                src={art}
-                alt={`${g.name} game art`}
-                width={480}
-                height={288}
-                sizes="240px"
-                priority
-                style={{ width: 240, height: 144, objectFit: "cover", borderRadius: 14, border: "1px solid rgba(255,255,255,.09)", flex: "0 0 auto" }}
-              />
-            )}
-            <div style={{ flex: "1 1 340px", minWidth: 0 }}>
+          <div className="sdp-hero" style={art ? undefined : { display: "block" }}>
+            <div style={{ minWidth: 0 }}>
               {pick && (
                 <div style={{ display: "inline-block", marginBottom: 10, padding: "4px 10px", borderRadius: 100, background: "rgba(255,197,49,.12)", border: "1px solid rgba(255,197,49,.3)", fontSize: 12.5, fontWeight: 600, color: "#FFC531" }}>
                   One of our top slots
@@ -123,7 +105,21 @@ export function SlotDataPage({ g, review }: { g: CatalogueSlotPage; review?: Rea
                 )}
               </p>
             </div>
+            {art && (
+              <SlotHeroArt
+                art={art}
+                name={g.name}
+                studio={g.provider}
+                chips={[
+                  { label: versions.length > 1 ? "Best RTP" : "RTP", value: versions.length ? `${versions[0]}%` : only !== null ? `${only}%` : "" },
+                  { label: "Max win", value: specs.find((x) => x.k === "Max win")?.v ?? "" },
+                  { label: "Volatility", value: specs.find((x) => x.k === "Volatility")?.v ?? "" },
+                ]}
+                seed={g.slug ?? g.name}
+              />
+            )}
           </div>
+          <style>{`.sdp-hero { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: 48px; align-items: center; } @media (max-width: 860px) { .sdp-hero { grid-template-columns: 1fr; gap: 28px; } }`}</style>
         </div>
       </section>
 
@@ -190,7 +186,7 @@ export function SlotDataPage({ g, review }: { g: CatalogueSlotPage; review?: Rea
       {/* Right after the returns, where most readers still are — not only at
           the foot of the page. Same partners, same geo rules. */}
       <section className="csg-partner-slot" style={{ maxWidth: 1100, margin: "0 auto", padding: "8px 40px 0" }}>
-        <FeaturedPartner context={{ kind: "slots" }} />
+        <FeaturedPartner context={{ kind: "slots" }} seed={g.slug ?? g.name} />
         <VipFloat />
       </section>
 
@@ -262,7 +258,7 @@ export function SlotDataPage({ g, review }: { g: CatalogueSlotPage; review?: Rea
       {review}
 
       <section style={{ maxWidth: 1100, margin: "0 auto", padding: "36px 40px 80px" }}>
-        {!review && <SlotNextStep name={g.name} />}
+        {!review && <SlotNextStep name={g.name} seed={g.slug ?? g.name} />}
         <NextSteps
           steps={[
             {

@@ -208,7 +208,7 @@ export default function Page() {
       </article>
 
       <div style={{ maxWidth: 900, margin: "0 auto", padding: "0 24px" }}>
-        <FeaturedPartner context={{ kind: "general" }} heading="Where we play" />
+        <FeaturedPartner context={{ kind: "general" }} heading="Where we play" seed="blackjack" />
       </div>
 
       <section style={{ maxWidth: 900, margin: "0 auto", padding: "20px 24px 60px" }}>

@@ -173,7 +173,7 @@ export function SlotReview({ slug, review, facts }: { slug: string; review: Revi
           </Link>
           <span hidden data-slug={slug} />
         </div>
-        <SlotNextStep name={facts.name} />
+        <SlotNextStep name={facts.name} seed={slug} />
       </div>
     </section>
   );

@@ -5,6 +5,7 @@ import { EntityReviewPageClient } from "@/components/entity/EntityReviewPageClie
 import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
 import { CasinoSpecSheet } from "@/components/entity/CasinoSpecSheet";
 import { CasinoBonuses } from "@/components/entity/CasinoBonuses";
+import { SlotHeroArt } from "@/components/slots/SlotHeroArt";
 
 /**
  * Server half of the review page. The labels and links it needs come from
@@ -13,15 +14,35 @@ import { CasinoBonuses } from "@/components/entity/CasinoBonuses";
  * where it had been shipping 7 MB to every review page.
  */
 export function EntityReviewPage({ e, review, lead, heroExtra }: { e: EntityView; review?: React.ReactNode; /** Server-rendered sections shown right after the verdict. */ lead?: React.ReactNode; /** Server-rendered block under the hero byline. */ heroExtra?: React.ReactNode }) {
+  // A slot's hero is its own art with its figures on it, not a casino card.
+  const glance = (label: string) => e.glance.find((r) => r.label === label)?.value ?? "";
+  const back = backLink(e.type);
+  const heroAside =
+    e.type === "slot" && e.heroArt ? (
+      <SlotHeroArt
+        art={e.heroArt}
+        name={e.name}
+        studio={e.stats.find((x) => x.label === "Provider")?.value}
+        chips={[
+          { label: "RTP", value: glance("Published RTP") },
+          { label: "Max win", value: glance("Max win") },
+          { label: "Volatility", value: glance("Volatility") },
+        ]}
+        seed={e.slug}
+        tint={e.tint}
+        back={back}
+      />
+    ) : undefined;
   return (
     <EntityReviewPageClient
       e={e}
       review={review}
       lead={lead}
       heroExtra={heroExtra}
+      heroAside={heroAside}
       bonuses={e.type === "casino" ? <CasinoBonuses slug={e.slug} /> : null}
       specSheet={e.type === "casino" || e.type === "wallet" || e.type === "exchange" ? <CasinoSpecSheet slug={e.slug} kind={e.type === "wallet" ? "wallet" : e.type === "exchange" ? "exchange" : "casino"} /> : null}
-      partner={e.type === "casino" ? null : <FeaturedPartner context={e.type === "slot" ? { kind: "slots" } : e.type === "market" ? { kind: "sports" } : { kind: "wallet" }} />}
+      partner={e.type === "casino" ? null : <FeaturedPartner context={e.type === "slot" ? { kind: "slots" } : e.type === "market" ? { kind: "sports" } : { kind: "wallet" }} seed={e.slug} />}
       chrome={{ back: backLink(e.type), take: editorialTake(e.type, e.slug), cta: ctaLabel(e.type, e.name), next: nextStepsFor(e.type) }}
     />
   );

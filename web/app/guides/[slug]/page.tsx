@@ -184,7 +184,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           )}
         </div>
         <GuideNextStep category={g.category} />
-        {!body.noPartners && <FeaturedPartner context={{ kind: "general" }} />}
+        {!body.noPartners && <FeaturedPartner context={{ kind: "general" }} seed={slug} />}
         <div style={{ margin: "32px 0" }}>
           <AuthorBox />
         </div>

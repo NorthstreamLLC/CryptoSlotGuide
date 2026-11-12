@@ -177,7 +177,7 @@ export function SlotCategoryPage({ tag }: { tag: SlotMechanicTag }) {
             </div>
           </>
         )}
-        <FeaturedPartner context={{ kind: "slots" }} />
+        <FeaturedPartner context={{ kind: "slots" }} seed={tag} />
         <NextSteps
           steps={[
             { href: "/slots", label: "The full slot RTP index", hint: "Every title we track, with the studio's published return." },

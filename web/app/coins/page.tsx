@@ -14,7 +14,7 @@ export default function Page() {
   return (
     <>
       <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Coins", path: "/coins" }])} />
-      <CoinsPage  partner={<FeaturedPartner context={{ kind: "general" }} />} />
+      <CoinsPage  partner={<FeaturedPartner context={{ kind: "wallet" }} seed="coins" />} />
     </>
   );
 }

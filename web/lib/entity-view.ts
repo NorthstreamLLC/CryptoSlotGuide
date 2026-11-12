@@ -10,6 +10,7 @@
  * provider, market (sports/esports betting markets — /betting/[slug]).
  */
 import { siteData } from "./site-data";
+import { pickPartners } from "./partner-fit";
 import { hasPromoPage, typeableCode } from "./promo-pages";
 import { slotReview } from "./slot-reviews";
 import { flag } from "./scoring";
@@ -348,11 +349,13 @@ export function getEntityView(type: EntityType, slug: string, opts: { fullTable?
     // them. Four slots currently take this path: Gates of Olympus and Gonzo's
     // Quest Megaways named BC.Game, Big Bass Bonanza and Divine Fortune named
     // Cloudbet, and we hold an affiliate link for neither.
-    // Every slot page now points at our featured pick (Roobet), the casino the
-    // rest of the slots section recommends; the slot's own named casino is the
-    // fallback only if the featured operator has no live link.
-    const featured = siteData.ops.find((o) => o.featured && o.affiliate && o.signupUrl);
-    const playAt = featured ?? named;
+    // The partner that fits this slot's page (lib/partner-fit.ts, rotated by
+    // slug), not the featured operator on every slot; the slot's own named
+    // casino only if no partner has a live link. The hero shows this only for
+    // a slot without art; one with art gets SlotHeroArt, which also swaps it
+    // for the visitor's location.
+    const fitted = pickPartners({ context: { kind: "slots" }, seed: s.slug, limit: 1 })[0]?.o;
+    const playAt = fitted ?? named;
     return {
       type,
       kicker: "Slot profile",

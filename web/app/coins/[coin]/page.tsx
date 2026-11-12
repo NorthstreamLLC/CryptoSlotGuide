@@ -30,7 +30,7 @@ export default async function Page({ params }: { params: Promise<{ coin: string 
   return (
     <>
       <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }, { name: "Coins", path: "/coins" }, { name: c.name, path: `/coins/${coin}` }])} />
-      <CoinsPage coin={String(c.ticker)}  partner={<FeaturedPartner context={{ kind: "general" }} />} />
+      <CoinsPage coin={String(c.ticker)}  partner={<FeaturedPartner context={{ kind: "coin", ticker: String(c.ticker) }} seed={coin} />} />
     </>
   );
 }

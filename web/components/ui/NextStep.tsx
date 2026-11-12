@@ -3,6 +3,8 @@ import { siteData } from "@/lib/site-data";
 import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
 import { CodeChip } from "@/components/ui/CodeChip";
 import { hasPromoPage, typeableCode } from "@/lib/promo-pages";
+import { pickPartners } from "@/lib/partner-fit";
+import { GeoRanked } from "@/components/geo/GeoRanked";
 
 const GOLD = "#FFC531";
 
@@ -56,24 +58,39 @@ function Block({ kicker, title, sub, cta, href, external, code, geoSlug, geoName
   );
 }
 
-/** End of a slot page: where to play it. */
-export function SlotNextStep({ name }: { name: string }) {
-  const r = siteData.ops.find((o) => o.slug === "roobet");
-  if (!r?.signupUrl) {
-    return <Block kicker="NEXT STEP" title={`Ready to play ${name}?`} sub="The best crypto slot sites: big game libraries, fast withdrawals, and the bonus that fits slots." cta="Best crypto slot sites" href="/slots/best-crypto-slot-sites" />;
-  }
+/**
+ * End of a slot page: where to play it. The partner that fits this page best
+ * (lib/partner-fit.ts, rotated by the page's own key so it is not the same
+ * casino on every slot), swapped for the next one where the visitor's location
+ * is shut to it. Never claims the title sits in that lobby: no data on file
+ * maps casinos to games.
+ */
+export function SlotNextStep({ name, seed }: { name: string; seed?: string }) {
+  const picks = pickPartners({ context: { kind: "slots" }, seed: seed ?? name, limit: 4 });
+  const generic = <Block kicker="NEXT STEP" title={`Ready to play ${name}?`} sub="The best crypto slot sites: big game libraries, fast withdrawals, and the bonus that fits slots." cta="Best crypto slot sites" href="/slots/best-crypto-slot-sites" />;
+  if (!picks.length) return generic;
   return (
-    <Block
-      kicker="NEXT STEP"
-      title={`Ready to play ${name}?`}
-      sub={r.promoCode ? `Check the RTP in the game's info screen first. Our pick for slots is Roobet: sign up with code ${r.promoCode}, then claim the welcome package through CasinoPerks on Telegram.` : "Check the RTP in the game's info screen first. Our pick for slots is Roobet."}
-      cta="Play slots at Roobet"
-      href={r.signupUrl}
-      external
-      code={r.promoCode}
-      geoSlug="roobet"
-      geoName={r.name}
-      secondary={{ label: "Or compare the best crypto slot sites →", href: "/slots/best-crypto-slot-sites" }}
+    <GeoRanked
+      count={1}
+      fallback={generic}
+      items={picks.map(({ o, pitch }) => {
+        const code = typeableCode(o.slug, o.promoCode) ? o.promoCode : null;
+        return {
+          slug: o.slug,
+          node: (
+            <Block
+              kicker="NEXT STEP"
+              title={`Ready to play ${name}?`}
+              sub={`Check the RTP in the game's info screen first. Our pick for this page: ${o.name}${o.bonusShort ? `, with ${o.bonusShort.charAt(0).toLowerCase()}${o.bonusShort.slice(1)}` : ""}. ${pitch.replace(/\.$/, "")}.`}
+              cta={`Play slots at ${o.name}`}
+              href={o.signupUrl as string}
+              external
+              code={code}
+              secondary={{ label: "Or compare the best crypto slot sites →", href: "/slots/best-crypto-slot-sites" }}
+            />
+          ),
+        };
+      })}
     />
   );
 }

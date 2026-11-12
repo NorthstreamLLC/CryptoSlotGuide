@@ -17,6 +17,8 @@ import { BonusesPage, toWithdraw } from "@/components/bonuses/BonusesPage";
 import { FoldedList } from "@/components/casino-index/FoldedList";
 import { kevinLive, KEVIN_PATH, KEVIN_END } from "@/lib/kevin-promo";
 import { Until } from "@/components/ui/Until";
+import { OfferStack } from "@/components/bonuses/OfferStack";
+import { hasPromoPage as hasPromo } from "@/lib/promo-pages";
 import vip from "@/data/vip.json";
 
 /**
@@ -108,6 +110,59 @@ export function BonusesHub() {
   const HIDE = new Set(["roobet", "500-casino"]);
   const top = inHouseOrder(ops.filter((o) => o.affiliate && o.signupUrl && !HIDE.has(o.slug))).slice(0, 8);
   const welcome = ops.filter(isWelcomeOffer);
+  // The hero stack: our pick first, then the next offers in placement order,
+  // with spares so a casino the visitor's location shuts is replaced.
+  const stack = [...(roobet?.promoCode && roobet.signupUrl ? [roobet] : []), ...top].slice(0, 6);
+  const face = (o: (typeof ops)[number]) => {
+    const code = readable(o.promoCode, o.slug) ? o.promoCode : null;
+    const wv = wagerView(o);
+    return (
+      <>
+        <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16 }}>
+          <span style={{ width: 52, height: 52, borderRadius: 13, overflow: "hidden", flex: "none", boxShadow: "0 8px 22px rgba(0,0,0,.4)" }}>
+            <BrandMark slug={o.slug} mono={o.mono} tint={brandFor(o.slug)} radius={13} fontSize={15} />
+          </span>
+          <span style={{ minWidth: 0 }}>
+            <span style={{ display: "block", fontSize: 17, fontWeight: 700, color: "#F2F5F7" }}>{o.slug === "roobet" ? "Roobet welcome package" : o.name}</span>
+            <span className="bh-tag">{o.slug === "roobet" ? "Our pick this week" : isWelcomeOffer(o) ? "Welcome offer" : "Rewards"}</span>
+          </span>
+        </div>
+        {o.slug === "roobet" ? (
+          <div className="bh-steps" data-keep-grid>
+            <div><b>20%</b><small>deposit match to $500</small></div>
+            <div><b>100 spins</b><small>at $10,000 wagered</small></div>
+            <div><b>500 spins</b><small>at $50,000 wagered</small></div>
+          </div>
+        ) : (
+          <div style={{ margin: "0 0 16px" }}>
+            <div style={{ fontSize: 22, lineHeight: 1.25, fontWeight: 700, letterSpacing: "-.02em", color: "#fff", textWrap: "balance" }}>{o.bonusShort ?? o.bonus}</div>
+            <div style={{ marginTop: 6, fontSize: 13, color: "#8E9CA4" }}>Wagering: {wv.label.toLowerCase()} · from {o.name}&apos;s own terms</div>
+          </div>
+        )}
+        {code && <CodeChip code={code} tint={GOLD} />}
+        <a href={o.signupUrl as string} target="_blank" rel="nofollow sponsored noopener" data-copy-code={code ?? undefined} className="bh-btn bh-gold" style={{ display: "flex", marginTop: 12 }}>
+          {o.slug === "roobet" ? "1. " : ""}Sign up{code ? ` with code ${code}` : ` at ${o.name}`} ↗
+        </a>
+        {o.slug === "roobet" && (
+          <div style={{ display: "flex", flexDirection: "column", marginTop: 10 }}>
+            <VipClaim label={`2. Claim it with ${vip.name}`} />
+          </div>
+        )}
+        <Link href={hasPromo(o.slug) ? `/promo-codes/${o.slug}` : reviewPath(o.slug)} style={{ display: "block", marginTop: 14, textAlign: "center", fontSize: 13.5, fontWeight: 600, color: "#C9D3D8" }}>
+          {hasPromo(o.slug) ? "Full terms and how to claim →" : `Read our ${o.name} review →`}
+        </Link>
+      </>
+    );
+  };
+  const peek = (o: (typeof ops)[number]) => (
+    <span style={{ display: "flex", alignItems: "center", gap: 9, minWidth: 0 }}>
+      <span style={{ width: 20, height: 20, borderRadius: 6, overflow: "hidden", flex: "none" }}>
+        <BrandMark slug={o.slug} mono={o.mono} tint={brandFor(o.slug)} radius={6} fontSize={8} />
+      </span>
+      <b style={{ fontSize: 13, color: "#F2F5F7", flex: "none" }}>{o.name}</b>
+      <span style={{ fontSize: 12.5, color: "#A9B8C0", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{o.bonusShort ?? o.bonus}</span>
+    </span>
+  );
   const lowWager = ops.filter((o) => { const w = wagerView(o); return w.kind === "none" || (w.mult !== null && w.mult <= 1); });
 
   const types: { icon: IconName; label: string; href: string; n: string; tint: string }[] = [
@@ -146,35 +201,18 @@ export function BonusesHub() {
               </div>
             </div>
 
-            {roobet?.promoCode && (
-              <aside className="bh-pick" aria-label="Best offer this week">
-                <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 18 }}>
-                  <span style={{ width: 48, height: 48, borderRadius: 12, overflow: "hidden", flex: "none" }}>
-                    <BrandMark slug="roobet" mono={roobet.mono} tint={brandFor("roobet")} radius={12} fontSize={14} />
-                  </span>
-                  <span>
-                    <span style={{ display: "block", fontSize: 17, fontWeight: 700, color: "#F2F5F7" }}>Roobet welcome package</span>
-                    <span className="bh-tag">Best offer this week</span>
-                  </span>
-                </div>
-                <div className="bh-steps" data-keep-grid>
-                  <div><b>20%</b><small>deposit match to $500</small></div>
-                  <div><b>100 spins</b><small>at $10,000 wagered</small></div>
-                  <div><b>500 spins</b><small>at $50,000 wagered</small></div>
-                </div>
-                <CodeChip code={roobet.promoCode} tint={GOLD} />
-                {roobet.signupUrl && (
-                  <a href={roobet.signupUrl} target="_blank" rel="nofollow sponsored noopener" data-copy-code={roobet.promoCode} className="bh-btn bh-gold" style={{ display: "flex", marginTop: 12 }}>
-                    1. Sign up with code {roobet.promoCode} ↗
-                  </a>
-                )}
-                <div style={{ display: "flex", flexDirection: "column", marginTop: 10 }}>
-                  <VipClaim label={`2. Claim it with ${vip.name}`} />
-                </div>
-                <GeoBlockNote slug="roobet" name={roobet.name} compact />
-                <Link href="/promo-codes/roobet" style={{ display: "block", marginTop: 14, textAlign: "center", fontSize: 13.5, fontWeight: 600, color: "#C9D3D8" }}>Full terms and how to claim →</Link>
-              </aside>
-            )}
+            <aside aria-label="Top offers this week">
+              <OfferStack
+                items={stack.map((o) => ({ slug: o.slug, name: o.name, tint: brandFor(o.slug), face: face(o), peek: peek(o) }))}
+                fallback={
+                  <div className="bh-pick">
+                    <span style={{ display: "block", fontSize: 19, fontWeight: 700, letterSpacing: "-.015em", color: "#F2F5F7" }}>This week&apos;s top offers aren&apos;t open where you are</span>
+                    <GeoBlockNote slug={stack[0]?.slug ?? "roobet"} name="" none />
+                    <a href="#top-offers" className="bh-btn bh-line" style={{ display: "flex", marginTop: 14 }}>Compare every offer and its terms ↓</a>
+                  </div>
+                }
+              />
+            </aside>
           </section>
         </div>
       </div>

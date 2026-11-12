@@ -168,7 +168,7 @@ export default async function Page({ params }: { params: Promise<{ country: stri
           Based on each casino&apos;s own restricted-countries list, not legal advice. Gambling law in {c.name} applies to you as a player; check it before you sign up.
         </p>
         <LinkCloud title="Crypto casinos in other countries" items={others.map((x) => ({ href: `/crypto-casinos/in/${x.c.code.toLowerCase()}`, label: x.c.name }))} />
-        <FeaturedPartner context={{ kind: "general" }} country={c.code} />
+        <FeaturedPartner context={{ kind: "general" }} country={c.code} seed={c.code} />
         <NextSteps
           steps={[
             { href: `/legal/${c.code.toLowerCase()}`, label: `Is it legal in ${c.name}?`, hint: "The regulator, the licensing model and the minimum age." },

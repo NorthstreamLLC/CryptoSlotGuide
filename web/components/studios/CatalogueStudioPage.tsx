@@ -117,7 +117,7 @@ export function CatalogueStudioPage({ studio }: { studio: CatalogueStudio }) {
       </section>
 
       <section style={{ maxWidth: 1180, margin: "0 auto", padding: "36px 24px 64px" }}>
-        <FeaturedPartner context={{ kind: "slots" }} />
+        <FeaturedPartner context={{ kind: "slots" }} seed={studio.slug} />
         <ReportIssue subject={studio.name} />
         <NextSteps
           steps={[

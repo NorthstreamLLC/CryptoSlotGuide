@@ -647,7 +647,11 @@ export function CasinoReport({ e }: { e: EntityView }) {
           </div>
         )}
         <CasinoNextStep slug={o.slug} />
-        <FeaturedPartner context={{ kind: "general" }} heading="Casinos we also recommend" exclude={o.slug} count={2} />
+        {/* Alternatives picked by how they compare with this casino (ID checks,
+            withdrawal speed, wagering, coins, sportsbook), with the reason on
+            each row. Not our featured partner: a rival's review is not the
+            place to push it. */}
+        <FeaturedPartner context={{ kind: "alternative", of: o.slug }} heading={`Similar to ${o.name}, worth comparing`} exclude={[o.slug, "roobet"]} seed={o.slug} count={3} />
         <div style={{ margin: "32px 0" }}>
           <AuthorBox />
         </div>

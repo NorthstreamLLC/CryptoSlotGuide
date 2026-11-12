@@ -10,7 +10,7 @@ import { getGeo, type GeoAnswer } from "@/lib/geo-client";
  * to them instead. Nothing is hidden and nothing renders for anyone else, so
  * the page reads the same to crawlers and to visitors the casino accepts.
  */
-export function GeoBlockNote({ slug, name, compact = false }: { slug: string; name: string; compact?: boolean }) {
+export function GeoBlockNote({ slug, name, compact = false, none = false }: { slug: string; name: string; compact?: boolean; /** Under a list whose every casino is shut to the visitor: one note for all of them. */ none?: boolean }) {
   const [geo, setGeo] = useState<GeoAnswer | null>(null);
 
   useEffect(() => {
@@ -57,7 +57,7 @@ export function GeoBlockNote({ slug, name, compact = false }: { slug: string; na
     >
       <span aria-hidden>⚠</span>
       <span>
-        {name}&apos;s terms don&apos;t accept players from {where}, where you appear to be.{" "}
+        {none ? <>None of the casinos we work with accepts players from {where}, where you appear to be.</> : <>{name}&apos;s terms don&apos;t accept players from {where}, where you appear to be.</>}{" "}
         <Link href={alt.href} style={{ color: "#fff", fontWeight: 700, textDecoration: "underline", textUnderlineOffset: 2 }}>
           {alt.label} →
         </Link>

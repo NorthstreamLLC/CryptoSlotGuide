@@ -89,7 +89,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       <div style={{ height: 28 }} />
       <StudioLicences studio={s} />
       <section style={{ maxWidth: 1180, margin: "0 auto", padding: "0 24px 64px" }}>
-        <FeaturedPartner context={{ kind: "slots" }} />
+        <FeaturedPartner context={{ kind: "slots" }} seed={slug} />
         <ReportIssue subject={s.name} />
         <NextSteps steps={nextStepsFor("provider")} />
       </section>

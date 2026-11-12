@@ -33,7 +33,7 @@ export interface EntityChrome {
   next: { href: string; label: string; hint: string }[];
 }
 
-export function EntityReviewPageClient({ e, review, lead, heroExtra, partner, bonuses, specSheet, chrome }: { e: EntityView; review?: React.ReactNode; lead?: React.ReactNode; heroExtra?: React.ReactNode; /** FeaturedPartner, rendered on the server so its data stays out of the bundle. */ partner?: React.ReactNode; /** CasinoBonuses and CasinoSpecSheet, server-rendered: they read the 690KB spec sheets. */ bonuses?: React.ReactNode; specSheet?: React.ReactNode; chrome: EntityChrome }) {
+export function EntityReviewPageClient({ e, review, lead, heroExtra, heroAside, partner, bonuses, specSheet, chrome }: { e: EntityView; review?: React.ReactNode; lead?: React.ReactNode; heroExtra?: React.ReactNode; /** Replaces the fact card on the hero's right (a slot's art). */ heroAside?: React.ReactNode; /** FeaturedPartner, rendered on the server so its data stays out of the bundle. */ partner?: React.ReactNode; /** CasinoBonuses and CasinoSpecSheet, server-rendered: they read the 690KB spec sheets. */ bonuses?: React.ReactNode; specSheet?: React.ReactNode; chrome: EntityChrome }) {
   const [openFaq, setOpenFaq] = useState<number | null>(0);
   const back = chrome.back;
   const take = chrome.take;
@@ -71,7 +71,7 @@ export function EntityReviewPageClient({ e, review, lead, heroExtra, partner, bo
           <div style={{ display: "grid", gridTemplateColumns: "1.25fr .75fr", gap: 56, alignItems: "start" }}>
             <div>
               <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 22 }}>
-                {e.heroArt ? (
+                {heroAside ? null : e.heroArt ? (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img src={e.heroArt} alt={`${e.name} game art`} width={128} height={80} style={{ width: 128, height: 80, flex: "none", objectFit: "cover", borderRadius: 12, border: "1px solid rgba(255,255,255,.14)", boxShadow: "0 12px 30px rgba(0,0,0,.45)" }} />
                 ) : (
@@ -121,6 +121,7 @@ export function EntityReviewPageClient({ e, review, lead, heroExtra, partner, bo
               {heroExtra}
             </div>
 
+            {heroAside ? <div className="erp-aside"><style>{`@media (max-width: 760px) { .erp-aside { order: -1; } }`}</style>{heroAside}</div> : (
             <div style={{ padding: 26, borderRadius: 16, background: "#12181C", border: "1px solid rgba(255,255,255,.09)", boxShadow: "0 20px 60px rgba(0,0,0,.5)" }}>
               <GlanceCard rows={e.glance} />
               {e.signupUrl ? (
@@ -178,6 +179,7 @@ export function EntityReviewPageClient({ e, review, lead, heroExtra, partner, bo
                   : "Not financial advice. We hold no position in any asset named here."}
               </div>
             </div>
+            )}
           </div>
         </div>
       </section>

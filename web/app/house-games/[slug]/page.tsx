@@ -177,7 +177,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             </Link>
           ))}
         </div>
-        <FeaturedPartner context={{ kind: "house" }} />
+        <FeaturedPartner context={{ kind: "house" }} seed={slug} />
         <NextSteps
           steps={[
             { href: "/house-games", label: "Every house game", hint: "The originals each casino runs, with the edge it publishes." },

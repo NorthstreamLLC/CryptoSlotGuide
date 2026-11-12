@@ -40,7 +40,7 @@ export default async function Page({ params }: { params: Promise<{ coin: string 
       >
         <CasinoOfferList ops={list} />
         <LinkCloud title="Casinos by coin" items={others.map((x) => ({ href: `/crypto-casinos/accepting/${x.slug}`, label: `${x.name} casinos` }))} />
-        <FeaturedPartner context={{ kind: "coin", ticker: c.ticker }} />
+        <FeaturedPartner context={{ kind: "coin", ticker: c.ticker }} seed={coin} />
         <NextSteps
           steps={[
             { href: "/coins", label: "Coins we track", hint: "Credit times, confirmations and what the network charges." },
