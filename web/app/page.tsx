@@ -12,7 +12,7 @@ import { CodeChip } from "@/components/ui/CodeChip";
 import { GeoBlockNote } from "@/components/geo/GeoBlockNote";
 import { CasinoRankList } from "@/components/casino-index/CasinoRankList";
 import { LineIcon } from "@/components/ui/LineIcon";
-import { GuideCover } from "@/components/guides/GuideCover";
+import { StoryThumb, thumbForNews, type ThumbSpec } from "@/components/home/StoryThumb";
 import { GeoSwap } from "@/components/promo/GeoSwap";
 import { CGA_REGISTER } from "@/lib/curacao-register";
 import { fill } from "@/lib/derived";
@@ -121,7 +121,7 @@ const CSS = `
 .h-lead-sub { font-size: 15px; line-height: 1.6; color: #98A6AE; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 .h-read { margin-top: 2px; font-size: 14px; font-weight: 700; color: #E8EDF0; }
 .h-minis { display: flex; flex-direction: column; gap: 12px; }
-.h-mini { flex: 1; display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 14px; align-items: center; padding: 10px; border-radius: 14px; border: 1px solid rgba(255,255,255,.08); background: #0D1114; transition: border-color .15s, transform .15s; }
+.h-mini { flex: 1; display: grid; grid-template-columns: 132px minmax(0, 1fr); gap: 14px; align-items: center; padding: 10px; border-radius: 14px; border: 1px solid rgba(255,255,255,.08); background: #0D1114; transition: border-color .15s, transform .15s; }
 .h-mini:hover { border-color: rgba(255,255,255,.2); transform: translateY(-1px); }
 .h-mini-cover { display: block; aspect-ratio: 16 / 10; border-radius: 10px; overflow: hidden; }
 .h-mini-brand { display: flex; align-items: center; justify-content: center; background: color-mix(in srgb, var(--tint) 16%, #0C1013); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--tint) 35%, transparent); }
@@ -247,14 +247,14 @@ function Stack({ imgs }: { imgs: string[] }) {
   );
 }
 
-type MiniItem = { href: string; tag: string; tint: string; title: string; date: string; cover: { category: string; tint: string } };
+type MiniItem = { href: string; tag: string; tint: string; title: string; date: string; thumb: ThumbSpec };
 const miniDate = (iso: string) => (iso ? new Date(iso + "T12:00:00Z").toLocaleDateString("en-GB", { day: "numeric", month: "short" }) : "");
 
 /** A story in the Latest column: cover tile, tag and date, headline. */
 function MiniStory({ x }: { x: MiniItem }) {
   return (
     <Link href={x.href} className="h-mini">
-      <span className="h-mini-cover"><GuideCover category={x.cover.category} tint={x.cover.tint} rounded={0} label={false} tile /></span>
+      <span className="h-mini-cover"><StoryThumb spec={x.thumb} size="mini" /></span>
       <span className="h-mini-body">
         <span className="h-story-meta">
           <span className="h-ltag" style={{ ["--tint" as string]: x.tint }}>{x.tag}</span>
@@ -285,10 +285,10 @@ export default function HomePage() {
   const typeTag = { news: "News", analysis: "Analysis", opinion: "Opinion" } as const;
   const assessCount = CGA_REGISTER.counts.find((x) => x.key === "assess")?.n;
   const latest = [
-    ...newsArticles().slice(0, 4).map((g) => ({ href: `/guides/${g.slug}`, tag: g.contentType ? typeTag[g.contentType] : "News", tint: g.contentType && g.contentType !== "news" ? "#FFC531" : "#5FE3E8", title: g.title, sub: fill(g.standfirst, siteData), date: g.iso, cover: { category: g.category, tint: g.tint } })),
-    { href: "/crypto-casinos/kyc-tracker", tag: "New tracker", tint: "#57E39A", title: "KYC tracker: when each of 46 crypto casinos asks for ID", sub: "All 46 casinos sorted by when their own terms say they'll ask for ID, with each one's wording and source.", date: "2026-11-11", cover: { category: "Accounts", tint: "#57E39A" } },
-    { href: "/bonuses/true-cost-index", tag: "New index", tint: "#57E39A", title: "Bonus true-cost index: what each welcome bonus really costs per $100", sub: "The bets each welcome bonus asks for on a $100 deposit, and what that betting costs on average, from each casino's own terms.", date: "2026-11-10", cover: { category: "Bonuses", tint: "#FFC531" } },
-    { href: "/legal/curacao-licence-tracker", tag: "Tracker", tint: "#57E39A", title: "Curaçao licence tracker: where each crypto casino stands on the register", sub: `${assessCount ?? "Hundreds"} of ${CGA_REGISTER.total} licences on the regulator's own register read "Assessment in progress". Where each casino we track stands.`, date: "2026-11-06", cover: { category: "Law", tint: "#9AAE5E" } },
+    ...newsArticles().slice(0, 4).map((g) => ({ href: `/guides/${g.slug}`, tag: g.contentType ? typeTag[g.contentType] : "News", tint: g.contentType && g.contentType !== "news" ? "#FFC531" : "#5FE3E8", title: g.title, sub: fill(g.standfirst, siteData), date: g.iso, thumb: thumbForNews(g.title, { category: g.category, tint: g.tint }) })),
+    { href: "/crypto-casinos/kyc-tracker", tag: "New tracker", tint: "#57E39A", title: "KYC tracker: when each of 46 crypto casinos asks for ID", sub: "All 46 casinos sorted by when their own terms say they'll ask for ID, with each one's wording and source.", date: "2026-11-11", thumb: { kind: "kyc" } as ThumbSpec },
+    { href: "/bonuses/true-cost-index", tag: "New index", tint: "#57E39A", title: "Bonus true-cost index: what each welcome bonus really costs per $100", sub: "The bets each welcome bonus asks for on a $100 deposit, and what that betting costs on average, from each casino's own terms.", date: "2026-11-10", thumb: { kind: "cost" } as ThumbSpec },
+    { href: "/legal/curacao-licence-tracker", tag: "Tracker", tint: "#57E39A", title: "Curaçao licence tracker: where each crypto casino stands on the register", sub: `${assessCount ?? "Hundreds"} of ${CGA_REGISTER.total} licences on the regulator's own register read "Assessment in progress". Where each casino we track stands.`, date: "2026-11-06", thumb: { kind: "register" } as ThumbSpec },
   ]
     .sort((a, b) => b.date.localeCompare(a.date))
     .slice(0, 5);
@@ -433,7 +433,7 @@ export default function HomePage() {
             {leadStory && (
               <div className="h-front">
                 <Link href={leadStory.href} className="h-lead-story">
-                  <span className="h-lead-cover"><GuideCover category={leadStory.cover.category} tint={leadStory.cover.tint} rounded={0} label={false} /></span>
+                  <span className="h-lead-cover"><StoryThumb spec={leadStory.thumb} size="lead" /></span>
                   <span className="h-lead-body">
                     <span className="h-story-meta">
                       <span className="h-ltag" style={{ ["--tint" as string]: leadStory.tint }}>{leadStory.tag}</span>
@@ -449,11 +449,7 @@ export default function HomePage() {
                     slot.promo ? (
                       <GeoSwap key={slot.promo.href} slug={slot.promo.slug} fallback={slot.fallback ? <MiniStory x={slot.fallback} /> : null}>
                         <Link href={slot.promo.href} className="h-mini">
-                          <span className="h-mini-cover h-mini-brand" style={{ ["--tint" as string]: slot.promo.tint }}>
-                            <span className="h-mini-mark">
-                              <BrandMark slug={slot.promo.slug} mono={siteData.ops.find((o) => o.slug === slot.promo!.slug)?.mono ?? ""} tint={slot.promo.tint} radius={10} fontSize={12} />
-                            </span>
-                          </span>
+                          <span className="h-mini-cover"><StoryThumb spec={{ kind: "casino", slug: slot.promo.slug }} size="mini" /></span>
                           <span className="h-mini-body">
                             <span className="h-story-meta">
                               <span className="h-ltag" style={{ ["--tint" as string]: slot.promo.tint }}>{slot.promo.tag}</span>
