@@ -22,6 +22,7 @@ export interface SlotDemo {
 export function demoFor(slug: string | null | undefined): SlotDemo | null {
   if (!slug) return null;
   for (const [key, cfg] of Object.entries(DEMO_STUDIOS)) {
+    if (cfg.hidden) continue;
     const id = DEMO_IDS[key]?.[slug];
     if (id !== undefined) return { url: `/demo/${key}/${id}`, studio: cfg.name };
   }
@@ -49,6 +50,7 @@ export function demoTiles(): DemoTile[] {
   // One tile per title: a slug carried by two studios' lists keeps the first.
   const seen = new Set<string>();
   return Object.entries(DEMO_STUDIOS)
+    .filter(([, cfg]) => !cfg.hidden)
     .flatMap(([key, cfg]) => tilesFor(cfg.name, DEMO_IDS[key] ?? {}, (id) => `/demo/${key}/${id}`))
     .filter((t) => !seen.has(t.slug) && !!seen.add(t.slug));
 }

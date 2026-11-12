@@ -17,6 +17,13 @@ export async function GET(_req: NextRequest, ctx: { params: Promise<{ studio: st
   if (!cfg || !isKnownDemo(studio, id)) return new Response("Unknown demo", { status: 404 });
   if (cfg.url) return redirect(cfg.url(id), cfg.cache);
 
+  if (studio === "nolimit") {
+    // The game id is checked against the list on file (isKnownDemo) and
+    // written as a JSON string, so nothing from the URL reaches the page raw.
+    const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Demo</title><style>html,body,#g{margin:0;width:100%;height:100%;background:#000;overflow:hidden}</style></head><body><div id="g"></div><script src="https://nolimitjs.nolimitcdn.com/dist/nolimit-latest.js"></script><script>nolimit.load({game:${JSON.stringify(id)},operator:"FANPAGE_DEMO",environment:"demo",device:innerWidth<760?"mobile":"desktop",language:"en",currency:"EUR",target:document.getElementById("g")});</script></body></html>`;
+    return new Response(html, { headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": `public, max-age=${cfg.cache}`, "X-Robots-Tag": "noindex, nofollow" } });
+  }
+
   if (studio === "microgaming") {
     try {
       const r = await fetch(`https://microgaming.io/wp-json/games/v1/game-demo-url?post_id=${id}&lang=en`, { next: { revalidate: 3600 } });

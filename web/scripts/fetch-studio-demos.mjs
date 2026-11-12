@@ -25,6 +25,12 @@ const UA = { headers: { "User-Agent": "Mozilla/5.0 (compatible; CryptoSlotGuide 
 const get = async (u) => (await fetch(u, UA)).text();
 
 const STUDIOS = {
+  nolimit: {
+    provider: /^nolimit/i,
+    sitemaps: ["https://nolimitcity.com/sitemap-0.xml"],
+    page: /^https:\/\/(www\.)?nolimitcity\.com\/games\/[a-z0-9-]+\/?$/,
+    id: (html) => html.match(/"tableId":"([A-Za-z0-9]+)"/)?.[1],
+  },
   betsoft: {
     provider: /^betsoft/i,
     sitemaps: ["https://betsoft.com/games-sitemap1.xml", "https://betsoft.com/games-sitemap2.xml"],

@@ -9,14 +9,15 @@ import { DemoPlay } from "@/components/slots/DemoPlay";
  */
 export const metadata = pageMetadata("Demo test", "Private check page.", "/demo-test", undefined, { noindex: true });
 
-const nolimit = (id: string) => `https://demo.nolimitcdn.com/loader/loader-desktop.html?operator=FANPAGE_DEMO&game=${id}&language=en&provider=nlc`;
+// Through our host page, which starts the game with Nolimit's own nolimit.js (app/demo).
+const nolimit = (id: string) => `/demo/nolimit/${id}`;
 const netent = (id: string) => `https://netent.com/demo/${id}`;
 
 const GAMES = [
   { studio: "Nolimit City", name: "Mental", url: nolimit("Mental") },
   { studio: "Nolimit City", name: "Tombstone RIP", url: nolimit("TombstoneRip") },
-  { studio: "Nolimit City", name: "Deadwood", url: nolimit("Deadwood") },
-  { studio: "Nolimit City", name: "Fire in the Hole", url: nolimit("FireInTheHole") },
+  { studio: "Nolimit City", name: "Deadwood R.I.P", url: nolimit("DeadwoodRip") },
+  { studio: "Nolimit City", name: "Fire in the Hole 2", url: nolimit("FireInTheHole2") },
   { studio: "NetEnt", name: "Starburst", url: netent("starburstr000000") },
   { studio: "NetEnt", name: "Gonzo's Quest", url: netent("eldorado00000000") },
   { studio: "NetEnt", name: "Dead or Alive 2", url: netent("deadoralive2fb00") },

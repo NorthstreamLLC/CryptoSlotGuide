@@ -15,6 +15,8 @@ export interface DemoStudio {
   url?: (id: string) => string;
   /** How long the redirect may be cached, in seconds. */
   cache: number;
+  /** Served by the route, but not yet shown on slot pages (still being checked). */
+  hidden?: boolean;
 }
 
 export const DEMO_STUDIOS: Record<string, DemoStudio> = {
@@ -74,6 +76,9 @@ export const DEMO_STUDIOS: Record<string, DemoStudio> = {
     url: (id) => `https://d1oij17g4yikkz.cloudfront.net/casino/quickspin/${id}/index.html?gameid=${id}&moneymode=fun&partnerid=quickspin`,
     cache: 86400,
   },
+  // Nolimit City starts its demos through its own nolimit.js, so the route
+  // serves a small page that loads it (app/demo). Hidden until confirmed.
+  nolimit: { name: "Nolimit City", idPattern: /^[A-Za-z0-9]{2,60}$/, cache: 86400, hidden: true },
   betsoft: {
     name: "Betsoft",
     idPattern: /^\d{1,6}$/,
