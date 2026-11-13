@@ -1,4 +1,8 @@
+import Link from "next/link";
 import { billTone, TONE_COLOR, type StateMarket, type OperatorList } from "@/lib/us-market";
+import { usBrandFor, hasUsBrandPage, US_BRAND_TINT } from "@/lib/us-brands";
+import { BrandMark } from "@/components/ui/BrandMark";
+import { tintFor } from "@/lib/logo";
 
 
 function Source({ url, asOf }: { url: string | null; asOf: string | null }) {
@@ -32,18 +36,53 @@ function Operators({ title, list }: { title: string; list: OperatorList }) {
         </h2>
         <Source url={list.sourceUrl} asOf={list.asOf} />
       </div>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(230px, 1fr))", gap: 8 }}>
-        {list.operators.map((o, i) => (
-          <div key={o.brand + i} style={{ padding: "11px 14px", borderRadius: 11, background: "#0C1013", border: "1px solid rgba(255,255,255,.07)" }}>
-            <div style={{ fontSize: 14, fontWeight: 700, color: "#E8EDF0", overflowWrap: "anywhere" }}>{o.brand}</div>
-            {o.licenseHolder && <div style={{ fontSize: 12, lineHeight: 1.4, color: "#83919A", marginTop: 2 }}>under {o.licenseHolder}</div>}
-          </div>
-        ))}
+      <div className="sm-ops">
+        {list.operators.map((o, i) => {
+          // The brand behind the listing, where we can tell: its logo, colour and our page on it.
+          const brand = usBrandFor(o.brand);
+          const slug = brand?.slug ?? o.brand.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+          const tint = (brand && US_BRAND_TINT[brand.slug]) ?? tintFor(slug);
+          const name = brand?.name ?? o.brand;
+          const mono = name.replace(/[^A-Za-z0-9]/g, "").slice(0, 2).toUpperCase();
+          const page = brand && hasUsBrandPage(brand.slug) ? `/us-casinos/${brand.slug}` : null;
+          const body = (
+            <>
+              <span className="sm-op-mark">
+                <BrandMark slug={slug} mono={mono} tint={tint} radius={11} fontSize={14} />
+              </span>
+              <span className="sm-op-text">
+                <b>{name}</b>
+                {o.licenseHolder ? <small>under {o.licenseHolder}</small> : brand && name !== o.brand ? <small>listed as {o.brand}</small> : null}
+              </span>
+              {page && <i aria-hidden>→</i>}
+            </>
+          );
+          return page ? (
+            <Link key={o.brand + i} href={page} className="sm-op" style={{ ["--tint" as string]: tint }}>{body}</Link>
+          ) : (
+            <div key={o.brand + i} className="sm-op" style={{ ["--tint" as string]: tint }}>{body}</div>
+          );
+        })}
       </div>
+      <style>{OPS_CSS}</style>
       {list.note && <p style={{ margin: "10px 0 0", maxWidth: "88ch", fontSize: 12.5, lineHeight: 1.6, color: "#8E9CA5" }}>{list.note}</p>}
     </div>
   );
 }
+
+const OPS_CSS = `
+.sm-ops { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); gap: 10px; }
+.sm-op { position: relative; display: flex; align-items: center; gap: 12px; padding: 12px 14px; border-radius: 14px; min-width: 0;
+  background: radial-gradient(120% 140% at 0% 0%, color-mix(in srgb, var(--tint) 16%, transparent), transparent 60%), #0C1013;
+  border: 1px solid color-mix(in srgb, var(--tint) 38%, rgba(255,255,255,.06)); box-shadow: inset 0 2px 0 var(--tint); transition: transform .15s, border-color .15s; }
+a.sm-op:hover { transform: translateY(-2px); border-color: var(--tint); }
+.sm-op-mark { width: 44px; height: 44px; flex: none; border-radius: 11px; overflow: hidden; box-shadow: 0 6px 18px rgba(0,0,0,.35); }
+.sm-op-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; flex: 1; }
+.sm-op-text b { font-size: 15px; font-weight: 700; color: #F2F5F7; overflow-wrap: anywhere; }
+.sm-op-text small { font-size: 12px; line-height: 1.4; color: #8E9CA5; overflow-wrap: anywhere; }
+.sm-op i { font-style: normal; color: var(--tint); transition: transform .15s; }
+a.sm-op:hover i { transform: translateX(3px); }
+`;
 
 /**
  * The market block on a state page: who is licensed, why the state is the way it
