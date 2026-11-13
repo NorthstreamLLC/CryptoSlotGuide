@@ -55,6 +55,16 @@ function catalogueMeta(slug: string) {
     v.length > 1
       ? `${g.provider} licenses ${g.name} at ${v.length} returns${spread ? `, ${spread} percentage points apart` : ""}. The configurations, the specs and which build your casino ships.`
       : `${g.provider} publishes ${only !== null ? `${only}% ` : ""}for ${g.name}. The return, the specs and where to play it.`;
+  // A title we can let the reader play says so first: "Starburst free demo".
+  if (demoFor(slug)) {
+    const rtp = v.length > 1 ? `RTP ${v[0]}% to ${v[v.length - 1]}%` : only !== null ? `RTP ${only}%` : "RTP and specs";
+    return pageMetadata(
+      `${g.name} free demo and ${rtp}`,
+      `Play ${g.name} free in ${g.provider}'s own demo: play money, no account, no deposit. ${desc}`,
+      `/slots/${slug}`,
+      demoCard(slug, g.name)
+    );
+  }
   return pageMetadata(title, desc, `/slots/${slug}`, demoCard(slug, g.name));
 }
 

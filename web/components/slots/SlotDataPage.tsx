@@ -4,6 +4,7 @@ import { seriesForSlot, seriesPath } from "@/lib/slot-series";
 import Link from "next/link";
 import { FeaturedPartner } from "@/components/ui/FeaturedPartner";
 import { SlotHeroArt } from "@/components/slots/SlotHeroArt";
+import { demoFor } from "@/lib/slot-demos";
 import { thumbOf } from "@/lib/thumb";
 import { EmailSignup } from "@/components/ui/EmailSignup";
 import { VipFloat } from "@/components/slots/VipFloat";
@@ -46,6 +47,7 @@ export function SlotDataPage({ g, review }: { g: CatalogueSlotPage; review?: Rea
   const src = rtpSource(g);
   const approvals = approvalsFor(g.slug ?? "");
   const pick = isTopSlot(g.slug ?? "");
+  const demo = demoFor(g.slug);
 
   return (
     <main style={{ background: "#07090B", color: "#E8EDF0" }}>
@@ -88,7 +90,7 @@ export function SlotDataPage({ g, review }: { g: CatalogueSlotPage; review?: Rea
                 </div>
               )}
               <h1 style={{ margin: "0 0 12px", fontSize: 40, lineHeight: 1.05, letterSpacing: "-.035em", fontWeight: 700, color: "#fff", textWrap: "balance" }}>
-                {g.name} RTP
+                {demo ? <>{g.name}: RTP and free demo</> : <>{g.name} RTP</>}
               </h1>
               <p style={{ margin: 0, maxWidth: "62ch", fontSize: 16, lineHeight: 1.6, color: "#A8B6BE" }}>
                 {versions.length > 1 ? (

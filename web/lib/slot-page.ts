@@ -7,6 +7,8 @@ import rtpOverrides from "@/data/slot-rtp-overrides.json";
 import { isTopSlot, TOP_SLOTS } from "./top-slots";
 import { slotEssentialsLink, slotEssentialsLabel } from "./slotessentials";
 import { artProxyPath } from "./art-proxy";
+import { DEMO_PAGE_PICKS } from "./demo-picks";
+import { DEMO_IDS } from "./demo-studios";
 
 /**
  * The slots that earn a page of their own out of the catalogue.
@@ -112,10 +114,19 @@ const studioSourced = (g: CatalogueGame) => {
   return !!o && o.versionsFrom === "studio" && (o.versions?.length ?? 0) > 0;
 };
 
+/**
+ * A famous title we can let the reader play (lib/demo-picks.ts): a free demo
+ * from the studio on file and a return to print. The demo is the page's
+ * reason to exist, beside the figures.
+ */
+const PICKS = new Set(DEMO_PAGE_PICKS);
+const hasDemo = (slug: string) => Object.values(DEMO_IDS).some((ids) => slug in ids);
+const demoPick = (g: CatalogueGame) => !!g.slug && PICKS.has(g.slug) && hasDemo(g.slug) && (rtpVersionsFor(g).length > 0 || typeof g.rtp === "number");
+
 const QUALIFIES = (g: CatalogueGame) =>
   g.kind === "slot" &&
   !!g.slug &&
-  (studioSourced(g) || ((!!g.demoUrl || hasStudioPage(g)) && rtpVersionsFor(g).length > 1) || isTopSlot(g.slug));
+  (studioSourced(g) || ((!!g.demoUrl || hasStudioPage(g)) && rtpVersionsFor(g).length > 1) || isTopSlot(g.slug) || demoPick(g));
 
 /** Slugs already owned by a hand-written review — those pages win. */
 const REVIEWED = new Set(siteData.slots.map((s) => s.slug));
