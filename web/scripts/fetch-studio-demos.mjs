@@ -1,7 +1,8 @@
 /**
  * Adds free demos from studios that publish them on their own game pages to
  * data/slot-demos.json: Play'n GO, BGaming, ELK Studios, Habanero, Thunderkick,
- * Endorphina, Yggdrasil, Quickspin, Kalamba Games, Betsoft and Microgaming. (Wazdan's demo
+ * Endorphina, Yggdrasil, Quickspin, Kalamba Games, Betsoft, Microgaming,
+ * Nolimit City, NetEnt and Red Tiger. (Wazdan's demo
  * launcher redirects every visitor to wazdan.com, so it cannot be played here.) For each
  * studio, its own sitemap lists the game pages; each page carries the id its
  * "play demo" button opens. Only titles we hold a catalogue entry for are
@@ -25,6 +26,20 @@ const UA = { headers: { "User-Agent": "Mozilla/5.0 (compatible; CryptoSlotGuide 
 const get = async (u) => (await fetch(u, UA)).text();
 
 const STUDIOS = {
+  // NetEnt and Red Tiger (Evolution's platform): the page's tableId opens the
+  // studio's own /demo/<tableId> page, which starts a fresh demo session.
+  netent: {
+    provider: /^netent$/i,
+    sitemaps: ["https://netent.com/sitemap-0.xml"],
+    page: /^https:\/\/(www\.)?netent\.com\/games\/[a-z0-9-]+\/?$/,
+    id: (html) => html.match(/"tableId":"([a-z0-9]+)"/i)?.[1],
+  },
+  redtiger: {
+    provider: /^red tiger$/i,
+    sitemaps: ["https://redtiger.com/sitemap-0.xml"],
+    page: /^https:\/\/(www\.)?redtiger\.com\/games\/[a-z0-9-]+\/?$/,
+    id: (html) => html.match(/"tableId":"([a-z0-9]+)"/i)?.[1],
+  },
   nolimit: {
     provider: /^nolimit/i,
     sitemaps: ["https://nolimitcity.com/sitemap-0.xml"],

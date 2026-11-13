@@ -21,10 +21,14 @@ export interface SlotDemo {
 
 export function demoFor(slug: string | null | undefined): SlotDemo | null {
   if (!slug) return null;
-  for (const [key, cfg] of Object.entries(DEMO_STUDIOS)) {
-    if (cfg.hidden) continue;
-    const id = DEMO_IDS[key]?.[slug];
-    if (id !== undefined) return { url: `/demo/${key}/${id}`, studio: cfg.name };
+  // The catalogue suffixes a clashing name ("mental-1") where a review page
+  // owns the plain slug ("mental"), so both spellings are tried.
+  for (const s of [slug, `${slug}-1`]) {
+    for (const [key, cfg] of Object.entries(DEMO_STUDIOS)) {
+      if (cfg.hidden) continue;
+      const id = DEMO_IDS[key]?.[s];
+      if (id !== undefined) return { url: `/demo/${key}/${id}`, studio: cfg.name };
+    }
   }
   return null;
 }

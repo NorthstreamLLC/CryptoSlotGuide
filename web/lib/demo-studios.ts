@@ -77,8 +77,11 @@ export const DEMO_STUDIOS: Record<string, DemoStudio> = {
     cache: 86400,
   },
   // Nolimit City starts its demos through its own nolimit.js, so the route
-  // serves a small page that loads it (app/demo). Hidden until confirmed.
-  nolimit: { name: "Nolimit City", idPattern: /^[A-Za-z0-9]{2,60}$/, cache: 86400, hidden: true },
+  // serves a small page that loads it (app/demo).
+  nolimit: { name: "Nolimit City", idPattern: /^[A-Za-z0-9]{2,60}$/, cache: 86400 },
+  // The studio's own demo page; it starts a fresh session each time and may show its own 18+ check.
+  netent: { name: "NetEnt", idPattern: /^[a-z0-9]{4,40}$/i, url: (id) => `https://netent.com/demo/${id}`, cache: 86400 },
+  redtiger: { name: "Red Tiger", idPattern: /^[a-z0-9]{4,40}$/i, url: (id) => `https://redtiger.com/demo/${id}`, cache: 86400 },
   betsoft: {
     name: "Betsoft",
     idPattern: /^\d{1,6}$/,
