@@ -110,7 +110,7 @@ export async function GET(req: NextRequest) {
     picture = (
       <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", width: "100%", height: "100%", padding: "0 40px" }}>
         <div style={{ display: "flex", fontSize: 140, fontWeight: 700, lineHeight: 1, letterSpacing: -6, color: "#fff" }}>{CGA_REGISTER.total}</div>
-        <div style={{ display: "flex", marginTop: 8, fontSize: 24, color: "#A9B8C0" }}>licences on Curaçao&apos;s register</div>
+        <div style={{ display: "flex", marginTop: 8, fontSize: 24, color: "#A9B8C0" }}>entries on Curaçao&apos;s register</div>
         <div style={{ display: "flex", gap: 5, width: "100%", height: 26, marginTop: 30, borderRadius: 13, overflow: "hidden" }}>
           {parts.map((p) => (
             <div key={p.key} style={{ display: "flex", flexGrow: p.n, height: 26, background: REGISTER_TONE[p.tone] }} />

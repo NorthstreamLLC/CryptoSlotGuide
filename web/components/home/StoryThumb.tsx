@@ -124,7 +124,7 @@ function RegisterThumb({ size }: { size: Size }) {
       <span className="st-grid" aria-hidden />
       <span className="st-reg">
         <b>{CGA_REGISTER.total}</b>
-        {size === "lead" && <small>licences on Curaçao&apos;s register</small>}
+        {size === "lead" && <small>entries on Curaçao&apos;s register</small>}
         <span className="st-stack">
           {parts.map((c) => (
             <span key={c.key} style={{ flex: c.n, background: tone[c.tone] }} title={`${c.label}: ${c.n}`} />

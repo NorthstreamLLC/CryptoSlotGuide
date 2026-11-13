@@ -45,7 +45,7 @@ const WRITTEN: Record<string, VersusAnalysis> = {
       },
       {
         title: "Licence and who runs them",
-        body: "Both are licensed in Curaçao. Roobet is run by Raw Entertainment B.V., whose licence the Curaçao Gaming Authority's register dated 30 October 2026 lists as \"Indefinite\", with no expiry. Stake is run by Medium Rare N.V., whose licence on the same register shows an expiry of 9 June 2026 and the status \"Assessment in progress\", as do 298 of the 666 licences listed.",
+        body: "Both are licensed in Curaçao. Roobet is run by Raw Entertainment B.V., whose licence the Curaçao Gaming Authority's register dated 12 November 2026 lists as \"Indefinite\", with no expiry. Stake is run by Medium Rare N.V., whose licence on the same register shows an expiry of 9 June 2026 and the status \"Assessment in progress\", as do 294 of the 669 entries listed.",
         cite: [
           { slug: "roobet", group: "Compliance", label: "Register check" },
           { slug: "stake", group: "Compliance", label: "Register check" },
@@ -116,7 +116,7 @@ const WRITTEN: Record<string, VersusAnalysis> = {
       },
       {
         title: "Licence and who runs them",
-        body: "Both are licensed in Curaçao. Shuffle's operator, Natural Nine B.V., is listed on the Curaçao Gaming Authority's register dated 30 October 2026 as \"Indefinite\", with no expiry. Stake's operator, Medium Rare N.V., shows an expiry of 9 June 2026 and the status \"Assessment in progress\" on the same register, as do 298 of the 666 licences listed.",
+        body: "Both are licensed in Curaçao. Shuffle's operator, Natural Nine B.V., is listed on the Curaçao Gaming Authority's register dated 12 November 2026 as \"Indefinite\", with no expiry. Stake's operator, Medium Rare N.V., shows an expiry of 9 June 2026 and the status \"Assessment in progress\" on the same register, as do 294 of the 669 entries listed.",
         cite: [
           { slug: "shuffle", group: "Compliance", label: "Register check" },
           { slug: "stake", group: "Compliance", label: "Register check" },
@@ -185,7 +185,7 @@ const WRITTEN: Record<string, VersusAnalysis> = {
       },
       {
         title: "Licence and who runs them",
-        body: "Stake is run by Medium Rare N.V. in Curaçao, whose licence shows the status \"Assessment in progress\" on the Curaçao Gaming Authority's register dated 30 October 2026. Gamdom is licensed in Anjouan, under a licence held by Moon Revolution Limitada of Costa Rica. In October 2026 Gamdom took its systems offline after finding an unauthorised connection on a server; it said user funds were safe and is back online.",
+        body: "Stake is run by Medium Rare N.V. in Curaçao, whose licence shows the status \"Assessment in progress\" on the Curaçao Gaming Authority's register dated 12 November 2026. Gamdom is licensed in Anjouan, under a licence held by Moon Revolution Limitada of Costa Rica. In October 2026 Gamdom took its systems offline after finding an unauthorised connection on a server; it said user funds were safe and is back online.",
         cite: [
           { slug: "stake", group: "Compliance", label: "Register check" },
           { slug: "gamdom", group: "Compliance", label: "Licence" },
@@ -248,7 +248,7 @@ const WRITTEN: Record<string, VersusAnalysis> = {
       },
       {
         title: "Licence and who runs them",
-        body: "Both are licensed in Curaçao, and both licences are listed as \"Indefinite\", with no expiry, on the Curaçao Gaming Authority's register dated 30 October 2026: Raw Entertainment B.V. for Roobet and Natural Nine B.V. for Shuffle.",
+        body: "Both are licensed in Curaçao, and both licences are listed as \"Indefinite\", with no expiry, on the Curaçao Gaming Authority's register dated 12 November 2026: Raw Entertainment B.V. for Roobet and Natural Nine B.V. for Shuffle.",
         cite: [
           { slug: "roobet", group: "Compliance", label: "Register check" },
           { slug: "shuffle", group: "Compliance", label: "Register check" },
@@ -315,7 +315,7 @@ const WRITTEN: Record<string, VersusAnalysis> = {
       },
       {
         title: "Licence and who runs them",
-        body: "Roobet is run by Raw Entertainment B.V., whose Curaçao licence is listed as \"Indefinite\", with no expiry, on the Curaçao Gaming Authority's register dated 30 October 2026. Gamdom is licensed in Anjouan under a licence held by Moon Revolution Limitada of Costa Rica, and in October 2026 took its systems offline after finding an unauthorised connection on a server; it said user funds were safe and is back online.",
+        body: "Roobet is run by Raw Entertainment B.V., whose Curaçao licence is listed as \"Indefinite\", with no expiry, on the Curaçao Gaming Authority's register dated 12 November 2026. Gamdom is licensed in Anjouan under a licence held by Moon Revolution Limitada of Costa Rica, and in October 2026 took its systems offline after finding an unauthorised connection on a server; it said user funds were safe and is back online.",
         cite: [
           { slug: "roobet", group: "Compliance", label: "Register check" },
           { slug: "gamdom", group: "Compliance", label: "Licence" },
@@ -376,7 +376,7 @@ const WRITTEN: Record<string, VersusAnalysis> = {
       },
       {
         title: "Licence and who runs them",
-        body: "Shuffle is run by Natural Nine B.V., whose Curaçao licence is listed as \"Indefinite\", with no expiry, on the Curaçao Gaming Authority's register dated 30 October 2026. Gamdom is licensed in Anjouan under a licence held by Moon Revolution Limitada of Costa Rica, and in October 2026 took its systems offline after finding an unauthorised connection on a server; it said user funds were safe and is back online.",
+        body: "Shuffle is run by Natural Nine B.V., whose Curaçao licence is listed as \"Indefinite\", with no expiry, on the Curaçao Gaming Authority's register dated 12 November 2026. Gamdom is licensed in Anjouan under a licence held by Moon Revolution Limitada of Costa Rica, and in October 2026 took its systems offline after finding an unauthorised connection on a server; it said user funds were safe and is back online.",
         cite: [
           { slug: "shuffle", group: "Compliance", label: "Register check" },
           { slug: "gamdom", group: "Compliance", label: "Licence" },
@@ -426,7 +426,7 @@ const BLOCKS: Record<string, CasinoBlocks> = {
     verdictIf: "you want a welcome package and a weekly raffle",
     pickIf: WRITTEN["roobet-vs-stake"].pickIf.roobet,
     code: { text: "At Roobet, code ELITE unlocks a welcome package of a 20% deposit match up to $500, then 100 free spins at $10,000 wagered and 500 more at $50,000, claimed through CasinoPerks on Telegram, and joining with an affiliate code boosts its rakeback by 20% for 72 hours.", cite: [[B, "Rakeback"]] },
-    licence: { text: "Roobet is run by Raw Entertainment B.V., whose Curaçao licence is listed as \"Indefinite\", with no expiry, on the Curaçao Gaming Authority's register dated 30 October 2026.", cite: [[C, "Register check"]] },
+    licence: { text: "Roobet is run by Raw Entertainment B.V., whose Curaçao licence is listed as \"Indefinite\", with no expiry, on the Curaçao Gaming Authority's register dated 12 November 2026.", cite: [[C, "Register check"]] },
     rewards: { text: "Roobet pays instant rakeback claimable every 30 minutes and runs a $100,000 weekly raffle with 100 winners, one ticket per $1,000 wagered.", cite: [[B, "Rakeback"], [B, "Weekly raffle"]] },
     vip: { text: "Roobet's VIP Club is invite-only, with no way to apply.", cite: [[B, "VIP levels"]] },
     cash: { text: "Roobet's terms set no maximum withdrawal, but deposits must be wagered once before you withdraw, and it may ask for ID at any time.", cite: [[P, "Withdrawal limits"], [C, "KYC policy"]] },
@@ -435,7 +435,7 @@ const BLOCKS: Record<string, CasinoBlocks> = {
     verdictIf: "you want rakeback from your first bet and a daily race that pays 5,000 places",
     pickIf: WRITTEN["roobet-vs-stake"].pickIf.stake,
     code: { text: "At Stake, code SLOTGUIDE entered within 24 hours of signing up switches on its 3.5% rakeback straight away, instead of only once you reach Bronze at $10,000 wagered.", cite: [[B, "Welcome offer"]] },
-    licence: { text: "Stake is run by Medium Rare N.V., whose Curaçao licence shows an expiry of 9 June 2026 and the status \"Assessment in progress\" on the Curaçao Gaming Authority's register dated 30 October 2026, as do 298 of the 666 licences listed.", cite: [[C, "Register check"]] },
+    licence: { text: "Stake is run by Medium Rare N.V., whose Curaçao licence shows an expiry of 9 June 2026 and the status \"Assessment in progress\" on the Curaçao Gaming Authority's register dated 12 November 2026, as do 294 of the 669 entries listed.", cite: [[C, "Register check"]] },
     rewards: { text: "Stake pays 3.5% of the house edge as rakeback and runs a $100,000 Daily Race paying the top 5,000.", cite: [[B, "Rakeback"], [B, "Leaderboards"]] },
     vip: { text: "Stake publishes 15 VIP levels, from Bronze at 10,000 to Obsidian at a billion, and counts sports wagers three times faster toward them.", cite: [[B, "VIP levels"], [B, "Perks by level"]] },
     cash: { text: "Stake sets no maximum withdrawal and says crypto withdrawals should be processed immediately.", cite: [[P, "Withdrawal limits"], [P, "Stated withdrawal time"]] },
@@ -444,7 +444,7 @@ const BLOCKS: Record<string, CasinoBlocks> = {
     verdictIf: "you want a $100,000 weekly race that pays 1,000 places and deposits from a cent",
     pickIf: WRITTEN["roobet-vs-shuffle"].pickIf.shuffle,
     code: { text: "Shuffle's code carries no bonus of its own; its deposit bonus applies to the first deposit only, with the amount shown inside your account.", cite: [[B, "Deposit bonus"]] },
-    licence: { text: "Shuffle is run by Natural Nine B.V., whose Curaçao licence is listed as \"Indefinite\", with no expiry, on the Curaçao Gaming Authority's register dated 30 October 2026.", cite: [[C, "Register check"]] },
+    licence: { text: "Shuffle is run by Natural Nine B.V., whose Curaçao licence is listed as \"Indefinite\", with no expiry, on the Curaçao Gaming Authority's register dated 12 November 2026.", cite: [[C, "Register check"]] },
     rewards: { text: "Shuffle pays rakeback instantly after each bet plus weekly and monthly, all withdrawable straight away, and runs a $100,000 weekly race paying the top 1,000.", cite: [[B, "Rakeback"], [B, "Leaderboards"]] },
     vip: { text: "Shuffle's ranks run from Wood at $500 wagered to Diamond, and every rank pays an automatic level-up bonus.", cite: [[B, "VIP levels"]] },
     cash: { text: "Shuffle takes deposits from $0.01, and deposits must be wagered once before withdrawal unless the money goes back to the same wallet on the same network.", cite: [[K, "Minimum deposit"], [P, "Withdrawal limits"]] },
@@ -505,7 +505,7 @@ const BLOCKS: Record<string, CasinoBlocks> = {
       "You want prediction markets: Duelbits Predict covers sports, crypto and politics",
     ],
     code: { text: "Duelbits runs no deposit bonus; every player gets 25% of the house edge back as rakeback, 10% instantly and 5% each daily, weekly and monthly, and a referral code has to be set within 24 hours of registering.", cite: [[B, "Deposit bonus"], [B, "Rakeback"], [B, "Referral program"]] },
-    licence: { text: "Duelbits is run by Liquid Entertainment N.V., whose Curaçao licence shows an expiry of 24 December 2025 and the status \"Assessment in progress\" on the Curaçao Gaming Authority's register dated 30 October 2026.", cite: [[C, "Register check"]] },
+    licence: { text: "Duelbits is run by Liquid Entertainment N.V., whose Curaçao licence shows an expiry of 24 December 2025 and the status \"Assessment in progress\" on the Curaçao Gaming Authority's register dated 12 November 2026.", cite: [[C, "Register check"]] },
     rewards: { text: "Duelbits' leaderboards score wager × (1 − RTP), so $100 on a 96% slot earns 400 points against 71 on blackjack; a $10,000 daily board pays the top 100 and a $30,000 weekly board the top 250.", cite: [[B, "Leaderboards"]] },
     vip: { text: "Duelbits' Ace's Lounge levels add up to 12.5% rakeback on top of the base 25%, and selected VIPs get extra rakeback every Tuesday.", cite: [[B, "VIP levels"], [B, "Reload bonuses"]] },
     cash: { text: "Duelbits sets no withdrawal cap and charges no platform fee, but at least 10% of a deposit must be wagered before you withdraw, and access can be restricted until documents are verified.", cite: [[P, "Withdrawal limits"], [C, "KYC policy"]] },
@@ -544,7 +544,7 @@ const BLOCKS: Record<string, CasinoBlocks> = {
       "You like battles: $20,000 Daily Battles, up to $100,000 for VIPs",
     ],
     code: { text: "BetFury's Welcome Pack spreads up to 590% in deposit bonuses and 225 free spins across three deposits, each to be wagered within 14 days with bets capped at $10.", cite: [[B, "Standing offer"]] },
-    licence: { text: "BetFury is run by Universe B Games B.V., whose Curaçao licence shows an expiry of 31 July 2026 and the status \"Assessment in progress\" on the Curaçao Gaming Authority's register dated 30 October 2026.", cite: [[C, "Register check"]] },
+    licence: { text: "BetFury is run by Universe B Games B.V., whose Curaçao licence shows an expiry of 31 July 2026 and the status \"Assessment in progress\" on the Curaçao Gaming Authority's register dated 12 November 2026.", cite: [[C, "Register check"]] },
     rewards: { text: "BetFury pays every player 10% of the house edge as rakeback, withdrawable every 20 minutes, works out cashback twice a week, and runs $20,000 Daily Battles.", cite: [[B, "Rakeback"], [B, "Cashback"], [B, "Leaderboards"]] },
     vip: { text: "BetFury's VIP Club adds higher cashback and a personal manager, and its Super VIP Club, from Rank 15, doubles rakeback.", cite: [[B, "VIP levels"]] },
     cash: { text: "BetFury caps what it pays on any single bet or spin at $300,000, and anything deposited below a coin's minimum is lost.", cite: [[P, "Withdrawal limits"], [K, "Deposit limits"]] },
@@ -601,7 +601,7 @@ const BLOCKS: Record<string, CasinoBlocks> = {
     verdictIf: "you want 5% rakeback with nothing to unlock and a $25,000 daily race",
     pickIf: ["5% rakeback on all bets, claimable every 30 minutes", "A $25,000 Daily Race where sports and crypto futures wagers count", "No withdrawal fees beyond on-chain gas"],
     code: { text: "Rollbit has no code from us and no deposit bonus: its offer is the Rewards Calendar, 5% rakeback on all bets plus daily, weekly, monthly and rank-up bonuses.", cite: [[B, "Standing offer"]] },
-    licence: { text: "Rollbit is run by Bull Gaming N.V., whose Curaçao licence OGL/2024/1260/0494 the Curaçao Gaming Authority's register dated 30 October 2026 lists as \"Expired. Re-evaluating in administrative appeal.\", with a listed expiry of 23 May 2026.", cite: [[C, "Company"], [C, "Register check"]] },
+    licence: { text: "Rollbit is run by Bull Gaming N.V., whose Curaçao licence OGL/2024/1260/0494 the Curaçao Gaming Authority's register dated 12 November 2026 lists as \"Expired. Re-evaluating in administrative appeal.\", with a listed expiry of 23 May 2026.", cite: [[C, "Company"], [C, "Register check"]] },
     rewards: { text: "Rollbit pays 5% rakeback on all bets, claimable every 30 minutes, and runs a $25,000 Daily Race with $10,000 for first place, where sports, casino and crypto futures wagers all count.", cite: [[B, "Rakeback"], [B, "Leaderboards"]] },
     vip: { text: "Rollbit's daily, weekly and monthly bonuses pay 20% straight away and release the other 80% over the calendar period, with lossback built into the weekly and monthly ones.", cite: [[B, "Reload bonuses"], [B, "Cashback"]] },
     cash: { text: "Rollbit charges no withdrawal fees beyond on-chain gas, says withdrawals are generally instant, from a few seconds to 60 minutes, and runs KYC in up to five levels.", cite: [[P, "Withdrawal fees"], [P, "Stated withdrawal time"], [C, "KYC policy"]] },

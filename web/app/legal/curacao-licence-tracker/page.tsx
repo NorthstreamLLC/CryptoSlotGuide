@@ -57,7 +57,7 @@ export function generateMetadata() {
   const assess = CGA_REGISTER.counts.find((c) => c.key === "assess")!.n;
   return pageMetadata(
     TITLE,
-    `On the Curaçao Gaming Authority's register dated ${fmtDate(CGA_REGISTER.date)}, ${assess} of ${CGA_REGISTER.total} online gaming licences read "Assessment in progress". Where Stake, Roobet, Rollbit, Shuffle and ${rows().length - 4} other crypto casinos stand, from the register itself.`,
+    `On the Curaçao Gaming Authority's register dated ${fmtDate(CGA_REGISTER.date)}, ${assess} of ${CGA_REGISTER.total} online gaming licence entries read "Assessment in progress". Where Stake, Roobet, Rollbit, Shuffle and ${rows().length - 4} other crypto casinos stand, from the register itself.`,
     PATH,
     storyCardFor({ kind: "register" }, TITLE, PATH)
   );
@@ -126,7 +126,7 @@ export default function Page() {
   const faqs = [
     {
       q: "What does \"Assessment in progress\" mean on the Curaçao register?",
-      a: `The register doesn't define it. It appears on ${assess} of ${reg.total} licences on the register dated ${fmtDate(reg.date)}, often next to an expiry date that has already passed. It does not by itself mean a licence has been withdrawn; only the Curaçao Gaming Authority can say what stage each assessment is at.`,
+      a: `The register doesn't define it. It appears on ${assess} of ${reg.total} entries on the register dated ${fmtDate(reg.date)}, often next to an expiry date that has already passed. It does not by itself mean a licence has been withdrawn; only the Curaçao Gaming Authority can say what stage each assessment is at.`,
     },
     {
       q: "Is Stake licensed in Curaçao?",
@@ -169,7 +169,7 @@ export default function Page() {
           <div className="ct-answer">
             <b>On the register dated {fmtDate(reg.date)}</b>
             <p>
-              {assess} of the {reg.total} online gaming licences ({pct}%) read &quot;Assessment in progress&quot;{prev ? `, down from ${prev.assess} on the ${fmtDate(prev.date)} register` : ""}, and {indef} read &quot;Indefinite&quot;. Of the {r.length} crypto casinos we track there, {ours.watch} are under assessment, {ours.ok} are indefinite, {ours.bad} {ours.bad === 1 ? "is" : "are"} listed as expired or revoked and {ours.missing} {ours.missing === 1 ? "isn't" : "aren't"} on the register at all.{" "}
+              {assess} of the {reg.total} online gaming licence entries ({pct}%) read &quot;Assessment in progress&quot;{prev ? `, ${prev.assess > assess ? "down from" : prev.assess < assess ? "up from" : "the same as"} ${prev.assess} on the ${fmtDate(prev.date)} register` : ""}, and {indef} read &quot;Indefinite&quot;. Of the {r.length} crypto casinos we track there, {ours.watch} are under assessment, {ours.ok} are indefinite, {ours.bad} {ours.bad === 1 ? "is" : "are"} listed as expired or revoked and {ours.missing} {ours.missing === 1 ? "isn't" : "aren't"} on the register at all.{" "}
               <a href={reg.url} target="_blank" rel="noopener noreferrer nofollow" style={{ color: "#5FE3E8" }}>Read the register (PDF) ↗</a>
             </p>
           </div>
@@ -204,7 +204,10 @@ export default function Page() {
 
         <section className="ct-sec">
           <h2 className="ct-h2">The whole register, by status</h2>
-          <p className="ct-sub">All {reg.total} online gaming licences on the register dated {fmtDate(reg.date)}, B2C and B2B, counted by the status the register gives each one.</p>
+          <p className="ct-sub">
+            All {reg.total} entries on the register dated {fmtDate(reg.date)}, B2C and B2B, counted by the status the register gives each one.
+            {reg.unique < reg.total ? ` They cover ${reg.unique} licence numbers: ${reg.total - reg.unique === 1 ? "one is" : `${reg.total - reg.unique} are`} listed twice with different statuses, and counted under each.` : ""}
+          </p>
           <div className="ct-bars">
             {reg.counts.map((c) => (
               <div key={c.key} className="ct-bar" data-keep-grid>
