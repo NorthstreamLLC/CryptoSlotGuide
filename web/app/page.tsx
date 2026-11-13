@@ -21,7 +21,9 @@ import { fill } from "@/lib/derived";
 import { wheelWarsLive } from "@/lib/stake-wheel-wars";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { getSpecFact } from "@/lib/spec-sheet";
-import { PROMO_HUB, PROMO_PAGES } from "@/lib/promo-pages";
+import { PROMO_HUB, PROMO_PAGES, hasPromoPage, typeableCode } from "@/lib/promo-pages";
+import { pickPartners } from "@/lib/partner-fit";
+import { GeoRanked } from "@/components/geo/GeoRanked";
 import { VERSUS_ANALYSIS } from "@/lib/versus-analysis";
 import { parsePair } from "@/lib/versus";
 import { FACT_ARTICLES } from "@/lib/fact-articles";
@@ -83,15 +85,26 @@ const CSS = `
 .h-btn-line:hover { border-color: rgba(255,255,255,.32); }
 
 /* Hero */
-.h-hero { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); grid-template-areas: "intro pick" "paths pick"; column-gap: 56px; align-items: center; padding: 52px 0 56px; }
-.h-intro { grid-area: intro; align-self: end; }
-.h-paths-wrap { grid-area: paths; align-self: start; }
-.h-pick { grid-area: pick; }
-.h-h1 { margin: 0 0 22px; font-size: clamp(38px, 5vw, 58px); line-height: 1.04; letter-spacing: -.04em; font-weight: 700; color: #F7F9FA; text-wrap: balance; }
-.h-lead { margin: 0 0 30px; max-width: 50ch; font-size: 18px; line-height: 1.6; color: #98A6AE; }
-.h-ctas { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 32px; }
-.h-paths { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.h-hero { display: flex; flex-direction: column; align-items: center; padding: 60px 0 56px; text-align: center; }
+.h-intro { display: flex; flex-direction: column; align-items: center; max-width: 820px; }
+.h-paths-wrap { width: 100%; margin-top: 40px; text-align: left; }
+.h-h1 { margin: 0 0 22px; font-size: clamp(38px, 5.4vw, 64px); line-height: 1.04; letter-spacing: -.04em; font-weight: 700; color: #F7F9FA; text-wrap: balance; }
+.h-lead { margin: 0 auto 30px; max-width: 56ch; font-size: 18px; line-height: 1.6; color: #98A6AE; }
+.h-ctas { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 32px; }
+.h-paths { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+/* The featured offer: one slim strip under the paths, not a second hero. */
+.h-offer { display: flex; align-items: center; gap: 16px; width: 100%; margin-top: 22px; padding: 12px 14px 12px 12px; border-radius: 16px; border: 1px solid rgba(255,197,49,.3); background: linear-gradient(90deg, rgba(255,197,49,.08), rgba(255,197,49,.01) 60%), #0D1114; text-align: left; }
+.h-offer-mark { width: 44px; height: 44px; flex: none; border-radius: 12px; overflow: hidden; }
+.h-offer-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.h-offer-name { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: #A9B8C0; }
+.h-offer-offer { font-size: 16.5px; font-weight: 700; letter-spacing: -.01em; color: #F2F5F7; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.h-offer-fine { font-size: 11.5px; color: #67747C; }
+.h-offer-actions { display: flex; align-items: center; gap: 10px; flex: none; }
+.h-offer-none { justify-content: center; padding: 0; border: 0; background: none; }
+.h-offer-none > div { margin-top: 0 !important; }
 .h-path { position: relative; display: grid; grid-template-columns: auto 1fr auto; grid-template-areas: "ico . stack" "txt txt arrow"; align-items: center; row-gap: 14px; column-gap: 12px; padding: 20px; border-radius: 14px; border: 1px solid rgba(255,255,255,.09); background: #0D1114; box-shadow: inset 0 2px 0 var(--tint); transition: border-color .2s, transform .2s; }
+.h-paths .h-path { grid-template-areas: "ico . stack" "txt txt txt"; padding-right: 44px; }
+.h-paths .h-path i { position: absolute; right: 18px; bottom: 20px; }
 .h-path:hover { transform: translateY(-2px); border-color: color-mix(in srgb, var(--tint) 55%, transparent); }
 .h-path-ico { display: flex; align-items: center; justify-content: center; width: 42px; height: 42px; flex: none; border-radius: 12px; background: color-mix(in srgb, var(--tint) 14%, transparent); border: 1px solid color-mix(in srgb, var(--tint) 35%, transparent); color: var(--tint); }
 .h-path-ico svg { width: 22px; height: 22px; }
@@ -142,7 +155,7 @@ const CSS = `
 .h-mcard-text { font-size: 14px; line-height: 1.45; color: #DCE3E7; }
 .h-change-mark { width: 26px; height: 26px; flex: none; border-radius: 7px; overflow: hidden; }
 
-.h-also { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+.h-also { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 22px; }
 .h-chip { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px 6px 7px; border-radius: 100px; border: 1px solid rgba(255,255,255,.1); background: rgba(255,255,255,.03); font-size: 13.5px; font-weight: 500; color: #C9D3D8; transition: border-color .15s, color .15s; }
 .h-chip:hover { border-color: color-mix(in srgb, var(--tint) 60%, transparent); color: #fff; }
 .h-chip .h-stack > span { width: 20px; height: 20px; }
@@ -226,8 +239,13 @@ a.h-demo-name:hover { color: #FFC531; }
 .h-trust p { margin: 0; font-size: 14px; line-height: 1.55; color: #8A98A0; }
 
 @media (max-width: 960px) {
-  .h-hero { grid-template-columns: 1fr; grid-template-areas: "intro" "pick" "paths"; row-gap: 32px; padding: 48px 0 40px; }
-  .h-ctas { margin-bottom: 0; }
+  .h-hero { padding: 48px 0 40px; }
+  .h-paths { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .h-offer { flex-wrap: wrap; }
+  .h-offer-body { flex-basis: calc(100% - 60px); }
+  .h-offer-offer { white-space: normal; }
+  .h-offer-actions { width: 100%; }
+  .h-offer-actions .h-btn { flex: 1; }
   .h-two { grid-template-columns: 1fr; }
   .h-front { grid-template-columns: 1fr; }
   .h-month-grid { grid-auto-flow: column; grid-template-columns: none; grid-auto-columns: minmax(220px, 70%); overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 6px; }
@@ -245,6 +263,7 @@ a.h-demo-name:hover { color: #FFC531; }
   .h-path b { font-size: 16px; }
   .h-path { padding: 15px; }
   .h-path .h-stack { display: none; }
+  .h-paths .h-path { padding-right: 15px; }
   .h-pick { padding: 20px; }
   .h-li { padding: 12px 16px; }
   .h-sub { padding: 14px 16px; }
@@ -290,6 +309,41 @@ export default function HomePage() {
   const c = siteCounts;
   const top = inHouseOrder(ops.filter((o) => !!casinoFacts(o).offer && !/^advertised/i.test(casinoFacts(o).headline))).slice(0, 6);
   const roobet = ops.find((o) => o.slug === "roobet");
+
+  // The hero's offer strip: our pick, then the partners that fit the homepage,
+  // so a visitor Roobet turns away sees one that takes them (GeoRanked).
+  const stripOps = [
+    ...(roobet?.promoCode && roobet.signupUrl ? [roobet] : []),
+    ...pickPartners({ context: { kind: "general" }, seed: "home-strip", exclude: ["roobet"], limit: 4 }).map((p) => p.o),
+  ];
+  const stripItems = stripOps.map((o) => {
+    const code = typeableCode(o.slug, o.promoCode) ? o.promoCode : null;
+    const isPick = o.slug === "roobet";
+    const offer = isPick ? "20% up to $500 + up to 600 free spins" : o.bonusShort ?? o.bonus ?? "";
+    const more = hasPromoPage(o.slug) ? `/promo-codes/${o.slug}` : `/casinos/${o.slug}`;
+    return {
+      slug: o.slug,
+      node: (
+        <div className="h-offer" data-placement="home-strip">
+          <span className="h-offer-mark">
+            <BrandMark slug={o.slug} mono={o.mono} tint={brandFor(o.slug)} radius={12} fontSize={13} />
+          </span>
+          <span className="h-offer-body">
+            <span className="h-offer-name">
+              {o.name}
+              <span className="h-tag">{isPick ? "Our pick" : "Featured offer"}</span>
+            </span>
+            <span className="h-offer-offer">{offer}</span>
+            <span className="h-offer-fine">18+ · T&amp;Cs apply · Affiliate offer: we may earn a commission.</span>
+          </span>
+          <span className="h-offer-actions">
+            {code && <CodeChip code={code} tint="#FFC531" />}
+            <Link href={more} className="h-btn h-btn-gold">Get the offer</Link>
+          </span>
+        </div>
+      ),
+    };
+  });
 
   const rooJackpots = !!getSpecFact("roobet", "Bonus terms", "Roo Jackpots");
 
@@ -414,6 +468,18 @@ export default function HomePage() {
                     </Link>
                   ))}
                 </nav>
+                {stripItems.length > 0 && (
+                  <GeoRanked
+                    count={1}
+                    items={stripItems}
+                    // Where every featured casino turns the visitor away, one line saying so and what is open to them.
+                    instead={
+                      <div className="h-offer h-offer-none">
+                        <GeoBlockNote slug={stripItems[0].slug} name="" none compact allOf={stripItems.map((x) => x.slug)} />
+                      </div>
+                    }
+                  />
+                )}
                 <div className="h-also">
                   {also.map((x) => (
                     <Link key={x.href} href={x.href} className="h-chip" style={{ ["--tint" as string]: x.tint }}>
@@ -424,32 +490,6 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {roobet?.promoCode && (
-                <aside className="h-pick" aria-label="Our pick">
-                  <div className="h-pick-top">
-                    <span style={{ width: 44, height: 44, flex: "none", borderRadius: 12, overflow: "hidden" }}>
-                      <BrandMark slug="roobet" mono={roobet.mono} tint={brandFor("roobet")} radius={12} fontSize={13} />
-                    </span>
-                    <span>
-                      <span style={{ display: "block", fontSize: 15.5, fontWeight: 700, color: "#F2F5F7" }}>Roobet</span>
-                      <span className="h-tag">Our pick</span>
-                    </span>
-                  </div>
-                  <p className="h-pick-title">20% up to $500 + up to 600 free spins</p>
-                  <p className="h-pick-line">Sign up with code {roobet.promoCode}, then claim the package through CasinoPerks, the casino VIP team, on Telegram.</p>
-                  <div className="h-pick-steps" data-keep-grid>
-                    <div><b>20%</b><small>deposit match to $500</small></div>
-                    <div><b>100 spins</b><small>at $10,000 wagered</small></div>
-                    <div><b>500 spins</b><small>at $50,000 wagered</small></div>
-                  </div>
-                  <div className="h-pick-actions">
-                    <CodeChip code={roobet.promoCode} tint="#FFC531" />
-                    <Link href="/promo-codes/roobet" className="h-btn h-btn-gold">Get the Roobet offer</Link>
-                  </div>
-                  <GeoBlockNote slug="roobet" name={roobet.name} compact />
-                  <p className="h-fine">18+ · T&amp;Cs apply · Affiliate offer: we may earn a commission.</p>
-                </aside>
-              )}
             </section>
           </div>
         </div>
