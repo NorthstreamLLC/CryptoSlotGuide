@@ -1,0 +1,29 @@
+{
+  "storyId": "cga-register-2026-11-12",
+  "slug": "curacao-register-12-november-2026",
+  "revision": 1,
+  "contentType": "news",
+  "category": "Law",
+  "tags": [
+    "curacao",
+    "licensing"
+  ],
+  "published": "2026-11-13",
+  "updated": "2026-11-13",
+  "packageHash": "fddb1e86fc83be77c7bdfb3d53696253",
+  "contentHash": "df22f1bab89e3ccded9d3cf4700cf688",
+  "checkedAt": "2026-11-13T14:01:20Z",
+  "sources": [
+    {
+      "url": "https://gamingcontrol.spin-cdn.com/media/license_registry/20261112_20261112_ogl_registry.pdf",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-13T14:01:20Z"
+    },
+    {
+      "url": "https://gamingcontrol.spin-cdn.com/media/license_registry/20261111_20261111_ogl_registry.pdf",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-13T14:01:20Z"
+    }
+  ],
+  "note": "Imported as a branch-only draft. Publication is a person merging the branch; this record doesn't track it."
+}

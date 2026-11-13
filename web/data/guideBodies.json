@@ -465,5 +465,37 @@
         "hint": "What Gamdom said, in its own words."
       }
     ]
+  },
+  "curacao-register-12-november-2026": {
+    "published": "2026-11-13",
+    "contentType": "news",
+    "key": [
+      "Two entries added compared with November 11.",
+      "One duplicate licence number remains."
+    ],
+    "body": [
+      "Curaçao’s November 12 register adds Brictec B.V. and Black Hawk Technology B.V., both labelled **Expired**. Their listed expiry date is May 19, 2026; the document update does not establish a new expiry event.",
+      "## What changed",
+      "A comparison of both complete registers found no removals or changes to previously listed licence-row facts. The additions take the document to 669 rows covering 668 unique licence numbers.",
+      "## One unresolved duplicate",
+      "Boom Line B.V.’s licence still appears twice with conflicting statuses. Row totals therefore cannot be read as a count of currently valid licences."
+    ],
+    "sources": [
+      {
+        "label": "CGA register, updated November 12, 2026",
+        "url": "https://gamingcontrol.spin-cdn.com/media/license_registry/20261112_20261112_ogl_registry.pdf"
+      },
+      {
+        "label": "CGA register, updated November 11, 2026",
+        "url": "https://gamingcontrol.spin-cdn.com/media/license_registry/20261111_20261111_ogl_registry.pdf"
+      }
+    ],
+    "next": [
+      {
+        "href": "/legal/curacao-licence-tracker",
+        "label": "Curaçao licence tracker",
+        "hint": "Casino licence research."
+      }
+    ]
   }
 }
