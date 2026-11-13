@@ -39,10 +39,12 @@ function Operators({ title, list }: { title: string; list: OperatorList }) {
       <div className="sm-ops">
         {list.operators.map((o, i) => {
           // The brand behind the listing, where we can tell: its logo, colour and our page on it.
-          const brand = usBrandFor(o.brand);
-          const slug = brand?.slug ?? o.brand.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+          // Some regulators list only the licence holder, with no brand name.
+          const listed = (o.brand ?? "").trim() || (o.licenseHolder ?? "").trim() || "Licensed operator";
+          const brand = (o.brand ?? "").trim() ? usBrandFor(o.brand) : undefined;
+          const slug = brand?.slug ?? listed.toLowerCase().replace(/[^a-z0-9]+/g, "-");
           const tint = (brand && US_BRAND_TINT[brand.slug]) ?? tintFor(slug);
-          const name = brand?.name ?? o.brand;
+          const name = brand?.name ?? listed;
           const mono = name.replace(/[^A-Za-z0-9]/g, "").slice(0, 2).toUpperCase();
           const page = brand && hasUsBrandPage(brand.slug) ? `/us-casinos/${brand.slug}` : null;
           const body = (
@@ -52,15 +54,15 @@ function Operators({ title, list }: { title: string; list: OperatorList }) {
               </span>
               <span className="sm-op-text">
                 <b>{name}</b>
-                {o.licenseHolder ? <small>under {o.licenseHolder}</small> : brand && name !== o.brand ? <small>listed as {o.brand}</small> : null}
+                {o.licenseHolder && o.licenseHolder !== name ? <small>under {o.licenseHolder}</small> : brand && name !== o.brand ? <small>listed as {o.brand}</small> : null}
               </span>
               {page && <i aria-hidden>→</i>}
             </>
           );
           return page ? (
-            <Link key={o.brand + i} href={page} className="sm-op" style={{ ["--tint" as string]: tint }}>{body}</Link>
+            <Link key={listed + i} href={page} className="sm-op" style={{ ["--tint" as string]: tint }}>{body}</Link>
           ) : (
-            <div key={o.brand + i} className="sm-op" style={{ ["--tint" as string]: tint }}>{body}</div>
+            <div key={listed + i} className="sm-op" style={{ ["--tint" as string]: tint }}>{body}</div>
           );
         })}
       </div>
