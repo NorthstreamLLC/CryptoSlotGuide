@@ -50,7 +50,7 @@ export function SlotHeroArt({
         {/* priority: the largest thing above the fold, so it is the LCP. */}
         <Image src={art} alt={`${name} game art`} width={960} height={600} sizes="(max-width: 860px) 100vw, 480px" priority className="sha-img" />
         <div className="sha-shade" aria-hidden />
-        {demo && <DemoPlay url={demo.url} name={name} studio={demo.studio} slug={seed} />}
+        {demo && <DemoPlay url={demo.url} name={name} studio={demo.studio} slug={seed} variant="art" />}
         {studio && <span className="sha-studio">{studio}</span>}
         {shown.length > 0 && (
           <dl className="sha-chips">
@@ -65,37 +65,41 @@ export function SlotHeroArt({
       </div>
 
       <div className="sha-foot">
-        {picks.length ? (
-          <GeoRanked
-            count={1}
-            // Where no partner takes the visitor, a button they can use: our
-            // slot-sites page, which shows what is open where they are.
-            instead={
-              <div className="sha-play">
-                <Link href="/slots/best-crypto-slot-sites" className="sha-cta">Play for real money →</Link>
-                <span className="sha-note">Where you can play from where you are</span>
-              </div>
-            }
-            items={picks.map(({ o }) => {
-              const code = typeableCode(o.slug, o.promoCode) ? o.promoCode : null;
-              return {
-                slug: o.slug,
-                node: (
-                  <div className="sha-play">
-                    <a href={o.signupUrl as string} target="_blank" rel="nofollow sponsored noopener" data-copy-code={code ?? undefined} className="sha-cta">
-                      Play slots at {o.name} ↗
-                    </a>
-                    <span className="sha-note">
-                      Our pick for this page{code ? <> · code <b>{code}</b></> : null} · <Link href={`/casinos/${o.slug}`}>review</Link> · affiliate link, 18+
-                    </span>
-                  </div>
-                ),
-              };
-            })}
-          />
-        ) : (
-          slotSites
-        )}
+        {/* Two choices side by side where there's a demo: try it free, or play for real. */}
+        <div className={`sha-actions${demo ? " sha-actions-2" : ""}`}>
+          {demo && <DemoPlay url={demo.url} name={name} studio={demo.studio} slug={seed} variant="primary" />}
+          {picks.length ? (
+            <GeoRanked
+              count={1}
+              // Where no partner takes the visitor, a button they can use: our
+              // slot-sites page, which shows what is open where they are.
+              instead={
+                <>
+                  <Link href="/slots/best-crypto-slot-sites" className={demo ? "sha-real" : "sha-cta"}>Play for real money →</Link>
+                  <span className="sha-note sha-span">{demo ? "Free demo: play money, no account. " : ""}For real money: where you can play from where you are</span>
+                </>
+              }
+              items={picks.map(({ o }) => {
+                const code = typeableCode(o.slug, o.promoCode) ? o.promoCode : null;
+                return {
+                  slug: o.slug,
+                  node: (
+                    <>
+                      <a href={o.signupUrl as string} target="_blank" rel="nofollow sponsored noopener" data-copy-code={code ?? undefined} className={demo ? "sha-real" : "sha-cta"}>
+                        {demo ? <>Play for real at {o.name} ↗</> : <>Play slots at {o.name} ↗</>}
+                      </a>
+                      <span className="sha-note sha-span">
+                        {demo ? "Free demo: play money, no account · " : ""}Our pick for real money{code ? <> · code <b>{code}</b></> : null} · <Link href={`/casinos/${o.slug}`}>review</Link> · affiliate link, 18+
+                      </span>
+                    </>
+                  ),
+                };
+              })}
+            />
+          ) : (
+            slotSites
+          )}
+        </div>
         {back && (
           <Link href={back.href} className="sha-back">
             {back.label}
@@ -120,6 +124,12 @@ const CSS = `
 .sha-chips dd { margin: 1px 0 0; font-size: 16px; font-weight: 700; letter-spacing: -.01em; color: #fff; }
 .sha-foot { display: flex; flex-direction: column; gap: 9px; margin-top: 16px; }
 .sha-play { display: flex; flex-direction: column; gap: 7px; }
+.sha-actions { display: grid; gap: 9px; }
+.sha-actions-2 { grid-template-columns: 1fr 1fr; }
+.sha-span { grid-column: 1 / -1; }
+.sha-real { display: flex; align-items: center; justify-content: center; padding: 13px; border-radius: 11px; border: 1px solid rgba(255,255,255,.22); color: #F2F5F7; font-size: 15px; font-weight: 700; text-align: center; transition: border-color .15s, background .15s; }
+.sha-real:hover { border-color: rgba(255,255,255,.45); background: rgba(255,255,255,.04); }
+@media (max-width: 420px) { .sha-actions-2 { grid-template-columns: 1fr; } }
 .sha-cta { display: block; text-align: center; padding: 14px; border-radius: 11px; background: #FFC531; color: #141007; font-size: 15px; font-weight: 700; transition: transform .15s, background .15s; }
 .sha-cta:hover { transform: translateY(-1px); background: #FFD45E; }
 .sha-note { text-align: center; font-size: 12px; color: #7E8C94; }

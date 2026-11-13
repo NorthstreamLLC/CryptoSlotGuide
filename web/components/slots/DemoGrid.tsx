@@ -77,7 +77,7 @@ export function DemoGrid({ tiles }: { tiles: DemoTile[] }) {
               ) : (
                 <span className="dg-noart">{t.name}</span>
               )}
-              <DemoPlay url={t.url} name={t.name} studio={t.studio} slug={t.slug} />
+              <DemoPlay url={t.url} name={t.name} studio={t.studio} slug={t.slug} variant="art" />
             </div>
             <div className="dg-body">
               <b>{t.name}</b>
@@ -86,7 +86,10 @@ export function DemoGrid({ tiles }: { tiles: DemoTile[] }) {
                 {t.maxWin && <span>{t.maxWin}</span>}
                 {t.vol && <span>{t.vol}</span>}
               </span>
-              {t.page && <Link href={t.page} className="dg-link">RTP and specs →</Link>}
+              <span className="dg-actions">
+                <DemoPlay url={t.url} name={t.name} studio={t.studio} slug={t.slug} variant="primary" label="Play free" />
+                {t.page && <Link href={t.page} className="dg-link">RTP and specs →</Link>}
+              </span>
             </div>
           </div>
         ))}
@@ -123,7 +126,9 @@ const CSS = `
 .dg-body { display: flex; flex-direction: column; gap: 5px; padding: 12px 14px 14px; }
 .dg-body b { font-size: 15px; color: #F2F5F7; }
 .dg-facts { display: flex; flex-wrap: wrap; gap: 4px 10px; font-size: 12.5px; color: #8E9CA4; }
-.dg-link { margin-top: 2px; font-size: 13px; font-weight: 600; color: #5FE3E8; }
+.dg-actions { display: flex; align-items: center; gap: 12px; margin-top: 8px; }
+.dg-actions .dp-primary { width: auto; padding: 8px 14px; font-size: 13.5px; border-radius: 9px; }
+.dg-link { font-size: 13px; font-weight: 600; color: #5FE3E8; white-space: nowrap; }
 @media (max-width: 560px) {
   .dg-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
   .dg-body { padding: 10px 11px 12px; }

@@ -217,6 +217,7 @@ a.h-li:hover b, .h-li-main:hover b { color: #fff; text-decoration: underline; te
 .h-demo-name { font-size: 14.5px; font-weight: 700; color: #F2F5F7; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 a.h-demo-name:hover { color: #FFC531; }
 .h-demo small { font-size: 12.5px; color: #8E9CA4; }
+.h-demo .dp-primary { width: auto; align-self: flex-start; margin-top: 8px; padding: 8px 14px; font-size: 13.5px; border-radius: 9px; }
 .h-demo-sub { margin: 6px 0 0; font-size: 14px; color: #8E9CA4; }
 @media (max-width: 960px) { .h-demos { grid-auto-flow: column; grid-template-columns: none; grid-auto-columns: minmax(180px, 46%); overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 6px; } .h-demo { scroll-snap-align: start; } }
 .h-slot-art { display: block; aspect-ratio: 16 / 10; border-radius: 12px; overflow: hidden; background: #11161A; border: 1px solid rgba(255,255,255,.06); }
@@ -585,10 +586,11 @@ export default function HomePage() {
                         // eslint-disable-next-line @next/next/no-img-element
                         <img src={t.art} alt={`${t.name} game art`} width={320} height={200} loading="lazy" decoding="async" />
                       )}
-                      <DemoPlay url={t.url} name={t.name} studio={t.studio} slug={t.slug} />
+                      <DemoPlay url={t.url} name={t.name} studio={t.studio} slug={t.slug} variant="art" />
                     </span>
                     {t.page ? <Link href={t.page} className="h-demo-name">{t.name}</Link> : <b className="h-demo-name">{t.name}</b>}
                     <small>{t.studio}{t.rtp ? ` · RTP ${t.rtp.split(/\s*[–-]\s*/)[0]}` : ""}</small>
+                    <DemoPlay url={t.url} name={t.name} studio={t.studio} slug={t.slug} variant="primary" label="Play free" />
                   </div>
                 ))}
               </div>
