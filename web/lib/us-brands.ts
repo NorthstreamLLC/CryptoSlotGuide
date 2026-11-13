@@ -55,6 +55,22 @@ function domainsIn(text: string): string[] {
 const ALIAS = new Map<string, string>();
 for (const b of US_BRANDS) for (const a of b.aliases) ALIAS.set(a.trim().toLowerCase(), b.slug);
 
+/** Brand colours, for the operator cards on state pages. */
+export const US_BRAND_TINT: Record<string, string> = {
+  draftkings: "#53D337", fanduel: "#1493FF", betmgm: "#C5A464", caesars: "#C9A55C", bet365: "#14805E", fanatics: "#E41D2D",
+  betrivers: "#2D6FD6", "hard-rock-bet": "#8B5CF6", "bally-bet": "#E4002B", "thescore-bet": "#6D3AFF", "circa-sports": "#E5B53A",
+  betparx: "#2CA6E0", "golden-nugget": "#D4AF37", "resorts-world-bet": "#C8102E", betjack: "#D71920", sporttrade: "#00C9A7", "prime-sportsbook": "#F2A900",
+};
+
+/** The brand a regulator's listing refers to, for showing its logo and linking its page. */
+export const usBrandFor = (listing: string): UsBrand | undefined => {
+  const slug = match(listing);
+  return slug ? BY_SLUG.get(slug) : undefined;
+};
+
+/** Brands with a page of their own at /us-casinos/<slug> (a regulator lists them somewhere). */
+export const hasUsBrandPage = (slug: string): boolean => statesFor(slug).length > 0;
+
 /** Which brand a regulator's listing refers to, or null to leave it alone. */
 function match(listing: string): string | null {
   const found = domainsIn(listing);
