@@ -1,0 +1,43 @@
+# The production build on every pushed branch and pull request, so a change that
+# would fail on Vercel shows a red check on GitHub before it is merged. The build
+# renders every page; type checks alone missed a page that crashed (13 Nov 2026).
+# Locally, scripts/ship.sh runs the same build before pushing to main.
+name: build
+
+on:
+  push:
+    branches-ignore: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: web
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # prebuild reads git history for the changelog.
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci
+      - name: Type check
+        run: npx tsc --noEmit -p .
+      - name: Importer tests
+        run: npm run test:import
+      - name: Production build (prebuild runs the content checks)
+        run: npm run build
