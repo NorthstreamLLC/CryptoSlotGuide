@@ -14,7 +14,8 @@ import { tintFor } from "@/lib/logo";
 import { BrandMark } from "@/components/ui/BrandMark";
 import { CasinoSpecSheet } from "@/components/entity/CasinoSpecSheet";
 import { CoinList, CoinStack } from "@/components/ui/CoinIcon";
-import { maxWithdrawal, maxDepositTile } from "@/lib/casino-facts";
+import { maxWithdrawal, maxDepositTile, brandFor } from "@/lib/casino-facts";
+import { kycTierOf, KYC_TIER_LABEL } from "@/lib/kyc";
 import { Icon, type IconName } from "@/components/ui/Icon";
 import { raceFor, partnerFor, dropFor } from "@/lib/races";
 import { rtpSummary } from "@/lib/rtp-watch-view";
@@ -203,9 +204,24 @@ function Card({ children, glow }: { children: ReactNode; glow?: string }) {
   );
 }
 
+const POSTER_CSS = `
+.cr-poster { position: relative; display: flex; flex-direction: column; align-items: center; gap: 18px; padding: 30px 20px 20px; overflow: hidden;
+  background: radial-gradient(80% 90% at 50% 20%, color-mix(in srgb, var(--tint) 30%, transparent), transparent 70%), #0B0F12; border-bottom: 1px solid rgba(255,255,255,.07); }
+.cr-poster-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px); background-size: 24px 24px; mask-image: radial-gradient(70% 80% at 50% 30%, #000, transparent); }
+.cr-poster-glow { position: absolute; top: 10px; left: 50%; width: 200px; height: 200px; margin-left: -100px; border-radius: 50%; background: var(--tint); opacity: .22; filter: blur(50px); }
+.cr-poster-mark { position: relative; width: 112px; height: 112px; border-radius: 26px; overflow: hidden; box-shadow: 0 0 0 2px color-mix(in srgb, var(--tint) 50%, transparent), 0 20px 50px rgba(0,0,0,.5); }
+.cr-poster-stats { position: relative; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; width: 100%; margin: 0; }
+.cr-poster-stats div { padding: 10px 8px; border-radius: 12px; text-align: center; background: rgba(7,9,11,.6); border: 1px solid rgba(255,255,255,.1); backdrop-filter: blur(6px); min-width: 0; }
+.cr-poster-stats dt { font-size: 10.5px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: #8E9CA4; }
+.cr-poster-stats dd { margin: 3px 0 0; font-size: 16px; font-weight: 700; letter-spacing: -.01em; color: #F2F5F7; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cr-poster-kyc { display: block; padding: 10px 20px; font-size: 12.5px; color: #A9B8C0; border-bottom: 1px solid rgba(255,255,255,.07); }
+.cr-poster-kyc:hover { color: #fff; }
+`;
+
 export function CasinoReport({ e }: { e: EntityView }) {
   const o = siteData.ops.find((x) => x.slug === e.slug)!;
-  const brand = BRAND[o.slug] ?? tintFor(o.slug);
+  const brand = BRAND[o.slug] ?? brandFor(o.slug);
+  const kycTier = kycTierOf(o.slug);
   const f = (g: string, l: string) => getSpecFact(o.slug, g, l);
   const pv = payoutView(o);
   const wv = wagerView(o);
@@ -384,8 +400,36 @@ export function CasinoReport({ e }: { e: EntityView }) {
               </div>
             </div>
 
-            {/* Key numbers */}
-            <div style={{ padding: 22, borderRadius: 18, background: "#0F1316", border: "1px solid rgba(255,255,255,.09)", boxShadow: `inset 0 2px 0 ${brand}` }}>
+            {/* Key numbers, under a brand poster: the casino's own mark in its own colour, with the three figures players weigh first. */}
+            <div style={{ borderRadius: 18, overflow: "hidden", background: "#0F1316", border: `1px solid ${brand}55`, boxShadow: `0 30px 80px -30px ${brand}66, 0 18px 50px rgba(0,0,0,.45)` }}>
+              <div className="cr-poster" style={{ ["--tint" as string]: brand }}>
+                <span className="cr-poster-grid" aria-hidden />
+                <span className="cr-poster-glow" aria-hidden />
+                <span className="cr-poster-mark">
+                  <BrandMark slug={o.slug} mono={o.mono} tint={brand} radius={26} fontSize={34} />
+                </span>
+                <dl className="cr-poster-stats">
+                  <div>
+                    <dt>Withdrawals</dt>
+                    <dd>{pv.label !== "Not stated" ? pv.label : "Not stated"}</dd>
+                  </div>
+                  <div>
+                    <dt>Wagering</dt>
+                    <dd>{wv.kind === "none" || wv.mult === 0 ? "None" : wv.kind === "cited" ? `${wv.mult}×` : "See terms"}</dd>
+                  </div>
+                  <div>
+                    <dt>ID check</dt>
+                    <dd>{kycTier ? ({ never: "Never", discretionary: "If asked", threshold: "At a trigger", required: "Required", conflicting: "Unclear" } as const)[kycTier] : ({ none: "Not required", tiered: "At a threshold", required: "Required" } as const)[o.kyc]}</dd>
+                  </div>
+                </dl>
+                <style>{POSTER_CSS}</style>
+              </div>
+              {kycTier && (
+                <Link href="/crypto-casinos/kyc-tracker" className="cr-poster-kyc">
+                  ID check: {KYC_TIER_LABEL[kycTier]}, from {o.name}&apos;s own terms →
+                </Link>
+              )}
+            <div style={{ padding: 22 }}>
               <div style={{ fontSize: 15, fontWeight: 700, color: "#F2F5F7", marginBottom: 14 }}>Key numbers</div>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", border: "1px solid rgba(255,255,255,.07)", borderRadius: 12, overflow: "hidden" }} data-keep-grid>
                 {[
@@ -411,6 +455,7 @@ export function CasinoReport({ e }: { e: EntityView }) {
                 <span style={{ color: "#77858E" }}>·</span>
                 <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}><Icon name="id" size={15} color="#8DA0AA" /> KYC: {kyc ? ({ none: "not required", tiered: "at a threshold", required: "before withdrawal" } as const)[o.kyc] : "not stated"}</span>
               </div>
+            </div>
             </div>
           </div>
         </div>
