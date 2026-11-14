@@ -24,6 +24,19 @@ export async function GET(_req: NextRequest, ctx: { params: Promise<{ studio: st
     return new Response(html, { headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": `public, max-age=${cfg.cache}`, "X-Robots-Tag": "noindex, nofollow" } });
   }
 
+  if (studio === "push") {
+    // Push's play page builds its demo link in a script, base64 in pieces.
+    try {
+      const html = await (await fetch(`https://www.pushgaming.com/games/play/${id}.html`, { next: { revalidate: 600 } })).text();
+      const parts = html.match(/var gameUrl\s*=\s*((?:'[A-Za-z0-9+/=]*'\s*\+?\s*)+)/)?.[1];
+      const to = parts ? Buffer.from([...parts.matchAll(/'([A-Za-z0-9+/=]*)'/g)].map((m) => m[1]).join(""), "base64").toString("utf8") : null;
+      if (to && /^https:\/\/[a-z0-9.-]+\.pushgaming\.com\//.test(to)) return redirect(to, cfg.cache);
+    } catch {
+      /* fall through */
+    }
+    return new Response("Demo unavailable right now", { status: 502 });
+  }
+
   if (studio === "microgaming") {
     try {
       const r = await fetch(`https://microgaming.io/wp-json/games/v1/game-demo-url?post_id=${id}&lang=en`, { next: { revalidate: 3600 } });

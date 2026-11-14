@@ -26,6 +26,23 @@ const UA = { headers: { "User-Agent": "Mozilla/5.0 (compatible; CryptoSlotGuide 
 const get = async (u) => (await fetch(u, UA)).text();
 
 const STUDIOS = {
+  relax: {
+    provider: /^relax/i,
+    sitemaps: [],
+    // Relax lists its games in a plain-text sitemap; the page's address is the game id.
+    textSitemap: "https://www.relax-gaming.com/sitemap.txt",
+    page: /^https:\/\/(www\.)?relax-gaming\.com\/products\/casino\/[a-z0-9]+\/?$/,
+    id: (html) => html.match(/launcher\.html\?channel=web(?:&amp;|&)(?:amp;)?gameid=([a-z0-9]+)/)?.[1],
+  },
+  push: {
+    provider: /^push gaming$/i,
+    sitemaps: ["https://www.pushgaming.com/sitemap.xml"],
+    page: /^https:\/\/www\.pushgaming\.com\/games\/[a-z0-9-]+\.html$/,
+    name: (url) => url.split("/").at(-1).replace(/\.html$/, ""),
+    // The demo link is minted on the studio's play page each time, so the id
+    // kept is the page slug; /demo/push/<slug> reads the link at play time.
+    id: (html, _k, url) => (/\/games\/play\/[a-z0-9-]+\.html/.test(html) ? url.split("/").at(-1).replace(/\.html$/, "") : undefined),
+  },
   // NetEnt and Red Tiger (Evolution's platform): the page's tableId opens the
   // studio's own /demo/<tableId> page, which starts a fresh demo session.
   netent: {
@@ -147,6 +164,7 @@ for (const [studio, cfg] of Object.entries(STUDIOS)) {
     const url = u.replace(/<\/?loc>/g, "").trim();
     if (cfg.page.test(url)) pages.add(url);
   }
+  if (cfg.textSitemap) for (const line of (await get(cfg.textSitemap)).split(/\s+/)) if (cfg.page.test(line.trim())) pages.add(line.trim());
   const todo = [...pages]
     .map((url) => {
       const last = (cfg.name ? cfg.name(url) : url.replace(/\/$/, "").split("/").at(-1)).replace(/-(slot|demo)$/, "");
@@ -158,7 +176,7 @@ for (const [studio, cfg] of Object.entries(STUDIOS)) {
     await Promise.all(
       todo.slice(i, i + 6).map(async ({ url, k, slug }) => {
         try {
-          const id = await cfg.id(await get(url), k);
+          const id = await cfg.id(await get(url), k, url);
           if (id) found[slug] ??= id;
         } catch {
           /* a page that fails is picked up by the next run */
