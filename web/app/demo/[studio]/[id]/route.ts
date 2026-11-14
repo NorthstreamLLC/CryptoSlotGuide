@@ -1,5 +1,5 @@
 import type { NextRequest } from "next/server";
-import { DEMO_STUDIOS, isKnownDemo } from "@/lib/demo-studios";
+import { DEMO_STUDIOS, isKnownDemo, feedUrl } from "@/lib/demo-studios";
 
 /**
  * /demo/<studio>/<id>: sends the demo player to the studio's own free demo
@@ -13,6 +13,10 @@ const redirect = (to: string, cache: number) =>
 
 export async function GET(_req: NextRequest, ctx: { params: Promise<{ studio: string; id: string }> }) {
   const { studio, id } = await ctx.params;
+  if (studio === "feed") {
+    const to = isKnownDemo("feed", id) ? feedUrl(id) : null;
+    return to ? redirect(to, 86400) : new Response("Unknown demo", { status: 404 });
+  }
   const cfg = DEMO_STUDIOS[studio];
   if (!cfg || !isKnownDemo(studio, id)) return new Response("Unknown demo", { status: 404 });
   if (cfg.url) return redirect(cfg.url(id), cfg.cache);

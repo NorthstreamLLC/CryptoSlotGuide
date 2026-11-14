@@ -117,4 +117,21 @@ export const DEMO_IDS = demos as unknown as Record<string, Record<string, string
 
 /** Is this id one we hold for that studio? Only those are ever redirected. */
 const KNOWN = new Map(Object.entries(DEMO_IDS).map(([st, ids]) => [st, new Set(Object.values(ids).map(String))]));
-export const isKnownDemo = (studio: string, id: string) => !!DEMO_STUDIOS[studio]?.idPattern.test(id) && !!KNOWN.get(studio)?.has(id);
+export const isKnownDemo = (studio: string, id: string) =>
+  studio === "feed" ? /^[a-z0-9-]{2,120}$/.test(id) && id in FEED : !!DEMO_STUDIOS[studio]?.idPattern.test(id) && !!KNOWN.get(studio)?.has(id);
+
+/**
+ * Demo links from our game catalogue for studios with no script of their own
+ * (scripts/fetch-feed-demos.mjs): slug -> the link as given. Only these hosts,
+ * each checked loading inside another site's page, are ever followed.
+ */
+export const FEED = (DEMO_IDS.feed ?? {}) as Record<string, string>;
+export const FEED_HOSTS = new Set(["router.apparatgaming.net", "lobby-api.penguinking.com", "wrapper.demo.wicked.games"]);
+export const feedUrl = (slug: string): string | null => {
+  const u = FEED[slug];
+  try {
+    return u && FEED_HOSTS.has(new URL(u).hostname) && u.startsWith("https://") ? u : null;
+  } catch {
+    return null;
+  }
+};

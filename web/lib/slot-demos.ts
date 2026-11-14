@@ -1,4 +1,8 @@
-import { DEMO_STUDIOS, DEMO_IDS } from "./demo-studios";
+import { DEMO_STUDIOS, DEMO_IDS, FEED, feedUrl } from "./demo-studios";
+import catalogue from "@/data/gameCatalogue.json";
+
+/** Studio of a catalogue title, for demos that come from the catalogue's own links. */
+const PROVIDER = new Map((catalogue as { games: { slug: string | null; provider: string | null }[] }).games.filter((g) => g.slug).map((g) => [g.slug as string, g.provider ?? ""]));
 import { studioAllTitles, slotArtBySlug, topSlotRows } from "./slot-page";
 import { siteData } from "./site-data";
 import { SLOT_SERIES } from "./slot-series";
@@ -29,6 +33,7 @@ export function demoFor(slug: string | null | undefined): SlotDemo | null {
       const id = DEMO_IDS[key]?.[s];
       if (id !== undefined) return { url: `/demo/${key}/${id}`, studio: cfg.name };
     }
+    if (feedUrl(s)) return { url: `/demo/feed/${s}`, studio: PROVIDER.get(s) || "the studio" };
   }
   return null;
 }
@@ -53,10 +58,19 @@ export function demoTiles(): DemoTile[] {
   };
   // One tile per title: a slug carried by two studios' lists keeps the first.
   const seen = new Set<string>();
-  return Object.entries(DEMO_STUDIOS)
-    .filter(([, cfg]) => !cfg.hidden)
-    .flatMap(([key, cfg]) => tilesFor(cfg.name, DEMO_IDS[key] ?? {}, (id) => `/demo/${key}/${id}`))
-    .filter((t) => !seen.has(t.slug) && !!seen.add(t.slug));
+  // Catalogue-link demos, grouped by their studio.
+  const feedByStudio = new Map<string, Record<string, string>>();
+  for (const slug of Object.keys(FEED)) {
+    if (!feedUrl(slug)) continue;
+    const st = PROVIDER.get(slug);
+    if (st) (feedByStudio.get(st) ?? feedByStudio.set(st, {}).get(st)!)[slug] = slug;
+  }
+  return [
+    ...Object.entries(DEMO_STUDIOS)
+      .filter(([, cfg]) => !cfg.hidden)
+      .flatMap(([key, cfg]) => tilesFor(cfg.name, DEMO_IDS[key] ?? {}, (id) => `/demo/${key}/${id}`)),
+    ...[...feedByStudio].flatMap(([studio, ids]) => tilesFor(studio, ids, (slug) => `/demo/feed/${slug}`)),
+  ].filter((t) => !seen.has(t.slug) && !!seen.add(t.slug));
 }
 
 /** Table rows with each title's free demo attached, where we hold one. */
