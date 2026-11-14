@@ -95,6 +95,15 @@ export const DEMO_STUDIOS: Record<string, DemoStudio> = {
   // player. The id is the studio's page slug; the route reads that page's
   // demo link at play time.
   push: { name: "Push Gaming", idPattern: /^[a-z0-9-]{2,80}$/, cache: 600, hidden: true },
+  // TrueLab: from the studio's own game list (a Google Sheet it shares, read
+  // 14 Nov 2026), whose "Game Demo" links open launcher.truelab.games/play/<id>.
+  // The id is the 96% build. Checked loading inside our player.
+  truelab: {
+    name: "Truelab",
+    idPattern: /^[a-z0-9-]{2,80}$/,
+    url: (id) => `https://launcher.truelab.games/play/${id}`,
+    cache: 86400,
+  },
   betsoft: {
     name: "Betsoft",
     idPattern: /^\d{1,6}$/,
