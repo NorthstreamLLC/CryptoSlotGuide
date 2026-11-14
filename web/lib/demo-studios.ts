@@ -82,16 +82,18 @@ export const DEMO_STUDIOS: Record<string, DemoStudio> = {
   // The studio's own demo page; it starts a fresh session each time and may show its own 18+ check.
   netent: { name: "NetEnt", idPattern: /^[a-z0-9]{4,40}$/i, url: (id) => `https://netent.com/demo/${id}`, cache: 86400 },
   redtiger: { name: "Red Tiger", idPattern: /^[a-z0-9]{4,40}$/i, url: (id) => `https://redtiger.com/demo/${id}`, cache: 86400 },
-  // Relax and Push Gaming: their game servers refuse our build machines, so
-  // these stay hidden until checked from a normal browser on /demo-test.
+  // Relax Gaming: checked loading in a normal browser (14 Nov 2026); its game
+  // servers refuse our build machines, so it can't be checked from here.
   relax: {
     name: "Relax Gaming",
     idPattern: /^[a-z0-9]{2,60}$/,
     url: (id) => `https://d2drhksbtcqozo.cloudfront.net/casino/launcher.html?channel=web&gameid=${id}&moneymode=fun&jurisdiction=MT&partnerid=1`,
     cache: 86400,
-    hidden: true,
   },
-  // The id is the studio's page slug; the route reads that page's demo link at play time.
+  // Push Gaming stays hidden: its demo server refuses players by location
+  // ("not available in your region"), so some visitors would get a dead
+  // player. The id is the studio's page slug; the route reads that page's
+  // demo link at play time.
   push: { name: "Push Gaming", idPattern: /^[a-z0-9-]{2,80}$/, cache: 600, hidden: true },
   betsoft: {
     name: "Betsoft",
