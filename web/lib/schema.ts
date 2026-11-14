@@ -16,13 +16,20 @@ import author from "@/data/author.json";
  */
 import { SITE_URL, SITE_NAME } from "./seo";
 
+const BRAND_SPELLINGS = ["Crypto Slot Guide", "CryptoSlot Guide", "cryptoslotguide.com"];
+
 export function organizationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": `${SITE_URL}/#organization`,
     name: SITE_NAME,
+    // The ways people type the name, so a search for any of them can be read
+    // as this site rather than corrected to a similar-sounding brand.
+    alternateName: BRAND_SPELLINGS,
     url: SITE_URL,
-    logo: `${SITE_URL}/assets/logo.svg`,
+    // Google's logo guidelines want a raster image at least 112px square; the SVG isn't used for that.
+    logo: { "@type": "ImageObject", url: `${SITE_URL}/assets/logo-256.png`, width: 256, height: 256 },
   };
 }
 
@@ -30,8 +37,11 @@ export function websiteSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": `${SITE_URL}/#website`,
     name: SITE_NAME,
+    alternateName: BRAND_SPELLINGS,
     url: SITE_URL,
+    publisher: { "@id": `${SITE_URL}/#organization` },
     potentialAction: {
       "@type": "SearchAction",
       target: { "@type": "EntryPoint", urlTemplate: `${SITE_URL}/search?q={search_term_string}` },

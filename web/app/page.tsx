@@ -40,10 +40,15 @@ import { raceSlugs } from "@/lib/races";
  * the only page shipping without a canonical — the page most likely to be
  * reached as www, with a trailing slash, or on the deployment URL.
  */
+// The brand first, with the spaced spelling beside it, so a search for either
+// form finds the homepage title saying it.
+const HOME_TITLE = "CryptoSlotGuide (Crypto Slot Guide): crypto casinos checked";
+
 export const metadata = {
+  title: { absolute: HOME_TITLE },
   alternates: { canonical: "/" },
   openGraph: {
-    title: "CryptoSlotGuide — crypto casino, slot and wallet information",
+    title: HOME_TITLE,
     description:
       "Crypto casinos, sportsbooks, wallets and exchanges reviewed against their own terms, with every fact linked to its source.",
     url: SITE_URL,
