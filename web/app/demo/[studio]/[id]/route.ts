@@ -28,6 +28,25 @@ export async function GET(_req: NextRequest, ctx: { params: Promise<{ studio: st
     return new Response(html, { headers: { "Content-Type": "text/html; charset=utf-8", "Cache-Control": `public, max-age=${cfg.cache}`, "X-Robots-Tag": "noindex, nofollow" } });
   }
 
+  if (studio === "sevenrings") {
+    try {
+      const r = await fetch("https://plsite.7ring.games/demo", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ gc: id, clt: "desktop", lang: "en", dacc: "50000" }),
+        cache: "no-store",
+      });
+      const to = r.ok ? ((await r.json()) as { url?: string }).url : undefined;
+      // Only on to the studio's demo host; the link is single-use, so never cached.
+      if (to && /^https:\/\/([a-z0-9-]+\.)*(digi-buy\.org|7ring\.games)\//.test(to)) {
+        return new Response(null, { status: 302, headers: { Location: to, "Cache-Control": "no-store", "X-Robots-Tag": "noindex, nofollow" } });
+      }
+    } catch {
+      /* fall through */
+    }
+    return new Response("Demo unavailable right now", { status: 502 });
+  }
+
   if (studio === "push") {
     // Push's play page builds its demo link in a script, base64 in pieces.
     try {

@@ -104,6 +104,18 @@ export const DEMO_STUDIOS: Record<string, DemoStudio> = {
     url: (id) => `https://launcher.truelab.games/play/${id}`,
     cache: 86400,
   },
+  // scripts/fetch-booming-demos.mjs: the studio's own demo lobby.
+  booming: {
+    name: "Booming Gaming",
+    idPattern: /^[a-f0-9]{24}$/,
+    url: (id) => `https://operator.asia.booming-games.com/promotion/play/${id}/desktop/demo-links/en`,
+    cache: 600,
+  },
+  // 7Rings Gaming: game codes read from the studio's own game pages (the game
+  // list it shares links them, some to the wrong page, so each page's own
+  // heading named the game, 14 Nov 2026). Its demo API mints a one-time link
+  // per play, so the route asks for one each time.
+  sevenrings: { name: "7Rings Gaming", idPattern: /^islx-[a-z0-9-]{2,60}$/, cache: 0 },
   betsoft: {
     name: "Betsoft",
     idPattern: /^\d{1,6}$/,
