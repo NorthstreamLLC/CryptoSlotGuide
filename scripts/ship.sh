@@ -28,7 +28,7 @@ git rebase -q origin/main || fail "Rebase failed: resolve it, then run again."
 
 cd "$WEB"
 step "Type check"
-rm -rf .next/dev/types
+rm -rf .next/dev/types .next/types  # generated; stale copies can name deleted pages
 npx tsc --noEmit -p . || fail "Type errors."
 
 step "Content checks"
